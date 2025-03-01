@@ -6,10 +6,13 @@ source "https://rubygems.org"
 gemspec
 
 gem "irb"
-gem "rake", "~> 13.0"
+gem "repl_type_completor"
 
-gem "rspec", "~> 3.0"
+gem "rake"
 
-gem "rubocop", "~> 1.21"
+gem "rspec"
 
-gem "repl_type_completor", "~> 0.1.10", :groups => [:development, :test]
+gem "rubocop"
+gem "rubocop-performance"
+gem "rubocop-rake"
+gem "rubocop-rspec"
