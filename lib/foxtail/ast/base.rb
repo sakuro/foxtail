@@ -11,19 +11,19 @@ module Foxtail
 
     # Span information for AST nodes
     class Span < Node
-      attr_accessor :start
-      attr_accessor :end
+      attr_accessor :start_pos
+      attr_accessor :end_pos
 
       def initialize(start_pos, end_pos)
         super()
-        @start = start_pos
-        @end = end_pos
+        @start_pos = start_pos
+        @end_pos = end_pos
       end
 
       def ==(other)
         return false unless other.is_a?(Span)
 
-        @start == other.start && @end == other.end
+        @start_pos == other.start_pos && @end_pos == other.end_pos
       end
     end
 

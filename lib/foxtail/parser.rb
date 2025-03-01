@@ -47,7 +47,7 @@ module Foxtail
           if entry.is_a?(AST::Message) || entry.is_a?(AST::Term)
             entry.comment = last_comment
             if @with_spans && entry.span && last_comment.span
-              entry.span.start = last_comment.span.start
+              entry.span.start_pos = last_comment.span.start_pos
             end
           else
             entries << last_comment
@@ -458,7 +458,7 @@ module Foxtail
           # Join adjacent TextElements by replacing them with their sum.
           sum = AST::TextElement.new(prev.value + element.value)
           if @with_spans && prev.span && element.span
-            sum.add_span(prev.span.start, element.span.end)
+            sum.add_span(prev.span.start_pos, element.span.end_pos)
           end
           trimmed[-1] = sum
           next
@@ -469,7 +469,7 @@ module Foxtail
           # convert it into a new TextElement.
           text_element = AST::TextElement.new(element.value)
           if @with_spans && element.span
-            text_element.add_span(element.span.start, element.span.end)
+            text_element.add_span(element.span.start_pos, element.span.end_pos)
           end
           element = text_element
         end
@@ -487,7 +487,7 @@ module Foxtail
           # Create a new TextElement to replace the old one
           new_element = AST::TextElement.new(trimmed_value)
           if @with_spans && last_element.span
-            new_element.add_span(last_element.span.start, last_element.span.end)
+            new_element.add_span(last_element.span.start_pos, last_element.span.end_pos)
           end
           trimmed[-1] = new_element
         end
