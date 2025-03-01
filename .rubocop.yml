@@ -86,13 +86,25 @@ Naming/MethodParameterName:
 
 # Disable RSpec cops for complex parser tests
 # Parser tests often require multiple expectations to verify complex parsing logic
+# FTL parsing tests need to validate multiple aspects of the parsed AST structure
 RSpec/ExampleLength:
   Exclude:
     - 'spec/foxtail/parser_spec.rb'
+    - 'spec/foxtail/parser/reference/*.rb'
+    - 'spec/foxtail/parser/structure/*.rb'
 
 RSpec/MultipleExpectations:
   Exclude:
     - 'spec/foxtail/parser_spec.rb'
+    - 'spec/foxtail/parser/reference/*.rb'
+    - 'spec/foxtail/parser/structure/*.rb'
+
+# Configure SpecFilePathFormat to handle our specific file structure
+# The parser tests are organized by feature/structure rather than by class/method
+RSpec/SpecFilePathFormat:
+  Exclude:
+    - 'spec/foxtail/parser/reference/*.rb'
+    - 'spec/foxtail/parser/structure/*.rb'
 
 # Disable Style/DocumentationMethod for implementation details
 # These methods are implementation details and don't need documentation

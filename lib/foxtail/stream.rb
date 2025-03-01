@@ -14,7 +14,7 @@ module Foxtail
     end
 
     def char_at(offset)
-      # 文字列の範囲外の場合はEOFを返す
+      # Return EOF if the offset is out of range
       return EOF if offset.nil? || offset < 0 || offset >= @string.length
 
       # When the cursor is at CRLF, return LF but don't move the cursor.
@@ -224,14 +224,14 @@ module Foxtail
     def next_line_comment?(level=-1)
       return false if current_char != EOL
 
-      # 次の行の先頭に#があるか確認
+      # Check if the next line starts with #
       next_char = peek
       if next_char != "#"
         reset_peek
         return false
       end
 
-      # #の数をカウント
+      # Count the number of # characters
       i = 1
       while i <= level || (level == -1 && i < 3)
         if peek != "#"
