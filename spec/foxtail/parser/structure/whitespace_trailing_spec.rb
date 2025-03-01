@@ -29,10 +29,17 @@ RSpec.describe Foxtail::Parser do
         expect(message2.value).to be_a(Foxtail::AST::Pattern)
         expect(message2.value.elements.size).to eq(1)
         expect(message2.value.elements[0]).to be_a(Foxtail::AST::TextElement)
-        # Use a more flexible comparison for strings with special whitespace
+        # The comment "↓ nbsp" in the FTL file indicates a non-breaking space
+        # Based on our debugging, the actual string contains "Value" followed by
+        # three regular spaces and one non-breaking space
+        nbsp = "\u00A0"  # Non-breaking space (U+00A0)
+        space = " "      # Regular space
+
+        # Use variables in the comparison for better readability
         value = message2.value.elements[0].value
-        expect(value.length).to eq(9)
-        expect(value).to start_with("Value")
+        # "Value" followed by 3 regular spaces, then 1 non-breaking space at the end
+        expected = "Value#{space}#{space}#{space}#{nbsp}"
+        expect(value).to eq(expected)
         expect(message2.comment).not_to be_nil
         expect(message2.comment.content).to eq("             ↓ nbsp")
 
