@@ -1,0 +1,82 @@
+{
+  "type": "Resource",
+  "body": [
+    {
+      "type": "Message",
+      "id": {
+        "type": "Identifier",
+        "name": "welcome",
+        "span": {
+          "type": "Span",
+          "start": 0,
+          "end": 7
+        }
+      },
+      "value": {
+        "type": "Pattern",
+        "elements": [
+          {
+            "type": "TextElement",
+            "value": "Welcome, ",
+            "span": {
+              "type": "Span",
+              "start": 10,
+              "end": 19
+            }
+          },
+          {
+            "type": "Placeable",
+            "expression": {
+              "type": "VariableReference",
+              "id": {
+                "type": "Identifier",
+                "name": "user",
+                "span": {
+                  "type": "Span",
+                  "start": 22,
+                  "end": 26
+                }
+              },
+              "span": {
+                "type": "Span",
+                "start": 21,
+                "end": 26
+              }
+            },
+            "span": {
+              "type": "Span",
+              "start": 19,
+              "end": 28
+            }
+          },
+          {
+            "type": "TextElement",
+            "value": "!",
+            "span": {
+              "type": "Span",
+              "start": 28,
+              "end": 29
+            }
+          }
+        ],
+        "span": {
+          "type": "Span",
+          "start": 10,
+          "end": 29
+        }
+      },
+      "attributes": [],
+      "comment": null,
+      "span": {
+        "type": "Span",
+        "start": 0,
+        "end": 29
+      }
+    }
+  ],
+  "span": {
+    "type": "Span",
+    "start": 0,
+    "end": 30
+  }
+}
