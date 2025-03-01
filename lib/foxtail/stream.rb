@@ -215,6 +215,15 @@ module Foxtail
 
       i = 0
 
+      # 次の行の先頭に#があるか確認
+      next_char = peek
+      if next_char != "#"
+        reset_peek
+        return false
+      end
+
+      # #の数をカウント
+      i = 1
       while i <= level || (level == -1 && i < 3)
         if peek != "#"
           if i <= level && level != -1

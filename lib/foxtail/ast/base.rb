@@ -11,8 +11,8 @@ module Foxtail
 
     # Span information for AST nodes
     class Span < Node
-      attr_reader :start
-      attr_reader :end
+      attr_accessor :start
+      attr_accessor :end
 
       def initialize(start_pos, end_pos)
         @start = start_pos

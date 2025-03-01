@@ -144,13 +144,15 @@ module Foxtail
         ps.next_char
       end
 
-      comment = case level
-                when 0
+      # コメントレベルに応じたコメントクラスを作成
+      comment = if level == 0
                   AST::Comment.new(content)
-                when 1
+                elsif level == 1
                   AST::GroupComment.new(content)
-                else
+                elsif level == 2
                   AST::ResourceComment.new(content)
+                else
+                  AST::Comment.new(content)
                 end
 
       add_span(comment, comment_start, ps.index)
