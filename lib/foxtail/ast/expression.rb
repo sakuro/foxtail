@@ -58,7 +58,7 @@ module Foxtail
       attr_reader :value
       attr_reader :default
 
-      def initialize(key, value, default=false)
+      def initialize(key, value, default: false)
         super()
         @key = key
         @value = value

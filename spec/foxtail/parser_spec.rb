@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "spec_helper"
 require "json"
+require "spec_helper"
 
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
@@ -302,7 +302,8 @@ RSpec.describe Foxtail::Parser do
       let(:source) { File.read(ftl_file) }
       let(:expected_json) { JSON.parse(File.read(json_file)) }
 
-      xit "parses escape sequences correctly" do
+      it "parses escape sequences correctly" do
+        pending("Escape sequence handling needs to be fixed")
         parser = Foxtail::Parser.new
         result = parser.parse(source)
 

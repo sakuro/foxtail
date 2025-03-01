@@ -15,6 +15,7 @@ module Foxtail
       attr_accessor :end
 
       def initialize(start_pos, end_pos)
+        super()
         @start = start_pos
         @end = end_pos
       end
@@ -31,6 +32,7 @@ module Foxtail
       attr_accessor :span
 
       def initialize
+        super
         @span = nil
       end
 
@@ -76,9 +78,7 @@ module Foxtail
         @message = message || get_error_message(code, arguments)
       end
 
-      private
-
-      def get_error_message(code, args)
+      private def get_error_message(code, _args)
         "Error #{code}"
       end
     end

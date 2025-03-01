@@ -21,7 +21,9 @@ module Foxtail
       # The cursor still points to the EOL position, which in this case is the
       # beginning of the compound CRLF sequence. This ensures slices of
       # [inclusive, exclusive) continue to work properly.
-      if @string[offset] == "\r" && offset + 1 < @string.length && @string[offset + 1] == "\n"
+      if @string[offset] == "\r" && offset + 1 < @string.length &&
+         @string[offset + 1] == "\n"
+
         return "\n"
       end
 
@@ -39,7 +41,9 @@ module Foxtail
     def next_char
       @peek_offset = 0
       # Skip over the CRLF as if it was a single character.
-      if @index < @string.length && @string[@index] == "\r" && @index + 1 < @string.length && @string[@index + 1] == "\n"
+      if @index < @string.length && @string[@index] == "\r" &&
+         @index + 1 < @string.length && @string[@index + 1] == "\n"
+
         @index += 1
       end
       @index += 1
@@ -49,7 +53,9 @@ module Foxtail
     def peek
       # Skip over the CRLF as if it was a single character.
       peek_index = @index + @peek_offset
-      if peek_index < @string.length && @string[peek_index] == "\r" && peek_index + 1 < @string.length && @string[peek_index + 1] == "\n"
+      if peek_index < @string.length && @string[peek_index] == "\r" &&
+         peek_index + 1 < @string.length && @string[peek_index + 1] == "\n"
+
         @peek_offset += 1
       end
       @peek_offset += 1
@@ -68,8 +74,13 @@ module Foxtail
 
   # Constants for parser stream
   EOL = "\n"
+  private_constant :EOL
+
   EOF = nil
+  private_constant :EOF
+
   SPECIAL_LINE_START_CHARS = ["}", ".", "[", "*"].freeze
+  private_constant :SPECIAL_LINE_START_CHARS
 
   # Fluent parser stream
   class FluentParserStream < ParserStream
@@ -154,17 +165,17 @@ module Foxtail
       ch
     end
 
-    def is_char_id_start(ch)
+    def char_id_start?(ch)
       return false if ch == EOF
 
       ch =~ /[a-zA-Z]/
     end
 
-    def is_identifier_start
-      is_char_id_start(current_peek)
+    def identifier_start?
+      char_id_start?(current_peek)
     end
 
-    def is_number_start
+    def number_start?
       ch = current_char == "-" ? peek : current_char
 
       if ch == EOF
@@ -177,19 +188,19 @@ module Foxtail
       is_digit
     end
 
-    def is_char_pattern_continuation(ch)
+    def char_pattern_continuation?(ch)
       return false if ch == EOF
 
       !SPECIAL_LINE_START_CHARS.include?(ch)
     end
 
-    def is_value_start
+    def value_start?
       # Inline Patterns may start with any char.
       ch = current_peek
       ch != EOL && ch != EOF
     end
 
-    def is_value_continuation
+    def value_continuation?
       column1 = @peek_offset
       peek_blank_inline
 
@@ -202,7 +213,7 @@ module Foxtail
         return false
       end
 
-      if is_char_pattern_continuation(current_peek)
+      if char_pattern_continuation?(current_peek)
         reset_peek(column1)
         return true
       end
@@ -210,10 +221,8 @@ module Foxtail
       false
     end
 
-    def is_next_line_comment(level=-1)
+    def next_line_comment?(level=-1)
       return false if current_char != EOL
-
-      i = 0
 
       # 次の行の先頭に#があるか確認
       next_char = peek
@@ -246,7 +255,7 @@ module Foxtail
       false
     end
 
-    def is_variant_start
+    def variant_start?
       current_peek_offset = @peek_offset
       if current_peek == "*"
         peek
@@ -259,7 +268,7 @@ module Foxtail
       false
     end
 
-    def is_attribute_start
+    def attribute_start?
       current_peek == "."
     end
 
@@ -279,14 +288,14 @@ module Foxtail
 
         # Break if the first char in this line looks like an entry start.
         first = next_char
-        if is_char_id_start(first) || first == "-" || first == "#"
+        if char_id_start?(first) || first == "-" || first == "#"
           break
         end
       end
     end
 
     def take_id_start
-      if is_char_id_start(current_char)
+      if char_id_start?(current_char)
         ret = current_char
         next_char
         return ret

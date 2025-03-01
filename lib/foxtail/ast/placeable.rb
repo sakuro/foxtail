@@ -7,6 +7,7 @@ module Foxtail
       attr_accessor :expression
 
       def initialize(expression)
+        super()
         @expression = expression
       end
     end

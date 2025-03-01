@@ -1,22 +1,26 @@
 # frozen_string_literal: true
 
-require_relative "stream"
-require_relative "errors"
 require_relative "ast/base"
-require_relative "ast/resource"
+require_relative "ast/expression"
 require_relative "ast/message"
 require_relative "ast/pattern"
-require_relative "ast/expression"
+require_relative "ast/resource"
+require_relative "errors"
+require_relative "stream"
 
 module Foxtail
   # Parser for FTL (Fluent Translation List) files
   class Parser
     attr_reader :with_spans
 
-    def initialize(options={})
-      @with_spans = options.fetch(:with_spans, true)
+    def initialize(with_spans: true)
+      @with_spans = with_spans
     end
 
+    # Parse FTL source into an AST::Resource
+    #
+    # @param source [String] FTL source to parse
+    # @return [AST::Resource] Parsed resource
     def parse(source)
       ps = FluentParserStream.new(source)
       ps.skip_blank_block
@@ -61,9 +65,7 @@ module Foxtail
       resource
     end
 
-    private
-
-    def get_entry_or_junk(ps)
+    private def get_entry_or_junk(ps)
       entry_start_pos = ps.index
 
       begin
@@ -80,7 +82,7 @@ module Foxtail
           error_index = next_entry_start
         end
 
-        # Junkインスタンスの作成
+        # Create a Junk instance
         slice = ps.string[entry_start_pos...next_entry_start]
         junk = AST::Junk.new(slice)
         add_span(junk, entry_start_pos, next_entry_start)
@@ -92,7 +94,7 @@ module Foxtail
       end
     end
 
-    def get_entry(ps)
+    private def get_entry(ps)
       if ps.current_char == "#"
         return get_comment(ps)
       end
@@ -101,14 +103,14 @@ module Foxtail
         return get_term(ps)
       end
 
-      if ps.is_char_id_start(ps.current_char)
+      if ps.char_id_start?(ps.current_char)
         return get_message(ps)
       end
 
-      raise Errors::ParseError.new("E0002")
+      raise Errors::ParseError, "E0002"
     end
 
-    def get_comment(ps)
+    private def get_comment(ps)
       # 0 - comment
       # 1 - group comment
       # 2 - resource comment
@@ -117,7 +119,7 @@ module Foxtail
 
       comment_start = ps.index
 
-      while true
+      loop do
         i = -1
         while ps.current_char == "#" && i < (level == -1 ? 2 : level)
           ps.next_char
@@ -130,36 +132,38 @@ module Foxtail
 
         if ps.current_char != EOL
           ps.expect_char(" ")
-          ch = nil
           content_start = ps.index
-          while (ch = ps.take_char ->(x) { x != EOL })
-            # 文字を蓄積
+          while ps.take_char ->(x) { x != EOL }
+            # Accumulate characters
           end
           content += ps.string[content_start...ps.index]
         end
 
-        break unless ps.is_next_line_comment(level)
+        break unless ps.next_line_comment?(level)
 
         content += ps.current_char
         ps.next_char
       end
 
-      # コメントレベルに応じたコメントクラスを作成
-      comment = if level == 0
-                  AST::Comment.new(content)
-                elsif level == 1
-                  AST::GroupComment.new(content)
-                elsif level == 2
-                  AST::ResourceComment.new(content)
-                else
-                  AST::Comment.new(content)
-                end
+      # Create a comment class based on the comment level
+      comment =
+        case level
+        when 0
+          AST::Comment.new(content)
+        when 1
+          AST::GroupComment.new(content)
+        when 2
+          AST::ResourceComment.new(content)
+        else
+          # Treat unknown levels as regular comments
+          AST::Comment.new(content)
+        end
 
       add_span(comment, comment_start, ps.index)
       comment
     end
 
-    def get_message(ps)
+    private def get_message(ps)
       message_start = ps.index
 
       id = get_identifier(ps)
@@ -179,7 +183,7 @@ module Foxtail
       message
     end
 
-    def get_term(ps)
+    private def get_term(ps)
       term_start = ps.index
 
       ps.expect_char("-")
@@ -199,7 +203,7 @@ module Foxtail
       term
     end
 
-    def get_attribute(ps)
+    private def get_attribute(ps)
       attr_start = ps.index
 
       ps.expect_char(".")
@@ -211,7 +215,7 @@ module Foxtail
 
       value = maybe_get_pattern(ps)
       if value.nil?
-        raise Errors::ParseError.new("E0012")
+        raise Errors::ParseError, "E0012"
       end
 
       attr = AST::Attribute.new(key, value)
@@ -219,10 +223,10 @@ module Foxtail
       attr
     end
 
-    def get_attributes(ps)
+    private def get_attributes(ps)
       attrs = []
       ps.peek_blank
-      while ps.is_attribute_start
+      while ps.attribute_start?
         ps.skip_to_peek
         attr = get_attribute(ps)
         attrs << attr
@@ -231,12 +235,10 @@ module Foxtail
       attrs
     end
 
-    def get_identifier(ps)
+    private def get_identifier(ps)
       id_start = ps.index
 
       name = ps.take_id_start
-
-      ch = nil
       while (ch = ps.take_id_char)
         name += ch
       end
@@ -246,13 +248,13 @@ module Foxtail
       id
     end
 
-    def get_variant_key(ps)
-      key_start = ps.index
+    private def get_variant_key(ps)
+      ps.index
 
       ch = ps.current_char
 
       if ch == EOF
-        raise Errors::ParseError.new("E0013")
+        raise Errors::ParseError, "E0013"
       end
 
       if /[0-9-]/.match?(ch)
@@ -262,14 +264,14 @@ module Foxtail
       get_identifier(ps)
     end
 
-    def get_variant(ps, has_default=false)
+    private def get_variant(ps, has_default: false)
       variant_start = ps.index
 
       default_index = false
 
       if ps.current_char == "*"
         if has_default
-          raise Errors::ParseError.new("E0015")
+          raise Errors::ParseError, "E0015"
         end
 
         ps.next_char
@@ -287,21 +289,21 @@ module Foxtail
 
       value = maybe_get_pattern(ps)
       if value.nil?
-        raise Errors::ParseError.new("E0012")
+        raise Errors::ParseError, "E0012"
       end
 
-      variant = AST::Variant.new(key, value, default_index)
+      variant = AST::Variant.new(key, value, default: default_index)
       add_span(variant, variant_start, ps.index)
       variant
     end
 
-    def get_variants(ps)
+    private def get_variants(ps)
       variants = []
       has_default = false
 
       ps.skip_blank
-      while ps.is_variant_start
-        variant = get_variant(ps, has_default)
+      while ps.variant_start?
+        variant = get_variant(ps, has_default:)
 
         if variant.default
           has_default = true
@@ -313,22 +315,20 @@ module Foxtail
       end
 
       if variants.empty?
-        raise Errors::ParseError.new("E0011")
+        raise Errors::ParseError, "E0011"
       end
 
       unless has_default
-        raise Errors::ParseError.new("E0010")
+        raise Errors::ParseError, "E0010"
       end
 
       variants
     end
 
-    def get_digits(ps)
-      digits_start = ps.index
+    private def get_digits(ps)
+      ps.index
 
       num = ""
-
-      ch = nil
       while (ch = ps.take_digit)
         num += ch
       end
@@ -340,7 +340,7 @@ module Foxtail
       num
     end
 
-    def get_number(ps)
+    private def get_number(ps)
       number_start = ps.index
 
       value = ""
@@ -362,15 +362,15 @@ module Foxtail
       number
     end
 
-    def maybe_get_pattern(ps)
+    private def maybe_get_pattern(ps)
       ps.peek_blank_inline
-      if ps.is_value_start
+      if ps.value_start?
         ps.skip_to_peek
         return get_pattern(ps, false)
       end
 
       ps.peek_blank_block
-      if ps.is_value_continuation
+      if ps.value_continuation?
         ps.skip_to_peek
         return get_pattern(ps, true)
       end
@@ -378,7 +378,7 @@ module Foxtail
       nil
     end
 
-    def get_pattern(ps, is_block)
+    private def get_pattern(ps, is_block)
       pattern_start = ps.index
 
       elements = []
@@ -404,7 +404,7 @@ module Foxtail
         when EOL
           blank_start = ps.index
           blank_lines = ps.peek_blank_block
-          if ps.is_value_continuation
+          if ps.value_continuation?
             ps.skip_to_peek
             indent = ps.skip_blank_inline
             common_indent_length = [common_indent_length, indent.length].min
@@ -420,7 +420,7 @@ module Foxtail
           elements << get_placeable(ps)
           next
         when "}"
-          raise Errors::ParseError.new("E0027")
+          raise Errors::ParseError, "E0027"
         else
           elements << get_text_element(ps)
         end
@@ -432,11 +432,11 @@ module Foxtail
       pattern
     end
 
-    def get_indent(ps, value, start)
+    private def get_indent(ps, value, start)
       Indent.new(value, start, ps.index)
     end
 
-    def dedent(elements, common_indent)
+    private def dedent(elements, common_indent)
       trimmed = []
 
       elements.each do |element|
@@ -454,7 +454,7 @@ module Foxtail
         end
 
         prev = trimmed.last
-        if prev && prev.is_a?(AST::TextElement)
+        if prev.is_a?(AST::TextElement)
           # Join adjacent TextElements by replacing them with their sum.
           sum = AST::TextElement.new(prev.value + element.value)
           if @with_spans && prev.span && element.span
@@ -479,12 +479,12 @@ module Foxtail
 
       # Trim trailing whitespace from the Pattern.
       last_element = trimmed.last
-      if last_element && last_element.is_a?(AST::TextElement)
+      if last_element.is_a?(AST::TextElement)
         trimmed_value = last_element.value.sub(/[ \n\r]+$/, "")
         if trimmed_value.empty?
           trimmed.pop
         else
-          # 新しいTextElementを作成して置き換える
+          # Create a new TextElement to replace the old one
           new_element = AST::TextElement.new(trimmed_value)
           if @with_spans && last_element.span
             new_element.add_span(last_element.span.start, last_element.span.end)
@@ -496,12 +496,10 @@ module Foxtail
       trimmed
     end
 
-    def get_text_element(ps)
+    private def get_text_element(ps)
       text_start = ps.index
 
       buffer = ""
-
-      ch = nil
       while (ch = ps.current_char)
         if ch == "{" || ch == "}" || ch == EOL || ch == EOF
           break
@@ -516,8 +514,8 @@ module Foxtail
       text_element
     end
 
-    def get_escape_sequence(ps)
-      escape_start = ps.index
+    private def get_escape_sequence(ps)
+      ps.index
 
       next_char = ps.current_char
 
@@ -534,8 +532,8 @@ module Foxtail
       end
     end
 
-    def get_unicode_escape_sequence(ps, u, digits)
-      unicode_start = ps.index
+    private def get_unicode_escape_sequence(ps, u, digits)
+      ps.index
 
       ps.expect_char(u)
 
@@ -553,7 +551,7 @@ module Foxtail
       "\\#{u}#{sequence}"
     end
 
-    def get_placeable(ps)
+    private def get_placeable(ps)
       placeable_start = ps.index
 
       ps.expect_char("{")
@@ -566,7 +564,7 @@ module Foxtail
       placeable
     end
 
-    def get_expression(ps)
+    private def get_expression(ps)
       expression_start = ps.index
 
       selector = get_inline_expression(ps)
@@ -581,17 +579,20 @@ module Foxtail
         # Validate selector expression according to
         # abstract.js in the Fluent specification
 
-        if selector.is_a?(AST::MessageReference)
-          raise Errors::ParseError.new("E0016") if selector.attribute.nil?
+        case selector
+        when AST::MessageReference
+          raise Errors::ParseError, "E0016" if selector.attribute.nil?
 
-          raise Errors::ParseError.new("E0018")
+          raise Errors::ParseError, "E0018"
 
-        elsif selector.is_a?(AST::TermReference)
+        when AST::TermReference
           if selector.attribute.nil?
-            raise Errors::ParseError.new("E0017")
+            raise Errors::ParseError, "E0017"
           end
-        elsif selector.is_a?(AST::Placeable)
-          raise Errors::ParseError.new("E0029")
+        when AST::Placeable
+          raise Errors::ParseError, "E0029"
+        else
+          # TODO: Need to investigate what conditions can reach here
         end
 
         ps.next_char
@@ -607,20 +608,20 @@ module Foxtail
       end
 
       if selector.is_a?(AST::TermReference) && !selector.attribute.nil?
-        raise Errors::ParseError.new("E0019")
+        raise Errors::ParseError, "E0019"
       end
 
       selector
     end
 
-    def get_inline_expression(ps)
+    private def get_inline_expression(ps)
       expression_start = ps.index
 
       if ps.current_char == "{"
         return get_placeable(ps)
       end
 
-      if ps.is_number_start
+      if ps.number_start?
         return get_number(ps)
       end
 
@@ -658,14 +659,14 @@ module Foxtail
         return term_ref
       end
 
-      if ps.is_char_id_start(ps.current_char)
+      if ps.char_id_start?(ps.current_char)
         id = get_identifier(ps)
         ps.peek_blank
 
         if ps.current_peek == "("
           # It's a Function. Ensure it's all upper-case.
           unless /^[A-Z][A-Z0-9_-]*$/.match?(id.name)
-            raise Errors::ParseError.new("E0008")
+            raise Errors::ParseError, "E0008"
           end
 
           ps.skip_to_peek
@@ -686,10 +687,10 @@ module Foxtail
         return msg_ref
       end
 
-      raise Errors::ParseError.new("E0028")
+      raise Errors::ParseError, "E0028"
     end
 
-    def get_call_argument(ps)
+    private def get_call_argument(ps)
       arg_start = ps.index
 
       exp = get_inline_expression(ps)
@@ -710,10 +711,10 @@ module Foxtail
         return named_arg
       end
 
-      raise Errors::ParseError.new("E0009")
+      raise Errors::ParseError, "E0009"
     end
 
-    def get_call_arguments(ps)
+    private def get_call_arguments(ps)
       args_start = ps.index
 
       positional = []
@@ -723,7 +724,7 @@ module Foxtail
       ps.expect_char("(")
       ps.skip_blank
 
-      while true
+      loop do
         if ps.current_char == ")"
           break
         end
@@ -731,13 +732,13 @@ module Foxtail
         arg = get_call_argument(ps)
         if arg.is_a?(AST::NamedArgument)
           if argument_names.include?(arg.name.name)
-            raise Errors::ParseError.new("E0022")
+            raise Errors::ParseError, "E0022"
           end
 
           named << arg
           argument_names.add(arg.name.name)
         elsif !argument_names.empty?
-          raise Errors::ParseError.new("E0021")
+          raise Errors::ParseError, "E0021"
         else
           positional << arg
         end
@@ -759,13 +760,11 @@ module Foxtail
       call_args
     end
 
-    def get_string(ps)
+    private def get_string(ps)
       string_start = ps.index
 
       ps.expect_char('"')
       value = ""
-
-      ch = nil
       while (ch = ps.take_char ->(x) { x != '"' && x != EOL })
         value += if ch == "\\"
                    get_escape_sequence(ps)
@@ -775,7 +774,7 @@ module Foxtail
       end
 
       if ps.current_char == EOL
-        raise Errors::ParseError.new("E0020")
+        raise Errors::ParseError, "E0020"
       end
 
       ps.expect_char('"')
@@ -785,8 +784,8 @@ module Foxtail
       string
     end
 
-    def get_literal(ps)
-      if ps.is_number_start
+    private def get_literal(ps)
+      if ps.number_start?
         return get_number(ps)
       end
 
@@ -794,10 +793,10 @@ module Foxtail
         return get_string(ps)
       end
 
-      raise Errors::ParseError.new("E0014")
+      raise Errors::ParseError, "E0014"
     end
 
-    def add_span(node, start, end_pos)
+    private def add_span(node, start, end_pos)
       node.add_span(start, end_pos) if @with_spans
       node
     end

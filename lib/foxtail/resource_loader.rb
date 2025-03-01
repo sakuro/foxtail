@@ -5,12 +5,12 @@ require_relative "parser"
 module Foxtail
   # ResourceLoader loads FTL resources from files or strings
   class ResourceLoader
-    def initialize(options={})
-      @parser = Parser.new(options)
+    def initialize(with_spans: true)
+      @parser = Parser.new(with_spans:)
     end
 
     # Load FTL resource from a string
-    def load_from_string(source, resource_id=nil)
+    def load_from_string(source, _resource_id=nil)
       @parser.parse(source)
     end
 

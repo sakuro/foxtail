@@ -31,3 +31,75 @@ inherit_from:
 - .rubocop/rake.yml
 - .rubocop/security.yml
 - .rubocop/style.yml
+
+# Disable Metrics cops for parser-related files and error handling
+# Parser implementations inherently have complex methods and classes due to the nature of parsing
+# Error handling also requires complex case statements for different error codes
+Metrics/AbcSize:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+    - 'lib/foxtail/errors.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+    - 'lib/foxtail/errors.rb'
+
+Metrics/BlockNesting:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+    - 'lib/foxtail/errors.rb'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+    - 'lib/foxtail/errors.rb'
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+    - 'lib/foxtail/errors.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+    - 'lib/foxtail/errors.rb'
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+    - 'lib/foxtail/errors.rb'
+
+# Disable Naming/MethodParameterName for parser-related files
+# Parser implementations often use short parameter names for brevity and clarity
+Naming/MethodParameterName:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/stream.rb'
+
+# Disable RSpec cops for complex parser tests
+# Parser tests often require multiple expectations to verify complex parsing logic
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/foxtail/parser_spec.rb'
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/foxtail/parser_spec.rb'
+
+# Disable Style/DocumentationMethod for implementation details
+# These methods are implementation details and don't need documentation
+Style/DocumentationMethod:
+  RequireForNonPublicMethods: false
+  Exclude:
+    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/ast/base.rb'
+    - 'lib/foxtail/errors.rb'
+    - 'lib/foxtail/stream.rb'
