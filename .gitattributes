@@ -1,0 +1,6 @@
+# デフォルト設定
+*.ftl eol=lf
+
+# 特定のテストファイル用設定
+spec/fixtures/reference/cr.ftl eol=cr
+spec/fixtures/reference/crlf.ftl eol=crlf

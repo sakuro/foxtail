@@ -2,6 +2,9 @@
 
 require "foxtail"
 
+# Load all support files
+Dir["spec/support/**/*.rb"].each {|f| load f }
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
@@ -12,4 +15,7 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  # Automatically include "with ftl fixture" shared_context when ftl_fixture tag is specified
+  config.include_context "with ftl fixture", ftl_fixture: /.+/
 end

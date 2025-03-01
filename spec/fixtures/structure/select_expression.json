@@ -1,0 +1,182 @@
+{
+  "type": "Resource",
+  "body": [
+    {
+      "type": "Message",
+      "id": {
+        "type": "Identifier",
+        "name": "emails",
+        "span": {
+          "type": "Span",
+          "start": 0,
+          "end": 6
+        }
+      },
+      "value": {
+        "type": "Pattern",
+        "elements": [
+          {
+            "type": "Placeable",
+            "expression": {
+              "type": "SelectExpression",
+              "selector": {
+                "type": "VariableReference",
+                "id": {
+                  "type": "Identifier",
+                  "name": "count",
+                  "span": {
+                    "type": "Span",
+                    "start": 11,
+                    "end": 16
+                  }
+                },
+                "span": {
+                  "type": "Span",
+                  "start": 10,
+                  "end": 16
+                }
+              },
+              "variants": [
+                {
+                  "type": "Variant",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "one",
+                    "span": {
+                      "type": "Span",
+                      "start": 25,
+                      "end": 28
+                    }
+                  },
+                  "value": {
+                    "type": "Pattern",
+                    "elements": [
+                      {
+                        "type": "TextElement",
+                        "value": "You have one new email.",
+                        "span": {
+                          "type": "Span",
+                          "start": 30,
+                          "end": 53
+                        }
+                      }
+                    ],
+                    "span": {
+                      "type": "Span",
+                      "start": 30,
+                      "end": 53
+                    }
+                  },
+                  "default": false,
+                  "span": {
+                    "type": "Span",
+                    "start": 24,
+                    "end": 53
+                  }
+                },
+                {
+                  "type": "Variant",
+                  "key": {
+                    "type": "Identifier",
+                    "name": "other",
+                    "span": {
+                      "type": "Span",
+                      "start": 59,
+                      "end": 64
+                    }
+                  },
+                  "value": {
+                    "type": "Pattern",
+                    "elements": [
+                      {
+                        "type": "TextElement",
+                        "value": "You have ",
+                        "span": {
+                          "type": "Span",
+                          "start": 66,
+                          "end": 75
+                        }
+                      },
+                      {
+                        "type": "Placeable",
+                        "expression": {
+                          "type": "VariableReference",
+                          "id": {
+                            "type": "Identifier",
+                            "name": "count",
+                            "span": {
+                              "type": "Span",
+                              "start": 78,
+                              "end": 83
+                            }
+                          },
+                          "span": {
+                            "type": "Span",
+                            "start": 77,
+                            "end": 83
+                          }
+                        },
+                        "span": {
+                          "type": "Span",
+                          "start": 75,
+                          "end": 85
+                        }
+                      },
+                      {
+                        "type": "TextElement",
+                        "value": " new emails.",
+                        "span": {
+                          "type": "Span",
+                          "start": 85,
+                          "end": 97
+                        }
+                      }
+                    ],
+                    "span": {
+                      "type": "Span",
+                      "start": 66,
+                      "end": 97
+                    }
+                  },
+                  "default": true,
+                  "span": {
+                    "type": "Span",
+                    "start": 57,
+                    "end": 97
+                  }
+                }
+              ],
+              "span": {
+                "type": "Span",
+                "start": 10,
+                "end": 98
+              }
+            },
+            "span": {
+              "type": "Span",
+              "start": 9,
+              "end": 99
+            }
+          }
+        ],
+        "span": {
+          "type": "Span",
+          "start": 9,
+          "end": 99
+        }
+      },
+      "attributes": [],
+      "comment": null,
+      "span": {
+        "type": "Span",
+        "start": 0,
+        "end": 99
+      }
+    }
+  ],
+  "span": {
+    "type": "Span",
+    "start": 0,
+    "end": 100
+  }
+}

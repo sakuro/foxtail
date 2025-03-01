@@ -1,0 +1,32 @@
+{
+  "type": "Resource",
+  "body": [
+    {
+      "type": "Junk",
+      "content": "foo =",
+      "annotations": [
+        {
+          "type": "Annotation",
+          "code": "E0005",
+          "arguments": ["foo"],
+          "message": "Expected message \"foo\" to have a value or attributes",
+          "span": {
+            "type": "Span",
+            "start": 5,
+            "end": 5
+          }
+        }
+      ],
+      "span": {
+        "type": "Span",
+        "start": 0,
+        "end": 5
+      }
+    }
+  ],
+  "span": {
+    "type": "Span",
+    "start": 0,
+    "end": 6
+  }
+}
