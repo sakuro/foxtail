@@ -25,27 +25,6 @@ RSpec.describe Foxtail::Parser do
           end
         end
 
-        # Helper methods to find entries by type and content
-        def find_comment(content)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Comment) && entry.content == content }
-        end
-
-        def find_message(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Message) && entry.id.name == id }
-        end
-
-        def find_term(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Term) && entry.id.name == id }
-        end
-
-        def find_group_comment(content)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::GroupComment) && entry.content == content }
-        end
-
-        def find_resource_comment(content)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::ResourceComment) && entry.content == content }
-        end
-
         # Verify the standalone comment
         standalone_comment = find_comment("Standalone Comment")
         expect(standalone_comment).not_to be_nil

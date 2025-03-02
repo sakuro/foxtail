@@ -10,11 +10,6 @@ RSpec.describe Foxtail::Parser do
         # Verify that the result is a Resource object
         expect(result).to be_a(Foxtail::AST::Resource)
 
-        # Helper method to find a message by ID
-        def find_message(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Message) && entry.id.name == id }
-        end
-
         # Verify multiline value continued on the next line
         key01 = find_message("key01")
         expect(key01).not_to be_nil

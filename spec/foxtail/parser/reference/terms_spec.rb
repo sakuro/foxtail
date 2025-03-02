@@ -9,11 +9,6 @@ RSpec.describe Foxtail::Parser do
         # Verify that the result is a Resource object
         expect(result).to be_a(Foxtail::AST::Resource)
 
-        # Helper method to find a term by ID
-        def find_term(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Term) && entry.id.name == id }
-        end
-
         # Verify term with attribute
         term01 = find_term("term01")
         expect(term01).not_to be_nil
