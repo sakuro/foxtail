@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with call expression errors", ftl_fixture: "structure/call_expression_errors" do
+      include_examples "a valid FTL resource"
       it "parses as junk with error annotations" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains three Junk entries
         expect(result.body.size).to eq(3)
         expect(result.body.all?(Foxtail::AST::Junk)).to be true

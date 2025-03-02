@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with member expressions", ftl_fixture: "reference/member_expressions" do
+      include_examples "a valid FTL resource"
       it "correctly parses member expressions" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify the first GroupComment
         expect(result.body[0]).to be_a(Foxtail::AST::GroupComment)
         expect(result.body[0].content).to eq("Member expressions in placeables.")

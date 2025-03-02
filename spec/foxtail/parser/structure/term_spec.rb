@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with term", ftl_fixture: "structure/term" do
+      include_examples "a valid FTL resource"
       it "parses term definition and references correctly" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains multiple entries
         expect(result.body.size).to be > 1
 

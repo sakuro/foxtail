@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with tab characters", ftl_fixture: "reference/tab" do
+      include_examples "a valid FTL resource"
       it "parses tab characters correctly" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Define tab character for better readability
         tab = "\t"
 

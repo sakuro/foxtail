@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with callee expressions", ftl_fixture: "reference/callee_expressions" do
+      include_examples "a valid FTL resource"
       it "correctly parses callee expressions" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify the GroupComment
         expect(result.body[0]).to be_a(Foxtail::AST::GroupComment)
         expect(result.body[0].content).to eq("Callees in placeables.")

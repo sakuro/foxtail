@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with expressions call args", ftl_fixture: "structure/expressions_call_args" do
+      include_examples "a valid FTL resource"
       it "parses multiline call arguments correctly" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains one Message
         expect(result.body.size).to eq(1)
         expect(result.body[0]).to be_a(Foxtail::AST::Message)

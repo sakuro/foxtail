@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "foxtail"
+require "json"
 
 # Load all support files
 Dir["spec/support/**/*.rb"].each {|f| load f }
@@ -16,6 +17,7 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  # Automatically include "with ftl fixture" shared_context when ftl_fixture tag is specified
+  # Automatically include shared contexts and helpers when ftl_fixture tag is specified
   config.include_context "with ftl fixture", ftl_fixture: /.+/
+  config.include FtlHelpers, ftl_fixture: /.+/
 end

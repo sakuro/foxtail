@@ -1,51 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with comments", ftl_fixture: "reference/comments" do
+      include_examples "a valid FTL resource"
       it "correctly parses different types of comments" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
-        # Debug: Print the actual content of the comments
-        puts "Comments in the result:"
-        result.body.each_with_index do |entry, index|
-          if entry.is_a?(Foxtail::AST::Comment)
-            puts "#{index}: #{entry.content.inspect}"
-          elsif entry.is_a?(Foxtail::AST::GroupComment)
-            puts "#{index}: GroupComment: #{entry.content.inspect}"
-          elsif entry.is_a?(Foxtail::AST::ResourceComment)
-            puts "#{index}: ResourceComment: #{entry.content.inspect}"
-          elsif entry.is_a?(Foxtail::AST::Message) && entry.comment
-            puts "#{index}: Message comment: #{entry.comment.content.inspect}"
-          elsif entry.is_a?(Foxtail::AST::Term) && entry.comment
-            puts "#{index}: Term comment: #{entry.comment.content.inspect}"
-          end
-        end
-
-        # Helper methods to find entries by type and content
-        def find_comment(content)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Comment) && entry.content == content }
-        end
-
-        def find_message(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Message) && entry.id.name == id }
-        end
-
-        def find_term(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Term) && entry.id.name == id }
-        end
-
-        def find_group_comment(content)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::GroupComment) && entry.content == content }
-        end
-
-        def find_resource_comment(content)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::ResourceComment) && entry.content == content }
-        end
-
         # Verify the standalone comment
         standalone_comment = find_comment("Standalone Comment")
         expect(standalone_comment).not_to be_nil

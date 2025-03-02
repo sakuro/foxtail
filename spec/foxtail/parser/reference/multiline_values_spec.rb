@@ -1,19 +1,11 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with multiline values", ftl_fixture: "reference/multiline_values" do
+      include_examples "a valid FTL resource"
       it "correctly parses multiline values" do
         skip "The parser needs to be fixed to handle multiline values correctly"
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
-        # Helper method to find a message by ID
-        def find_message(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Message) && entry.id.name == id }
-        end
 
         # Verify multiline value continued on the next line
         key01 = find_message("key01")

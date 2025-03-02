@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with astral plane characters", ftl_fixture: "reference/astral" do
+      include_examples "a valid FTL resource"
       it "parses astral plane characters correctly" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains expected entries
         # 7 valid messages + 3 comments + 3 junk entries = 13 entries
         expect(result.body.size).to eq(13)

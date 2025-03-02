@@ -1,24 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with escaped characters", ftl_fixture: "reference/escaped_characters" do
+      include_examples "a valid FTL resource"
       it "correctly parses escaped characters" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
-        # Helper method to find a message by ID
-        def find_message(id)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::Message) && entry.id.name == id }
-        end
-
-        # Helper method to find a group comment by content
-        def find_group_comment(content)
-          result.body.find {|entry| entry.is_a?(Foxtail::AST::GroupComment) && entry.content == content }
-        end
-
         # The "Literal text" check
         skip "Group comments are not being parsed correctly"
 
