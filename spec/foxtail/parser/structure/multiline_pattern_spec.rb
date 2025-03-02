@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with multiline pattern", ftl_fixture: "structure/multiline_pattern" do
+      include_examples "a valid FTL resource"
       it "parses multiline patterns correctly" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains multiple entries
         expect(result.body.size).to be > 1
 

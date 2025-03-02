@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with leading whitespace", ftl_fixture: "structure/whitespace_leading" do
+      include_examples "a valid FTL resource"
       it "parses leading whitespace correctly" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains four Messages
         expect(result.body.size).to eq(4)
         expect(result.body.all?(Foxtail::AST::Message)).to be true

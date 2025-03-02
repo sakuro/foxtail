@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with mixed entries", ftl_fixture: "reference/mixed_entries" do
+      include_examples "a valid FTL resource"
       it "correctly parses a mix of different entry types" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify the standalone comment
         standalone_comment = result.body[0]
         expect(standalone_comment).to be_a(Foxtail::AST::Comment)

@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with placeables", ftl_fixture: "reference/placeables" do
+      include_examples "a valid FTL resource"
       it "correctly parses placeables" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains three messages and four comments
         expect(result.body.size).to eq(11)
         expect(result.body.count {|entry| entry.is_a?(Foxtail::AST::Message) }).to eq(3)

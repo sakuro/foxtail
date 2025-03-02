@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with empty pattern in variants", ftl_fixture: "structure/variant_with_empty_pattern" do
+      include_examples "a valid FTL resource"
       it "correctly handles variants with empty patterns" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains a Message and a Junk
         expect(result.body.size).to eq(2)
         expect(result.body[0]).to be_a(Foxtail::AST::Message)

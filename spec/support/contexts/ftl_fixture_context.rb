@@ -19,31 +19,4 @@ RSpec.shared_context "with ftl fixture" do
   # Parser and parse result
   let(:parser) { Foxtail::Parser.new }
   let(:result) { parser.parse(source) }
-
-  # Helper methods for finding specific entries in the parsed result
-
-  # Find a message by ID
-  def find_message(id)
-    result.body.find {|entry| entry.is_a?(Foxtail::AST::Message) && entry.id.name == id }
-  end
-
-  # Find a term by ID
-  def find_term(id)
-    result.body.find {|entry| entry.is_a?(Foxtail::AST::Term) && entry.id.name == id }
-  end
-
-  # Find a comment by content
-  def find_comment(content)
-    result.body.find {|entry| entry.is_a?(Foxtail::AST::Comment) && entry.content == content }
-  end
-
-  # Find a group comment by content
-  def find_group_comment(content)
-    result.body.find {|entry| entry.is_a?(Foxtail::AST::GroupComment) && entry.content == content }
-  end
-
-  # Find a resource comment by content
-  def find_resource_comment(content)
-    result.body.find {|entry| entry.is_a?(Foxtail::AST::ResourceComment) && entry.content == content }
-  end
 end

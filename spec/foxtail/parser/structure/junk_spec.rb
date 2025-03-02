@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with junk", ftl_fixture: "structure/junk" do
+      include_examples "a valid FTL resource"
       it "parses junk entries correctly" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that the body contains 9 entries (8 Junk and 1 Message)
         expect(result.body.size).to eq(9)
         expect(result.body.count {|entry| entry.is_a?(Foxtail::AST::Junk) }).to eq(8)

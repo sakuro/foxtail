@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with messages", ftl_fixture: "reference/messages" do
+      include_examples "a valid FTL resource"
       it "correctly parses different message formats" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify simple message
         key01 = find_message("key01")
         expect(key01).not_to be_nil

@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with number literals", ftl_fixture: "reference/numbers" do
+      include_examples "a valid FTL resource"
       it "correctly parses number literals" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Helper method to get the number literal value from a message
         def get_number_value(message)
           message.value.elements[0].expression.value

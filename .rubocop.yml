@@ -40,6 +40,7 @@ Metrics/AbcSize:
     - 'lib/foxtail/parser.rb'
     - 'lib/foxtail/stream.rb'
     - 'lib/foxtail/errors.rb'
+    - 'spec/support/helpers/ftl_helpers.rb'
 
 Metrics/BlockLength:
   Exclude:
@@ -64,18 +65,21 @@ Metrics/CyclomaticComplexity:
     - 'lib/foxtail/parser.rb'
     - 'lib/foxtail/stream.rb'
     - 'lib/foxtail/errors.rb'
+    - 'spec/support/helpers/ftl_helpers.rb'
 
 Metrics/MethodLength:
   Exclude:
     - 'lib/foxtail/parser.rb'
     - 'lib/foxtail/stream.rb'
     - 'lib/foxtail/errors.rb'
+    - 'spec/support/helpers/ftl_helpers.rb'
 
 Metrics/PerceivedComplexity:
   Exclude:
     - 'lib/foxtail/parser.rb'
     - 'lib/foxtail/stream.rb'
     - 'lib/foxtail/errors.rb'
+    - 'spec/support/helpers/ftl_helpers.rb'
 
 # Disable Naming/MethodParameterName for parser-related files
 # Parser implementations often use short parameter names for brevity and clarity

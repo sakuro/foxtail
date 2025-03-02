@@ -10,6 +10,7 @@
 Lint/DuplicateBranch:
   Exclude:
     - 'lib/foxtail/parser.rb'
+    - 'spec/support/helpers/ftl_helpers.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AutoCorrect, EnforcedStyle, AllowComments.
@@ -17,3 +18,10 @@ Lint/DuplicateBranch:
 Style/EmptyElse:
   Exclude:
     - 'lib/foxtail/parser.rb'
+
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: if, case, both
+Style/MissingElse:
+  Exclude:
+    - 'spec/support/helpers/ftl_helpers.rb'

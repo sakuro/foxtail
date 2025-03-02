@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with empty pattern in attributes", ftl_fixture: "structure/attribute_with_empty_pattern" do
+      include_examples "a valid FTL resource"
       it "treats attributes with empty patterns as junk" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # Verify that all entries are Junk
         expect(result.body.size).to eq(5)
         expect(result.body.all?(Foxtail::AST::Junk)).to be true

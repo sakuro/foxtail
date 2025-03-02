@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   describe "#parse" do
     context "with escaped characters", ftl_fixture: "reference/escaped_characters" do
+      include_examples "a valid FTL resource"
       it "correctly parses escaped characters" do
-        # Verify that the result is a Resource object
-        expect(result).to be_a(Foxtail::AST::Resource)
-
         # The "Literal text" check
         skip "Group comments are not being parsed correctly"
 
