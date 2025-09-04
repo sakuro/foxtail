@@ -50,11 +50,10 @@ module FixtureHelper
   # Parse FTL source with Ruby parser (when implemented)
   def self.parse_ftl_with_ruby(source)
     # TODO: Replace with actual Foxtail::Parser when implemented
-    {
-      "type" => "Resource",
-      "body" => [],
-      "span" => { "type" => "Span", "start" => 0, "end" => source.length }
-    }
+    # For now, create a proper AST using our Ruby classes
+    resource = Foxtail::Resource.new([])
+    resource.add_span(0, source.length)
+    resource.to_h
   end
 
   # Deep comparison of AST structures
