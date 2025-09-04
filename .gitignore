@@ -10,3 +10,7 @@
 # rspec failure tracking
 .rspec_status
 Gemfile.lock
+
+# Serena MCP - ignore everything except project.yml
+.serena/*
+!.serena/project.yml
