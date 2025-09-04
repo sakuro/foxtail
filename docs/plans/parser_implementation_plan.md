@@ -93,12 +93,30 @@ Achieve 100% identical AST generation with fluent.js test fixtures:
 - **Continuous Validation**: Run fixture tests after each major change
 - **Methodical Approach**: Complete each phase before moving to next
 
+## 🏗️ Architecture Decisions
+
+### Class Design Decision (2024)
+**TypeScript → Ruby Mapping:**
+- `ParserStream` (base class) → *Skipped* (unnecessary abstraction)
+- `FluentParserStream` → `Foxtail::Stream` (direct mapping)
+
+**Rationale:**
+- **Simplification**: Avoid unnecessary base class since Ruby implementation only needs FluentParserStream functionality
+- **Direct Translation**: Map fluent.js's primary stream class directly to Ruby equivalent
+- **Ruby Conventions**: Use `Foxtail::` namespace for clean organization
+- **Efficiency**: Eliminate inheritance overhead for unused base functionality
+
+### Implementation Status
+- ✅ **Test Framework**: 62 fixture validation system established
+- ✅ **Baseline Measurement**: 2/62 perfect matches (3.2%) with placeholder parser
+- 🚧 **Ruby Implementation**: Starting with `Foxtail::Stream` class
+
 ## 📁 File Structure Plan
 ```
 lib/foxtail/
 ├── ast.rb          # AST node classes
 ├── parser.rb       # Main FluentParser class  
-├── stream.rb       # FluentParserStream class
+├── stream.rb       # Foxtail::Stream class (FluentParserStream equivalent)
 ├── errors.rb       # Error classes and codes
 └── version.rb      # Existing version file
 ```
@@ -113,3 +131,29 @@ lib/foxtail/
 - **Primary**: 100% identical AST generation (fixtures_structure)
 - **Secondary**: 100% identical AST generation (fixtures_reference)
 - **Tertiary**: Performance within 2x of original Ruby parser
+
+## 🎯 Implementation Progress
+
+### Completed ✅
+- [x] **Project Analysis** (fluent.js architecture study)
+- [x] **Test Framework** (62-fixture automated comparison)
+- [x] **Baseline Measurement** (2/62 matches with placeholder)
+- [x] **Architecture Design** (class mapping decisions)
+
+### In Progress 🚧
+- [ ] **Foxtail::Stream** (character stream processing)
+- [ ] **AST Base Classes** (BaseNode, SyntaxNode hierarchy)
+- [ ] **Core Parser Methods** (entry parsing loop)
+
+### Planned 📋
+- [ ] **Pattern System** (TextElement, Placeable parsing)
+- [ ] **Expression Parsing** (SelectExpression, References)
+- [ ] **Error Handling** (ParseError, Junk creation)
+- [ ] **Comment System** (attachment logic)
+- [ ] **Final Validation** (100% fixture compatibility)
+
+### Milestone Targets
+- **Phase 1 Complete**: Basic parsing (10+ fixtures passing)
+- **Phase 2 Complete**: Advanced features (30+ fixtures passing)
+- **Phase 3 Complete**: Error handling (50+ fixtures passing)
+- **Final Goal**: 62/62 fixtures passing (100% compatibility)
