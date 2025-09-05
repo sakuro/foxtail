@@ -2,11 +2,11 @@
 
 require "spec_helper"
 
-RSpec.describe Foxtail::BaseNode do
+RSpec.describe Foxtail::Parser::AST::BaseNode do
   describe "basic functionality" do
-    let(:node1) { Foxtail::Identifier.new("hello") }
-    let(:node2) { Foxtail::Identifier.new("hello") }
-    let(:node3) { Foxtail::Identifier.new("world") }
+    let(:node1) { Foxtail::Parser::AST::Identifier.new("hello") }
+    let(:node2) { Foxtail::Parser::AST::Identifier.new("hello") }
+    let(:node3) { Foxtail::Parser::AST::Identifier.new("world") }
 
     it "sets type automatically from class name" do
       expect(node1.type).to eq("Identifier")
@@ -25,18 +25,18 @@ RSpec.describe Foxtail::BaseNode do
   end
 end
 
-RSpec.describe Foxtail::SyntaxNode do
-  let(:node) { Foxtail::TextElement.new("hello") }
+RSpec.describe Foxtail::Parser::AST::SyntaxNode do
+  let(:node) { Foxtail::Parser::AST::TextElement.new("hello") }
 
   it "can add span information" do
     node.add_span(0, 5)
-    expect(node.span).to be_a(Foxtail::Span)
+    expect(node.span).to be_a(Foxtail::Parser::AST::Span)
     expect(node.span.start).to eq(0)
     expect(node.span.end).to eq(5)
   end
 end
 
-RSpec.describe Foxtail::Span do
+RSpec.describe Foxtail::Parser::AST::Span do
   let(:span) { described_class.new(10, 20) }
 
   it "stores start and end positions" do
@@ -55,7 +55,7 @@ RSpec.describe Foxtail::Span do
   end
 end
 
-RSpec.describe Foxtail::Resource do
+RSpec.describe Foxtail::Parser::AST::Resource do
   it "initializes with empty body by default" do
     resource = described_class.new
     expect(resource.type).to eq("Resource")
@@ -63,13 +63,13 @@ RSpec.describe Foxtail::Resource do
   end
 
   it "accepts initial body" do
-    message = Foxtail::Message.new(Foxtail::Identifier.new("test"))
+    message = Foxtail::Parser::AST::Message.new(Foxtail::Parser::AST::Identifier.new("test"))
     resource = described_class.new([message])
     expect(resource.body).to eq([message])
   end
 
   it "converts to hash with nested nodes" do
-    message = Foxtail::Message.new(Foxtail::Identifier.new("test"))
+    message = Foxtail::Parser::AST::Message.new(Foxtail::Parser::AST::Identifier.new("test"))
     resource = described_class.new([message])
     hash = resource.to_h
 
@@ -81,9 +81,9 @@ RSpec.describe Foxtail::Resource do
   end
 end
 
-RSpec.describe Foxtail::Message do
-  let(:id) { Foxtail::Identifier.new("hello") }
-  let(:pattern) { Foxtail::Pattern.new([Foxtail::TextElement.new("Hello world")]) }
+RSpec.describe Foxtail::Parser::AST::Message do
+  let(:id) { Foxtail::Parser::AST::Identifier.new("hello") }
+  let(:pattern) { Foxtail::Parser::AST::Pattern.new([Foxtail::Parser::AST::TextElement.new("Hello world")]) }
 
   it "initializes with required id" do
     message = described_class.new(id)
@@ -95,8 +95,8 @@ RSpec.describe Foxtail::Message do
   end
 
   it "accepts optional parameters" do
-    attribute = Foxtail::Attribute.new(Foxtail::Identifier.new("attr"), pattern)
-    comment = Foxtail::Comment.new("A comment")
+    attribute = Foxtail::Parser::AST::Attribute.new(Foxtail::Parser::AST::Identifier.new("attr"), pattern)
+    comment = Foxtail::Parser::AST::Comment.new("A comment")
     
     message = described_class.new(id, pattern, [attribute], comment)
     expect(message.value).to eq(pattern)
@@ -105,9 +105,9 @@ RSpec.describe Foxtail::Message do
   end
 end
 
-RSpec.describe Foxtail::Term do
-  let(:id) { Foxtail::Identifier.new("brand-name") }
-  let(:pattern) { Foxtail::Pattern.new([Foxtail::TextElement.new("Firefox")]) }
+RSpec.describe Foxtail::Parser::AST::Term do
+  let(:id) { Foxtail::Parser::AST::Identifier.new("brand-name") }
+  let(:pattern) { Foxtail::Parser::AST::Pattern.new([Foxtail::Parser::AST::TextElement.new("Firefox")]) }
 
   it "initializes with required id and value" do
     term = described_class.new(id, pattern)
@@ -119,11 +119,11 @@ RSpec.describe Foxtail::Term do
   end
 end
 
-RSpec.describe Foxtail::Pattern do
+RSpec.describe Foxtail::Parser::AST::Pattern do
   let(:elements) do
     [
-      Foxtail::TextElement.new("Hello "),
-      Foxtail::Placeable.new(Foxtail::VariableReference.new(Foxtail::Identifier.new("name")))
+      Foxtail::Parser::AST::TextElement.new("Hello "),
+      Foxtail::Parser::AST::Placeable.new(Foxtail::Parser::AST::VariableReference.new(Foxtail::Parser::AST::Identifier.new("name")))
     ]
   end
 
@@ -134,7 +134,7 @@ RSpec.describe Foxtail::Pattern do
   end
 end
 
-RSpec.describe Foxtail::TextElement do
+RSpec.describe Foxtail::Parser::AST::TextElement do
   let(:element) { described_class.new("Hello world") }
 
   it "stores text value" do
@@ -143,8 +143,8 @@ RSpec.describe Foxtail::TextElement do
   end
 end
 
-RSpec.describe Foxtail::Placeable do
-  let(:expr) { Foxtail::VariableReference.new(Foxtail::Identifier.new("name")) }
+RSpec.describe Foxtail::Parser::AST::Placeable do
+  let(:expr) { Foxtail::Parser::AST::VariableReference.new(Foxtail::Parser::AST::Identifier.new("name")) }
   let(:placeable) { described_class.new(expr) }
 
   it "wraps an expression" do
@@ -153,7 +153,7 @@ RSpec.describe Foxtail::Placeable do
   end
 end
 
-RSpec.describe Foxtail::Identifier do
+RSpec.describe Foxtail::Parser::AST::Identifier do
   let(:identifier) { described_class.new("message-id") }
 
   it "stores identifier name" do
@@ -162,7 +162,7 @@ RSpec.describe Foxtail::Identifier do
   end
 end
 
-RSpec.describe Foxtail::StringLiteral do
+RSpec.describe Foxtail::Parser::AST::StringLiteral do
   it "handles simple strings" do
     literal = described_class.new("Hello")
     result = literal.parse
@@ -194,7 +194,7 @@ RSpec.describe Foxtail::StringLiteral do
   end
 end
 
-RSpec.describe Foxtail::NumberLiteral do
+RSpec.describe Foxtail::Parser::AST::NumberLiteral do
   it "parses integer literals" do
     literal = described_class.new("42")
     result = literal.parse
@@ -214,8 +214,8 @@ RSpec.describe Foxtail::NumberLiteral do
   end
 end
 
-RSpec.describe Foxtail::VariableReference do
-  let(:id) { Foxtail::Identifier.new("userName") }
+RSpec.describe Foxtail::Parser::AST::VariableReference do
+  let(:id) { Foxtail::Parser::AST::Identifier.new("userName") }
   let(:var_ref) { described_class.new(id) }
 
   it "references a variable" do
@@ -224,9 +224,9 @@ RSpec.describe Foxtail::VariableReference do
   end
 end
 
-RSpec.describe Foxtail::MessageReference do
-  let(:id) { Foxtail::Identifier.new("hello") }
-  let(:attribute) { Foxtail::Identifier.new("title") }
+RSpec.describe Foxtail::Parser::AST::MessageReference do
+  let(:id) { Foxtail::Parser::AST::Identifier.new("hello") }
+  let(:attribute) { Foxtail::Parser::AST::Identifier.new("title") }
 
   it "references a message without attribute" do
     msg_ref = described_class.new(id)
@@ -242,17 +242,17 @@ RSpec.describe Foxtail::MessageReference do
   end
 end
 
-RSpec.describe Foxtail::SelectExpression do
-  let(:selector) { Foxtail::VariableReference.new(Foxtail::Identifier.new("count")) }
+RSpec.describe Foxtail::Parser::AST::SelectExpression do
+  let(:selector) { Foxtail::Parser::AST::VariableReference.new(Foxtail::Parser::AST::Identifier.new("count")) }
   let(:variants) do
     [
-      Foxtail::Variant.new(
-        Foxtail::Identifier.new("one"),
-        Foxtail::Pattern.new([Foxtail::TextElement.new("One item")])
+      Foxtail::Parser::AST::Variant.new(
+        Foxtail::Parser::AST::Identifier.new("one"),
+        Foxtail::Parser::AST::Pattern.new([Foxtail::Parser::AST::TextElement.new("One item")])
       ),
-      Foxtail::Variant.new(
-        Foxtail::Identifier.new("other"),
-        Foxtail::Pattern.new([Foxtail::TextElement.new("Many items")]),
+      Foxtail::Parser::AST::Variant.new(
+        Foxtail::Parser::AST::Identifier.new("other"),
+        Foxtail::Parser::AST::Pattern.new([Foxtail::Parser::AST::TextElement.new("Many items")]),
         true # default
       )
     ]
@@ -266,9 +266,9 @@ RSpec.describe Foxtail::SelectExpression do
   end
 end
 
-RSpec.describe Foxtail::Variant do
-  let(:key) { Foxtail::Identifier.new("one") }
-  let(:value) { Foxtail::Pattern.new([Foxtail::TextElement.new("One item")]) }
+RSpec.describe Foxtail::Parser::AST::Variant do
+  let(:key) { Foxtail::Parser::AST::Identifier.new("one") }
+  let(:value) { Foxtail::Parser::AST::Pattern.new([Foxtail::Parser::AST::TextElement.new("One item")]) }
 
   it "creates a variant without default" do
     variant = described_class.new(key, value)
@@ -284,7 +284,7 @@ RSpec.describe Foxtail::Variant do
   end
 end
 
-RSpec.describe Foxtail::Comment do
+RSpec.describe Foxtail::Parser::AST::Comment do
   let(:comment) { described_class.new("This is a comment") }
 
   it "stores comment content" do
@@ -293,7 +293,7 @@ RSpec.describe Foxtail::Comment do
   end
 end
 
-RSpec.describe Foxtail::Junk do
+RSpec.describe Foxtail::Parser::AST::Junk do
   let(:junk) { described_class.new("unparseable content") }
 
   it "stores junk content" do
@@ -303,7 +303,7 @@ RSpec.describe Foxtail::Junk do
   end
 
   it "accepts annotations" do
-    annotation = Foxtail::Annotation.new("E0001", [], "Parse error")
+    annotation = Foxtail::Parser::AST::Annotation.new("E0001", [], "Parse error")
     junk = described_class.new("bad content", [annotation])
     expect(junk.annotations).to eq([annotation])
   end
@@ -311,20 +311,20 @@ end
 
 RSpec.describe "AST node equality with spans" do
   it "ignores span in equality comparison by default" do
-    node1 = Foxtail::TextElement.new("hello")
+    node1 = Foxtail::Parser::AST::TextElement.new("hello")
     node1.add_span(0, 5)
     
-    node2 = Foxtail::TextElement.new("hello")
+    node2 = Foxtail::Parser::AST::TextElement.new("hello")
     node2.add_span(10, 15)
     
     expect(node1 == node2).to be true # Should ignore different spans
   end
 
   it "can include span in equality comparison" do
-    node1 = Foxtail::TextElement.new("hello")
+    node1 = Foxtail::Parser::AST::TextElement.new("hello")
     node1.add_span(0, 5)
     
-    node2 = Foxtail::TextElement.new("hello")
+    node2 = Foxtail::Parser::AST::TextElement.new("hello")
     node2.add_span(10, 15)
     
     expect(node1.==(node2, [])).to be false # Should consider spans when no fields ignored

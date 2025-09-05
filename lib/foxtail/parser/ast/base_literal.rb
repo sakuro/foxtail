@@ -1,0 +1,23 @@
+# frozen_string_literal: true
+
+module Foxtail
+  class Parser
+    module AST
+      class BaseLiteral < SyntaxNode
+        attr_accessor :value
+
+        def initialize(value)
+          super()
+          # The "value" field contains the exact contents of the literal,
+          # character-for-character.
+          @value = value
+        end
+
+        # Abstract method - subclasses must implement
+        def parse
+          raise NotImplementedError, "Subclasses must implement parse method"
+        end
+      end
+    end
+  end
+end

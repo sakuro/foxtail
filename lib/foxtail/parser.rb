@@ -28,17 +28,17 @@ module Foxtail
 
         # Regular Comments require special logic. Comments may be attached to
         # Messages or Terms if they are followed immediately by them. However
-        # they should parse as standalone when they're followed by Junk.
-        # Consequently, we only attach Comments once we know that the Message
-        # or the Term parsed successfully.
-        if entry.is_a?(Comment) && blank_lines.length == 0 && ps.current_char
+        # they should parse as standalone when they're followed by AST::Junk.
+        # Consequently, we only attach Comments once we know that the AST::Message
+        # or the AST::Term parsed successfully.
+        if entry.is_a?(AST::Comment) && blank_lines.length == 0 && ps.current_char
           # Stash the comment and decide what to do with it in the next pass.
           last_comment = entry
           next
         end
 
         if last_comment
-          if entry.is_a?(Message) || entry.is_a?(Term)
+          if entry.is_a?(AST::Message) || entry.is_a?(AST::Term)
             entry.comment = last_comment
             if @with_spans && entry.span && last_comment.span
               entry.span.start = last_comment.span.start
@@ -54,7 +54,7 @@ module Foxtail
         entries << entry
       end
 
-      res = Resource.new(entries)
+      res = AST::Resource.new(entries)
       if @with_spans
         res.add_span(0, ps.index)
       end
@@ -62,14 +62,14 @@ module Foxtail
       res
     end
 
-    # Parse the first Message or Term in source
+    # Parse the first AST::Message or AST::Term in source
     def parse_entry(source)
       ps = Stream.new(source)
       ps.skip_blank_block
 
       while ps.current_char == "#"
         skipped = get_entry_or_junk(ps)
-        return skipped if skipped.is_a?(Junk)
+        return skipped if skipped.is_a?(AST::Junk)
         ps.skip_blank_block
       end
 
@@ -95,15 +95,15 @@ module Foxtail
           error_index = next_entry_start
         end
 
-        # Create a Junk instance
+        # Create a AST::Junk instance
         slice = ps.string[entry_start_pos...next_entry_start]
-        junk = Junk.new(slice)
+        junk = AST::Junk.new(slice)
         
         if @with_spans
           junk.add_span(entry_start_pos, next_entry_start)
         end
         
-        annot = Annotation.new(err.code, err.args, err.message)
+        annot = AST::Annotation.new(err.code, err.args, err.message)
         if @with_spans
           annot.add_span(error_index, error_index)
         end
@@ -162,11 +162,11 @@ module Foxtail
 
       comment_class = case level
                       when 0
-                        Comment
+                        AST::Comment
                       when 1
-                        GroupComment
+                        AST::GroupComment
                       else
-                        ResourceComment
+                        AST::ResourceComment
                       end
       
       result = comment_class.new(content)
@@ -188,7 +188,7 @@ module Foxtail
         raise ParseError.new("E0005", id.name)
       end
 
-      result = Message.new(id, value, attrs)
+      result = AST::Message.new(id, value, attrs)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -207,7 +207,7 @@ module Foxtail
       end
 
       attrs = get_attributes(ps)
-      result = Term.new(id, value, attrs)
+      result = AST::Term.new(id, value, attrs)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -225,7 +225,7 @@ module Foxtail
         raise ParseError.new("E0012")
       end
 
-      result = Attribute.new(key, value)
+      result = AST::Attribute.new(key, value)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -254,7 +254,7 @@ module Foxtail
         name += ch
       end
 
-      result = Identifier.new(name)
+      result = AST::Identifier.new(name)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -297,7 +297,7 @@ module Foxtail
         raise ParseError.new("E0012")
       end
 
-      result = Variant.new(key, value, default_index)
+      result = AST::Variant.new(key, value, default_index)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -357,7 +357,7 @@ module Foxtail
         value += ".#{get_digits(ps)}"
       end
 
-      result = NumberLiteral.new(value)
+      result = AST::NumberLiteral.new(value)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -425,14 +425,14 @@ module Foxtail
       end
 
       dedented = dedent(elements, common_indent_length)
-      result = Pattern.new(dedented)
+      result = AST::Pattern.new(dedented)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
 
     # Create a token representing an indent. It's not part of the AST and it will
     # be trimmed and merged into adjacent TextElements, or turned into a new
-    # TextElement, if it's surrounded by two Placeables.
+    # AST::TextElement, if it's surrounded by two Placeables.
     def get_indent(ps, value, start)
       # Ruby doesn't need a separate Indent class - we'll use a simple struct
       indent_struct = Struct.new(:value, :start, :end, :span) do
@@ -461,7 +461,7 @@ module Foxtail
       trimmed = []
 
       elements.each do |element|
-        if element.is_a?(Placeable)
+        if element.is_a?(AST::Placeable)
           trimmed << element
           next
         end
@@ -473,9 +473,9 @@ module Foxtail
         end
 
         prev = trimmed.last
-        if prev&.is_a?(TextElement)
+        if prev&.is_a?(AST::TextElement)
           # Join adjacent TextElements by replacing them with their sum.
-          sum = TextElement.new(prev.value + element.value)
+          sum = AST::TextElement.new(prev.value + element.value)
           if @with_spans && prev.span && element.span
             sum.add_span(prev.span.start, element.span.end)
           end
@@ -484,9 +484,9 @@ module Foxtail
         end
 
         if element.is_a?(Indent)
-          # If the indent hasn't been merged into a preceding TextElement,
-          # convert it into a new TextElement.
-          text_element = TextElement.new(element.value)
+          # If the indent hasn't been merged into a preceding AST::TextElement,
+          # convert it into a new AST::TextElement.
+          text_element = AST::TextElement.new(element.value)
           if @with_spans && element.span
             text_element.add_span(element.span.start, element.span.end)
           end
@@ -496,9 +496,9 @@ module Foxtail
         trimmed << element
       end
 
-      # Trim trailing whitespace from the Pattern.
+      # Trim trailing whitespace from the AST::Pattern.
       last_element = trimmed.last
-      if last_element.is_a?(TextElement)
+      if last_element.is_a?(AST::TextElement)
         last_element.value = last_element.value.gsub(TRAILING_WS_RE, "")
         trimmed.pop if last_element.value.empty?
       end
@@ -526,7 +526,7 @@ module Foxtail
         ps.next
       end
 
-      result = TextElement.new(buffer)
+      result = AST::TextElement.new(buffer)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -539,7 +539,7 @@ module Foxtail
       expression = get_expression(ps)
       ps.expect_char("}")
       
-      result = Placeable.new(expression)
+      result = AST::Placeable.new(expression)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -566,17 +566,17 @@ module Foxtail
 
         # Validate selector expression according to
         # abstract.js in the Fluent specification
-        if selector.is_a?(MessageReference)
+        if selector.is_a?(AST::MessageReference)
           if selector.attribute.nil?
             raise ParseError.new("E0016")
           else
             raise ParseError.new("E0018")
           end
-        elsif selector.is_a?(TermReference)
+        elsif selector.is_a?(AST::TermReference)
           if selector.attribute.nil?
             raise ParseError.new("E0017")
           end
-        elsif selector.is_a?(Placeable)
+        elsif selector.is_a?(AST::Placeable)
           raise ParseError.new("E0029")
         end
 
@@ -587,12 +587,12 @@ module Foxtail
         ps.expect_line_end
 
         variants = get_variants(ps)
-        result = SelectExpression.new(selector, variants)
+        result = AST::SelectExpression.new(selector, variants)
         add_span_if_enabled(result, ps, start_pos)
         return result
       end
 
-      if selector.is_a?(TermReference) && !selector.attribute.nil?
+      if selector.is_a?(AST::TermReference) && !selector.attribute.nil?
         raise ParseError.new("E0019")
       end
 
@@ -617,7 +617,7 @@ module Foxtail
       if ps.current_char == "$"
         ps.next
         id = get_identifier(ps)
-        result = VariableReference.new(id)
+        result = AST::VariableReference.new(id)
         add_span_if_enabled(result, ps, start_pos)
         return result
       end
@@ -639,7 +639,7 @@ module Foxtail
           args = get_call_arguments(ps)
         end
 
-        result = TermReference.new(id, attr, args)
+        result = AST::TermReference.new(id, attr, args)
         add_span_if_enabled(result, ps, start_pos)
         return result
       end
@@ -656,7 +656,7 @@ module Foxtail
 
           ps.skip_to_peek
           args = get_call_arguments(ps)
-          result = FunctionReference.new(id, args)
+          result = AST::FunctionReference.new(id, args)
           add_span_if_enabled(result, ps, start_pos)
           return result
         end
@@ -667,7 +667,7 @@ module Foxtail
           attr = get_identifier(ps)
         end
 
-        result = MessageReference.new(id, attr)
+        result = AST::MessageReference.new(id, attr)
         add_span_if_enabled(result, ps, start_pos)
         return result
       end
@@ -685,12 +685,12 @@ module Foxtail
         return exp
       end
 
-      if exp.is_a?(MessageReference) && exp.attribute.nil?
+      if exp.is_a?(AST::MessageReference) && exp.attribute.nil?
         ps.next
         ps.skip_blank
 
         value = get_literal(ps)
-        result = NamedArgument.new(exp.id, value)
+        result = AST::NamedArgument.new(exp.id, value)
         add_span_if_enabled(result, ps, start_pos)
         return result
       end
@@ -712,7 +712,7 @@ module Foxtail
         break if ps.current_char == ")"
 
         arg = get_call_argument(ps)
-        if arg.is_a?(NamedArgument)
+        if arg.is_a?(AST::NamedArgument)
           if argument_names.include?(arg.name.name)
             raise ParseError.new("E0022")
           end
@@ -736,7 +736,7 @@ module Foxtail
       end
 
       ps.expect_char(")")
-      result = CallArguments.new(positional, named)
+      result = AST::CallArguments.new(positional, named)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
@@ -762,7 +762,7 @@ module Foxtail
 
       ps.expect_char('"')
       
-      result = StringLiteral.new(value)
+      result = AST::StringLiteral.new(value)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
