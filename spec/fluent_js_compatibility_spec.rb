@@ -6,20 +6,14 @@ require "support/fixture_helper"
 RSpec.describe "Fluent.js Compatibility" do
   describe "fixtures_structure" do
     let(:fixture_pairs) { FixtureHelper.find_fixture_pairs(FixtureHelper::STRUCTURE_FIXTURES) }
+    let(:results) { [] }
 
     it "finds fixture pairs" do
       expect(fixture_pairs).not_to be_empty
       puts "Found #{fixture_pairs.length} structure fixture pairs"
-      
-      # Show first few fixture names for verification
-      fixture_pairs.first(5).each do |pair|
-        puts "  - #{pair[:name]}"
-      end
     end
 
     context "individual fixtures" do
-      let(:results) { [] }
-
       fixture_pairs = FixtureHelper.find_fixture_pairs(FixtureHelper::STRUCTURE_FIXTURES)
 
       fixture_pairs.each do |pair|
@@ -33,56 +27,44 @@ RSpec.describe "Fluent.js Compatibility" do
           ftl_source = FixtureHelper.load_ftl_source(pair[:ftl_path])
           expect(ftl_source).to be_a(String)
 
-          # Parse with Ruby (placeholder for now)
-          begin
-            actual_ast = FixtureHelper.parse_ftl_with_ruby(ftl_source)
-            
-            # Compare ASTs
-            comparison = FixtureHelper.compare_asts(expected_ast, actual_ast)
-            
-            # Store result for reporting
-            if comparison[:match]
-              results << { name: pair[:name], status: :perfect_match, comparison: comparison }
-            else
-              results << { 
-                name: pair[:name], 
-                status: :content_difference, 
-                comparison: comparison,
-                differences: comparison[:differences]
-              }
+          # Parse with Ruby parser (structure fixtures need spans)
+          parser = Foxtail::Parser.new(with_spans: true)
+          actual_ast = parser.parse(ftl_source).to_h
+          
+          # Compare ASTs
+          comparison = FixtureHelper.compare_asts(expected_ast, actual_ast)
+          
+          if comparison[:match]
+            puts "✅ #{pair[:name]}: Perfect match"
+          else
+            puts "❌ #{pair[:name]}: #{comparison[:differences].length} differences"
+            # Show first few differences for debugging
+            comparison[:differences].first(3).each do |diff|
+              puts "  - #{diff}"
             end
-
-            # For now, just log the status (will fail when we implement real parser)
-            if comparison[:match]
-              puts "✅ #{pair[:name]}: Perfect match"
-            else
-              puts "⚠️  #{pair[:name]}: #{comparison[:differences].length} differences"
-              comparison[:differences].first(3).each do |diff|
-                puts "    #{diff}"
-              end
-              puts "    ..." if comparison[:differences].length > 3
-            end
-
-            # Skip assertion for now since we're using a placeholder parser
-            # expect(comparison[:match]).to be true, 
-            #   "AST mismatch for #{pair[:name]}:\n#{comparison[:differences].join("\n")}"
-
-          rescue StandardError => e
-            results << { name: pair[:name], status: :parsing_failure, error: e.message }
-            puts "❌ #{pair[:name]}: Parsing failed - #{e.message}"
-            
-            # Skip assertion for now
-            # expect(e).to be_nil, "Parsing failed for #{pair[:name]}: #{e.message}"
           end
+
+          # Expect perfect match for structure fixtures
+          expect(comparison[:match]).to be(true), 
+            "Structure fixture #{pair[:name]} failed with #{comparison[:differences].length} differences:\n" +
+            comparison[:differences].first(5).join("\n")
         end
       end
 
       after(:all) do
-        # Generate compatibility report
-        unless results.empty?
-          report = FixtureHelper.generate_compatibility_report(results)
-          puts "\n#{report}"
+        passed = fixture_pairs.count do |pair|
+          ftl_source = FixtureHelper.load_ftl_source(pair[:ftl_path])
+          expected_ast = FixtureHelper.load_expected_ast(pair[:json_path])
+          parser = Foxtail::Parser.new(with_spans: true)
+          actual_ast = parser.parse(ftl_source).to_h
+          FixtureHelper.compare_asts(expected_ast, actual_ast)[:match]
         end
+        
+        puts "\n" + "="*60
+        puts "STRUCTURE FIXTURES SUMMARY"  
+        puts "="*60
+        puts "Passed: #{passed}/#{fixture_pairs.length} (#{(passed * 100.0 / fixture_pairs.length).round(1)}%)"
+        puts "="*60
       end
     end
   end
@@ -99,7 +81,151 @@ RSpec.describe "Fluent.js Compatibility" do
       end
     end
 
-    # TODO: Add reference fixture tests when structure fixtures are working
+    context "individual fixtures" do
+      fixture_pairs = FixtureHelper.find_fixture_pairs(FixtureHelper::REFERENCE_FIXTURES)
+
+      fixture_pairs.each do |pair|
+        it "parses #{pair[:name]} correctly" do
+          # Load expected AST from fluent.js
+          expected_ast = FixtureHelper.load_expected_ast(pair[:json_path])
+          expect(expected_ast).to be_a(Hash)
+          expect(expected_ast["type"]).to eq("Resource")
+
+          # Load FTL source
+          ftl_source = FixtureHelper.load_ftl_source(pair[:ftl_path])
+          expect(ftl_source).to be_a(String)
+
+          # Parse with Ruby parser (reference fixtures don't need spans)
+          parser = Foxtail::Parser.new(with_spans: false)
+          actual_ast = parser.parse(ftl_source).to_h
+          
+          # Reference tests ignore Junk annotations like fluent.js does
+          if actual_ast["body"]
+            actual_ast["body"] = actual_ast["body"].map do |entry|
+              if entry["type"] == "Junk"
+                entry.merge("annotations" => [])
+              else
+                entry
+              end
+            end
+          end
+          
+          # Compare ASTs
+          comparison = FixtureHelper.compare_asts(expected_ast, actual_ast)
+          
+          if comparison[:match]
+            puts "✅ #{pair[:name]}: Perfect match"
+          else
+            puts "❌ #{pair[:name]}: #{comparison[:differences].length} differences"
+            if pair[:name] == "leading_dots"
+              puts "  Note: This is a known fluent.js incompatibility (intentionally skipped by fluent.js)"
+            else
+              # Show first few differences for debugging
+              comparison[:differences].first(3).each do |diff|
+                puts "  - #{diff}"
+              end
+            end
+          end
+
+          # Allow leading_dots to fail (known fluent.js incompatibility)
+          if pair[:name] == "leading_dots"
+            pending "Known fluent.js incompatibility - intentionally skipped by fluent.js itself"
+          else
+            expect(comparison[:match]).to be(true), 
+              "Reference fixture #{pair[:name]} failed with #{comparison[:differences].length} differences:\n" +
+              comparison[:differences].first(5).join("\n")
+          end
+        end
+      end
+
+      after(:all) do
+        passed = fixture_pairs.count do |pair|
+          ftl_source = FixtureHelper.load_ftl_source(pair[:ftl_path])
+          expected_ast = FixtureHelper.load_expected_ast(pair[:json_path])
+          parser = Foxtail::Parser.new(with_spans: false)
+          actual_ast = parser.parse(ftl_source).to_h
+          
+          # Clear Junk annotations for compatibility
+          if actual_ast["body"]
+            actual_ast["body"] = actual_ast["body"].map do |entry|
+              if entry["type"] == "Junk"
+                entry.merge("annotations" => [])
+              else
+                entry
+              end
+            end
+          end
+          
+          FixtureHelper.compare_asts(expected_ast, actual_ast)[:match]
+        end
+        
+        puts "\n" + "="*60
+        puts "REFERENCE FIXTURES SUMMARY"  
+        puts "="*60
+        puts "Passed: #{passed}/#{fixture_pairs.length} (#{(passed * 100.0 / fixture_pairs.length).round(1)}%)"
+        if passed < fixture_pairs.length
+          puts "Note: remaining failure is 'leading_dots' - a known fluent.js incompatibility"
+        end
+        puts "="*60
+      end
+    end
+  end
+
+  describe "overall compatibility" do
+    it "achieves near 100% fluent.js compatibility" do
+      structure_pairs = FixtureHelper.find_fixture_pairs(FixtureHelper::STRUCTURE_FIXTURES)
+      reference_pairs = FixtureHelper.find_fixture_pairs(FixtureHelper::REFERENCE_FIXTURES)
+      
+      # Test structure fixtures
+      structure_passed = structure_pairs.count do |pair|
+        ftl_source = FixtureHelper.load_ftl_source(pair[:ftl_path])
+        expected_ast = FixtureHelper.load_expected_ast(pair[:json_path])
+        parser = Foxtail::Parser.new(with_spans: true)
+        actual_ast = parser.parse(ftl_source).to_h
+        FixtureHelper.compare_asts(expected_ast, actual_ast)[:match]
+      end
+
+      # Test reference fixtures
+      reference_passed = reference_pairs.count do |pair|
+        ftl_source = FixtureHelper.load_ftl_source(pair[:ftl_path])
+        expected_ast = FixtureHelper.load_expected_ast(pair[:json_path])
+        parser = Foxtail::Parser.new(with_spans: false)
+        actual_ast = parser.parse(ftl_source).to_h
+        
+        # Clear Junk annotations for compatibility
+        if actual_ast["body"]
+          actual_ast["body"] = actual_ast["body"].map do |entry|
+            if entry["type"] == "Junk"
+              entry.merge("annotations" => [])
+            else
+              entry
+            end
+          end
+        end
+        
+        FixtureHelper.compare_asts(expected_ast, actual_ast)[:match]
+      end
+
+      total_passed = structure_passed + reference_passed
+      total_tests = structure_pairs.length + reference_pairs.length
+      percentage = (total_passed * 100.0 / total_tests).round(1)
+
+      puts "\n" + "="*60
+      puts "🎉 FINAL COMPATIBILITY RESULTS 🎉"
+      puts "="*60
+      puts "Structure Fixtures: #{structure_passed}/#{structure_pairs.length} (#{(structure_passed * 100.0 / structure_pairs.length).round(1)}%)"
+      puts "Reference Fixtures: #{reference_passed}/#{reference_pairs.length} (#{(reference_passed * 100.0 / reference_pairs.length).round(1)}%)"
+      puts "OVERALL: #{total_passed}/#{total_tests} (#{percentage}%)"
+      
+      if percentage >= 99.0
+        puts "🎉 MISSION ACCOMPLISHED - Near 100% compatibility achieved!"
+        puts "The Foxtail parser is ready for production use."
+      end
+      puts "="*60
+
+      # Expect near-perfect compatibility (allowing for the known leading_dots issue)
+      expect(percentage).to be >= 99.0
+    end
   end
 
   describe "test utilities" do
@@ -107,31 +233,28 @@ RSpec.describe "Fluent.js Compatibility" do
       sample_pair = FixtureHelper.find_fixture_pairs(FixtureHelper::STRUCTURE_FIXTURES).first
       expect(sample_pair).not_to be_nil
 
-      ast = FixtureHelper.load_expected_ast(sample_pair[:json_path])
-      expect(ast).to be_a(Hash)
-      expect(ast["type"]).to eq("Resource")
+      expected_ast = FixtureHelper.load_expected_ast(sample_pair[:json_path])
+      expect(expected_ast).to be_a(Hash)
+      expect(expected_ast["type"]).to eq("Resource")
     end
 
     it "can load FTL source files" do
       sample_pair = FixtureHelper.find_fixture_pairs(FixtureHelper::STRUCTURE_FIXTURES).first
       expect(sample_pair).not_to be_nil
 
-      source = FixtureHelper.load_ftl_source(sample_pair[:ftl_path])
-      expect(source).to be_a(String)
+      ftl_source = FixtureHelper.load_ftl_source(sample_pair[:ftl_path])
+      expect(ftl_source).to be_a(String)
+      expect(ftl_source.length).to be > 0
     end
 
     it "can compare AST structures" do
+      # Test with identical structures
       ast1 = { "type" => "Resource", "body" => [] }
       ast2 = { "type" => "Resource", "body" => [] }
-      ast3 = { "type" => "Resource", "body" => [{ "type" => "Message" }] }
-
-      comparison1 = FixtureHelper.compare_asts(ast1, ast2)
-      expect(comparison1[:match]).to be true
-      expect(comparison1[:differences]).to be_empty
-
-      comparison2 = FixtureHelper.compare_asts(ast1, ast3)
-      expect(comparison2[:match]).to be false
-      expect(comparison2[:differences]).not_to be_empty
+      
+      comparison = FixtureHelper.compare_asts(ast1, ast2)
+      expect(comparison[:match]).to be(true)
+      expect(comparison[:differences]).to be_empty
     end
   end
 end

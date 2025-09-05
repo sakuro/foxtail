@@ -6,7 +6,7 @@ module Foxtail
   # Ruby equivalent of fluent.js FluentParser
   # Faithfully translates TypeScript parsing logic to Ruby
   class Parser
-    TRAILING_WS_RE = /[ \n\r]+$/
+    TRAILING_WS_RE = /[ \n\r]+\z/
 
     attr_reader :with_spans
 

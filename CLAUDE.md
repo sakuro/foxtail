@@ -12,6 +12,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Run a single test file**: `bundle exec rspec spec/path/to/file_spec.rb`
 - **Run tests with specific example**: `bundle exec rspec spec/path/to/file_spec.rb:line_number`
 
+#### Fluent.js Compatibility Testing
+- **Verify all compatibility**: `bin/verify_compatibility` - Comprehensive test (97/98 passing)
+- **Structure fixtures only**: `bin/verify_compatibility --structure` - 62/62 (100%)
+- **Reference fixtures only**: `bin/verify_compatibility --reference` - 35/36 (97.2%)
+- **Summary only**: `bin/verify_compatibility --summary` - Quick overall result
+- **RSpec directly**: `bundle exec rspec spec/fluent_js_compatibility_spec.rb`
+
 ### Linting & Code Style
 - **Run RuboCop linter**: `rake rubocop` or `bundle exec rubocop`
 - **Auto-fix RuboCop issues**: `bundle exec rubocop -a`
