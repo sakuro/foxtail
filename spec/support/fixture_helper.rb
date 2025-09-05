@@ -47,12 +47,10 @@ module FixtureHelper
     raise "Failed to read FTL fixture #{ftl_path}: #{e.message}"
   end
 
-  # Parse FTL source with Ruby parser (when implemented)
+  # Parse FTL source with Ruby parser
   def self.parse_ftl_with_ruby(source)
-    # TODO: Replace with actual Foxtail::Parser when implemented
-    # For now, create a proper AST using our Ruby classes
-    resource = Foxtail::Resource.new([])
-    resource.add_span(0, source.length)
+    parser = Foxtail::Parser.new
+    resource = parser.parse(source)
     resource.to_h
   end
 
