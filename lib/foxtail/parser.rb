@@ -129,6 +129,8 @@ module Foxtail
     end
 
     def get_comment(ps)
+      start_pos = ps.index if @with_spans
+      
       # 0 - comment, 1 - group comment, 2 - resource comment
       level = -1
       content = ""
@@ -168,7 +170,7 @@ module Foxtail
                       end
       
       result = comment_class.new(content)
-      add_span_if_enabled(result, ps)
+      add_span_if_enabled(result, ps, start_pos)
       result
     end
 
