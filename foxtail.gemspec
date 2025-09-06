@@ -9,7 +9,10 @@ Gem::Specification.new do |spec|
   spec.email = ["10973+sakuro@users.noreply.github.com"]
 
   spec.summary = "Ruby implementation of Project Fluent localization system"
-  spec.description = "A Ruby implementation of Project Fluent - a modern localization system designed to improve how software is translated. Provides high fluent.js compatibility with FTL syntax parsing, runtime message formatting, and Unicode CLDR integration."
+  spec.description = <<~DESC
+    A Ruby implementation of Project Fluent - a modern localization system designed to improve how software is translated.#{" "}
+    Provides high fluent.js compatibility with FTL syntax parsing, runtime message formatting, and Unicode CLDR integration.
+  DESC
   spec.homepage = "https://github.com/sakuro/foxtail"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.9"
