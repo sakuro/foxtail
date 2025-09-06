@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["OZAWA Sakuro"]
   spec.email = ["10973+sakuro@users.noreply.github.com"]
 
-  spec.summary = "foxtail"
-  spec.description = "foxtail"
+  spec.summary = "Ruby implementation of Project Fluent localization system"
+  spec.description = "A Ruby implementation of Project Fluent - a modern localization system designed to improve how software is translated. Provides high fluent.js compatibility with FTL syntax parsing, runtime message formatting, and Unicode CLDR integration."
   spec.homepage = "https://github.com/sakuro/foxtail"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.9"
