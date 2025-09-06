@@ -5,4 +5,10 @@ set -vx
 
 bundle install
 
-# Do any other automated setup that you need to do here
+# Set up fluent.js submodule if it doesn't exist
+if [ ! -d "fluent.js" ] || [ ! -f "fluent.js/.git" ]; then
+  echo "Setting up fluent.js submodule..."
+  git submodule update --init --recursive fluent.js
+else
+  echo "fluent.js submodule already exists, skipping initialization"
+fi
