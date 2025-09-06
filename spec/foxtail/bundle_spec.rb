@@ -1,0 +1,263 @@
+# frozen_string_literal: true
+
+require "spec_helper"
+require_relative "../../lib/foxtail/bundle"
+require_relative "../../lib/foxtail/resource"
+
+RSpec.describe Foxtail::Bundle do
+  describe "#initialize" do
+    it "accepts a single locale" do
+      bundle = Foxtail::Bundle.new(locale("en-US"))
+      expect(bundle.locales.map(&:to_s)).to eq(["en_US"])
+    end
+
+    it "accepts multiple locales" do
+      bundle = Foxtail::Bundle.new([locale("en-US"), locale("en")])
+      expect(bundle.locales.map(&:to_s)).to eq(%w[en_US en])
+    end
+
+    it "sets default options" do
+      locale = locale("en")
+      bundle = Foxtail::Bundle.new(locale)
+      expect(bundle.functions).to have_key("NUMBER")
+      expect(bundle.functions).to have_key("DATETIME")
+      expect(bundle.use_isolating).to be true
+      expect(bundle.transform).to be_nil
+    end
+
+    it "includes working default functions" do
+      locale = locale("en")
+      bundle = Foxtail::Bundle.new(locale)
+      number_func = bundle.functions["NUMBER"]
+      datetime_func = bundle.functions["DATETIME"]
+
+      expect(number_func.call(42, {}, locale:)).to eq("42")
+      expect(datetime_func.call(Time.new(2023, 6, 15), {}, locale:)).to include("Jun 15, 2023")
+    end
+
+    it "accepts custom options" do
+      functions = {"NUMBER" => ->(val, _opts) { val.to_s }}
+      locale = locale("en")
+      bundle = Foxtail::Bundle.new(
+        locale,
+        functions:,
+        use_isolating: false,
+        transform: :some_transform
+      )
+
+      expect(bundle.functions).to eq(functions)
+      expect(bundle.use_isolating).to be false
+      expect(bundle.transform).to eq(:some_transform)
+    end
+  end
+
+  describe "#add_resource" do
+    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:ftl_source) do
+      <<~FTL
+        hello = Hello, {$name}!
+        -brand = Firefox
+        goodbye = Goodbye world
+      FTL
+    end
+    let(:resource) { Foxtail::Resource.from_string(ftl_source) }
+
+    it "adds resource entries to the bundle" do
+      bundle.add_resource(resource)
+
+      expect(bundle.message?("hello")).to be true
+      expect(bundle.message?("goodbye")).to be true
+      expect(bundle.term?("-brand")).to be true
+    end
+
+    it "returns resource errors" do
+      errors = bundle.add_resource(resource)
+      expect(errors).to be_an(Array)
+    end
+
+    it "prevents overrides by default" do
+      bundle.add_resource(resource)
+
+      # Add same resource again
+      duplicate_resource = Foxtail::Resource.from_string("hello = Different message")
+      bundle.add_resource(duplicate_resource)
+
+      # Should still have original message
+      message = bundle.get_message("hello")
+      expect(message["value"]).to be_an(Array) # Original complex pattern
+    end
+
+    it "allows overrides when specified" do
+      bundle.add_resource(resource)
+
+      # Add resource with override
+      override_resource = Foxtail::Resource.from_string("hello = Different message")
+      bundle.add_resource(override_resource, allow_overrides: true)
+
+      # Should have new message
+      message = bundle.get_message("hello")
+      expect(message["value"]).to eq("Different message")
+    end
+  end
+
+  describe "#message? and #get_message" do
+    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:resource) { Foxtail::Resource.from_string("hello = Hello world") }
+
+    before { bundle.add_resource(resource) }
+
+    it "checks message existence" do
+      expect(bundle.message?("hello")).to be true
+      expect(bundle.message?("nonexistent")).to be false
+    end
+
+    it "retrieves messages" do
+      message = bundle.get_message("hello")
+      expect(message).to be_a(Hash)
+      expect(message["id"]).to eq("hello")
+      expect(message["attributes"]).to be_nil
+    end
+
+    it "returns nil for nonexistent messages" do
+      expect(bundle.get_message("nonexistent")).to be_nil
+    end
+
+    it "handles string and symbol keys" do
+      expect(bundle.message?(:hello)).to be true
+      expect(bundle.get_message(:hello)).not_to be_nil
+    end
+  end
+
+  describe "#term? and #get_term" do
+    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:resource) { Foxtail::Resource.from_string("-brand = Firefox") }
+
+    before { bundle.add_resource(resource) }
+
+    it "checks term existence" do
+      expect(bundle.term?("-brand")).to be true
+      expect(bundle.term?("nonexistent")).to be false
+    end
+
+    it "retrieves terms" do
+      term = bundle.get_term("-brand")
+      expect(term).to be_a(Hash)
+      expect(term["id"]).to eq("-brand")
+      expect(term["attributes"]).to be_nil
+    end
+
+    it "returns nil for nonexistent terms" do
+      expect(bundle.get_term("nonexistent")).to be_nil
+    end
+  end
+
+  describe "#format" do
+    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+
+    context "with simple messages" do
+      before do
+        resource = Foxtail::Resource.from_string("hello = Hello world")
+        bundle.add_resource(resource)
+      end
+
+      it "formats simple text messages" do
+        result = bundle.format("hello")
+        expect(result).to eq("Hello world")
+      end
+
+      it "returns message ID for nonexistent messages" do
+        result = bundle.format("nonexistent")
+        expect(result).to eq("nonexistent")
+      end
+    end
+
+    context "with variable substitution" do
+      before do
+        resource = Foxtail::Resource.from_string("greeting = Hello, {$name}!")
+        bundle.add_resource(resource)
+      end
+
+      it "substitutes variables" do
+        result = bundle.format("greeting", name: "World")
+        expect(result).to eq("Hello, World!")
+      end
+
+      it "handles missing variables" do
+        result = bundle.format("greeting")
+        expect(result).to eq("Hello, {$name}!")
+      end
+
+      it "handles string and symbol keys" do
+        result1 = bundle.format("greeting", name: "Alice")
+        result2 = bundle.format("greeting", "name" => "Bob")
+        expect(result1).to eq("Hello, Alice!")
+        expect(result2).to eq("Hello, Bob!")
+      end
+    end
+
+    context "with term references" do
+      before do
+        ftl = <<~FTL
+          hello = Hello from {-brand}!
+          -brand = Firefox
+        FTL
+        resource = Foxtail::Resource.from_string(ftl)
+        bundle.add_resource(resource)
+      end
+
+      it "expands term references" do
+        result = bundle.format("hello")
+        expect(result).to eq("Hello from Firefox!")
+      end
+    end
+
+    context "with select expressions" do
+      before do
+        ftl = <<~FTL
+          emails = You have {$count ->
+            [0] no emails
+            [one] one email
+           *[other] {$count} emails
+          }.
+        FTL
+        resource = Foxtail::Resource.from_string(ftl)
+        bundle.add_resource(resource)
+      end
+
+      it "handles select expressions with number matching" do
+        result = bundle.format("emails", count: 0)
+        expect(result).to eq("You have no emails.")
+      end
+
+      it "handles select expressions with default variant" do
+        result = bundle.format("emails", count: 5)
+        expect(result).to eq("You have 5 emails.")
+      end
+    end
+  end
+
+  describe "#format_pattern" do
+    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+
+    it "formats string patterns" do
+      result = bundle.format_pattern("Hello world")
+      expect(result).to eq("Hello world")
+    end
+
+    it "formats array patterns" do
+      pattern = ["Hello, ", {"type" => "var", "name" => "name"}, "!"]
+      result = bundle.format_pattern(pattern, {name: "World"})
+      expect(result).to eq("Hello, World!")
+    end
+
+    it "collects errors when provided" do
+      pattern = [{"type" => "var", "name" => "missing"}]
+      errors = []
+      result = bundle.format_pattern(pattern, {}, errors)
+
+      expect(result).to eq("{$missing}")
+      expect(errors).not_to be_empty
+      expect(errors.first).to include("Unknown variable")
+    end
+  end
+end

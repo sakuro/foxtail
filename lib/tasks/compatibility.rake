@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "../foxtail"
 require_relative "../../spec/support/fixture_helper"
+require_relative "../foxtail"
 
 namespace :compatibility do
   desc "Run fluent.js compatibility analysis"
@@ -18,32 +18,23 @@ namespace :compatibility do
 
     fixture_pairs.each_with_index do |pair, index|
       print "\rProcessing: #{index + 1}/#{fixture_pairs.length} (#{pair[:name]})"
-      
+
       begin
         # Load expected AST
         expected_ast = FixtureHelper.load_expected_ast(pair[:json_path])
-        
+
         # Load FTL source
         ftl_source = FixtureHelper.load_ftl_source(pair[:ftl_path])
-        
+
         # Parse with Ruby parser (placeholder for now)
         actual_ast = FixtureHelper.parse_ftl_with_ruby(ftl_source)
-        
+
         # Compare
         comparison = FixtureHelper.compare_asts(expected_ast, actual_ast)
-        
-        if comparison[:match]
-          results << { name: pair[:name], status: :perfect_match, comparison: comparison }
-        else
-          results << { 
-            name: pair[:name], 
-            status: :content_difference, 
-            comparison: comparison 
-          }
-        end
 
-      rescue StandardError => e
-        results << { name: pair[:name], status: :parsing_failure, error: e.message }
+        results << {name: pair[:name], status: comparison[:match] ? :perfect_match : :content_difference, comparison:}
+      rescue => e
+        results << {name: pair[:name], status: :parsing_failure, error: e.message}
       end
     end
 
@@ -127,14 +118,12 @@ namespace :compatibility do
       puts "   Structure fixtures: #{structure_pairs.length}"
     else
       puts "❌ Found #{errors.length} fixture errors:"
-      errors.each { |error| puts "   #{error}" }
+      errors.each {|error| puts "   #{error}" }
       exit 1
     end
   end
 
-  private
-
-  def save_detailed_report(results, filepath)
+  private def save_detailed_report(results, filepath)
     require "fileutils"
     FileUtils.mkdir_p(File.dirname(filepath))
 
@@ -146,7 +135,7 @@ namespace :compatibility do
 
       results.each do |result|
         file.puts "#{result[:name]} - #{result[:status]}"
-        
+
         case result[:status]
         when :content_difference
           file.puts "  Differences:"
@@ -156,7 +145,7 @@ namespace :compatibility do
         when :parsing_failure
           file.puts "  Error: #{result[:error]}"
         end
-        
+
         file.puts
       end
     end
@@ -165,4 +154,4 @@ end
 
 # Default task
 desc "Run compatibility analysis"
-task :compatibility => "compatibility:analyze"
+task compatibility: "compatibility:analyze"

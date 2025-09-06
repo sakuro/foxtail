@@ -3,6 +3,7 @@
 module Foxtail
   class Parser
     module AST
+      # Represents references to variables passed as arguments (e.g., $variable)
       class VariableReference < SyntaxNode
         attr_accessor :id
 

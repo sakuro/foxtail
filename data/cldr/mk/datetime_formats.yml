@@ -1,0 +1,85 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': јан.
+        '2': фев.
+        '3': мар.
+        '4': апр.
+        '5': мај
+        '6': јун.
+        '7': јул.
+        '8': авг.
+        '9': сеп.
+        '10': окт.
+        '11': ное.
+        '12': дек.
+      wide:
+        '1': јануари
+        '2': февруари
+        '3': март
+        '4': април
+        '5': мај
+        '6': јуни
+        '7': јули
+        '8': август
+        '9': септември
+        '10': октомври
+        '11': ноември
+        '12': декември
+    stand-alone:
+      narrow:
+        '1': ј
+        '2': ф
+        '3': м
+        '4': а
+        '5': м
+        '6': ј
+        '7': ј
+        '8': а
+        '9': с
+        '10': о
+        '11': н
+        '12': д
+  days:
+    format:
+      abbreviated:
+        sun: нед.
+        mon: пон.
+        tue: вто.
+        wed: сре.
+        thu: чет.
+        fri: пет.
+        sat: саб.
+      wide:
+        sun: недела
+        mon: понеделник
+        tue: вторник
+        wed: среда
+        thu: четврток
+        fri: петок
+        sat: сабота
+    stand-alone:
+      narrow:
+        sun: н
+        mon: п
+        tue: в
+        wed: с
+        thu: ч
+        fri: п
+        sat: с
+  date_formats:
+    full: EEEE, d MMMM y 'г'.
+    long: d MMMM y 'г'.
+    medium: d.M.y 'г'.
+    short: d.M.yy
+  time_formats:
+    full: HH:mm:ss zzzz
+    long: HH:mm:ss z
+    medium: HH:mm:ss
+    short: HH:mm
+locale: mk
+generated_at: '2025-09-06T03:52:38+09:00'
+cldr_version: v46
+source: Unicode CLDR

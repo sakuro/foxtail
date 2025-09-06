@@ -1,0 +1,80 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': Ian
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': Mai
+        '6': Iun
+        '7': Iul
+        '8': Aug
+        '9': Sep
+        '10': Oct
+        '11': Nov
+        '12': Dec
+      wide:
+        '1': Ianuarii
+        '2': Februarii
+        '3': Martii
+        '4': Aprilis
+        '5': Maii
+        '6': Iunii
+        '7': Iulii
+        '8': Augusti
+        '9': Septembris
+        '10': Octobris
+        '11': Novembris
+        '12': Decembris
+    stand-alone:
+      wide:
+        '1': Ianuarius
+        '2': Februarius
+        '3': Martius
+        '4': Aprilis
+        '5': Maius
+        '6': Iunius
+        '7': Iulius
+        '8': Augustus
+        '9': September
+        '10': October
+        '11': November
+        '12': December
+  days:
+    format:
+      abbreviated:
+        sun: Dom
+        mon: Lun
+        tue: Mar
+        wed: Mer
+        thu: Iov
+        fri: Ven
+        sat: Sab
+      wide:
+        sun: Dominica
+        mon: dies Lunae
+        tue: dies Martis
+        wed: dies Mercurii
+        thu: dies Iovis
+        fri: dies Veneris
+        sat: dies Sabbati
+    stand-alone:
+      wide:
+        sun: Dominica
+        sat: Sabbatum
+  date_formats:
+    full: EEEE, 'die' d MMMM y G
+    long: "'die' d MMMM y G"
+    medium: "'die' d MMM y G"
+    short: d M y G
+  time_formats:
+    full: HH:mm:ss zzzz
+    long: HH:mm:ss z
+    medium: HH:mm:ss
+    short: HH:mm
+locale: la
+generated_at: '2025-09-06T03:52:37+09:00'
+cldr_version: v46
+source: Unicode CLDR

@@ -6,10 +6,17 @@ module Foxtail
   class Stream
     # Constants
     EOL = "\n"
-    EOF = nil
-    SPECIAL_LINE_START_CHARS = ["}", ".", "[", "*"].freeze
+    public_constant :EOL
 
-    attr_reader :string, :index, :peek_offset
+    EOF = nil
+    public_constant :EOF
+
+    SPECIAL_LINE_START_CHARS = ["}", ".", "[", "*"].freeze
+    public_constant :SPECIAL_LINE_START_CHARS
+
+    attr_reader :string
+    attr_reader :index
+    attr_reader :peek_offset
 
     def initialize(string)
       @string = string
@@ -58,7 +65,7 @@ module Foxtail
       @string[@index + @peek_offset]
     end
 
-    def reset_peek(offset = 0)
+    def reset_peek(offset=0)
       @peek_offset = offset
     end
 
@@ -71,9 +78,7 @@ module Foxtail
 
     def peek_blank_inline
       start = @index + @peek_offset
-      while current_peek == " "
-        peek
-      end
+      peek while current_peek == " "
       @string.slice(start, @index + @peek_offset - start)
     end
 
@@ -97,6 +102,7 @@ module Foxtail
           # Treat the blank line at EOF as a blank block.
           return blank
         end
+
         # Any other char; reset to column 1 on this line.
         reset_peek(line_start)
         return blank
@@ -110,9 +116,7 @@ module Foxtail
     end
 
     def peek_blank
-      while current_peek == " " || current_peek == EOL
-        peek
-      end
+      peek while current_peek == " " || current_peek == EOL
     end
 
     def skip_blank
@@ -144,12 +148,13 @@ module Foxtail
       raise ParseError.new("E0003", "\u2424")
     end
 
-    def take_char(&block)
+    def take_char
       ch = current_char
       if ch == EOF
         return EOF
       end
-      if block.call(ch)
+
+      if yield(ch)
         self.next
         return ch
       end
@@ -160,8 +165,8 @@ module Foxtail
       return false if ch == EOF
 
       cc = ch.ord
-      (cc >= 97 && cc <= 122) || # a-z
-        (cc >= 65 && cc <= 90)    # A-Z
+      cc.between?(97, 122) || # a-z
+        cc.between?(65, 90) # A-Z
     end
 
     def identifier_start?
@@ -177,7 +182,7 @@ module Foxtail
       end
 
       cc = ch.ord
-      is_digit = cc >= 48 && cc <= 57 # 0-9
+      is_digit = cc.between?(48, 57) # 0-9
       reset_peek
       is_digit
     end
@@ -216,7 +221,7 @@ module Foxtail
     end
 
     # @param level - -1: any, 0: comment, 1: group comment, 2: resource comment
-    def next_line_comment?(level = -1)
+    def next_line_comment?(level=-1)
       return false if current_char != EOL
 
       i = 0
@@ -295,9 +300,9 @@ module Foxtail
     def take_id_char
       take_char do |ch|
         cc = ch.ord
-        (cc >= 97 && cc <= 122) || # a-z
-          (cc >= 65 && cc <= 90) ||  # A-Z
-          (cc >= 48 && cc <= 57) ||  # 0-9
+        cc.between?(97, 122) || # a-z
+          cc.between?(65, 90) ||  # A-Z
+          cc.between?(48, 57) ||  # 0-9
           cc == 95 ||                # _
           cc == 45                   # -
       end
@@ -306,16 +311,16 @@ module Foxtail
     def take_digit
       take_char do |ch|
         cc = ch.ord
-        cc >= 48 && cc <= 57 # 0-9
+        cc.between?(48, 57) # 0-9
       end
     end
 
     def take_hex_digit
       take_char do |ch|
         cc = ch.ord
-        (cc >= 48 && cc <= 57) || # 0-9
-          (cc >= 65 && cc <= 70) ||  # A-F
-          (cc >= 97 && cc <= 102)    # a-f
+        cc.between?(48, 57) || # 0-9
+          cc.between?(65, 70) ||  # A-F
+          cc.between?(97, 102)    # a-f
       end
     end
   end

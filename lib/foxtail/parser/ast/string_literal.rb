@@ -3,12 +3,16 @@
 module Foxtail
   class Parser
     module AST
+      # Represents quoted string literals with escape sequence processing
       class StringLiteral < BaseLiteral
+        # Parse the string literal value, processing escape sequences
+        # Handles backslash escapes, Unicode escapes (uHHHH, UHHHHHH), and validates Unicode scalar values
+        # @return [Hash] Hash containing the parsed string value
         def parse
           # Backslash backslash, backslash double quote, uHHHH, UHHHHHH.
           known_escapes = /(?:\\\\|\\"|\\u([0-9a-fA-F]{4})|\\U([0-9a-fA-F]{6}))/
 
-          escaped_value = @value.gsub(known_escapes) do |match|
+          escaped_value = @value.gsub(known_escapes) {|match|
             codepoint4 = $1
             codepoint6 = $2
 
@@ -29,9 +33,9 @@ module Foxtail
                 "\uFFFD"
               end
             end
-          end
+          }
 
-          { value: escaped_value }
+          {value: escaped_value}
         end
       end
     end

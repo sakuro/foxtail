@@ -3,10 +3,12 @@
 module Foxtail
   class Parser
     module AST
+      # Represents function calls with optional arguments
       class FunctionReference < SyntaxNode
-        attr_accessor :id, :arguments
+        attr_accessor :id
+        attr_accessor :arguments
 
-        def initialize(id, arguments = nil)
+        def initialize(id, arguments=nil)
           super()
           @id = id
           @arguments = arguments

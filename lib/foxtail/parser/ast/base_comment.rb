@@ -3,6 +3,7 @@
 module Foxtail
   class Parser
     module AST
+      # Base class for all comment types in Fluent syntax
       class BaseComment < SyntaxNode
         attr_accessor :content
 

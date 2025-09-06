@@ -3,6 +3,8 @@
 module Foxtail
   class Parser
     module AST
+      # Represents a message or term value pattern consisting of text elements
+      # and placeables (expressions within braces)
       class Pattern < SyntaxNode
         attr_accessor :elements
 

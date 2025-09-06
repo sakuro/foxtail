@@ -34,6 +34,14 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/foxtail.
 
+## Acknowledgments
+
+This project stands on the shoulders of giants:
+
+- **Unicode CLDR**: The plural rules data is extracted from [Unicode Common Locale Data Repository (CLDR) v34](http://unicode.org/Public/cldr/34/core.zip), providing ICU-compliant plural rules for 207 locales
+- **Fluent Project**: Foxtail aims for compatibility with Mozilla's [Fluent localization system](https://projectfluent.org/), particularly [fluent.js](https://github.com/projectfluent/fluent.js)
+- **ICU Project**: Plural rules implementation follows [ICU plural rules specification](https://unicode.org/reports/tr35/tr35-numbers.html#Language_Plural_Rules)
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

@@ -1,0 +1,10 @@
+---
+locale: uk
+plural_rules:
+  one: v = 0 and i % 10 = 1 and i % 100 != 11
+  few: v = 0 and i % 10 = 2..4 and i % 100 != 12..14
+  many: v = 0 and i % 10 = 0 or v = 0 and i % 10 = 5..9 or v = 0 and i % 100 = 11..14
+  other: ''
+generated_at: '2025-09-06T03:52:16+09:00'
+cldr_version: v46
+source: Unicode CLDR

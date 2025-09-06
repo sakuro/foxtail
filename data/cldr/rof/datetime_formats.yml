@@ -1,0 +1,85 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': M1
+        '2': M2
+        '3': M3
+        '4': M4
+        '5': M5
+        '6': M6
+        '7': M7
+        '8': M8
+        '9': M9
+        '10': M10
+        '11': M11
+        '12': M12
+      wide:
+        '1': Mweri wa kwanza
+        '2': Mweri wa kaili
+        '3': Mweri wa katatu
+        '4': Mweri wa kaana
+        '5': Mweri wa tanu
+        '6': Mweri wa sita
+        '7': Mweri wa saba
+        '8': Mweri wa nane
+        '9': Mweri wa tisa
+        '10': Mweri wa ikumi
+        '11': Mweri wa ikumi na moja
+        '12': Mweri wa ikumi na mbili
+    stand-alone:
+      narrow:
+        '1': K
+        '2': K
+        '3': K
+        '4': K
+        '5': T
+        '6': S
+        '7': S
+        '8': "N"
+        '9': T
+        '10': I
+        '11': I
+        '12': I
+  days:
+    format:
+      abbreviated:
+        sun: Ijp
+        mon: Ijt
+        tue: Ijn
+        wed: Ijtn
+        thu: Alh
+        fri: Iju
+        sat: Ijm
+      wide:
+        sun: Ijumapili
+        mon: Ijumatatu
+        tue: Ijumanne
+        wed: Ijumatano
+        thu: Alhamisi
+        fri: Ijumaa
+        sat: Ijumamosi
+    stand-alone:
+      narrow:
+        sun: '2'
+        mon: '3'
+        tue: '4'
+        wed: '5'
+        thu: '6'
+        fri: '7'
+        sat: '1'
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: dd/MM/y
+  time_formats:
+    full: HH:mm:ss zzzz
+    long: HH:mm:ss z
+    medium: HH:mm:ss
+    short: HH:mm
+locale: rof
+generated_at: '2025-09-06T03:52:40+09:00'
+cldr_version: v46
+source: Unicode CLDR

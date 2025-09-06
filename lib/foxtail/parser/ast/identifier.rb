@@ -3,6 +3,7 @@
 module Foxtail
   class Parser
     module AST
+      # Represents identifiers used for messages, terms, attributes, and function names
       class Identifier < SyntaxNode
         attr_accessor :name
 

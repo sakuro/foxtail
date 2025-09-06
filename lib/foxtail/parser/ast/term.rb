@@ -3,10 +3,15 @@
 module Foxtail
   class Parser
     module AST
+      # Represents a Fluent term with an identifier, value pattern,
+      # optional attributes, and an optional comment
       class Term < SyntaxNode
-        attr_accessor :id, :value, :attributes, :comment
+        attr_accessor :id
+        attr_accessor :value
+        attr_accessor :attributes
+        attr_accessor :comment
 
-        def initialize(id, value, attributes = [], comment = nil)
+        def initialize(id, value, attributes=[], comment=nil)
           super()
           @id = id
           @value = value

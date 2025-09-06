@@ -1,0 +1,79 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': ינו׳
+        '2': פבר׳
+        '3': מרץ
+        '4': אפר׳
+        '5': מאי
+        '6': יוני
+        '7': יולי
+        '8': אוג׳
+        '9': ספט׳
+        '10': אוק׳
+        '11': נוב׳
+        '12': דצמ׳
+      wide:
+        '1': ינואר
+        '2': פברואר
+        '3': מרץ
+        '4': אפריל
+        '5': מאי
+        '6': יוני
+        '7': יולי
+        '8': אוגוסט
+        '9': ספטמבר
+        '10': אוקטובר
+        '11': נובמבר
+        '12': דצמבר
+  days:
+    format:
+      abbreviated:
+        sun: יום א׳
+        mon: יום ב׳
+        tue: יום ג׳
+        wed: יום ד׳
+        thu: יום ה׳
+        fri: יום ו׳
+        sat: שבת
+      short:
+        sun: א׳
+        mon: ב׳
+        tue: ג׳
+        wed: ד׳
+        thu: ה׳
+        fri: ו׳
+        sat: ש׳
+      wide:
+        sun: יום ראשון
+        mon: יום שני
+        tue: יום שלישי
+        wed: יום רביעי
+        thu: יום חמישי
+        fri: יום שישי
+        sat: יום שבת
+    stand-alone:
+      narrow:
+        sun: א׳
+        mon: ב׳
+        tue: ג׳
+        wed: ד׳
+        thu: ה׳
+        fri: ו׳
+        sat: ש׳
+  date_formats:
+    full: EEEE, d בMMMM y
+    long: d בMMMM y
+    medium: d בMMM y
+    short: d.M.y
+  time_formats:
+    full: H:mm:ss zzzz
+    long: H:mm:ss z
+    medium: H:mm:ss
+    short: H:mm
+locale: he
+generated_at: '2025-09-06T03:52:35+09:00'
+cldr_version: v46
+source: Unicode CLDR

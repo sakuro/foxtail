@@ -3,10 +3,12 @@
 module Foxtail
   class Parser
     module AST
+      # Represents unparseable content with associated error annotations
       class Junk < SyntaxNode
-        attr_accessor :content, :annotations
+        attr_accessor :content
+        attr_accessor :annotations
 
-        def initialize(content, annotations = [])
+        def initialize(content, annotations=[])
           super()
           @content = content
           @annotations = annotations

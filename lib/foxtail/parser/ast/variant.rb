@@ -3,10 +3,13 @@
 module Foxtail
   class Parser
     module AST
+      # Represents individual variants within select expressions
       class Variant < SyntaxNode
-        attr_accessor :key, :value, :default
+        attr_accessor :key
+        attr_accessor :value
+        attr_accessor :default
 
-        def initialize(key, value, default = false)
+        def initialize(key, value, default: false)
           super()
           @key = key
           @value = value

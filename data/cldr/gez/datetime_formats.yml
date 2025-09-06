@@ -1,0 +1,64 @@
+---
+datetime_formats:
+  months:
+    format:
+      wide:
+        '1': ጠሐረ
+        '2': ከተተ
+        '3': መገበ
+        '4': አኀዘ
+        '5': ግንባት
+        '6': ሠንየ
+        '7': ሐመለ
+        '8': ነሐሰ
+        '9': ከረመ
+        '10': ጠቀመ
+        '11': ኀደረ
+        '12': ኀሠሠ
+    stand-alone:
+      narrow:
+        '1': ጠ
+        '2': ከ
+        '3': መ
+        '4': አ
+        '5': ግ
+        '6': ሠ
+        '7': ሐ
+        '8': ነ
+        '9': ከ
+        '10': ጠ
+        '11': ኀ
+        '12': ኀ
+  days:
+    format:
+      wide:
+        sun: እኁድ
+        mon: ሰኑይ
+        tue: ሠሉስ
+        wed: ራብዕ
+        thu: ሐሙስ
+        fri: ዓርበ
+        sat: ቀዳሚት
+    stand-alone:
+      narrow:
+        sun: እ
+        mon: ሰ
+        tue: ሠ
+        wed: ራ
+        thu: ሐ
+        fri: ዓ
+        sat: ቀ
+  date_formats:
+    full: EEEE፥ dd MMMM መዓልት y G
+    long: dd MMMM y
+    medium: dd-MMM-y
+    short: dd/MM/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+locale: gez
+generated_at: '2025-09-06T03:52:34+09:00'
+cldr_version: v46
+source: Unicode CLDR

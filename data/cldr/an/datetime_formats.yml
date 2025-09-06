@@ -1,0 +1,85 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': chi.
+        '2': feb.
+        '3': mar.
+        '4': abr.
+        '5': may.
+        '6': chn.
+        '7': chl.
+        '8': ago.
+        '9': set.
+        '10': oct.
+        '11': nov.
+        '12': avi.
+      wide:
+        '1': de chinero
+        '2': de febrero
+        '3': de marzo
+        '4': d’abril
+        '5': de mayo
+        '6': de chunyo
+        '7': de chuliol
+        '8': d’agosto
+        '9': de setiembre
+        '10': d’octubre
+        '11': de noviembre
+        '12': d’aviento
+    stand-alone:
+      wide:
+        '1': chinero
+        '2': febrero
+        '3': marzo
+        '4': abril
+        '5': mayo
+        '6': chunyo
+        '7': chuliol
+        '8': agosto
+        '9': setiembre
+        '10': octubre
+        '11': noviembre
+        '12': aviento
+  days:
+    format:
+      abbreviated:
+        sun: dom
+        mon: lun
+        tue: mar
+        wed: mie
+        thu: chu
+        fri: vie
+        sat: sab
+      wide:
+        sun: dominche
+        mon: luns
+        tue: martz
+        wed: miercres
+        thu: chueves
+        fri: viernes
+        sat: sabado
+    stand-alone:
+      narrow:
+        sun: D
+        mon: L
+        tue: Ma
+        wed: Mi
+        thu: Ch
+        fri: V
+        sat: S
+  date_formats:
+    full: EEEE, d MMMM 'de' y
+    long: d MMMM 'de' y
+    medium: d MMM y
+    short: d/M/yy
+  time_formats:
+    full: H:mm:ss zzzz
+    long: H:mm:ss z
+    medium: H:mm:ss
+    short: H:mm
+locale: an
+generated_at: '2025-09-06T03:52:30+09:00'
+cldr_version: v46
+source: Unicode CLDR

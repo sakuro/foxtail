@@ -3,8 +3,10 @@
 module Foxtail
   class Parser
     module AST
+      # Represents named arguments in function calls (e.g., arg: value)
       class NamedArgument < SyntaxNode
-        attr_accessor :name, :value
+        attr_accessor :name
+        attr_accessor :value
 
         def initialize(name, value)
           super()

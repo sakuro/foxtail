@@ -3,7 +3,8 @@
 module Foxtail
   # Ruby equivalent of fluent.js ParseError
   class ParseError < StandardError
-    attr_reader :code, :args
+    attr_reader :code
+    attr_reader :args
 
     def initialize(code, *args)
       @code = code
@@ -11,9 +12,7 @@ module Foxtail
       super(error_message(code, args))
     end
 
-    private
-
-    def error_message(code, args)
+    private def error_message(code, args)
       case code
       when "E0001"
         "Generic error"

@@ -1,0 +1,85 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': rag
+        '2': was
+        '3': pūl
+        '4': sak
+        '5': zal
+        '6': sīm
+        '7': līp
+        '8': dag
+        '9': sil
+        '10': spa
+        '11': lap
+        '12': sal
+      wide:
+        '1': rags
+        '2': wassarins
+        '3': pūlis
+        '4': sakkis
+        '5': zallaws
+        '6': sīmenis
+        '7': līpa
+        '8': daggis
+        '9': sillins
+        '10': spallins
+        '11': lapkrūtis
+        '12': sallaws
+    stand-alone:
+      narrow:
+        '1': R
+        '2': W
+        '3': P
+        '4': S
+        '5': Z
+        '6': S
+        '7': L
+        '8': D
+        '9': S
+        '10': S
+        '11': L
+        '12': S
+  days:
+    format:
+      abbreviated:
+        sun: nad
+        mon: pan
+        tue: wis
+        wed: pus
+        thu: ket
+        fri: pēn
+        sat: sab
+      wide:
+        sun: nadīli
+        mon: panadīli
+        tue: wisasīdis
+        wed: pussisawaiti
+        thu: ketwirtiks
+        fri: pēntniks
+        sat: sabattika
+    stand-alone:
+      narrow:
+        sun: "N"
+        mon: P
+        tue: W
+        wed: P
+        thu: K
+        fri: P
+        sat: S
+  date_formats:
+    full: EEEE, y 'mettas' d. MMMM
+    long: y 'mettas' d. MMMM
+    medium: dd.MM 'st'. y
+    short: dd.MM.yy
+  time_formats:
+    full: HH:mm:ss zzzz
+    long: HH:mm:ss z
+    medium: HH:mm:ss
+    short: HH:mm
+locale: prg
+generated_at: '2025-09-06T03:52:39+09:00'
+cldr_version: v46
+source: Unicode CLDR

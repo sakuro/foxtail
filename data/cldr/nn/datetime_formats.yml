@@ -1,0 +1,51 @@
+---
+datetime_formats:
+  days:
+    format:
+      abbreviated:
+        sun: sø.
+        mon: må.
+        tue: ty.
+        wed: on.
+        thu: to.
+        fri: fr.
+        sat: la.
+      short:
+        sun: sø.
+        mon: må.
+        tue: ty.
+        wed: on.
+        thu: to.
+        fri: fr.
+        sat: la.
+      wide:
+        sun: søndag
+        mon: måndag
+        tue: tysdag
+        wed: onsdag
+        thu: torsdag
+        fri: fredag
+        sat: laurdag
+    stand-alone:
+      abbreviated:
+        sun: søn
+        mon: mån
+        tue: tys
+        wed: ons
+        thu: tor
+        fri: fre
+        sat: lau
+  date_formats:
+    full: EEEE d. MMMM y
+    long: d. MMMM y
+    medium: d. MMM y
+    short: dd.MM.y
+  time_formats:
+    full: "'kl'. HH:mm:ss zzzz"
+    long: HH:mm:ss z
+    medium: HH:mm:ss
+    short: HH:mm
+locale: nn
+generated_at: '2025-09-06T03:52:39+09:00'
+cldr_version: v46
+source: Unicode CLDR

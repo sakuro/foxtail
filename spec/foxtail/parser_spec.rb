@@ -3,7 +3,7 @@
 require "spec_helper"
 
 RSpec.describe Foxtail::Parser do
-  let(:parser) { described_class.new }
+  let(:parser) { Foxtail::Parser.new }
 
   describe "simple parsing" do
     it "parses empty resources" do
@@ -16,7 +16,7 @@ RSpec.describe Foxtail::Parser do
       result = parser.parse("hello = Hello world")
       expect(result).to be_a(Foxtail::Parser::AST::Resource)
       expect(result.body.length).to eq(1)
-      
+
       message = result.body.first
       expect(message).to be_a(Foxtail::Parser::AST::Message)
       expect(message.id.name).to eq("hello")
@@ -30,7 +30,7 @@ RSpec.describe Foxtail::Parser do
       result = parser.parse("-brand = Firefox")
       expect(result).to be_a(Foxtail::Parser::AST::Resource)
       expect(result.body.length).to eq(1)
-      
+
       term = result.body.first
       expect(term).to be_a(Foxtail::Parser::AST::Term)
       expect(term.id.name).to eq("brand")
@@ -40,7 +40,7 @@ RSpec.describe Foxtail::Parser do
       result = parser.parse("# This is a comment")
       expect(result).to be_a(Foxtail::Parser::AST::Resource)
       expect(result.body.length).to eq(1)
-      
+
       comment = result.body.first
       expect(comment).to be_a(Foxtail::Parser::AST::Comment)
       expect(comment.content).to eq("This is a comment")
@@ -52,7 +52,7 @@ RSpec.describe Foxtail::Parser do
       result = parser.parse("invalid entry")
       expect(result).to be_a(Foxtail::Parser::AST::Resource)
       expect(result.body.length).to eq(1)
-      
+
       junk = result.body.first
       expect(junk).to be_a(Foxtail::Parser::AST::Junk)
       expect(junk.content).to include("invalid entry")
@@ -64,7 +64,7 @@ RSpec.describe Foxtail::Parser do
     it "serializes parsed AST to hash" do
       result = parser.parse("hello = Hello world")
       hash = result.to_h
-      
+
       expect(hash["type"]).to eq("Resource")
       expect(hash["body"]).to be_a(Array)
       expect(hash["body"].length).to eq(1)

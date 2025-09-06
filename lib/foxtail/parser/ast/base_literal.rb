@@ -3,6 +3,7 @@
 module Foxtail
   class Parser
     module AST
+      # Base class for literal values (strings and numbers) with parsing capability
       class BaseLiteral < SyntaxNode
         attr_accessor :value
 

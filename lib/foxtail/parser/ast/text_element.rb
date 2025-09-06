@@ -3,6 +3,7 @@
 module Foxtail
   class Parser
     module AST
+      # Represents plain text content within a pattern
       class TextElement < SyntaxNode
         attr_accessor :value
 

@@ -1,0 +1,85 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': jan.
+        '2': febr.
+        '3': márc.
+        '4': ápr.
+        '5': máj.
+        '6': jún.
+        '7': júl.
+        '8': aug.
+        '9': szept.
+        '10': okt.
+        '11': nov.
+        '12': dec.
+      wide:
+        '1': január
+        '2': február
+        '3': március
+        '4': április
+        '5': május
+        '6': június
+        '7': július
+        '8': augusztus
+        '9': szeptember
+        '10': október
+        '11': november
+        '12': december
+    stand-alone:
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': Á
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': Sz
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      abbreviated:
+        sun: V
+        mon: H
+        tue: K
+        wed: Sze
+        thu: Cs
+        fri: P
+        sat: Szo
+      wide:
+        sun: vasárnap
+        mon: hétfő
+        tue: kedd
+        wed: szerda
+        thu: csütörtök
+        fri: péntek
+        sat: szombat
+    stand-alone:
+      narrow:
+        sun: V
+        mon: H
+        tue: K
+        wed: Sz
+        thu: Cs
+        fri: P
+        sat: Sz
+  date_formats:
+    full: y. MMMM d., EEEE
+    long: y. MMMM d.
+    medium: y. MMM d.
+    short: y. MM. dd.
+  time_formats:
+    full: H:mm:ss zzzz
+    long: H:mm:ss z
+    medium: H:mm:ss
+    short: H:mm
+locale: hu
+generated_at: '2025-09-06T03:52:35+09:00'
+cldr_version: v46
+source: Unicode CLDR

@@ -1,0 +1,24 @@
+---
+number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
+  currency_formats:
+    standard: "¤#,##0.00"
+    accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
+locale: en
+generated_at: '2025-09-06T03:52:19+09:00'
+cldr_version: v46
+source: Unicode CLDR

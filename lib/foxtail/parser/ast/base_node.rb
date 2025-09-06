@@ -3,6 +3,8 @@
 module Foxtail
   class Parser
     module AST
+      # Base class for all AST nodes in the Fluent parser
+      # Provides common functionality for type management and node equality
       class BaseNode
         attr_accessor :type
 
@@ -10,19 +12,16 @@ module Foxtail
           @type = self.class.name.split("::").last
         end
 
-        # Compare nodes for equality, ignoring specified fields
-        def ==(other, ignored_fields = ["span"])
+        # Compare nodes for equality, ignoring span information
+        def ==(other)
           return false unless other.is_a?(BaseNode)
 
-          this_keys = instance_variables.map { |v| v.to_s.delete("@") }.to_set
-          other_keys = other.instance_variables.map { |v| v.to_s.delete("@") }.to_set
+          this_keys = instance_variables.to_set {|v| v.to_s.delete("@") }
+          other_keys = other.instance_variables.to_set {|v| v.to_s.delete("@") }
 
-          if ignored_fields
-            ignored_fields.each do |field|
-              this_keys.delete(field)
-              other_keys.delete(field)
-            end
-          end
+          # Always ignore span information in equality comparison
+          this_keys.delete("span")
+          other_keys.delete("span")
 
           return false if this_keys.size != other_keys.size
 
@@ -36,10 +35,11 @@ module Foxtail
 
             if this_val.is_a?(Array) && other_val.is_a?(Array)
               return false if this_val.length != other_val.length
+
               this_val.each_with_index do |item, i|
-                return false unless scalars_equal(item, other_val[i], ignored_fields)
+                return false unless item == other_val[i]
               end
-            elsif !scalars_equal(this_val, other_val, ignored_fields)
+            elsif this_val != other_val
               return false
             end
           end
@@ -58,22 +58,12 @@ module Foxtail
           result
         end
 
-        private
-
-        def scalars_equal(this_val, other_val, ignored_fields)
-          if this_val.is_a?(BaseNode) && other_val.is_a?(BaseNode)
-            this_val == other_val
-          else
-            this_val == other_val
-          end
-        end
-
-        def serialize_value(value)
+        private def serialize_value(value)
           case value
           when BaseNode
             value.to_h
           when Array
-            value.map { |v| serialize_value(v) }
+            value.map {|v| serialize_value(v) }
           else
             value
           end

@@ -36,6 +36,88 @@ inherit_gem:
 inherit_from: .rubocop_todo.yml
 
 # Project-specific settings can be added here
-# Example:
-# Style/Documentation:
-#   Enabled: false
+
+# Disable all Metrics cops for now - will address these later
+Metrics:
+  Enabled: false
+
+# Case statements don't always need else clauses when all cases are handled
+# or when unhandled cases should be ignored intentionally
+Style/MissingElse:
+  Enabled: false
+
+# These methods are intentionally named without ? suffix as they represent actions/operations
+# rather than simple boolean queries
+Naming/PredicateMethod:
+  Exclude:
+    - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
+    - 'lib/foxtail/cldr/plural_rules.rb'     # evaluate_simple_condition() - evaluates CLDR conditions
+
+# Allow common short parameter names in parser contexts  
+Naming/MethodParameterName:
+  AllowedNames: 
+    - ps  # parser state - used throughout lib/foxtail/parser.rb
+    - ch  # character - used in lib/foxtail/stream.rb for character operations
+    - id  # identifier - used in lib/foxtail/bundle.rb, lib/foxtail/bundle/scope.rb, and AST classes
+
+# These specs test cross-cutting concerns rather than specific classes
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/foxtail/parser/ast_spec.rb'     # Tests AST node equality behavior across multiple classes
+    - 'spec/syntax_compatibility_spec.rb'   # Tests fluent.js compatibility integration
+
+# Allow multiple describe blocks for comprehensive AST testing
+RSpec/MultipleDescribes:
+  Exclude:
+    - 'spec/foxtail/parser/ast_spec.rb'     # Tests multiple AST node classes in logical groupings
+
+# Complex integration and parser tests need longer examples and multiple expectations
+RSpec/ExampleLength:
+  Enabled: false
+
+# Integration and compatibility tests require multiple expectations for comprehensive validation
+RSpec/MultipleExpectations:
+  Enabled: false
+
+# The after(:all) hooks in compatibility tests are safe - they only output summaries
+# and don't modify state or create database records that could leak between tests
+RSpec/BeforeAfterAll:
+  Exclude:
+    - 'spec/syntax_compatibility_spec.rb'          # Safe summary output hooks only
+
+# Context names describe test structure rather than behavioral conditions
+RSpec/ContextWording:
+  Exclude:
+    - 'spec/syntax_compatibility_spec.rb'          # "individual fixtures" groups dynamic fixture tests
+
+# Internal utility methods in stream processing don't require documentation
+Style/DocumentationMethod:
+  Exclude:
+    - 'lib/foxtail/stream.rb'                           # Internal stream processing utilities
+
+# Options hashes are part of the established API for Bundle, Scope, and Functions
+# Changing to keyword arguments would break existing usage and tests
+Style/OptionHash:
+  Exclude:
+    - 'lib/foxtail/bundle.rb'                      # Bundle#format(id, args={}) - public API
+    - 'lib/foxtail/bundle/ast_converter.rb'       # Internal converter initialization  
+    - 'lib/foxtail/bundle/scope.rb'               # Scope.new(bundle, args={}) - public API
+    - 'lib/foxtail/functions/number_formatter.rb'      # NumberFormatter#call(value, options={}) - matches Intl.NumberFormat API
+    - 'lib/foxtail/functions/date_time_formatter.rb'   # DateTimeFormatter#call(value, options={}) - matches Intl.DateTimeFormat API
+
+# Duplicate branches provide intentional fallback behavior for robustness
+Lint/DuplicateBranch:
+  Exclude:
+    - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
+    - 'lib/foxtail/cldr/datetime_formats.rb'      # Default datetime format patterns (medium as fallback)
+    - 'lib/foxtail/functions/date_time_formatter.rb'  # CLDR style normalization with wide as default
+
+# Task-scoped methods prevent global namespace pollution (see rubocop-rake#42)
+Rake/MethodDefinitionInTask:
+  Exclude:
+    - 'lib/tasks/compatibility.rake'  # save_detailed_report is task-scoped to avoid global conflicts
+
+# Long lines that improve readability when not split
+Layout/LineLength:
+  Exclude:
+    - 'lib/tasks/cldr.rake'  # Long XPath expressions for CLDR data extraction are more readable on single lines

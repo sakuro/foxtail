@@ -6,16 +6,17 @@ source "https://rubygems.org"
 gemspec
 
 group :development, :test do
-  gem "docquet", github: "sakuro/docquet"
+  gem "docquet", github: "sakuro/docquet" # Unreleased gem
   gem "irb"
-  gem "rake", "~> 13.0"
-  gem "repl_type_completor", "~> 0.1.11"
-  gem "rubocop", "~> 1.21"
+  gem "rake"
+  gem "repl_type_completor"
+  gem "rexml" # For CLDR XML parsing in rake tasks
+  gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rake"
   gem "rubocop-rspec"
 end
 
 group :test do
-  gem "rspec", "~> 3.0"
+  gem "rspec"
 end

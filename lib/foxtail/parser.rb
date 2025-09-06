@@ -1,12 +1,15 @@
 # frozen_string_literal: true
 
-require "set"
-
 module Foxtail
   # Ruby equivalent of fluent.js FluentParser
   # Faithfully translates TypeScript parsing logic to Ruby
   class Parser
     TRAILING_WS_RE = /[ \n\r]+\z/
+    private_constant :TRAILING_WS_RE
+
+    # Define Indent as a Struct for temporary indentation tokens
+    # Note: Uses Struct instead of Data.define because the value field is mutated in dedent()
+    Indent = Struct.new(:value, :start, :end, :span, keyword_init: true)
 
     attr_reader :with_spans
 
@@ -70,26 +73,25 @@ module Foxtail
       while ps.current_char == "#"
         skipped = get_entry_or_junk(ps)
         return skipped if skipped.is_a?(AST::Junk)
+
         ps.skip_blank_block
       end
 
       get_entry_or_junk(ps)
     end
 
-    private
-
-    def get_entry_or_junk(ps)
+    private def get_entry_or_junk(ps)
       entry_start_pos = ps.index
 
       begin
         entry = get_entry(ps)
         ps.expect_line_end
         entry
-      rescue ParseError => err
+      rescue ParseError => e
         error_index = ps.index
         ps.skip_to_next_entry_start(entry_start_pos)
         next_entry_start = ps.index
-        
+
         if next_entry_start < error_index
           # The position of the error must be inside of the Junk's span.
           error_index = next_entry_start
@@ -98,39 +100,38 @@ module Foxtail
         # Create a AST::Junk instance
         slice = ps.string[entry_start_pos...next_entry_start]
         junk = AST::Junk.new(slice)
-        
+
         if @with_spans
           junk.add_span(entry_start_pos, next_entry_start)
         end
-        
-        annot = AST::Annotation.new(err.code, err.args, err.message)
+
+        annot = AST::Annotation.new(e.code, e.args, e.message)
         if @with_spans
           annot.add_span(error_index, error_index)
         end
         junk.annotations << annot
-        
+
         junk
       end
     end
 
-    def get_entry(ps)
+    private def get_entry(ps)
       case ps.current_char
       when "#"
         get_comment(ps)
       when "-"
         get_term(ps)
       else
-        if ps.identifier_start?
-          get_message(ps)
-        else
-          raise ParseError.new("E0002")
-        end
+        raise ParseError, "E0002" unless ps.identifier_start?
+
+        get_message(ps)
+
       end
     end
 
-    def get_comment(ps)
+    private def get_comment(ps)
       start_pos = ps.index if @with_spans
-      
+
       # 0 - comment, 1 - group comment, 2 - resource comment
       level = -1
       content = ""
@@ -146,18 +147,15 @@ module Foxtail
 
         if ps.current_char != Stream::EOL
           ps.expect_char(" ")
-          ch = nil
-          while (ch = ps.take_char { |x| x != Stream::EOL })
+          while (ch = ps.take_char {|x| x != Stream::EOL })
             content += ch
           end
         end
 
-        if ps.next_line_comment?(level)
-          content += ps.current_char
-          ps.next
-        else
-          break
-        end
+        break unless ps.next_line_comment?(level)
+
+        content += ps.current_char
+        ps.next
       end
 
       comment_class = case level
@@ -168,15 +166,15 @@ module Foxtail
                       else
                         AST::ResourceComment
                       end
-      
+
       result = comment_class.new(content)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
 
-    def get_message(ps)
+    private def get_message(ps)
       start_pos = ps.index if @with_spans
-      
+
       id = get_identifier(ps)
       ps.skip_blank_inline
       ps.expect_char("=")
@@ -193,9 +191,9 @@ module Foxtail
       result
     end
 
-    def get_term(ps)
+    private def get_term(ps)
       start_pos = ps.index if @with_spans
-      
+
       ps.expect_char("-")
       id = get_identifier(ps)
       ps.skip_blank_inline
@@ -212,9 +210,9 @@ module Foxtail
       result
     end
 
-    def get_attribute(ps)
+    private def get_attribute(ps)
       start_pos = ps.index if @with_spans
-      
+
       ps.expect_char(".")
       key = get_identifier(ps)
       ps.skip_blank_inline
@@ -222,7 +220,7 @@ module Foxtail
 
       value = maybe_get_pattern(ps)
       if value.nil?
-        raise ParseError.new("E0012")
+        raise ParseError, "E0012"
       end
 
       result = AST::Attribute.new(key, value)
@@ -230,26 +228,25 @@ module Foxtail
       result
     end
 
-    def get_attributes(ps)
+    private def get_attributes(ps)
       attrs = []
       ps.peek_blank
-      
+
       while ps.attribute_start?
         ps.skip_to_peek
         attr = get_attribute(ps)
         attrs << attr
         ps.peek_blank
       end
-      
+
       attrs
     end
 
-    def get_identifier(ps)
+    private def get_identifier(ps)
       start_pos = ps.index if @with_spans
-      
+
       name = ps.take_id_start
-      
-      ch = nil
+
       while (ch = ps.take_id_char)
         name += ch
       end
@@ -259,29 +256,30 @@ module Foxtail
       result
     end
 
-    def get_variant_key(ps)
+    private def get_variant_key(ps)
       ch = ps.current_char
-      
+
       if ch == Stream::EOF
-        raise ParseError.new("E0013")
+        raise ParseError, "E0013"
       end
 
       cc = ch.ord
-      if (cc >= 48 && cc <= 57) || cc == 45  # 0-9, -
+      if cc.between?(48, 57) || cc == 45 # 0-9, -
         get_number(ps)
       else
         get_identifier(ps)
       end
     end
 
-    def get_variant(ps, has_default = false)
+    private def get_variant(ps, has_default: false)
       start_pos = ps.index if @with_spans
       default_index = false
 
       if ps.current_char == "*"
         if has_default
-          raise ParseError.new("E0015")
+          raise ParseError, "E0015"
         end
+
         ps.next
         default_index = true
       end
@@ -294,21 +292,21 @@ module Foxtail
 
       value = maybe_get_pattern(ps)
       if value.nil?
-        raise ParseError.new("E0012")
+        raise ParseError, "E0012"
       end
 
-      result = AST::Variant.new(key, value, default_index)
+      result = AST::Variant.new(key, value, default: default_index)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
 
-    def get_variants(ps)
+    private def get_variants(ps)
       variants = []
       has_default = false
 
       ps.skip_blank
       while ps.variant_start?
-        variant = get_variant(ps, has_default)
+        variant = get_variant(ps, has_default:)
         has_default = true if variant.default
         variants << variant
         ps.expect_line_end
@@ -316,20 +314,19 @@ module Foxtail
       end
 
       if variants.empty?
-        raise ParseError.new("E0011")
+        raise ParseError, "E0011"
       end
 
       unless has_default
-        raise ParseError.new("E0010")
+        raise ParseError, "E0010"
       end
 
       variants
     end
 
-    def get_digits(ps)
+    private def get_digits(ps)
       num = ""
-      
-      ch = nil
+
       while (ch = ps.take_digit)
         num += ch
       end
@@ -341,7 +338,7 @@ module Foxtail
       num
     end
 
-    def get_number(ps)
+    private def get_number(ps)
       start_pos = ps.index if @with_spans
       value = ""
 
@@ -362,7 +359,7 @@ module Foxtail
       result
     end
 
-    def maybe_get_pattern(ps)
+    private def maybe_get_pattern(ps)
       ps.peek_blank_inline
       if ps.value_start?
         ps.skip_to_peek
@@ -378,7 +375,7 @@ module Foxtail
       nil
     end
 
-    def get_pattern(ps, is_block)
+    private def get_pattern(ps, is_block)
       start_pos = ps.index if @with_spans
       elements = []
       common_indent_length = nil
@@ -418,7 +415,7 @@ module Foxtail
           elements << get_placeable(ps)
           next
         when "}"
-          raise ParseError.new("E0027")
+          raise ParseError, "E0027"
         else
           elements << get_text_element(ps)
         end
@@ -433,31 +430,14 @@ module Foxtail
     # Create a token representing an indent. It's not part of the AST and it will
     # be trimmed and merged into adjacent TextElements, or turned into a new
     # AST::TextElement, if it's surrounded by two Placeables.
-    def get_indent(ps, value, start)
-      # Ruby doesn't need a separate Indent class - we'll use a simple struct
-      indent_struct = Struct.new(:value, :start, :end, :span) do
-        def is_a?(klass)
-          klass == Indent || super
-        end
-        
-        class << self
-          def name
-            "Indent"
-          end
-        end
-      end
-      
-      indent = indent_struct.new(value, start, ps.index)
-      if @with_spans
-        span_struct = Struct.new(:start, :end)
-        indent.span = span_struct.new(start, ps.index)
-      end
-      indent
+    private def get_indent(ps, value, start)
+      span = @with_spans ? AST::Span.new(start, ps.index) : nil
+      Indent.new(value:, start:, end: ps.index, span:)
     end
 
     # Dedent a list of elements by removing the maximum common indent from the
     # beginning of text lines. The common indent is calculated in get_pattern.
-    def dedent(elements, common_indent)
+    private def dedent(elements, common_indent)
       trimmed = []
 
       elements.each do |element|
@@ -473,7 +453,7 @@ module Foxtail
         end
 
         prev = trimmed.last
-        if prev&.is_a?(AST::TextElement)
+        if prev.is_a?(AST::TextElement)
           # Join adjacent TextElements by replacing them with their sum.
           sum = AST::TextElement.new(prev.value + element.value)
           if @with_spans && prev.span && element.span
@@ -506,7 +486,7 @@ module Foxtail
       trimmed
     end
 
-    def get_text_element(ps)
+    private def get_text_element(ps)
       start_pos = ps.index if @with_spans
       buffer = ""
 
@@ -531,30 +511,30 @@ module Foxtail
       result
     end
 
-    def get_placeable(ps)
+    private def get_placeable(ps)
       start_pos = ps.index if @with_spans
-      
+
       ps.expect_char("{")
       ps.skip_blank
       expression = get_expression(ps)
       ps.expect_char("}")
-      
+
       result = AST::Placeable.new(expression)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
 
     # Helper method to add spans consistently
-    def add_span_if_enabled(node, ps, start_pos = nil)
-      if @with_spans
-        start_pos ||= ps.index
-        node.add_span(start_pos, ps.index) unless node.span
-      end
+    private def add_span_if_enabled(node, ps, start_pos=nil)
+      return unless @with_spans
+
+      start_pos ||= ps.index
+      node.add_span(start_pos, ps.index) unless node.span
     end
 
-    def get_expression(ps)
+    private def get_expression(ps)
       start_pos = ps.index if @with_spans
-      
+
       selector = get_inline_expression(ps)
       ps.skip_blank
 
@@ -566,18 +546,17 @@ module Foxtail
 
         # Validate selector expression according to
         # abstract.js in the Fluent specification
-        if selector.is_a?(AST::MessageReference)
+        case selector
+        when AST::MessageReference
+          raise ParseError, "E0016" if selector.attribute.nil?
+
+          raise ParseError, "E0018"
+        when AST::TermReference
           if selector.attribute.nil?
-            raise ParseError.new("E0016")
-          else
-            raise ParseError.new("E0018")
+            raise ParseError, "E0017"
           end
-        elsif selector.is_a?(AST::TermReference)
-          if selector.attribute.nil?
-            raise ParseError.new("E0017")
-          end
-        elsif selector.is_a?(AST::Placeable)
-          raise ParseError.new("E0029")
+        when AST::Placeable
+          raise ParseError, "E0029"
         end
 
         ps.next
@@ -593,13 +572,13 @@ module Foxtail
       end
 
       if selector.is_a?(AST::TermReference) && !selector.attribute.nil?
-        raise ParseError.new("E0019")
+        raise ParseError, "E0019"
       end
 
       selector
     end
 
-    def get_inline_expression(ps)
+    private def get_inline_expression(ps)
       start_pos = ps.index if @with_spans
 
       if ps.current_char == "{"
@@ -651,7 +630,7 @@ module Foxtail
         if ps.current_peek == "("
           # It's a Function. Ensure it's all upper-case.
           unless /^[A-Z][A-Z0-9_-]*$/.match?(id.name)
-            raise ParseError.new("E0008")
+            raise ParseError, "E0008"
           end
 
           ps.skip_to_peek
@@ -672,12 +651,12 @@ module Foxtail
         return result
       end
 
-      raise ParseError.new("E0028")
+      raise ParseError, "E0028"
     end
 
-    def get_call_argument(ps)
+    private def get_call_argument(ps)
       start_pos = ps.index if @with_spans
-      
+
       exp = get_inline_expression(ps)
       ps.skip_blank
 
@@ -695,12 +674,12 @@ module Foxtail
         return result
       end
 
-      raise ParseError.new("E0009")
+      raise ParseError, "E0009"
     end
 
-    def get_call_arguments(ps)
+    private def get_call_arguments(ps)
       start_pos = ps.index if @with_spans
-      
+
       positional = []
       named = []
       argument_names = Set.new
@@ -714,12 +693,13 @@ module Foxtail
         arg = get_call_argument(ps)
         if arg.is_a?(AST::NamedArgument)
           if argument_names.include?(arg.name.name)
-            raise ParseError.new("E0022")
+            raise ParseError, "E0022"
           end
+
           named << arg
           argument_names.add(arg.name.name)
         elsif !argument_names.empty?
-          raise ParseError.new("E0021")
+          raise ParseError, "E0021"
         else
           positional << arg
         end
@@ -741,33 +721,28 @@ module Foxtail
       result
     end
 
-    def get_string(ps)
+    private def get_string(ps)
       start_pos = ps.index if @with_spans
-      
+
       ps.expect_char('"')
       value = ""
 
-      ch = nil
-      while (ch = ps.take_char { |x| x != '"' && x != Stream::EOL })
-        if ch == "\\"
-          value += get_escape_sequence(ps)
-        else
-          value += ch
-        end
+      while (ch = ps.take_char {|x| x != '"' && x != Stream::EOL })
+        value += ch == "\\" ? get_escape_sequence(ps) : ch
       end
 
       if ps.current_char == Stream::EOL
-        raise ParseError.new("E0020")
+        raise ParseError, "E0020"
       end
 
       ps.expect_char('"')
-      
+
       result = AST::StringLiteral.new(value)
       add_span_if_enabled(result, ps, start_pos)
       result
     end
 
-    def get_escape_sequence(ps)
+    private def get_escape_sequence(ps)
       next_char = ps.current_char
 
       case next_char
@@ -783,24 +758,24 @@ module Foxtail
       end
     end
 
-    def get_unicode_escape_sequence(ps, u, digits)
-      ps.expect_char(u)
+    private def get_unicode_escape_sequence(ps, unicode_marker, digits)
+      ps.expect_char(unicode_marker)
 
       sequence = ""
       digits.times do
         ch = ps.take_hex_digit
-        
+
         unless ch
-          raise ParseError.new("E0026", "\\#{u}#{sequence}#{ps.current_char}")
+          raise ParseError.new("E0026", "\\#{unicode_marker}#{sequence}#{ps.current_char}")
         end
 
         sequence += ch
       end
 
-      "\\#{u}#{sequence}"
+      "\\#{unicode_marker}#{sequence}"
     end
 
-    def get_literal(ps)
+    private def get_literal(ps)
       if ps.number_start?
         return get_number(ps)
       end
@@ -809,14 +784,7 @@ module Foxtail
         return get_string(ps)
       end
 
-      raise ParseError.new("E0014")
-    end
-
-    # Define Indent as a constant for type checking
-    Indent = Class.new do
-      def self.name
-        "Indent"
-      end
+      raise ParseError, "E0014"
     end
   end
 end

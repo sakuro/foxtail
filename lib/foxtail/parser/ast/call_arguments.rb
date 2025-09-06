@@ -3,10 +3,12 @@
 module Foxtail
   class Parser
     module AST
+      # Represents function call arguments (both positional and named)
       class CallArguments < SyntaxNode
-        attr_accessor :positional, :named
+        attr_accessor :positional
+        attr_accessor :named
 
-        def initialize(positional = [], named = [])
+        def initialize(positional=[], named=[])
           super()
           @positional = positional
           @named = named

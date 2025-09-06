@@ -1,0 +1,9 @@
+---
+locale: ro
+plural_rules:
+  one: i = 1 and v = 0
+  few: v != 0 or n = 0 or n != 1 and n % 100 = 1..19
+  other: ''
+generated_at: '2025-09-06T03:52:16+09:00'
+cldr_version: v46
+source: Unicode CLDR

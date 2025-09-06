@@ -1,0 +1,106 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': sty
+        '2': lut
+        '3': mar
+        '4': kwi
+        '5': moj
+        '6': czy
+        '7': lip
+        '8': siy
+        '9': wrz
+        '10': paź
+        '11': lis
+        '12': gru
+      wide:
+        '1': stycznia
+        '2': lutego
+        '3': marca
+        '4': kwietnia
+        '5': moja
+        '6': czyrwca
+        '7': lipca
+        '8': siyrpnia
+        '9': września
+        '10': października
+        '11': listopada
+        '12': grudnia
+    stand-alone:
+      narrow:
+        '1': S
+        '2': L
+        '3': M
+        '4': K
+        '5': M
+        '6': C
+        '7': L
+        '8': S
+        '9': W
+        '10': P
+        '11': L
+        '12': G
+      wide:
+        '1': styczyń
+        '2': luty
+        '3': marzec
+        '4': kwieciyń
+        '5': moj
+        '6': czyrwiec
+        '7': lipiec
+        '8': siyrpiyń
+        '9': wrzesiyń
+        '10': październik
+        '11': listopad
+        '12': grudziyń
+  days:
+    format:
+      abbreviated:
+        sun: niy
+        mon: pyń
+        tue: wto
+        wed: str
+        thu: szt
+        fri: piō
+        sat: sob
+      short:
+        sun: nd
+        mon: pń
+        tue: wt
+        wed: st
+        thu: sz
+        fri: pt
+        sat: sb
+      wide:
+        sun: niydziela
+        mon: pyńdziałek
+        tue: wtorek
+        wed: strzoda
+        thu: sztwortek
+        fri: piōntek
+        sat: sobota
+    stand-alone:
+      narrow:
+        sun: "n"
+        mon: p
+        tue: w
+        wed: s
+        thu: s
+        fri: p
+        sat: s
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: dd.MM.y
+  time_formats:
+    full: HH:mm:ss zzzz
+    long: HH:mm:ss z
+    medium: HH:mm:ss
+    short: HH:mm
+locale: szl
+generated_at: '2025-09-06T03:52:41+09:00'
+cldr_version: v46
+source: Unicode CLDR

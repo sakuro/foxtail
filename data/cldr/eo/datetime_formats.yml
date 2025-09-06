@@ -1,0 +1,85 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': Maj
+        '6': Jun
+        '7': Jul
+        '8': Aŭg
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Dec
+      wide:
+        '1': Januaro
+        '2': Februaro
+        '3': Marto
+        '4': Aprilo
+        '5': Majo
+        '6': Junio
+        '7': Julio
+        '8': Aŭgusto
+        '9': Septembro
+        '10': Oktobro
+        '11': Novembro
+        '12': Decembro
+    stand-alone:
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      abbreviated:
+        sun: di
+        mon: lu
+        tue: ma
+        wed: me
+        thu: ĵa
+        fri: ve
+        sat: sa
+      wide:
+        sun: dimanĉo
+        mon: lundo
+        tue: mardo
+        wed: merkredo
+        thu: ĵaŭdo
+        fri: vendredo
+        sat: sabato
+    stand-alone:
+      narrow:
+        sun: d
+        mon: l
+        tue: m
+        wed: m
+        thu: ĵ
+        fri: v
+        sat: s
+  date_formats:
+    full: EEEE, 'la' d-'a' 'de' MMMM y
+    long: y-MMMM-dd
+    medium: y-MMM-dd
+    short: yy-MM-dd
+  time_formats:
+    full: HH:mm:ss zzzz
+    long: HH:mm:ss z
+    medium: HH:mm:ss
+    short: HH:mm
+locale: eo
+generated_at: '2025-09-06T03:52:33+09:00'
+cldr_version: v46
+source: Unicode CLDR

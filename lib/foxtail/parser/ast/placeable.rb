@@ -3,6 +3,7 @@
 module Foxtail
   class Parser
     module AST
+      # Represents expressions within braces {} in a pattern that are evaluated at runtime
       class Placeable < SyntaxNode
         attr_accessor :expression
 

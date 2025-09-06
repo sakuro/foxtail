@@ -1,0 +1,119 @@
+---
+datetime_formats:
+  months:
+    format:
+      abbreviated:
+        '1': tammi
+        '2': helmi
+        '3': maalis
+        '4': huhti
+        '5': touko
+        '6': kesä
+        '7': heinä
+        '8': elo
+        '9': syys
+        '10': loka
+        '11': marras
+        '12': joulu
+      wide:
+        '1': tammikuuta
+        '2': helmikuuta
+        '3': maaliskuuta
+        '4': huhtikuuta
+        '5': toukokuuta
+        '6': kesäkuuta
+        '7': heinäkuuta
+        '8': elokuuta
+        '9': syyskuuta
+        '10': lokakuuta
+        '11': marraskuuta
+        '12': joulukuuta
+    stand-alone:
+      abbreviated:
+        '1': tammi
+        '2': helmi
+        '3': maalis
+        '4': huhti
+        '5': touko
+        '6': kesä
+        '7': heinä
+        '8': elo
+        '9': syys
+        '10': loka
+        '11': marras
+        '12': joulu
+      narrow:
+        '1': T
+        '2': H
+        '3': M
+        '4': H
+        '5': T
+        '6': K
+        '7': H
+        '8': E
+        '9': S
+        '10': L
+        '11': M
+        '12': J
+      wide:
+        '1': tammikuu
+        '2': helmikuu
+        '3': maaliskuu
+        '4': huhtikuu
+        '5': toukokuu
+        '6': kesäkuu
+        '7': heinäkuu
+        '8': elokuu
+        '9': syyskuu
+        '10': lokakuu
+        '11': marraskuu
+        '12': joulukuu
+  days:
+    format:
+      abbreviated:
+        sun: su
+        mon: ma
+        tue: ti
+        wed: ke
+        thu: to
+        fri: pe
+        sat: la
+      wide:
+        sun: sunnuntai
+        mon: maanantaina
+        tue: tiistaina
+        wed: keskiviikkona
+        thu: torstaina
+        fri: perjantaina
+        sat: lauantaina
+    stand-alone:
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: K
+        thu: T
+        fri: P
+        sat: L
+      wide:
+        sun: sunnuntai
+        mon: maanantai
+        tue: tiistai
+        wed: keskiviikko
+        thu: torstai
+        fri: perjantai
+        sat: lauantai
+  date_formats:
+    full: cccc d. MMMM y
+    long: d. MMMM y
+    medium: d.M.y
+    short: d.M.y
+  time_formats:
+    full: H.mm.ss zzzz
+    long: H.mm.ss z
+    medium: H.mm.ss
+    short: H.mm
+locale: fi
+generated_at: '2025-09-06T03:52:34+09:00'
+cldr_version: v46
+source: Unicode CLDR
