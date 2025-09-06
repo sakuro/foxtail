@@ -315,6 +315,140 @@ skipBlankBlock()→ skip_blank_block()
 - **Error handling**: Same error codes and messages
 - **Performance**: Reasonable speed (within 5x of fluent.js)
 
+## 🔄 @fluent/sequence Architecture
+
+### Purpose & Role
+`@fluent/sequence` is a separate package that provides **language fallback chain management** for FluentBundle instances. It solves the critical problem of finding the best available translation across multiple locales.
+
+### Core Functionality
+
+#### Bundle Mapping Functions
+```typescript
+// Synchronous mapping
+function mapBundleSync(
+  bundles: Iterable<FluentBundle>,
+  ids: string | Array<string>
+): FluentBundle | null | Array<FluentBundle | null>
+
+// Asynchronous mapping  
+function mapBundleAsync(
+  bundles: AsyncIterable<FluentBundle>,
+  ids: string | Array<string>
+): Promise<FluentBundle | null | Array<FluentBundle | null>>
+```
+
+#### Key Algorithm: First-Match Strategy
+```typescript
+function getBundleForId(bundles: Iterable<FluentBundle>, id: string) {
+  for (const bundle of bundles) {
+    if (bundle.hasMessage(id)) {  // First bundle with this message wins
+      return bundle;
+    }
+  }
+  return null;  // No bundle contains this message
+}
+```
+
+### Usage Pattern
+```javascript
+// 1. Create language fallback chain (ordered by preference)
+const bundles = [
+  new FluentBundle("ja"),     // Primary: Japanese  
+  new FluentBundle("en-US"),  // Fallback: English
+  new FluentBundle("en")      // Final fallback: Generic English
+];
+
+// 2. Find best available translation
+function formatString(id, args) {
+  let ctx = mapBundleSync(bundles, id);  // Returns first bundle with 'id'
+  if (ctx === null) return id;           // No translation found
+  
+  let msg = ctx.getMessage(id);
+  return ctx.format(msg, args);
+}
+```
+
+### Architecture Benefits
+
+#### 1. **Separation of Concerns**
+- **fluent-bundle**: Single-locale message formatting
+- **fluent-sequence**: Multi-locale fallback management
+- Clean modular design
+
+#### 2. **Language Negotiation Support**
+- Ordered iterable represents negotiated language preferences
+- Automatic fallback to less preferred but available languages
+- Graceful degradation when translations are missing
+
+#### 3. **Performance Optimizations**
+- Early termination (first match wins)
+- Async support for lazy bundle loading
+- Batch processing for multiple IDs
+
+### Ruby Implementation Considerations
+
+#### Potential Ruby Equivalent
+```ruby
+module Foxtail
+  module Sequence
+    def self.map_bundle_sync(bundles, ids)
+      if ids.is_a?(String)
+        return get_bundle_for_id(bundles, ids)
+      end
+      
+      ids.map { |id| get_bundle_for_id(bundles, id) }
+    end
+    
+    private def self.get_bundle_for_id(bundles, id)
+      bundles.find { |bundle| bundle.message?(id) }
+    end
+  end
+end
+```
+
+#### Ruby Idioms Opportunities
+- Use `Enumerable#find` instead of manual iteration
+- Leverage Ruby's block syntax for cleaner code
+- Support both Array and Enumerator for bundles
+
+### Implementation Priority
+
+#### For Foxtail Project
+- **Low Priority**: Not core to Bundle functionality
+- **Nice-to-have**: Would provide complete fluent.js ecosystem parity
+- **Alternative**: Users can implement simple fallback logic themselves
+
+#### Decision Factors
+- Adds complexity without core functionality
+- Most Ruby applications use simpler I18n patterns
+- Could be added as separate gem later (`foxtail-sequence`)
+
+### Integration Points
+
+#### If Implemented
+```ruby
+# High-level API integration
+class Foxtail::Context
+  def initialize(locales, options = {})
+    @bundles = locales.map { |locale| Foxtail::Bundle.new(locale) }
+  end
+  
+  def format(id, args = {})
+    bundle = Foxtail::Sequence.map_bundle_sync(@bundles, id)
+    return "??#{id}??" if bundle.nil?
+    bundle.format(id, args)
+  end
+end
+```
+
+### Compatibility Notes
+
+#### JavaScript vs Ruby Differences
+- JavaScript: Heavy use of iterators/iterables
+- Ruby: More natural with Enumerable
+- JavaScript: Separate async/sync versions needed  
+- Ruby: Could use single method with Fiber support
+
 ---
 
 *This analysis provides the foundation for faithful Ruby translation of fluent.js parser logic.*
