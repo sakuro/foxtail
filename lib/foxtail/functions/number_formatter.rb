@@ -63,7 +63,7 @@ module Foxtail
         # Use CLDR pattern for percentage formatting
         pattern = number_formats.percent_pattern
         # Check if pattern has space before % by looking at the pattern structure
-        if pattern.length >= 2 && pattern[-1] == "%" && pattern[-2].ord != 48 && pattern[-2] != "0"
+        if pattern.length >= 2 && pattern[-1] == "%" && pattern[-2] != "0"
           # There's a space or separator character before %, use it
           space_char = pattern[-2]
           "#{result}#{space_char}#{number_formats.percent_sign}"
