@@ -7,7 +7,7 @@
 **Decision**: Reuse existing Parser::AST with conversion to Bundle::AST
 
 **Alternatives Considered**:
-1. Implement regex-based parser like fluent-bundle (faithful port)
+1. Implement regex-based parser like fluent-bundle (direct port)
 2. Use Parser::AST and convert to Bundle::AST (chosen)
 
 **Rationale**:
@@ -22,7 +22,7 @@
 - ✅ Bug fixes apply to both development and runtime
 - ✅ Already proven compatibility
 - ❌ Slightly slower resource loading
-- ❌ Not 100% faithful to fluent-bundle implementation
+- ❌ Not 100% compatible with fluent-bundle implementation
 
 ### 2. Bundle::AST Type System
 

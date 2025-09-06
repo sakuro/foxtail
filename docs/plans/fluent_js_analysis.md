@@ -451,4 +451,4 @@ end
 
 ---
 
-*This analysis provides the foundation for faithful Ruby translation of fluent.js parser logic.*
+*This analysis provides the foundation for Ruby translation of fluent.js parser logic.*
