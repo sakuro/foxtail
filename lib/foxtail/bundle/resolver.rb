@@ -84,7 +84,7 @@ module Foxtail
         name = expr["name"]
         expr["attr"] # Future: attribute access
 
-        value = scope.get_variable(name)
+        value = scope.variable(name)
 
         if value.nil?
           scope.add_error("Unknown variable: $#{name}")
@@ -105,7 +105,7 @@ module Foxtail
           return "{-#{name}}"
         end
 
-        term = @bundle.get_term("-#{name}")
+        term = @bundle.term("-#{name}")
 
         if term.nil?
           scope.add_error("Unknown term: -#{name}")
@@ -135,7 +135,7 @@ module Foxtail
           return "{#{name}}"
         end
 
-        message = @bundle.get_message(name)
+        message = @bundle.message(name)
 
         if message.nil?
           scope.add_error("Unknown message: #{name}")

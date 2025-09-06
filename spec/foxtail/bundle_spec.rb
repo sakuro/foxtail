@@ -83,7 +83,7 @@ RSpec.describe Foxtail::Bundle do
       bundle.add_resource(duplicate_resource)
 
       # Should still have original message
-      message = bundle.get_message("hello")
+      message = bundle.message("hello")
       expect(message["value"]).to be_an(Array) # Original complex pattern
     end
 
@@ -95,12 +95,12 @@ RSpec.describe Foxtail::Bundle do
       bundle.add_resource(override_resource, allow_overrides: true)
 
       # Should have new message
-      message = bundle.get_message("hello")
+      message = bundle.message("hello")
       expect(message["value"]).to eq("Different message")
     end
   end
 
-  describe "#message? and #get_message" do
+  describe "#message? and #message" do
     let(:bundle) { Foxtail::Bundle.new(locale("en")) }
     let(:resource) { Foxtail::Resource.from_string("hello = Hello world") }
 
@@ -112,23 +112,23 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "retrieves messages" do
-      message = bundle.get_message("hello")
+      message = bundle.message("hello")
       expect(message).to be_a(Hash)
       expect(message["id"]).to eq("hello")
       expect(message["attributes"]).to be_nil
     end
 
     it "returns nil for nonexistent messages" do
-      expect(bundle.get_message("nonexistent")).to be_nil
+      expect(bundle.message("nonexistent")).to be_nil
     end
 
     it "handles string and symbol keys" do
       expect(bundle.message?(:hello)).to be true
-      expect(bundle.get_message(:hello)).not_to be_nil
+      expect(bundle.message(:hello)).not_to be_nil
     end
   end
 
-  describe "#term? and #get_term" do
+  describe "#term? and #term" do
     let(:bundle) { Foxtail::Bundle.new(locale("en")) }
     let(:resource) { Foxtail::Resource.from_string("-brand = Firefox") }
 
@@ -140,14 +140,14 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "retrieves terms" do
-      term = bundle.get_term("-brand")
+      term = bundle.term("-brand")
       expect(term).to be_a(Hash)
       expect(term["id"]).to eq("-brand")
       expect(term["attributes"]).to be_nil
     end
 
     it "returns nil for nonexistent terms" do
-      expect(bundle.get_term("nonexistent")).to be_nil
+      expect(bundle.term("nonexistent")).to be_nil
     end
   end
 

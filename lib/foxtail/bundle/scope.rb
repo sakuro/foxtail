@@ -20,7 +20,7 @@ module Foxtail
       end
 
       # Get a variable value (checks locals first, then args)
-      def get_variable(name)
+      def variable(name)
         @locals[name] || @args[name.to_sym] || @args[name.to_s]
       end
 

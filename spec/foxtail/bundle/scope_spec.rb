@@ -32,28 +32,28 @@ RSpec.describe Foxtail::Bundle::Scope do
     end
   end
 
-  describe "#get_variable" do
+  describe "#variable" do
     it "gets variables from args (symbol keys)" do
-      expect(scope.get_variable("name")).to eq("World")
-      expect(scope.get_variable("count")).to eq(5)
+      expect(scope.variable("name")).to eq("World")
+      expect(scope.variable("count")).to eq(5)
     end
 
     it "gets variables from args (string keys)" do
-      expect(scope.get_variable("email")).to eq("test@example.com")
+      expect(scope.variable("email")).to eq("test@example.com")
     end
 
     it "gets local variables first" do
       scope.set_local("name", "Local Value")
-      expect(scope.get_variable("name")).to eq("Local Value")
+      expect(scope.variable("name")).to eq("Local Value")
     end
 
     it "returns nil for nonexistent variables" do
-      expect(scope.get_variable("nonexistent")).to be_nil
+      expect(scope.variable("nonexistent")).to be_nil
     end
 
     it "prioritizes locals over args" do
       scope.set_local("count", 100)
-      expect(scope.get_variable("count")).to eq(100)
+      expect(scope.variable("count")).to eq(100)
     end
   end
 
@@ -183,7 +183,7 @@ RSpec.describe Foxtail::Bundle::Scope do
 
     it "doesn't affect args" do
       scope.clear_locals
-      expect(scope.get_variable("name")).to eq("World")
+      expect(scope.variable("name")).to eq("World")
     end
   end
 

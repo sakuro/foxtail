@@ -62,7 +62,7 @@ module Foxtail
     end
 
     # Get a message by ID
-    def get_message(id)
+    def message(id)
       @messages[id.to_s]
     end
 
@@ -72,13 +72,13 @@ module Foxtail
     end
 
     # Get a term by ID (private method in fluent-bundle)
-    def get_term(id)
+    def term(id)
       @terms[id.to_s]
     end
 
     # Format a message with the given arguments
     def format(id, args={})
-      message = get_message(id)
+      message = message(id)
       return id.to_s unless message
 
       scope = Scope.new(self, args)
