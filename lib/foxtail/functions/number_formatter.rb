@@ -73,7 +73,17 @@ module Foxtail
       end
 
       private def format_currency(formatted_value, number_formats, options)
-        # Format as currency
+        # TODO: Implement proper CLDR currency formatting
+        # Currently this is a simplified implementation that:
+        # - Ignores currency codes (e.g., "USD", "JPY")
+        # - Uses default "$" symbol or explicit currency option
+        # - Does not use CLDR currency patterns or locale-specific formatting
+        #
+        # Full implementation should:
+        # - Map currency codes to symbols via CLDR currency data
+        # - Use NumberFormats#currency_pattern for locale-specific formatting
+        # - Handle currency placement, spacing, and negative formatting per locale
+
         result = format_number_with_precision(formatted_value, number_formats, options)
         currency = options[:currency] || "$"
         currency_style = options[:currencyDisplay] || "standard"
