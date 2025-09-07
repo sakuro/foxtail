@@ -34,6 +34,3 @@
 - Implementation decisions and design rationale
 - fluent.js compatibility analysis
 
-## [0.1.0] - 2025-09-04
-
-- Initial release
