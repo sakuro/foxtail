@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "locale"
-
 RSpec.describe Foxtail::CLDR::PluralRules do
   describe "#initialize" do
     it "loads rules for supported locale" do

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "locale"
-
 RSpec.describe Foxtail::Bundle::Resolver do
   let(:bundle) { Foxtail::Bundle.new(locale("en")) }
   let(:resolver) { Foxtail::Bundle::Resolver.new(bundle) }

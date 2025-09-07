@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "locale"
-
 RSpec.describe Foxtail::Bundle::Scope do
   let(:bundle) { Foxtail::Bundle.new(locale("en")) }
   let(:args) { {:name => "World", :count => 5, "email" => "test@example.com"} }

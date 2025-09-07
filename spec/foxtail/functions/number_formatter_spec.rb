@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "locale"
-
 RSpec.describe Foxtail::Functions::NumberFormatter do
   subject(:formatter) { Foxtail::Functions::NumberFormatter.new }
 

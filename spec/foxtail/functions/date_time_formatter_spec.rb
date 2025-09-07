@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "locale"
 require "time"
 
 RSpec.describe Foxtail::Functions::DateTimeFormatter do
