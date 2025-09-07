@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser::Stream do
   describe "basic functionality" do
     let(:stream) { Foxtail::Parser::Stream.new("hello world") }
@@ -161,7 +159,7 @@ RSpec.describe Foxtail::Parser::Stream do
     let(:stream) { Foxtail::Parser::Stream.new("hello") }
 
     it "raises ParseError for expect_char mismatch" do
-      expect { stream.expect_char("x") }.to raise_error(Foxtail::ParseError, 'Expected token: "x"')
+      expect { stream.expect_char("x") }.to raise_error(Foxtail::Parser::ParseError, 'Expected token: "x"')
     end
 
     it "accepts expected character" do
@@ -171,7 +169,7 @@ RSpec.describe Foxtail::Parser::Stream do
 
     it "raises ParseError for take_id_start with invalid character" do
       stream = Foxtail::Parser::Stream.new("123")
-      expect { stream.take_id_start }.to raise_error(Foxtail::ParseError, 'Expected a character from range: "a-zA-Z"')
+      expect { stream.take_id_start }.to raise_error(Foxtail::Parser::ParseError, 'Expected a character from range: "a-zA-Z"')
     end
   end
 end

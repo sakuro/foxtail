@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser do
   let(:parser) { Foxtail::Parser.new }
 

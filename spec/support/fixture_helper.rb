@@ -2,7 +2,6 @@
 
 require "json"
 require "pathname"
-require_relative "../../lib/foxtail"
 
 module FixtureHelper
   # Path to fluent.js fixtures

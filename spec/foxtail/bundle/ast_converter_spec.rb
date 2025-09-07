@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-require_relative "../../../lib/foxtail/bundle/ast_converter"
-require_relative "../../../lib/foxtail/parser"
-
 RSpec.describe Foxtail::Bundle::ASTConverter do
   let(:converter) { Foxtail::Bundle::ASTConverter.new }
 

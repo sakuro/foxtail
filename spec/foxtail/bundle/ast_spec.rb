@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-require_relative "../../../lib/foxtail/bundle/ast"
-
 RSpec.describe Foxtail::Bundle::AST do
   describe ".str" do
     it "creates a string literal node" do

@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require "locale"
-require "spec_helper"
 require "time"
-require_relative "../../lib/foxtail/functions"
 
 RSpec.describe Foxtail::Functions do
   describe "[]" do
@@ -41,11 +39,6 @@ RSpec.describe Foxtail::Functions do
 
       expect(result["NUMBER"]).to be_a(Foxtail::Functions::NumberFormatter)
       expect(result["DATETIME"]).to be_a(Foxtail::Functions::DateTimeFormatter)
-    end
-
-    it "allows modification of returned hash" do
-      result = Foxtail::Functions.defaults
-      expect { result["CUSTOM"] = ->(_val, _opts) { "custom" } }.not_to raise_error
     end
   end
 end

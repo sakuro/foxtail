@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require "spec_helper"
 require "tempfile"
-require_relative "../../lib/foxtail/resource"
 
 RSpec.describe Foxtail::Resource do
   describe ".from_string" do

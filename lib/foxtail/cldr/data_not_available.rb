@@ -3,6 +3,6 @@
 module Foxtail
   module CLDR
     # Exception raised when CLDR data is not available for a locale
-    class DataNotAvailable < StandardError; end
+    class DataNotAvailable < Error; end
   end
 end

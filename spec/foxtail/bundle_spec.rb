@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-require_relative "../../lib/foxtail/bundle"
-require_relative "../../lib/foxtail/resource"
-
 RSpec.describe Foxtail::Bundle do
   describe "#initialize" do
     it "accepts a single locale" do
@@ -48,6 +44,18 @@ RSpec.describe Foxtail::Bundle do
       expect(bundle.functions).to eq(functions)
       expect(bundle.use_isolating).to be false
       expect(bundle.transform).to eq(:some_transform)
+    end
+
+    it "accepts merged functions with defaults" do
+      custom_function = ->(_val, _opts) { "custom" }
+      merged_functions = Foxtail::Functions.defaults.merge("CUSTOM" => custom_function)
+      locale = locale("en")
+      bundle = Foxtail::Bundle.new(locale, functions: merged_functions)
+
+      expect(bundle.functions).to have_key("NUMBER")
+      expect(bundle.functions).to have_key("DATETIME")
+      expect(bundle.functions).to have_key("CUSTOM")
+      expect(bundle.functions["CUSTOM"]).to eq(custom_function)
     end
   end
 

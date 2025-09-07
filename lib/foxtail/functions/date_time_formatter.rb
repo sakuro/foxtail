@@ -3,8 +3,6 @@
 require "date"
 require "locale"
 require "time"
-require_relative "../cldr/datetime_formats"
-require_relative "../cldr/errors"
 
 module Foxtail
   module Functions
@@ -23,7 +21,7 @@ module Foxtail
       #   locale: Locale instance (required)
       #
       # @raise [ArgumentError] when the value cannot be parsed as a date/time
-      # @raise [CLDR::DataNotAvailable] when CLDR data is not available for the locale
+      # @raise [Foxtail::CLDR::DataNotAvailable] when CLDR data is not available for the locale
       def call(*args, locale:, **options)
         # Locale is now guaranteed to be a Locale instance from Bundle/Resolver
 
@@ -57,11 +55,11 @@ module Foxtail
         time_obj = date_obj.is_a?(Time) ? date_obj : Time.parse(date_obj.to_s)
 
         # Load CLDR formatting data
-        formats = CLDR::DateTimeFormats.new(locale)
+        formats = Foxtail::CLDR::DateTimeFormats.new(locale)
 
         # Check if CLDR data is actually available for this locale
         unless formats.data?
-          raise CLDR::DataNotAvailable, "CLDR data not available for locale: #{locale}"
+          raise Foxtail::CLDR::DataNotAvailable, "CLDR data not available for locale: #{locale}"
         end
 
         # Handle dateStyle/timeStyle (Intl.DateTimeFormat style)

@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "bundle/ast_converter"
-require_relative "parser"
-
 module Foxtail
   # Parse FTL source and convert to Bundle::AST
   # Public API for creating resources from FTL content

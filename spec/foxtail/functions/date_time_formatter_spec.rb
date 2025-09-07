@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require "locale"
-require "spec_helper"
 require "time"
-require_relative "../../../lib/foxtail/functions/date_time_formatter"
 
 RSpec.describe Foxtail::Functions::DateTimeFormatter do
   subject(:formatter) { Foxtail::Functions::DateTimeFormatter.new }

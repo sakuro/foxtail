@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::Parser::AST::BaseNode do
   describe "basic functionality" do
     let(:hello_node) { Foxtail::Parser::AST::Identifier.new("hello") }

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
 require "support/fixture_helper"
 
 # Constants for compatibility testing

@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "locale"
-require "spec_helper"
-require_relative "../../../lib/foxtail/functions/number_formatter"
 
 RSpec.describe Foxtail::Functions::NumberFormatter do
   subject(:formatter) { Foxtail::Functions::NumberFormatter.new }

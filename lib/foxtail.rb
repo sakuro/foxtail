@@ -1,14 +1,23 @@
 # frozen_string_literal: true
 
-require_relative "foxtail/bundle"
-require_relative "foxtail/cldr"
-require_relative "foxtail/errors"
-require_relative "foxtail/functions"
-require_relative "foxtail/parser"
-require_relative "foxtail/parser/ast"
-require_relative "foxtail/resource"
+require "zeitwerk"
 require_relative "foxtail/version"
 
+# Ruby implementation of Project Fluent localization system
 module Foxtail
-  class Error < StandardError; end
+  # Configure Zeitwerk loader for this gem
+  loader = Zeitwerk::Loader.for_gem
+
+  # Ignore version.rb since it's required by gemspec before Zeitwerk loads
+  loader.ignore(__dir__ + "/foxtail/version.rb")
+
+  # Configure inflections for acronyms
+  loader.inflector.inflect(
+    "ast" => "AST",
+    "ast_converter" => "ASTConverter",
+    "cldr" => "CLDR",
+    "datetime_formats" => "DateTimeFormats"
+  )
+
+  loader.setup
 end

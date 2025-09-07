@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 require "locale"
-require_relative "bundle/ast"
-require_relative "bundle/ast_converter"
-require_relative "bundle/resolver"
-require_relative "bundle/scope"
-require_relative "functions"
 
 module Foxtail
   # Main runtime class for message formatting

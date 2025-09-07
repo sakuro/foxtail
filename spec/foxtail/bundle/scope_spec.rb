@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require "locale"
-require "spec_helper"
-require_relative "../../../lib/foxtail/bundle"
-require_relative "../../../lib/foxtail/bundle/scope"
 
 RSpec.describe Foxtail::Bundle::Scope do
   let(:bundle) { Foxtail::Bundle.new(locale("en")) }

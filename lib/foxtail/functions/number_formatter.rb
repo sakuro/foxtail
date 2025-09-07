@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "locale"
-require_relative "../cldr/errors"
-require_relative "../cldr/number_formats"
 
 module Foxtail
   module Functions
@@ -11,7 +9,7 @@ module Foxtail
       # Format numbers with locale-specific formatting
       #
       # @raise [ArgumentError] when the value cannot be parsed as a number
-      # @raise [CLDR::DataNotAvailable] when CLDR data is not available for the locale
+      # @raise [Foxtail::CLDR::DataNotAvailable] when CLDR data is not available for the locale
       def call(*args, locale:, **options)
         # Locale is now guaranteed to be a Locale instance from Bundle/Resolver
 
@@ -29,11 +27,11 @@ module Foxtail
           end
 
         # Load CLDR number formats for the locale
-        number_formats = CLDR::NumberFormats.new(locale)
+        number_formats = Foxtail::CLDR::NumberFormats.new(locale)
 
         # Check if CLDR data is actually available for this locale
         unless number_formats.data?
-          raise CLDR::DataNotAvailable, "CLDR data not available for locale: #{locale}"
+          raise Foxtail::CLDR::DataNotAvailable, "CLDR data not available for locale: #{locale}"
         end
 
         # Convert options to formatting parameters
