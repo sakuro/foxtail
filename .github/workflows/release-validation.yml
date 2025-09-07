@@ -78,13 +78,13 @@ jobs:
           echo ""
           echo "To fix this:"
           echo "1. Generate an API key at https://rubygems.org/profile/edit"
-          echo "2. Go to repository Settings → Secrets and variables → Actions"
+          echo "2. Go to repository Settings -> Secrets and variables -> Actions"
           echo "3. Add new secret: RUBYGEMS_API_KEY with your API key"
           echo ""
           echo "This PR cannot be merged until the secret is configured."
           exit 1
         else
-          echo "✓ RUBYGEMS_API_KEY is configured"
+          echo ":white_check_mark: RUBYGEMS_API_KEY is configured"
         fi
 
     - name: Run quality checks
