@@ -84,7 +84,7 @@ jobs:
           echo "This PR cannot be merged until the secret is configured."
           exit 1
         else
-          echo ":white_check_mark: RUBYGEMS_API_KEY is configured"
+          echo "✅ RUBYGEMS_API_KEY is configured"
         fi
 
     - name: Run quality checks
@@ -116,11 +116,11 @@ jobs:
         # Force push the updated tag
         git push origin "v${{ steps.version.outputs.version }}" --force
         
-        echo ":label: Tag v${{ steps.version.outputs.version }} updated to commit $(git rev-parse --short HEAD)"
+        echo "🏷️ Tag v${{ steps.version.outputs.version }} updated to commit $(git rev-parse --short HEAD)"
 
     - name: Release validation summary
       run: |
-        echo ":white_check_mark: Release validation passed for v${{ steps.version.outputs.version }}"
+        echo "✅ Release validation passed for v${{ steps.version.outputs.version }}"
         echo "- Version format is valid"
         echo "- Version consistency verified"
         echo "- Git tag exists at correct commit"

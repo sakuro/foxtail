@@ -101,7 +101,7 @@ jobs:
 
     - name: Post-release summary
       run: |
-        echo ":tada: Release ${{ steps.version.outputs.tag }} published successfully!"
+        echo "🎉 Release ${{ steps.version.outputs.tag }} published successfully!"
         echo "- Using git tag created on release branch"
         echo "- Gem built from tagged commit and published to RubyGems"
         echo "- GitHub release created with assets"
