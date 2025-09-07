@@ -1,0 +1,145 @@
+name: Release Validation
+
+env:
+  GEM_NAME: ${{ github.event.repository.name }}
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'lib/*/version.rb'  # Assumes single gem per repository
+      - 'CHANGELOG.md'
+
+jobs:
+  validate-release:
+    # Only run for release branches
+    if: startsWith(github.head_ref, 'release-v')
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+        submodules: recursive
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.4'
+        bundler-cache: true
+
+    - name: Extract version from branch name
+      id: version
+      run: |
+        BRANCH_NAME="${{ github.head_ref }}"
+        VERSION=${BRANCH_NAME#release-v}
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+    - name: Validate version format
+      run: |
+        if ! echo "${{ steps.version.outputs.version }}" | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+          echo "Error: Version must be in format x.y.z (e.g., 1.0.0)"
+          exit 1
+        fi
+
+    - name: Verify version consistency
+      run: |
+        # Check if version in file matches branch
+        FILE_VERSION=$(grep 'VERSION = ' lib/${{ env.GEM_NAME }}/version.rb | sed 's/.*VERSION = "\(.*\)".*/\1/')
+        if [ "$FILE_VERSION" != "${{ steps.version.outputs.version }}" ]; then
+          echo "Error: Version mismatch. File: $FILE_VERSION, Expected: ${{ steps.version.outputs.version }}"
+          exit 1
+        fi
+
+    - name: Check if git tag already exists
+      run: |
+        if git tag | grep -q "^${{ steps.version.outputs.tag }}$"; then
+          echo "Error: Git tag ${{ steps.version.outputs.tag }} already exists"
+          exit 1
+        fi
+
+    - name: Check if version already released on RubyGems
+      run: |
+        if gem list ${{ env.GEM_NAME }} --remote | grep -q "${{ steps.version.outputs.version }}"; then
+          echo "Error: Version ${{ steps.version.outputs.version }} already exists on RubyGems"
+          exit 1
+        fi
+
+    - name: Validate RubyGems API key
+      run: |
+        if [ -z "${{ secrets.RUBYGEMS_API_KEY }}" ]; then
+          echo "Error: RUBYGEMS_API_KEY secret is not configured"
+          echo ""
+          echo "To fix this:"
+          echo "1. Generate an API key at https://rubygems.org/profile/edit"
+          echo "2. Go to repository Settings → Secrets and variables → Actions"
+          echo "3. Add new secret: RUBYGEMS_API_KEY with your API key"
+          echo ""
+          echo "This PR cannot be merged until the secret is configured."
+          exit 1
+        fi
+
+    - name: Run quality checks
+      run: |
+        bundle exec rake rubocop
+        bundle exec rake spec
+
+    - name: Validate CHANGELOG.md format
+      run: |
+        # Check if CHANGELOG has the expected section for this version
+        if ! grep -q "^## \[${{ steps.version.outputs.version }}\]" CHANGELOG.md; then
+          echo "Error: CHANGELOG.md missing section for version ${{ steps.version.outputs.version }}"
+          exit 1
+        fi
+
+    - name: Validate release branch file changes
+      run: |
+        # Get the base commit (where release branch diverged from main)
+        BASE=$(git merge-base origin/main HEAD)
+        echo "Base commit: $BASE"
+        
+        # Get list of changed files since branch creation
+        CHANGED_FILES=$(git diff --name-only $BASE..HEAD)
+        echo "Changed files:"
+        echo "$CHANGED_FILES"
+        
+        # Check if any changed files are outside allowed patterns
+        DISALLOWED_FILES=""
+        while IFS= read -r file; do
+          if [[ -n "$file" ]]; then
+            # Allow: lib/{gem}/version.rb and CHANGELOG.md only
+            if [[ ! "$file" =~ ^lib/.*/version\.rb$ ]] && [[ "$file" != "CHANGELOG.md" ]]; then
+              DISALLOWED_FILES="$DISALLOWED_FILES\n  - $file"
+            fi
+          fi
+        done <<< "$CHANGED_FILES"
+        
+        # Fail if disallowed files found
+        if [[ -n "$DISALLOWED_FILES" ]]; then
+          echo "Error: Release branches should only contain version and changelog updates"
+          echo ""
+          echo "Disallowed files found:$DISALLOWED_FILES"
+          echo ""
+          echo "Allowed files:"
+          echo "  - lib/${{ env.GEM_NAME }}/version.rb"
+          echo "  - CHANGELOG.md"
+          echo ""
+          echo "Please remove these changes or create a separate feature branch."
+          exit 1
+        fi
+        
+        echo ":white_check_mark: All file changes are allowed in release branch"
+
+    - name: Release validation summary
+      run: |
+        echo ":white_check_mark: Release validation passed for v${{ steps.version.outputs.version }}"
+        echo "- Version format is valid"
+        echo "- Version consistency verified"
+        echo "- Git tag does not exist"
+        echo "- Version not yet on RubyGems"
+        echo "- RubyGems API key is configured"
+        echo "- Quality checks passed"
+        echo "- CHANGELOG.md is properly formatted"
+        echo "- Release branch contains only allowed file changes"
