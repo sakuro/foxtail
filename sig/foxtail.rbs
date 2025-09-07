@@ -1,4 +1,176 @@
 module Foxtail
   VERSION: String
-  # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+
+  class Error < StandardError
+  end
+
+  class Bundle
+    @locales: Array[Locale::Tag::Simple]
+    @messages: Hash[String, Hash[String, untyped]]
+    @terms: Hash[String, Hash[String, untyped]]
+    @functions: Hash[String, Proc]
+    @use_isolating: bool
+    @transform: Proc?
+
+    attr_reader locales: Array[Locale::Tag::Simple]
+    attr_reader messages: Hash[String, Hash[String, untyped]]
+    attr_reader terms: Hash[String, Hash[String, untyped]]
+    attr_reader functions: Hash[String, Proc]
+    attr_reader use_isolating: bool
+    attr_reader transform: Proc?
+
+    def initialize: (Locale::Tag::Simple | Array[Locale::Tag::Simple] locales, **untyped options) -> void
+    def locale: () -> Locale::Tag::Simple
+    def add_resource: (String | Resource resource, ?locale: Locale::Tag::Simple?) -> void
+    def message?: (String | Symbol id) -> bool
+    def message: (String | Symbol id) -> Hash[String, untyped]?
+    def term?: (String | Symbol id) -> bool
+    def term: (String | Symbol id) -> Hash[String, untyped]?
+    def format: (String | Symbol id, ?Hash[String | Symbol, untyped] args) -> String
+    def format_pattern: (Hash[String, untyped] pattern, ?Hash[String | Symbol, untyped] args) -> String
+
+    private
+
+    def add_message_entry: (untyped entry, Locale::Tag::Simple locale) -> void
+    def add_term_entry: (untyped entry, Locale::Tag::Simple locale) -> void
+  end
+
+  class Parser
+    @with_spans: bool
+
+    attr_reader with_spans: bool
+
+    def initialize: (?with_spans: bool) -> void
+    def parse: (String source) -> Parser::AST::Resource
+    def parse_entry: (String source) -> Parser::AST::BaseNode?
+
+    private
+
+    # Many private parsing methods - simplified signatures
+    def get_entry_or_junk: (Parser::Stream stream) -> untyped
+    def get_entry: (Parser::Stream stream) -> untyped
+    def get_comment: (Parser::Stream stream) -> untyped
+    def get_message: (Parser::Stream stream) -> untyped
+    def get_term: (Parser::Stream stream) -> untyped
+
+    class Stream
+      @string: String
+      @index: Integer
+      @peek_offset: Integer
+
+      attr_reader string: String
+      attr_reader index: Integer
+      attr_reader peek_offset: Integer
+
+      def initialize: (String input) -> void
+      def char_at: (Integer index) -> String?
+      def current_char: () -> String?
+      def current_peek: () -> String?
+      def next: () -> String?
+      def peek: () -> String?
+      def reset_peek: () -> void
+      def skip_to_peek: () -> void
+      def peek_blank_inline: () -> bool
+      def skip_blank_inline: () -> void
+      def peek_blank_block: () -> bool
+      def skip_blank_block: () -> void
+      def peek_blank: () -> bool
+      def skip_blank: () -> void
+      def expect_char: (String ch) -> bool
+      def expect_line_end: () -> bool
+      def take_char: (untyped predicate) -> String?
+      def char_id_start?: (String? ch) -> bool
+      def identifier_start?: () -> bool
+      def number_start?: () -> bool
+      def char_pattern_continuation?: (String? ch) -> bool
+      def value_start?: () -> bool
+      def value_continuation?: () -> bool
+      def next_line_comment?: () -> bool
+      def variant_start?: () -> bool
+      def attribute_start?: () -> bool
+      def skip_to_next_entry_start: () -> void
+      def take_id_start: () -> String?
+      def take_id_char: () -> String?
+      def take_digit: () -> String?
+      def take_hex_digit: () -> String?
+    end
+  end
+
+  class Resource
+    include Enumerable[untyped]
+    
+    @entries: Array[untyped]
+    @errors: Array[String]
+
+    attr_reader entries: Array[untyped]
+    attr_reader errors: Array[String]
+
+    def self.from_string: (String source, **untyped options) -> Resource
+    def self.from_file: (String path, **untyped options) -> Resource
+    # Note: new is private (private_class_method :new in implementation)
+    
+    private
+    
+    def initialize: (Array[untyped] entries, ?errors: Array[String]) -> void
+
+    public
+    
+    def empty?: () -> bool
+    def size: () -> Integer
+    def each: () { (untyped) -> void } -> void
+    def messages: () -> Array[untyped]
+    def terms: () -> Array[untyped]
+    def find: (String id) -> untyped?
+  end
+
+  module Functions
+    def self.defaults: () -> Hash[String, Proc]
+    def self.number: () -> Proc
+    def self.datetime: () -> Proc
+  end
+
+
+  module Parser::AST
+    class BaseNode
+      def initialize: (**untyped) -> void
+      def []: (String key) -> untyped
+      def []=: (String key, untyped value) -> untyped
+      def to_h: () -> Hash[String, untyped]
+    end
+
+    class Resource < BaseNode
+      def initialize: (Array[untyped] body, ?Array[untyped] comment) -> void
+    end
+
+    class Message < BaseNode
+      def initialize: (untyped id, ?untyped value, ?Array[untyped] attributes, ?untyped comment) -> void
+    end
+
+    class Term < BaseNode
+      def initialize: (untyped id, untyped value, ?Array[untyped] attributes, ?untyped comment) -> void
+    end
+
+    class Pattern < BaseNode
+      def initialize: (Array[untyped] elements) -> void
+    end
+  end
+
+  module CLDR
+    class Base
+      def initialize: (Locale::Tag::Simple locale) -> void
+    end
+
+    class PluralRules < Base
+      def cardinal: (Numeric n) -> Symbol
+      def ordinal: (Numeric n) -> Symbol
+    end
+
+    class NumberFormats < Base
+      def format: (Numeric number, ?Hash[Symbol, untyped] options) -> String
+    end
+
+    class DateTimeFormats < Base
+      def format: (Time | Date | DateTime datetime, ?Hash[Symbol, untyped] options) -> String
+    end
+  end
 end
