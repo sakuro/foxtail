@@ -1,5 +1,8 @@
 name: CI
 
+# This workflow runs tests and quality checks across multiple Ruby versions.
+# It ensures compatibility and maintains code quality for all supported versions.
+
 on:
   push:
     branches:
