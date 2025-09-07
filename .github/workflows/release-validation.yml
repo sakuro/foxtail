@@ -56,8 +56,13 @@ jobs:
     - name: Check if git tag already exists
       run: |
         if git tag | grep -q "^${{ steps.version.outputs.tag }}$"; then
-          echo "Error: Git tag ${{ steps.version.outputs.tag }} already exists"
-          exit 1
+          if [ "${{ github.event.action }}" != "synchronize" ]; then
+            echo "Error: Git tag ${{ steps.version.outputs.tag }} already exists"
+            echo "This should only happen if the tag was created outside the release process"
+            exit 1
+          else
+            echo "Tag ${{ steps.version.outputs.tag }} exists and will be updated to latest commit"
+          fi
         fi
 
     - name: Check if version already released on RubyGems
@@ -132,14 +137,35 @@ jobs:
         
         echo ":white_check_mark: All file changes are allowed in release branch"
 
+    - name: Update release tag to latest commit
+      if: github.event.action == 'synchronize'  # When new commits are pushed to PR
+      run: |
+        echo "Updating tag v${{ steps.version.outputs.version }} to latest commit"
+        
+        # Configure git
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Force update the tag to current HEAD
+        git tag -fa "v${{ steps.version.outputs.version }}" \
+          -m "Release v${{ steps.version.outputs.version }}"
+        
+        # Force push the updated tag
+        git push origin "v${{ steps.version.outputs.version }}" --force
+        
+        echo ":label: Tag v${{ steps.version.outputs.version }} updated to commit $(git rev-parse --short HEAD)"
+
     - name: Release validation summary
       run: |
         echo ":white_check_mark: Release validation passed for v${{ steps.version.outputs.version }}"
         echo "- Version format is valid"
         echo "- Version consistency verified"
-        echo "- Git tag does not exist"
+        echo "- Git tag exists at correct commit"
         echo "- Version not yet on RubyGems"
         echo "- RubyGems API key is configured"
         echo "- Quality checks passed"
         echo "- CHANGELOG.md is properly formatted"
         echo "- Release branch contains only allowed file changes"
+        if [ "${{ github.event.action }}" == "synchronize" ]; then
+          echo "- Tag updated to latest commit"
+        fi

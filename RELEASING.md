@@ -44,12 +44,17 @@ The workflow will automatically:
 Once the PR is created, the Release Validation workflow automatically:
 - Validates version format (must be `x.y.z`)
 - Verifies version consistency between branch name and `version.rb`
-- Checks that the git tag doesn't already exist
+- Checks that the git tag doesn't already exist (or can be updated)
 - Confirms the version isn't already published on RubyGems
 - Verifies `RUBYGEMS_API_KEY` secret is configured
 - Runs all tests and RuboCop checks
 - Validates `CHANGELOG.md` has an entry for this version
 - Ensures only `version.rb` and `CHANGELOG.md` were modified
+
+**Important**: If you push additional commits to the release PR (e.g., fixing typos, updating CHANGELOG):
+- The validation workflow automatically moves the release tag to the latest commit
+- This ensures the tag always points to the final reviewed code
+- No manual intervention required
 
 If all checks pass, merge the PR.
 
@@ -66,7 +71,9 @@ After the PR is merged, the Release Publish workflow automatically:
 
 ## Workflow Architecture
 
-### Key Design Decision: Tag-Based Deployment
+### Key Design Decisions
+
+#### Tag-Based Deployment
 
 The release workflow uses a **tag-based deployment strategy** to ensure the released gem contains exactly the code that was reviewed and approved in the release PR, without any subsequent changes from `main`.
 
@@ -81,7 +88,22 @@ graph LR
     F -->|Contains only| G[Code from release branch]
 ```
 
-This approach prevents unintended changes from being included in releases.
+#### Automatic Tag Movement
+
+When additional commits are pushed to a release PR, the tag automatically moves to the latest commit:
+
+```mermaid
+graph LR
+    A[Initial commit] -->|Tag v1.0.0| B[Tagged commit]
+    B -->|Fix typo| C[New commit]
+    C -->|Auto-move tag| D[Tag v1.0.0 on latest]
+    D -->|Final review| E[Ready to merge]
+```
+
+This ensures:
+- The tag always points to the final reviewed code
+- No manual tag management required
+- The published gem matches exactly what was approved
 
 ## Manual Release (Emergency Only)
 
