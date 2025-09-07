@@ -6,16 +6,16 @@ module Foxtail
   # Main runtime class for message formatting and localization.
   #
   # Bundle manages a collection of messages and terms for one or more locales,
-  # providing formatting capabilities with support for pluralization, 
+  # providing formatting capabilities with support for pluralization,
   # variable interpolation, and function calls.
   #
   # @example Basic usage
   #   locale = Locale::Tag.parse("en-US")
   #   bundle = Foxtail::Bundle.new(locale)
-  #   
+  #
   #   resource = Foxtail::Resource.from_string("hello = Hello, {$name}!")
   #   bundle.add_resource(resource)
-  #   
+  #
   #   result = bundle.format("hello", name: "World")
   #   # => "Hello, World!"
   #
@@ -36,7 +36,7 @@ module Foxtail
 
     # Create a new Bundle instance.
     #
-    # @param locales [Locale::Tag::Simple, Array<Locale::Tag::Simple>] 
+    # @param locales [Locale::Tag::Simple, Array<Locale::Tag::Simple>]
     #   One or more locale instances
     # @param options [Hash] Configuration options
     # @option options [Hash] :functions Custom formatting functions
