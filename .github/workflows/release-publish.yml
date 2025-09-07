@@ -62,6 +62,9 @@ jobs:
         :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
         EOF
 
+    - name: Set git user
+      uses: git-actions/set-user@v1
+
     - name: Build gem
       run: |
         bundle exec rake build

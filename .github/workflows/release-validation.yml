@@ -103,14 +103,14 @@ jobs:
           exit 1
         fi
 
+    - name: Set git user for tag update
+      if: github.event.action == 'synchronize'  # When new commits are pushed to PR
+      uses: git-actions/set-user@v1
+
     - name: Update release tag to latest commit
       if: github.event.action == 'synchronize'  # When new commits are pushed to PR
       run: |
         echo "Updating tag v${{ steps.version.outputs.version }} to latest commit"
-        
-        # Configure git
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
         
         # Force update the tag to current HEAD
         git tag -fa "v${{ steps.version.outputs.version }}" \
