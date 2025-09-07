@@ -2,9 +2,9 @@
 
 require "spec_helper"
 
-RSpec.describe Foxtail::Stream do
+RSpec.describe Foxtail::Parser::Stream do
   describe "basic functionality" do
-    let(:stream) { Foxtail::Stream.new("hello world") }
+    let(:stream) { Foxtail::Parser::Stream.new("hello world") }
 
     it "initializes correctly" do
       expect(stream.string).to eq("hello world")
@@ -50,7 +50,7 @@ RSpec.describe Foxtail::Stream do
   end
 
   describe "CRLF handling" do
-    let(:stream) { Foxtail::Stream.new("line1\r\nline2\nline3") }
+    let(:stream) { Foxtail::Parser::Stream.new("line1\r\nline2\nline3") }
 
     it "normalizes CRLF to LF in char_at" do
       expect(stream.char_at(5)).to eq("\n") # Should return \n for \r in CRLF
@@ -73,7 +73,7 @@ RSpec.describe Foxtail::Stream do
   end
 
   describe "blank handling" do
-    let(:stream) { Foxtail::Stream.new("  hello   \n  world") }
+    let(:stream) { Foxtail::Parser::Stream.new("  hello   \n  world") }
 
     it "handles peek_blank_inline" do
       blank = stream.peek_blank_inline
@@ -90,7 +90,7 @@ RSpec.describe Foxtail::Stream do
   end
 
   describe "character classification" do
-    let(:stream) { Foxtail::Stream.new("a1-_Z9") }
+    let(:stream) { Foxtail::Parser::Stream.new("a1-_Z9") }
 
     it "identifies ID start characters" do
       expect(stream.char_id_start?("a")).to be true
@@ -110,7 +110,7 @@ RSpec.describe Foxtail::Stream do
   end
 
   describe "number handling" do
-    let(:stream) { Foxtail::Stream.new("123-456") }
+    let(:stream) { Foxtail::Parser::Stream.new("123-456") }
 
     it "identifies number start" do
       expect(stream.number_start?).to be true
@@ -121,12 +121,12 @@ RSpec.describe Foxtail::Stream do
     end
 
     it "handles negative numbers" do
-      stream = Foxtail::Stream.new("-123")
+      stream = Foxtail::Parser::Stream.new("-123")
       expect(stream.number_start?).to be true
     end
 
     it "rejects non-number starting with dash" do
-      stream = Foxtail::Stream.new("-abc")
+      stream = Foxtail::Parser::Stream.new("-abc")
       expect(stream.number_start?).to be false
     end
 
@@ -139,26 +139,26 @@ RSpec.describe Foxtail::Stream do
   end
 
   describe "EOF handling" do
-    let(:stream) { Foxtail::Stream.new("a") }
+    let(:stream) { Foxtail::Parser::Stream.new("a") }
 
     it "handles EOF correctly" do
       expect(stream.current_char).to eq("a")
       stream.next
       expect(stream.current_char).to be_nil # EOF
-      expect(stream.current_char).to eq(Foxtail::Stream::EOF)
+      expect(stream.current_char).to eq(Foxtail::Parser::Stream::EOF)
     end
   end
 
   describe "constants" do
     it "defines correct constants" do
-      expect(Foxtail::Stream::EOL).to eq("\n")
-      expect(Foxtail::Stream::EOF).to be_nil
-      expect(Foxtail::Stream::SPECIAL_LINE_START_CHARS).to eq(["}", ".", "[", "*"])
+      expect(Foxtail::Parser::Stream::EOL).to eq("\n")
+      expect(Foxtail::Parser::Stream::EOF).to be_nil
+      expect(Foxtail::Parser::Stream::SPECIAL_LINE_START_CHARS).to eq(["}", ".", "[", "*"])
     end
   end
 
   describe "error handling" do
-    let(:stream) { Foxtail::Stream.new("hello") }
+    let(:stream) { Foxtail::Parser::Stream.new("hello") }
 
     it "raises ParseError for expect_char mismatch" do
       expect { stream.expect_char("x") }.to raise_error(Foxtail::ParseError, 'Expected token: "x"')
@@ -170,7 +170,7 @@ RSpec.describe Foxtail::Stream do
     end
 
     it "raises ParseError for take_id_start with invalid character" do
-      stream = Foxtail::Stream.new("123")
+      stream = Foxtail::Parser::Stream.new("123")
       expect { stream.take_id_start }.to raise_error(Foxtail::ParseError, 'Expected a character from range: "a-zA-Z"')
     end
   end

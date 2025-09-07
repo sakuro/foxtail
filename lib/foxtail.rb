@@ -7,7 +7,6 @@ require_relative "foxtail/functions"
 require_relative "foxtail/parser"
 require_relative "foxtail/parser/ast"
 require_relative "foxtail/resource"
-require_relative "foxtail/stream"
 require_relative "foxtail/version"
 
 module Foxtail

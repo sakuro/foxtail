@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "parser/stream"
+
 module Foxtail
   # Ruby equivalent of fluent.js FluentParser
   # Faithfully translates TypeScript parsing logic to Ruby
