@@ -2,7 +2,6 @@
 
 require "foxtail"
 require "locale"
-require_relative "support/fixture_helper"
 
 # Shared context for locale helper method
 RSpec.shared_context "with locale" do

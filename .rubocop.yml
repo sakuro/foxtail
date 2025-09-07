@@ -52,6 +52,8 @@ Naming/PredicateMethod:
   Exclude:
     - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
     - 'lib/foxtail/cldr/plural_rules.rb'     # evaluate_simple_condition() - evaluates CLDR conditions
+    - 'compat/compatibility_tester.rb'       # span_related() - checks difference type rather than boolean property
+    - 'compat/ast_comparator.rb'             # span_related() - checks difference type rather than boolean property
 
 # Allow common short parameter names in parser contexts  
 Naming/MethodParameterName:
@@ -94,6 +96,9 @@ RSpec/ContextWording:
 Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/parser/stream.rb'                    # Internal stream processing utilities
+    - 'compat/compatibility_tester.rb'                  # Internal compatibility testing utilities
+    - 'compat/compatibility_reporter.rb'                # Internal compatibility reporting utilities
+    - 'compat/ast_comparator.rb'                        # Internal AST comparison utilities
 
 # Options hashes are part of the established API for Bundle, Scope, and Functions
 # Changing to keyword arguments would break existing usage and tests
@@ -112,6 +117,11 @@ Lint/DuplicateBranch:
     - 'lib/foxtail/cldr/datetime_formats.rb'      # Default datetime format patterns (medium as fallback)
     - 'lib/foxtail/functions/date_time_formatter.rb'  # CLDR style normalization with wide as default
 
+# Number conversions are safe for statistical percentages (integers to float)
+Lint/NumberConversion:
+  Exclude:
+    - 'compat/compatibility_reporter.rb'  # Statistical percentage calculations with known integer inputs
+
 # Task-scoped methods prevent global namespace pollution (see rubocop-rake#42)
 Rake/MethodDefinitionInTask:
   Exclude:
@@ -121,3 +131,4 @@ Rake/MethodDefinitionInTask:
 Layout/LineLength:
   Exclude:
     - 'lib/tasks/cldr.rake'  # Long XPath expressions for CLDR data extraction are more readable on single lines
+    - 'compat/compatibility_reporter.rb'  # Report formatting strings are clearer as single lines
