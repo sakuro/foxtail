@@ -24,8 +24,8 @@ DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
 # CLDR source XML files
 CLDR_LOCALE_XML_FILES = FileList[File.join(TMP_DIR, "cldr-core/common/main/*.xml")]
 
-CLEAN.include(PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES)
-CLOBBER.include(CLDR_ZIP_PATH, CLDR_EXTRACT_DIR)
+CLEAN.include(CLDR_EXTRACT_DIR)
+CLOBBER.include(CLDR_ZIP_PATH, PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES)
 
 namespace :cldr do
   desc "Download CLDR core data to tmp directory"
