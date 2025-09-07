@@ -73,8 +73,10 @@ jobs:
         fi
 
     - name: Validate RubyGems API key
+      env:
+        API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
       run: |
-        if [ -z "${{ secrets.RUBYGEMS_API_KEY }}" ]; then
+        if [ -z "$API_KEY" ]; then
           echo "Error: RUBYGEMS_API_KEY secret is not configured"
           echo ""
           echo "To fix this:"
@@ -84,6 +86,8 @@ jobs:
           echo ""
           echo "This PR cannot be merged until the secret is configured."
           exit 1
+        else
+          echo "✓ RUBYGEMS_API_KEY is configured"
         fi
 
     - name: Run quality checks
