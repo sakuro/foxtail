@@ -37,7 +37,7 @@ jobs:
     - name: Validate version format
       run: |
         if ! echo "${{ steps.version.outputs.version }}" | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$'; then
-          echo "Error: Version must be in format x.y.z (e.g., 1.0.0)"
+          echo "❌ Error: Version must be in format x.y.z (e.g., 1.0.0)"
           exit 1
         fi
 
@@ -46,7 +46,7 @@ jobs:
         # Check if version in file matches branch
         FILE_VERSION=$(grep 'VERSION = ' lib/${{ env.GEM_NAME }}/version.rb | sed 's/.*VERSION = "\(.*\)".*/\1/')
         if [ "$FILE_VERSION" != "${{ steps.version.outputs.version }}" ]; then
-          echo "Error: Version mismatch. File: $FILE_VERSION, Expected: ${{ steps.version.outputs.version }}"
+          echo "❌ Error: Version mismatch. File: $FILE_VERSION, Expected: ${{ steps.version.outputs.version }}"
           exit 1
         fi
 
@@ -54,7 +54,7 @@ jobs:
       run: |
         if git tag | grep -q "^${{ steps.version.outputs.tag }}$"; then
           if [ "${{ github.event.action }}" != "synchronize" ]; then
-            echo "Error: Git tag ${{ steps.version.outputs.tag }} already exists"
+            echo "❌ Error: Git tag ${{ steps.version.outputs.tag }} already exists"
             echo "This should only happen if the tag was created outside the release process"
             exit 1
           else
@@ -65,7 +65,7 @@ jobs:
     - name: Check if version already released on RubyGems
       run: |
         if gem list ${{ env.GEM_NAME }} --remote | grep -q "${{ steps.version.outputs.version }}"; then
-          echo "Error: Version ${{ steps.version.outputs.version }} already exists on RubyGems"
+          echo "❌ Error: Version ${{ steps.version.outputs.version }} already exists on RubyGems"
           exit 1
         fi
 
@@ -74,7 +74,7 @@ jobs:
         API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
       run: |
         if [ -z "$API_KEY" ]; then
-          echo "Error: RUBYGEMS_API_KEY secret is not configured"
+          echo "❌ Error: RUBYGEMS_API_KEY secret is not configured"
           echo ""
           echo "To fix this:"
           echo "1. Generate an API key at https://rubygems.org/profile/edit"
@@ -96,7 +96,7 @@ jobs:
       run: |
         # Check if CHANGELOG has the expected section for this version
         if ! grep -q "^## \[${{ steps.version.outputs.version }}\]" CHANGELOG.md; then
-          echo "Error: CHANGELOG.md missing section for version ${{ steps.version.outputs.version }}"
+          echo "❌ Error: CHANGELOG.md missing section for version ${{ steps.version.outputs.version }}"
           exit 1
         fi
 

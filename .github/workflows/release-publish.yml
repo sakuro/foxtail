@@ -43,7 +43,7 @@ jobs:
         # Check if version in file matches branch
         FILE_VERSION=$(grep 'VERSION = ' lib/${{ env.GEM_NAME }}/version.rb | sed 's/.*VERSION = "\(.*\)".*/\1/')
         if [ "$FILE_VERSION" != "${{ steps.version.outputs.version }}" ]; then
-          echo "Error: Version mismatch. File: $FILE_VERSION, Expected: ${{ steps.version.outputs.version }}"
+          echo "❌ Error: Version mismatch. File: $FILE_VERSION, Expected: ${{ steps.version.outputs.version }}"
           exit 1
         fi
 
