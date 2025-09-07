@@ -2,7 +2,7 @@
 
 module Foxtail
   # Ruby equivalent of fluent.js FluentParser
-  # Faithfully translates TypeScript parsing logic to Ruby
+  # Translates TypeScript parsing logic to Ruby
   class Parser
     TRAILING_WS_RE = /[ \n\r]+\z/
     private_constant :TRAILING_WS_RE

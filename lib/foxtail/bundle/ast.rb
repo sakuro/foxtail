@@ -2,7 +2,7 @@
 
 module Foxtail
   class Bundle
-    # Faithful port of fluent-bundle/src/ast.ts type system
+    # Ruby port of fluent-bundle/src/ast.ts type system
     # Lightweight Hash-based implementation maintaining TypeScript semantics
     module AST
       # Helper methods for creating AST nodes
