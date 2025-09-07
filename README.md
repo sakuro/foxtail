@@ -150,7 +150,7 @@ Foxtail consists of two main components:
 ### Parser System
 - **Foxtail::Parser** - FTL syntax parser
 - **Foxtail::Parser::AST** - Abstract Syntax Tree implementation
-- **Foxtail::Stream** - Character stream processing
+- **Foxtail::Parser::Stream** - Character stream processing
 
 ### Bundle System  
 - **Foxtail::Bundle** - Runtime message formatting
