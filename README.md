@@ -126,8 +126,8 @@ $ bundle exec rspec spec/foxtail/bundle_spec.rb
 Foxtail includes comprehensive compatibility testing against fluent.js:
 
 ```bash
-# Test fluent.js compatibility (97/98 fixtures passing)
-$ bundle exec rspec spec/syntax_compatibility_spec.rb
+# Generate compatibility report (97/98 fixtures passing, 99.0%)
+$ bundle exec rake compatibility:report
 ```
 
 ### Code Quality
