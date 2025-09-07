@@ -32,6 +32,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Development Console
 - **Interactive console**: `bin/console` - Opens an IRB session with the gem loaded
 
+### Documentation
+- **Generate YARD docs**: `rake yard` - Generate API documentation with YARD
+- **View documentation**: Open `docs/api/index.html` in browser after generation
+
 ## Architecture
 
 This is a Ruby gem project with a standard structure:

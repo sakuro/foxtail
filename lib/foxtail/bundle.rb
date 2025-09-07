@@ -3,8 +3,29 @@
 require "locale"
 
 module Foxtail
-  # Main runtime class for message formatting
-  # Corresponds to fluent-bundle/src/bundle.ts
+  # Main runtime class for message formatting and localization.
+  #
+  # Bundle manages a collection of messages and terms for one or more locales,
+  # providing formatting capabilities with support for pluralization, 
+  # variable interpolation, and function calls.
+  #
+  # @example Basic usage
+  #   locale = Locale::Tag.parse("en-US")
+  #   bundle = Foxtail::Bundle.new(locale)
+  #   
+  #   resource = Foxtail::Resource.from_string("hello = Hello, {$name}!")
+  #   bundle.add_resource(resource)
+  #   
+  #   result = bundle.format("hello", name: "World")
+  #   # => "Hello, World!"
+  #
+  # @example With custom functions
+  #   functions = Foxtail::Functions.defaults.merge(
+  #     "UPPER" => ->(str, **_opts) { str.upcase }
+  #   )
+  #   bundle = Foxtail::Bundle.new(locale, functions: functions)
+  #
+  # Corresponds to fluent-bundle/src/bundle.ts in the original JavaScript implementation.
   class Bundle
     attr_reader :locales
     attr_reader :messages
@@ -13,6 +34,15 @@ module Foxtail
     attr_reader :use_isolating
     attr_reader :transform
 
+    # Create a new Bundle instance.
+    #
+    # @param locales [Locale::Tag::Simple, Array<Locale::Tag::Simple>] 
+    #   One or more locale instances
+    # @param options [Hash] Configuration options
+    # @option options [Hash] :functions Custom formatting functions
+    # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks
+    # @option options [Proc, nil] :transform Optional message transformation function
+    # @raise [ArgumentError] if locales are not Locale instances
     def initialize(locales, **options)
       # Accept only Locale instances for type safety
       @locales = Array(locales).each_with_object([]) {|locale, acc|
