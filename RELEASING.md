@@ -49,12 +49,12 @@ Once the PR is created, the Release Validation workflow automatically:
 - Verifies `RUBYGEMS_API_KEY` secret is configured
 - Runs all tests and RuboCop checks
 - Validates `CHANGELOG.md` has an entry for this version
-- Ensures only `version.rb` and `CHANGELOG.md` were modified
 
-**Important**: If you push additional commits to the release PR (e.g., fixing typos, updating CHANGELOG):
+**Important**: If you push additional commits to the release PR (e.g., bug fixes, workflow updates, documentation changes):
 - The validation workflow automatically moves the release tag to the latest commit
 - This ensures the tag always points to the final reviewed code
 - No manual intervention required
+- All changes will be included in the final release
 
 If all checks pass, merge the PR.
 

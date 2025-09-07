@@ -103,44 +103,6 @@ jobs:
           exit 1
         fi
 
-    - name: Validate release branch file changes
-      run: |
-        # Get the base commit (where release branch diverged from main)
-        BASE=$(git merge-base origin/main HEAD)
-        echo "Base commit: $BASE"
-        
-        # Get list of changed files since branch creation
-        CHANGED_FILES=$(git diff --name-only $BASE..HEAD)
-        echo "Changed files:"
-        echo "$CHANGED_FILES"
-        
-        # Check if any changed files are outside allowed patterns
-        DISALLOWED_FILES=""
-        while IFS= read -r file; do
-          if [[ -n "$file" ]]; then
-            # Allow: lib/{gem}/version.rb and CHANGELOG.md only
-            if [[ ! "$file" =~ ^lib/.*/version\.rb$ ]] && [[ "$file" != "CHANGELOG.md" ]]; then
-              DISALLOWED_FILES="$DISALLOWED_FILES\n  - $file"
-            fi
-          fi
-        done <<< "$CHANGED_FILES"
-        
-        # Fail if disallowed files found
-        if [[ -n "$DISALLOWED_FILES" ]]; then
-          echo "Error: Release branches should only contain version and changelog updates"
-          echo ""
-          echo "Disallowed files found:$DISALLOWED_FILES"
-          echo ""
-          echo "Allowed files:"
-          echo "  - lib/${{ env.GEM_NAME }}/version.rb"
-          echo "  - CHANGELOG.md"
-          echo ""
-          echo "Please remove these changes or create a separate feature branch."
-          exit 1
-        fi
-        
-        echo ":white_check_mark: All file changes are allowed in release branch"
-
     - name: Update release tag to latest commit
       if: github.event.action == 'synchronize'  # When new commits are pushed to PR
       run: |
@@ -169,7 +131,6 @@ jobs:
         echo "- RubyGems API key is configured"
         echo "- Quality checks passed"
         echo "- CHANGELOG.md is properly formatted"
-        echo "- Release branch contains only allowed file changes"
         if [ "${{ github.event.action }}" == "synchronize" ]; then
           echo "- Tag updated to latest commit"
         fi
