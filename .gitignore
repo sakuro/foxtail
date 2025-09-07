@@ -11,6 +11,9 @@
 .rspec_status
 Gemfile.lock
 
+# MCP configuration (contains local paths)
+.mcp.json
+
 # Serena MCP - ignore everything except project.yml
 .serena/*
 !.serena/project.yml
