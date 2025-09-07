@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 ### Added
+- Zeitwerk autoloading integration for automatic code loading
 - Ruby implementation of Project Fluent localization system
 - FTL syntax parser with comprehensive AST support
 - Runtime message formatting with Bundle system
