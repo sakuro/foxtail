@@ -20,9 +20,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Extract version from branch name
+      id: version
+      run: |
+        BRANCH_NAME="${{ github.head_ref }}"
+        VERSION=${BRANCH_NAME#release-v}
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+
+    - name: Checkout release tag
       uses: actions/checkout@v5
       with:
+        ref: ${{ steps.version.outputs.tag }}
         fetch-depth: 0
         submodules: recursive
 
@@ -31,14 +40,6 @@ jobs:
       with:
         ruby-version: '3.4'
         bundler-cache: true
-
-    - name: Extract version from branch name
-      id: version
-      run: |
-        BRANCH_NAME="${{ github.head_ref }}"
-        VERSION=${BRANCH_NAME#release-v}
-        echo "version=$VERSION" >> $GITHUB_OUTPUT
-        echo "tag=v$VERSION" >> $GITHUB_OUTPUT
 
     - name: Verify version consistency
       run: |
@@ -61,12 +62,13 @@ jobs:
         :rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
         EOF
 
-    - name: Set git user
-      uses: git-actions/set-user@v1
-
-    - name: Build and release gem
+    - name: Build gem
       run: |
-        bundle exec rake release
+        bundle exec rake build
+
+    - name: Push gem to RubyGems
+      run: |
+        gem push pkg/${{ env.GEM_NAME }}-${{ steps.version.outputs.version }}.gem
 
     - name: Extract changelog for this version
       id: changelog
@@ -100,7 +102,7 @@ jobs:
     - name: Post-release summary
       run: |
         echo ":tada: Release ${{ steps.version.outputs.tag }} published successfully!"
-        echo "- Git tag created and pushed via rake release"
-        echo "- Gem built and published to RubyGems"
+        echo "- Using git tag created on release branch"
+        echo "- Gem built from tagged commit and published to RubyGems"
         echo "- GitHub release created with assets"
         echo "- Release branch cleaned up"
