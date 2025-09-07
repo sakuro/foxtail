@@ -1,5 +1,8 @@
 name: Release Validation
 
+# This workflow validates release PRs before they are merged.
+# It performs comprehensive checks on version, dependencies, and release readiness.
+
 env:
   GEM_NAME: ${{ github.event.repository.name }}
 
