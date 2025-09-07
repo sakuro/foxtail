@@ -47,8 +47,9 @@ Once the PR is created, the Release Validation workflow automatically:
 - Checks that the git tag doesn't already exist (or can be updated)
 - Confirms the version isn't already published on RubyGems
 - Verifies `RUBYGEMS_API_KEY` secret is configured
-- Runs all tests and RuboCop checks
 - Validates `CHANGELOG.md` has an entry for this version
+
+**Note**: Quality checks (tests and RuboCop) are handled by the CI workflow to avoid duplication.
 
 **Important**: If you push additional commits to the release PR (e.g., bug fixes, workflow updates, documentation changes):
 - The validation workflow automatically moves the release tag to the latest commit

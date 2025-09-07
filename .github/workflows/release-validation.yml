@@ -90,10 +90,6 @@ jobs:
           echo "✅ RUBYGEMS_API_KEY is configured"
         fi
 
-    - name: Run quality checks
-      run: |
-        bundle exec rake rubocop
-        bundle exec rake spec
 
     - name: Validate CHANGELOG.md format
       run: |
@@ -129,8 +125,8 @@ jobs:
         echo "- Git tag exists at correct commit"
         echo "- Version not yet on RubyGems"
         echo "- RubyGems API key is configured"
-        echo "- Quality checks passed"
         echo "- CHANGELOG.md is properly formatted"
+        echo "- Quality checks handled by CI workflow"
         if [ "${{ github.event.action }}" == "synchronize" ]; then
           echo "- Tag updated to latest commit"
         fi
