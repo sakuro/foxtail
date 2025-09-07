@@ -34,6 +34,8 @@ module Foxtail
       @errors = errors
     end
 
+    private_class_method :new
+
     # Check if resource has any entries
     def empty?
       @entries.empty?

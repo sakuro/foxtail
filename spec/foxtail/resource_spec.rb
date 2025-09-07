@@ -101,7 +101,7 @@ RSpec.describe Foxtail::Resource do
       end
 
       it "returns true when resource is empty" do
-        empty_resource = Foxtail::Resource.new([])
+        empty_resource = Foxtail::Resource.from_string("")
         expect(empty_resource.empty?).to be true
       end
     end
@@ -168,12 +168,6 @@ RSpec.describe Foxtail::Resource do
       # This would test error handling when we have actual error scenarios
       resource = Foxtail::Resource.from_string("valid = Valid message")
       expect(resource.errors).to be_an(Array)
-    end
-
-    it "accepts custom errors during initialization" do
-      custom_errors = ["Custom error"]
-      resource = Foxtail::Resource.new([], errors: custom_errors)
-      expect(resource.errors).to eq(custom_errors)
     end
   end
 end
