@@ -50,10 +50,12 @@ Report generation that:
 # Generate compatibility report
 bundle exec rake compatibility:report
 
-# Output:
+# Console output:
 # Fluent.js Compatibility: 97/98 perfect matches (99.0%), 97/98 functional (99.0%)
 # 📄 Detailed report saved to compatibility_report.md
 ```
+
+The task generates a concise console summary and saves the detailed analysis to `compatibility_report.md`.
 
 ### Integration
 
