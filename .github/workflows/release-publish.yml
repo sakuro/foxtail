@@ -10,9 +10,6 @@ on:
   pull_request:
     types: [closed]
     branches: [main]
-    paths:
-      - 'lib/*/version.rb'  # Assumes single gem per repository
-      - 'CHANGELOG.md'
 
 jobs:
   publish-release:

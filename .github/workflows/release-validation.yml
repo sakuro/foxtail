@@ -6,9 +6,6 @@ env:
 on:
   pull_request:
     branches: [main]
-    paths:
-      - 'lib/*/version.rb'  # Assumes single gem per repository
-      - 'CHANGELOG.md'
 
 jobs:
   validate-release:
