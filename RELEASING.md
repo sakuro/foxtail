@@ -108,28 +108,40 @@ This ensures:
 
 ## Manual Release (Emergency Only)
 
-If automation fails, you can release manually:
+If automation fails, you can release manually using our tag-based strategy:
 
 ```bash
-# 1. Update version
+# 1. Create release branch
+git checkout -b release-v1.0.0
+
+# 2. Update version
 vim lib/foxtail/version.rb
 
-# 2. Update CHANGELOG
+# 3. Update CHANGELOG (move content from [Unreleased] to [1.0.0])
 vim CHANGELOG.md
 
-# 3. Commit changes
+# 4. Commit changes and create tag
 git add -A
 git commit -m ":bookmark: Release v1.0.0"
-
-# 4. Create and push tag
 git tag -a v1.0.0 -m "Release v1.0.0"
+
+# 5. Push release branch and tag
+git push origin release-v1.0.0
 git push origin v1.0.0
 
-# 5. Build gem
+# 6. Create PR and merge after review
+gh pr create --title "Release v1.0.0" --body "Release v1.0.0"
+# (Review and merge PR)
+
+# 7. Checkout the tag and build gem
+git checkout v1.0.0
 bundle exec rake build
 
-# 6. Push to RubyGems
+# 8. Push to RubyGems
 gem push pkg/foxtail-1.0.0.gem
+
+# 9. Create GitHub release
+gh release create v1.0.0 --title "foxtail v1.0.0" --generate-notes pkg/foxtail-1.0.0.gem
 ```
 
 ## Troubleshooting
@@ -145,13 +157,17 @@ gem push pkg/foxtail-1.0.0.gem
 3. Add new secret: `RUBYGEMS_API_KEY` with your API key
 
 **Tests or RuboCop failing**
-- Fix the issues on `main` first, then retry the release
+- These are checked by the CI workflow, not in release validation
+- Fix the issues on the release branch or `main` as appropriate
+- Release validation focuses on version consistency and format
 
 ### Release Publish Fails
 
 **Tag not found**
 - The release preparation workflow may have failed to create the tag
-- Manually create the tag on the release branch before merging
+- Check if the tag exists: `git tag | grep v1.0.0`
+- If missing, the release validation workflow will recreate it on PR updates
+- For manual fix: create tag on release branch with `git tag -a v1.0.0 -m "Release v1.0.0"`
 
 **Gem push fails**
 - Verify RubyGems API key is valid
