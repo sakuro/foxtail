@@ -1,0 +1,89 @@
+name: Fluent.js Compatibility
+
+# This workflow runs fluent.js compatibility tests only when parser-related files change.
+# This keeps the main CI fast while ensuring compatibility is verified when needed.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'lib/foxtail/parser/**'
+      - 'lib/foxtail/parser.rb'
+      - 'lib/foxtail/bundle/ast_converter.rb'
+      - 'spec/parser/**'
+      - 'spec/fluent_js_compatibility_spec.rb'
+      - 'compat/**'
+
+  pull_request:
+    paths:
+      - 'lib/foxtail/parser/**'
+      - 'lib/foxtail/parser.rb'
+      - 'lib/foxtail/bundle/ast_converter.rb'
+      - 'spec/parser/**'
+      - 'spec/fluent_js_compatibility_spec.rb'
+      - 'compat/**'
+
+  # Allow manual triggering for comprehensive testing
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  compatibility:
+    runs-on: ubuntu-latest
+    name: Compatibility Tests
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'  # Use latest supported version
+          bundler-cache: true
+          
+      - name: Generate compatibility report
+        run: |
+          bundle exec rake compatibility:report
+          
+      - name: Upload compatibility reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: compatibility-reports
+          path: compatibility_report.md
+          retention-days: 30
+          
+      - name: Extract compatibility summary
+        if: github.event_name == 'pull_request'
+        id: extract-summary
+        run: |
+          # Read the markdown report
+          REPORT=$(cat compatibility_report.md)
+          
+          # Extract the summary table and total fixtures line
+          SUMMARY=$(echo "$REPORT" | sed -n '/## Summary/,/*Total fixtures:/p')
+          
+          # Create the comment body
+          {
+            echo 'body<<EOF'
+            echo '## 📊 Fluent.js Compatibility Report'
+            echo ''
+            echo "$SUMMARY"
+            echo ''
+            echo "[Full report available in workflow artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo ''
+            echo '> 🔍 This compatibility check ran because parser-related files were modified.'
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+          
+      - name: Comment PR with compatibility summary
+        if: github.event_name == 'pull_request'
+        uses: int128/comment-action@v1
+        with:
+          post: |
+            ${{ steps.extract-summary.outputs.body }}
