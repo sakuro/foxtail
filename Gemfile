@@ -2,21 +2,29 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in foxtail.gemspec
 gemspec
 
 group :development, :test do
-  gem "docquet", github: "sakuro/docquet" # Unreleased gem
   gem "irb"
-  gem "rake"
-  gem "redcarpet" # Markdown provider for YARD
   gem "repl_type_completor"
-  gem "rexml" # For CLDR XML parsing in rake tasks
+
+  gem "rake"
+end
+
+group :development do
+  # RuboCop
+  gem "docquet", github: "sakuro/docquet" # An opinionated RuboCop config
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rake"
   gem "rubocop-rspec"
+
+  # YARD
+  gem "gemoji"
+  gem "redcarpet"
   gem "yard"
+
+  gem "rexml" # For CLDR XML parsing in rake tasks
 end
 
 group :test do
