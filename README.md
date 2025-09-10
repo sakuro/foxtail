@@ -1,4 +1,4 @@
-# Foxtail 🦊
+# :fox_face: Foxtail :globe_with_meridians:
 
 A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern localization system designed to improve how software is translated.
 
@@ -60,7 +60,7 @@ bundle.format("hello", name: "Alice")
 bundle.format("emails", count: 0)
 # => "You have no emails."
 
-bundle.format("emails", count: 1)  
+bundle.format("emails", count: 1)
 # => "You have one email."
 
 bundle.format("emails", count: 5)
@@ -152,7 +152,7 @@ Foxtail consists of two main components:
 - **Foxtail::Parser::AST** - Abstract Syntax Tree implementation
 - **Foxtail::Parser::Stream** - Character stream processing
 
-### Bundle System  
+### Bundle System
 - **Foxtail::Bundle** - Runtime message formatting
 - **Foxtail::Resource** - FTL resource loading and management
 - **Foxtail::Functions** - Built-in formatting functions (NUMBER, DATETIME)
@@ -166,7 +166,7 @@ Foxtail consists of two main components:
 ## Compatibility
 
 - **Ruby**: 3.2.9 or higher
-- **fluent.js**: High compatibility (97/98 test fixtures passing)  
+- **fluent.js**: High compatibility (97/98 test fixtures passing)
 - **Unicode**: Full Unicode support including astral plane characters
 - **CLDR**: Unicode CLDR integration for localization
 
