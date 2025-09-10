@@ -71,27 +71,30 @@ module Foxtail
       end
 
       private def format_currency(formatted_value, number_formats, options)
-        # TODO: Implement proper CLDR currency formatting
-        # Currently this is a simplified implementation that:
-        # - Ignores currency codes (e.g., "USD", "JPY")
-        # - Uses default "$" symbol or explicit currency option
-        # - Does not use CLDR currency patterns or locale-specific formatting
-        #
-        # Full implementation should:
-        # - Map currency codes to symbols via CLDR currency data
-        # - Use NumberFormats#currency_pattern for locale-specific formatting
-        # - Handle currency placement, spacing, and negative formatting per locale
-
-        result = format_number_with_precision(formatted_value, number_formats, options)
-        currency = options[:currency] || "$"
+        # Get currency code (defaults to locale-specific or "USD")
+        currency_code = options[:currency] || "USD"
         currency_style = options[:currencyDisplay] || "standard"
 
-        if currency_style == "accounting" && formatted_value < 0
-          result = result.gsub(number_formats.minus_sign, "")
-          "(#{currency}#{result})"
-        else
-          "#{currency}#{result}"
+        # Get CLDR currency data
+        currency_symbol = number_formats.currency_symbol(currency_code)
+        currency_digits = number_formats.currency_digits(currency_code)
+
+        # Override precision with currency-specific digits unless explicitly set
+        currency_options = options.dup
+        unless options[:minimumFractionDigits] || options[:maximumFractionDigits]
+          currency_options[:minimumFractionDigits] = currency_digits
+          currency_options[:maximumFractionDigits] = currency_digits
         end
+
+        # Format the number with currency-specific precision
+        formatted_number = format_number_with_precision(formatted_value, number_formats, currency_options)
+
+        # Get the appropriate currency pattern
+        pattern_style = currency_style == "accounting" ? "accounting" : "standard"
+        pattern = number_formats.currency_pattern(pattern_style)
+
+        # Apply currency formatting pattern
+        apply_currency_pattern(formatted_number, pattern, currency_symbol, formatted_value < 0)
       end
 
       private def format_scientific(formatted_value, number_formats, options)
@@ -163,6 +166,37 @@ module Foxtail
         else
           integer_part
         end
+      end
+
+      # Apply CLDR currency pattern to formatted number
+      private def apply_currency_pattern(formatted_number, pattern, currency_symbol, negative)
+        # CLDR currency patterns use ¤ as currency placeholder
+        # Examples:
+        # "¤#,##0.00" -> "$1,234.00"
+        # "¤#,##0.00;(¤#,##0.00)" -> "$1,234.00" or "($1,234.00)"
+        # "#,##0.00 ¤" -> "1,234.00 $" (currency after number)
+
+        if negative && pattern.include?(";")
+          # Use negative pattern (after semicolon)
+          negative_pattern = pattern.split(";")[1]
+          # Remove minus sign from formatted number since pattern handles it
+          clean_number = formatted_number.gsub(/^-/, "")
+          apply_pattern_substitution(negative_pattern, currency_symbol, clean_number)
+        else
+          # Use positive pattern (before semicolon, or entire pattern if no semicolon)
+          positive_pattern = pattern.split(";")[0]
+          apply_pattern_substitution(positive_pattern, currency_symbol, formatted_number)
+        end
+      end
+
+      # Apply pattern substitution for currency symbol and number
+      private def apply_pattern_substitution(pattern, currency_symbol, formatted_number)
+        # Replace currency placeholder with actual symbol
+        result = pattern.gsub("¤", currency_symbol)
+
+        # Replace number pattern with formatted number
+        # Look for number patterns like #,##0.00, #,##0, etc.
+        result.gsub(/#[,#0.]*0[#.]*/, formatted_number)
       end
 
       # Format number in scientific notation

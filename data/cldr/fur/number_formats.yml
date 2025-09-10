@@ -3,7 +3,487 @@ number_formats:
   symbols:
     decimal: ","
     group: "."
+  currencies:
+    AMD:
+      display_names:
+        other: Dram armen
+    ARS:
+      display_names:
+        other: Peso argjentin
+    ATS:
+      display_names:
+        other: Selin austriac
+    AUD:
+      display_names:
+        other: dolars australians
+        one: dolar australian
+    BEF:
+      display_names:
+        other: Franc de Belgjiche
+    BIF:
+      display_names:
+        other: Franc burundês
+    BND:
+      display_names:
+        other: Dolar dal Brunei
+    BRL:
+      display_names:
+        other: real brasilians
+        one: real brasilian
+    BYN:
+      display_names:
+        other: Rubli bielorùs
+    BYR:
+      display_names:
+        other: Rubli bielorùs (2000–2016)
+    CAD:
+      display_names:
+        other: dolars canadês
+        one: dolar canadês
+    CHF:
+      display_names:
+        other: francs svuizars
+        one: franc svuizar
+    CNY:
+      display_names:
+        other: yuan cinês
+    CSD:
+      display_names:
+        other: Vieri dinar serp
+    CUP:
+      display_names:
+        other: peso cuban
+        one: peso cuban
+    CZK:
+      display_names:
+        other: Corone de Republiche Ceche
+    DEM:
+      display_names:
+        other: Marc todesc
+    DKK:
+      display_names:
+        other: coronis danesis
+        one: corone danese
+    DZD:
+      display_names:
+        other: Dinar algerin
+    EUR:
+      display_names:
+        other: euros
+        one: euro
+    FRF:
+      display_names:
+        other: Franc francês
+    GBP:
+      display_names:
+        other: sterlinis britanichis
+        one: sterline britaniche
+    HKD:
+      display_names:
+        other: dolars di Hong Kong
+        one: dolar di Hong Kong
+    HRD:
+      display_names:
+        other: Dinar cravuat
+    HRK:
+      display_names:
+        other: Kuna cravuate
+    IDR:
+      display_names:
+        other: rupiah indonesianis
+        one: rupiah indonesiane
+    INR:
+      display_names:
+        other: rupiis indianis
+        one: rupie indiane
+    IRR:
+      display_names:
+        other: Rial iranian
+    ITL:
+      display_names:
+        other: Lire taliane
+    JPY:
+      display_names:
+        other: yen gjaponês
+    KRW:
+      display_names:
+        other: won de Coree dal Sud
+    LVL:
+      display_names:
+        other: Lats leton
+    MXN:
+      display_names:
+        other: pesos messicans
+        one: peso messican
+    NAD:
+      display_names:
+        other: Dolar namibian
+    NIO:
+      display_names:
+        other: córdoba oro nicaraguan
+        one: córdoba oro nicaraguan
+    NOK:
+      display_names:
+        other: coronis norvegjesis
+        one: corone norvegjese
+    NZD:
+      display_names:
+        other: Dollar neozelandês
+    PKR:
+      display_names:
+        other: Rupie pachistane
+    PLN:
+      display_names:
+        other: zloty polacs
+        one: zloty polac
+    RSD:
+      display_names:
+        other: Dinar serp
+    RUB:
+      display_names:
+        other: rublis rus
+        one: rubli rus
+    SAR:
+      display_names:
+        other: riyals de Arabie Saudite
+        one: riyal de Arabie Saudite
+    SEK:
+      display_names:
+        other: coronis svedesis
+        one: corone svedese
+    SIT:
+      display_names:
+        other: Talar sloven
+    SKK:
+      display_names:
+        other: Corone slovache
+    THB:
+      display_names:
+        other: baht tailandês
+    TRL:
+      display_names:
+        other: Viere Lire turche
+    TRY:
+      display_names:
+        other: liris turchis
+        one: lire turche
+    TWD:
+      display_names:
+        other: gnûfs dolars taiwanês
+        one: gnûf dolar taiwanês
+    USD:
+      display_names:
+        other: dolars americans
+        one: dolar american
+    USN:
+      display_names:
+        other: Dolar american (prossime zornade)
+    USS:
+      display_names:
+        other: Dolar american (stesse zornade)
+    XAG:
+      display_names:
+        other: Arint
+    XAU:
+      display_names:
+        other: Aur
+    XBA:
+      display_names:
+        other: Unitât composite europeane
+    XBB:
+      display_names:
+        other: Unitât monetarie europeane
+    XBC:
+      display_names:
+        other: Unitât di acont europeane (XBC)
+    XBD:
+      display_names:
+        other: Unitât di acont europeane (XBD)
+    XDR:
+      display_names:
+        other: Dirits speciâi di incas
+    XFO:
+      display_names:
+        other: Franc aur francês
+    XFU:
+      display_names:
+        other: Franc UIC francês
+    XPD:
+      display_names:
+        other: Paladi
+    XPT:
+      display_names:
+        other: Platin
+    XRE:
+      display_names:
+        other: fonts RINET
+    XTS:
+      display_names:
+        other: codiç di verifiche de monede
+    XXX:
+      display_names:
+        other: Monedis no validis o no cognossudis
+        one: Monede no valide o no cognossude
+    ZAR:
+      display_names:
+        other: rands sudafricans
+        one: rand sudafrican
 locale: fur
-generated_at: '2025-09-06T03:52:20+09:00'
+generated_at: '2025-09-10T22:17:38+09:00'
 cldr_version: v46
 source: Unicode CLDR
+currency_fractions:
+  ADP:
+    digits: 0
+    rounding: 0
+  AFN:
+    digits: 0
+    rounding: 0
+  ALL:
+    digits: 0
+    rounding: 0
+  AMD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  BHD:
+    digits: 3
+    rounding: 0
+  BIF:
+    digits: 0
+    rounding: 0
+  BYR:
+    digits: 0
+    rounding: 0
+  BYN:
+    digits: 2
+    rounding: 0
+  CAD:
+    digits: 2
+    rounding: 0
+    cash_rounding: 5
+  CHF:
+    digits: 2
+    rounding: 0
+    cash_rounding: 5
+  CLF:
+    digits: 4
+    rounding: 0
+  CLP:
+    digits: 0
+    rounding: 0
+  COP:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  CRC:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  CZK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  DEFAULT:
+    digits: 2
+    rounding: 0
+  DJF:
+    digits: 0
+    rounding: 0
+  DKK:
+    digits: 2
+    rounding: 0
+    cash_rounding: 50
+  ESP:
+    digits: 0
+    rounding: 0
+  GNF:
+    digits: 0
+    rounding: 0
+  GYD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  HUF:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  IDR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  IQD:
+    digits: 0
+    rounding: 0
+  IRR:
+    digits: 0
+    rounding: 0
+  ISK:
+    digits: 0
+    rounding: 0
+  ITL:
+    digits: 0
+    rounding: 0
+  JOD:
+    digits: 3
+    rounding: 0
+  JPY:
+    digits: 0
+    rounding: 0
+  KMF:
+    digits: 0
+    rounding: 0
+  KPW:
+    digits: 0
+    rounding: 0
+  KRW:
+    digits: 0
+    rounding: 0
+  KWD:
+    digits: 3
+    rounding: 0
+  LAK:
+    digits: 0
+    rounding: 0
+  LBP:
+    digits: 0
+    rounding: 0
+  LUF:
+    digits: 0
+    rounding: 0
+  LYD:
+    digits: 3
+    rounding: 0
+  MGA:
+    digits: 0
+    rounding: 0
+  MGF:
+    digits: 0
+    rounding: 0
+  MMK:
+    digits: 0
+    rounding: 0
+  MNT:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  MRO:
+    digits: 0
+    rounding: 0
+  MUR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  NOK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  OMR:
+    digits: 3
+    rounding: 0
+  PKR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  PYG:
+    digits: 0
+    rounding: 0
+  RSD:
+    digits: 0
+    rounding: 0
+  RWF:
+    digits: 0
+    rounding: 0
+  SEK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  SLE:
+    digits: 2
+    rounding: 0
+  SLL:
+    digits: 0
+    rounding: 0
+  SOS:
+    digits: 0
+    rounding: 0
+  STD:
+    digits: 0
+    rounding: 0
+  SYP:
+    digits: 0
+    rounding: 0
+  TMM:
+    digits: 0
+    rounding: 0
+  TND:
+    digits: 3
+    rounding: 0
+  TRL:
+    digits: 0
+    rounding: 0
+  TZS:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  TWD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  UGX:
+    digits: 0
+    rounding: 0
+  UZS:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  UYI:
+    digits: 0
+    rounding: 0
+  UYW:
+    digits: 4
+    rounding: 0
+  VEF:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  VND:
+    digits: 0
+    rounding: 0
+  VUV:
+    digits: 0
+    rounding: 0
+  XAF:
+    digits: 0
+    rounding: 0
+  XOF:
+    digits: 0
+    rounding: 0
+  XPF:
+    digits: 0
+    rounding: 0
+  YER:
+    digits: 0
+    rounding: 0
+  ZMK:
+    digits: 0
+    rounding: 0
+  ZWD:
+    digits: 0
+    rounding: 0

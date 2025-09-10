@@ -21,6 +21,7 @@ module Foxtail
       def initialize(locale)
         super
         @data = load_data["number_formats"] || {}
+        @currency_fractions = load_data["currency_fractions"] || {}
       end
 
       # Get decimal symbol
@@ -81,6 +82,33 @@ module Foxtail
       # Get scientific format pattern
       def scientific_pattern(style="standard")
         @data.dig("scientific_formats", style) || default_scientific_pattern
+      end
+
+      # Get currency symbol for a given currency code
+      def currency_symbol(currency_code)
+        @data.dig("currencies", currency_code, "symbol") || currency_code
+      end
+
+      # Get currency display name for a given currency code and plural form
+      def currency_display_name(currency_code, count="other")
+        @data.dig("currencies", currency_code, "display_names", count) ||
+          @data.dig("currencies", currency_code, "display_names", "other") ||
+          currency_code
+      end
+
+      # Get decimal digits for a currency (defaults to 2 if not found)
+      def currency_digits(currency_code)
+        @currency_fractions.dig(currency_code, "digits") || 2
+      end
+
+      # Get cash digits for a currency (falls back to regular digits)
+      def currency_cash_digits(currency_code)
+        @currency_fractions.dig(currency_code, "cash_digits") || currency_digits(currency_code)
+      end
+
+      # Get all available currency codes
+      def currency_codes
+        @data["currencies"]&.keys || []
       end
 
       private def default_decimal_pattern

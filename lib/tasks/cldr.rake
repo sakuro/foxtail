@@ -4,6 +4,7 @@ require "fileutils"
 require "rake/clean"
 require "rexml/document"
 require "shellwords"
+require "time"
 require "yaml"
 
 # CLDR version configuration
@@ -299,6 +300,30 @@ namespace :cldr do
       # Create data directory
       FileUtils.mkdir_p(DATA_DIR)
 
+      # Extract currency fractions data (shared across all locales)
+      currency_fractions = {}
+      supplemental_data_path = File.join(CLDR_EXTRACT_DIR, "common", "supplemental", "supplementalData.xml")
+      if File.exist?(supplemental_data_path)
+        puts "  Processing currency fractions from supplementalData.xml..."
+        supplemental_doc = REXML::Document.new(File.read(supplemental_data_path))
+        supplemental_doc.elements.each("supplementalData/currencyData/fractions/info") do |info|
+          currency_code = info.attributes["iso4217"]
+          digits = info.attributes["digits"] ? Integer(info.attributes["digits"], 10) : 2
+          currency_fractions[currency_code] = {
+            "digits" => digits,
+            "rounding" => info.attributes["rounding"] ? Integer(info.attributes["rounding"], 10) : 0
+          }
+          # Add cash-specific data if available
+          if info.attributes["cashDigits"]
+            currency_fractions[currency_code]["cash_digits"] = Integer(info.attributes["cashDigits"], 10)
+          end
+          if info.attributes["cashRounding"]
+            currency_fractions[currency_code]["cash_rounding"] = Integer(info.attributes["cashRounding"], 10)
+          end
+        end
+        puts "    Loaded #{currency_fractions.size} currency fraction rules"
+      end
+
       # Get all locale XML files
       locale_files = CLDR_LOCALE_XML_FILES
       puts "Found #{locale_files.size} locale files"
@@ -377,6 +402,36 @@ namespace :cldr do
           end
           number_formats["scientific_formats"] = scientific_formats unless scientific_formats.empty?
 
+          # Extract currency symbols and names
+          currencies = {}
+          doc.elements.each("ldml/numbers/currencies/currency") do |currency|
+            currency_code = currency.attributes["type"]
+            next unless currency_code
+
+            currency_data = {}
+
+            # Get symbol
+            symbol_elem = currency.elements["symbol"]
+            if symbol_elem&.text
+              currency_data["symbol"] = symbol_elem.text
+            end
+
+            # Get display name (plural forms)
+            display_names = {}
+            currency.elements.each("displayName") do |display_name|
+              count = display_name.attributes["count"]
+              if count
+                display_names[count] = display_name.text
+              else
+                display_names["other"] = display_name.text # Default form
+              end
+            end
+            currency_data["display_names"] = display_names unless display_names.empty?
+
+            currencies[currency_code] = currency_data unless currency_data.empty?
+          end
+          number_formats["currencies"] = currencies unless currencies.empty?
+
           # Skip if no useful data found
           next if number_formats.empty?
 
@@ -392,6 +447,9 @@ namespace :cldr do
             "cldr_version" => "v#{CLDR_VERSION}",
             "source" => "Unicode CLDR"
           }
+
+          # Add currency fractions data (shared across all locales, but included for convenience)
+          yaml_data["currency_fractions"] = currency_fractions unless currency_fractions.empty?
 
           # Write YAML file
           yaml_path = File.join(locale_dir, "number_formats.yml")

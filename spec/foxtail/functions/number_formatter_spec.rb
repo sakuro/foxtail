@@ -43,7 +43,7 @@ RSpec.describe Foxtail::Functions::NumberFormatter do
 
       it "formats as currency" do
         result = formatter.call(1234.5, locale: en_locale, style: "currency", currency: "€")
-        expect(result).to eq("€1,234.5")
+        expect(result).to eq("€1,234.50")
       end
     end
 
@@ -67,6 +67,87 @@ RSpec.describe Foxtail::Functions::NumberFormatter do
           minimumFractionDigits: 2
         )
         expect(result).to eq("$42.00")
+      end
+    end
+
+    context "with CLDR currency formatting" do
+      let(:en_locale) { locale("en") }
+      let(:ja_locale) { locale("ja") }
+
+      describe "USD formatting" do
+        it "formats positive USD amounts with proper symbol and decimals" do
+          result = formatter.call(1234.50, locale: en_locale, style: "currency", currency: "USD")
+          expect(result).to eq("$1,234.50")
+        end
+
+        it "formats negative USD amounts" do
+          result = formatter.call(-1234.50, locale: en_locale, style: "currency", currency: "USD")
+          expect(result).to eq("$-1,234.50")
+        end
+
+        it "formats negative USD with accounting style" do
+          result = formatter.call(
+            -1234.50,
+            locale: en_locale,
+            style: "currency",
+            currency: "USD",
+            currencyDisplay: "accounting"
+          )
+          expect(result).to eq("($1,234.50)")
+        end
+
+        it "formats large amounts with proper grouping" do
+          result = formatter.call(1_234_567.89, locale: en_locale, style: "currency", currency: "USD")
+          expect(result).to eq("$1,234,567.89")
+        end
+
+        it "formats small amounts correctly" do
+          result = formatter.call(5.99, locale: en_locale, style: "currency", currency: "USD")
+          expect(result).to eq("$5.99")
+        end
+      end
+
+      describe "JPY formatting" do
+        it "formats JPY with no decimal places" do
+          result = formatter.call(1234, locale: en_locale, style: "currency", currency: "JPY")
+          expect(result).to eq("¥1,234")
+        end
+
+        it "formats fractional JPY by rounding to whole numbers" do
+          result = formatter.call(1234.67, locale: en_locale, style: "currency", currency: "JPY")
+          expect(result).to eq("¥1,235") # Should round to nearest whole number
+        end
+      end
+
+      describe "Currency digits" do
+        it "respects CLDR currency fraction digits for different currencies" do
+          # USD should have 2 decimal places
+          usd_result = formatter.call(100, locale: en_locale, style: "currency", currency: "USD")
+          expect(usd_result).to eq("$100.00")
+
+          # JPY should have 0 decimal places
+          jpy_result = formatter.call(100, locale: en_locale, style: "currency", currency: "JPY")
+          expect(jpy_result).to eq("¥100")
+        end
+      end
+
+      describe "Locale-specific formatting", :integration do
+        it "uses Japanese yen symbol in Japanese locale" do
+          result = formatter.call(1234, locale: ja_locale, style: "currency", currency: "JPY")
+          expect(result).to eq("￥1,234")
+        end
+
+        it "formats USD in Japanese locale" do
+          result = formatter.call(1234.50, locale: ja_locale, style: "currency", currency: "USD")
+          expect(result).to eq("$1,234.50")
+        end
+      end
+
+      describe "Error handling" do
+        it "falls back to currency code when symbol is not available" do
+          result = formatter.call(100, locale: en_locale, style: "currency", currency: "XYZ")
+          expect(result).to eq("XYZ100.00")
+        end
       end
     end
 
