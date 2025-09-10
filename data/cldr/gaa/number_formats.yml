@@ -1,71 +1,86 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
+    standard: "¤ #,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    ALL:
-      display_names:
-        other: Albania lekii
-    ANG:
-      display_names:
-        other: Netherlands Antillea guildai
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
     AOA:
+      symbol: Kz
       display_names:
         other: Angola kwanzai
     ARS:
+      symbol: "$"
       display_names:
         other: Argentina pesoi
-    AWG:
-      display_names:
-        other: Aruba florinii
+    AUD:
+      symbol: A$
+    AZN:
+      symbol: "₼"
     BAM:
+      symbol: KM
       display_names:
         other: Bosnia-Herzegovina markii ni hiɔ tsakemɔ
     BBD:
+      symbol: "$"
       display_names:
         other: Barbados dɔlai
-    BGN:
-      display_names:
-        other: Bulgaria levii
-    BIF:
-      display_names:
-        other: Burundi frankii
+    BDT:
+      symbol: "৳"
     BMD:
+      symbol: "$"
       display_names:
         other: Bermuda dɔlai
+    BND:
+      symbol: "$"
     BOB:
+      symbol: Bs
       display_names:
         other: Bolivia bolivianoi
     BRL:
+      symbol: R$
       display_names:
         other: Brazil realii
     BSD:
+      symbol: "$"
       display_names:
         other: Bahamas dɔlai
     BWP:
+      symbol: P
       display_names:
         other: Botswana pulai
-    BYN:
-      display_names:
-        other: Belarus rubolii
     BZD:
+      symbol: "$"
       display_names:
         other: Belize dɔlai
     CAD:
       symbol: KA$
       display_names:
         other: Kanada dɔlai
-    CDF:
-      symbol: KDF
-      display_names:
-        other: Kongo frankii
-    CHF:
-      symbol: SZF
-      display_names:
-        other: Switzerland frankii
     CLP:
+      symbol: "$"
       display_names:
         other: Tsili pesoi
+    CNY:
+      symbol: CN¥
     COP:
       symbol: KOP
       display_names:
@@ -86,49 +101,46 @@ number_formats:
       symbol: TSK
       display_names:
         other: Tsek korunai
-    DJF:
-      display_names:
-        other: Djibouti frankii
     DKK:
+      symbol: kr
       display_names:
         other: Denmark kronei
     DOP:
+      symbol: "$"
       display_names:
         other: Dominika pesoi
-    DZD:
-      display_names:
-        other: Algeria dinarii
     EGP:
+      symbol: E£
       display_names:
         other: Ejipt pounds
-    ERN:
-      display_names:
-        other: Eritrea nakfai
-    ETB:
-      display_names:
-        other: Ethiopia birri
+    ESP:
+      symbol: "₧"
     EUR:
+      symbol: "€"
       display_names:
         other: yuro
+    FJD:
+      symbol: "$"
     FKP:
+      symbol: "£"
       display_names:
         other: Falkland Ŋshɔkpɔi pounds
     GBP:
+      symbol: "£"
       display_names:
         other: Britain pounds
-    GHC:
-      display_names:
-        other: Sidi
+    GEL:
+      symbol: "₾"
     GHS:
+      symbol: GH₵
       display_names:
         other: Ghana sidii
     GIP:
+      symbol: "£"
       display_names:
         other: Gibraltar pounds
-    GMD:
-      display_names:
-        other: Gambia dalasii
     GNF:
+      symbol: FG
       display_names:
         other: Guinea frankii
     GTQ:
@@ -136,39 +148,261 @@ number_formats:
       display_names:
         other: Guatemala kuetzalii
     GYD:
+      symbol: "$"
       display_names:
         other: Guyan dɔlai
+    HKD:
+      symbol: HK$
     HNL:
+      symbol: L
       display_names:
         other: Hondura lempirai
     HRK:
+      symbol: kn
       display_names:
         other: Kroatia kunai
-    HTG:
-      display_names:
-        other: Haiti gourdei
     HUF:
+      symbol: Ft
       display_names:
         other: Hungary forintii
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
     ISK:
+      symbol: kr
       display_names:
         other: Aisland krónai
     JMD:
+      symbol: "$"
       display_names:
         other: Jamaika dɔlai
-    KES:
-      display_names:
-        other: Kenya sheleŋ
+    JPY:
+      symbol: JP¥
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
     KMF:
       symbol: KF
       display_names:
         other: Komoros frankii
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
     KYD:
+      symbol: "$"
       display_names:
         other: Kayman Ŋshɔkpɔi dɔlai
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
     LRD:
+      symbol: "$"
       display_names:
         other: Liberia dɔlai
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Madagaska ariarii
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Mauritius rupii
+    MXN:
+      symbol: MZ$
+      display_names:
+        other: Meziko pesoi
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Namibia dɔlai
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Anago nairai
+    NIO:
+      symbol: K$
+      display_names:
+        other: Nikaragua kórdobai
+    NOK:
+      symbol: kr
+      display_names:
+        other: Norway kronei
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+      display_names:
+        other: Poland zlotii
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: Paraguay guaranii
+    RON:
+      symbol: lei
+      display_names:
+        other: Romania leuii
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: Russia rubolii
+    RWF:
+      symbol: RF
+      display_names:
+        other: Rwanda frankii
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+      display_names:
+        other: Sweden kronai
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: St. Helena pounds
+    SRD:
+      symbol: "$"
+      display_names:
+        other: Surinam dɔlai
+    SSP:
+      symbol: "£"
+      display_names:
+        other: Sudan Anai pounds
+    STN:
+      symbol: Db
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+      display_names:
+        other: Trinidad Kɛ Tobago dɔlai
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: Ukrainia hryvniai
+    USD:
+      symbol: "$"
+      display_names:
+        other: US dɔlai
+    UYU:
+      symbol: "$"
+      display_names:
+        other: Uruguay pesoi
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+    XCD:
+      symbol: KB$
+      display_names:
+        other: Karibbean Bokã dɔlai
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: SFA
+      display_names:
+        other: Afrika Anai Sefa Frankii
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(shika ko ni gbɛ́i bɛ mli)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: South Afrika randii
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Zambia kwatsai
+    ALL:
+      display_names:
+        other: Albania lekii
+    ANG:
+      display_names:
+        other: Netherlands Antillea guildai
+    AWG:
+      display_names:
+        other: Aruba florinii
+    BGN:
+      display_names:
+        other: Bulgaria levii
+    BIF:
+      display_names:
+        other: Burundi frankii
+    BYN:
+      display_names:
+        other: Belarus rubolii
+    CDF:
+      symbol: KDF
+      display_names:
+        other: Kongo frankii
+    CHF:
+      symbol: SZF
+      display_names:
+        other: Switzerland frankii
+    DJF:
+      display_names:
+        other: Djibouti frankii
+    DZD:
+      display_names:
+        other: Algeria dinarii
+    ERN:
+      display_names:
+        other: Eritrea nakfai
+    ETB:
+      display_names:
+        other: Ethiopia birri
+    GHC:
+      display_names:
+        other: Sidi
+    GMD:
+      display_names:
+        other: Gambia dalasii
+    HTG:
+      display_names:
+        other: Haiti gourdei
+    KES:
+      display_names:
+        other: Kenya sheleŋ
     LYD:
       display_names:
         other: Libia dinarii
@@ -178,65 +412,27 @@ number_formats:
     MDL:
       display_names:
         other: Moldova leuii
-    MGA:
-      display_names:
-        other: Madagaska ariarii
     MKD:
       display_names:
         other: Makedonia denarii
     MRU:
       display_names:
         other: Mauritania ouguiyai
-    MUR:
-      display_names:
-        other: Mauritius rupii
     MWK:
       display_names:
         other: Malawi kwatsai
-    MXN:
-      symbol: MZ$
-      display_names:
-        other: Meziko pesoi
     MZN:
       display_names:
         other: Mozambik metikalii
-    NAD:
-      display_names:
-        other: Namibia dɔlai
-    NGN:
-      display_names:
-        other: Anago nairai
-    NIO:
-      symbol: K$
-      display_names:
-        other: Nikaragua kórdobai
-    NOK:
-      display_names:
-        other: Norway kronei
     PAB:
       display_names:
         other: Panama balboai
     PEN:
       display_names:
         other: Peru solii
-    PLN:
-      display_names:
-        other: Poland zlotii
-    PYG:
-      display_names:
-        other: Paraguay guaranii
-    RON:
-      display_names:
-        other: Romania leuii
     RSD:
       display_names:
         other: Serbia dinarii
-    RUB:
-      display_names:
-        other: Russia rubolii
-    RWF:
-      display_names:
-        other: Rwanda frankii
     SCR:
       symbol: SSR
       display_names:
@@ -244,12 +440,6 @@ number_formats:
     SDG:
       display_names:
         other: Sudan pounds
-    SEK:
-      display_names:
-        other: Sweden kronai
-    SHP:
-      display_names:
-        other: St. Helena pounds
     SLE:
       display_names:
         other: Sierra Leone leonei
@@ -259,60 +449,24 @@ number_formats:
     SOS:
       display_names:
         other: Somali sheleŋ
-    SRD:
-      display_names:
-        other: Surinam dɔlai
-    SSP:
-      display_names:
-        other: Sudan Anai pounds
     SZL:
       display_names:
         other: Swazi lilangenii
     TND:
       display_names:
         other: Tunisia dinarii
-    TTD:
-      display_names:
-        other: Trinidad Kɛ Tobago dɔlai
     TZS:
       display_names:
         other: Tanzania sheleŋ
-    UAH:
-      display_names:
-        other: Ukrainia hryvniai
     UGX:
       symbol: UGS
       display_names:
         other: Uganda sheleŋ
-    USD:
-      symbol: "$"
-      display_names:
-        other: US dɔlai
-    UYU:
-      display_names:
-        other: Uruguay pesoi
     VES:
       display_names:
         other: Venezuela bolívarii
-    XCD:
-      symbol: KB$
-      display_names:
-        other: Karibbean Bokã dɔlai
-    XOF:
-      symbol: SFA
-      display_names:
-        other: Afrika Anai Sefa Frankii
-    XXX:
-      display_names:
-        other: "(shika ko ni gbɛ́i bɛ mli)"
-    ZAR:
-      display_names:
-        other: South Afrika randii
-    ZMW:
-      display_names:
-        other: Zambia kwatsai
 locale: gaa
-generated_at: '2025-09-10T22:17:38+09:00'
+generated_at: '2025-09-10T23:53:08+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

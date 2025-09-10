@@ -1,39 +1,295 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: ꕉꖐꕞ ꖴꕎꘋꕤ
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: ꖺꔻꖤꔃꔷꕩ ꕜꕞꕌ
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: ꕷꖬꕎꕯ ꖛꕞ
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: ꕪꕯꕜ ꕜꕞꕌ
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: ꕦꕇꔧ ꖳꕎꘋ ꔓꕆꘋꔬ
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: ꕆꔻꕞ ꗁꖻꘋ
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: ꖳꖄ
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: ꔛꔟꔻ ꗁꖻꘋ ꔻꗳꔷꘋ
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: ꔤꔺꕩ ꖩꔪ
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: ꕧꕐꕇꔧ ꘂꘋ
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: ꖏꖒꖄ ꖢꕟꘋꕃ
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: ꕞꔤꔫꕩ ꕜꕞꕌ
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ꕮꕞꕭꕌꔻ ꕉꔸꕩꔸ
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: ꗞꔓꗔ ꖩꔪ
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: ꕯꕆꔫꕩ ꕜꕞꕌ
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: ꕯꔤꕀꔸꕩ ꕯꔤꕟ
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: ꕟꖙꕡ ꖢꕟꘋꕃ
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: ꔻꘋ ꗥꔷꕯ ꗁꖻꘋ
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: ꕢꕴ ꕿꔈ ꗪ ꕉ ꕗꕴ ꖁꖜꕟ
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: ꕶꕱ ꕜꕞ
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: ꕉꔱꔸꕪ ꗛꔤ ꔒꘋꗣ ꗏ ꕟꘋꔵ
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: ꕤꔭꕩ ꖴꕎꕦ
     AED:
       display_names:
         other: ꖳꕯꔤꗳ ꕉꕟꔬ ꗡꕆꔓꔻ ꔵꕌꕆ
-    AOA:
-      display_names:
-        other: ꕉꖐꕞ ꖴꕎꘋꕤ
-    AUD:
-      display_names:
-        other: ꖺꔻꖤꔃꔷꕩ ꕜꕞꕌ
     BHD:
       display_names:
         other: ꕑꗸꘋ
     BIF:
       display_names:
         other: ꖜꖩꔺ ꖢꕟꘋꕃ
-    BWP:
-      display_names:
-        other: ꕷꖬꕎꕯ ꖛꕞ
-    CAD:
-      display_names:
-        other: ꕪꕯꕜ ꕜꕞꕌ
     CDF:
       display_names:
         other: ꖏꖐꕱ ꖢꕟꘋꕃ
     CHF:
       display_names:
         other: ꖬꔃꕤ ꖨꕮꕊ ꖢꕟꘋꕃ
-    CNY:
-      display_names:
-        other: ꕦꕇꔧ ꖳꕎꘋ ꔓꕆꘋꔬ
     CVE:
       display_names:
         other: ꗡꔻꖴꖁ ꕪꕷꗲꗡꔵꕩꖆ
@@ -43,21 +299,12 @@ number_formats:
     DZD:
       display_names:
         other: ꕉꔷꕀꔸꕩ ꔵꕯ
-    EGP:
-      display_names:
-        other: ꕆꔻꕞ ꗁꖻꘋ
     ERN:
       display_names:
         other: ꔀꔸꔳꕟ ꗁꖻꘋ
     ETB:
       display_names:
         other: ꔤꕿꖎꔪꕩ ꔫꔤ
-    EUR:
-      display_names:
-        other: ꖳꖄ
-    GBP:
-      display_names:
-        other: ꔛꔟꔻ ꗁꖻꘋ ꔻꗳꔷꘋ
     GHC:
       display_names:
         other: ꕭꕌꕯ ꔻꔵ
@@ -67,22 +314,9 @@ number_formats:
     GNS:
       display_names:
         other: ꕅꔤꕇ ꖢꕟꘋꕃ
-    INR:
-      display_names:
-        other: ꔤꔺꕩ ꖩꔪ
-    JPY:
-      display_names:
-        other: ꕧꕐꕇꔧ ꘂꘋ
     KES:
       display_names:
         other: ꔞꕰ ꔻꔝꘋ
-    KMF:
-      display_names:
-        other: ꖏꖒꖄ ꖢꕟꘋꕃ
-    LRD:
-      symbol: "$"
-      display_names:
-        other: ꕞꔤꔫꕩ ꕜꕞꕌ
     LSL:
       display_names:
         other: ꔷꖇꕿ ꖃꔳ
@@ -92,33 +326,18 @@ number_formats:
     MAD:
       display_names:
         other: ꗞꕟꖏ ꔵꕌꕆ
-    MGA:
-      display_names:
-        other: ꕮꕞꕭꕌꔻ ꕉꔸꕩꔸ
     MRO:
       display_names:
         other: ꗞꔸꕚꕇꕰ ꖳꕅꕩ (1973–2017)
     MRU:
       display_names:
         other: ꗞꔸꕚꕇꕰ ꖳꕅꕩ
-    MUR:
-      display_names:
-        other: ꗞꔓꗔ ꖩꔪ
     MWK:
       display_names:
         other: ꕮꕞꕌꔨ ꖴꕎꕦ
     MZM:
       display_names:
         other: ꗞꕤꔭꕃ ꕆꔳꕪ
-    NAD:
-      display_names:
-        other: ꕯꕆꔫꕩ ꕜꕞꕌ
-    NGN:
-      display_names:
-        other: ꕯꔤꕀꔸꕩ ꕯꔤꕟ
-    RWF:
-      display_names:
-        other: ꕟꖙꕡ ꖢꕟꘋꕃ
     SAR:
       display_names:
         other: ꕢꖙꔵ ꔸꕩꔷ
@@ -128,9 +347,6 @@ number_formats:
     SDG:
       display_names:
         other: ꖬꗵꘋ ꗁꖻꘋ
-    SHP:
-      display_names:
-        other: ꔻꘋ ꗥꔷꕯ ꗁꖻꘋ
     SLE:
       display_names:
         other: ꔷꗚꘋ
@@ -143,9 +359,6 @@ number_formats:
     STD:
       display_names:
         other: ꕢꕴ ꕿꔈ ꗪ ꕉ ꕗꕴ ꖁꖜꕟ (1977–2017)
-    STN:
-      display_names:
-        other: ꕢꕴ ꕿꔈ ꗪ ꕉ ꕗꕴ ꖁꖜꕟ
     SZL:
       display_names:
         other: ꔷꕞꔟꕇ
@@ -158,23 +371,14 @@ number_formats:
     UGX:
       display_names:
         other: ꖳꕭꕡ ꔻꔝꘋ
-    USD:
-      display_names:
-        other: ꕶꕱ ꕜꕞ
-    ZAR:
-      display_names:
-        other: ꕉꔱꔸꕪ ꗛꔤ ꔒꘋꗣ ꗏ ꕟꘋꔵ
     ZMK:
       display_names:
         other: ꕤꔭꕩ ꖴꕎꕦ (1968–2012)
-    ZMW:
-      display_names:
-        other: ꕤꔭꕩ ꖴꕎꕦ
     ZWD:
       display_names:
         other: ꔽꕓꖜꔃ ꕜꕞ
 locale: vai
-generated_at: '2025-09-10T22:17:50+09:00'
+generated_at: '2025-09-10T23:53:20+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

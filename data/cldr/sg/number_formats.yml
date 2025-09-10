@@ -3,39 +3,296 @@ number_formats:
   symbols:
     decimal: ","
     group: "."
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00;¤-#,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: kwânza tî Angoläa
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: dolära tî Ostralïi
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: pûla tî Botswana
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: dolära tî kanadäa
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: yuan renminbi tî Shîni
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: pôndo tî Kâmitâ
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: zoröo
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: pôndo tî Anglëe
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: rupïi tî Ênnde
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: yêni tî Zapön
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: farânga tî Kömôro
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: dolära tî Liberïa
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ariâri tî Madagasikära
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: rupïi tî Mörîsi
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: dolära tî Namibïi
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: nâîra tî Nizerïa
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: farânga tî Ruandäa
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: pôndo tî Zûâ Sênt-Helêna
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: dôbra tî Sâô Tomë na Prinsîpe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: dol$ara ttî äLetäa-Ôko tî Amerîka
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: farânga CFA (BEAC)
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: farânga CFA (BCEAO)
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: rânde tî Mbongo-Afrîka
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: kwâtia tî Zambïi
     AED:
       display_names:
         other: dirâm tî âEmirâti tî Arâbo Ôko
-    AOA:
-      display_names:
-        other: kwânza tî Angoläa
-    AUD:
-      display_names:
-        other: dolära tî Ostralïi
     BHD:
       display_names:
         other: dolùara tî Bahrâina
     BIF:
       display_names:
         other: farânga tî Burundïi
-    BWP:
-      display_names:
-        other: pûla tî Botswana
-    CAD:
-      display_names:
-        other: dolära tî kanadäa
     CDF:
       display_names:
         other: farânga tî Kongöo
     CHF:
       display_names:
         other: farânga tî Sûîsi
-    CNY:
-      display_names:
-        other: yuan renminbi tî Shîni
     CVE:
       display_names:
         other: eskûêdo tî Kâpo-Vêre
@@ -45,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: dinäri tî Alzerïi
-    EGP:
-      display_names:
-        other: pôndo tî Kâmitâ
     ERN:
       display_names:
         other: nakafa tî Eritrëe
     ETB:
       display_names:
         other: bir tî Etiopïi
-    EUR:
-      display_names:
-        other: zoröo
-    GBP:
-      display_names:
-        other: pôndo tî Anglëe
     GHC:
       display_names:
         other: sêdi tî Ganäa
@@ -69,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: sili tî Ginëe
-    INR:
-      display_names:
-        other: rupïi tî Ênnde
-    JPY:
-      display_names:
-        other: yêni tî Zapön
     KES:
       display_names:
         other: shilîngi tî Kenyäa
-    KMF:
-      display_names:
-        other: farânga tî Kömôro
-    LRD:
-      display_names:
-        other: dolära tî Liberïa
     LSL:
       display_names:
         other: loti tî Lesôtho
@@ -93,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: dirâm tî Marôko
-    MGA:
-      display_names:
-        other: ariâri tî Madagasikära
     MRO:
       display_names:
         other: ugîya tî Moritanïi (1973–2017)
     MRU:
       display_names:
         other: ugîya tî Moritanïi
-    MUR:
-      display_names:
-        other: rupïi tî Mörîsi
     MWK:
       display_names:
         other: kwâtia tî Malawïi
     MZM:
       display_names:
         other: metikala tî Mozambîka
-    NAD:
-      display_names:
-        other: dolära tî Namibïi
-    NGN:
-      display_names:
-        other: nâîra tî Nizerïa
-    RWF:
-      display_names:
-        other: farânga tî Ruandäa
     SAR:
       display_names:
         other: riâli tî Saûdi Arabïi
@@ -129,9 +350,6 @@ number_formats:
     SDG:
       display_names:
         other: pôndo tî Sudäan
-    SHP:
-      display_names:
-        other: pôndo tî Zûâ Sênt-Helêna
     SLE:
       display_names:
         other: leône tî Sierâ-Leône
@@ -144,9 +362,6 @@ number_formats:
     STD:
       display_names:
         other: dôbra tî Sâô Tomë na Prinsîpe (1977–2017)
-    STN:
-      display_names:
-        other: dôbra tî Sâô Tomë na Prinsîpe
     SZL:
       display_names:
         other: lilangùeni tî Swazïlânde
@@ -159,29 +374,14 @@ number_formats:
     UGX:
       display_names:
         other: shilîngi tî Ugandäa
-    USD:
-      display_names:
-        other: dol$ara ttî äLetäa-Ôko tî Amerîka
-    XAF:
-      display_names:
-        other: farânga CFA (BEAC)
-    XOF:
-      display_names:
-        other: farânga CFA (BCEAO)
-    ZAR:
-      display_names:
-        other: rânde tî Mbongo-Afrîka
     ZMK:
       display_names:
         other: kwâtia tî Zambïi (1968–2012)
-    ZMW:
-      display_names:
-        other: kwâtia tî Zambïi
     ZWD:
       display_names:
         other: dolära tî Zimbäbwe
 locale: sg
-generated_at: '2025-09-10T22:17:47+09:00'
+generated_at: '2025-09-10T23:53:17+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

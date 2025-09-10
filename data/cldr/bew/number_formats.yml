@@ -3,48 +3,448 @@ number_formats:
   symbols:
     decimal: ","
     group: "."
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
+    standard: "¤ #,##0.00"
     accounting: "¤#,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: dirham Imarat Arab Rempug
     AFN:
+      symbol: "؋"
       display_names:
         other: apgani Apganistan
-    ALL:
-      display_names:
-        other: lèk Albani
     AMD:
+      symbol: "֏"
       display_names:
         other: dirham Lemènder
-    ANG:
-      display_names:
-        other: gulden Antilen Belanda
     AOA:
+      symbol: Kz
       display_names:
         other: kuansa Anggola
     ARS:
+      symbol: "$"
       display_names:
         other: pèso Argèntina
     AUD:
+      symbol: A$
       display_names:
         other: dolar Ostrali
-    AWG:
-      display_names:
-        other: plorèn Aruba
     AZN:
+      symbol: "₼"
       display_names:
         other: manat Asèrbaijan
     BAM:
+      symbol: KM
       display_names:
         other: marek tukeran Bosni-Hèrségowina
     BBD:
+      symbol: "$"
       display_names:
         other: dolar Barbados
     BDT:
+      symbol: "৳"
       display_names:
         other: taka Benggaladésa
+    BMD:
+      symbol: "$"
+      display_names:
+        other: dolar Bermuda
+    BND:
+      symbol: "$"
+      display_names:
+        other: ringgit Bruné
+    BOB:
+      symbol: Bs
+      display_names:
+        other: boliwiano Boliwi
+    BRL:
+      symbol: R$
+      display_names:
+        other: rèal Brasil
+    BSD:
+      symbol: "$"
+      display_names:
+        other: dolar Bahama
+    BWP:
+      symbol: P
+      display_names:
+        other: pula Boswana
+    BZD:
+      symbol: "$"
+      display_names:
+        other: dolar Bélis
+    CAD:
+      symbol: CA$
+      display_names:
+        other: dolar Kanada
+    CLP:
+      symbol: "$"
+      display_names:
+        other: pèso Cili
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: yuèn Tiongkok
+    COP:
+      symbol: "$"
+      display_names:
+        other: pèso Kolombia
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: kolon Kosta Rika
+    CUC:
+      symbol: "$"
+      display_names:
+        other: pèso tukeran Kuba
+    CUP:
+      symbol: "$"
+      display_names:
+        other: pèso Kuba
+    CZK:
+      symbol: Kč
+      display_names:
+        other: kron Cèko
+    DKK:
+      symbol: kr
+      display_names:
+        other: kron Dènemarken
+    DOP:
+      symbol: "$"
+      display_names:
+        other: pèso Dominika
+    EGP:
+      symbol: E£
+      display_names:
+        other: pon Mesir
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: èuro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: dolar Piji
+    FKP:
+      symbol: "£"
+      display_names:
+        other: pon Pulo Paklan
+    GBP:
+      symbol: "£"
+      display_names:
+        other: pon Britani
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: lari Géorgi
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: sédi Gana
+    GIP:
+      symbol: "£"
+      display_names:
+        other: pon Jabal Tarik
+    GNF:
+      symbol: FG
+      display_names:
+        other: prang Giné
+    GTQ:
+      symbol: Q
+      display_names:
+        other: kètsal Guatémala
+    GYD:
+      symbol: "$"
+      display_names:
+        other: dolar Guyana
+    HKD:
+      symbol: HK$
+      display_names:
+        other: dolar Hongkong
+    HNL:
+      symbol: L
+      display_names:
+        other: lèmpira Honduras
+    HRK:
+      symbol: kn
+      display_names:
+        other: kuna Kroasi
+    HUF:
+      symbol: Ft
+      display_names:
+        other: porin Honggari
+    IDR:
+      symbol: Rp
+      display_names:
+        other: rupiah Indonésia
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: sèkèl baru Israèl
+    INR:
+      symbol: "₹"
+      display_names:
+        other: rupiah Hindi
+    ISK:
+      symbol: kr
+      display_names:
+        other: kron Èslan
+    JMD:
+      symbol: "$"
+      display_names:
+        other: dolar Jamaika
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: yèn Jepang
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: sum Kirgistan
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: rèal Kemboja
+    KMF:
+      symbol: CF
+      display_names:
+        other: prang Komoro
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: won Koréa Lor
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: won Koréa Kidul
+    KYD:
+      symbol: "$"
+      display_names:
+        other: dolar Pulo Kaèman
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: tènggé Kasakstan
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: kip Laos
+    LBP:
+      symbol: L£
+      display_names:
+        other: pon Lèbanon
+    LKR:
+      symbol: Rs
+      display_names:
+        other: rupiah Sri Langka
+    LRD:
+      symbol: "$"
+      display_names:
+        other: dolar Libéria
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: rèal Madagaskar
+    MMK:
+      symbol: K
+      display_names:
+        other: kiat Mianmar
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: tugrik Monggoli
+    MUR:
+      symbol: Rs
+      display_names:
+        other: rupiah Moritius
+    MXN:
+      symbol: MX$
+      display_names:
+        other: pèso Mèksiko
+    MYR:
+      symbol: RM
+      display_names:
+        other: ringgit Malésia
+    NAD:
+      symbol: "$"
+      display_names:
+        other: dolar Namibi
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: naira Nigéria
+    NIO:
+      symbol: C$
+      display_names:
+        other: kordoba Nikaragua
+    NOK:
+      symbol: kr
+      display_names:
+        other: kron Norwèhen
+    NPR:
+      symbol: Rs
+      display_names:
+        other: rupiah Népal
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: dolar Sélan Baru
+    PHP:
+      symbol: "₱"
+      display_names:
+        other: pèso Pilipénen
+    PKR:
+      symbol: Rs
+      display_names:
+        other: rupiah Pakistan
+    PLN:
+      symbol: zł
+      display_names:
+        other: złoty Polen
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: guarani Paragué
+    RON:
+      symbol: lei
+      display_names:
+        other: léu Ruméni
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: rubel Ruslan
+    RWF:
+      symbol: RF
+      display_names:
+        other: prang Ruanda
+    SBD:
+      symbol: "$"
+      display_names:
+        other: dolar Pulo Suléman
+    SEK:
+      symbol: kr
+      display_names:
+        other: kron Swèden
+    SGD:
+      symbol: "$"
+      display_names:
+        other: dolar Singapur
+    SHP:
+      symbol: "£"
+      display_names:
+        other: pon Sint Héléna
+    SRD:
+      symbol: "$"
+      display_names:
+        other: dolar Suriname
+    SSP:
+      symbol: "£"
+      display_names:
+        other: pon Sudan Kidul
+    STN:
+      symbol: Db
+      display_names:
+        other: dobra Sint Tomas èn Prins
+    SYP:
+      symbol: "£"
+      display_names:
+        other: pon Suriah
+    THB:
+      symbol: "฿"
+      display_names:
+        other: bat Muang-Tay
+    TOP:
+      symbol: T$
+      display_names:
+        other: pa’anga Tonga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: lira Turki
+    TTD:
+      symbol: "$"
+      display_names:
+        other: dolar Trinidad èn Tobago
+    TWD:
+      symbol: NT$
+      display_names:
+        other: yuèn baru Taiwan
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: heriwnia Ukrain
+    USD:
+      symbol: US$
+      display_names:
+        other: dolar Amrik Serèkat
+    UYU:
+      symbol: "$"
+      display_names:
+        other: pèso Urugué
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+      display_names:
+        other: dong Piètnam
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: prang CFA Aprika Tenga
+    XCD:
+      symbol: EC$
+      display_names:
+        other: dolar Karaiben Wètan
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: prang CFA Aprika Kulon
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: prang CFP
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(mata uang kaga’ ditauin)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: ran Aprika Kidul
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: kuaca Sambia
+    AED:
+      display_names:
+        other: dirham Imarat Arab Rempug
+    ALL:
+      display_names:
+        other: lèk Albani
+    ANG:
+      display_names:
+        other: gulden Antilen Belanda
+    AWG:
+      display_names:
+        other: plorèn Aruba
     BGN:
       display_names:
         other: lèp Bulgari
@@ -54,204 +454,57 @@ number_formats:
     BIF:
       display_names:
         other: prang Burundi
-    BMD:
-      display_names:
-        other: dolar Bermuda
-    BND:
-      display_names:
-        other: ringgit Bruné
-    BOB:
-      display_names:
-        other: boliwiano Boliwi
-    BRL:
-      display_names:
-        other: rèal Brasil
-    BSD:
-      display_names:
-        other: dolar Bahama
     BTN:
       display_names:
         other: ngultrum Butan
-    BWP:
-      display_names:
-        other: pula Boswana
     BYN:
       display_names:
         other: rubel Ruslan Puti
-    BZD:
-      display_names:
-        other: dolar Bélis
-    CAD:
-      display_names:
-        other: dolar Kanada
     CDF:
       display_names:
         other: prang Kongo
     CHF:
       display_names:
         other: prang Switserlan
-    CLP:
-      display_names:
-        other: pèso Cili
     CNH:
       display_names:
         other: yuèn Tiongkok (luar negeri)
-    CNY:
-      display_names:
-        other: yuèn Tiongkok
-    COP:
-      display_names:
-        other: pèso Kolombia
-    CRC:
-      display_names:
-        other: kolon Kosta Rika
-    CUC:
-      display_names:
-        other: pèso tukeran Kuba
-    CUP:
-      display_names:
-        other: pèso Kuba
     CVE:
       display_names:
         other: èskudo Tanjung Ijo
-    CZK:
-      display_names:
-        other: kron Cèko
     DJF:
       display_names:
         other: prang Jibuti
-    DKK:
-      display_names:
-        other: kron Dènemarken
-    DOP:
-      display_names:
-        other: pèso Dominika
     DZD:
       display_names:
         other: dinar Aljajaèr
-    EGP:
-      display_names:
-        other: pon Mesir
     ERN:
       display_names:
         other: nakpa Èritréa
     ETB:
       display_names:
         other: bir Habsi
-    EUR:
-      display_names:
-        other: èuro
-    FJD:
-      display_names:
-        other: dolar Piji
-    FKP:
-      display_names:
-        other: pon Pulo Paklan
-    GBP:
-      display_names:
-        other: pon Britani
-    GEL:
-      display_names:
-        other: lari Géorgi
-    GHS:
-      display_names:
-        other: sédi Gana
-    GIP:
-      display_names:
-        other: pon Jabal Tarik
     GMD:
       display_names:
         other: dalasi Gambia
-    GNF:
-      display_names:
-        other: prang Giné
-    GTQ:
-      display_names:
-        other: kètsal Guatémala
-    GYD:
-      display_names:
-        other: dolar Guyana
-    HKD:
-      display_names:
-        other: dolar Hongkong
-    HNL:
-      display_names:
-        other: lèmpira Honduras
-    HRK:
-      display_names:
-        other: kuna Kroasi
     HTG:
       display_names:
         other: gurda Haiti
-    HUF:
-      display_names:
-        other: porin Honggari
-    IDR:
-      display_names:
-        other: rupiah Indonésia
-    ILS:
-      display_names:
-        other: sèkèl baru Israèl
-    INR:
-      display_names:
-        other: rupiah Hindi
     IQD:
       display_names:
         other: dinar Irak
     IRR:
       display_names:
         other: rèal Iran
-    ISK:
-      display_names:
-        other: kron Èslan
-    JMD:
-      display_names:
-        other: dolar Jamaika
     JOD:
       display_names:
         other: dinar Urdun
-    JPY:
-      display_names:
-        other: yèn Jepang
     KES:
       display_names:
         other: siling Kénia
-    KGS:
-      display_names:
-        other: sum Kirgistan
-    KHR:
-      display_names:
-        other: rèal Kemboja
-    KMF:
-      display_names:
-        other: prang Komoro
-    KPW:
-      display_names:
-        other: won Koréa Lor
-    KRW:
-      display_names:
-        other: won Koréa Kidul
     KWD:
       display_names:
         other: dinar Kuwaèt
-    KYD:
-      display_names:
-        other: dolar Pulo Kaèman
-    KZT:
-      display_names:
-        other: tènggé Kasakstan
-    LAK:
-      display_names:
-        other: kip Laos
-    LBP:
-      display_names:
-        other: pon Lèbanon
-    LKR:
-      display_names:
-        other: rupiah Sri Langka
-    LRD:
-      display_names:
-        other: dolar Libéria
     LSL:
       display_names:
         other: loti Lésoto
@@ -264,66 +517,30 @@ number_formats:
     MDL:
       display_names:
         other: léu Moldawi
-    MGA:
-      display_names:
-        other: rèal Madagaskar
     MKD:
       display_names:
         other: dinar Makèdoni
-    MMK:
-      display_names:
-        other: kiat Mianmar
-    MNT:
-      display_names:
-        other: tugrik Monggoli
     MOP:
       display_names:
         other: pataka Makao
     MRU:
       display_names:
         other: ukiah Moritani
-    MUR:
-      display_names:
-        other: rupiah Moritius
     MVR:
       display_names:
         other: rupiah Maladéwa
     MWK:
       display_names:
         other: kuaca Malawi
-    MXN:
-      display_names:
-        other: pèso Mèksiko
     MXP:
       display_names:
         other: pèso pèrak Mèksiko (1861–1992)
-    MYR:
-      display_names:
-        other: ringgit Malésia
     MZN:
       display_names:
         other: miskal Mosambik
-    NAD:
-      display_names:
-        other: dolar Namibi
-    NGN:
-      display_names:
-        other: naira Nigéria
     NIC:
       display_names:
         other: kordoba Nikaragua (1988–1991)
-    NIO:
-      display_names:
-        other: kordoba Nikaragua
-    NOK:
-      display_names:
-        other: kron Norwèhen
-    NPR:
-      display_names:
-        other: rupiah Népal
-    NZD:
-      display_names:
-        other: dolar Sélan Baru
     OMR:
       display_names:
         other: rèal Oman
@@ -336,54 +553,21 @@ number_formats:
     PGK:
       display_names:
         other: kina Papua Giné Baru
-    PHP:
-      display_names:
-        other: pèso Pilipénen
-    PKR:
-      display_names:
-        other: rupiah Pakistan
-    PLN:
-      display_names:
-        other: złoty Polen
-    PYG:
-      display_names:
-        other: guarani Paragué
     QAR:
       display_names:
         other: rèal Katar
-    RON:
-      display_names:
-        other: léu Ruméni
     RSD:
       display_names:
         other: dinar Sèrwi
-    RUB:
-      display_names:
-        other: rubel Ruslan
-    RWF:
-      display_names:
-        other: prang Ruanda
     SAR:
       display_names:
         other: rèal Saudi
-    SBD:
-      display_names:
-        other: dolar Pulo Suléman
     SCR:
       display_names:
         other: rupiah Sésèl
     SDG:
       display_names:
         other: pon Sudan
-    SEK:
-      display_names:
-        other: kron Swèden
-    SGD:
-      display_names:
-        other: dolar Singapur
-    SHP:
-      display_names:
-        other: pon Sint Héléna
     SLE:
       display_names:
         other: léon Gunung Singa
@@ -393,27 +577,12 @@ number_formats:
     SOS:
       display_names:
         other: siling Somali
-    SRD:
-      display_names:
-        other: dolar Suriname
-    SSP:
-      display_names:
-        other: pon Sudan Kidul
-    STN:
-      display_names:
-        other: dobra Sint Tomas èn Prins
     SVC:
       display_names:
         other: kolon Salbador
-    SYP:
-      display_names:
-        other: pon Suriah
     SZL:
       display_names:
         other: lilanggéni Swasilan
-    THB:
-      display_names:
-        other: bat Muang-Tay
     TJS:
       display_names:
         other: samani Tajikistan
@@ -423,80 +592,35 @@ number_formats:
     TND:
       display_names:
         other: dinar Tunis
-    TOP:
-      display_names:
-        other: pa’anga Tonga
-    TRY:
-      display_names:
-        other: lira Turki
-    TTD:
-      display_names:
-        other: dolar Trinidad èn Tobago
-    TWD:
-      display_names:
-        other: yuèn baru Taiwan
     TZS:
       display_names:
         other: siling Tansania
-    UAH:
-      display_names:
-        other: heriwnia Ukrain
     UGX:
       display_names:
         other: siling Uganda
-    USD:
-      display_names:
-        other: dolar Amrik Serèkat
     USN:
       display_names:
         other: dolar AS (bèsokannya)
     USS:
       display_names:
         other: dolar AS (ari nyang sama)
-    UYU:
-      display_names:
-        other: pèso Urugué
     UZS:
       display_names:
         other: sum Usbèkistan
     VES:
       display_names:
         other: boliwar Bénésuèla
-    VND:
-      display_names:
-        other: dong Piètnam
     VUV:
       display_names:
         other: watu Wanuatu
     WST:
       display_names:
         other: dolar Samoa
-    XAF:
-      display_names:
-        other: prang CFA Aprika Tenga
-    XCD:
-      display_names:
-        other: dolar Karaiben Wètan
-    XOF:
-      display_names:
-        other: prang CFA Aprika Kulon
-    XPF:
-      display_names:
-        other: prang CFP
-    XXX:
-      display_names:
-        other: "(mata uang kaga’ ditauin)"
     YER:
       display_names:
         other: rèal Yaman
-    ZAR:
-      display_names:
-        other: ran Aprika Kidul
-    ZMW:
-      display_names:
-        other: kuaca Sambia
 locale: bew
-generated_at: '2025-09-10T22:17:33+09:00'
+generated_at: '2025-09-10T23:53:03+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

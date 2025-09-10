@@ -1,14 +1,496 @@
 ---
 number_formats:
   symbols:
+    decimal: "."
+    group: ","
     minus_sign: "‎-"
     plus_sign: "‎+"
     percent_sign: "‎%‎"
+    per_mille: "‰"
+    infinity: "∞"
     nan: ليس رقمًا
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "‏#,##0.00 ¤;‏-#,##0.00 ¤"
     accounting: "؜#,##0.00¤;(؜#,##0.00¤)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: أفغاني أفغانستاني
+        zero: أفغاني أفغانستاني
+        one: أفغاني أفغانستاني
+        two: أفغاني أفغانستاني
+        few: أفغاني أفغانستاني
+        many: أفغاني أفغانستاني
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: درام أرميني
+    AOA:
+      symbol: Kz
+      display_names:
+        other: كوانزا أنغولي
+    ARS:
+      symbol: AR$
+      display_names:
+        other: بيزو أرجنتيني
+    AUD:
+      symbol: AU$
+      display_names:
+        other: دولار أسترالي
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: مانت أذربيجاني
+        zero: مانت أذربيجاني
+        one: مانت أذربيجاني
+        two: مانت أذربيجاني
+        few: مانت أذربيجاني
+        many: مانت أذربيجاني
+    BAM:
+      symbol: KM
+      display_names:
+        other: مارك البوسنة والهرسك قابل للتحويل
+    BBD:
+      symbol: BB$
+      display_names:
+        other: دولار بربادوسي
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: تاكا بنغلاديشي
+    BMD:
+      symbol: BM$
+      display_names:
+        other: دولار برمودي
+    BND:
+      symbol: BN$
+      display_names:
+        other: دولار بروناي
+    BOB:
+      symbol: Bs
+      display_names:
+        other: بوليفيانو بوليفي
+    BRL:
+      symbol: R$
+      display_names:
+        other: ريال برازيلي
+    BSD:
+      symbol: BS$
+      display_names:
+        other: دولار باهامي
+    BWP:
+      symbol: P
+      display_names:
+        other: بولا بتسواني
+    BZD:
+      symbol: BZ$
+      display_names:
+        other: دولار بليزي
+        zero: دولار بليزي
+        one: دولار بليزي
+        two: دولاران بليزيان
+        few: دولار بليزي
+        many: دولار بليزي
+    CAD:
+      symbol: CA$
+      display_names:
+        other: دولار كندي
+    CLP:
+      symbol: CL$
+      display_names:
+        other: بيزو تشيلي
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: يوان صيني
+    COP:
+      symbol: CO$
+      display_names:
+        other: بيزو كولومبي
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: كولن كوستاريكي
+    CUC:
+      symbol: "$"
+      display_names:
+        other: بيزو كوبي قابل للتحويل
+    CUP:
+      symbol: CU$
+      display_names:
+        other: بيزو كوبي
+    CZK:
+      symbol: Kč
+      display_names:
+        other: كرونة تشيكية
+    DKK:
+      symbol: kr
+      display_names:
+        other: كرونة دنماركية
+    DOP:
+      symbol: DO$
+      display_names:
+        other: بيزو الدومنيكان
+    EGP:
+      symbol: ج.م.‏
+      display_names:
+        other: جنيه مصري
+        zero: جنيه مصري
+        one: جنيه مصري
+        two: جنيهان مصريان
+        few: جنيهات مصرية
+        many: جنيهًا مصريًا
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: بيزيتا إسباني
+    EUR:
+      symbol: "€"
+      display_names:
+        other: يورو
+    FJD:
+      symbol: FJ$
+      display_names:
+        other: دولار فيجي
+    FKP:
+      symbol: "£"
+      display_names:
+        other: جنيه جزر فوكلاند
+    GBP:
+      symbol: UK£
+      display_names:
+        other: جنيه إسترليني
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: لاري جورجي
+        zero: لاري جورجي
+        one: لاري جورجي
+        two: لاري جورجي
+        few: لاري جورجي
+        many: لاري جورجي
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: سيدي غانا
+    GIP:
+      symbol: "£"
+      display_names:
+        other: جنيه جبل طارق
+    GNF:
+      symbol: FG
+      display_names:
+        other: فرنك غينيا
+    GTQ:
+      symbol: Q
+      display_names:
+        other: كوتزال غواتيمالا
+    GYD:
+      symbol: GY$
+      display_names:
+        other: دولار غيانا
+    HKD:
+      symbol: HK$
+      display_names:
+        other: دولار هونغ كونغ
+    HNL:
+      symbol: L
+      display_names:
+        other: ليمبيرا هندوراس
+        zero: ليمبيرا هندوراس
+        one: ليمبيرا هندوراس
+        two: ليمبيرا هندوراس
+        few: ليمبيرا هندوراس
+        many: ليمبيرا هندوراس
+    HRK:
+      symbol: kn
+      display_names:
+        other: كونا كرواتي
+    HUF:
+      symbol: Ft
+      display_names:
+        other: فورينت هنغاري
+    IDR:
+      symbol: Rp
+      display_names:
+        other: روبية إندونيسية
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: شيكل إسرائيلي جديد
+    INR:
+      symbol: "₹"
+      display_names:
+        other: روبية هندي
+    ISK:
+      symbol: kr
+      display_names:
+        other: كرونة أيسلندية
+    JMD:
+      symbol: JM$
+      display_names:
+        other: دولار جامايكي
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: ين ياباني
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: سوم قيرغستاني
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: رييال كمبودي
+    KMF:
+      symbol: CF
+      display_names:
+        other: فرنك جزر القمر
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: وون كوريا الشمالية
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: وون كوريا الجنوبية
+    KYD:
+      symbol: KY$
+      display_names:
+        other: دولار جزر كيمن
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: تينغ كازاخستاني
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: كيب لاوسي
+    LBP:
+      symbol: ل.ل.‏
+      display_names:
+        other: جنيه لبناني
+    LKR:
+      symbol: Rs
+      display_names:
+        other: روبية سريلانكية
+    LRD:
+      symbol: "$LR"
+      display_names:
+        other: دولار ليبيري
+        zero: دولار ليبيري
+        one: دولار ليبيري
+        two: دولاران ليبيريان
+        few: دولارات ليبيرية
+        many: دولارًا ليبيريًا
+    LTL:
+      symbol: Lt
+      display_names:
+        other: ليتا ليتوانية
+    LVL:
+      symbol: Ls
+      display_names:
+        other: لاتس لاتفي
+        zero: لاتس لاتفي
+        one: لاتس لاتفي
+        two: لاتس لاتفي
+        few: لاتس لاتفي
+        many: لاتس لاتفي
+    MGA:
+      symbol: Ar
+      display_names:
+        other: أرياري مدغشقر
+    MMK:
+      symbol: K
+      display_names:
+        other: كيات ميانمار
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: توغروغ منغولي
+    MUR:
+      symbol: Rs
+      display_names:
+        other: روبية موريشيوسية
+    MXN:
+      symbol: MX$
+      display_names:
+        other: بيزو مكسيكي
+    MYR:
+      symbol: RM
+      display_names:
+        other: رينغيت ماليزي
+    NAD:
+      symbol: "$"
+      display_names:
+        other: دولار ناميبي
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: نايرا نيجيري
+    NIO:
+      symbol: C$
+      display_names:
+        other: قرطبة نيكاراغوا
+    NOK:
+      symbol: kr
+      display_names:
+        other: كرونة نرويجية
+    NPR:
+      symbol: Rs
+      display_names:
+        other: روبية نيبالي
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: دولار نيوزيلندي
+    PHP:
+      symbol: PHP
+      display_names:
+        other: بيزو فلبيني
+    PKR:
+      symbol: Rs
+      display_names:
+        other: روبية باكستاني
+    PLN:
+      symbol: zł
+      display_names:
+        other: زلوتي بولندي
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: غواراني باراغواي
+    RON:
+      symbol: lei
+      display_names:
+        other: ليو روماني
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: روبل روسي
+    RWF:
+      symbol: RF
+      display_names:
+        other: فرنك رواندي
+    SBD:
+      symbol: SB$
+      display_names:
+        other: دولار جزر سليمان
+    SEK:
+      symbol: kr
+      display_names:
+        other: كرونة سويدية
+    SGD:
+      symbol: "$"
+      display_names:
+        other: دولار سنغافوري
+    SHP:
+      symbol: "£"
+      display_names:
+        other: جنيه سانت هيلين
+    SRD:
+      symbol: SR$
+      display_names:
+        other: دولار سورينامي
+    SSP:
+      symbol: "£"
+      display_names:
+        other: جنيه جنوب السودان
+        zero: جنيه جنوب السودان
+        one: جنيه جنوب السودان
+        two: جنيهان جنوب السودان
+        few: جنيهات جنوب السودان
+        many: جنيهًا جنوب السودان
+    STN:
+      symbol: Db
+      display_names:
+        other: دوبرا ساو تومي وبرينسيبي
+    SYP:
+      symbol: ل.س.‏
+      display_names:
+        other: ليرة سورية
+    THB:
+      symbol: "฿"
+      display_names:
+        other: باخت تايلاندي
+    TOP:
+      symbol: T$
+      display_names:
+        other: بانغا تونغا
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: ليرة تركية
+    TTD:
+      symbol: TT$
+      display_names:
+        other: دولار ترينداد وتوباغو
+    TWD:
+      symbol: NT$
+      display_names:
+        other: دولار تايواني
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: هريفنيا أوكراني
+    USD:
+      symbol: US$
+      display_names:
+        other: دولار أمريكي
+    UYU:
+      symbol: UY$
+      display_names:
+        other: بيزو اوروغواي
+    VEF:
+      symbol: Bs
+      display_names:
+        other: بوليفار فنزويلي - 2008–2018
+    VND:
+      symbol: "₫"
+      display_names:
+        other: دونج فيتنامي
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: فرنك وسط أفريقي
+    XCD:
+      symbol: EC$
+      display_names:
+        other: دولار شرق الكاريبي
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: فرنك غرب أفريقي
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: فرنك سي إف بي
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(عملة غير معروفة)"
+        zero: "(عملة غير معروفة)"
+        one: "(عملة غير معروفة)"
+        two: "(عملة غير معروفة)"
+        few: "(عملة غير معروفة)"
+        many: "(عملة غير معروفة)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: راند جنوب أفريقيا
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: كواشا زامبي
     ADP:
       display_names:
         other: بيستا أندوري
@@ -19,26 +501,12 @@ number_formats:
     AFA:
       display_names:
         other: أفغاني - 1927-2002
-    AFN:
-      display_names:
-        other: أفغاني أفغانستاني
-        zero: أفغاني أفغانستاني
-        one: أفغاني أفغانستاني
-        two: أفغاني أفغانستاني
-        few: أفغاني أفغانستاني
-        many: أفغاني أفغانستاني
     ALL:
       display_names:
         other: ليك ألباني
-    AMD:
-      display_names:
-        other: درام أرميني
     ANG:
       display_names:
         other: غيلدر أنتيلي هولندي
-    AOA:
-      display_names:
-        other: كوانزا أنغولي
     AOK:
       display_names:
         other: كوانزا أنجولي - 1977-1990
@@ -59,44 +527,18 @@ number_formats:
     ARP:
       display_names:
         other: بيزو أرجنتيني - 1983-1985
-    ARS:
-      symbol: AR$
-      display_names:
-        other: بيزو أرجنتيني
     ATS:
       display_names:
         other: شلن نمساوي
-    AUD:
-      symbol: AU$
-      display_names:
-        other: دولار أسترالي
     AWG:
       display_names:
         other: فلورن أروبي
     AZM:
       display_names:
         other: مانات أذريبجاني
-    AZN:
-      display_names:
-        other: مانت أذربيجاني
-        zero: مانت أذربيجاني
-        one: مانت أذربيجاني
-        two: مانت أذربيجاني
-        few: مانت أذربيجاني
-        many: مانت أذربيجاني
     BAD:
       display_names:
         other: دينار البوسنة والهرسك
-    BAM:
-      display_names:
-        other: مارك البوسنة والهرسك قابل للتحويل
-    BBD:
-      symbol: BB$
-      display_names:
-        other: دولار بربادوسي
-    BDT:
-      display_names:
-        other: تاكا بنغلاديشي
     BEC:
       display_names:
         other: فرنك بلجيكي قابل للتحويل
@@ -116,17 +558,6 @@ number_formats:
     BIF:
       display_names:
         other: فرنك بروندي
-    BMD:
-      symbol: BM$
-      display_names:
-        other: دولار برمودي
-    BND:
-      symbol: BN$
-      display_names:
-        other: دولار بروناي
-    BOB:
-      display_names:
-        other: بوليفيانو بوليفي
     BOP:
       display_names:
         other: بيزو بوليفي
@@ -142,22 +573,12 @@ number_formats:
     BRE:
       display_names:
         other: كروزايرو برازيلي - 1990-1993
-    BRL:
-      display_names:
-        other: ريال برازيلي
-    BSD:
-      symbol: BS$
-      display_names:
-        other: دولار باهامي
     BTN:
       display_names:
         other: نولتوم بوتاني
     BUK:
       display_names:
         other: كيات بورمي
-    BWP:
-      display_names:
-        other: بولا بتسواني
     BYB:
       display_names:
         other: روبل بيلاروسي جديد - 1994-1999
@@ -168,65 +589,27 @@ number_formats:
     BYR:
       display_names:
         other: روبل بيلاروسي (٢٠٠٠–٢٠١٦)
-    BZD:
-      symbol: BZ$
-      display_names:
-        other: دولار بليزي
-        zero: دولار بليزي
-        one: دولار بليزي
-        two: دولاران بليزيان
-        few: دولار بليزي
-        many: دولار بليزي
-    CAD:
-      symbol: CA$
-      display_names:
-        other: دولار كندي
     CDF:
       display_names:
         other: فرنك كونغولي
     CHF:
       display_names:
         other: فرنك سويسري
-    CLP:
-      symbol: CL$
-      display_names:
-        other: بيزو تشيلي
     CNH:
       display_names:
         other: يوان صيني (في الخارج)
-    CNY:
-      symbol: CN¥
-      display_names:
-        other: يوان صيني
-    COP:
-      symbol: CO$
-      display_names:
-        other: بيزو كولومبي
-    CRC:
-      display_names:
-        other: كولن كوستاريكي
     CSD:
       display_names:
         other: دينار صربي قديم
     CSK:
       display_names:
         other: كرونة تشيكوسلوفاكيا
-    CUC:
-      display_names:
-        other: بيزو كوبي قابل للتحويل
-    CUP:
-      symbol: CU$
-      display_names:
-        other: بيزو كوبي
     CVE:
       display_names:
         other: اسكودو الرأس الأخضر
     CYP:
       display_names:
         other: جنيه قبرصي
-    CZK:
-      display_names:
-        other: كرونة تشيكية
     DDM:
       display_names:
         other: أوستمارك ألماني شرقي
@@ -236,13 +619,6 @@ number_formats:
     DJF:
       display_names:
         other: فرنك جيبوتي
-    DKK:
-      display_names:
-        other: كرونة دنماركية
-    DOP:
-      symbol: DO$
-      display_names:
-        other: بيزو الدومنيكان
     DZD:
       symbol: د.ج.‏
       display_names:
@@ -260,67 +636,24 @@ number_formats:
         two: كرونة أستونية
         few: كرونة أستونية
         many: كرونة أستونية
-    EGP:
-      symbol: ج.م.‏
-      display_names:
-        other: جنيه مصري
-        zero: جنيه مصري
-        one: جنيه مصري
-        two: جنيهان مصريان
-        few: جنيهات مصرية
-        many: جنيهًا مصريًا
     ERN:
       display_names:
         other: ناكفا أريتري
-    ESP:
-      display_names:
-        other: بيزيتا إسباني
     ETB:
       display_names:
         other: بير أثيوبي
-    EUR:
-      display_names:
-        other: يورو
     FIM:
       display_names:
         other: ماركا فنلندي
-    FJD:
-      symbol: FJ$
-      display_names:
-        other: دولار فيجي
-    FKP:
-      display_names:
-        other: جنيه جزر فوكلاند
     FRF:
       display_names:
         other: فرنك فرنسي
-    GBP:
-      symbol: UK£
-      display_names:
-        other: جنيه إسترليني
-    GEL:
-      display_names:
-        other: لاري جورجي
-        zero: لاري جورجي
-        one: لاري جورجي
-        two: لاري جورجي
-        few: لاري جورجي
-        many: لاري جورجي
     GHC:
       display_names:
         other: سيدي غاني
-    GHS:
-      display_names:
-        other: سيدي غانا
-    GIP:
-      display_names:
-        other: جنيه جبل طارق
     GMD:
       display_names:
         other: دلاسي غامبي
-    GNF:
-      display_names:
-        other: فرنك غينيا
     GNS:
       display_names:
         other: سيلي غينيا
@@ -330,58 +663,24 @@ number_formats:
     GRD:
       display_names:
         other: دراخما يوناني
-    GTQ:
-      display_names:
-        other: كوتزال غواتيمالا
     GWE:
       display_names:
         other: اسكود برتغالي غينيا
     GWP:
       display_names:
         other: بيزو غينيا بيساو
-    GYD:
-      symbol: GY$
-      display_names:
-        other: دولار غيانا
-    HKD:
-      symbol: HK$
-      display_names:
-        other: دولار هونغ كونغ
-    HNL:
-      display_names:
-        other: ليمبيرا هندوراس
-        zero: ليمبيرا هندوراس
-        one: ليمبيرا هندوراس
-        two: ليمبيرا هندوراس
-        few: ليمبيرا هندوراس
-        many: ليمبيرا هندوراس
     HRD:
       display_names:
         other: دينار كرواتي
-    HRK:
-      display_names:
-        other: كونا كرواتي
     HTG:
       display_names:
         other: جوردى هايتي
-    HUF:
-      display_names:
-        other: فورينت هنغاري
-    IDR:
-      display_names:
-        other: روبية إندونيسية
     IEP:
       display_names:
         other: جنيه إيرلندي
     ILP:
       display_names:
         other: جنيه إسرائيلي
-    ILS:
-      display_names:
-        other: شيكل إسرائيلي جديد
-    INR:
-      display_names:
-        other: روبية هندي
     IQD:
       symbol: د.ع.‏
       display_names:
@@ -390,78 +689,23 @@ number_formats:
       symbol: ر.إ.
       display_names:
         other: ريال إيراني
-    ISK:
-      display_names:
-        other: كرونة أيسلندية
     ITL:
       display_names:
         other: ليرة إيطالية
-    JMD:
-      symbol: JM$
-      display_names:
-        other: دولار جامايكي
     JOD:
       symbol: د.أ.‏
       display_names:
         other: دينار أردني
-    JPY:
-      symbol: JP¥
-      display_names:
-        other: ين ياباني
     KES:
       display_names:
         other: شلن كينيي
-    KGS:
-      display_names:
-        other: سوم قيرغستاني
-    KHR:
-      display_names:
-        other: رييال كمبودي
-    KMF:
-      display_names:
-        other: فرنك جزر القمر
-    KPW:
-      display_names:
-        other: وون كوريا الشمالية
-    KRW:
-      display_names:
-        other: وون كوريا الجنوبية
     KWD:
       symbol: د.ك.‏
       display_names:
         other: دينار كويتي
-    KYD:
-      symbol: KY$
-      display_names:
-        other: دولار جزر كيمن
-    KZT:
-      display_names:
-        other: تينغ كازاخستاني
-    LAK:
-      display_names:
-        other: كيب لاوسي
-    LBP:
-      symbol: ل.ل.‏
-      display_names:
-        other: جنيه لبناني
-    LKR:
-      display_names:
-        other: روبية سريلانكية
-    LRD:
-      symbol: "$LR"
-      display_names:
-        other: دولار ليبيري
-        zero: دولار ليبيري
-        one: دولار ليبيري
-        two: دولاران ليبيريان
-        few: دولارات ليبيرية
-        many: دولارًا ليبيريًا
     LSL:
       display_names:
         other: لوتي ليسوتو
-    LTL:
-      display_names:
-        other: ليتا ليتوانية
     LTT:
       display_names:
         other: تالوناس ليتواني
@@ -474,14 +718,6 @@ number_formats:
     LUL:
       display_names:
         other: فرنك لوكسمبرج المالي
-    LVL:
-      display_names:
-        other: لاتس لاتفي
-        zero: لاتس لاتفي
-        one: لاتس لاتفي
-        two: لاتس لاتفي
-        few: لاتس لاتفي
-        many: لاتس لاتفي
     LVR:
       display_names:
         other: روبل لاتفيا
@@ -509,9 +745,6 @@ number_formats:
     MDL:
       display_names:
         other: ليو مولدوفي
-    MGA:
-      display_names:
-        other: أرياري مدغشقر
     MGF:
       display_names:
         other: فرنك مدغشقر
@@ -526,12 +759,6 @@ number_formats:
     MLF:
       display_names:
         other: فرنك مالي
-    MMK:
-      display_names:
-        other: كيات ميانمار
-    MNT:
-      display_names:
-        other: توغروغ منغولي
     MOP:
       display_names:
         other: باتاكا ماكاوي
@@ -548,19 +775,12 @@ number_formats:
     MTP:
       display_names:
         other: جنيه مالطي
-    MUR:
-      display_names:
-        other: روبية موريشيوسية
     MVR:
       display_names:
         other: روفيه جزر المالديف
     MWK:
       display_names:
         other: كواشا مالاوي
-    MXN:
-      symbol: MX$
-      display_names:
-        other: بيزو مكسيكي
     MXP:
       display_names:
         other: بيزو فضي مكسيكي
@@ -569,40 +789,18 @@ number_formats:
         two: بيزو فضي مكسيكي
         few: بيزو فضي مكسيكي
         many: بيزو فضي مكسيكي
-    MYR:
-      display_names:
-        other: رينغيت ماليزي
     MZE:
       display_names:
         other: اسكود موزمبيقي
     MZN:
       display_names:
         other: متكال موزمبيقي
-    NAD:
-      display_names:
-        other: دولار ناميبي
-    NGN:
-      display_names:
-        other: نايرا نيجيري
     NIC:
       display_names:
         other: كوردوبة نيكاراجوا
-    NIO:
-      display_names:
-        other: قرطبة نيكاراغوا
     NLG:
       display_names:
         other: جلدر هولندي
-    NOK:
-      display_names:
-        other: كرونة نرويجية
-    NPR:
-      display_names:
-        other: روبية نيبالي
-    NZD:
-      symbol: NZ$
-      display_names:
-        other: دولار نيوزيلندي
     OMR:
       symbol: ر.ع.‏
       display_names:
@@ -616,16 +814,6 @@ number_formats:
     PGK:
       display_names:
         other: كينا بابوا غينيا الجديدة
-    PHP:
-      symbol: PHP
-      display_names:
-        other: بيزو فلبيني
-    PKR:
-      display_names:
-        other: روبية باكستاني
-    PLN:
-      display_names:
-        other: زلوتي بولندي
     PLZ:
       display_names:
         other: زلوتي بولندي - 1950-1995
@@ -637,9 +825,6 @@ number_formats:
         two: أسكود برتغالي
         few: أسكود برتغالي
         many: أسكود برتغالي
-    PYG:
-      display_names:
-        other: غواراني باراغواي
     QAR:
       symbol: ر.ق.‏
       display_names:
@@ -650,9 +835,6 @@ number_formats:
     ROL:
       display_names:
         other: ليو روماني قديم
-    RON:
-      display_names:
-        other: ليو روماني
     RSD:
       display_names:
         other: دينار صربي
@@ -661,23 +843,13 @@ number_formats:
         two: ديناران صربيان
         few: دينارات صربية
         many: دينارًا صربيًا
-    RUB:
-      display_names:
-        other: روبل روسي
     RUR:
       display_names:
         other: روبل روسي - 1991-1998
-    RWF:
-      display_names:
-        other: فرنك رواندي
     SAR:
       symbol: ر.س.‏
       display_names:
         other: ريال سعودي
-    SBD:
-      symbol: SB$
-      display_names:
-        other: دولار جزر سليمان
     SCR:
       display_names:
         other: روبية سيشيلية
@@ -702,15 +874,6 @@ number_formats:
     SDP:
       display_names:
         other: جنيه سوداني قديم
-    SEK:
-      display_names:
-        other: كرونة سويدية
-    SGD:
-      display_names:
-        other: دولار سنغافوري
-    SHP:
-      display_names:
-        other: جنيه سانت هيلين
     SIT:
       display_names:
         other: تولار سلوفيني
@@ -726,44 +889,21 @@ number_formats:
     SOS:
       display_names:
         other: شلن صومالي
-    SRD:
-      symbol: SR$
-      display_names:
-        other: دولار سورينامي
     SRG:
       display_names:
         other: جلدر سورينامي
-    SSP:
-      display_names:
-        other: جنيه جنوب السودان
-        zero: جنيه جنوب السودان
-        one: جنيه جنوب السودان
-        two: جنيهان جنوب السودان
-        few: جنيهات جنوب السودان
-        many: جنيهًا جنوب السودان
     STD:
       display_names:
         other: دوبرا ساو تومي وبرينسيبي - 1977-2017
-    STN:
-      display_names:
-        other: دوبرا ساو تومي وبرينسيبي
     SUR:
       display_names:
         other: روبل سوفيتي
     SVC:
       display_names:
         other: كولون سلفادوري
-    SYP:
-      symbol: ل.س.‏
-      display_names:
-        other: ليرة سورية
     SZL:
       display_names:
         other: ليلانجيني سوازيلندي
-    THB:
-      symbol: "฿"
-      display_names:
-        other: باخت تايلاندي
     TJR:
       display_names:
         other: روبل طاجيكستاني
@@ -785,42 +925,21 @@ number_formats:
         two: ديناران تونسيان
         few: دينارات تونسية
         many: دينارًا تونسيًا
-    TOP:
-      display_names:
-        other: بانغا تونغا
     TPE:
       display_names:
         other: اسكود تيموري
     TRL:
       display_names:
         other: ليرة تركي
-    TRY:
-      display_names:
-        other: ليرة تركية
-    TTD:
-      symbol: TT$
-      display_names:
-        other: دولار ترينداد وتوباغو
-    TWD:
-      symbol: NT$
-      display_names:
-        other: دولار تايواني
     TZS:
       display_names:
         other: شلن تنزاني
-    UAH:
-      display_names:
-        other: هريفنيا أوكراني
     UGS:
       display_names:
         other: شلن أوغندي - 1966-1987
     UGX:
       display_names:
         other: شلن أوغندي
-    USD:
-      symbol: US$
-      display_names:
-        other: دولار أمريكي
     USN:
       display_names:
         other: دولار أمريكي (اليوم التالي)‏
@@ -830,34 +949,21 @@ number_formats:
     UYP:
       display_names:
         other: بيزو أوروجواي - 1975-1993
-    UYU:
-      symbol: UY$
-      display_names:
-        other: بيزو اوروغواي
     UZS:
       display_names:
         other: سوم أوزبكستاني
     VEB:
       display_names:
         other: بوليفار فنزويلي - 1871-2008
-    VEF:
-      display_names:
-        other: بوليفار فنزويلي - 2008–2018
     VES:
       display_names:
         other: بوليفار فنزويلي
-    VND:
-      display_names:
-        other: دونج فيتنامي
     VUV:
       display_names:
         other: فاتو فانواتو
     WST:
       display_names:
         other: تالا ساموا
-    XAF:
-      display_names:
-        other: فرنك وسط أفريقي
     XAG:
       display_names:
         other: فضة
@@ -881,9 +987,6 @@ number_formats:
         two: وحدة الحساب الأوروبية
         few: وحدة الحساب الأوروبية
         many: وحدة الحساب الأوروبية
-    XCD:
-      display_names:
-        other: دولار شرق الكاريبي
     XDR:
       display_names:
         other: حقوق السحب الخاصة
@@ -896,29 +999,15 @@ number_formats:
     XFU:
       display_names:
         other: "(UIC)فرنك فرنسي"
-    XOF:
-      display_names:
-        other: فرنك غرب أفريقي
     XPD:
       display_names:
         other: بالاديوم
-    XPF:
-      display_names:
-        other: فرنك سي إف بي
     XPT:
       display_names:
         other: البلاتين
     XTS:
       display_names:
         other: كود اختبار العملة
-    XXX:
-      display_names:
-        other: "(عملة غير معروفة)"
-        zero: "(عملة غير معروفة)"
-        one: "(عملة غير معروفة)"
-        two: "(عملة غير معروفة)"
-        few: "(عملة غير معروفة)"
-        many: "(عملة غير معروفة)"
     YDD:
       display_names:
         other: دينار يمني
@@ -935,15 +1024,9 @@ number_formats:
     ZAL:
       display_names:
         other: راند جنوب أفريقيا -مالي
-    ZAR:
-      display_names:
-        other: راند جنوب أفريقيا
     ZMK:
       display_names:
         other: كواشا زامبي - 1968-2012
-    ZMW:
-      display_names:
-        other: كواشا زامبي
     ZRN:
       display_names:
         other: زائير زائيري جديد
@@ -957,7 +1040,7 @@ number_formats:
       display_names:
         other: دولار زمبابوي 2009
 locale: ar
-generated_at: '2025-09-10T22:17:33+09:00'
+generated_at: '2025-09-10T23:53:02+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

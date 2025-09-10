@@ -1,38 +1,298 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: kwandha ya Angola
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: dola ya Authtralia
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: pula ya Botthwana
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: dola ya Kanada
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: yuan renminbi ya China
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: pauni ya Mithri
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: yuro
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: pauni ya Uingeredha
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: rupia ya India
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: tharafu ya Kijapani
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: faranga ya Komoro
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: dola ya Liberia
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: faranga ya Bukini
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: rupia ya Morithi
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: dola ya Namibia
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: naira ya Nijeria
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: faranga ya Rwanda
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: pauni ya Thantahelena
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: dobra ya Thao Tome na Principe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: dola ya Marekani
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: faranga CFA BEAC
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: faranga CFA BCEAO
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: randi ya Afrika Kuthini
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: kwacha ya Dhambia
     AED:
       display_names:
         other: dirham ya Falme dha Kiarabu
-    AOA:
-      display_names:
-        other: kwandha ya Angola
-    AUD:
-      display_names:
-        other: dola ya Authtralia
     BHD:
       display_names:
         other: dinari ya Bahareni
     BIF:
       display_names:
         other: faranga ya Burundi
-    BWP:
-      display_names:
-        other: pula ya Botthwana
-    CAD:
-      display_names:
-        other: dola ya Kanada
     CDF:
       display_names:
         other: faranga ya Kongo
     CHF:
       display_names:
         other: faranga ya Uthwithi
-    CNY:
-      display_names:
-        other: yuan renminbi ya China
     CVE:
       display_names:
         other: ethkudo ya Kepuvede
@@ -42,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: dinari ya Aljeria
-    EGP:
-      display_names:
-        other: pauni ya Mithri
     ERN:
       display_names:
         other: nakfa ya Eritrea
     ETB:
       display_names:
         other: bir ya Uhabeshi
-    EUR:
-      display_names:
-        other: yuro
-    GBP:
-      display_names:
-        other: pauni ya Uingeredha
     GHC:
       display_names:
         other: thedi ya Ghana
@@ -66,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: faranga ya Gine
-    INR:
-      display_names:
-        other: rupia ya India
-    JPY:
-      display_names:
-        other: tharafu ya Kijapani
     KES:
       display_names:
         other: shilingi ya Kenya
-    KMF:
-      display_names:
-        other: faranga ya Komoro
-    LRD:
-      display_names:
-        other: dola ya Liberia
     LSL:
       display_names:
         other: loti ya Lethoto
@@ -90,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: dirham ya Moroko
-    MGA:
-      display_names:
-        other: faranga ya Bukini
     MRO:
       display_names:
         other: ugwiya ya Moritania (1973–2017)
     MRU:
       display_names:
         other: ugwiya ya Moritania
-    MUR:
-      display_names:
-        other: rupia ya Morithi
     MWK:
       display_names:
         other: kwacha ya Malawi
     MZM:
       display_names:
         other: metikali ya Mthumbiji
-    NAD:
-      display_names:
-        other: dola ya Namibia
-    NGN:
-      display_names:
-        other: naira ya Nijeria
-    RWF:
-      display_names:
-        other: faranga ya Rwanda
     SAR:
       display_names:
         other: riyal ya Thaudia
@@ -129,9 +353,6 @@ number_formats:
     SDP:
       display_names:
         other: pauni ya Thudani
-    SHP:
-      display_names:
-        other: pauni ya Thantahelena
     SLE:
       display_names:
         other: leoni
@@ -144,9 +365,6 @@ number_formats:
     STD:
       display_names:
         other: dobra ya Thao Tome na Principe (1977–2017)
-    STN:
-      display_names:
-        other: dobra ya Thao Tome na Principe
     SZL:
       display_names:
         other: lilangeni
@@ -160,29 +378,14 @@ number_formats:
     UGX:
       display_names:
         other: shilingi ya Uganda
-    USD:
-      display_names:
-        other: dola ya Marekani
-    XAF:
-      display_names:
-        other: faranga CFA BEAC
-    XOF:
-      display_names:
-        other: faranga CFA BCEAO
-    ZAR:
-      display_names:
-        other: randi ya Afrika Kuthini
     ZMK:
       display_names:
         other: kwacha ya Dhambia (1968–2012)
-    ZMW:
-      display_names:
-        other: kwacha ya Dhambia
     ZWD:
       display_names:
         other: dola ya Dhimbabwe
 locale: asa
-generated_at: '2025-09-10T22:17:33+09:00'
+generated_at: '2025-09-10T23:53:02+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

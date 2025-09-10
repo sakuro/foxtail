@@ -3,10 +3,753 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
     accounting: "#,##0.00 ¤;(#,##0.00 ¤)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: afgani afgańskiego
+        one: afgani afgańskie
+        few: afgani afgańskie
+        many: afgani afgańskich
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: drama armeńskiego
+        one: dram armeński
+        few: dramy armeńskie
+        many: dramów armeńskich
+    AOA:
+      symbol: Kz
+      display_names:
+        other: kwanzy angolskiej
+        one: kwanza angolska
+        few: kwanzy angolskie
+        many: kwanz angolskich
+    ARS:
+      symbol: "$"
+      display_names:
+        other: peso argentyńskiego
+        one: peso argentyńskie
+        few: pesos argentyńskie
+        many: pesos argentyńskich
+    AUD:
+      symbol: AUD
+      display_names:
+        other: dolara australijskiego
+        one: dolar australijski
+        few: dolary australijskie
+        many: dolarów australijskich
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: manata azerskiego
+        one: manat azerski
+        few: manaty azerskie
+        many: manatów azerskich
+    BAM:
+      symbol: KM
+      display_names:
+        other: marki zamiennej Bośni i Hercegowiny
+        one: marka zamienna Bośni i Hercegowiny
+        few: marki zamienne Bośni i Hercegowiny
+        many: marek zamiennych Bośni i Hercegowiny
+    BBD:
+      symbol: "$"
+      display_names:
+        other: dolara barbadoskiego
+        one: dolar barbadoski
+        few: dolary barbadoskie
+        many: dolarów barbadoskich
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: taka bengalskiej
+        one: taka bengalska
+        few: taka bengalskie
+        many: taka bengalskich
+    BMD:
+      symbol: "$"
+      display_names:
+        other: dolara bermudzkiego
+        one: dolar bermudzki
+        few: dolary bermudzkie
+        many: dolarów bermudzkich
+    BND:
+      symbol: "$"
+      display_names:
+        other: dolara brunejskiego
+        one: dolar brunejski
+        few: dolary brunejskie
+        many: dolarów brunejskich
+    BOB:
+      symbol: Bs
+      display_names:
+        other: boliviano boliwijskiego
+        one: boliviano boliwijskie
+        few: boliviano boliwijskie
+        many: boliviano boliwijskich
+    BRL:
+      symbol: R$
+      display_names:
+        other: reala brazylijskiego
+        one: real brazylijski
+        few: reale brazylijskie
+        many: reali brazylijskich
+    BSD:
+      symbol: "$"
+      display_names:
+        other: dolara bahamskiego
+        one: dolar bahamski
+        few: dolary bahamskie
+        many: dolarów bahamskich
+    BWP:
+      symbol: P
+      display_names:
+        other: puli botswańskiej
+        one: pula botswańska
+        few: pule botswańskie
+        many: pul botswańskich
+    BZD:
+      symbol: "$"
+      display_names:
+        other: dolara belizeńskiego
+        one: dolar belizeński
+        few: dolary belizeńskie
+        many: dolarów belizeńskich
+    CAD:
+      symbol: CAD
+      display_names:
+        other: dolara kanadyjskiego
+        one: dolar kanadyjski
+        few: dolary kanadyjskie
+        many: dolarów kanadyjskich
+    CLP:
+      symbol: "$"
+      display_names:
+        other: peso chilijskiego
+        one: peso chilijskie
+        few: pesos chilijskie
+        many: pesos chilijskich
+    CNY:
+      symbol: CNY
+      display_names:
+        other: juana chińskiego
+        one: juan chiński
+        few: juany chińskie
+        many: juanów chińskich
+    COP:
+      symbol: "$"
+      display_names:
+        other: peso kolumbijskiego
+        one: peso kolumbijskie
+        few: pesos kolumbijskie
+        many: pesos kolumbijskich
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: colona kostarykańskiego
+        one: colon kostarykański
+        few: colony kostarykańskie
+        many: colonów kostarykańskich
+    CUC:
+      symbol: "$"
+      display_names:
+        other: peso kubańskiego wymienialnego
+        one: peso kubańskie wymienialne
+        few: pesos kubańskie wymienialne
+        many: pesos kubańskich wymienialnych
+    CUP:
+      symbol: "$"
+      display_names:
+        other: peso kubańskiego
+        one: peso kubańskie
+        few: pesos kubańskie
+        many: pesos kubańskich
+    CZK:
+      symbol: Kč
+      display_names:
+        other: korony czeskiej
+        one: korona czeska
+        few: korony czeskie
+        many: koron czeskich
+    DKK:
+      symbol: kr
+      display_names:
+        other: korony duńskiej
+        one: korona duńska
+        few: korony duńskie
+        many: koron duńskich
+    DOP:
+      symbol: "$"
+      display_names:
+        other: peso dominikańskiego
+        one: peso dominikańskie
+        few: pesos dominikańskie
+        many: pesos dominikańskich
+    EGP:
+      symbol: E£
+      display_names:
+        other: funta egipskiego
+        one: funt egipski
+        few: funty egipskie
+        many: funtów egipskich
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: peseta hiszpańska
+    EUR:
+      symbol: "€"
+      display_names:
+        other: euro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: dolara fidżyjskiego
+        one: dolar fidżyjski
+        few: dolary fidżyjskie
+        many: dolarów fidżyjskich
+    FKP:
+      symbol: "£"
+      display_names:
+        other: funta falklandzkiego
+        one: funt falklandzki
+        few: funty falklandzkie
+        many: funtów falklandzkich
+    GBP:
+      symbol: GBP
+      display_names:
+        other: funta szterlinga
+        one: funt szterling
+        few: funty szterlingi
+        many: funtów szterlingów
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: lari gruzińskiego
+        one: lari gruzińskie
+        few: lari gruzińskie
+        many: lari gruzińskich
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: cedi ghańskiego
+        one: cedi ghańskie
+        few: cedi ghańskie
+        many: cedi ghańskich
+    GIP:
+      symbol: "£"
+      display_names:
+        other: funta gibraltarskiego
+        one: funt gibraltarski
+        few: funty gibraltarskie
+        many: funtów gibraltarskich
+    GNF:
+      symbol: FG
+      display_names:
+        other: franka gwinejskiego
+        one: frank gwinejski
+        few: franki gwinejskie
+        many: franków gwinejskich
+    GTQ:
+      symbol: Q
+      display_names:
+        other: quetzala gwatemalskiego
+        one: quetzal gwatemalski
+        few: quetzale gwatemalskie
+        many: quetzali gwatemalskich
+    GYD:
+      symbol: "$"
+      display_names:
+        other: dolara gujańskiego
+        one: dolar gujański
+        few: dolary gujańskie
+        many: dolarów gujańskich
+    HKD:
+      symbol: HKD
+      display_names:
+        other: dolara hongkońskiego
+        one: dolar hongkoński
+        few: dolary hongkońskie
+        many: dolarów hongkońskich
+    HNL:
+      symbol: L
+      display_names:
+        other: lempiry honduraskiej
+        one: lempira honduraska
+        few: lempiry honduraskie
+        many: lempir honduraskich
+    HRK:
+      symbol: kn
+      display_names:
+        other: kuny chorwackiej
+        one: kuna chorwacka
+        few: kuny chorwackie
+        many: kun chorwackich
+    HUF:
+      symbol: Ft
+      display_names:
+        other: forinta węgierskiego
+        one: forint węgierski
+        few: forinty węgierskie
+        many: forintów węgierskich
+    IDR:
+      symbol: Rp
+      display_names:
+        other: rupii indonezyjskiej
+        one: rupia indonezyjska
+        few: rupie indonezyjskie
+        many: rupii indonezyjskich
+    ILS:
+      symbol: ILS
+      display_names:
+        other: nowego szekla izraelskiego
+        one: nowy szekel izraelski
+        few: nowe szekle izraelskie
+        many: nowych szekli izraelskich
+    INR:
+      symbol: INR
+      display_names:
+        other: rupii indyjskiej
+        one: rupia indyjska
+        few: rupie indyjskie
+        many: rupii indyjskich
+    ISK:
+      symbol: kr
+      display_names:
+        other: korony islandzkiej
+        one: korona islandzka
+        few: korony islandzkie
+        many: koron islandzkich
+    JMD:
+      symbol: "$"
+      display_names:
+        other: dolara jamajskiego
+        one: dolar jamajski
+        few: dolary jamajskie
+        many: dolarów jamajskich
+    JPY:
+      symbol: JPY
+      display_names:
+        other: jena japońskiego
+        one: jen japoński
+        few: jeny japońskie
+        many: jenów japońskich
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: soma kirgiskiego
+        one: som kirgiski
+        few: somy kirgiskie
+        many: somów kirgiskich
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: riela kambodżańskiego
+        one: riel kambodżański
+        few: riele kambodżańskie
+        many: rieli kambodżańskich
+    KMF:
+      symbol: CF
+      display_names:
+        other: franka komoryjskiego
+        one: frank komoryjski
+        few: franki komoryjskie
+        many: franków komoryjskich
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: wona północnokoreańskiego
+        one: won północnokoreański
+        few: wony północnokoreańskie
+        many: wonów północnokoreańskich
+    KRW:
+      symbol: KRW
+      display_names:
+        other: wona południowokoreańskiego
+        one: won południowokoreański
+        few: wony południowokoreańskie
+        many: wonów południowokoreańskich
+    KYD:
+      symbol: "$"
+      display_names:
+        other: dolara kajmańskiego
+        one: dolar kajmański
+        few: dolary kajmańskie
+        many: dolarów kajmańskich
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: tenge kazachskiego
+        one: tenge kazachskie
+        few: tenge kazachskie
+        many: tenge kazachskich
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: kipa laotańskiego
+        one: kip laotański
+        few: kipy laotańskie
+        many: kipów laotańskich
+    LBP:
+      symbol: L£
+      display_names:
+        other: funta libańskiego
+        one: funt libański
+        few: funty libańskie
+        many: funtów libańskich
+    LKR:
+      symbol: Rs
+      display_names:
+        other: rupii lankijskiej
+        one: rupia lankijska
+        few: rupie lankijskie
+        many: rupii lankijskich
+    LRD:
+      symbol: "$"
+      display_names:
+        other: dolara liberyjskiego
+        one: dolar liberyjski
+        few: dolary liberyjskie
+        many: dolarów liberyjskich
+    LTL:
+      symbol: Lt
+      display_names:
+        other: lita litewskiego
+        one: lit litewski
+        few: lity litewskie
+        many: litów litewskich
+    LVL:
+      symbol: Ls
+      display_names:
+        other: łata łotewskiego
+        one: łat łotewski
+        few: łaty łotewskie
+        many: łatów łotewskich
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ariary malgaskiego
+        one: ariary malgaski
+        few: ariary malgaskie
+        many: ariary malgaskich
+    MMK:
+      symbol: K
+      display_names:
+        other: kiata birmańskiego
+        one: kiat birmański
+        few: kiaty birmańskie
+        many: kiatów birmańskich
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: tugrika mongolskiego
+        one: tugrik mongolski
+        few: tugriki mongolskie
+        many: tugrików mongolskich
+    MUR:
+      symbol: Rs
+      display_names:
+        other: rupii maurytyjskiej
+        one: rupia maurytyjska
+        few: rupie maurytyjskie
+        many: rupii maurytyjskich
+    MXN:
+      symbol: MXN
+      display_names:
+        other: peso meksykańskiego
+        one: peso meksykańskie
+        few: pesos meksykańskie
+        many: pesos meksykańskich
+    MYR:
+      symbol: RM
+      display_names:
+        other: ringgita malezyjskiego
+        one: ringgit malezyjski
+        few: ringgity malezyjskie
+        many: ringgitów malezyjskich
+    NAD:
+      symbol: "$"
+      display_names:
+        other: dolara namibijskiego
+        one: dolar namibijski
+        few: dolary namibijskie
+        many: dolarów namibijskich
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: nairy nigeryjskiej
+        one: naira nigeryjska
+        few: nairy nigeryjskie
+        many: nair nigeryjskich
+    NIO:
+      symbol: C$
+      display_names:
+        other: cordoby nikaraguańskiej
+        one: cordoba nikaraguańska
+        few: cordoby nikaraguańskie
+        many: cordob nikaraguańskich
+    NOK:
+      symbol: kr
+      display_names:
+        other: korony norweskiej
+        one: korona norweska
+        few: korony norweskie
+        many: koron norweskich
+    NPR:
+      symbol: Rs
+      display_names:
+        other: rupii nepalskiej
+        one: rupia nepalska
+        few: rupie nepalskie
+        many: rupii nepalskich
+    NZD:
+      symbol: NZD
+      display_names:
+        other: dolara nowozelandzkiego
+        one: dolar nowozelandzki
+        few: dolary nowozelandzkie
+        many: dolarów nowozelandzkich
+    PHP:
+      symbol: PHP
+      display_names:
+        other: peso filipińskiego
+        one: peso filipińskie
+        few: pesos filipińskie
+        many: pesos filipińskich
+    PKR:
+      symbol: Rs
+      display_names:
+        other: rupii pakistańskiej
+        one: rupia pakistańska
+        few: rupie pakistańskie
+        many: rupii pakistańskich
+    PLN:
+      symbol: zł
+      display_names:
+        other: złotego polskiego
+        one: złoty polski
+        few: złote polskie
+        many: złotych polskich
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: guarani paragwajskiego
+        one: guarani paragwajskie
+        few: guarani paragwajskie
+        many: guarani paragwajskich
+    RON:
+      symbol: lej
+      display_names:
+        other: leja rumuńskiego
+        one: lej rumuński
+        few: leje rumuńskie
+        many: lejów rumuńskich
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: rubla rosyjskiego
+        one: rubel rosyjski
+        few: ruble rosyjskie
+        many: rubli rosyjskich
+    RWF:
+      symbol: RF
+      display_names:
+        other: franka ruandyjskiego
+        one: frank ruandyjski
+        few: franki ruandyjskie
+        many: franków ruandyjskich
+    SBD:
+      symbol: "$"
+      display_names:
+        other: dolara Wysp Salomona
+        one: dolar Wysp Salomona
+        few: dolary Wysp Salomona
+        many: dolarów Wysp Salomona
+    SEK:
+      symbol: kr
+      display_names:
+        other: korony szwedzkiej
+        one: korona szwedzka
+        few: korony szwedzkie
+        many: koron szwedzkich
+    SGD:
+      symbol: "$"
+      display_names:
+        other: dolara singapurskiego
+        one: dolar singapurski
+        few: dolary singapurskie
+        many: dolarów singapurskich
+    SHP:
+      symbol: "£"
+      display_names:
+        other: funta Świętej Heleny
+        one: funt Świętej Heleny
+        few: funty Świętej Heleny
+        many: funtów Świętej Heleny
+    SRD:
+      symbol: "$"
+      display_names:
+        other: dolara surinamskiego
+        one: dolar surinamski
+        few: dolary surinamskie
+        many: dolarów surinamskich
+    SSP:
+      symbol: "£"
+      display_names:
+        other: funta południowosudańskiego
+        one: funt południowosudański
+        few: funty południowosudańskie
+        many: funtów południowosudańskich
+    STN:
+      symbol: Db
+      display_names:
+        other: dobry Wysp Świętego Tomasza i Książęcej
+        one: dobra Wysp Świętego Tomasza i Książęcej
+        few: dobry Wysp Świętego Tomasza i Książęcej
+        many: dobr Wysp Świętego Tomasza i Książęcej
+    SYP:
+      symbol: "£"
+      display_names:
+        other: funta syryjskiego
+        one: funt syryjski
+        few: funty syryjskie
+        many: funtów syryjskich
+    THB:
+      symbol: "฿"
+      display_names:
+        other: bahta tajskiego
+        one: baht tajski
+        few: bahty tajskie
+        many: bahtów tajskich
+    TOP:
+      symbol: T$
+      display_names:
+        other: pa’anga tongijskiej
+        one: pa’anga tongijska
+        few: pa’anga tongijskie
+        many: pa’anga tongijskich
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: liry tureckiej
+        one: lira turecka
+        few: liry tureckie
+        many: lir tureckich
+    TTD:
+      symbol: "$"
+      display_names:
+        other: dolara trynidadzkiego
+        one: dolar trynidadzki
+        few: dolary trynidadzkie
+        many: dolarów trynidadzkich
+    TWD:
+      symbol: TWD
+      display_names:
+        other: nowego dolara tajwańskiego
+        one: nowy dolar tajwański
+        few: nowe dolary tajwańskie
+        many: nowych dolarów tajwańskich
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: hrywny ukraińskiej
+        one: hrywna ukraińska
+        few: hrywny ukraińskie
+        many: hrywien ukraińskich
+    USD:
+      symbol: USD
+      display_names:
+        other: dolara amerykańskiego
+        one: dolar amerykański
+        few: dolary amerykańskie
+        many: dolarów amerykańskich
+    UYU:
+      symbol: "$"
+      display_names:
+        other: peso urugwajskiego
+        one: peso urugwajskie
+        few: pesos urugwajskie
+        many: pesos urugwajskich
+    VEF:
+      symbol: Bs
+      display_names:
+        other: boliwara wenezuelskiego (2008–2018)
+        one: boliwar wenezuelski (2008–2018)
+        few: boliwary wenezuelskie (2008–2018)
+        many: boliwarów wenezuelskich (2008–2018)
+    VND:
+      symbol: VND
+      display_names:
+        other: donga wietnamskiego
+        one: dong wietnamski
+        few: dongi wietnamskie
+        many: dongów wietnamskich
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: franka CFA BEAC
+        one: frank CFA BEAC
+        few: franki CFA BEAC
+        many: franków CFA BEAC
+    XCD:
+      symbol: EC$
+      display_names:
+        other: dolara wschodniokaraibskiego
+        one: dolar wschodniokaraibski
+        few: dolary wschodniokaraibskie
+        many: dolarów wschodniokaraibskich
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: franka CFA
+        one: frank CFA
+        few: franki CFA
+        many: franków CFA
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: franka CFP
+        one: frank CFP
+        few: franki CFP
+        many: franków CFP
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(nieznana waluta)"
+        one: "(nieznana waluta)"
+        few: "(nieznana waluta)"
+        many: "(nieznana waluta)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: randa południowoafrykańskiego
+        one: rand południowoafrykański
+        few: randy południowoafrykańskie
+        many: randów południowoafrykańskich
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: kwachy zambijskiej
+        one: kwacha zambijska
+        few: kwachy zambijskie
+        many: kwach zambijskich
     ADP:
       display_names:
         other: peseta andorska
@@ -22,36 +765,18 @@ number_formats:
     AFA:
       display_names:
         other: afgani (1927–2002)
-    AFN:
-      display_names:
-        other: afgani afgańskiego
-        one: afgani afgańskie
-        few: afgani afgańskie
-        many: afgani afgańskich
     ALL:
       display_names:
         other: leka albańskiego
         one: lek albański
         few: leki albańskie
         many: leków albańskich
-    AMD:
-      display_names:
-        other: drama armeńskiego
-        one: dram armeński
-        few: dramy armeńskie
-        many: dramów armeńskich
     ANG:
       display_names:
         other: guldena antylskiego
         one: gulden antylski
         few: guldeny antylskie
         many: guldenów antylskich
-    AOA:
-      display_names:
-        other: kwanzy angolskiej
-        one: kwanza angolska
-        few: kwanzy angolskie
-        many: kwanz angolskich
     AOK:
       display_names:
         other: kwanza angolańska (1977–1990)
@@ -76,22 +801,9 @@ number_formats:
     ARP:
       display_names:
         other: peso argentyńskie (1983–1985)
-    ARS:
-      display_names:
-        other: peso argentyńskiego
-        one: peso argentyńskie
-        few: pesos argentyńskie
-        many: pesos argentyńskich
     ATS:
       display_names:
         other: szyling austriacki
-    AUD:
-      symbol: AUD
-      display_names:
-        other: dolara australijskiego
-        one: dolar australijski
-        few: dolary australijskie
-        many: dolarów australijskich
     AWG:
       display_names:
         other: florina arubańskiego
@@ -101,33 +813,9 @@ number_formats:
     AZM:
       display_names:
         other: manat azerbejdżański
-    AZN:
-      display_names:
-        other: manata azerskiego
-        one: manat azerski
-        few: manaty azerskie
-        many: manatów azerskich
     BAD:
       display_names:
         other: dinar Bośni i Hercegowiny
-    BAM:
-      display_names:
-        other: marki zamiennej Bośni i Hercegowiny
-        one: marka zamienna Bośni i Hercegowiny
-        few: marki zamienne Bośni i Hercegowiny
-        many: marek zamiennych Bośni i Hercegowiny
-    BBD:
-      display_names:
-        other: dolara barbadoskiego
-        one: dolar barbadoski
-        few: dolary barbadoskie
-        many: dolarów barbadoskich
-    BDT:
-      display_names:
-        other: taka bengalskiej
-        one: taka bengalska
-        few: taka bengalskie
-        many: taka bengalskich
     BEC:
       display_names:
         other: frank belgijski (zamienny)
@@ -176,24 +864,6 @@ number_formats:
         one: frank burundyjski
         few: franki burundyjskie
         many: franków burundyjskich
-    BMD:
-      display_names:
-        other: dolara bermudzkiego
-        one: dolar bermudzki
-        few: dolary bermudzkie
-        many: dolarów bermudzkich
-    BND:
-      display_names:
-        other: dolara brunejskiego
-        one: dolar brunejski
-        few: dolary brunejskie
-        many: dolarów brunejskich
-    BOB:
-      display_names:
-        other: boliviano boliwijskiego
-        one: boliviano boliwijskie
-        few: boliviano boliwijskie
-        many: boliviano boliwijskich
     BOP:
       display_names:
         other: peso boliwijskie
@@ -209,24 +879,12 @@ number_formats:
     BRE:
       display_names:
         other: cruzeiro brazylijskie (1990–1993)
-    BRL:
-      display_names:
-        other: reala brazylijskiego
-        one: real brazylijski
-        few: reale brazylijskie
-        many: reali brazylijskich
     BRN:
       display_names:
         other: nowe cruzado brazylijskie
     BRR:
       display_names:
         other: cruzeiro brazylijskie
-    BSD:
-      display_names:
-        other: dolara bahamskiego
-        one: dolar bahamski
-        few: dolary bahamskie
-        many: dolarów bahamskich
     BTN:
       display_names:
         other: ngultrum bhutańskiego
@@ -236,12 +894,6 @@ number_formats:
     BUK:
       display_names:
         other: kyat birmański
-    BWP:
-      display_names:
-        other: puli botswańskiej
-        one: pula botswańska
-        few: pule botswańskie
-        many: pul botswańskich
     BYB:
       display_names:
         other: rubel białoruski (1994–1999)
@@ -257,19 +909,6 @@ number_formats:
         one: rubel białoruski (2000–2016)
         few: ruble białoruskie (2000–2016)
         many: rubli białoruskich (2000–2016)
-    BZD:
-      display_names:
-        other: dolara belizeńskiego
-        one: dolar belizeński
-        few: dolary belizeńskie
-        many: dolarów belizeńskich
-    CAD:
-      symbol: CAD
-      display_names:
-        other: dolara kanadyjskiego
-        one: dolar kanadyjski
-        few: dolary kanadyjskie
-        many: dolarów kanadyjskich
     CDF:
       display_names:
         other: franka kongijskiego
@@ -282,37 +921,12 @@ number_formats:
         one: frank szwajcarski
         few: franki szwajcarskie
         many: franków szwajcarskich
-    CLP:
-      display_names:
-        other: peso chilijskiego
-        one: peso chilijskie
-        few: pesos chilijskie
-        many: pesos chilijskich
     CNH:
       display_names:
         other: juana chińskiego (rynek zewnętrzny)
         one: juan chiński (rynek zewnętrzny)
         few: juany chińskie (rynek zewnętrzny)
         many: juanów chińskich (rynek zewnętrzny)
-    CNY:
-      symbol: CNY
-      display_names:
-        other: juana chińskiego
-        one: juan chiński
-        few: juany chińskie
-        many: juanów chińskich
-    COP:
-      display_names:
-        other: peso kolumbijskiego
-        one: peso kolumbijskie
-        few: pesos kolumbijskie
-        many: pesos kolumbijskich
-    CRC:
-      display_names:
-        other: colona kostarykańskiego
-        one: colon kostarykański
-        few: colony kostarykańskie
-        many: colonów kostarykańskich
     CSD:
       display_names:
         other: stary dinar serbski
@@ -322,18 +936,6 @@ number_formats:
         one: korona czechosłowacka
         few: korony czechosłowackie
         many: koron czechosłowackich
-    CUC:
-      display_names:
-        other: peso kubańskiego wymienialnego
-        one: peso kubańskie wymienialne
-        few: pesos kubańskie wymienialne
-        many: pesos kubańskich wymienialnych
-    CUP:
-      display_names:
-        other: peso kubańskiego
-        one: peso kubańskie
-        few: pesos kubańskie
-        many: pesos kubańskich
     CVE:
       display_names:
         other: escudo zielonoprzylądkowego
@@ -343,12 +945,6 @@ number_formats:
     CYP:
       display_names:
         other: funt cypryjski
-    CZK:
-      display_names:
-        other: korony czeskiej
-        one: korona czeska
-        few: korony czeskie
-        many: koron czeskich
     DDM:
       display_names:
         other: wschodnia marka wschodnioniemiecka
@@ -364,18 +960,6 @@ number_formats:
         one: frank dżibutyjski
         few: franki dżibutyjskie
         many: franków dżibutyjskich
-    DKK:
-      display_names:
-        other: korony duńskiej
-        one: korona duńska
-        few: korony duńskie
-        many: koron duńskich
-    DOP:
-      display_names:
-        other: peso dominikańskiego
-        one: peso dominikańskie
-        few: pesos dominikańskie
-        many: pesos dominikańskich
     DZD:
       display_names:
         other: dinara algierskiego
@@ -391,12 +975,6 @@ number_formats:
         one: korona estońska
         few: korony estońskie
         many: koron estońskich
-    EGP:
-      display_names:
-        other: funta egipskiego
-        one: funt egipski
-        few: funty egipskie
-        many: funtów egipskich
     ERN:
       display_names:
         other: nakfy erytrejskiej
@@ -412,82 +990,33 @@ number_formats:
         one: peseta hiszpańska (konto wymienialne)
         few: pesety hiszpańskie (konto wymienialne)
         many: peset hiszpańskich (konto wymienialne)
-    ESP:
-      display_names:
-        other: peseta hiszpańska
     ETB:
       display_names:
         other: birra etiopskiego
         one: birr etiopski
         few: birry etiopskie
         many: birrów etiopskich
-    EUR:
-      display_names:
-        other: euro
     FIM:
       display_names:
         other: marka fińska
-    FJD:
-      display_names:
-        other: dolara fidżyjskiego
-        one: dolar fidżyjski
-        few: dolary fidżyjskie
-        many: dolarów fidżyjskich
-    FKP:
-      display_names:
-        other: funta falklandzkiego
-        one: funt falklandzki
-        few: funty falklandzkie
-        many: funtów falklandzkich
     FRF:
       display_names:
         other: frank francuski
         one: frank francuski
         few: franki francuskie
         many: franków francuskich
-    GBP:
-      symbol: GBP
-      display_names:
-        other: funta szterlinga
-        one: funt szterling
-        few: funty szterlingi
-        many: funtów szterlingów
     GEK:
       display_names:
         other: kupon gruziński larit
-    GEL:
-      display_names:
-        other: lari gruzińskiego
-        one: lari gruzińskie
-        few: lari gruzińskie
-        many: lari gruzińskich
     GHC:
       display_names:
         other: cedi ghańskie (1979–2007)
-    GHS:
-      display_names:
-        other: cedi ghańskiego
-        one: cedi ghańskie
-        few: cedi ghańskie
-        many: cedi ghańskich
-    GIP:
-      display_names:
-        other: funta gibraltarskiego
-        one: funt gibraltarski
-        few: funty gibraltarskie
-        many: funtów gibraltarskich
     GMD:
       display_names:
         other: dalasi gambijskiego
         one: dalasi gambijskie
         few: dalasi gambijskie
         many: dalasi gambijskich
-    GNF:
-      display_names:
-        other: franka gwinejskiego
-        one: frank gwinejski
-        few: franki gwinejskie
-        many: franków gwinejskich
     GNS:
       display_names:
         other: syli gwinejskie
@@ -497,84 +1026,27 @@ number_formats:
     GRD:
       display_names:
         other: drachma grecka
-    GTQ:
-      display_names:
-        other: quetzala gwatemalskiego
-        one: quetzal gwatemalski
-        few: quetzale gwatemalskie
-        many: quetzali gwatemalskich
     GWE:
       display_names:
         other: escudo Gwinea Portugalska
     GWP:
       display_names:
         other: peso Guinea-Bissau
-    GYD:
-      display_names:
-        other: dolara gujańskiego
-        one: dolar gujański
-        few: dolary gujańskie
-        many: dolarów gujańskich
-    HKD:
-      symbol: HKD
-      display_names:
-        other: dolara hongkońskiego
-        one: dolar hongkoński
-        few: dolary hongkońskie
-        many: dolarów hongkońskich
-    HNL:
-      display_names:
-        other: lempiry honduraskiej
-        one: lempira honduraska
-        few: lempiry honduraskie
-        many: lempir honduraskich
     HRD:
       display_names:
         other: dinar chorwacki
-    HRK:
-      display_names:
-        other: kuny chorwackiej
-        one: kuna chorwacka
-        few: kuny chorwackie
-        many: kun chorwackich
     HTG:
       display_names:
         other: gourde haitańskiego
         one: gourde haitański
         few: gourde haitańskie
         many: gourde haitańskich
-    HUF:
-      display_names:
-        other: forinta węgierskiego
-        one: forint węgierski
-        few: forinty węgierskie
-        many: forintów węgierskich
-    IDR:
-      display_names:
-        other: rupii indonezyjskiej
-        one: rupia indonezyjska
-        few: rupie indonezyjskie
-        many: rupii indonezyjskich
     IEP:
       display_names:
         other: funt irlandzki
     ILP:
       display_names:
         other: funt izraelski
-    ILS:
-      symbol: ILS
-      display_names:
-        other: nowego szekla izraelskiego
-        one: nowy szekel izraelski
-        few: nowe szekle izraelskie
-        many: nowych szekli izraelskich
-    INR:
-      symbol: INR
-      display_names:
-        other: rupii indyjskiej
-        one: rupia indyjska
-        few: rupie indyjskie
-        many: rupii indyjskich
     IQD:
       display_names:
         other: dinara irackiego
@@ -587,137 +1059,39 @@ number_formats:
         one: rial irański
         few: riale irańskie
         many: riali irańskich
-    ISK:
-      display_names:
-        other: korony islandzkiej
-        one: korona islandzka
-        few: korony islandzkie
-        many: koron islandzkich
     ITL:
       display_names:
         other: lir włoski
-    JMD:
-      display_names:
-        other: dolara jamajskiego
-        one: dolar jamajski
-        few: dolary jamajskie
-        many: dolarów jamajskich
     JOD:
       display_names:
         other: dinara jordańskiego
         one: dinar jordański
         few: dinary jordańskie
         many: dinarów jordańskich
-    JPY:
-      symbol: JPY
-      display_names:
-        other: jena japońskiego
-        one: jen japoński
-        few: jeny japońskie
-        many: jenów japońskich
     KES:
       display_names:
         other: szylinga kenijskiego
         one: szyling kenijski
         few: szylingi kenijskie
         many: szylingów kenijskich
-    KGS:
-      display_names:
-        other: soma kirgiskiego
-        one: som kirgiski
-        few: somy kirgiskie
-        many: somów kirgiskich
-    KHR:
-      display_names:
-        other: riela kambodżańskiego
-        one: riel kambodżański
-        few: riele kambodżańskie
-        many: rieli kambodżańskich
-    KMF:
-      display_names:
-        other: franka komoryjskiego
-        one: frank komoryjski
-        few: franki komoryjskie
-        many: franków komoryjskich
-    KPW:
-      display_names:
-        other: wona północnokoreańskiego
-        one: won północnokoreański
-        few: wony północnokoreańskie
-        many: wonów północnokoreańskich
-    KRW:
-      symbol: KRW
-      display_names:
-        other: wona południowokoreańskiego
-        one: won południowokoreański
-        few: wony południowokoreańskie
-        many: wonów południowokoreańskich
     KWD:
       display_names:
         other: dinara kuwejckiego
         one: dinar kuwejcki
         few: dinary kuwejckie
         many: dinarów kuwejckich
-    KYD:
-      display_names:
-        other: dolara kajmańskiego
-        one: dolar kajmański
-        few: dolary kajmańskie
-        many: dolarów kajmańskich
-    KZT:
-      display_names:
-        other: tenge kazachskiego
-        one: tenge kazachskie
-        few: tenge kazachskie
-        many: tenge kazachskich
-    LAK:
-      display_names:
-        other: kipa laotańskiego
-        one: kip laotański
-        few: kipy laotańskie
-        many: kipów laotańskich
-    LBP:
-      display_names:
-        other: funta libańskiego
-        one: funt libański
-        few: funty libańskie
-        many: funtów libańskich
-    LKR:
-      display_names:
-        other: rupii lankijskiej
-        one: rupia lankijska
-        few: rupie lankijskie
-        many: rupii lankijskich
-    LRD:
-      display_names:
-        other: dolara liberyjskiego
-        one: dolar liberyjski
-        few: dolary liberyjskie
-        many: dolarów liberyjskich
     LSL:
       display_names:
         other: loti sotyjskiego
         one: loti sotyjskie
         few: loti sotyjskie
         many: loti sotyjskich
-    LTL:
-      display_names:
-        other: lita litewskiego
-        one: lit litewski
-        few: lity litewskie
-        many: litów litewskich
     LTT:
       display_names:
         other: talon litewski
     LUF:
       display_names:
         other: frank luksemburski
-    LVL:
-      display_names:
-        other: łata łotewskiego
-        one: łat łotewski
-        few: łaty łotewskie
-        many: łatów łotewskich
     LVR:
       display_names:
         other: rubel łotewski
@@ -745,12 +1119,6 @@ number_formats:
         one: lej mołdawski
         few: leje mołdawskie
         many: lejów mołdawskich
-    MGA:
-      display_names:
-        other: ariary malgaskiego
-        one: ariary malgaski
-        few: ariary malgaskie
-        many: ariary malgaskich
     MGF:
       display_names:
         other: frank malgaski
@@ -763,18 +1131,6 @@ number_formats:
     MLF:
       display_names:
         other: frank malijski
-    MMK:
-      display_names:
-        other: kiata birmańskiego
-        one: kiat birmański
-        few: kiaty birmańskie
-        many: kiatów birmańskich
-    MNT:
-      display_names:
-        other: tugrika mongolskiego
-        one: tugrik mongolski
-        few: tugriki mongolskie
-        many: tugrików mongolskich
     MOP:
       display_names:
         other: pataca Makau
@@ -796,12 +1152,6 @@ number_formats:
     MTP:
       display_names:
         other: funt maltański
-    MUR:
-      display_names:
-        other: rupii maurytyjskiej
-        one: rupia maurytyjska
-        few: rupie maurytyjskie
-        many: rupii maurytyjskich
     MVR:
       display_names:
         other: rupii malediwskiej
@@ -814,22 +1164,9 @@ number_formats:
         one: kwacha malawijska
         few: kwachy malawijskie
         many: kwach malawijskich
-    MXN:
-      symbol: MXN
-      display_names:
-        other: peso meksykańskiego
-        one: peso meksykańskie
-        few: pesos meksykańskie
-        many: pesos meksykańskich
     MXP:
       display_names:
         other: peso srebrne meksykańskie (1861–1992)
-    MYR:
-      display_names:
-        other: ringgita malezyjskiego
-        one: ringgit malezyjski
-        few: ringgity malezyjskie
-        many: ringgitów malezyjskich
     MZE:
       display_names:
         other: escudo mozambickie
@@ -842,52 +1179,15 @@ number_formats:
         one: metical mozambicki
         few: meticale mozambickie
         many: meticali mozambickich
-    NAD:
-      display_names:
-        other: dolara namibijskiego
-        one: dolar namibijski
-        few: dolary namibijskie
-        many: dolarów namibijskich
-    NGN:
-      display_names:
-        other: nairy nigeryjskiej
-        one: naira nigeryjska
-        few: nairy nigeryjskie
-        many: nair nigeryjskich
     NIC:
       display_names:
         other: cordoby nikaraguańskiej (1988–1991)
         one: cordoba nikaraguańska (1988–1991)
         few: cordoby nikaraguańskie (1988–1991)
         many: cordob nikaraguańskich (1988–1991)
-    NIO:
-      display_names:
-        other: cordoby nikaraguańskiej
-        one: cordoba nikaraguańska
-        few: cordoby nikaraguańskie
-        many: cordob nikaraguańskich
     NLG:
       display_names:
         other: gulden holenderski
-    NOK:
-      display_names:
-        other: korony norweskiej
-        one: korona norweska
-        few: korony norweskie
-        many: koron norweskich
-    NPR:
-      display_names:
-        other: rupii nepalskiej
-        one: rupia nepalska
-        few: rupie nepalskie
-        many: rupii nepalskich
-    NZD:
-      symbol: NZD
-      display_names:
-        other: dolara nowozelandzkiego
-        one: dolar nowozelandzki
-        few: dolary nowozelandzkie
-        many: dolarów nowozelandzkich
     OMR:
       display_names:
         other: riala omańskiego
@@ -921,26 +1221,6 @@ number_formats:
         one: kina papuaska
         few: kina papuaskie
         many: kina papuaskich
-    PHP:
-      symbol: PHP
-      display_names:
-        other: peso filipińskiego
-        one: peso filipińskie
-        few: pesos filipińskie
-        many: pesos filipińskich
-    PKR:
-      display_names:
-        other: rupii pakistańskiej
-        one: rupia pakistańska
-        few: rupie pakistańskie
-        many: rupii pakistańskich
-    PLN:
-      symbol: zł
-      display_names:
-        other: złotego polskiego
-        one: złoty polski
-        few: złote polskie
-        many: złotych polskich
     PLZ:
       display_names:
         other: złotego polskiego (1950–1995)
@@ -950,12 +1230,6 @@ number_formats:
     PTE:
       display_names:
         other: escudo portugalskie
-    PYG:
-      display_names:
-        other: guarani paragwajskiego
-        one: guarani paragwajskie
-        few: guarani paragwajskie
-        many: guarani paragwajskich
     QAR:
       display_names:
         other: riala katarskiego
@@ -971,49 +1245,24 @@ number_formats:
         one: lej rumuński (1952–2006)
         few: lei rumuńskie (1952–2006)
         many: lei rumuńskich (1952–2006)
-    RON:
-      symbol: lej
-      display_names:
-        other: leja rumuńskiego
-        one: lej rumuński
-        few: leje rumuńskie
-        many: lejów rumuńskich
     RSD:
       display_names:
         other: dinara serbskiego
         one: dinar serbski
         few: dinary serbskie
         many: dinarów serbskich
-    RUB:
-      display_names:
-        other: rubla rosyjskiego
-        one: rubel rosyjski
-        few: ruble rosyjskie
-        many: rubli rosyjskich
     RUR:
       display_names:
         other: rubla rosyjskiego (1991–1998)
         one: rubel rosyjski (1991–1998)
         few: ruble rosyjskie (1991–1998)
         many: rubli rosyjskich (1991–1998)
-    RWF:
-      display_names:
-        other: franka ruandyjskiego
-        one: frank ruandyjski
-        few: franki ruandyjskie
-        many: franków ruandyjskich
     SAR:
       display_names:
         other: riala saudyjskiego
         one: rial saudyjski
         few: riale saudyjskie
         many: riali saudyjskich
-    SBD:
-      display_names:
-        other: dolara Wysp Salomona
-        one: dolar Wysp Salomona
-        few: dolary Wysp Salomona
-        many: dolarów Wysp Salomona
     SCR:
       display_names:
         other: rupii seszelskiej
@@ -1035,24 +1284,6 @@ number_formats:
         one: funt sudański (1957–1998)
         few: funty sudańskie (1957–1998)
         many: funtów sudańskich (1957–1998)
-    SEK:
-      display_names:
-        other: korony szwedzkiej
-        one: korona szwedzka
-        few: korony szwedzkie
-        many: koron szwedzkich
-    SGD:
-      display_names:
-        other: dolara singapurskiego
-        one: dolar singapurski
-        few: dolary singapurskie
-        many: dolarów singapurskich
-    SHP:
-      display_names:
-        other: funta Świętej Heleny
-        one: funt Świętej Heleny
-        few: funty Świętej Heleny
-        many: funtów Świętej Heleny
     SIT:
       display_names:
         other: tolar słoweński
@@ -1083,33 +1314,15 @@ number_formats:
         one: szyling somalijski
         few: szylingi somalijskie
         many: szylingów somalijskich
-    SRD:
-      display_names:
-        other: dolara surinamskiego
-        one: dolar surinamski
-        few: dolary surinamskie
-        many: dolarów surinamskich
     SRG:
       display_names:
         other: gulden surinamski
-    SSP:
-      display_names:
-        other: funta południowosudańskiego
-        one: funt południowosudański
-        few: funty południowosudańskie
-        many: funtów południowosudańskich
     STD:
       display_names:
         other: dobry Wysp Świętego Tomasza i Książęcej (1977–2017)
         one: dobra Wysp Świętego Tomasza i Książęcej (1977–2017)
         few: dobry Wysp Świętego Tomasza i Książęcej (1977–2017)
         many: dobr Wysp Świętego Tomasza i Książęcej (1977–2017)
-    STN:
-      display_names:
-        other: dobry Wysp Świętego Tomasza i Książęcej
-        one: dobra Wysp Świętego Tomasza i Książęcej
-        few: dobry Wysp Świętego Tomasza i Książęcej
-        many: dobr Wysp Świętego Tomasza i Książęcej
     SUR:
       display_names:
         other: rubel radziecki
@@ -1119,24 +1332,12 @@ number_formats:
     SVC:
       display_names:
         other: colon salwadorski
-    SYP:
-      display_names:
-        other: funta syryjskiego
-        one: funt syryjski
-        few: funty syryjskie
-        many: funtów syryjskich
     SZL:
       display_names:
         other: emalangeni Suazi
         one: lilangeni Suazi
         few: emalangeni Suazi
         many: emalangeni Suazi
-    THB:
-      display_names:
-        other: bahta tajskiego
-        one: baht tajski
-        few: bahty tajskie
-        many: bahtów tajskich
     TJR:
       display_names:
         other: rubel tadżycki
@@ -1164,12 +1365,6 @@ number_formats:
         one: dinar tunezyjski
         few: dinary tunezyjskie
         many: dinarów tunezyjskich
-    TOP:
-      display_names:
-        other: pa’anga tongijskiej
-        one: pa’anga tongijska
-        few: pa’anga tongijskie
-        many: pa’anga tongijskich
     TPE:
       display_names:
         other: escudo timorskie
@@ -1179,37 +1374,12 @@ number_formats:
         one: lira turecka (1922–2005)
         few: liry tureckie (1922–2005)
         many: lir tureckich (1922–2005)
-    TRY:
-      display_names:
-        other: liry tureckiej
-        one: lira turecka
-        few: liry tureckie
-        many: lir tureckich
-    TTD:
-      display_names:
-        other: dolara trynidadzkiego
-        one: dolar trynidadzki
-        few: dolary trynidadzkie
-        many: dolarów trynidadzkich
-    TWD:
-      symbol: TWD
-      display_names:
-        other: nowego dolara tajwańskiego
-        one: nowy dolar tajwański
-        few: nowe dolary tajwańskie
-        many: nowych dolarów tajwańskich
     TZS:
       display_names:
         other: szylinga tanzańskiego
         one: szyling tanzański
         few: szylingi tanzańskie
         many: szylingów tanzańskich
-    UAH:
-      display_names:
-        other: hrywny ukraińskiej
-        one: hrywna ukraińska
-        few: hrywny ukraińskie
-        many: hrywien ukraińskich
     UAK:
       display_names:
         other: karbowaniec ukraiński
@@ -1225,22 +1395,9 @@ number_formats:
         one: szyling ugandyjski
         few: szylingi ugandyjskie
         many: szylingów ugandyjskich
-    USD:
-      symbol: USD
-      display_names:
-        other: dolara amerykańskiego
-        one: dolar amerykański
-        few: dolary amerykańskie
-        many: dolarów amerykańskich
     UYP:
       display_names:
         other: peso urugwajskie (1975–1993)
-    UYU:
-      display_names:
-        other: peso urugwajskiego
-        one: peso urugwajskie
-        few: pesos urugwajskie
-        many: pesos urugwajskich
     UZS:
       display_names:
         other: soma uzbeckiego
@@ -1253,25 +1410,12 @@ number_formats:
         one: boliwar wenezuelski (1871–2008)
         few: boliwary wenezuelskie (1871–2008)
         many: boliwarów wenezuelskich (1871–2008)
-    VEF:
-      display_names:
-        other: boliwara wenezuelskiego (2008–2018)
-        one: boliwar wenezuelski (2008–2018)
-        few: boliwary wenezuelskie (2008–2018)
-        many: boliwarów wenezuelskich (2008–2018)
     VES:
       display_names:
         other: boliwara wenezuelskiego
         one: boliwar wenezuelski
         few: boliwary wenezuelskie
         many: boliwarów wenezuelskich
-    VND:
-      symbol: VND
-      display_names:
-        other: donga wietnamskiego
-        one: dong wietnamski
-        few: dongi wietnamskie
-        many: dongów wietnamskich
     VUV:
       display_names:
         other: vatu wanuackiego
@@ -1284,12 +1428,6 @@ number_formats:
         one: tala samoańskie
         few: tala samoańskie
         many: tala samoańskich
-    XAF:
-      display_names:
-        other: franka CFA BEAC
-        one: frank CFA BEAC
-        few: franki CFA BEAC
-        many: franków CFA BEAC
     XAG:
       display_names:
         other: srebro
@@ -1308,12 +1446,6 @@ number_formats:
     XBD:
       display_names:
         other: europejska jednostka rozrachunkowa (XBD)
-    XCD:
-      display_names:
-        other: dolara wschodniokaraibskiego
-        one: dolar wschodniokaraibski
-        few: dolary wschodniokaraibskie
-        many: dolarów wschodniokaraibskich
     XDR:
       display_names:
         other: specjalne prawa ciągnienia
@@ -1326,33 +1458,15 @@ number_formats:
     XFU:
       display_names:
         other: UIC-frank francuski
-    XOF:
-      display_names:
-        other: franka CFA
-        one: frank CFA
-        few: franki CFA
-        many: franków CFA
     XPD:
       display_names:
         other: pallad
-    XPF:
-      display_names:
-        other: franka CFP
-        one: frank CFP
-        few: franki CFP
-        many: franków CFP
     XPT:
       display_names:
         other: platyna
     XTS:
       display_names:
         other: testowy kod waluty
-    XXX:
-      display_names:
-        other: "(nieznana waluta)"
-        one: "(nieznana waluta)"
-        few: "(nieznana waluta)"
-        many: "(nieznana waluta)"
     YDD:
       display_names:
         other: dinar jemeński
@@ -1371,24 +1485,12 @@ number_formats:
     ZAL:
       display_names:
         other: rand południowoafrykański (finansowy)
-    ZAR:
-      display_names:
-        other: randa południowoafrykańskiego
-        one: rand południowoafrykański
-        few: randy południowoafrykańskie
-        many: randów południowoafrykańskich
     ZMK:
       display_names:
         other: kwacha zambijskiej (1968–2012)
         one: kwacha zambijska (1968–2012)
         few: kwacha zambijskie (1968–2012)
         many: kwacha zambijskich (1968–2012)
-    ZMW:
-      display_names:
-        other: kwachy zambijskiej
-        one: kwacha zambijska
-        few: kwachy zambijskie
-        many: kwach zambijskich
     ZRN:
       display_names:
         other: nowy zair zairski
@@ -1405,7 +1507,7 @@ number_formats:
       display_names:
         other: dolar Zimbabwe (2008)
 locale: pl
-generated_at: '2025-09-10T22:17:46+09:00'
+generated_at: '2025-09-10T23:53:15+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

@@ -1,38 +1,298 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: heleri sa Angola
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: heleri sa Australia
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: heleri sa Botswana
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: heleri sa Kanada
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: heleri sa China
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: heleri sa Misri
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: yuro
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: heleri sa Uingereza
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: heleri sa India
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: heleri sa Japani
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: heleri sa Komoro
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: heleri sa Liberia
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: heleri sa Bukini
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: heleri sa Morisi
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: heleri sa Namibia
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: heleri sa Nijeria
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: heleri sa Rwanda
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: heleri sa Santahelena
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: heleri sa Sao Tome na Principe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: heleri sa Marekani
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: heleri sa CFA BEAC
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: heleri sa CFA BCEAO
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: heleri sa Afrika Kusini
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: heleri sa Zambia
     AED:
       display_names:
         other: heleri sa Falme za Kiarabu
-    AOA:
-      display_names:
-        other: heleri sa Angola
-    AUD:
-      display_names:
-        other: heleri sa Australia
     BHD:
       display_names:
         other: heleri sa Bahareni
     BIF:
       display_names:
         other: heleri sa Burundi
-    BWP:
-      display_names:
-        other: heleri sa Botswana
-    CAD:
-      display_names:
-        other: heleri sa Kanada
     CDF:
       display_names:
         other: heleri sa Kongo
     CHF:
       display_names:
         other: heleri sa Uswisi
-    CNY:
-      display_names:
-        other: heleri sa China
     CVE:
       display_names:
         other: heleri sa Kepuvede
@@ -42,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: heleri sa Aljeria
-    EGP:
-      display_names:
-        other: heleri sa Misri
     ERN:
       display_names:
         other: heleri sa Eritrea
     ETB:
       display_names:
         other: heleri sa Uhabeshi
-    EUR:
-      display_names:
-        other: yuro
-    GBP:
-      display_names:
-        other: heleri sa Uingereza
     GHC:
       display_names:
         other: heleri sa Ghana
@@ -66,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: heleri sa Gine
-    INR:
-      display_names:
-        other: heleri sa India
-    JPY:
-      display_names:
-        other: heleri sa Japani
     KES:
       display_names:
         other: heleri sa Kenya
-    KMF:
-      display_names:
-        other: heleri sa Komoro
-    LRD:
-      display_names:
-        other: heleri sa Liberia
     LSL:
       display_names:
         other: heleri sa Lesoto
@@ -90,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: heleri sa Moroko
-    MGA:
-      display_names:
-        other: heleri sa Bukini
     MRO:
       display_names:
         other: heleri sa Moritania (1973–2017)
     MRU:
       display_names:
         other: heleri sa Moritania
-    MUR:
-      display_names:
-        other: heleri sa Morisi
     MWK:
       display_names:
         other: heleri sa Malawi
     MZM:
       display_names:
         other: heleri sa Msumbiji
-    NAD:
-      display_names:
-        other: heleri sa Namibia
-    NGN:
-      display_names:
-        other: heleri sa Nijeria
-    RWF:
-      display_names:
-        other: heleri sa Rwanda
     SAR:
       display_names:
         other: heleri sa Saudia
@@ -126,9 +350,6 @@ number_formats:
     SDG:
       display_names:
         other: heleri sa Sudani
-    SHP:
-      display_names:
-        other: heleri sa Santahelena
     SLE:
       display_names:
         other: leoni
@@ -141,9 +362,6 @@ number_formats:
     STD:
       display_names:
         other: heleri sa Sao Tome na Principe (1977–2017)
-    STN:
-      display_names:
-        other: heleri sa Sao Tome na Principe
     SZL:
       display_names:
         other: lilangeni
@@ -157,29 +375,14 @@ number_formats:
     UGX:
       display_names:
         other: heleri sa Uganda
-    USD:
-      display_names:
-        other: heleri sa Marekani
-    XAF:
-      display_names:
-        other: heleri sa CFA BEAC
-    XOF:
-      display_names:
-        other: heleri sa CFA BCEAO
-    ZAR:
-      display_names:
-        other: heleri sa Afrika Kusini
     ZMK:
       display_names:
         other: heleri sa Zambia (1968–2012)
-    ZMW:
-      display_names:
-        other: heleri sa Zambia
     ZWD:
       display_names:
         other: heleri sa Zimbabwe
 locale: rof
-generated_at: '2025-09-10T22:17:46+09:00'
+generated_at: '2025-09-10T23:53:16+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

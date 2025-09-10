@@ -1,54 +1,512 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: Yunaítẹ́d Áráb Ẹ́míréts dírhams
-        one: Yunaítẹ́d Áráb Ẹ́míréts dírham
     AFN:
+      symbol: "؋"
       display_names:
         other: Afgán afgánis
         one: Afgán afgáni
-    ALL:
-      display_names:
-        other: Albéniá Lẹk
     AMD:
+      symbol: "֏"
       display_names:
         other: Armẹ́niá drams
         one: Armẹ́nia ́dram
-    ANG:
-      display_names:
-        other: Nẹ́dalánds Antílián Gílda
     AOA:
+      symbol: Kz
       display_names:
         other: Angólá kwánzas
         one: Angólá kwánza
     ARS:
+      symbol: "$"
       display_names:
         other: Ajẹntína Pẹ́so
     AUD:
+      symbol: A$
       display_names:
         other: Ọstréliá dọ́las
         one: Ọstréliá dọ́la
-    AWG:
-      display_names:
-        other: Arúba Flọ́rin
     AZN:
+      symbol: "₼"
       display_names:
         other: Azẹrbaiján mánats
         one: Azẹrbaiján mánat
     BAM:
+      symbol: KM
       display_names:
         other: Bọ́sniá an Hẹzẹgovína Mak Wé Pẹ́sin Fít Chenj
     BBD:
+      symbol: "$"
       display_names:
         other: Barbédọs Dọ́la
     BDT:
+      symbol: "৳"
       display_names:
         other: Bangladẹ́sh táka
         one: Bangladẹ́sh táka
+    BMD:
+      symbol: "$"
+      display_names:
+        other: Bẹmiúda Dọ́la
+    BND:
+      symbol: "$"
+      display_names:
+        other: Brunẹí dọ́las
+        one: Brunẹí dọ́la
+    BOB:
+      symbol: Bs
+      display_names:
+        other: Bolíviá Boliviáno
+    BRL:
+      symbol: R$
+      display_names:
+        other: Brazíl Rẹal
+    BSD:
+      symbol: "$"
+      display_names:
+        other: Bahámas Dọ́la
+    BWP:
+      symbol: P
+      display_names:
+        other: Botswáná púlas
+        one: Botswáná púla
+    BZD:
+      symbol: "$"
+      display_names:
+        other: Bẹliz Dọ́la
+    CAD:
+      symbol: KA$
+      display_names:
+        other: Kánádá Dọ́la
+    CLP:
+      symbol: "$"
+      display_names:
+        other: Chílí Pẹ́so
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Chaíná yuans
+        one: Chaíná yuan
+    COP:
+      symbol: "$"
+      display_names:
+        other: Kolómbiá pẹ́sos
+        one: Kolómbiá pẹ́so
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: Kósta Ríka Kólọn
+    CUC:
+      symbol: "$"
+      display_names:
+        other: Kiúbá Pẹ́so Wé Pẹ́sin Fít Chenj
+    CUP:
+      symbol: "$"
+      display_names:
+        other: Kiúbá Pẹ́so
+    CZK:
+      symbol: Kč
+      display_names:
+        other: Chẹ́k Kórúna
+    DKK:
+      symbol: kr
+      display_names:
+        other: Dẹ́nmák Króna
+    DOP:
+      symbol: "$"
+      display_names:
+        other: Dọmíníkan Pẹ́so
+    EGP:
+      symbol: E£
+      display_names:
+        other: Íjípt Paund
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: eúros
+        one: eúro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: Fíjí dọ́las
+        one: Fíjí dọ́la
+    FKP:
+      symbol: "£"
+      display_names:
+        other: Fọlkland Aílands paunds
+        one: Fọlkland Aílands paund
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Brítísh Páund
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: Jọ́jiá láris
+        one: Jọ́jiá lári
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: Ganá sídis
+        one: Ganá sídi
+    GIP:
+      symbol: "£"
+      display_names:
+        other: Jibrọ́lta Páund
+    GNF:
+      symbol: FG
+      display_names:
+        other: Gíní franks
+        one: Gíní frank
+    GTQ:
+      symbol: Q
+      display_names:
+        other: Guátẹmála Kwuẹ́tzal
+    GYD:
+      symbol: "$"
+      display_names:
+        other: Giyána dọ́las
+        one: Giyána dọ́la
+    HKD:
+      symbol: HK$
+      display_names:
+        other: Họng Kọ́ng dọ́las
+        one: Họng Kọ́ng dọ́la
+    HNL:
+      symbol: L
+      display_names:
+        other: Họndúrán Lẹmpíra
+    HRK:
+      symbol: kn
+      display_names:
+        other: Kroéshia Kúna
+    HUF:
+      symbol: Ft
+      display_names:
+        other: Họngériá Fọ́rint
+    IDR:
+      symbol: Rp
+      display_names:
+        other: Indoníshiá rupias
+        one: Indoníshiá rupia
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: Ízrẹ́l niú shẹ́kẹls
+        one: Ízrẹ́l niú shẹ́kẹl
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Índiá rúpis
+        one: Índiá rúpi
+    ISK:
+      symbol: kr
+      display_names:
+        other: Aíslánd Króna
+    JMD:
+      symbol: "$"
+      display_names:
+        other: Jamaíka Dọla
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Japán yẹns
+        one: Japán yẹn
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: Kẹjístan soms
+        one: Kẹjístan som
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: Kambódiá riẹls
+        one: Kambódiá riẹl
+    KMF:
+      symbol: CF
+      display_names:
+        other: Kọ́mọ́ros franks
+        one: Kọ́mọ́ros frank
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: Nọ́t Koriá wọns
+        one: Nọ́t Koriá wọn
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: Saút Koriá wọns
+        one: Saút Koriá wọn
+    KYD:
+      symbol: "$"
+      display_names:
+        other: Kéman Aílands Dọla
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: Kazakstan tẹ́njs
+        one: Kazakstan tẹ́nj
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: Laós kips
+        one: Laós kip
+    LBP:
+      symbol: L£
+      display_names:
+        other: Lẹ́bánọ́n paunds
+        one: Lẹ́bánọ́n paund
+    LKR:
+      symbol: Rs
+      display_names:
+        other: Sri Lánká rúpis
+        one: Sri Lánká rúpi
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Laibẹ́riá dọ́las
+        one: Laibẹ́riá dọ́la
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Malagásí ariáris
+        one: Malagásí ariári
+    MMK:
+      symbol: K
+      display_names:
+        other: Miánmá kiats
+        one: Miánmá kiat
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: Mọngóliá túgriks
+        one: Mọngóliá túgrik
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Mọríshọ́s rúpis
+        one: Mọríshọ́s rúpi
+    MXN:
+      symbol: MX$
+      display_names:
+        other: Mẹ́ksíko Pẹ́so
+    MYR:
+      symbol: RM
+      display_names:
+        other: Maléshiá ríngits
+        one: Maléshiá ríngit
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Namíbiá dọ́las
+        one: Namíbiá dọ́la
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Naijíriá naíras
+        one: Naijíriá naíra
+    NIO:
+      symbol: C$
+      display_names:
+        other: Nikarágwua Kordóba
+    NOK:
+      symbol: kr
+      display_names:
+        other: Nọ́wé Króna
+    NPR:
+      symbol: Rs
+      display_names:
+        other: Nẹ́pál rúpis
+        one: Nẹ́pál rúpi
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: Niú Zílánd dọ́las
+        one: Niú Zílánd dọ́la
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Fílípíns písos
+        one: Fílípíns píso
+    PKR:
+      symbol: Rs
+      display_names:
+        other: Pakístán rúpis
+        one: Pakístán rúpi
+    PLN:
+      symbol: zł
+      display_names:
+        other: Pólánd Zílọ́ti
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: Páragwuá Guaráni
+    RON:
+      symbol: lei
+      display_names:
+        other: Roméniá Lu
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: Rọ́shiá Rúbul
+    RWF:
+      symbol: RF
+      display_names:
+        other: Ruwándá franks
+        one: Ruwándá frank
+    SBD:
+      symbol: "$"
+      display_names:
+        other: Sólómọ́n Aílands dọ́las
+        one: Sólómọ́n Aílands dọ́la
+    SEK:
+      symbol: kr
+      display_names:
+        other: Swídẹ́n Króna
+    SGD:
+      symbol: "$"
+      display_names:
+        other: Singapọ́ dọ́las
+        one: Singapọ́ dọ́la
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Sent Hẹlẹ́ná paunds
+        one: Sent Hẹlẹ́ná paund
+    SRD:
+      symbol: "$"
+      display_names:
+        other: Súrínám Dọla
+    SSP:
+      symbol: "£"
+      display_names:
+        other: Saút Sudán paunds
+        one: Saút Sudán paund
+    STN:
+      symbol: Db
+      display_names:
+        other: Sao Tómẹ & Prínsípẹ dóbras
+        one: Sao Tómẹ & Prínsípẹ dóbra
+    SYP:
+      symbol: "£"
+      display_names:
+        other: Síriá paunds
+        one: Síriá paund
+    THB:
+      symbol: "฿"
+      display_names:
+        other: Taílánd bahts
+        one: Taílánd baht
+    TOP:
+      symbol: T$
+      display_names:
+        other: Tónga pángas
+        one: Tónga pánga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: Tọ́kí líras
+        one: Tọ́kí líra
+    TTD:
+      symbol: "$"
+      display_names:
+        other: Trínídad & Tobágo Dọ́la
+    TWD:
+      symbol: NT$
+      display_names:
+        other: Niú Taiwán dọ́las
+        one: Niú Taiwán dọ́la
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: Yukrẹín Rívnia
+    USD:
+      symbol: US$
+      display_names:
+        other: Amẹ́ríká Dọ́la
+        one: US Dọ́la
+    UYU:
+      symbol: "$"
+      display_names:
+        other: Yurugwaí Pẹ́so
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+      display_names:
+        other: Viẹ́tnám dọngs
+        one: Viẹ́tnám dọng
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Sẹ́ntrál Áfríká franks
+        one: Sẹ́ntrál Áfríká frank
+    XCD:
+      symbol: EC$
+      display_names:
+        other: Íst Karíbián Dọla
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Wẹ́st Afríká Sẹ́fa franks
+        one: Wẹ́st Afríká Sẹ́fa frank
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: Frẹ́nch Poliníshiá franks
+        one: Frẹ́nch Poliníshiá frank
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(mọní wé pípul nọ́ no)"
+        one: mọní wé pípul nọ́ no
+    ZAR:
+      symbol: R
+      display_names:
+        other: Saút Áfríká rands
+        one: Saút Áfríká rand
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Zámbiá kwáchas
+        one: Zámbiá kwácha
+    AED:
+      display_names:
+        other: Yunaítẹ́d Áráb Ẹ́míréts dírhams
+        one: Yunaítẹ́d Áráb Ẹ́míréts dírham
+    ALL:
+      display_names:
+        other: Albéniá Lẹk
+    ANG:
+      display_names:
+        other: Nẹ́dalánds Antílián Gílda
+    AWG:
+      display_names:
+        other: Arúba Flọ́rin
     BGN:
       display_names:
         other: Bọlgériá Lẹv
@@ -60,41 +518,14 @@ number_formats:
       display_names:
         other: Burúndí franks
         one: Burúndí frank
-    BMD:
-      display_names:
-        other: Bẹmiúda Dọ́la
-    BND:
-      display_names:
-        other: Brunẹí dọ́las
-        one: Brunẹí dọ́la
-    BOB:
-      display_names:
-        other: Bolíviá Boliviáno
-    BRL:
-      display_names:
-        other: Brazíl Rẹal
-    BSD:
-      display_names:
-        other: Bahámas Dọ́la
     BTN:
       display_names:
         other: Bután ngúltrums
         one: Bután ngúltrum
-    BWP:
-      display_names:
-        other: Botswáná púlas
-        one: Botswáná púla
     BYN:
       symbol: p.
       display_names:
         other: Bẹlarús Rúbul
-    BZD:
-      display_names:
-        other: Bẹliz Dọ́la
-    CAD:
-      symbol: KA$
-      display_names:
-        other: Kánádá Dọ́la
     CDF:
       display_names:
         other: Kóngó franks
@@ -102,53 +533,21 @@ number_formats:
     CHF:
       display_names:
         other: Swís Frank
-    CLP:
-      display_names:
-        other: Chílí Pẹ́so
     CNH:
       display_names:
         other: Chaíná yuans (ples-dẹm aúsaíd chaína)
         one: Chaíná yuan (ples-dẹm aúsaíd chaína)
-    CNY:
-      display_names:
-        other: Chaíná yuans
-        one: Chaíná yuan
-    COP:
-      display_names:
-        other: Kolómbiá pẹ́sos
-        one: Kolómbiá pẹ́so
-    CRC:
-      display_names:
-        other: Kósta Ríka Kólọn
-    CUC:
-      display_names:
-        other: Kiúbá Pẹ́so Wé Pẹ́sin Fít Chenj
-    CUP:
-      display_names:
-        other: Kiúbá Pẹ́so
     CVE:
       display_names:
         other: Kép Vẹ́d ẹskúdos
         one: Kép Vẹ́d ẹskúdo
-    CZK:
-      display_names:
-        other: Chẹ́k Kórúna
     DJF:
       display_names:
         other: Jibútí franks
         one: Jibútí frank
-    DKK:
-      display_names:
-        other: Dẹ́nmák Króna
-    DOP:
-      display_names:
-        other: Dọmíníkan Pẹ́so
     DZD:
       display_names:
         other: Aljíria Dínar
-    EGP:
-      display_names:
-        other: Íjípt Paund
     ERN:
       display_names:
         other: Ẹritrẹá nákfas
@@ -157,75 +556,13 @@ number_formats:
       display_names:
         other: Ẹtiópiá berrs
         one: Ẹtiópiá berr
-    EUR:
-      display_names:
-        other: eúros
-        one: eúro
-    FJD:
-      display_names:
-        other: Fíjí dọ́las
-        one: Fíjí dọ́la
-    FKP:
-      display_names:
-        other: Fọlkland Aílands paunds
-        one: Fọlkland Aílands paund
-    GBP:
-      display_names:
-        other: Brítísh Páund
-    GEL:
-      display_names:
-        other: Jọ́jiá láris
-        one: Jọ́jiá lári
-    GHS:
-      display_names:
-        other: Ganá sídis
-        one: Ganá sídi
-    GIP:
-      display_names:
-        other: Jibrọ́lta Páund
     GMD:
       display_names:
         other: Gámbiá dalásis
         one: Gámbiá dalási
-    GNF:
-      display_names:
-        other: Gíní franks
-        one: Gíní frank
-    GTQ:
-      display_names:
-        other: Guátẹmála Kwuẹ́tzal
-    GYD:
-      display_names:
-        other: Giyána dọ́las
-        one: Giyána dọ́la
-    HKD:
-      display_names:
-        other: Họng Kọ́ng dọ́las
-        one: Họng Kọ́ng dọ́la
-    HNL:
-      display_names:
-        other: Họndúrán Lẹmpíra
-    HRK:
-      display_names:
-        other: Kroéshia Kúna
     HTG:
       display_names:
         other: Haíti Gourd
-    HUF:
-      display_names:
-        other: Họngériá Fọ́rint
-    IDR:
-      display_names:
-        other: Indoníshiá rupias
-        one: Indoníshiá rupia
-    ILS:
-      display_names:
-        other: Ízrẹ́l niú shẹ́kẹls
-        one: Ízrẹ́l niú shẹ́kẹl
-    INR:
-      display_names:
-        other: Índiá rúpis
-        one: Índiá rúpi
     IQD:
       display_names:
         other: Irák dínars
@@ -234,71 +571,18 @@ number_formats:
       display_names:
         other: Irán rials
         one: Irán rial
-    ISK:
-      display_names:
-        other: Aíslánd Króna
-    JMD:
-      display_names:
-        other: Jamaíka Dọla
     JOD:
       display_names:
         other: Jọ́dán dínars
         one: Jọ́dán dínar
-    JPY:
-      display_names:
-        other: Japán yẹns
-        one: Japán yẹn
     KES:
       display_names:
         other: Kẹ́nyá shílins
         one: Kẹ́nyá shílin
-    KGS:
-      display_names:
-        other: Kẹjístan soms
-        one: Kẹjístan som
-    KHR:
-      display_names:
-        other: Kambódiá riẹls
-        one: Kambódiá riẹl
-    KMF:
-      display_names:
-        other: Kọ́mọ́ros franks
-        one: Kọ́mọ́ros frank
-    KPW:
-      display_names:
-        other: Nọ́t Koriá wọns
-        one: Nọ́t Koriá wọn
-    KRW:
-      display_names:
-        other: Saút Koriá wọns
-        one: Saút Koriá wọn
     KWD:
       display_names:
         other: Kuwét dínars
         one: Kuwét dínar
-    KYD:
-      display_names:
-        other: Kéman Aílands Dọla
-    KZT:
-      display_names:
-        other: Kazakstan tẹ́njs
-        one: Kazakstan tẹ́nj
-    LAK:
-      display_names:
-        other: Laós kips
-        one: Laós kip
-    LBP:
-      display_names:
-        other: Lẹ́bánọ́n paunds
-        one: Lẹ́bánọ́n paund
-    LKR:
-      display_names:
-        other: Sri Lánká rúpis
-        one: Sri Lánká rúpi
-    LRD:
-      display_names:
-        other: Laibẹ́riá dọ́las
-        one: Laibẹ́riá dọ́la
     LSL:
       display_names:
         other: Lẹsóto Lọ́tis
@@ -312,21 +596,9 @@ number_formats:
     MDL:
       display_names:
         other: Mọldóva Lu
-    MGA:
-      display_names:
-        other: Malagásí ariáris
-        one: Malagásí ariári
     MKD:
       display_names:
         other: Masẹdónia Dínar
-    MMK:
-      display_names:
-        other: Miánmá kiats
-        one: Miánmá kiat
-    MNT:
-      display_names:
-        other: Mọngóliá túgriks
-        one: Mọngóliá túgrik
     MOP:
       display_names:
         other: Makáo pátákas
@@ -335,10 +607,6 @@ number_formats:
       display_names:
         other: Mọriténiá uguíyas
         one: Mọriténiá uguíya
-    MUR:
-      display_names:
-        other: Mọríshọ́s rúpis
-        one: Mọríshọ́s rúpi
     MVR:
       display_names:
         other: Mọ́ldívs rúfíyas
@@ -347,40 +615,10 @@ number_formats:
       display_names:
         other: Maláwí kwáchas
         one: Maláwi ́kwácha
-    MXN:
-      display_names:
-        other: Mẹ́ksíko Pẹ́so
-    MYR:
-      display_names:
-        other: Maléshiá ríngits
-        one: Maléshiá ríngit
     MZN:
       display_names:
         other: Mozámbík métíkals
         one: Mozámbík métíkal
-    NAD:
-      display_names:
-        other: Namíbiá dọ́las
-        one: Namíbiá dọ́la
-    NGN:
-      symbol: "₦"
-      display_names:
-        other: Naijíriá naíras
-        one: Naijíriá naíra
-    NIO:
-      display_names:
-        other: Nikarágwua Kordóba
-    NOK:
-      display_names:
-        other: Nọ́wé Króna
-    NPR:
-      display_names:
-        other: Nẹ́pál rúpis
-        one: Nẹ́pál rúpi
-    NZD:
-      display_names:
-        other: Niú Zílánd dọ́las
-        one: Niú Zílánd dọ́la
     OMR:
       display_names:
         other: Omán rials
@@ -395,46 +633,17 @@ number_formats:
       display_names:
         other: Pápuá Niú Gíni kínas
         one: Pápuá Niú Gíni kína
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Fílípíns písos
-        one: Fílípíns píso
-    PKR:
-      display_names:
-        other: Pakístán rúpis
-        one: Pakístán rúpi
-    PLN:
-      display_names:
-        other: Pólánd Zílọ́ti
-    PYG:
-      display_names:
-        other: Páragwuá Guaráni
     QAR:
       display_names:
         other: Kata ríals
         one: Kata ríal
-    RON:
-      display_names:
-        other: Roméniá Lu
     RSD:
       display_names:
         other: Sẹrbia Dínar
-    RUB:
-      display_names:
-        other: Rọ́shiá Rúbul
-    RWF:
-      display_names:
-        other: Ruwándá franks
-        one: Ruwándá frank
     SAR:
       display_names:
         other: Saúdí Arébiá riyals
         one: Saúdí Arébiá riyal
-    SBD:
-      display_names:
-        other: Sólómọ́n Aílands dọ́las
-        one: Sólómọ́n Aílands dọ́la
     SCR:
       display_names:
         other: Sẹ́chẹ́ls rúpis
@@ -442,17 +651,6 @@ number_formats:
     SDG:
       display_names:
         other: Sudan Paund
-    SEK:
-      display_names:
-        other: Swídẹ́n Króna
-    SGD:
-      display_names:
-        other: Singapọ́ dọ́las
-        one: Singapọ́ dọ́la
-    SHP:
-      display_names:
-        other: Sent Hẹlẹ́ná paunds
-        one: Sent Hẹlẹ́ná paund
     SLE:
       display_names:
         other: Siẹ́ra Líoniá liọns
@@ -465,29 +663,10 @@ number_formats:
       display_names:
         other: Sọmáliá shílins
         one: Sọmáliá shílin
-    SRD:
-      display_names:
-        other: Súrínám Dọla
-    SSP:
-      display_names:
-        other: Saút Sudán paunds
-        one: Saút Sudán paund
-    STN:
-      display_names:
-        other: Sao Tómẹ & Prínsípẹ dóbras
-        one: Sao Tómẹ & Prínsípẹ dóbra
-    SYP:
-      display_names:
-        other: Síriá paunds
-        one: Síriá paund
     SZL:
       display_names:
         other: Swází ẹmalánjẹ́ni
         one: Swází lilánjẹ́ni
-    THB:
-      display_names:
-        other: Taílánd bahts
-        one: Taílánd baht
     TJS:
       display_names:
         other: Tajíkstan sómónis
@@ -499,39 +678,14 @@ number_formats:
     TND:
       display_names:
         other: Tuníshia Dínar
-    TOP:
-      display_names:
-        other: Tónga pángas
-        one: Tónga pánga
-    TRY:
-      display_names:
-        other: Tọ́kí líras
-        one: Tọ́kí líra
-    TTD:
-      display_names:
-        other: Trínídad & Tobágo Dọ́la
-    TWD:
-      display_names:
-        other: Niú Taiwán dọ́las
-        one: Niú Taiwán dọ́la
     TZS:
       display_names:
         other: Tanzániá shílins
         one: Tanzániá shílin
-    UAH:
-      display_names:
-        other: Yukrẹín Rívnia
     UGX:
       display_names:
         other: Yugándá shílins
         one: Yugándá shílin
-    USD:
-      display_names:
-        other: Amẹ́ríká Dọ́la
-        one: US Dọ́la
-    UYU:
-      display_names:
-        other: Yurugwaí Pẹ́so
     UZS:
       display_names:
         other: Uzbẹ́kistan soms
@@ -539,10 +693,6 @@ number_formats:
     VES:
       display_names:
         other: Vẹnẹzuẹlá Bolívar
-    VND:
-      display_names:
-        other: Viẹ́tnám dọngs
-        one: Viẹ́tnám dọng
     VUV:
       display_names:
         other: Vanuátú vátus
@@ -551,39 +701,12 @@ number_formats:
       display_names:
         other: Samóa tálas
         one: Samóa tála
-    XAF:
-      display_names:
-        other: Sẹ́ntrál Áfríká franks
-        one: Sẹ́ntrál Áfríká frank
-    XCD:
-      display_names:
-        other: Íst Karíbián Dọla
-    XOF:
-      display_names:
-        other: Wẹ́st Afríká Sẹ́fa franks
-        one: Wẹ́st Afríká Sẹ́fa frank
-    XPF:
-      display_names:
-        other: Frẹ́nch Poliníshiá franks
-        one: Frẹ́nch Poliníshiá frank
-    XXX:
-      display_names:
-        other: "(mọní wé pípul nọ́ no)"
-        one: mọní wé pípul nọ́ no
     YER:
       display_names:
         other: Yẹ́mẹ́n rials
         one: Yẹ́mẹ́n rial
-    ZAR:
-      display_names:
-        other: Saút Áfríká rands
-        one: Saút Áfríká rand
-    ZMW:
-      display_names:
-        other: Zámbiá kwáchas
-        one: Zámbiá kwácha
 locale: pcm
-generated_at: '2025-09-10T22:17:45+09:00'
+generated_at: '2025-09-10T23:53:15+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

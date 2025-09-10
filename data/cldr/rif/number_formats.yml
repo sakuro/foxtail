@@ -3,67 +3,275 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
   percent_formats:
     standard: 0%
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
     BMD:
+      symbol: "$"
       display_names:
         other: ddular n birmudan
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
     BZD:
+      symbol: "$"
       display_names:
         other: ddular n biliz
     CAD:
+      symbol: CA$
       display_names:
         other: ddular n kanada
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+    COP:
+      symbol: "$"
     CRC:
+      symbol: "₡"
       display_names:
         other: kulun n kustarika
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
     DKK:
+      symbol: kr
       display_names:
         other: kruna n ddanmark
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: uru
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: ppaʷndd
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+      display_names:
+        other: kwitzal n gwatimala
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+      display_names:
+        other: lempiras n hondura
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+    MXN:
+      symbol: MX$
+      display_names:
+        other: pisus n miksiku
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+    NGN:
+      symbol: "₦"
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+      display_names:
+        other: kruna n nnarwij
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+      display_names:
+        other: kruna n sswid
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: ddular
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: ttmneyat
+    ZAR:
+      symbol: R
+    ZMW:
+      symbol: ZK
     DZD:
       display_names:
         other: ddinar n ddzayer
-    EUR:
-      display_names:
-        other: uru
-    GBP:
-      display_names:
-        other: ppaʷndd
-    GTQ:
-      display_names:
-        other: kwitzal n gwatimala
-    HNL:
-      display_names:
-        other: lempiras n hondura
     LYD:
       display_names:
         other: ddinar n libya
     MAD:
       display_names:
         other: derhem
-    MXN:
-      display_names:
-        other: pisus n miksiku
-    NOK:
-      display_names:
-        other: kruna n nnarwij
-    SEK:
-      display_names:
-        other: kruna n sswid
     TND:
       display_names:
         other: ddinar n tunes
-    USD:
-      display_names:
-        other: ddular
-    XXX:
-      display_names:
-        other: ttmneyat
 locale: rif
-generated_at: '2025-09-10T22:17:46+09:00'
+generated_at: '2025-09-10T23:53:16+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

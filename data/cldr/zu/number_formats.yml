@@ -1,0 +1,895 @@
+---
+number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
+  currency_formats:
+    standard: "¤#,##0.00"
+    accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
+  currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: i-Afghan Afghani
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: i-Armenian Dram
+    AOA:
+      symbol: Kz
+      display_names:
+        other: i-Angolan Kwanza
+    ARS:
+      symbol: "$"
+      display_names:
+        other: i-Argentina Peso
+    AUD:
+      symbol: A$
+      display_names:
+        other: i-Austrilian Dollar
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: i-Azerbaijani Manat
+    BAM:
+      symbol: KM
+      display_names:
+        other: i-Bosnia-Herzegovina Convertible Mark
+    BBD:
+      symbol: "$"
+      display_names:
+        other: i-Barbadian Dollar
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: i-Bangladeshi Taka
+    BMD:
+      symbol: "$"
+      display_names:
+        other: i-Bermudan Dollar
+    BND:
+      symbol: "$"
+      display_names:
+        other: i-Brunei Dollar
+    BOB:
+      symbol: Bs
+      display_names:
+        other: i-Bolivian Boliviano
+    BRL:
+      symbol: R$
+      display_names:
+        other: i-Brazilian Real
+    BSD:
+      symbol: "$"
+      display_names:
+        other: i-Bahamian Dollar
+    BWP:
+      symbol: P
+      display_names:
+        other: i-Botswana Pula
+    BZD:
+      symbol: "$"
+      display_names:
+        other: i-Belize Dollar
+    CAD:
+      symbol: CA$
+      display_names:
+        other: i-Candian Dollar
+    CLP:
+      symbol: "$"
+      display_names:
+        other: i-Chilean Peso
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: i-Chinese Yuan
+    COP:
+      symbol: "$"
+      display_names:
+        other: i-Colombian Peso
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: i-Costa Rican Colón
+    CUC:
+      symbol: "$"
+      display_names:
+        other: i-Cuban Convertable Peso
+    CUP:
+      symbol: "$"
+      display_names:
+        other: i-Cuban pesos
+        one: i-Cuban pesos
+    CZK:
+      symbol: Kč
+      display_names:
+        other: i-Czech Republic Koruna
+    DKK:
+      symbol: Kr
+      display_names:
+        other: i-Danish Krone
+    DOP:
+      symbol: "$"
+      display_names:
+        other: i-Dominican Peso
+    EGP:
+      symbol: E£
+      display_names:
+        other: i-Egyptian Pound
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: i-Euro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: i-Fijian Dollar
+    FKP:
+      symbol: "£"
+      display_names:
+        other: i-Falkland Islands Pound
+    GBP:
+      symbol: "£"
+      display_names:
+        other: i-British Pound
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: i-Georgian Lari
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: i-Ghanaian cedis
+        one: i-Ghanaian Cedi
+    GIP:
+      symbol: "£"
+      display_names:
+        other: i-Gibraltar Pound
+    GNF:
+      symbol: FG
+      display_names:
+        other: i-Guinean francs
+        one: i-Gunean Franc
+    GTQ:
+      symbol: Q
+      display_names:
+        other: i-Guatemalan Quetzal
+    GYD:
+      symbol: "$"
+      display_names:
+        other: i-Guyanaese Dollar
+    HKD:
+      symbol: HK$
+      display_names:
+        other: i-Hong Kong Dollar
+    HNL:
+      symbol: L
+      display_names:
+        other: i-Honduran lempiras
+        one: i-Honduran Lempira
+    HRK:
+      symbol: Kn
+      display_names:
+        other: i-Croatian Kuna
+    HUF:
+      symbol: Ft
+      display_names:
+        other: i-Hungarian Forint
+    IDR:
+      symbol: Rp
+      display_names:
+        other: i-Indonesian Rupiah
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: i-Israeli New Sheqel
+    INR:
+      symbol: "₹"
+      display_names:
+        other: i-Indian Rupee
+    ISK:
+      symbol: Kr
+      display_names:
+        other: i-Icelandic Króna
+    JMD:
+      symbol: "$"
+      display_names:
+        other: i-Jamaican Dollar
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: i-Japanese Yen
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: i-Kyrgystani Som
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: i-Cambodian Riel
+    KMF:
+      symbol: CF
+      display_names:
+        other: i-Comorian Franc
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: i-North Korean Won
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: i-South Korean Won
+    KYD:
+      symbol: "$"
+      display_names:
+        other: i-Cayman Islands Dollar
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: i-Kazakhstani Tenge
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: i-Laotian Kip
+    LBP:
+      symbol: L£
+      display_names:
+        other: i-Lebanese Pound
+    LKR:
+      symbol: Rs
+      display_names:
+        other: i-Sri Lankan Rupee
+    LRD:
+      symbol: "$"
+      display_names:
+        other: i-Liberian Dollar
+    LTL:
+      symbol: Lt
+      display_names:
+        other: i-Lithuanian Litas
+    LVL:
+      symbol: Ls
+      display_names:
+        other: i-Latvian Lats
+    MGA:
+      symbol: Ar
+      display_names:
+        other: i-Malagasy Ariary
+    MMK:
+      symbol: K
+      display_names:
+        other: i-Myanma Kyat
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: i-Mongolian Tugrik
+    MUR:
+      symbol: Rs
+      display_names:
+        other: i-Mauritian Rupee
+    MXN:
+      symbol: MX$
+      display_names:
+        other: i-Mexican Peso
+    MYR:
+      symbol: RM
+      display_names:
+        other: i-Malaysian Ringgit
+    NAD:
+      symbol: "$"
+      display_names:
+        other: i-Namibian Dollar
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: i-Nigerian Naira
+    NIO:
+      symbol: C$
+      display_names:
+        other: i-Nicaraguan Córdoba
+    NOK:
+      symbol: Kr
+      display_names:
+        other: i-Norwegian Krone
+    NPR:
+      symbol: Rs
+      display_names:
+        other: i-Nepalese Rupee
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: i-New Zealand Dollar
+    PHP:
+      symbol: PHP
+      display_names:
+        other: i-Philippine Peso
+    PKR:
+      symbol: Rs
+      display_names:
+        other: i-Pakistani Rupee
+    PLN:
+      symbol: Zł
+      display_names:
+        other: i-Polish Zloty
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: i-Paraguayan Guarani
+    RON:
+      symbol: lei
+      display_names:
+        other: i-Romanian lei
+        one: i-Romanian leu
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: i-Russian Ruble
+    RWF:
+      symbol: RF
+      display_names:
+        other: i-Rwandan Franc
+    SBD:
+      symbol: "$"
+      display_names:
+        other: i-Solomon Islands Dollar
+    SEK:
+      symbol: Kr
+      display_names:
+        other: i-Swedish Krona
+    SGD:
+      symbol: "$"
+      display_names:
+        other: i-Singapore Dollar
+    SHP:
+      symbol: "£"
+      display_names:
+        other: i-Saint Helena Pound
+    SRD:
+      symbol: "$"
+      display_names:
+        other: i-Surinamese Dollar
+    SSP:
+      symbol: "£"
+      display_names:
+        other: i-South Sudanese Pound
+    STN:
+      symbol: Db
+      display_names:
+        other: i-São Tomé kanye ne-Príncipe Dobra
+    SYP:
+      symbol: "£"
+      display_names:
+        other: i-Syrian Pound
+    THB:
+      symbol: "฿"
+      display_names:
+        other: i-Thai Baht
+    TOP:
+      symbol: T$
+      display_names:
+        other: i-Tongan Paʻanga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: i-Turkish Lira
+    TTD:
+      symbol: "$"
+      display_names:
+        other: i-Trinidad & Tobago dollars
+        one: i-Trinidad and Tobago dollar
+    TWD:
+      symbol: NT$
+      display_names:
+        other: i-New Taiwan Dollar
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: i-Ukrainian Hryvnia
+    USD:
+      symbol: "$"
+      display_names:
+        other: i-US Dollar
+    UYU:
+      symbol: "$"
+      display_names:
+        other: i-Uruguayan Peso
+    VEF:
+      symbol: Bs
+      display_names:
+        other: i-Venezuelan Bolívar (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: i-Vietnamese Dong
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: i-CFA Franc BCEA
+        one: i-CFA Franc BCEA
+    XCD:
+      symbol: EC$
+      display_names:
+        other: i-East Caribbean Dollar
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: i-West African CFA francs
+        one: i-West African CFA Franc
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: i-CFP Franc
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: imali engaziwa
+    ZAR:
+      symbol: R
+      display_names:
+        other: i-South African Rand
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: i-Zambian Kwacha
+    AED:
+      display_names:
+        other: i-Dirham yase-United Arab Emirates
+    ALL:
+      display_names:
+        other: i-Albanian Lek
+    ANG:
+      display_names:
+        other: i-Netherlands Antillean Guilder
+    AWG:
+      display_names:
+        other: i-Aruban Florin
+    BGN:
+      display_names:
+        other: i-Bulgarian Lev
+    BHD:
+      display_names:
+        other: i-Bahraini Dinar
+    BIF:
+      display_names:
+        other: i-Burundian Franc
+    BTN:
+      display_names:
+        other: i-Bhutanese Ngultrum
+    BYN:
+      symbol: P.
+      display_names:
+        other: i-Belarusian Ruble
+    BYR:
+      display_names:
+        other: i-Belarusian Ruble (2000–2016)
+    CDF:
+      display_names:
+        other: i-Congolese Franc
+    CHF:
+      display_names:
+        other: i-Swiss Franc
+    CNH:
+      display_names:
+        other: i-CNH
+        one: i-Chinese yuan (offshore)
+    CVE:
+      display_names:
+        other: i-Cape Verdean escudos
+        one: i-Cape Verdean Escudo
+    DJF:
+      display_names:
+        other: i-Djiboutian Franc
+    DZD:
+      display_names:
+        other: i-Algerian Dinar
+    ERN:
+      display_names:
+        other: i-Eritrean Nakfa
+    ETB:
+      display_names:
+        other: i-Ethopian Birr
+    GMD:
+      display_names:
+        other: i-Gambian dalasis
+        one: i-Gambian Dalasi
+    HTG:
+      display_names:
+        other: i-Haitian Gourde
+    IQD:
+      display_names:
+        other: i-Iraqi Dinar
+    IRR:
+      display_names:
+        other: i-Iranian Rial
+    JOD:
+      display_names:
+        other: i-Jordanian Dinar
+    KES:
+      display_names:
+        other: i-Kenyan Shilling
+    KWD:
+      display_names:
+        other: i-Kuwaiti Dinar
+    LSL:
+      display_names:
+        other: i-Lesotho Loti
+    LYD:
+      display_names:
+        other: i-Libyan Dinar
+    MAD:
+      display_names:
+        other: i-Moroccan Dirham
+    MDL:
+      display_names:
+        other: i-Moldovan Leu
+    MKD:
+      display_names:
+        other: i-Macedonian Denar
+    MOP:
+      display_names:
+        other: i-Macanese Pataca
+    MRO:
+      display_names:
+        other: i-Mauritanian Ouguiya (1973–2017)
+    MRU:
+      display_names:
+        other: i-Mauritanian Ouguiya
+    MVR:
+      display_names:
+        other: i-Maldivian Rufiyana
+    MWK:
+      display_names:
+        other: i-Malawian Kwacha
+    MZN:
+      display_names:
+        other: i-Mozambican Metical
+    OMR:
+      display_names:
+        other: i-Omani Rial
+    PAB:
+      display_names:
+        other: i-Panamanian Balboa
+    PEN:
+      display_names:
+        other: i-Peruvian Nuevo Sol
+    PGK:
+      display_names:
+        other: i-Papua New Guinean Kina
+    QAR:
+      display_names:
+        other: i-Qatari Rial
+    RSD:
+      display_names:
+        other: i-Serbian Dinar
+    SAR:
+      display_names:
+        other: i-Saudi Riyal
+    SCR:
+      display_names:
+        other: i-Seychellois Rupee
+    SDG:
+      display_names:
+        other: i-Sudanese Pound
+    SLE:
+      display_names:
+        other: i-Sierra Leonean Leone
+    SLL:
+      display_names:
+        other: i-Sierra Leonean Leone (1964—2022)
+    SOS:
+      display_names:
+        other: i-Somali Shilling
+    STD:
+      display_names:
+        other: i-São Tomé kanye ne-Príncipe Dobra (1977–2017)
+    SZL:
+      display_names:
+        other: i-Swazi Lilangeni
+    TJS:
+      display_names:
+        other: i-Tajikistani Somoni
+    TMT:
+      display_names:
+        other: i-Turkmenistani Manat
+    TND:
+      display_names:
+        other: i-Tunisian Dinar
+    TZS:
+      display_names:
+        other: i-Tanzanian Shilling
+    UGX:
+      display_names:
+        other: i-Ugandan Shilling
+    UZS:
+      display_names:
+        other: i-Uzbekistan Som
+    VES:
+      display_names:
+        other: i-Venezuelan Bolívar
+    VUV:
+      display_names:
+        other: i-Vanuatu Vatu
+    WST:
+      display_names:
+        other: i-Samoan Tala
+    YER:
+      display_names:
+        other: i-Yemeni Rial
+    ZMK:
+      display_names:
+        other: i-Zambian Kwacha (1968–2012)
+locale: zu
+generated_at: '2025-09-10T23:53:21+09:00'
+cldr_version: v46
+source: Unicode CLDR
+currency_fractions:
+  ADP:
+    digits: 0
+    rounding: 0
+  AFN:
+    digits: 0
+    rounding: 0
+  ALL:
+    digits: 0
+    rounding: 0
+  AMD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  BHD:
+    digits: 3
+    rounding: 0
+  BIF:
+    digits: 0
+    rounding: 0
+  BYR:
+    digits: 0
+    rounding: 0
+  BYN:
+    digits: 2
+    rounding: 0
+  CAD:
+    digits: 2
+    rounding: 0
+    cash_rounding: 5
+  CHF:
+    digits: 2
+    rounding: 0
+    cash_rounding: 5
+  CLF:
+    digits: 4
+    rounding: 0
+  CLP:
+    digits: 0
+    rounding: 0
+  COP:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  CRC:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  CZK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  DEFAULT:
+    digits: 2
+    rounding: 0
+  DJF:
+    digits: 0
+    rounding: 0
+  DKK:
+    digits: 2
+    rounding: 0
+    cash_rounding: 50
+  ESP:
+    digits: 0
+    rounding: 0
+  GNF:
+    digits: 0
+    rounding: 0
+  GYD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  HUF:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  IDR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  IQD:
+    digits: 0
+    rounding: 0
+  IRR:
+    digits: 0
+    rounding: 0
+  ISK:
+    digits: 0
+    rounding: 0
+  ITL:
+    digits: 0
+    rounding: 0
+  JOD:
+    digits: 3
+    rounding: 0
+  JPY:
+    digits: 0
+    rounding: 0
+  KMF:
+    digits: 0
+    rounding: 0
+  KPW:
+    digits: 0
+    rounding: 0
+  KRW:
+    digits: 0
+    rounding: 0
+  KWD:
+    digits: 3
+    rounding: 0
+  LAK:
+    digits: 0
+    rounding: 0
+  LBP:
+    digits: 0
+    rounding: 0
+  LUF:
+    digits: 0
+    rounding: 0
+  LYD:
+    digits: 3
+    rounding: 0
+  MGA:
+    digits: 0
+    rounding: 0
+  MGF:
+    digits: 0
+    rounding: 0
+  MMK:
+    digits: 0
+    rounding: 0
+  MNT:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  MRO:
+    digits: 0
+    rounding: 0
+  MUR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  NOK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  OMR:
+    digits: 3
+    rounding: 0
+  PKR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  PYG:
+    digits: 0
+    rounding: 0
+  RSD:
+    digits: 0
+    rounding: 0
+  RWF:
+    digits: 0
+    rounding: 0
+  SEK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  SLE:
+    digits: 2
+    rounding: 0
+  SLL:
+    digits: 0
+    rounding: 0
+  SOS:
+    digits: 0
+    rounding: 0
+  STD:
+    digits: 0
+    rounding: 0
+  SYP:
+    digits: 0
+    rounding: 0
+  TMM:
+    digits: 0
+    rounding: 0
+  TND:
+    digits: 3
+    rounding: 0
+  TRL:
+    digits: 0
+    rounding: 0
+  TZS:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  TWD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  UGX:
+    digits: 0
+    rounding: 0
+  UZS:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  UYI:
+    digits: 0
+    rounding: 0
+  UYW:
+    digits: 4
+    rounding: 0
+  VEF:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  VND:
+    digits: 0
+    rounding: 0
+  VUV:
+    digits: 0
+    rounding: 0
+  XAF:
+    digits: 0
+    rounding: 0
+  XOF:
+    digits: 0
+    rounding: 0
+  XPF:
+    digits: 0
+    rounding: 0
+  YER:
+    digits: 0
+    rounding: 0
+  ZMK:
+    digits: 0
+    rounding: 0
+  ZWD:
+    digits: 0
+    rounding: 0

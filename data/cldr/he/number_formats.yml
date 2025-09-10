@@ -1,32 +1,470 @@
 ---
 number_formats:
   symbols:
+    decimal: "."
+    group: ","
     minus_sign: "‎-"
     plus_sign: "‎+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "‏#,##0.00 ‏¤;‏-#,##0.00 ‏¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: אפגני אפגני
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: דראם ארמני
+    AOA:
+      symbol: Kz
+      display_names:
+        other: קואנזה אנגולי
+    ARS:
+      symbol: "$"
+      display_names:
+        other: פסו ארגנטינאי
+    AUD:
+      symbol: A$
+      display_names:
+        other: דולר אוסטרלי
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: מאנאט אזרבייג׳ני
+    BAM:
+      symbol: KM
+      display_names:
+        other: מארק סחיר של בוסניה והרצגובינה
+    BBD:
+      symbol: "$"
+      display_names:
+        other: דולר ברבדיאני
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: טאקה בנגלדשי
+    BMD:
+      symbol: "$"
+      display_names:
+        other: דולר ברמודה
+    BND:
+      symbol: "$"
+      display_names:
+        other: דולר ברוניי
+    BOB:
+      symbol: Bs
+      display_names:
+        other: בוליביאנו
+    BRL:
+      symbol: R$
+      display_names:
+        other: ריאל ברזילאי
+    BSD:
+      symbol: "$"
+      display_names:
+        other: דולר בהאמי
+    BWP:
+      symbol: P
+      display_names:
+        other: פולה בוטסואני
+    BZD:
+      symbol: "$"
+      display_names:
+        other: דולר בליזי
+    CAD:
+      symbol: CA$
+      display_names:
+        other: דולר קנדי
+    CLP:
+      symbol: "$"
+      display_names:
+        other: פסו צ׳ילאני
+    CNY:
+      symbol: "‎CN¥‎"
+      display_names:
+        other: יואן סיני
+    COP:
+      symbol: "$"
+      display_names:
+        other: פסו קולומביאני
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: קולון קוסטה־ריקני
+    CUC:
+      symbol: "$"
+      display_names:
+        other: פסו קובני להמרה
+    CUP:
+      symbol: "$"
+      display_names:
+        other: פסו קובני
+    CZK:
+      symbol: Kč
+      display_names:
+        other: קורונה צ׳כית
+    DKK:
+      symbol: kr
+      display_names:
+        other: כתר דני
+    DOP:
+      symbol: "$"
+      display_names:
+        other: פסו דומיניקני
+    EGP:
+      symbol: E£
+      display_names:
+        other: לירה מצרית
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: פסטה ספרדי
+    EUR:
+      symbol: "€"
+      display_names:
+        other: אירו
+    FJD:
+      symbol: "$"
+      display_names:
+        other: דולר פיג׳י
+    FKP:
+      symbol: "£"
+      display_names:
+        other: לירה של איי פוקלנד
+    GBP:
+      symbol: "£"
+      display_names:
+        other: לירה שטרלינג
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: לארי גאורגי
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: סדי גאני
+    GIP:
+      symbol: "£"
+      display_names:
+        other: פאונד גיברלטר
+    GNF:
+      symbol: FG
+      display_names:
+        other: פרנק גינאי
+    GTQ:
+      symbol: Q
+      display_names:
+        other: קצאל גואטמלי
+    GYD:
+      symbol: "$"
+      display_names:
+        other: דולר גיאני
+    HKD:
+      symbol: HK$
+      display_names:
+        other: דולר הונג קונגי
+    HNL:
+      symbol: L
+      display_names:
+        other: למפירה הונדורי
+    HRK:
+      symbol: kn
+      display_names:
+        other: קונה קרואטי
+    HUF:
+      symbol: Ft
+      display_names:
+        other: פורינט הונגרי
+    IDR:
+      symbol: Rp
+      display_names:
+        other: רופיות אינדונזיות
+        one: רופיה אינדונזית
+        two: רופיות אינדונזיות
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: שקלים חדשים
+        one: שקל חדש
+        two: שקלים חדשים
+    INR:
+      symbol: "₹"
+      display_names:
+        other: רופי הודי
+    ISK:
+      symbol: kr
+      display_names:
+        other: כתר איסלנדי
+    JMD:
+      symbol: "$"
+      display_names:
+        other: דולר ג׳מייקני
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: ין יפני
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: סום קירגיזי
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: ריל קמבודי
+    KMF:
+      symbol: CF
+      display_names:
+        other: פרנק קומורואי
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: וון צפון קוריאני
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: וון דרום קוריאני
+    KYD:
+      symbol: "$"
+      display_names:
+        other: דולר קיימני
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: טנגה קזחסטני
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: קיפ לאי
+    LBP:
+      symbol: L£
+      display_names:
+        other: לירות לבנוניות
+        one: לירה לבנונית
+        two: לירות לבנוניות
+    LKR:
+      symbol: Rs
+      display_names:
+        other: רופי סרי לנקי
+    LRD:
+      symbol: "$"
+      display_names:
+        other: דולר ליברי
+    LTL:
+      symbol: Lt
+      display_names:
+        other: ליטא ליטאי
+    LVL:
+      symbol: Ls
+      display_names:
+        other: לט לטבי
+    MGA:
+      symbol: Ar
+      display_names:
+        other: אריארי מלגשי
+    MMK:
+      symbol: K
+      display_names:
+        other: קיאט מיאנמרי
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: טוגרוג מונגולי
+    MUR:
+      symbol: Rs
+      display_names:
+        other: רופי מאוריציני
+    MXN:
+      symbol: MX$
+      display_names:
+        other: פסו מקסיקני
+    MYR:
+      symbol: RM
+      display_names:
+        other: רינגיט מלזי
+    NAD:
+      symbol: "$"
+      display_names:
+        other: דולר נמיבי
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: נאירה ניגרי
+    NIO:
+      symbol: C$
+      display_names:
+        other: קורדובה ניקרגואה
+    NOK:
+      symbol: kr
+      display_names:
+        other: כתר נורווגי
+    NPR:
+      symbol: Rs
+      display_names:
+        other: רופי נפאלי
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: דולר ניו זילנדי
+    PHP:
+      symbol: PHP
+      display_names:
+        other: פסו פיליפיני
+    PKR:
+      symbol: Rs
+      display_names:
+        other: רופי פקיסטני
+    PLN:
+      symbol: zł
+      display_names:
+        other: זלוטי פולני
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: גוארני פרגוואי
+    RON:
+      symbol: lei
+      display_names:
+        other: לאו רומני
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: רובל רוסי
+    RWF:
+      symbol: RF
+      display_names:
+        other: פרנק רואנדי
+    SBD:
+      symbol: "$"
+      display_names:
+        other: דולר איי שלמה
+    SEK:
+      symbol: kr
+      display_names:
+        other: כתר שוודי
+    SGD:
+      symbol: "$"
+      display_names:
+        other: דולר סינגפורי
+    SHP:
+      symbol: "£"
+      display_names:
+        other: פאונד סנט הלני
+    SRD:
+      symbol: "$"
+      display_names:
+        other: דולר סורינאמי
+    SSP:
+      symbol: "£"
+      display_names:
+        other: לירה דרום-סודנית
+    STN:
+      symbol: Db
+      display_names:
+        other: דוברה של סאו טומה ופרינסיפה
+    SYP:
+      symbol: "£"
+      display_names:
+        other: לירות סוריות
+        one: לירה סורית
+        two: לירות סוריות
+    THB:
+      symbol: "฿"
+      display_names:
+        other: בהט תאילנדי
+    TOP:
+      symbol: T$
+      display_names:
+        other: פאנגה טונגי
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: לירות טורקיות
+        one: לירה טורקית חדשה
+        two: לירות טורקיות
+        many: לירות טורקיות
+    TTD:
+      symbol: "$"
+      display_names:
+        other: דולר טרינידדי
+    TWD:
+      symbol: NT$
+      display_names:
+        other: דולר טייוואני חדש
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: הריבנה אוקראיני
+    USD:
+      symbol: "$"
+      display_names:
+        other: דולר אמריקאי
+    UYU:
+      symbol: "$"
+      display_names:
+        other: פסו אורוגוואי
+    VEF:
+      symbol: Bs
+      display_names:
+        other: בוליבר ונצואלי (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: דונג וייטנאמי
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: פרנק CFA מרכז אפריקני
+    XCD:
+      symbol: EC$
+      display_names:
+        other: דולר מזרח קריבי
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: פרנק CFA מערב אפריקני
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: פרנק פולינזיה הצרפתית
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(מטבע שאינו ידוע)"
+        one: "(מטבע שאינו ידוע)"
+        two: "(מטבע שאינו ידוע)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: ראנד דרום אפריקאי
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: קוואצ׳ה זמבי
     ADP:
       display_names:
         other: פזטה אנדורית
     AED:
       display_names:
         other: דירהם של איחוד הנסיכויות הערביות
-    AFN:
-      display_names:
-        other: אפגני אפגני
     ALL:
       display_names:
         other: לק אלבני
-    AMD:
-      display_names:
-        other: דראם ארמני
     ANG:
       display_names:
         other: גילדר של האנטילים ההולנדיים
-    AOA:
-      display_names:
-        other: קואנזה אנגולי
     AON:
       display_names:
         other: קואנזה חדש אנגולי (1990–2000)
@@ -36,36 +474,18 @@ number_formats:
     ARP:
       display_names:
         other: פזו ארגנטינאי (1983–1985)
-    ARS:
-      display_names:
-        other: פסו ארגנטינאי
     ATS:
       display_names:
         other: שילינג אוסטרי
-    AUD:
-      display_names:
-        other: דולר אוסטרלי
     AWG:
       display_names:
         other: פלורין של ארובה
     AZM:
       display_names:
         other: מנאט אזרביג׳אני (1993–2006)
-    AZN:
-      display_names:
-        other: מאנאט אזרבייג׳ני
     BAD:
       display_names:
         other: דינר של בוסניה־הרצגובינה
-    BAM:
-      display_names:
-        other: מארק סחיר של בוסניה והרצגובינה
-    BBD:
-      display_names:
-        other: דולר ברבדיאני
-    BDT:
-      display_names:
-        other: טאקה בנגלדשי
     BEC:
       display_names:
         other: פרנק בלגי (בר המרה)
@@ -84,15 +504,6 @@ number_formats:
     BIF:
       display_names:
         other: פרנק בורונדי
-    BMD:
-      display_names:
-        other: דולר ברמודה
-    BND:
-      display_names:
-        other: דולר ברוניי
-    BOB:
-      display_names:
-        other: בוליביאנו
     BOP:
       display_names:
         other: פזו בוליבי
@@ -102,18 +513,9 @@ number_formats:
     BRC:
       display_names:
         other: קרוזדו ברזילאי
-    BRL:
-      display_names:
-        other: ריאל ברזילאי
-    BSD:
-      display_names:
-        other: דולר בהאמי
     BTN:
       display_names:
         other: נגולטרום בהוטני
-    BWP:
-      display_names:
-        other: פולה בוטסואני
     BYN:
       symbol: р
       display_names:
@@ -121,52 +523,24 @@ number_formats:
     BYR:
       display_names:
         other: רובל בלרוסי (2000–2016)
-    BZD:
-      display_names:
-        other: דולר בליזי
-    CAD:
-      display_names:
-        other: דולר קנדי
     CDF:
       display_names:
         other: פרנק קונגולזי
     CHF:
       display_names:
         other: פרנק שוויצרי
-    CLP:
-      display_names:
-        other: פסו צ׳ילאני
     CNH:
       display_names:
         other: יואן סיני (CNH)
-    CNY:
-      symbol: "‎CN¥‎"
-      display_names:
-        other: יואן סיני
-    COP:
-      display_names:
-        other: פסו קולומביאני
-    CRC:
-      display_names:
-        other: קולון קוסטה־ריקני
     CSD:
       display_names:
         other: דינר סרבי ישן
-    CUC:
-      display_names:
-        other: פסו קובני להמרה
-    CUP:
-      display_names:
-        other: פסו קובני
     CVE:
       display_names:
         other: אסקודו כף ורדה
     CYP:
       display_names:
         other: לירה קפריסאית
-    CZK:
-      display_names:
-        other: קורונה צ׳כית
     DDM:
       display_names:
         other: מרק מזרח גרמני
@@ -176,12 +550,6 @@ number_formats:
     DJF:
       display_names:
         other: פרנק ג׳יבוטי
-    DKK:
-      display_names:
-        other: כתר דני
-    DOP:
-      display_names:
-        other: פסו דומיניקני
     DZD:
       display_names:
         other: דינר אלג׳ירי
@@ -191,9 +559,6 @@ number_formats:
     EEK:
       display_names:
         other: קרון אסטוני
-    EGP:
-      display_names:
-        other: לירה מצרית
     ERN:
       display_names:
         other: נאקפה אריתראי
@@ -203,77 +568,27 @@ number_formats:
     ESB:
       display_names:
         other: פזטה [ESB]
-    ESP:
-      display_names:
-        other: פסטה ספרדי
     ETB:
       display_names:
         other: ביר אתיופי
-    EUR:
-      display_names:
-        other: אירו
     FIM:
       display_names:
         other: מרק פיני
-    FJD:
-      display_names:
-        other: דולר פיג׳י
-    FKP:
-      display_names:
-        other: לירה של איי פוקלנד
     FRF:
       display_names:
         other: פרנק צרפתי
-    GBP:
-      display_names:
-        other: לירה שטרלינג
-    GEL:
-      display_names:
-        other: לארי גאורגי
-    GHS:
-      display_names:
-        other: סדי גאני
-    GIP:
-      display_names:
-        other: פאונד גיברלטר
     GMD:
       display_names:
         other: דלסי גמבי
-    GNF:
-      display_names:
-        other: פרנק גינאי
     GRD:
       display_names:
         other: דרכמה
-    GTQ:
-      display_names:
-        other: קצאל גואטמלי
     GWP:
       display_names:
         other: פזו גינאי
-    GYD:
-      display_names:
-        other: דולר גיאני
-    HKD:
-      display_names:
-        other: דולר הונג קונגי
-    HNL:
-      display_names:
-        other: למפירה הונדורי
-    HRK:
-      display_names:
-        other: קונה קרואטי
     HTG:
       display_names:
         other: גורד האיטי
-    HUF:
-      display_names:
-        other: פורינט הונגרי
-    IDR:
-      display_names:
-        other: רופיות אינדונזיות
-        one: רופיה אינדונזית
-        two: רופיות אינדונזיות
     IEP:
       display_names:
         other: לירה אירית
@@ -281,89 +596,30 @@ number_formats:
       symbol: ל״י
       display_names:
         other: לירה ישראלית
-    ILS:
-      display_names:
-        other: שקלים חדשים
-        one: שקל חדש
-        two: שקלים חדשים
-    INR:
-      display_names:
-        other: רופי הודי
     IQD:
       display_names:
         other: דינר עיראקי
     IRR:
       display_names:
         other: ריאל איראני
-    ISK:
-      display_names:
-        other: כתר איסלנדי
     ITL:
       display_names:
         other: לירה איטלקית
-    JMD:
-      display_names:
-        other: דולר ג׳מייקני
     JOD:
       display_names:
         other: דינר ירדני
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: ין יפני
     KES:
       display_names:
         other: שילינג קנייתי
-    KGS:
-      display_names:
-        other: סום קירגיזי
-    KHR:
-      display_names:
-        other: ריל קמבודי
-    KMF:
-      display_names:
-        other: פרנק קומורואי
-    KPW:
-      display_names:
-        other: וון צפון קוריאני
-    KRW:
-      display_names:
-        other: וון דרום קוריאני
     KWD:
       display_names:
         other: דינר כוויתי
-    KYD:
-      display_names:
-        other: דולר קיימני
-    KZT:
-      display_names:
-        other: טנגה קזחסטני
-    LAK:
-      display_names:
-        other: קיפ לאי
-    LBP:
-      display_names:
-        other: לירות לבנוניות
-        one: לירה לבנונית
-        two: לירות לבנוניות
-    LKR:
-      display_names:
-        other: רופי סרי לנקי
-    LRD:
-      display_names:
-        other: דולר ליברי
     LSL:
       display_names:
         other: לוטי לסותי
-    LTL:
-      display_names:
-        other: ליטא ליטאי
     LUF:
       display_names:
         other: פרנק לוקסמבורגי
-    LVL:
-      display_names:
-        other: לט לטבי
     LYD:
       display_names:
         other: דינר לובי
@@ -376,21 +632,12 @@ number_formats:
     MDL:
       display_names:
         other: לאו מולדובני
-    MGA:
-      display_names:
-        other: אריארי מלגשי
     MGF:
       display_names:
         other: פרנק מדגסקארי
     MKD:
       display_names:
         other: דינר מקדוני
-    MMK:
-      display_names:
-        other: קיאט מיאנמרי
-    MNT:
-      display_names:
-        other: טוגרוג מונגולי
     MOP:
       display_names:
         other: פטקה של מקאו
@@ -403,9 +650,6 @@ number_formats:
     MTL:
       display_names:
         other: לירה מלטית
-    MUR:
-      display_names:
-        other: רופי מאוריציני
     MVR:
       display_names:
         other: רופיות מלדיביות
@@ -414,9 +658,6 @@ number_formats:
     MWK:
       display_names:
         other: קואצ׳ה מלאווי
-    MXN:
-      display_names:
-        other: פסו מקסיקני
     MXP:
       display_names:
         other: פסו מקסיקני (1861 – 1992)
@@ -427,9 +668,6 @@ number_formats:
         other: יחידות השקעות מקסיקניות
         one: יחידת השקעות מקסיקנית
         two: יחידות השקעות מקסיקניות
-    MYR:
-      display_names:
-        other: רינגיט מלזי
     MZE:
       display_names:
         other: אסקודואים מוזמביקיים
@@ -442,32 +680,14 @@ number_formats:
     MZN:
       display_names:
         other: מטיקל מוזמביני
-    NAD:
-      display_names:
-        other: דולר נמיבי
-    NGN:
-      display_names:
-        other: נאירה ניגרי
     NIC:
       display_names:
         other: קורדובות (1988–1991)
         one: קורדובה (1988–1991)
         two: קורדובות (1988–1991)
-    NIO:
-      display_names:
-        other: קורדובה ניקרגואה
     NLG:
       display_names:
         other: גילדן הולנדי
-    NOK:
-      display_names:
-        other: כתר נורווגי
-    NPR:
-      display_names:
-        other: רופי נפאלי
-    NZD:
-      display_names:
-        other: דולר ניו זילנדי
     OMR:
       display_names:
         other: ריאל עומאני
@@ -480,53 +700,27 @@ number_formats:
     PGK:
       display_names:
         other: קינה של פפואה גינאה החדשה
-    PHP:
-      symbol: PHP
-      display_names:
-        other: פסו פיליפיני
-    PKR:
-      display_names:
-        other: רופי פקיסטני
-    PLN:
-      display_names:
-        other: זלוטי פולני
     PLZ:
       display_names:
         other: זלוטי (1950 – 1995)
     PTE:
       display_names:
         other: אסקודו פורטוגלי
-    PYG:
-      display_names:
-        other: גוארני פרגוואי
     QAR:
       display_names:
         other: ריאל קטארי
     ROL:
       display_names:
         other: לאו רומני ישן
-    RON:
-      display_names:
-        other: לאו רומני
     RSD:
       display_names:
         other: דינר סרבי
-    RUB:
-      symbol: "₽"
-      display_names:
-        other: רובל רוסי
     RUR:
       display_names:
         other: רובל רוסי (1991 – 1998)
-    RWF:
-      display_names:
-        other: פרנק רואנדי
     SAR:
       display_names:
         other: ריאל סעודי
-    SBD:
-      display_names:
-        other: דולר איי שלמה
     SCR:
       display_names:
         other: רופי סיישלי
@@ -539,15 +733,6 @@ number_formats:
     SDP:
       display_names:
         other: לירה סודנית (1957–1998)
-    SEK:
-      display_names:
-        other: כתר שוודי
-    SGD:
-      display_names:
-        other: דולר סינגפורי
-    SHP:
-      display_names:
-        other: פאונד סנט הלני
     SIT:
       display_names:
         other: טולאר סלובני
@@ -563,21 +748,12 @@ number_formats:
     SOS:
       display_names:
         other: שילינג סומלי
-    SRD:
-      display_names:
-        other: דולר סורינאמי
     SRG:
       display_names:
         other: גילדר סורינאמי
-    SSP:
-      display_names:
-        other: לירה דרום-סודנית
     STD:
       display_names:
         other: דוברה של סן טומה ופרינסיפה (1977–2017)
-    STN:
-      display_names:
-        other: דוברה של סאו טומה ופרינסיפה
     SUR:
       display_names:
         other: רובל סובייטי
@@ -587,18 +763,9 @@ number_formats:
         one: קולון סלבדורי
         two: קולונים סלבדוריים
         many: קולון סלבדורי
-    SYP:
-      display_names:
-        other: לירות סוריות
-        one: לירה סורית
-        two: לירות סוריות
     SZL:
       display_names:
         other: לילנגני סווזילנדי
-    THB:
-      symbol: "฿"
-      display_names:
-        other: בהט תאילנדי
     TJS:
       display_names:
         other: סומוני טג׳קיסטני
@@ -611,112 +778,63 @@ number_formats:
     TND:
       display_names:
         other: דינר טוניסאי
-    TOP:
-      display_names:
-        other: פאנגה טונגי
     TPE:
       display_names:
         other: אסקודו טימוראי
     TRL:
       display_names:
         other: לירה טורקית
-    TRY:
-      display_names:
-        other: לירות טורקיות
-        one: לירה טורקית חדשה
-        two: לירות טורקיות
-        many: לירות טורקיות
-    TTD:
-      display_names:
-        other: דולר טרינידדי
-    TWD:
-      symbol: NT$
-      display_names:
-        other: דולר טייוואני חדש
     TZS:
       display_names:
         other: שילינג טנזני
-    UAH:
-      display_names:
-        other: הריבנה אוקראיני
     UGS:
       display_names:
         other: שילינג אוגנדי (1966 – 1987)
     UGX:
       display_names:
         other: שילינג אוגנדי
-    USD:
-      symbol: "$"
-      display_names:
-        other: דולר אמריקאי
     USN:
       display_names:
         other: דולר אמריקאי (היום הבא)
     USS:
       display_names:
         other: דולר אמריקאי (היום הזה)
-    UYU:
-      display_names:
-        other: פסו אורוגוואי
     UZS:
       display_names:
         other: סום אוזבקי
     VEB:
       display_names:
         other: בוליבר ונצואלי (1871–2008)
-    VEF:
-      display_names:
-        other: בוליבר ונצואלי (2008–2018)
     VES:
       display_names:
         other: בוליבר ונצואלי
-    VND:
-      display_names:
-        other: דונג וייטנאמי
     VUV:
       display_names:
         other: ואטו של ונואטו
     WST:
       display_names:
         other: טאלה סמואי
-    XAF:
-      display_names:
-        other: פרנק CFA מרכז אפריקני
     XAG:
       display_names:
         other: כסף
     XAU:
       display_names:
         other: זהב
-    XCD:
-      display_names:
-        other: דולר מזרח קריבי
     XDR:
       display_names:
         other: זכויות משיכה מיוחדות
     XFO:
       display_names:
         other: פרנק זהב
-    XOF:
-      display_names:
-        other: פרנק CFA מערב אפריקני
     XPD:
       display_names:
         other: פלדיום
-    XPF:
-      display_names:
-        other: פרנק פולינזיה הצרפתית
     XPT:
       display_names:
         other: פלטינה
     XTS:
       display_names:
         other: סימון למטרות בדיקה
-    XXX:
-      display_names:
-        other: "(מטבע שאינו ידוע)"
-        one: "(מטבע שאינו ידוע)"
-        two: "(מטבע שאינו ידוע)"
     YDD:
       display_names:
         other: דינר תימני
@@ -732,15 +850,9 @@ number_formats:
     ZAL:
       display_names:
         other: ראנד דרום אפריקאי (כספי)
-    ZAR:
-      display_names:
-        other: ראנד דרום אפריקאי
     ZMK:
       display_names:
         other: קוואצ׳ה זמבית (1968–2012)
-    ZMW:
-      display_names:
-        other: קוואצ׳ה זמבי
     ZRN:
       display_names:
         other: זאיר חדש
@@ -748,7 +860,7 @@ number_formats:
       display_names:
         other: דולר זימבבואי
 locale: he
-generated_at: '2025-09-10T22:17:39+09:00'
+generated_at: '2025-09-10T23:53:09+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

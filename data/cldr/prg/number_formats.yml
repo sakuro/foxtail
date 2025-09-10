@@ -3,54 +3,269 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
     BRL:
+      symbol: R$
       display_names:
         other: Brazīlijas realai
         zero: Brazīlijas realin
         one: Brazīlijas reals
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+    CLP:
+      symbol: "$"
     CNY:
+      symbol: CN¥
       display_names:
         other: Kīnas juānai
         zero: Kīnas juānan
         one: Kīnas juāns
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+    ESP:
+      symbol: "₧"
     EUR:
+      symbol: "€"
       display_names:
         other: eurō
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
     GBP:
+      symbol: "£"
       display_names:
         other: pundai sterlingai
         zero: pundan sterlingan
         one: punds sterlings
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
     INR:
+      symbol: "₹"
       display_names:
         other: Īndijas rūpijas
         zero: Īndijas rūpijan
         one: Īndijas rūpija
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
     JPY:
+      symbol: JP¥
       display_names:
         other: Japānijas jānai
         zero: Japānijas jānan
         one: Japānijas jāns
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+    NGN:
+      symbol: "₦"
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
     RUB:
+      symbol: "₽"
       display_names:
         other: Russis rūblai
         zero: Russis rūblin
         one: Russis rūbels
+    RWF:
+      symbol: RF
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
     USD:
+      symbol: US$
       display_names:
         other: APW dālarai
         zero: APW dālaran
         one: APW dālars
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+    XPF:
+      symbol: CFPF
     XXX:
+      symbol: "¤"
       display_names:
         other: "(niwaistā walūta)"
         zero: "(niwaistā walūta)"
         one: "(niwaistā walūtas aīnibi)"
+    ZAR:
+      symbol: R
+    ZMW:
+      symbol: ZK
 locale: prg
-generated_at: '2025-09-10T22:17:46+09:00'
+generated_at: '2025-09-10T23:53:15+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

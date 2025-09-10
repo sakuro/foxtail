@@ -1,39 +1,299 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: Ango’otol lok’ Angola
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: Ango’otol lok’ Australia
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: Ango’otol lok’ Botswana
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Edola lok’Kanada
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Ango’otol lok’ China
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: Epaunt lok’ Misri
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Yuro
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Epaunt lok’ Uingereza
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Ango’otol lok’ India
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Ango’otol lok’ Kijapani
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: Ango’otol lok’ Komoro
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: edola lok’ Liberia
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Ango’otol lok’ Bukini
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Ango’otol lok’ Morisi
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Ango’otol lok’ Namibia
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Ango’otol lok’ Nijeria
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: Ango’otol lok’ Rwanda
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Ango’otol lok’ Santahelena
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: Ango’otol lok’ Sao Tome na Principe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: edola lok’ Amareka
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Ango’otol lok’ CFA BEAC
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Ango’otol lok’ CFA BCEAO
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Ango’otol lok’ Afrika Kusini
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Ango’otol lok’ Zambia
     AED:
       display_names:
         other: Ango’otol lok’ Falme za Kiarabu
-    AOA:
-      display_names:
-        other: Ango’otol lok’ Angola
-    AUD:
-      display_names:
-        other: Ango’otol lok’ Australia
     BHD:
       display_names:
         other: Ango’otol lok’ Bahareni
     BIF:
       display_names:
         other: Ango’otol lok’ Burundi
-    BWP:
-      display_names:
-        other: Ango’otol lok’ Botswana
-    CAD:
-      display_names:
-        other: Edola lok’Kanada
     CDF:
       display_names:
         other: Ango’otol lok’ Kongo
     CHF:
       display_names:
         other: Ango’otol lok’ Uswisi
-    CNY:
-      display_names:
-        other: Ango’otol lok’ China
     CVE:
       display_names:
         other: Ango’otol lok’ Kepuvede
@@ -43,21 +303,12 @@ number_formats:
     DZD:
       display_names:
         other: Ango’otol lok’ Aljeria
-    EGP:
-      display_names:
-        other: Epaunt lok’ Misri
     ERN:
       display_names:
         other: Ango’otol lok’ Eritrea
     ETB:
       display_names:
         other: Ango’otol lok’ Uhabeshi
-    EUR:
-      display_names:
-        other: Yuro
-    GBP:
-      display_names:
-        other: Epaunt lok’ Uingereza
     GHC:
       display_names:
         other: Sedi ya Ghana
@@ -67,21 +318,9 @@ number_formats:
     GNS:
       display_names:
         other: Ango’otol lok’ Gine
-    INR:
-      display_names:
-        other: Ango’otol lok’ India
-    JPY:
-      display_names:
-        other: Ango’otol lok’ Kijapani
     KES:
       display_names:
         other: Ango’otol lok’ Kenya
-    KMF:
-      display_names:
-        other: Ango’otol lok’ Komoro
-    LRD:
-      display_names:
-        other: edola lok’ Liberia
     LSL:
       display_names:
         other: Ango’otol lok’ Lesoto
@@ -91,33 +330,18 @@ number_formats:
     MAD:
       display_names:
         other: Ango’otol lok’ Moroko
-    MGA:
-      display_names:
-        other: Ango’otol lok’ Bukini
     MRO:
       display_names:
         other: Ango’otol lok’ Moritania (1973–2017)
     MRU:
       display_names:
         other: Ango’otol lok’ Moritania
-    MUR:
-      display_names:
-        other: Ango’otol lok’ Morisi
     MWK:
       display_names:
         other: Ango’otol lok’ Malawi
     MZM:
       display_names:
         other: Ango’otol lok’ Msumbiji
-    NAD:
-      display_names:
-        other: Ango’otol lok’ Namibia
-    NGN:
-      display_names:
-        other: Ango’otol lok’ Nijeria
-    RWF:
-      display_names:
-        other: Ango’otol lok’ Rwanda
     SAR:
       display_names:
         other: Ango’otol lok’ Saudia
@@ -127,9 +351,6 @@ number_formats:
     SDG:
       display_names:
         other: Epaunt Lok’ Sudan
-    SHP:
-      display_names:
-        other: Ango’otol lok’ Santahelena
     SLE:
       display_names:
         other: Leoni
@@ -142,9 +363,6 @@ number_formats:
     STD:
       display_names:
         other: Ango’otol lok’ Sao Tome na Principe (1977–2017)
-    STN:
-      display_names:
-        other: Ango’otol lok’ Sao Tome na Principe
     SZL:
       display_names:
         other: Lilangeni
@@ -158,29 +376,14 @@ number_formats:
       symbol: USh
       display_names:
         other: Ango’otol lok’ Uganda
-    USD:
-      display_names:
-        other: edola lok’ Amareka
-    XAF:
-      display_names:
-        other: Ango’otol lok’ CFA BEAC
-    XOF:
-      display_names:
-        other: Ango’otol lok’ CFA BCEAO
-    ZAR:
-      display_names:
-        other: Ango’otol lok’ Afrika Kusini
     ZMK:
       display_names:
         other: Ango’otol lok’ Zambia (1968–2012)
-    ZMW:
-      display_names:
-        other: Ango’otol lok’ Zambia
     ZWD:
       display_names:
         other: Edola lok’Zimbabwe
 locale: teo
-generated_at: '2025-09-10T22:17:49+09:00'
+generated_at: '2025-09-10T23:53:18+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

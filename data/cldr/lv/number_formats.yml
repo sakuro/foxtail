@@ -3,52 +3,639 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
     nan: NS
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: AAE dirhēmi
-        zero: AAE dirhēmi
-        one: AAE dirhēms
     AFN:
+      symbol: "؋"
       display_names:
         other: Afganistānas afgāni
         zero: Afganistānas afgāni
         one: Afganistānas afgāns
-    ALL:
-      display_names:
-        other: Albānijas leki
-        zero: Albānijas leki
-        one: Albānijas leks
     AMD:
+      symbol: "֏"
       display_names:
         other: Armēnijas drami
         zero: Armēnijas drami
         one: Armēnijas drams
-    ANG:
-      display_names:
-        other: Nīderlandes Antiļu guldeņi
-        zero: Nīderlandes Antiļu guldeņi
-        one: Nīderlandes Antiļu guldenis
     AOA:
+      symbol: Kz
       display_names:
         other: Angolas kvanzas
         zero: Angolas kvanzas
         one: Angolas kvanza
     ARS:
+      symbol: "$"
       display_names:
         other: Argentīnas peso
-    ATS:
-      display_names:
-        other: Austrijas šiliņš
     AUD:
       symbol: AU$
       display_names:
         other: Austrālijas dolāri
         zero: Austrālijas dolāri
         one: Austrālijas dolārs
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: Azerbaidžānas manati
+        zero: Azerbaidžānas manati
+        one: Azerbaidžānas manats
+    BAM:
+      symbol: KM
+      display_names:
+        other: Bosnijas un Hercogovinas konvertējamās markas
+        zero: Bosnijas un Hercogovinas konvertējamās markas
+        one: Bosnijas un Hercogovinas konvertējamā marka
+    BBD:
+      symbol: "$"
+      display_names:
+        other: Barbadosas dolāri
+        zero: Barbadosas dolāri
+        one: Barbadosas dolārs
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: Bangladešas takas
+        zero: Bangladešas takas
+        one: Bangladešas taka
+    BMD:
+      symbol: "$"
+      display_names:
+        other: Bermudu dolāri
+        zero: Bermudu dolāri
+        one: Bermudu dolārs
+    BND:
+      symbol: "$"
+      display_names:
+        other: Brunejas dolāri
+        zero: Brunejas dolāri
+        one: Brunejas dolārs
+    BOB:
+      symbol: Bs
+      display_names:
+        other: Bolīvijas boliviano
+    BRL:
+      symbol: R$
+      display_names:
+        other: Brazīlijas reāli
+        zero: Brazīlijas reāli
+        one: Brazīlijas reāls
+    BSD:
+      symbol: "$"
+      display_names:
+        other: Bahamu dolāri
+        zero: Bahamu dolāri
+        one: Bahamu dolārs
+    BWP:
+      symbol: P
+      display_names:
+        other: Botsvanas pulas
+        zero: Botsvanas pulas
+        one: Botsvanas pula
+    BZD:
+      symbol: "$"
+      display_names:
+        other: Belizas dolāri
+        zero: Belizas dolāri
+        one: Belizas dolārs
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Kanādas dolāri
+        zero: Kanādas dolāri
+        one: Kanādas dolārs
+    CLP:
+      symbol: "$"
+      display_names:
+        other: Čīles peso
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Ķīnas juaņi
+        zero: Ķīnas juaņi
+        one: Ķīnas juaņs
+    COP:
+      symbol: "$"
+      display_names:
+        other: Kolumbijas peso
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: Kostarikas koloni
+        zero: Kostarikas koloni
+        one: Kostarikas kolons
+    CUC:
+      symbol: "$"
+      display_names:
+        other: Kubas konvertējamie peso
+        zero: Kubas konvertējamie peso
+        one: Kubas konvertējamais peso
+    CUP:
+      symbol: "$"
+      display_names:
+        other: Kubas peso
+    CZK:
+      symbol: Kč
+      display_names:
+        other: Čehijas kronas
+        zero: Čehijas kronas
+        one: Čehijas krona
+    DKK:
+      symbol: kr
+      display_names:
+        other: Dānijas kronas
+        zero: Dānijas kronas
+        one: Dānijas krona
+    DOP:
+      symbol: "$"
+      display_names:
+        other: Dominikānas peso
+    EGP:
+      symbol: E£
+      display_names:
+        other: Ēģiptes mārciņas
+        zero: Ēģiptes mārciņas
+        one: Ēģiptes mārciņa
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: Spānijas peseta
+    EUR:
+      symbol: "€"
+      display_names:
+        other: eiro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: Fidži dolāri
+        zero: Fidži dolāri
+        one: Fidži dolārs
+    FKP:
+      symbol: "£"
+      display_names:
+        other: Folklenda Salu mārciņas
+        zero: Folklenda Salu mārciņas
+        one: Folklenda Salu mārciņa
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Lielbritānijas mārciņas
+        zero: Lielbritānijas mārciņas
+        one: Lielbritānijas mārciņa
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: Gruzijas lari
+    GHS:
+      symbol: GHS
+      display_names:
+        other: Ganas sedi
+    GIP:
+      symbol: "£"
+      display_names:
+        other: Gibraltāra mārciņas
+        zero: Gibraltāra mārciņas
+        one: Gibraltāra mārciņa
+    GNF:
+      symbol: FG
+      display_names:
+        other: Gvinejas franki
+        zero: Gvinejas franki
+        one: Gvinejas franks
+    GTQ:
+      symbol: Q
+      display_names:
+        other: Gvatemalas ketsali
+        zero: Gvatemalas ketsali
+        one: Gvatemalas ketsals
+    GYD:
+      symbol: "$"
+      display_names:
+        other: Gajānas dolāri
+        zero: Gajānas dolāri
+        one: Gajānas dolārs
+    HKD:
+      symbol: HK$
+      display_names:
+        other: Honkongas dolāri
+        zero: Honkongas dolāri
+        one: Honkongas dolārs
+    HNL:
+      symbol: L
+      display_names:
+        other: Hondurasas lempīras
+        zero: Hondurasas lempīras
+        one: Hondurasas lempīra
+    HRK:
+      symbol: kn
+      display_names:
+        other: Horvātijas kunas
+        zero: Horvātijas kunas
+        one: Horvātijas kuna
+    HUF:
+      symbol: Ft
+      display_names:
+        other: Ungārijas forinti
+        zero: Ungārijas forinti
+        one: Ungārijas forints
+    IDR:
+      symbol: Rp
+      display_names:
+        other: Indonēzijas rūpijas
+        zero: Indonēzijas rūpijas
+        one: Indonēzijas rūpija
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: Izraēlas šekeļi
+        zero: Izraēlas šekeļi
+        one: Izraēlas šekelis
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Indijas rūpijas
+        zero: Indijas rūpijas
+        one: Indijas rūpija
+    ISK:
+      symbol: kr
+      display_names:
+        other: Islandes kronas
+        zero: Islandes kronas
+        one: Islandes krona
+    JMD:
+      symbol: "$"
+      display_names:
+        other: Jamaikas dolāri
+        zero: Jamaikas dolāri
+        one: Jamaikas dolārs
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: Japānas jenas
+        zero: Japānas jenas
+        one: Japānas jena
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: Kirgizstānas somi
+        zero: Kirgizstānas somi
+        one: Kirgizstānas soms
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: Kambodžas rieli
+        zero: Kambodžas rieli
+        one: Kambodžas riels
+    KMF:
+      symbol: CF
+      display_names:
+        other: Komoru franki
+        zero: Komoru franki
+        one: Komoru franks
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: Ziemeļkorejas vonas
+        zero: Ziemeļkorejas vonas
+        one: Ziemeļkorejas vona
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: Dienvidkorejas vonas
+        zero: Dienvidkorejas vonas
+        one: Dienvidkorejas vona
+    KYD:
+      symbol: "$"
+      display_names:
+        other: Kaimanu salu dolāri
+        zero: Kaimanu salu dolāri
+        one: Kaimanu salu dolārs
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: Kazahstānas tenges
+        zero: Kazahstānas tenges
+        one: Kazahstānas tenge
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: Laosas kipi
+        zero: Laosas kipi
+        one: Laosas kips
+    LBP:
+      symbol: L£
+      display_names:
+        other: Libānas mārciņas
+        zero: Libānas mārciņas
+        one: Libānas mārciņa
+    LKR:
+      symbol: Rs
+      display_names:
+        other: Šrilankas rūpijas
+        zero: Šrilankas rūpijas
+        one: Šrilankas rūpija
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Libērijas dolāri
+        zero: Libērijas dolāri
+        one: Libērijas dolārs
+    LTL:
+      symbol: Lt
+      display_names:
+        other: Lietuvas liti
+        zero: Lietuvas liti
+        one: Lietuvas lits
+    LVL:
+      symbol: Ls
+      display_names:
+        other: Latvijas lati
+        zero: Latvijas lati
+        one: Latvijas lats
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Madagaskaras ariari
+    MMK:
+      symbol: K
+      display_names:
+        other: Mjanmas kjati
+        zero: Mjanmas kjati
+        one: Mjanmas kjats
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: Mongolijas tugriki
+        zero: Mongolijas tugriki
+        one: Mongolijas tugriks
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Maurīcijas rūpijas
+        zero: Maurīcijas rūpijas
+        one: Maurīcijas rūpija
+    MXN:
+      symbol: MX$
+      display_names:
+        other: Meksikas peso
+    MYR:
+      symbol: RM
+      display_names:
+        other: Malaizijas ringiti
+        zero: Malaizijas ringiti
+        one: Malaizijas ringits
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Namībijas dolāri
+        zero: Namībijas dolāri
+        one: Namībijas dolārs
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Nigērijas nairas
+        zero: Nigērijas nairas
+        one: Nigērijas naira
+    NIO:
+      symbol: C$
+      display_names:
+        other: Nikaragvas kordobas
+        zero: Nikaragvas kordobas
+        one: Nikaragvas kordoba
+    NOK:
+      symbol: kr
+      display_names:
+        other: Norvēģijas kronas
+        zero: Norvēģijas kronas
+        one: Norvēģijas krona
+    NPR:
+      symbol: Rs
+      display_names:
+        other: Nepālas rūpijas
+        zero: Nepālas rūpijas
+        one: Nepālas rūpija
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: Jaunzēlandes dolāri
+        zero: Jaunzēlandes dolāri
+        one: Jaunzēlandes dolārs
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Filipīnu peso
+    PKR:
+      symbol: Rs
+      display_names:
+        other: Pakistānas rūpijas
+        zero: Pakistānas rūpijas
+        one: Pakistānas rūpija
+    PLN:
+      symbol: zł
+      display_names:
+        other: Polijas zloti
+        zero: Polijas zloti
+        one: Polijas zlots
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: Paragvajas guarani
+    RON:
+      symbol: lei
+      display_names:
+        other: Rumānijas lejas
+        zero: Rumānijas lejas
+        one: Rumānijas leja
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: Krievijas rubļi
+        zero: Krievijas rubļi
+        one: Krievijas rublis
+    RWF:
+      symbol: RF
+      display_names:
+        other: Ruandas franki
+        zero: Ruandas franki
+        one: Ruandas franks
+    SBD:
+      symbol: "$"
+      display_names:
+        other: Zālamana Salu dolāri
+        zero: Zālamana Salu dolāri
+        one: Zālamana Salu dolārs
+    SEK:
+      symbol: kr
+      display_names:
+        other: Zviedrijas kronas
+        zero: Zviedrijas kronas
+        one: Zviedrijas krona
+    SGD:
+      symbol: "$"
+      display_names:
+        other: Singapūras dolāri
+        zero: Singapūras dolāri
+        one: Singapūras dolārs
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Sv.Helēnas salas mārciņas
+        zero: Sv.Helēnas salas mārciņas
+        one: Sv.Helēnas salas mārciņa
+    SRD:
+      symbol: "$"
+      display_names:
+        other: Surinamas dolāri
+        zero: Surinamas dolāri
+        one: Surinamas dolārs
+    SSP:
+      symbol: "£"
+      display_names:
+        other: Dienvidsudānas mārciņas
+        zero: Dienvidsudānas mārciņas
+        one: Dienvidsudānas mārciņa
+    STN:
+      symbol: Db
+      display_names:
+        other: Santome un Prinsipi dobras
+        zero: Santome un Prinsipi dobras
+        one: Santome un Prinsipi dobra
+    SYP:
+      symbol: "£"
+      display_names:
+        other: Sīrijas mārciņas
+        zero: Sīrijas mārciņas
+        one: Sīrijas mārciņa
+    THB:
+      symbol: "฿"
+      display_names:
+        other: Taizemes bāti
+        zero: Taizemes bāti
+        one: Taizemes bāts
+    TOP:
+      symbol: T$
+      display_names:
+        other: Tongas paangas
+        zero: Tongas paangas
+        one: Tongas paanga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: Turcijas liras
+        zero: Turcijas liras
+        one: Turcijas lira
+    TTD:
+      symbol: "$"
+      display_names:
+        other: Trinidādas un Tobāgo dolāri
+        zero: Trinidādas un Tobāgo dolāri
+        one: Trinidādas un Tobāgo dolārs
+    TWD:
+      symbol: NT$
+      display_names:
+        other: Taivānas jaunie dolāri
+        zero: Taivānas jaunie dolāri
+        one: Taivānas jaunais dolārs
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: Ukrainas grivnas
+        zero: Ukrainas grivnas
+        one: Ukrainas grivna
+    USD:
+      symbol: "$"
+      display_names:
+        other: ASV dolāri
+        zero: ASV dolāri
+        one: ASV dolārs
+    UYU:
+      symbol: "$"
+      display_names:
+        other: Urugvajas peso
+    VEF:
+      symbol: Bs
+      display_names:
+        other: Venecuēlas bolivāri (2008–2018)
+        zero: Venecuēlas bolivāri (2008–2018)
+        one: Venecuēlas bolivārs (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: Vjetnamas dongi
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Centrālāfrikas CFA franki
+        zero: Centrālāfrikas CFA franki
+        one: Centrālāfrikas CFA franks
+    XCD:
+      symbol: EC$
+      display_names:
+        other: Austrumkarību dolāri
+        zero: Austrumkarību dolāri
+        one: Austrumkarību dolārs
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Rietumāfrikas CFA franki
+        zero: Rietumāfrikas CFA franki
+        one: Rietumāfrikas CFA franks
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: CFP franki
+        zero: CFP franki
+        one: CFP franks
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(nezināma valūta)"
+        zero: "(nezināma valūta)"
+        one: "(nezināma valūta)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Dienvidāfrikas rendi
+        zero: Dienvidāfrikas rendi
+        one: Dienvidāfrikas rends
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Zambijas kvačas
+        zero: Zambijas kvačas
+        one: Zambijas kvača
+    AED:
+      display_names:
+        other: AAE dirhēmi
+        zero: AAE dirhēmi
+        one: AAE dirhēms
+    ALL:
+      display_names:
+        other: Albānijas leki
+        zero: Albānijas leki
+        one: Albānijas leks
+    ANG:
+      display_names:
+        other: Nīderlandes Antiļu guldeņi
+        zero: Nīderlandes Antiļu guldeņi
+        one: Nīderlandes Antiļu guldenis
+    ATS:
+      display_names:
+        other: Austrijas šiliņš
     AWG:
       display_names:
         other: Arubas guldeņi
@@ -59,26 +646,6 @@ number_formats:
         other: Azerbaidžānas manati (1993–2006)
         zero: Azerbaidžānas manati (1993–2006)
         one: Azerbaidžānas manats (1993–2006)
-    AZN:
-      display_names:
-        other: Azerbaidžānas manati
-        zero: Azerbaidžānas manati
-        one: Azerbaidžānas manats
-    BAM:
-      display_names:
-        other: Bosnijas un Hercogovinas konvertējamās markas
-        zero: Bosnijas un Hercogovinas konvertējamās markas
-        one: Bosnijas un Hercogovinas konvertējamā marka
-    BBD:
-      display_names:
-        other: Barbadosas dolāri
-        zero: Barbadosas dolāri
-        one: Barbadosas dolārs
-    BDT:
-      display_names:
-        other: Bangladešas takas
-        zero: Bangladešas takas
-        one: Bangladešas taka
     BEF:
       display_names:
         other: Beļģijas franki
@@ -99,39 +666,11 @@ number_formats:
         other: Burundi franki
         zero: Burundi franki
         one: Burundi franks
-    BMD:
-      display_names:
-        other: Bermudu dolāri
-        zero: Bermudu dolāri
-        one: Bermudu dolārs
-    BND:
-      display_names:
-        other: Brunejas dolāri
-        zero: Brunejas dolāri
-        one: Brunejas dolārs
-    BOB:
-      display_names:
-        other: Bolīvijas boliviano
-    BRL:
-      display_names:
-        other: Brazīlijas reāli
-        zero: Brazīlijas reāli
-        one: Brazīlijas reāls
-    BSD:
-      display_names:
-        other: Bahamu dolāri
-        zero: Bahamu dolāri
-        one: Bahamu dolārs
     BTN:
       display_names:
         other: Butānas ngultrumi
         zero: Butānas ngultrumi
         one: Butānas ngultrums
-    BWP:
-      display_names:
-        other: Botsvanas pulas
-        zero: Botsvanas pulas
-        one: Botsvanas pula
     BYN:
       symbol: р.
       display_names:
@@ -143,16 +682,6 @@ number_formats:
         other: Baltkrievijas rubeļi (2000–2016)
         zero: Baltkrievijas rubeļi (2000–2016)
         one: Baltkrievijas rubelis (2000–2016)
-    BZD:
-      display_names:
-        other: Belizas dolāri
-        zero: Belizas dolāri
-        one: Belizas dolārs
-    CAD:
-      display_names:
-        other: Kanādas dolāri
-        zero: Kanādas dolāri
-        one: Kanādas dolārs
     CDF:
       display_names:
         other: KDR franki
@@ -163,49 +692,20 @@ number_formats:
         other: Šveices franki
         zero: Šveices franki
         one: Šveices franks
-    CLP:
-      display_names:
-        other: Čīles peso
     CNH:
       display_names:
         other: Ķīnas juaņas (ofšors)
         zero: Ķīnas juaņa (ofšors)
         one: Ķīnas juaņa (ofšors)
-    CNY:
-      display_names:
-        other: Ķīnas juaņi
-        zero: Ķīnas juaņi
-        one: Ķīnas juaņs
-    COP:
-      display_names:
-        other: Kolumbijas peso
     COU:
       display_names:
         other: Kolumbijas reāls
-    CRC:
-      display_names:
-        other: Kostarikas koloni
-        zero: Kostarikas koloni
-        one: Kostarikas kolons
-    CUC:
-      display_names:
-        other: Kubas konvertējamie peso
-        zero: Kubas konvertējamie peso
-        one: Kubas konvertējamais peso
-    CUP:
-      display_names:
-        other: Kubas peso
     CVE:
       display_names:
         other: Kaboverdes eskudo
     CYP:
       display_names:
         other: Kipras mārciņa
-    CZK:
-      display_names:
-        other: Čehijas kronas
-        zero: Čehijas kronas
-        one: Čehijas krona
     DEM:
       display_names:
         other: Vācijas marka
@@ -214,14 +714,6 @@ number_formats:
         other: Džibutijas franki
         zero: Džibutijas franki
         one: Džibutijas franks
-    DKK:
-      display_names:
-        other: Dānijas kronas
-        zero: Dānijas kronas
-        one: Dānijas krona
-    DOP:
-      display_names:
-        other: Dominikānas peso
     DZD:
       display_names:
         other: Alžīrijas dināri
@@ -230,124 +722,36 @@ number_formats:
     EEK:
       display_names:
         other: Igaunijas krona
-    EGP:
-      display_names:
-        other: Ēģiptes mārciņas
-        zero: Ēģiptes mārciņas
-        one: Ēģiptes mārciņa
     ERN:
       display_names:
         other: Eritrejas nakfas
         zero: Eritrejas nakfas
         one: Eritrejas nakfa
-    ESP:
-      display_names:
-        other: Spānijas peseta
     ETB:
       display_names:
         other: Etiopijas biri
         zero: Etiopijas biri
         one: Etiopijas birs
-    EUR:
-      display_names:
-        other: eiro
     FIM:
       display_names:
         other: Somijas marka
-    FJD:
-      display_names:
-        other: Fidži dolāri
-        zero: Fidži dolāri
-        one: Fidži dolārs
-    FKP:
-      display_names:
-        other: Folklenda Salu mārciņas
-        zero: Folklenda Salu mārciņas
-        one: Folklenda Salu mārciņa
     FRF:
       display_names:
         other: Francijas franks
-    GBP:
-      display_names:
-        other: Lielbritānijas mārciņas
-        zero: Lielbritānijas mārciņas
-        one: Lielbritānijas mārciņa
-    GEL:
-      display_names:
-        other: Gruzijas lari
-    GHS:
-      symbol: GHS
-      display_names:
-        other: Ganas sedi
-    GIP:
-      display_names:
-        other: Gibraltāra mārciņas
-        zero: Gibraltāra mārciņas
-        one: Gibraltāra mārciņa
     GMD:
       display_names:
         other: Gambijas dalasi
-    GNF:
-      display_names:
-        other: Gvinejas franki
-        zero: Gvinejas franki
-        one: Gvinejas franks
     GRD:
       display_names:
         other: Grieķijas drahma
-    GTQ:
-      display_names:
-        other: Gvatemalas ketsali
-        zero: Gvatemalas ketsali
-        one: Gvatemalas ketsals
-    GYD:
-      display_names:
-        other: Gajānas dolāri
-        zero: Gajānas dolāri
-        one: Gajānas dolārs
-    HKD:
-      display_names:
-        other: Honkongas dolāri
-        zero: Honkongas dolāri
-        one: Honkongas dolārs
-    HNL:
-      display_names:
-        other: Hondurasas lempīras
-        zero: Hondurasas lempīras
-        one: Hondurasas lempīra
-    HRK:
-      display_names:
-        other: Horvātijas kunas
-        zero: Horvātijas kunas
-        one: Horvātijas kuna
     HTG:
       display_names:
         other: Haiti gurdi
         zero: Haiti gurdi
         one: Haiti gurds
-    HUF:
-      display_names:
-        other: Ungārijas forinti
-        zero: Ungārijas forinti
-        one: Ungārijas forints
-    IDR:
-      display_names:
-        other: Indonēzijas rūpijas
-        zero: Indonēzijas rūpijas
-        one: Indonēzijas rūpija
     IEP:
       display_names:
         other: Īrijas mārciņa
-    ILS:
-      display_names:
-        other: Izraēlas šekeļi
-        zero: Izraēlas šekeļi
-        one: Izraēlas šekelis
-    INR:
-      display_names:
-        other: Indijas rūpijas
-        zero: Indijas rūpijas
-        one: Indijas rūpija
     IQD:
       display_names:
         other: Irākas dināri
@@ -358,112 +762,30 @@ number_formats:
         other: Irānas riāli
         zero: Irānas riāli
         one: Irānas riāls
-    ISK:
-      display_names:
-        other: Islandes kronas
-        zero: Islandes kronas
-        one: Islandes krona
     ITL:
       display_names:
         other: Itālijas lira
-    JMD:
-      display_names:
-        other: Jamaikas dolāri
-        zero: Jamaikas dolāri
-        one: Jamaikas dolārs
     JOD:
       display_names:
         other: Jordānas dināri
         zero: Jordānas dināri
         one: Jordānas dinārs
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: Japānas jenas
-        zero: Japānas jenas
-        one: Japānas jena
     KES:
       display_names:
         other: Kenijas šiliņi
         zero: Kenijas šiliņi
         one: Kenijas šiliņš
-    KGS:
-      display_names:
-        other: Kirgizstānas somi
-        zero: Kirgizstānas somi
-        one: Kirgizstānas soms
-    KHR:
-      display_names:
-        other: Kambodžas rieli
-        zero: Kambodžas rieli
-        one: Kambodžas riels
-    KMF:
-      display_names:
-        other: Komoru franki
-        zero: Komoru franki
-        one: Komoru franks
-    KPW:
-      display_names:
-        other: Ziemeļkorejas vonas
-        zero: Ziemeļkorejas vonas
-        one: Ziemeļkorejas vona
-    KRW:
-      display_names:
-        other: Dienvidkorejas vonas
-        zero: Dienvidkorejas vonas
-        one: Dienvidkorejas vona
     KWD:
       display_names:
         other: Kuveitas dināri
         zero: Kuveitas dināri
         one: Kuveitas dinārs
-    KYD:
-      display_names:
-        other: Kaimanu salu dolāri
-        zero: Kaimanu salu dolāri
-        one: Kaimanu salu dolārs
-    KZT:
-      display_names:
-        other: Kazahstānas tenges
-        zero: Kazahstānas tenges
-        one: Kazahstānas tenge
-    LAK:
-      display_names:
-        other: Laosas kipi
-        zero: Laosas kipi
-        one: Laosas kips
-    LBP:
-      display_names:
-        other: Libānas mārciņas
-        zero: Libānas mārciņas
-        one: Libānas mārciņa
-    LKR:
-      display_names:
-        other: Šrilankas rūpijas
-        zero: Šrilankas rūpijas
-        one: Šrilankas rūpija
-    LRD:
-      display_names:
-        other: Libērijas dolāri
-        zero: Libērijas dolāri
-        one: Libērijas dolārs
     LSL:
       display_names:
         other: Lesoto loti
-    LTL:
-      display_names:
-        other: Lietuvas liti
-        zero: Lietuvas liti
-        one: Lietuvas lits
     LUF:
       display_names:
         other: Luksemburgas franks
-    LVL:
-      symbol: Ls
-      display_names:
-        other: Latvijas lati
-        zero: Latvijas lati
-        one: Latvijas lats
     LVR:
       display_names:
         other: Latvijas rublis
@@ -482,9 +804,6 @@ number_formats:
         other: Moldovas lejas
         zero: Moldovas lejas
         one: Moldovas leja
-    MGA:
-      display_names:
-        other: Madagaskaras ariari
     MKD:
       display_names:
         other: Maķedonijas denāri
@@ -493,16 +812,6 @@ number_formats:
     MLF:
       display_names:
         other: CFA (Āfrikas) franks
-    MMK:
-      display_names:
-        other: Mjanmas kjati
-        zero: Mjanmas kjati
-        one: Mjanmas kjats
-    MNT:
-      display_names:
-        other: Mongolijas tugriki
-        zero: Mongolijas tugriki
-        one: Mongolijas tugriks
     MOP:
       display_names:
         other: Makao patakas
@@ -524,11 +833,6 @@ number_formats:
     MTP:
       display_names:
         other: Maltas mārciņa
-    MUR:
-      display_names:
-        other: Maurīcijas rūpijas
-        zero: Maurīcijas rūpijas
-        one: Maurīcijas rūpija
     MVR:
       display_names:
         other: Maldīvijas rūfijas
@@ -539,14 +843,6 @@ number_formats:
         other: Malāvijas kvačas
         zero: Malāvijas kvačas
         one: Malāvijas kvača
-    MXN:
-      display_names:
-        other: Meksikas peso
-    MYR:
-      display_names:
-        other: Malaizijas ringiti
-        zero: Malaizijas ringiti
-        one: Malaizijas ringits
     MZE:
       display_names:
         other: Mozambikas eskudo
@@ -560,39 +856,9 @@ number_formats:
         other: Mozambikas metikali
         zero: Mozambikas metikali
         one: Mozambikas metikals
-    NAD:
-      display_names:
-        other: Namībijas dolāri
-        zero: Namībijas dolāri
-        one: Namībijas dolārs
-    NGN:
-      display_names:
-        other: Nigērijas nairas
-        zero: Nigērijas nairas
-        one: Nigērijas naira
-    NIO:
-      display_names:
-        other: Nikaragvas kordobas
-        zero: Nikaragvas kordobas
-        one: Nikaragvas kordoba
     NLG:
       display_names:
         other: Nīderlandes guldenis
-    NOK:
-      display_names:
-        other: Norvēģijas kronas
-        zero: Norvēģijas kronas
-        one: Norvēģijas krona
-    NPR:
-      display_names:
-        other: Nepālas rūpijas
-        zero: Nepālas rūpijas
-        one: Nepālas rūpija
-    NZD:
-      display_names:
-        other: Jaunzēlandes dolāri
-        zero: Jaunzēlandes dolāri
-        one: Jaunzēlandes dolārs
     OMR:
       display_names:
         other: Omānas riāli
@@ -611,26 +877,9 @@ number_formats:
         other: Papua-Jaungvinejas kinas
         zero: Papua-Jaungvinejas kinas
         one: Papua-Jaungvinejas kina
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Filipīnu peso
-    PKR:
-      display_names:
-        other: Pakistānas rūpijas
-        zero: Pakistānas rūpijas
-        one: Pakistānas rūpija
-    PLN:
-      display_names:
-        other: Polijas zloti
-        zero: Polijas zloti
-        one: Polijas zlots
     PTE:
       display_names:
         other: Portugāles eskudo
-    PYG:
-      display_names:
-        other: Paragvajas guarani
     QAR:
       display_names:
         other: Kataras riāli
@@ -641,36 +890,16 @@ number_formats:
         other: Rumānijas vecās levas
         zero: Rumānijas vecās levas
         one: Rumānijas vecā leva
-    RON:
-      display_names:
-        other: Rumānijas lejas
-        zero: Rumānijas lejas
-        one: Rumānijas leja
     RSD:
       display_names:
         other: Serbijas dināri
         zero: Serbijas dināri
         one: Serbijas dinārs
-    RUB:
-      display_names:
-        other: Krievijas rubļi
-        zero: Krievijas rubļi
-        one: Krievijas rublis
-    RWF:
-      display_names:
-        other: Ruandas franki
-        zero: Ruandas franki
-        one: Ruandas franks
     SAR:
       display_names:
         other: Saūda riāli
         zero: Saūda riāli
         one: Saūda riāls
-    SBD:
-      display_names:
-        other: Zālamana Salu dolāri
-        zero: Zālamana Salu dolāri
-        one: Zālamana Salu dolārs
     SCR:
       display_names:
         other: Seišelu salu rūpijas
@@ -681,21 +910,6 @@ number_formats:
         other: Sudānas mārciņas
         zero: Sudānas mārciņas
         one: Sudānas mārciņa
-    SEK:
-      display_names:
-        other: Zviedrijas kronas
-        zero: Zviedrijas kronas
-        one: Zviedrijas krona
-    SGD:
-      display_names:
-        other: Singapūras dolāri
-        zero: Singapūras dolāri
-        one: Singapūras dolārs
-    SHP:
-      display_names:
-        other: Sv.Helēnas salas mārciņas
-        zero: Sv.Helēnas salas mārciņas
-        one: Sv.Helēnas salas mārciņa
     SIT:
       display_names:
         other: Slovēnijas tolars
@@ -717,46 +931,20 @@ number_formats:
         other: Somālijas šiliņi
         zero: Somālijas šiliņi
         one: Somālijas šiliņš
-    SRD:
-      display_names:
-        other: Surinamas dolāri
-        zero: Surinamas dolāri
-        one: Surinamas dolārs
     SRG:
       display_names:
         other: Surinamas guldenis
-    SSP:
-      display_names:
-        other: Dienvidsudānas mārciņas
-        zero: Dienvidsudānas mārciņas
-        one: Dienvidsudānas mārciņa
     STD:
       display_names:
         other: Santome un Prinsipi dobras (1977–2017)
         zero: Santome un Prinsipi dobras (1977–2017)
         one: Santome un Prinsipi dobra (1977–2017)
-    STN:
-      display_names:
-        other: Santome un Prinsipi dobras
-        zero: Santome un Prinsipi dobras
-        one: Santome un Prinsipi dobra
     SVC:
       display_names:
         other: Salvadoras kolons
-    SYP:
-      display_names:
-        other: Sīrijas mārciņas
-        zero: Sīrijas mārciņas
-        one: Sīrijas mārciņa
     SZL:
       display_names:
         other: Svazilendas lilangeni
-    THB:
-      symbol: "฿"
-      display_names:
-        other: Taizemes bāti
-        zero: Taizemes bāti
-        one: Taizemes bāts
     TJS:
       display_names:
         other: Tadžikistānas somoni
@@ -777,56 +965,21 @@ number_formats:
         other: Tunisijas dināri
         zero: Tunisijas dināri
         one: Tunisijas dinārs
-    TOP:
-      display_names:
-        other: Tongas paangas
-        zero: Tongas paangas
-        one: Tongas paanga
     TRL:
       display_names:
         other: Turcijas liras (1922–2005)
         zero: Turcijas liras (1922–2005)
         one: Turcijas lira (1922–2005)
-    TRY:
-      display_names:
-        other: Turcijas liras
-        zero: Turcijas liras
-        one: Turcijas lira
-    TTD:
-      display_names:
-        other: Trinidādas un Tobāgo dolāri
-        zero: Trinidādas un Tobāgo dolāri
-        one: Trinidādas un Tobāgo dolārs
-    TWD:
-      symbol: NT$
-      display_names:
-        other: Taivānas jaunie dolāri
-        zero: Taivānas jaunie dolāri
-        one: Taivānas jaunais dolārs
     TZS:
       display_names:
         other: Tanzānijas šiliņi
         zero: Tanzānijas šiliņi
         one: Tanzānijas šiliņš
-    UAH:
-      display_names:
-        other: Ukrainas grivnas
-        zero: Ukrainas grivnas
-        one: Ukrainas grivna
     UGX:
       display_names:
         other: Ugandas šiliņi
         zero: Ugandas šiliņi
         one: Ugandas šiliņš
-    USD:
-      symbol: "$"
-      display_names:
-        other: ASV dolāri
-        zero: ASV dolāri
-        one: ASV dolārs
-    UYU:
-      display_names:
-        other: Urugvajas peso
     UZS:
       display_names:
         other: Uzbekistānas sumi
@@ -837,19 +990,11 @@ number_formats:
         other: Venecuēlas bolivāri (1871–2008)
         zero: Venecuēlas bolivāri (1871–2008)
         one: Venecuēlas bolivārs (1871–2008)
-    VEF:
-      display_names:
-        other: Venecuēlas bolivāri (2008–2018)
-        zero: Venecuēlas bolivāri (2008–2018)
-        one: Venecuēlas bolivārs (2008–2018)
     VES:
       display_names:
         other: Venecuēlas bolivāri
         zero: Venecuēlas bolivāri
         one: Venecuēlas bolivārs
-    VND:
-      display_names:
-        other: Vjetnamas dongi
     VUV:
       display_names:
         other: Vanuatu vatu
@@ -858,11 +1003,6 @@ number_formats:
         other: Samoa talas
         zero: Samoa talas
         one: Samoa tala
-    XAF:
-      display_names:
-        other: Centrālāfrikas CFA franki
-        zero: Centrālāfrikas CFA franki
-        one: Centrālāfrikas CFA franks
     XAG:
       display_names:
         other: unces sudrabs
@@ -891,11 +1031,6 @@ number_formats:
         other: Eiropas norēķinu vienības (XBD)
         zero: Eiropas norēķinu vienības (XBD)
         one: Eiropas norēķinu vienība (XBD)
-    XCD:
-      display_names:
-        other: Austrumkarību dolāri
-        zero: Austrumkarību dolāri
-        one: Austrumkarību dolārs
     XDR:
       display_names:
         other: Speciālās aizņēmuma tiesības
@@ -908,21 +1043,11 @@ number_formats:
     XFU:
       display_names:
         other: Francijas UIC franks
-    XOF:
-      display_names:
-        other: Rietumāfrikas CFA franki
-        zero: Rietumāfrikas CFA franki
-        one: Rietumāfrikas CFA franks
     XPD:
       display_names:
         other: unces pallādijs
         zero: unces pallādijs
         one: unces pallādijs
-    XPF:
-      display_names:
-        other: CFP franki
-        zero: CFP franki
-        one: CFP franks
     XPT:
       display_names:
         other: unces platīns
@@ -933,31 +1058,16 @@ number_formats:
         other: testa valūtas kods
         zero: testa valūtas kods
         one: testa valūtas kods
-    XXX:
-      display_names:
-        other: "(nezināma valūta)"
-        zero: "(nezināma valūta)"
-        one: "(nezināma valūta)"
     YER:
       display_names:
         other: Jemenas riāli
         zero: Jemenas riāli
         one: Jemenas riāls
-    ZAR:
-      display_names:
-        other: Dienvidāfrikas rendi
-        zero: Dienvidāfrikas rendi
-        one: Dienvidāfrikas rends
     ZMK:
       display_names:
         other: Zambijas kvačas (1968–2012)
         zero: Zambijas kvačas (1968–2012)
         one: Zambijas kvača (1968–2012)
-    ZMW:
-      display_names:
-        other: Zambijas kvačas
-        zero: Zambijas kvačas
-        one: Zambijas kvača
     ZWD:
       display_names:
         other: Zimbabves dolārs
@@ -967,7 +1077,7 @@ number_formats:
         zero: Zimbabves dollāri (2009)
         one: Zimbabves dollārs (2009)
 locale: lv
-generated_at: '2025-09-10T22:17:43+09:00'
+generated_at: '2025-09-10T23:53:13+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

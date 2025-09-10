@@ -1,38 +1,298 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: Angolan Kwanzab
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: Australian Dollari
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: Botswanan Pulab
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Canadian Dollari
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Chinese Yuan Renminbi
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: Egytian Ponds
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Eurob
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: British Ponds
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Indian Rupee
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Japanese Yenni
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: Comorian Franc
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Liberian Dollar
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Malagasy Franc
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Mauritius Rupeeb
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Namibia Dollari
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Nigerian Naira
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: Rwanda Franci
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: St Helena Ponds
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: Sao Tome and Principe Dobra
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: US Dollari
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: CFA Franc BEAC
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: CFA Franc BCEAO
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: South African Randi
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Zambian Kwachab
     AED:
       display_names:
         other: United Arab Emirates Dirham
-    AOA:
-      display_names:
-        other: Angolan Kwanzab
-    AUD:
-      display_names:
-        other: Australian Dollari
     BHD:
       display_names:
         other: Bahrain Dinar
     BIF:
       display_names:
         other: Burundi Franc
-    BWP:
-      display_names:
-        other: Botswanan Pulab
-    CAD:
-      display_names:
-        other: Canadian Dollari
     CDF:
       display_names:
         other: Congolese Franc
     CHF:
       display_names:
         other: Swiss Franci
-    CNY:
-      display_names:
-        other: Chinese Yuan Renminbi
     CVE:
       display_names:
         other: Escudo Caboverdiano
@@ -42,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: Algerian Dinar
-    EGP:
-      display_names:
-        other: Egytian Ponds
     ERN:
       display_names:
         other: Eritreian Nakfa
     ETB:
       display_names:
         other: Ethiopian Birr
-    EUR:
-      display_names:
-        other: Eurob
-    GBP:
-      display_names:
-        other: British Ponds
     GHC:
       display_names:
         other: Ghana Cedi
@@ -66,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: Guinea Franc
-    INR:
-      display_names:
-        other: Indian Rupee
-    JPY:
-      display_names:
-        other: Japanese Yenni
     KES:
       display_names:
         other: Kenyan Shilling
-    KMF:
-      display_names:
-        other: Comorian Franc
-    LRD:
-      display_names:
-        other: Liberian Dollar
     LSL:
       display_names:
         other: Lesotho Loti
@@ -90,34 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: Moroccan Dirham
-    MGA:
-      display_names:
-        other: Malagasy Franc
     MRO:
       display_names:
         other: Mauritania Ouguiya (1973–2017)
     MRU:
       display_names:
         other: Mauritania Ouguiya
-    MUR:
-      display_names:
-        other: Mauritius Rupeeb
     MWK:
       display_names:
         other: Malawian Kwachab
     MZM:
       display_names:
         other: Mozambique Metical
-    NAD:
-      symbol: "$"
-      display_names:
-        other: Namibia Dollari
-    NGN:
-      display_names:
-        other: Nigerian Naira
-    RWF:
-      display_names:
-        other: Rwanda Franci
     SAR:
       display_names:
         other: Saudi Riyal
@@ -130,9 +353,6 @@ number_formats:
     SDP:
       display_names:
         other: Sudanese Ponds
-    SHP:
-      display_names:
-        other: St Helena Ponds
     SLE:
       display_names:
         other: Leone
@@ -145,9 +365,6 @@ number_formats:
     STD:
       display_names:
         other: Sao Tome and Principe Dobra (1977–2017)
-    STN:
-      display_names:
-        other: Sao Tome and Principe Dobra
     SZL:
       display_names:
         other: Lilangeni
@@ -160,29 +377,14 @@ number_formats:
     UGX:
       display_names:
         other: Ugandan Shillings
-    USD:
-      display_names:
-        other: US Dollari
-    XAF:
-      display_names:
-        other: CFA Franc BEAC
-    XOF:
-      display_names:
-        other: CFA Franc BCEAO
-    ZAR:
-      display_names:
-        other: South African Randi
     ZMK:
       display_names:
         other: Zambian Kwachab (1968–2012)
-    ZMW:
-      display_names:
-        other: Zambian Kwachab
     ZWD:
       display_names:
         other: Zimbabwe Dollari
 locale: naq
-generated_at: '2025-09-10T22:17:44+09:00'
+generated_at: '2025-09-10T23:53:14+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

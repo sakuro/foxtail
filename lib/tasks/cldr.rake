@@ -324,7 +324,16 @@ namespace :cldr do
         puts "    Loaded #{currency_fractions.size} currency fraction rules"
       end
 
-      # Get all locale XML files
+      # Step 1: Process root locale for base data
+      root_data = {}
+      root_xml_path = File.join(CLDR_EXTRACT_DIR, "common", "main", "root.xml")
+      if File.exist?(root_xml_path)
+        puts "  Processing root locale for base inheritance data..."
+        root_data = extract_number_format_data(root_xml_path, "root")
+        puts "    Extracted root data with #{root_data["currencies"]&.size || 0} currencies"
+      end
+
+      # Step 2: Get all locale XML files
       locale_files = CLDR_LOCALE_XML_FILES
       puts "Found #{locale_files.size} locale files"
 
@@ -338,99 +347,12 @@ namespace :cldr do
         begin
           puts "  Processing locale: #{locale}"
 
-          doc = REXML::Document.new(File.read(xml_file))
-
-          # Extract number formatting data
-          number_formats = {}
-
-          # Extract decimal symbols
-          symbols = {}
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/decimal") do |element|
-            symbols["decimal"] = element.text
+          # Extract number formatting data using helper method
+          number_formats = extract_number_format_data(xml_file, locale)
+          # Apply inheritance if needed (merge with root data)
+          if locale != "root" && !root_data.empty?
+            number_formats = merge_with_inheritance(root_data, number_formats)
           end
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/group") do |element|
-            symbols["group"] = element.text
-          end
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/minusSign") do |element|
-            symbols["minus_sign"] = element.text
-          end
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/plusSign") do |element|
-            symbols["plus_sign"] = element.text
-          end
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/percentSign") do |element|
-            symbols["percent_sign"] = element.text
-          end
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/perMille") do |element|
-            symbols["per_mille"] = element.text
-          end
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/infinity") do |element|
-            symbols["infinity"] = element.text
-          end
-          doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/nan") do |element|
-            symbols["nan"] = element.text
-          end
-          number_formats["symbols"] = symbols unless symbols.empty?
-
-          # Extract decimal format patterns
-          decimal_formats = {}
-          doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='latn']/decimalFormatLength[not(@type)]/decimalFormat/pattern") do |pattern|
-            decimal_formats["standard"] = pattern.text
-          end
-          number_formats["decimal_formats"] = decimal_formats unless decimal_formats.empty?
-
-          # Extract percent format patterns
-          percent_formats = {}
-          doc.elements.each("ldml/numbers/percentFormats[@numberSystem='latn']/percentFormatLength/percentFormat/pattern") do |pattern|
-            percent_formats["standard"] = pattern.text
-          end
-          number_formats["percent_formats"] = percent_formats unless percent_formats.empty?
-
-          # Extract currency format patterns
-          currency_formats = {}
-          doc.elements.each("ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat[@type='standard']/pattern[not(@alt)]") do |pattern|
-            currency_formats["standard"] = pattern.text
-          end
-          doc.elements.each("ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat[@type='accounting']/pattern[not(@alt)]") do |pattern|
-            currency_formats["accounting"] = pattern.text
-          end
-          number_formats["currency_formats"] = currency_formats unless currency_formats.empty?
-
-          # Extract scientific format patterns
-          scientific_formats = {}
-          doc.elements.each("ldml/numbers/scientificFormats[@numberSystem='latn']/scientificFormatLength/scientificFormat/pattern") do |pattern|
-            scientific_formats["standard"] = pattern.text
-          end
-          number_formats["scientific_formats"] = scientific_formats unless scientific_formats.empty?
-
-          # Extract currency symbols and names
-          currencies = {}
-          doc.elements.each("ldml/numbers/currencies/currency") do |currency|
-            currency_code = currency.attributes["type"]
-            next unless currency_code
-
-            currency_data = {}
-
-            # Get symbol
-            symbol_elem = currency.elements["symbol"]
-            if symbol_elem&.text
-              currency_data["symbol"] = symbol_elem.text
-            end
-
-            # Get display name (plural forms)
-            display_names = {}
-            currency.elements.each("displayName") do |display_name|
-              count = display_name.attributes["count"]
-              if count
-                display_names[count] = display_name.text
-              else
-                display_names["other"] = display_name.text # Default form
-              end
-            end
-            currency_data["display_names"] = display_names unless display_names.empty?
-
-            currencies[currency_code] = currency_data unless currency_data.empty?
-          end
-          number_formats["currencies"] = currencies unless currencies.empty?
 
           # Skip if no useful data found
           next if number_formats.empty?
@@ -464,5 +386,123 @@ namespace :cldr do
 
       puts "CLDR number formats extraction complete! Processed #{processed_count} locales."
     end
+  end
+
+  # Helper method to extract number format data from a locale XML file
+  private def extract_number_format_data(xml_file_path, locale_name)
+    doc = REXML::Document.new(File.read(xml_file_path))
+    number_formats = {}
+
+    # Extract decimal symbols
+    symbols = {}
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/decimal") do |element|
+      symbols["decimal"] = element.text
+    end
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/group") do |element|
+      symbols["group"] = element.text
+    end
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/minusSign") do |element|
+      symbols["minus_sign"] = element.text
+    end
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/plusSign") do |element|
+      symbols["plus_sign"] = element.text
+    end
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/percentSign") do |element|
+      symbols["percent_sign"] = element.text
+    end
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/perMille") do |element|
+      symbols["per_mille"] = element.text
+    end
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/infinity") do |element|
+      symbols["infinity"] = element.text
+    end
+    doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/nan") do |element|
+      symbols["nan"] = element.text
+    end
+    number_formats["symbols"] = symbols unless symbols.empty?
+
+    # Extract decimal format patterns
+    decimal_formats = {}
+    doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='latn']/decimalFormatLength[not(@type)]/decimalFormat/pattern") do |pattern|
+      decimal_formats["standard"] = pattern.text
+    end
+    number_formats["decimal_formats"] = decimal_formats unless decimal_formats.empty?
+
+    # Extract percent format patterns
+    percent_formats = {}
+    doc.elements.each("ldml/numbers/percentFormats[@numberSystem='latn']/percentFormatLength/percentFormat/pattern") do |pattern|
+      percent_formats["standard"] = pattern.text
+    end
+    number_formats["percent_formats"] = percent_formats unless percent_formats.empty?
+
+    # Extract currency format patterns
+    currency_formats = {}
+    doc.elements.each("ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat[@type='standard']/pattern[not(@alt)]") do |pattern|
+      currency_formats["standard"] = pattern.text
+    end
+    doc.elements.each("ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat[@type='accounting']/pattern[not(@alt)]") do |pattern|
+      currency_formats["accounting"] = pattern.text
+    end
+    number_formats["currency_formats"] = currency_formats unless currency_formats.empty?
+
+    # Extract scientific format patterns
+    scientific_formats = {}
+    doc.elements.each("ldml/numbers/scientificFormats[@numberSystem='latn']/scientificFormatLength/scientificFormat/pattern") do |pattern|
+      scientific_formats["standard"] = pattern.text
+    end
+    number_formats["scientific_formats"] = scientific_formats unless scientific_formats.empty?
+
+    # Extract currency symbols and names
+    currencies = {}
+    doc.elements.each("ldml/numbers/currencies/currency") do |currency|
+      currency_code = currency.attributes["type"]
+      next unless currency_code
+
+      currency_data = {}
+
+      # Get symbol
+      symbol_elem = currency.elements["symbol"]
+      if symbol_elem&.text
+        currency_data["symbol"] = symbol_elem.text
+      end
+
+      # Get display name (plural forms)
+      display_names = {}
+      currency.elements.each("displayName") do |display_name|
+        count = display_name.attributes["count"]
+        if count
+          display_names[count] = display_name.text
+        else
+          display_names["other"] = display_name.text # Default form
+        end
+      end
+      currency_data["display_names"] = display_names unless display_names.empty?
+
+      currencies[currency_code] = currency_data unless currency_data.empty?
+    end
+    number_formats["currencies"] = currencies unless currencies.empty?
+
+    number_formats
+  rescue => e
+    puts "    Error extracting data from #{locale_name}: #{e.message}"
+    {}
+  end
+
+  # Merge locale data with parent data (inheritance)
+  # Child data takes precedence over parent data
+  def merge_with_inheritance(parent_data, child_data)
+    merged = parent_data.dup
+
+    child_data.each do |key, value|
+      merged[key] = if value.is_a?(Hash) && merged[key].is_a?(Hash)
+                      # Recursively merge hash values
+                      merge_with_inheritance(merged[key], value)
+                    else
+                      # Child value takes precedence
+                      value
+                    end
+    end
+
+    merged
   end
 end

@@ -1,42 +1,437 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
+  currency_formats:
+    standard: "¤ #,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: امارات ِدرهم
     AFN:
+      symbol: "؋"
       display_names:
         other: افغانستون ِافغانی
-    ALL:
-      display_names:
-        other: آلبانی ِلک
     AMD:
+      symbol: "֏"
       display_names:
         other: ارمنستون درهم
-    ANG:
-      display_names:
-        other: هلند ِآنتیل ِجزایر ِگویلدر
     AOA:
+      symbol: Kz
       display_names:
         other: آنگولای ِکوانزا
     ARS:
+      symbol: "$"
       display_names:
         other: آرژانتین ِپزو
-    AWG:
-      display_names:
-        other: آروبای فلورن
+    AUD:
+      symbol: A$
     AZN:
+      symbol: "₼"
       display_names:
         other: آذربایجون ِمنات
     BAM:
+      symbol: KM
       display_names:
         other: بوسنی و هرزگوین ِتبدیل‌بَیی مارک
     BBD:
+      symbol: "$"
       display_names:
         other: باربادوس دلار
     BDT:
+      symbol: "৳"
       display_names:
         other: بنگلادش ِتاکا
+    BMD:
+      symbol: "$"
+      display_names:
+        other: برمودای ِدلار
+    BND:
+      symbol: "$"
+      display_names:
+        other: برونئی دلار
+    BOB:
+      symbol: Bs
+      display_names:
+        other: بولیوی ِبولیویانو
+    BRL:
+      symbol: R$
+      display_names:
+        other: برزیل ِرئال
+    BSD:
+      symbol: "$"
+      display_names:
+        other: باهامای ِدولار
+    BWP:
+      symbol: P
+      display_names:
+        other: بوتساوانای ِپولا
+    BZD:
+      symbol: "$"
+      display_names:
+        other: بلیز دلار
+    CAD:
+      symbol: CA$
+      display_names:
+        other: کانادای ِدلار
+    CLP:
+      symbol: "$"
+      display_names:
+        other: شیلی ِپزو
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: چین ِیوآن
+    COP:
+      symbol: "$"
+      display_names:
+        other: کلمبیای ِپزو
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: کاستاریکا کولون
+    CUC:
+      symbol: "$"
+      display_names:
+        other: کوبای تبدیل‌بَیی پزو
+    CUP:
+      symbol: "$"
+      display_names:
+        other: کوبای پزو
+    CZK:
+      symbol: Kč
+      display_names:
+        other: چک ِکرون
+    DKK:
+      symbol: kr
+      display_names:
+        other: دانمارک ِکورن
+    DOP:
+      symbol: "$"
+      display_names:
+        other: دومینیکن پزو
+    EGP:
+      symbol: E£
+      display_names:
+        other: مصر ِپوند
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: یورو
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+      display_names:
+        other: فالکلند ِجزایر ِپوند
+    GBP:
+      symbol: "£"
+      display_names:
+        other: بریتانیای ِپوند
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: گرجستون ِلاری
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: غنای ِسدی
+    GIP:
+      symbol: "£"
+      display_names:
+        other: جبل‌طارق ِپوند
+    GNF:
+      symbol: FG
+      display_names:
+        other: گینه‌ی ِفرانک
+    GTQ:
+      symbol: Q
+      display_names:
+        other: گواتمالای ِکتزال
+    GYD:
+      symbol: "$"
+      display_names:
+        other: گویان دلار
+    HKD:
+      symbol: HK$
+      display_names:
+        other: هنگ کنگ ِدلار
+    HNL:
+      symbol: L
+      display_names:
+        other: هندوراس لمپیرا
+    HRK:
+      symbol: kn
+      display_names:
+        other: کرواسی ِکونا
+    HUF:
+      symbol: Ft
+      display_names:
+        other: مجارستون ِفروینت
+    IDR:
+      symbol: Rp
+      display_names:
+        other: اندونزی ِروپیه
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: اسراییل ِنو شِکِل
+    INR:
+      symbol: "₹"
+      display_names:
+        other: هند ِروپیه
+    ISK:
+      symbol: kr
+      display_names:
+        other: ایسلند کرونا
+    JMD:
+      symbol: "$"
+      display_names:
+        other: جاماییکا دلار
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: جاپون ِین
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: قرقیزستون ِسام
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: کامبوج ِریل
+    KMF:
+      symbol: CF
+      display_names:
+        other: کامرون ِفرانک
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: شمالی کره وون
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: جنوبی کره وون
+    KYD:
+      symbol: "$"
+      display_names:
+        other: کایمن جزیره‌ی دلار
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: قراقستون ِتنگ
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: لائوس ِکیپ
+    LBP:
+      symbol: L£
+      display_names:
+        other: لبنان ِپوند
+    LKR:
+      symbol: Rs
+      display_names:
+        other: سریلانکا روپیه
+    LRD:
+      symbol: "$"
+      display_names:
+        other: لیبریا دلار
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ماداگاسکار ِآریاری
+    MMK:
+      symbol: K
+      display_names:
+        other: میانمار ِکیات
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: مغلستون ِتوگریک
+    MUR:
+      symbol: Rs
+      display_names:
+        other: موریتیان ِروپیه
+    MXN:
+      symbol: MX$
+      display_names:
+        other: مکزیک پزو
+    MYR:
+      symbol: RM
+      display_names:
+        other: مالزی ِرینگیت
+    NAD:
+      symbol: "$"
+      display_names:
+        other: نامبیای ِدلار
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: نیجریه‌ی ِنیارا
+    NIO:
+      symbol: C$
+      display_names:
+        other: نیکاراگوئه کوردوبا
+    NOK:
+      symbol: kr
+      display_names:
+        other: نروژ ِکرون
+    NPR:
+      symbol: Rs
+      display_names:
+        other: نپال ِروپیه
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: PHP
+      display_names:
+        other: فیلیپین ِپزو
+    PKR:
+      symbol: Rs
+      display_names:
+        other: پاکستون روپیه
+    PLN:
+      symbol: zł
+      display_names:
+        other: لهستون ِزلوتی
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: پاراگوئه‌ی ِگوارانی
+    RON:
+      symbol: lei
+      display_names:
+        other: رومانی ِلئو
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: روسیه‌ی ِروبل
+    RWF:
+      symbol: RF
+      display_names:
+        other: روآندای ِفرانک
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+      display_names:
+        other: سوئد ِکرون
+    SGD:
+      symbol: "$"
+      display_names:
+        other: سنگاپور ِدلار
+    SHP:
+      symbol: "£"
+      display_names:
+        other: سنت هلنای ِپوند
+    SRD:
+      symbol: "$"
+      display_names:
+        other: سورینام ِدولار
+    SSP:
+      symbol: "£"
+      display_names:
+        other: جنوبی سودان ِپوند
+    STN:
+      symbol: Db
+      display_names:
+        other: سائوتومه و پرینسیپ ِدوبرا
+    SYP:
+      symbol: "£"
+      display_names:
+        other: سوریه‌ی ِپوند
+    THB:
+      symbol: "฿"
+      display_names:
+        other: تایلند ِبات
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: ترکیه‌ی ِلیره
+    TTD:
+      symbol: "$"
+      display_names:
+        other: ترینیداد و توباگوی ِدلار
+    TWD:
+      symbol: NT$
+      display_names:
+        other: تایوان دلار
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: اکراین ِگریونا
+    USD:
+      symbol: "$"
+      display_names:
+        other: آمریکای ِدلار
+    UYU:
+      symbol: "$"
+      display_names:
+        other: اروگوئه‌ی ِپزو
+    VEF:
+      symbol: Bs
+      display_names:
+        other: ونزوئلایِ بولیوار (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: ویتنام ِدنگ
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: میونی آفریقای ِسی‌اف‌ای فرانک
+    XCD:
+      symbol: EC$
+      display_names:
+        other: شرقی کارائیب دلار
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: غربی آفریقای ِسی‌اف‌ای فرانک
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: جنوبی آفریقای ِراند
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: زامبیای ِکواچا
+    AED:
+      display_names:
+        other: امارات ِدرهم
+    ALL:
+      display_names:
+        other: آلبانی ِلک
+    ANG:
+      display_names:
+        other: هلند ِآنتیل ِجزایر ِگویلدر
+    AWG:
+      display_names:
+        other: آروبای فلورن
     BGN:
       display_names:
         other: بلغارستون ِلیوا
@@ -46,27 +441,9 @@ number_formats:
     BIF:
       display_names:
         other: بوروندی ِفرانک
-    BMD:
-      display_names:
-        other: برمودای ِدلار
-    BND:
-      display_names:
-        other: برونئی دلار
-    BOB:
-      display_names:
-        other: بولیوی ِبولیویانو
-    BRL:
-      display_names:
-        other: برزیل ِرئال
-    BSD:
-      display_names:
-        other: باهامای ِدولار
     BTN:
       display_names:
         other: بوتان ِنگولتروم
-    BWP:
-      display_names:
-        other: بوتساوانای ِپولا
     BYN:
       symbol: р.
       display_names:
@@ -74,174 +451,48 @@ number_formats:
     BYR:
       display_names:
         other: بلاروس ِروبل (۲۰۰۰–۲۰۱۶)
-    BZD:
-      display_names:
-        other: بلیز دلار
-    CAD:
-      display_names:
-        other: کانادای ِدلار
     CDF:
       display_names:
         other: کنگوی ِفرانک
     CHF:
       display_names:
         other: سوییس ِفرانک
-    CLP:
-      display_names:
-        other: شیلی ِپزو
-    CNY:
-      display_names:
-        other: چین ِیوآن
-    COP:
-      display_names:
-        other: کلمبیای ِپزو
-    CRC:
-      display_names:
-        other: کاستاریکا کولون
-    CUC:
-      display_names:
-        other: کوبای تبدیل‌بَیی پزو
-    CUP:
-      display_names:
-        other: کوبای پزو
     CVE:
       display_names:
         other: عاج ِساحل ِایسکودو
-    CZK:
-      display_names:
-        other: چک ِکرون
     DJF:
       display_names:
         other: جیبوتی ِفرانک
-    DKK:
-      display_names:
-        other: دانمارک ِکورن
-    DOP:
-      display_names:
-        other: دومینیکن پزو
     DZD:
       display_names:
         other: الجزیره‌ی ِدینار
-    EGP:
-      display_names:
-        other: مصر ِپوند
     ERN:
       display_names:
         other: اریتره‌ی ِناکفا
     ETB:
       display_names:
         other: اتیوپی ِبیر
-    EUR:
-      display_names:
-        other: یورو
-    FKP:
-      display_names:
-        other: فالکلند ِجزایر ِپوند
-    GBP:
-      display_names:
-        other: بریتانیای ِپوند
-    GEL:
-      display_names:
-        other: گرجستون ِلاری
-    GHS:
-      display_names:
-        other: غنای ِسدی
-    GIP:
-      display_names:
-        other: جبل‌طارق ِپوند
     GMD:
       display_names:
         other: گامبیای ِدالاسی
-    GNF:
-      display_names:
-        other: گینه‌ی ِفرانک
-    GTQ:
-      display_names:
-        other: گواتمالای ِکتزال
-    GYD:
-      display_names:
-        other: گویان دلار
-    HKD:
-      display_names:
-        other: هنگ کنگ ِدلار
-    HNL:
-      display_names:
-        other: هندوراس لمپیرا
-    HRK:
-      display_names:
-        other: کرواسی ِکونا
     HTG:
       display_names:
         other: هاییتی گورد
-    HUF:
-      display_names:
-        other: مجارستون ِفروینت
-    IDR:
-      display_names:
-        other: اندونزی ِروپیه
-    ILS:
-      display_names:
-        other: اسراییل ِنو شِکِل
-    INR:
-      display_names:
-        other: هند ِروپیه
     IQD:
       display_names:
         other: عراق ِدینار
     IRR:
       display_names:
         other: ایران ریال
-    ISK:
-      display_names:
-        other: ایسلند کرونا
-    JMD:
-      display_names:
-        other: جاماییکا دلار
     JOD:
       display_names:
         other: اردن ِدینار
-    JPY:
-      display_names:
-        other: جاپون ِین
     KES:
       display_names:
         other: کنیای ِشیلینگ
-    KGS:
-      display_names:
-        other: قرقیزستون ِسام
-    KHR:
-      display_names:
-        other: کامبوج ِریل
-    KMF:
-      display_names:
-        other: کامرون ِفرانک
-    KPW:
-      display_names:
-        other: شمالی کره وون
-    KRW:
-      display_names:
-        other: جنوبی کره وون
     KWD:
       display_names:
         other: کویت ِدینار
-    KYD:
-      display_names:
-        other: کایمن جزیره‌ی دلار
-    KZT:
-      display_names:
-        other: قراقستون ِتنگ
-    LAK:
-      display_names:
-        other: لائوس ِکیپ
-    LBP:
-      display_names:
-        other: لبنان ِپوند
-    LKR:
-      display_names:
-        other: سریلانکا روپیه
-    LRD:
-      display_names:
-        other: لیبریا دلار
     LYD:
       display_names:
         other: لیبی ِدینار
@@ -251,18 +502,9 @@ number_formats:
     MDL:
       display_names:
         other: مولداوی ِلئو
-    MGA:
-      display_names:
-        other: ماداگاسکار ِآریاری
     MKD:
       display_names:
         other: مقدونیه‌ی ِدینار
-    MMK:
-      display_names:
-        other: میانمار ِکیات
-    MNT:
-      display_names:
-        other: مغلستون ِتوگریک
     MOP:
       display_names:
         other: ماکائو ِپاتاجا
@@ -272,39 +514,15 @@ number_formats:
     MRU:
       display_names:
         other: موریتانی ِاوگوئیا
-    MUR:
-      display_names:
-        other: موریتیان ِروپیه
     MVR:
       display_names:
         other: مالدیو ِروفیا
     MWK:
       display_names:
         other: مالاوی ِکواچا
-    MXN:
-      display_names:
-        other: مکزیک پزو
-    MYR:
-      display_names:
-        other: مالزی ِرینگیت
     MZN:
       display_names:
         other: موزامبیک متیکال
-    NAD:
-      display_names:
-        other: نامبیای ِدلار
-    NGN:
-      display_names:
-        other: نیجریه‌ی ِنیارا
-    NIO:
-      display_names:
-        other: نیکاراگوئه کوردوبا
-    NOK:
-      display_names:
-        other: نروژ ِکرون
-    NPR:
-      display_names:
-        other: نپال ِروپیه
     OMR:
       display_names:
         other: عمان ِریال
@@ -314,34 +532,12 @@ number_formats:
     PEN:
       display_names:
         other: پروی ِسول
-    PHP:
-      symbol: PHP
-      display_names:
-        other: فیلیپین ِپزو
-    PKR:
-      display_names:
-        other: پاکستون روپیه
-    PLN:
-      display_names:
-        other: لهستون ِزلوتی
-    PYG:
-      display_names:
-        other: پاراگوئه‌ی ِگوارانی
     QAR:
       display_names:
         other: قطر ِریال
-    RON:
-      display_names:
-        other: رومانی ِلئو
     RSD:
       display_names:
         other: صربستون ِدینار
-    RUB:
-      display_names:
-        other: روسیه‌ی ِروبل
-    RWF:
-      display_names:
-        other: روآندای ِفرانک
     SAR:
       display_names:
         other: عربستون ِریال
@@ -351,15 +547,6 @@ number_formats:
     SDG:
       display_names:
         other: سودان ِپوند
-    SEK:
-      display_names:
-        other: سوئد ِکرون
-    SGD:
-      display_names:
-        other: سنگاپور ِدلار
-    SHP:
-      display_names:
-        other: سنت هلنای ِپوند
     SLE:
       display_names:
         other: سیرالئون ِلئون
@@ -369,27 +556,12 @@ number_formats:
     SOS:
       display_names:
         other: سومالی ِشیلینگ
-    SRD:
-      display_names:
-        other: سورینام ِدولار
-    SSP:
-      display_names:
-        other: جنوبی سودان ِپوند
     STD:
       display_names:
         other: سائوتومه و پرینسیپ ِدوبرا (1977–2017)
-    STN:
-      display_names:
-        other: سائوتومه و پرینسیپ ِدوبرا
-    SYP:
-      display_names:
-        other: سوریه‌ی ِپوند
     SZL:
       display_names:
         other: سوازیلند ِلیلانجنی
-    THB:
-      display_names:
-        other: تایلند ِبات
     TJS:
       display_names:
         other: تاجیکستون ِسامانی
@@ -399,63 +571,23 @@ number_formats:
     TND:
       display_names:
         other: تونس ِدینار
-    TRY:
-      display_names:
-        other: ترکیه‌ی ِلیره
-    TTD:
-      display_names:
-        other: ترینیداد و توباگوی ِدلار
-    TWD:
-      display_names:
-        other: تایوان دلار
     TZS:
       display_names:
         other: تانزانیای ِشیلینگ
-    UAH:
-      display_names:
-        other: اکراین ِگریونا
     UGX:
       display_names:
         other: اوگاندای ِشیلینگ
-    USD:
-      symbol: "$"
-      display_names:
-        other: آمریکای ِدلار
-    UYU:
-      display_names:
-        other: اروگوئه‌ی ِپزو
     UZS:
       display_names:
         other: ازبکستون ِسام
-    VEF:
-      display_names:
-        other: ونزوئلایِ بولیوار (2008–2018)
     VES:
       display_names:
         other: ونزوئلایِ بولیوار
-    VND:
-      display_names:
-        other: ویتنام ِدنگ
-    XAF:
-      display_names:
-        other: میونی آفریقای ِسی‌اف‌ای فرانک
-    XCD:
-      display_names:
-        other: شرقی کارائیب دلار
-    XOF:
-      display_names:
-        other: غربی آفریقای ِسی‌اف‌ای فرانک
     YER:
       display_names:
         other: یمن ِریال
-    ZAR:
-      display_names:
-        other: جنوبی آفریقای ِراند
-    ZMW:
-      display_names:
-        other: زامبیای ِکواچا
 locale: mzn
-generated_at: '2025-09-10T22:17:44+09:00'
+generated_at: '2025-09-10T23:53:14+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

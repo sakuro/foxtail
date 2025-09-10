@@ -1,9 +1,446 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: 아프가니스탄 아프가니
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: 아르메니아 드람
+    AOA:
+      symbol: Kz
+      display_names:
+        other: 앙골라 콴자
+    ARS:
+      symbol: "$"
+      display_names:
+        other: 아르헨티나 페소
+    AUD:
+      symbol: AU$
+      display_names:
+        other: 호주 달러
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: 아제르바이잔 마나트
+    BAM:
+      symbol: KM
+      display_names:
+        other: 보스니아-헤르체고비나 태환 마르크
+    BBD:
+      symbol: "$"
+      display_names:
+        other: 바베이도스 달러
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: 방글라데시 타카
+    BMD:
+      symbol: "$"
+      display_names:
+        other: 버뮤다 달러
+    BND:
+      symbol: "$"
+      display_names:
+        other: 부루나이 달러
+    BOB:
+      symbol: Bs
+      display_names:
+        other: 볼리비아 볼리비아노
+    BRL:
+      symbol: R$
+      display_names:
+        other: 브라질 레알
+    BSD:
+      symbol: "$"
+      display_names:
+        other: 바하마 달러
+    BWP:
+      symbol: P
+      display_names:
+        other: 보츠와나 풀라
+    BZD:
+      symbol: "$"
+      display_names:
+        other: 벨리즈 달러
+    CAD:
+      symbol: CA$
+      display_names:
+        other: 캐나다 달러
+    CLP:
+      symbol: "$"
+      display_names:
+        other: 칠레 페소
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: 중국 위안화
+    COP:
+      symbol: "$"
+      display_names:
+        other: 콜롬비아 페소
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: 코스타리카 콜론
+    CUC:
+      symbol: "$"
+      display_names:
+        other: 쿠바 태환 페소
+    CUP:
+      symbol: "$"
+      display_names:
+        other: 쿠바 페소
+    CZK:
+      symbol: Kč
+      display_names:
+        other: 체코 코루나
+    DKK:
+      symbol: kr
+      display_names:
+        other: 덴마크 크로네
+    DOP:
+      symbol: "$"
+      display_names:
+        other: 도미니카 페소
+    EGP:
+      symbol: E£
+      display_names:
+        other: 이집트 파운드
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: 스페인 페세타
+    EUR:
+      symbol: "€"
+      display_names:
+        other: 유로
+    FJD:
+      symbol: "$"
+      display_names:
+        other: 피지 달러
+    FKP:
+      symbol: "£"
+      display_names:
+        other: 포클랜드제도 파운드
+    GBP:
+      symbol: "£"
+      display_names:
+        other: 영국 파운드
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: 조지아 라리
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: 가나 세디
+    GIP:
+      symbol: "£"
+      display_names:
+        other: 지브롤터 파운드
+    GNF:
+      symbol: FG
+      display_names:
+        other: 기니 프랑
+    GTQ:
+      symbol: Q
+      display_names:
+        other: 과테말라 케트살
+    GYD:
+      symbol: "$"
+      display_names:
+        other: 가이아나 달러
+    HKD:
+      symbol: HK$
+      display_names:
+        other: 홍콩 달러
+    HNL:
+      symbol: L
+      display_names:
+        other: 온두라스 렘피라
+    HRK:
+      symbol: kn
+      display_names:
+        other: 크로아티아 쿠나
+    HUF:
+      symbol: Ft
+      display_names:
+        other: 헝가리 포린트
+    IDR:
+      symbol: Rp
+      display_names:
+        other: 인도네시아 루피아
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: 이스라엘 신권 세켈
+    INR:
+      symbol: "₹"
+      display_names:
+        other: 인도 루피
+    ISK:
+      symbol: kr
+      display_names:
+        other: 아이슬란드 크로나
+    JMD:
+      symbol: "$"
+      display_names:
+        other: 자메이카 달러
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: 일본 엔화
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: 키르기스스탄 솜
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: 캄보디아 리엘
+    KMF:
+      symbol: CF
+      display_names:
+        other: 코모르 프랑
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: 조선 민주주의 인민 공화국 원
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: 대한민국 원
+    KYD:
+      symbol: "$"
+      display_names:
+        other: 케이맨 제도 달러
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: 카자흐스탄 텡게
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: 라오스 키프
+    LBP:
+      symbol: L£
+      display_names:
+        other: 레바논 파운드
+    LKR:
+      symbol: Rs
+      display_names:
+        other: 스리랑카 루피
+    LRD:
+      symbol: "$"
+      display_names:
+        other: 라이베리아 달러
+    LTL:
+      symbol: Lt
+      display_names:
+        other: 리투아니아 리타
+    LVL:
+      symbol: Ls
+      display_names:
+        other: 라트비아 라트
+    MGA:
+      symbol: Ar
+      display_names:
+        other: 마다가스카르 아리아리
+    MMK:
+      symbol: K
+      display_names:
+        other: 미얀마 키얏
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: 몽골 투그릭
+    MUR:
+      symbol: Rs
+      display_names:
+        other: 모리셔스 루피
+    MXN:
+      symbol: MX$
+      display_names:
+        other: 멕시코 페소
+    MYR:
+      symbol: RM
+      display_names:
+        other: 말레이시아 링깃
+    NAD:
+      symbol: "$"
+      display_names:
+        other: 나미비아 달러
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: 나이지리아 나이라
+    NIO:
+      symbol: C$
+      display_names:
+        other: 니카라과 코르도바
+    NOK:
+      symbol: kr
+      display_names:
+        other: 노르웨이 크로네
+    NPR:
+      symbol: Rs
+      display_names:
+        other: 네팔 루피
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: 뉴질랜드 달러
+    PHP:
+      symbol: PHP
+      display_names:
+        other: 필리핀 페소
+    PKR:
+      symbol: Rs
+      display_names:
+        other: 파키스탄 루피
+    PLN:
+      symbol: zł
+      display_names:
+        other: 폴란드 즈워티
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: 파라과이 과라니
+    RON:
+      symbol: L
+      display_names:
+        other: 루마니아 레우
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: 러시아 루블
+    RWF:
+      symbol: RF
+      display_names:
+        other: 르완다 프랑
+    SBD:
+      symbol: "$"
+      display_names:
+        other: 솔로몬 제도 달러
+    SEK:
+      symbol: kr
+      display_names:
+        other: 스웨덴 크로나
+    SGD:
+      symbol: "$"
+      display_names:
+        other: 싱가포르 달러
+    SHP:
+      symbol: "£"
+      display_names:
+        other: 세인트헬레나 파운드
+    SRD:
+      symbol: "$"
+      display_names:
+        other: 수리남 달러
+    SSP:
+      symbol: "£"
+      display_names:
+        other: 남수단 파운드
+    STN:
+      symbol: Db
+      display_names:
+        other: 상투메 프린시페 도브라
+    SYP:
+      symbol: "£"
+      display_names:
+        other: 시리아 파운드
+    THB:
+      symbol: "฿"
+      display_names:
+        other: 태국 바트
+    TOP:
+      symbol: T$
+      display_names:
+        other: 통가 파앙가
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: 튀르키예 리라
+    TTD:
+      symbol: "$"
+      display_names:
+        other: 트리니다드 토바고 달러
+    TWD:
+      symbol: NT$
+      display_names:
+        other: 신 타이완 달러
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: 우크라이나 그리브나
+    USD:
+      symbol: US$
+      display_names:
+        other: 미국 달러
+    UYU:
+      symbol: "$"
+      display_names:
+        other: 우루과이 페소
+    VEF:
+      symbol: Bs
+      display_names:
+        other: 베네수엘라 볼리바르 (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: 베트남 동
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: 중앙아프리카 CFA 프랑
+    XCD:
+      symbol: EC$
+      display_names:
+        other: 동카리브 달러
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: 서아프리카 CFA 프랑
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: CFP 프랑
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(알 수 없는 통화 단위)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: 남아프리카 랜드
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: 잠비아 콰차
     ADP:
       display_names:
         other: 안도라 페세타
@@ -13,21 +450,12 @@ number_formats:
     AFA:
       display_names:
         other: 아프가니 (1927–2002)
-    AFN:
-      display_names:
-        other: 아프가니스탄 아프가니
     ALL:
       display_names:
         other: 알바니아 레크
-    AMD:
-      display_names:
-        other: 아르메니아 드람
     ANG:
       display_names:
         other: 네덜란드령 안틸레스 길더
-    AOA:
-      display_names:
-        other: 앙골라 콴자
     AOK:
       display_names:
         other: 앙골라 콴자 (1977–1990)
@@ -49,40 +477,21 @@ number_formats:
     ARP:
       display_names:
         other: 아르헨티나 페소 (1983–1985)
-    ARS:
-      display_names:
-        other: 아르헨티나 페소
     ATS:
       display_names:
         other: 호주 실링
-    AUD:
-      symbol: AU$
-      display_names:
-        other: 호주 달러
     AWG:
       display_names:
         other: 아루바 플로린
     AZM:
       display_names:
         other: 아제르바이젠 마나트(1993–2006)
-    AZN:
-      display_names:
-        other: 아제르바이잔 마나트
     BAD:
       display_names:
         other: 보스니아-헤르체고비나 디나르
-    BAM:
-      display_names:
-        other: 보스니아-헤르체고비나 태환 마르크
     BAN:
       display_names:
         other: 보스니아-헤르체고비나 신디나르 (1994–1997)
-    BBD:
-      display_names:
-        other: 바베이도스 달러
-    BDT:
-      display_names:
-        other: 방글라데시 타카
     BEC:
       display_names:
         other: 벨기에 프랑 (태환)
@@ -110,15 +519,6 @@ number_formats:
     BIF:
       display_names:
         other: 부룬디 프랑
-    BMD:
-      display_names:
-        other: 버뮤다 달러
-    BND:
-      display_names:
-        other: 부루나이 달러
-    BOB:
-      display_names:
-        other: 볼리비아 볼리비아노
     BOL:
       display_names:
         other: 볼리비아 볼리비아노 (1863–1963)
@@ -137,9 +537,6 @@ number_formats:
     BRE:
       display_names:
         other: 브라질 크루제이루 (1990–1993)
-    BRL:
-      display_names:
-        other: 브라질 레알
     BRN:
       display_names:
         other: 브라질 크루자두 노보
@@ -149,18 +546,12 @@ number_formats:
     BRZ:
       display_names:
         other: 브라질 크루제이루 (1942–1967)
-    BSD:
-      display_names:
-        other: 바하마 달러
     BTN:
       display_names:
         other: 부탄 눌투눔
     BUK:
       display_names:
         other: 버마 차트
-    BWP:
-      display_names:
-        other: 보츠와나 풀라
     BYB:
       display_names:
         other: 벨라루스 신권 루블 (1994–1999)
@@ -171,12 +562,6 @@ number_formats:
     BYR:
       display_names:
         other: 벨라루스 루블 (2000–2016)
-    BZD:
-      display_names:
-        other: 벨리즈 달러
-    CAD:
-      display_names:
-        other: 캐나다 달러
     CDF:
       display_names:
         other: 콩고 프랑
@@ -195,45 +580,24 @@ number_formats:
     CLF:
       display_names:
         other: 칠레 (UF)
-    CLP:
-      display_names:
-        other: 칠레 페소
     CNH:
       display_names:
         other: 중국 위안화(역외)
-    CNY:
-      display_names:
-        other: 중국 위안화
-    COP:
-      display_names:
-        other: 콜롬비아 페소
     COU:
       display_names:
         other: 콜롬비아 실가 단위
-    CRC:
-      display_names:
-        other: 코스타리카 콜론
     CSD:
       display_names:
         other: 고 세르비아 디나르
     CSK:
       display_names:
         other: 체코슬로바키아 동전 코루나
-    CUC:
-      display_names:
-        other: 쿠바 태환 페소
-    CUP:
-      display_names:
-        other: 쿠바 페소
     CVE:
       display_names:
         other: 카보베르데 에스쿠도
     CYP:
       display_names:
         other: 싸이프러스 파운드
-    CZK:
-      display_names:
-        other: 체코 코루나
     DDM:
       display_names:
         other: 동독 오스트마르크
@@ -243,12 +607,6 @@ number_formats:
     DJF:
       display_names:
         other: 지부티 프랑
-    DKK:
-      display_names:
-        other: 덴마크 크로네
-    DOP:
-      display_names:
-        other: 도미니카 페소
     DZD:
       display_names:
         other: 알제리 디나르
@@ -261,9 +619,6 @@ number_formats:
     EEK:
       display_names:
         other: 에스토니아 크룬
-    EGP:
-      display_names:
-        other: 이집트 파운드
     ERN:
       display_names:
         other: 에리트리아 나크파
@@ -273,51 +628,24 @@ number_formats:
     ESB:
       display_names:
         other: 스페인 페세타(변환 예금)
-    ESP:
-      display_names:
-        other: 스페인 페세타
     ETB:
       display_names:
         other: 에티오피아 비르
-    EUR:
-      display_names:
-        other: 유로
     FIM:
       display_names:
         other: 핀란드 마르카
-    FJD:
-      display_names:
-        other: 피지 달러
-    FKP:
-      display_names:
-        other: 포클랜드제도 파운드
     FRF:
       display_names:
         other: 프랑스 프랑
-    GBP:
-      display_names:
-        other: 영국 파운드
     GEK:
       display_names:
         other: 그루지야 지폐 라리트
-    GEL:
-      display_names:
-        other: 조지아 라리
     GHC:
       display_names:
         other: 가나 시디 (1979–2007)
-    GHS:
-      display_names:
-        other: 가나 세디
-    GIP:
-      display_names:
-        other: 지브롤터 파운드
     GMD:
       display_names:
         other: 감비아 달라시
-    GNF:
-      display_names:
-        other: 기니 프랑
     GNS:
       display_names:
         other: 기니 시리
@@ -327,120 +655,48 @@ number_formats:
     GRD:
       display_names:
         other: 그리스 드라크마
-    GTQ:
-      display_names:
-        other: 과테말라 케트살
     GWE:
       display_names:
         other: 포르투갈령 기니 에스쿠도
     GWP:
       display_names:
         other: 기네비쏘 페소
-    GYD:
-      display_names:
-        other: 가이아나 달러
-    HKD:
-      display_names:
-        other: 홍콩 달러
-    HNL:
-      display_names:
-        other: 온두라스 렘피라
     HRD:
       display_names:
         other: 크로아티아 디나르
-    HRK:
-      display_names:
-        other: 크로아티아 쿠나
     HTG:
       display_names:
         other: 아이티 구르드
-    HUF:
-      display_names:
-        other: 헝가리 포린트
-    IDR:
-      display_names:
-        other: 인도네시아 루피아
     IEP:
       display_names:
         other: 아일랜드 파운드
     ILP:
       display_names:
         other: 이스라엘 파운드
-    ILS:
-      display_names:
-        other: 이스라엘 신권 세켈
-    INR:
-      display_names:
-        other: 인도 루피
     IQD:
       display_names:
         other: 이라크 디나르
     IRR:
       display_names:
         other: 이란 리얄
-    ISK:
-      display_names:
-        other: 아이슬란드 크로나
     ITL:
       display_names:
         other: 이탈리아 리라
-    JMD:
-      display_names:
-        other: 자메이카 달러
     JOD:
       display_names:
         other: 요르단 디나르
-    JPY:
-      display_names:
-        other: 일본 엔화
     KES:
       display_names:
         other: 케냐 실링
-    KGS:
-      display_names:
-        other: 키르기스스탄 솜
-    KHR:
-      display_names:
-        other: 캄보디아 리엘
-    KMF:
-      display_names:
-        other: 코모르 프랑
-    KPW:
-      display_names:
-        other: 조선 민주주의 인민 공화국 원
     KRH:
       display_names:
         other: 대한민국 환 (1953–1962)
-    KRW:
-      display_names:
-        other: 대한민국 원
     KWD:
       display_names:
         other: 쿠웨이트 디나르
-    KYD:
-      display_names:
-        other: 케이맨 제도 달러
-    KZT:
-      display_names:
-        other: 카자흐스탄 텡게
-    LAK:
-      display_names:
-        other: 라오스 키프
-    LBP:
-      display_names:
-        other: 레바논 파운드
-    LKR:
-      display_names:
-        other: 스리랑카 루피
-    LRD:
-      display_names:
-        other: 라이베리아 달러
     LSL:
       display_names:
         other: 레소토 로티
-    LTL:
-      display_names:
-        other: 리투아니아 리타
     LTT:
       display_names:
         other: 룩셈부르크 타로나
@@ -453,9 +709,6 @@ number_formats:
     LUL:
       display_names:
         other: 룩셈부르크 재정 프랑
-    LVL:
-      display_names:
-        other: 라트비아 라트
     LVR:
       display_names:
         other: 라트비아 루블
@@ -477,9 +730,6 @@ number_formats:
     MDL:
       display_names:
         other: 몰도바 레이
-    MGA:
-      display_names:
-        other: 마다가스카르 아리아리
     MGF:
       display_names:
         other: 마다가스카르 프랑
@@ -489,12 +739,6 @@ number_formats:
     MLF:
       display_names:
         other: 말리 프랑
-    MMK:
-      display_names:
-        other: 미얀마 키얏
-    MNT:
-      display_names:
-        other: 몽골 투그릭
     MOP:
       display_names:
         other: 마카오 파타카
@@ -510,27 +754,18 @@ number_formats:
     MTP:
       display_names:
         other: 몰타 파운드
-    MUR:
-      display_names:
-        other: 모리셔스 루피
     MVR:
       display_names:
         other: 몰디브 제도 루피아
     MWK:
       display_names:
         other: 말라위 콰차
-    MXN:
-      display_names:
-        other: 멕시코 페소
     MXP:
       display_names:
         other: 멕시코 실버 페소 (1861–1992)
     MXV:
       display_names:
         other: 멕시코 (UDI)
-    MYR:
-      display_names:
-        other: 말레이시아 링깃
     MZE:
       display_names:
         other: 모잠비크 에스쿠도
@@ -540,30 +775,12 @@ number_formats:
     MZN:
       display_names:
         other: 모잠비크 메티칼
-    NAD:
-      display_names:
-        other: 나미비아 달러
-    NGN:
-      display_names:
-        other: 나이지리아 나이라
     NIC:
       display_names:
         other: 니카라과 코르도바 오로(1988~1991)
-    NIO:
-      display_names:
-        other: 니카라과 코르도바
     NLG:
       display_names:
         other: 네델란드 길더
-    NOK:
-      display_names:
-        other: 노르웨이 크로네
-    NPR:
-      display_names:
-        other: 네팔 루피
-    NZD:
-      display_names:
-        other: 뉴질랜드 달러
     OMR:
       display_names:
         other: 오만 리알
@@ -582,25 +799,12 @@ number_formats:
     PGK:
       display_names:
         other: 파푸아뉴기니 키나
-    PHP:
-      symbol: PHP
-      display_names:
-        other: 필리핀 페소
-    PKR:
-      display_names:
-        other: 파키스탄 루피
-    PLN:
-      display_names:
-        other: 폴란드 즈워티
     PLZ:
       display_names:
         other: 폴란드 즐로티 (1950–1995)
     PTE:
       display_names:
         other: 포르투갈 에스쿠도
-    PYG:
-      display_names:
-        other: 파라과이 과라니
     QAR:
       display_names:
         other: 카타르 리얄
@@ -610,28 +814,15 @@ number_formats:
     ROL:
       display_names:
         other: 루마니아 레이
-    RON:
-      symbol: L
-      display_names:
-        other: 루마니아 레우
     RSD:
       display_names:
         other: 세르비아 디나르
-    RUB:
-      display_names:
-        other: 러시아 루블
     RUR:
       display_names:
         other: 러시아 루블 (1991–1998)
-    RWF:
-      display_names:
-        other: 르완다 프랑
     SAR:
       display_names:
         other: 사우디아라비아 리얄
-    SBD:
-      display_names:
-        other: 솔로몬 제도 달러
     SCR:
       display_names:
         other: 세이셸 루피
@@ -644,15 +835,6 @@ number_formats:
     SDP:
       display_names:
         other: 고 수단 파운드
-    SEK:
-      display_names:
-        other: 스웨덴 크로나
-    SGD:
-      display_names:
-        other: 싱가포르 달러
-    SHP:
-      display_names:
-        other: 세인트헬레나 파운드
     SIT:
       display_names:
         other: 슬로베니아 톨라르
@@ -668,36 +850,21 @@ number_formats:
     SOS:
       display_names:
         other: 소말리아 실링
-    SRD:
-      display_names:
-        other: 수리남 달러
     SRG:
       display_names:
         other: 수리남 길더
-    SSP:
-      display_names:
-        other: 남수단 파운드
     STD:
       display_names:
         other: 상투메 프린시페 도브라 (1977–2017)
-    STN:
-      display_names:
-        other: 상투메 프린시페 도브라
     SUR:
       display_names:
         other: 소련 루블
     SVC:
       display_names:
         other: 엘살바도르 콜론
-    SYP:
-      display_names:
-        other: 시리아 파운드
     SZL:
       display_names:
         other: 스와질란드 릴랑게니
-    THB:
-      display_names:
-        other: 태국 바트
     TJR:
       display_names:
         other: 타지키스탄 루블
@@ -713,31 +880,15 @@ number_formats:
     TND:
       display_names:
         other: 튀니지 디나르
-    TOP:
-      display_names:
-        other: 통가 파앙가
     TPE:
       display_names:
         other: 티모르 에스쿠도
     TRL:
       display_names:
         other: 터키 리라(1922~2005)
-    TRY:
-      display_names:
-        other: 튀르키예 리라
-    TTD:
-      display_names:
-        other: 트리니다드 토바고 달러
-    TWD:
-      symbol: NT$
-      display_names:
-        other: 신 타이완 달러
     TZS:
       display_names:
         other: 탄자니아 실링
-    UAH:
-      display_names:
-        other: 우크라이나 그리브나
     UAK:
       display_names:
         other: 우크라이나 카보바네츠
@@ -747,9 +898,6 @@ number_formats:
     UGX:
       display_names:
         other: 우간다 실링
-    USD:
-      display_names:
-        other: 미국 달러
     USN:
       display_names:
         other: 미국 달러(다음날)
@@ -762,24 +910,15 @@ number_formats:
     UYP:
       display_names:
         other: 우루과이 페소 (1975–1993)
-    UYU:
-      display_names:
-        other: 우루과이 페소
     UZS:
       display_names:
         other: 우즈베키스탄 숨
     VEB:
       display_names:
         other: 베네주엘라 볼리바르 (1871–2008)
-    VEF:
-      display_names:
-        other: 베네수엘라 볼리바르 (2008–2018)
     VES:
       display_names:
         other: 베네수엘라 볼리바르
-    VND:
-      display_names:
-        other: 베트남 동
     VNN:
       display_names:
         other: 베트남 동 (1978–1985)
@@ -789,9 +928,6 @@ number_formats:
     WST:
       display_names:
         other: 서 사모아 탈라
-    XAF:
-      display_names:
-        other: 중앙아프리카 CFA 프랑
     XAG:
       display_names:
         other: 은화
@@ -810,9 +946,6 @@ number_formats:
     XBD:
       display_names:
         other: 유럽 계산 단위 (XBD)
-    XCD:
-      display_names:
-        other: 동카리브 달러
     XDR:
       display_names:
         other: 특별인출권
@@ -825,15 +958,9 @@ number_formats:
     XFU:
       display_names:
         other: 프랑스 프랑 (UIC)
-    XOF:
-      display_names:
-        other: 서아프리카 CFA 프랑
     XPD:
       display_names:
         other: 팔라듐
-    XPF:
-      display_names:
-        other: CFP 프랑
     XPT:
       display_names:
         other: 백금
@@ -843,9 +970,6 @@ number_formats:
     XTS:
       display_names:
         other: 테스트 통화 코드
-    XXX:
-      display_names:
-        other: "(알 수 없는 통화 단위)"
     YDD:
       display_names:
         other: 예멘 디나르
@@ -864,15 +988,9 @@ number_formats:
     ZAL:
       display_names:
         other: 남아프리카 랜드 (금융)
-    ZAR:
-      display_names:
-        other: 남아프리카 랜드
     ZMK:
       display_names:
         other: 쟘비아 콰쳐 (1968–2012)
-    ZMW:
-      display_names:
-        other: 잠비아 콰차
     ZRN:
       display_names:
         other: 자이르 신권 자이르
@@ -889,7 +1007,7 @@ number_formats:
       display_names:
         other: 짐바브웨 달러 (2008)
 locale: ko
-generated_at: '2025-09-10T22:17:42+09:00'
+generated_at: '2025-09-10T23:53:11+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

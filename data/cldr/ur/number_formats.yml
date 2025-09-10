@@ -1,51 +1,467 @@
 ---
 number_formats:
   symbols:
+    decimal: "."
+    group: ","
     minus_sign: "‎-"
     plus_sign: "‎+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: متحدہ عرب اماراتی درہم
     AFN:
+      symbol: "؋"
       display_names:
         other: افغان افغانی
-    ALL:
-      display_names:
-        other: البانیا کا لیک
     AMD:
+      symbol: "֏"
       display_names:
         other: آرمینیائی ڈرم
-    ANG:
-      display_names:
-        other: نیدر لینڈز انٹیلیئن گلڈر
     AOA:
+      symbol: Kz
       display_names:
         other: انگولا کا کوانزا
     ARS:
+      symbol: "$"
       display_names:
         other: ارجنٹائن پیسہ
     AUD:
+      symbol: A$
       display_names:
         other: آسٹریلین ڈالر
-    AWG:
-      display_names:
-        other: اروبن فلورِن
     AZN:
+      symbol: "₼"
       display_names:
         other: آذربائجانی منات
     BAM:
+      symbol: KM
       display_names:
         other: بوسنیا ہرزیگووینا کا قابل منتقلی نشان
     BBD:
+      symbol: "$"
       display_names:
         other: باربیڈین ڈالر
     BDT:
+      symbol: "৳"
       display_names:
         other: بنگلہ دیشی ٹکا
+    BMD:
+      symbol: "$"
+      display_names:
+        other: برموڈا ڈالر
+    BND:
+      symbol: "$"
+      display_names:
+        other: برونئی ڈالر
+    BOB:
+      symbol: Bs
+      display_names:
+        other: بولیوین بولیویانو
+    BRL:
+      symbol: R$
+      display_names:
+        other: برازیلی ریئل
+    BSD:
+      symbol: "$"
+      display_names:
+        other: بہامانی ڈالر
+    BWP:
+      symbol: P
+      display_names:
+        other: بوتسوانا کا پولا
+    BZD:
+      symbol: "$"
+      display_names:
+        other: بیلیز ڈالرز
+        one: بیلیز ڈالر
+    CAD:
+      symbol: CA$
+      display_names:
+        other: کنیڈین ڈالر
+    CLP:
+      symbol: "$"
+      display_names:
+        other: چلّین پیسہ
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: چینی یوآن
+    COP:
+      symbol: "$"
+      display_names:
+        other: کولمبین پیسہ
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: کوسٹا ریکا کا کولن
+    CUC:
+      symbol: "$"
+      display_names:
+        other: کیوبا کا قابل منتقلی پیسو
+    CUP:
+      symbol: "$"
+      display_names:
+        other: کیوبا کا پیسو
+    CZK:
+      symbol: Kč
+      display_names:
+        other: چیک کروناز
+        one: چیک کرونا
+    DKK:
+      symbol: kr
+      display_names:
+        other: ڈنمارک کرون
+    DOP:
+      symbol: "$"
+      display_names:
+        other: ڈومنیکن پیسو
+    EGP:
+      symbol: E£
+      display_names:
+        other: مصری پاؤنڈ
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: یورو
+    FJD:
+      symbol: "$"
+      display_names:
+        other: فجی کا ڈالر
+    FKP:
+      symbol: "£"
+      display_names:
+        other: فاکلینڈ آئلینڈز پونڈ
+    GBP:
+      symbol: "£"
+      display_names:
+        other: برطانوی پاؤنڈ
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: جارجیائی لاری
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: گھانا کا سیڈی
+    GIP:
+      symbol: "£"
+      display_names:
+        other: جبل الطارق پونڈ
+    GNF:
+      symbol: FG
+      display_names:
+        other: گنی فرانک
+    GTQ:
+      symbol: Q
+      display_names:
+        other: گواٹے مالا کا کوئٹزل
+    GYD:
+      symbol: "$"
+      display_names:
+        other: گویانیز ڈالر
+    HKD:
+      symbol: HK$
+      display_names:
+        other: ھانگ کانگ ڈالر
+    HNL:
+      symbol: L
+      display_names:
+        other: ہونڈوران لیمپیرا
+    HRK:
+      symbol: kn
+      display_names:
+        other: کروشین کونا
+    HUF:
+      symbol: Ft
+      display_names:
+        other: ہنگرین فورنٹ
+    IDR:
+      symbol: Rp
+      display_names:
+        other: انڈونیشین روپیہ
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: اسرائیلی نیا شیکلز
+        one: اسرائیلی نیا شیکل
+    INR:
+      symbol: "₹"
+      display_names:
+        other: بھارتی روپے
+        one: بھارتی روپیہ
+    ISK:
+      symbol: kr
+      display_names:
+        other: آئس لينڈی کرونوں
+        one: آئس لينڈی کرونا
+    JMD:
+      symbol: "$"
+      display_names:
+        other: جمائیکن ڈالر
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: جاپانی ین
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: کرغستانی سوم
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: کمبوڈیائی ریئل
+    KMF:
+      symbol: CF
+      display_names:
+        other: کوموریئن فرانک
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: شمالی کوریائی وون
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: جنوبی کوریائی وون
+    KYD:
+      symbol: "$"
+      display_names:
+        other: کیمین آئلینڈز ڈالر
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: قزاخستانی ٹینگ
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: لاؤشیائی کِپ
+    LBP:
+      symbol: L£
+      display_names:
+        other: لبنانی پونڈ
+    LKR:
+      symbol: Rs
+      display_names:
+        other: سری لنکائی روپیہ
+    LRD:
+      symbol: "$"
+      display_names:
+        other: لائبریائی ڈالر
+    LTL:
+      symbol: Lt
+      display_names:
+        other: لیتھوینیائی لیٹاس
+    LVL:
+      symbol: Ls
+      display_names:
+        other: لاتویائی لیٹس
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ملاگاسی اریاری
+    MMK:
+      symbol: K
+      display_names:
+        other: میانمار کیاٹ
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: منگولیائی ٹگرِ
+    MUR:
+      symbol: Rs
+      display_names:
+        other: ماریشس کا روپیہ
+    MXN:
+      symbol: MX$
+      display_names:
+        other: میکسیکی پیسہ
+    MYR:
+      symbol: RM
+      display_names:
+        other: ملیشیائی رنگِٹ
+    NAD:
+      symbol: "$"
+      display_names:
+        other: نامیبیائی ڈالر
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: نائیجیریائی نائرا
+    NIO:
+      symbol: C$
+      display_names:
+        other: نکارا گوا کا کورڈوبا
+    NOK:
+      symbol: kr
+      display_names:
+        other: ناروے کرون
+    NPR:
+      symbol: Rs
+      display_names:
+        other: نیپالی روپیہ
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: نیوزی لینڈ ڈالر
+    PHP:
+      symbol: PHP
+      display_names:
+        other: فلپائنی پیسو
+        one: فلپائینی پیسہ
+    PKR:
+      symbol: Rs
+      display_names:
+        other: پاکستانی روپیہ
+    PLN:
+      symbol: zł
+      display_names:
+        other: پولش زلوٹی
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: پیراگوئے کا گوآرنی
+    RON:
+      symbol: lei
+      display_names:
+        other: رومانیائی لی
+        one: رومانیائی لیو
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: روسی روبل
+    RWF:
+      symbol: RF
+      display_names:
+        other: روانڈا کا فرانک
+    SBD:
+      symbol: "$"
+      display_names:
+        other: سولومن آئلینڈز ڈالر
+    SEK:
+      symbol: kr
+      display_names:
+        other: سویڈن کرونر
+        one: سویڈن کرونا
+    SGD:
+      symbol: "$"
+      display_names:
+        other: سنگا پور ڈالر
+    SHP:
+      symbol: "£"
+      display_names:
+        other: سینٹ ہیلینا پاؤنڈ
+    SRD:
+      symbol: "$"
+      display_names:
+        other: سورینامی ڈالر
+    SSP:
+      symbol: "£"
+      display_names:
+        other: جنوبی سوڈانی پاؤنڈز
+        one: جنوبی سوڈانی پاؤنڈ
+    STN:
+      symbol: Db
+      display_names:
+        other: ساؤ ٹومے اور پرنسپے ڈوبرا
+    SYP:
+      symbol: "£"
+      display_names:
+        other: شامی پونڈ
+    THB:
+      symbol: "฿"
+      display_names:
+        other: تھائی باہت
+    TOP:
+      symbol: T$
+      display_names:
+        other: ٹونگن پانگا
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: ترکی لیرا
+    TTD:
+      symbol: "$"
+      display_names:
+        other: ترینیداد اور ٹوباگو کا ڈالر
+    TWD:
+      symbol: NT$
+      display_names:
+        other: نیو تائیوان ڈالر
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: یوکرینیائی ہریونیا
+    USD:
+      symbol: "$"
+      display_names:
+        other: امریکی ڈالر
+    UYU:
+      symbol: "$"
+      display_names:
+        other: یوروگویان پیسو
+    VEF:
+      symbol: Bs
+      display_names:
+        other: وینزویلا بولیور (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: ویتنامی ڈانگ
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: وسطی افریقی [CFA] فرانک
+    XCD:
+      symbol: EC$
+      display_names:
+        other: مشرقی کریبیا کا ڈالر
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: مغربی افریقی [CFA] فرانک
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: CFP فرانکس
+        one: CFP فرانک
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(نامعلوم کرنسی)"
+        one: "(کرنسی کی نامعلوم یونٹ)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: جنوبی افریقی رانڈ
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: زامبیائی کواچا
+    AED:
+      display_names:
+        other: متحدہ عرب اماراتی درہم
+    ALL:
+      display_names:
+        other: البانیا کا لیک
+    ANG:
+      display_names:
+        other: نیدر لینڈز انٹیلیئن گلڈر
+    AWG:
+      display_names:
+        other: اروبن فلورِن
     BGN:
       display_names:
         other: بلغارین لیو
@@ -55,27 +471,9 @@ number_formats:
     BIF:
       display_names:
         other: برونڈیئن فرانک
-    BMD:
-      display_names:
-        other: برموڈا ڈالر
-    BND:
-      display_names:
-        other: برونئی ڈالر
-    BOB:
-      display_names:
-        other: بولیوین بولیویانو
-    BRL:
-      display_names:
-        other: برازیلی ریئل
-    BSD:
-      display_names:
-        other: بہامانی ڈالر
     BTN:
       display_names:
         other: بھوٹانی گُلٹرم
-    BWP:
-      display_names:
-        other: بوتسوانا کا پولا
     BYN:
       symbol: р.
       display_names:
@@ -83,203 +481,63 @@ number_formats:
     BYR:
       display_names:
         other: بیلاروسی روبل (۲۰۰۰–۲۰۱۶)
-    BZD:
-      display_names:
-        other: بیلیز ڈالرز
-        one: بیلیز ڈالر
-    CAD:
-      display_names:
-        other: کنیڈین ڈالر
     CDF:
       display_names:
         other: کانگولیز فرانک
     CHF:
       display_names:
         other: سوئس فرانکس
-    CLP:
-      display_names:
-        other: چلّین پیسہ
     CNH:
       display_names:
         other: چینی یوآن (آف شور)
-    CNY:
-      display_names:
-        other: چینی یوآن
-    COP:
-      display_names:
-        other: کولمبین پیسہ
-    CRC:
-      display_names:
-        other: کوسٹا ریکا کا کولن
-    CUC:
-      display_names:
-        other: کیوبا کا قابل منتقلی پیسو
-    CUP:
-      display_names:
-        other: کیوبا کا پیسو
     CVE:
       display_names:
         other: کیپ ورڈی کا اسکیوڈو
-    CZK:
-      display_names:
-        other: چیک کروناز
-        one: چیک کرونا
     DEM:
       display_names:
         other: ڈچ مارکس
     DJF:
       display_names:
         other: جبوتی فرانک
-    DKK:
-      display_names:
-        other: ڈنمارک کرون
-    DOP:
-      display_names:
-        other: ڈومنیکن پیسو
     DZD:
       display_names:
         other: الجیریائی دینار
     EEK:
       display_names:
         other: ایسٹونین کرون
-    EGP:
-      display_names:
-        other: مصری پاؤنڈ
     ERN:
       display_names:
         other: اریٹیریائی ناکفا
     ETB:
       display_names:
         other: ایتھوپیائی بِرّ
-    EUR:
-      display_names:
-        other: یورو
-    FJD:
-      display_names:
-        other: فجی کا ڈالر
-    FKP:
-      display_names:
-        other: فاکلینڈ آئلینڈز پونڈ
     FRF:
       display_names:
         other: فرانسیسی فرانک
-    GBP:
-      display_names:
-        other: برطانوی پاؤنڈ
-    GEL:
-      display_names:
-        other: جارجیائی لاری
-    GHS:
-      display_names:
-        other: گھانا کا سیڈی
-    GIP:
-      display_names:
-        other: جبل الطارق پونڈ
     GMD:
       display_names:
         other: گامبیا کا ڈلاسی
-    GNF:
-      display_names:
-        other: گنی فرانک
-    GTQ:
-      display_names:
-        other: گواٹے مالا کا کوئٹزل
-    GYD:
-      display_names:
-        other: گویانیز ڈالر
-    HKD:
-      display_names:
-        other: ھانگ کانگ ڈالر
-    HNL:
-      display_names:
-        other: ہونڈوران لیمپیرا
-    HRK:
-      display_names:
-        other: کروشین کونا
     HTG:
       display_names:
         other: ہیتی کا گؤرڈی
-    HUF:
-      display_names:
-        other: ہنگرین فورنٹ
-    IDR:
-      display_names:
-        other: انڈونیشین روپیہ
-    ILS:
-      display_names:
-        other: اسرائیلی نیا شیکلز
-        one: اسرائیلی نیا شیکل
-    INR:
-      display_names:
-        other: بھارتی روپے
-        one: بھارتی روپیہ
     IQD:
       display_names:
         other: عراقی دینار
     IRR:
       display_names:
         other: ایرانی ریال
-    ISK:
-      display_names:
-        other: آئس لينڈی کرونوں
-        one: آئس لينڈی کرونا
-    JMD:
-      display_names:
-        other: جمائیکن ڈالر
     JOD:
       display_names:
         other: اردنی دینار
-    JPY:
-      display_names:
-        other: جاپانی ین
     KES:
       display_names:
         other: کینیائی شلنگ
-    KGS:
-      display_names:
-        other: کرغستانی سوم
-    KHR:
-      display_names:
-        other: کمبوڈیائی ریئل
-    KMF:
-      display_names:
-        other: کوموریئن فرانک
-    KPW:
-      display_names:
-        other: شمالی کوریائی وون
-    KRW:
-      display_names:
-        other: جنوبی کوریائی وون
     KWD:
       display_names:
         other: کویتی دینار
-    KYD:
-      display_names:
-        other: کیمین آئلینڈز ڈالر
-    KZT:
-      display_names:
-        other: قزاخستانی ٹینگ
-    LAK:
-      display_names:
-        other: لاؤشیائی کِپ
-    LBP:
-      display_names:
-        other: لبنانی پونڈ
-    LKR:
-      display_names:
-        other: سری لنکائی روپیہ
-    LRD:
-      display_names:
-        other: لائبریائی ڈالر
     LSL:
       display_names:
         other: لیسوتھو لوتی
-    LTL:
-      display_names:
-        other: لیتھوینیائی لیٹاس
-    LVL:
-      display_names:
-        other: لاتویائی لیٹس
     LYD:
       display_names:
         other: لیبیائی دینار
@@ -289,18 +547,9 @@ number_formats:
     MDL:
       display_names:
         other: مالدووی لیو
-    MGA:
-      display_names:
-        other: ملاگاسی اریاری
     MKD:
       display_names:
         other: مقدونیائی دینار
-    MMK:
-      display_names:
-        other: میانمار کیاٹ
-    MNT:
-      display_names:
-        other: منگولیائی ٹگرِ
     MOP:
       display_names:
         other: میکانیز پٹاکا
@@ -310,43 +559,16 @@ number_formats:
     MRU:
       display_names:
         other: موریطانیائی اوگوئیا
-    MUR:
-      display_names:
-        other: ماریشس کا روپیہ
     MVR:
       display_names:
         other: مالدیپ کا روفیہ
     MWK:
       display_names:
         other: ملاوی کواچا
-    MXN:
-      display_names:
-        other: میکسیکی پیسہ
-    MYR:
-      display_names:
-        other: ملیشیائی رنگِٹ
     MZN:
       display_names:
         other: موزامبیقی میٹیکلز
         one: موزامبیقی میٹیکل
-    NAD:
-      display_names:
-        other: نامیبیائی ڈالر
-    NGN:
-      display_names:
-        other: نائیجیریائی نائرا
-    NIO:
-      display_names:
-        other: نکارا گوا کا کورڈوبا
-    NOK:
-      display_names:
-        other: ناروے کرون
-    NPR:
-      display_names:
-        other: نیپالی روپیہ
-    NZD:
-      display_names:
-        other: نیوزی لینڈ ڈالر
     OMR:
       display_names:
         other: عمانی ریال
@@ -359,59 +581,21 @@ number_formats:
     PGK:
       display_names:
         other: پاپوآ نیو گنی کا کینا
-    PHP:
-      symbol: PHP
-      display_names:
-        other: فلپائنی پیسو
-        one: فلپائینی پیسہ
-    PKR:
-      symbol: Rs
-      display_names:
-        other: پاکستانی روپیہ
-    PLN:
-      display_names:
-        other: پولش زلوٹی
-    PYG:
-      display_names:
-        other: پیراگوئے کا گوآرنی
     QAR:
       display_names:
         other: قطری ریال
-    RON:
-      display_names:
-        other: رومانیائی لی
-        one: رومانیائی لیو
     RSD:
       display_names:
         other: سربین دینار
-    RUB:
-      display_names:
-        other: روسی روبل
-    RWF:
-      display_names:
-        other: روانڈا کا فرانک
     SAR:
       display_names:
         other: سعودی ریال
-    SBD:
-      display_names:
-        other: سولومن آئلینڈز ڈالر
     SCR:
       display_names:
         other: سشلی کا روپیہ
     SDG:
       display_names:
         other: سوڈانی پاؤنڈ
-    SEK:
-      display_names:
-        other: سویڈن کرونر
-        one: سویڈن کرونا
-    SGD:
-      display_names:
-        other: سنگا پور ڈالر
-    SHP:
-      display_names:
-        other: سینٹ ہیلینا پاؤنڈ
     SIT:
       display_names:
         other: سلوانین ٹولر
@@ -427,29 +611,12 @@ number_formats:
     SOS:
       display_names:
         other: صومالی شلنگ
-    SRD:
-      display_names:
-        other: سورینامی ڈالر
-    SSP:
-      display_names:
-        other: جنوبی سوڈانی پاؤنڈز
-        one: جنوبی سوڈانی پاؤنڈ
     STD:
       display_names:
         other: ساؤ ٹوم اور پرنسپے ڈوبرا (1977–2017)
-    STN:
-      display_names:
-        other: ساؤ ٹومے اور پرنسپے ڈوبرا
-    SYP:
-      display_names:
-        other: شامی پونڈ
     SZL:
       display_names:
         other: سوازی لیلانجینی
-    THB:
-      symbol: "฿"
-      display_names:
-        other: تھائی باہت
     TJS:
       display_names:
         other: تاجکستانی سومونی
@@ -459,87 +626,35 @@ number_formats:
     TND:
       display_names:
         other: تیونیسیائی دینار
-    TOP:
-      display_names:
-        other: ٹونگن پانگا
-    TRY:
-      display_names:
-        other: ترکی لیرا
-    TTD:
-      display_names:
-        other: ترینیداد اور ٹوباگو کا ڈالر
-    TWD:
-      symbol: NT$
-      display_names:
-        other: نیو تائیوان ڈالر
     TZS:
       display_names:
         other: تنزانیائی شلنگ
-    UAH:
-      display_names:
-        other: یوکرینیائی ہریونیا
     UGX:
       display_names:
         other: یوگانڈا شلنگ
-    USD:
-      symbol: "$"
-      display_names:
-        other: امریکی ڈالر
-    UYU:
-      display_names:
-        other: یوروگویان پیسو
     UZS:
       display_names:
         other: ازبکستانی سوم
     VEB:
       display_names:
         other: وینزویلا بولیور (1871–2008)
-    VEF:
-      display_names:
-        other: وینزویلا بولیور (2008–2018)
     VES:
       display_names:
         other: وینزویلا بولیور
-    VND:
-      display_names:
-        other: ویتنامی ڈانگ
     VUV:
       display_names:
         other: وینوواتو واتو
     WST:
       display_names:
         other: ساموآ کا ٹالا
-    XAF:
-      display_names:
-        other: وسطی افریقی [CFA] فرانک
-    XCD:
-      display_names:
-        other: مشرقی کریبیا کا ڈالر
-    XOF:
-      display_names:
-        other: مغربی افریقی [CFA] فرانک
-    XPF:
-      display_names:
-        other: CFP فرانکس
-        one: CFP فرانک
-    XXX:
-      display_names:
-        other: "(نامعلوم کرنسی)"
-        one: "(کرنسی کی نامعلوم یونٹ)"
     YER:
       display_names:
         other: یمنی ریال
-    ZAR:
-      display_names:
-        other: جنوبی افریقی رانڈ
     ZMK:
       display_names:
         other: زامبیائی کواچا (1968–2012)
-    ZMW:
-      display_names:
-        other: زامبیائی کواچا
 locale: ur
-generated_at: '2025-09-10T22:17:50+09:00'
+generated_at: '2025-09-10T23:53:20+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

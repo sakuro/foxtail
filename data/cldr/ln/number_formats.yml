@@ -3,33 +3,374 @@ number_formats:
   symbols:
     decimal: ","
     group: "."
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: Kwanza ya Angóla
+    ARS:
+      symbol: "$"
+      display_names:
+        other: Peso y’Argentina
+    AUD:
+      symbol: A$
+      display_names:
+        other: Dolarɛ ya Ositali
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+      display_names:
+        other: Mark ya kobóngwama
+    BBD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Barbados
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+      display_names:
+        other: Boliviano
+    BRL:
+      symbol: R$
+      display_names:
+        other: Real ya Brazil
+    BSD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Bahamas
+    BWP:
+      symbol: P
+      display_names:
+        other: Pula ya Botswana
+    BZD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Belíze
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Dolarɛ ya Kanadá
+    CLP:
+      symbol: "$"
+      display_names:
+        other: Peso ya Shili
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Yuanɛ Renminbi ya Sinɛ
+    COP:
+      symbol: "$"
+      display_names:
+        other: Peso ya Kolombi
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: Colon ya Kosta Rika
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+      display_names:
+        other: Peso ya Kuba
+    CZK:
+      symbol: Kč
+      display_names:
+        other: Motolé Sheki
+    DKK:
+      symbol: kr
+      display_names:
+        other: Motolé ya Danemark
+    DOP:
+      symbol: "$"
+      display_names:
+        other: Peso Dominikani
+    EGP:
+      symbol: E£
+      display_names:
+        other: Paunɛ ya Ezípitɛ
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Ɛlɔ́
+    FJD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Fiji
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Paunɛ ya Angɛlɛtɛ́lɛ
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: Cedi
+    GIP:
+      symbol: "£"
+      display_names:
+        other: Bojito ya Gibraltar
+    GNF:
+      symbol: FG
+      display_names:
+        other: Falánga ya Gine
+    GTQ:
+      symbol: Q
+      display_names:
+        other: Quetzal
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+      display_names:
+        other: Lempira
+    HRK:
+      symbol: kn
+      display_names:
+        other: Kuna ya Kroasia
+    HUF:
+      symbol: Ft
+      display_names:
+        other: Folinte
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Rupi ya Índɛ
+    ISK:
+      symbol: kr
+      display_names:
+        other: Motolé ya Islandi
+    JMD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Jamaïke
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Yeni ya Zapɔ
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: Falánga ya Komoro
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Bisanga bya Kayman
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Dolarɛ ya Liberya
+    LTL:
+      symbol: Lt
+      display_names:
+        other: Litas ya Litwani
+    LVL:
+      symbol: Ls
+      display_names:
+        other: Lats ya Letoni
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Falánga ya Madagasikarɛ
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Rupi ya Morisi
+    MXN:
+      symbol: MX$
+      display_names:
+        other: Peso ya Mexiko
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Dolarɛ ya Namibi
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Naira ya Nizerya
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+      display_names:
+        other: Motolé ya Norvej
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: Dolále ya Zeland ya Sika
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+      display_names:
+        other: Sloty
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: Guarani
+    RON:
+      symbol: lei
+      display_names:
+        other: Leu Sika
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: Rubelé ya Rusí
+    RWF:
+      symbol: RF
+      display_names:
+        other: Falánga ya Rwanda
+    SBD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Bisanga Solomoni
+    SEK:
+      symbol: kr
+      display_names:
+        other: Motolé ya Swédi
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Paunɛ ya Sántu elena
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+      display_names:
+        other: Bojito ya Sudaní ya Súdi
+    STN:
+      symbol: Db
+      display_names:
+        other: Dobra ya Sao Tomé mpé Presipe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+      display_names:
+        other: Pa’Anga
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+      display_names:
+        other: Dolále ya Trinidad mpé Tobago
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: Griwná
+    USD:
+      symbol: US$
+      display_names:
+        other: Dolarɛ ya Ameriki
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Falánga CFA BEAC
+    XCD:
+      symbol: EC$
+      display_names:
+        other: Dolále ya Kalibí Monyɛlɛ
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Falánga CFA BCEAO
+    XPF:
+      symbol: F CFP
+      display_names:
+        other: Falánga CFP
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Randɛ ya Afríka Súdi
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Kwasha ya Zambi
     AED:
       display_names:
         other: Dirihamɛ ya Lémila alabo
     ALL:
       display_names:
         other: Lek
-    AOA:
-      display_names:
-        other: Kwanza ya Angóla
-    ARS:
-      display_names:
-        other: Peso y’Argentina
-    AUD:
-      display_names:
-        other: Dolarɛ ya Ositali
     AWG:
       display_names:
         other: Guldeni y’ Aruba
-    BAM:
-      display_names:
-        other: Mark ya kobóngwama
-    BBD:
-      display_names:
-        other: Dolále ya Barbados
     BGN:
       display_names:
         other: Leva ya Bulgaria
@@ -40,30 +381,12 @@ number_formats:
     BIF:
       display_names:
         other: Falánga ya Burundi
-    BOB:
-      display_names:
-        other: Boliviano
-    BRL:
-      display_names:
-        other: Real ya Brazil
-    BSD:
-      display_names:
-        other: Dolále ya Bahamas
-    BWP:
-      display_names:
-        other: Pula ya Botswana
     BYN:
       display_names:
         other: Rubelé ya Bielorusí
     BYR:
       display_names:
         other: Rubelé ya Bielorusí (2000–2016)
-    BZD:
-      display_names:
-        other: Dolále ya Belíze
-    CAD:
-      display_names:
-        other: Dolarɛ ya Kanadá
     CDF:
       symbol: FC
       display_names:
@@ -72,132 +395,45 @@ number_formats:
       symbol: Fr.
       display_names:
         other: Falánga ya Swisɛ
-    CLP:
-      display_names:
-        other: Peso ya Shili
-    CNY:
-      display_names:
-        other: Yuanɛ Renminbi ya Sinɛ
-    COP:
-      display_names:
-        other: Peso ya Kolombi
-    CRC:
-      display_names:
-        other: Colon ya Kosta Rika
-    CUP:
-      display_names:
-        other: Peso ya Kuba
     CVE:
       display_names:
         other: Esikudo ya Kapevɛrɛ
-    CZK:
-      display_names:
-        other: Motolé Sheki
     DJF:
       display_names:
         other: Falánga ya Dzibuti
-    DKK:
-      display_names:
-        other: Motolé ya Danemark
-    DOP:
-      display_names:
-        other: Peso Dominikani
     DZD:
       display_names:
         other: Dinarɛ ya Alizeri
-    EGP:
-      display_names:
-        other: Paunɛ ya Ezípitɛ
     ERN:
       display_names:
         other: Nakfa ya Elitlɛ
     ETB:
       display_names:
         other: Birɛ ya Etsiópi
-    EUR:
-      display_names:
-        other: Ɛlɔ́
-    FJD:
-      display_names:
-        other: Dolále ya Fiji
-    GBP:
-      display_names:
-        other: Paunɛ ya Angɛlɛtɛ́lɛ
     GHC:
       display_names:
         other: Sedi ya Gana
-    GHS:
-      display_names:
-        other: Cedi
-    GIP:
-      display_names:
-        other: Bojito ya Gibraltar
     GMD:
       display_names:
         other: Dalasi ya Gambi
-    GNF:
-      display_names:
-        other: Falánga ya Gine
     GNS:
       display_names:
         other: Falánga ya Ginɛ
-    GTQ:
-      display_names:
-        other: Quetzal
-    HNL:
-      display_names:
-        other: Lempira
-    HRK:
-      display_names:
-        other: Kuna ya Kroasia
     HTG:
       display_names:
         other: Gurde
-    HUF:
-      display_names:
-        other: Folinte
-    INR:
-      display_names:
-        other: Rupi ya Índɛ
-    ISK:
-      display_names:
-        other: Motolé ya Islandi
-    JMD:
-      display_names:
-        other: Dolále ya Jamaïke
-    JPY:
-      display_names:
-        other: Yeni ya Zapɔ
     KES:
       display_names:
         other: Shilingɛ ya Kenya
-    KMF:
-      display_names:
-        other: Falánga ya Komoro
-    KYD:
-      display_names:
-        other: Dolále ya Bisanga bya Kayman
-    LRD:
-      display_names:
-        other: Dolarɛ ya Liberya
     LSL:
       display_names:
         other: Loti ya Lesóto
-    LTL:
-      display_names:
-        other: Litas ya Litwani
-    LVL:
-      display_names:
-        other: Lats ya Letoni
     LYD:
       display_names:
         other: Dinarɛ ya Libí
     MAD:
       display_names:
         other: Dirihame ya Marokɛ
-    MGA:
-      display_names:
-        other: Falánga ya Madagasikarɛ
     MKD:
       display_names:
         other: Denalé
@@ -207,33 +443,15 @@ number_formats:
     MRU:
       display_names:
         other: Ugwiya ya Moritani
-    MUR:
-      display_names:
-        other: Rupi ya Morisi
     MWK:
       display_names:
         other: Kwasha ya Malawi
-    MXN:
-      display_names:
-        other: Peso ya Mexiko
     MZM:
       display_names:
         other: Metikali ya Mozambiki
     MZN:
       display_names:
         other: Métikal
-    NAD:
-      display_names:
-        other: Dolarɛ ya Namibi
-    NGN:
-      display_names:
-        other: Naira ya Nizerya
-    NOK:
-      display_names:
-        other: Motolé ya Norvej
-    NZD:
-      display_names:
-        other: Dolále ya Zeland ya Sika
     PAB:
       display_names:
         other: Balboa
@@ -243,30 +461,12 @@ number_formats:
     PGK:
       display_names:
         other: Kina
-    PLN:
-      display_names:
-        other: Sloty
-    PYG:
-      display_names:
-        other: Guarani
-    RON:
-      display_names:
-        other: Leu Sika
     RSD:
       display_names:
         other: Dinalé ya Serbia
-    RUB:
-      display_names:
-        other: Rubelé ya Rusí
-    RWF:
-      display_names:
-        other: Falánga ya Rwanda
     SAR:
       display_names:
         other: Riyalɛ ya Alabi Sawuditɛ
-    SBD:
-      display_names:
-        other: Dolále ya Bisanga Solomoni
     SCR:
       display_names:
         other: Rupi ya Sɛshɛlɛ
@@ -276,12 +476,6 @@ number_formats:
     SDP:
       display_names:
         other: Paunɛ ya Sudá
-    SEK:
-      display_names:
-        other: Motolé ya Swédi
-    SHP:
-      display_names:
-        other: Paunɛ ya Sántu elena
     SLE:
       display_names:
         other: Leonɛ
@@ -291,72 +485,35 @@ number_formats:
     SOS:
       display_names:
         other: Shilingɛ ya Somali
-    SSP:
-      display_names:
-        other: Bojito ya Sudaní ya Súdi
     STD:
       display_names:
         other: Dobra ya Sao Tomé mpé Presipe (1977–2017)
-    STN:
-      display_names:
-        other: Dobra ya Sao Tomé mpé Presipe
     SZL:
       display_names:
         other: Lilangeni
     TND:
       display_names:
         other: Dinarɛ ya Tinizi
-    TOP:
-      display_names:
-        other: Pa’Anga
-    TTD:
-      display_names:
-        other: Dolále ya Trinidad mpé Tobago
     TZS:
       display_names:
         other: Shilingɛ ya Tanzani
-    UAH:
-      display_names:
-        other: Griwná
     UGX:
       display_names:
         other: Shilingɛ ya Uganda
-    USD:
-      display_names:
-        other: Dolarɛ ya Ameriki
     VUV:
       display_names:
         other: Vatu
     WST:
       display_names:
         other: Tala
-    XAF:
-      display_names:
-        other: Falánga CFA BEAC
-    XCD:
-      display_names:
-        other: Dolále ya Kalibí Monyɛlɛ
-    XOF:
-      display_names:
-        other: Falánga CFA BCEAO
-    XPF:
-      symbol: F CFP
-      display_names:
-        other: Falánga CFP
-    ZAR:
-      display_names:
-        other: Randɛ ya Afríka Súdi
     ZMK:
       display_names:
         other: Kwasha ya Zambi (1968–2012)
-    ZMW:
-      display_names:
-        other: Kwasha ya Zambi
     ZWD:
       display_names:
         other: Dolarɛ ya Zimbabwɛ
 locale: ln
-generated_at: '2025-09-10T22:17:42+09:00'
+generated_at: '2025-09-10T23:53:12+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

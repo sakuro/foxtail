@@ -1,38 +1,298 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: Kwanza ey’Angola
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: Doola ey’Awusiturelya
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: Pula ey’eBotiswana
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Doola ey’eKanada
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Yuwani Reniminibi ey’eCayina
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: Pawundi ey’eMisiri
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Yuro
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Pawundi ey’eBungereza
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Rupiya ey’eBuyindi
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Yeni ey’eJapani
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: Faranga ey’eKomoro
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Doola ey’eLiberya
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Faranga ey’eMalagase
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Rupiya ey’eMawurisyasi
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Doola ey’eNamibiya
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Nayira ey’eNayijerya
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: Faranga ey’eRwanda
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Pawundi ey’eSenti Herena
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: Dobura ey’eSantome ne Purincipe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: Doola ey’Amerika
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Faranga ey’omu Afirika eya wakati
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Faranga ey’omu Afirika ey’ebugwanjuba
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Randi ey’eSawusafirika
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Kwaca ey’eZambya
     AED:
       display_names:
         other: Diraamu eya Emireeti
-    AOA:
-      display_names:
-        other: Kwanza ey’Angola
-    AUD:
-      display_names:
-        other: Doola ey’Awusiturelya
     BHD:
       display_names:
         other: Dinaali ey’eBaareeni
     BIF:
       display_names:
         other: Faranga ey’eburundi
-    BWP:
-      display_names:
-        other: Pula ey’eBotiswana
-    CAD:
-      display_names:
-        other: Doola ey’eKanada
     CDF:
       display_names:
         other: Faranga ey’eKongo
     CHF:
       display_names:
         other: Faranga ey’eSwitizirandi
-    CNY:
-      display_names:
-        other: Yuwani Reniminibi ey’eCayina
     CVE:
       display_names:
         other: Esikudo ey’Keepu Veredi
@@ -42,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: Dinaali ey’Aligerya
-    EGP:
-      display_names:
-        other: Pawundi ey’eMisiri
     ERN:
       display_names:
         other: Nakifa ey’Eritureya
     ETB:
       display_names:
         other: Biiru ey’Esyopya
-    EUR:
-      display_names:
-        other: Yuro
-    GBP:
-      display_names:
-        other: Pawundi ey’eBungereza
     GHC:
       display_names:
         other: Sedi ey’eGana
@@ -66,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: Faranga ey’eGini
-    INR:
-      display_names:
-        other: Rupiya ey’eBuyindi
-    JPY:
-      display_names:
-        other: Yeni ey’eJapani
     KES:
       display_names:
         other: Silingi ey’eKenya
-    KMF:
-      display_names:
-        other: Faranga ey’eKomoro
-    LRD:
-      display_names:
-        other: Doola ey’eLiberya
     LSL:
       display_names:
         other: Loti ey’eLesoso
@@ -90,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: Diraamu ey’eMoroko
-    MGA:
-      display_names:
-        other: Faranga ey’eMalagase
     MRO:
       display_names:
         other: Wugwiya ey’eMawritenya (1973–2017)
     MRU:
       display_names:
         other: Wugwiya ey’eMawritenya
-    MUR:
-      display_names:
-        other: Rupiya ey’eMawurisyasi
     MWK:
       display_names:
         other: Kwaca ey’eMalawi
     MZM:
       display_names:
         other: Metikaali ey’eMozambiiki
-    NAD:
-      display_names:
-        other: Doola ey’eNamibiya
-    NGN:
-      display_names:
-        other: Nayira ey’eNayijerya
-    RWF:
-      display_names:
-        other: Faranga ey’eRwanda
     SAR:
       display_names:
         other: Riyaali ey’eBuwarabu
@@ -129,9 +353,6 @@ number_formats:
     SDP:
       display_names:
         other: Pawundi ey’eSudaani
-    SHP:
-      display_names:
-        other: Pawundi ey’eSenti Herena
     SLE:
       display_names:
         other: Lewone
@@ -144,9 +365,6 @@ number_formats:
     STD:
       display_names:
         other: Dobura ey’eSantome ne Purincipe (1977–2017)
-    STN:
-      display_names:
-        other: Dobura ey’eSantome ne Purincipe
     SZL:
       display_names:
         other: Lilangeni
@@ -160,29 +378,14 @@ number_formats:
       symbol: USh
       display_names:
         other: Silingi eya Yuganda
-    USD:
-      display_names:
-        other: Doola ey’Amerika
-    XAF:
-      display_names:
-        other: Faranga ey’omu Afirika eya wakati
-    XOF:
-      display_names:
-        other: Faranga ey’omu Afirika ey’ebugwanjuba
-    ZAR:
-      display_names:
-        other: Randi ey’eSawusafirika
     ZMK:
       display_names:
         other: Kwaca ey’eZambya (1968–2012)
-    ZMW:
-      display_names:
-        other: Kwaca ey’eZambya
     ZWD:
       display_names:
         other: Doola ey’eZimbabwe
 locale: lg
-generated_at: '2025-09-10T22:17:42+09:00'
+generated_at: '2025-09-10T23:53:12+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

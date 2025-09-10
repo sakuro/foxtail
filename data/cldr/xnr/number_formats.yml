@@ -1,51 +1,449 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
   decimal_formats:
     standard: "#,##,##0.###"
   percent_formats:
     standard: "#,##,##0%"
   currency_formats:
     standard: "¤#,##,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: कट्ठा अरब अमीरात दे दिराम
     AFN:
+      symbol: "؋"
       display_names:
         other: अफ़गान दे अफ़गानी
-    ALL:
-      display_names:
-        other: अल्बानिया दा लेक
     AMD:
+      symbol: "֏"
       display_names:
         other: आर्मेनिया दे द्राम
-    ANG:
-      display_names:
-        other: नीदरलैंड एंटीलिया दे गिल्डर
     AOA:
+      symbol: Kz
       display_names:
         other: अंगोला दे क्वांज़ा
     ARS:
+      symbol: "$"
       display_names:
         other: अर्जेंटीनी दे पेसो
     AUD:
+      symbol: A$
       display_names:
         other: अस्ट्रेलिया दे डॉलर
-    AWG:
-      display_names:
-        other: अरूबा दा फ़्लोरिन
     AZN:
+      symbol: "₼"
       display_names:
         other: अज़रबैजान दे मैनेट
     BAM:
+      symbol: KM
       display_names:
         other: बोस्निया हर्ज़ेगोविना बदलने जोगा मार्क
     BBD:
+      symbol: "$"
       display_names:
         other: बार्बेडिया दे डॉलर
     BDT:
+      symbol: "৳"
       display_names:
         other: बांग्लादेशे दे टका
+    BMD:
+      symbol: "$"
+      display_names:
+        other: बरमूडा दे डॉलर
+    BND:
+      symbol: "$"
+      display_names:
+        other: ब्रूने दे डॉलर
+    BOB:
+      symbol: Bs
+      display_names:
+        other: बोलिविया दे बोलिवियानो
+    BRL:
+      symbol: R$
+      display_names:
+        other: ब्राज़ीले दे रियाल
+    BSD:
+      symbol: "$"
+      display_names:
+        other: बहामा दे डॉलर
+    BWP:
+      symbol: P
+      display_names:
+        other: बोत्सवानिया दे पुला
+    BZD:
+      symbol: "$"
+      display_names:
+        other: बेलीज़ दे डॉलर
+    CAD:
+      symbol: CA$
+      display_names:
+        other: कनेडा दे डॉलर
+    CLP:
+      symbol: "$"
+      display_names:
+        other: चिली पेसो
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: चीनी युआन
+    COP:
+      symbol: "$"
+      display_names:
+        other: कोलंबिया दे पेसो
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: कोस्टा रिका कोलोन
+    CUC:
+      symbol: "$"
+      display_names:
+        other: क्यूबा बदलने जोगा पेसो
+    CUP:
+      symbol: "$"
+      display_names:
+        other: क्यूबा दे पेसो
+    CZK:
+      symbol: Kč
+      display_names:
+        other: चेक गणराज्य कोरुना
+    DKK:
+      symbol: kr
+      display_names:
+        other: डैनिश क्रोन
+    DOP:
+      symbol: "$"
+      display_names:
+        other: डैनमार्के दे पेसो
+    EGP:
+      symbol: E£
+      display_names:
+        other: मिस्र दे पाउंड
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: यूरो
+    FJD:
+      symbol: "$"
+      display_names:
+        other: फ़िजी डॉलर
+    FKP:
+      symbol: "£"
+      display_names:
+        other: फ़ॉकलैंड टापुआं दे झुंडे दे पाउंड
+    GBP:
+      symbol: "£"
+      display_names:
+        other: ब्रिटिश पाउंड स्टर्लिंग
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: जॉर्जिया दे लारी
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: घाना दे सेडी
+    GIP:
+      symbol: "£"
+      display_names:
+        other: जिब्राल्टरे दे पाउंड
+    GNF:
+      symbol: FG
+      display_names:
+        other: गिनीया दे फ़्रैंक
+    GTQ:
+      symbol: Q
+      display_names:
+        other: ग्वाटेमाला दे क्वेटज़ल
+    GYD:
+      symbol: "$"
+      display_names:
+        other: गयाना दे डॉलर
+    HKD:
+      symbol: HK$
+      display_names:
+        other: हाँगकाँग दे डॉलर
+    HNL:
+      symbol: L
+      display_names:
+        other: होंडुरे दे लेम्पिरा
+    HRK:
+      symbol: kn
+      display_names:
+        other: क्रोएशिया दे कुना
+    HUF:
+      symbol: Ft
+      display_names:
+        other: हंगेरिया दे फ़ोरिंट
+    IDR:
+      symbol: Rp
+      display_names:
+        other: इंडोनेशिया दे रुपिये
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: इज़राइली न्यू शेकेल
+    INR:
+      symbol: "₹"
+      display_names:
+        other: भारते दे रुपए
+    ISK:
+      symbol: kr
+      display_names:
+        other: आइसलैंडे दे क्रोना
+    JMD:
+      symbol: "$"
+      display_names:
+        other: जमैके दे डॉलर
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: जपाने दे येन
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: किर्गिस्ताने दे सोम
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: कंबोडिया दे रियाल
+    KMF:
+      symbol: CF
+      display_names:
+        other: कोमोरिया दे फ़्रैंक
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: उत्तर कोरिया दे वॉन
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: दखण कोरिया दे वॉन
+    KYD:
+      symbol: "$"
+      display_names:
+        other: कैमेन टापुआं दे झुंडे दे डॉलर
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: कज़ाखिस्ताने दे टेंज
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: लाओशिया दे किप
+    LBP:
+      symbol: L£
+      display_names:
+        other: लेबनाने दे पाउंड
+    LKR:
+      symbol: Rs
+      display_names:
+        other: श्रीलंका दे रुपए
+    LRD:
+      symbol: "$"
+      display_names:
+        other: लाइबेरिया दे डॉलर
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: मालागासे दे आरियरी
+    MMK:
+      symbol: K
+      display_names:
+        other: म्यांमार दे क्याट
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: मंगोलिया दे टगरिक
+    MUR:
+      symbol: Rs
+      display_names:
+        other: मारिशियश दे रुपया
+    MXN:
+      symbol: MX$
+      display_names:
+        other: मैक्सिकन दे पेसो
+    MYR:
+      symbol: RM
+      display_names:
+        other: मलेशियाई दे रिंगित
+    NAD:
+      symbol: "$"
+      display_names:
+        other: नामीबियाई दे डॉलर
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: नाइजीरियाई दे नाइरा
+    NIO:
+      symbol: C$
+      display_names:
+        other: निकारागुअन दे कोरडोबा
+    NOK:
+      symbol: kr
+      display_names:
+        other: नॉर्वेजियन दे क्रोन
+    NPR:
+      symbol: Rs
+      display_names:
+        other: नेपाले दे रुपए
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: न्यूज़ीलैंड दे डॉलर
+    PHP:
+      symbol: "₱"
+      display_names:
+        other: फ़िलिपीनी दे पेसो
+    PKR:
+      symbol: Rs
+      display_names:
+        other: पाकिस्ताने दे रुपए
+    PLN:
+      symbol: zł
+      display_names:
+        other: पोलिश दे ज़्लॉटी
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: पैराग्वियन दे गुआरानी
+    RON:
+      symbol: lei
+      display_names:
+        other: रोमानिया दे ल्यू
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: रूसे दे रूबल
+    RWF:
+      symbol: RF
+      display_names:
+        other: रवांडा दे फ़्रैंक
+    SBD:
+      symbol: "$"
+      display_names:
+        other: सोलोमन टापुआं दे झुंडे दे डॉलर
+    SEK:
+      symbol: kr
+      display_names:
+        other: स्वीडेने दे क्रोना
+    SGD:
+      symbol: "$"
+      display_names:
+        other: सिंगापुरे दे डॉलर
+    SHP:
+      symbol: "£"
+      display_names:
+        other: सेंट हेलेना दे पाउंड
+    SRD:
+      symbol: "$"
+      display_names:
+        other: सूरीनामे दे डॉलर
+    SSP:
+      symbol: "£"
+      display_names:
+        other: दखण सूडाने दे पाउंड
+    STN:
+      symbol: Db
+      display_names:
+        other: साओ टोम कने प्रिंसिपे दे डोबरा
+    SYP:
+      symbol: "£"
+      display_names:
+        other: सीरिया दे पाउंड
+    THB:
+      symbol: "฿"
+      display_names:
+        other: थाई बहत
+    TOP:
+      symbol: T$
+      display_names:
+        other: टोंगे दे पांगा
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: तुर्के दे लीरा
+    TTD:
+      symbol: "$"
+      display_names:
+        other: त्रिनिदाद कने टोबैगो दे डॉलर
+    TWD:
+      symbol: NT$
+      display_names:
+        other: नोए ताईवानी डॉलर
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: यूक्रेनिया दे रिव्निया
+    USD:
+      symbol: US$
+      display_names:
+        other: यूएस दे डॉलर
+    UYU:
+      symbol: "$"
+      display_names:
+        other: उरुग्विया दे पेसो
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+      display_names:
+        other: वियतनामे दे डोंग
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: केंद्रीय अफ़्रीका दे CFA फ़्रैंक
+    XCD:
+      symbol: EC$
+      display_names:
+        other: पूर्वी कैरिबिया दे डॉलर
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: पश्चिमी अफ़्रीका दे CFA फ़्रैंक
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: "[CFP] फ़्रैंक"
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(अणजाण मुद्रा)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: दखण अफ़्रीका दे रैंड
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: ज़ाम्बिया दे क्वाचा
+    AED:
+      display_names:
+        other: कट्ठा अरब अमीरात दे दिराम
+    ALL:
+      display_names:
+        other: अल्बानिया दा लेक
+    ANG:
+      display_names:
+        other: नीदरलैंड एंटीलिया दे गिल्डर
+    AWG:
+      display_names:
+        other: अरूबा दा फ़्लोरिन
     BGN:
       display_names:
         other: बुल्गारिया दा लेव
@@ -55,204 +453,57 @@ number_formats:
     BIF:
       display_names:
         other: बुरूंडी दे फ़्रैंक
-    BMD:
-      display_names:
-        other: बरमूडा दे डॉलर
-    BND:
-      display_names:
-        other: ब्रूने दे डॉलर
-    BOB:
-      display_names:
-        other: बोलिविया दे बोलिवियानो
-    BRL:
-      display_names:
-        other: ब्राज़ीले दे रियाल
-    BSD:
-      display_names:
-        other: बहामा दे डॉलर
     BTN:
       display_names:
         other: भूटाने दे नंगलट्रम
-    BWP:
-      display_names:
-        other: बोत्सवानिया दे पुला
     BYN:
       display_names:
         other: बेलारूस दे रूबल
-    BZD:
-      display_names:
-        other: बेलीज़ दे डॉलर
-    CAD:
-      display_names:
-        other: कनेडा दे डॉलर
     CDF:
       display_names:
         other: कोंगोली फ़्रैंक
     CHF:
       display_names:
         other: स्विस फ़्रैंक
-    CLP:
-      display_names:
-        other: चिली पेसो
     CNH:
       display_names:
         other: चीनी युआन (ऑफ़शोर)
-    CNY:
-      display_names:
-        other: चीनी युआन
-    COP:
-      display_names:
-        other: कोलंबिया दे पेसो
-    CRC:
-      display_names:
-        other: कोस्टा रिका कोलोन
-    CUC:
-      display_names:
-        other: क्यूबा बदलने जोगा पेसो
-    CUP:
-      display_names:
-        other: क्यूबा दे पेसो
     CVE:
       display_names:
         other: केप वर्ड एस्कूडो
-    CZK:
-      display_names:
-        other: चेक गणराज्य कोरुना
     DJF:
       display_names:
         other: जिबूती दे फ़्रैंक
-    DKK:
-      display_names:
-        other: डैनिश क्रोन
-    DOP:
-      display_names:
-        other: डैनमार्के दे पेसो
     DZD:
       display_names:
         other: अल्जीरिया दे दिनार
-    EGP:
-      display_names:
-        other: मिस्र दे पाउंड
     ERN:
       display_names:
         other: इरीट्रिया दे नाक्फ़ा
     ETB:
       display_names:
         other: इथियोपिया दे बिर
-    EUR:
-      display_names:
-        other: यूरो
-    FJD:
-      display_names:
-        other: फ़िजी डॉलर
-    FKP:
-      display_names:
-        other: फ़ॉकलैंड टापुआं दे झुंडे दे पाउंड
-    GBP:
-      display_names:
-        other: ब्रिटिश पाउंड स्टर्लिंग
-    GEL:
-      display_names:
-        other: जॉर्जिया दे लारी
-    GHS:
-      display_names:
-        other: घाना दे सेडी
-    GIP:
-      display_names:
-        other: जिब्राल्टरे दे पाउंड
     GMD:
       display_names:
         other: गैंबिया दे डलासी
-    GNF:
-      display_names:
-        other: गिनीया दे फ़्रैंक
-    GTQ:
-      display_names:
-        other: ग्वाटेमाला दे क्वेटज़ल
-    GYD:
-      display_names:
-        other: गयाना दे डॉलर
-    HKD:
-      display_names:
-        other: हाँगकाँग दे डॉलर
-    HNL:
-      display_names:
-        other: होंडुरे दे लेम्पिरा
-    HRK:
-      display_names:
-        other: क्रोएशिया दे कुना
     HTG:
       display_names:
         other: हैतियाई दे गर्ड
-    HUF:
-      display_names:
-        other: हंगेरिया दे फ़ोरिंट
-    IDR:
-      display_names:
-        other: इंडोनेशिया दे रुपिये
-    ILS:
-      display_names:
-        other: इज़राइली न्यू शेकेल
-    INR:
-      display_names:
-        other: भारते दे रुपए
     IQD:
       display_names:
         other: इराके दे दिनार
     IRR:
       display_names:
         other: ईराने दे रियाल
-    ISK:
-      display_names:
-        other: आइसलैंडे दे क्रोना
-    JMD:
-      display_names:
-        other: जमैके दे डॉलर
     JOD:
       display_names:
         other: जॉर्डनिया दे दिनार
-    JPY:
-      display_names:
-        other: जपाने दे येन
     KES:
       display_names:
         other: केन्या दे शिलिंग
-    KGS:
-      display_names:
-        other: किर्गिस्ताने दे सोम
-    KHR:
-      display_names:
-        other: कंबोडिया दे रियाल
-    KMF:
-      display_names:
-        other: कोमोरिया दे फ़्रैंक
-    KPW:
-      display_names:
-        other: उत्तर कोरिया दे वॉन
-    KRW:
-      display_names:
-        other: दखण कोरिया दे वॉन
     KWD:
       display_names:
         other: कुवैते दे दिनार
-    KYD:
-      display_names:
-        other: कैमेन टापुआं दे झुंडे दे डॉलर
-    KZT:
-      display_names:
-        other: कज़ाखिस्ताने दे टेंज
-    LAK:
-      display_names:
-        other: लाओशिया दे किप
-    LBP:
-      display_names:
-        other: लेबनाने दे पाउंड
-    LKR:
-      display_names:
-        other: श्रीलंका दे रुपए
-    LRD:
-      display_names:
-        other: लाइबेरिया दे डॉलर
     LYD:
       display_names:
         other: लीबिया दे दिनार
@@ -262,60 +513,24 @@ number_formats:
     MDL:
       display_names:
         other: मोल्डोवा दे लियू
-    MGA:
-      display_names:
-        other: मालागासे दे आरियरी
     MKD:
       display_names:
         other: मैसीडोनिया दे दिनार
-    MMK:
-      display_names:
-        other: म्यांमार दे क्याट
-    MNT:
-      display_names:
-        other: मंगोलिया दे टगरिक
     MOP:
       display_names:
         other: मेकानी दे पाटाके
     MRU:
       display_names:
         other: मॉरीटेनिया दे ओगुइया
-    MUR:
-      display_names:
-        other: मारिशियश दे रुपया
     MVR:
       display_names:
         other: मालदीवी दे रुफ़िया
     MWK:
       display_names:
         other: मालावियन दे क्वाचा
-    MXN:
-      display_names:
-        other: मैक्सिकन दे पेसो
-    MYR:
-      display_names:
-        other: मलेशियाई दे रिंगित
     MZN:
       display_names:
         other: मोज़ाम्बिकन दे मेटिकल
-    NAD:
-      display_names:
-        other: नामीबियाई दे डॉलर
-    NGN:
-      display_names:
-        other: नाइजीरियाई दे नाइरा
-    NIO:
-      display_names:
-        other: निकारागुअन दे कोरडोबा
-    NOK:
-      display_names:
-        other: नॉर्वेजियन दे क्रोन
-    NPR:
-      display_names:
-        other: नेपाले दे रुपए
-    NZD:
-      display_names:
-        other: न्यूज़ीलैंड दे डॉलर
     OMR:
       display_names:
         other: ओमानी दे रियाल
@@ -328,54 +543,21 @@ number_formats:
     PGK:
       display_names:
         other: पापुआ नोआ गिनीयन किना
-    PHP:
-      display_names:
-        other: फ़िलिपीनी दे पेसो
-    PKR:
-      display_names:
-        other: पाकिस्ताने दे रुपए
-    PLN:
-      display_names:
-        other: पोलिश दे ज़्लॉटी
-    PYG:
-      display_names:
-        other: पैराग्वियन दे गुआरानी
     QAR:
       display_names:
         other: क़तरी दे रियाल
-    RON:
-      display_names:
-        other: रोमानिया दे ल्यू
     RSD:
       display_names:
         other: सर्बिया दे दिनार
-    RUB:
-      display_names:
-        other: रूसे दे रूबल
-    RWF:
-      display_names:
-        other: रवांडा दे फ़्रैंक
     SAR:
       display_names:
         other: सउदी दे रियाल
-    SBD:
-      display_names:
-        other: सोलोमन टापुआं दे झुंडे दे डॉलर
     SCR:
       display_names:
         other: सेशेल्सिया दे रुपए
     SDG:
       display_names:
         other: सूडाने दे पाउंड
-    SEK:
-      display_names:
-        other: स्वीडेने दे क्रोना
-    SGD:
-      display_names:
-        other: सिंगापुरे दे डॉलर
-    SHP:
-      display_names:
-        other: सेंट हेलेना दे पाउंड
     SLE:
       display_names:
         other: सिएरा लियोनिया दे लियोन
@@ -385,24 +567,9 @@ number_formats:
     SOS:
       display_names:
         other: सोमाले दे शिलिंग
-    SRD:
-      display_names:
-        other: सूरीनामे दे डॉलर
-    SSP:
-      display_names:
-        other: दखण सूडाने दे पाउंड
-    STN:
-      display_names:
-        other: साओ टोम कने प्रिंसिपे दे डोबरा
-    SYP:
-      display_names:
-        other: सीरिया दे पाउंड
     SZL:
       display_names:
         other: स्वाज़ी लिलांजेनी
-    THB:
-      display_names:
-        other: थाई बहत
     TJS:
       display_names:
         other: ताजिकिस्ताने दे सोमोनी
@@ -412,74 +579,29 @@ number_formats:
     TND:
       display_names:
         other: ट्यूनीशिया दे दिनार
-    TOP:
-      display_names:
-        other: टोंगे दे पांगा
-    TRY:
-      display_names:
-        other: तुर्के दे लीरा
-    TTD:
-      display_names:
-        other: त्रिनिदाद कने टोबैगो दे डॉलर
-    TWD:
-      display_names:
-        other: नोए ताईवानी डॉलर
     TZS:
       display_names:
         other: तंज़ानिया दे शिलिंग
-    UAH:
-      display_names:
-        other: यूक्रेनिया दे रिव्निया
     UGX:
       display_names:
         other: युगांडा दे शिलिंग
-    USD:
-      display_names:
-        other: यूएस दे डॉलर
-    UYU:
-      display_names:
-        other: उरुग्विया दे पेसो
     UZS:
       display_names:
         other: उज़्बेकिस्ताने दे सोम
     VES:
       display_names:
         other: वेनेज़ुएला दे बोलिवर
-    VND:
-      display_names:
-        other: वियतनामे दे डोंग
     VUV:
       display_names:
         other: वनुआतू दे वातू
     WST:
       display_names:
         other: समोआ दे ताला
-    XAF:
-      display_names:
-        other: केंद्रीय अफ़्रीका दे CFA फ़्रैंक
-    XCD:
-      display_names:
-        other: पूर्वी कैरिबिया दे डॉलर
-    XOF:
-      display_names:
-        other: पश्चिमी अफ़्रीका दे CFA फ़्रैंक
-    XPF:
-      display_names:
-        other: "[CFP] फ़्रैंक"
-    XXX:
-      display_names:
-        other: "(अणजाण मुद्रा)"
     YER:
       display_names:
         other: यमने दे रियाल
-    ZAR:
-      display_names:
-        other: दखण अफ़्रीका दे रैंड
-    ZMW:
-      display_names:
-        other: ज़ाम्बिया दे क्वाचा
 locale: xnr
-generated_at: '2025-09-10T22:17:51+09:00'
+generated_at: '2025-09-10T23:53:20+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

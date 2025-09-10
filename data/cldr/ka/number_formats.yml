@@ -3,10 +3,447 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
     nan: არ არის რიცხვი
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: ავღანური ავღანი
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: სომხური დრამი
+    AOA:
+      symbol: Kz
+      display_names:
+        other: ანგოლური კვანზა
+    ARS:
+      symbol: "$"
+      display_names:
+        other: არგენტინული პესო
+    AUD:
+      symbol: AUD
+      display_names:
+        other: ავსტრალიური დოლარი
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: აზერბაიჯანული მანათი
+    BAM:
+      symbol: KM
+      display_names:
+        other: ბოსნია და ჰერცოგოვინას კონვერტირებადი მარკა
+    BBD:
+      symbol: "$"
+      display_names:
+        other: ბარბადოსული დოლარი
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: ბანგლადეშური ტაკა
+    BMD:
+      symbol: "$"
+      display_names:
+        other: ბერმუდული დოლარი
+    BND:
+      symbol: "$"
+      display_names:
+        other: ბრუნეული დოლარი
+    BOB:
+      symbol: Bs
+      display_names:
+        other: ბოლივიური ბოლივიანო
+    BRL:
+      symbol: R$
+      display_names:
+        other: ბრაზილიური რეალი
+    BSD:
+      symbol: "$"
+      display_names:
+        other: ბაჰამური დოლარი
+    BWP:
+      symbol: P
+      display_names:
+        other: ბოცვანური პულა
+    BZD:
+      symbol: "$"
+      display_names:
+        other: ბელიზის დოლარი
+    CAD:
+      symbol: CA$
+      display_names:
+        other: კანადური დოლარი
+    CLP:
+      symbol: "$"
+      display_names:
+        other: ჩილეს პესო
+    CNY:
+      symbol: CNY
+      display_names:
+        other: ჩინური უანი
+        one: ჩინური უანი
+    COP:
+      symbol: "$"
+      display_names:
+        other: კოლუმბიური პესო
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: კოსტა რიკული კოლონი
+        one: კოსტა-რიკული კოლონი
+    CUC:
+      symbol: "$"
+      display_names:
+        other: კუბური კონვერტირებადი პესო
+    CUP:
+      symbol: "$"
+      display_names:
+        other: კუბური პესო
+    CZK:
+      symbol: Kč
+      display_names:
+        other: ჩეხური კრონა
+    DKK:
+      symbol: kr
+      display_names:
+        other: დანიური კრონა
+    DOP:
+      symbol: "$"
+      display_names:
+        other: დომინიკური პესო
+    EGP:
+      symbol: E£
+      display_names:
+        other: ეგვიპტური გირვანქა
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: ესპანური პესეტა
+    EUR:
+      symbol: "€"
+      display_names:
+        other: ევრო
+    FJD:
+      symbol: "$"
+      display_names:
+        other: ფიჯის დოლარი
+    FKP:
+      symbol: "£"
+      display_names:
+        other: ფოლკლენდის კუნძულების ფუნტი
+    GBP:
+      symbol: "£"
+      display_names:
+        other: ბრიტანული გირვანქა სტერლინგი
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: ქართული ლარი
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: განური სედი
+    GIP:
+      symbol: "£"
+      display_names:
+        other: გიბრალტარული ფუნტი
+    GNF:
+      symbol: FG
+      display_names:
+        other: გვინეური ფრანკი
+    GTQ:
+      symbol: Q
+      display_names:
+        other: გვატემალური კეტსალი
+    GYD:
+      symbol: "$"
+      display_names:
+        other: გაიანური დოლარი
+    HKD:
+      symbol: HKD
+      display_names:
+        other: ჰონკონგის დოლარი
+    HNL:
+      symbol: L
+      display_names:
+        other: ჰონდურასული ლემპირა
+    HRK:
+      symbol: kn
+      display_names:
+        other: ხორვატული კუნა
+    HUF:
+      symbol: Ft
+      display_names:
+        other: უნგრული ფორინტი
+    IDR:
+      symbol: Rp
+      display_names:
+        other: ინდონეზიური რუპია
+    ILS:
+      symbol: ILS
+      display_names:
+        other: ისრაელის ახალი შეკელი
+    INR:
+      symbol: INR
+      display_names:
+        other: ინდური რუპია
+    ISK:
+      symbol: kr
+      display_names:
+        other: ისლანდიური კრონა
+    JMD:
+      symbol: "$"
+      display_names:
+        other: იამაიკური დოლარი
+    JPY:
+      symbol: JPY
+      display_names:
+        other: იაპონური იენი
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: ყირგიზული სომი
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: კამბოჯური რიელი
+    KMF:
+      symbol: CF
+      display_names:
+        other: კომორული ფრანკი
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: ჩრდილოეთ კორეული ვონი
+    KRW:
+      symbol: KRW
+      display_names:
+        other: სამხრეთ კორეული ვონი
+    KYD:
+      symbol: "$"
+      display_names:
+        other: კაიმანის კუნძულების დოლარი
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: ყაზახური ტენგე
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: ლაოსური კიპი
+    LBP:
+      symbol: L£
+      display_names:
+        other: ლიბანური ფუნტი
+    LKR:
+      symbol: Rs
+      display_names:
+        other: შრი-ლანკური რუპია
+    LRD:
+      symbol: "$"
+      display_names:
+        other: ლიბერიული დოლარი
+    LTL:
+      symbol: Lt
+      display_names:
+        other: ლიტვური ლიტა
+    LVL:
+      symbol: Ls
+      display_names:
+        other: ლატვიური ლატი
+    MGA:
+      symbol: Ar
+      display_names:
+        other: მადაგასკარის არიარი
+    MMK:
+      symbol: K
+      display_names:
+        other: მიანმარის კიატი
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: მონღოლური ტუგრიკი
+    MUR:
+      symbol: Rs
+      display_names:
+        other: მავრიტანული რუპია
+    MXN:
+      symbol: MX$
+      display_names:
+        other: მექსიკური პესო
+    MYR:
+      symbol: RM
+      display_names:
+        other: მალაიზიური რინგიტი
+    NAD:
+      symbol: "$"
+      display_names:
+        other: ნამიბიური დოლარი
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: ნიგერიული ნაირა
+    NIO:
+      symbol: C$
+      display_names:
+        other: ნიკარაგუას ოქროს კორდობა
+    NOK:
+      symbol: kr
+      display_names:
+        other: ნორვეგიული კრონა
+    NPR:
+      symbol: Rs
+      display_names:
+        other: ნეპალური რუპია
+    NZD:
+      symbol: NZD
+      display_names:
+        other: ახალი ზელანდიის დოლარი
+    PHP:
+      symbol: PHP
+      display_names:
+        other: ფილიპინური პესო
+    PKR:
+      symbol: Rs
+      display_names:
+        other: პაკისტანური რუპია
+    PLN:
+      symbol: zł
+      display_names:
+        other: პოლონური ზლოტი
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: პარაგვაული გუარანი
+    RON:
+      symbol: lei
+      display_names:
+        other: რუმინული ლეუ
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: რუსული რუბლი
+    RWF:
+      symbol: RF
+      display_names:
+        other: რუანდული ფრანკი
+    SBD:
+      symbol: "$"
+      display_names:
+        other: სოლომონის კუნძულების დოლარი
+    SEK:
+      symbol: kr
+      display_names:
+        other: შვედური კრონა
+    SGD:
+      symbol: "$"
+      display_names:
+        other: სინგაპურის დოლარი
+    SHP:
+      symbol: "£"
+      display_names:
+        other: წმ. ელენეს კუნძულის ფუნტი
+    SRD:
+      symbol: "$"
+      display_names:
+        other: სურინამული დოლარი
+    SSP:
+      symbol: "£"
+      display_names:
+        other: სამხრეთ სუდანური ფუნტი
+    STN:
+      symbol: Db
+      display_names:
+        other: სან-ტომე და პრინსიპის დობრა
+    SYP:
+      symbol: "£"
+      display_names:
+        other: სირიული გირვანქა
+        one: სირიული გირვანქა
+    THB:
+      symbol: "฿"
+      display_names:
+        other: ტაილანდური ბატი
+    TOP:
+      symbol: T$
+      display_names:
+        other: ტონგანური პაანგა
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: ახალი თურქული ლირა
+    TTD:
+      symbol: "$"
+      display_names:
+        other: ტრინიდად და ტობაგოს დოლარი
+    TWD:
+      symbol: NT$
+      display_names:
+        other: ტაივანური ახალი დოლარი
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: უკრაინული გრივნა
+    USD:
+      symbol: US$
+      display_names:
+        other: აშშ დოლარი
+    UYU:
+      symbol: "$"
+      display_names:
+        other: ურუგვაის პესო
+    VEF:
+      symbol: Bs
+      display_names:
+        other: ვენესუელის ბოლივარი (2008–2018)
+    VND:
+      symbol: VND
+      display_names:
+        other: ვიეტნამური დონგი
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: ცენტრალურ აფრიკული CFA ფრანკი
+    XCD:
+      symbol: EC$
+      display_names:
+        other: აღმოსავლეთ კარიბიული დოლარი
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: დასავლეთ აფრიკული CFA ფრანკი
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: CFP ფრანკი
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(უცნობი ვალუტა)"
+        one: "(ვალუტის უცნობი ერთეული)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: სამხრეთ აფრიკული რანდი
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: ზამბიური კვაჭა
     ADP:
       display_names:
         other: ანდორული პესეტა
@@ -16,22 +453,13 @@ number_formats:
     AFA:
       display_names:
         other: ავღანი (1927–2002)
-    AFN:
-      display_names:
-        other: ავღანური ავღანი
     ALL:
       display_names:
         other: ალბანური ლეკი
-    AMD:
-      display_names:
-        other: სომხური დრამი
     ANG:
       display_names:
         other: ნიდრელანდების ანტილიის გულდენი
         one: ნიდრელანდების ანტილიის გულდენი
-    AOA:
-      display_names:
-        other: ანგოლური კვანზა
     AOK:
       display_names:
         other: ანგოლური კვანზა (1977–1990)
@@ -47,37 +475,18 @@ number_formats:
     ARP:
       display_names:
         other: არგენტინული პესო (1983–1985)
-    ARS:
-      display_names:
-        other: არგენტინული პესო
     ATS:
       display_names:
         other: ავსტრიული შილინგი
-    AUD:
-      symbol: AUD
-      display_names:
-        other: ავსტრალიური დოლარი
     AWG:
       display_names:
         other: არუბანული გულდენი
     AZM:
       display_names:
         other: აზერბაიჯანული მანათი (1993–2006)
-    AZN:
-      display_names:
-        other: აზერბაიჯანული მანათი
     BAD:
       display_names:
         other: ბოსნია-ჰერცოგოვინას დინარი
-    BAM:
-      display_names:
-        other: ბოსნია და ჰერცოგოვინას კონვერტირებადი მარკა
-    BBD:
-      display_names:
-        other: ბარბადოსული დოლარი
-    BDT:
-      display_names:
-        other: ბანგლადეშური ტაკა
     BEC:
       display_names:
         other: ბელგიური ფრანკი (კოვერტირებადი)
@@ -99,15 +508,6 @@ number_formats:
     BIF:
       display_names:
         other: ბურუნდიული ფრანკი
-    BMD:
-      display_names:
-        other: ბერმუდული დოლარი
-    BND:
-      display_names:
-        other: ბრუნეული დოლარი
-    BOB:
-      display_names:
-        other: ბოლივიური ბოლივიანო
     BOP:
       display_names:
         other: ბოლივიური პესო
@@ -120,24 +520,15 @@ number_formats:
     BRE:
       display_names:
         other: ბრაზილიური კრუზეირო (1990–1993)
-    BRL:
-      display_names:
-        other: ბრაზილიური რეალი
     BRN:
       display_names:
         other: ბრაზილიური კრუზადო ნოვო
     BRR:
       display_names:
         other: ბრაზილიური კრუზეირო
-    BSD:
-      display_names:
-        other: ბაჰამური დოლარი
     BTN:
       display_names:
         other: ბუტანური ნგულტრუმი
-    BWP:
-      display_names:
-        other: ბოცვანური პულა
     BYB:
       display_names:
         other: ახალი ბელარუსიული რუბლი (1994–1999)
@@ -148,57 +539,27 @@ number_formats:
     BYR:
       display_names:
         other: ბელორუსული რუბლი (2000–2016)
-    BZD:
-      display_names:
-        other: ბელიზის დოლარი
-    CAD:
-      display_names:
-        other: კანადური დოლარი
     CDF:
       display_names:
         other: კონგოს ფრანკი
     CHF:
       display_names:
         other: შვეიცარიული ფრანკი
-    CLP:
-      display_names:
-        other: ჩილეს პესო
     CNH:
       display_names:
         other: ჩინური იუანი (ოფშორი)
-    CNY:
-      symbol: CNY
-      display_names:
-        other: ჩინური უანი
-        one: ჩინური უანი
-    COP:
-      display_names:
-        other: კოლუმბიური პესო
-    CRC:
-      display_names:
-        other: კოსტა რიკული კოლონი
-        one: კოსტა-რიკული კოლონი
     CSD:
       display_names:
         other: ძველი სერბიული დინარი
     CSK:
       display_names:
         other: ჩეხოსლოვაკიის მყარი კრონა
-    CUC:
-      display_names:
-        other: კუბური კონვერტირებადი პესო
-    CUP:
-      display_names:
-        other: კუბური პესო
     CVE:
       display_names:
         other: კაბო-ვერდეს ესკუდო
     CYP:
       display_names:
         other: კვიპროსის გირვანქა
-    CZK:
-      display_names:
-        other: ჩეხური კრონა
     DDM:
       display_names:
         other: აღმოსავლეთ გერმანული მარკა
@@ -208,180 +569,66 @@ number_formats:
     DJF:
       display_names:
         other: ჯიბუტის ფრანკი
-    DKK:
-      display_names:
-        other: დანიური კრონა
-    DOP:
-      display_names:
-        other: დომინიკური პესო
     DZD:
       display_names:
         other: ალჟირული დინარი
     EEK:
       display_names:
         other: ესტონური კრუნა
-    EGP:
-      display_names:
-        other: ეგვიპტური გირვანქა
     ERN:
       display_names:
         other: ერიტრეის ნაკფა
-    ESP:
-      display_names:
-        other: ესპანური პესეტა
     ETB:
       display_names:
         other: ეთიოპიური ბირი
-    EUR:
-      display_names:
-        other: ევრო
     FIM:
       display_names:
         other: ფინური მარკა
-    FJD:
-      display_names:
-        other: ფიჯის დოლარი
-    FKP:
-      display_names:
-        other: ფოლკლენდის კუნძულების ფუნტი
     FRF:
       display_names:
         other: ფრანგული ფრანკი
-    GBP:
-      display_names:
-        other: ბრიტანული გირვანქა სტერლინგი
     GEK:
       display_names:
         other: ქართული კუპონი ლარით
-    GEL:
-      symbol: "₾"
-      display_names:
-        other: ქართული ლარი
-    GHS:
-      display_names:
-        other: განური სედი
-    GIP:
-      display_names:
-        other: გიბრალტარული ფუნტი
     GMD:
       display_names:
         other: გამბიური დალასი
-    GNF:
-      display_names:
-        other: გვინეური ფრანკი
     GRD:
       display_names:
         other: ბერძნული დრაჰმა
-    GTQ:
-      display_names:
-        other: გვატემალური კეტსალი
     GWE:
       display_names:
         other: პორტუგალიური გინეა ესკუდო
-    GYD:
-      display_names:
-        other: გაიანური დოლარი
-    HKD:
-      symbol: HKD
-      display_names:
-        other: ჰონკონგის დოლარი
-    HNL:
-      display_names:
-        other: ჰონდურასული ლემპირა
     HRD:
       display_names:
         other: ხორვატიული დინარი
-    HRK:
-      display_names:
-        other: ხორვატული კუნა
     HTG:
       display_names:
         other: ჰაიტური გურდი
-    HUF:
-      display_names:
-        other: უნგრული ფორინტი
-    IDR:
-      display_names:
-        other: ინდონეზიური რუპია
     IEP:
       display_names:
         other: ირლანდიური გირვანქა
-    ILS:
-      symbol: ILS
-      display_names:
-        other: ისრაელის ახალი შეკელი
-    INR:
-      symbol: INR
-      display_names:
-        other: ინდური რუპია
     IQD:
       display_names:
         other: ერაყული დინარი
     IRR:
       display_names:
         other: ირანული რიალი
-    ISK:
-      display_names:
-        other: ისლანდიური კრონა
     ITL:
       display_names:
         other: იტალიური ლირა
-    JMD:
-      display_names:
-        other: იამაიკური დოლარი
     JOD:
       display_names:
         other: იორდანიული დოლარი
-    JPY:
-      symbol: JPY
-      display_names:
-        other: იაპონური იენი
     KES:
       display_names:
         other: კენიური შილინგი
-    KGS:
-      display_names:
-        other: ყირგიზული სომი
-    KHR:
-      display_names:
-        other: კამბოჯური რიელი
-    KMF:
-      display_names:
-        other: კომორული ფრანკი
-    KPW:
-      display_names:
-        other: ჩრდილოეთ კორეული ვონი
-    KRW:
-      symbol: KRW
-      display_names:
-        other: სამხრეთ კორეული ვონი
     KWD:
       display_names:
         other: ქუვეითური დინარი
-    KYD:
-      display_names:
-        other: კაიმანის კუნძულების დოლარი
-    KZT:
-      display_names:
-        other: ყაზახური ტენგე
-    LAK:
-      display_names:
-        other: ლაოსური კიპი
-    LBP:
-      display_names:
-        other: ლიბანური ფუნტი
-    LKR:
-      display_names:
-        other: შრი-ლანკური რუპია
-    LRD:
-      display_names:
-        other: ლიბერიული დოლარი
     LSL:
       display_names:
         other: ლესოთოს ლოტი
-    LTL:
-      display_names:
-        other: ლიტვური ლიტა
     LTT:
       display_names:
         other: ლიტვური ტალონი
@@ -394,9 +641,6 @@ number_formats:
     LUL:
       display_names:
         other: ლუქსემბურგის ფინანსური ფრანკი
-    LVL:
-      display_names:
-        other: ლატვიური ლატი
     LVR:
       display_names:
         other: ლატვიური რუბლი
@@ -412,9 +656,6 @@ number_formats:
     MDL:
       display_names:
         other: მოლდოვური ლეუ
-    MGA:
-      display_names:
-        other: მადაგასკარის არიარი
     MGF:
       display_names:
         other: მადაგასკარის ფრანკი
@@ -424,12 +665,6 @@ number_formats:
     MLF:
       display_names:
         other: მალის ფრანკი
-    MMK:
-      display_names:
-        other: მიანმარის კიატი
-    MNT:
-      display_names:
-        other: მონღოლური ტუგრიკი
     MOP:
       display_names:
         other: მაკაუს პატაკა
@@ -445,24 +680,15 @@ number_formats:
     MTP:
       display_names:
         other: მალტის გირვანქა
-    MUR:
-      display_names:
-        other: მავრიტანული რუპია
     MVR:
       display_names:
         other: მალდივური რუფია
     MWK:
       display_names:
         other: მალავიური კვაჩა
-    MXN:
-      display_names:
-        other: მექსიკური პესო
     MXP:
       display_names:
         other: მექსიკური ვერცხლის პესო (1861–1992)
-    MYR:
-      display_names:
-        other: მალაიზიური რინგიტი
     MZE:
       display_names:
         other: მოზამბიკური ესკუდო
@@ -472,31 +698,12 @@ number_formats:
     MZN:
       display_names:
         other: მოზამბიკური მეტიკალი
-    NAD:
-      display_names:
-        other: ნამიბიური დოლარი
-    NGN:
-      display_names:
-        other: ნიგერიული ნაირა
     NIC:
       display_names:
         other: ნიკარაგუას კორდობა
-    NIO:
-      display_names:
-        other: ნიკარაგუას ოქროს კორდობა
     NLG:
       display_names:
         other: ჰოლანდიური გულდენი
-    NOK:
-      display_names:
-        other: ნორვეგიული კრონა
-    NPR:
-      display_names:
-        other: ნეპალური რუპია
-    NZD:
-      symbol: NZD
-      display_names:
-        other: ახალი ზელანდიის დოლარი
     OMR:
       display_names:
         other: ომანის რიალი
@@ -515,25 +722,12 @@ number_formats:
     PGK:
       display_names:
         other: პაპუა-ახალი გვინეის კინა
-    PHP:
-      symbol: PHP
-      display_names:
-        other: ფილიპინური პესო
-    PKR:
-      display_names:
-        other: პაკისტანური რუპია
-    PLN:
-      display_names:
-        other: პოლონური ზლოტი
     PLZ:
       display_names:
         other: პოლონური ზლოტი (1950–1995)
     PTE:
       display_names:
         other: პორტუგალიური ესკუდო
-    PYG:
-      display_names:
-        other: პარაგვაული გუარანი
     QAR:
       display_names:
         other: კატარის რიალი
@@ -543,27 +737,15 @@ number_formats:
     ROL:
       display_names:
         other: ძველი რუმინული ლეუ
-    RON:
-      display_names:
-        other: რუმინული ლეუ
     RSD:
       display_names:
         other: სერბული დინარი
-    RUB:
-      display_names:
-        other: რუსული რუბლი
     RUR:
       display_names:
         other: რუსული რუბლი (1991–1998)
-    RWF:
-      display_names:
-        other: რუანდული ფრანკი
     SAR:
       display_names:
         other: საუდის არაბეთის რიალი
-    SBD:
-      display_names:
-        other: სოლომონის კუნძულების დოლარი
     SCR:
       display_names:
         other: სეიშელური რუპია
@@ -576,15 +758,6 @@ number_formats:
     SDP:
       display_names:
         other: სუდანის გირვანქა
-    SEK:
-      display_names:
-        other: შვედური კრონა
-    SGD:
-      display_names:
-        other: სინგაპურის დოლარი
-    SHP:
-      display_names:
-        other: წმ. ელენეს კუნძულის ფუნტი
     SLE:
       display_names:
         other: სიერა-ლეონეს ლეონე
@@ -594,34 +767,18 @@ number_formats:
     SOS:
       display_names:
         other: სომალური შილინგი
-    SRD:
-      display_names:
-        other: სურინამული დოლარი
     SRG:
       display_names:
         other: სურინამის გულდენი
-    SSP:
-      display_names:
-        other: სამხრეთ სუდანური ფუნტი
     STD:
       display_names:
         other: სან-ტომე და პრინსიპის დობრა (1977–2017)
-    STN:
-      display_names:
-        other: სან-ტომე და პრინსიპის დობრა
     SUR:
       display_names:
         other: საბჭოთა რუბლი
-    SYP:
-      display_names:
-        other: სირიული გირვანქა
-        one: სირიული გირვანქა
     SZL:
       display_names:
         other: სვაზილენდის ლილანგენი
-    THB:
-      display_names:
-        other: ტაილანდური ბატი
     TJR:
       display_names:
         other: ტაჯიკური რუბლი
@@ -638,28 +795,12 @@ number_formats:
       display_names:
         other: ტუნისის დინარი
         one: ტუნისის დინარი
-    TOP:
-      display_names:
-        other: ტონგანური პაანგა
     TRL:
       display_names:
         other: თურქული ლირა
-    TRY:
-      display_names:
-        other: ახალი თურქული ლირა
-    TTD:
-      display_names:
-        other: ტრინიდად და ტობაგოს დოლარი
-    TWD:
-      symbol: NT$
-      display_names:
-        other: ტაივანური ახალი დოლარი
     TZS:
       display_names:
         other: ტანზანიური შილინგი
-    UAH:
-      display_names:
-        other: უკრაინული გრივნა
     UAK:
       display_names:
         other: უკრაინული კარბოვანეცი
@@ -669,9 +810,6 @@ number_formats:
     UGX:
       display_names:
         other: უგანდური შილინგი
-    USD:
-      display_names:
-        other: აშშ დოლარი
     USN:
       display_names:
         other: აშშ დოლარი (შემდეგი დღე)
@@ -681,25 +819,15 @@ number_formats:
     UYP:
       display_names:
         other: ურუგვაის პესო (1975–1993)
-    UYU:
-      display_names:
-        other: ურუგვაის პესო
     UZS:
       display_names:
         other: უზბეკური სუმი
     VEB:
       display_names:
         other: ვენესუელის ბოლივარი (1871–2008)
-    VEF:
-      display_names:
-        other: ვენესუელის ბოლივარი (2008–2018)
     VES:
       display_names:
         other: ვენესუელის ბოლივარი
-    VND:
-      symbol: VND
-      display_names:
-        other: ვიეტნამური დონგი
     VUV:
       display_names:
         other: ვანატუს ვატუ
@@ -707,9 +835,6 @@ number_formats:
     WST:
       display_names:
         other: სამოური ტალა
-    XAF:
-      display_names:
-        other: ცენტრალურ აფრიკული CFA ფრანკი
     XAG:
       display_names:
         other: ვერცხლი
@@ -719,25 +844,12 @@ number_formats:
     XBB:
       display_names:
         other: ევროპული ფულადი ერთეული
-    XCD:
-      display_names:
-        other: აღმოსავლეთ კარიბიული დოლარი
     XEU:
       display_names:
         other: ევროპული სავალუტო ერთეული
     XFO:
       display_names:
         other: ფრანგული ოქროს ფრანკი
-    XOF:
-      display_names:
-        other: დასავლეთ აფრიკული CFA ფრანკი
-    XPF:
-      display_names:
-        other: CFP ფრანკი
-    XXX:
-      display_names:
-        other: "(უცნობი ვალუტა)"
-        one: "(ვალუტის უცნობი ერთეული)"
     YDD:
       display_names:
         other: იემენის დინარი
@@ -753,15 +865,9 @@ number_formats:
     YUN:
       display_names:
         other: იუგოსლავიური კონვერტირებადი დინარი
-    ZAR:
-      display_names:
-        other: სამხრეთ აფრიკული რანდი
     ZMK:
       display_names:
         other: ზამბიური კვაჭა (1968–2012)
-    ZMW:
-      display_names:
-        other: ზამბიური კვაჭა
     ZRN:
       display_names:
         other: ზაირის ახალი ზაირი
@@ -772,7 +878,7 @@ number_formats:
       display_names:
         other: ზიმბაბვეს დოლარი
 locale: ka
-generated_at: '2025-09-10T22:17:41+09:00'
+generated_at: '2025-09-10T23:53:10+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:
