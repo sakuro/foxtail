@@ -2,7 +2,921 @@
 number_formats:
   currency_formats:
     standard: "¤#,##0.00"
+  currencies:
+    AED:
+      display_names:
+        other: ኢማራት ዲርሃም
+        one: ኢማራት ዲርሃም
+    AFN:
+      display_names:
+        other: ኣፍጋኒስታናዊ ኣፍጋን
+        one: ኣፍጋኒስታናዊ ኣፍጋን
+    ALL:
+      display_names:
+        other: ኣልባናዊ ሌኬ
+        one: ኣልባናዊ ሌክ
+    AMD:
+      display_names:
+        other: ኣርመንያዊ ድራም
+        one: ኣርመንያዊ ድራም
+    ANG:
+      display_names:
+        other: ሆላንድ ኣንቲለያን ጊልደር
+        one: ሆላንድ ኣንቲለያን ጊልደር
+    AOA:
+      display_names:
+        other: ኣንጎላዊ ክዋንዛ
+        one: ኣንጎላዊ ክዋንዛ
+    ARS:
+      display_names:
+        other: ኣርጀንቲናዊ ፔሶ
+        one: ኣርጀንቲናዊ ፔሶ
+    AUD:
+      display_names:
+        other: ኣውስትራልያዊ ዶላር
+        one: ኣውስትራልያዊ ዶላር
+    AWG:
+      display_names:
+        other: ኣሩባን ፍሎሪን
+        one: ኣሩባን ፍሎሪን
+    AZN:
+      display_names:
+        other: ኣዘርባጃናዊ ማናት
+        one: ኣዘርባጃናዊ ማናት
+    BAM:
+      display_names:
+        other: ቦዝንያ-ሄርዘጎቪና ተቐያሪ ምልክታት
+        one: ቦዝንያ-ሄርዘጎቪና ተቐያሪ ምልክት
+    BBD:
+      display_names:
+        other: ባርባዲያን ዶላር
+        one: ባርባዲያን ዶላር
+    BDT:
+      display_names:
+        other: ባንግላደሻዊ ታካ
+        one: ባንግላደሻዊ ታካ
+    BGN:
+      display_names:
+        other: ቡልጋርያዊ ሌቫ
+        one: ቡልጋርያዊ ሌቭ
+    BHD:
+      display_names:
+        other: ባሕሬናዊ ዲናር
+        one: ባሕሬናዊ ዲናር
+    BIF:
+      display_names:
+        other: ብሩንዳዊ ፍራንክ
+        one: ብሩንዳዊ ፍራንክ
+    BMD:
+      display_names:
+        other: በርሙዳን ዶላር
+        one: በርሙዳን ዶላር
+    BND:
+      display_names:
+        other: ብሩነይ ዶላር
+        one: ብሩነይ ዶላር
+    BOB:
+      display_names:
+        other: ቦሊቭያዊ ቦሊቭያኖ
+        one: ቦሊቭያዊ ቦሊቭያኖ
+    BRL:
+      display_names:
+        other: የብራዚል ሪል
+    BSD:
+      display_names:
+        other: ባሃማዊ ዶላር
+        one: ባሃማዊ ዶላር
+    BTN:
+      display_names:
+        other: ቡታናዊ ንጉልትሩም
+        one: ቡታናዊ ንጉልትሩም
+    BWP:
+      display_names:
+        other: ቦትስዋናዊ ፑላ
+        one: ቦትስዋናዊ ፑላ
+    BYN:
+      display_names:
+        other: ናይ ቤላሩስ ሩብል
+        one: ናይ ቤላሩስ ሩብል
+    BZD:
+      display_names:
+        other: ቤሊዝ ዶላር
+        one: ቤሊዝ ዶላር
+    CAD:
+      display_names:
+        other: ካናዳ ዶላር
+        one: ካናዳ ዶላር
+    CDF:
+      display_names:
+        other: ኮንጎ ፍራንክ
+        one: ኮንጎ ፍራንክ
+    CHF:
+      display_names:
+        other: ስዊስ ፍራንክ
+        one: ስዊስ ፍራንክ
+    CLP:
+      display_names:
+        other: ቺለዊ ፔሶ
+        one: ቺለዊ ፔሶ
+    CNH:
+      display_names:
+        other: ቻይናዊ ዩዋን (ካብ ባሕሪ ወጻኢ)
+        one: ቻይናዊ ዩዋን (ካብ ባሕሪ ወጻኢ)
+    CNY:
+      symbol: CNY
+      display_names:
+        other: ዩዋን ቻይና
+    COP:
+      display_names:
+        other: ኮሎምብያዊ ፔሶ
+        one: ኮሎምብያዊ ፔሶ
+    CRC:
+      display_names:
+        other: ኮስታሪካ ኮሎን
+        one: ኮስታሪካ ኮሎን
+    CUC:
+      display_names:
+        other: ኩባውያን ተቐያሪ ፔሶ
+        one: ኩባውያን ተቐያሪ ፔሶ
+    CUP:
+      display_names:
+        other: ኩባዊ ፔሶ
+        one: ኩባዊ ፔሶ
+    CVE:
+      display_names:
+        other: ናይ ኬፕ ቨርዲ ኤስኩዶ
+        one: ናይ ኬፕ ቨርዲ ኤስኩዶ
+    CZK:
+      display_names:
+        other: ናይ ቸክ ኮሩና
+        one: ናይ ቸክ ኮሩና
+    DJF:
+      display_names:
+        other: ናይ ጅቡቲ ፍራንክ
+        one: ናይ ጅቡቲ ፍራንክ
+    DKK:
+      display_names:
+        other: ናይ ዴንማርክ ክሮነር
+        one: ናይ ዴንማርክ ክሮነር
+    DOP:
+      display_names:
+        other: ዶሚኒካን ፔሶ
+        one: ዶሚኒካን ፔሶ
+    DZD:
+      display_names:
+        other: ኣልጀርያዊ ዲናር
+        one: ኣልጀርያዊ ዲናር
+    EGP:
+      display_names:
+        other: ግብጻዊ ፓውንድ
+        one: ግብጻዊ ፓውንድ
+    ERN:
+      display_names:
+        other: ኤርትራዊ ናቕፋ
+        one: ኤርትራዊ ናቕፋ
+    ETB:
+      symbol: Br
+      display_names:
+        other: ናይ ኢትዮጵያ ብር
+        one: ናይ ኢትዮጵያ ብር
+    EUR:
+      display_names:
+        other: ዩሮ
+    FJD:
+      display_names:
+        other: ዶላር ፊጂ
+        one: ዶላር ፊጂ
+    FKP:
+      display_names:
+        other: ደሴታት ፎክላንድ ፓውንድ
+        one: ደሴታት ፎክላንድ ፓውንድ
+    GBP:
+      display_names:
+        other: የእንግሊዝ ፓውንድ ስተርሊንግ
+    GEL:
+      display_names:
+        other: ጆርጅያዊ ላሪ
+        one: ጆርጅያዊ ላሪ
+    GHS:
+      display_names:
+        other: ጋናዊ ሴዲስ
+        one: ጋናዊ ሴዲ
+    GIP:
+      display_names:
+        other: ጂብራልተር ፓውንድ
+        one: ጂብራልተር ፓውንድ
+    GMD:
+      display_names:
+        other: ጋምብያዊ ዳላሲስ
+        one: ጋምብያዊ ዳላሲ
+    GNF:
+      display_names:
+        other: ናይ ጊኒ ፍራንክ
+        one: ናይ ጊኒ ፍራንክ
+    GTQ:
+      display_names:
+        other: ጓቲማላ ኲትዛል
+        one: ጓቲማላ ኲትዛል
+    GYD:
+      display_names:
+        other: ጓያናኛ ዶላር
+        one: ጓያናኛ ዶላር
+    HKD:
+      display_names:
+        other: ሆንግ ኮንግ ዶላር
+        one: ሆንግ ኮንግ ዶላር
+    HNL:
+      display_names:
+        other: ሆንዱራስ ለምፒራ
+        one: ሆንዱራስ ለምፒራ
+    HRK:
+      display_names:
+        other: ክሮኤሽያዊ ኩና
+        one: ክሮኤሽያዊ ኩና
+    HTG:
+      display_names:
+        other: ናይ ሃይቲ ጎርደ
+        one: ናይ ሃይቲ ጎርደ
+    HUF:
+      display_names:
+        other: ሃንጋርያዊ ፎርንት
+        one: ሃንጋርያዊ ፎርንት
+    IDR:
+      display_names:
+        other: ኢንዶነዥያዊ ሩፒያ
+        one: ኢንዶነዥያዊ ሩፒያ
+    ILS:
+      display_names:
+        other: እስራኤላዊ ሓድሽ ሸቃል
+        one: እስራኤላዊ ሓድሽ ሸቃል
+    INR:
+      display_names:
+        other: ናይ ሕንድ ሩፒ
+        one: ናይ ሕንድ ሩፒ
+    IQD:
+      display_names:
+        other: ዒራቂ ዲናር
+        one: ናይ ዒራቕ ዲናር
+    IRR:
+      display_names:
+        other: ናይ ኢራን ርያል
+        one: ናይ ኢራን ርያል
+    ISK:
+      display_names:
+        other: ናይ ኣይስላንድ ክሮና
+        one: ናይ ኣይስላንድ ክሮና
+    JMD:
+      display_names:
+        other: ጃማይካ ዶላር
+        one: ጃማይካ ዶላር
+    JOD:
+      display_names:
+        other: ዮርዳኖሳዊ ዲናር
+        one: ዮርዳኖሳዊ ዲናር
+    JPY:
+      symbol: JPY
+      display_names:
+        other: የን ጃፓን
+    KES:
+      display_names:
+        other: ኬንያዊ ሽልንግ
+        one: ኬንያዊ ሽልንግ
+    KGS:
+      display_names:
+        other: ኪርጊስታናዊ ሶም
+        one: ኪርጊስታናዊ ሶም
+    KHR:
+      display_names:
+        other: ካምቦድያዊ ሪኤል
+        one: ካምቦድያዊ ሪኤል
+    KMF:
+      display_names:
+        other: ኮሞርያዊ ፍራንክ
+        one: ኮሞርያዊ ፍራንክ
+    KPW:
+      display_names:
+        other: ሰሜን ኮርያዊ ዎን
+        one: ሰሜን ኮርያዊ ዎን
+    KRW:
+      display_names:
+        other: ደቡብ ኮርያዊ ዎን
+        one: ደቡብ ኮርያዊ ዎን
+    KWD:
+      display_names:
+        other: ኩዌቲ ዲናር
+        one: ኩዌቲ ዲናር
+    KYD:
+      display_names:
+        other: ደሴታት ካይመን ዶላር
+        one: ደሴታት ካይመን ዶላር
+    KZT:
+      display_names:
+        other: ካዛኪስታናዊ ተንገ
+        one: ካዛኪስታናዊ ተንገ
+    LAK:
+      display_names:
+        other: ላኦስያዊ ኪፕ
+        one: ላኦስያዊ ኪፕ
+    LBP:
+      display_names:
+        other: ሊባኖሳዊ ፓውንድ
+        one: ሊባኖሳዊ ፓውንድ
+    LKR:
+      display_names:
+        other: ስሪላንካ ሩፒ
+        one: ስሪላንካ ሩፒ
+    LRD:
+      display_names:
+        other: ላይበርያዊ ዶላር
+        one: ላይበርያዊ ዶላር
+    LSL:
+      display_names:
+        other: ሌሶቶ ሎቲ
+        one: ሌሶቶ ሎቲ
+    LYD:
+      display_names:
+        other: ናይ ሊብያ ዲናር
+        one: ናይ ሊብያ ዲናር
+    MAD:
+      display_names:
+        other: ሞሮካዊ ዲርሃም
+        one: ሞሮካዊ ዲርሃም
+    MDL:
+      display_names:
+        other: ሞልዶቫን ሌይ
+        one: ሞልዶቫን ሌው
+    MGA:
+      display_names:
+        other: ማላጋሲ ኣሪያሪ
+        one: ማላጋሲ ኣሪያሪ
+    MKD:
+      display_names:
+        other: ናይ መቄዶንያ ዲናሪ
+        one: ናይ መቄዶንያ ዲናር
+    MMK:
+      display_names:
+        other: ሚያንማር ክያት
+        one: ሚያንማር ክያት
+    MNT:
+      display_names:
+        other: ሞንጎላዊ ቱግሪክ
+        one: ሞንጎላዊ ቱግሪክ
+    MOP:
+      display_names:
+        other: ማካኒዝ ፓታካ
+        one: ማካኒዝ ፓታካ
+    MRU:
+      display_names:
+        other: ሞሪታናዊ ኡጉዋያ
+        one: ሞሪታናዊ ኡጉዋያ
+    MUR:
+      display_names:
+        other: ሞሪሸስ ሩፒ
+        one: ሞሪሸስ ሩፒ
+    MVR:
+      display_names:
+        other: ማልዲቭያዊ ሩፍያ
+        one: ማልዲቭያዊ ሩፍያ
+    MWK:
+      display_names:
+        other: ማላዊያዊ ኳቻ
+        one: ማላዊያዊ ኳቻ
+    MXN:
+      display_names:
+        other: ሜክሲካዊ ፔሶ
+        one: ሜክሲካዊ ፔሶ
+    MXP:
+      display_names:
+        other: ሜክሲካዊ ብሩር ፔሶ (1861–1992)
+        one: ሜክሲካዊ ብሩር ፔሶ (1861–1992)
+    MXV:
+      display_names:
+        other: ኣሃዱ ወፍሪ ሜክሲኮ
+        one: ኣሃዱ ወፍሪ ሜክሲኮ
+    MYR:
+      display_names:
+        other: ማሌዥያዊ ሪንግጊት
+        one: ማሌዥያዊ ሪንግጊት
+    MZN:
+      display_names:
+        other: ሞዛምቢካዊ ሜቲካል
+        one: ሞዛምቢካዊ ሜቲካል
+    NAD:
+      display_names:
+        other: ናሚብያ ዶላር
+        one: ናሚብያ ዶላር
+    NGN:
+      display_names:
+        other: ናይጀርያዊ ናይራስ
+        one: ናይጀርያዊ ናይራ
+    NIC:
+      display_names:
+        other: ኒካራጓ ካርዶባ (1988–1991)
+        one: ኒካራጓ ካርዶባ (1988–1991)
+    NIO:
+      display_names:
+        other: ኒካራጓ ኮርዶባ
+        one: ኒካራጓ ኮርዶባ
+    NOK:
+      display_names:
+        other: ናይ ኖርወይ ክሮነር
+        one: ናይ ኖርወይ ክሮነር
+    NPR:
+      display_names:
+        other: ኔፓላዊ ሩፒ
+        one: ኔፓላዊ ሩፒ
+    NZD:
+      display_names:
+        other: ኒውዚላንዳዊ ዶላር
+        one: ኒውዚላንዳዊ ዶላር
+    OMR:
+      display_names:
+        other: ኦማን ርያል
+        one: ኦማን ርያል
+    PAB:
+      display_names:
+        other: ፓናማያን ባልቦኣ
+        one: ፓናማያን ባልቦኣ
+    PEN:
+      display_names:
+        other: ፔሩቪያን ሶል
+        one: ፔሩቪያን ሶል
+    PGK:
+      display_names:
+        other: ፓፑዋ ኒው ጊኒ ኪና
+        one: ፓፑዋ ኒው ጊኒ ኪና
+    PHP:
+      display_names:
+        other: ፊሊፒንስ ፔሶ
+        one: ፊሊፒንስ ፔሶ
+    PKR:
+      display_names:
+        other: ፓኪስታናዊ ሩፒ
+        one: ፓኪስታናዊ ሩፒ
+    PLN:
+      display_names:
+        other: ፖላንዳዊ ዝሎቲ
+        one: ፖላንዳዊ ዝሎቲ
+    PYG:
+      display_names:
+        other: ፓራጓያዊ ጓራኒ
+        one: ፓራጓያዊ ጓራኒ
+    QAR:
+      display_names:
+        other: ቀጠሪ ሪያል
+        one: ቀጠሪ ሪያል
+    RON:
+      display_names:
+        other: ሮማንያዊ ሌይ
+        one: ሮማንያዊ ሌው
+    RSD:
+      display_names:
+        other: ናይ ሰርብያን ዲናር
+        one: ናይ ሰርብያን ዲናር
+    RUB:
+      display_names:
+        other: የራሻ ሩብል
+    RWF:
+      display_names:
+        other: ፍራንክ ሩዋንዳ
+        one: ፍራንክ ሩዋንዳ
+    SAR:
+      display_names:
+        other: ስዑዲ ዓረብ ሪያል
+        one: ስዑዲ ዓረብ ሪያል
+    SBD:
+      display_names:
+        other: ደሴታት ሰሎሞን ዶላር
+        one: ደሴታት ሰሎሞን ዶላር
+    SCR:
+      display_names:
+        other: ሲሸሎ ሩፒ
+        one: ሲሸሎ ሩፒ
+    SDG:
+      display_names:
+        other: ሱዳናዊ ፓውንድ
+        one: ሱዳናዊ ፓውንድ
+    SEK:
+      display_names:
+        other: ሽወደናዊ ክሮና
+        one: ሽወደናዊ ክሮና
+    SGD:
+      display_names:
+        other: ሲንጋፖር ዶላር
+        one: ሲንጋፖር ዶላር
+    SHP:
+      display_names:
+        other: ቅድስቲ ሄለና ፓውንድ
+        one: ቅድስቲ ሄለና ፓውንድ
+    SLE:
+      display_names:
+        other: ሴራሊዮን ልዮንስ
+        one: ሴራሊዮን ልዮን
+    SLL:
+      display_names:
+        other: ሴራሊዮን ልዮንስ (1964—2022)
+        one: ሴራሊዮን ልዮን (1964—2022)
+    SOS:
+      display_names:
+        other: ሶማልያዊ ሽልንግ
+        one: ሶማልያዊ ሽልንግ
+    SRD:
+      display_names:
+        other: ሱሪናማዊ ዶላር
+        one: ሱሪናማዊ ዶላር
+    SSP:
+      display_names:
+        other: ደቡብ ሱዳን ፓውንድ
+        one: ደቡብ ሱዳን ፓውንድ
+    STN:
+      display_names:
+        other: ሳኦ ቶሜን ፕሪንሲፐ ዶብራ
+        one: ሳኦ ቶሜን ፕሪንሲፐ ዶብራ
+    SVC:
+      display_names:
+        other: ሳልቫዶራን ኮሎን
+        one: ሳልቫዶራን ኮሎን
+    SYP:
+      display_names:
+        other: ሶርያዊ ፓውንድ
+        one: ሶርያዊ ፓውንድ
+    SZL:
+      display_names:
+        other: ስዋዚ ሊላንገኒ
+        one: ስዋዚ ሊላንገኒ
+    THB:
+      display_names:
+        other: ታይላንዳዊ ባህ
+        one: ታይላንዳዊ ባህ
+    TJS:
+      display_names:
+        other: ታጂኪስታናዊ ሶሞኒ
+        one: ታጂኪስታናዊ ሶሞኒ
+    TMT:
+      display_names:
+        other: ቱርክመኒስታናዊ ማናት
+        one: ቱርክመኒስታናዊ ማናት
+    TND:
+      display_names:
+        other: ቱኒዝያዊ ዲናር
+        one: ቱኒዝያዊ ዲናር
+    TOP:
+      display_names:
+        other: ቶንጋዊ ፓ`ኣንጋ
+        one: ቶንጋዊ ፓ`ኣንጋ
+    TRY:
+      display_names:
+        other: ቱርካዊ ሊራ
+        one: ቱርካዊ ሊራ
+    TTD:
+      display_names:
+        other: ትሪኒዳድን ቶባጎ ዶላር
+        one: ትሪኒዳድን ቶባጎ ዶላር
+    TWD:
+      display_names:
+        other: ኒው ታይዋን ዶላር
+        one: ኒው ታይዋን ዶላር
+    TZS:
+      display_names:
+        other: ታንዛንያዊ ሽልንግ
+        one: ታንዛንያዊ ሽልንግ
+    UAH:
+      display_names:
+        other: ዩክሬናዊት ሪቭንያ
+        one: ዩክሬናዊት ሪቭንያ
+    UGX:
+      display_names:
+        other: ኡጋንዳዊ ሽልንግ
+        one: ኡጋንዳዊ ሽልንግ
+    USD:
+      display_names:
+        other: ዶላር ኣመሪካ
+    USN:
+      display_names:
+        other: ዶላር ኣመሪካ (ዝቕጽል መዓልቲ)
+        one: ዶላር ኣመሪካ (ዝቕጽል መዓልቲ)
+    USS:
+      display_names:
+        other: ዶላር ኣመሪካ (ተመሳሳሊ መዓልቲ)
+        one: ዶላር ኣመሪካ (ተመሳሳሊ መዓልቲ)
+    UYU:
+      display_names:
+        other: ኡራጋያዊ ፔሶ
+        one: ኡራጋያዊ ፔሶ
+    UZS:
+      display_names:
+        other: ኡዝቤኪስታናዊ ሶም
+        one: ኡዝቤኪስታናዊ ሶም
+    VES:
+      display_names:
+        other: ቬንዙዌላዊ ቦሊቫር
+        one: ቬንዙዌላዊ ቦሊቫር
+    VND:
+      display_names:
+        other: ቬትናማዊ ዶንግ
+        one: ቬትናማዊ ዶንግ
+    VUV:
+      display_names:
+        other: ቫኑኣቱ ቫቱ
+        one: ቫኑኣቱ ቫቱ
+    WST:
+      display_names:
+        other: ሳሞኣዊ ታላ
+        one: ሳሞኣዊ ታላ
+    XAF:
+      display_names:
+        other: ማእከላይ ኣፍሪቃ ሲኤፍኤ ፍራንክ
+        one: ማእከላይ ኣፍሪቃ ሲኤፍኤ ፍራንክ
+    XAG:
+      display_names:
+        other: ብሩር
+    XAU:
+      display_names:
+        other: ወርቂ
+    XCD:
+      display_names:
+        other: ምብራቕ ካሪብያን ዶላር
+        one: ምብራቕ ካሪብያን ዶላር
+    XOF:
+      display_names:
+        other: ምዕራብ ኣፍሪቃ CFA ፍራንክ
+        one: ምዕራብ ኣፍሪቃ ሲኤፍኤ ፍራንክ
+    XPF:
+      display_names:
+        other: ሲኤፍፒ ፍራንክ
+        one: ሲኤፍፒ ፍራንክ
+    XXX:
+      display_names:
+        other: "(ዘይተፈልጠ ባጤራ)"
+        one: "(ዘይተፈልጠ ባጤራ)"
+    YER:
+      display_names:
+        other: የመኒ ርያል
+        one: የመኒ ርያል
+    ZAR:
+      display_names:
+        other: ናይ ደቡብ ኣፍሪቃ ራንድ
+        one: ናይ ደቡብ ኣፍሪቃ ራንድ
+    ZMW:
+      display_names:
+        other: ዛምብያዊ ኳቻ
+        one: ዛምብያዊ ኳቻ
 locale: ti
-generated_at: '2025-09-06T03:52:28+09:00'
+generated_at: '2025-09-10T22:17:49+09:00'
 cldr_version: v46
 source: Unicode CLDR
+currency_fractions:
+  ADP:
+    digits: 0
+    rounding: 0
+  AFN:
+    digits: 0
+    rounding: 0
+  ALL:
+    digits: 0
+    rounding: 0
+  AMD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  BHD:
+    digits: 3
+    rounding: 0
+  BIF:
+    digits: 0
+    rounding: 0
+  BYR:
+    digits: 0
+    rounding: 0
+  BYN:
+    digits: 2
+    rounding: 0
+  CAD:
+    digits: 2
+    rounding: 0
+    cash_rounding: 5
+  CHF:
+    digits: 2
+    rounding: 0
+    cash_rounding: 5
+  CLF:
+    digits: 4
+    rounding: 0
+  CLP:
+    digits: 0
+    rounding: 0
+  COP:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  CRC:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  CZK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  DEFAULT:
+    digits: 2
+    rounding: 0
+  DJF:
+    digits: 0
+    rounding: 0
+  DKK:
+    digits: 2
+    rounding: 0
+    cash_rounding: 50
+  ESP:
+    digits: 0
+    rounding: 0
+  GNF:
+    digits: 0
+    rounding: 0
+  GYD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  HUF:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  IDR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  IQD:
+    digits: 0
+    rounding: 0
+  IRR:
+    digits: 0
+    rounding: 0
+  ISK:
+    digits: 0
+    rounding: 0
+  ITL:
+    digits: 0
+    rounding: 0
+  JOD:
+    digits: 3
+    rounding: 0
+  JPY:
+    digits: 0
+    rounding: 0
+  KMF:
+    digits: 0
+    rounding: 0
+  KPW:
+    digits: 0
+    rounding: 0
+  KRW:
+    digits: 0
+    rounding: 0
+  KWD:
+    digits: 3
+    rounding: 0
+  LAK:
+    digits: 0
+    rounding: 0
+  LBP:
+    digits: 0
+    rounding: 0
+  LUF:
+    digits: 0
+    rounding: 0
+  LYD:
+    digits: 3
+    rounding: 0
+  MGA:
+    digits: 0
+    rounding: 0
+  MGF:
+    digits: 0
+    rounding: 0
+  MMK:
+    digits: 0
+    rounding: 0
+  MNT:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  MRO:
+    digits: 0
+    rounding: 0
+  MUR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  NOK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  OMR:
+    digits: 3
+    rounding: 0
+  PKR:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  PYG:
+    digits: 0
+    rounding: 0
+  RSD:
+    digits: 0
+    rounding: 0
+  RWF:
+    digits: 0
+    rounding: 0
+  SEK:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  SLE:
+    digits: 2
+    rounding: 0
+  SLL:
+    digits: 0
+    rounding: 0
+  SOS:
+    digits: 0
+    rounding: 0
+  STD:
+    digits: 0
+    rounding: 0
+  SYP:
+    digits: 0
+    rounding: 0
+  TMM:
+    digits: 0
+    rounding: 0
+  TND:
+    digits: 3
+    rounding: 0
+  TRL:
+    digits: 0
+    rounding: 0
+  TZS:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  TWD:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  UGX:
+    digits: 0
+    rounding: 0
+  UZS:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  UYI:
+    digits: 0
+    rounding: 0
+  UYW:
+    digits: 4
+    rounding: 0
+  VEF:
+    digits: 2
+    rounding: 0
+    cash_digits: 0
+    cash_rounding: 0
+  VND:
+    digits: 0
+    rounding: 0
+  VUV:
+    digits: 0
+    rounding: 0
+  XAF:
+    digits: 0
+    rounding: 0
+  XOF:
+    digits: 0
+    rounding: 0
+  XPF:
+    digits: 0
+    rounding: 0
+  YER:
+    digits: 0
+    rounding: 0
+  ZMK:
+    digits: 0
+    rounding: 0
+  ZWD:
+    digits: 0
+    rounding: 0
