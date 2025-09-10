@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "simplecov"
+
 require "foxtail"
 require_relative "support/locale_context"
 
