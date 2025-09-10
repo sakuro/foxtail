@@ -1,6 +1,286 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
+  currency_formats:
+    standard: "¤ #,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+    COP:
+      symbol: "$"
+      display_names:
+        other: kolombianske pesos
+        one: kolombiansk peso
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: kostarikanske colón
+        one: kostarikansk colón
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: GBP
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+      display_names:
+        other: ungarske forintar
+    IDR:
+      symbol: Rp
+      display_names:
+        other: indonesiske rupiahar
+        one: indonesisk rupiah
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: nye israelske sheklar
+    INR:
+      symbol: "₹"
+      display_names:
+        other: indiske rupiar
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+      display_names:
+        other: srilankiske rupiar
+    LRD:
+      symbol: "$"
+    LTL:
+      symbol: Lt
+      display_names:
+        other: litauiske lita
+    LVL:
+      symbol: Ls
+      display_names:
+        other: latviske lat
+        one: latvisk lat
+    MGA:
+      symbol: Ar
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: mauritiske rupiar
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+    NGN:
+      symbol: "₦"
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+      display_names:
+        other: nepalske rupiar
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: nyzealandske dollar
+        one: nyzealandsk dollar
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+      display_names:
+        other: pakistanske rupiar
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: paraguayanske guaraní
+        one: paraguayansk guaraní
+    RON:
+      symbol: lei
+      display_names:
+        other: rumenske leuar
+        one: rumensk leu
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: russiske rublar
+    RWF:
+      symbol: RF
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: tyrkiske lira
+        one: tyrkisk lira
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: "$"
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+    UYU:
+      symbol: "$"
+      display_names:
+        one: uruguayansk peso
+        other: uruguayanske pesos
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+    XCD:
+      symbol: EC$
+      display_names:
+        other: austkaribiske dollar
+        one: austkaribisk dollar
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(ukjend valuta)"
+        one: "(ukjend valuta)"
+    ZAR:
+      symbol: R
+    ZMW:
+      symbol: ZK
     ADP:
       display_names:
         other: andorranske peseta
@@ -87,18 +367,10 @@ number_formats:
     CHW:
       display_names:
         other: WIR-franc
-    COP:
-      display_names:
-        other: kolombianske pesos
-        one: kolombiansk peso
     COU:
       display_names:
         other: unidad de valor real
         one: unidad de valor real
-    CRC:
-      display_names:
-        other: kostarikanske colón
-        one: kostarikansk colón
     CSD:
       display_names:
         other: gamle serbiske dinarar
@@ -117,8 +389,6 @@ number_formats:
       display_names:
         one: estisk kroon
         other: estiske kroon
-    GBP:
-      symbol: GBP
     GHC:
       display_names:
         other: ghanesiske cedi (1979–2007)
@@ -137,19 +407,6 @@ number_formats:
       display_names:
         other: kroatiske dinarar
         one: kroatisk dinar
-    HUF:
-      display_names:
-        other: ungarske forintar
-    IDR:
-      display_names:
-        other: indonesiske rupiahar
-        one: indonesisk rupiah
-    ILS:
-      display_names:
-        other: nye israelske sheklar
-    INR:
-      display_names:
-        other: indiske rupiar
     IQD:
       display_names:
         other: irakiske dinarar
@@ -163,12 +420,6 @@ number_formats:
     KWD:
       display_names:
         other: kuwaitiske dinarar
-    LKR:
-      display_names:
-        other: srilankiske rupiar
-    LTL:
-      display_names:
-        other: litauiske lita
     LTT:
       display_names:
         other: litauiske talona
@@ -176,10 +427,6 @@ number_formats:
     LUC:
       display_names:
         other: luxemburgske konvertibel franc
-    LVL:
-      display_names:
-        other: latviske lat
-        one: latvisk lat
     LVR:
       display_names:
         other: latviske rublar
@@ -196,9 +443,6 @@ number_formats:
     MKN:
       display_names:
         other: makedonske denarar (1992–1993)
-    MUR:
-      display_names:
-        other: mauritiske rupiar
     MVP:
       display_names:
         other: maldiviske rupiar
@@ -214,27 +458,13 @@ number_formats:
       display_names:
         other: nicaraguanske cordoba
         one: nicaraguansk cordoba
-    NPR:
-      display_names:
-        other: nepalske rupiar
-    NZD:
-      display_names:
-        other: nyzealandske dollar
-        one: nyzealandsk dollar
     OMR:
       display_names:
         other: omanske rial
-    PKR:
-      display_names:
-        other: pakistanske rupiar
     PLZ:
       display_names:
         one: polsk zloty (PLZ)
         other: polske zloty (PLZ)
-    PYG:
-      display_names:
-        other: paraguayanske guaraní
-        one: paraguayansk guaraní
     QAR:
       display_names:
         other: qatarske rial
@@ -242,17 +472,9 @@ number_formats:
       display_names:
         other: gamle rumenske lei
         one: gammal rumensk leu
-    RON:
-      symbol: lei
-      display_names:
-        other: rumenske leuar
-        one: rumensk leu
     RSD:
       display_names:
         other: serbiske dinarar
-    RUB:
-      display_names:
-        other: russiske rublar
     RUR:
       display_names:
         other: russiske rublar (1991–1998)
@@ -293,12 +515,6 @@ number_formats:
       display_names:
         other: gamle tyrkiske lire
         one: gammal tyrkisk lire
-    TRY:
-      display_names:
-        other: tyrkiske lira
-        one: tyrkisk lira
-    TWD:
-      symbol: "$"
     USS:
       display_names:
         other: amerikanske dollar (same dag)
@@ -311,10 +527,6 @@ number_formats:
       display_names:
         other: uruguayanske peso (UYP)
         one: uruguayansk peso (UYP)
-    UYU:
-      display_names:
-        one: uruguayansk peso
-        other: uruguayanske pesos
     UZS:
       display_names:
         other: usbekiske sum
@@ -339,10 +551,6 @@ number_formats:
       display_names:
         other: europeiske kontoeiningar (XBD)
         one: europeisk kontoeining (XBD)
-    XCD:
-      display_names:
-        other: austkaribiske dollar
-        one: austkaribisk dollar
     XDR:
       display_names:
         other: spesielle trekkrettar
@@ -359,10 +567,6 @@ number_formats:
       display_names:
         one: testvalutakode
         other: testvalutakode
-    XXX:
-      display_names:
-        other: "(ukjend valuta)"
-        one: "(ukjend valuta)"
     YDD:
       display_names:
         other: jemenittiske dinarar
@@ -395,7 +599,7 @@ number_formats:
       display_names:
         other: zimbabwisk dollar
 locale: nn
-generated_at: '2025-09-10T22:17:45+09:00'
+generated_at: '2025-09-10T23:53:14+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

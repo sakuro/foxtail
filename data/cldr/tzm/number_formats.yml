@@ -3,39 +3,296 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: Kwanza Unguli
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: Ḍular Usṭrali
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: Pula Ubutswani
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Ḍular Ukanadi
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Ywan Renminbi Ucinwi
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: Junih Umiṣṛi
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Uṛu
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Junih Ubriṭani
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Rupi Uḥindi
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Yann Ujappuni
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: Frank Uqumuri
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Ḍular Ulibiri
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Aryari Umalɣaci
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Rupi Umurisi
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Ḍular Unamibi
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Nayra Unijiri
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: Frank Urwandi
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Junih Usantehilini
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: Dubra Usawṭumi
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: Ḍular Umirikani
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Frank CFA (BEAC)
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Frank CFA (BCEAO)
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Rand Ufriki Unzul
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Kwača Uzambi
     AED:
       display_names:
         other: Derhem Uymarati
-    AOA:
-      display_names:
-        other: Kwanza Unguli
-    AUD:
-      display_names:
-        other: Ḍular Usṭrali
     BHD:
       display_names:
         other: Ḍinar Ubaḥrayni
     BIF:
       display_names:
         other: Frank Uburundi
-    BWP:
-      display_names:
-        other: Pula Ubutswani
-    CAD:
-      display_names:
-        other: Ḍular Ukanadi
     CDF:
       display_names:
         other: Frank Ukunguli
     CHF:
       display_names:
         other: Frank Uswisri
-    CNY:
-      display_names:
-        other: Ywan Renminbi Ucinwi
     CVE:
       display_names:
         other: Iskudu Ukabuvirdyani
@@ -45,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: Ḍinar Udzayri
-    EGP:
-      display_names:
-        other: Junih Umiṣṛi
     ERN:
       display_names:
         other: Nakfa Uyritri
     ETB:
       display_names:
         other: Birr Uyityuppi
-    EUR:
-      display_names:
-        other: Uṛu
-    GBP:
-      display_names:
-        other: Junih Ubriṭani
     GHC:
       display_names:
         other: Sidi Uɣani
@@ -69,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: Frank Uɣini
-    INR:
-      display_names:
-        other: Rupi Uḥindi
-    JPY:
-      display_names:
-        other: Yann Ujappuni
     KES:
       display_names:
         other: Cillin Ukini
-    KMF:
-      display_names:
-        other: Frank Uqumuri
-    LRD:
-      display_names:
-        other: Ḍular Ulibiri
     LSL:
       display_names:
         other: Luti Ulusuṭi
@@ -93,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: Derhem Umeṛṛuki
-    MGA:
-      display_names:
-        other: Aryari Umalɣaci
     MRO:
       display_names:
         other: Uqiyya Umuritani (1973–2017)
     MRU:
       display_names:
         other: Uqiyya Umuritani
-    MUR:
-      display_names:
-        other: Rupi Umurisi
     MWK:
       display_names:
         other: Kwača Umalawi
     MZM:
       display_names:
         other: Mitikal Umuzambiqi
-    NAD:
-      display_names:
-        other: Ḍular Unamibi
-    NGN:
-      display_names:
-        other: Nayra Unijiri
-    RWF:
-      display_names:
-        other: Frank Urwandi
     SAR:
       display_names:
         other: Ryal Usaεudi
@@ -132,9 +353,6 @@ number_formats:
     SDP:
       display_names:
         other: Junih Usudani (1956–2007)
-    SHP:
-      display_names:
-        other: Junih Usantehilini
     SLE:
       display_names:
         other: Lyun Usirralyuni
@@ -147,9 +365,6 @@ number_formats:
     STD:
       display_names:
         other: Dubra Usawṭumi (1977–2017)
-    STN:
-      display_names:
-        other: Dubra Usawṭumi
     SZL:
       display_names:
         other: Lilanjini Uswazi
@@ -162,29 +377,14 @@ number_formats:
     UGX:
       display_names:
         other: Cilin Uɣandi (1966–1987)
-    USD:
-      display_names:
-        other: Ḍular Umirikani
-    XAF:
-      display_names:
-        other: Frank CFA (BEAC)
-    XOF:
-      display_names:
-        other: Frank CFA (BCEAO)
-    ZAR:
-      display_names:
-        other: Rand Ufriki Unzul
     ZMK:
       display_names:
         other: Kwača Uzambi (1968–2012)
-    ZMW:
-      display_names:
-        other: Kwača Uzambi
     ZWD:
       display_names:
         other: Ḍular Uzimbabwi
 locale: tzm
-generated_at: '2025-09-10T22:17:50+09:00'
+generated_at: '2025-09-10T23:53:19+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

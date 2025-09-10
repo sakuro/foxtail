@@ -3,51 +3,459 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
     nan: ՈչԹ
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: ԱՄԷ դիրհամ
-        one: ԱՄԷ դիրհամ
     AFN:
+      symbol: "؋"
       display_names:
         other: աֆղանական աֆղանի
-    ALL:
-      display_names:
-        other: ալբանական լեկ
     AMD:
       symbol: "֏"
       display_names:
         other: հայկական դրամ
-    ANG:
-      display_names:
-        other: նիդեռլանդական անտիլյան գուլդեն
     AOA:
+      symbol: Kz
       display_names:
         other: անգոլական կվանզա
     ARS:
+      symbol: "$"
       display_names:
         other: արգենտինական պեսո
     AUD:
+      symbol: A$
       display_names:
         other: ավստրալիական դոլար
-    AWG:
-      display_names:
-        other: արուբական ֆլորին
     AZN:
+      symbol: "₼"
       display_names:
         other: ադրբեջանական մանաթ
     BAM:
+      symbol: KM
       display_names:
         other: Բոսնիա և Հերցեգովինայի փոխարկվող մարկ
     BBD:
+      symbol: "$"
       display_names:
         other: բարբադոսյան դոլար
     BDT:
+      symbol: "৳"
       display_names:
         other: Բանգլադեշի տակա
+    BMD:
+      symbol: "$"
+      display_names:
+        other: բերմուդյան դոլար
+    BND:
+      symbol: "$"
+      display_names:
+        other: Բրունեյի դոլար
+    BOB:
+      symbol: Bs
+      display_names:
+        other: բոլիվիական բոլիվիանո
+    BRL:
+      symbol: R$
+      display_names:
+        other: բրազիլական ռեալ
+    BSD:
+      symbol: "$"
+      display_names:
+        other: բահամյան դոլար
+    BWP:
+      symbol: P
+      display_names:
+        other: բոտսվանական պուլա
+        one: բոտսվանական պուլա
+    BZD:
+      symbol: "$"
+      display_names:
+        other: Բելիզի դոլար
+    CAD:
+      symbol: CA$
+      display_names:
+        other: կանադական դոլար
+    CLP:
+      symbol: "$"
+      display_names:
+        other: չիլիական պեսո
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: չինական յուան
+    COP:
+      symbol: "$"
+      display_names:
+        other: կոլումբիական պեսո
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: Կոստա Ռիկայի կոլոն
+    CUC:
+      symbol: "$"
+      display_names:
+        other: կուբայական փոխարկվող պեսո
+    CUP:
+      symbol: "$"
+      display_names:
+        other: կուբայական պեսո
+    CZK:
+      symbol: Kč
+      display_names:
+        other: չեխական կրոնա
+        one: չեխական կրոնա
+    DKK:
+      symbol: kr
+      display_names:
+        other: դանիական կրոն
+    DOP:
+      symbol: "$"
+      display_names:
+        other: դոմինիկյան պեսո
+    EGP:
+      symbol: E£
+      display_names:
+        other: եգիպտական ֆունտ
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: եվրո
+    FJD:
+      symbol: "$"
+      display_names:
+        other: ֆիջիական դոլար
+    FKP:
+      symbol: "£"
+      display_names:
+        other: Ֆոլքլենդյան կղզիների ֆունտ
+    GBP:
+      symbol: "£"
+      display_names:
+        other: բրիտանական ֆունտ ստերլինգ
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: վրացական լարի
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: գանայական սեդի
+        one: գանայական սեդի
+    GIP:
+      symbol: "£"
+      display_names:
+        other: Ջիբրալթարի ֆունտ
+    GNF:
+      symbol: FG
+      display_names:
+        other: գվինեական ֆրանկ
+    GTQ:
+      symbol: Q
+      display_names:
+        other: գվատեմալական կետսալ
+    GYD:
+      symbol: "$"
+      display_names:
+        other: գայանական դոլար
+    HKD:
+      symbol: HK$
+      display_names:
+        other: Հոնկոնգի դոլար
+    HNL:
+      symbol: L
+      display_names:
+        other: հոնդուրասական լեմպիրա
+    HRK:
+      symbol: kn
+      display_names:
+        other: խորվաթական կունա
+    HUF:
+      symbol: Ft
+      display_names:
+        other: հունգարական ֆորինտ
+    IDR:
+      symbol: Rp
+      display_names:
+        other: ինդոնեզիական ռուփի
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: Իսրայելի նոր շեկել
+    INR:
+      symbol: "₹"
+      display_names:
+        other: հնդկական ռուփի
+    ISK:
+      symbol: kr
+      display_names:
+        other: իսլանդական կրոն
+    JMD:
+      symbol: "$"
+      display_names:
+        other: Ճամայկայի դոլար
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: ճապոնական իեն
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: ղրղզական սոմ
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: կամբոջական ռիել
+    KMF:
+      symbol: CF
+      display_names:
+        other: կոմորյան ֆրանկ
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: հյուսիսկորեական վոն
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: հարավկորեական վոն
+    KYD:
+      symbol: "$"
+      display_names:
+        other: Կայմանյան կղզիների դոլար
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: ղազախական տենգե
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: լաոսական կիպ
+    LBP:
+      symbol: L£
+      display_names:
+        other: լիբանանյան ֆունտ
+    LKR:
+      symbol: Rs
+      display_names:
+        other: Շրի Լանկայի ռուփի
+    LRD:
+      symbol: "$"
+      display_names:
+        other: լիբերիական դոլար
+    LTL:
+      symbol: Lt
+      display_names:
+        other: Լիտվական լիտ
+    LVL:
+      symbol: Ls
+      display_names:
+        other: Լատվիական լատ
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Մադագասկարի արիարի
+    MMK:
+      symbol: K
+      display_names:
+        other: Մյանմայի կյատ
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: մոնղոլական տուգրիկ
+    MUR:
+      symbol: Rs
+      display_names:
+        other: մավրիկյան ռուփի
+    MXN:
+      symbol: MX$
+      display_names:
+        other: մեքսիկական պեսո
+    MYR:
+      symbol: RM
+      display_names:
+        other: մալայզիական ռինգիտ
+    NAD:
+      symbol: "$"
+      display_names:
+        other: նամիբիական դոլար
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: նիգերիական նայրա
+    NIO:
+      symbol: C$
+      display_names:
+        other: նիկարագուական կորդոբա
+    NOK:
+      symbol: kr
+      display_names:
+        other: նորվեգական կրոն
+    NPR:
+      symbol: Rs
+      display_names:
+        other: Նեպալի ռուփի
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: նորզելանդական դոլար
+    PHP:
+      symbol: PHP
+      display_names:
+        other: ֆիլիպինյան պեսո
+    PKR:
+      symbol: Rs
+      display_names:
+        other: պակիստանյան ռուփի
+    PLN:
+      symbol: zł
+      display_names:
+        other: լեհական զլոտի
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: պարագվայական գուարանի
+    RON:
+      symbol: lei
+      display_names:
+        other: ռումինական լեյ
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: ռուսական ռուբլի
+    RWF:
+      symbol: RF
+      display_names:
+        other: ռուանդական ֆրանկ
+    SBD:
+      symbol: "$"
+      display_names:
+        other: Սողոմոնյան կղզիների դոլար
+    SEK:
+      symbol: kr
+      display_names:
+        other: շվեդական կրոն
+    SGD:
+      symbol: "$"
+      display_names:
+        other: Սինգապուրի դոլար
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Սուրբ Հեղինեի ֆունտ
+    SRD:
+      symbol: "$"
+      display_names:
+        other: սուրինամական դոլար
+    SSP:
+      symbol: "£"
+      display_names:
+        other: հարավսուդանական ֆունտ
+    STN:
+      symbol: Db
+      display_names:
+        other: Սան Տոմե և Փրինսիպիի դոբրա
+    SYP:
+      symbol: "£"
+      display_names:
+        other: սիրիական ֆունտ
+    THB:
+      symbol: "฿"
+      display_names:
+        other: թաիլանդական բահտ
+        one: թաիլանդական բահտ
+    TOP:
+      symbol: T$
+      display_names:
+        other: Տոնգայի պաանգա
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: թուրքական լիրա
+    TTD:
+      symbol: "$"
+      display_names:
+        other: Տրինիդադ և Տոբագոյի դոլար
+    TWD:
+      symbol: NT$
+      display_names:
+        other: թայվանական նոր դոլար
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: ուկրաինական գրիվնա
+    USD:
+      symbol: "$"
+      display_names:
+        other: ԱՄՆ դոլար
+    UYU:
+      symbol: "$"
+      display_names:
+        other: ուրուգվայական պեսո
+    VEF:
+      symbol: Bs
+      display_names:
+        other: վենեսուելական բոլիվար (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: վիետնամական դոնգ
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Կենտրոնական Աֆրիկայի ԿՖԱ ֆրանկ
+    XCD:
+      symbol: EC$
+      display_names:
+        other: արևելակարիբյան դոլար
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Արևմտյան Աֆրիկայի ԿՖԱ ֆրանկ
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: ԿՊՖ ֆրանկ
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(անհայտ արժույթ)"
+        one: "(անհայտ արժույթ)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: հարավաֆրիկյան ռանդ
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: զամբիական կվաչա
+    AED:
+      display_names:
+        other: ԱՄԷ դիրհամ
+        one: ԱՄԷ դիրհամ
+    ALL:
+      display_names:
+        other: ալբանական լեկ
+    ANG:
+      display_names:
+        other: նիդեռլանդական անտիլյան գուլդեն
+    AWG:
+      display_names:
+        other: արուբական ֆլորին
     BGN:
       display_names:
         other: բուլղարական լև
@@ -57,28 +465,9 @@ number_formats:
     BIF:
       display_names:
         other: բուրունդիական ֆրանկ
-    BMD:
-      display_names:
-        other: բերմուդյան դոլար
-    BND:
-      display_names:
-        other: Բրունեյի դոլար
-    BOB:
-      display_names:
-        other: բոլիվիական բոլիվիանո
-    BRL:
-      display_names:
-        other: բրազիլական ռեալ
-    BSD:
-      display_names:
-        other: բահամյան դոլար
     BTN:
       display_names:
         other: բութանական նգուլտրում
-    BWP:
-      display_names:
-        other: բոտսվանական պուլա
-        one: բոտսվանական պուլա
     BYN:
       symbol: р.
       display_names:
@@ -87,61 +476,24 @@ number_formats:
       display_names:
         other: բելառուսական ռուբլի (2000–2016)
         one: բելառուսական ռուբլի (2000–2016)
-    BZD:
-      display_names:
-        other: Բելիզի դոլար
-    CAD:
-      display_names:
-        other: կանադական դոլար
     CDF:
       display_names:
         other: Կոնգոյի ֆրանկ
     CHF:
       display_names:
         other: շվեյցարական ֆրանկ
-    CLP:
-      display_names:
-        other: չիլիական պեսո
     CNH:
       display_names:
         other: չինական օֆշորային յուան
-    CNY:
-      display_names:
-        other: չինական յուան
-    COP:
-      display_names:
-        other: կոլումբիական պեսո
-    CRC:
-      display_names:
-        other: Կոստա Ռիկայի կոլոն
-    CUC:
-      display_names:
-        other: կուբայական փոխարկվող պեսո
-    CUP:
-      display_names:
-        other: կուբայական պեսո
     CVE:
       display_names:
         other: Կաբո Վերդեի էսկուդո
-    CZK:
-      display_names:
-        other: չեխական կրոնա
-        one: չեխական կրոնա
     DJF:
       display_names:
         other: Ջիբութիի ֆրանկ
-    DKK:
-      display_names:
-        other: դանիական կրոն
-    DOP:
-      display_names:
-        other: դոմինիկյան պեսո
     DZD:
       display_names:
         other: ալժիրական դինար
-    EGP:
-      display_names:
-        other: եգիպտական ֆունտ
     ERN:
       display_names:
         other: էրիթրեական նակֆա
@@ -149,130 +501,30 @@ number_formats:
     ETB:
       display_names:
         other: եթովպիական բիր
-    EUR:
-      display_names:
-        other: եվրո
-    FJD:
-      display_names:
-        other: ֆիջիական դոլար
-    FKP:
-      display_names:
-        other: Ֆոլքլենդյան կղզիների ֆունտ
-    GBP:
-      display_names:
-        other: բրիտանական ֆունտ ստերլինգ
-    GEL:
-      display_names:
-        other: վրացական լարի
-    GHS:
-      display_names:
-        other: գանայական սեդի
-        one: գանայական սեդի
-    GIP:
-      display_names:
-        other: Ջիբրալթարի ֆունտ
     GMD:
       display_names:
         other: գամբիական դալասի
-    GNF:
-      display_names:
-        other: գվինեական ֆրանկ
-    GTQ:
-      display_names:
-        other: գվատեմալական կետսալ
-    GYD:
-      display_names:
-        other: գայանական դոլար
-    HKD:
-      display_names:
-        other: Հոնկոնգի դոլար
-    HNL:
-      display_names:
-        other: հոնդուրասական լեմպիրա
-    HRK:
-      display_names:
-        other: խորվաթական կունա
     HTG:
       display_names:
         other: հայիթյան գուրդ
-    HUF:
-      display_names:
-        other: հունգարական ֆորինտ
-    IDR:
-      display_names:
-        other: ինդոնեզիական ռուփի
-    ILS:
-      display_names:
-        other: Իսրայելի նոր շեկել
-    INR:
-      display_names:
-        other: հնդկական ռուփի
     IQD:
       display_names:
         other: իրաքյան դինար
     IRR:
       display_names:
         other: իրանական ռիալ
-    ISK:
-      display_names:
-        other: իսլանդական կրոն
-    JMD:
-      display_names:
-        other: Ճամայկայի դոլար
     JOD:
       display_names:
         other: հորդանանյան դինար
-    JPY:
-      display_names:
-        other: ճապոնական իեն
     KES:
       display_names:
         other: քենիական շիլինգ
-    KGS:
-      display_names:
-        other: ղրղզական սոմ
-    KHR:
-      display_names:
-        other: կամբոջական ռիել
-    KMF:
-      display_names:
-        other: կոմորյան ֆրանկ
-    KPW:
-      display_names:
-        other: հյուսիսկորեական վոն
-    KRW:
-      display_names:
-        other: հարավկորեական վոն
     KWD:
       display_names:
         other: Քուվեյթի դինար
-    KYD:
-      display_names:
-        other: Կայմանյան կղզիների դոլար
-    KZT:
-      display_names:
-        other: ղազախական տենգե
-    LAK:
-      display_names:
-        other: լաոսական կիպ
-    LBP:
-      display_names:
-        other: լիբանանյան ֆունտ
-    LKR:
-      display_names:
-        other: Շրի Լանկայի ռուփի
-    LRD:
-      display_names:
-        other: լիբերիական դոլար
     LSL:
       display_names:
         other: լեսոթոյական լոտի
-    LTL:
-      display_names:
-        other: Լիտվական լիտ
-    LVL:
-      display_names:
-        other: Լատվիական լատ
     LYD:
       display_names:
         other: լիբիական դինար
@@ -282,18 +534,9 @@ number_formats:
     MDL:
       display_names:
         other: մոլդովական լեյ
-    MGA:
-      display_names:
-        other: Մադագասկարի արիարի
     MKD:
       display_names:
         other: մակեդոնական դենար
-    MMK:
-      display_names:
-        other: Մյանմայի կյատ
-    MNT:
-      display_names:
-        other: մոնղոլական տուգրիկ
     MOP:
       display_names:
         other: Մակաոյի պատակա
@@ -303,42 +546,15 @@ number_formats:
     MRU:
       display_names:
         other: մավրիտանական ուգիյա
-    MUR:
-      display_names:
-        other: մավրիկյան ռուփի
     MVR:
       display_names:
         other: մալդիվյան ռուֆիյա
     MWK:
       display_names:
         other: մալավիական կվաչա
-    MXN:
-      display_names:
-        other: մեքսիկական պեսո
-    MYR:
-      display_names:
-        other: մալայզիական ռինգիտ
     MZN:
       display_names:
         other: մոզամբիկյան մետիկալ
-    NAD:
-      display_names:
-        other: նամիբիական դոլար
-    NGN:
-      display_names:
-        other: նիգերիական նայրա
-    NIO:
-      display_names:
-        other: նիկարագուական կորդոբա
-    NOK:
-      display_names:
-        other: նորվեգական կրոն
-    NPR:
-      display_names:
-        other: Նեպալի ռուփի
-    NZD:
-      display_names:
-        other: նորզելանդական դոլար
     OMR:
       display_names:
         other: Օմանի ռիալ
@@ -351,55 +567,21 @@ number_formats:
     PGK:
       display_names:
         other: Պապուա Նոր Գվինեայի կինա
-    PHP:
-      symbol: PHP
-      display_names:
-        other: ֆիլիպինյան պեսո
-    PKR:
-      display_names:
-        other: պակիստանյան ռուփի
-    PLN:
-      display_names:
-        other: լեհական զլոտի
-    PYG:
-      display_names:
-        other: պարագվայական գուարանի
     QAR:
       display_names:
         other: Կատարի ռիալ
-    RON:
-      display_names:
-        other: ռումինական լեյ
     RSD:
       display_names:
         other: սերբական դինար
-    RUB:
-      display_names:
-        other: ռուսական ռուբլի
-    RWF:
-      display_names:
-        other: ռուանդական ֆրանկ
     SAR:
       display_names:
         other: Սաուդյան Արաբիայի ռիալ
-    SBD:
-      display_names:
-        other: Սողոմոնյան կղզիների դոլար
     SCR:
       display_names:
         other: սեյշելյան ռուփի
     SDG:
       display_names:
         other: սուդանական ֆունտ
-    SEK:
-      display_names:
-        other: շվեդական կրոն
-    SGD:
-      display_names:
-        other: Սինգապուրի դոլար
-    SHP:
-      display_names:
-        other: Սուրբ Հեղինեի ֆունտ
     SLE:
       display_names:
         other: Սիեռա Լեոնեի լեոնե
@@ -409,29 +591,12 @@ number_formats:
     SOS:
       display_names:
         other: սոմալիական շիլինգ
-    SRD:
-      display_names:
-        other: սուրինամական դոլար
-    SSP:
-      display_names:
-        other: հարավսուդանական ֆունտ
     STD:
       display_names:
         other: Սան Տոմե և Փրինսիպիի դոբրա (1977–2017)
-    STN:
-      display_names:
-        other: Սան Տոմե և Փրինսիպիի դոբրա
-    SYP:
-      display_names:
-        other: սիրիական ֆունտ
     SZL:
       display_names:
         other: սվազիլենդական լիլանգենի
-    THB:
-      symbol: "฿"
-      display_names:
-        other: թաիլանդական բահտ
-        one: թաիլանդական բահտ
     TJS:
       display_names:
         other: տաջիկական սոմոնի
@@ -441,83 +606,32 @@ number_formats:
     TND:
       display_names:
         other: թունիսյան դինար
-    TOP:
-      display_names:
-        other: Տոնգայի պաանգա
-    TRY:
-      display_names:
-        other: թուրքական լիրա
-    TTD:
-      display_names:
-        other: Տրինիդադ և Տոբագոյի դոլար
-    TWD:
-      symbol: NT$
-      display_names:
-        other: թայվանական նոր դոլար
     TZS:
       display_names:
         other: տանզանիական շիլինգ
-    UAH:
-      display_names:
-        other: ուկրաինական գրիվնա
     UGX:
       display_names:
         other: ուգանդական շիլինգ
-    USD:
-      symbol: "$"
-      display_names:
-        other: ԱՄՆ դոլար
-    UYU:
-      display_names:
-        other: ուրուգվայական պեսո
     UZS:
       display_names:
         other: ուզբեկական սոմ
-    VEF:
-      display_names:
-        other: վենեսուելական բոլիվար (2008–2018)
     VES:
       display_names:
         other: վենեսուելական բոլիվար
-    VND:
-      display_names:
-        other: վիետնամական դոնգ
     VUV:
       display_names:
         other: Վանուատուի վատու
     WST:
       display_names:
         other: սամոական տալա
-    XAF:
-      display_names:
-        other: Կենտրոնական Աֆրիկայի ԿՖԱ ֆրանկ
-    XCD:
-      display_names:
-        other: արևելակարիբյան դոլար
-    XOF:
-      display_names:
-        other: Արևմտյան Աֆրիկայի ԿՖԱ ֆրանկ
-    XPF:
-      display_names:
-        other: ԿՊՖ ֆրանկ
-    XXX:
-      display_names:
-        other: "(անհայտ արժույթ)"
-        one: "(անհայտ արժույթ)"
     YER:
       display_names:
         other: եմենական ռիալ
-    ZAR:
-      display_names:
-        other: հարավաֆրիկյան ռանդ
     ZMK:
       display_names:
         other: Զամբիական կվաչա (1968–2012)
-    ZMW:
-      display_names:
-        other: զամբիական կվաչա
 locale: hy
-generated_at: '2025-09-10T22:17:40+09:00'
+generated_at: '2025-09-10T23:53:09+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

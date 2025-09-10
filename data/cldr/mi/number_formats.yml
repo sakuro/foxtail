@@ -1,45 +1,449 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
+  currency_formats:
+    standard: "¤ #,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: dirham UAE
     AFN:
+      symbol: "؋"
       display_names:
         other: afghani Awhekenetāna
-    ALL:
-      display_names:
-        other: leke Arapeinia
     AMD:
+      symbol: "֏"
       display_names:
         other: dram Āmenia
-    ANG:
-      display_names:
-        other: Guilder Anatiri Hōrana
     AOA:
+      symbol: Kz
       display_names:
         other: kwanza Anakora
     ARS:
+      symbol: "$"
       display_names:
         other: peso Āketina
     AUD:
+      symbol: A$
       display_names:
         other: tāra Ahitereiria
-    AWG:
-      display_names:
-        other: florin Arūpa
     AZN:
+      symbol: "₼"
       display_names:
         other: manat Atepaihānia
     BAM:
+      symbol: KM
       display_names:
         other: mark Pōngia-Herekōwini takahuri
     BBD:
+      symbol: "$"
       display_names:
         other: tāra Papatohe
     BDT:
+      symbol: "৳"
       display_names:
         other: taka Pākaratēhi
+    BMD:
+      symbol: "$"
+      display_names:
+        other: tāra Pāmura
+    BND:
+      symbol: "$"
+      display_names:
+        other: tāra Poronai
+    BOB:
+      symbol: Bs
+      display_names:
+        other: boliviano Poriwia
+    BRL:
+      symbol: R$
+      display_names:
+        other: real Parahi
+    BSD:
+      symbol: "$"
+      display_names:
+        other: tāra Pahama
+    BWP:
+      symbol: P
+      display_names:
+        other: pula Poriwana
+    BZD:
+      symbol: "$"
+      display_names:
+        other: tāra Pērihi
+    CAD:
+      symbol: CA$
+      display_names:
+        other: tāra Kānata
+    CLP:
+      symbol: "$"
+      display_names:
+        other: peso Hiri
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: yuan Haina
+    COP:
+      symbol: "$"
+      display_names:
+        other: peso Koromōpia
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: colon Koto Rika
+    CUC:
+      symbol: "$"
+      display_names:
+        other: peso Kiupa takahuri
+    CUP:
+      symbol: "$"
+      display_names:
+        other: peso Kiupa
+    CZK:
+      symbol: Kč
+      display_names:
+        other: koruna Tieke
+    DKK:
+      symbol: kr
+      display_names:
+        other: kroner Tenemāka
+    DOP:
+      symbol: "$"
+      display_names:
+        other: peso Tominika
+    EGP:
+      symbol: E£
+      display_names:
+        other: pāuna Īhipa
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: euro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: tāra Whītī
+    FKP:
+      symbol: "£"
+      display_names:
+        other: pāuna Whākana
+    GBP:
+      symbol: "£"
+      display_names:
+        other: pāuna Piritene
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: lari Hōria
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: cedi Kāna
+    GIP:
+      symbol: "£"
+      display_names:
+        other: pāuna Kāmaka
+    GNF:
+      symbol: FG
+      display_names:
+        other: franc Kini
+    GTQ:
+      symbol: Q
+      display_names:
+        other: quetzal Kuatamāra
+    GYD:
+      symbol: "$"
+      display_names:
+        other: tāra Kaiana
+    HKD:
+      symbol: HK$
+      display_names:
+        other: tāra Hongipua
+    HNL:
+      symbol: L
+      display_names:
+        other: lempira Honotura
+    HRK:
+      symbol: kn
+      display_names:
+        other: kuna Koroātia
+    HUF:
+      symbol: Ft
+      display_names:
+        other: forint Hanekari
+    IDR:
+      symbol: Rp
+      display_names:
+        other: rupiah Initonīhia
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: shekel hou Iharaira
+    INR:
+      symbol: "₹"
+      display_names:
+        other: rupī Iniana
+    ISK:
+      symbol: kr
+      display_names:
+        other: kronur Tiorangi
+    JMD:
+      symbol: "$"
+      display_names:
+        other: tāra Hemeika
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: yen Hapanihi
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: som Kikitānga
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: riel Kamapōtia
+    KMF:
+      symbol: CF
+      display_names:
+        other: franc Komoro
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: won Kōrea ki te Raki
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: won Kōrea ki te Tonga
+    KYD:
+      symbol: "$"
+      display_names:
+        other: tāra Kāmana
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: tenge Katatānga
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: kip Rāoho
+    LBP:
+      symbol: L£
+      display_names:
+        other: pāuna Repanona
+    LKR:
+      symbol: Rs
+      display_names:
+        other: rupee Hiri Ranaka
+    LRD:
+      symbol: "$"
+      display_names:
+        other: tāra Raipiria
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ariary Matakāhika
+    MMK:
+      symbol: K
+      display_names:
+        other: kyat Pēma
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: tugrik Mongōria
+    MUR:
+      symbol: Rs
+      display_names:
+        other: rupee Marihi
+    MXN:
+      symbol: MX$
+      display_names:
+        other: peso Mēhiko
+    MYR:
+      symbol: RM
+      display_names:
+        other: ringgit Mareia
+    NAD:
+      symbol: "$"
+      display_names:
+        other: tāra Namipia
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: naira Ngāitīria
+    NIO:
+      symbol: C$
+      display_names:
+        other: cordoba Nikarāhua
+    NOK:
+      symbol: kr
+      display_names:
+        other: kroner Nōwei
+    NPR:
+      symbol: Rs
+      display_names:
+        other: rupee Nepōra
+    NZD:
+      symbol: "$"
+      display_names:
+        other: tāra o Aotearoa
+    PHP:
+      symbol: "₱"
+      display_names:
+        other: peso Piripīni
+    PKR:
+      symbol: Rs
+      display_names:
+        other: rupee Pakitāne
+    PLN:
+      symbol: zł
+      display_names:
+        other: zloty Pōrana
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: guarani Parakai
+    RON:
+      symbol: lei
+      display_names:
+        other: lei Romeinia
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: rūpera Ruhiana
+    RWF:
+      symbol: RF
+      display_names:
+        other: franc Rāwana
+    SBD:
+      symbol: "$"
+      display_names:
+        other: tāra Moutere Horomona
+    SEK:
+      symbol: kr
+      display_names:
+        other: kronor Huitene
+    SGD:
+      symbol: "$"
+      display_names:
+        other: tāra Hingapoa
+    SHP:
+      symbol: "£"
+      display_names:
+        other: pāuna Hato Herena
+    SRD:
+      symbol: "$"
+      display_names:
+        other: tāra Huriname
+    SSP:
+      symbol: "£"
+      display_names:
+        other: pāuna Hūtāne Tonga
+    STN:
+      symbol: Db
+      display_names:
+        other: dobra Hao Tome me Pirinihipi
+    SYP:
+      symbol: "£"
+      display_names:
+        other: pāuna Hiria
+    THB:
+      symbol: "฿"
+      display_names:
+        other: baht Tairanga
+    TOP:
+      symbol: T$
+      display_names:
+        other: pa’anga Tonga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: lira Tākei
+    TTD:
+      symbol: "$"
+      display_names:
+        other: tāra Tirinaki Tōpako
+    TWD:
+      symbol: NT$
+      display_names:
+        other: tāra Taiwana Hou
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: hryvnia Ukareinga
+    USD:
+      symbol: US$
+      display_names:
+        other: tāra US
+    UYU:
+      symbol: "$"
+      display_names:
+        other: peso Urukoi
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+      display_names:
+        other: dong Whitināmu
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: franc CFA Āwherika Waenga
+    XCD:
+      symbol: EC$
+      display_names:
+        other: tāra Karapīana Rāwhiti
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: franc CFA Āwherika ki te Uru
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: franc CFP
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(moni tē mōhiotia)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: rand Āwherika ki te Tonga
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: kwacha Tāmipia
+    AED:
+      display_names:
+        other: dirham UAE
+    ALL:
+      display_names:
+        other: leke Arapeinia
+    ANG:
+      display_names:
+        other: Guilder Anatiri Hōrana
+    AWG:
+      display_names:
+        other: florin Arūpa
     BGN:
       display_names:
         other: leva Purukāria
@@ -49,205 +453,57 @@ number_formats:
     BIF:
       display_names:
         other: franc Puruniti
-    BMD:
-      display_names:
-        other: tāra Pāmura
-    BND:
-      display_names:
-        other: tāra Poronai
-    BOB:
-      display_names:
-        other: boliviano Poriwia
-    BRL:
-      display_names:
-        other: real Parahi
-    BSD:
-      display_names:
-        other: tāra Pahama
     BTN:
       display_names:
         other: ngultrum Pūtana
-    BWP:
-      display_names:
-        other: pula Poriwana
     BYN:
       display_names:
         other: ruble Pērara
-    BZD:
-      display_names:
-        other: tāra Pērihi
-    CAD:
-      display_names:
-        other: tāra Kānata
     CDF:
       display_names:
         other: franc Kōngo
     CHF:
       display_names:
         other: franc Huiterangi
-    CLP:
-      display_names:
-        other: peso Hiri
     CNH:
       display_names:
         other: yuan Haina (ki waho)
-    CNY:
-      display_names:
-        other: yuan Haina
-    COP:
-      display_names:
-        other: peso Koromōpia
-    CRC:
-      display_names:
-        other: colon Koto Rika
-    CUC:
-      display_names:
-        other: peso Kiupa takahuri
-    CUP:
-      display_names:
-        other: peso Kiupa
     CVE:
       display_names:
         other: escudo Kūrae Matomato
-    CZK:
-      display_names:
-        other: koruna Tieke
     DJF:
       display_names:
         other: franc Tepūti
-    DKK:
-      display_names:
-        other: kroner Tenemāka
-    DOP:
-      display_names:
-        other: peso Tominika
     DZD:
       display_names:
         other: dinar Aratiria
-    EGP:
-      display_names:
-        other: pāuna Īhipa
     ERN:
       display_names:
         other: nakfa Eriterea
     ETB:
       display_names:
         other: birr Etiopia
-    EUR:
-      display_names:
-        other: euro
-    FJD:
-      display_names:
-        other: tāra Whītī
-    FKP:
-      display_names:
-        other: pāuna Whākana
-    GBP:
-      display_names:
-        other: pāuna Piritene
-    GEL:
-      display_names:
-        other: lari Hōria
-    GHS:
-      display_names:
-        other: cedi Kāna
-    GIP:
-      display_names:
-        other: pāuna Kāmaka
     GMD:
       display_names:
         other: dalasi Kamopia
-    GNF:
-      display_names:
-        other: franc Kini
-    GTQ:
-      display_names:
-        other: quetzal Kuatamāra
-    GYD:
-      display_names:
-        other: tāra Kaiana
-    HKD:
-      display_names:
-        other: tāra Hongipua
-    HNL:
-      display_names:
-        other: lempira Honotura
-    HRK:
-      display_names:
-        other: kuna Koroātia
     HTG:
       display_names:
         other: gourde Haiti
-    HUF:
-      display_names:
-        other: forint Hanekari
-    IDR:
-      display_names:
-        other: rupiah Initonīhia
-    ILS:
-      display_names:
-        other: shekel hou Iharaira
-    INR:
-      display_names:
-        other: rupī Iniana
     IQD:
       display_names:
         other: dinar Irāka
     IRR:
       display_names:
         other: rial Irāna
-    ISK:
-      display_names:
-        other: kronur Tiorangi
-    JMD:
-      display_names:
-        other: tāra Hemeika
     JOD:
       display_names:
         other: dinar Hōrano
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: yen Hapanihi
     KES:
       display_names:
         other: hereni Kenia
-    KGS:
-      display_names:
-        other: som Kikitānga
-    KHR:
-      display_names:
-        other: riel Kamapōtia
-    KMF:
-      display_names:
-        other: franc Komoro
-    KPW:
-      display_names:
-        other: won Kōrea ki te Raki
-    KRW:
-      display_names:
-        other: won Kōrea ki te Tonga
     KWD:
       display_names:
         other: dinar Kūweiti
-    KYD:
-      display_names:
-        other: tāra Kāmana
-    KZT:
-      display_names:
-        other: tenge Katatānga
-    LAK:
-      display_names:
-        other: kip Rāoho
-    LBP:
-      display_names:
-        other: pāuna Repanona
-    LKR:
-      display_names:
-        other: rupee Hiri Ranaka
-    LRD:
-      display_names:
-        other: tāra Raipiria
     LSL:
       display_names:
         other: loti Teroto
@@ -260,61 +516,24 @@ number_formats:
     MDL:
       display_names:
         other: lei Morotawa
-    MGA:
-      display_names:
-        other: ariary Matakāhika
     MKD:
       display_names:
         other: denari Makerōnia
-    MMK:
-      display_names:
-        other: kyat Pēma
-    MNT:
-      display_names:
-        other: tugrik Mongōria
     MOP:
       display_names:
         other: pataca Makau
     MRU:
       display_names:
         other: ouguiya Mauritania
-    MUR:
-      display_names:
-        other: rupee Marihi
     MVR:
       display_names:
         other: rufiyaa Māratiri
     MWK:
       display_names:
         other: kwacha Marāwi
-    MXN:
-      display_names:
-        other: peso Mēhiko
-    MYR:
-      display_names:
-        other: ringgit Mareia
     MZN:
       display_names:
         other: metical Mohapiki
-    NAD:
-      display_names:
-        other: tāra Namipia
-    NGN:
-      display_names:
-        other: naira Ngāitīria
-    NIO:
-      display_names:
-        other: cordoba Nikarāhua
-    NOK:
-      display_names:
-        other: kroner Nōwei
-    NPR:
-      display_names:
-        other: rupee Nepōra
-    NZD:
-      symbol: "$"
-      display_names:
-        other: tāra o Aotearoa
     OMR:
       display_names:
         other: rial Ōmana
@@ -327,54 +546,21 @@ number_formats:
     PGK:
       display_names:
         other: kina Papua Nūkini
-    PHP:
-      display_names:
-        other: peso Piripīni
-    PKR:
-      display_names:
-        other: rupee Pakitāne
-    PLN:
-      display_names:
-        other: zloty Pōrana
-    PYG:
-      display_names:
-        other: guarani Parakai
     QAR:
       display_names:
         other: riyal Katā
-    RON:
-      display_names:
-        other: lei Romeinia
     RSD:
       display_names:
         other: dinar Hirupia
-    RUB:
-      display_names:
-        other: rūpera Ruhiana
-    RWF:
-      display_names:
-        other: franc Rāwana
     SAR:
       display_names:
         other: riyal Hauri
-    SBD:
-      display_names:
-        other: tāra Moutere Horomona
     SCR:
       display_names:
         other: rupee Heikere
     SDG:
       display_names:
         other: pāuna Hūtāne
-    SEK:
-      display_names:
-        other: kronor Huitene
-    SGD:
-      display_names:
-        other: tāra Hingapoa
-    SHP:
-      display_names:
-        other: pāuna Hato Herena
     SLE:
       display_names:
         other: leone Araone
@@ -384,24 +570,9 @@ number_formats:
     SOS:
       display_names:
         other: hereni Hūmārie
-    SRD:
-      display_names:
-        other: tāra Huriname
-    SSP:
-      display_names:
-        other: pāuna Hūtāne Tonga
-    STN:
-      display_names:
-        other: dobra Hao Tome me Pirinihipi
-    SYP:
-      display_names:
-        other: pāuna Hiria
     SZL:
       display_names:
         other: emalangeni Warerangi
-    THB:
-      display_names:
-        other: baht Tairanga
     TJS:
       display_names:
         other: somoni Takiritānga
@@ -411,74 +582,29 @@ number_formats:
     TND:
       display_names:
         other: dinar Tūnihia
-    TOP:
-      display_names:
-        other: pa’anga Tonga
-    TRY:
-      display_names:
-        other: lira Tākei
-    TTD:
-      display_names:
-        other: tāra Tirinaki Tōpako
-    TWD:
-      display_names:
-        other: tāra Taiwana Hou
     TZS:
       display_names:
         other: hereni Tānahia
-    UAH:
-      display_names:
-        other: hryvnia Ukareinga
     UGX:
       display_names:
         other: hereni Ukānga
-    USD:
-      display_names:
-        other: tāra US
-    UYU:
-      display_names:
-        other: peso Urukoi
     UZS:
       display_names:
         other: som Uhipeketāne
     VES:
       display_names:
         other: bolivar Penehūera
-    VND:
-      display_names:
-        other: dong Whitināmu
     VUV:
       display_names:
         other: vatu Whenuatū
     WST:
       display_names:
         other: tala Hāmoa
-    XAF:
-      display_names:
-        other: franc CFA Āwherika Waenga
-    XCD:
-      display_names:
-        other: tāra Karapīana Rāwhiti
-    XOF:
-      display_names:
-        other: franc CFA Āwherika ki te Uru
-    XPF:
-      display_names:
-        other: franc CFP
-    XXX:
-      display_names:
-        other: "(moni tē mōhiotia)"
     YER:
       display_names:
         other: rial Īmene
-    ZAR:
-      display_names:
-        other: rand Āwherika ki te Tonga
-    ZMW:
-      display_names:
-        other: kwacha Tāmipia
 locale: mi
-generated_at: '2025-09-10T22:17:43+09:00'
+generated_at: '2025-09-10T23:53:13+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

@@ -3,39 +3,296 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: Kwansaa Anngolaa
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: Dolaar Ostaraalii
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: Pulaa Botwanaa
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Dolaar Kandaaa
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Yuam Siin
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: Liibar Ejipt
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Oroo
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Liibar Sterling
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Rupii Enndo
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Yen Sapoo
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: Faraa Komoor
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Dolaar Liberiyaa
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Ariyari Madagaskaar
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Rupii Moriis
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Dolaar Namibii
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Nayraa Nijeriyaa
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: Faraa Ruwanndaa
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Liibar Sent Helen
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: Dobra Sawo Tome e Prensipe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: Dolaar Dowlaaji Dentuɗi
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Mbuuɗi Seefaa BEAC
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Mbuuɗu Seefaa BCEAO
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Rannda Afrik Bŋ Worgo
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Kuwacca Sammbi
     AED:
       display_names:
         other: Dirham Emiraati Araab Dentuɗi
-    AOA:
-      display_names:
-        other: Kwansaa Anngolaa
-    AUD:
-      display_names:
-        other: Dolaar Ostaraalii
     BHD:
       display_names:
         other: Dinaar Bahrayn
     BIF:
       display_names:
         other: Mbuuɗu Burunndi
-    BWP:
-      display_names:
-        other: Pulaa Botwanaa
-    CAD:
-      display_names:
-        other: Dolaar Kandaaa
     CDF:
       display_names:
         other: Faraa Konngo
     CHF:
       display_names:
         other: Faraa Suwiis
-    CNY:
-      display_names:
-        other: Yuam Siin
     CVE:
       display_names:
         other: Eskudoo Kap Weer
@@ -45,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: Dinaar Alaseri
-    EGP:
-      display_names:
-        other: Liibar Ejipt
     ERN:
       display_names:
         other: Nafka Eriteree
     ETB:
       display_names:
         other: Biir Ecoppi
-    EUR:
-      display_names:
-        other: Oroo
-    GBP:
-      display_names:
-        other: Liibar Sterling
     GHC:
       display_names:
         other: Sedi Ganaa
@@ -69,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: Faraa Gine
-    INR:
-      display_names:
-        other: Rupii Enndo
-    JPY:
-      display_names:
-        other: Yen Sapoo
     KES:
       display_names:
         other: Siling Keñaa
-    KMF:
-      display_names:
-        other: Faraa Komoor
-    LRD:
-      display_names:
-        other: Dolaar Liberiyaa
     LSL:
       display_names:
         other: Loti Lesotoo
@@ -93,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: Diraham Maruk
-    MGA:
-      display_names:
-        other: Ariyari Madagaskaar
     MRO:
       display_names:
         other: Ugiyya Muritani (1973–2017)
     MRU:
       display_names:
         other: Ugiyya Muritani
-    MUR:
-      display_names:
-        other: Rupii Moriis
     MWK:
       display_names:
         other: Kuwacca Malaawi
     MZM:
       display_names:
         other: Metikal Mosammbik
-    NAD:
-      display_names:
-        other: Dolaar Namibii
-    NGN:
-      display_names:
-        other: Nayraa Nijeriyaa
-    RWF:
-      display_names:
-        other: Faraa Ruwanndaa
     SAR:
       display_names:
         other: Riyaal Arabi Sawdit
@@ -129,9 +350,6 @@ number_formats:
     SDG:
       display_names:
         other: Liibar Sudaan
-    SHP:
-      display_names:
-        other: Liibar Sent Helen
     SLE:
       display_names:
         other: Lewoon Seraa Liyon
@@ -144,9 +362,6 @@ number_formats:
     STD:
       display_names:
         other: Dobra Sawo Tome e Prensipe (1977–2017)
-    STN:
-      display_names:
-        other: Dobra Sawo Tome e Prensipe
     SZL:
       display_names:
         other: Lilangeni Swaasilannda
@@ -159,29 +374,14 @@ number_formats:
     UGX:
       display_names:
         other: Siling Uganndaa
-    USD:
-      display_names:
-        other: Dolaar Dowlaaji Dentuɗi
-    XAF:
-      display_names:
-        other: Mbuuɗi Seefaa BEAC
-    XOF:
-      display_names:
-        other: Mbuuɗu Seefaa BCEAO
-    ZAR:
-      display_names:
-        other: Rannda Afrik Bŋ Worgo
     ZMK:
       display_names:
         other: Kuwacca Sammbi (1968–2012)
-    ZMW:
-      display_names:
-        other: Kuwacca Sammbi
     ZWD:
       display_names:
         other: Dolaar Simbaabuwe
 locale: ff
-generated_at: '2025-09-10T22:17:37+09:00'
+generated_at: '2025-09-10T23:53:07+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

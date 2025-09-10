@@ -1,64 +1,471 @@
 ---
 number_formats:
   symbols:
+    decimal: "."
     group: "،"
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: افغان افغٲنی
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: اَرمانؠن ڈرؠم
+    AOA:
+      symbol: Kz
+      display_names:
+        other: اؠنگولَن کوانزا
+    ARS:
+      symbol: "$"
+      display_names:
+        other: أرجَنٹیٖن پِسو
+    AUD:
+      symbol: A$
+      display_names:
+        other: آسٹریلِیَن ڈالَر
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: آزَرباجانی مَنَٹ
+    BAM:
+      symbol: KM
+      display_names:
+        other: بوزنِیاہَرزِگووِنا کَنوٲٹیبٕل مارٕک
+    BBD:
+      symbol: "$"
+      display_names:
+        other: بابیڑِیَن ڈالَر
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: بَنگلادیٖشی ٹَکا
+    BMD:
+      symbol: "$"
+      display_names:
+        other: بٔرمیوٗڑَن ڈالَر
+    BND:
+      symbol: "$"
+      display_names:
+        other: برونی ڈالَر
+    BOB:
+      symbol: Bs
+      display_names:
+        other: بولِوِیَن بولوینو
+    BRL:
+      symbol: R$
+      display_names:
+        other: برازیٖلی رِیَلز
+        one: برازیٖلی رِیَل
+    BSD:
+      symbol: "$"
+      display_names:
+        other: بہامِیَن ڈالر
+    BWP:
+      symbol: P
+      display_names:
+        other: بوٹٕسوانَن پُلا
+    BZD:
+      symbol: "$"
+      display_names:
+        other: بِلِزی ڈالر
+    CAD:
+      symbol: CA$
+      display_names:
+        other: کینَڑِیَن ڈالر
+    CLP:
+      symbol: "$"
+      display_names:
+        other: چِلِن پِسو
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: چیٖنی یُوان
+    COP:
+      symbol: "$"
+      display_names:
+        other: کولَمبِین پِسو
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: کوسٹا رِکَن کولَن
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+      display_names:
+        other: کیوٗبَن پِسو
+    CZK:
+      symbol: Kč
+      display_names:
+        other: چیک کوریٖنا
+    DKK:
+      symbol: kr
+      display_names:
+        other: ڈٔنِش کرون
+    DOP:
+      symbol: "$"
+      display_names:
+        other: ڈومِنِکَن پِسو
+    EGP:
+      symbol: E£
+      display_names:
+        other: اِجِپٹِیَن پَوُنڑ
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: سِپینِش پیسِٹا
+    EUR:
+      symbol: "€"
+      display_names:
+        other: یوٗرو
+    FJD:
+      symbol: "$"
+      display_names:
+        other: فِجین ڈالر
+    FKP:
+      symbol: "£"
+      display_names:
+        other: فیکلینڑِس آیلینڑ پونڑ
+    GBP:
+      symbol: "£"
+      display_names:
+        other: برطٲنوی پوٗنڈ
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: جارجِیَن لاری
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: گَنییَن سؠڑی
+    GIP:
+      symbol: "£"
+      display_names:
+        other: گِبریلٹَر پَاونڑ
+    GNF:
+      symbol: FG
+      display_names:
+        other: گِنِیَن فرینک
+    GTQ:
+      symbol: Q
+      display_names:
+        other: گواٹَمالَن قیوٗٹزَل
+    GYD:
+      symbol: "$"
+      display_names:
+        other: گَیَنیٖزُک ڑالَر
+    HKD:
+      symbol: HK$
+      display_names:
+        other: حانگ کانگُک ڑالَر
+    HNL:
+      symbol: L
+      display_names:
+        other: حونڑورنُک لؠمپیٖرا
+    HRK:
+      symbol: kn
+      display_names:
+        other: کروایشنُک کوٗنا
+    HUF:
+      symbol: Ft
+      display_names:
+        other: حَنگیرِیَن فورِنٹ
+    IDR:
+      symbol: Rp
+      display_names:
+        other: اِنڑونیشیاہُک رُپِیاہ
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: اِزرٲیِلی نٔوؠ شؠقٕل
+    INR:
+      symbol: "₹"
+      display_names:
+        other: ہِندُستٲنؠ رۄپَے
+    ISK:
+      symbol: kr
+      display_names:
+        other: اَیسلینڑُک کرونا
+    JMD:
+      symbol: "$"
+      display_names:
+        other: جَمَیکاہُک ڑالَر
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: جاپٲن یَن
+        one: جاپٲن یَن
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: کِرگِستانُک سوم
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: کَمبوڑِیاہُک رِیال
+    KMF:
+      symbol: CF
+      display_names:
+        other: کومورِیَن فرینک
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: جنوٗبی کورِیَن وَن
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: ساوتھ کورِیَن وَن
+    KYD:
+      symbol: "$"
+      display_names:
+        other: کیمین ججیٖرُک ڑالَر
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: کزاکِستان ٹینج
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: لَوٹِیَن کِپ
+    LBP:
+      symbol: L£
+      display_names:
+        other: لیبنیٖزُک پاونڑ
+    LKR:
+      symbol: Rs
+      display_names:
+        other: سری لَنکاہٕچ رۄپَے
+    LRD:
+      symbol: "$"
+      display_names:
+        other: لَیبیرِیَن ڑالَر
+    LTL:
+      symbol: Lt
+      display_names:
+        other: لِتھوینِیَن لِٹاس
+    LVL:
+      symbol: Ls
+      display_names:
+        other: لَتوِیَن لیٹس
+    MGA:
+      symbol: Ar
+      display_names:
+        other: مؠلؠگیسی اؠریَری
+    MMK:
+      symbol: K
+      display_names:
+        other: مِیانما کیاٹ
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: مۄنگولِیَن ٹُگرِک
+    MUR:
+      symbol: Rs
+      display_names:
+        other: مورؠشِیاہٕچ رۄپَے
+    MXN:
+      symbol: MX$
+      display_names:
+        other: مؠکسِکَن پؠسو
+    MYR:
+      symbol: RM
+      display_names:
+        other: مَلیشِیَن رِنگِٹ
+    NAD:
+      symbol: "$"
+      display_names:
+        other: نامِبِیَن ڑالَر
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: نَیجیرِیَن ڑالَر
+    NIO:
+      symbol: C$
+      display_names:
+        other: نِکؠراگُوؠن کورڑوبا اورو
+    NOK:
+      symbol: kr
+      display_names:
+        other: نوروییِنُک کرون
+    NPR:
+      symbol: Rs
+      display_names:
+        other: نیپالٕچ رۄپَے
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: نِوزیٖلینڑُک ڑالَر
+    PHP:
+      symbol: "₱"
+      display_names:
+        other: پھِلِپایِٔن پؠسو
+    PKR:
+      symbol: Rs
+      display_names:
+        other: پاکِستٲنؠ رۄپَے
+    PLN:
+      symbol: zł
+      display_names:
+        other: پولِش زلوٹی
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: پؠرؠگیوٗوَیَن گُعارانی
+    RON:
+      symbol: lei
+      display_names:
+        other: رومانِیَن لؠیوٗ
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: روٗسی رَبٕلز
+        one: روٗسی رَبٕل
+    RWF:
+      symbol: RF
+      display_names:
+        other: روانڑَن فرانک
+    SBD:
+      symbol: "$"
+      display_names:
+        other: سولَمَن جٔزیٖرُک ڈالَر
+    SEK:
+      symbol: kr
+      display_names:
+        other: سویٖڈِش کَرونا
+    SGD:
+      symbol: "$"
+      display_names:
+        other: سِنگاپورُک ڈالَر
+    SHP:
+      symbol: "£"
+      display_names:
+        other: سینٹ ہیلِنا پونڈ
+    SRD:
+      symbol: "$"
+      display_names:
+        other: سُریٖنامُک ڈالَر
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+    SYP:
+      symbol: "£"
+      display_names:
+        other: سیٖریاہُک پونڈ
+    THB:
+      symbol: "฿"
+      display_names:
+        other: تھایھک بات
+    TOP:
+      symbol: T$
+      display_names:
+        other: ٹونگَن پانگا
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: تُرکیہُک لیرا
+    TTD:
+      symbol: "$"
+      display_names:
+        other: ٹرِنہِ ڈیڈ تہٕ ٹوبیگو ڈالَر
+    TWD:
+      symbol: NT$
+      display_names:
+        other: نۆو تیوانُک ڈالَر
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: یوٗکرینیاہُک ہرِوِنیا
+    USD:
+      symbol: "$"
+      display_names:
+        other: US ڈالرس
+        one: US ڈالر
+    UYU:
+      symbol: "$"
+      display_names:
+        other: اُروٗگایَن پیسو
+    VEF:
+      symbol: Bs
+      display_names:
+        other: وینٕزوٗلیُک بولِوَر (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: وِیَنَمُک ڈانگ
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: سی ایف اے فرینک بی ایٖ اے سی
+    XCD:
+      symbol: EC$
+      display_names:
+        other: مَشرِقی کیرِبِیَن ڈالَر
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: سی ایف اے فرینک بی سی ایٖ اے او
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: سی ایف پی فرینک
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "﴿نانولوٗم کرنسی﴾"
+        one: "﴿کرنسی ہُنٛد نامولوٗم سِکٕہ﴾"
+    ZAR:
+      symbol: R
+      display_names:
+        other: ساوُتھ افریٖکاہُک رینڈ
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: زِمبابیُک کواچا
     ADP:
       display_names:
         other: اؠڑورَن پیسِٹا
     AED:
       display_names:
         other: مُتحدہ عرب اِمارات دِرہم
-    AFN:
-      display_names:
-        other: افغان افغٲنی
     ALL:
       display_names:
         other: اؠلبینِیَن لِک
-    AMD:
-      display_names:
-        other: اَرمانؠن ڈرؠم
     ANG:
       display_names:
         other: نایدَرلینڑ اؠنٹٕلیٖیَن گِلڑَر
-    AOA:
-      display_names:
-        other: اؠنگولَن کوانزا
     AOR:
       display_names:
         other: اؠنگولَن کوانزا رؠجِسٹاڑو
     ARA:
       display_names:
         other: أرجَنٹیٖن اَسٹرل
-    ARS:
-      display_names:
-        other: أرجَنٹیٖن پِسو
     ATS:
       display_names:
         other: آسٹریَن شِلِنگ
-    AUD:
-      display_names:
-        other: آسٹریلِیَن ڈالَر
     AWG:
       display_names:
         other: اَروبَن فِلورِن
-    AZN:
-      display_names:
-        other: آزَرباجانی مَنَٹ
     BAD:
       display_names:
         other: بوزنِیاہَرزِگووِنا دیٖنار
-    BAM:
-      display_names:
-        other: بوزنِیاہَرزِگووِنا کَنوٲٹیبٕل مارٕک
-    BBD:
-      display_names:
-        other: بابیڑِیَن ڈالَر
-    BDT:
-      display_names:
-        other: بَنگلادیٖشی ٹَکا
     BEF:
       display_names:
         other: بَلجِیَن فرینک
@@ -71,15 +478,6 @@ number_formats:
     BIF:
       display_names:
         other: بُرُنڑِین فرینک
-    BMD:
-      display_names:
-        other: بٔرمیوٗڑَن ڈالَر
-    BND:
-      display_names:
-        other: برونی ڈالَر
-    BOB:
-      display_names:
-        other: بولِوِیَن بولوینو
     BOP:
       display_names:
         other: بولویَن پِسو
@@ -95,28 +493,18 @@ number_formats:
     BRE:
       display_names:
         other: برازیٖلین کروزِرو
-    BRL:
-      display_names:
-        other: برازیٖلی رِیَلز
-        one: برازیٖلی رِیَل
     BRN:
       display_names:
         other: برازیٖلین کروزیڑو نووو
     BRR:
       display_names:
         other: برازیٖلین کروزیرو
-    BSD:
-      display_names:
-        other: بہامِیَن ڈالر
     BTN:
       display_names:
         other: بوٗٹینیٖز نگُلٹرم
     BUK:
       display_names:
         other: بٔرمیٖز کیٹ
-    BWP:
-      display_names:
-        other: بوٹٕسوانَن پُلا
     BYB:
       display_names:
         other: بِلیروشِیَن نِو رِبٕل
@@ -126,12 +514,6 @@ number_formats:
     BYR:
       display_names:
         other: بِلیروشِیَن رِبٕل (۲۰۰۰–۲۰۱۶)
-    BZD:
-      display_names:
-        other: بِلِزی ڈالر
-    CAD:
-      display_names:
-        other: کینَڑِیَن ڈالر
     CDF:
       display_names:
         other: کونگولیٖز فریک
@@ -147,105 +529,51 @@ number_formats:
     CLF:
       display_names:
         other: چِلِن یوٗنِڑیدیٖز ڑِ فومیٹو
-    CLP:
-      display_names:
-        other: چِلِن پِسو
-    CNY:
-      display_names:
-        other: چیٖنی یُوان
-    COP:
-      display_names:
-        other: کولَمبِین پِسو
     COU:
       display_names:
         other: ِٖیوٗنِڑیڑ ڑِ ویلور رِیل
-    CRC:
-      display_names:
-        other: کوسٹا رِکَن کولَن
     CSD:
       display_names:
         other: پرون سٔربِین ڈالر
     CSK:
       display_names:
         other: چِکوسولوواک ہاڑ کوروٗنا
-    CUP:
-      display_names:
-        other: کیوٗبَن پِسو
     CYP:
       display_names:
         other: کیپروٹ پَوُڑ
-    CZK:
-      display_names:
-        other: چیک کوریٖنا
     DDM:
       display_names:
         other: مٔشرِقی جٔرمَن مارٕک
     DEM:
       display_names:
         other: جٔرمَن مارٕک
-    DKK:
-      display_names:
-        other: ڈٔنِش کرون
-    DOP:
-      display_names:
-        other: ڈومِنِکَن پِسو
     DZD:
       display_names:
         other: اؠلجیرِیَن ڈیٖنار
     EEK:
       display_names:
         other: اؠسٹونِیَن کرون
-    EGP:
-      display_names:
-        other: اِجِپٹِیَن پَوُنڑ
     ERN:
       display_names:
         other: رِٹریٖن نَفکا
-    ESP:
-      display_names:
-        other: سِپینِش پیسِٹا
     ETB:
       display_names:
         other: اِتھوپِیَن بِر
-    EUR:
-      display_names:
-        other: یوٗرو
     FIM:
       display_names:
         other: فِنِش مارکا
-    FJD:
-      display_names:
-        other: فِجین ڈالر
-    FKP:
-      display_names:
-        other: فیکلینڑِس آیلینڑ پونڑ
     FRF:
       display_names:
         other: فرانسِسی فریک
-    GBP:
-      display_names:
-        other: برطٲنوی پوٗنڈ
     GEK:
       display_names:
         other: جارجِیَن کیوٗپَن لَرِٹ
-    GEL:
-      display_names:
-        other: جارجِیَن لاری
     GHC:
       display_names:
         other: گَنییَن سؠڑی(۱۹۷۹–۲٠٠۷)
-    GHS:
-      display_names:
-        other: گَنییَن سؠڑی
-    GIP:
-      display_names:
-        other: گِبریلٹَر پَاونڑ
     GMD:
       display_names:
         other: گیمبِیاہُک دلاسی
-    GNF:
-      display_names:
-        other: گِنِیَن فرینک
     GNS:
       display_names:
         other: گِنِیَن سِلی
@@ -255,119 +583,45 @@ number_formats:
     GRD:
       display_names:
         other: گریٖسُک ڑرؠکما
-    GTQ:
-      display_names:
-        other: گواٹَمالَن قیوٗٹزَل
     GWE:
       display_names:
         other: پورتگیٖزُک گِنی اؠسکیوٗڑو
     GWP:
       display_names:
         other: گِنی بِساوُک پؠسو
-    GYD:
-      display_names:
-        other: گَیَنیٖزُک ڑالَر
-    HKD:
-      display_names:
-        other: حانگ کانگُک ڑالَر
-    HNL:
-      display_names:
-        other: حونڑورنُک لؠمپیٖرا
     HRD:
       display_names:
         other: کروایشنُک دیٖنار
-    HRK:
-      display_names:
-        other: کروایشنُک کوٗنا
     HTG:
       display_names:
         other: حیشَنُک گوڑ
-    HUF:
-      display_names:
-        other: حَنگیرِیَن فورِنٹ
-    IDR:
-      display_names:
-        other: اِنڑونیشیاہُک رُپِیاہ
     IEP:
       display_names:
         other: اَیرلینڑُک پاونڑ
     ILP:
       display_names:
         other: اِزرٲیِلی پاونڑ
-    ILS:
-      display_names:
-        other: اِزرٲیِلی نٔوؠ شؠقٕل
-    INR:
-      display_names:
-        other: ہِندُستٲنؠ رۄپَے
     IQD:
       display_names:
         other: ایٖراقُک دیٖنار
     IRR:
       display_names:
         other: ایٖرانُک رِیال
-    ISK:
-      display_names:
-        other: اَیسلینڑُک کرونا
     ITL:
       display_names:
         other: اِٹلیٖ یُک لیٖرا
-    JMD:
-      display_names:
-        other: جَمَیکاہُک ڑالَر
     JOD:
       display_names:
         other: جَرڑینیاہُک دیٖنار
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: جاپٲن یَن
-        one: جاپٲن یَن
     KES:
       display_names:
         other: کؠنیَن شِلِنگ
-    KGS:
-      display_names:
-        other: کِرگِستانُک سوم
-    KHR:
-      display_names:
-        other: کَمبوڑِیاہُک رِیال
-    KMF:
-      display_names:
-        other: کومورِیَن فرینک
-    KPW:
-      display_names:
-        other: جنوٗبی کورِیَن وَن
-    KRW:
-      display_names:
-        other: ساوتھ کورِیَن وَن
     KWD:
       display_names:
         other: قُویتُک دیٖنار
-    KYD:
-      display_names:
-        other: کیمین ججیٖرُک ڑالَر
-    KZT:
-      display_names:
-        other: کزاکِستان ٹینج
-    LAK:
-      display_names:
-        other: لَوٹِیَن کِپ
-    LBP:
-      display_names:
-        other: لیبنیٖزُک پاونڑ
-    LKR:
-      display_names:
-        other: سری لَنکاہٕچ رۄپَے
-    LRD:
-      display_names:
-        other: لَیبیرِیَن ڑالَر
     LSL:
       display_names:
         other: لِسوتھو لوٹی
-    LTL:
-      display_names:
-        other: لِتھوینِیَن لِٹاس
     LTT:
       display_names:
         other: لِتھوینِیَن ٹؠلوناس
@@ -380,9 +634,6 @@ number_formats:
     LUL:
       display_names:
         other: لَکزٕمبوگ فَینانشَل فرینک
-    LVL:
-      display_names:
-        other: لَتوِیَن لیٹس
     LVR:
       display_names:
         other: لَتوِیَن رَبٕل
@@ -398,9 +649,6 @@ number_formats:
     MDL:
       display_names:
         other: مولڑووین لیوٗ
-    MGA:
-      display_names:
-        other: مؠلؠگیسی اؠریَری
     MGF:
       display_names:
         other: مؠلؠگیسی فرینک
@@ -410,12 +658,6 @@ number_formats:
     MLF:
       display_names:
         other: میلِیَن فرینک
-    MMK:
-      display_names:
-        other: مِیانما کیاٹ
-    MNT:
-      display_names:
-        other: مۄنگولِیَن ٹُگرِک
     MOP:
       display_names:
         other: مؠکانیٖز پَٹاکا
@@ -431,24 +673,15 @@ number_formats:
     MTP:
       display_names:
         other: مالٹیٖزُک پاونڑ
-    MUR:
-      display_names:
-        other: مورؠشِیاہٕچ رۄپَے
     MVR:
       display_names:
         other: مالدِیٖوِیَن رُفِیا
     MWK:
       display_names:
         other: مؠلیوِیَن کواچا
-    MXN:
-      display_names:
-        other: مؠکسِکَن پؠسو
     MXP:
       display_names:
         other: مؠکسِکَن سِلوَر پؠسو (۱۸۶۱–۱۹۹۲)
-    MYR:
-      display_names:
-        other: مَلیشِیَن رِنگِٹ
     MZE:
       display_names:
         other: موزیمبِکَن سکیوٗڑو
@@ -458,30 +691,12 @@ number_formats:
     MZN:
       display_names:
         other: موزیمبِکَن مؠٹِکَل
-    NAD:
-      display_names:
-        other: نامِبِیَن ڑالَر
-    NGN:
-      display_names:
-        other: نَیجیرِیَن ڑالَر
     NIC:
       display_names:
         other: نِکؠراگُوؠن کورڑوبا
-    NIO:
-      display_names:
-        other: نِکؠراگُوؠن کورڑوبا اورو
     NLG:
       display_names:
         other: ڈَچ گِلڑَر
-    NOK:
-      display_names:
-        other: نوروییِنُک کرون
-    NPR:
-      display_names:
-        other: نیپالٕچ رۄپَے
-    NZD:
-      display_names:
-        other: نِوزیٖلینڑُک ڑالَر
     OMR:
       display_names:
         other: اومِنی رِیال
@@ -500,24 +715,12 @@ number_formats:
     PGK:
       display_names:
         other: نیوٗ پیپُعا گِنِیَن کیٖنا
-    PHP:
-      display_names:
-        other: پھِلِپایِٔن پؠسو
-    PKR:
-      display_names:
-        other: پاکِستٲنؠ رۄپَے
-    PLN:
-      display_names:
-        other: پولِش زلوٹی
     PLZ:
       display_names:
         other: پولِش زلوٹی(۱۹۵٠–۱۹۹۵)
     PTE:
       display_names:
         other: پورتُگیٖز اؠسکیوٗڑو
-    PYG:
-      display_names:
-        other: پؠرؠگیوٗوَیَن گُعارانی
     QAR:
       display_names:
         other: قطاری رِیال
@@ -527,28 +730,15 @@ number_formats:
     ROL:
       display_names:
         other: اولڑ رومانِیَن لؠیوٗ
-    RON:
-      display_names:
-        other: رومانِیَن لؠیوٗ
     RSD:
       display_names:
         other: سٔربِیَن دیٖنار
-    RUB:
-      display_names:
-        other: روٗسی رَبٕلز
-        one: روٗسی رَبٕل
     RUR:
       display_names:
         other: رٔشیَن رَبٕل(۱۹۹۱–۱۹۹۸)
-    RWF:
-      display_names:
-        other: روانڑَن فرانک
     SAR:
       display_names:
         other: سودیٖیُک رِیال
-    SBD:
-      display_names:
-        other: سولَمَن جٔزیٖرُک ڈالَر
     SDD:
       display_names:
         other: پرون سوٗڈانُک دیٖنار
@@ -558,15 +748,6 @@ number_formats:
     SDP:
       display_names:
         other: پرون سوٗڈانُک پونڈ
-    SEK:
-      display_names:
-        other: سویٖڈِش کَرونا
-    SGD:
-      display_names:
-        other: سِنگاپورُک ڈالَر
-    SHP:
-      display_names:
-        other: سینٹ ہیلِنا پونڈ
     SIT:
       display_names:
         other: سلووینُک ٹولَر
@@ -576,9 +757,6 @@ number_formats:
     SOS:
       display_names:
         other: سومالی شِلِنگ
-    SRD:
-      display_names:
-        other: سُریٖنامُک ڈالَر
     SRG:
       display_names:
         other: سُریٖنام گِلدَر
@@ -588,15 +766,9 @@ number_formats:
     SVC:
       display_names:
         other: سَلویدَرُک کولَن
-    SYP:
-      display_names:
-        other: سیٖریاہُک پونڈ
     SZL:
       display_names:
         other: سوازی لِلَنگینی
-    THB:
-      display_names:
-        other: تھایھک بات
     TJR:
       display_names:
         other: تاجکِستانُک رَبٕل
@@ -609,30 +781,15 @@ number_formats:
     TND:
       display_names:
         other: ٹُنیشیاہُک دیٖنار
-    TOP:
-      display_names:
-        other: ٹونگَن پانگا
     TPE:
       display_names:
         other: ٹیموریسو ایکیٖڈو
     TRL:
       display_names:
         other: پرون تُرکِش لیرا
-    TRY:
-      display_names:
-        other: تُرکیہُک لیرا
-    TTD:
-      display_names:
-        other: ٹرِنہِ ڈیڈ تہٕ ٹوبیگو ڈالَر
-    TWD:
-      display_names:
-        other: نۆو تیوانُک ڈالَر
     TZS:
       display_names:
         other: تَنزانیاہُک شِلِنگ
-    UAH:
-      display_names:
-        other: یوٗکرینیاہُک ہرِوِنیا
     UAK:
       display_names:
         other: یوٗکرینیاہُک کاربووَنیٹس
@@ -642,11 +799,6 @@ number_formats:
     UGX:
       display_names:
         other: اُگاداہُک شِلِنگ
-    USD:
-      symbol: "$"
-      display_names:
-        other: US ڈالرس
-        one: US ڈالر
     USN:
       display_names:
         other: یوٗ ایس ڈالَر(پَگاہ)
@@ -659,33 +811,21 @@ number_formats:
     UYP:
       display_names:
         other: اُرگایَن پیسو(۱۹۷۵–۱۹۹۳)
-    UYU:
-      display_names:
-        other: اُروٗگایَن پیسو
     UZS:
       display_names:
         other: اُبیکِستان سوم
     VEB:
       display_names:
         other: وینٕزوٗلیُک بولِوَر (۱۸۷۱–۲۰۰۸)
-    VEF:
-      display_names:
-        other: وینٕزوٗلیُک بولِوَر (2008–2018)
     VES:
       display_names:
         other: وینٕزوٗلیُک بولِوَر
-    VND:
-      display_names:
-        other: وِیَنَمُک ڈانگ
     VUV:
       display_names:
         other: وَنوٗاَتوٗ وَتوٗ
     WST:
       display_names:
         other: سَمون تَلا
-    XAF:
-      display_names:
-        other: سی ایف اے فرینک بی ایٖ اے سی
     XAG:
       display_names:
         other: رۄپھ
@@ -704,9 +844,6 @@ number_formats:
     XBD:
       display_names:
         other: یوٗرپی یوٗنِٹ آف ایکاوُنٹ (ایکس بی ڈی)
-    XCD:
-      display_names:
-        other: مَشرِقی کیرِبِیَن ڈالَر
     XDR:
       display_names:
         other: خاص ڈرایِنگ رایٹس
@@ -719,15 +856,9 @@ number_formats:
     XFU:
       display_names:
         other: فرینچ یوٗ اے سی فرینک
-    XOF:
-      display_names:
-        other: سی ایف اے فرینک بی سی ایٖ اے او
     XPD:
       display_names:
         other: پُلیڈیَم
-    XPF:
-      display_names:
-        other: سی ایف پی فرینک
     XPT:
       display_names:
         other: پلیٹِنَم
@@ -737,10 +868,6 @@ number_formats:
     XTS:
       display_names:
         other: ٹیسٹِنگ کَرَنسی کوڈ
-    XXX:
-      display_names:
-        other: "﴿نانولوٗم کرنسی﴾"
-        one: "﴿کرنسی ہُنٛد نامولوٗم سِکٕہ﴾"
     YDD:
       display_names:
         other: یَمنُک دیٖنار
@@ -756,15 +883,9 @@ number_formats:
     YUN:
       display_names:
         other: یوگوسلاوِیَن کَنؤٹِبٕل دیٖنار
-    ZAR:
-      display_names:
-        other: ساوُتھ افریٖکاہُک رینڈ
     ZMK:
       display_names:
         other: زِمبابیُک کواچا (1968–2012)
-    ZMW:
-      display_names:
-        other: زِمبابیُک کواچا
     ZRN:
       display_names:
         other: زایرِیَن نِو زایِر
@@ -775,7 +896,7 @@ number_formats:
       display_names:
         other: زِمبابِیُک ڈالَر
 locale: ks
-generated_at: '2025-09-10T22:17:42+09:00'
+generated_at: '2025-09-10T23:53:11+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

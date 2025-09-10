@@ -3,11 +3,847 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: afghani Afghanistan
+        one: afghani Afghanistan
+        two: afghani Afghanistan
+        few: afghani Afghanistan
+        many: a afghanioù Afghanistan
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: dram Armenia
+        one: dram Armenia
+        two: zram Armenia
+        few: dram Armenia
+        many: a zramoù Armenia
+    AOA:
+      symbol: Kz
+      display_names:
+        other: kwanza Angola
+        one: cʼhwanza Angola
+        two: gwanza Angola
+        few: cʼhwanza Angola
+        many: a gwanzaoù Angola
+    ARS:
+      symbol: "$"
+      display_names:
+        other: peso Arcʼhantina
+        one: peso Arcʼhantina
+        two: beso Arcʼhantina
+        few: feso Arcʼhantina
+        many: a pesoioù Arcʼhantina
+    AUD:
+      symbol: "$A"
+      display_names:
+        other: dollar Aostralia
+        one: dollar Aostralia
+        two: zollar Aostralia
+        few: dollar Aostralia
+        many: a zollaroù Aostralia
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: manat Azerbaidjan
+        one: manat Azerbaidjan
+        two: vanat Azerbaidjan
+        few: manat Azerbaidjan
+        many: a vanatoù Azerbaidjan
+    BAM:
+      symbol: KM
+      display_names:
+        other: mark kemmadus Bosnia ha Herzegovina
+        one: mark kemmadus Bosnia ha Herzegovina
+        two: vark kemmadus Bosnia ha Herzegovina
+        few: mark kemmadus Bosnia ha Herzegovina
+        many: a varkoù kemmadus Bosnia ha Herzegovina
+    BBD:
+      symbol: "$"
+      display_names:
+        other: dollar Barbados
+        one: dollar Barbados
+        two: zollar Barbados
+        few: dollar Barbados
+        many: a zollaroù Barbados
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: taka Bangladesh
+        one: taka Bangladesh
+        two: daka Bangladesh
+        few: zaka Bangladesh
+        many: a dakaoù Bangladesh
+    BMD:
+      symbol: "$"
+      display_names:
+        other: dollar Bermuda
+        one: dollar Bermuda
+        two: zollar Bermuda
+        few: dollar Bermuda
+        many: a zollaroù Bermuda
+    BND:
+      symbol: "$"
+      display_names:
+        other: dollar Brunei
+        one: dollar Brunei
+        two: zollar Brunei
+        few: dollar Brunei
+        many: a zollaroù Brunei
+    BOB:
+      symbol: Bs
+      display_names:
+        other: boliviano Bolivia
+        one: boliviano Bolivia
+        two: voliviano Bolivia
+        few: boliviano Bolivia
+        many: a volivianoioù Bolivia
+    BRL:
+      symbol: BRL
+      display_names:
+        other: real Brazil
+        one: real Brazil
+        two: real Brazil
+        few: real Brazil
+        many: a realioù Brazil
+    BSD:
+      symbol: "$"
+      display_names:
+        other: dollar Bahamas
+        one: dollar Bahamas
+        two: zollar Bahamas
+        few: dollar Bahamas
+        many: a zollaroù Bahamas
+    BWP:
+      symbol: P
+      display_names:
+        other: pula Botswana
+        one: pula Botswana
+        two: bula Botswana
+        few: fula Botswana
+        many: a bulaoù Botswana
+    BZD:
+      symbol: "$"
+      display_names:
+        other: dollar Belize
+        one: dollar Belize
+        two: zollar Belize
+        few: dollar Belize
+        many: a zollaroù Belize
+    CAD:
+      symbol: "$CA"
+      display_names:
+        other: dollar Kanada
+        one: dollar Kanada
+        two: zollar Kanada
+        few: dollar Kanada
+        many: a zollaroù Kanada
+    CLP:
+      symbol: "$"
+      display_names:
+        other: peso Chile
+        one: peso Chile
+        two: beso Chile
+        few: feso Chile
+        many: a besoioù Chile
+    CNY:
+      symbol: CNY
+      display_names:
+        other: yuan Sina
+        one: yuan Sina
+        two: yuan Sina
+        few: yuan Sina
+        many: a yuanoù Sina
+    COP:
+      symbol: "$"
+      display_names:
+        other: peso Kolombia
+        one: peso Kolombia
+        two: beso Kolombia
+        few: feso Kolombia
+        many: a besoioù Kolombia
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: colón Costa Rica
+        one: cʼholón Costa Rica
+        two: golón Costa Rica
+        few: cʼholón Costa Rica
+        many: a golónoù Costa Rica
+    CUC:
+      symbol: "$"
+      display_names:
+        other: peso kemmadus Kuba
+        one: peso kemmadus Kuba
+        two: beso gemmadus Kuba
+        few: feso kemmadus Kuba
+        many: a besoioù kemmadus Kuba
+    CUP:
+      symbol: "$"
+      display_names:
+        other: peso Kuba
+        one: peso Kuba
+        two: beso Kuba
+        few: feso Kuba
+        many: a besoioù Kuba
+    CZK:
+      symbol: Kč
+      display_names:
+        other: kurunenn Tchek
+        one: gurunenn Tchek
+        two: gurunenn Tchek
+        few: cʼhurunenn Tchek
+        many: a gurunennoù Tchek
+    DKK:
+      symbol: kr
+      display_names:
+        other: kurunenn Danmark
+        one: gurunenn Danmark
+        two: gurunenn Danmark
+        few: cʼhurunenn Danmark
+        many: a gurunennoù Danmark
+    DOP:
+      symbol: "$"
+      display_names:
+        other: peso Dominikan
+        one: peso Dominikan
+        two: beso Dominikan
+        few: feso Dominikan
+        many: a besoioù Dominikan
+    EGP:
+      symbol: "£ E"
+      display_names:
+        other: lur Egipt
+        one: lur Egipt
+        two: lur Egipt
+        few: lur Egipt
+        many: a lurioù Egipt
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: peseta Spagn
+        one: beseta Spagn
+        two: beseta Spagn
+        few: feseta Spagn
+        many: a besetaoù Spagn
+    EUR:
+      symbol: "€"
+      display_names:
+        other: euro
+        one: euro
+        two: euro
+        few: euro
+        many: a euroioù
+    FJD:
+      symbol: "$"
+      display_names:
+        other: dollar Fidji
+        one: dollar Fidji
+        two: zollar Fidji
+        few: dollar Fidji
+        many: a zollaroù Fidji
+    FKP:
+      symbol: "£"
+      display_names:
+        other: lur Inizi Falkland
+        one: lur Inizi Falkland
+        two: lur Inizi Falkland
+        few: lur Inizi Falkland
+        many: a lurioù Inizi Falkland
+    GBP:
+      symbol: "£ RU"
+      display_names:
+        other: lur Breizh-Veur
+        one: lur Breizh-Veur
+        two: lur Breizh-Veur
+        few: lur Breizh-Veur
+        many: a lurioù Breizh-Veur
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: lari Jorjia
+        one: lari Jorjia
+        two: lari Jorjia
+        few: lari Jorjia
+        many: a larioù Jorjia
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: cedi Ghana
+    GIP:
+      symbol: "£"
+      display_names:
+        other: lur Jibraltar
+        one: lur Jibraltar
+        two: lur Jibraltar
+        few: lur Jibraltar
+        many: a lurioù Jibraltar
+    GNF:
+      symbol: FG
+      display_names:
+        other: lur Ginea
+        one: lur Ginea
+        two: lur Ginea
+        few: lur Ginea
+        many: a lurioù Ginea
+    GTQ:
+      symbol: Q
+      display_names:
+        other: quetzal Guatemala
+        one: cʼhuetzal Guatemala
+        two: guetzal Guatemala
+        few: cʼhuetzal Guatemala
+        many: a guetzaloù Guatemala
+    GYD:
+      symbol: "$"
+      display_names:
+        other: dollar Guyana
+        one: dollar Guyana
+        two: zollar Guyana
+        few: dollar Guyana
+        many: a zollaroù Guyana
+    HKD:
+      symbol: "$ HK"
+      display_names:
+        other: dollar Hong Kong
+        one: dollar Hong Kong
+        two: zollar Hong Kong
+        few: dollar Hong Kong
+        many: a zollaroù Hong Kong
+    HNL:
+      symbol: L
+      display_names:
+        other: lempira Honduras
+        one: lempira Honduras
+        two: lempira Honduras
+        few: lempira Honduras
+        many: a lempiraoù Honduras
+    HRK:
+      symbol: kn
+      display_names:
+        other: kuna Kroatia
+        one: cʼhuna Kroatia
+        two: guna Kroatia
+        few: cʼhuna Kroatia
+        many: a gunaoù Kroatia
+    HUF:
+      symbol: Ft
+      display_names:
+        other: forint Hungaria
+        one: forint Hungaria
+        two: forint Hungaria
+        few: forint Hungaria
+        many: a forintoù Hungaria
+    IDR:
+      symbol: Rp
+      display_names:
+        other: roupi Indonezia
+        one: roupi Indonezia
+        two: roupi Indonezia
+        few: roupi Indonezia
+        many: a roupioù Indonezia
+    ILS:
+      symbol: ILS
+      display_names:
+        other: shekel nevez Israel
+    INR:
+      symbol: "₹"
+      display_names:
+        other: roupi India
+        one: roupi India
+        two: roupi India
+        few: roupi India
+        many: a roupioù India
+    ISK:
+      symbol: kr
+      display_names:
+        other: kurunenn Island
+        one: gurunenn Island
+        two: gurunenn Island
+        few: cʼhurunenn Island
+        many: a gurunennoù Island
+    JMD:
+      symbol: "$"
+      display_names:
+        other: dollar Jamaika
+        one: dollar Jamaika
+        two: zollar Jamaika
+        few: dollar Jamaika
+        many: a zollaroù Jamaika
+    JPY:
+      symbol: JPY
+      display_names:
+        other: yen Japan
+        one: yen Japan
+        two: yen Japan
+        few: yen Japan
+        many: a yenoù Japan
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: som Kyrgyzstan
+        one: som Kyrgyzstan
+        two: som Kyrgyzstan
+        few: som Kyrgyzstan
+        many: a somoù Kyrgyzstan
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: riel Kambodja
+        one: riel Kambodja
+        two: riel Kambodja
+        few: riel Kambodja
+        many: a rieloù Kambodja
+    KMF:
+      symbol: CF
+      display_names:
+        other: lur Komorez
+        one: lur Komorez
+        two: lur Komorez
+        few: lur Komorez
+        many: a lurioù Komorez
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: won Korea an Norzh
+        one: won Korea an Norzh
+        two: won Korea an Norzh
+        few: won Korea an Norzh
+        many: a wonoù Korea an Norzh
+    KRW:
+      symbol: KRW
+      display_names:
+        other: won Korea ar Su
+        one: won Korea ar Su
+        two: won Korea ar Su
+        few: won Korea ar Su
+        many: a wonoù Korea ar Su
+    KYD:
+      symbol: "$"
+      display_names:
+        other: dollar Inizi Cayman
+        one: dollar Inizi Cayman
+        two: zollar Inizi Cayman
+        few: dollar Inizi Cayman
+        many: a zollaroù Inizi Cayman
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: tenge Kazakstan
+        one: tenge Kazakstan
+        two: denge Kazakstan
+        few: zenge Kazakstan
+        many: a dengeoù Kazakstan
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: kip Laos
+        one: cʼhip Laos
+        two: gip Laos
+        few: cʼhip Laos
+        many: a gipoù Laos
+    LBP:
+      symbol: "£L"
+      display_names:
+        other: lur Liban
+        one: lur Liban
+        two: lur Liban
+        few: lur Liban
+        many: a lurioù Liban
+    LKR:
+      symbol: Rs
+      display_names:
+        other: roupi Sri Lanka
+        one: roupi Sri Lanka
+        two: roupi Sri Lanka
+        few: roupi Sri Lanka
+        many: a roupioù Sri Lanka
+    LRD:
+      symbol: "$"
+      display_names:
+        other: dollar Liberia
+        one: dollar Liberia
+        two: zollar Liberia
+        few: dollar Liberia
+        many: a zollaroù Liberia
+    LTL:
+      symbol: Lt
+      display_names:
+        other: litas Lituania
+        one: litas Lituania
+        two: litas Lituania
+        few: litas Lituania
+        many: a litasoù Lituania
+    LVL:
+      symbol: Ls
+      display_names:
+        other: lats Latvia
+        one: lats Latvia
+        two: lats Latvia
+        few: lats Latvia
+        many: a latsoù Latvia
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ariary Madagaskar
+        one: ariary Madagaskar
+        two: ariary Madagaskar
+        few: ariary Madagaskar
+        many: a ariaryoù Madagaska
+    MMK:
+      symbol: K
+      display_names:
+        other: kyat Myanmar
+        one: cʼhyat Myanmar
+        two: gyat Myanmar
+        few: cʼhyat Myanmar
+        many: a gyatoù Myanmar
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: tugrik Mongolia
+        one: tugrik Mongolia
+        two: dugrik Mongolia
+        few: zugrik Mongolia
+        many: a dugrikoù Mongolia
+    MUR:
+      symbol: Rs
+      display_names:
+        other: roupi Moris
+        one: roupi Moris
+        two: roupi Moris
+        few: roupi Moris
+        many: a roupioù Moris
+    MXN:
+      symbol: MX$
+      display_names:
+        other: peso Mecʼhiko
+        one: peso Mecʼhiko
+        two: beso Mecʼhiko
+        few: feso Mecʼhiko
+        many: a besoioù Mecʼhiko
+    MYR:
+      symbol: RM
+      display_names:
+        other: ringgit Malaysia
+        one: ringgit Malaysia
+        two: ringgit Malaysia
+        few: ringgit Malaysia
+        many: a ringgitoù Malaysia
+    NAD:
+      symbol: "$"
+      display_names:
+        other: dollar Namibia
+        one: dollar Namibia
+        two: zollar Namibia
+        few: dollar Namibia
+        many: a zollaroù Namibia
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: naira Nigeria
+        one: naira Nigeria
+        two: naira Nigeria
+        few: naira Nigeria
+        many: a nairaoù Nigeria
+    NIO:
+      symbol: C$
+      display_names:
+        other: cordoba Nicaragua
+        one: cʼhordoba Nicaragua
+        two: gordoba Nicaragua
+        few: cʼhordoba Nicaragua
+        many: a gordobaoù Nicaragua
+    NOK:
+      symbol: kr
+      display_names:
+        other: kurunenn Norvegia
+        one: gurunenn Norvegia
+        two: gurunenn Norvegia
+        few: cʼhurunenn Norvegia
+        many: a gurunennoù Norvegia
+    NPR:
+      symbol: Rs
+      display_names:
+        other: roupi Nepal
+        one: roupi Nepal
+        two: roupi Nepal
+        few: roupi Nepal
+        many: a roupioù Nepal
+    NZD:
+      symbol: "$ ZN"
+      display_names:
+        other: dollar Zeland-Nevez
+        one: dollar Zeland-Nevez
+        two: zollar Zeland-Nevez
+        few: dollar Zeland-Nevez
+        many: a zollaroù Zeland-Nevez
+    PHP:
+      symbol: PHP
+      display_names:
+        other: peso Filipinez
+        one: peso Filipinez
+        two: beso Filipinez
+        few: feso Filipinez
+        many: a besoioù Filipinez
+    PKR:
+      symbol: Rs
+      display_names:
+        other: roupi Pakistan
+        one: roupi Pakistan
+        two: roupi Pakistan
+        few: roupi Pakistan
+        many: a roupioù Pakistan
+    PLN:
+      symbol: zł
+      display_names:
+        other: zloty Polonia
+        one: zloty Polonia
+        two: zloty Polonia
+        few: zloty Polonia
+        many: a zlotyoù Polonia
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: guarani Paraguay
+        one: guarani Paraguay
+        two: uarani Paraguay
+        few: guarani Paraguay
+        many: a uaranioù Paraguay
+    RON:
+      symbol: lei
+      display_names:
+        other: leu Roumania
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: roubl Rusia
+        one: roubl Rusia
+        two: roubl Rusia
+        few: roubl Rusia
+        many: a roubloù Rusia
+    RWF:
+      symbol: RF
+      display_names:
+        other: lur Rwanda
+        one: lur Rwanda
+        two: lur Rwanda
+        few: lur Rwanda
+        many: a lurioù Rwanda
+    SBD:
+      symbol: "$"
+      display_names:
+        other: dollar Inizi Salomon
+        one: dollar Inizi Salomon
+        two: zollar Inizi Salomon
+        few: dollar Inizi Salomon
+        many: a zollaroù Inizi Salomon
+    SEK:
+      symbol: kr
+      display_names:
+        other: kurunenn Sveden
+        one: gurunenn Sveden
+        two: gurunenn Sveden
+        few: cʼhurunenn Sveden
+        many: a gurunennoù Sveden
+    SGD:
+      symbol: "$"
+      display_names:
+        other: dollar Singapour
+        one: dollar Singapour
+        two: zollar Singapour
+        few: dollar Singapour
+        many: a zollaroù Singapour
+    SHP:
+      symbol: "£"
+      display_names:
+        other: lur Saint-Helena
+        one: lur Saint-Helena
+        two: lur Saint-Helena
+        few: lur Saint-Helena
+        many: a lurioù Saint-Helena
+    SRD:
+      symbol: "$"
+      display_names:
+        other: dollar Surinam
+        one: dollar Surinam
+        two: zollar Surinam
+        few: dollar Surinam
+        many: a zollaroù Surinam
+    SSP:
+      symbol: "£"
+      display_names:
+        other: lur Susoudan
+        one: lur Susoudan
+        two: lur Susoudan
+        few: lur Susoudan
+        many: a lurioù Susoudan
+    STN:
+      symbol: Db
+      display_names:
+        other: dobra São Tomé ha Príncipe
+        one: dobra São Tomé ha Príncipe
+        two: zobra São Tomé ha Príncipe
+        few: dobra São Tomé ha Príncipe
+        many: a zobraoù São Tomé ha Príncipe
+    SYP:
+      symbol: "£"
+      display_names:
+        other: lur Siria
+        one: lur Siria
+        two: lur Siria
+        few: lur Siria
+        many: a lurioù Siria
+    THB:
+      symbol: "฿"
+      display_names:
+        other: baht Thailand
+        one: baht Thailand
+        two: vaht Thailand
+        few: baht Thailand
+        many: a vahtoù Thailand
+    TOP:
+      symbol: "$ T"
+      display_names:
+        other: paʻanga Tonga
+        one: paʻanga Tonga
+        two: baʻanga Tonga
+        few: faʻanga Tonga
+        many: a baʻangaoù Tonga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: lur Turkia
+        one: lur Turkia
+        two: lur Turkia
+        few: lur Turkia
+        many: a lurioù Turkia
+    TTD:
+      symbol: "$"
+      display_names:
+        other: dollar Trinidad ha Tobago
+        one: dollar Trinidad ha Tobago
+        two: zollar Trinidad ha Tobago
+        few: dollar Trinidad ha Tobago
+        many: a zollaroù Trinidad ha Tobago
+    TWD:
+      symbol: TWD
+      display_names:
+        other: dollar nevez Taiwan
+        one: dollar nevez Taiwan
+        two: zollar nevez Taiwan
+        few: dollar nevez Taiwan
+        many: a zollaroù nevez Taiwan
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: hryvnia Ukraina
+        one: hryvnia Ukraina
+        two: hryvnia Ukraina
+        few: hryvnia Ukraina
+        many: a hryvniaoù Ukraina
+    USD:
+      symbol: "$ SU"
+      display_names:
+        other: dollar SU
+        one: dollar SU
+        two: zollar SU
+        few: dollar SU
+        many: a zollaroù SU
+    UYU:
+      symbol: "$"
+      display_names:
+        other: peso Uruguay
+        one: peso Uruguay
+        two: beso Uruguay
+        few: feso Uruguay
+        many: a besoioù Uruguay
+    VEF:
+      symbol: Bs
+      display_names:
+        other: bolivar Venezuela (2008–2018)
+        one: bolivar Venezuela (2008–2018)
+        two: volivar Venezuela (2008–2018)
+        few: bolivar Venezuela (2008–2018)
+        many: a volivaroù Venezuela (2008–2018)
+    VND:
+      symbol: VND
+      display_names:
+        other: dong Viêt Nam
+        one: dong Viêt Nam
+        two: zong Viêt Nam
+        few: dong Viêt Nam
+        many: a zongoù Viêt Nam
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: lur CFA Kreizafrika
+    XCD:
+      symbol: XCD
+      display_names:
+        other: dollar Karib ar reter
+        one: dollar Karib ar reter
+        two: zollar Karib ar reter
+        few: dollar Karib ar reter
+        many: a zollaroù Karib ar reter
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: lur CFA Afrika ar Cʼhornôg
+        one: lur CFA Afrika ar Cʼhornôg
+        two: lur CFA BCEAO
+        few: lur CFA BCEAO
+        many: a lurioù CFA BCEAO
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: lur CFP
+        one: lur CFP
+        two: lur CFP
+        few: lur CFP
+        many: a lurioù CFP
+    XXX:
+      symbol: XXX
+      display_names:
+        other: "(moneiz dianav)"
+        one: "(moneiz dianav)"
+        two: "(moneiz dianav)"
+        few: "(moneiz dianav)"
+        many: "(moneiz dianav)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: rand Suafrika
+        one: rand Suafrika
+        two: rand Suafrika
+        few: rand Suafrika
+        many: a randoù Suafrika
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: kwacha Zambia
+        one: cʼhwacha Zambia
+        two: gwacha Zambia
+        few: kwacha Zambia
+        many: a gwachaoù Zambia
     ADP:
       display_names:
         other: peseta Andorra
@@ -29,13 +865,6 @@ number_formats:
         two: afghani Afghanistan (1927–2002)
         few: afghani Afghanistan (1927–2002)
         many: a afghanioù Afghanistan (1927–2002)
-    AFN:
-      display_names:
-        other: afghani Afghanistan
-        one: afghani Afghanistan
-        two: afghani Afghanistan
-        few: afghani Afghanistan
-        many: a afghanioù Afghanistan
     ALK:
       display_names:
         other: lek Albania (1946–1965)
@@ -50,13 +879,6 @@ number_formats:
         two: lek Albania
         few: lek Albania
         many: a lekoù Albania
-    AMD:
-      display_names:
-        other: dram Armenia
-        one: dram Armenia
-        two: zram Armenia
-        few: dram Armenia
-        many: a zramoù Armenia
     ANG:
       display_names:
         other: florin Antilhez nederlandat
@@ -64,13 +886,6 @@ number_formats:
         two: florin Antilhez nederlandat
         few: florin Antilhez nederlandat
         many: a florinoù Antilhez
-    AOA:
-      display_names:
-        other: kwanza Angola
-        one: cʼhwanza Angola
-        two: gwanza Angola
-        few: cʼhwanza Angola
-        many: a gwanzaoù Angola
     AOK:
       display_names:
         other: kwanza Angola (1977–1991)
@@ -99,13 +914,6 @@ number_formats:
         two: beso Arcʼhantina (1983–1985)
         few: feso Arcʼhantina (1983–1985)
         many: a besoioù Arcʼhantina (1983–1985)
-    ARS:
-      display_names:
-        other: peso Arcʼhantina
-        one: peso Arcʼhantina
-        two: beso Arcʼhantina
-        few: feso Arcʼhantina
-        many: a pesoioù Arcʼhantina
     ATS:
       display_names:
         other: schilling Aostria
@@ -113,14 +921,6 @@ number_formats:
         two: schilling Aostria
         few: schilling Aostria
         many: a schillingoù Aostria
-    AUD:
-      symbol: "$A"
-      display_names:
-        other: dollar Aostralia
-        one: dollar Aostralia
-        two: zollar Aostralia
-        few: dollar Aostralia
-        many: a zollaroù Aostralia
     AWG:
       display_names:
         other: florin Aruba
@@ -135,13 +935,6 @@ number_formats:
         two: vanat Azerbaidjan (1993–2006)
         few: manat Azerbaidjan (1993–2006)
         many: a vanatoù Azerbaidjan (1993–2006)
-    AZN:
-      display_names:
-        other: manat Azerbaidjan
-        one: manat Azerbaidjan
-        two: vanat Azerbaidjan
-        few: manat Azerbaidjan
-        many: a vanatoù Azerbaidjan
     BAD:
       display_names:
         other: dinar Bosnia ha Herzegovina (1992–1994)
@@ -149,13 +942,6 @@ number_formats:
         two: zinar Bosnia ha Herzegovina (1992–1994)
         few: dinar Bosnia ha Herzegovina (1992–1994)
         many: a zinaroù Bosnia ha Herzegovina (1992–1994)
-    BAM:
-      display_names:
-        other: mark kemmadus Bosnia ha Herzegovina
-        one: mark kemmadus Bosnia ha Herzegovina
-        two: vark kemmadus Bosnia ha Herzegovina
-        few: mark kemmadus Bosnia ha Herzegovina
-        many: a varkoù kemmadus Bosnia ha Herzegovina
     BAN:
       display_names:
         other: dinar nevez Bosnia ha Herzegovina (1994–1997)
@@ -163,20 +949,6 @@ number_formats:
         two: zinar nevez Bosnia ha Herzegovina (1994–1997)
         few: dinar nevez Bosnia ha Herzegovina (1994–1997)
         many: a zinaroù nevez Bosnia ha Herzegovina (1994–1997)
-    BBD:
-      display_names:
-        other: dollar Barbados
-        one: dollar Barbados
-        two: zollar Barbados
-        few: dollar Barbados
-        many: a zollaroù Barbados
-    BDT:
-      display_names:
-        other: taka Bangladesh
-        one: taka Bangladesh
-        two: daka Bangladesh
-        few: zaka Bangladesh
-        many: a dakaoù Bangladesh
     BEC:
       display_names:
         other: lur Belgia (kemmadus)
@@ -226,27 +998,6 @@ number_formats:
         two: lur Burundi
         few: lur Burundi
         many: a lurioù Burundi
-    BMD:
-      display_names:
-        other: dollar Bermuda
-        one: dollar Bermuda
-        two: zollar Bermuda
-        few: dollar Bermuda
-        many: a zollaroù Bermuda
-    BND:
-      display_names:
-        other: dollar Brunei
-        one: dollar Brunei
-        two: zollar Brunei
-        few: dollar Brunei
-        many: a zollaroù Brunei
-    BOB:
-      display_names:
-        other: boliviano Bolivia
-        one: boliviano Bolivia
-        two: voliviano Bolivia
-        few: boliviano Bolivia
-        many: a volivianoioù Bolivia
     BOL:
       display_names:
         other: boliviano Bolivia (1863–1963)
@@ -261,21 +1012,6 @@ number_formats:
         two: beso Bolivia
         few: feso Bolivia
         many: a besoioù Bolivia
-    BRL:
-      symbol: BRL
-      display_names:
-        other: real Brazil
-        one: real Brazil
-        two: real Brazil
-        few: real Brazil
-        many: a realioù Brazil
-    BSD:
-      display_names:
-        other: dollar Bahamas
-        one: dollar Bahamas
-        two: zollar Bahamas
-        few: dollar Bahamas
-        many: a zollaroù Bahamas
     BTN:
       display_names:
         other: ngultrum Bhoutan
@@ -290,13 +1026,6 @@ number_formats:
         two: gyat Birmania
         few: cʼhyat Birmania
         many: a gyatoù Birmania
-    BWP:
-      display_names:
-        other: pula Botswana
-        one: pula Botswana
-        two: bula Botswana
-        few: fula Botswana
-        many: a bulaoù Botswana
     BYB:
       display_names:
         other: roubl nevez Belarus (1994–1999)
@@ -319,21 +1048,6 @@ number_formats:
         two: roubl Belarus (2000–2016)
         few: roubl Belarus (2000–2016)
         many: a roubloù Belarus (2000–2016)
-    BZD:
-      display_names:
-        other: dollar Belize
-        one: dollar Belize
-        two: zollar Belize
-        few: dollar Belize
-        many: a zollaroù Belize
-    CAD:
-      symbol: "$CA"
-      display_names:
-        other: dollar Kanada
-        one: dollar Kanada
-        two: zollar Kanada
-        few: dollar Kanada
-        many: a zollaroù Kanada
     CDF:
       display_names:
         other: lur Kongo
@@ -376,13 +1090,6 @@ number_formats:
         two: unanenn jediñ Chile
         few: unanenn jediñ Chile
         many: a unanennoù jediñ Chile
-    CLP:
-      display_names:
-        other: peso Chile
-        one: peso Chile
-        two: beso Chile
-        few: feso Chile
-        many: a besoioù Chile
     CNH:
       display_names:
         other: yuan Sina (diavaez)
@@ -397,28 +1104,6 @@ number_formats:
         two: zollar Bank poblel Sina
         few: dollar Bank poblel Sina
         many: a zollaroù Bank poblel Sina
-    CNY:
-      symbol: CNY
-      display_names:
-        other: yuan Sina
-        one: yuan Sina
-        two: yuan Sina
-        few: yuan Sina
-        many: a yuanoù Sina
-    COP:
-      display_names:
-        other: peso Kolombia
-        one: peso Kolombia
-        two: beso Kolombia
-        few: feso Kolombia
-        many: a besoioù Kolombia
-    CRC:
-      display_names:
-        other: colón Costa Rica
-        one: cʼholón Costa Rica
-        two: golón Costa Rica
-        few: cʼholón Costa Rica
-        many: a golónoù Costa Rica
     CSD:
       display_names:
         other: dinar Serbia (2002–2006)
@@ -426,20 +1111,6 @@ number_formats:
         two: zinar Serbia (2002–2006)
         few: dinar Serbia (2002–2006)
         many: a zinaroù Serbia (2002–2006)
-    CUC:
-      display_names:
-        other: peso kemmadus Kuba
-        one: peso kemmadus Kuba
-        two: beso gemmadus Kuba
-        few: feso kemmadus Kuba
-        many: a besoioù kemmadus Kuba
-    CUP:
-      display_names:
-        other: peso Kuba
-        one: peso Kuba
-        two: beso Kuba
-        few: feso Kuba
-        many: a besoioù Kuba
     CVE:
       display_names:
         other: escudo Kab Glas
@@ -454,13 +1125,6 @@ number_formats:
         two: lur Kiprenez
         few: lur Kiprenez
         many: a lurioù Kiprenez
-    CZK:
-      display_names:
-        other: kurunenn Tchek
-        one: gurunenn Tchek
-        two: gurunenn Tchek
-        few: cʼhurunenn Tchek
-        many: a gurunennoù Tchek
     DDM:
       display_names:
         other: mark Alamagn ar Reter
@@ -482,20 +1146,6 @@ number_formats:
         two: lur Djibouti
         few: lur Djibouti
         many: a lurioù Djibouti
-    DKK:
-      display_names:
-        other: kurunenn Danmark
-        one: gurunenn Danmark
-        two: gurunenn Danmark
-        few: cʼhurunenn Danmark
-        many: a gurunennoù Danmark
-    DOP:
-      display_names:
-        other: peso Dominikan
-        one: peso Dominikan
-        two: beso Dominikan
-        few: feso Dominikan
-        many: a besoioù Dominikan
     DZD:
       display_names:
         other: dinar Aljeria
@@ -510,14 +1160,6 @@ number_formats:
         two: gurunenn Estonia
         few: cʼhurunenn Estonia
         many: a gurunennoù Estonia
-    EGP:
-      symbol: "£ E"
-      display_names:
-        other: lur Egipt
-        one: lur Egipt
-        two: lur Egipt
-        few: lur Egipt
-        many: a lurioù Egipt
     ERN:
       display_names:
         other: nakfa Eritrea
@@ -532,13 +1174,6 @@ number_formats:
         two: beseta gemmadus Spagn
         few: feseta gemmadus Spagn
         many: a besetaoù kemmadus Spagn
-    ESP:
-      display_names:
-        other: peseta Spagn
-        one: beseta Spagn
-        two: beseta Spagn
-        few: feseta Spagn
-        many: a besetaoù Spagn
     ETB:
       display_names:
         other: birr Etiopia
@@ -546,13 +1181,6 @@ number_formats:
         two: virr Etiopia
         few: birr Etiopia
         many: a virroù Etiopia
-    EUR:
-      display_names:
-        other: euro
-        one: euro
-        two: euro
-        few: euro
-        many: a euroioù
     FIM:
       display_names:
         other: mark Finland
@@ -560,20 +1188,6 @@ number_formats:
         two: vark Finland
         few: mark Finland
         many: a varkoù Finland
-    FJD:
-      display_names:
-        other: dollar Fidji
-        one: dollar Fidji
-        two: zollar Fidji
-        few: dollar Fidji
-        many: a zollaroù Fidji
-    FKP:
-      display_names:
-        other: lur Inizi Falkland
-        one: lur Inizi Falkland
-        two: lur Inizi Falkland
-        few: lur Inizi Falkland
-        many: a lurioù Inizi Falkland
     FRF:
       display_names:
         other: lur gall
@@ -581,31 +1195,6 @@ number_formats:
         two: lur gall
         few: lur gall
         many: a lurioù gall
-    GBP:
-      symbol: "£ RU"
-      display_names:
-        other: lur Breizh-Veur
-        one: lur Breizh-Veur
-        two: lur Breizh-Veur
-        few: lur Breizh-Veur
-        many: a lurioù Breizh-Veur
-    GEL:
-      display_names:
-        other: lari Jorjia
-        one: lari Jorjia
-        two: lari Jorjia
-        few: lari Jorjia
-        many: a larioù Jorjia
-    GHS:
-      display_names:
-        other: cedi Ghana
-    GIP:
-      display_names:
-        other: lur Jibraltar
-        one: lur Jibraltar
-        two: lur Jibraltar
-        few: lur Jibraltar
-        many: a lurioù Jibraltar
     GMD:
       display_names:
         other: dalasi Gambia
@@ -613,13 +1202,6 @@ number_formats:
         two: zalasi Gambia
         few: dalasi Gambia
         many: a zalasioù Gambia
-    GNF:
-      display_names:
-        other: lur Ginea
-        one: lur Ginea
-        two: lur Ginea
-        few: lur Ginea
-        many: a lurioù Ginea
     GNS:
       display_names:
         other: syli Ginea
@@ -641,13 +1223,6 @@ number_formats:
         two: zrakm Gres
         few: drakm Gres
         many: a zrakmoù Gres
-    GTQ:
-      display_names:
-        other: quetzal Guatemala
-        one: cʼhuetzal Guatemala
-        two: guetzal Guatemala
-        few: cʼhuetzal Guatemala
-        many: a guetzaloù Guatemala
     GWP:
       display_names:
         other: peso Ginea-Bissau
@@ -655,28 +1230,6 @@ number_formats:
         two: beso Ginea-Bissau
         few: feso Ginea-Bissau
         many: a besoioù Ginea-Bissau
-    GYD:
-      display_names:
-        other: dollar Guyana
-        one: dollar Guyana
-        two: zollar Guyana
-        few: dollar Guyana
-        many: a zollaroù Guyana
-    HKD:
-      symbol: "$ HK"
-      display_names:
-        other: dollar Hong Kong
-        one: dollar Hong Kong
-        two: zollar Hong Kong
-        few: dollar Hong Kong
-        many: a zollaroù Hong Kong
-    HNL:
-      display_names:
-        other: lempira Honduras
-        one: lempira Honduras
-        two: lempira Honduras
-        few: lempira Honduras
-        many: a lempiraoù Honduras
     HRD:
       display_names:
         other: dinar Kroatia
@@ -684,13 +1237,6 @@ number_formats:
         two: zinar Kroatia
         few: dinar Kroatia
         many: a zinaroù Kroatia
-    HRK:
-      display_names:
-        other: kuna Kroatia
-        one: cʼhuna Kroatia
-        two: guna Kroatia
-        few: cʼhuna Kroatia
-        many: a gunaoù Kroatia
     HTG:
       display_names:
         other: gourde Haiti
@@ -698,20 +1244,6 @@ number_formats:
         two: cʼhourde Haiti
         few: gourde Haiti
         many: a cʼhourdeoù Haiti
-    HUF:
-      display_names:
-        other: forint Hungaria
-        one: forint Hungaria
-        two: forint Hungaria
-        few: forint Hungaria
-        many: a forintoù Hungaria
-    IDR:
-      display_names:
-        other: roupi Indonezia
-        one: roupi Indonezia
-        two: roupi Indonezia
-        few: roupi Indonezia
-        many: a roupioù Indonezia
     IEP:
       display_names:
         other: lur Iwerzhon
@@ -729,17 +1261,6 @@ number_formats:
     ILR:
       display_names:
         other: shekel Israel (1980–1985)
-    ILS:
-      symbol: ILS
-      display_names:
-        other: shekel nevez Israel
-    INR:
-      display_names:
-        other: roupi India
-        one: roupi India
-        two: roupi India
-        few: roupi India
-        many: a roupioù India
     IQD:
       display_names:
         other: dinar Iraq
@@ -761,13 +1282,6 @@ number_formats:
         two: gurunenn Island (1918–1981)
         few: cʼhurunenn Island (1918–1981)
         many: a gurunennoù Island (1918–1981)
-    ISK:
-      display_names:
-        other: kurunenn Island
-        one: gurunenn Island
-        two: gurunenn Island
-        few: cʼhurunenn Island
-        many: a gurunennoù Island
     ITL:
       display_names:
         other: lur Italia
@@ -775,13 +1289,6 @@ number_formats:
         two: lur Italia
         few: lur Italia
         many: a lurioù Italia
-    JMD:
-      display_names:
-        other: dollar Jamaika
-        one: dollar Jamaika
-        two: zollar Jamaika
-        few: dollar Jamaika
-        many: a zollaroù Jamaika
     JOD:
       display_names:
         other: dinar Jordania
@@ -789,14 +1296,6 @@ number_formats:
         two: zinar Jordania
         few: dinar Jordania
         many: a zinaroù Jordania
-    JPY:
-      symbol: JPY
-      display_names:
-        other: yen Japan
-        one: yen Japan
-        two: yen Japan
-        few: yen Japan
-        many: a yenoù Japan
     KES:
       display_names:
         other: shilling Kenya
@@ -804,34 +1303,6 @@ number_formats:
         two: shilling Kenya
         few: shilling Kenya
         many: a shillingoù Kenya
-    KGS:
-      display_names:
-        other: som Kyrgyzstan
-        one: som Kyrgyzstan
-        two: som Kyrgyzstan
-        few: som Kyrgyzstan
-        many: a somoù Kyrgyzstan
-    KHR:
-      display_names:
-        other: riel Kambodja
-        one: riel Kambodja
-        two: riel Kambodja
-        few: riel Kambodja
-        many: a rieloù Kambodja
-    KMF:
-      display_names:
-        other: lur Komorez
-        one: lur Komorez
-        two: lur Komorez
-        few: lur Komorez
-        many: a lurioù Komorez
-    KPW:
-      display_names:
-        other: won Korea an Norzh
-        one: won Korea an Norzh
-        two: won Korea an Norzh
-        few: won Korea an Norzh
-        many: a wonoù Korea an Norzh
     KRH:
       display_names:
         other: hwan Korea ar Su (1953–1962)
@@ -846,14 +1317,6 @@ number_formats:
         two: won Korea ar Su (1945–1953)
         few: won Korea ar Su (1945–1953)
         many: a wonoù Korea ar Su (1945–1953)
-    KRW:
-      symbol: KRW
-      display_names:
-        other: won Korea ar Su
-        one: won Korea ar Su
-        two: won Korea ar Su
-        few: won Korea ar Su
-        many: a wonoù Korea ar Su
     KWD:
       display_names:
         other: dinar Koweit
@@ -861,49 +1324,6 @@ number_formats:
         two: zinar Koweit
         few: dinar Koweit
         many: a zinaroù Koweit
-    KYD:
-      display_names:
-        other: dollar Inizi Cayman
-        one: dollar Inizi Cayman
-        two: zollar Inizi Cayman
-        few: dollar Inizi Cayman
-        many: a zollaroù Inizi Cayman
-    KZT:
-      display_names:
-        other: tenge Kazakstan
-        one: tenge Kazakstan
-        two: denge Kazakstan
-        few: zenge Kazakstan
-        many: a dengeoù Kazakstan
-    LAK:
-      display_names:
-        other: kip Laos
-        one: cʼhip Laos
-        two: gip Laos
-        few: cʼhip Laos
-        many: a gipoù Laos
-    LBP:
-      symbol: "£L"
-      display_names:
-        other: lur Liban
-        one: lur Liban
-        two: lur Liban
-        few: lur Liban
-        many: a lurioù Liban
-    LKR:
-      display_names:
-        other: roupi Sri Lanka
-        one: roupi Sri Lanka
-        two: roupi Sri Lanka
-        few: roupi Sri Lanka
-        many: a roupioù Sri Lanka
-    LRD:
-      display_names:
-        other: dollar Liberia
-        one: dollar Liberia
-        two: zollar Liberia
-        few: dollar Liberia
-        many: a zollaroù Liberia
     LSL:
       display_names:
         other: loti Lesotho
@@ -911,13 +1331,6 @@ number_formats:
         two: loti Lesotho
         few: loti Lesotho
         many: a lotioù Lesotho
-    LTL:
-      display_names:
-        other: litas Lituania
-        one: litas Lituania
-        two: litas Lituania
-        few: litas Lituania
-        many: a litasoù Lituania
     LTT:
       display_names:
         other: talonas Lituania
@@ -939,13 +1352,6 @@ number_formats:
         two: lur Luksembourg
         few: lur Luksembourg
         many: a lurioù Luksembourg
-    LVL:
-      display_names:
-        other: lats Latvia
-        one: lats Latvia
-        two: lats Latvia
-        few: lats Latvia
-        many: a latsoù Latvia
     LVR:
       display_names:
         other: roubl Latvia
@@ -984,13 +1390,6 @@ number_formats:
     MDL:
       display_names:
         other: leu Moldova
-    MGA:
-      display_names:
-        other: ariary Madagaskar
-        one: ariary Madagaskar
-        two: ariary Madagaskar
-        few: ariary Madagaskar
-        many: a ariaryoù Madagaska
     MGF:
       display_names:
         other: lur Madagaskar
@@ -1019,20 +1418,6 @@ number_formats:
         two: lur Mali
         few: lur Mali
         many: a lurioù Mali
-    MMK:
-      display_names:
-        other: kyat Myanmar
-        one: cʼhyat Myanmar
-        two: gyat Myanmar
-        few: cʼhyat Myanmar
-        many: a gyatoù Myanmar
-    MNT:
-      display_names:
-        other: tugrik Mongolia
-        one: tugrik Mongolia
-        two: dugrik Mongolia
-        few: zugrik Mongolia
-        many: a dugrikoù Mongolia
     MOP:
       display_names:
         other: pataca Macau
@@ -1068,13 +1453,6 @@ number_formats:
         two: lur Malta
         few: lur Malta
         many: a lurioù Malta
-    MUR:
-      display_names:
-        other: roupi Moris
-        one: roupi Moris
-        two: roupi Moris
-        few: roupi Moris
-        many: a roupioù Moris
     MVP:
       display_names:
         other: roupi Maldivez
@@ -1096,13 +1474,6 @@ number_formats:
         two: gwacha Malawi
         few: kwacha Malawi
         many: a gwachaoù Malawi
-    MXN:
-      display_names:
-        other: peso Mecʼhiko
-        one: peso Mecʼhiko
-        two: beso Mecʼhiko
-        few: feso Mecʼhiko
-        many: a besoioù Mecʼhiko
     MXP:
       display_names:
         other: peso arcʼhant Mecʼhiko (1861–1992)
@@ -1110,13 +1481,6 @@ number_formats:
         two: beso arcʼhant Mecʼhiko (1861–1992)
         few: feso arcʼhant Mecʼhiko (1861–1992)
         many: a besoioù arcʼhant Mecʼhiko (1861–1992)
-    MYR:
-      display_names:
-        other: ringgit Malaysia
-        one: ringgit Malaysia
-        two: ringgit Malaysia
-        few: ringgit Malaysia
-        many: a ringgitoù Malaysia
     MZE:
       display_names:
         other: escudo Mozambik
@@ -1138,20 +1502,6 @@ number_formats:
         two: vetical Mozambik
         few: metical Mozambik
         many: a veticaloù Mozambik
-    NAD:
-      display_names:
-        other: dollar Namibia
-        one: dollar Namibia
-        two: zollar Namibia
-        few: dollar Namibia
-        many: a zollaroù Namibia
-    NGN:
-      display_names:
-        other: naira Nigeria
-        one: naira Nigeria
-        two: naira Nigeria
-        few: naira Nigeria
-        many: a nairaoù Nigeria
     NIC:
       display_names:
         other: cordoba Nicaragua (1988–1991)
@@ -1159,13 +1509,6 @@ number_formats:
         two: gordoba Nicaragua (1988–1991)
         few: cʼhordoba Nicaragua (1988–1991)
         many: a gordobaoù Nicaragua (1988–1991)
-    NIO:
-      display_names:
-        other: cordoba Nicaragua
-        one: cʼhordoba Nicaragua
-        two: gordoba Nicaragua
-        few: cʼhordoba Nicaragua
-        many: a gordobaoù Nicaragua
     NLG:
       display_names:
         other: florin an Izelvroioù
@@ -1173,28 +1516,6 @@ number_formats:
         two: florin an Izelvroioù
         few: florin an Izelvroioù
         many: a florinoù an Izelvroioù
-    NOK:
-      display_names:
-        other: kurunenn Norvegia
-        one: gurunenn Norvegia
-        two: gurunenn Norvegia
-        few: cʼhurunenn Norvegia
-        many: a gurunennoù Norvegia
-    NPR:
-      display_names:
-        other: roupi Nepal
-        one: roupi Nepal
-        two: roupi Nepal
-        few: roupi Nepal
-        many: a roupioù Nepal
-    NZD:
-      symbol: "$ ZN"
-      display_names:
-        other: dollar Zeland-Nevez
-        one: dollar Zeland-Nevez
-        two: zollar Zeland-Nevez
-        few: dollar Zeland-Nevez
-        many: a zollaroù Zeland-Nevez
     OMR:
       display_names:
         other: rial Oman
@@ -1226,28 +1547,6 @@ number_formats:
         two: gina Papoua Ginea-Nevez
         few: cʼhina Papoua Ginea-Nevez
         many: a ginaoù Papoua Ginea-Nevez
-    PHP:
-      symbol: PHP
-      display_names:
-        other: peso Filipinez
-        one: peso Filipinez
-        two: beso Filipinez
-        few: feso Filipinez
-        many: a besoioù Filipinez
-    PKR:
-      display_names:
-        other: roupi Pakistan
-        one: roupi Pakistan
-        two: roupi Pakistan
-        few: roupi Pakistan
-        many: a roupioù Pakistan
-    PLN:
-      display_names:
-        other: zloty Polonia
-        one: zloty Polonia
-        two: zloty Polonia
-        few: zloty Polonia
-        many: a zlotyoù Polonia
     PLZ:
       display_names:
         other: zloty Polonia (1950–1995)
@@ -1262,13 +1561,6 @@ number_formats:
         two: escudo Portugal
         few: escudo Portugal
         many: a escudoioù Portugal
-    PYG:
-      display_names:
-        other: guarani Paraguay
-        one: guarani Paraguay
-        two: uarani Paraguay
-        few: guarani Paraguay
-        many: a uaranioù Paraguay
     QAR:
       display_names:
         other: rial Qatar
@@ -1286,9 +1578,6 @@ number_formats:
     ROL:
       display_names:
         other: leu Roumania (1952–2006)
-    RON:
-      display_names:
-        other: leu Roumania
     RSD:
       display_names:
         other: dinar Serbia
@@ -1296,13 +1585,6 @@ number_formats:
         two: zinar Serbia
         few: dinar Serbia
         many: a zinaroù Serbia
-    RUB:
-      display_names:
-        other: roubl Rusia
-        one: roubl Rusia
-        two: roubl Rusia
-        few: roubl Rusia
-        many: a roubloù Rusia
     RUR:
       symbol: р.
       display_names:
@@ -1311,13 +1593,6 @@ number_formats:
         two: roubl Rusia (1991–1998)
         few: roubl Rusia (1991–1998)
         many: a roubloù Rusia (1991–1998)
-    RWF:
-      display_names:
-        other: lur Rwanda
-        one: lur Rwanda
-        two: lur Rwanda
-        few: lur Rwanda
-        many: a lurioù Rwanda
     SAR:
       display_names:
         other: riyal Arabia Saoudat
@@ -1325,13 +1600,6 @@ number_formats:
         two: riyal Arabia Saoudat
         few: riyal Arabia Saoudat
         many: a riyaloù Arabia Saoudat
-    SBD:
-      display_names:
-        other: dollar Inizi Salomon
-        one: dollar Inizi Salomon
-        two: zollar Inizi Salomon
-        few: dollar Inizi Salomon
-        many: a zollaroù Inizi Salomon
     SCR:
       display_names:
         other: roupi Sechelez
@@ -1360,27 +1628,6 @@ number_formats:
         two: lur Soudan (1957–1998)
         few: lur Soudan (1957–1998)
         many: a lurioù Soudan (1957–1998)
-    SEK:
-      display_names:
-        other: kurunenn Sveden
-        one: gurunenn Sveden
-        two: gurunenn Sveden
-        few: cʼhurunenn Sveden
-        many: a gurunennoù Sveden
-    SGD:
-      display_names:
-        other: dollar Singapour
-        one: dollar Singapour
-        two: zollar Singapour
-        few: dollar Singapour
-        many: a zollaroù Singapour
-    SHP:
-      display_names:
-        other: lur Saint-Helena
-        one: lur Saint-Helena
-        two: lur Saint-Helena
-        few: lur Saint-Helena
-        many: a lurioù Saint-Helena
     SIT:
       display_names:
         other: tolar Slovenia
@@ -1416,13 +1663,6 @@ number_formats:
         two: shilling Somalia
         few: shilling Somalia
         many: a shillingoù Somalia
-    SRD:
-      display_names:
-        other: dollar Surinam
-        one: dollar Surinam
-        two: zollar Surinam
-        few: dollar Surinam
-        many: a zollaroù Surinam
     SRG:
       display_names:
         other: florin Surinam
@@ -1430,13 +1670,6 @@ number_formats:
         two: florin Surinam
         few: florin Surinam
         many: a florinoù Surinam
-    SSP:
-      display_names:
-        other: lur Susoudan
-        one: lur Susoudan
-        two: lur Susoudan
-        few: lur Susoudan
-        many: a lurioù Susoudan
     STD:
       display_names:
         other: dobra São Tomé ha Príncipe (1977–2017)
@@ -1444,13 +1677,6 @@ number_formats:
         two: zobra São Tomé ha Príncipe (1977–2017)
         few: dobra São Tomé ha Príncipe (1977–2017)
         many: a zobraoù São Tomé ha Príncipe (1977–2017)
-    STN:
-      display_names:
-        other: dobra São Tomé ha Príncipe
-        one: dobra São Tomé ha Príncipe
-        two: zobra São Tomé ha Príncipe
-        few: dobra São Tomé ha Príncipe
-        many: a zobraoù São Tomé ha Príncipe
     SUR:
       display_names:
         other: roubl soviedel
@@ -1465,13 +1691,6 @@ number_formats:
         two: golón Salvador
         few: cʼholón Salvador
         many: a golónoù Salvador
-    SYP:
-      display_names:
-        other: lur Siria
-        one: lur Siria
-        two: lur Siria
-        few: lur Siria
-        many: a lurioù Siria
     SZL:
       display_names:
         other: lilangeni Swaziland
@@ -1479,13 +1698,6 @@ number_formats:
         two: lilangeni Swaziland
         few: lilangeni Swaziland
         many: a lilangenioù Swaziland
-    THB:
-      display_names:
-        other: baht Thailand
-        one: baht Thailand
-        two: vaht Thailand
-        few: baht Thailand
-        many: a vahtoù Thailand
     TJR:
       display_names:
         other: roubl Tadjikistan
@@ -1521,14 +1733,6 @@ number_formats:
         two: zinar Tunizia
         few: dinar Tunizia
         many: a zinaroù Tunizia
-    TOP:
-      symbol: "$ T"
-      display_names:
-        other: paʻanga Tonga
-        one: paʻanga Tonga
-        two: baʻanga Tonga
-        few: faʻanga Tonga
-        many: a baʻangaoù Tonga
     TPE:
       display_names:
         other: escudo Timor
@@ -1543,28 +1747,6 @@ number_formats:
         two: lur Turkia (1922–2005)
         few: lur Turkia (1922–2005)
         many: a lurioù Turkia (1922–2005)
-    TRY:
-      display_names:
-        other: lur Turkia
-        one: lur Turkia
-        two: lur Turkia
-        few: lur Turkia
-        many: a lurioù Turkia
-    TTD:
-      display_names:
-        other: dollar Trinidad ha Tobago
-        one: dollar Trinidad ha Tobago
-        two: zollar Trinidad ha Tobago
-        few: dollar Trinidad ha Tobago
-        many: a zollaroù Trinidad ha Tobago
-    TWD:
-      symbol: TWD
-      display_names:
-        other: dollar nevez Taiwan
-        one: dollar nevez Taiwan
-        two: zollar nevez Taiwan
-        few: dollar nevez Taiwan
-        many: a zollaroù nevez Taiwan
     TZS:
       display_names:
         other: shilling Tanzania
@@ -1572,13 +1754,6 @@ number_formats:
         two: shilling Tanzania
         few: shilling Tanzania
         many: a shillingoù Tanzania
-    UAH:
-      display_names:
-        other: hryvnia Ukraina
-        one: hryvnia Ukraina
-        two: hryvnia Ukraina
-        few: hryvnia Ukraina
-        many: a hryvniaoù Ukraina
     UGS:
       display_names:
         other: shilling Ouganda (1966–1987)
@@ -1593,14 +1768,6 @@ number_formats:
         two: shilling Ouganda
         few: shilling Ouganda
         many: a shillingoù Ouganda
-    USD:
-      symbol: "$ SU"
-      display_names:
-        other: dollar SU
-        one: dollar SU
-        two: zollar SU
-        few: dollar SU
-        many: a zollaroù SU
     UYP:
       display_names:
         other: peso Uruguay (1975–1993)
@@ -1608,13 +1775,6 @@ number_formats:
         two: beso Uruguay (1975–1993)
         few: feso Uruguay (1975–1993)
         many: a besoioù Uruguay (1975–1993)
-    UYU:
-      display_names:
-        other: peso Uruguay
-        one: peso Uruguay
-        two: beso Uruguay
-        few: feso Uruguay
-        many: a besoioù Uruguay
     UZS:
       display_names:
         other: som Ouzbekistan
@@ -1629,13 +1789,6 @@ number_formats:
         two: volivar Venezuela (1871–2008)
         few: bolivar Venezuela (1871–2008)
         many: a volivaroù Venezuela (1871–2008)
-    VEF:
-      display_names:
-        other: bolivar Venezuela (2008–2018)
-        one: bolivar Venezuela (2008–2018)
-        two: volivar Venezuela (2008–2018)
-        few: bolivar Venezuela (2008–2018)
-        many: a volivaroù Venezuela (2008–2018)
     VES:
       display_names:
         other: bolivar Venezuela
@@ -1643,14 +1796,6 @@ number_formats:
         two: volivar Venezuela
         few: bolivar Venezuela
         many: a volivaroù Venezuela
-    VND:
-      symbol: VND
-      display_names:
-        other: dong Viêt Nam
-        one: dong Viêt Nam
-        two: zong Viêt Nam
-        few: dong Viêt Nam
-        many: a zongoù Viêt Nam
     VNN:
       display_names:
         other: dong Viêt Nam (1978–1985)
@@ -1672,9 +1817,6 @@ number_formats:
         two: dala Samoa
         few: zala Samoa
         many: a dalaoù Samoa
-    XAF:
-      display_names:
-        other: lur CFA Kreizafrika
     XAG:
       display_names:
         other: oñs troy arcʼhant
@@ -1717,14 +1859,6 @@ number_formats:
         two: unanenn jediñ europat (XBD)
         few: unanenn jediñ europat (XBD)
         many: a unanennoù jediñ europat (XBD)
-    XCD:
-      symbol: XCD
-      display_names:
-        other: dollar Karib ar reter
-        one: dollar Karib ar reter
-        two: zollar Karib ar reter
-        few: dollar Karib ar reter
-        many: a zollaroù Karib ar reter
     XDR:
       display_names:
         other: gwirioù tennañ arbennik
@@ -1749,13 +1883,6 @@ number_formats:
         two: lur Unaniezh etrebroadel an hentoù-houarn
         few: lur Unaniezh etrebroadel an hentoù-houarn
         many: a lurioù Unaniezh etrebroadel an hentoù-houarn
-    XOF:
-      display_names:
-        other: lur CFA Afrika ar Cʼhornôg
-        one: lur CFA Afrika ar Cʼhornôg
-        two: lur CFA BCEAO
-        few: lur CFA BCEAO
-        many: a lurioù CFA BCEAO
     XPD:
       display_names:
         other: oñs troy palladiom
@@ -1763,13 +1890,6 @@ number_formats:
         two: oñs troy palladiom
         few: oñs troy palladiom
         many: oñs troy palladiom
-    XPF:
-      display_names:
-        other: lur CFP
-        one: lur CFP
-        two: lur CFP
-        few: lur CFP
-        many: a lurioù CFP
     XPT:
       display_names:
         other: oñs troy platin
@@ -1791,14 +1911,6 @@ number_formats:
         two: unanenn jediñ BAD
         few: unanenn jediñ BAD
         many: a unanennoù jediñ BAD
-    XXX:
-      symbol: XXX
-      display_names:
-        other: "(moneiz dianav)"
-        one: "(moneiz dianav)"
-        two: "(moneiz dianav)"
-        few: "(moneiz dianav)"
-        many: "(moneiz dianav)"
     YDD:
       display_names:
         other: dinar Yemen
@@ -1834,13 +1946,6 @@ number_formats:
         two: zinar adreizhet Yougoslavia (1992–1993)
         few: dinar adreizhet Yougoslavia (1992–1993)
         many: a zinaroù adreizhet Yougoslavia (1992–1993)
-    ZAR:
-      display_names:
-        other: rand Suafrika
-        one: rand Suafrika
-        two: rand Suafrika
-        few: rand Suafrika
-        many: a randoù Suafrika
     ZMK:
       display_names:
         other: kwacha Zambia (1968–2012)
@@ -1848,13 +1953,6 @@ number_formats:
         two: gwacha Zambia (1968–2012)
         few: kwacha Zambia (1968–2012)
         many: a gwachaoù Zambia (1968–2012)
-    ZMW:
-      display_names:
-        other: kwacha Zambia
-        one: cʼhwacha Zambia
-        two: gwacha Zambia
-        few: kwacha Zambia
-        many: a gwachaoù Zambia
     ZWD:
       display_names:
         other: dollar Zimbabwe (1980–2008)
@@ -1877,7 +1975,7 @@ number_formats:
         few: dollar Zimbabwe (2008)
         many: a zollaroù Zimbabwe (2008)
 locale: br
-generated_at: '2025-09-10T22:17:34+09:00'
+generated_at: '2025-09-10T23:53:04+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

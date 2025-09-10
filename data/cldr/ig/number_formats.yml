@@ -1,48 +1,450 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: Ego dirhams obodo UAE
     AFN:
+      symbol: "؋"
       display_names:
         other: Ego Afghani Obodo Afghanistan
-    ALL:
-      display_names:
-        other: Ego Lek Obodo Albania
     AMD:
+      symbol: "֏"
       display_names:
         other: Ego Dram obodo Armenia
-    ANG:
-      display_names:
-        other: Ego Antillean Guilder obodo Netherlands
     AOA:
+      symbol: Kz
       display_names:
         other: Ego kwanzas obodo Angola
     ARS:
+      symbol: "$"
       display_names:
         other: Ego Peso obodo Argentina
     AUD:
+      symbol: A$
       display_names:
         other: Ego dollars obodo Australia
-    AWG:
-      display_names:
-        other: Ego Florin obodo Aruba
     AZN:
+      symbol: "₼"
       display_names:
         other: Ego manats obodo Azerbaijan
     BAM:
+      symbol: KM
       display_names:
         other: Akara mgbanwe ego obodo Bosnia-Herzegovina
     BBD:
+      symbol: "$"
       display_names:
         other: Ego Dollar obodo Barbados
     BDT:
+      symbol: "৳"
       display_names:
         other: Ego Taka obodo Bangladesh
+    BMD:
+      symbol: "$"
+      display_names:
+        other: Dollars Bermuda
+    BND:
+      symbol: "$"
+      display_names:
+        other: Ego dollars obodo Brunei
+    BOB:
+      symbol: Bs
+      display_names:
+        other: Ego Boliviano obodo Bolivia
+    BRL:
+      symbol: R$
+      display_names:
+        other: Real Brazil
+    BSD:
+      symbol: "$"
+      display_names:
+        other: Ego Dollar Obodo Bahamas
+    BWP:
+      symbol: P
+      display_names:
+        other: Ego pulas obodo Bostwana
+    BZD:
+      symbol: "$"
+      display_names:
+        other: Dollars Belize
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Dollars Canada
+    CLP:
+      symbol: "$"
+      display_names:
+        other: Ego Peso obodo Chile
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Yuan China
+    COP:
+      symbol: "$"
+      display_names:
+        other: Ego Peso obodo Columbia
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: Ego colóns obodo Costa Rica
+    CUC:
+      symbol: "$"
+      display_names:
+        other: Ego Peso e nwere ike ịgbanwe nke obodo Cuba
+    CUP:
+      symbol: "$"
+      display_names:
+        other: Ego pesos obodo Cuba
+    CZK:
+      symbol: Kč
+      display_names:
+        other: Ego Koruna obodo Czech
+    DKK:
+      symbol: kr
+      display_names:
+        other: Ego Krone Obodo Denmark
+    DOP:
+      symbol: "$"
+      display_names:
+        other: Ego Peso Obodo Dominica
+    EGP:
+      symbol: E£
+      display_names:
+        other: Ego Pound obodo Egypt
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: euro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: Ego dollars obodo Fijian
+    FKP:
+      symbol: "£"
+      display_names:
+        other: Ego Pound obodo Falkland Islands
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Pound British
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: Ego Lari Obodo Georgia
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: Ego Cedi obodo Ghana
+    GIP:
+      symbol: "£"
+      display_names:
+        other: Ego Pound obodo Gibraltar
+    GNF:
+      symbol: FG
+      display_names:
+        other: Ego Franc obodo Guinea
+    GTQ:
+      symbol: Q
+      display_names:
+        other: Ego Quetzal obodo Guatemala
+    GYD:
+      symbol: "$"
+      display_names:
+        other: Ego Dollar obodo Guyana
+    HKD:
+      symbol: HK$
+      display_names:
+        other: Ego Dollar Obodo Honk Kong
+    HNL:
+      symbol: L
+      display_names:
+        other: Ego Lempira obodo Honduras
+    HRK:
+      symbol: kn
+      display_names:
+        other: Ego kunas obodo Croatia
+    HUF:
+      symbol: Ft
+      display_names:
+        other: Ego Forint obodo Hungary
+    IDR:
+      symbol: Rp
+      display_names:
+        other: Ego Rupiah Obodo Indonesia
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: Ego Shekel ọhụrụ obodo Israel
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Rupee India
+    ISK:
+      symbol: kr
+      display_names:
+        other: Ego Króna obodo Iceland
+    JMD:
+      symbol: "$"
+      display_names:
+        other: Ego Dollar obodo Jamaica
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: Yen Japan
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: Ego Som Obodo Kyrgyzstan
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: Ego Riel obodo Cambodia
+    KMF:
+      symbol: CF
+      display_names:
+        other: Ego Franc obodo Comoros
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: Ego Won Obodo North Korea
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: Ego Won Obodo South Korea
+    KYD:
+      symbol: "$"
+      display_names:
+        other: Ego dollars obodo Cayman Islands
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: Ego Tenge obodo Kazakhstani
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: Ego Kip Obodo Laos
+    LBP:
+      symbol: L£
+      display_names:
+        other: Ego Pound Obodo Lebanon
+    LKR:
+      symbol: Rs
+      display_names:
+        other: Ego Rupee obodo Sri Lanka
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Ego Dollar obodo Liberia
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Ego ariaries obodo Madagascar
+    MMK:
+      symbol: K
+      display_names:
+        other: Ego Kyat obodo Myanmar
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: Ego Turgik Obodo Mongolia
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Ego Rupee obodo Mauritania
+    MXN:
+      symbol: MX$
+      display_names:
+        other: Ego Peso obodo Mexico
+    MYR:
+      symbol: RM
+      display_names:
+        other: Ego Ringgit obodo Malaysia
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Ego Dollar obodo Namibia
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Naịra
+    NIO:
+      symbol: C$
+      display_names:
+        other: Ego Córodoba obodo Nicaragua
+    NOK:
+      symbol: kr
+      display_names:
+        other: Ego Krone Obodo Norway
+    NPR:
+      symbol: Rs
+      display_names:
+        other: Ego Rupee obodo Nepal
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: Ego dollars obodo New Zealand
+    PHP:
+      symbol: "₱"
+      display_names:
+        other: Ego Piso obodo Philippine
+    PKR:
+      symbol: Rs
+      display_names:
+        other: Ego Rupee obodo Pakistan
+    PLN:
+      symbol: zł
+      display_names:
+        other: Ego Zloty mba Poland
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: Ego Guarani obodo Paraguay
+    RON:
+      symbol: lei
+      display_names:
+        other: Ego leu Obodo Romania
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: Ruble Russia
+    RWF:
+      symbol: RF
+      display_names:
+        other: Ego Franc obodo Rwanda
+    SBD:
+      symbol: "$"
+      display_names:
+        other: Ego dollars obodo Solomon Islands
+    SEK:
+      symbol: kr
+      display_names:
+        other: Ego Krona Obodo Sweden
+    SGD:
+      symbol: "$"
+      display_names:
+        other: Ego Dollar obodo Singapore
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Ego Pound obodo St Helena
+    SRD:
+      symbol: "$"
+      display_names:
+        other: Dollar Surinamese
+    SSP:
+      symbol: "£"
+      display_names:
+        other: Ego pounds mba ọdịda anyanwụ Sudan
+    STN:
+      symbol: Db
+      display_names:
+        other: Ego Dobra nke obodo Sāo Tomé na Principe
+    SYP:
+      symbol: "£"
+      display_names:
+        other: Ego Pound obodo Syria
+    THB:
+      symbol: "฿"
+      display_names:
+        other: Ego Baht obodo Thai
+    TOP:
+      symbol: T$
+      display_names:
+        other: Ego paʻanga obodo Tonga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: Ego Lira obodo Turkey
+    TTD:
+      symbol: "$"
+      display_names:
+        other: Dollars Trinidad & Tobago
+    TWD:
+      symbol: NT$
+      display_names:
+        other: Dollar obodo New Taiwan
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: Ego Hryvnia obodo Ukraine
+    USD:
+      symbol: "$"
+      display_names:
+        other: Dollars US
+    UYU:
+      symbol: "$"
+      display_names:
+        other: Ego Peso obodo Uruguay
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+      display_names:
+        other: Ego Dong obodo Vietnam
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Ego francs mba etiti Africa
+    XCD:
+      symbol: EC$
+      display_names:
+        other: Ego Dollar obodo East Carribbean
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Ego CFA francs mba ọdịda anyanwụ Afrịka
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: Ego francs obodo CFP
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(ego amaghị)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Ego rand obodo South Africa
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Ego kwachas obodo Zambia
+    AED:
+      display_names:
+        other: Ego dirhams obodo UAE
+    ALL:
+      display_names:
+        other: Ego Lek Obodo Albania
+    ANG:
+      display_names:
+        other: Ego Antillean Guilder obodo Netherlands
+    AWG:
+      display_names:
+        other: Ego Florin obodo Aruba
     BGN:
       display_names:
         other: Ego Lev mba Bulgaria
@@ -52,205 +454,57 @@ number_formats:
     BIF:
       display_names:
         other: Ego Franc obodo Burundi
-    BMD:
-      display_names:
-        other: Dollars Bermuda
-    BND:
-      display_names:
-        other: Ego dollars obodo Brunei
-    BOB:
-      display_names:
-        other: Ego Boliviano obodo Bolivia
-    BRL:
-      display_names:
-        other: Real Brazil
-    BSD:
-      display_names:
-        other: Ego Dollar Obodo Bahamas
     BTN:
       display_names:
         other: Ego Ngultrum obodo Bhutan
-    BWP:
-      display_names:
-        other: Ego pulas obodo Bostwana
     BYN:
       display_names:
         other: Ego Ruble mba Belarus
-    BZD:
-      display_names:
-        other: Dollars Belize
-    CAD:
-      display_names:
-        other: Dollars Canada
     CDF:
       display_names:
         other: Ego francs mba Congo
     CHF:
       display_names:
         other: Ego Franc mba Switzerland
-    CLP:
-      display_names:
-        other: Ego Peso obodo Chile
     CNH:
       display_names:
         other: Ego Yuan Obodo China (ndị bi na mmiri)
-    CNY:
-      display_names:
-        other: Yuan China
-    COP:
-      display_names:
-        other: Ego Peso obodo Columbia
-    CRC:
-      display_names:
-        other: Ego colóns obodo Costa Rica
-    CUC:
-      display_names:
-        other: Ego Peso e nwere ike ịgbanwe nke obodo Cuba
-    CUP:
-      display_names:
-        other: Ego pesos obodo Cuba
     CVE:
       display_names:
         other: Escudo Caboverdiano
-    CZK:
-      display_names:
-        other: Ego Koruna obodo Czech
     DJF:
       display_names:
         other: ego francs obodo Djibouti
-    DKK:
-      display_names:
-        other: Ego Krone Obodo Denmark
-    DOP:
-      display_names:
-        other: Ego Peso Obodo Dominica
     DZD:
       display_names:
         other: Ego Dinar Obodo Algeria
-    EGP:
-      display_names:
-        other: Ego Pound obodo Egypt
     ERN:
       display_names:
         other: Ego nakfas obodo Eritrea
     ETB:
       display_names:
         other: Ego birrs obodo Ethiopia
-    EUR:
-      display_names:
-        other: euro
-    FJD:
-      display_names:
-        other: Ego dollars obodo Fijian
-    FKP:
-      display_names:
-        other: Ego Pound obodo Falkland Islands
-    GBP:
-      display_names:
-        other: Pound British
-    GEL:
-      display_names:
-        other: Ego Lari Obodo Georgia
-    GHS:
-      display_names:
-        other: Ego Cedi obodo Ghana
-    GIP:
-      display_names:
-        other: Ego Pound obodo Gibraltar
     GMD:
       display_names:
         other: Ego Dalasi obodo Gambia
-    GNF:
-      display_names:
-        other: Ego Franc obodo Guinea
-    GTQ:
-      display_names:
-        other: Ego Quetzal obodo Guatemala
-    GYD:
-      display_names:
-        other: Ego Dollar obodo Guyana
-    HKD:
-      display_names:
-        other: Ego Dollar Obodo Honk Kong
-    HNL:
-      display_names:
-        other: Ego Lempira obodo Honduras
-    HRK:
-      display_names:
-        other: Ego kunas obodo Croatia
     HTG:
       display_names:
         other: Ego Gourde obodo Haiti
-    HUF:
-      display_names:
-        other: Ego Forint obodo Hungary
-    IDR:
-      display_names:
-        other: Ego Rupiah Obodo Indonesia
-    ILS:
-      display_names:
-        other: Ego Shekel ọhụrụ obodo Israel
-    INR:
-      display_names:
-        other: Rupee India
     IQD:
       display_names:
         other: Ego dinars obodo Iraq
     IRR:
       display_names:
         other: Ego Rial obodo Iran
-    ISK:
-      display_names:
-        other: Ego Króna obodo Iceland
-    JMD:
-      display_names:
-        other: Ego Dollar obodo Jamaica
     JOD:
       display_names:
         other: Ego Dinar Obodo Jordan
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: Yen Japan
     KES:
       display_names:
         other: Ego Shilling obodo Kenya
-    KGS:
-      display_names:
-        other: Ego Som Obodo Kyrgyzstan
-    KHR:
-      display_names:
-        other: Ego Riel obodo Cambodia
-    KMF:
-      display_names:
-        other: Ego Franc obodo Comoros
-    KPW:
-      display_names:
-        other: Ego Won Obodo North Korea
-    KRW:
-      display_names:
-        other: Ego Won Obodo South Korea
     KWD:
       display_names:
         other: Ego Dinar Obodo Kuwait
-    KYD:
-      display_names:
-        other: Ego dollars obodo Cayman Islands
-    KZT:
-      display_names:
-        other: Ego Tenge obodo Kazakhstani
-    LAK:
-      display_names:
-        other: Ego Kip Obodo Laos
-    LBP:
-      display_names:
-        other: Ego Pound Obodo Lebanon
-    LKR:
-      display_names:
-        other: Ego Rupee obodo Sri Lanka
-    LRD:
-      display_names:
-        other: Ego Dollar obodo Liberia
     LSL:
       display_names:
         other: Ego loti obodo Lesotho
@@ -263,61 +517,24 @@ number_formats:
     MDL:
       display_names:
         other: Ego leu mba Moldova
-    MGA:
-      display_names:
-        other: Ego ariaries obodo Madagascar
     MKD:
       display_names:
         other: Ego denari mba Macedonia
-    MMK:
-      display_names:
-        other: Ego Kyat obodo Myanmar
-    MNT:
-      display_names:
-        other: Ego Turgik Obodo Mongolia
     MOP:
       display_names:
         other: Ego Pataca ndị Obodo Macanese
     MRU:
       display_names:
         other: Ego Ouguiya Obodo Mauritania
-    MUR:
-      display_names:
-        other: Ego Rupee obodo Mauritania
     MVR:
       display_names:
         other: Ego Rufiyaa obodo Moldova
     MWK:
       display_names:
         other: Ego kwachas obodo Malawi
-    MXN:
-      display_names:
-        other: Ego Peso obodo Mexico
-    MYR:
-      display_names:
-        other: Ego Ringgit obodo Malaysia
     MZN:
       display_names:
         other: Ego meticals obodo Mozambique
-    NAD:
-      display_names:
-        other: Ego Dollar obodo Namibia
-    NGN:
-      symbol: "₦"
-      display_names:
-        other: Naịra
-    NIO:
-      display_names:
-        other: Ego Córodoba obodo Nicaragua
-    NOK:
-      display_names:
-        other: Ego Krone Obodo Norway
-    NPR:
-      display_names:
-        other: Ego Rupee obodo Nepal
-    NZD:
-      display_names:
-        other: Ego dollars obodo New Zealand
     OMR:
       display_names:
         other: Ego rials Obodo Oman
@@ -330,54 +547,21 @@ number_formats:
     PGK:
       display_names:
         other: Ego Kina obodo Papua New Guinea
-    PHP:
-      display_names:
-        other: Ego Piso obodo Philippine
-    PKR:
-      display_names:
-        other: Ego Rupee obodo Pakistan
-    PLN:
-      display_names:
-        other: Ego Zloty mba Poland
-    PYG:
-      display_names:
-        other: Ego Guarani obodo Paraguay
     QAR:
       display_names:
         other: Ego rials obodo Qatar
-    RON:
-      display_names:
-        other: Ego leu Obodo Romania
     RSD:
       display_names:
         other: Ego Dinar obodo Serbia
-    RUB:
-      display_names:
-        other: Ruble Russia
-    RWF:
-      display_names:
-        other: Ego Franc obodo Rwanda
     SAR:
       display_names:
         other: Ego Riyal obodo Saudi
-    SBD:
-      display_names:
-        other: Ego dollars obodo Solomon Islands
     SCR:
       display_names:
         other: Ego rupees obodo Seychelles
     SDG:
       display_names:
         other: Ego Pound obodo Sudan
-    SEK:
-      display_names:
-        other: Ego Krona Obodo Sweden
-    SGD:
-      display_names:
-        other: Ego Dollar obodo Singapore
-    SHP:
-      display_names:
-        other: Ego Pound obodo St Helena
     SLE:
       display_names:
         other: Ego Leone obodo Sierra Leone
@@ -387,24 +571,9 @@ number_formats:
     SOS:
       display_names:
         other: Ego shilling obodo Somali
-    SRD:
-      display_names:
-        other: Dollar Surinamese
-    SSP:
-      display_names:
-        other: Ego pounds mba ọdịda anyanwụ Sudan
-    STN:
-      display_names:
-        other: Ego Dobra nke obodo Sāo Tomé na Principe
-    SYP:
-      display_names:
-        other: Ego Pound obodo Syria
     SZL:
       display_names:
         other: Ego emalangeni obodo Swaziland
-    THB:
-      display_names:
-        other: Ego Baht obodo Thai
     TJS:
       display_names:
         other: Who Somoni obodo Tajikistan
@@ -414,75 +583,29 @@ number_formats:
     TND:
       display_names:
         other: Ego Dinar Obodo Tunisia
-    TOP:
-      display_names:
-        other: Ego paʻanga obodo Tonga
-    TRY:
-      display_names:
-        other: Ego Lira obodo Turkey
-    TTD:
-      display_names:
-        other: Dollars Trinidad & Tobago
-    TWD:
-      display_names:
-        other: Dollar obodo New Taiwan
     TZS:
       display_names:
         other: Ego Shillings Obodo Tanzania
-    UAH:
-      display_names:
-        other: Ego Hryvnia obodo Ukraine
     UGX:
       display_names:
         other: Ego shillings obodo Uganda
-    USD:
-      symbol: "$"
-      display_names:
-        other: Dollars US
-    UYU:
-      display_names:
-        other: Ego Peso obodo Uruguay
     UZS:
       display_names:
         other: Ego som obodo Uzbekistan
     VES:
       display_names:
         other: Ego Bolivar obodo Venezuela
-    VND:
-      display_names:
-        other: Ego Dong obodo Vietnam
     VUV:
       display_names:
         other: Ego Vanuatu vatus obodo Vanuatu
     WST:
       display_names:
         other: Ego Tala obodo Samoa
-    XAF:
-      display_names:
-        other: Ego francs mba etiti Africa
-    XCD:
-      display_names:
-        other: Ego Dollar obodo East Carribbean
-    XOF:
-      display_names:
-        other: Ego CFA francs mba ọdịda anyanwụ Afrịka
-    XPF:
-      display_names:
-        other: Ego francs obodo CFP
-    XXX:
-      display_names:
-        other: "(ego amaghị)"
     YER:
       display_names:
         other: Ego Rial obodo Yemeni
-    ZAR:
-      display_names:
-        other: Ego rand obodo South Africa
-    ZMW:
-      display_names:
-        other: Ego kwachas obodo Zambia
 locale: ig
-generated_at: '2025-09-10T22:17:40+09:00'
+generated_at: '2025-09-10T23:53:10+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

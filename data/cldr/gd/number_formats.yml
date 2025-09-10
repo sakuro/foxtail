@@ -1,9 +1,766 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: afghani Afghanach
+        one: afghani Afghanach
+        two: afghani Afghanach
+        few: afghani Afghanach
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: dram Airmeineach
+        one: dram Airmeineach
+        two: dhram Airmeineach
+        few: dram Airmeineach
+    AOA:
+      symbol: Kz
+      display_names:
+        other: kwanza Angòlach
+        one: kwanza Angòlach
+        two: kwanza Angòlach
+        few: kwanza Angòlach
+    ARS:
+      symbol: "$"
+      display_names:
+        other: peso Argantaineach
+        one: pheso Argantaineach
+        two: pheso Argantaineach
+        few: pesothan Argantaineach
+    AUD:
+      symbol: A$
+      display_names:
+        other: dolar Astràilianach
+        one: dolar Astràilianach
+        two: dholar Astràilianach
+        few: dolaran Astràilianach
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: manat Asarbaideànach
+        one: mhanat Asarbaideànach
+        two: mhanat Asarbaideànach
+        few: manat Asarbaideànach
+    BAM:
+      symbol: KM
+      display_names:
+        other: mark iompachail Bhosna agus Hearsagobhana
+        one: mhark iompachail Bhosna agus Hearsagobhana
+        two: mhark iompachail Bhosna agus Hearsagobhana
+        few: mark iompachail Bhosna agus Hearsagobhana
+    BBD:
+      symbol: "$"
+      display_names:
+        other: dolar Barbadach
+        one: dolar Barbadach
+        two: dholar Barbadach
+        few: dolaran Barbadach
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: taka Bangladaiseach
+        one: taka Bangladaiseach
+        two: thaka Bangladaiseach
+        few: taka Bangladaiseach
+    BMD:
+      symbol: "$"
+      display_names:
+        other: dolar Bearmùdach
+        one: dolar Bearmùdach
+        two: dholar Bearmùdach
+        few: dolaran Bearmùdach
+    BND:
+      symbol: "$"
+      display_names:
+        other: dolar Brùnaigheach
+        one: dolar Brùnaigheach
+        two: dholar Brùnaigheach
+        few: dolaran Brùnaigheach
+    BOB:
+      symbol: Bs
+      display_names:
+        other: boliviano Boilibhiach
+        one: bholiviano Boilibhiach
+        two: bholiviano Boilibhiach
+        few: boliviano Boilibhiach
+    BRL:
+      symbol: R$
+      display_names:
+        other: real Braisileach
+        one: real Braisileach
+        two: real Braisileach
+        few: real Braisileach
+    BSD:
+      symbol: "$"
+      display_names:
+        other: dolar Bathamach
+        one: dolar Bathamach
+        two: dholar Bathamach
+        few: dolaran Bathamach
+    BWP:
+      symbol: P
+      display_names:
+        other: pula Botsuanach
+        one: phula Botsuanach
+        two: phula Botsuanach
+        few: pula Botsuanach
+    BZD:
+      symbol: "$"
+      display_names:
+        other: dolar Beilìseach
+        one: dolar Beilìseach
+        two: dholar Beilìseach
+        few: dolaran Beilìseach
+    CAD:
+      symbol: CA$
+      display_names:
+        other: dolar Canadach
+        one: dolar Canadach
+        two: dholar Canadach
+        few: dolaran Canadach
+    CLP:
+      symbol: "$"
+      display_names:
+        other: peso Sileach
+        one: pheso Sileach
+        two: pheso Sileach
+        few: pesothan Sileach
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: yuan Sìneach
+        one: yuan Sìneach
+        two: yuan Sìneach
+        few: yuan Sìneach
+    COP:
+      symbol: "$"
+      display_names:
+        other: peso Coloimbeach
+        one: pheso Coloimbeach
+        two: pheso Coloimbeach
+        few: pesothan Coloimbeach
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: colón Costa Rìceach
+        one: cholón Chosta Rìcea
+        two: cholón Costa Rìceach
+        few: colón Costa Rìceach
+    CUC:
+      symbol: "$"
+      display_names:
+        other: peso iompachail Cùbach
+        one: pheso iompachail Cùbach
+        two: pheso iompachail Cùbach
+        few: pesothan iompachail Cùbach
+    CUP:
+      symbol: "$"
+      display_names:
+        other: peso Cùbach
+        one: pheso Cùbach
+        two: pheso Cùbach
+        few: pesothan Cùbach
+    CZK:
+      symbol: Kč
+      display_names:
+        other: koruna Seiceach
+        one: koruna Seiceach
+        two: koruna Seiceach
+        few: koruna Seiceach
+    DKK:
+      symbol: kr
+      display_names:
+        other: krone Danmhairgeach
+        one: krone Danmhairgeach
+        two: krone Danmhairgeach
+        few: kroner Danmhairgeach
+    DOP:
+      symbol: "$"
+      display_names:
+        other: peso Doiminiceach
+        one: pheso Doiminiceach
+        two: pheso Doiminiceach
+        few: pesothan Doiminiceach
+    EGP:
+      symbol: E£
+      display_names:
+        other: punnd Èipheiteach
+        one: phunnd Èipheiteach
+        two: phunnd Èipheiteach
+        few: puinnd Èipheiteach
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: peseta Spàinnteach
+        one: pheseta Spàinnteach
+        two: pheseta Spàinnteach
+        few: peseta Spàinnteach
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Eòro
+        one: Eòro
+        two: Eòro
+        few: Eòrothan
+    FJD:
+      symbol: "$"
+      display_names:
+        other: dolar Fìditheach
+        one: dolar Fìditheach
+        two: dholar Fìditheach
+        few: dolaran Fìditheach
+    FKP:
+      symbol: "£"
+      display_names:
+        other: punnd Fàclannach
+        one: phunnd Fàclannach
+        two: phunnd Fàclannach
+        few: puinnd Fhàclannach
+    GBP:
+      symbol: "£"
+      display_names:
+        other: punnd Sasannach
+        one: phunnd Sasannach
+        two: phunnd Sasannach
+        few: puinnd Shasannach
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: lari Cairtbheileach
+        one: lari Cairtbheileach
+        two: lari Cairtbheileach
+        few: lari Cairtbheileach
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: cedi Gànach
+        one: chedi Gànach
+        two: chedi Gànach
+        few: cedi Gànach
+    GIP:
+      symbol: "£"
+      display_names:
+        other: punnd Diobraltarach
+        one: phunnd Diobraltarach
+        two: phunnd Diobraltarach
+        few: puinnd Dhiobraltarach
+    GNF:
+      symbol: FG
+      display_names:
+        other: franc Ginitheach
+        one: fhranc Ginitheach
+        two: fhranc Ginitheach
+        few: franc Ginitheach
+    GTQ:
+      symbol: Q
+      display_names:
+        other: quetzal Guatamalach
+        one: quetzal Guatamalach
+        two: quetzal Guatamalach
+        few: quetzal Guatamalach
+    GYD:
+      symbol: "$"
+      display_names:
+        other: dolar Guidheànach
+        one: dolar Guidheànach
+        two: dholar Guidheànach
+        few: dolaran Guidheànach
+    HKD:
+      symbol: HK$
+      display_names:
+        other: dolar Hong Kong
+        one: dolar Hong Kong
+        two: dholar Hong Kong
+        few: dolaran Hong Kong
+    HNL:
+      symbol: L
+      display_names:
+        other: lempira Hondùrach
+        one: lempira Hondùrach
+        two: lempira Hondùrach
+        few: lempira Hondùrach
+    HRK:
+      symbol: kn
+      display_names:
+        other: kuna Cròthaiseach
+        one: kuna Cròthaiseach
+        two: kuna Cròthaiseach
+        few: kuna Cròthaiseach
+    HUF:
+      symbol: Ft
+      display_names:
+        other: forint Ungaireach
+        one: fhorint Ungaireach
+        two: fhorint Ungaireach
+        few: forint Ungaireach
+    IDR:
+      symbol: Rp
+      display_names:
+        other: rupiah Innd-Innseach
+        one: rupiah Innd-Innseach
+        two: rupiah Innd-Innseach
+        few: rupiah Innd-Innseach
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: secel ùr Iosraeleach
+        one: shecel ùr Iosraeleach
+        two: shecel ùr Iosraeleach
+        few: secelean ùra Iosraeleach
+    INR:
+      symbol: "₹"
+      display_names:
+        other: rupee Innseanach
+        one: rupee Innseanach
+        two: rupee Innseanach
+        few: rupee Innseanach
+    ISK:
+      symbol: kr
+      display_names:
+        other: króna Innis Tìleach
+        one: króna Innis Tìleach
+        two: króna Innis Tìleach
+        few: krónur Innis Tìleach
+    JMD:
+      symbol: "$"
+      display_names:
+        other: dolar Diameugach
+        one: dolar Diameugach
+        two: dholar Diameugach
+        few: dolaran Diameugach
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: yen Seapanach
+        one: yen Seapanach
+        two: yen Seapanach
+        few: yen Seapanach
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: som Cìorgasach
+        one: som Cìorgasach
+        two: shom Cìorgasach
+        few: som Cìorgasach
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: riel Cambuideach
+        one: riel Cambuideach
+        two: riel Cambuideach
+        few: riel Cambuideach
+    KMF:
+      symbol: CF
+      display_names:
+        other: franc Comorosach
+        one: fhranc Comorosach
+        two: fhranc Comorosach
+        few: franc Comorosach
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: won Choirèa a Tuath
+        one: won Choirèa a Tuath
+        two: won Choirèa a Tuath
+        few: won Choirèa a Tuath
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: won Choirèa a Deas
+        one: won Choirèa a Deas
+        two: won Choirèa a Deas
+        few: won Choirèa a Deas
+    KYD:
+      symbol: "$"
+      display_names:
+        other: dolar Caimeanach
+        one: dolar Caimeanach
+        two: dholar Caimeanach
+        few: dolaran Caimeanach
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: tenge Casachach
+        one: tenge Casachach
+        two: thenge Casachach
+        few: tenge Casachach
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: kip Làthosach
+        one: kip Làthosach
+        two: kip Làthosach
+        few: kip Làthosach
+    LBP:
+      symbol: L£
+      display_names:
+        other: punnd Leabanach
+        one: phunnd Leabanach
+        two: phunnd Leabanach
+        few: puinnd Leabanach
+    LKR:
+      symbol: Rs
+      display_names:
+        other: rupee Sri Lancach
+        one: rupee Sri Lancach
+        two: rupee Sri Lancach
+        few: rupee Sri Lancach
+    LRD:
+      symbol: "$"
+      display_names:
+        other: dolar Libèireach
+        one: dolar Libèireach
+        two: dholar Libèireach
+        few: dolaran Libèireach
+    LTL:
+      symbol: Lt
+      display_names:
+        other: litas Liotuaineach
+        one: litas Liotuaineach
+        two: litas Liotuaineach
+        few: litas Liotuaineach
+    LVL:
+      symbol: Ls
+      display_names:
+        other: lats Laitbheach
+        one: lats Laitbheach
+        two: lats Laitbheach
+        few: lats Laitbheach
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ariary Madagasgarach
+        one: ariary Madagasgarach
+        two: ariary Madagasgarach
+        few: ariary Madagasgarach
+    MMK:
+      symbol: K
+      display_names:
+        other: kyat Miànmarach
+        one: kyat Miànmarach
+        two: kyat Miànmarach
+        few: kyat Miànmarach
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: tugrik Mongolach
+        one: tugrik Mongolach
+        two: thugrik Mongolach
+        few: tugrik Mongolach
+    MUR:
+      symbol: Rs
+      display_names:
+        other: rupee Moiriseasach
+        one: rupee Moiriseasach
+        two: rupee Moiriseasach
+        few: rupee Moiriseasach
+    MXN:
+      symbol: MX$
+      display_names:
+        other: peso Meagsagach
+        one: pheso Meagsagach
+        two: pheso Meagsagach
+        few: pesothan Meagsagach
+    MYR:
+      symbol: RM
+      display_names:
+        other: ringgit Malaidheach
+        one: ringgit Malaidheach
+        two: ringgit Malaidheach
+        few: ringgit Malaidheach
+    NAD:
+      symbol: "$"
+      display_names:
+        other: dolar Naimibitheach
+        one: dolar Naimibitheach
+        two: dholar Naimibitheach
+        few: dolaran Naimibitheach
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: naira Nigèiriach
+        one: naira Nigèiriach
+        two: naira Nigèiriach
+        few: naira Nigèiriach
+    NIO:
+      symbol: C$
+      display_names:
+        other: córdoba Niocaragach
+        one: chórdoba Niocaragach
+        two: chórdoba Niocaragach
+        few: córdoba Niocaragach
+    NOK:
+      symbol: kr
+      display_names:
+        other: krone Nirribheach
+        one: krone Nirribheach
+        two: krone Nirribheach
+        few: kroner Nirribheach
+    NPR:
+      symbol: Rs
+      display_names:
+        other: rupee Neapàlach
+        one: rupee Neapàlach
+        two: rupee Neapàlach
+        few: rupee Neapàlach
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: dolar Shealainn Nuaidh
+        one: dolar Shealainn Nuaidh
+        two: dholar Shealainn Nuaidh
+        few: dolaran Shealainn Nuaidh
+    PHP:
+      symbol: PHP
+      display_names:
+        other: peso Filipineach
+        one: pheso Filipineach
+        two: pheso Filipineach
+        few: pesothan Filipineach
+    PKR:
+      symbol: Rs
+      display_names:
+        other: rupee Pagastànach
+        one: rupee Pagastànach
+        two: rupee Pagastànach
+        few: rupee Pagastànach
+    PLN:
+      symbol: zł
+      display_names:
+        other: złoty Pòlainneach
+        one: złoty Pòlainneach
+        two: złoty Pòlainneach
+        few: złoty Pòlainneach
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: guaraní Paraguaidheach
+        one: ghuaraní Paraguaidheach
+        two: ghuaraní Paraguaidheach
+        few: guaraní Paraguaidheach
+    RON:
+      symbol: leu
+      display_names:
+        other: leu Romàineach
+        one: leu Romàineach
+        two: leu Romàineach
+        few: leu Romàineach
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: rùbal Ruiseach
+        one: rùbal Ruiseach
+        two: rùbal Ruiseach
+        few: rùbalan Ruiseach
+    RWF:
+      symbol: RF
+      display_names:
+        other: franc Rubhandach
+        one: fhranc Rubhandach
+        two: fhranc Rubhandach
+        few: franc Rubhandach
+    SBD:
+      symbol: "$"
+      display_names:
+        other: dolar Eileanan Sholaimh
+        one: dolar Eileanan Sholaimh
+        two: dholar Eileanan Sholaimh
+        few: dolaran Eileanan Sholaimh
+    SEK:
+      symbol: kr
+      display_names:
+        other: krona Suaineach
+        one: krona Suaineach
+        two: krona Suaineach
+        few: kronor Suaineach
+    SGD:
+      symbol: "$"
+      display_names:
+        other: dolar Singeapòrach
+        one: dolar Singeapòrach
+        two: dholar Singeapòrach
+        few: dolaran Singeapòrach
+    SHP:
+      symbol: "£"
+      display_names:
+        other: punnd Eilean Naomh Eilidh
+        one: phunnd Eilean Naomh Eilidh
+        two: phunnd Eilean Naomh Eilidh
+        few: puinnd Eilean Naomh Eilidh
+    SRD:
+      symbol: "$"
+      display_names:
+        other: dolar Suranamach
+        one: dolar Suranamach
+        two: dholar Suranamach
+        few: dolaran Suranamach
+    SSP:
+      symbol: "£"
+      display_names:
+        other: punnd Sudàin a Deas
+        one: phunnd Sudàin a Deas
+        two: phunnd Sudàin a Deas
+        few: puinnd Shudàin a Deas
+    STN:
+      symbol: Db
+      display_names:
+        other: dobra São Tomé agus Príncipe
+        one: dobra São Tomé agus Príncipe
+        two: dhobra São Tomé agus Príncipe
+        few: dobra São Tomé agus Príncipe
+    SYP:
+      symbol: "£"
+      display_names:
+        other: punnd Siridheach
+        one: phunnd Siridheach
+        two: phunnd Siridheach
+        few: puinnd Shiridheach
+    THB:
+      symbol: "฿"
+      display_names:
+        other: baht Tàidheach
+        one: bhaht Tàidheach
+        two: bhaht Tàidheach
+        few: baht Tàidheach
+    TOP:
+      symbol: T$
+      display_names:
+        other: paʻanga Tongach
+        one: phaʻanga Tongach
+        two: phaʻanga Tongach
+        few: paʻanga Tongach
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: lira Turcach
+        one: lira Turcach
+        two: lira Turcach
+        few: lira Turcach
+    TTD:
+      symbol: "$"
+      display_names:
+        other: dolar Thrianaid agus Thobago
+        one: dolar Thrianaid agus Thobago
+        two: dholar Thrianaid agus Thobago
+        few: dolaran Thrianaid agus Thobago
+    TWD:
+      symbol: NT$
+      display_names:
+        other: dolar ùr Taidh-Bhànach
+        one: dolar ùr Taidh-Bhànach
+        two: dholar ùr Taidh-Bhànach
+        few: dolaran ùra Taidh-Bhànach
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: hryvnia Ucràineach
+        one: hryvnia Ucràineach
+        two: hryvnia Ucràineach
+        few: hryvnia Ucràineach
+    USD:
+      symbol: "$"
+      display_names:
+        other: dolar nan Stàitean Aonaichte
+        one: dolar nan Stàitean Aonaichte
+        two: dholar nan Stàitean Aonaichte
+        few: dolaran nan Stàitean Aonaichte
+    UYU:
+      symbol: "$"
+      display_names:
+        other: peso Uruguaidheach
+        one: pheso Uruguaidheach
+        two: pheso Uruguaidheach
+        few: pesothan Uruguaidheach
+    VEF:
+      symbol: Bs
+      display_names:
+        other: bolívar Bheinisealach (2008–2018)
+        one: bholívar Bheinisealach (2008–2018)
+        two: bholívar Bheinisealach (2008–2018)
+        few: bolívar Bheinisealach (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: dong Bhiet-Namach
+        one: dong Bhiet-Namach
+        two: dhong Bhiet-Namach
+        few: dong Bhiet-Namach
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: franc CFA Meadhan-Afragach
+        one: fhranc CFA Meadhan-Afragach
+        two: fhranc CFA Meadhan-Afragach
+        few: franc CFA Meadhan-Afragach
+    XCD:
+      symbol: EC$
+      display_names:
+        other: dolar Caraibeach earach
+        one: dolar Caraibeach earach
+        two: dholar Caraibeach earach
+        few: dolaran Caraibeach earach
+    XCG:
+      symbol: Cg.
+      display_names:
+        other: gulden Caraibeach
+        one: ghulden Caraibeach
+        two: ghulden Caraibeach
+        few: gulden Caraibeach
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: franc CFA Afraga an Iar
+        one: fhranc CFA Afraga an Iar
+        two: fhranc CFA Afraga an Iar
+        few: franc CFA Afraga an Iar
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: franc CFP
+        one: fhranc CFP
+        two: fhranc CFP
+        few: franc CFP
+    XXX:
+      symbol: XXX
+      display_names:
+        other: "(aonad airgeadra neo–aithnichte)"
+        one: "(aonad airgeadra neo–aithnichte)"
+        two: "(aonad airgeadra neo–aithnichte)"
+        few: "(aonadan airgeadra neo–aithnichte)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: rand Afraga a Deas
+        one: rand Afraga a Deas
+        two: rand Afraga a Deas
+        few: rand Afraga a Deas
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: kwacha Sàimbitheach
+        one: kwacha Sàimbitheach
+        two: kwacha Sàimbitheach
+        few: kwacha Sàimbitheach
     ADP:
       display_names:
         other: peseta Andorrach
@@ -22,12 +779,6 @@ number_formats:
         one: afghani Afghanach (1927–2002)
         two: afghani Afghanach (1927–2002)
         few: afghani Afghanach (1927–2002)
-    AFN:
-      display_names:
-        other: afghani Afghanach
-        one: afghani Afghanach
-        two: afghani Afghanach
-        few: afghani Afghanach
     ALK:
       display_names:
         other: lek Albàineach (1946–1965)
@@ -40,24 +791,12 @@ number_formats:
         one: lek Albàineach
         two: lek Albàineach
         few: lek Albàineach
-    AMD:
-      display_names:
-        other: dram Airmeineach
-        one: dram Airmeineach
-        two: dhram Airmeineach
-        few: dram Airmeineach
     ANG:
       display_names:
         other: gulden Eileanan Aintilia nan Tìrean Ìsle
         one: ghulden Eileanan Aintilia nan Tìrean Ìsle
         two: ghulden Eileanan Aintilia nan Tìrean Ìsle
         few: gulden Eileanan Aintilia nan Tìrean Ìsle
-    AOA:
-      display_names:
-        other: kwanza Angòlach
-        one: kwanza Angòlach
-        two: kwanza Angòlach
-        few: kwanza Angòlach
     AOK:
       display_names:
         other: kwanza Angòlach (1977–1991)
@@ -100,24 +839,12 @@ number_formats:
         one: pheso Argantaineach (1983–1985)
         two: pheso Argantaineach (1983–1985)
         few: pesothan Argantaineach (1983–1985)
-    ARS:
-      display_names:
-        other: peso Argantaineach
-        one: pheso Argantaineach
-        two: pheso Argantaineach
-        few: pesothan Argantaineach
     ATS:
       display_names:
         other: schilling Ostaireach
         one: schilling Ostaireach
         two: schilling Ostaireach
         few: schilling Ostaireach
-    AUD:
-      display_names:
-        other: dolar Astràilianach
-        one: dolar Astràilianach
-        two: dholar Astràilianach
-        few: dolaran Astràilianach
     AWG:
       display_names:
         other: florin Arùbach
@@ -130,42 +857,18 @@ number_formats:
         one: mhanat Asarbaideànach (1993–2006)
         two: mhanat Asarbaideànach (1993–2006)
         few: manat Asarbaideànach (1993–2006)
-    AZN:
-      display_names:
-        other: manat Asarbaideànach
-        one: mhanat Asarbaideànach
-        two: mhanat Asarbaideànach
-        few: manat Asarbaideànach
     BAD:
       display_names:
         other: dinar Bhosna agus Hearsagobhana (1992–1994)
         one: dinar Bhosna agus Hearsagobhana (1992–1994)
         two: dhinar Bhosna agus Hearsagobhana (1992–1994)
         few: dinar Bhosna agus Hearsagobhana (1992–1994)
-    BAM:
-      display_names:
-        other: mark iompachail Bhosna agus Hearsagobhana
-        one: mhark iompachail Bhosna agus Hearsagobhana
-        two: mhark iompachail Bhosna agus Hearsagobhana
-        few: mark iompachail Bhosna agus Hearsagobhana
     BAN:
       display_names:
         other: dinar ùr Bhosna agus Hearsagobhana (1994–1997)
         one: dinar ùr Bhosna agus Hearsagobhana (1994–1997)
         two: dhinar ùr Bhosna agus Hearsagobhana (1994–1997)
         few: dinar ùr Bhosna agus Hearsagobhana (1994–1997)
-    BBD:
-      display_names:
-        other: dolar Barbadach
-        one: dolar Barbadach
-        two: dholar Barbadach
-        few: dolaran Barbadach
-    BDT:
-      display_names:
-        other: taka Bangladaiseach
-        one: taka Bangladaiseach
-        two: thaka Bangladaiseach
-        few: taka Bangladaiseach
     BEC:
       display_names:
         other: franc Beilgeach (iompachail)
@@ -220,24 +923,6 @@ number_formats:
         one: fhranc Burundaidheach
         two: fhranc Burundaidheach
         few: franc Burundaidheach
-    BMD:
-      display_names:
-        other: dolar Bearmùdach
-        one: dolar Bearmùdach
-        two: dholar Bearmùdach
-        few: dolaran Bearmùdach
-    BND:
-      display_names:
-        other: dolar Brùnaigheach
-        one: dolar Brùnaigheach
-        two: dholar Brùnaigheach
-        few: dolaran Brùnaigheach
-    BOB:
-      display_names:
-        other: boliviano Boilibhiach
-        one: bholiviano Boilibhiach
-        two: bholiviano Boilibhiach
-        few: boliviano Boilibhiach
     BOL:
       display_names:
         other: boliviano Boilibhiach (1863–1963)
@@ -274,12 +959,6 @@ number_formats:
         one: chruzeiro Braisileach (1990–1993)
         two: chruzeiro Braisileach (1990–1993)
         few: cruzeiro Braisileach (1990–1993)
-    BRL:
-      display_names:
-        other: real Braisileach
-        one: real Braisileach
-        two: real Braisileach
-        few: real Braisileach
     BRN:
       display_names:
         other: cruzado ùr Braisileach (1989–1990)
@@ -298,12 +977,6 @@ number_formats:
         one: chruzeiro Braisileach (1942–1967)
         two: chruzeiro Braisileach (1942–1967)
         few: cruzeiro Braisileach (1942–1967)
-    BSD:
-      display_names:
-        other: dolar Bathamach
-        one: dolar Bathamach
-        two: dholar Bathamach
-        few: dolaran Bathamach
     BTN:
       display_names:
         other: ngultrum Butànach
@@ -316,12 +989,6 @@ number_formats:
         one: kyat Burmach
         two: kyat Burmach
         few: kyat Burmach
-    BWP:
-      display_names:
-        other: pula Botsuanach
-        one: phula Botsuanach
-        two: phula Botsuanach
-        few: pula Botsuanach
     BYB:
       display_names:
         other: rùbal ùr Bealaruiseach (1994–1999)
@@ -341,18 +1008,6 @@ number_formats:
         one: rùbal Bealaruiseach (2000–2016)
         two: rùbal Bealaruiseach (2000–2016)
         few: rùbalan Bealaruiseach (2000–2016)
-    BZD:
-      display_names:
-        other: dolar Beilìseach
-        one: dolar Beilìseach
-        two: dholar Beilìseach
-        few: dolaran Beilìseach
-    CAD:
-      display_names:
-        other: dolar Canadach
-        one: dolar Canadach
-        two: dholar Canadach
-        few: dolaran Canadach
     CDF:
       display_names:
         other: franc Congothach
@@ -389,12 +1044,6 @@ number_formats:
         one: aonad cunntasachd Sileach (UF)
         two: aonad cunntasachd Sileach (UF)
         few: aonadan cunntasachd Sileach (UF)
-    CLP:
-      display_names:
-        other: peso Sileach
-        one: pheso Sileach
-        two: pheso Sileach
-        few: pesothan Sileach
     CNH:
       display_names:
         other: yuan Sìneach (far-thìreach)
@@ -407,30 +1056,12 @@ number_formats:
         one: dolar an t-sluagh-bhanca Shìnich
         two: dholar an t-sluagh-bhanca Shìnich
         few: dolaran an t-sluagh-bhanca Shìnich
-    CNY:
-      display_names:
-        other: yuan Sìneach
-        one: yuan Sìneach
-        two: yuan Sìneach
-        few: yuan Sìneach
-    COP:
-      display_names:
-        other: peso Coloimbeach
-        one: pheso Coloimbeach
-        two: pheso Coloimbeach
-        few: pesothan Coloimbeach
     COU:
       display_names:
         other: aonad fìor-luach Coloimbeach
         one: aonad fìor-luach Coloimbeach
         two: aonad fìor-luach Coloimbeach
         few: aonadan fìor-luach Coloimbeach
-    CRC:
-      display_names:
-        other: colón Costa Rìceach
-        one: cholón Chosta Rìcea
-        two: cholón Costa Rìceach
-        few: colón Costa Rìceach
     CSD:
       display_names:
         other: dinar Sèirbeach (2002–2006)
@@ -443,18 +1074,6 @@ number_formats:
         one: koruna cruaidh Seic-Slòbhacach
         two: koruna cruaidh Seic-Slòbhacach
         few: koruna cruaidh Seic-Slòbhacach
-    CUC:
-      display_names:
-        other: peso iompachail Cùbach
-        one: pheso iompachail Cùbach
-        two: pheso iompachail Cùbach
-        few: pesothan iompachail Cùbach
-    CUP:
-      display_names:
-        other: peso Cùbach
-        one: pheso Cùbach
-        two: pheso Cùbach
-        few: pesothan Cùbach
     CVE:
       display_names:
         other: escudo a’ Chip Uaine
@@ -467,12 +1086,6 @@ number_formats:
         one: phunnd Cìoprasach
         two: phunnd Cìoprasach
         few: puinnd Chìoprasach
-    CZK:
-      display_names:
-        other: koruna Seiceach
-        one: koruna Seiceach
-        two: koruna Seiceach
-        few: koruna Seiceach
     DDM:
       display_names:
         other: mark na Gearmailte an Ear
@@ -491,18 +1104,6 @@ number_formats:
         one: fhranc Diobùtaidheach
         two: fhranc Diobùtaidheach
         few: franc Diobùtaidheach
-    DKK:
-      display_names:
-        other: krone Danmhairgeach
-        one: krone Danmhairgeach
-        two: krone Danmhairgeach
-        few: kroner Danmhairgeach
-    DOP:
-      display_names:
-        other: peso Doiminiceach
-        one: pheso Doiminiceach
-        two: pheso Doiminiceach
-        few: pesothan Doiminiceach
     DZD:
       display_names:
         other: dinar Aildireach
@@ -527,12 +1128,6 @@ number_formats:
         one: kroon Eastoineach
         two: kroon Eastoineach
         few: kroon Eastoineach
-    EGP:
-      display_names:
-        other: punnd Èipheiteach
-        one: phunnd Èipheiteach
-        two: phunnd Èipheiteach
-        few: puinnd Èipheiteach
     ERN:
       display_names:
         other: nakfa Eartrach
@@ -551,96 +1146,42 @@ number_formats:
         one: pheseta Spàinnteach (cunntas iompachail)
         two: pheseta Spàinnteach (cunntas iompachail)
         few: peseta Spàinnteach (cunntas iompachail)
-    ESP:
-      display_names:
-        other: peseta Spàinnteach
-        one: pheseta Spàinnteach
-        two: pheseta Spàinnteach
-        few: peseta Spàinnteach
     ETB:
       display_names:
         other: birr Itiopach
         one: bhirr Itiopach
         two: bhirr Itiopach
         few: birr Itiopach
-    EUR:
-      display_names:
-        other: Eòro
-        one: Eòro
-        two: Eòro
-        few: Eòrothan
     FIM:
       display_names:
         other: markka Fionnlannach
         one: mharkka Fionnlannach
         two: mharkka Fionnlannach
         few: markka Fionnlannach
-    FJD:
-      display_names:
-        other: dolar Fìditheach
-        one: dolar Fìditheach
-        two: dholar Fìditheach
-        few: dolaran Fìditheach
-    FKP:
-      display_names:
-        other: punnd Fàclannach
-        one: phunnd Fàclannach
-        two: phunnd Fàclannach
-        few: puinnd Fhàclannach
     FRF:
       display_names:
         other: franc Frangach
         one: fhranc Frangach
         two: fhranc Frangach
         few: franc Frangach
-    GBP:
-      display_names:
-        other: punnd Sasannach
-        one: phunnd Sasannach
-        two: phunnd Sasannach
-        few: puinnd Shasannach
     GEK:
       display_names:
         other: kupon larit Cairtbheileach
         one: kupon larit Cairtbheileach
         two: kupon larit Cairtbheileach
         few: kupon larit Cairtbheileach
-    GEL:
-      display_names:
-        other: lari Cairtbheileach
-        one: lari Cairtbheileach
-        two: lari Cairtbheileach
-        few: lari Cairtbheileach
     GHC:
       display_names:
         other: cedi Gànach (1979–2007)
         one: chedi Gànach (1979–2007)
         two: chedi Gànach (1979–2007)
         few: cedi Gànach (1979–2007)
-    GHS:
-      display_names:
-        other: cedi Gànach
-        one: chedi Gànach
-        two: chedi Gànach
-        few: cedi Gànach
-    GIP:
-      display_names:
-        other: punnd Diobraltarach
-        one: phunnd Diobraltarach
-        two: phunnd Diobraltarach
-        few: puinnd Dhiobraltarach
     GMD:
       display_names:
         other: dalasi Gaimbitheach
         one: dalasi Gaimbitheach
         two: dhalasi Gaimbitheach
         few: dalasi Gaimbitheach
-    GNF:
-      display_names:
-        other: franc Ginitheach
-        one: fhranc Ginitheach
-        two: fhranc Ginitheach
-        few: franc Ginitheach
     GNS:
       display_names:
         other: syli Ginitheach
@@ -659,12 +1200,6 @@ number_formats:
         one: dhrachma Greugach
         two: dhrachma Greugach
         few: drachma Greugach
-    GTQ:
-      display_names:
-        other: quetzal Guatamalach
-        one: quetzal Guatamalach
-        two: quetzal Guatamalach
-        few: quetzal Guatamalach
     GWE:
       display_names:
         other: escudo Gini na Portagaile
@@ -677,54 +1212,18 @@ number_formats:
         one: pheso Gini-Biosothach
         two: pheso Gini-Biosothach
         few: pesothan Gini-Biosothach
-    GYD:
-      display_names:
-        other: dolar Guidheànach
-        one: dolar Guidheànach
-        two: dholar Guidheànach
-        few: dolaran Guidheànach
-    HKD:
-      display_names:
-        other: dolar Hong Kong
-        one: dolar Hong Kong
-        two: dholar Hong Kong
-        few: dolaran Hong Kong
-    HNL:
-      display_names:
-        other: lempira Hondùrach
-        one: lempira Hondùrach
-        two: lempira Hondùrach
-        few: lempira Hondùrach
     HRD:
       display_names:
         other: dinar Cròthaiseach
         one: dinar Cròthaiseach
         two: dhinar Cròthaiseach
         few: dinar Cròthaiseach
-    HRK:
-      display_names:
-        other: kuna Cròthaiseach
-        one: kuna Cròthaiseach
-        two: kuna Cròthaiseach
-        few: kuna Cròthaiseach
     HTG:
       display_names:
         other: gourde Haidhteach
         one: ghourde Haidhteach
         two: ghourde Haidhteach
         few: gourde Haidhteach
-    HUF:
-      display_names:
-        other: forint Ungaireach
-        one: fhorint Ungaireach
-        two: fhorint Ungaireach
-        few: forint Ungaireach
-    IDR:
-      display_names:
-        other: rupiah Innd-Innseach
-        one: rupiah Innd-Innseach
-        two: rupiah Innd-Innseach
-        few: rupiah Innd-Innseach
     IEP:
       display_names:
         other: punnd Èireannach
@@ -743,18 +1242,6 @@ number_formats:
         one: shecel Iosraeleach (1980–1985)
         two: shecel Iosraeleach (1980–1985)
         few: secelean Iosraeleach (1980–1985)
-    ILS:
-      display_names:
-        other: secel ùr Iosraeleach
-        one: shecel ùr Iosraeleach
-        two: shecel ùr Iosraeleach
-        few: secelean ùra Iosraeleach
-    INR:
-      display_names:
-        other: rupee Innseanach
-        one: rupee Innseanach
-        two: rupee Innseanach
-        few: rupee Innseanach
     IQD:
       display_names:
         other: dinar Ioràcach
@@ -773,66 +1260,24 @@ number_formats:
         one: króna Innis Tìleach (1918–1981)
         two: króna Innis Tìleach (1918–1981)
         few: krónur Innis Tìleach (1918–1981)
-    ISK:
-      display_names:
-        other: króna Innis Tìleach
-        one: króna Innis Tìleach
-        two: króna Innis Tìleach
-        few: krónur Innis Tìleach
     ITL:
       display_names:
         other: lira Eadailteach
         one: lira Eadailteach
         two: lira Eadailteach
         few: lira Eadailteach
-    JMD:
-      display_names:
-        other: dolar Diameugach
-        one: dolar Diameugach
-        two: dholar Diameugach
-        few: dolaran Diameugach
     JOD:
       display_names:
         other: dinar Iòrdanach
         one: dinar Iòrdanach
         two: dhinar Iòrdanach
         few: dinar Iòrdanach
-    JPY:
-      display_names:
-        other: yen Seapanach
-        one: yen Seapanach
-        two: yen Seapanach
-        few: yen Seapanach
     KES:
       display_names:
         other: shilling Ceineach
         one: shilling Ceineach
         two: shilling Ceineach
         few: shilling Ceineach
-    KGS:
-      display_names:
-        other: som Cìorgasach
-        one: som Cìorgasach
-        two: shom Cìorgasach
-        few: som Cìorgasach
-    KHR:
-      display_names:
-        other: riel Cambuideach
-        one: riel Cambuideach
-        two: riel Cambuideach
-        few: riel Cambuideach
-    KMF:
-      display_names:
-        other: franc Comorosach
-        one: fhranc Comorosach
-        two: fhranc Comorosach
-        few: franc Comorosach
-    KPW:
-      display_names:
-        other: won Choirèa a Tuath
-        one: won Choirèa a Tuath
-        two: won Choirèa a Tuath
-        few: won Choirèa a Tuath
     KRH:
       display_names:
         other: hwan Choirèa a Deas (1953–1962)
@@ -845,66 +1290,18 @@ number_formats:
         one: won Choirèa a Deas (1945–1953)
         two: won Choirèa a Deas (1945–1953)
         few: won Choirèa a Deas (1945–1953)
-    KRW:
-      display_names:
-        other: won Choirèa a Deas
-        one: won Choirèa a Deas
-        two: won Choirèa a Deas
-        few: won Choirèa a Deas
     KWD:
       display_names:
         other: dinar Cuibhèiteach
         one: dinar Cuibhèiteach
         two: dhinar Cuibhèiteach
         few: dinar Cuibhèiteach
-    KYD:
-      display_names:
-        other: dolar Caimeanach
-        one: dolar Caimeanach
-        two: dholar Caimeanach
-        few: dolaran Caimeanach
-    KZT:
-      display_names:
-        other: tenge Casachach
-        one: tenge Casachach
-        two: thenge Casachach
-        few: tenge Casachach
-    LAK:
-      display_names:
-        other: kip Làthosach
-        one: kip Làthosach
-        two: kip Làthosach
-        few: kip Làthosach
-    LBP:
-      display_names:
-        other: punnd Leabanach
-        one: phunnd Leabanach
-        two: phunnd Leabanach
-        few: puinnd Leabanach
-    LKR:
-      display_names:
-        other: rupee Sri Lancach
-        one: rupee Sri Lancach
-        two: rupee Sri Lancach
-        few: rupee Sri Lancach
-    LRD:
-      display_names:
-        other: dolar Libèireach
-        one: dolar Libèireach
-        two: dholar Libèireach
-        few: dolaran Libèireach
     LSL:
       display_names:
         other: loti Leasotach
         one: loti Leasotach
         two: loti Leasotach
         few: loti Leasotach
-    LTL:
-      display_names:
-        other: litas Liotuaineach
-        one: litas Liotuaineach
-        two: litas Liotuaineach
-        few: litas Liotuaineach
     LTT:
       display_names:
         other: talonas Liotuaineach
@@ -929,12 +1326,6 @@ number_formats:
         one: fhranc ionmhasail Lugsamburgach
         two: fhranc ionmhasail Lugsamburgach
         few: franc ionmhasail Lugsamburgach
-    LVL:
-      display_names:
-        other: lats Laitbheach
-        one: lats Laitbheach
-        two: lats Laitbheach
-        few: lats Laitbheach
     LVR:
       display_names:
         other: rùbal Laitbheach
@@ -977,12 +1368,6 @@ number_formats:
         one: leu Moldobhach
         two: leu Moldobhach
         few: leu Moldobhach
-    MGA:
-      display_names:
-        other: ariary Madagasgarach
-        one: ariary Madagasgarach
-        two: ariary Madagasgarach
-        few: ariary Madagasgarach
     MGF:
       display_names:
         other: franc Madagasgarach
@@ -1007,18 +1392,6 @@ number_formats:
         one: fhranc Màilitheach
         two: fhranc Màilitheach
         few: franc Màilitheach
-    MMK:
-      display_names:
-        other: kyat Miànmarach
-        one: kyat Miànmarach
-        two: kyat Miànmarach
-        few: kyat Miànmarach
-    MNT:
-      display_names:
-        other: tugrik Mongolach
-        one: tugrik Mongolach
-        two: thugrik Mongolach
-        few: tugrik Mongolach
     MOP:
       display_names:
         other: pataca Macàthuach
@@ -1049,12 +1422,6 @@ number_formats:
         one: phunnd Maltach
         two: phunnd Maltach
         few: puinnd Mhaltach
-    MUR:
-      display_names:
-        other: rupee Moiriseasach
-        one: rupee Moiriseasach
-        two: rupee Moiriseasach
-        few: rupee Moiriseasach
     MVP:
       display_names:
         other: rupee Maladaibheach
@@ -1073,12 +1440,6 @@ number_formats:
         one: kwacha Malabhaidheach
         two: kwacha Malabhaidheach
         few: kwacha Malabhaidheach
-    MXN:
-      display_names:
-        other: peso Meagsagach
-        one: pheso Meagsagach
-        two: pheso Meagsagach
-        few: pesothan Meagsagach
     MXP:
       display_names:
         other: peso airgid Meagsagach (1861–1992)
@@ -1091,12 +1452,6 @@ number_formats:
         one: aonad inbheistidh Meagsagach
         two: aonad inbheistidh Meagsagach
         few: aonadan inbheistidh Meagsagach
-    MYR:
-      display_names:
-        other: ringgit Malaidheach
-        one: ringgit Malaidheach
-        two: ringgit Malaidheach
-        few: ringgit Malaidheach
     MZE:
       display_names:
         other: escudo Mòsaimbiceach
@@ -1115,54 +1470,18 @@ number_formats:
         one: mhetical Mòsaimbiceach
         two: mhetical Mòsaimbiceach
         few: metical Mòsaimbiceach
-    NAD:
-      display_names:
-        other: dolar Naimibitheach
-        one: dolar Naimibitheach
-        two: dholar Naimibitheach
-        few: dolaran Naimibitheach
-    NGN:
-      display_names:
-        other: naira Nigèiriach
-        one: naira Nigèiriach
-        two: naira Nigèiriach
-        few: naira Nigèiriach
     NIC:
       display_names:
         other: córdoba Niocaragach (1988–1991)
         one: chórdoba Niocaragach (1988–1991)
         two: chórdoba Niocaragach (1988–1991)
         few: córdoba Niocaragach (1988–1991)
-    NIO:
-      display_names:
-        other: córdoba Niocaragach
-        one: chórdoba Niocaragach
-        two: chórdoba Niocaragach
-        few: córdoba Niocaragach
     NLG:
       display_names:
         other: gulden Duitseach
         one: ghulden Duitseach
         two: ghulden Duitseach
         few: gulden Duitseach
-    NOK:
-      display_names:
-        other: krone Nirribheach
-        one: krone Nirribheach
-        two: krone Nirribheach
-        few: kroner Nirribheach
-    NPR:
-      display_names:
-        other: rupee Neapàlach
-        one: rupee Neapàlach
-        two: rupee Neapàlach
-        few: rupee Neapàlach
-    NZD:
-      display_names:
-        other: dolar Shealainn Nuaidh
-        one: dolar Shealainn Nuaidh
-        two: dholar Shealainn Nuaidh
-        few: dolaran Shealainn Nuaidh
     OMR:
       display_names:
         other: rial Omànach
@@ -1199,25 +1518,6 @@ number_formats:
         one: kina Ghini Nuaidh Paputhaiche
         two: kina Ghini Nuaidh Paputhaiche
         few: kina Ghini Nuaidh Paputhaiche
-    PHP:
-      symbol: PHP
-      display_names:
-        other: peso Filipineach
-        one: pheso Filipineach
-        two: pheso Filipineach
-        few: pesothan Filipineach
-    PKR:
-      display_names:
-        other: rupee Pagastànach
-        one: rupee Pagastànach
-        two: rupee Pagastànach
-        few: rupee Pagastànach
-    PLN:
-      display_names:
-        other: złoty Pòlainneach
-        one: złoty Pòlainneach
-        two: złoty Pòlainneach
-        few: złoty Pòlainneach
     PLZ:
       display_names:
         other: złoty Pòlainneach (1950–1995)
@@ -1230,12 +1530,6 @@ number_formats:
         one: escudo Portagaileach
         two: escudo Portagaileach
         few: escudo Portagaileach
-    PYG:
-      display_names:
-        other: guaraní Paraguaidheach
-        one: ghuaraní Paraguaidheach
-        two: ghuaraní Paraguaidheach
-        few: guaraní Paraguaidheach
     QAR:
       display_names:
         other: rial Catarach
@@ -1254,25 +1548,12 @@ number_formats:
         one: leu Romàineach (1952–2006)
         two: leu Romàineach (1952–2006)
         few: leu Romàineach (1952–2006)
-    RON:
-      symbol: leu
-      display_names:
-        other: leu Romàineach
-        one: leu Romàineach
-        two: leu Romàineach
-        few: leu Romàineach
     RSD:
       display_names:
         other: dinar Sèirbeach
         one: dinar Sèirbeach
         two: dhinar Sèirbeach
         few: dinar Sèirbeach
-    RUB:
-      display_names:
-        other: rùbal Ruiseach
-        one: rùbal Ruiseach
-        two: rùbal Ruiseach
-        few: rùbalan Ruiseach
     RUR:
       symbol: р.
       display_names:
@@ -1280,24 +1561,12 @@ number_formats:
         one: rùbal Ruiseach (1991–1998)
         two: rùbal Ruiseach (1991–1998)
         few: rùbalan Ruiseach (1991–1998)
-    RWF:
-      display_names:
-        other: franc Rubhandach
-        one: fhranc Rubhandach
-        two: fhranc Rubhandach
-        few: franc Rubhandach
     SAR:
       display_names:
         other: riyal Sabhdach
         one: riyal Sabhdach
         two: riyal Sabhdach
         few: riyal Sabhdach
-    SBD:
-      display_names:
-        other: dolar Eileanan Sholaimh
-        one: dolar Eileanan Sholaimh
-        two: dholar Eileanan Sholaimh
-        few: dolaran Eileanan Sholaimh
     SCR:
       display_names:
         other: rupee Seiseallach
@@ -1322,24 +1591,6 @@ number_formats:
         one: phunnd Sudànach (1957–1998)
         two: phunnd Sudànach (1957–1998)
         few: puinnd Shudànach (1957–1998)
-    SEK:
-      display_names:
-        other: krona Suaineach
-        one: krona Suaineach
-        two: krona Suaineach
-        few: kronor Suaineach
-    SGD:
-      display_names:
-        other: dolar Singeapòrach
-        one: dolar Singeapòrach
-        two: dholar Singeapòrach
-        few: dolaran Singeapòrach
-    SHP:
-      display_names:
-        other: punnd Eilean Naomh Eilidh
-        one: phunnd Eilean Naomh Eilidh
-        two: phunnd Eilean Naomh Eilidh
-        few: puinnd Eilean Naomh Eilidh
     SIT:
       display_names:
         other: tolar Slòbhaineach
@@ -1370,36 +1621,18 @@ number_formats:
         one: shilling Somàilitheach
         two: shilling Somàilitheach
         few: shilling Somàilitheach
-    SRD:
-      display_names:
-        other: dolar Suranamach
-        one: dolar Suranamach
-        two: dholar Suranamach
-        few: dolaran Suranamach
     SRG:
       display_names:
         other: gulden Suranamach
         one: ghulden Suranamach
         two: ghulden Suranamach
         few: gulden Suranamach
-    SSP:
-      display_names:
-        other: punnd Sudàin a Deas
-        one: phunnd Sudàin a Deas
-        two: phunnd Sudàin a Deas
-        few: puinnd Shudàin a Deas
     STD:
       display_names:
         other: dobra São Tomé agus Príncipe (1977–2017)
         one: dobra São Tomé agus Príncipe (1977–2017)
         two: dhobra São Tomé agus Príncipe (1977–2017)
         few: dobra São Tomé agus Príncipe (1977–2017)
-    STN:
-      display_names:
-        other: dobra São Tomé agus Príncipe
-        one: dobra São Tomé agus Príncipe
-        two: dhobra São Tomé agus Príncipe
-        few: dobra São Tomé agus Príncipe
     SUR:
       display_names:
         other: rùbal Sovietach
@@ -1412,25 +1645,12 @@ number_formats:
         one: cholón Salbhadorach
         two: cholón Salbhadorach
         few: colón Salbhadorach
-    SYP:
-      display_names:
-        other: punnd Siridheach
-        one: phunnd Siridheach
-        two: phunnd Siridheach
-        few: puinnd Shiridheach
     SZL:
       display_names:
         other: lilangeni Suasaidheach
         one: lilangeni Suasaidheach
         two: lilangeni Suasaidheach
         few: lilangeni Suasaidheach
-    THB:
-      symbol: "฿"
-      display_names:
-        other: baht Tàidheach
-        one: bhaht Tàidheach
-        two: bhaht Tàidheach
-        few: baht Tàidheach
     TJR:
       display_names:
         other: rùbal Taidigeach
@@ -1461,12 +1681,6 @@ number_formats:
         one: dinar Tuiniseach
         two: dhinar Tuiniseach
         few: dinar Tuiniseach
-    TOP:
-      display_names:
-        other: paʻanga Tongach
-        one: phaʻanga Tongach
-        two: phaʻanga Tongach
-        few: paʻanga Tongach
     TPE:
       display_names:
         other: escudo Tìomorach
@@ -1479,37 +1693,12 @@ number_formats:
         one: lira Turcach (1922–2005)
         two: lira Turcach (1922–2005)
         few: lira Turcach (1922–2005)
-    TRY:
-      display_names:
-        other: lira Turcach
-        one: lira Turcach
-        two: lira Turcach
-        few: lira Turcach
-    TTD:
-      display_names:
-        other: dolar Thrianaid agus Thobago
-        one: dolar Thrianaid agus Thobago
-        two: dholar Thrianaid agus Thobago
-        few: dolaran Thrianaid agus Thobago
-    TWD:
-      symbol: NT$
-      display_names:
-        other: dolar ùr Taidh-Bhànach
-        one: dolar ùr Taidh-Bhànach
-        two: dholar ùr Taidh-Bhànach
-        few: dolaran ùra Taidh-Bhànach
     TZS:
       display_names:
         other: shilling Tansanaidheach
         one: shilling Tansanaidheach
         two: shilling Tansanaidheach
         few: shilling Tansanaidheach
-    UAH:
-      display_names:
-        other: hryvnia Ucràineach
-        one: hryvnia Ucràineach
-        two: hryvnia Ucràineach
-        few: hryvnia Ucràineach
     UAK:
       display_names:
         other: karbovanets Ucràineach
@@ -1528,13 +1717,6 @@ number_formats:
         one: shilling Ugandach
         two: shilling Ugandach
         few: shilling Ugandach
-    USD:
-      symbol: "$"
-      display_names:
-        other: dolar nan Stàitean Aonaichte
-        one: dolar nan Stàitean Aonaichte
-        two: dholar nan Stàitean Aonaichte
-        few: dolaran nan Stàitean Aonaichte
     USN:
       display_names:
         other: dolar nan SA (an ath–latha)
@@ -1559,12 +1741,6 @@ number_formats:
         one: pheso Uruguaidheach (1975–1993)
         two: pheso Uruguaidheach (1975–1993)
         few: pesothan Uruguaidheach (1975–1993)
-    UYU:
-      display_names:
-        other: peso Uruguaidheach
-        one: pheso Uruguaidheach
-        two: pheso Uruguaidheach
-        few: pesothan Uruguaidheach
     UYW:
       display_names:
         other: aonad inneacs tuarastail ainmeach Uruguaidh
@@ -1589,24 +1765,12 @@ number_formats:
         one: bholívar Soberano
         two: bholívar Soberano
         few: bolívar Soberano
-    VEF:
-      display_names:
-        other: bolívar Bheinisealach (2008–2018)
-        one: bholívar Bheinisealach (2008–2018)
-        two: bholívar Bheinisealach (2008–2018)
-        few: bolívar Bheinisealach (2008–2018)
     VES:
       display_names:
         other: bolívar Bheinisealach
         one: bholívar Bheinisealach
         two: bholívar Bheinisealach
         few: bolívar Bheinisealach
-    VND:
-      display_names:
-        other: dong Bhiet-Namach
-        one: dong Bhiet-Namach
-        two: dhong Bhiet-Namach
-        few: dong Bhiet-Namach
     VNN:
       display_names:
         other: dong Bhiet-Namach (1978–1985)
@@ -1625,12 +1789,6 @@ number_formats:
         one: tala Samothach
         two: thala Samothach
         few: tala Samothach
-    XAF:
-      display_names:
-        other: franc CFA Meadhan-Afragach
-        one: fhranc CFA Meadhan-Afragach
-        two: fhranc CFA Meadhan-Afragach
-        few: franc CFA Meadhan-Afragach
     XAG:
       display_names:
         other: unnsa tròidh airgid
@@ -1667,18 +1825,6 @@ number_formats:
         one: aonad cunntasachd Eòrpach (XBD)
         two: aonad cunntasachd Eòrpach (XBD)
         few: aonadan cunntasachd Eòrpach (XBD)
-    XCD:
-      display_names:
-        other: dolar Caraibeach earach
-        one: dolar Caraibeach earach
-        two: dholar Caraibeach earach
-        few: dolaran Caraibeach earach
-    XCG:
-      display_names:
-        other: gulden Caraibeach
-        one: ghulden Caraibeach
-        two: ghulden Caraibeach
-        few: gulden Caraibeach
     XDR:
       display_names:
         other: còir tarraing shònraichte
@@ -1703,24 +1849,12 @@ number_formats:
         one: fhranc UIC Frangach
         two: fhranc UIC Frangach
         few: franc UIC Frangach
-    XOF:
-      display_names:
-        other: franc CFA Afraga an Iar
-        one: fhranc CFA Afraga an Iar
-        two: fhranc CFA Afraga an Iar
-        few: franc CFA Afraga an Iar
     XPD:
       display_names:
         other: unnsa tròidh pallaideim
         one: unnsa tròidh pallaideim
         two: unnsa tròidh pallaideim
         few: unnsachan tròidh pallaideim
-    XPF:
-      display_names:
-        other: franc CFP
-        one: fhranc CFP
-        two: fhranc CFP
-        few: franc CFP
     XPT:
       display_names:
         other: unnsa tròidh platanaim
@@ -1751,13 +1885,6 @@ number_formats:
         one: aonad cunntasachd ADB
         two: aonad cunntasachd ADB
         few: aonadan cunntasachd ADB
-    XXX:
-      symbol: XXX
-      display_names:
-        other: "(aonad airgeadra neo–aithnichte)"
-        one: "(aonad airgeadra neo–aithnichte)"
-        two: "(aonad airgeadra neo–aithnichte)"
-        few: "(aonadan airgeadra neo–aithnichte)"
     YDD:
       display_names:
         other: dinar Eamanach
@@ -1800,24 +1927,12 @@ number_formats:
         one: rand Afraga a Deas (ionmhasail)
         two: rand Afraga a Deas (ionmhasail)
         few: rand Afraga a Deas (ionmhasail)
-    ZAR:
-      display_names:
-        other: rand Afraga a Deas
-        one: rand Afraga a Deas
-        two: rand Afraga a Deas
-        few: rand Afraga a Deas
     ZMK:
       display_names:
         other: kwacha Sàimbitheach (1968–2012)
         one: kwacha Sàimbitheach (1968–2012)
         two: kwacha Sàimbitheach (1968–2012)
         few: kwacha Sàimbitheach (1968–2012)
-    ZMW:
-      display_names:
-        other: kwacha Sàimbitheach
-        one: kwacha Sàimbitheach
-        two: kwacha Sàimbitheach
-        few: kwacha Sàimbitheach
     ZRN:
       display_names:
         other: zaïre ùr Zaïreach (1993–1998)
@@ -1849,7 +1964,7 @@ number_formats:
         two: dholar Sìombabuthach (2008)
         few: dolaran Sìombabuthach (2008)
 locale: gd
-generated_at: '2025-09-10T22:17:38+09:00'
+generated_at: '2025-09-10T23:53:08+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

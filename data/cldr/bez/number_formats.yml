@@ -1,38 +1,298 @@
 ---
 number_formats:
+  symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: Lupila lwa Huangola
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: Lupila lwa Huaustlalia
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: Lupila lwa Hubotswana
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Lupila lwa Hukanada
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Lupila lwa Huchina
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: Lupila lwa Humisri
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: Lupila lwa Yulo
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Lupila lwa Huuingereza
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Lupila lwa Huindia
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Lupila lwa Hijapani
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: Lupila lwa Hukomoro
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Lupila lwa Hulibelia
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Lupila lwa Hubukini
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Lupila lwa Humolisi
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Lupila lwa Hunamibia
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Lupila lwa Hunijelia
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: Lupila lwa Hurwanda
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Lupila lwa Husantahelena
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: Lupila lwa Husaotome na Huprinisipe
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: Lupila lwa Humalekani
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Lupila lwa CFA BEAC
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Lupila lwa CFA BCEAO
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: Lupila lwa Huafriaka ya Hukusini
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Lupila lwa Huzambia
     AED:
       display_names:
         other: Lupila lwa Hufalme dza Huhihalabu
-    AOA:
-      display_names:
-        other: Lupila lwa Huangola
-    AUD:
-      display_names:
-        other: Lupila lwa Huaustlalia
     BHD:
       display_names:
         other: Lupila lwa Hubahareni
     BIF:
       display_names:
         other: Lupila lwa Huburundi
-    BWP:
-      display_names:
-        other: Lupila lwa Hubotswana
-    CAD:
-      display_names:
-        other: Lupila lwa Hukanada
     CDF:
       display_names:
         other: Lupila lwa Hukongo
     CHF:
       display_names:
         other: Lupila lwa Huuswisi
-    CNY:
-      display_names:
-        other: Lupila lwa Huchina
     CVE:
       display_names:
         other: Lupila lwa Hukepuvede
@@ -42,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: Lupila lwa Hualjelia
-    EGP:
-      display_names:
-        other: Lupila lwa Humisri
     ERN:
       display_names:
         other: Lupila lwa Hueritrea
     ETB:
       display_names:
         other: Lupila lwa Huuhabeshi
-    EUR:
-      display_names:
-        other: Lupila lwa Yulo
-    GBP:
-      display_names:
-        other: Lupila lwa Huuingereza
     GHC:
       display_names:
         other: Lupila lwa Hughana
@@ -66,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: Lupila lwa Hujine
-    INR:
-      display_names:
-        other: Lupila lwa Huindia
-    JPY:
-      display_names:
-        other: Lupila lwa Hijapani
     KES:
       display_names:
         other: Shilingi ya Hukenya
-    KMF:
-      display_names:
-        other: Lupila lwa Hukomoro
-    LRD:
-      display_names:
-        other: Lupila lwa Hulibelia
     LSL:
       display_names:
         other: Lupila lwa Hulesoto
@@ -90,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: Lupila lwa Humoloko
-    MGA:
-      display_names:
-        other: Lupila lwa Hubukini
     MRO:
       display_names:
         other: Lupila lwa Humolitania (1973–2017)
     MRU:
       display_names:
         other: Lupila lwa Humolitania
-    MUR:
-      display_names:
-        other: Lupila lwa Humolisi
     MWK:
       display_names:
         other: Lupila lwa Humalawi
     MZM:
       display_names:
         other: Lupila lwa Humsumbiji
-    NAD:
-      display_names:
-        other: Lupila lwa Hunamibia
-    NGN:
-      display_names:
-        other: Lupila lwa Hunijelia
-    RWF:
-      display_names:
-        other: Lupila lwa Hurwanda
     SAR:
       display_names:
         other: Lupila lwa Husaudi
@@ -126,9 +350,6 @@ number_formats:
     SDG:
       display_names:
         other: Lupila lwa Husudani
-    SHP:
-      display_names:
-        other: Lupila lwa Husantahelena
     SLE:
       display_names:
         other: Lupila lwa Lioni
@@ -141,9 +362,6 @@ number_formats:
     STD:
       display_names:
         other: Lupila lwa Husaotome na Huprinisipe (1977–2017)
-    STN:
-      display_names:
-        other: Lupila lwa Husaotome na Huprinisipe
     SZL:
       display_names:
         other: Lupila lwa Lilangeni
@@ -157,29 +375,14 @@ number_formats:
     UGX:
       display_names:
         other: Shilingi ya Huuganda
-    USD:
-      display_names:
-        other: Lupila lwa Humalekani
-    XAF:
-      display_names:
-        other: Lupila lwa CFA BEAC
-    XOF:
-      display_names:
-        other: Lupila lwa CFA BCEAO
-    ZAR:
-      display_names:
-        other: Lupila lwa Huafriaka ya Hukusini
     ZMK:
       display_names:
         other: Lupila lwa Huzambia (1968–2012)
-    ZMW:
-      display_names:
-        other: Lupila lwa Huzambia
     ZWD:
       display_names:
         other: Lupila lwa Huzimbabwe
 locale: bez
-generated_at: '2025-09-10T22:17:33+09:00'
+generated_at: '2025-09-10T23:53:03+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

@@ -3,12 +3,443 @@ number_formats:
   symbols:
     decimal: ","
     group: "."
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
     nan: ບໍ່​ແມ່ນ​ໂຕ​ເລກ
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00;¤-#,##0.00"
   scientific_formats:
     standard: "#"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: ອັຟ​ກັນ ອັຟ​ກາ​ນິ
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: ອາ​ເມ​ນຽນ ແດຣມ
+    AOA:
+      symbol: Kz
+      display_names:
+        other: ແອງ​ໂກ​ລັນ ຄວນ​ຊາ
+    ARS:
+      symbol: "$"
+      display_names:
+        other: ອາ​ເຈນ​ທິ​ນາ ເປ​ໂຊ
+    AUD:
+      symbol: A$
+      display_names:
+        other: ອອສ​ເຕຣ​ລຽນ ໂດ​ລ່າ
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: ອາ​ເຊີ​ໄບ​ຈາ​ນິ ມາ​ນັດ
+    BAM:
+      symbol: KM
+      display_names:
+        other: ບອ​ສ​ເນຍ-ເຮີ​ເຊ​ໂກວິ​ນາ ຄອນ​ເວີດ​ຕິ​ໂບ ມາກ
+    BBD:
+      symbol: "$"
+      display_names:
+        other: ໂດລ່າ ບາບາດຽນ
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: ບັງ​ຄລາ​ເທດ ຕາ​ກາ
+    BMD:
+      symbol: "$"
+      display_names:
+        other: ໂດ​ລ່າ​ເບີ​ມິວ​ດາ
+    BND:
+      symbol: "$"
+      display_names:
+        other: ບຣູ​ໄນ ໂດ​ລ່າ
+    BOB:
+      symbol: Bs
+      display_names:
+        other: ໂບ​ລິ​ວຽນ ໂບ​ລິ​ເວຍ​ໂນ
+    BRL:
+      symbol: R$
+      display_names:
+        other: ບຣາ​ຊິ​ລຽນ ຣຽວ
+    BSD:
+      symbol: "$"
+      display_names:
+        other: ໂດລ່າ ບາຮາມຽນ
+    BWP:
+      symbol: P
+      display_names:
+        other: ບອດ​ສະ​ວາ​ນານ ພູ​ລາ
+    BZD:
+      symbol: "$"
+      display_names:
+        other: ໂດ​ລ່າ​ເບ​ລີຊ
+    CAD:
+      symbol: CA$
+      display_names:
+        other: ໂດລ່າແຄນາດາ
+    CLP:
+      symbol: "$"
+      display_names:
+        other: ຊິ​ລຽນ ເປ​ໂຊ
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: ຈີນ ຢວນ
+    COP:
+      symbol: "$"
+      display_names:
+        other: ໂຄ​ລົມ​ບຽນ ເປ​ໂຊ
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: ໂຄສຕາ ຣິກັນ ໂຄລອນ
+    CUC:
+      symbol: "$"
+      display_names:
+        other: ຄິວແບນ ຄອນເວີດຕິໂບ ເປໂຊ
+    CUP:
+      symbol: "$"
+      display_names:
+        other: ຄິວແບນ ເປໂຊ
+    CZK:
+      symbol: Kč
+      display_names:
+        other: ເຊກ ໂຄ​ຣູ​ນາ
+    DKK:
+      symbol: kr
+      display_names:
+        other: ແດນ​ນິ​ຊ ໂຄຣນເນີ
+    DOP:
+      symbol: "$"
+      display_names:
+        other: ໂດ​ມິ​ນິ​ກັນ ເປ​ໂຊ
+    EGP:
+      symbol: E£
+      display_names:
+        other: ອີ​ຢິບ​ທຽນ ພາວດ໌
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: ເປເຊຕາ ສະເປນ
+    EUR:
+      symbol: "€"
+      display_names:
+        other: ຢູ​ໂຣ
+    FJD:
+      symbol: "$"
+      display_names:
+        other: ຟິ​ຈຽນ ໂດ​ລ່າ
+    FKP:
+      symbol: "£"
+      display_names:
+        other: ຟອ​ລ໌ກ​ແລນ ໄອ​ແລນ​ສ໌ ພາວ​ດ໌
+    GBP:
+      symbol: "£"
+      display_names:
+        other: ອັງກິດ ປອນ
+    GEL:
+      symbol: ລາຣີ
+      display_names:
+        other: ຈໍ​ຈຽນ ລາ​ຣິ
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: ກາ​ນາ​ອຽນ ເຊ​ດິ
+    GIP:
+      symbol: "£"
+      display_names:
+        other: ກິບ​ຣາ​ທາ ພາ​ວດ໌
+    GNF:
+      symbol: FG
+      display_names:
+        other: ກິ​ນຽນ ຟຣັງ
+    GTQ:
+      symbol: Q
+      display_names:
+        other: ເຄັດຊອນ
+    GYD:
+      symbol: "$"
+      display_names:
+        other: ກາຍ​ຢາ​ນີ​ສ ໂດ​ລ່າ
+    HKD:
+      symbol: HK$
+      display_names:
+        other: ຮອງ​ກົງ ໂດ​ລ່າ
+    HNL:
+      symbol: L
+      display_names:
+        other: ຮອນດູແຣນ ເລມພິຣາ
+    HRK:
+      symbol: kn
+      display_names:
+        other: ໂຄຣ​ເອ​ທຽນ ຄູ​ນາ
+    HUF:
+      symbol: Ft
+      display_names:
+        other: ຮັງ​ກາ​ຣຽນ ຟໍ​ຣິນ
+    IDR:
+      symbol: Rp
+      display_names:
+        other: ອິນ​ໂດ​ເນ​ຊຽນ ໂດ​ລ່າ
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: ອິສ​ຣາ​ເອວ​ລິ ນິວ ເຊ​ເກວ
+    INR:
+      symbol: "₹"
+      display_names:
+        other: ອິນ​ເດຍ ຣູ​ປີ
+    ISK:
+      symbol: kr
+      display_names:
+        other: ໄອ​ສ໌​ແລນ​ດິກ ໂຄຣ​ນາ
+    JMD:
+      symbol: "$"
+      display_names:
+        other: "​ຈາ​ໄມ​ກັນ ໂດ​ລ່າ"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: ຍີ່​ປຸ່ນ ເຢນ
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: ຄ​ຣີ​ກິສ​​ຖາ​ນິ ໂຊມ
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: ກຳ​ປູ​ເຈຍ ຣຽວ
+    KMF:
+      symbol: CF
+      display_names:
+        other: ໂຄ​ໂມ​ຣຽນ ຟຣັງ
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: ເກົາ​ຫລີ​ເໜືອ ວອນ
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: ເກົາ​ຫລີໃຕ້ ວອນ
+    KYD:
+      symbol: "$"
+      display_names:
+        other: ເຄ​ແມນ ໄອ​ແລນ ໂດ​ລ່າ
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: ຄາ​ຊັກ​ສະ​ຖາ​ນິ ເຕັງ​ເຈ
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: ລາວ ກີບ
+    LBP:
+      symbol: L£
+      display_names:
+        other: ເລ​ບາ​ນີ​ສ ພາວດ໌
+    LKR:
+      symbol: Rs
+      display_names:
+        other: ສີ​ລັງ​ກາ ຣູ​ປີ
+    LRD:
+      symbol: "$"
+      display_names:
+        other: ລິ​ເບີ​ຣຽນ ໂດ​ລ່າ
+    LTL:
+      symbol: Lt
+      display_names:
+        other: ລິ​ທົວ​ນຽນ ລິ​ທັ​ສ
+    LVL:
+      symbol: Ls
+      display_names:
+        other: ລັດ​ວຽນ ລັດ​ຕິ
+    MGA:
+      symbol: Ar
+      display_names:
+        other: ມາ​ລາ​ກາ​ຊີ ອາ​ເຣຍ​ຣີ
+    MMK:
+      symbol: K
+      display_names:
+        other: ມຽນ​ມາ ຈ໊າດ
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: ມອງ​ໂກ​ລຽນ ຕູກຣິກ
+    MUR:
+      symbol: Rs
+      display_names:
+        other: ເມົາ​ຣິ​ທຽນ ຣູ​ປີ
+    MXN:
+      symbol: MX$
+      display_names:
+        other: ເມັກຊິກັນ ເປໂຊ
+    MYR:
+      symbol: RM
+      display_names:
+        other: ມາ​ເລ​ເຊຍ ຣິງ​ກິດ
+    NAD:
+      symbol: "$"
+      display_names:
+        other: ນາ​ມິ​ບຽນ ໂດ​ລ່າ
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: ໄນ​ຣາ ​ໄນເຈີ​ຣຽນ
+    NIO:
+      symbol: C$
+      display_names:
+        other: ນິກາຣາກວນ ໂຄໂດບາ
+    NOK:
+      symbol: kr
+      display_names:
+        other: ນໍ​ເວ​ຈຽນ ​ໂຄຣນ
+    NPR:
+      symbol: Rs
+      display_names:
+        other: ເນ​ປານ ຣູ​ປີ
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: ນິວ​ຊີ​ແລນ ໂດ​ລ່າ
+    PHP:
+      symbol: PHP
+      display_names:
+        other: ຟິ​ລິບ​ປິນ ເປ​ໂຊ
+    PKR:
+      symbol: Rs
+      display_names:
+        other: ປາ​ກິ​ສຖານ ຣູ​ປີ
+    PLN:
+      symbol: zł
+      display_names:
+        other: ໂປ​ລິ​ຊ ຊະ​ລໍ​ຕີ
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: ກວາຣານີ ປາຣາກວາຍ
+    RON:
+      symbol: lei
+      display_names:
+        other: ໂຣ​ມາ​ນຽນ ເລ​ອູ
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: ຣັສ​ຊຽນ ຣູ​ເບິນ
+    RWF:
+      symbol: RF
+      display_names:
+        other: ຣະ​ວັນ​ດັນ ຟຣັງ
+    SBD:
+      symbol: "$"
+      display_names:
+        other: ໂຊ​ໂລມອນ ໄອ​ແລນ ໂດ​ລ່າ
+    SEK:
+      symbol: kr
+      display_names:
+        other: ສະ​ວີ​ດິ​ຊ ໂຄຣ​ນາ
+    SGD:
+      symbol: "$"
+      display_names:
+        other: ສິງ​ກະ​ໂປ ໂດ​ລ່າ
+    SHP:
+      symbol: "£"
+      display_names:
+        other: ເຊນ ເຮ​ເລ​ນາ ພາວດ໌
+    SRD:
+      symbol: "$"
+      display_names:
+        other: ຊູ​ຣິ​ນາ​ມີ​ສ ໂດ​ລ່າ
+    SSP:
+      symbol: "£"
+      display_names:
+        other: ເຊົາ​ທ໌ ຊູ​ດານ​ນີ​ສ ພາວດ໌
+    STN:
+      symbol: Db
+      display_names:
+        other: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ
+    SYP:
+      symbol: "£"
+      display_names:
+        other: ຊີ​ຣຽນ ພາວດ໌
+    THB:
+      symbol: "฿"
+      display_names:
+        other: ໄທ ບາດ
+    TOP:
+      symbol: T$
+      display_names:
+        other: ຕອງ​ກັນ ປາ​ອັງ​ກາ
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: ເຕີ​ກິ​ຊ ລິ​ຣາ
+    TTD:
+      symbol: "$"
+      display_names:
+        other: ທ​ຣິ​ນິ​ແດດ & ໂທ​ບາ​ໂກ ໂດ​ລ່າ
+    TWD:
+      symbol: NT$
+      display_names:
+        other: ນິວ ໄຕ້​ຫວັນ ໂດ​ລ່າ
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: ຢູ​ເຄຣ​ນຽນ ຮະ​ຣີບ​ເນຍ
+    USD:
+      symbol: US$
+      display_names:
+        other: "​ໂດ​ລ່າ​ສະ​ຫະ​ລັດຯ"
+    UYU:
+      symbol: "$"
+      display_names:
+        other: ອູ​ຣຸ​ກົວ​ຢານ ເປ​ໂຊ
+    VEF:
+      symbol: Bs
+      display_names:
+        other: ເວເນຊູເອລັນ ໂບລິວາສ໌
+    VND:
+      symbol: "₫"
+      display_names:
+        other: ຫວຽດ​ນາມ ດົງ
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: ຟຣັງ ເຊຟານ ທະນາຄານລັດອາຟຣິກາກາງ
+    XCD:
+      symbol: EC$
+      display_names:
+        other: ອີ​ສ ຄາ​ຣິ​ບຽນ ໂດ​ລ່າ
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: ຟັງເຊຟານ ອາຟຣິກາຕາເວັນຕົກ
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: ຊີ​ເອັບ​ພີ ຟຣັງ
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(ສະກຸນເງິນທີ່ບໍ່ຮູ້ຈັກ)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: ເຊົາທ໌ ອາ​ຟຣິ​ກັນ ແຣນດ໌
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: ແຊມ​ບຽນ ຄວາ​ຊາ
     ADP:
       display_names:
         other: ເປເຊຕາ ອັນໂດລາ
@@ -18,21 +449,12 @@ number_formats:
     AFA:
       display_names:
         other: ອັບການິ ອັບການິສະຖານ (1927–2002)
-    AFN:
-      display_names:
-        other: ອັຟ​ກັນ ອັຟ​ກາ​ນິ
     ALL:
       display_names:
         other: ອັລ​ບາ​ນຽນ ເລກ
-    AMD:
-      display_names:
-        other: ອາ​ເມ​ນຽນ ແດຣມ
     ANG:
       display_names:
         other: ເນ​ເທີ​ແລນ ແອນ​ຕິ​ລຽນ ກິວ​ເດີ
-    AOA:
-      display_names:
-        other: ແອງ​ໂກ​ລັນ ຄວນ​ຊາ
     AOK:
       display_names:
         other: ກວານຊາ ແອງໂກລາ (1977–1991)
@@ -54,39 +476,21 @@ number_formats:
     ARP:
       display_names:
         other: ເປໂຊ ອາກຊັງຕິນ (1983–1985)
-    ARS:
-      display_names:
-        other: ອາ​ເຈນ​ທິ​ນາ ເປ​ໂຊ
     ATS:
       display_names:
         other: ຊິລລິງ ອົດສະຕາລີ
-    AUD:
-      display_names:
-        other: ອອສ​ເຕຣ​ລຽນ ໂດ​ລ່າ
     AWG:
       display_names:
         other: ອະຣູແບນ ຟລໍຣິນ
     AZM:
       display_names:
         other: ມານັດ ອາແຊກບາຍຊານ (1993–2006)
-    AZN:
-      display_names:
-        other: ອາ​ເຊີ​ໄບ​ຈາ​ນິ ມາ​ນັດ
     BAD:
       display_names:
         other: ດີນາ ບອສເນຍ ເຮີເຊໂບວາເນຍ (1992–1994)
-    BAM:
-      display_names:
-        other: ບອ​ສ​ເນຍ-ເຮີ​ເຊ​ໂກວິ​ນາ ຄອນ​ເວີດ​ຕິ​ໂບ ມາກ
     BAN:
       display_names:
         other: ດີນາໃໝ່ ບອສເນຍ ເຮີເຊໂບວີນາ(1994–1997)
-    BBD:
-      display_names:
-        other: ໂດລ່າ ບາບາດຽນ
-    BDT:
-      display_names:
-        other: ບັງ​ຄລາ​ເທດ ຕາ​ກາ
     BEC:
       display_names:
         other: ຟຣັງ ບູນກາລີ (ປ່ຽນແປງໄດ້)
@@ -114,15 +518,6 @@ number_formats:
     BIF:
       display_names:
         other: ບຸ​ຣັນ​ດຽນ ຟຣັງ
-    BMD:
-      display_names:
-        other: ໂດ​ລ່າ​ເບີ​ມິວ​ດາ
-    BND:
-      display_names:
-        other: ບຣູ​ໄນ ໂດ​ລ່າ
-    BOB:
-      display_names:
-        other: ໂບ​ລິ​ວຽນ ໂບ​ລິ​ເວຍ​ໂນ
     BOL:
       display_names:
         other: ໂລລິເວຍໂນ ໂລລິເວຍ (1863–1963)
@@ -141,9 +536,6 @@ number_formats:
     BRE:
       display_names:
         other: ກຣູເຊໂຣ ບາຊິ ກຣູໂຊ ບາຊິວ (1993–1994)
-    BRL:
-      display_names:
-        other: ບຣາ​ຊິ​ລຽນ ຣຽວ
     BRN:
       display_names:
         other: ກຣູຊາໂດ ບາຊິວ ໃໝ່ (1989–1990)
@@ -153,18 +545,12 @@ number_formats:
     BRZ:
       display_names:
         other: ກຣູເຊໂຣ ບາຊິວ (1942–1967)
-    BSD:
-      display_names:
-        other: ໂດລ່າ ບາຮາມຽນ
     BTN:
       display_names:
         other: ພູ​ຖານ ງຸນດຣັມ
     BUK:
       display_names:
         other: ຈາດ ພະມ້າ
-    BWP:
-      display_names:
-        other: ບອດ​ສະ​ວາ​ນານ ພູ​ລາ
     BYB:
       display_names:
         other: ຣູໂບ ເບຣາຣຸສ ໃໝ່(1994–1999)
@@ -175,12 +561,6 @@ number_formats:
     BYR:
       display_names:
         other: ເບ​ລາ​ຣຸ​ສ​ຊຽນ ຣູ​ເບິນ (2000–2016)
-    BZD:
-      display_names:
-        other: ໂດ​ລ່າ​ເບ​ລີຊ
-    CAD:
-      display_names:
-        other: ໂດລ່າແຄນາດາ
     CDF:
       display_names:
         other: ຄອງ​ໂກ​ລີສ ຟຣັງ
@@ -199,45 +579,24 @@ number_formats:
     CLF:
       display_names:
         other: ຫົວໜ່ວຍບັນຊີ (UF) ຊິລີ
-    CLP:
-      display_names:
-        other: ຊິ​ລຽນ ເປ​ໂຊ
     CNH:
       display_names:
         other: ຢວນຈີນ (ນອກປະເທດ)
-    CNY:
-      display_names:
-        other: ຈີນ ຢວນ
-    COP:
-      display_names:
-        other: ໂຄ​ລົມ​ບຽນ ເປ​ໂຊ
     COU:
       display_names:
         other: ຫົວໜ່ວຍຄ່າຈິງ ໂຄລັມເບຍ
-    CRC:
-      display_names:
-        other: ໂຄສຕາ ຣິກັນ ໂຄລອນ
     CSD:
       display_names:
         other: ດີນາ ເຊີເບຍ (2002–2006)
     CSK:
       display_names:
         other: ຮາດໂກຣູນາ ເຊັກໂກສະໂລວັກ
-    CUC:
-      display_names:
-        other: ຄິວແບນ ຄອນເວີດຕິໂບ ເປໂຊ
-    CUP:
-      display_names:
-        other: ຄິວແບນ ເປໂຊ
     CVE:
       display_names:
         other: ເຄບ ເວີດ​ດີນ ເອ​ສ​ຄູ​ໂດ
     CYP:
       display_names:
         other: ປອນ ໄຊປຣັດ
-    CZK:
-      display_names:
-        other: ເຊກ ໂຄ​ຣູ​ນາ
     DDM:
       display_names:
         other: ມາກ ເຢຍລະມັນ ຕາເວັນອອກ
@@ -247,12 +606,6 @@ number_formats:
     DJF:
       display_names:
         other: "​ດິ​ບູ​ຈຽນ ຟຣັງ"
-    DKK:
-      display_names:
-        other: ແດນ​ນິ​ຊ ໂຄຣນເນີ
-    DOP:
-      display_names:
-        other: ໂດ​ມິ​ນິ​ກັນ ເປ​ໂຊ
     DZD:
       display_names:
         other: ອັລ​ເຈີ​ຣຽນ ດິ​ນາ
@@ -265,9 +618,6 @@ number_formats:
     EEK:
       display_names:
         other: ຄຣູນເອສ ໂຕເນຍ
-    EGP:
-      display_names:
-        other: ອີ​ຢິບ​ທຽນ ພາວດ໌
     ERN:
       display_names:
         other: ອິ​ຣິ​ທຣຽນ ແນກ​ຟ​າ
@@ -277,52 +627,24 @@ number_formats:
     ESB:
       display_names:
         other: ເປເຊຕາສະເປນ (ປ່ຽນແປງໄດ້)
-    ESP:
-      display_names:
-        other: ເປເຊຕາ ສະເປນ
     ETB:
       display_names:
         other: ເອ​ທິ​ໂອ​ປຽນ ເບີ​ຣ໌
-    EUR:
-      display_names:
-        other: ຢູ​ໂຣ
     FIM:
       display_names:
         other: ມາກກາ ຟິນແລນ
-    FJD:
-      display_names:
-        other: ຟິ​ຈຽນ ໂດ​ລ່າ
-    FKP:
-      display_names:
-        other: ຟອ​ລ໌ກ​ແລນ ໄອ​ແລນ​ສ໌ ພາວ​ດ໌
     FRF:
       display_names:
         other: ຟຣັງ ຝຣັ່ງ
-    GBP:
-      display_names:
-        other: ອັງກິດ ປອນ
     GEK:
       display_names:
         other: ກູປອນ ລາຣິທ ຈໍເຈຍ
-    GEL:
-      symbol: ລາຣີ
-      display_names:
-        other: ຈໍ​ຈຽນ ລາ​ຣິ
     GHC:
       display_names:
         other: ເຊດີ ການາ (1979–2007)
-    GHS:
-      display_names:
-        other: ກາ​ນາ​ອຽນ ເຊ​ດິ
-    GIP:
-      display_names:
-        other: ກິບ​ຣາ​ທາ ພາ​ວດ໌
     GMD:
       display_names:
         other: "​ແກມ​ບຽນ ດາ​ລາ​ຊິ"
-    GNF:
-      display_names:
-        other: ກິ​ນຽນ ຟຣັງ
     GNS:
       display_names:
         other: ໄຊລິ ກີນີ
@@ -332,124 +654,51 @@ number_formats:
     GRD:
       display_names:
         other: ດາກຊະມາ ເກຣັກ
-    GTQ:
-      display_names:
-        other: ເຄັດຊອນ
     GWE:
       display_names:
         other: ເອສກູໂດ ກີນີໂປຕູເກດ
     GWP:
       display_names:
         other: ເປໂຊກິນີ-ບິສເຊົາ
-    GYD:
-      display_names:
-        other: ກາຍ​ຢາ​ນີ​ສ ໂດ​ລ່າ
-    HKD:
-      display_names:
-        other: ຮອງ​ກົງ ໂດ​ລ່າ
-    HNL:
-      display_names:
-        other: ຮອນດູແຣນ ເລມພິຣາ
     HRD:
       display_names:
         other: ດີນາ ໂຄຣເອເຊຍ
-    HRK:
-      display_names:
-        other: ໂຄຣ​ເອ​ທຽນ ຄູ​ນາ
     HTG:
       display_names:
         other: ໄຮ​ຕຽນ ກົວ​ເດ
-    HUF:
-      display_names:
-        other: ຮັງ​ກາ​ຣຽນ ຟໍ​ຣິນ
-    IDR:
-      display_names:
-        other: ອິນ​ໂດ​ເນ​ຊຽນ ໂດ​ລ່າ
     IEP:
       display_names:
         other: ປອນ ໄອຣິຊ
     ILP:
       display_names:
         other: ປອນ ອີສະລາເອວ
-    ILS:
-      display_names:
-        other: ອິສ​ຣາ​ເອວ​ລິ ນິວ ເຊ​ເກວ
-    INR:
-      display_names:
-        other: ອິນ​ເດຍ ຣູ​ປີ
     IQD:
       display_names:
         other: ອິ​ຣັກ​ກິ ດິ​ນາ
     IRR:
       display_names:
         other: ອິ​ຣາ​ນິ ຣຽວ
-    ISK:
-      display_names:
-        other: ໄອ​ສ໌​ແລນ​ດິກ ໂຄຣ​ນາ
     ITL:
       display_names:
         other: ລິຣາ ອີຕາລີ
-    JMD:
-      display_names:
-        other: "​ຈາ​ໄມ​ກັນ ໂດ​ລ່າ"
     JOD:
       display_names:
         other: ຈໍ​ແດ​ນຽນ ດິ​ນາ
-    JPY:
-      display_names:
-        other: ຍີ່​ປຸ່ນ ເຢນ
     KES:
       display_names:
         other: ເຄນ​ຢັນ ຊິວ​ລິງ
-    KGS:
-      display_names:
-        other: ຄ​ຣີ​ກິສ​​ຖາ​ນິ ໂຊມ
-    KHR:
-      display_names:
-        other: ກຳ​ປູ​ເຈຍ ຣຽວ
-    KMF:
-      display_names:
-        other: ໂຄ​ໂມ​ຣຽນ ຟຣັງ
-    KPW:
-      display_names:
-        other: ເກົາ​ຫລີ​ເໜືອ ວອນ
     KRH:
       display_names:
         other: ຮາວານ ເກົາຫຼີເນື້
     KRO:
       display_names:
         other: ວອນ ເກົາຫຼີໃຕ້ (1945–1953)
-    KRW:
-      display_names:
-        other: ເກົາ​ຫລີໃຕ້ ວອນ
     KWD:
       display_names:
         other: ຄູ​ເວ​ຕິ ດິ​ນາ
-    KYD:
-      display_names:
-        other: ເຄ​ແມນ ໄອ​ແລນ ໂດ​ລ່າ
-    KZT:
-      display_names:
-        other: ຄາ​ຊັກ​ສະ​ຖາ​ນິ ເຕັງ​ເຈ
-    LAK:
-      symbol: "₭"
-      display_names:
-        other: ລາວ ກີບ
-    LBP:
-      display_names:
-        other: ເລ​ບາ​ນີ​ສ ພາວດ໌
-    LKR:
-      display_names:
-        other: ສີ​ລັງ​ກາ ຣູ​ປີ
-    LRD:
-      display_names:
-        other: ລິ​ເບີ​ຣຽນ ໂດ​ລ່າ
     LSL:
       display_names:
         other: ໂລຕິ ເລໂຊໂຕ
-    LTL:
-      display_names:
-        other: ລິ​ທົວ​ນຽນ ລິ​ທັ​ສ
     LTT:
       display_names:
         other: ທາໂລນັສ ລິທົວເນຍ
@@ -462,9 +711,6 @@ number_formats:
     LUL:
       display_names:
         other: ຟຣັງ ລຸກຊຳບວກ ການເງິນ
-    LVL:
-      display_names:
-        other: ລັດ​ວຽນ ລັດ​ຕິ
     LVR:
       display_names:
         other: ຣູໂບ ລາວຽນ
@@ -486,9 +732,6 @@ number_formats:
     MDL:
       display_names:
         other: ມອນ​ໂດ​ແວນ ເລ​ອູ
-    MGA:
-      display_names:
-        other: ມາ​ລາ​ກາ​ຊີ ອາ​ເຣຍ​ຣີ
     MGF:
       display_names:
         other: ຟຣັງ ມາດາກັດສະກາ
@@ -501,12 +744,6 @@ number_formats:
     MLF:
       display_names:
         other: ຟຣັງ ມາລີ
-    MMK:
-      display_names:
-        other: ມຽນ​ມາ ຈ໊າດ
-    MNT:
-      display_names:
-        other: ມອງ​ໂກ​ລຽນ ຕູກຣິກ
     MOP:
       display_names:
         other: ມາ​ເກົ້າ ປາ​​ຕາ​ກາ
@@ -522,27 +759,18 @@ number_formats:
     MTP:
       display_names:
         other: ປອນ ມອນຕາ
-    MUR:
-      display_names:
-        other: ເມົາ​ຣິ​ທຽນ ຣູ​ປີ
     MVR:
       display_names:
         other: ມັ​ລ​ດິ​ວຽນ ຣູ​ຟິ​ຢາ
     MWK:
       display_names:
         other: ມາ​ລາ​ວຽນ ຄວາ​ຊາ
-    MXN:
-      display_names:
-        other: ເມັກຊິກັນ ເປໂຊ
     MXP:
       display_names:
         other: ຫົວໜ່ວຍເງິນ ເປໂຊ ແມັກຊິໂກ(1861–1992)
     MXV:
       display_names:
         other: ຫົວໜ່ວຍການລົງທຶນ ແມັກຊິໂກ
-    MYR:
-      display_names:
-        other: ມາ​ເລ​ເຊຍ ຣິງ​ກິດ
     MZE:
       display_names:
         other: ເອສກູໂດ ໂມຊຳບິກ
@@ -552,30 +780,12 @@ number_formats:
     MZN:
       display_names:
         other: ໂມ​ແຊມ​ບິ​ກັນ ເມ​ທິ​ຄອນ
-    NAD:
-      display_names:
-        other: ນາ​ມິ​ບຽນ ໂດ​ລ່າ
-    NGN:
-      display_names:
-        other: ໄນ​ຣາ ​ໄນເຈີ​ຣຽນ
     NIC:
       display_names:
         other: ຄໍໂດບາ ນິກາຣາກົວ (1988–1991)
-    NIO:
-      display_names:
-        other: ນິກາຣາກວນ ໂຄໂດບາ
     NLG:
       display_names:
         other: ກິລເດີ ເນເທີແລນ
-    NOK:
-      display_names:
-        other: ນໍ​ເວ​ຈຽນ ​ໂຄຣນ
-    NPR:
-      display_names:
-        other: ເນ​ປານ ຣູ​ປີ
-    NZD:
-      display_names:
-        other: ນິວ​ຊີ​ແລນ ໂດ​ລ່າ
     OMR:
       display_names:
         other: ໂອ​ມາ​ນິ ຣຽວ
@@ -594,25 +804,12 @@ number_formats:
     PGK:
       display_names:
         other: ປາ​ປົວ ນິວ ກິ​ນຽນ ກິ​ນາ
-    PHP:
-      symbol: PHP
-      display_names:
-        other: ຟິ​ລິບ​ປິນ ເປ​ໂຊ
-    PKR:
-      display_names:
-        other: ປາ​ກິ​ສຖານ ຣູ​ປີ
-    PLN:
-      display_names:
-        other: ໂປ​ລິ​ຊ ຊະ​ລໍ​ຕີ
     PLZ:
       display_names:
         other: ຊະລອສຕີ ໂປແລນ (1950–1995)
     PTE:
       display_names:
         other: ເອສກູໂດ ໂປຕູເກສ
-    PYG:
-      display_names:
-        other: ກວາຣານີ ປາຣາກວາຍ
     QAR:
       display_names:
         other: ຄາ​ຕາ​ຣິ ຣຽວ
@@ -622,27 +819,15 @@ number_formats:
     ROL:
       display_names:
         other: ລິວ ໂຣມາເນຍເກົ່າ
-    RON:
-      display_names:
-        other: ໂຣ​ມາ​ນຽນ ເລ​ອູ
     RSD:
       display_names:
         other: ເຊີ​ບຽນ ດິ​ນາ
-    RUB:
-      display_names:
-        other: ຣັສ​ຊຽນ ຣູ​ເບິນ
     RUR:
       display_names:
         other: ຣູໂບ ຣັດເຊຍ (1991–1998)
-    RWF:
-      display_names:
-        other: ຣະ​ວັນ​ດັນ ຟຣັງ
     SAR:
       display_names:
         other: ຊາ​ອູ​ດິ ຣິ​ຢອນ
-    SBD:
-      display_names:
-        other: ໂຊ​ໂລມອນ ໄອ​ແລນ ໂດ​ລ່າ
     SCR:
       display_names:
         other: ເຊ​ເຊວ​ລອຍ​ສ໌ ຣູ​ປີ
@@ -655,15 +840,6 @@ number_formats:
     SDP:
       display_names:
         other: ປອນ ຊູດານເກົ່າ
-    SEK:
-      display_names:
-        other: ສະ​ວີ​ດິ​ຊ ໂຄຣ​ນາ
-    SGD:
-      display_names:
-        other: ສິງ​ກະ​ໂປ ໂດ​ລ່າ
-    SHP:
-      display_names:
-        other: ເຊນ ເຮ​ເລ​ນາ ພາວດ໌
     SIT:
       display_names:
         other: ໂຕລາ ສະໂລວິເນຍ
@@ -679,37 +855,21 @@ number_formats:
     SOS:
       display_names:
         other: ໂຊ​ມາ​ລິ ຊິວ​ລິງ
-    SRD:
-      display_names:
-        other: ຊູ​ຣິ​ນາ​ມີ​ສ ໂດ​ລ່າ
     SRG:
       display_names:
         other: ກິລເດີ ຊູຣິນາເມ
-    SSP:
-      display_names:
-        other: ເຊົາ​ທ໌ ຊູ​ດານ​ນີ​ສ ພາວດ໌
     STD:
       display_names:
         other: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ (1977–2017)
-    STN:
-      display_names:
-        other: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ
     SUR:
       display_names:
         other: ຣູໂບ ໂຊວຽດ
     SVC:
       display_names:
         other: ໂກລອງ ເອກາວາດໍ
-    SYP:
-      display_names:
-        other: ຊີ​ຣຽນ ພາວດ໌
     SZL:
       display_names:
         other: ສະ​ວາ​ຊິ ລິ​ລັນ​ກິ​ນີ
-    THB:
-      symbol: "฿"
-      display_names:
-        other: ໄທ ບາດ
     TJR:
       display_names:
         other: ຣູໂບ ຕັຈີກິສຖານ
@@ -725,31 +885,15 @@ number_formats:
     TND:
       display_names:
         other: ຕູ​ນິ​ຊຽນ ດິ​ນາ
-    TOP:
-      display_names:
-        other: ຕອງ​ກັນ ປາ​ອັງ​ກາ
     TPE:
       display_names:
         other: ເອສກູໂດ ຕີມໍ
     TRL:
       display_names:
         other: ລີຕາ ຕູຣາກີເກົ່າ
-    TRY:
-      display_names:
-        other: ເຕີ​ກິ​ຊ ລິ​ຣາ
-    TTD:
-      display_names:
-        other: ທ​ຣິ​ນິ​ແດດ & ໂທ​ບາ​ໂກ ໂດ​ລ່າ
-    TWD:
-      symbol: NT$
-      display_names:
-        other: ນິວ ໄຕ້​ຫວັນ ໂດ​ລ່າ
     TZS:
       display_names:
         other: ທານ​ຊາ​ນຽນ ຊິວ​ລິງ
-    UAH:
-      display_names:
-        other: ຢູ​ເຄຣ​ນຽນ ຮະ​ຣີບ​ເນຍ
     UAK:
       display_names:
         other: ຄາໂບວາເນດ ອູແກຣນ
@@ -759,9 +903,6 @@ number_formats:
     UGX:
       display_names:
         other: ອູ​ກັນ​ດັນ ຊິວ​ລິງ
-    USD:
-      display_names:
-        other: "​ໂດ​ລ່າ​ສະ​ຫະ​ລັດຯ"
     USN:
       display_names:
         other: ດອນລາສະຫະລັດ (ມື້ຖັດໄປ)
@@ -774,24 +915,15 @@ number_formats:
     UYP:
       display_names:
         other: ເປໂຊ ອູຣຸກວຍ (1975–1993)
-    UYU:
-      display_names:
-        other: ອູ​ຣຸ​ກົວ​ຢານ ເປ​ໂຊ
     UZS:
       display_names:
         other: ອຸສເບກິສຖານິ ໂຊມ
     VEB:
       display_names:
         other: ໂບລີວາ ເວເນຊູເອລາ (1871–2008)
-    VEF:
-      display_names:
-        other: ເວເນຊູເອລັນ ໂບລິວາສ໌
     VES:
       display_names:
         other: ເວ​ເນ​ຊູ​ເອ​ລັນ ໂບ​ລິ​ວາ
-    VND:
-      display_names:
-        other: ຫວຽດ​ນາມ ດົງ
     VNN:
       display_names:
         other: ດົງ ຫວຽດນາມ (1978–1985)
@@ -801,9 +933,6 @@ number_formats:
     WST:
       display_names:
         other: ຊາ​ໂມນ ທາ​ລາ
-    XAF:
-      display_names:
-        other: ຟຣັງ ເຊຟານ ທະນາຄານລັດອາຟຣິກາກາງ
     XAG:
       display_names:
         other: ເງິນ
@@ -822,9 +951,6 @@ number_formats:
     XBD:
       display_names:
         other: ຫົວໜ່ວຍບັນຊີເອີຣົບ (XBD)
-    XCD:
-      display_names:
-        other: ອີ​ສ ຄາ​ຣິ​ບຽນ ໂດ​ລ່າ
     XDR:
       display_names:
         other: ສິດທິຖອນເງິນພິເສດ
@@ -837,15 +963,9 @@ number_formats:
     XFU:
       display_names:
         other: ຟຣັງ ຢູໄອຊີ ຝຣັ່ງ
-    XOF:
-      display_names:
-        other: ຟັງເຊຟານ ອາຟຣິກາຕາເວັນຕົກ
     XPD:
       display_names:
         other: ແພເລດຽມ
-    XPF:
-      display_names:
-        other: ຊີ​ເອັບ​ພີ ຟຣັງ
     XPT:
       display_names:
         other: ແພລັດຕິນຳ
@@ -855,9 +975,6 @@ number_formats:
     XTS:
       display_names:
         other: ລະຫັດທົດສອບສະກຸນເງິນ
-    XXX:
-      display_names:
-        other: "(ສະກຸນເງິນທີ່ບໍ່ຮູ້ຈັກ)"
     YDD:
       display_names:
         other: ດີນາ ເຢເມນ
@@ -879,15 +996,9 @@ number_formats:
     ZAL:
       display_names:
         other: ແຣນ ອາຟຣິກາໃຕ້ (ການເງິນ)
-    ZAR:
-      display_names:
-        other: ເຊົາທ໌ ອາ​ຟຣິ​ກັນ ແຣນດ໌
     ZMK:
       display_names:
         other: ຄວາຊາ ຊັມເບຍ (1968–2012)
-    ZMW:
-      display_names:
-        other: ແຊມ​ບຽນ ຄວາ​ຊາ
     ZRN:
       display_names:
         other: ແຊ ຄອງໂກໃໝ່
@@ -904,7 +1015,7 @@ number_formats:
       display_names:
         other: ດອນລາ ຊິມບັບເວ (2008)
 locale: lo
-generated_at: '2025-09-10T22:17:43+09:00'
+generated_at: '2025-09-10T23:53:12+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

@@ -3,35 +3,39 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
     accounting: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: UAE-dirhamoj
-        one: UAE-dirhamo
     AFN:
+      symbol: "؋"
       display_names:
         other: afganaj afganioj
         one: afgana afganio
-    ALL:
-      display_names:
-        other: albanaj lekoj
-        one: albana leko
     AMD:
+      symbol: "֏"
       display_names:
         other: armenaj dramoj
         one: armena dramo
-    ANG:
-      display_names:
-        other: nederlandantilaj guldenoj
-        one: nederlandantila guldeno
     AOA:
+      symbol: Kz
       display_names:
         other: angolaj kvanzoj
         one: angola kvanzo
     ARS:
+      symbol: "$"
       display_names:
         other: argentinaj pesoj
         one: argentina peso
@@ -40,47 +44,38 @@ number_formats:
       display_names:
         other: aŭstraliaj dolaroj
         one: aŭstralia dolaro
-    AWG:
-      display_names:
-        other: arubaj guldenoj
-        one: aruba guldeno
     AZN:
+      symbol: "₼"
       display_names:
         other: azerbajĝanaj manatoj
         one: azerbajĝana manato
     BAM:
+      symbol: KM
       display_names:
         other: konverteblaj markoj
         one: konvertebla marko
     BBD:
+      symbol: "$"
       display_names:
         other: barbadaj dolaroj
         one: barbada dolaro
     BDT:
+      symbol: "৳"
       display_names:
         other: bangladeŝaj takoj
         one: bangladeŝa tako
-    BGN:
-      display_names:
-        other: bulgaraj levoj
-        one: bulgara levo
-    BHD:
-      display_names:
-        other: barejnaj dinaroj
-        one: barejna dinaro
-    BIF:
-      display_names:
-        other: burundaj frankoj
-        one: burunda franko
     BMD:
+      symbol: "$"
       display_names:
         other: bermudaj dolaroj
         one: bermuda dolaro
     BND:
+      symbol: "$"
       display_names:
         other: brunejaj dolaroj
         one: bruneja dolaro
     BOB:
+      symbol: Bs
       display_names:
         other: boliviaj bolivjanoj
         one: bolivia bolivjano
@@ -90,22 +85,17 @@ number_formats:
         other: brazilaj realoj
         one: brazila realo
     BSD:
+      symbol: "$"
       display_names:
         other: bahamaj dolaroj
         one: bahama dolaro
-    BTN:
-      display_names:
-        other: butanaj ngultrumoj
-        one: butana ngultrumo
     BWP:
+      symbol: P
       display_names:
         other: bocvanaj pulaoj
         one: bocvana pulao
-    BYN:
-      display_names:
-        other: belorusaj rubloj
-        one: belorusa rublo
     BZD:
+      symbol: "$"
       display_names:
         other: belizaj dolaroj
         one: beliza dolaro
@@ -114,88 +104,70 @@ number_formats:
       display_names:
         other: kanadaj dolaroj
         one: kanada dolaro
-    CDF:
-      display_names:
-        other: kongaj frankoj
-        one: konga franko
-    CHF:
-      display_names:
-        other: svisaj frankoj
-        one: svisa franko
     CLP:
+      symbol: "$"
       display_names:
         other: ĉiliaj pesoj
         one: ĉilia peso
-    CNH:
-      display_names:
-        other: ĉinaj juanoj (eksterlande)
-        one: ĉina juano (eksterlande)
     CNY:
       symbol: CNY
       display_names:
         other: ĉinaj juanoj
         one: ĉina juano
     COP:
+      symbol: "$"
       display_names:
         other: kolombiaj pesoj
         one: kolombia peso
     CRC:
+      symbol: "₡"
       display_names:
         other: kostarikaj kolumboj
         one: kostarika kolumbo
     CUC:
+      symbol: "$"
       display_names:
         other: konverteblaj kubaj pesoj
         one: konvertebla kuba peso
     CUP:
+      symbol: "$"
       display_names:
         other: kubaj pesoj
         one: kuba peso
-    CVE:
-      display_names:
-        other: kaboverdaj eskudoj
-        one: kaboverda eskudo
     CZK:
+      symbol: Kč
       display_names:
         other: ĉeĥaj kronoj
         one: ĉeĥa krono
-    DJF:
-      display_names:
-        other: ĝibutiaj frankoj
-        one: ĝibutia franko
     DKK:
+      symbol: kr
       display_names:
         other: danaj kronoj
         one: dana krono
     DOP:
+      symbol: "$"
       display_names:
         other: dominikaj pesoj
         one: dominika peso
-    DZD:
-      display_names:
-        other: alĝeriaj dinaroj
-        one: alĝeria dinaro
     EGP:
+      symbol: E£
       display_names:
         other: egiptaj pundoj
         one: egipta pundo
-    ERN:
-      display_names:
-        other: eritreaj nakfoj
-        one: eritrea nakfo
-    ETB:
-      display_names:
-        other: etiopaj birroj
-        one: etiopa birro
+    ESP:
+      symbol: "₧"
     EUR:
+      symbol: "€"
       display_names:
         other: eŭroj
         one: eŭro
     FJD:
+      symbol: "$"
       display_names:
         other: fiĝiaj dolaroj
         one: fiĝia dolaro
     FKP:
+      symbol: "£"
       display_names:
         other: falklandaj pundoj
         one: falklanda pundo
@@ -205,30 +177,32 @@ number_formats:
         other: britaj pundoj
         one: brita pundo
     GEL:
+      symbol: "₾"
       display_names:
         other: kartvelaj larioj
         one: kartvela lario
     GHS:
+      symbol: GH₵
       display_names:
         other: ganaaj cedioj
         one: ganaa cedio
     GIP:
+      symbol: "£"
       display_names:
         other: ĝibraltaraj pundoj
         one: ĝibraltara pundo
-    GMD:
-      display_names:
-        other: gambiaj dalasioj
-        one: gambia dalasio
     GNF:
+      symbol: FG
       display_names:
         other: gvineaj frankoj
         one: gvinea franko
     GTQ:
+      symbol: Q
       display_names:
         other: gvatemalaj kecaloj
         one: gvatemala kecalo
     GYD:
+      symbol: "$"
       display_names:
         other: gujanaj dolaroj
         one: gujana dolaro
@@ -238,22 +212,22 @@ number_formats:
         other: honkongaj dolaroj
         one: honkonga dolaro
     HNL:
+      symbol: L
       display_names:
         other: honduraj lempiroj
         one: hondura lempiro
     HRK:
+      symbol: kn
       display_names:
         other: kroataj kunaoj
         one: kroata kunao
-    HTG:
-      display_names:
-        other: haitiaj gurdoj
-        one: haitia gurdo
     HUF:
+      symbol: Ft
       display_names:
         other: hungaraj forintoj
         one: hungara forinto
     IDR:
+      symbol: Rp
       display_names:
         other: indoneziaj rupioj
         one: indonezia rupio
@@ -267,48 +241,38 @@ number_formats:
       display_names:
         other: hindaj rupioj
         one: hinda rupio
-    IQD:
-      display_names:
-        other: irakaj dinaroj
-        one: iraka dinaro
-    IRR:
-      display_names:
-        other: iranaj rialoj
-        one: irana rialo
     ISK:
+      symbol: kr
       display_names:
         other: islandaj kronoj
         one: islanda krono
     JMD:
+      symbol: "$"
       display_names:
         other: jamajkaj dolaroj
         one: jamajka dolaro
-    JOD:
-      display_names:
-        other: jordaniaj dinaroj
-        one: jordania dinaro
     JPY:
       symbol: JPY
       display_names:
         other: japanaj enoj
         one: japana eno
-    KES:
-      display_names:
-        other: kenjaj ŝilingoj
-        one: kenja ŝilingo
     KGS:
+      symbol: "⃀"
       display_names:
         other: kirgizaj somoj
         one: kirgiza somo
     KHR:
+      symbol: "៛"
       display_names:
         other: kamboĝaj rieloj
         one: kamboĝa rielo
     KMF:
+      symbol: CF
       display_names:
         other: komoraj frankoj
         one: komora franko
     KPW:
+      symbol: "₩"
       display_names:
         other: nordkoreaj vonoj
         one: nordkorea vono
@@ -317,23 +281,23 @@ number_formats:
       display_names:
         other: sudkoreaj vonoj
         one: sudkorea vono
-    KWD:
-      display_names:
-        other: kuvajtaj dinaroj
-        one: kuvajta dinaro
     KYD:
+      symbol: "$"
       display_names:
         other: kajmanaj dolaroj
         one: kajmana dolaro
     KZT:
+      symbol: "₸"
       display_names:
         other: kazaĥaj tengoj
         one: kazaĥa tengo
     LAK:
+      symbol: "₭"
       display_names:
         other: laosaj kipoj
         one: laosa kipo
     LBP:
+      symbol: L£
       display_names:
         other: libanaj liroj
         one: libana liro
@@ -343,9 +307,329 @@ number_formats:
         other: srilankaj rupioj
         one: srilanka rupio
     LRD:
+      symbol: "$"
       display_names:
         other: liberiaj dolaroj
         one: liberia dolaro
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: madagaskaraj ariaroj
+        one: madagaskara ariaro
+    MMK:
+      symbol: K
+      display_names:
+        other: birmaj kjatoj
+        one: birma kjato
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: mongolaj tugrikoj
+        one: mongola tugriko
+    MUR:
+      symbol: "₨"
+      display_names:
+        other: maŭriciaj rupioj
+        one: maŭricia rupio
+    MXN:
+      symbol: MXN
+      display_names:
+        other: meksikaj pesoj
+        one: meksika peso
+    MYR:
+      symbol: RM
+      display_names:
+        other: malajziaj ringitoj
+        one: malajzia ringito
+    NAD:
+      symbol: "$"
+      display_names:
+        other: namibiaj dolaroj
+        one: namibia dolaro
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: niĝeriaj najroj
+        one: niĝeria najro
+    NIO:
+      symbol: C$
+      display_names:
+        other: nikaragvaj kordovoj
+        one: nikaragva kordovo
+    NOK:
+      symbol: kr
+      display_names:
+        other: norvegaj kronoj
+        one: norvega krono
+    NPR:
+      symbol: "₨"
+      display_names:
+        other: nepalaj rupioj
+        one: nepala rupio
+    NZD:
+      symbol: NZD
+      display_names:
+        other: novzelandaj dolaroj
+        one: novzelanda dolaro
+    PHP:
+      symbol: PHP
+      display_names:
+        other: filipinaj pesoj
+        one: filipina peso
+    PKR:
+      symbol: "₨"
+      display_names:
+        other: pakistanaj rupioj
+        one: pakistana rupio
+    PLN:
+      symbol: zł
+      display_names:
+        other: polaj zlotoj
+        one: pola zloto
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: paragvajaj gvaranioj
+        one: paragvaja gvaranio
+    RON:
+      symbol: lei
+      display_names:
+        other: rumanaj leoj
+        one: rumana leo
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: rusaj rubloj
+        one: rusa rublo
+    RWF:
+      symbol: RF
+      display_names:
+        other: ruandaj frankoj
+        one: ruanda franko
+    SBD:
+      symbol: "$"
+      display_names:
+        other: salomonaj dolaroj
+        one: salomona dolaro
+    SEK:
+      symbol: kr
+      display_names:
+        other: svedaj kronoj
+        one: sveda krono
+    SGD:
+      symbol: "$"
+      display_names:
+        other: singapuraj dolaroj
+        one: singapura dolaro
+    SHP:
+      symbol: "£"
+      display_names:
+        other: sankthelenaj pundoj
+        one: sankthelena pundo
+    SRD:
+      symbol: "$"
+      display_names:
+        other: surinamaj dolaroj
+        one: surinama dolaro
+    SSP:
+      symbol: "£"
+      display_names:
+        other: sudsudanaj pundoj
+        one: sudsudana pundo
+    STN:
+      symbol: Db
+      display_names:
+        other: santomeaj dobroj
+        one: santomea dobro
+    SYP:
+      symbol: "£"
+      display_names:
+        other: siriaj pundoj
+        one: siria pundo
+    THB:
+      symbol: "฿"
+      display_names:
+        other: tajaj bahtoj
+        one: taja bahto
+    TOP:
+      symbol: T$
+      display_names:
+        other: tongaj paangaoj
+        one: tonga paangao
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: turkaj liroj
+        one: turka liro
+    TTD:
+      symbol: "$"
+      display_names:
+        other: trinidadaj dolaroj
+        one: trinidada dolaro
+    TWD:
+      symbol: TWD
+      display_names:
+        other: tajvanaj novaj dolaroj
+        one: tajvana nova dolaro
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: ukrainaj hrivnoj
+        one: ukraina hrivno
+    USD:
+      symbol: USD
+      display_names:
+        other: usonaj dolaroj
+        one: usona dolaro
+    UYU:
+      symbol: "$"
+      display_names:
+        other: urugvajaj pesoj
+        one: urugvaja peso
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: VND
+      display_names:
+        other: vjetnamaj dongoj
+        one: vjetnama dongo
+    XAF:
+      symbol: XAF
+      display_names:
+        other: ekvatorafrikaj frankoj
+        one: ekvatorafrika franko
+    XCD:
+      symbol: XCD
+      display_names:
+        other: orientkaribaj dolaroj
+        one: orientkariba dolaro
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: XOF
+      display_names:
+        other: okcidentafrikaj frankoj
+        one: okcidentafrika franko
+    XPF:
+      symbol: XPF
+      display_names:
+        other: pacifikaj frankoj
+        one: pacifika franko
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: "(nekonata monunuo)"
+        one: "(nekunata monunuo)"
+    ZAR:
+      symbol: R
+      display_names:
+        other: sudafrikaj randoj
+        one: sudafrika rando
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: zambiaj kvaĉoj
+        one: zambia kvaĉo
+    AED:
+      display_names:
+        other: UAE-dirhamoj
+        one: UAE-dirhamo
+    ALL:
+      display_names:
+        other: albanaj lekoj
+        one: albana leko
+    ANG:
+      display_names:
+        other: nederlandantilaj guldenoj
+        one: nederlandantila guldeno
+    AWG:
+      display_names:
+        other: arubaj guldenoj
+        one: aruba guldeno
+    BGN:
+      display_names:
+        other: bulgaraj levoj
+        one: bulgara levo
+    BHD:
+      display_names:
+        other: barejnaj dinaroj
+        one: barejna dinaro
+    BIF:
+      display_names:
+        other: burundaj frankoj
+        one: burunda franko
+    BTN:
+      display_names:
+        other: butanaj ngultrumoj
+        one: butana ngultrumo
+    BYN:
+      display_names:
+        other: belorusaj rubloj
+        one: belorusa rublo
+    CDF:
+      display_names:
+        other: kongaj frankoj
+        one: konga franko
+    CHF:
+      display_names:
+        other: svisaj frankoj
+        one: svisa franko
+    CNH:
+      display_names:
+        other: ĉinaj juanoj (eksterlande)
+        one: ĉina juano (eksterlande)
+    CVE:
+      display_names:
+        other: kaboverdaj eskudoj
+        one: kaboverda eskudo
+    DJF:
+      display_names:
+        other: ĝibutiaj frankoj
+        one: ĝibutia franko
+    DZD:
+      display_names:
+        other: alĝeriaj dinaroj
+        one: alĝeria dinaro
+    ERN:
+      display_names:
+        other: eritreaj nakfoj
+        one: eritrea nakfo
+    ETB:
+      display_names:
+        other: etiopaj birroj
+        one: etiopa birro
+    GMD:
+      display_names:
+        other: gambiaj dalasioj
+        one: gambia dalasio
+    HTG:
+      display_names:
+        other: haitiaj gurdoj
+        one: haitia gurdo
+    IQD:
+      display_names:
+        other: irakaj dinaroj
+        one: iraka dinaro
+    IRR:
+      display_names:
+        other: iranaj rialoj
+        one: irana rialo
+    JOD:
+      display_names:
+        other: jordaniaj dinaroj
+        one: jordania dinaro
+    KES:
+      display_names:
+        other: kenjaj ŝilingoj
+        one: kenja ŝilingo
+    KWD:
+      display_names:
+        other: kuvajtaj dinaroj
+        one: kuvajta dinaro
     LSL:
       display_names:
         other: lesotaj lotioj
@@ -362,22 +646,10 @@ number_formats:
       display_names:
         other: moldavaj leoj
         one: moldava leo
-    MGA:
-      display_names:
-        other: madagaskaraj ariaroj
-        one: madagaskara ariaro
     MKD:
       display_names:
         other: makedonaj denaroj
         one: makedona denaro
-    MMK:
-      display_names:
-        other: birmaj kjatoj
-        one: birma kjato
-    MNT:
-      display_names:
-        other: mongolaj tugrikoj
-        one: mongola tugriko
     MOP:
       display_names:
         other: makaaj patakoj
@@ -386,11 +658,6 @@ number_formats:
       display_names:
         other: maŭritaniaj uguijaoj
         one: maŭritania uguijao
-    MUR:
-      symbol: "₨"
-      display_names:
-        other: maŭriciaj rupioj
-        one: maŭricia rupio
     MVR:
       display_names:
         other: maldivaj rufijaoj
@@ -399,45 +666,10 @@ number_formats:
       display_names:
         other: malaviaj kvaĉoj
         one: malavia kvaĉo
-    MXN:
-      symbol: MXN
-      display_names:
-        other: meksikaj pesoj
-        one: meksika peso
-    MYR:
-      display_names:
-        other: malajziaj ringitoj
-        one: malajzia ringito
     MZN:
       display_names:
         other: mozambikaj metikaloj
         one: mozambika metikalo
-    NAD:
-      display_names:
-        other: namibiaj dolaroj
-        one: namibia dolaro
-    NGN:
-      display_names:
-        other: niĝeriaj najroj
-        one: niĝeria najro
-    NIO:
-      display_names:
-        other: nikaragvaj kordovoj
-        one: nikaragva kordovo
-    NOK:
-      display_names:
-        other: norvegaj kronoj
-        one: norvega krono
-    NPR:
-      symbol: "₨"
-      display_names:
-        other: nepalaj rupioj
-        one: nepala rupio
-    NZD:
-      symbol: NZD
-      display_names:
-        other: novzelandaj dolaroj
-        one: novzelanda dolaro
     OMR:
       display_names:
         other: omanaj rialoj
@@ -454,52 +686,18 @@ number_formats:
       display_names:
         other: papuonovgvineaj kinaoj
         one: papuonovgvinea kinao
-    PHP:
-      symbol: PHP
-      display_names:
-        other: filipinaj pesoj
-        one: filipina peso
-    PKR:
-      symbol: "₨"
-      display_names:
-        other: pakistanaj rupioj
-        one: pakistana rupio
-    PLN:
-      display_names:
-        other: polaj zlotoj
-        one: pola zloto
-    PYG:
-      display_names:
-        other: paragvajaj gvaranioj
-        one: paragvaja gvaranio
     QAR:
       display_names:
         other: kataraj rialoj
         one: katara rialo
-    RON:
-      display_names:
-        other: rumanaj leoj
-        one: rumana leo
     RSD:
       display_names:
         other: serbaj dinaroj
         one: serba dinaro
-    RUB:
-      display_names:
-        other: rusaj rubloj
-        one: rusa rublo
-    RWF:
-      display_names:
-        other: ruandaj frankoj
-        one: ruanda franko
     SAR:
       display_names:
         other: saudaj rialoj
         one: sauda rialo
-    SBD:
-      display_names:
-        other: salomonaj dolaroj
-        one: salomona dolaro
     SCR:
       display_names:
         other: sejŝelaj rupioj
@@ -508,18 +706,6 @@ number_formats:
       display_names:
         other: sudanaj pundoj
         one: sudana pundo
-    SEK:
-      display_names:
-        other: svedaj kronoj
-        one: sveda krono
-    SGD:
-      display_names:
-        other: singapuraj dolaroj
-        one: singapura dolaro
-    SHP:
-      display_names:
-        other: sankthelenaj pundoj
-        one: sankthelena pundo
     SLE:
       display_names:
         other: sieraleonaj leonoj
@@ -532,30 +718,10 @@ number_formats:
       display_names:
         other: somalaj ŝilingoj
         one: somala ŝilingo
-    SRD:
-      display_names:
-        other: surinamaj dolaroj
-        one: surinama dolaro
-    SSP:
-      display_names:
-        other: sudsudanaj pundoj
-        one: sudsudana pundo
-    STN:
-      display_names:
-        other: santomeaj dobroj
-        one: santomea dobro
-    SYP:
-      display_names:
-        other: siriaj pundoj
-        one: siria pundo
     SZL:
       display_names:
         other: svaziaj lilangenioj
         one: svazia lilangenio
-    THB:
-      display_names:
-        other: tajaj bahtoj
-        one: taja bahto
     TJS:
       display_names:
         other: taĝikaj somonioj
@@ -568,44 +734,14 @@ number_formats:
       display_names:
         other: tuniziaj dinaroj
         one: tunizia dinaro
-    TOP:
-      display_names:
-        other: tongaj paangaoj
-        one: tonga paangao
-    TRY:
-      display_names:
-        other: turkaj liroj
-        one: turka liro
-    TTD:
-      display_names:
-        other: trinidadaj dolaroj
-        one: trinidada dolaro
-    TWD:
-      symbol: TWD
-      display_names:
-        other: tajvanaj novaj dolaroj
-        one: tajvana nova dolaro
     TZS:
       display_names:
         other: tanzaniaj ŝilingoj
         one: tanzania ŝilingo
-    UAH:
-      display_names:
-        other: ukrainaj hrivnoj
-        one: ukraina hrivno
     UGX:
       display_names:
         other: ugandaj ŝilingoj
         one: uganda ŝilingo
-    USD:
-      symbol: USD
-      display_names:
-        other: usonaj dolaroj
-        one: usona dolaro
-    UYU:
-      display_names:
-        other: urugvajaj pesoj
-        one: urugvaja peso
     UZS:
       display_names:
         other: uzbekaj somoj
@@ -614,11 +750,6 @@ number_formats:
       display_names:
         other: venezuelaj bolivaroj
         one: venezuela bolivaro
-    VND:
-      symbol: VND
-      display_names:
-        other: vjetnamaj dongoj
-        one: vjetnama dongo
     VUV:
       display_names:
         other: vanuatuaj vatuoj
@@ -627,11 +758,6 @@ number_formats:
       display_names:
         other: samoaj talaoj
         one: samoa talao
-    XAF:
-      symbol: XAF
-      display_names:
-        other: ekvatorafrikaj frankoj
-        one: ekvatorafrika franko
     XAG:
       display_names:
         other: arĝento
@@ -641,48 +767,21 @@ number_formats:
     XBB:
       display_names:
         other: eŭropa monunuo
-    XCD:
-      symbol: XCD
-      display_names:
-        other: orientkaribaj dolaroj
-        one: orientkariba dolaro
     XFO:
       display_names:
         other: franca ora franko
-    XOF:
-      symbol: XOF
-      display_names:
-        other: okcidentafrikaj frankoj
-        one: okcidentafrika franko
     XPD:
       display_names:
         other: paladio
-    XPF:
-      symbol: XPF
-      display_names:
-        other: pacifikaj frankoj
-        one: pacifika franko
     XPT:
       display_names:
         other: plateno
-    XXX:
-      display_names:
-        other: "(nekonata monunuo)"
-        one: "(nekunata monunuo)"
     YER:
       display_names:
         other: jemenaj rialoj
         one: jemena rialo
-    ZAR:
-      display_names:
-        other: sudafrikaj randoj
-        one: sudafrika rando
-    ZMW:
-      display_names:
-        other: zambiaj kvaĉoj
-        one: zambia kvaĉo
 locale: eo
-generated_at: '2025-09-10T22:17:36+09:00'
+generated_at: '2025-09-10T23:53:06+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

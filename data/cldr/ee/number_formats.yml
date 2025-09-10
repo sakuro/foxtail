@@ -1,11 +1,454 @@
 ---
 number_formats:
   symbols:
+    decimal: "."
+    group: ","
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
     nan: mnn
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+      display_names:
+        other: afghanistanga afghani
+    AMD:
+      symbol: "֏"
+      display_names:
+        other: armeniaga dram
+    AOA:
+      symbol: Kz
+      display_names:
+        other: angolaga kwanza
+    ARS:
+      symbol: "$"
+      display_names:
+        other: argentinaga peso
+    AUD:
+      symbol: AU$
+      display_names:
+        other: Australiaga dollar
+    AZN:
+      symbol: "₼"
+      display_names:
+        other: azerbaidzanga manat
+    BAM:
+      symbol: KM
+      display_names:
+        other: bosnia-herzegovinaga convertible mark
+    BBD:
+      symbol: "$"
+      display_names:
+        other: barbadosga dollar
+    BDT:
+      symbol: "৳"
+      display_names:
+        other: bangladeshga taka
+    BMD:
+      symbol: "$"
+      display_names:
+        other: bermudaga dollar
+    BND:
+      symbol: "$"
+      display_names:
+        other: bruneiga dollar
+    BOB:
+      symbol: Bs
+      display_names:
+        other: boliviaga boliviano
+    BRL:
+      symbol: R$
+      display_names:
+        other: braziliaga real
+    BSD:
+      symbol: "$"
+      display_names:
+        other: bahamasga dollar
+    BWP:
+      symbol: P
+      display_names:
+        other: botswanaga pula
+    BZD:
+      symbol: "$"
+      display_names:
+        other: belizega dollar
+    CAD:
+      symbol: CA$
+      display_names:
+        other: canadaga dollar
+    CLP:
+      symbol: "$"
+      display_names:
+        other: chilega peso
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Chinesega yuan
+    COP:
+      symbol: "$"
+      display_names:
+        other: colombiaga peso
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: costa ricaga colón
+    CUC:
+      symbol: "$"
+      display_names:
+        other: cubaga convertible peso
+    CUP:
+      symbol: "$"
+      display_names:
+        other: cubaga peso
+    CZK:
+      symbol: Kč
+      display_names:
+        other: czechga koruna
+    DKK:
+      symbol: kr
+      display_names:
+        other: denmarkga krone
+    DOP:
+      symbol: "$"
+      display_names:
+        other: dominikaga peso
+        one: dominikaga peso
+    EGP:
+      symbol: E£
+      display_names:
+        other: egyptega pound
+    ESP:
+      symbol: "₧"
+      display_names:
+        other: spaniaga pesetas
+        one: spaniaga peseta
+    EUR:
+      symbol: "€"
+      display_names:
+        one: euro
+        other: euro
+    FJD:
+      symbol: "$"
+      display_names:
+        other: fidziga dollar
+    FKP:
+      symbol: "£"
+      display_names:
+        other: falkland islands pound
+    GBP:
+      symbol: "£"
+      display_names:
+        other: britainga pound
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: dzɔdziaga larit
+        one: dzɔdziaga larit
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: ghana siɖi
+    GIP:
+      symbol: "£"
+      display_names:
+        other: gilbratarga pound
+    GNF:
+      symbol: FG
+      display_names:
+        other: giniga franc
+    GTQ:
+      symbol: Q
+      display_names:
+        other: guatemalaga quetzal
+    GYD:
+      symbol: "$"
+      display_names:
+        other: guyanaga dollar
+    HKD:
+      symbol: HK$
+      display_names:
+        other: Hong Kongga dollar
+    HNL:
+      symbol: L
+      display_names:
+        other: honduraga lempira
+    HRK:
+      symbol: kn
+      display_names:
+        other: croatiaga kuna
+    HUF:
+      symbol: Ft
+      display_names:
+        other: hungariaga forint
+    IDR:
+      symbol: Rp
+      display_names:
+        other: Indonesiaga rupiah
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: israelga yeyetɔ sheqel
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Indiaga rupee
+    ISK:
+      symbol: kr
+      display_names:
+        other: icelandga króna
+    JMD:
+      symbol: "$"
+      display_names:
+        other: jamaicaga dollar
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Japanesega yen
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: kirgistanga som
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: kambodiaga riel
+    KMF:
+      symbol: CF
+      display_names:
+        other: komoroga franc
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: dziehe koreaga won
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: South Koreaga won
+    KYD:
+      symbol: "$"
+      display_names:
+        other: cayman islandsga dollar
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: kazakhstanga tenge
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: laosga kip
+    LBP:
+      symbol: L£
+      display_names:
+        other: lebanonga pound
+    LKR:
+      symbol: Rs
+      display_names:
+        other: sri lankaga rupee
+    LRD:
+      symbol: "$"
+      display_names:
+        other: liberiaga dollar
+    LTL:
+      symbol: Lt
+      display_names:
+        other: lithuaniaga litai
+        one: lithuaniaga litas
+    LVL:
+      symbol: Ls
+      display_names:
+        other: latviaga lati
+        one: latviaga lats
+    MGA:
+      symbol: Ar
+      display_names:
+        other: malagasega ariary
+    MMK:
+      symbol: K
+      display_names:
+        other: myanmaga kyat
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: mongoliaga tugrik
+    MUR:
+      symbol: Rs
+      display_names:
+        other: mɔritiusga rupee
+    MXN:
+      symbol: MX$
+      display_names:
+        other: mexicoga peso
+    MYR:
+      symbol: RM
+      display_names:
+        other: malaysiaga ringit
+    NAD:
+      symbol: "$"
+      display_names:
+        other: namibiaga dollar
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: naidzeriaga naira
+    NIO:
+      symbol: C$
+      display_names:
+        other: nicaraguaga córdoba
+    NOK:
+      symbol: kr
+      display_names:
+        other: norwayga krone
+    NPR:
+      symbol: Rs
+      display_names:
+        other: nepalga rupee
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: new zealanɖga dollar
+    PHP:
+      symbol: "₱"
+      display_names:
+        other: filipinga peso
+        one: filipinga peso
+    PKR:
+      symbol: Rs
+      display_names:
+        other: pakistanga rupee
+        one: pakistanga rupee
+    PLN:
+      symbol: zł
+      display_names:
+        other: polandga zloty
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: paraguayga guarani
+    RON:
+      symbol: lei
+      display_names:
+        other: romaniaga leu
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: russiaga ruble
+    RWF:
+      symbol: RF
+      display_names:
+        other: rwandaga franc
+    SBD:
+      symbol: "$"
+      display_names:
+        other: solomon ƒudomekpo dukɔwo ƒe ga dollar
+    SEK:
+      symbol: kr
+      display_names:
+        other: swedenga krone
+    SGD:
+      symbol: "$"
+      display_names:
+        other: singapɔga dollar
+    SHP:
+      symbol: "£"
+      display_names:
+        other: saint helenaga pound
+    SRD:
+      symbol: "$"
+      display_names:
+        other: surinamga dollar
+    SSP:
+      symbol: "£"
+      display_names:
+        other: anyiehe sudanga pound
+    STN:
+      symbol: Db
+      display_names:
+        other: são tomé kple príncipega dobra
+    SYP:
+      symbol: "£"
+      display_names:
+        other: syriaga pound
+    THB:
+      symbol: "฿"
+      display_names:
+        other: Thailandga baht
+    TOP:
+      symbol: T$
+      display_names:
+        other: tonagaga pa’anga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: Turkishga lira
+    TTD:
+      symbol: "$"
+      display_names:
+        other: trinidad & tobagoga dollar
+    TWD:
+      symbol: NT$
+      display_names:
+        other: Taiwanga dollar
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: ukrainega hryvnia
+    USD:
+      symbol: US$
+      display_names:
+        other: us ga dollar
+    UYU:
+      symbol: "$"
+      display_names:
+        other: uruguayga peso
+    VEF:
+      symbol: Bs
+      display_names:
+        other: venezuelaga bolívar (2008–2018)
+    VND:
+      symbol: "₫"
+      display_names:
+        other: vietnamga dong
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: ɣetoɖofe afrikaga CFA franc BEAC
+    XCD:
+      symbol: EC$
+      display_names:
+        other: east caribbeanga dollar
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: ɣetoɖofe afrikaga CFA franc BCEAO
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: CFP ga franc
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: gaɖuɖu manya
+    ZAR:
+      symbol: R
+      display_names:
+        other: South Africaga rand
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: zambiaga kwacha
     ADP:
       display_names:
         other: andorraga peseta
@@ -15,24 +458,15 @@ number_formats:
     AFA:
       display_names:
         other: afghanistanga afghani (1927–2002)
-    AFN:
-      display_names:
-        other: afghanistanga afghani
     ALK:
       display_names:
         other: albaniaga lek (1946–1965)
     ALL:
       display_names:
         other: albaniaga lek
-    AMD:
-      display_names:
-        other: armeniaga dram
     ANG:
       display_names:
         other: netherlands antilleaga guilder
-    AOA:
-      display_names:
-        other: angolaga kwanza
     AOK:
       display_names:
         other: angolaga kwanza (1977–1991)
@@ -54,16 +488,9 @@ number_formats:
     ARP:
       display_names:
         other: argentinaga peso (1983–1985)
-    ARS:
-      display_names:
-        other: argentinaga peso
     ATS:
       display_names:
         other: ɔstriaga schilling
-    AUD:
-      symbol: AU$
-      display_names:
-        other: Australiaga dollar
     AWG:
       display_names:
         other: arubaga florin
@@ -71,24 +498,12 @@ number_formats:
     AZM:
       display_names:
         other: azerbaidzanga manat (1993–2006)
-    AZN:
-      display_names:
-        other: azerbaidzanga manat
     BAD:
       display_names:
         other: bosnia-herzegovinaga dinar (1992–1994)
-    BAM:
-      display_names:
-        other: bosnia-herzegovinaga convertible mark
     BAN:
       display_names:
         other: bosnia kple herzegovinaga dinar yeyètɔ (1994–1997)
-    BBD:
-      display_names:
-        other: barbadosga dollar
-    BDT:
-      display_names:
-        other: bangladeshga taka
     BEC:
       display_names:
         other: beldziumga franc (convertible)
@@ -116,15 +531,6 @@ number_formats:
     BIF:
       display_names:
         other: burundiga franc
-    BMD:
-      display_names:
-        other: bermudaga dollar
-    BND:
-      display_names:
-        other: bruneiga dollar
-    BOB:
-      display_names:
-        other: boliviaga boliviano
     BOL:
       display_names:
         other: boliviaga boliviano (1863–1963)
@@ -144,9 +550,6 @@ number_formats:
       display_names:
         other: braziliaga cruzeiro xoxotɔ gbãtɔwo (1990–1993)
         one: braziliaga cruzeiro xoxotɔ gbãtɔ (1990–1993)
-    BRL:
-      display_names:
-        other: braziliaga real
     BRN:
       display_names:
         other: brazilia cruzado xoxotɔ (1989–1990)
@@ -156,18 +559,12 @@ number_formats:
     BRZ:
       display_names:
         other: braziliaga cruzeiro (1942–1967)
-    BSD:
-      display_names:
-        other: bahamasga dollar
     BTN:
       display_names:
         other: bhutanga ngultrum
     BUK:
       display_names:
         other: burmaga kyat
-    BWP:
-      display_names:
-        other: botswanaga pula
     BYB:
       display_names:
         other: belarusiaga ruble yeyetɔ (1994–1999)
@@ -181,12 +578,6 @@ number_formats:
       display_names:
         other: belarusiaga rublewo (2000–2016)
         one: belarusiaga ruble (2000–2016)
-    BZD:
-      display_names:
-        other: belizega dollar
-    CAD:
-      display_names:
-        other: canadaga dollar
     CDF:
       display_names:
         other: kongoga franc
@@ -207,46 +598,25 @@ number_formats:
     CLF:
       display_names:
         other: tsilegakɔnta dzidzenu UF
-    CLP:
-      display_names:
-        other: chilega peso
     CNX:
       display_names:
         other: tsainatɔwo ƒe gadzraɖoƒe dollarwo
         one: tsainatɔwo ƒe gadzraɖoƒe dollar
-    CNY:
-      display_names:
-        other: Chinesega yuan
-    COP:
-      display_names:
-        other: colombiaga peso
     COU:
       display_names:
         other: kolombiaga vavãtɔ
-    CRC:
-      display_names:
-        other: costa ricaga colón
     CSD:
       display_names:
         other: serbiaga dinar (2002–2006)
     CSK:
       display_names:
         other: tsɛkoslovakiaga hard koruna
-    CUC:
-      display_names:
-        other: cubaga convertible peso
-    CUP:
-      display_names:
-        other: cubaga peso
     CVE:
       display_names:
         other: kape verdega escudo
     CYP:
       display_names:
         other: saipriɔtga pound
-    CZK:
-      display_names:
-        other: czechga koruna
     DDM:
       display_names:
         other: ɣedzeƒe germaniaga mark
@@ -258,13 +628,6 @@ number_formats:
       display_names:
         other: dzibutiga franc
         one: dziboutiga franc
-    DKK:
-      display_names:
-        other: denmarkga krone
-    DOP:
-      display_names:
-        other: dominikaga peso
-        one: dominikaga peso
     DZD:
       display_names:
         other: aldzeriaga dinar
@@ -277,9 +640,6 @@ number_formats:
     EEK:
       display_names:
         other: estoniaga kroon
-    EGP:
-      display_names:
-        other: egyptega pound
     ERN:
       display_names:
         other: eritreaga nakfa
@@ -290,55 +650,24 @@ number_formats:
       display_names:
         other: spaniaga pesetas (Convertible)
         one: spaniaga peseta (Convertible)
-    ESP:
-      display_names:
-        other: spaniaga pesetas
-        one: spaniaga peseta
     ETB:
       display_names:
         other: ethiopiaga birr
-    EUR:
-      display_names:
-        one: euro
-        other: euro
     FIM:
       display_names:
         other: finlandga markka
-    FJD:
-      display_names:
-        other: fidziga dollar
-    FKP:
-      display_names:
-        other: falkland islands pound
     FRF:
       display_names:
         other: frentsiga franc
-    GBP:
-      display_names:
-        other: britainga pound
     GEK:
       display_names:
         other: dzɔdziaga kupon larit
-    GEL:
-      display_names:
-        other: dzɔdziaga larit
-        one: dzɔdziaga larit
     GHC:
       display_names:
         other: ghana siɖi (1979–2007)
-    GHS:
-      symbol: GH₵
-      display_names:
-        other: ghana siɖi
-    GIP:
-      display_names:
-        other: gilbratarga pound
     GMD:
       display_names:
         other: gambiaga dalasi
-    GNF:
-      display_names:
-        other: giniga franc
     GNS:
       display_names:
         other: giniga syli
@@ -348,39 +677,18 @@ number_formats:
     GRD:
       display_names:
         other: grisiga drachma
-    GTQ:
-      display_names:
-        other: guatemalaga quetzal
     GWE:
       display_names:
         other: pɔtugaltɔwo ƒe giniga escudo
     GWP:
       display_names:
         other: gini-bisau peso
-    GYD:
-      display_names:
-        other: guyanaga dollar
-    HKD:
-      display_names:
-        other: Hong Kongga dollar
-    HNL:
-      display_names:
-        other: honduraga lempira
     HRD:
       display_names:
         other: kroatiaga dinar
-    HRK:
-      display_names:
-        other: croatiaga kuna
     HTG:
       display_names:
         other: haitiga gourde
-    HUF:
-      display_names:
-        other: hungariaga forint
-    IDR:
-      display_names:
-        other: Indonesiaga rupiah
     IEP:
       display_names:
         other: ireland pound
@@ -390,12 +698,6 @@ number_formats:
     ILR:
       display_names:
         other: israelga sheqel (1980–1985)
-    ILS:
-      display_names:
-        other: israelga yeyetɔ sheqel
-    INR:
-      display_names:
-        other: Indiaga rupee
     IQD:
       display_names:
         other: irakga dinar
@@ -406,73 +708,27 @@ number_formats:
       display_names:
         other: aiselandga krónur (1918–1981)
         one: aiselandga króna (1918–1981)
-    ISK:
-      display_names:
-        other: icelandga króna
     ITL:
       display_names:
         other: italiaga lira
-    JMD:
-      display_names:
-        other: jamaicaga dollar
     JOD:
       display_names:
         other: yɔdanga dinar
-    JPY:
-      display_names:
-        other: Japanesega yen
     KES:
       display_names:
         other: kenyaga shilling
-    KGS:
-      display_names:
-        other: kirgistanga som
-    KHR:
-      display_names:
-        other: kambodiaga riel
-    KMF:
-      display_names:
-        other: komoroga franc
-    KPW:
-      display_names:
-        other: dziehe koreaga won
     KRH:
       display_names:
         other: anyiehe koreaga hwan (1953–1962)
     KRO:
       display_names:
         other: anyiehe koreaga won (1945–1953)
-    KRW:
-      display_names:
-        other: South Koreaga won
     KWD:
       display_names:
         other: kuwaitga dinar
-    KYD:
-      display_names:
-        other: cayman islandsga dollar
-    KZT:
-      display_names:
-        other: kazakhstanga tenge
-    LAK:
-      display_names:
-        other: laosga kip
-    LBP:
-      display_names:
-        other: lebanonga pound
-    LKR:
-      display_names:
-        other: sri lankaga rupee
-    LRD:
-      display_names:
-        other: liberiaga dollar
     LSL:
       display_names:
         other: lesotoga loti
-    LTL:
-      display_names:
-        other: lithuaniaga litai
-        one: lithuaniaga litas
     LTT:
       display_names:
         other: lithuaniaga talonas
@@ -485,10 +741,6 @@ number_formats:
     LUL:
       display_names:
         other: lazembɔgga gadzikpɔ franc
-    LVL:
-      display_names:
-        other: latviaga lati
-        one: latviaga lats
     LVR:
       display_names:
         other: latviaga ruble
@@ -510,9 +762,6 @@ number_formats:
     MDL:
       display_names:
         other: moldovaga leu
-    MGA:
-      display_names:
-        other: malagasega ariary
     MGF:
       display_names:
         other: malagasega franc
@@ -527,12 +776,6 @@ number_formats:
     MLF:
       display_names:
         other: maliga franc
-    MMK:
-      display_names:
-        other: myanmaga kyat
-    MNT:
-      display_names:
-        other: mongoliaga tugrik
     MOP:
       display_names:
         other: makanesega pataca
@@ -548,48 +791,21 @@ number_formats:
     MTP:
       display_names:
         other: maltaga pound
-    MUR:
-      display_names:
-        other: mɔritiusga rupee
     MVR:
       display_names:
         other: maldiviaga rufiyaa
     MWK:
       display_names:
         other: malawiga kwacha
-    MXN:
-      display_names:
-        other: mexicoga peso
-    MYR:
-      display_names:
-        other: malaysiaga ringit
     MZN:
       display_names:
         other: mozambikga metikal
-    NAD:
-      display_names:
-        other: namibiaga dollar
-    NGN:
-      display_names:
-        other: naidzeriaga naira
     NIC:
       display_names:
         other: nikaraguaga córdoba (1988–1991)
-    NIO:
-      display_names:
-        other: nicaraguaga córdoba
     NLG:
       display_names:
         other: hollandga guilder
-    NOK:
-      display_names:
-        other: norwayga krone
-    NPR:
-      display_names:
-        other: nepalga rupee
-    NZD:
-      display_names:
-        other: new zealanɖga dollar
     OMR:
       display_names:
         other: omanga rial
@@ -609,17 +825,6 @@ number_formats:
       display_names:
         other: papua new giniga kina
         one: papua new giniga kina
-    PHP:
-      display_names:
-        other: filipinga peso
-        one: filipinga peso
-    PKR:
-      display_names:
-        other: pakistanga rupee
-        one: pakistanga rupee
-    PLN:
-      display_names:
-        other: polandga zloty
     PLZ:
       display_names:
         other: polandga zloty (1950–1995)
@@ -627,9 +832,6 @@ number_formats:
     PTE:
       display_names:
         other: pɔtugalga escudo
-    PYG:
-      display_names:
-        other: paraguayga guarani
     QAR:
       display_names:
         other: katarga rial
@@ -639,27 +841,15 @@ number_formats:
     ROL:
       display_names:
         other: romaniaga leu (1952–2006)
-    RON:
-      display_names:
-        other: romaniaga leu
     RSD:
       display_names:
         other: serbiaga dinar
-    RUB:
-      display_names:
-        other: russiaga ruble
     RUR:
       display_names:
         other: rɔtsiaga ruble (1991–1998)
-    RWF:
-      display_names:
-        other: rwandaga franc
     SAR:
       display_names:
         other: Saudi Arabiaga riyal
-    SBD:
-      display_names:
-        other: solomon ƒudomekpo dukɔwo ƒe ga dollar
     SCR:
       display_names:
         other: sɛtselsga rupee
@@ -672,15 +862,6 @@ number_formats:
     SDP:
       display_names:
         other: sudanga pound (1957–1998)
-    SEK:
-      display_names:
-        other: swedenga krone
-    SGD:
-      display_names:
-        other: singapɔga dollar
-    SHP:
-      display_names:
-        other: saint helenaga pound
     SIT:
       display_names:
         other: slovaniaga tolar
@@ -697,37 +878,21 @@ number_formats:
     SOS:
       display_names:
         other: somaliaga shilling
-    SRD:
-      display_names:
-        other: surinamga dollar
     SRG:
       display_names:
         other: surinamega guilder
-    SSP:
-      display_names:
-        other: anyiehe sudanga pound
     STD:
       display_names:
         other: são tomé kple príncipega dobra (1977–2017)
-    STN:
-      display_names:
-        other: são tomé kple príncipega dobra
     SUR:
       display_names:
         other: sovietga rouble
     SVC:
       display_names:
         other: salvadɔga colón
-    SYP:
-      display_names:
-        other: syriaga pound
     SZL:
       display_names:
         other: swaziga lilangeni
-    THB:
-      symbol: "฿"
-      display_names:
-        other: Thailandga baht
     TJR:
       display_names:
         other: tajikistanga ruble
@@ -743,31 +908,16 @@ number_formats:
     TND:
       display_names:
         other: tunisiaga dinar
-    TOP:
-      display_names:
-        other: tonagaga pa’anga
     TPE:
       display_names:
         other: timɔga escudo
     TRL:
       display_names:
         other: tɛkiiga lira (1922–2005)
-    TRY:
-      display_names:
-        other: Turkishga lira
-    TTD:
-      display_names:
-        other: trinidad & tobagoga dollar
-    TWD:
-      display_names:
-        other: Taiwanga dollar
     TZS:
       display_names:
         other: tanzaniaga shilling
         one: tanzaniaga shilling
-    UAH:
-      display_names:
-        other: ukrainega hryvnia
     UAK:
       display_names:
         other: ukrainega karbovantsiv
@@ -778,9 +928,6 @@ number_formats:
     UGX:
       display_names:
         other: ugandaga shilling
-    USD:
-      display_names:
-        other: us ga dollar
     USN:
       display_names:
         other: us ga dollar (ŋkeke si gbɔna tɔ)
@@ -793,24 +940,15 @@ number_formats:
     UYP:
       display_names:
         other: uruguayga peso (1975–1993)
-    UYU:
-      display_names:
-        other: uruguayga peso
     UZS:
       display_names:
         other: uzbekistanga som
     VEB:
       display_names:
         other: venezuelaga bolívar (1871–2008)
-    VEF:
-      display_names:
-        other: venezuelaga bolívar (2008–2018)
     VES:
       display_names:
         other: venezuelaga bolívar
-    VND:
-      display_names:
-        other: vietnamga dong
     VNN:
       display_names:
         other: vietnamga dong (1978–1985)
@@ -820,9 +958,6 @@ number_formats:
     WST:
       display_names:
         other: samaoga tala
-    XAF:
-      display_names:
-        other: ɣetoɖofe afrikaga CFA franc BEAC
     XAG:
       display_names:
         other: klosalo
@@ -843,9 +978,6 @@ number_formats:
       display_names:
         other: europaga (XBD)
         one: europaga (XBD)
-    XCD:
-      display_names:
-        other: east caribbeanga dollar
     XDR:
       display_names:
         other: gaɖuɖu ɖoɖo tɔxɛ
@@ -859,15 +991,9 @@ number_formats:
     XFU:
       display_names:
         other: frentsi UIC-franc
-    XOF:
-      display_names:
-        other: ɣetoɖofe afrikaga CFA franc BCEAO
     XPD:
       display_names:
         other: palladiumga
-    XPF:
-      display_names:
-        other: CFP ga franc
     XPT:
       display_names:
         other: platinum
@@ -878,9 +1004,6 @@ number_formats:
       display_names:
         other: gaɖuɖu dodokpɔ dzesi
         one: gaɖuɖu dodokpɔ dzesi
-    XXX:
-      display_names:
-        other: gaɖuɖu manya
     YDD:
       display_names:
         other: yemeniga dinar
@@ -902,15 +1025,9 @@ number_formats:
     ZAL:
       display_names:
         other: anyiehe afrikaga rand (gadzikpɔtɔ)
-    ZAR:
-      display_names:
-        other: South Africaga rand
     ZMK:
       display_names:
         other: zambiaga kwacha (1968–2012)
-    ZMW:
-      display_names:
-        other: zambiaga kwacha
     ZRN:
       display_names:
         other: zairega yeyetɔ zaire
@@ -928,7 +1045,7 @@ number_formats:
       display_names:
         other: zimbabwega dollar (2008)
 locale: ee
-generated_at: '2025-09-10T22:17:36+09:00'
+generated_at: '2025-09-10T23:53:06+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

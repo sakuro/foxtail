@@ -3,76 +3,657 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
   percent_formats:
     standard: "% #,#0;% -#,#0"
   currency_formats:
     standard: "¤ #,##0.00;¤ -#,##0.00"
+  scientific_formats:
+    standard: "#E0"
   currencies:
-    AED:
-      display_names:
-        other: Emiir baGanɔ gaɖɔŋkɔnɔ kaAlaaributǝna kɩɖiram
-        zero: baa Emiir baGanɔ gaɖɔŋkɔnɔ kaAlaaributǝna kaɖiram
-        one: Emiir baGanɔ gaɖɔŋkɔnɔ kaAlaaributǝna kaɖiram
     AFN:
+      symbol: "؋"
       display_names:
         other: Afganistan kɩhafganii
         zero: baa Afganistan kahafganii
         one: Afganistan kahafganii
-    ALL:
-      display_names:
-        other: Albanii kɩlɛɛkɩ
-        zero: baa Albanii kalɛɛkɩ
-        one: Albanii kalɛɛkɩ
     AMD:
+      symbol: "֏"
       display_names:
         other: Armenii kɩɖram
         zero: baa Armenii kaɖram
         one: Armenii kaɖram
-    ANG:
-      display_names:
-        other: Holanɖ kaKarayiib kɩfɔlɔrɛŋ
-        zero: baa Holanɖ kaKarayiib kafɔlɔrɛŋ
-        one: Holanɖ kaKarayiib kafɔlɔrɛŋ
     AOA:
+      symbol: Kz
       display_names:
         other: Aŋgolaa kɩkʊwansa
         zero: baa Aŋgolaa kakʊwansa
         one: Aŋgolaa kakʊwansa
     ARS:
+      symbol: "$"
       display_names:
         other: Arjantin kɩpɛsoo
         zero: baa Arjantin kapɛsoo
         one: Arjantin kapɛsoo
     AUD:
+      symbol: A$
       display_names:
         other: Ɔstraliya kɩɖala
         zero: baa Ɔstraliya kaɖala
         one: Ɔstraliya kaɖala
-    AWG:
-      display_names:
-        other: Arubaa kɩfɔlɔrɛŋ
-        zero: baa Arubaa kafɔlɔrɛŋ
-        one: Arubaa kafɔlɔrɛŋ
     AZN:
+      symbol: "₼"
       display_names:
         other: Asɛrbaɩjaŋ kɩmanaatɩ
         zero: baa Asɛrbaɩjaŋ kamanaatɩ
         one: Asɛrbaɩjaŋ kamanaatɩ
     BAM:
+      symbol: KM
       display_names:
         other: Bɔsniya na Hɛrsegɔfina kɩmarkɩ
         zero: baa Bɔsniya na Hɛrsegɔfina kamarkɩ
         one: Bɔsniya na Hɛrsegɔfina kamarkɩ
     BBD:
+      symbol: "$"
       display_names:
         other: Barbaɖɔɔsɩ kɩɖala
         zero: baa Barbaɖɔɔsɩ kaɖala
         one: Barbaɖɔɔsɩ kaɖala
     BDT:
+      symbol: "৳"
       display_names:
         other: Baŋglaɖɛɛshɩ kɩtaka
         zero: baa Baŋglaɖɛɛshɩ kataka
         one: Baŋglaɖɛɛshɩ kataka
+    BMD:
+      symbol: "$"
+      display_names:
+        other: Bɛrmuɖaa kɩɖala
+        zero: baa Bɛrmuɖaa kaɖala
+        one: Bɛrmuɖaa kaɖala
+    BND:
+      symbol: "$"
+      display_names:
+        other: Brunɛɩ kɩɖala
+        zero: baa Brunɛɩ kaɖala
+        one: Brunɛɩ kaɖala
+    BOB:
+      symbol: Bs
+      display_names:
+        other: Bolifiya kɩbolifiyano
+        zero: baa Bolifiya kabolifiyano
+        one: Bolifiya kabolifiyano
+    BRL:
+      symbol: R$
+      display_names:
+        other: Bresil kɩreyal
+        zero: baa Bresil kareyal
+        one: Bresil kareyal
+    BSD:
+      symbol: "$"
+      display_names:
+        other: Bahamaasɩ kɩɖala
+        zero: baa Bahamaasɩ kaɖala
+        one: Bahamaasɩ kaɖala
+    BWP:
+      symbol: P
+      display_names:
+        other: Bɔsʊwanaa kɩpula
+        zero: baa Bɔsʊwanaa kapula
+        one: Bɔsʊwanaa kapula
+    BZD:
+      symbol: "$"
+      display_names:
+        other: Beliis kɩɖala
+        zero: baa Beliis kaɖala
+        one: Beliis kaɖala
+    CAD:
+      symbol: CA$
+      display_names:
+        other: Kanaɖaa kɩɖala
+        zero: baa Kanaɖaa kaɖala
+        one: Kanaɖaa kaɖala
+    CLP:
+      symbol: "$"
+      display_names:
+        other: Shilii kɩpɛsoo
+        zero: baa Shilii kapɛsoo
+        one: Shilii kapɛsoo
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: Caɩna kɩyuwan
+        zero: baa Caɩna kayuwan
+        one: Caɩna kayuwan
+    COP:
+      symbol: "$"
+      display_names:
+        other: Kolɔmbii kɩpɛsoo
+        zero: baa Kolɔmbii kapɛsoo
+        one: Kolɔmbii kapɛsoo
+    CRC:
+      symbol: "₡"
+      display_names:
+        other: Kɔsta Rikaa kɩkolɔn
+        zero: baa Kɔsta Rikaa kakolɔn
+        one: Kɔsta Rikaa kakolɔn
+    CUC:
+      symbol: "$"
+      display_names:
+        other: Kubaa kɩpɛsoo ba sǝ̂ra afʊba ma
+        zero: baa Kubaa kapɛsoo ba sǝ̂ra afʊba ma
+        one: Kubaa kapɛsoo ba sǝ̂ra afʊba ma
+    CUP:
+      symbol: "$"
+      display_names:
+        other: Kubaa kɩpɛsoo
+        zero: baa Kubaa kapɛsoo
+        one: Kubaa kapɛsoo
+    CZK:
+      symbol: Kč
+      display_names:
+        other: Cɛk kɩkrona
+        zero: baa Cɛk kakrona
+        one: Cɛk kakrona
+    DKK:
+      symbol: kr
+      display_names:
+        other: Ɖanǝmark kɩkrona
+        zero: baa Ɖanǝmark kakrona
+        one: Ɖanǝmark kakrona
+    DOP:
+      symbol: "$"
+      display_names:
+        other: Ɖominikaa kɩpɛsoo
+        zero: baa Ɖominikaa kapɛsoo
+        one: Ɖominikaa kapɛsoo
+    EGP:
+      symbol: E£
+      display_names:
+        other: Ejipti kɩpɔŋ
+        zero: baa Ejipti kapɔŋ
+        one: Ejipti kapɔŋ
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: eroo mána
+        zero: baa eroo
+        one: eroo
+    FJD:
+      symbol: "$"
+      display_names:
+        other: Fiji kɩɖala
+        zero: baa Fiji kaɖala
+        one: Fiji kaɖala
+    FKP:
+      symbol: "£"
+      display_names:
+        other: Fɔklanɖ kaBʊtukǝltǝna kɩpɔŋ
+        zero: baa Fɔklanɖ kaBʊtukǝltǝna kapɔŋ
+        one: Fɔklanɖ kaBʊtukǝltǝna kapɔŋ
+    GBP:
+      symbol: "£"
+      display_names:
+        other: Gagɛɛshɩtǝna kɩpɔŋ
+        zero: baa Gagɛɛshɩtǝna kapɔŋ
+        one: Gagɛɛshɩtǝna kapɔŋ
+    GEL:
+      symbol: "₾"
+      display_names:
+        other: Jɔrjiya kɩlari
+        zero: baa Jɔrjiya kalari
+        one: Jɔrjiya kalari
+    GHS:
+      symbol: GH₵
+      display_names:
+        other: Gana kɩsiɖi
+        zero: baa Gana kasiɖi
+        one: Gana kasiɖi
+    GIP:
+      symbol: "£"
+      display_names:
+        other: Gibraltaa kɩpɔŋ
+        zero: baa Gibraltaa kapɔŋ
+        one: Gibraltaa kapɔŋ
+    GNF:
+      symbol: FG
+      display_names:
+        other: Ginee kɩfaraŋ
+        zero: baa Ginee kafaraŋ
+        one: Ginee kafaraŋ
+    GTQ:
+      symbol: Q
+      display_names:
+        other: Guwatemalaa kɩkesaal
+        zero: baa Guwatemalaa kakesaal
+        one: Guwatemalaa kakesaal
+    GYD:
+      symbol: "$"
+      display_names:
+        other: Guyanaa kɩɖala
+        zero: baa Guyanaa kaɖala
+        one: Guyanaa kaɖala
+    HKD:
+      symbol: HK$
+      display_names:
+        other: Hɔŋ Kɔŋ kɩɖala
+        zero: baa Hɔŋ Kɔŋ kaɖala
+        one: Hɔŋ Kɔŋ kaɖala
+    HNL:
+      symbol: L
+      display_names:
+        other: Hɔnɖuraasɩ kɩlampira
+        zero: baa Hɔnɖuraasɩ kalampira
+        one: Hɔnɖuraasɩ kalampira
+    HRK:
+      symbol: kn
+      display_names:
+        other: Krowasii kɩkuna
+        zero: baa Krowasii kakuna
+        one: Krowasii kakuna
+    HUF:
+      symbol: Ft
+      display_names:
+        other: Ɔŋgrii kɩfɔrɩntɩ
+        zero: baa Ɔŋgrii kafɔrɩntɩ
+        one: Ɔŋgrii kafɔrɩntɩ
+    IDR:
+      symbol: Rp
+      display_names:
+        other: Ɛnɖonosii kɩrupiyaa
+        zero: baa Ɛnɖonosii karupiyaa
+        one: Ɛnɖonosii karupiyaa
+    ILS:
+      symbol: "₪"
+      display_names:
+        other: Yishraɛl kɩshekɛl bafɔlɩ
+        zero: baa Yishraɛl kashekɛl afɔlɩ
+        one: Yishraɛl kashekɛl afɔlɩ
+    INR:
+      symbol: "₹"
+      display_names:
+        other: Inɖiya kɩrupii
+        zero: baa Inɖiya karupii
+        one: Inɖiya karupii
+    ISK:
+      symbol: kr
+      display_names:
+        other: Islanɖ kɩkrona
+        zero: baa Islanɖ kakrona
+        one: Islanɖ kakrona
+    JMD:
+      symbol: "$"
+      display_names:
+        other: Jamaɩka kɩɖala
+        zero: baa Jamaɩka kaɖala
+        one: Jamaɩka kaɖala
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: Japaŋ kɩyɛn
+        zero: baa Japaŋ kayɛn
+        one: Japaŋ kayɛn
+    KGS:
+      symbol: "⃀"
+      display_names:
+        other: Kirgistan kɩsɔm
+        zero: baa Kirgistan kasɔm
+        one: Kirgistan kasɔm
+    KHR:
+      symbol: "៛"
+      display_names:
+        other: Kamboɖiya kɩriyɛl
+        zero: baa Kamboɖiya kariyɛl
+        one: Kamboɖiya kariyɛl
+    KMF:
+      symbol: CF
+      display_names:
+        other: Komɔɔr kɩfaraŋ
+        zero: baa Komɔɔr kafaraŋ
+        one: Komɔɔr kafaraŋ
+    KPW:
+      symbol: "₩"
+      display_names:
+        other: Koree gʊnyɩpɛnɛlaŋ kɩwɔn
+        zero: baa Koree gʊnyɩpɛnɛlaŋ kawɔn
+        one: Koree gʊnyɩpɛnɛlaŋ kawɔn
+    KRW:
+      symbol: "₩"
+      display_names:
+        other: Koree gʊnyɩsonolaŋ kɩwɔn
+        zero: baa Koree gʊnyɩsonolaŋ kawɔn
+        one: Koree gʊnyɩsonolaŋ kawɔn
+    KYD:
+      symbol: "$"
+      display_names:
+        other: Kayimaan kaBʊtukǝltǝna kɩɖala
+        zero: baa Kayimaan kaBʊtukǝltǝna kaɖala
+        one: Kayimaan kaBʊtukǝltǝna kaɖala
+    KZT:
+      symbol: "₸"
+      display_names:
+        other: Kasastan kɩtɛŋgɛ
+        zero: baa Kasastan katɛŋgɛ
+        one: Kasastan katɛŋgɛ
+    LAK:
+      symbol: "₭"
+      display_names:
+        other: Lawɔs kɩkip
+        zero: baa Lawɔs kakip
+        one: Lawɔs kakip
+    LBP:
+      symbol: L£
+      display_names:
+        other: Liibaaŋ kɩpɔŋ
+        zero: baa Liibaaŋ kapɔŋ
+        one: Liibaaŋ kapɔŋ
+    LKR:
+      symbol: Rs
+      display_names:
+        other: Siri Laŋkaa kɩrupii
+        zero: baa Siri Laŋkaa karupii
+        one: Siri Laŋkaa karupii
+    LRD:
+      symbol: "$"
+      display_names:
+        other: Liberiya kɩɖala
+        zero: baa Liberiya kaɖala
+        one: Liberiya kaɖala
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: Maɖagaskaa kɩharɩyaarɩ
+        zero: baa Maɖagaskaa kaharɩyaarɩ
+        one: Maɖagaskaa kaharɩyaarɩ
+    MMK:
+      symbol: K
+      display_names:
+        other: Miyanmaa kɩkiyaatɩ
+        zero: baa Miyanmaa kakiyaatɩ
+        one: Miyanmaa kakiyaatɩ
+    MNT:
+      symbol: "₮"
+      display_names:
+        other: Mɔŋgolii kɩtugiriiki
+        zero: baa Mɔŋgolii katugiriiki
+        one: Mɔŋgolii katugiriiki
+    MUR:
+      symbol: Rs
+      display_names:
+        other: Imoris kɩrupii
+        zero: baa Imoris karupii
+        one: Imoris karupii
+    MXN:
+      symbol: MX$
+      display_names:
+        other: Mɛsik kɩpɛsoo
+        zero: baa Mɛsik kapɛsoo
+        one: Mɛsik kapɛsoo
+    MYR:
+      symbol: RM
+      display_names:
+        other: Malɛsii kɩriŋgiiti
+        zero: baa Malɛsii kariŋgiiti
+        one: Malɛsii kariŋgiiti
+    NAD:
+      symbol: "$"
+      display_names:
+        other: Namibii kɩɖala
+        zero: baa Namibii kaɖala
+        one: Namibii kaɖala
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: Nanjiiriya kɩnɛɛra
+        zero: baa Nanjiiriya kanɛɛra
+        one: Nanjiiriya kanɛɛra
+    NIO:
+      symbol: C$
+      display_names:
+        other: Nikaraguwaa kɩkɔrɖoba
+        zero: baa Nikaraguwaa kakɔrɖoba
+        one: Nikaraguwaa kakɔrɖoba
+    NOK:
+      symbol: kr
+      display_names:
+        other: Nɔrfɛsh kɩkrona
+        zero: baa Nɔrfɛsh kakrona
+        one: Nɔrfɛsh kakrona
+    NPR:
+      symbol: Rs
+      display_names:
+        other: Neepal kɩrupii
+        zero: baa Neepal karupii
+        one: Neepal karupii
+    NZD:
+      symbol: NZ$
+      display_names:
+        other: Selanɖ afɔlɩ kɩɖala
+        zero: baa Selanɖ afɔlɩ kaɖala
+        one: Selanɖ afɔlɩ kaɖala
+    PHP:
+      symbol: "₱"
+      display_names:
+        other: Filipiin kɩpɛsoo
+        zero: baa Filipiin kapɛsoo
+        one: Filipiin kapɛsoo
+    PKR:
+      symbol: Rs
+      display_names:
+        other: Pakistan kɩrupii
+        zero: baa Pakistan karupii
+        one: Pakistan karupii
+    PLN:
+      symbol: zł
+      display_names:
+        other: Polanɖ kɩsǝlɔɔtɩ
+        zero: baa Polanɖ kasǝlɔɔtɩ
+        one: Polanɖ kasǝlɔɔtɩ
+    PYG:
+      symbol: "₲"
+      display_names:
+        other: Paraguwee kɩguwarani
+        zero: baa Paraguwee kaguwarani
+        one: Paraguwee kaguwarani
+    RON:
+      symbol: lei
+      display_names:
+        other: Romanii kɩlewu
+        zero: baa Romanii kalewu
+        one: Romanii kalewu
+    RUB:
+      symbol: "₽"
+      display_names:
+        other: Rɔɔshɩya kɩrubǝl
+        zero: baa Rɔɔshɩya karubǝl
+        one: Rɔɔshɩya karubǝl
+    RWF:
+      symbol: RF
+      display_names:
+        other: Rʊwanɖaa kɩfaraŋ
+        zero: baa Rʊwanɖaa kafaraŋ
+        one: Rʊwanɖaa kafaraŋ
+    SBD:
+      symbol: "$"
+      display_names:
+        other: Salomɔɔn kaBʊtukǝltǝna kɩɖala
+        zero: baa Salomɔɔn kaBʊtukǝltǝna kaɖala
+        one: Salomɔɔn kaBʊtukǝltǝna kaɖala
+    SEK:
+      symbol: kr
+      display_names:
+        other: Sʊwɛɖ kɩkrona
+        zero: baa Sʊwɛɖ kakrona
+        one: Sʊwɛɖ kakrona
+    SGD:
+      symbol: "$"
+      display_names:
+        other: Siŋgapuur kɩɖala
+        zero: baa Siŋgapuur kaɖala
+        one: Siŋgapuur kaɖala
+    SHP:
+      symbol: "£"
+      display_names:
+        other: Sɛŋ Elenaa kɩpɔŋ
+        zero: baa Sɛŋ Elenaa kapɔŋ
+        one: Sɛŋ Elenaa kapɔŋ
+    SRD:
+      symbol: "$"
+      display_names:
+        other: Surinam kɩɖala
+        zero: baa Surinam kaɖala
+        one: Surinam kaɖala
+    SSP:
+      symbol: "£"
+      display_names:
+        other: Suɖaŋ gʊnyɩsonolaŋ kɩpɔŋ
+        zero: baa Suɖaŋ gʊnyɩsonolaŋ kapɔŋ
+        one: Suɖaŋ gʊnyɩsonolaŋ kapɔŋ
+    STN:
+      symbol: Db
+      display_names:
+        other: Saotomee kɩɖobra
+        zero: baa Saotomee kaɖobra
+        one: Saotomee kaɖobra
+    SYP:
+      symbol: "£"
+      display_names:
+        other: Sirii kɩpɔŋ
+        zero: baa Sirii kapɔŋ
+        one: Sirii kapɔŋ
+    THB:
+      symbol: "฿"
+      display_names:
+        other: Taɩlanɖ kɩbaatɩ
+        zero: baa Taɩlanɖ kabaatɩ
+        one: Taɩlanɖ kabaatɩ
+    TOP:
+      symbol: T$
+      display_names:
+        other: Tɔŋga kɩpaŋga
+        zero: baa Tɔŋga kapaŋga
+        one: Tɔŋga kapaŋga
+    TRY:
+      symbol: "₺"
+      display_names:
+        other: Turkii kɩlira
+        zero: baa Turkii kalira
+        one: Turkii kalira
+    TTD:
+      symbol: "$"
+      display_names:
+        other: Triniɖaaɖ na Tobagoo kɩɖala
+        zero: baa Triniɖaaɖ na Tobagoo kaɖala
+        one: Triniɖaaɖ na Tobagoo kaɖala
+    TWD:
+      symbol: NT$
+      display_names:
+        other: Taɩwan kɩɖala bafɔlɩ
+        zero: baa Taɩwan kaɖala afɔlɩ
+        one: Taɩwan kaɖala afɔlɩ
+    UAH:
+      symbol: "₴"
+      display_names:
+        other: Ikrɛɛn kɩrifniya
+        zero: baa Ikrɛɛn karifniya
+        one: Ikrɛɛn karifniya
+    USD:
+      symbol: US$
+      display_names:
+        other: Amalɩka kɩɖala
+        zero: baa Amalɩka kaɖala
+        one: Amalɩka kaɖala
+    UYU:
+      symbol: "$"
+      display_names:
+        other: Uruguwee kɩpɛsoo
+        zero: baa Uruguwee kapɛsoo
+        one: Uruguwee kapɛsoo
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+      display_names:
+        other: Fɛtnam kɩɖɔŋgɩ
+        zero: baa Fɛtnam kaɖɔŋgɩ
+        one: Fɛtnam kaɖɔŋgɩ
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: Garɩɖontǝna gɩcɩɩca kɩsɛɛfa
+        zero: baa Garɩɖontǝna gɩcɩɩca kasɛɛfa
+        one: Garɩɖontǝna gɩcɩɩca kasɛɛfa
+    XCD:
+      symbol: EC$
+      display_names:
+        other: Karayiib gajakalaŋ kɩɖala
+        zero: baa Karayiib gajakalaŋ kaɖala
+        one: Karayiib gajakalaŋ kaɖala
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: Garɩɖontǝna gɩteŋshilelaŋ kɩsɛɛfa
+        zero: baa Garɩɖontǝna gɩteŋshilelaŋ kasɛɛfa
+        one: Garɩɖontǝna gɩteŋshilelaŋ kasɛɛfa
+    XPF:
+      symbol: CFPF
+      display_names:
+        other: Polinesiya Gafɔntǝna kaja kɩfaraŋ
+        zero: baa Polinesiya Gafɔntǝna kaja kafaraŋ
+        one: Polinesiya Gafɔntǝna kaja kafaraŋ
+    XXX:
+      symbol: "¤"
+      display_names:
+        other: ɩtanɩɩ kʊyɔʊ ʊ mana ma
+        zero: baa gɩtanɩɩ kʊyɔʊ ʊ mana ma
+        one: gɩtanɩɩ kʊyɔʊ ʊ mana ma
+    ZAR:
+      symbol: R
+      display_names:
+        other: Sautafrika kɩranɖɩ
+        zero: baa Sautafrika karanɖɩ
+        one: Sautafrika karanɖɩ
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: Sambii kɩkʊwaasha
+        zero: baa Sambii kakʊwaasha
+        one: Sambii kakʊwaasha
+    AED:
+      display_names:
+        other: Emiir baGanɔ gaɖɔŋkɔnɔ kaAlaaributǝna kɩɖiram
+        zero: baa Emiir baGanɔ gaɖɔŋkɔnɔ kaAlaaributǝna kaɖiram
+        one: Emiir baGanɔ gaɖɔŋkɔnɔ kaAlaaributǝna kaɖiram
+    ALL:
+      display_names:
+        other: Albanii kɩlɛɛkɩ
+        zero: baa Albanii kalɛɛkɩ
+        one: Albanii kalɛɛkɩ
+    ANG:
+      display_names:
+        other: Holanɖ kaKarayiib kɩfɔlɔrɛŋ
+        zero: baa Holanɖ kaKarayiib kafɔlɔrɛŋ
+        one: Holanɖ kaKarayiib kafɔlɔrɛŋ
+    AWG:
+      display_names:
+        other: Arubaa kɩfɔlɔrɛŋ
+        zero: baa Arubaa kafɔlɔrɛŋ
+        one: Arubaa kafɔlɔrɛŋ
     BGN:
       display_names:
         other: Bulgarii kɩlɛɛfʊ
@@ -88,56 +669,16 @@ number_formats:
         other: Burunɖii kɩfaraŋ
         zero: baa Burunɖii kafaraŋ
         one: Burunɖii kafaraŋ
-    BMD:
-      display_names:
-        other: Bɛrmuɖaa kɩɖala
-        zero: baa Bɛrmuɖaa kaɖala
-        one: Bɛrmuɖaa kaɖala
-    BND:
-      display_names:
-        other: Brunɛɩ kɩɖala
-        zero: baa Brunɛɩ kaɖala
-        one: Brunɛɩ kaɖala
-    BOB:
-      display_names:
-        other: Bolifiya kɩbolifiyano
-        zero: baa Bolifiya kabolifiyano
-        one: Bolifiya kabolifiyano
-    BRL:
-      display_names:
-        other: Bresil kɩreyal
-        zero: baa Bresil kareyal
-        one: Bresil kareyal
-    BSD:
-      display_names:
-        other: Bahamaasɩ kɩɖala
-        zero: baa Bahamaasɩ kaɖala
-        one: Bahamaasɩ kaɖala
     BTN:
       display_names:
         other: Butan kɩŋgulturɔm
         zero: baa Butan kaŋgulturɔm
         one: Butan kaŋgulturɔm
-    BWP:
-      display_names:
-        other: Bɔsʊwanaa kɩpula
-        zero: baa Bɔsʊwanaa kapula
-        one: Bɔsʊwanaa kapula
     BYN:
       display_names:
         other: Belaruus kɩrubǝl
         zero: baa Belaruus karubǝl
         one: Belaruus karubǝl
-    BZD:
-      display_names:
-        other: Beliis kɩɖala
-        zero: baa Beliis kaɖala
-        one: Beliis kaɖala
-    CAD:
-      display_names:
-        other: Kanaɖaa kɩɖala
-        zero: baa Kanaɖaa kaɖala
-        one: Kanaɖaa kaɖala
     CDF:
       display_names:
         other: Koŋgoo kɩfaraŋ
@@ -148,76 +689,26 @@ number_formats:
         other: Suwis kɩfaraŋ
         zero: baa Suwis kafaraŋ
         one: Suwis kafaraŋ
-    CLP:
-      display_names:
-        other: Shilii kɩpɛsoo
-        zero: baa Shilii kapɛsoo
-        one: Shilii kapɛsoo
     CNH:
       display_names:
         other: Caɩna kɩyuwan ba sǝ̂ra afʊba ma
         zero: baa Caɩna kayuwan ba sǝ̂ra afʊba ma
         one: Caɩna kayuwan ba sǝ̂ra afʊba ma
-    CNY:
-      display_names:
-        other: Caɩna kɩyuwan
-        zero: baa Caɩna kayuwan
-        one: Caɩna kayuwan
-    COP:
-      display_names:
-        other: Kolɔmbii kɩpɛsoo
-        zero: baa Kolɔmbii kapɛsoo
-        one: Kolɔmbii kapɛsoo
-    CRC:
-      display_names:
-        other: Kɔsta Rikaa kɩkolɔn
-        zero: baa Kɔsta Rikaa kakolɔn
-        one: Kɔsta Rikaa kakolɔn
-    CUC:
-      display_names:
-        other: Kubaa kɩpɛsoo ba sǝ̂ra afʊba ma
-        zero: baa Kubaa kapɛsoo ba sǝ̂ra afʊba ma
-        one: Kubaa kapɛsoo ba sǝ̂ra afʊba ma
-    CUP:
-      display_names:
-        other: Kubaa kɩpɛsoo
-        zero: baa Kubaa kapɛsoo
-        one: Kubaa kapɛsoo
     CVE:
       display_names:
         other: Kapfɛɛr kɩhɛskuɖoo
         zero: baa Kapfɛɛr kahɛskuɖoo
         one: Kapfɛɛr kahɛskuɖoo
-    CZK:
-      display_names:
-        other: Cɛk kɩkrona
-        zero: baa Cɛk kakrona
-        one: Cɛk kakrona
     DJF:
       display_names:
         other: Jibutii kɩfaraŋ
         zero: baa Jibutii kafaraŋ
         one: Jibutii kafaraŋ
-    DKK:
-      display_names:
-        other: Ɖanǝmark kɩkrona
-        zero: baa Ɖanǝmark kakrona
-        one: Ɖanǝmark kakrona
-    DOP:
-      display_names:
-        other: Ɖominikaa kɩpɛsoo
-        zero: baa Ɖominikaa kapɛsoo
-        one: Ɖominikaa kapɛsoo
     DZD:
       display_names:
         other: Aljerii kɩɖinaa
         zero: baa Aljerii kaɖinaa
         one: Aljerii kaɖinaa
-    EGP:
-      display_names:
-        other: Ejipti kɩpɔŋ
-        zero: baa Ejipti kapɔŋ
-        one: Ejipti kapɔŋ
     ERN:
       display_names:
         other: Eritree kɩnafka
@@ -228,101 +719,16 @@ number_formats:
         other: Etiyopii kɩbiir
         zero: baa Etiyopii kabiir
         one: Etiyopii kabiir
-    EUR:
-      display_names:
-        other: eroo mána
-        zero: baa eroo
-        one: eroo
-    FJD:
-      display_names:
-        other: Fiji kɩɖala
-        zero: baa Fiji kaɖala
-        one: Fiji kaɖala
-    FKP:
-      display_names:
-        other: Fɔklanɖ kaBʊtukǝltǝna kɩpɔŋ
-        zero: baa Fɔklanɖ kaBʊtukǝltǝna kapɔŋ
-        one: Fɔklanɖ kaBʊtukǝltǝna kapɔŋ
-    GBP:
-      display_names:
-        other: Gagɛɛshɩtǝna kɩpɔŋ
-        zero: baa Gagɛɛshɩtǝna kapɔŋ
-        one: Gagɛɛshɩtǝna kapɔŋ
-    GEL:
-      display_names:
-        other: Jɔrjiya kɩlari
-        zero: baa Jɔrjiya kalari
-        one: Jɔrjiya kalari
-    GHS:
-      display_names:
-        other: Gana kɩsiɖi
-        zero: baa Gana kasiɖi
-        one: Gana kasiɖi
-    GIP:
-      display_names:
-        other: Gibraltaa kɩpɔŋ
-        zero: baa Gibraltaa kapɔŋ
-        one: Gibraltaa kapɔŋ
     GMD:
       display_names:
         other: Gambii kɩɖalaasi
         zero: baa Gambii kaɖalaasi
         one: Gambii kaɖalaasi
-    GNF:
-      display_names:
-        other: Ginee kɩfaraŋ
-        zero: baa Ginee kafaraŋ
-        one: Ginee kafaraŋ
-    GTQ:
-      display_names:
-        other: Guwatemalaa kɩkesaal
-        zero: baa Guwatemalaa kakesaal
-        one: Guwatemalaa kakesaal
-    GYD:
-      display_names:
-        other: Guyanaa kɩɖala
-        zero: baa Guyanaa kaɖala
-        one: Guyanaa kaɖala
-    HKD:
-      display_names:
-        other: Hɔŋ Kɔŋ kɩɖala
-        zero: baa Hɔŋ Kɔŋ kaɖala
-        one: Hɔŋ Kɔŋ kaɖala
-    HNL:
-      display_names:
-        other: Hɔnɖuraasɩ kɩlampira
-        zero: baa Hɔnɖuraasɩ kalampira
-        one: Hɔnɖuraasɩ kalampira
-    HRK:
-      display_names:
-        other: Krowasii kɩkuna
-        zero: baa Krowasii kakuna
-        one: Krowasii kakuna
     HTG:
       display_names:
         other: Hayitii kɩguurɖi
         zero: baa Hayitii kaguurɖi
         one: Hayitii kaguurɖi
-    HUF:
-      display_names:
-        other: Ɔŋgrii kɩfɔrɩntɩ
-        zero: baa Ɔŋgrii kafɔrɩntɩ
-        one: Ɔŋgrii kafɔrɩntɩ
-    IDR:
-      display_names:
-        other: Ɛnɖonosii kɩrupiyaa
-        zero: baa Ɛnɖonosii karupiyaa
-        one: Ɛnɖonosii karupiyaa
-    ILS:
-      display_names:
-        other: Yishraɛl kɩshekɛl bafɔlɩ
-        zero: baa Yishraɛl kashekɛl afɔlɩ
-        one: Yishraɛl kashekɛl afɔlɩ
-    INR:
-      display_names:
-        other: Inɖiya kɩrupii
-        zero: baa Inɖiya karupii
-        one: Inɖiya karupii
     IQD:
       display_names:
         other: Ɩraakɩ kɩɖinaa
@@ -333,91 +739,21 @@ number_formats:
         other: Iraŋ kɩriyal
         zero: baa Iraŋ kariyal
         one: Iraŋ kariyal
-    ISK:
-      display_names:
-        other: Islanɖ kɩkrona
-        zero: baa Islanɖ kakrona
-        one: Islanɖ kakrona
-    JMD:
-      display_names:
-        other: Jamaɩka kɩɖala
-        zero: baa Jamaɩka kaɖala
-        one: Jamaɩka kaɖala
     JOD:
       display_names:
         other: Jɔrɖanii kɩɖinaa
         zero: baa Jɔrɖanii kaɖinaa
         one: Jɔrɖanii kaɖinaa
-    JPY:
-      display_names:
-        other: Japaŋ kɩyɛn
-        zero: baa Japaŋ kayɛn
-        one: Japaŋ kayɛn
     KES:
       display_names:
         other: Keniya kɩshílè
         zero: baa Keniya kashílè
         one: Keniya kashílè
-    KGS:
-      display_names:
-        other: Kirgistan kɩsɔm
-        zero: baa Kirgistan kasɔm
-        one: Kirgistan kasɔm
-    KHR:
-      display_names:
-        other: Kamboɖiya kɩriyɛl
-        zero: baa Kamboɖiya kariyɛl
-        one: Kamboɖiya kariyɛl
-    KMF:
-      display_names:
-        other: Komɔɔr kɩfaraŋ
-        zero: baa Komɔɔr kafaraŋ
-        one: Komɔɔr kafaraŋ
-    KPW:
-      display_names:
-        other: Koree gʊnyɩpɛnɛlaŋ kɩwɔn
-        zero: baa Koree gʊnyɩpɛnɛlaŋ kawɔn
-        one: Koree gʊnyɩpɛnɛlaŋ kawɔn
-    KRW:
-      display_names:
-        other: Koree gʊnyɩsonolaŋ kɩwɔn
-        zero: baa Koree gʊnyɩsonolaŋ kawɔn
-        one: Koree gʊnyɩsonolaŋ kawɔn
     KWD:
       display_names:
         other: Koweeti kɩɖinaa
         zero: baa Koweeti kaɖinaa
         one: Koweeti kaɖinaa
-    KYD:
-      display_names:
-        other: Kayimaan kaBʊtukǝltǝna kɩɖala
-        zero: baa Kayimaan kaBʊtukǝltǝna kaɖala
-        one: Kayimaan kaBʊtukǝltǝna kaɖala
-    KZT:
-      display_names:
-        other: Kasastan kɩtɛŋgɛ
-        zero: baa Kasastan katɛŋgɛ
-        one: Kasastan katɛŋgɛ
-    LAK:
-      display_names:
-        other: Lawɔs kɩkip
-        zero: baa Lawɔs kakip
-        one: Lawɔs kakip
-    LBP:
-      display_names:
-        other: Liibaaŋ kɩpɔŋ
-        zero: baa Liibaaŋ kapɔŋ
-        one: Liibaaŋ kapɔŋ
-    LKR:
-      display_names:
-        other: Siri Laŋkaa kɩrupii
-        zero: baa Siri Laŋkaa karupii
-        one: Siri Laŋkaa karupii
-    LRD:
-      display_names:
-        other: Liberiya kɩɖala
-        zero: baa Liberiya kaɖala
-        one: Liberiya kaɖala
     LSL:
       display_names:
         other: Lesotoo kɩloti
@@ -438,26 +774,11 @@ number_formats:
         other: Molɖafiya kɩlewu
         zero: baa Molɖafiya kalewu
         one: Molɖafiya kalewu
-    MGA:
-      display_names:
-        other: Maɖagaskaa kɩharɩyaarɩ
-        zero: baa Maɖagaskaa kaharɩyaarɩ
-        one: Maɖagaskaa kaharɩyaarɩ
     MKD:
       display_names:
         other: Maseɖoniya kɩɖenaa
         zero: baa Maseɖoniya kaɖenaa
         one: Maseɖoniya kaɖenaa
-    MMK:
-      display_names:
-        other: Miyanmaa kɩkiyaatɩ
-        zero: baa Miyanmaa kakiyaatɩ
-        one: Miyanmaa kakiyaatɩ
-    MNT:
-      display_names:
-        other: Mɔŋgolii kɩtugiriiki
-        zero: baa Mɔŋgolii katugiriiki
-        one: Mɔŋgolii katugiriiki
     MOP:
       display_names:
         other: Makawoo kɩpataka
@@ -468,11 +789,6 @@ number_formats:
         other: Moritanii kɩhugiya
         zero: baa Moritanii kahugiya
         one: Moritanii kahugiya
-    MUR:
-      display_names:
-        other: Imoris kɩrupii
-        zero: baa Imoris karupii
-        one: Imoris karupii
     MVR:
       display_names:
         other: Malɖiifu kɩrufiyaa
@@ -483,51 +799,11 @@ number_formats:
         other: Malawii kɩkʊwaasha
         zero: baa Malawii kakʊwaasha
         one: Malawii kakʊwaasha
-    MXN:
-      display_names:
-        other: Mɛsik kɩpɛsoo
-        zero: baa Mɛsik kapɛsoo
-        one: Mɛsik kapɛsoo
-    MYR:
-      display_names:
-        other: Malɛsii kɩriŋgiiti
-        zero: baa Malɛsii kariŋgiiti
-        one: Malɛsii kariŋgiiti
     MZN:
       display_names:
         other: Mosambii kɩmetikal
         zero: baa Mosambii kametikal
         one: Mosambii kametikal
-    NAD:
-      display_names:
-        other: Namibii kɩɖala
-        zero: baa Namibii kaɖala
-        one: Namibii kaɖala
-    NGN:
-      display_names:
-        other: Nanjiiriya kɩnɛɛra
-        zero: baa Nanjiiriya kanɛɛra
-        one: Nanjiiriya kanɛɛra
-    NIO:
-      display_names:
-        other: Nikaraguwaa kɩkɔrɖoba
-        zero: baa Nikaraguwaa kakɔrɖoba
-        one: Nikaraguwaa kakɔrɖoba
-    NOK:
-      display_names:
-        other: Nɔrfɛsh kɩkrona
-        zero: baa Nɔrfɛsh kakrona
-        one: Nɔrfɛsh kakrona
-    NPR:
-      display_names:
-        other: Neepal kɩrupii
-        zero: baa Neepal karupii
-        one: Neepal karupii
-    NZD:
-      display_names:
-        other: Selanɖ afɔlɩ kɩɖala
-        zero: baa Selanɖ afɔlɩ kaɖala
-        one: Selanɖ afɔlɩ kaɖala
     OMR:
       display_names:
         other: Oman kɩriyal
@@ -548,61 +824,21 @@ number_formats:
         other: Papuasii Ginee afɔlɩ kɩkina
         zero: baa Papuasii Ginee afɔlɩ kakina
         one: Papuasii Ginee afɔlɩ kakina
-    PHP:
-      display_names:
-        other: Filipiin kɩpɛsoo
-        zero: baa Filipiin kapɛsoo
-        one: Filipiin kapɛsoo
-    PKR:
-      display_names:
-        other: Pakistan kɩrupii
-        zero: baa Pakistan karupii
-        one: Pakistan karupii
-    PLN:
-      display_names:
-        other: Polanɖ kɩsǝlɔɔtɩ
-        zero: baa Polanɖ kasǝlɔɔtɩ
-        one: Polanɖ kasǝlɔɔtɩ
-    PYG:
-      display_names:
-        other: Paraguwee kɩguwarani
-        zero: baa Paraguwee kaguwarani
-        one: Paraguwee kaguwarani
     QAR:
       display_names:
         other: Kataa kɩriyal
         zero: baa Kataa kariyal
         one: Kataa kariyal
-    RON:
-      display_names:
-        other: Romanii kɩlewu
-        zero: baa Romanii kalewu
-        one: Romanii kalewu
     RSD:
       display_names:
         other: Sɛrbii kɩɖinaa
         zero: baa Sɛrbii kaɖinaa
         one: Sɛrbii kaɖinaa
-    RUB:
-      display_names:
-        other: Rɔɔshɩya kɩrubǝl
-        zero: baa Rɔɔshɩya karubǝl
-        one: Rɔɔshɩya karubǝl
-    RWF:
-      display_names:
-        other: Rʊwanɖaa kɩfaraŋ
-        zero: baa Rʊwanɖaa kafaraŋ
-        one: Rʊwanɖaa kafaraŋ
     SAR:
       display_names:
         other: Sauɖiya kɩriyal
         zero: baa Sauɖiya kariyal
         one: Sauɖiya kariyal
-    SBD:
-      display_names:
-        other: Salomɔɔn kaBʊtukǝltǝna kɩɖala
-        zero: baa Salomɔɔn kaBʊtukǝltǝna kaɖala
-        one: Salomɔɔn kaBʊtukǝltǝna kaɖala
     SCR:
       display_names:
         other: Seshɛl kɩrupii
@@ -613,21 +849,6 @@ number_formats:
         other: Suɖaŋ kɩpɔŋ
         zero: baa Suɖaŋ kapɔŋ
         one: Suɖaŋ kapɔŋ
-    SEK:
-      display_names:
-        other: Sʊwɛɖ kɩkrona
-        zero: baa Sʊwɛɖ kakrona
-        one: Sʊwɛɖ kakrona
-    SGD:
-      display_names:
-        other: Siŋgapuur kɩɖala
-        zero: baa Siŋgapuur kaɖala
-        one: Siŋgapuur kaɖala
-    SHP:
-      display_names:
-        other: Sɛŋ Elenaa kɩpɔŋ
-        zero: baa Sɛŋ Elenaa kapɔŋ
-        one: Sɛŋ Elenaa kapɔŋ
     SLE:
       display_names:
         other: Seraleyɔn kɩleyɔn
@@ -643,36 +864,11 @@ number_formats:
         other: Somalii kɩshílè
         zero: baa Somalii kashílè
         one: Somalii kashílè
-    SRD:
-      display_names:
-        other: Surinam kɩɖala
-        zero: baa Surinam kaɖala
-        one: Surinam kaɖala
-    SSP:
-      display_names:
-        other: Suɖaŋ gʊnyɩsonolaŋ kɩpɔŋ
-        zero: baa Suɖaŋ gʊnyɩsonolaŋ kapɔŋ
-        one: Suɖaŋ gʊnyɩsonolaŋ kapɔŋ
-    STN:
-      display_names:
-        other: Saotomee kɩɖobra
-        zero: baa Saotomee kaɖobra
-        one: Saotomee kaɖobra
-    SYP:
-      display_names:
-        other: Sirii kɩpɔŋ
-        zero: baa Sirii kapɔŋ
-        one: Sirii kapɔŋ
     SZL:
       display_names:
         other: Sʊwasilanɖ kɩlilaŋgenii
         zero: baa Sʊwasilanɖ kalilaŋgenii
         one: Sʊwasilanɖ kalilaŋgenii
-    THB:
-      display_names:
-        other: Taɩlanɖ kɩbaatɩ
-        zero: baa Taɩlanɖ kabaatɩ
-        one: Taɩlanɖ kabaatɩ
     TJS:
       display_names:
         other: Tajikistan kɩsomooni
@@ -688,51 +884,16 @@ number_formats:
         other: Tunisii kɩɖinaa
         zero: baa Tunisii kaɖinaa
         one: Tunisii kaɖinaa
-    TOP:
-      display_names:
-        other: Tɔŋga kɩpaŋga
-        zero: baa Tɔŋga kapaŋga
-        one: Tɔŋga kapaŋga
-    TRY:
-      display_names:
-        other: Turkii kɩlira
-        zero: baa Turkii kalira
-        one: Turkii kalira
-    TTD:
-      display_names:
-        other: Triniɖaaɖ na Tobagoo kɩɖala
-        zero: baa Triniɖaaɖ na Tobagoo kaɖala
-        one: Triniɖaaɖ na Tobagoo kaɖala
-    TWD:
-      display_names:
-        other: Taɩwan kɩɖala bafɔlɩ
-        zero: baa Taɩwan kaɖala afɔlɩ
-        one: Taɩwan kaɖala afɔlɩ
     TZS:
       display_names:
         other: Taŋsanii kɩshílè
         zero: baa Taŋsanii kashílè
         one: Taŋsanii kashílè
-    UAH:
-      display_names:
-        other: Ikrɛɛn kɩrifniya
-        zero: baa Ikrɛɛn karifniya
-        one: Ikrɛɛn karifniya
     UGX:
       display_names:
         other: Uganɖaa kɩshílè
         zero: baa Uganɖaa kashílè
         one: Uganɖaa kashílè
-    USD:
-      display_names:
-        other: Amalɩka kɩɖala
-        zero: baa Amalɩka kaɖala
-        one: Amalɩka kaɖala
-    UYU:
-      display_names:
-        other: Uruguwee kɩpɛsoo
-        zero: baa Uruguwee kapɛsoo
-        one: Uruguwee kapɛsoo
     UZS:
       display_names:
         other: Usbeekistan kɩsɔm
@@ -743,11 +904,6 @@ number_formats:
         other: Fenesuwelaa kɩbolifar
         zero: baa Fenesuwelaa kabolifar
         one: Fenesuwelaa kabolifar
-    VND:
-      display_names:
-        other: Fɛtnam kɩɖɔŋgɩ
-        zero: baa Fɛtnam kaɖɔŋgɩ
-        one: Fɛtnam kaɖɔŋgɩ
     VUV:
       display_names:
         other: Fanuwatu kɩfatu
@@ -758,48 +914,13 @@ number_formats:
         other: Samowa kɩtala
         zero: baa Samowa katala
         one: Samowa katala
-    XAF:
-      display_names:
-        other: Garɩɖontǝna gɩcɩɩca kɩsɛɛfa
-        zero: baa Garɩɖontǝna gɩcɩɩca kasɛɛfa
-        one: Garɩɖontǝna gɩcɩɩca kasɛɛfa
-    XCD:
-      display_names:
-        other: Karayiib gajakalaŋ kɩɖala
-        zero: baa Karayiib gajakalaŋ kaɖala
-        one: Karayiib gajakalaŋ kaɖala
-    XOF:
-      display_names:
-        other: Garɩɖontǝna gɩteŋshilelaŋ kɩsɛɛfa
-        zero: baa Garɩɖontǝna gɩteŋshilelaŋ kasɛɛfa
-        one: Garɩɖontǝna gɩteŋshilelaŋ kasɛɛfa
-    XPF:
-      display_names:
-        other: Polinesiya Gafɔntǝna kaja kɩfaraŋ
-        zero: baa Polinesiya Gafɔntǝna kaja kafaraŋ
-        one: Polinesiya Gafɔntǝna kaja kafaraŋ
-    XXX:
-      display_names:
-        other: ɩtanɩɩ kʊyɔʊ ʊ mana ma
-        zero: baa gɩtanɩɩ kʊyɔʊ ʊ mana ma
-        one: gɩtanɩɩ kʊyɔʊ ʊ mana ma
     YER:
       display_names:
         other: Yemɛn kɩriyal
         zero: baa Yemɛn kariyal
         one: Yemɛn kariyal
-    ZAR:
-      display_names:
-        other: Sautafrika kɩranɖɩ
-        zero: baa Sautafrika karanɖɩ
-        one: Sautafrika karanɖɩ
-    ZMW:
-      display_names:
-        other: Sambii kɩkʊwaasha
-        zero: baa Sambii kakʊwaasha
-        one: Sambii kakʊwaasha
 locale: blo
-generated_at: '2025-09-10T22:17:34+09:00'
+generated_at: '2025-09-10T23:53:03+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:

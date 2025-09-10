@@ -3,39 +3,296 @@ number_formats:
   symbols:
     decimal: ","
     group: " "
+    minus_sign: "-"
+    plus_sign: "+"
+    percent_sign: "%"
+    per_mille: "‰"
+    infinity: "∞"
+    nan: NaN
+  decimal_formats:
+    standard: "#,##0.###"
+  percent_formats:
+    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: "#E0"
   currencies:
+    AFN:
+      symbol: "؋"
+    AMD:
+      symbol: "֏"
+    AOA:
+      symbol: Kz
+      display_names:
+        other: mɔni mǝ á angóla
+    ARS:
+      symbol: "$"
+    AUD:
+      symbol: A$
+      display_names:
+        other: mɔni mǝ á ɔstralí
+    AZN:
+      symbol: "₼"
+    BAM:
+      symbol: KM
+    BBD:
+      symbol: "$"
+    BDT:
+      symbol: "৳"
+    BMD:
+      symbol: "$"
+    BND:
+      symbol: "$"
+    BOB:
+      symbol: Bs
+    BRL:
+      symbol: R$
+    BSD:
+      symbol: "$"
+    BWP:
+      symbol: P
+      display_names:
+        other: mɔni mǝ á botswana
+    BZD:
+      symbol: "$"
+    CAD:
+      symbol: CA$
+      display_names:
+        other: mɔni mǝ á kanada
+    CLP:
+      symbol: "$"
+    CNY:
+      symbol: CN¥
+      display_names:
+        other: mɔni mǝ á cín
+    COP:
+      symbol: "$"
+    CRC:
+      symbol: "₡"
+    CUC:
+      symbol: "$"
+    CUP:
+      symbol: "$"
+    CZK:
+      symbol: Kč
+    DKK:
+      symbol: kr
+    DOP:
+      symbol: "$"
+    EGP:
+      symbol: E£
+      display_names:
+        other: mɔni mǝ á ɛjípt
+    ESP:
+      symbol: "₧"
+    EUR:
+      symbol: "€"
+      display_names:
+        other: mɔni mǝ á pɛrɛsǝ́
+    FJD:
+      symbol: "$"
+    FKP:
+      symbol: "£"
+    GBP:
+      symbol: "£"
+      display_names:
+        other: mɔni mǝ á ingɛrís
+    GEL:
+      symbol: "₾"
+    GHS:
+      symbol: GH₵
+    GIP:
+      symbol: "£"
+    GNF:
+      symbol: FG
+    GTQ:
+      symbol: Q
+    GYD:
+      symbol: "$"
+    HKD:
+      symbol: HK$
+    HNL:
+      symbol: L
+    HRK:
+      symbol: kn
+    HUF:
+      symbol: Ft
+    IDR:
+      symbol: Rp
+    ILS:
+      symbol: "₪"
+    INR:
+      symbol: "₹"
+      display_names:
+        other: mɔni mǝ á indí
+    ISK:
+      symbol: kr
+    JMD:
+      symbol: "$"
+    JPY:
+      symbol: JP¥
+      display_names:
+        other: mɔni mǝ á japɔ́ŋ
+    KGS:
+      symbol: "⃀"
+    KHR:
+      symbol: "៛"
+    KMF:
+      symbol: CF
+      display_names:
+        other: mɔni mǝ á komɔr
+    KPW:
+      symbol: "₩"
+    KRW:
+      symbol: "₩"
+    KYD:
+      symbol: "$"
+    KZT:
+      symbol: "₸"
+    LAK:
+      symbol: "₭"
+    LBP:
+      symbol: L£
+    LKR:
+      symbol: Rs
+    LRD:
+      symbol: "$"
+      display_names:
+        other: mɔni mǝ á libɛrya
+    LTL:
+      symbol: Lt
+    LVL:
+      symbol: Ls
+    MGA:
+      symbol: Ar
+      display_names:
+        other: mɔni mǝ á madagaska
+    MMK:
+      symbol: K
+    MNT:
+      symbol: "₮"
+    MUR:
+      symbol: Rs
+      display_names:
+        other: mɔni mǝ á mwarís
+    MXN:
+      symbol: MX$
+    MYR:
+      symbol: RM
+    NAD:
+      symbol: "$"
+      display_names:
+        other: mɔni mǝ á namibí
+    NGN:
+      symbol: "₦"
+      display_names:
+        other: mɔni mǝ á nijɛ́rya
+    NIO:
+      symbol: C$
+    NOK:
+      symbol: kr
+    NPR:
+      symbol: Rs
+    NZD:
+      symbol: NZ$
+    PHP:
+      symbol: "₱"
+    PKR:
+      symbol: Rs
+    PLN:
+      symbol: zł
+    PYG:
+      symbol: "₲"
+    RON:
+      symbol: lei
+    RUB:
+      symbol: "₽"
+    RWF:
+      symbol: RF
+      display_names:
+        other: mɔni mǝ á rwanda
+    SBD:
+      symbol: "$"
+    SEK:
+      symbol: kr
+    SGD:
+      symbol: "$"
+    SHP:
+      symbol: "£"
+      display_names:
+        other: mɔni mǝ á sɛntɛ́len
+    SRD:
+      symbol: "$"
+    SSP:
+      symbol: "£"
+    STN:
+      symbol: Db
+      display_names:
+        other: mɔni mǝ á saotomɛ́ ri priŋsib
+    SYP:
+      symbol: "£"
+    THB:
+      symbol: "฿"
+    TOP:
+      symbol: T$
+    TRY:
+      symbol: "₺"
+    TTD:
+      symbol: "$"
+    TWD:
+      symbol: NT$
+    UAH:
+      symbol: "₴"
+    USD:
+      symbol: US$
+      display_names:
+        other: mɔni mǝ á amɛrika
+    UYU:
+      symbol: "$"
+    VEF:
+      symbol: Bs
+    VND:
+      symbol: "₫"
+    XAF:
+      symbol: FCFA
+      display_names:
+        other: fráŋ
+    XCD:
+      symbol: EC$
+    XCG:
+      symbol: Cg.
+    XOF:
+      symbol: F CFA
+      display_names:
+        other: mɔni mǝ á afríka aná wɛs
+    XPF:
+      symbol: CFPF
+    XXX:
+      symbol: "¤"
+    ZAR:
+      symbol: R
+      display_names:
+        other: mɔni mǝ á afrik anǝ a sud
+    ZMW:
+      symbol: ZK
+      display_names:
+        other: mɔni mǝ á zambí
     AED:
       display_names:
         other: mɔni mǝ á bǝlɔŋ bǝ kaksa bɛ táatáaŋzǝn
-    AOA:
-      display_names:
-        other: mɔni mǝ á angóla
-    AUD:
-      display_names:
-        other: mɔni mǝ á ɔstralí
     BHD:
       display_names:
         other: mɔni mǝ á barǝ́n
     BIF:
       display_names:
         other: mɔni mǝ á burundí
-    BWP:
-      display_names:
-        other: mɔni mǝ á botswana
-    CAD:
-      display_names:
-        other: mɔni mǝ á kanada
     CDF:
       display_names:
         other: mɔni mǝ á kɔngó
     CHF:
       display_names:
         other: mɔni mǝ á swís
-    CNY:
-      display_names:
-        other: mɔni mǝ á cín
     CVE:
       display_names:
         other: mɔni mǝ á kapvɛr
@@ -45,21 +302,12 @@ number_formats:
     DZD:
       display_names:
         other: mɔni mǝ á aljɛrí
-    EGP:
-      display_names:
-        other: mɔni mǝ á ɛjípt
     ERN:
       display_names:
         other: mɔni mǝ á ɛritrɛ́
     ETB:
       display_names:
         other: mɔni mǝ á ɛtyɔpí
-    EUR:
-      display_names:
-        other: mɔni mǝ á pɛrɛsǝ́
-    GBP:
-      display_names:
-        other: mɔni mǝ á ingɛrís
     GHC:
       display_names:
         other: mɔni mǝ á gána
@@ -69,21 +317,9 @@ number_formats:
     GNS:
       display_names:
         other: mɔni mǝ á ginɛ́
-    INR:
-      display_names:
-        other: mɔni mǝ á indí
-    JPY:
-      display_names:
-        other: mɔni mǝ á japɔ́ŋ
     KES:
       display_names:
         other: mɔni mǝ á kɛnya
-    KMF:
-      display_names:
-        other: mɔni mǝ á komɔr
-    LRD:
-      display_names:
-        other: mɔni mǝ á libɛrya
     LSL:
       display_names:
         other: mɔni mǝ á lǝsóto
@@ -93,33 +329,18 @@ number_formats:
     MAD:
       display_names:
         other: mɔni mǝ á marɔk
-    MGA:
-      display_names:
-        other: mɔni mǝ á madagaska
     MRO:
       display_names:
         other: mɔni mǝ á mwaritaní (1973–2017)
     MRU:
       display_names:
         other: mɔni mǝ á mwaritaní
-    MUR:
-      display_names:
-        other: mɔni mǝ á mwarís
     MWK:
       display_names:
         other: mɔni mǝ á malawi
     MZM:
       display_names:
         other: mɔni mǝ á mosambík
-    NAD:
-      display_names:
-        other: mɔni mǝ á namibí
-    NGN:
-      display_names:
-        other: mɔni mǝ á nijɛ́rya
-    RWF:
-      display_names:
-        other: mɔni mǝ á rwanda
     SAR:
       display_names:
         other: mɔni mǝ á arabí saodí
@@ -129,9 +350,6 @@ number_formats:
     SDG:
       display_names:
         other: mɔni mǝ á sudan
-    SHP:
-      display_names:
-        other: mɔni mǝ á sɛntɛ́len
     SLE:
       display_names:
         other: mɔni mǝ á syɛraleon
@@ -144,9 +362,6 @@ number_formats:
     STD:
       display_names:
         other: mɔni mǝ á saotomɛ́ ri priŋsib (1977–2017)
-    STN:
-      display_names:
-        other: mɔni mǝ á saotomɛ́ ri priŋsib
     SZL:
       display_names:
         other: mɔni mǝ á swazilan
@@ -159,29 +374,14 @@ number_formats:
     UGX:
       display_names:
         other: mɔni mǝ á uganda
-    USD:
-      display_names:
-        other: mɔni mǝ á amɛrika
-    XAF:
-      display_names:
-        other: fráŋ
-    XOF:
-      display_names:
-        other: mɔni mǝ á afríka aná wɛs
-    ZAR:
-      display_names:
-        other: mɔni mǝ á afrik anǝ a sud
     ZMK:
       display_names:
         other: mɔni mǝ á zambí (1968–2012)
-    ZMW:
-      display_names:
-        other: mɔni mǝ á zambí
     ZWD:
       display_names:
         other: mɔni mǝ á zimbabwɛ́
 locale: ksf
-generated_at: '2025-09-10T22:17:42+09:00'
+generated_at: '2025-09-10T23:53:11+09:00'
 cldr_version: v46
 source: Unicode CLDR
 currency_fractions:
