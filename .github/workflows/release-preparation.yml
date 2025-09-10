@@ -3,6 +3,9 @@ name: Release Preparation
 # This workflow only handles file updates for release preparation.
 # All validations are performed by the Release Validation workflow on PR creation.
 
+env:
+  GEM_NAME: ${{ github.event.repository.name }}
+
 on:
   workflow_dispatch:
     inputs:
@@ -11,25 +14,18 @@ on:
         required: true
         type: string
 
-env:
-  GEM_NAME: ${{ github.event.repository.name }}
-
 jobs:
   create-release-branch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write       # Required for git push (branch and tag creation)
+      pull-requests: write  # Required for PR creation
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v5
       with:
         fetch-depth: 0
-        submodules: recursive
-
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.4'
-        bundler-cache: true
 
     - name: Set git user
       uses: git-actions/set-user@v1
@@ -98,6 +94,31 @@ jobs:
         - [x] All tests passed
         - [x] Version format validated
         - [x] CHANGELOG.md updated
+
+        ## Release Requirements Checklist
+
+        Before merging this PR, ensure the following requirements are met:
+
+        ### GitHub Repository Settings
+        - [ ] **Workflow permissions**: Set to "Read repository contents and packages permissions"
+        - [ ] **Pull request permissions**: "Allow GitHub Actions to create and approve pull requests" enabled
+        - [ ] Configure at: https://github.com/${{ github.repository }}/settings/actions
+
+        ### Required Secrets
+        - [ ] **RUBYGEMS_API_KEY**: RubyGems.org API key for gem publishing
+        - [ ] Configure at: https://github.com/${{ github.repository }}/settings/secrets/actions
+        - [ ] Generate API key at: https://rubygems.org/profile/api_keys (requires password confirmation)
+        - [ ] API key scopes: Enable "Push rubygem" and "Yank rubygem"
+        - [ ] API key security: Enable "Enable MFA"
+        - [ ] Gem scope: Start with "All Gems", restrict to `${{ env.GEM_NAME }}` after first release
+
+        ### RubyGems.org Setup
+        - [ ] **Gem name availability**: Verify `${{ env.GEM_NAME }}` is available or owned by you (first release only)
+        - [ ] **Account verified**: RubyGems.org account email verified and MFA enabled (recommended)
+        - [ ] Configure MFA at: https://rubygems.org/profile/edit
+        - [ ] Set Authentication Levels to "UI and gem signin" (enables MFA while allowing CI/CD)
+        - [ ] **Note**: Do not use "UI and API" as it breaks automated CI/CD workflows
+        - [ ] MFA setup guide: https://guides.rubygems.org/setting-up-multifactor-authentication/
 
         ## Post-Merge Actions
 

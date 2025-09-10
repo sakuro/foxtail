@@ -18,9 +18,9 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
-          - '3.2.9'
-          - '3.3.9'
-          - '3.4.5'
+          - '3.2'
+          - '3.3'
+          - '3.4'
 
     steps:
       - uses: actions/checkout@v5
@@ -35,12 +35,12 @@ jobs:
         run: bundle exec rake
       
       - name: Generate compatibility report
-        if: matrix.ruby == '3.4.5'  # Only run once, on the latest Ruby version
+        if: matrix.ruby == '3.4'  # Only run once, on the latest Ruby version
         run: |
           bundle exec rake compatibility:report
           
       - name: Upload compatibility reports
-        if: matrix.ruby == '3.4.5'
+        if: matrix.ruby == '3.4'
         uses: actions/upload-artifact@v4
         with:
           name: compatibility-reports
@@ -48,7 +48,7 @@ jobs:
           retention-days: 30
           
       - name: Extract compatibility summary
-        if: matrix.ruby == '3.4.5' && github.event_name == 'pull_request'
+        if: matrix.ruby == '3.4' && github.event_name == 'pull_request'
         id: extract-summary
         run: |
           # Read the markdown report
@@ -69,7 +69,7 @@ jobs:
           } >> $GITHUB_OUTPUT
           
       - name: Comment PR with compatibility summary
-        if: matrix.ruby == '3.4.5' && github.event_name == 'pull_request'
+        if: matrix.ruby == '3.4' && github.event_name == 'pull_request'
         uses: int128/comment-action@v1
         with:
           post: |

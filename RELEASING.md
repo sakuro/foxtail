@@ -1,6 +1,6 @@
 # Releasing
 
-This document describes the release process for the Foxtail gem, which is fully automated through GitHub Actions workflows.
+This document describes the release process for Ruby gems used in this project, which is fully automated through GitHub Actions workflows.
 
 ## Overview
 
@@ -31,7 +31,7 @@ Before initiating a release, ensure:
 
 The workflow will automatically:
 - Create a new branch `release-v{version}`
-- Update `lib/foxtail/version.rb` with the new version
+- Update `lib/[gem_name]/version.rb` with the new version
 - Update `CHANGELOG.md`:
   - Replace `## [Unreleased]` with `## [{version}] - {date}`
   - Add a new `## [Unreleased]` section for future changes
@@ -115,7 +115,7 @@ If automation fails, you can release manually using our tag-based strategy:
 git checkout -b release-v1.0.0
 
 # 2. Update version
-vim lib/foxtail/version.rb
+vim lib/[gem_name]/version.rb
 
 # 3. Update CHANGELOG (move content from [Unreleased] to [1.0.0])
 vim CHANGELOG.md
@@ -138,10 +138,10 @@ git checkout v1.0.0
 bundle exec rake build
 
 # 8. Push to RubyGems
-gem push pkg/foxtail-1.0.0.gem
+gem push pkg/[gem_name]-1.0.0.gem
 
 # 9. Create GitHub release
-gh release create v1.0.0 --title "foxtail v1.0.0" --generate-notes pkg/foxtail-1.0.0.gem
+gh release create v1.0.0 --title "[gem_name] v1.0.0" --generate-notes pkg/[gem_name]-1.0.0.gem
 ```
 
 ## Troubleshooting

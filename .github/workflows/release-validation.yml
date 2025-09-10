@@ -15,13 +15,14 @@ jobs:
     # Only run for release branches
     if: startsWith(github.head_ref, 'release-v')
     runs-on: ubuntu-latest
-    
+    permissions:
+      contents: write      # Required for git tag push
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v5
       with:
         fetch-depth: 0
-        submodules: recursive
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -90,7 +91,6 @@ jobs:
           echo "✅ RUBYGEMS_API_KEY is configured"
         fi
 
-
     - name: Validate CHANGELOG.md format
       run: |
         # Check if CHANGELOG has the expected section for this version
@@ -107,14 +107,14 @@ jobs:
       if: github.event.action == 'synchronize'  # When new commits are pushed to PR
       run: |
         echo "Updating tag v${{ steps.version.outputs.version }} to latest commit"
-        
+
         # Force update the tag to current HEAD
         git tag -fa "v${{ steps.version.outputs.version }}" \
           -m "Release v${{ steps.version.outputs.version }}"
-        
+
         # Force push the updated tag
         git push origin "v${{ steps.version.outputs.version }}" --force
-        
+
         echo "🏷️ Tag v${{ steps.version.outputs.version }} updated to commit $(git rev-parse --short HEAD)"
 
     - name: Release validation summary

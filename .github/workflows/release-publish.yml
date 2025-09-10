@@ -15,6 +15,8 @@ jobs:
   publish-release:
     if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release-v')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write      # Required for GitHub Release creation and branch deletion
 
     steps:
     - name: Extract version from branch name
@@ -93,9 +95,14 @@ jobs:
           --notes-file release_notes.md \
           pkg/${{ env.GEM_NAME }}-${{ steps.version.outputs.version }}.gem
 
-    - name: Cleanup release branch
+    - name: Cleanup release branch (if exists)
       run: |
-        git push origin --delete release-v${{ steps.version.outputs.version }}
+        if git ls-remote --heads origin release-v${{ steps.version.outputs.version }} | grep -q release-v${{ steps.version.outputs.version }}; then
+          echo "Deleting release branch: release-v${{ steps.version.outputs.version }}"
+          git push origin --delete release-v${{ steps.version.outputs.version }}
+        else
+          echo "Release branch already deleted (likely by auto-delete setting)"
+        fi
       continue-on-error: true
 
     - name: Post-release summary
