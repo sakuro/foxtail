@@ -54,3 +54,20 @@ This is a Ruby gem project with a standard structure:
 - **Ruby version**: Requires Ruby >= 3.4.5 (specified in gemspec)
 - **RuboCop style**: Enforces double quotes for strings (see .rubocop.yml)
 - **Default task**: Runs both tests and RuboCop when executing `rake` without arguments
+
+## Additional Agent Guidelines
+
+This project includes specialized documentation for AI agents to ensure consistent, high-quality contributions. All agents should read and follow these guidelines:
+
+### Agent Documentation Directory
+- **[docs/agents/rubocop.md](docs/agents/rubocop.md)** - RuboCop fix workflows and style enforcement procedures
+- **[docs/agents/languages.md](docs/agents/languages.md)** - Language usage conventions for multilingual projects  
+- **[docs/agents/git-pr.md](docs/agents/git-pr.md)** - Git commit and pull request guidelines with proper formatting
+
+### Required Reading Instructions
+AI agents MUST read the following documentation files before working on this project:
+1. Read `docs/agents/rubocop.md` for code style and linting procedures
+2. Read `docs/agents/languages.md` for proper language usage in different contexts
+3. Read `docs/agents/git-pr.md` for Git workflow and commit message formatting
+
+These documents provide essential context for maintaining code quality, following project conventions, and ensuring professional collaboration standards.
