@@ -12,8 +12,8 @@ on:
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
       - 'spec/parser/**'
-      - 'spec/fluent_js_compatibility_spec.rb'
       - 'compat/**'
+      - '.github/workflows/compatibility.yml'
 
   pull_request:
     paths:
@@ -21,8 +21,8 @@ on:
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
       - 'spec/parser/**'
-      - 'spec/fluent_js_compatibility_spec.rb'
       - 'compat/**'
+      - '.github/workflows/compatibility.yml'
 
   # Allow manual triggering for comprehensive testing
   workflow_dispatch:
