@@ -164,5 +164,50 @@ RSpec.describe Foxtail::Functions::NumberFormatter do
         }.to raise_error(ArgumentError)
       end
     end
+
+    context "with scientific notation style" do
+      it "formats numbers in scientific notation using CLDR pattern" do
+        result = formatter.call(123.456, style: "scientific", locale: locale("en"))
+        # CLDR pattern "#E0" produces proper scientific notation with minimum necessary digits
+        expect(result).to match(/^1\.23456E\+?2$/)
+      end
+
+      it "formats large numbers in scientific notation" do
+        result = formatter.call(1_234_567.89, style: "scientific", locale: locale("en"))
+        # Should produce format like "1.23456789E6" with necessary significant digits
+        expect(result).to match(/^1\.23456789E\+?6$/)
+      end
+
+      it "formats small numbers in scientific notation" do
+        result = formatter.call(0.000123, style: "scientific", locale: locale("en"))
+        # Should produce format like "1.23E-4"
+        expect(result).to match(/^1\.23E-4$/)
+      end
+
+      it "formats negative numbers in scientific notation" do
+        result = formatter.call(-987_654.321, style: "scientific", locale: locale("en"))
+        # Should produce format like "-9.87654321E5"
+        expect(result).to match(/^-9\.87654321E\+?5$/)
+      end
+
+      it "formats integer with minimum digits" do
+        result = formatter.call(1, style: "scientific", locale: locale("en"))
+        # Should produce "1E0" for simple integer
+        expect(result).to match(/^1E\+?0$/)
+      end
+
+      it "formats decimal with necessary precision" do
+        result = formatter.call(12.3, style: "scientific", locale: locale("en"))
+        # Should produce "1.23E1" maintaining necessary precision
+        expect(result).to match(/^1\.23E\+?1$/)
+      end
+
+      it "uses CLDR scientific pattern from locale data" do
+        # This test verifies that we use CLDR data instead of hardcoded patterns
+        number_formats = Foxtail::CLDR::NumberFormats.new(locale("en"))
+        expected_pattern = number_formats.scientific_pattern
+        expect(expected_pattern).to eq("#E0")
+      end
+    end
   end
 end

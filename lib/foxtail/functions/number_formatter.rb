@@ -138,6 +138,19 @@ module Foxtail
 
       # Build the final formatted string from tokens
       private def build_formatted_string(decimal_value, tokens, number_formats, options)
+        # Analyze pattern structure first to check for scientific notation
+        pattern_info = analyze_pattern_structure(tokens, options)
+
+        # Check if this is scientific notation (has ExponentToken)
+        has_scientific = tokens.any?(Foxtail::CLDR::NumberPatternParser::ExponentToken)
+
+        if has_scientific
+          # For scientific notation, normalize the number to mantissa form (1-10 × 10^exp)
+          normalized_result = normalize_for_scientific(decimal_value, pattern_info)
+          decimal_value = normalized_result[:mantissa]
+          exponent = normalized_result[:exponent]
+        end
+
         # Convert to string for digit processing, avoiding scientific notation
         value_str = decimal_value.to_s("F")
 
@@ -145,9 +158,6 @@ module Foxtail
         parts = value_str.split(".")
         integer_part = parts[0] || "0"
         fractional_part = parts[1] || ""
-
-        # Analyze pattern structure for grouping
-        pattern_info = analyze_pattern_structure(tokens, options)
 
         # Format the number according to the pattern
         result = ""
@@ -161,7 +171,17 @@ module Foxtail
         result += format_integer_with_grouping(integer_part, pattern_info, number_formats)
 
         # Add decimal part if present
-        if pattern_info[:has_decimal] && fractional_part.length > 0 && pattern_info[:fractional_digits] > 0
+        if has_scientific
+          # For scientific notation, show all significant digits of the mantissa (remove trailing zeros)
+          if fractional_part.length > 0
+            # Remove trailing zeros but preserve significant digits
+            trimmed_fractional = fractional_part.gsub(/0+$/, "")
+            if trimmed_fractional.length > 0
+              result += number_formats.decimal_symbol
+              result += trimmed_fractional
+            end
+          end
+        elsif pattern_info[:has_decimal] && fractional_part.length > 0 && pattern_info[:fractional_digits] > 0
           formatted_fractional = format_fractional_part(fractional_part, pattern_info)
           if formatted_fractional.length > 0
             result += number_formats.decimal_symbol
@@ -175,7 +195,11 @@ module Foxtail
 
         # Process non-digit tokens after digits
         pattern_info[:suffix_tokens].each do |token|
-          result += format_non_digit_token(token, number_formats, options, decimal_value)
+          result += if has_scientific && token.is_a?(Foxtail::CLDR::NumberPatternParser::ExponentToken)
+                      format_exponent_token_with_value(token, exponent, number_formats)
+                    else
+                      format_non_digit_token(token, number_formats, options, decimal_value)
+                    end
         end
 
         result
@@ -337,7 +361,7 @@ module Foxtail
         end
       end
 
-      # Format exponent token for scientific notation
+      # Format exponent token for scientific notation (deprecated - use format_exponent_token_with_value)
       private def format_exponent_token(token, decimal_value, number_formats)
         return "E0" if decimal_value.zero?
 
@@ -351,6 +375,36 @@ module Foxtail
         exponent_str = "+#{exponent_str}" if exponent.positive? && token.show_exponent_sign?
 
         "E#{exponent_str}"
+      end
+
+      # Format exponent token with pre-calculated exponent value
+      private def format_exponent_token_with_value(token, exponent, number_formats)
+        return "E0" if exponent.zero?
+
+        # Format exponent with required digits
+        exponent_str = exponent.abs.to_s.rjust(token.exponent_digits, "0")
+        exponent_str = "#{number_formats.minus_sign}#{exponent_str}" if exponent.negative?
+        exponent_str = "+#{exponent_str}" if exponent.positive? && token.show_exponent_sign?
+
+        "E#{exponent_str}"
+      end
+
+      # Normalize number for scientific notation (mantissa between 1-10)
+      private def normalize_for_scientific(decimal_value, _pattern_info)
+        return {mantissa: BigDecimal(0), exponent: 0} if decimal_value.zero?
+
+        abs_value = decimal_value.abs
+
+        # Calculate exponent to normalize mantissa between 1-10
+        exponent = Math.log10(Float(abs_value)).floor
+
+        # Calculate mantissa by dividing by 10^exponent
+        mantissa = abs_value / (BigDecimal(10)**exponent)
+
+        # Preserve sign
+        mantissa = -mantissa if decimal_value.negative?
+
+        {mantissa:, exponent:}
       end
     end
   end
