@@ -25,6 +25,9 @@ group :development do
   gem "yard"
 
   gem "rexml" # For CLDR XML parsing in rake tasks
+
+  # Language Server Protocol support
+  gem "ruby-lsp"
 end
 
 group :test do
