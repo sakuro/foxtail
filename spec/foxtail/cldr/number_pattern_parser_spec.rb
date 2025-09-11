@@ -456,5 +456,25 @@ RSpec.describe Foxtail::CLDR::NumberPatternParser do
         expect(token.literal_text).to eq("Don't worry")
       end
     end
+
+    describe "pattern validation" do
+      it "raises error for patterns with conflicting percent and permille symbols" do
+        expect {
+          parser.parse("#0.0%‰")
+        }.to raise_error(ArgumentError, /Pattern cannot contain both percent \(.*?\) and permille \(.*?\)/)
+      end
+
+      it "allows patterns with only percent symbol" do
+        expect { parser.parse("#0.0%") }.not_to raise_error
+      end
+
+      it "allows patterns with only permille symbol" do
+        expect { parser.parse("#0.0‰") }.not_to raise_error
+      end
+
+      it "allows patterns with neither percent nor permille symbol" do
+        expect { parser.parse("#,##0.00") }.not_to raise_error
+      end
+    end
   end
 end

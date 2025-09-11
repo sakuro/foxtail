@@ -209,5 +209,49 @@ RSpec.describe Foxtail::Functions::NumberFormatter do
         expect(expected_pattern).to eq("#E0")
       end
     end
+
+    describe "custom pattern support" do
+      it "formats with quirky decimal pattern" do
+        result = formatter.call(1234.567, pattern: "###,###,##0.000", locale: locale("en"))
+        expect(result).to eq("1,234.567")
+      end
+
+      it "formats with unusual currency placement" do
+        result = formatter.call(1234.56, pattern: "#,##0.00¤", locale: locale("en"))
+        expect(result).to eq("1,234.56$")
+      end
+
+      it "formats with multiple literal texts" do
+        result = formatter.call(42, pattern: "'Score:' #0 'points'", locale: locale("en"))
+        expect(result).to eq("Score: 42 points")
+      end
+
+      it "formats with zero-padded scientific notation" do
+        result = formatter.call(1234, pattern: "000.0E000", locale: locale("en"))
+        expect(result).to eq("1.234E003")
+      end
+
+      it "formats with permille and literal suffix" do
+        result = formatter.call(0.789, pattern: "#0.00‰ 'rate'", locale: locale("en"))
+        expect(result).to eq("789.00‰ rate")
+      end
+
+      it "formats with accounting-style negative pattern" do
+        negative_result = formatter.call(-456.78, pattern: "#0.00;[#0.00]", locale: locale("en"))
+        expect(negative_result).to eq("[456.78]")
+      end
+
+      it "custom pattern takes precedence over style option" do
+        result = formatter.call(0.5, pattern: "'Value:' #0.000", style: "percent", locale: locale("en"))
+        # Should format as decimal with literal, not as percent (50.000 indicates percent style was applied)
+        expect(result).to eq("Value: 50.000")
+      end
+
+      it "raises error for patterns with conflicting percent and permille symbols" do
+        expect {
+          formatter.call(0.123, pattern: "#0.0%‰", locale: locale("en"))
+        }.to raise_error(ArgumentError, /Pattern cannot contain both percent \(.*?\) and permille \(.*?\)/)
+      end
+    end
   end
 end
