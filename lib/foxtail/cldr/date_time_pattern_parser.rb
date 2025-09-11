@@ -179,7 +179,7 @@ module Foxtail
         nil
       end
 
-      # Check if a single-letter token is part of an English word
+      # Check if a single-letter token is part of a literal word/text
       private def part_of_word?(pattern, position, token)
         return false if token.length > 1
 
@@ -189,7 +189,7 @@ module Foxtail
         # CLDR pattern letters that are valid in field contexts
         cldr_letters = /[EMydhHmsaYDKkzZXx]/
 
-        # If surrounded by non-CLDR ASCII letters, it's part of a word
+        # If surrounded by non-CLDR ASCII letters, it's part of literal text
         (prev_char&.match?(/[a-zA-Z]/) && !prev_char.match?(cldr_letters)) ||
         (next_char&.match?(/[a-zA-Z]/) && !next_char.match?(cldr_letters))
       end
