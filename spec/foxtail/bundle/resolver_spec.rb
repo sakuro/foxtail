@@ -45,13 +45,13 @@ RSpec.describe Foxtail::Bundle::Resolver do
     it "resolves number literals" do
       expr = {"type" => "num", "value" => 42.5}
       result = resolver.resolve_expression(expr, scope)
-      expect(result).to eq("42.5")
+      expect(result).to eq(42.5)
     end
 
     it "resolves number literals with precision" do
       expr = {"type" => "num", "value" => 42.567, "precision" => 2}
       result = resolver.resolve_expression(expr, scope)
-      expect(result).to eq("42.57")
+      expect(result).to eq(42.567)
     end
 
     it "resolves variable references" do
