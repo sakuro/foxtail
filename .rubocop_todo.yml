@@ -9,3 +9,8 @@
 Rake/MethodDefinitionInTask:
   Exclude:
     - 'lib/tasks/cldr.rake'
+
+# Configuration parameters: AllowedMethods, RequireForNonPublicMethods.
+Style/DocumentationMethod:
+  Exclude:
+    - 'lib/foxtail/cldr/date_time_pattern_parser.rb'
