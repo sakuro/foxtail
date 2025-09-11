@@ -75,5 +75,55 @@ RSpec.describe Foxtail::Functions::DateTimeFormatter do
         }.to raise_error(ArgumentError)
       end
     end
+
+    context "with custom patterns" do
+      let(:en_locale) { locale("en") }
+      let(:ja_locale) { locale("ja") }
+
+      it "formats with simple custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "yyyy-MM-dd")
+        expect(result).to eq("2023-06-15")
+      end
+
+      it "formats with custom pattern including weekday and month names" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "EEEE, MMMM d, yyyy")
+        expect(result).to eq("Thursday, June 15, 2023")
+      end
+
+      it "formats with abbreviated names in custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "EEE, MMM d")
+        expect(result).to eq("Thu, Jun 15")
+      end
+
+      it "formats with time components in custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "HH:mm:ss")
+        expect(result).to eq("14:30:45")
+      end
+
+      it "formats with 12-hour time in custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "h:mm a")
+        expect(result).to eq("2:30 PM")
+      end
+
+      it "formats with complex custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "EEEE, d MMMM yyyy 'at' HH:mm")
+        expect(result).to eq("Thursday, 15 June 2023 at 14:30")
+      end
+
+      it "uses locale-specific names in custom patterns" do
+        result = formatter.call(test_time, locale: ja_locale, pattern: "yyyy年MMMMd日(EEEE)")
+        expect(result).to eq("2023年6月15日(木曜日)")
+      end
+
+      it "handles literal text in custom patterns" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "'Today is' EEEE")
+        expect(result).to eq("Today is Thursday")
+      end
+
+      it "handles mixed tokens and literals" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "Date: dd/MM/yyyy Time: HH:mm")
+        expect(result).to eq("Date: 15/06/2023 Time: 14:30")
+      end
+    end
   end
 end

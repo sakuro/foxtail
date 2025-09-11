@@ -2,6 +2,7 @@
 
 require "date"
 require "locale"
+require "strscan"
 require "time"
 
 module Foxtail
@@ -62,8 +63,11 @@ module Foxtail
           raise Foxtail::CLDR::DataNotAvailable, "CLDR data not available for locale: #{locale}"
         end
 
-        # Handle dateStyle/timeStyle (Intl.DateTimeFormat style)
-        if options[:dateStyle] || options[:timeStyle]
+        # Handle custom pattern first (highest priority)
+        if options[:pattern]
+          format_with_pattern(time_obj, formats, options[:pattern])
+        elsif options[:dateStyle] || options[:timeStyle]
+          # Handle dateStyle/timeStyle (Intl.DateTimeFormat style)
           format_with_styles(time_obj, formats, options)
         else
           # Handle individual field specifications
@@ -170,9 +174,17 @@ module Foxtail
       private def format_with_pattern(time_obj, formats, pattern)
         weekday_key = %w[sun mon tue wed thu fri sat][time_obj.wday]
 
-        # Tokenize the pattern to avoid replacement conflicts
-        # Match CLDR date/time pattern tokens and literal text
-        tokens = pattern.scan(/EEEE|EEE|MMMM|MMM|MM|yyyy|yy|dd|hh|HH|mm|ss|a|M|d|y|h|H|[^EMydhHmsa]+/)
+        # Handle quoted literals first by replacing them with placeholders
+        literals = []
+        pattern_with_placeholders = pattern.gsub(/'([^']*)'/) {|_match|
+          literal = Regexp.last_match(1)
+          placeholder = "\u0001LITERAL#{literals.size}\u0001"
+          literals << literal
+          placeholder
+        }
+
+        # Parse pattern into tokens using a stateful parser
+        tokens = parse_pattern_tokens(pattern_with_placeholders)
 
         # Define replacements for each token
         replacements = {
@@ -197,7 +209,106 @@ module Foxtail
         }
 
         # Replace each token, leaving literals unchanged
-        tokens.map {|token| replacements[token] || token }.join
+        result = tokens.map {|token|
+          if token[:type] == :pattern
+            replacements[token[:value]] || token[:value]
+          else
+            token[:value]
+          end
+        }.join
+
+        # Restore literals from placeholders
+        literals.each_with_index do |literal, index|
+          placeholder = "\u0001LITERAL#{index}\u0001"
+          result = result.gsub(placeholder, literal)
+        end
+
+        result
+      end
+
+      private def parse_pattern_tokens(pattern)
+        tokens = []
+        i = 0
+
+        # CLDR pattern tokens, ordered by length (longest first)
+        pattern_specs = %w[
+          EEEE
+          EEE
+          yyyy
+          MMMM
+          MMM
+          MM
+          dd
+          HH
+          hh
+          mm
+          ss
+          yy
+          M
+          d
+          H
+          h
+          y
+          a
+        ]
+
+        while i < pattern.length
+          matched = false
+
+          # Check for literal placeholder
+          if pattern[i..].start_with?("\u0001LITERAL")
+            match = pattern[i..].match(/\A\u0001LITERAL\d+\u0001/)
+            if match
+              tokens << {type: :literal, value: match[0]}
+              i += match[0].length
+              matched = true
+            end
+          end
+
+          unless matched
+            # Try to match pattern tokens (longest first)
+            pattern_specs.each do |spec|
+              next unless pattern[i, spec.length] == spec
+
+              # For single-letter tokens, check if it's part of a word
+              if spec.length == 1
+                # Check previous and next characters
+                prev_char = i > 0 ? pattern[i - 1] : nil
+                next_char = i + 1 < pattern.length ? pattern[i + 1] : nil
+
+                # Check if it's part of an English word (not a CLDR pattern)
+                # CLDR pattern letters: E, M, y, d, h, H, m, s, a
+                # If surrounded by non-CLDR ASCII letters, it's part of a word
+                cldr_letters = /[EMydhHmsa]/
+
+                if (prev_char && prev_char.match?(/[a-zA-Z]/) && !prev_char.match?(cldr_letters)) ||
+                   (next_char && next_char.match?(/[a-zA-Z]/) && !next_char.match?(cldr_letters))
+
+                  # Skip this pattern match, treat as literal
+                  next
+                end
+              end
+
+              tokens << {type: :pattern, value: spec}
+              i += spec.length
+              matched = true
+              break
+            end
+          end
+
+          # If no pattern matched, treat as literal character
+          next if matched
+
+          # Combine consecutive literal characters
+          if tokens.last && tokens.last[:type] == :literal && !tokens.last[:value].start_with?("\u0001")
+            tokens.last[:value] += pattern[i]
+          else
+            tokens << {type: :literal, value: pattern[i]}
+          end
+          i += 1
+        end
+
+        tokens
       end
     end
   end
