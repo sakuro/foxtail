@@ -21,3 +21,8 @@ Gemfile.lock
 
 # Generated compatibility reports
 compatibility_report.md
+
+# CLDR locale data (generated during build/development)
+# Keep README.md but ignore all locale-specific data files
+data/cldr/*
+!data/cldr/README.md
