@@ -1,30 +1,32 @@
 # frozen_string_literal: true
 
+require "bigdecimal"
 require "locale"
 
 module Foxtail
   module Functions
     # CLDR-based number formatter implementing Intl.NumberFormat functionality
+    # Uses NumberPatternParser for proper token-based pattern processing
     class NumberFormatter
       # Format numbers with locale-specific formatting
       #
+      # @param value [Numeric, String] The value to format
+      # @param locale [Locale] The locale for formatting
+      # @param options [Hash] Formatting options
+      # @option options [String] :style Format style ("decimal", "percent", "currency", "scientific")
+      # @option options [String] :pattern Custom CLDR pattern
+      # @option options [String] :currency Currency code for currency formatting
+      # @option options [Integer] :minimumFractionDigits Minimum decimal places
+      # @option options [Integer] :maximumFractionDigits Maximum decimal places
       # @raise [ArgumentError] when the value cannot be parsed as a number
       # @raise [Foxtail::CLDR::DataNotAvailable] when CLDR data is not available for the locale
+      # @return [String] Formatted number string
       def call(*args, locale:, **options)
-        # Locale is now guaranteed to be a Locale instance from Bundle/Resolver
-
         # Get the first positional argument (the value to format)
         value = args.first
-        # Try to convert string numbers to numeric
-        # Note: May raise ArgumentError for invalid numeric strings
-        numeric_value =
-          case value
-          when Numeric then value
-          when String
-            Float(value)
-          else
-            return value.to_s
-          end
+
+        # Convert to BigDecimal for precise arithmetic
+        decimal_value = convert_to_decimal(value)
 
         # Load CLDR number formats for the locale
         number_formats = Foxtail::CLDR::NumberFormats.new(locale)
@@ -34,207 +36,375 @@ module Foxtail
           raise Foxtail::CLDR::DataNotAvailable, "CLDR data not available for locale: #{locale}"
         end
 
-        # Convert options to formatting parameters
-        formatted_value = Float(numeric_value)
+        # Determine the pattern to use
+        pattern = determine_pattern(options, number_formats)
 
-        # Handle style options (decimal, percent, currency, scientific)
+        # Apply style-specific transformations
+        transformed_value = apply_style_transformations(decimal_value, options)
+
+        # Format using token-based pattern processing
+        format_with_pattern(transformed_value, pattern, number_formats, options)
+      end
+
+      private def convert_to_decimal(value)
+        case value
+        when BigDecimal
+          value
+        when Numeric
+          BigDecimal(value.to_s)
+        when String
+          begin
+            BigDecimal(value)
+          rescue ArgumentError
+            raise ArgumentError, "Invalid numeric string: #{value}"
+          end
+        else
+          raise ArgumentError, "Cannot convert #{value.class} to number"
+        end
+      end
+
+      # Determine which pattern to use based on options
+      private def determine_pattern(options, number_formats)
+        # Custom pattern takes priority
+        return options[:pattern] if options[:pattern]
+
+        # Style-based pattern selection
         style = options[:style] || "decimal"
-
         case style
         when "percent"
-          format_percent(formatted_value, number_formats, options)
+          number_formats.percent_pattern
         when "currency"
-          format_currency(formatted_value, number_formats, options)
+          currency_style = options[:currencyDisplay] == "accounting" ? "accounting" : "standard"
+          pattern = number_formats.currency_pattern(currency_style)
+
+          # Apply currency-specific decimal digits if not overridden by options
+          currency_code = options[:currency] || "USD"
+          unless options[:minimumFractionDigits] || options[:maximumFractionDigits]
+            currency_digits = number_formats.currency_digits(currency_code)
+            options[:minimumFractionDigits] = currency_digits
+            options[:maximumFractionDigits] = currency_digits
+          end
+
+          pattern
         when "scientific"
-          format_scientific(formatted_value, number_formats, options)
+          number_formats.scientific_pattern
         else
-          # Default decimal formatting
-          format_number_with_precision(formatted_value, number_formats, options)
+          number_formats.decimal_pattern
         end
       end
 
-      private def format_percent(formatted_value, number_formats, options)
-        # Format as percentage (multiply by 100)
-        percent_value = formatted_value * 100
-        result = format_number_with_precision(percent_value, number_formats, options)
-
-        # Use CLDR pattern for percentage formatting
-        pattern = number_formats.percent_pattern
-        # Check if pattern has space before % by looking at the pattern structure
-        if pattern.length >= 2 && pattern[-1] == "%" && pattern[-2] != "0"
-          # There's a space or separator character before %, use it
-          space_char = pattern[-2]
-          "#{result}#{space_char}#{number_formats.percent_sign}"
-        else
-          "#{result}#{number_formats.percent_sign}"
-        end
-      end
-
-      private def format_currency(formatted_value, number_formats, options)
-        # Get currency code (defaults to locale-specific or "USD")
-        currency_code = options[:currency] || "USD"
-        currency_style = options[:currencyDisplay] || "standard"
-
-        # Handle case where currency is already a symbol (legacy test compatibility)
-        if currency_code.length == 1 && currency_code !~ /[A-Z]{3}/
-          # Assume it's already a currency symbol
-          currency_symbol = currency_code
-          currency_digits = 2 # Default for most currencies
-        else
-          # Get CLDR currency data
-          currency_symbol = number_formats.currency_symbol(currency_code)
-          currency_digits = number_formats.currency_digits(currency_code)
-        end
-
-        # Override precision with currency-specific digits unless explicitly set
-        currency_options = options.dup
-        unless options[:minimumFractionDigits] || options[:maximumFractionDigits]
-          currency_options[:minimumFractionDigits] = currency_digits
-          currency_options[:maximumFractionDigits] = currency_digits
-        end
-
-        # Format the number with currency-specific precision
-        formatted_number = format_number_with_precision(formatted_value, number_formats, currency_options)
-
-        # Get the appropriate currency pattern
-        pattern_style = currency_style == "accounting" ? "accounting" : "standard"
-        pattern = number_formats.currency_pattern(pattern_style)
-
-        # Apply currency formatting pattern
-        apply_currency_pattern(formatted_number, pattern, currency_symbol, formatted_value < 0)
-      end
-
-      private def format_scientific(formatted_value, number_formats, options)
-        # Format in scientific notation
-        format_scientific_notation(formatted_value, number_formats, options)
-      end
-
-      # Format number with precision and locale-specific symbols
-      private def format_number_with_precision(value, number_formats, options)
-        # Handle precision options
-        if options[:minimumFractionDigits] || options[:maximumFractionDigits]
-          min_digits = options[:minimumFractionDigits] || 0
-          max_digits = options[:maximumFractionDigits]
-
-          if max_digits
-            # Format with max digits, then truncate trailing zeros down to minimum
-            format_str = "%.#{max_digits}f"
-            result = format_str % value
-
-            # Remove trailing zeros, but keep at least min_digits
-            if min_digits > 0
-              decimal_part = result.split(".")[1] || ""
-              # Remove trailing zeros but preserve at least min_digits
-              decimal_part = decimal_part[0...-1] while decimal_part.length > min_digits && decimal_part.end_with?("0")
-              result = "#{result.split(".")[0]}.#{decimal_part}"
-            end
+      # Apply style-specific value transformations
+      private def apply_style_transformations(decimal_value, options)
+        style = options[:style] || "decimal"
+        case style
+        when "percent"
+          # Multiply by 100 for percentage display
+          decimal_value * 100
+        when "currency"
+          # Round to currency-specific decimal places
+          if options[:maximumFractionDigits] == 0
+            BigDecimal(decimal_value.round(0).to_s)
           else
-            # Only minimum digits specified
-            format_str = "%.#{min_digits}f"
-            result = format_str % value
+            decimal_value
           end
-        elsif value == Integer(value)
-          # Integer formatting
-          result = Integer(value).to_s
         else
-          result = value.to_s
-        end
-
-        # Apply CLDR locale-specific symbols
-        apply_cldr_symbols(result, number_formats)
-      end
-
-      # Apply CLDR locale-specific number symbols
-      private def apply_cldr_symbols(result, number_formats)
-        # Replace decimal separator
-        result = result.gsub(".", number_formats.decimal_symbol)
-
-        # Add thousand separators if the number is large enough
-        parts = result.split(number_formats.decimal_symbol)
-        integer_part = parts[0]
-        decimal_part = parts[1]
-
-        # Add grouping separators (every 3 digits from the right)
-        if integer_part.length > 3
-          # Handle negative numbers
-          negative = integer_part.start_with?("-")
-          integer_part = integer_part[1..] if negative
-
-          # Add grouping separators
-          integer_part = integer_part.reverse.gsub(/(\d{3})(?=\d)/, "\\1#{number_formats.group_symbol}").reverse
-
-          # Add back negative sign if needed
-          integer_part = number_formats.minus_sign + integer_part if negative
-        end
-
-        # Reconstruct the result
-        if decimal_part
-          "#{integer_part}#{number_formats.decimal_symbol}#{decimal_part}"
-        else
-          integer_part
+          decimal_value
         end
       end
 
-      # Apply CLDR currency pattern to formatted number
-      private def apply_currency_pattern(formatted_number, pattern, currency_symbol, negative)
-        # CLDR currency patterns use ¤ as currency placeholder
-        # Examples:
-        # "¤#,##0.00" -> "$1,234.00"
-        # "¤#,##0.00;(¤#,##0.00)" -> "$1,234.00" or "($1,234.00)"
-        # "#,##0.00 ¤" -> "1,234.00 $" (currency after number)
+      # Format value using pattern tokens
+      private def format_with_pattern(decimal_value, pattern, number_formats, options)
+        # Parse pattern into tokens
+        parser = Foxtail::CLDR::NumberPatternParser.new
+        tokens = parser.parse(pattern)
 
-        if negative && pattern.include?(";")
-          # Use negative pattern (after semicolon)
-          negative_pattern = pattern.split(";")[1]
-          # Remove minus sign from formatted number since pattern handles it
-          clean_number = formatted_number.gsub(/^-/, "")
-          apply_pattern_substitution(negative_pattern, currency_symbol, clean_number)
+        # Split positive and negative patterns if present
+        separator_index = tokens.find_index {|t| t.is_a?(Foxtail::CLDR::NumberPatternParser::PatternSeparatorToken) }
+
+        if separator_index
+          positive_tokens = tokens[0...separator_index]
+          negative_tokens = tokens[(separator_index + 1)..]
+          pattern_tokens = decimal_value.negative? ? negative_tokens : positive_tokens
+          # Use absolute value for negative patterns (pattern handles the sign display)
+          format_value = decimal_value.negative? ? decimal_value.abs : decimal_value
         else
-          # Use positive pattern (before semicolon, or entire pattern if no semicolon)
-          positive_pattern = pattern.split(";")[0]
-          apply_pattern_substitution(positive_pattern, currency_symbol, formatted_number)
+          pattern_tokens = tokens
+          format_value = decimal_value
         end
+
+        # Build formatted string from tokens
+        build_formatted_string(format_value, pattern_tokens, number_formats, options)
       end
 
-      # Apply pattern substitution for currency symbol and number
-      private def apply_pattern_substitution(pattern, currency_symbol, formatted_number)
-        # Simple approach: replace the CLDR placeholders directly
-        result = pattern.gsub("¤", currency_symbol)
+      # Build the final formatted string from tokens
+      private def build_formatted_string(decimal_value, tokens, number_formats, options)
+        # Analyze pattern structure first to check for scientific notation
+        pattern_info = analyze_pattern_structure(tokens, options)
 
-        # Common CLDR number format patterns to replace
-        patterns_to_replace = [
-          "#,##0.00",  # Standard decimal pattern with 2 places
-          "#,##0",     # Integer pattern
-          "#.#",       # Simple decimal
-          "#0.00",     # Alternative decimal
-          "0.00",      # Minimal decimal
-          "0"          # Minimal integer
-        ]
+        # Check if this is scientific notation (has ExponentToken)
+        has_scientific = tokens.any?(Foxtail::CLDR::NumberPatternParser::ExponentToken)
 
-        # Try each pattern and replace the first match
-        patterns_to_replace.each do |number_pattern|
-          if result.include?(number_pattern)
-            return result.gsub(number_pattern, formatted_number)
+        if has_scientific
+          # For scientific notation, normalize the number to mantissa form (1-10 × 10^exp)
+          normalized_result = normalize_for_scientific(decimal_value, pattern_info)
+          decimal_value = normalized_result[:mantissa]
+          exponent = normalized_result[:exponent]
+        end
+
+        # Convert to string for digit processing, avoiding scientific notation
+        value_str = decimal_value.to_s("F")
+
+        # Separate integer and fractional parts
+        parts = value_str.split(".")
+        integer_part = parts[0] || "0"
+        fractional_part = parts[1] || ""
+
+        # Format the number according to the pattern
+        result = ""
+
+        # Process non-digit tokens before digits
+        pattern_info[:prefix_tokens].each do |token|
+          result += format_non_digit_token(token, number_formats, options, decimal_value)
+        end
+
+        # Format the integer part with grouping
+        result += format_integer_with_grouping(integer_part, pattern_info, number_formats)
+
+        # Add decimal part if present
+        if has_scientific
+          # For scientific notation, show all significant digits of the mantissa (remove trailing zeros)
+          if fractional_part.length > 0
+            # Remove trailing zeros but preserve significant digits
+            trimmed_fractional = fractional_part.gsub(/0+$/, "")
+            if trimmed_fractional.length > 0
+              result += number_formats.decimal_symbol
+              result += trimmed_fractional
+            end
+          end
+        elsif pattern_info[:has_decimal] && fractional_part.length > 0 && pattern_info[:fractional_digits] > 0
+          formatted_fractional = format_fractional_part(fractional_part, pattern_info)
+          if formatted_fractional.length > 0
+            result += number_formats.decimal_symbol
+            result += formatted_fractional
+          end
+        elsif pattern_info[:has_decimal] && pattern_info[:required_fractional_digits] > 0
+          # Show decimal separator and required zeros even if no fractional part
+          result += number_formats.decimal_symbol
+          result += "0" * pattern_info[:required_fractional_digits]
+        end
+
+        # Process non-digit tokens after digits
+        pattern_info[:suffix_tokens].each do |token|
+          result += if has_scientific && token.is_a?(Foxtail::CLDR::NumberPatternParser::ExponentToken)
+                      format_exponent_token_with_value(token, exponent, number_formats)
+                    else
+                      format_non_digit_token(token, number_formats, options, decimal_value)
+                    end
+        end
+
+        result
+      end
+
+      # Analyze the pattern structure to understand grouping and digit placement
+      private def analyze_pattern_structure(tokens, options={})
+        info = {
+          prefix_tokens: [],
+          suffix_tokens: [],
+          integer_pattern: [],
+          fractional_digits: 0,
+          required_fractional_digits: 0,
+          has_decimal: false,
+          has_grouping: false
+        }
+
+        decimal_found = false
+        digit_section_started = false
+
+        tokens.each do |token|
+          case token
+          when Foxtail::CLDR::NumberPatternParser::DigitToken
+            digit_section_started = true
+            if decimal_found
+              info[:fractional_digits] += token.digit_count
+              # Count required digits (0) vs optional digits (#)
+              if token.required?
+                info[:required_fractional_digits] += token.digit_count
+              end
+            else
+              info[:integer_pattern] << token
+            end
+          when Foxtail::CLDR::NumberPatternParser::GroupToken
+            if digit_section_started && !decimal_found
+              info[:has_grouping] = true
+              info[:integer_pattern] << token
+            end
+          when Foxtail::CLDR::NumberPatternParser::DecimalToken
+            decimal_found = true
+            info[:has_decimal] = true
+          when Foxtail::CLDR::NumberPatternParser::ExponentToken
+            # Scientific notation - handle separately
+            info[:suffix_tokens] << token
+          else
+            # Non-digit tokens (currency, percent, literals, etc.)
+            if digit_section_started
+              info[:suffix_tokens] << token
+            else
+              info[:prefix_tokens] << token
+            end
           end
         end
 
-        # Fallback: if no pattern matched, try regex replacement
-        result.gsub(/[#0][,#0.]*[0#]*/, formatted_number)
+        # Override with precision options if provided
+        if options[:minimumFractionDigits]
+          info[:required_fractional_digits] = [info[:required_fractional_digits], options[:minimumFractionDigits]].max
+          info[:fractional_digits] = [info[:fractional_digits], options[:minimumFractionDigits]].max
+          info[:has_decimal] = true if options[:minimumFractionDigits] > 0
+        end
+
+        if options[:maximumFractionDigits]
+          info[:fractional_digits] = [info[:fractional_digits], options[:maximumFractionDigits]].min
+          # If maximum is 0, don't show decimals at all
+          if options[:maximumFractionDigits] == 0
+            info[:fractional_digits] = 0
+            info[:required_fractional_digits] = 0
+            info[:has_decimal] = false
+          end
+        end
+
+        info
       end
 
-      # Format number in scientific notation
-      private def format_scientific_notation(value, number_formats, _options)
-        # Simple scientific notation formatting
-        if value == 0
-          "0E0"
-        else
-          exponent = Math.log10(value.abs).floor
-          mantissa = value / (10**exponent)
+      # Format integer part with proper grouping based on pattern
+      private def format_integer_with_grouping(integer_part, pattern_info, number_formats)
+        return integer_part unless pattern_info[:has_grouping]
 
-          # Format mantissa with locale symbols
-          mantissa_str = apply_cldr_symbols(mantissa.to_s, number_formats)
-          "#{mantissa_str}E#{exponent}"
+        # Split integer into groups of 3 digits from right
+        digit_groups = split_into_groups(integer_part)
+
+        # Apply grouping separators
+        digit_groups.join(number_formats.group_symbol)
+      end
+
+      # Split integer string into groups of 3 digits from the right
+      private def split_into_groups(integer_str)
+        # Remove any leading zeros except for the last digit
+        clean_integer = integer_str.sub(/^0+(?=\d)/, "")
+        clean_integer = "0" if clean_integer.empty?
+
+        # Split into groups of 3 from the right
+        groups = []
+        while clean_integer.length > 3
+          groups.unshift(clean_integer[-3..])
+          clean_integer = clean_integer[0...-3]
         end
+        groups.unshift(clean_integer) if clean_integer.length > 0
+
+        groups
+      end
+
+      # Format fractional part with proper digit count
+      private def format_fractional_part(fractional_part, pattern_info)
+        total_digits = pattern_info[:fractional_digits]
+        required_digits = pattern_info[:required_fractional_digits]
+
+        if total_digits > 0
+          # Pad to expected length
+          padded = fractional_part.ljust(total_digits, "0")[0...total_digits]
+
+          # Remove trailing zeros only beyond required digits
+          if required_digits < total_digits
+            # Keep at least required_digits, remove optional trailing zeros
+            min_length = required_digits
+            padded = padded[0...-1] while padded.length > min_length && padded.end_with?("0")
+          end
+
+          padded
+        else
+          fractional_part
+        end
+      end
+
+      # Format non-digit tokens
+      private def format_non_digit_token(token, number_formats, options, decimal_value)
+        case token
+        when Foxtail::CLDR::NumberPatternParser::CurrencyToken
+          format_currency_token(token, number_formats, options)
+        when Foxtail::CLDR::NumberPatternParser::PercentToken
+          number_formats.percent_sign
+        when Foxtail::CLDR::NumberPatternParser::PerMilleToken
+          "‰"
+        when Foxtail::CLDR::NumberPatternParser::ExponentToken
+          format_exponent_token(token, decimal_value, number_formats)
+        when Foxtail::CLDR::NumberPatternParser::LiteralToken
+          token.value
+        when Foxtail::CLDR::NumberPatternParser::QuotedToken
+          token.literal_text
+        when Foxtail::CLDR::NumberPatternParser::PlusToken
+          "+"
+        when Foxtail::CLDR::NumberPatternParser::MinusToken
+          number_formats.minus_sign
+        else
+          ""
+        end
+      end
+
+      # Format currency token
+      private def format_currency_token(token, number_formats, options)
+        currency_code = options[:currency] || "USD"
+
+        case token.currency_type
+        when :symbol
+          number_formats.currency_symbol(currency_code)
+        when :code, :name
+          # For now, fall back to code for :name - full implementation would use currency names
+          currency_code
+        end
+      end
+
+      # Format exponent token for scientific notation (deprecated - use format_exponent_token_with_value)
+      private def format_exponent_token(token, decimal_value, number_formats)
+        return "E0" if decimal_value.zero?
+
+        # Calculate exponent
+        abs_value = decimal_value.abs
+        exponent = Math.log10(Float(abs_value)).floor
+
+        # Format exponent with required digits
+        exponent_str = exponent.abs.to_s.rjust(token.exponent_digits, "0")
+        exponent_str = "#{number_formats.minus_sign}#{exponent_str}" if exponent.negative?
+        exponent_str = "+#{exponent_str}" if exponent.positive? && token.show_exponent_sign?
+
+        "E#{exponent_str}"
+      end
+
+      # Format exponent token with pre-calculated exponent value
+      private def format_exponent_token_with_value(token, exponent, number_formats)
+        return "E0" if exponent.zero?
+
+        # Format exponent with required digits
+        exponent_str = exponent.abs.to_s.rjust(token.exponent_digits, "0")
+        exponent_str = "#{number_formats.minus_sign}#{exponent_str}" if exponent.negative?
+        exponent_str = "+#{exponent_str}" if exponent.positive? && token.show_exponent_sign?
+
+        "E#{exponent_str}"
+      end
+
+      # Normalize number for scientific notation (mantissa between 1-10)
+      private def normalize_for_scientific(decimal_value, _pattern_info)
+        return {mantissa: BigDecimal(0), exponent: 0} if decimal_value.zero?
+
+        abs_value = decimal_value.abs
+
+        # Calculate exponent to normalize mantissa between 1-10
+        exponent = Math.log10(Float(abs_value)).floor
+
+        # Calculate mantissa by dividing by 10^exponent
+        mantissa = abs_value / (BigDecimal(10)**exponent)
+
+        # Preserve sign
+        mantissa = -mantissa if decimal_value.negative?
+
+        {mantissa:, exponent:}
       end
     end
   end

@@ -37,7 +37,19 @@ module Foxtail
         when String
           element
         when Hash
-          resolve_expression(element, scope)
+          result = resolve_expression(element, scope)
+          # Convert resolved values to displayable strings
+          case result
+          when Numeric
+            # For numeric values in patterns, format for display
+            if element["precision"] && element["precision"] > 0
+              format_number(result, element["precision"])
+            else
+              result.to_s
+            end
+          else
+            result.to_s
+          end
         else
           element.to_s
         end
@@ -49,7 +61,8 @@ module Foxtail
         when "str"
           expr["value"].to_s
         when "num"
-          format_number(expr["value"], expr["precision"])
+          # Return raw numeric value, not formatted string
+          expr["value"]
         when "var"
           resolve_variable_reference(expr, scope)
         when "term"
@@ -90,8 +103,9 @@ module Foxtail
           scope.add_error("Unknown variable: $#{name}")
           "{$#{name}}"
         else
-          # Future: handle attribute access if attr is present
-          value.to_s
+          # Return the raw value, not string representation
+          # String conversion should happen at display time
+          value
         end
       end
 
@@ -258,9 +272,21 @@ module Foxtail
 
           case key["type"]
           when "num"
-            # Numeric comparison using string representation to avoid float precision issues
-            # This ensures exact matches like fluent.js behavior
-            key_value.to_s == selector_value.to_s
+            # Numeric comparison
+            # If precision is 0, compare as integers
+            # Otherwise compare as floats
+            if selector_value.is_a?(Numeric) && key_value.is_a?(Numeric)
+              if key["precision"] == 0
+                # Integer comparison when precision is 0
+                Integer(key_value) == Integer(selector_value)
+              else
+                # Float comparison when precision > 0
+                key_value == selector_value
+              end
+            else
+              # Fallback to string comparison if not both numeric
+              key_value.to_s == selector_value.to_s
+            end
           when "str"
             # String comparison - check for ICU plural category match
             if numeric_selector?(selector_value)
