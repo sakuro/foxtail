@@ -34,4 +34,8 @@ end
 # Load custom tasks
 Dir.glob("lib/tasks/*.rake").each {|file| load file }
 
+# Ensure CLDR data is available before building the gem
+desc "Build foxtail-#{Foxtail::VERSION}.gem with CLDR data"
+task build: "cldr:extract:all"
+
 task default: %i[spec rubocop]

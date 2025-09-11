@@ -12,3 +12,21 @@ if [ ! -d "fluent.js" ] || [ ! -f "fluent.js/.git" ]; then
 else
   echo "fluent.js submodule already exists, skipping initialization"
 fi
+
+# Set up CLDR locale data
+if [ -z "$(find data/cldr -name "*.yml" -print -quit 2>/dev/null)" ]; then
+  echo ""
+  echo "CLDR locale data needs to be generated for number/datetime formatting."
+  echo "This will download and extract Unicode CLDR data (~50MB download)."
+  read -p "Generate CLDR data now? [Y/n]: " -r
+  echo
+  if [[ $REPLY =~ ^[Nn]$ ]]; then
+    echo "Skipping CLDR data generation. You can run 'rake cldr:extract:all' later."
+  else
+    echo "Generating CLDR locale data..."
+    bundle exec rake cldr:extract:all
+    echo "CLDR data generation complete!"
+  fi
+else
+  echo "CLDR locale data already exists, skipping generation"
+fi

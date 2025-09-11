@@ -29,5 +29,25 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+
+      - name: Cache CLDR data
+        uses: actions/cache@v4
+        with:
+          path: |
+            tmp/cldr-core
+            data/cldr
+          key: cldr-data-v46-${{ hashFiles('lib/tasks/cldr.rake') }}
+          restore-keys: |
+            cldr-data-v46-
+
+      - name: Generate CLDR data if not cached
+        run: |
+          if [ -z "$(find data/cldr -name "*.yml" -print -quit 2>/dev/null)" ]; then
+            echo "CLDR data not found in cache, generating..."
+            bundle exec rake cldr:extract:all
+          else
+            echo "CLDR data found in cache"
+          fi
+
       - name: Run the default task
         run: bundle exec rake
