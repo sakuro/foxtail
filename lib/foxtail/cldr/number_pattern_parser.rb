@@ -210,7 +210,21 @@ module Foxtail
           i += 1
         end
 
+        # Validate the parsed tokens
+        validate_tokens(tokens, pattern)
+
         tokens
+      end
+
+      # Validate parsed tokens for logical consistency
+      private def validate_tokens(tokens, original_pattern)
+        has_percent = tokens.any?(PercentToken)
+        has_permille = tokens.any?(PerMilleToken)
+
+        # Error on conflicting multiplier symbols
+        return unless has_percent && has_permille
+
+        raise ArgumentError, "Pattern cannot contain both percent (%) and permille (‰) symbols: #{original_pattern}"
       end
 
       private def match_quoted_literal(pattern, start_pos)

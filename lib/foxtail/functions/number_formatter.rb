@@ -132,6 +132,19 @@ module Foxtail
           format_value = decimal_value
         end
 
+        # Apply pattern-based multipliers only for custom patterns
+        # (Built-in style patterns already handle multipliers in apply_style_transformations)
+        if options[:pattern]
+          has_percent = pattern_tokens.any?(Foxtail::CLDR::NumberPatternParser::PercentToken)
+          has_permille = pattern_tokens.any?(Foxtail::CLDR::NumberPatternParser::PerMilleToken)
+
+          if has_permille
+            format_value *= 1000
+          elsif has_percent
+            format_value *= 100
+          end
+        end
+
         # Build formatted string from tokens
         build_formatted_string(format_value, pattern_tokens, number_formats, options)
       end
