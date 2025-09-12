@@ -8,6 +8,8 @@ module Foxtail
     module Repository
       # Base class for CLDR data access with common functionality
       class Base
+        attr_reader :locale
+
         # Class method to access the shared inflector (lazy initialization)
         def self.inflector
           @inflector ||= Dry::Inflector.new do |inflections|

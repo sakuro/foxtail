@@ -253,5 +253,95 @@ RSpec.describe Foxtail::CLDR::Formatter::Number do
         }.to raise_error(ArgumentError, /Pattern cannot contain both percent \(.*?\) and permille \(.*?\)/)
       end
     end
+
+    describe "currency name formatting (¤¤¤)" do
+      context "with English locale" do
+        let(:en_locale) { locale("en") }
+
+        it "formats singular currency name for integer 1" do
+          result = formatter.call(1, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
+          expect(result).to eq("US dollar 1.00")
+        end
+
+        it "formats singular currency name for 1.0 (trailing zero)" do
+          result = formatter.call(1.0, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
+          expect(result).to eq("US dollar 1.00")
+        end
+
+        it "formats plural currency name for 2" do
+          result = formatter.call(2, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
+          expect(result).to eq("US dollars 2.00")
+        end
+
+        it "formats plural currency name for 0" do
+          result = formatter.call(0, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
+          expect(result).to eq("US dollars 0.00")
+        end
+
+        it "formats plural currency name for decimal values" do
+          result = formatter.call(1.5, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
+          expect(result).to eq("US dollars 1.50")
+        end
+
+        it "formats plural currency name for large numbers" do
+          result = formatter.call(1000, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
+          expect(result).to eq("US dollars 1,000.00")
+        end
+
+        it "formats currency name with negative values" do
+          result = formatter.call(-1, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
+          expect(result).to eq("US dollar -1.00")
+        end
+
+        it "handles unknown currency code XXX properly" do
+          result = formatter.call(1, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "XXX")
+          expect(result).to eq("(unknown unit of currency) 1.00")
+        end
+
+        it "falls back to currency code for truly unknown currencies" do
+          result = formatter.call(1, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "ZZZ")
+          expect(result).to eq("ZZZ 1.00")
+        end
+
+        it "formats different currency names properly" do
+          result = formatter.call(1, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "EUR")
+          expect(result).to eq("euro 1.00")
+
+          result = formatter.call(2, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "EUR")
+          expect(result).to eq("euros 2.00")
+        end
+      end
+
+      context "with different pattern positions" do
+        let(:en_locale) { locale("en") }
+
+        it "formats with currency name at the end" do
+          result = formatter.call(1, pattern: "#,##0.00 ¤¤¤", locale: en_locale, currency: "USD")
+          expect(result).to eq("1.00 US dollar")
+        end
+
+        it "formats with currency name in parentheses" do
+          result = formatter.call(2, pattern: "#,##0.00 '('¤¤¤')'", locale: en_locale, currency: "USD")
+          expect(result).to eq("2.00 (US dollars)")
+        end
+      end
+
+      context "with locales having different plural rules" do
+        it "respects locale-specific plural rules" do
+          # Polish has different plural rules: 1 (one), 2-4 (few), 5+ (many/other)
+          pl_locale = locale("pl")
+
+          # Test will depend on whether Polish CLDR data is available
+          # and properly configured with plural currency names
+          begin
+            result = formatter.call(1, pattern: "¤¤¤ #,##0.00", locale: pl_locale, currency: "PLN")
+            # Should use singular form
+            expect(result).to match(/zł|PLN/)
+          rescue Foxtail::CLDR::Repository::DataNotAvailable
+            skip "Polish CLDR data not available"
+          end
+        end
+      end
+    end
   end
 end

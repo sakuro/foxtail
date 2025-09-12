@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "bigdecimal"
 require "locale"
 
 module Foxtail
@@ -55,20 +56,31 @@ module Foxtail
         private def extract_operands(number)
           n = number.abs
 
-          if number.is_a?(Float)
-            # Handle floating point numbers
-            str = number.to_s
+          if number.is_a?(Float) || number.is_a?(BigDecimal)
+            # Handle floating point and BigDecimal numbers
+            # Convert to string in standard format (not scientific notation)
+            str = number.is_a?(BigDecimal) ? number.to_s("F") : number.to_s
+
             if str.include?(".")
               integer_part, fraction_part = str.split(".")
-              i = Integer(integer_part, 10)
+              i = Integer(integer_part, 10).abs
 
-              # Remove trailing zeros to get visible fraction digits
+              # Remove trailing zeros to check if there's actual fractional content
               visible_fraction = fraction_part.sub(/0+$/, "")
 
-              v = visible_fraction.length  # number of visible fraction digits (without trailing zeros)
-              w = visible_fraction.length  # same as v (visible fraction digits without trailing zeros)
-              f = Integer(fraction_part, 10) # fraction digits as integer (with trailing zeros)
-              t = visible_fraction.empty? ? 0 : Integer(visible_fraction, 10) # visible fraction as integer
+              # Practical approach: treat numbers like 1.0, 2.00 as integers
+              # This is more intuitive for currency formatting (e.g., "$1.00" = "1 dollar")
+              # While not strictly CLDR-compliant, it matches user expectations
+              if visible_fraction.empty?
+                # No significant fractional part (e.g., "1.0" or "1.00")
+                v = w = f = t = 0
+              else
+                # Has significant fractional part (e.g., "1.5" or "1.01")
+                v = fraction_part.length
+                w = visible_fraction.length # number of visible fraction digits (without trailing zeros)
+                f = Integer(fraction_part, 10) # fraction digits as integer
+                t = Integer(visible_fraction, 10) # visible fraction as integer
+              end
             else
               i = Integer(n)
               v = w = f = t = 0

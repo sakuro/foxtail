@@ -39,7 +39,8 @@ module Foxtail
           transformed_value = apply_style_transformations(decimal_value, options)
 
           # Format using token-based pattern processing
-          format_with_pattern(transformed_value, pattern, number_formats, options)
+          # Pass original value in options for plural determination
+          format_with_pattern(transformed_value, pattern, number_formats, options.merge(original_value: value))
         end
 
         private def convert_to_decimal(value)
@@ -337,7 +338,7 @@ module Foxtail
         private def format_non_digit_token(token, number_formats, options, decimal_value)
           case token
           when Foxtail::CLDR::PatternParser::Number::CurrencyToken
-            format_currency_token(token, number_formats, options)
+            format_currency_token(token, number_formats, options, decimal_value)
           when Foxtail::CLDR::PatternParser::Number::PercentToken
             number_formats.percent_sign
           when Foxtail::CLDR::PatternParser::Number::PerMilleToken
@@ -358,15 +359,30 @@ module Foxtail
         end
 
         # Format currency token
-        private def format_currency_token(token, number_formats, options)
+        private def format_currency_token(token, number_formats, options, decimal_value)
           currency_code = options[:currency] || "USD"
 
           case token.currency_type
           when :symbol
             number_formats.currency_symbol(currency_code)
-          when :code, :name
-            # For now, fall back to code for :name - full implementation would use currency names
+          when :code
             currency_code
+          when :name
+            # CLDR ¤¤¤ pattern: Display currency names with plural-aware selection
+            # See: https://unicode.org/reports/tr35/tr35-numbers.html#Currencies
+            #
+            # Examples:
+            #   1 → "US dollar"
+            #   2 → "US dollars"
+            #   1.5 → "US dollars"
+            #   1.0 → "US dollar" (treated as integer for practical purposes)
+            #
+            # Use original value for plural determination (not transformed value)
+            original_value = options[:original_value] || decimal_value
+            plural_rules = Foxtail::CLDR::Repository::PluralRules.new(number_formats.locale)
+            plural_category = plural_rules.select(original_value)
+            currency_names = number_formats.currency_names(currency_code)
+            currency_names[plural_category.to_sym] || currency_names[:other] || currency_code
           end
         end
 
