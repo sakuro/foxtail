@@ -1,6 +1,6 @@
 ---
 locale: mni
-generated_at: '2025-09-12T05:01:03Z'
+generated_at: '2025-09-12T07:04:19Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -94,7 +94,6 @@ datetime_formats:
         thu: শগোলশেন
         fri: ইরাই
         sat: থাংজ
-      abbreviated: {}
       narrow:
         sun: নোং
         mon: নিং
@@ -104,8 +103,6 @@ datetime_formats:
         fri: ইরা
         sat: থাং
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: নো
         mon: নিং
@@ -121,10 +118,6 @@ datetime_formats:
         '2': অনীশুবা মসুং
         '3': অহুমশুবা মসুং
         '4': মরীশুবা মসুং
-      abbreviated: {}
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -132,16 +125,10 @@ datetime_formats:
         pm: পি এম
       abbreviated:
         am: নুমাং
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
-    names: {}
     abbreviated:
       '0': বি সি ই
       '1': সি ই
-    narrow: {}
   date_formats:
     full: MMMM d, y, EEEE
     long: MMMM d, y
@@ -158,43 +145,9 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
-      Ed: d, E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
       GyMd: GGGGG dd-MM-y
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: d/M, E
-      MMM: LLL
-      MMMd: MMM d
-      MMMEd: MMM d, E
-      MMMMd: MMMM d
-      MMMMW: "'week' W 'of' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: d/M/y, E
@@ -202,6 +155,3 @@ datetime_formats:
       yMMMd: MMM d, y
       yMMMEd: MMM d, y, E
       yMMMM: MMMM y
-      yQQQ: y QQQ
-      yQQQQ: y QQQQ
-      yw: "'week' w 'of' Y"

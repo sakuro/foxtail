@@ -1,6 +1,6 @@
 ---
 locale: doi
-generated_at: '2025-09-12T04:59:56Z'
+generated_at: '2025-09-12T07:04:12Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': अक्तू.
         '11': नव.
         '12': दिस.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': ज
         '2': फ
@@ -75,8 +72,6 @@ datetime_formats:
         fri: शु.
         sat: श.
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: ऐ
         mon: सो
@@ -97,9 +92,6 @@ datetime_formats:
         '2': त्र.2
         '3': त्र.3
         '4': त्र.4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -108,16 +100,12 @@ datetime_formats:
       abbreviated:
         am: सवेर
         pm: स’ञ
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '1': ई. सन्
     abbreviated:
       '0': ई.पू.
       '1': सन्
-    narrow: {}
   date_formats:
     full: EEEE, d, MMMM y
     long: d, MMMM y
@@ -134,43 +122,15 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
-      GyMd: GGGGG y-MM-dd
-      GyMMM: G y MMM
       GyMMMd: d, MMM G y
       GyMMMEd: E, d, MMM G y
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E, d/M
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: MMMM दा हफ्ता W
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y

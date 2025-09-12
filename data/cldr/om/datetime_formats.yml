@@ -1,6 +1,6 @@
 ---
 locale: om
-generated_at: '2025-09-12T05:01:13Z'
+generated_at: '2025-09-12T07:04:20Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -134,7 +134,6 @@ datetime_formats:
         wed: R
         thu: K
         fri: J
-        sat: S
   quarters:
     format:
       wide:
@@ -160,13 +159,9 @@ datetime_formats:
         '4': K4
   day_periods:
     format:
-      wide: {}
       abbreviated:
         am: WD
         pm: WB
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': Bara Waloo Dura
@@ -193,46 +188,23 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
-      Ed: d, E
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
-      GyMd: GGGGG y-MM-dd
       GyMMM: MMM y G
       GyMMMd: MMM d, y G
       GyMMMEd: E, MMM d, y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
-      Md: MM-dd
       MEd: E, M/d
-      MMM: LLL
-      MMMd: MMM d
+      MMdd: dd/MM
       MMMEd: E, MMM d
-      MMMMd: MMMM d
+      MMMMdd: MMMM dd
       MMMMW: "'torbee' W 'kan' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: M/d/y
       yMEd: E, M/d/y
+      yMM: MM/y
       yMMM: MMM y
       yMMMd: MMM d, y
       yMMMEd: E, MMM d, y
@@ -240,6 +212,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'torbee' w 'kan' Y"
-      MMdd: dd/MM
-      MMMMdd: MMMM dd
-      yMM: MM/y

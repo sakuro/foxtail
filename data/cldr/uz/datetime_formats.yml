@@ -1,6 +1,6 @@
 ---
 locale: uz
-generated_at: '2025-09-12T05:01:47Z'
+generated_at: '2025-09-12T07:04:24Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': okt
         '11': noy
         '12': dek
-      narrow: {}
     stand-alone:
       wide:
         '1': Yanvar
@@ -90,10 +89,7 @@ datetime_formats:
         thu: Pay
         fri: Jum
         sat: Shan
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: "Y"
         mon: D
@@ -101,7 +97,6 @@ datetime_formats:
         wed: C
         thu: P
         fri: J
-        sat: S
   quarters:
     format:
       wide:
@@ -114,31 +109,23 @@ datetime_formats:
         '2': 2-ch
         '3': 3-ch
         '4': 4-ch
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: TO
-        pm: TK
         midnight: yarim tun
+        am: TO
         noon: tush payti
+        pm: TK
         morning1: ertalab
         afternoon1: kunduzi
         evening1: kechqurun
         night1: kechasi
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': eramizdan avvalgi
     abbreviated:
       '0': e.a.
       '1': mil.
-    narrow: {}
   date_formats:
     full: EEEE, d-MMMM, y
     long: d-MMMM, y
@@ -147,8 +134,6 @@ datetime_formats:
   time_formats:
     full: H:mm:ss (zzzz)
     long: H:mm:ss (z)
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1}, {0}"
     long: "{1}, {0}"
@@ -158,26 +143,18 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E, B h:mm
       EBhms: E, B h:mm:ss
-      Ed: d, E
       Ehm: E, h:mm a
       EHm: E, HH:mm
       Ehms: E, h:mm:ss a
       EHms: E, HH:mm:ss
-      Gy: G y
       GyMd: dd.MM.y GGGGG
       GyMMM: MMM, G y
       GyMMMd: d-MMM, G y
       GyMMMEd: E, d-MMM, G y
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a (v)
       Hmsv: HH:mm:ss (v)
       hmv: h:mm a (v)
@@ -185,13 +162,10 @@ datetime_formats:
       M: LL
       Md: dd/MM
       MEd: E, dd/MM
-      MMM: LLL
       MMMd: d-MMM
       MMMEd: E, d-MMM
       MMMMd: d-MMMM
       MMMMW: MMMM, W-'hafta'
-      ms: mm:ss
-      "y": "y"
       yM: MM.y
       yMd: dd/MM/y
       yMEd: E, dd/MM/y

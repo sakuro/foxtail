@@ -1,6 +1,6 @@
 ---
 locale: ta
-generated_at: '2025-09-12T05:01:39Z'
+generated_at: '2025-09-12T07:04:23Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': அக்.
         '11': நவ.
         '12': டிச.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': ஜ
         '2': பி
@@ -66,10 +63,7 @@ datetime_formats:
         thu: வியா.
         fri: வெள்.
         sat: சனி
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: ஞா
         mon: தி
@@ -103,10 +97,7 @@ datetime_formats:
         '4': கா.4
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: AM
-        pm: PM
         midnight: நள்ளிரவு
         noon: நண்பகல்
         morning1: அதிகாலை
@@ -116,9 +107,6 @@ datetime_formats:
         evening1: மாலை
         evening2: அந்தி மாலை
         night1: இரவு
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': கிறிஸ்துவுக்கு முன்
@@ -126,7 +114,6 @@ datetime_formats:
     abbreviated:
       '0': பொ.ச.மு
       '1': பொ.ச
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM, y
     long: d MMMM, y
@@ -146,43 +133,20 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: d E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
       GyMd: d/M/y G
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: dd-MM, E
-      MMM: LLL
+      MMdd: dd-MM
       MMMd: d MMM
-      MMMEd: MMM d, E
       MMMMd: d MMMM
       MMMMW: MMMM W -ஆம் வாரம்
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
+      yMM: MM-y
       yMMM: MMM y
       yMMMd: d MMM, y
       yMMMEd: E, d MMM, y
@@ -190,5 +154,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: Y ஆம் ஆண்டின் w -ஆம் வாரம்
-      MMdd: dd-MM
-      yMM: MM-y

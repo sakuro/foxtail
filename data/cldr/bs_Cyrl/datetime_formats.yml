@@ -1,6 +1,6 @@
 ---
 locale: bs_Cyrl
-generated_at: '2025-09-12T04:59:47Z'
+generated_at: '2025-09-12T07:04:10Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': окт
         '11': нов
         '12': дец
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': ј
         '2': ф
@@ -66,10 +63,7 @@ datetime_formats:
         thu: чет
         fri: пет
         sat: суб
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: н
         mon: п
@@ -90,19 +84,16 @@ datetime_formats:
         '2': К2
         '3': К3
         '4': К4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
         am: прије подне
         pm: послије подне
       abbreviated:
-        am: пре подне
-        pm: поподне
         midnight: поноћ
+        am: пре подне
         noon: подне
+        pm: поподне
         morning1: ујутру
         afternoon1: у подне
         evening1: увече
@@ -131,53 +122,19 @@ datetime_formats:
     long: dd. MMMM y.
     medium: dd.MM.y.
     short: d.M.yy.
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E, d.
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y. G
-      GyMd: GGGGG y-MM-dd
       GyMMM: MMM y. G
       GyMMMd: dd. MMM y. G
       GyMMMEd: E, dd. MMM y. G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: dd.MM.
       MEd: E, dd.MM.
-      MMM: LLL
       MMMd: dd. MMM
       MMMEd: E, dd. MMM
       MMMMd: d. MMMM
       MMMMW: "'седмица' W 'мјесец' MMMM"
-      ms: mm:ss
       "y": y.
       yM: MM.y.
       yMd: dd.MM.y.
@@ -186,6 +143,4 @@ datetime_formats:
       yMMMd: dd. MMM y.
       yMMMEd: E, dd. MMM y.
       yMMMM: MMMM y.
-      yQQQ: y QQQ
-      yQQQQ: y QQQQ
       yw: "'седмица' w 'година' Y"

@@ -1,6 +1,6 @@
 ---
 locale: hy
-generated_at: '2025-09-12T05:00:41Z'
+generated_at: '2025-09-12T07:04:15Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': հոկ
         '11': նոյ
         '12': դեկ
-      narrow: {}
     stand-alone:
       wide:
         '1': հունվար
@@ -46,7 +45,6 @@ datetime_formats:
         '10': հոկտեմբեր
         '11': նոյեմբեր
         '12': դեկտեմբեր
-      abbreviated: {}
       narrow:
         '1': Հ
         '2': Փ
@@ -78,10 +76,7 @@ datetime_formats:
         thu: հնգ
         fri: ուր
         sat: շբթ
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: Կ
         mon: Ե
@@ -102,9 +97,6 @@ datetime_formats:
         '2': 2-րդ եռմս.
         '3': 3-րդ եռմս.
         '4': 4-րդ եռմս.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -115,8 +107,6 @@ datetime_formats:
         evening1: երեկոյան
         night1: գիշերվա
       abbreviated:
-        am: AM
-        pm: PM
         midnight: կեսգիշեր
         noon: կեսօր
         morning1: առավոտյան
@@ -124,7 +114,6 @@ datetime_formats:
         evening1: երեկոյան
         night1: գիշերը
     stand-alone:
-      wide: {}
       abbreviated:
         morning1: առավոտ
         afternoon1: ցերեկ
@@ -137,17 +126,11 @@ datetime_formats:
     abbreviated:
       '0': մ․թ․ա․
       '1': մ․թ․
-    narrow: {}
   date_formats:
     full: y թ. MMMM d, EEEE
     long: dd MMMM, y թ.
     medium: dd MMM, y թ.
     short: dd.MM.yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1}, {0}"
     long: "{1}, {0}"
@@ -157,8 +140,6 @@ datetime_formats:
       Bh: B h-ին
       Bhm: B h:mm-ին
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E B h:mm-ին
       EBhms: E B h:mm:ss
       Ed: d, ccc
@@ -171,26 +152,15 @@ datetime_formats:
       GyMMM: G y թ. MMM
       GyMMMd: G y թ․ MMM d
       GyMMMEd: G y թ. MMM d, E
-      h: h a
       H: H
-      hm: h:mm a
       Hm: H:mm
-      hms: h:mm:ss a
       Hms: H:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: dd.MM
       MEd: dd.MM, E
-      MMM: LLL
       MMMd: d MMM
       MMMEd: d MMM, E
       MMMMd: d MMMM
       MMMMW: MMMM W-րդ շաբաթ
-      ms: mm:ss
-      "y": "y"
       yM: MM.y
       yMd: dd.MM.y
       yMEd: d.MM.y թ., E

@@ -152,16 +152,29 @@ RSpec.describe Foxtail::CLDR::PluralRules do
   describe "data loading" do
     it "loads data on-demand for each locale" do
       # Test that data is loaded from the correct file path
+      allow(File).to receive(:exist?).and_call_original
+
+      # Mock root locale (inheritance chain includes root)
+      allow(File).to receive(:exist?)
+        .with(a_string_ending_with("data/cldr/root/plural_rules.yml"))
+        .and_return(true)
+      allow(YAML).to receive(:load_file)
+        .with(a_string_ending_with("data/cldr/root/plural_rules.yml"))
+        .and_return({
+          "plural_rules" => {
+            "other" => ""
+          }
+        })
+
+      # Mock en locale
       allow(File).to receive(:exist?)
         .with(a_string_ending_with("data/cldr/en/plural_rules.yml"))
         .and_return(true)
-
       allow(YAML).to receive(:load_file)
         .with(a_string_ending_with("data/cldr/en/plural_rules.yml"))
         .and_return({
           "plural_rules" => {
-            "one" => "i = 1 and v = 0",
-            "other" => ""
+            "one" => "i = 1 and v = 0"
           }
         })
 

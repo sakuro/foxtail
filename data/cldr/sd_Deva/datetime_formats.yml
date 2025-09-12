@@ -1,6 +1,6 @@
 ---
 locale: sd_Deva
-generated_at: '2025-09-12T05:01:27Z'
+generated_at: '2025-09-12T07:04:21Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -102,7 +102,6 @@ datetime_formats:
         thu: विस
         fri: जुम
         sat: छंछ
-      narrow: {}
     stand-alone:
       wide:
         sun: आर्त
@@ -135,9 +134,7 @@ datetime_formats:
         '2': बीं॒ टिमाही
         '3': टीं टिमाही
         '4': चोथीं टिमाही
-      abbreviated: {}
     stand-alone:
-      wide: {}
       abbreviated:
         '1': पहिरीं टिमाही
         '2': बीं॒ टिमाही
@@ -148,18 +145,10 @@ datetime_formats:
       wide:
         am: सुबुह जा
         pm: शाम जा
-      abbreviated:
-        am: AM
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
-    names: {}
     abbreviated:
       '0': बीसीई
       '1': सीई
-    narrow: {}
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
@@ -176,43 +165,15 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: d E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: M/d/y GGGGG
       GyMMM: MMM y G
       GyMMMd: MMM d, y G
       GyMMMEd: E, MMM d, y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: M/d
       MEd: E, M/d
-      MMM: LLL
-      MMMd: MMM d
       MMMEd: E, MMM d
-      MMMMd: MMMM d
-      MMMMW: "'week' W 'of' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: M/d/y
       yMEd: E, M/d/y
@@ -222,4 +183,3 @@ datetime_formats:
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
-      yw: "'week' w 'of' Y"

@@ -1,6 +1,6 @@
 ---
 locale: kea
-generated_at: '2025-09-12T05:00:47Z'
+generated_at: '2025-09-12T07:04:16Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': Otu
         '11': Nuv
         '12': Diz
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -66,18 +63,13 @@ datetime_formats:
         thu: kin
         fri: ses
         sat: sab
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: D
         mon: S
-        tue: T
         wed: K
         thu: K
         fri: S
-        sat: S
   quarters:
     format:
       wide:
@@ -90,18 +82,11 @@ datetime_formats:
         '2': T2
         '3': T3
         '4': T4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
         am: am
         pm: pm
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': antis di Era Kumun
@@ -109,28 +94,17 @@ datetime_formats:
     abbreviated:
       '0': AEK
       '1': EK
-    narrow: {}
   date_formats:
     full: EEEE, d 'di' MMMM 'di' y
     long: d 'di' MMMM 'di' y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1}, {0}"
     long: "{1}, {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
       EBhm: E, h:mm B
       EBhms: E, h:mm:ss B
       Ed: E, d
@@ -143,29 +117,25 @@ datetime_formats:
       GyMMM: LLL y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a (v)
       Hmsv: HH:mm:ss (v)
       hmv: h:mm a (v)
       Hmv: HH:mm (v)
-      M: L
       Md: dd/MM
       MEd: E, dd/MM
-      MMM: LLL
+      MMdd: dd/MM
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d 'di' MMMM
+      MMMMEd: E, d 'di' MMMM
       MMMMW: W'º' 'simana' 'di' MMMM
-      ms: mm:ss
-      "y": "y"
+      mmss: mm:ss
       yM: LL/y
       yMd: dd/MM/y
       yMEd: E, dd/MM/y
+      yMM: LL/y
       yMMM: LLL y
       yMMMd: d MMM y
       yMMMEd: E, d MMM y
@@ -173,7 +143,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ 'di' y
       yw: w'º' 'simana' 'di' Y
-      MMdd: dd/MM
-      MMMMEd: E, d 'di' MMMM
-      mmss: mm:ss
-      yMM: LL/y

@@ -1,6 +1,6 @@
 ---
 locale: pap
-generated_at: '2025-09-12T05:01:15Z'
+generated_at: '2025-09-12T07:04:20Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,9 +31,7 @@ datetime_formats:
         '10': Òkt
         '11': Nov
         '12': Des
-      narrow: {}
     stand-alone:
-      wide: {}
       abbreviated:
         '1': yan
         '2': feb
@@ -47,19 +45,6 @@ datetime_formats:
         '10': òkt
         '11': nov
         '12': des
-      narrow:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-        '8': '8'
-        '9': '9'
-        '10': '10'
-        '11': '11'
-        '12': '12'
   days:
     format:
       wide:
@@ -70,11 +55,7 @@ datetime_formats:
         thu: djaweps
         fri: djabièrnè
         sat: djasabra
-      abbreviated: {}
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: dd
         mon: dl
@@ -106,15 +87,6 @@ datetime_formats:
         '2': 2 kuartal
         '3': 3 kuartal
         '4': 4 kuartal
-  day_periods:
-    format:
-      wide: {}
-      abbreviated:
-        am: AM
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': Promé ku Era Komun
@@ -122,60 +94,25 @@ datetime_formats:
     abbreviated:
       '0': P.E.K
       '1': E.K
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd-MM-y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E, d
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: dd-MM-y GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: dd-MM
       MEd: E, dd-MM
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: "'siman' W 'di' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: MM-y
       yMd: dd-MM-y
       yMEd: E, dd-MM-y

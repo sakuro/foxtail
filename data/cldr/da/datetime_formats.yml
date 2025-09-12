@@ -1,6 +1,6 @@
 ---
 locale: da
-generated_at: '2025-09-12T04:59:54Z'
+generated_at: '2025-09-12T07:04:11Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': okt.
         '11': nov.
         '12': dec.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -66,17 +63,9 @@ datetime_formats:
         thu: tors.
         fri: fre.
         sat: lør.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
-        sun: S
-        mon: M
-        tue: T
         wed: O
-        thu: T
-        fri: F
         sat: L
   quarters:
     format:
@@ -90,15 +79,9 @@ datetime_formats:
         '2': 2. kvt.
         '3': 3. kvt.
         '4': 4. kvt.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: AM
-        pm: PM
         midnight: midnat
         morning1: om morgenen
         morning2: om formiddagen
@@ -106,7 +89,6 @@ datetime_formats:
         evening1: om aftenen
         night1: om natten
     stand-alone:
-      wide: {}
       abbreviated:
         morning1: morgen
         morning2: formiddag
@@ -139,11 +121,9 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
       Bhm: h.mm B
       Bhms: h.mm.ss B
       d: d.
-      E: ccc
       EBhm: E h.mm B
       EBhms: E h.mm.ss B
       Ed: E 'den' d.
@@ -156,8 +136,6 @@ datetime_formats:
       GyMMM: MMM y G
       GyMMMd: d. MMM y G
       GyMMMEd: E d. MMM y G
-      h: h a
-      H: HH
       hm: h.mm a
       Hm: HH.mm
       hms: h.mm.ss a
@@ -169,16 +147,18 @@ datetime_formats:
       M: M
       Md: d.M
       MEd: E d.M
+      MMdd: dd.MM
       MMM: MMM
       MMMd: d. MMM
       MMMEd: E d. MMM
       MMMMd: d. MMMM
+      MMMMEd: E d. MMMM
       MMMMW: W. 'uge' 'i' MMMM
       ms: mm.ss
-      "y": "y"
       yM: M.y
       yMd: d.M.y
       yMEd: E d.M.y
+      yMM: MM.y
       yMMM: MMM y
       yMMMd: d. MMM y
       yMMMEd: E d. MMM y
@@ -186,6 +166,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'uge' w 'i' Y"
-      MMdd: dd.MM
-      MMMMEd: E d. MMMM
-      yMM: MM.y

@@ -1,6 +1,6 @@
 ---
 locale: ne
-generated_at: '2025-09-12T05:01:08Z'
+generated_at: '2025-09-12T07:04:19Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -18,7 +18,6 @@ datetime_formats:
         '10': अक्टोबर
         '11': नोभेम्बर
         '12': डिसेम्बर
-      abbreviated: {}
       narrow:
         '1': जन
         '2': फेब
@@ -33,8 +32,6 @@ datetime_formats:
         '11': नोभे
         '12': डिसे
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': जन
         '2': फेेब
@@ -66,10 +63,7 @@ datetime_formats:
         thu: बिहि
         fri: शुक्र
         sat: शनि
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: आ
         mon: सो
@@ -85,96 +79,37 @@ datetime_formats:
         '2': दोस्रो त्रैमासिक
         '3': तेस्रो त्रैमासिक
         '4': चौथो त्रैमासिक
-      abbreviated: {}
     stand-alone:
       wide:
         '1': प्रथम त्रैमासिक
         '2': द्वितीय त्रैमासिक
         '3': तृतीय त्रैमासिक
         '4': चतुर्थ त्रैमासिक
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: पूर्वाह्न
-        pm: अपराह्न
         midnight: मध्यरात
+        am: पूर्वाह्न
         noon: मध्यान्ह
+        pm: अपराह्न
         morning1: बिहान
         afternoon1: अपरान्ह
         afternoon2: साँझ
         evening1: बेलुकी
         night1: रात
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
-    names: {}
     abbreviated:
       '0': इस्वीपूर्व
       '1': ईसा काल
-    narrow: {}
   date_formats:
-    full: y MMMM d, EEEE
-    long: y MMMM d
-    medium: y MMM d
     short: yy/M/d
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1}: {0}"
     long: "{1}: {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: d E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
       GyMd: M/d/y G
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
-      Md: MM-dd
-      MEd: MM-dd, E
-      MMM: LLL
-      MMMd: MMM d
-      MMMEd: MMM d, E
-      MMMMd: MMMM d
       MMMMW: MMMM को W हप्ता
-      ms: mm:ss
-      "y": "y"
-      yM: y-MM
-      yMd: y-MM-dd
-      yMEd: y-MM-dd, E
-      yMMM: y MMM
-      yMMMd: y MMM d
-      yMMMEd: y MMM d, E
-      yMMMM: y MMMM
-      yQQQ: y QQQ
-      yQQQQ: y QQQQ
       yw: Y को w हप्ता

@@ -1,6 +1,6 @@
 ---
 locale: fa
-generated_at: '2025-09-12T05:00:17Z'
+generated_at: '2025-09-12T07:04:13Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': اکتبر
         '11': نوامبر
         '12': دسامبر
-      narrow: {}
     stand-alone:
       wide:
         '1': ژانویه
@@ -46,7 +45,6 @@ datetime_formats:
         '10': اکتبر
         '11': نوامبر
         '12': دسامبر
-      abbreviated: {}
       narrow:
         '1': ژ
         '2': ف
@@ -70,11 +68,7 @@ datetime_formats:
         thu: پنجشنبه
         fri: جمعه
         sat: شنبه
-      abbreviated: {}
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: ی
         mon: د
@@ -95,9 +89,6 @@ datetime_formats:
         '2': س‌م۲
         '3': س‌م۳
         '4': س‌م۴
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -122,7 +113,6 @@ datetime_formats:
       wide:
         am: قبل‌ازظهر
         pm: بعدازظهر
-      abbreviated: {}
   eras:
     names:
       '0': قبل از دوران مشترک
@@ -149,43 +139,29 @@ datetime_formats:
     medium: "{1}، {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
-      Ehm: E h:mm a
       EHm: E H:mm
-      Ehms: E h:mm:ss a
       EHms: E H:mm:ss
       Gy: y G
       GyMd: y/M/d GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E d MMM y G
-      h: h a
       H: H
-      hm: h:mm a
+      HHmmZ: HH:mm (Z)
       Hm: H:mm
-      hms: h:mm:ss a
       Hms: H:mm:ss
-      hmsv: h:mm:ss a v
       Hmsv: H:mm:ss v
-      hmv: h:mm a v
       Hmv: H:mm v
-      M: L
       Md: M/d
       MEd: E M/d
-      MMM: LLL
       MMMd: d LLL
       MMMEd: E d LLL
       MMMMd: d LLLL
+      MMMMEd: E d LLLL
       MMMMW: هفتهٔ Wم LLLL
+      mmss: mm:ss
       ms: m:ss
-      "y": "y"
       yM: y/M
       yMd: y/M/d
       yMEd: E y/M/d
@@ -193,10 +169,7 @@ datetime_formats:
       yMMMd: d MMM y
       yMMMEd: E d MMM y
       yMMMM: MMMM y
+      yMMMMEEEEd: EEEE d MMMM y
       yQQQ: QQQQ y
       yQQQQ: QQQQ y
       yw: هفتهٔ wم Y
-      HHmmZ: HH:mm (Z)
-      MMMMEd: E d LLLL
-      mmss: mm:ss
-      yMMMMEEEEd: EEEE d MMMM y

@@ -1,192 +1,30 @@
 ---
 locale: so_KE
-generated_at: '2025-09-12T05:01:32Z'
+generated_at: '2025-09-12T07:04:22Z'
 cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide:
-        '1': Janaayo
-        '2': Febraayo
-        '3': Maarso
-        '4': Abriil
-        '5': Maayo
-        '6': Juun
-        '7': Luulyo
-        '8': Agosto
-        '9': Sebtembar
-        '10': Oktoobar
-        '11': Noofeembar
-        '12': Diseembar
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mar
-        '4': Abr
-        '5': May
-        '6': Jun
-        '7': Lul
-        '8': Ogs
-        '9': Seb
-        '10': Okt
-        '11': Nof
-        '12': Dis
       narrow: {}
     stand-alone:
-      wide:
-        '1': Jannaayo
-        '2': Febraayo
-        '3': Maarso
-        '4': Abriil
-        '5': Maayo
-        '6': Juun
-        '7': Luulyo
-        '8': Ogosto
-        '9': Sebteembar
-        '10': Oktoobar
-        '11': Noofeembar
-        '12': Diseembar
       abbreviated: {}
-      narrow:
-        '1': J
-        '2': F
-        '3': M
-        '4': A
-        '5': M
-        '6': J
-        '7': L
-        '8': O
-        '9': S
-        '10': O
-        '11': "N"
-        '12': D
   days:
     format:
-      wide:
-        sun: Axad
-        mon: Isniin
-        tue: Talaado
-        wed: Arbaco
-        thu: Khamiis
-        fri: Jimco
-        sat: Sabti
-      abbreviated:
-        sun: Axd
-        mon: Isn
-        tue: Tldo
-        wed: Arbc
-        thu: Khms
-        fri: Jmc
-        sat: Sbti
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow:
-        sun: A
-        mon: I
-        tue: T
-        wed: A
-        thu: Kh
-        fri: J
-        sat: S
   quarters:
-    format:
-      wide:
-        '1': Rubaca 1aad
-        '2': Rubaca 2aad
-        '3': Rubaca 3aad
-        '4': Rubaca 4aad
-      abbreviated:
-        '1': R1
-        '2': R2
-        '3': R3
-        '4': R4
     stand-alone:
       wide: {}
       abbreviated: {}
   day_periods:
     format:
       wide: {}
-      abbreviated:
-        am: GH
-        pm: GD
     stand-alone:
-      wide:
-        am: GH
-        pm: GD
       abbreviated: {}
-  eras:
-    names:
-      '0': Ka Hor Taariikhda Miilaadiga
-      '1': Taariikhda Miilaadiga
-    abbreviated:
-      '0': KTM
-      '1': CE
-    narrow:
-      '0': B
-      '1': A
-  date_formats:
-    full: EEEE, MMMM d, y
-    long: MMMM d, y
-    medium: dd-MMM-y
-    short: dd/MM/yy
   time_formats:
     full: HH:mm:ss zzzz
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-  datetime_formats:
-    full: "{1} 'ee' {0}"
-    long: "{1} 'ee' {0}"
-    medium: "{1} 'ee' {0}"
-    short: "{1}, {0}"
-    available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
-      Ed: d, E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: y G
-      GyMd: M/d/y GGGGG
-      GyMMM: MMM y G
-      GyMMMd: MMM d, y G
-      GyMMMEd: E, MMM d, y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
-      Md: M/d
-      MEd: E, M/d
-      MMM: LLL
-      MMMd: MMM d
-      MMMEd: E, MMM d
-      MMMMd: MMMM d
-      MMMMW: "'toddobaadka' W 'ee' MMMM"
-      ms: mm:ss
-      "y": "y"
-      yM: M/y
-      yMd: M/d/y
-      yMEd: E, M/d/y
-      yMMM: MMM y
-      yMMMd: MMM d, y
-      yMMMEd: E, MMM d, y
-      yMMMM: MMMM y
-      yQQQ: QQQ y
-      yQQQQ: QQQQ y
-      yw: "'toddobaadka' w 'ee' Y"
-      MMMMEd: E, MMMM d

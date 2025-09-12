@@ -1,6 +1,6 @@
 ---
 locale: kn
-generated_at: '2025-09-12T05:00:50Z'
+generated_at: '2025-09-12T07:04:17Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,9 +31,7 @@ datetime_formats:
         '10': ಅಕ್ಟೋ
         '11': ನವೆಂ
         '12': ಡಿಸೆಂ
-      narrow: {}
     stand-alone:
-      wide: {}
       abbreviated:
         '1': ಜನ
         '2': ಫೆಬ್ರ
@@ -78,10 +76,7 @@ datetime_formats:
         thu: ಗುರು
         fri: ಶುಕ್ರ
         sat: ಶನಿ
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: ಭಾ
         mon: ಸೋ
@@ -102,17 +97,12 @@ datetime_formats:
         '2': ತ್ರೈ 2
         '3': ತ್ರೈ 3
         '4': ತ್ರೈ 4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
         am: AM
         pm: PM
       abbreviated:
-        am: AM
-        pm: PM
         midnight: ಮಧ್ಯ ರಾತ್ರಿ
         morning1: ಬೆಳಗ್ಗೆ
         afternoon1: ಮಧ್ಯಾಹ್ನ
@@ -133,7 +123,6 @@ datetime_formats:
     abbreviated:
       '0': ಕ್ರಿ.ಪೂ.ಕಾಲ
       '1': ಪ್ರಸಕ್ತ ಶಕ
-    narrow: {}
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
@@ -150,52 +139,20 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: d E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
-      GyMd: GGGGG y-MM-dd
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: d/M, E
-      MMM: LLL
+      MMdd: dd-MM
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
-      MMMMW: "'week' W 'of' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, M/d/y
+      yMM: MM-y
       yMMM: MMM y
       yMMMd: MMM d,y
       yMMMEd: E, MMM d, y
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
-      yw: "'week' w 'of' Y"
-      MMdd: dd-MM
-      yMM: MM-y

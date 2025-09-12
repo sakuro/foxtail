@@ -1,6 +1,6 @@
 ---
 locale: su
-generated_at: '2025-09-12T05:01:37Z'
+generated_at: '2025-09-12T07:04:22Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': Okt
         '11': Nop
         '12': Dés
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': P
@@ -66,10 +63,7 @@ datetime_formats:
         thu: Kem
         fri: Jum
         sat: Sap
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: M
         mon: S
@@ -77,7 +71,6 @@ datetime_formats:
         wed: R
         thu: K
         fri: J
-        sat: S
   quarters:
     format:
       wide:
@@ -96,22 +89,10 @@ datetime_formats:
         '2': kuartal ka-2
         '3': kuartal ka-3
         '4': kuartal-ka 4
-      abbreviated: {}
-  day_periods:
-    format:
-      wide: {}
-      abbreviated:
-        am: AM
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
-    names: {}
     abbreviated:
       '0': SM
       '1': M
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -128,25 +109,19 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
       Bhm: h.mm B
       Bhms: h.mm.ss B
-      d: d
-      E: ccc
       EBhm: E h.mm B
       EBhms: E h.mm.ss B
       Ed: E d
       Ehm: E h.mm a
       EHm: E HH.mm
       Ehms: E h.mm.ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d/M/y GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
-      h: h a
-      H: HH
       hm: h.mm a
       Hm: HH.mm
       hms: h.mm.ss a
@@ -155,16 +130,12 @@ datetime_formats:
       Hmsv: HH.mm.ss v
       hmv: h.mm a v
       Hmv: HH.mm v
-      M: L
       Md: d/M
       MEd: E, d/M
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
-      MMMMW: "'week' W 'of' MMMM"
       ms: mm.ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
@@ -174,4 +145,3 @@ datetime_formats:
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
-      yw: "'week' w 'of' Y"

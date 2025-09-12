@@ -1,6 +1,6 @@
 ---
 locale: lld
-generated_at: '2025-09-12T05:00:57Z'
+generated_at: '2025-09-12T07:04:18Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -134,7 +134,6 @@ datetime_formats:
         wed: M
         thu: J
         fri: V
-        sat: S
   quarters:
     format:
       wide:
@@ -158,15 +157,6 @@ datetime_formats:
         '2': T2
         '3': T3
         '4': T4
-  day_periods:
-    format:
-      wide: {}
-      abbreviated:
-        am: AM
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': dan le tëmp cristian
@@ -174,28 +164,17 @@ datetime_formats:
     abbreviated:
       '0': dan t.c.
       '1': t.c.
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM 'dl' y
     long: d MMMM y
     medium: d MMM y
     short: dd.MM.yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1} 'dales' {0}"
     long: "{1} 'dales' {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
       EBhm: E, h:mm B
       EBhms: E, h:mm:ss B
       Ed: E, d
@@ -208,26 +187,12 @@ datetime_formats:
       GyMMM: LLL y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d.M.
       MEd: E, d.M.
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: "'edema' W MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: MM.y
       yMd: d.M.y
       yMEd: E, d.M.y

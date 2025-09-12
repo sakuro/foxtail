@@ -1,6 +1,6 @@
 ---
 locale: ga
-generated_at: '2025-09-12T05:00:34Z'
+generated_at: '2025-09-12T07:04:14Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': DFómh
         '11': Samh
         '12': Noll
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': E
         '2': F
@@ -66,10 +63,7 @@ datetime_formats:
         thu: Déar
         fri: Aoine
         sat: Sath
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: D
         mon: L
@@ -77,7 +71,6 @@ datetime_formats:
         wed: C
         thu: D
         fri: A
-        sat: S
   quarters:
     format:
       wide:
@@ -90,18 +83,11 @@ datetime_formats:
         '2': R2
         '3': R3
         '4': R4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
         am: r.n.
         pm: i.n.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': Roimh Chomh-Ré
@@ -109,60 +95,36 @@ datetime_formats:
     abbreviated:
       '0': RCR
       '1': CR
-    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1} 'ag' {0}"
     long: "{1} 'ag' {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: dd/MM/y GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E d MMM y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
       M: LL
       Md: dd/MM
       MEd: E dd/MM
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
       MMMMW: "'seachtain' 'a' W 'i' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: MM/y
       yMd: dd/MM/y
       yMEd: E dd/MM/y

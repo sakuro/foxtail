@@ -1,6 +1,6 @@
 ---
 locale: lt
-generated_at: '2025-09-12T05:00:58Z'
+generated_at: '2025-09-12T07:04:18Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': spal.
         '11': lapkr.
         '12': gruod.
-      narrow: {}
     stand-alone:
       wide:
         '1': sausis
@@ -46,7 +45,6 @@ datetime_formats:
         '10': spalis
         '11': lapkritis
         '12': gruodis
-      abbreviated: {}
       narrow:
         '1': S
         '2': V
@@ -78,12 +76,8 @@ datetime_formats:
         thu: kt
         fri: pn
         sat: št
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
-        sun: S
         mon: P
         tue: A
         wed: T
@@ -103,7 +97,6 @@ datetime_formats:
         '3': III k.
         '4': IV k.
     stand-alone:
-      wide: {}
       abbreviated:
         '1': I ketv.
         '2': II ketv.
@@ -111,18 +104,16 @@ datetime_formats:
         '4': IV ketv.
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: priešpiet
-        pm: popiet
         midnight: vidurnaktis
+        am: priešpiet
         noon: perpiet
+        pm: popiet
         morning1: rytas
         afternoon1: popietė
         evening1: vakaras
         night1: naktis
     stand-alone:
-      wide: {}
       abbreviated:
         noon: vidurdienis
         morning1: rytas
@@ -143,26 +134,11 @@ datetime_formats:
     full: y 'm'. MMMM d 'd'., EEEE
     long: y 'm'. MMMM d 'd'.
     medium: y-MM-dd
-    short: y-MM-dd
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
       d: dd
-      E: ccc
       EBhm: h:mm B, E
       EBhms: h:mm:ss B, E
-      Ed: d, E
       Ehm: hh:mm a, E
       EHm: HH:mm, E
       Ehms: hh:mm:ss a, E
@@ -172,41 +148,30 @@ datetime_formats:
       GyMMM: y-MM G
       GyMMMd: y-MM-dd G
       GyMMMEd: y-MM-dd G, E
+      GyMMMM: y 'm'. G, LLLL
+      GyMMMMd: y 'm'. G MMMM d 'd'.
+      GyMMMMEd: y 'm'. G MMMM d 'd'., E
       h: hh a
-      H: HH
       hm: hh:mm a
-      Hm: HH:mm
       hms: hh:mm:ss a
-      Hms: HH:mm:ss
       hmsv: hh:mm:ss a; v
       Hmsv: HH:mm:ss; v
       hmv: hh:mm a; v
       Hmv: HH:mm; v
       M: MM
       Md: MM-d
-      MEd: MM-dd, E
+      MMdd: MM-dd
       MMM: MM
       MMMd: MM-dd
       MMMEd: MM-dd, E
+      MMMM: LLLL
       MMMMd: MMMM d 'd'.
+      MMMMEd: MMMM d 'd'., E
       MMMMW: MMMM W 'sav'.
-      ms: mm:ss
-      "y": "y"
-      yM: y-MM
-      yMd: y-MM-dd
-      yMEd: y-MM-dd, E
       yMMM: y-MM
       yMMMd: y-MM-dd
       yMMMEd: y-MM-dd, E
       yMMMM: y 'm'. LLLL
-      yQQQ: y QQQ
-      yQQQQ: y QQQQ
-      yw: Y w 'sav'.
-      GyMMMM: y 'm'. G, LLLL
-      GyMMMMd: y 'm'. G MMMM d 'd'.
-      GyMMMMEd: y 'm'. G MMMM d 'd'., E
-      MMdd: MM-dd
-      MMMM: LLLL
-      MMMMEd: MMMM d 'd'., E
       yMMMMd: y 'm'. MMMM d 'd'.
       yMMMMEd: y 'm'. MMMM d 'd'., E
+      yw: Y w 'sav'.

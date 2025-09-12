@@ -1,6 +1,6 @@
 ---
 locale: la
-generated_at: '2025-09-12T05:00:55Z'
+generated_at: '2025-09-12T07:04:17Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': Oct
         '11': Nov
         '12': Dec
-      narrow: {}
     stand-alone:
       wide:
         '1': Ianuarius
@@ -46,20 +45,6 @@ datetime_formats:
         '10': October
         '11': November
         '12': December
-      abbreviated: {}
-      narrow:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-        '8': '8'
-        '9': '9'
-        '10': '10'
-        '11': '11'
-        '12': '12'
   days:
     format:
       wide:
@@ -78,20 +63,10 @@ datetime_formats:
         thu: Iov
         fri: Ven
         sat: Sab
-      narrow: {}
     stand-alone:
       wide:
         sun: Dominica
         sat: Sabbatum
-      abbreviated: {}
-      narrow:
-        sun: S
-        mon: M
-        tue: T
-        wed: W
-        thu: T
-        fri: F
-        sat: S
   quarters:
     format:
       wide:
@@ -104,18 +79,11 @@ datetime_formats:
         '2': Q2
         '3': Q3
         '4': Q4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
         am: a.m.
         pm: p.m.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': ante Christum natum
@@ -123,67 +91,13 @@ datetime_formats:
     abbreviated:
       '0': a.C.n.
       '1': p.C.n.
-    narrow: {}
   date_formats:
     full: EEEE, 'die' d MMMM y G
     long: "'die' d MMMM y G"
     medium: "'die' d MMM y G"
     short: d M y G
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1} 'de' {0}"
     long: "{1} 'de' {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
-    available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
-      Ed: d, E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
-      GyMd: GGGGG y-MM-dd
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
-      Md: MM-dd
-      MEd: MM-dd, E
-      MMM: LLL
-      MMMd: MMM d
-      MMMEd: MMM d, E
-      MMMMd: MMMM d
-      MMMMW: "'week' W 'of' MMMM"
-      ms: mm:ss
-      "y": "y"
-      yM: y-MM
-      yMd: y-MM-dd
-      yMEd: y-MM-dd, E
-      yMMM: y MMM
-      yMMMd: y MMM d
-      yMMMEd: y MMM d, E
-      yMMMM: y MMMM
-      yQQQ: y QQQ
-      yQQQQ: y QQQQ
-      yw: "'week' w 'of' Y"

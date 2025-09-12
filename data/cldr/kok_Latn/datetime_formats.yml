@@ -1,6 +1,6 @@
 ---
 locale: kok_Latn
-generated_at: '2025-09-12T05:00:52Z'
+generated_at: '2025-09-12T07:04:17Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -44,8 +44,6 @@ datetime_formats:
         '11': "N"
         '12': D
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -86,8 +84,6 @@ datetime_formats:
         fri: S
         sat: S
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: A
         mon: S
@@ -95,7 +91,6 @@ datetime_formats:
         wed: B
         thu: B
         fri: S
-        sat: S
   quarters:
     format:
       wide:
@@ -108,22 +103,15 @@ datetime_formats:
         '2': Timh2
         '3': Timh3
         '4': Timh4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
         am: sokallim
         pm: sanje
-      abbreviated:
-        am: AM
-        pm: PM
     stand-alone:
       wide:
         am: sokallim
         pm: sanje
-      abbreviated: {}
   eras:
     names:
       '0': KA
@@ -153,40 +141,26 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
-      Ed: d, E
       Ehm: E a h:mm
-      EHm: E HH:mm
       Ehms: E a h:mm:ss
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d-M-y G
       GyMMM: MMM y G
       GyMMMd: d MMM, y G
       GyMMMEd: E, d MMM, y G
       h: a h
-      H: HH
       hm: a h:mm
-      Hm: HH:mm
       hms: a h:mm:ss
-      Hms: HH:mm:ss
       hmsv: a h:mm:ss v
-      Hmsv: HH:mm:ss v
       hmv: a h:mm v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: dd-MM, E
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: MMMM -'acho' 'suman' W
-      ms: mm:ss
-      "y": "y"
       yM: M-y
       yMd: d-M-y
       yMEd: E, d-M-y

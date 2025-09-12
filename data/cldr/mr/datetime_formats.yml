@@ -1,6 +1,6 @@
 ---
 locale: mr
-generated_at: '2025-09-12T05:01:04Z'
+generated_at: '2025-09-12T07:04:19Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': ऑक्टो
         '11': नोव्हें
         '12': डिसें
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': जा
         '2': फे
@@ -66,10 +63,7 @@ datetime_formats:
         thu: गुरु
         fri: शुक्र
         sat: शनि
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: र
         mon: सो
@@ -90,15 +84,9 @@ datetime_formats:
         '2': ति२
         '3': ति३
         '4': ति४
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: AM
-        pm: PM
         midnight: मध्यरात्र
         noon: मध्यान्ह
         morning1: पहाट
@@ -106,9 +94,6 @@ datetime_formats:
         afternoon1: दुपार
         evening1: संध्याकाळ
         night1: रात्र
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': ईसापूर्व युग
@@ -116,7 +101,6 @@ datetime_formats:
     abbreviated:
       '0': ई. पू. युग
       '1': ख्रि. यु.
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM, y
     long: d MMMM, y
@@ -136,43 +120,26 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: d E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
       GyMd: GGGGG d/M/y
       GyMMM: MMM G y
       GyMMMd: d MMM, G y
       GyMMMEd: E, d MMM, G y
-      h: h a
-      H: HH
-      hm: h:mm a
       Hm: H:mm
-      hms: h:mm:ss a
       Hms: H:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E, d/M
-      MMM: LLL
+      MMdd: dd-MM
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: MMMM चा W रा आठवडा
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
+      yMM: MM-y
       yMMM: MMM y
       yMMMd: d MMM, y
       yMMMEd: E, d, MMM y
@@ -180,5 +147,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: Y चा w वा आठवडा
-      MMdd: dd-MM
-      yMM: MM-y

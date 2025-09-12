@@ -1,6 +1,6 @@
 ---
 locale: be
-generated_at: '2025-09-12T04:59:42Z'
+generated_at: '2025-09-12T07:04:10Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': кас
         '11': ліс
         '12': сне
-      narrow: {}
     stand-alone:
       wide:
         '1': студзень
@@ -90,10 +89,7 @@ datetime_formats:
         thu: чц
         fri: пт
         sat: сб
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: н
         mon: п
@@ -114,18 +110,6 @@ datetime_formats:
         '2': 2-гі кв.
         '3': 3-ці кв.
         '4': 4-ты кв.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
-  day_periods:
-    format:
-      wide: {}
-      abbreviated:
-        am: AM
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': да нашай эры
@@ -133,7 +117,6 @@ datetime_formats:
     abbreviated:
       '0': да н.э.
       '1': н.э.
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM y 'г'.
     long: d MMMM y 'г'.
@@ -141,52 +124,32 @@ datetime_formats:
     short: d.MM.yy
   time_formats:
     full: HH:mm:ss, zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1} 'у' {0}"
     long: "{1} 'у' {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
-      Ed: d, E
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y 'г'. G
       GyMd: dd.MM.y GGGGG
       GyMMM: LLL y 'г'. G
       GyMMMd: d MMM y 'г'. G
       GyMMMEd: E, d MMM y 'г'. G
       h: hh a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d.M
       MEd: E, d.M
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
+      MMMMEd: E, d MMMM
       MMMMW: W 'тыдзень' MMMM
       ms: mm.ss
-      "y": "y"
       yM: M.y
       yMd: d.M.y
       yMEd: E, d.M.y
@@ -197,4 +160,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: w 'тыдзень' Y
-      MMMMEd: E, d MMMM

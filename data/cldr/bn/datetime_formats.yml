@@ -1,6 +1,6 @@
 ---
 locale: bn
-generated_at: '2025-09-12T04:59:46Z'
+generated_at: '2025-09-12T07:04:10Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,9 +31,7 @@ datetime_formats:
         '10': অক্টো
         '11': নভে
         '12': ডিসে
-      narrow: {}
     stand-alone:
-      wide: {}
       abbreviated:
         '1': জানু
         '2': ফেব
@@ -78,10 +76,7 @@ datetime_formats:
         thu: বৃহস্পতি
         fri: শুক্র
         sat: শনি
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: র
         mon: সো
@@ -97,9 +92,7 @@ datetime_formats:
         '2': দ্বিতীয় ত্রৈমাসিক
         '3': তৃতীয় ত্রৈমাসিক
         '4': চতুর্থ ত্রৈমাসিক
-      abbreviated: {}
     stand-alone:
-      wide: {}
       abbreviated:
         '1': Q1
         '2': Q2
@@ -115,24 +108,18 @@ datetime_formats:
         evening1: সন্ধ্যাবেলায়
         night1: রাত্রিবেলায়
       abbreviated:
-        am: AM
-        pm: PM
         morning1: ভোর
         morning2: সকাল
         afternoon1: দুপুর
         afternoon2: বিকাল
         evening1: সন্ধ্যা
         night1: রাত্রি
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '1': খ্রীষ্টাব্দ
     abbreviated:
       '0': '"খ্রিঃপূঃ"'
       '1': খ্রিষ্টাব্দ
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM, y
     long: d MMMM, y
@@ -149,46 +136,24 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: d E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: dd-MM-y GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM, y G
       GyMMMEd: E, d MMM, y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E, d-M
-      MMM: LLL
+      MMdd: dd-MM
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
+      MMMMEd: E d MMMM
       MMMMW: MMMM এর Wয় সপ্তাহ
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
+      yMM: MM-y
       yMMM: MMM y
       yMMMd: d MMM, y
       yMMMEd: E, d MMM, y
@@ -196,6 +161,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: Y এর wতম সপ্তাহ
-      MMdd: dd-MM
-      MMMMEd: E d MMMM
-      yMM: MM-y

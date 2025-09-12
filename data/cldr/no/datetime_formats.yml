@@ -1,6 +1,6 @@
 ---
 locale: 'no'
-generated_at: '2025-09-12T05:01:11Z'
+generated_at: '2025-09-12T07:04:19Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,9 +31,7 @@ datetime_formats:
         '10': okt.
         '11': nov.
         '12': des.
-      narrow: {}
     stand-alone:
-      wide: {}
       abbreviated:
         '1': jan
         '2': feb
@@ -78,17 +76,9 @@ datetime_formats:
         thu: tor.
         fri: fre.
         sat: lør.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
-        sun: S
-        mon: M
-        tue: T
         wed: O
-        thu: T
-        fri: F
         sat: L
   quarters:
     format:
@@ -102,9 +92,6 @@ datetime_formats:
         '2': K2
         '3': K3
         '4': K4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -115,9 +102,9 @@ datetime_formats:
         evening1: på kvelden
         night1: på natten
       abbreviated:
+        midnight: midn.
         am: a.m.
         pm: p.m.
-        midnight: midn.
         morning1: morg.
         morning2: form.
         afternoon1: etterm.
@@ -131,7 +118,6 @@ datetime_formats:
         afternoon1: ettermiddag
         evening1: kveld
         night1: natt
-      abbreviated: {}
   eras:
     names:
       '0': før vår tidsregning
@@ -157,13 +143,7 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
       d: d.
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d.
       Ehm: E h:mm a
       EHm: E 'kl'. HH:mm
@@ -174,29 +154,22 @@ datetime_formats:
       GyMMM: MMM y G
       GyMMMd: d. MMM y G
       GyMMMEd: E d. MMM y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
       M: L.
       Md: d.M.
       MEd: E d.M.
-      MMM: LLL
+      MMdd: d.M.
       MMMd: d. MMM
       MMMEd: E d. MMM
       MMMMd: d. MMMM
       MMMMW: "'den' W. 'uken' 'i' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M.y
       yMd: d.M.y
       yMEd: E d.M.y
+      yMM: MM.y
       yMMM: MMM y
       yMMMd: d. MMM y
       yMMMEd: E d. MMM y
@@ -204,5 +177,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'uke' w 'i' Y"
-      MMdd: d.M.
-      yMM: MM.y

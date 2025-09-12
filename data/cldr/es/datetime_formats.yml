@@ -1,6 +1,6 @@
 ---
 locale: es
-generated_at: '2025-09-12T05:00:13Z'
+generated_at: '2025-09-12T07:04:13Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': oct
         '11': nov
         '12': dic
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': E
         '2': F
@@ -66,10 +63,7 @@ datetime_formats:
         thu: jue
         fri: vie
         sat: sáb
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: D
         mon: L
@@ -77,7 +71,6 @@ datetime_formats:
         wed: X
         thu: J
         fri: V
-        sat: S
   quarters:
     format:
       wide:
@@ -90,9 +83,6 @@ datetime_formats:
         '2': T2
         '3': T3
         '4': T4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -100,8 +90,8 @@ datetime_formats:
         pm: p. m.
       abbreviated:
         am: a. m.
-        pm: p. m.
         noon: del mediodía
+        pm: p. m.
         morning1: de la madrugada
         morning2: de la mañana
         evening1: de la tarde
@@ -123,7 +113,6 @@ datetime_formats:
     abbreviated:
       '0': a. e. c.
       '1': e. c.
-    narrow: {}
   date_formats:
     full: EEEE, d 'de' MMMM 'de' y
     long: d 'de' MMMM 'de' y
@@ -140,13 +129,6 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E, h:mm a
       EHm: E, H:mm
@@ -157,7 +139,9 @@ datetime_formats:
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
-      h: h a
+      GyMMMM: MMMM 'de' y G
+      GyMMMMd: d 'de' MMMM 'de' y G
+      GyMMMMEd: E, d 'de' MMMM 'de' y G
       H: H
       hm: h:mm a
       Hm: H:mm
@@ -165,36 +149,29 @@ datetime_formats:
       Hms: H:mm:ss
       hmsv: h:mm:ss a v
       Hmsv: H:mm:ss v
+      hmsvvvv: h:mm:ss a (vvvv)
+      Hmsvvvv: H:mm:ss (vvvv)
       hmv: h:mm a v
       Hmv: H:mm v
-      M: L
       Md: d/M
       MEd: E, d/M
-      MMM: LLL
+      MMd: d/M
+      MMdd: d/M
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d 'de' MMMM
+      MMMMEd: E, d 'de' MMMM
       MMMMW: "'semana' W 'de' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: EEE, d/M/y
+      yMM: M/y
       yMMM: MMM y
       yMMMd: d MMM y
       yMMMEd: EEE, d MMM y
       yMMMM: MMMM 'de' y
+      yMMMMd: d 'de' MMMM 'de' y
+      yMMMMEd: EEE, d 'de' MMMM 'de' y
       yQQQ: QQQ y
       yQQQQ: QQQQ 'de' y
       yw: "'semana' w 'de' Y"
-      GyMMMM: MMMM 'de' y G
-      GyMMMMd: d 'de' MMMM 'de' y G
-      GyMMMMEd: E, d 'de' MMMM 'de' y G
-      hmsvvvv: h:mm:ss a (vvvv)
-      Hmsvvvv: H:mm:ss (vvvv)
-      MMd: d/M
-      MMdd: d/M
-      MMMMEd: E, d 'de' MMMM
-      yMM: M/y
-      yMMMMd: d 'de' MMMM 'de' y
-      yMMMMEd: EEE, d 'de' MMMM 'de' y

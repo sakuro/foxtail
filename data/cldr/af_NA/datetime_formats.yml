@@ -1,187 +1,35 @@
 ---
 locale: af_NA
-generated_at: '2025-09-12T04:59:32Z'
+generated_at: '2025-09-12T07:04:09Z'
 cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide:
-        '1': Januarie
-        '2': Februarie
-        '3': Maart
-        '4': April
-        '5': Mei
-        '6': Junie
-        '7': Julie
-        '8': Augustus
-        '9': September
-        '10': Oktober
-        '11': November
-        '12': Desember
-      abbreviated:
-        '1': Jan.
-        '2': Feb.
-        '3': Mrt.
-        '4': Apr.
-        '5': Mei
-        '6': Jun.
-        '7': Jul.
-        '8': Aug.
-        '9': Sep.
-        '10': Okt.
-        '11': Nov.
-        '12': Des.
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow:
-        '1': J
-        '2': F
-        '3': M
-        '4': A
-        '5': M
-        '6': J
-        '7': J
-        '8': A
-        '9': S
-        '10': O
-        '11': "N"
-        '12': D
   days:
     format:
-      wide:
-        sun: Sondag
-        mon: Maandag
-        tue: Dinsdag
-        wed: Woensdag
-        thu: Donderdag
-        fri: Vrydag
-        sat: Saterdag
-      abbreviated:
-        sun: So.
-        mon: Ma.
-        tue: Di.
-        wed: Wo.
-        thu: Do.
-        fri: Vr.
-        sat: Sa.
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow:
-        sun: S
-        mon: M
-        tue: D
-        wed: W
-        thu: D
-        fri: V
-        sat: S
   quarters:
-    format:
-      wide:
-        '1': 1ste kwartaal
-        '2': 2de kwartaal
-        '3': 3de kwartaal
-        '4': 4de kwartaal
-      abbreviated:
-        '1': K1
-        '2': K2
-        '3': K3
-        '4': K4
     stand-alone:
       wide: {}
       abbreviated: {}
   day_periods:
     format:
       wide: {}
-      abbreviated:
-        am: vm.
-        pm: nm.
-        midnight: middernag
-        morning1: die oggend
-        afternoon1: die middag
-        evening1: die aand
-        night1: die nag
     stand-alone:
       wide: {}
-      abbreviated:
-        morning1: oggend
-        afternoon1: middag
-        evening1: aand
-        night1: nag
-  eras:
-    names:
-      '0': voor die gewone jaartelling
-      '1': gewone jaartelling
-    abbreviated:
-      '0': v.g.j.
-      '1': g.j.
-    narrow:
-      '0': vgj
-      '1': gj
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
-    short: y-MM-dd
   time_formats:
     full: h:mm:ss a zzzz
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-  datetime_formats:
-    full: "{1} 'om' {0}"
-    long: "{1} 'om' {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
-    available_formats:
-      Bh: h B
-      Bhm: hh:mm B
-      Bhms: hh:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E hh:mm B
-      EBhms: E hh:mm:ss B
-      Ed: E d
-      Ehm: E hh:mm a
-      EHm: E HH:mm
-      Ehms: E hh:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: y G
-      GyMd: GGGGG y-MM-dd
-      GyMMM: MMM y G
-      GyMMMd: dd MMM y G
-      GyMMMEd: E dd MMM y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
-      Md: dd-MM
-      MEd: E d/M
-      MMM: LLL
-      MMMd: d MMM
-      MMMEd: E d MMM
-      MMMMd: d MMMM
-      MMMMW: "'week' W 'van' MMMM"
-      ms: mm:ss
-      "y": "y"
-      yM: MM-y
-      yMd: y-MM-dd
-      yMEd: E y-MM-dd
-      yMMM: MMM y
-      yMMMd: d MMM y
-      yMMMEd: E d MMM y
-      yMMMM: MMMM y
-      yQQQ: QQQ y
-      yQQQQ: QQQQ y
-      yw: "'week' w 'van' Y"
-      MMMMEd: E d MMMM

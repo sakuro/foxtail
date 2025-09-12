@@ -1,6 +1,6 @@
 ---
 locale: sv
-generated_at: '2025-09-12T05:01:37Z'
+generated_at: '2025-09-12T07:04:22Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': okt.
         '11': nov.
         '12': dec.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -66,17 +63,9 @@ datetime_formats:
         thu: tors
         fri: fre
         sat: lör
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
-        sun: S
-        mon: M
-        tue: T
         wed: O
-        thu: T
-        fri: F
         sat: L
   quarters:
     format:
@@ -90,9 +79,6 @@ datetime_formats:
         '2': K2
         '3': K3
         '4': K4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -103,9 +89,9 @@ datetime_formats:
         evening1: på kvällen
         night1: på natten
       abbreviated:
+        midnight: midnatt
         am: fm
         pm: em
-        midnight: midnatt
         morning1: på morg.
         morning2: på förm.
         afternoon1: på efterm.
@@ -133,12 +119,10 @@ datetime_formats:
     abbreviated:
       '0': f.v.t.
       '1': v.t.
-    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
-    short: y-MM-dd
   time_formats:
     full: "'kl'. HH.mm.ss zzzz"
     long: HH.mm.ss z
@@ -147,49 +131,30 @@ datetime_formats:
   datetime_formats:
     full: "{1} 'kl'. {0}"
     long: "{1} 'kl'. {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: y-MM-dd GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E d MMM y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E d/M
-      MMM: LLL
+      MMd: d/M
+      MMdd: dd/MM
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
+      MMMMEd: E d MMMM
       MMMMW: "'vecka' W 'i' MMMM"
-      ms: mm:ss
-      "y": "y"
-      yM: y-MM
-      yMd: y-MM-dd
       yMEd: E, y-MM-dd
+      yMM: y-MM
       yMMM: MMM y
       yMMMd: d MMM y
       yMMMEd: E d MMM y
@@ -197,7 +162,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'vecka' w, Y"
-      MMd: d/M
-      MMdd: dd/MM
-      MMMMEd: E d MMMM
-      yMM: y-MM

@@ -1,6 +1,6 @@
 ---
 locale: fi
-generated_at: '2025-09-12T05:00:22Z'
+generated_at: '2025-09-12T07:04:13Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': loka
         '11': marras
         '12': joulu
-      narrow: {}
     stand-alone:
       wide:
         '1': tammikuu
@@ -90,7 +89,6 @@ datetime_formats:
         thu: to
         fri: pe
         sat: la
-      narrow: {}
     stand-alone:
       wide:
         sun: sunnuntai
@@ -100,13 +98,8 @@ datetime_formats:
         thu: torstai
         fri: perjantai
         sat: lauantai
-      abbreviated: {}
       narrow:
-        sun: S
-        mon: M
-        tue: T
         wed: K
-        thu: T
         fri: P
         sat: L
   quarters:
@@ -121,9 +114,6 @@ datetime_formats:
         '2': 2. nelj.
         '3': 3. nelj.
         '4': 4. nelj.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -135,10 +125,10 @@ datetime_formats:
         evening1: illalla
         night1: yöllä
       abbreviated:
-        am: ap.
-        pm: ip.
         midnight: keskiyöllä
+        am: ap.
         noon: keskip.
+        pm: ip.
         morning1: aamulla
         morning2: aamup.
         afternoon1: iltap.
@@ -185,11 +175,8 @@ datetime_formats:
     medium: "{1} 'klo' {0}"
     short: "{1} 'klo' {0}"
     available_formats:
-      Bh: h B
       Bhm: h.mm B
       Bhms: h.mm.ss B
-      d: d
-      E: ccc
       EBhm: E h.mm B
       EBhms: E h.mm.ss B
       Ed: E d.
@@ -202,7 +189,8 @@ datetime_formats:
       GyMMM: LLL y G
       GyMMMd: d.M.y G
       GyMMMEd: E d.M.y G
-      h: h a
+      GyMMMMd: d. MMMM y G
+      GyMMMMEd: E d. MMMM y G
       H: H
       hm: h.mm a
       Hm: H.mm
@@ -212,30 +200,25 @@ datetime_formats:
       Hmsv: H.mm.ss v
       hmv: h.mm a v
       Hmv: H.mm v
-      M: L
       Md: d.M.
       MEd: E d.M.
-      MMM: LLL
       MMMd: d.M.
       MMMEd: ccc d.M.
       MMMMd: d. MMMM
+      MMMMEd: ccc d. MMMM
       MMMMW: LLLL'n' W. 'viikko'
       ms: m.ss
-      "y": "y"
       yM: L.y
       yMd: d.M.y
       yMEd: E d.M.y
+      yMM: M.y
       yMMM: LLL y
       yMMMd: d.M.y
       yMMMEd: E d.M.y
       yMMMM: LLLL y
-      yQQQ: QQQ y
-      yQQQQ: QQQQ y
-      yw: "'vuoden' Y 'viikko' w"
-      GyMMMMd: d. MMMM y G
-      GyMMMMEd: E d. MMMM y G
-      MMMMEd: ccc d. MMMM
-      yMM: M.y
       yMMMMccccd: cccc d. MMMM y
       yMMMMd: d. MMMM y
       yMMMMEd: E d. MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'vuoden' Y 'viikko' w"

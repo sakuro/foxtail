@@ -1,6 +1,6 @@
 ---
 locale: et
-generated_at: '2025-09-12T05:00:16Z'
+generated_at: '2025-09-12T07:04:13Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': okt
         '11': nov
         '12': dets
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': V
@@ -66,14 +63,10 @@ datetime_formats:
         thu: "N"
         fri: R
         sat: L
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: P
         mon: E
-        tue: T
         wed: K
         thu: "N"
         fri: R
@@ -90,15 +83,9 @@ datetime_formats:
         '2': K2
         '3': K3
         '4': K4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: AM
-        pm: PM
         midnight: keskööl
         noon: keskpäeval
         morning1: hommikul
@@ -106,7 +93,6 @@ datetime_formats:
         evening1: õhtul
         night1: öösel
     stand-alone:
-      wide: {}
       abbreviated:
         midnight: kesköö
         noon: keskpäev
@@ -121,50 +107,29 @@ datetime_formats:
     abbreviated:
       '0': e.m.a
       '1': m.a.j
-    narrow: {}
   date_formats:
     full: EEEE, d. MMMM y
     long: d. MMMM y
     medium: d. MMM y
     short: dd.MM.yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1}, 'kell' {0}"
     long: "{1}, 'kell' {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E, d
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d.MM.y GGGGG
       GyMMM: MMM y G
       GyMMMd: d. MMM y G
       GyMMMEd: E, d. MMMM y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
       M: M
       Md: d.M
       MEd: E, d.M
@@ -172,9 +137,9 @@ datetime_formats:
       MMMd: d. MMM
       MMMEd: E, d. MMM
       MMMMd: d. MMMM
+      MMMMEd: E, d. MMMM
       MMMMW: MMMM (W. 'nädal')
-      ms: mm:ss
-      "y": "y"
+      mmss: mm:ss
       yM: M.y
       yMd: d.M.y
       yMEd: E, d.M.y
@@ -185,5 +150,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: w. 'nädal' (Y)
-      MMMMEd: E, d. MMMM
-      mmss: mm:ss

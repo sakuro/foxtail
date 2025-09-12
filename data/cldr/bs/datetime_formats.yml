@@ -1,6 +1,6 @@
 ---
 locale: bs
-generated_at: '2025-09-12T04:59:47Z'
+generated_at: '2025-09-12T07:04:10Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': okt
         '11': nov
         '12': dec
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': j
         '2': f
@@ -75,8 +72,6 @@ datetime_formats:
         fri: P
         sat: S
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: "n"
         mon: p
@@ -97,19 +92,16 @@ datetime_formats:
         '2': KV2
         '3': KV3
         '4': KV4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
         am: prijepodne
         pm: popodne
       abbreviated:
-        am: a. m.
-        pm: p. m.
         midnight: ponoć
+        am: a. m.
         noon: podne
+        pm: p. m.
         morning1: ujutro
         afternoon1: poslijepodne
         evening1: navečer
@@ -135,57 +127,40 @@ datetime_formats:
     long: d. MMMM y.
     medium: d. MMM y.
     short: d. M. y.
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1} 'u' {0}"
     long: "{1} 'u' {0}"
     medium: "{1} 'u' {0}"
     short: "{1} 'u' {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
       d: d.
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E, d.
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y. G
       GyMd: d. M. y. G
       GyMMM: MMM y. G
       GyMMMd: d. MMM y. G
       GyMMMEd: E, d. MMM y. G
-      h: h a
-      H: HH
       hm: hh:mm a
-      Hm: HH:mm
       hms: hh:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a (v)
       Hmsv: HH:mm:ss (v)
       hmv: h:mm a (v)
       Hmv: HH:mm (v)
-      M: L
       Md: d. M.
       MEd: E, d. M.
-      MMM: LLL
+      MMdd: d. M.
       MMMd: d. MMM
       MMMEd: E, d. MMM
       MMMMd: d. MMMM
+      MMMMEd: E, d. MMMM
       MMMMW: W. 'sedmica' 'mjesec' MMMM
-      ms: mm:ss
       "y": y.
       yM: MM/y
       yMd: d. M. y.
       yMEd: E, d. M. y.
+      yMM: M. y.
       yMMM: MMM y.
       yMMMd: d. MMM y.
       yMMMEd: E, d. MMM y.
@@ -193,6 +168,3 @@ datetime_formats:
       yQQQ: QQQ y.
       yQQQQ: QQQQ y.
       yw: w. 'sedmica' 'u' Y.
-      MMdd: d. M.
-      MMMMEd: E, d. MMMM
-      yMM: M. y.

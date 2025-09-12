@@ -19,6 +19,7 @@ module Foxtail
           @output_dir = output_dir
           @parent_locales = nil
           @inheritance = Inheritance.instance
+          @extracted_data_cache = {}
         end
 
         # Template method for extracting all locales
@@ -46,10 +47,33 @@ module Foxtail
           write_data(locale_id, extracted_data)
         end
 
-        # Extract locale data with full CLDR inheritance chain
+        # Extract minimal locale data (only differences from parent)
         def extract_locale_with_inheritance(locale_id)
+          return @extracted_data_cache[locale_id] if @extracted_data_cache.key?(locale_id)
+
           load_parent_locales_if_needed
-          @inheritance.load_inherited_data(locale_id, source_dir, self, parent_locales)
+
+          # Get raw data for this locale
+          raw_data = load_raw_locale_data(locale_id)
+          return nil unless raw_data
+
+          # Get parent data to compare against
+          parent_locale = get_parent_locale(locale_id)
+          unless parent_locale
+            @extracted_data_cache[locale_id] = raw_data
+            return raw_data
+          end
+
+          parent_data = extract_locale_with_inheritance(parent_locale)
+          unless parent_data
+            @extracted_data_cache[locale_id] = raw_data
+            return raw_data
+          end
+
+          # Extract only the differences
+          result = extract_differences(raw_data, parent_data)
+          @extracted_data_cache[locale_id] = result
+          result
         end
 
         private def validate_source_directory
@@ -69,6 +93,54 @@ module Foxtail
 
         private def parent_locales
           @parent_locales ||= {}
+        end
+
+        private def load_raw_locale_data(locale_id)
+          xml_path = File.join(source_dir, "common", "main", "#{locale_id}.xml")
+          return nil unless File.exist?(xml_path)
+
+          begin
+            doc = REXML::Document.new(File.read(xml_path))
+            extract_data_from_xml(doc)
+          rescue => e
+            log "Warning: Could not load data for locale #{locale_id}: #{e.message}"
+            nil
+          end
+        end
+
+        private def get_parent_locale(locale_id)
+          return nil if locale_id == "root"
+
+          # Check explicit parent mappings first
+          if parent_locales[locale_id]
+            parent_locales[locale_id]
+          else
+            # Use algorithmic parent resolution
+            chain = @inheritance.resolve_inheritance_chain(locale_id)
+            chain[1] if chain.length > 1
+          end
+        end
+
+        private def extract_differences(child_data, parent_data)
+          return child_data unless child_data.is_a?(Hash) && parent_data.is_a?(Hash)
+
+          diff = {}
+
+          child_data.each do |key, value|
+            parent_value = parent_data[key]
+
+            if value != parent_value
+              if value.is_a?(Hash) && parent_value.is_a?(Hash)
+                # Recursively extract differences for nested hashes
+                nested_diff = extract_differences(value, parent_value)
+                diff[key] = nested_diff unless nested_diff.empty?
+              else
+                diff[key] = value
+              end
+            end
+          end
+
+          diff
         end
 
         private def ensure_locale_directory(locale_id)

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require "locale"
+require_relative "base"
+require_relative "resolver"
 
 module Foxtail
   module CLDR
@@ -20,95 +22,101 @@ module Foxtail
     class NumberFormats < Base
       def initialize(locale)
         super
-        @data = load_data["number_formats"] || {}
-        @currency_fractions = load_data["currency_fractions"] || {}
+        @resolver = Resolver.new(@locale.to_simple.to_s)
       end
 
       # Get decimal symbol
       def decimal_symbol
-        @data.dig("symbols", "decimal") || "."
+        @resolver.resolve("number_formats.symbols.decimal", "number_formats") || "."
       end
 
       # Get grouping symbol
       def group_symbol
-        @data.dig("symbols", "group") || ","
+        @resolver.resolve("number_formats.symbols.group", "number_formats") || ","
       end
 
       # Get minus sign
       def minus_sign
-        @data.dig("symbols", "minus_sign") || "-"
+        @resolver.resolve("number_formats.symbols.minus_sign", "number_formats") || "-"
       end
 
       # Get plus sign
       def plus_sign
-        @data.dig("symbols", "plus_sign") || "+"
+        @resolver.resolve("number_formats.symbols.plus_sign", "number_formats") || "+"
       end
 
       # Get percent sign
       def percent_sign
-        @data.dig("symbols", "percent_sign") || "%"
+        @resolver.resolve("number_formats.symbols.percent_sign", "number_formats") || "%"
       end
 
       # Get per mille sign
       def per_mille_sign
-        @data.dig("symbols", "per_mille") || "‰"
+        @resolver.resolve("number_formats.symbols.per_mille", "number_formats") || "‰"
       end
 
       # Get infinity symbol
       def infinity_symbol
-        @data.dig("symbols", "infinity") || "∞"
+        @resolver.resolve("number_formats.symbols.infinity", "number_formats") || "∞"
       end
 
       # Get NaN symbol
       def nan_symbol
-        @data.dig("symbols", "nan") || "NaN"
+        @resolver.resolve("number_formats.symbols.nan", "number_formats") || "NaN"
       end
 
       # Get decimal format pattern
       def decimal_pattern(style="standard")
-        @data.dig("decimal_formats", style) || default_decimal_pattern
+        @resolver.resolve("number_formats.decimal_formats.#{style}", "number_formats") || default_decimal_pattern
       end
 
       # Get percent format pattern
       def percent_pattern(style="standard")
-        @data.dig("percent_formats", style) || default_percent_pattern
+        @resolver.resolve("number_formats.percent_formats.#{style}", "number_formats") || default_percent_pattern
       end
 
       # Get currency format pattern
       def currency_pattern(style="standard")
-        @data.dig("currency_formats", style) || default_currency_pattern(style)
+        @resolver.resolve(
+          "number_formats.currency_formats.#{style}",
+          "number_formats"
+        ) || default_currency_pattern(style)
       end
 
       # Get scientific format pattern
       def scientific_pattern(style="standard")
-        @data.dig("scientific_formats", style) || default_scientific_pattern
+        @resolver.resolve("number_formats.scientific_formats.#{style}", "number_formats") || default_scientific_pattern
       end
 
       # Get currency symbol for a given currency code
       def currency_symbol(currency_code)
-        @data.dig("currencies", currency_code, "symbol") || currency_code
+        @resolver.resolve("number_formats.currencies.#{currency_code}.symbol", "number_formats") || currency_code
       end
 
       # Get currency display name for a given currency code and plural form
       def currency_display_name(currency_code, count="other")
-        @data.dig("currencies", currency_code, "display_names", count) ||
-          @data.dig("currencies", currency_code, "display_names", "other") ||
+        @resolver.resolve("number_formats.currencies.#{currency_code}.display_names.#{count}", "number_formats") ||
+          @resolver.resolve("number_formats.currencies.#{currency_code}.display_names.other", "number_formats") ||
           currency_code
       end
 
       # Get decimal digits for a currency (defaults to 2 if not found)
       def currency_digits(currency_code)
-        @currency_fractions.dig(currency_code, "digits") || 2
+        @resolver.resolve("currency_fractions.#{currency_code}.digits", "number_formats") || 2
       end
 
       # Get cash digits for a currency (falls back to regular digits)
       def currency_cash_digits(currency_code)
-        @currency_fractions.dig(currency_code, "cash_digits") || currency_digits(currency_code)
+        @resolver.resolve(
+          "currency_fractions.#{currency_code}.cash_digits",
+          "number_formats"
+        ) || currency_digits(currency_code)
       end
 
       # Get all available currency codes
       def currency_codes
-        @data["currencies"]&.keys || []
+        currencies = @resolver.resolve("number_formats.currencies", "number_formats")
+        currencies&.keys || []
       end
 
       private def default_decimal_pattern

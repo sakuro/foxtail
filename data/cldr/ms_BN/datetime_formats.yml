@@ -1,189 +1,29 @@
 ---
 locale: ms_BN
-generated_at: '2025-09-12T05:01:05Z'
+generated_at: '2025-09-12T07:04:19Z'
 cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide:
-        '1': Januari
-        '2': Februari
-        '3': Mac
-        '4': April
-        '5': Mei
-        '6': Jun
-        '7': Julai
-        '8': Ogos
-        '9': September
-        '10': Oktober
-        '11': November
-        '12': Disember
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mac
-        '4': Apr
-        '5': Mei
-        '6': Jun
-        '7': Jul
-        '8': Ogo
-        '9': Sep
-        '10': Okt
-        '11': Nov
-        '12': Dis
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow:
-        '1': J
-        '2': F
-        '3': M
-        '4': A
-        '5': M
-        '6': J
-        '7': J
-        '8': O
-        '9': S
-        '10': O
-        '11': "N"
-        '12': D
   days:
     format:
-      wide:
-        sun: Ahad
-        mon: Isnin
-        tue: Selasa
-        wed: Rabu
-        thu: Khamis
-        fri: Jumaat
-        sat: Sabtu
-      abbreviated:
-        sun: Ahd
-        mon: Isn
-        tue: Sel
-        wed: Rab
-        thu: Kha
-        fri: Jum
-        sat: Sab
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow:
-        sun: A
-        mon: I
-        tue: S
-        wed: R
-        thu: K
-        fri: J
-        sat: S
   quarters:
-    format:
-      wide:
-        '1': Suku pertama
-        '2': Suku Ke-2
-        '3': Suku Ke-3
-        '4': Suku Ke-4
-      abbreviated:
-        '1': S1
-        '2': S2
-        '3': S3
-        '4': S4
     stand-alone:
       wide: {}
       abbreviated: {}
   day_periods:
-    format:
-      wide:
-        morning1: tengah malam
-        morning2: pagi
-        afternoon1: tengah hari
-        evening1: petang
-        night1: malam
-      abbreviated:
-        am: PG
-        pm: PTG
-        morning1: pagi
-        morning2: pagi
-        afternoon1: tengah hari
-        evening1: petang
-        night1: malam
     stand-alone:
       wide: {}
-      abbreviated:
-        morning1: tengah malam
-        morning2: pagi
-        afternoon1: tengah hari
-        evening1: petang
-        night1: malam
   eras:
     names: {}
-    abbreviated:
-      '0': S.M.
-      '1': TM
     narrow: {}
   date_formats:
     full: dd MMMM y
-    long: d MMMM y
-    medium: d MMM y
-    short: d/MM/yy
-  time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-  datetime_formats:
-    full: "{1} 'pada' {0}"
-    long: "{1} 'pada' {0}"
-    medium: "{1}, {0}"
-    short: "{1}, {0}"
-    available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
-      Ed: d E
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: y G
-      GyMd: GGGGG y-MM-dd
-      GyMMM: MMM y G
-      GyMMMd: d MMM y G
-      GyMMMEd: E, d MMM y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
-      Md: d-M
-      MEd: E, d-M
-      MMM: LLL
-      MMMd: d MMM
-      MMMEd: E, d MMM
-      MMMMd: d MMMM
-      MMMMW: "'minggu' W 'daripada' MMMM"
-      ms: mm:ss
-      "y": "y"
-      yM: M-y
-      yMd: d/M/y
-      yMEd: E, d/M/y
-      yMMM: MMM y
-      yMMMd: d MMM y
-      yMMMEd: E, d MMM y
-      yMMMM: MMMM y
-      yQQQ: QQQ y
-      yQQQQ: QQQQ y
-      yw: "'minggu' w 'daripada' Y"
-      MMdd: dd/MM

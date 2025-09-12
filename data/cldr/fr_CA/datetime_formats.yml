@@ -1,139 +1,42 @@
 ---
 locale: fr_CA
-generated_at: '2025-09-12T05:00:24Z'
+generated_at: '2025-09-12T07:04:14Z'
 cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide:
-        '1': janvier
-        '2': février
-        '3': mars
-        '4': avril
-        '5': mai
-        '6': juin
-        '7': juillet
-        '8': août
-        '9': septembre
-        '10': octobre
-        '11': novembre
-        '12': décembre
       abbreviated:
-        '1': janv.
-        '2': févr.
-        '3': mars
-        '4': avr.
-        '5': mai
-        '6': juin
         '7': juill.
-        '8': août
-        '9': sept.
-        '10': oct.
-        '11': nov.
-        '12': déc.
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow:
-        '1': J
-        '2': F
-        '3': M
-        '4': A
-        '5': M
-        '6': J
-        '7': J
-        '8': A
-        '9': S
-        '10': O
-        '11': "N"
-        '12': D
   days:
     format:
-      wide:
-        sun: dimanche
-        mon: lundi
-        tue: mardi
-        wed: mercredi
-        thu: jeudi
-        fri: vendredi
-        sat: samedi
-      abbreviated:
-        sun: dim.
-        mon: lun.
-        tue: mar.
-        wed: mer.
-        thu: jeu.
-        fri: ven.
-        sat: sam.
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow:
-        sun: D
-        mon: L
-        tue: M
-        wed: M
-        thu: J
-        fri: V
-        sat: S
   quarters:
-    format:
-      wide:
-        '1': 1er trimestre
-        '2': 2e trimestre
-        '3': 3e trimestre
-        '4': 4e trimestre
-      abbreviated:
-        '1': T1
-        '2': T2
-        '3': T3
-        '4': T4
     stand-alone:
       wide: {}
       abbreviated: {}
   day_periods:
     format:
-      wide:
-        midnight: minuit
-        noon: midi
-        morning1: du matin
-        afternoon1: de l’après-midi
-        evening1: du soir
-        night1: du matin
       abbreviated:
         am: a.m.
         pm: p.m.
-        midnight: minuit
-        noon: midi
         morning1: du mat.
-        afternoon1: après-midi
         evening1: du soir
         night1: du mat.
     stand-alone:
-      wide:
-        morning1: matin
-        afternoon1: après-midi
-        evening1: soir
-        night1: matin
       abbreviated:
-        morning1: mat.
         afternoon1: après-midi
         evening1: du soir
         night1: du mat.
   eras:
-    names:
-      '0': avant l’ère commune
-      '1': de l’ère commune
-    abbreviated:
-      '0': AEC
-      '1': EC
     narrow: {}
   date_formats:
-    full: EEEE d MMMM y
-    long: d MMMM y
-    medium: d MMM y
     short: y-MM-dd
   time_formats:
     full: HH 'h' mm 'min' ss 's' zzzz
@@ -143,28 +46,19 @@ datetime_formats:
   datetime_formats:
     full: "{1}, {0}"
     long: "{1}, {0}"
-    medium: "{1}, {0}"
     short: "{1} {0}"
     available_formats:
       Bh: h 'h' B
       Bhm: h 'h' mm B
       Bhms: h 'h' mm 'min' ss 's' B
-      d: d
-      E: E
       EBhm: E h 'h' mm B
       EBhms: E h 'h' mm 'min' ss 's' B
-      Ed: E d
       Ehm: E h 'h' mm a
       EHm: E HH 'h' mm
       Ehms: E h 'h' mm 'min' ss 's' a
       EHms: E HH 'h' mm 'min' ss 's'
-      Gy: y G
       GyMd: y-MM-dd GGGGG
-      GyMMM: MMM y G
-      GyMMMd: d MMM y G
-      GyMMMEd: E d MMM y G
       h: h 'h' a
-      H: HH 'h'
       hm: h 'h' mm a
       Hm: HH 'h' mm
       hms: h 'h' mm 'min' ss 's' a
@@ -173,26 +67,12 @@ datetime_formats:
       Hmsv: HH 'h' mm 'min' ss 's' v
       hmv: h 'h' mm a v
       Hmv: HH 'h' mm v
-      M: L
       Md: MM-dd
       MEd: E MM-dd
-      MMM: LLL
-      MMMd: d MMM
-      MMMEd: E d MMM
-      MMMMd: d MMMM
-      MMMMW: "'semaine' W (MMMM)"
+      MMd: MM-dd
+      MMdd: MM-dd
       ms: mm 'min' ss 's'
-      "y": "y"
       yM: y-MM
       yMd: y-MM-dd
       yMEd: E y-MM-dd
-      yMMM: MMM y
-      yMMMd: d MMM y
-      yMMMEd: E d MMM y
-      yMMMM: MMMM y
-      yQQQ: QQQ y
-      yQQQQ: QQQQ y
-      yw: "'semaine' w 'de' Y"
-      MMd: MM-dd
-      MMdd: MM-dd
       yMM: y-MM

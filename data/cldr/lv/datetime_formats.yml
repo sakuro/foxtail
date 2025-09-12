@@ -1,6 +1,6 @@
 ---
 locale: lv
-generated_at: '2025-09-12T05:00:59Z'
+generated_at: '2025-09-12T07:04:18Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': okt.
         '11': nov.
         '12': dec.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -66,7 +63,6 @@ datetime_formats:
         thu: ceturtd.
         fri: piektd.
         sat: sestd.
-      narrow: {}
     stand-alone:
       wide:
         sun: Svētdiena
@@ -85,13 +81,11 @@ datetime_formats:
         fri: Piektd.
         sat: Sestd.
       narrow:
-        sun: S
         mon: P
         tue: O
         wed: T
         thu: C
         fri: P
-        sat: S
   quarters:
     format:
       wide:
@@ -104,9 +98,6 @@ datetime_formats:
         '2': 2. cet.
         '3': 3. cet.
         '4': 4. cet.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -119,10 +110,10 @@ datetime_formats:
         evening1: vakarā
         night1: naktī
       abbreviated:
-        am: priekšp.
-        pm: pēcp.
         midnight: pusnaktī
+        am: priekšp.
         noon: pusd.
+        pm: pēcp.
         morning1: no rīta
         afternoon1: pēcpusd.
         evening1: vakarā
@@ -159,22 +150,8 @@ datetime_formats:
     long: y. 'gada' d. MMMM
     medium: y. 'gada' d. MMM
     short: dd.MM.yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
       EBhm: E, h:mm B
       EBhms: E, h:mm:ss B
       Ed: E, d.
@@ -187,25 +164,18 @@ datetime_formats:
       GyMMM: G y. 'g'. MMM
       GyMMMd: G y. 'g'. d. MMM
       GyMMMEd: E, G y. 'g'. d. MMM
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: dd.MM.
       MEd: E, dd.MM.
-      MMM: LLL
       MMMd: d. MMM
       MMMEd: E, d. MMM
       MMMMd: d. MMMM
+      MMMMEd: E, d. MMMM
       MMMMW: MMMM, W. 'nedēļa'
-      ms: mm:ss
+      mmss: mm:ss
       "y": y. 'g'.
       yM: MM.y.
       yMd: d.MM.y.
@@ -217,5 +187,3 @@ datetime_formats:
       yQQQ: y. 'g'. QQQ
       yQQQQ: y. 'g'. QQQQ
       yw: Y. 'g'. w. 'nedēļa'
-      MMMMEd: E, d. MMMM
-      mmss: mm:ss

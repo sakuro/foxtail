@@ -1,6 +1,6 @@
 ---
 locale: dsb
-generated_at: '2025-09-12T04:59:57Z'
+generated_at: '2025-09-12T07:04:12Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': okt.
         '11': now.
         '12': dec.
-      narrow: {}
     stand-alone:
       wide:
         '1': januar
@@ -90,10 +89,7 @@ datetime_formats:
         thu: stw
         fri: pět
         sat: sob
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: "n"
         mon: p
@@ -114,9 +110,6 @@ datetime_formats:
         '2': kw2
         '3': kw3
         '4': kw4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -129,7 +122,6 @@ datetime_formats:
       wide:
         am: dopołdnja
         pm: wótpołdnja
-      abbreviated: {}
   eras:
     names:
       '0': pśed našym licenim casa
@@ -137,7 +129,6 @@ datetime_formats:
     abbreviated:
       '0': pś.n.l.c.
       '1': n.l.c.
-    narrow: {}
   date_formats:
     full: EEEE, d. MMMM y
     long: d. MMMM y
@@ -151,16 +142,8 @@ datetime_formats:
   datetime_formats:
     full: "{1} 'zeger' {0}"
     long: "{1} 'zeger' {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
       d: d.
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E, d.
       Ehm: E, h:mm a
       EHm: E, 'zeg'. H:mm
@@ -171,26 +154,19 @@ datetime_formats:
       GyMMM: MMM y G
       GyMMMd: d. MMM y G
       GyMMMEd: E, d. MMM y G
-      h: h a
       H: "'zeg'. H"
       hm: h:mm a
       Hm: "'zeg'. H:mm"
       hms: h:mm:ss a
       Hms: H:mm:ss
-      hmsv: h:mm:ss a v
       Hmsv: H:mm:ss v
-      hmv: h:mm a v
       Hmv: H:mm v
-      M: L
       Md: d.M.
       MEd: E, d.M.
-      MMM: LLL
       MMMd: d. MMM
       MMMEd: E, d. MMM
       MMMMd: d. MMMM
       MMMMW: W. 'tyźeń' MMMM
-      ms: mm:ss
-      "y": "y"
       yM: M.y
       yMd: d.M.y
       yMEd: E, d.M.y

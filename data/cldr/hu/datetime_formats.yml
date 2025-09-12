@@ -1,6 +1,6 @@
 ---
 locale: hu
-generated_at: '2025-09-12T05:00:40Z'
+generated_at: '2025-09-12T07:04:15Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': okt.
         '11': nov.
         '12': dec.
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -66,10 +63,7 @@ datetime_formats:
         thu: Cs
         fri: P
         sat: Szo
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: V
         mon: H
@@ -113,10 +107,10 @@ datetime_formats:
         night1: éjjel
         night2: hajnal
       abbreviated:
-        am: de.
-        pm: du.
         midnight: éjfél
+        am: de.
         noon: dél
+        pm: du.
         morning1: reggel
         morning2: de.
         afternoon1: du.
@@ -131,7 +125,6 @@ datetime_formats:
         evening1: este
         night1: éjjel
         night2: hajnal
-      abbreviated: {}
   eras:
     names:
       '0': időszámításunk előtt
@@ -153,23 +146,15 @@ datetime_formats:
     medium: H:mm:ss
     short: H:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: d., E
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: G y.
       GyMd: GGGGG y. MM. dd.
       GyMMM: G y. MMM
@@ -182,18 +167,14 @@ datetime_formats:
       hms: a h:mm:ss
       Hms: H:mm:ss
       hmsv: a h:mm:ss v
-      Hmsv: HH:mm:ss v
       hmv: a h:mm v
-      Hmv: HH:mm v
-      M: L
       Md: M. d.
       MEd: M. d., E
-      MMM: LLL
       MMMd: MMM d.
       MMMEd: MMM d., E
       MMMMd: MMMM d.
       MMMMW: MMMM W. 'hete'
-      ms: mm:ss
+      mmss: mm:ss
       "y": y.
       yM: y. M.
       yMd: y. MM. dd.
@@ -205,4 +186,3 @@ datetime_formats:
       yQQQ: y. QQQ
       yQQQQ: y. QQQQ
       yw: Y w. 'hete'
-      mmss: mm:ss

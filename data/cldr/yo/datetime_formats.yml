@@ -1,6 +1,6 @@
 ---
 locale: yo
-generated_at: '2025-09-12T05:01:51Z'
+generated_at: '2025-09-12T07:04:24Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -18,10 +18,7 @@ datetime_formats:
         '10': Oṣù Ọ̀wàrà
         '11': Oṣù Bélú
         '12': Oṣù Ọ̀pẹ̀
-      abbreviated: {}
-      narrow: {}
     stand-alone:
-      wide: {}
       abbreviated:
         '1': Oṣù Ṣẹ́rẹ́
         '2': Oṣù Èrèlè
@@ -66,7 +63,6 @@ datetime_formats:
         thu: Ọjọ́bọ
         fri: Ẹtì
         sat: Àbámẹ́ta
-      narrow: {}
     stand-alone:
       wide:
         sun: Àìkú
@@ -99,34 +95,21 @@ datetime_formats:
         '2': Ìdámẹ́rin Kejì
         '3': Ìdámẹ́rin Kẹta
         '4': Ìdámẹ́rin Kẹrin
-      abbreviated: {}
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
         am: Àárọ̀
         pm: Ọ̀sán
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': Sáájú ìgbà mímọ̀
       '1': Lehin Kristi
-    abbreviated:
-      '0': BCE
-      '1': CE
-    narrow: {}
   date_formats:
     full: EEEE, d MMM y
     long: d MMM y
     medium: d MM y
     short: d/M/y
   time_formats:
-    full: HH:mm:ss zzzz
     long: H:mm:ss z
     medium: H:m:s
     short: H:m
@@ -136,43 +119,20 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E, d
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
       GyMd: d/M/y GGGGG
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E, d/M
-      MMM: LLL
       MMMd: d MMM
       MMMEd: d MMM, E
       MMMMd: d MMMM
-      MMMMW: "'week' W 'of' MMMM"
-      ms: mm:ss
-      "y": "y"
+      MMMMEd: d, MMMM E
       yM: M/y
       yMd: d/M/y
       yMEd: d/M/y, E
@@ -182,5 +142,3 @@ datetime_formats:
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
-      yw: "'week' w 'of' Y"
-      MMMMEd: d, MMMM E

@@ -1,6 +1,6 @@
 ---
 locale: to
-generated_at: '2025-09-12T05:01:43Z'
+generated_at: '2025-09-12T07:04:23Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': ʻOka
         '11': Nōv
         '12': Tīs
-      narrow: {}
     stand-alone:
       wide:
         '1': Sānuali
@@ -46,7 +45,6 @@ datetime_formats:
         '10': ʻOkatopa
         '11': Nōvema
         '12': Tīsema
-      abbreviated: {}
       narrow:
         '1': S
         '2': F
@@ -78,17 +76,9 @@ datetime_formats:
         thu: Tuʻa
         fri: Fal
         sat: Tok
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
-        sun: S
-        mon: M
-        tue: T
         wed: P
-        thu: T
-        fri: F
         sat: T
   quarters:
     format:
@@ -108,7 +98,6 @@ datetime_formats:
         '2': kuata 2
         '3': kuata 3
         '4': kuata 4
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -117,9 +106,6 @@ datetime_formats:
       abbreviated:
         am: HH
         pm: EA
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': ki muʻa
@@ -127,7 +113,6 @@ datetime_formats:
     abbreviated:
       '0': KM
       '1': TS
-    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -142,48 +127,30 @@ datetime_formats:
     full: "{1}, {0}"
     long: "{1}, {0}"
     medium: "{1}, {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: dd MM y GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E d MMM y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E d/M
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
+      MMMMEd: E d MMMM
       MMMMW: "'uike' 'hono' W ʻ'o' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E d/M/y
+      yMM: MM-y
       yMMM: MMM y
       yMMMd: d MMM y
       yMMMEd: E d MMM y
@@ -191,5 +158,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'uike' 'hono' w ʻ'o' Y"
-      MMMMEd: E d MMMM
-      yMM: MM-y

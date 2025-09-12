@@ -1,6 +1,6 @@
 ---
 locale: sbp
-generated_at: '2025-09-12T05:01:26Z'
+generated_at: '2025-09-12T07:04:21Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,23 +31,6 @@ datetime_formats:
         '10': Mok
         '11': Mus
         '12': Muh
-      narrow: {}
-    stand-alone:
-      wide: {}
-      abbreviated: {}
-      narrow:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-        '8': '8'
-        '9': '9'
-        '10': '10'
-        '11': '11'
-        '12': '12'
   days:
     format:
       wide:
@@ -66,10 +49,7 @@ datetime_formats:
         thu: Alh
         fri: Iju
         sat: Jmo
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: M
         mon: J
@@ -90,18 +70,11 @@ datetime_formats:
         '2': L2
         '3': L3
         '4': L4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
         am: Lwamilawu
         pm: Pashamihe
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': Ashanali uKilisito
@@ -109,67 +82,25 @@ datetime_formats:
     abbreviated:
       '0': AK
       '1': PK
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
-      GyMd: GGGGG y-MM-dd
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: M/d
       MEd: E, M/d
-      MMM: LLL
-      MMMd: MMM d
       MMMEd: E, MMM d
-      MMMMd: MMMM d
-      MMMMW: "'week' W 'of' MMMM"
       ms: m:ss
-      "y": "y"
       yM: M/y
       yMd: M/d/y
       yMEd: E, M/d/y
       yMMM: MMM y
       yMMMd: MMM d y
       yMMMEd: E, MMM d, y
-      yMMMM: y MMMM
       yQQQ: QQQ y
       yQQQQ: QQQQ y
-      yw: "'week' w 'of' Y"

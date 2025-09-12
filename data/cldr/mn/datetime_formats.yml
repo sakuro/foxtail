@@ -1,6 +1,6 @@
 ---
 locale: mn
-generated_at: '2025-09-12T05:01:03Z'
+generated_at: '2025-09-12T07:04:18Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': 10-р сар
         '11': 11-р сар
         '12': 12-р сар
-      narrow: {}
     stand-alone:
       wide:
         '1': Нэгдүгээр сар
@@ -46,7 +45,6 @@ datetime_formats:
         '10': Аравдугаар сар
         '11': Арван нэгдүгээр сар
         '12': Арван хоёрдугаар сар
-      abbreviated: {}
       narrow:
         '1': I
         '2': II
@@ -78,7 +76,6 @@ datetime_formats:
         thu: Пү
         fri: Ба
         sat: Бя
-      narrow: {}
     stand-alone:
       wide:
         sun: Ням
@@ -88,7 +85,6 @@ datetime_formats:
         thu: Пүрэв
         fri: Баасан
         sat: Бямба
-      abbreviated: {}
       narrow:
         sun: Ня
         mon: Да
@@ -109,24 +105,17 @@ datetime_formats:
         '2': II улирал
         '3': III улирал
         '4': IV улирал
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: ү.ө.
-        pm: ү.х.
         midnight: шөнө дунд
+        am: ү.ө.
         noon: үд дунд
+        pm: ү.х.
         morning1: өглөө
         afternoon1: өдөр
         evening1: орой
         night1: шөнө
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': манай эриний өмнөх
@@ -134,7 +123,6 @@ datetime_formats:
     abbreviated:
       '0': НТӨ
       '1': НТ
-    narrow: {}
   date_formats:
     full: y 'оны' MMMM'ын' d, EEEE 'гараг'
     long: y 'оны' MMMM'ын' d
@@ -143,19 +131,11 @@ datetime_formats:
   time_formats:
     full: HH:mm:ss (zzzz)
     long: HH:mm:ss (z)
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
       Bh: B h 'ц'
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E. B h:mm
       EBhms: E. B h:mm:ss
       Ed: dd. E
@@ -163,17 +143,13 @@ datetime_formats:
       EHm: E. HH:mm
       Ehms: E. h:mm:ss a
       EHms: E. HH:mm:ss
-      Gy: G y
-      GyMd: GGGGG y-MM-dd
       GyMMM: G y 'оны' MMM
       GyMMMd: G y 'оны' MMM'ын' d
       GyMMMEd: G y 'оны' MMM'ын' d. E
       h: h 'ц' a
       H: HH 'ц'
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a (v)
       Hmsv: HH:mm:ss (v)
       hmv: h:mm a (v)
@@ -181,13 +157,10 @@ datetime_formats:
       M: LLLLL
       Md: MMMMM/dd
       MEd: MMMMM/dd. E
-      MMM: LLL
       MMMd: MMM'ын' d
       MMMEd: MMM'ын' d. E
       MMMMd: MMMM'ын' d
       MMMMW: MMMM'ын' W-'р' 'долоо' 'хоног'
-      ms: mm:ss
-      "y": "y"
       yM: y MMMMM
       yMd: y.MM.dd
       yMEd: y.MM.dd. E

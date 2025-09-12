@@ -1,6 +1,6 @@
 ---
 locale: ko
-generated_at: '2025-09-12T05:00:51Z'
+generated_at: '2025-09-12T07:04:17Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -18,11 +18,7 @@ datetime_formats:
         '10': 10월
         '11': 11월
         '12': 12월
-      abbreviated: {}
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': 1월
         '2': 2월
@@ -54,10 +50,7 @@ datetime_formats:
         thu: 목
         fri: 금
         sat: 토
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: 일
         mon: 월
@@ -78,9 +71,6 @@ datetime_formats:
         '2': 2분기
         '3': 3분기
         '4': 4분기
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -94,8 +84,6 @@ datetime_formats:
         evening1: 저녁
         night1: 밤
       abbreviated:
-        am: AM
-        pm: PM
         midnight: 자정
         noon: 정오
         morning1: 아침
@@ -122,10 +110,6 @@ datetime_formats:
     names:
       '0': 기원전
       '1': 서기
-    abbreviated:
-      '0': BCE
-      '1': CE
-    narrow: {}
   date_formats:
     full: y년 MMMM d일 EEEE
     long: y년 MMMM d일
@@ -137,19 +121,15 @@ datetime_formats:
     medium: a h:mm:ss
     short: a h:mm
   datetime_formats:
-    full: "{1} {0}"
-    long: "{1} {0}"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
       Bh: B h시
       Bhm: B h:mm
       Bhms: B h:mm:ss
       d: d일
-      E: ccc
       EBhm: "(E) B h:mm"
       EBhms: "(E) B h:mm:ss"
       Ed: d일 (E)
+      EEEEd: d일 EEEE
       Ehm: "(E) a h:mm"
       EHm: "(E) HH:mm"
       Ehms: "(E) a h:mm:ss"
@@ -159,42 +139,37 @@ datetime_formats:
       GyMMM: G y년 MMM
       GyMMMd: G y년 MMM d일
       GyMMMEd: G y년 MMM d일 (E)
+      GyMMMEEEEd: G y년 MMM d일 EEEE
       h: a h시
       H: H시
+      HHmmss: HH:mm:ss
       hm: a h:mm
-      Hm: HH:mm
       hms: a h:mm:ss
       Hms: H시 m분 s초
       hmsv: a h:mm:ss v
       Hmsv: H시 m분 s초 v
       hmv: a h:mm v
-      Hmv: HH:mm v
       M: M월
       Md: M. d.
       MEd: M. d. (E)
-      MMM: LLL
+      MEEEEd: M. d. EEEE
       MMMd: MMM d일
       MMMEd: MMM d일 (E)
+      MMMEEEEd: MMM d일 EEEE
       MMMMd: MMMM d일
       MMMMW: MMMM W번째 주
-      ms: mm:ss
+      mmss: mm:ss
       "y": y년
       yM: y. M.
       yMd: y. M. d.
       yMEd: y. M. d. (E)
+      yMEEEEd: y. M. d. EEEE
+      yMM: y. M.
       yMMM: y년 MMM
       yMMMd: y년 MMM d일
       yMMMEd: y년 MMM d일 (E)
+      yMMMEEEEd: y년 MMM d일 EEEE
       yMMMM: y년 MMMM
       yQQQ: y년 QQQ
       yQQQQ: y년 QQQQ
       yw: Y년 w번째 주
-      EEEEd: d일 EEEE
-      GyMMMEEEEd: G y년 MMM d일 EEEE
-      HHmmss: HH:mm:ss
-      MEEEEd: M. d. EEEE
-      MMMEEEEd: MMM d일 EEEE
-      mmss: mm:ss
-      yMEEEEd: y. M. d. EEEE
-      yMM: y. M.
-      yMMMEEEEd: y년 MMM d일 EEEE

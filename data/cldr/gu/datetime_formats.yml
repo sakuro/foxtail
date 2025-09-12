@@ -1,6 +1,6 @@
 ---
 locale: gu
-generated_at: '2025-09-12T05:00:36Z'
+generated_at: '2025-09-12T07:04:14Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,10 +31,7 @@ datetime_formats:
         '10': ઑક્ટો
         '11': નવે
         '12': ડિસે
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': જા
         '2': ફે
@@ -66,10 +63,7 @@ datetime_formats:
         thu: ગુરુ
         fri: શુક્ર
         sat: શનિ
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: ર
         mon: સો
@@ -90,15 +84,9 @@ datetime_formats:
         '2': Q2
         '3': Q3
         '4': Q4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: AM
-        pm: PM
         midnight: મધ્યરાત્રિ
         morning1: સવારે
         afternoon1: બપોરે
@@ -110,7 +98,6 @@ datetime_formats:
         afternoon1: બપોર
         evening1: સાંજ
         night1: રાત્રિ
-      abbreviated: {}
   eras:
     names:
       '0': સામાન્ય યુગ પહેલા
@@ -134,55 +121,24 @@ datetime_formats:
   datetime_formats:
     full: "{1} એ {0} વાગ્યે"
     long: "{1} એ {0} વાગ્યે"
-    medium: "{1} {0}"
-    short: "{1} {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
-      GyMd: GGGGG y-MM-dd
       GyMMM: MMM, G y
       GyMMMd: d MMM, G y
       GyMMMEd: E, d MMM, G y
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E, d/M
-      MMM: LLL
+      MMdd: dd-MM
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: MMMMના W અઠવાડિયા
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
+      yMM: MM-y
       yMMM: MMM y
       yMMMd: d MMM, y
       yMMMEd: E, d MMM, y
       yMMMM: MMMM y
-      yQQQ: y QQQ
-      yQQQQ: y QQQQ
       yw: Y ના w અઠવાડિયા
-      MMdd: dd-MM
-      yMM: MM-y

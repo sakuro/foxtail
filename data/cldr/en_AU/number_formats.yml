@@ -1,24 +1,22 @@
 ---
 locale: en_AU
-generated_at: '2025-09-12T04:49:07Z'
+generated_at: '2025-09-12T07:01:05Z'
 cldr_version: '46'
 number_formats:
   symbols:
+    exponential: e
     decimal: "."
     group: ","
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
-    exponential: e
     infinity: "∞"
     nan: NaN
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
     standard: "#,##0%"
-  currency_formats:
-    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -173,8 +171,6 @@ number_formats:
       symbol: Ls
     MGA:
       symbol: Ar
-      display_names:
-        other: Malagasy ariary
     MMK:
       symbol: K
     MNT:
@@ -209,9 +205,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: Russian roubles
-        one: Russian rouble
     RWF:
       symbol: RF
     SBD:
@@ -222,9 +215,6 @@ number_formats:
       symbol: "$"
     SHP:
       symbol: "£"
-      display_names:
-        other: St Helena pounds
-        one: St Helena pound
     SRD:
       symbol: "$"
       display_names:
@@ -241,7 +231,6 @@ number_formats:
     TOP:
       symbol: T$
     TRY:
-      symbol: "₺"
       display_names:
         one: Turkish lira
         other: Turkish lire
@@ -281,50 +270,22 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    BYB:
-      display_names:
-        other: Belarusian new roubles (1994–1999)
-        one: Belarusian new rouble (1994–1999)
-    BYN:
-      display_names:
-        other: Belarusian roubles
-        one: Belarusian rouble
-    BYR:
-      display_names:
-        other: Belarusian roubles (2000–2016)
-        one: Belarusian rouble (2000–2016)
     ETB:
       display_names:
-        other: Ethiopian birrs
         one: Ethiopian birr
+        other: Ethiopian birrs
     LSL:
       display_names:
-        other: Lesotho lotis
         one: Lesotho loti
-    LVR:
-      display_names:
-        other: Latvian roubles
-        one: Latvian rouble
-    MVR:
-      display_names:
-        other: Maldivian rufiyaas
-        one: Maldivian rufiyaa
-    RUR:
-      display_names:
-        other: Russian roubles (1991–1998)
-        one: Russian rouble (1991–1998)
-    TJR:
-      display_names:
-        other: Tajikistani roubles
-        one: Tajikistani rouble
-    VUV:
-      display_names:
-        other: Vanuatu vatus
-        one: Vanuatu vatu
+        other: Lesotho lotis
     MKD:
       display_names:
         one: Macedonian denar
         other: Macedonian denar
+    MVR:
+      display_names:
+        one: Maldivian rufiyaa
+        other: Maldivian rufiyaas
     PGK:
       display_names:
         one: Papua New Guinean kina
@@ -347,6 +308,10 @@ number_formats:
       display_names:
         other: Venezuelan bolívar
         one: Venezuelan bolívar
+    VUV:
+      display_names:
+        one: Vanuatu vatu
+        other: Vanuatu vatus
     WST:
       display_names:
         one: Samoan tala

@@ -1,6 +1,6 @@
 ---
 locale: kab
-generated_at: '2025-09-12T05:00:46Z'
+generated_at: '2025-09-12T07:04:16Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -45,7 +45,6 @@ datetime_formats:
         '11': W
         '12': D
     stand-alone:
-      wide: {}
       abbreviated:
         '1': Yen
         '2': Fur
@@ -122,7 +121,6 @@ datetime_formats:
         wed: K
         thu: S
         fri: S
-        sat: S
   quarters:
     format:
       wide:
@@ -155,7 +153,6 @@ datetime_formats:
         am: n tufat
         pm: n tmeddit
     stand-alone:
-      wide: {}
       abbreviated:
         am: FT
         pm: MD
@@ -166,7 +163,6 @@ datetime_formats:
     abbreviated:
       '0': NTƐ
       '1': LTƐ
-    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -183,46 +179,29 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
-      GyMd: GGGGG y-MM-dd
-      GyMMM: G y MMM
-      GyMMMd: G y MMM d
-      GyMMMEd: G y MMM d, E
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
       M: M
       Md: d/M
-      MEd: MM-dd, E
+      MMd: d/MM
+      MMdd: dd/MM
       MMM: MMM
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
+      MMMMEd: E d MMMM
       MMMMW: "'imalas' W 'n' MMMM"
       ms: m:ss
-      "y": "y"
       yM: M/y
       yMd: dd/MM/y
       yMEd: E d/M/y
+      yMM: MM/y
       yMMM: MMM y
       yMMMd: d MMM y
       yMMMEd: E d MMM y
@@ -230,7 +209,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'imalas' w 'n' Y"
-      MMd: d/MM
-      MMdd: dd/MM
-      MMMMEd: E d MMMM
-      yMM: MM/y

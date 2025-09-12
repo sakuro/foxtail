@@ -1,50 +1,37 @@
 ---
 locale: lt
-generated_at: '2025-09-12T04:54:21Z'
+generated_at: '2025-09-12T07:02:33Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
     minus_sign: "−"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
     exponential: "×10^"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
-  scientific_formats:
-    standard: "#E0"
   currencies:
     AFN:
-      symbol: "؋"
       display_names:
         other: Afganistano afganių
         one: Afganistano afganis
         few: Afganistano afganiai
         many: Afganistano afganio
     AMD:
-      symbol: "֏"
       display_names:
         other: Armėnijos dramų
         one: Armėnijos dramas
         few: Armėnijos dramai
         many: Armėnijos dramo
     AOA:
-      symbol: Kz
       display_names:
         other: Angolos kvanzų
         one: Angolos kvanza
         few: Angolos kvanzos
         many: Angolos kvanzos
     ARS:
-      symbol: "$"
       display_names:
         other: Argentinos pesų
         one: Argentinos pesas
@@ -58,21 +45,18 @@ number_formats:
         few: Australijos doleriai
         many: Australijos dolerio
     AZN:
-      symbol: "₼"
       display_names:
         other: Azerbaidžano manatų
         one: Azerbaidžano manatas
         few: Azerbaidžano manatai
         many: Azerbaidžano manato
     BAM:
-      symbol: KM
       display_names:
         other: Bosnijos ir Hercegovinos konvertuojamųjų markių
         one: Bosnijos ir Hercegovinos konvertuojamoji markė
         few: Bosnijos ir Hercegovinos konvertuojamosios markės
         many: Bosnijos ir Hercegovinos konvertuojamosios markės
     BBD:
-      symbol: "$"
       display_names:
         other: Barbadoso dolerių
         one: Barbadoso doleris
@@ -86,21 +70,18 @@ number_formats:
         few: Bangladešo takos
         many: Bangladešo takos
     BMD:
-      symbol: "$"
       display_names:
         other: Bermudos dolerių
         one: Bermudos doleris
         few: Bermudos doleriai
         many: Bermudos dolerio
     BND:
-      symbol: "$"
       display_names:
         other: Brunėjaus dolerių
         one: Brunėjaus doleris
         few: Brunėjaus doleriai
         many: Brunėjaus dolerio
     BOB:
-      symbol: Bs
       display_names:
         other: Bolivijos bolivijanų
         one: Bolivijos bolivijanas
@@ -114,21 +95,18 @@ number_formats:
         few: Brazilijos realai
         many: Brazilijos realo
     BSD:
-      symbol: "$"
       display_names:
         other: Bahamų dolerių
         one: Bahamų doleris
         few: Bahamų doleriai
         many: Bahamų dolerio
     BWP:
-      symbol: P
       display_names:
         other: Botsvanos pulų
         one: Botsvanos pula
         few: Botsvanos pulos
         many: Botsvanos pulos
     BZD:
-      symbol: "$"
       display_names:
         other: Belizo dolerių
         one: Belizo doleris
@@ -142,7 +120,6 @@ number_formats:
         few: Kanados doleriai
         many: Kanados dolerio
     CLP:
-      symbol: "$"
       display_names:
         other: Čilės pesų
         one: Čilės pesas
@@ -156,84 +133,72 @@ number_formats:
         few: Kinijos ženminbi juaniai
         many: Kinijos ženminbi juanio
     COP:
-      symbol: "$"
       display_names:
         other: Kolumbijos pesų
         one: Kolumbijos pesas
         few: Kolumbijos pesai
         many: Kolumbijos peso
     CRC:
-      symbol: "₡"
       display_names:
         other: Kosta Rikos kolonų
         one: Kosta Rikos kolonas
         few: Kosta Rikos kolonai
         many: Kosta Rikos kolono
     CUC:
-      symbol: "$"
       display_names:
         other: Kubos konvertuojamųjų pesų
         one: Kubos konvertuojamasis pesas
         few: Kubos konvertuojamieji pesai
         many: Kubos konvertuojamojo peso
     CUP:
-      symbol: "$"
       display_names:
         other: Kubos pesų
         one: Kubos pesas
         few: Kubos pesai
         many: Kubos peso
     CZK:
-      symbol: Kč
       display_names:
         other: Čekijos kronų
         one: Čekijos krona
         few: Čekijos kronos
         many: Čekijos kronos
     DKK:
-      symbol: kr
       display_names:
         other: Danijos kronų
         one: Danijos krona
         few: Danijos kronos
         many: Danijos kronos
     DOP:
-      symbol: "$"
       display_names:
         other: Dominikos pesų
         one: Dominikos pesas
         few: Dominikos pesai
         many: Dominikos peso
     EGP:
-      symbol: E£
       display_names:
         other: Egipto svarų
         one: Egipto svaras
         few: Egipto svarai
         many: Egipto svaro
     ESP:
-      symbol: "₧"
       display_names:
         other: Ispanų pesetai
         one: Ispanų pesetas
         few: Ispanų pesetai
         many: Ispanų pesetai
     EUR:
-      symbol: "€"
       display_names:
         other: eurų
         one: euras
         few: eurai
         many: euro
     FJD:
-      symbol: "$"
       display_names:
         other: Fidžio dolerių
         one: Fidžio doleris
         few: Fidžio doleriai
         many: Fidžio dolerio
     FKP:
-      symbol: "£"
       display_names:
         other: Falklando salų svarų
         one: Falklando salų svaras
@@ -247,42 +212,36 @@ number_formats:
         few: Didžiosios Britanijos svarai
         many: Didžiosios Britanijos svaro
     GEL:
-      symbol: "₾"
       display_names:
         other: Gruzijos larių
         one: Gruzijos laris
         few: Gruzijos lariai
         many: Gruzijos lario
     GHS:
-      symbol: GH₵
       display_names:
         other: Ganos sedžių
         one: Ganos sedis
         few: Ganos sedžiai
         many: Ganos sedžio
     GIP:
-      symbol: "£"
       display_names:
         other: Gibraltaro svarų
         one: Gibraltaro svaras
         few: Gibraltaro svarai
         many: Gibraltaro svaro
     GNF:
-      symbol: FG
       display_names:
         other: Gvinėjos frankų
         one: Gvinėjos frankas
         few: Gvinėjos frankai
         many: Gvinėjos franko
     GTQ:
-      symbol: Q
       display_names:
         other: Gvatemalos ketcalių
         one: Gvatemalos ketcalis
         few: Gvatemalos ketcaliai
         many: Gvatemalos ketcalio
     GYD:
-      symbol: "$"
       display_names:
         other: Gajanos dolerių
         one: Gajanos doleris
@@ -296,28 +255,24 @@ number_formats:
         few: Honkongo doleriai
         many: Honkongo dolerio
     HNL:
-      symbol: L
       display_names:
         other: Hondūro lempirų
         one: Hondūro lempira
         few: Hondūro lempiros
         many: Hondūro lempiros
     HRK:
-      symbol: kn
       display_names:
         other: Kroatijos kunų
         one: Kroatijos kuna
         few: Kroatijos kunos
         many: Kroatijos kunos
     HUF:
-      symbol: Ft
       display_names:
         other: Vengrijos forintų
         one: Vengrijos forintas
         few: Vengrijos forintai
         many: Vengrijos forinto
     IDR:
-      symbol: Rp
       display_names:
         other: Indonezijos rupijų
         one: Indonezijos rupija
@@ -338,14 +293,12 @@ number_formats:
         few: Indijos rupijos
         many: Indijos rupijos
     ISK:
-      symbol: kr
       display_names:
         other: Islandijos kronų
         one: Islandijos krona
         few: Islandijos kronos
         many: Islandijos kronos
     JMD:
-      symbol: "$"
       display_names:
         other: Jamaikos dolerių
         one: Jamaikos doleris
@@ -359,7 +312,6 @@ number_formats:
         few: Japonijos jenos
         many: Japonijos jenos
     KGS:
-      symbol: "⃀"
       display_names:
         other: Kirgizijos somų
         one: Kirgizijos somas
@@ -373,14 +325,12 @@ number_formats:
         few: Kambodžos rieliai
         many: Kambodžos rielio
     KMF:
-      symbol: CF
       display_names:
         other: Komoro frankų
         one: Komoro frankas
         few: Komoro frankai
         many: Komoro franko
     KPW:
-      symbol: "₩"
       display_names:
         other: Šiaurės Korėjos vonų
         one: Šiaurės Korėjos vonas
@@ -394,14 +344,12 @@ number_formats:
         few: Pietų Korėjos vonai
         many: Pietų Korėjos vono
     KYD:
-      symbol: "$"
       display_names:
         other: Kaimanų salų dolerių
         one: Kaimanų salų doleris
         few: Kaimanų salų doleriai
         many: Kaimanų salų dolerio
     KZT:
-      symbol: "₸"
       display_names:
         other: Kazachstano tengių
         one: Kazachstano tengė
@@ -415,49 +363,42 @@ number_formats:
         few: Laoso kipai
         many: Laoso kipo
     LBP:
-      symbol: L£
       display_names:
         other: Libano svarų
         one: Libano svaras
         few: Libano svarai
         many: Libano svaro
     LKR:
-      symbol: Rs
       display_names:
         other: Šri Lankos rupijų
         one: Šri Lankos rupija
         few: Šri Lankos rupijos
         many: Šri Lankos rupijos
     LRD:
-      symbol: "$"
       display_names:
         other: Liberijos dolerių
         one: Liberijos doleris
         few: Liberijos doleriai
         many: Liberijos dolerio
     LTL:
-      symbol: Lt
       display_names:
         other: Lietuvos litų
         one: Lietuvos litas
         few: Lietuvos litai
         many: Lietuvos lito
     LVL:
-      symbol: Ls
       display_names:
         other: Latvijos latų
         one: Latvijos latas
         few: Latvijos latai
         many: Latvijos lato
     MGA:
-      symbol: Ar
       display_names:
         other: Madagaskaro ariarių
         one: Madagaskaro ariaris
         few: Madagaskaro ariariai
         many: Madagaskaro ariario
     MMK:
-      symbol: K
       display_names:
         other: Mianmaro kijatų
         one: Mianmaro kijatas
@@ -471,7 +412,6 @@ number_formats:
         few: Mongolijos tugrikai
         many: Mongolijos tugriko
     MUR:
-      symbol: Rs
       display_names:
         other: Mauricijaus rupijų
         one: Mauricijaus rupija
@@ -485,42 +425,36 @@ number_formats:
         few: Meksikos pesai
         many: Meksikos peso
     MYR:
-      symbol: RM
       display_names:
         other: Malaizijos ringitų
         one: Malaizijos ringitas
         few: Malaizijos ringitai
         many: Malaizijos ringito
     NAD:
-      symbol: "$"
       display_names:
         other: Namibijos dolerių
         one: Namibijos doleris
         few: Namibijos doleriai
         many: Namibijos dolerio
     NGN:
-      symbol: "₦"
       display_names:
         other: Nigerijos nairų
         one: Nigerijos naira
         few: Nigerijos nairos
         many: Nigerijos nairos
     NIO:
-      symbol: C$
       display_names:
         other: Nikaragvos kordobų
         one: Nikaragvos kordoba
         few: Nikaragvos kordobos
         many: Nikaragvos kordobos
     NOK:
-      symbol: kr
       display_names:
         other: Norvegijos kronų
         one: Norvegijos krona
         few: Norvegijos kronos
         many: Norvegijos kronos
     NPR:
-      symbol: Rs
       display_names:
         other: Nepalo rupijų
         one: Nepalo rupija
@@ -541,7 +475,6 @@ number_formats:
         few: Filipinų pesai
         many: Filipinų peso
     PKR:
-      symbol: Rs
       display_names:
         other: Pakistano rupijų
         one: Pakistano rupija
@@ -562,91 +495,78 @@ number_formats:
         few: Paragvajaus guaraniai
         many: Paragvajaus guaranio
     RON:
-      symbol: lei
       display_names:
         other: Rumunijos lėjų
         one: Rumunijos lėja
         few: Rumunijos lėjos
         many: Rumunijos lėjos
     RUB:
-      symbol: "₽"
       display_names:
         other: Rusijos rublių
         one: Rusijos rublis
         few: Rusijos rubliai
         many: Rusijos rublio
     RWF:
-      symbol: RF
       display_names:
         other: Ruandos frankų
         one: Ruandos frankas
         few: Ruandos frankai
         many: Ruandos franko
     SBD:
-      symbol: "$"
       display_names:
         other: Saliamono salų dolerių
         one: Saliamono salų doleris
         few: Saliamono salų doleriai
         many: Saliamono salų dolerio
     SEK:
-      symbol: kr
       display_names:
         other: Švedijos kronų
         one: Švedijos krona
         few: Švedijos kronos
         many: Švedijos kronos
     SGD:
-      symbol: "$"
       display_names:
         other: Singapūro dolerių
         one: Singapūro doleris
         few: Singapūro doleriai
         many: Singapūro dolerio
     SHP:
-      symbol: "£"
       display_names:
         other: Šv. Elenos salų svarų
         one: Šv. Elenos salų svaras
         few: Šv. Elenos salų svarai
         many: Šv. Elenos salų svaro
     SRD:
-      symbol: "$"
       display_names:
         other: Surimano dolerių
         one: Surimano doleris
         few: Surimano doleriai
         many: Surimano dolerio
     SSP:
-      symbol: "£"
       display_names:
         other: Pietų Sudano svarų
         one: Pietų Sudano svaras
         few: Pietų Sudano svarai
         many: Pietų Sudano svaro
     STN:
-      symbol: Db
       display_names:
         other: Sao Tomės ir Principės dobrų
         one: San Tomės ir Principės dobra
         few: San Tomės ir Principės dobros
         many: San Tomės ir Principės dobros
     SYP:
-      symbol: "£"
       display_names:
         other: Sirijos svarų
         one: Sirijos svaras
         few: Sirijos svarai
         many: Sirijos svaro
     THB:
-      symbol: "฿"
       display_names:
         other: Tailando batų
         one: Tailando batas
         few: Tailando batai
         many: Tailando bato
     TOP:
-      symbol: T$
       display_names:
         other: Tongo paangų
         one: Tongo paanga
@@ -660,7 +580,6 @@ number_formats:
         few: Turkijos liros
         many: Turkijos liros
     TTD:
-      symbol: "$"
       display_names:
         other: Trinidado ir Tobago dolerių
         one: Trinidado ir Tobago doleris
@@ -674,7 +593,6 @@ number_formats:
         few: Taivano naujieji doleriai
         many: Taivano naujojo dolerio
     UAH:
-      symbol: "₴"
       display_names:
         other: Ukrainos grivinų
         one: Ukrainos grivina
@@ -688,14 +606,12 @@ number_formats:
         few: JAV doleriai
         many: JAV dolerio
     UYU:
-      symbol: "$"
       display_names:
         other: Urugvajaus pesų
         one: Urugvajaus pesas
         few: Urugvajaus pesai
         many: Urugvajaus peso
     VEF:
-      symbol: Bs
       display_names:
         other: Venesuelos bolivarų (2008–2018)
         one: Venesuelos bolivaras (2008–2018)
@@ -722,8 +638,6 @@ number_formats:
         one: Rytų Karibų doleris
         few: Rytų Karibų doleriai
         many: Rytų Karibų dolerio
-    XCG:
-      symbol: Cg.
     XOF:
       symbol: XOF
       display_names:
@@ -739,21 +653,18 @@ number_formats:
         few: CFP frankai
         many: CFP franko
     XXX:
-      symbol: "¤"
       display_names:
         other: "(nežinoma valiuta)"
         one: "(nežinoma valiuta)"
         few: "(nežinoma valiuta)"
         many: "(nežinoma valiuta)"
     ZAR:
-      symbol: R
       display_names:
         other: Pietų Afrikos Respublikos randų
         one: Pietų Afrikos Respublikos randas
         few: Pietų Afrikos Respublikos randai
         many: Pietų Afrikos Respublikos rando
     ZMW:
-      symbol: ZK
       display_names:
         other: Zambijos kvačų
         one: Zambijos kvača
@@ -1922,258 +1833,3 @@ number_formats:
         one: Zimbabvės doleris (2008)
         few: Zimbabvės doleriai (2008)
         many: Zimbabvės dolerio (2008)
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0

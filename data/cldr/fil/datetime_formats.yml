@@ -1,6 +1,6 @@
 ---
 locale: fil
-generated_at: '2025-09-12T05:00:22Z'
+generated_at: '2025-09-12T07:04:13Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -45,8 +45,6 @@ datetime_formats:
         '11': Nob
         '12': Dis
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         '1': E
         '2': P
@@ -87,8 +85,6 @@ datetime_formats:
         fri: Biy
         sat: Sab
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: Lin
         mon: Lun
@@ -109,9 +105,6 @@ datetime_formats:
         '2': Q2
         '3': Q3
         '4': Q4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
@@ -123,8 +116,6 @@ datetime_formats:
         evening1: ng gabi
         night1: ng gabi
       abbreviated:
-        am: AM
-        pm: PM
         midnight: hatinggabi
         noon: tanghaling-tapat
         morning1: ng umaga
@@ -133,7 +124,6 @@ datetime_formats:
         evening1: ng gabi
         night1: ng gabi
     stand-alone:
-      wide: {}
       abbreviated:
         morning1: umaga
         morning2: madaling-araw
@@ -144,10 +134,6 @@ datetime_formats:
     names:
       '0': Before Common Era
       '1': Common Era
-    abbreviated:
-      '0': BCE
-      '1': CE
-    narrow: {}
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
@@ -164,46 +150,27 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
-      Bh: h B
-      Bhm: h:mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
-      EBhm: E h:mm B
-      EBhms: E h:mm:ss B
       Ed: d E
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
       GyMd: M/d/y G
       GyMMM: MMM y G
       GyMMMd: MMM d, y G
       GyMMMEd: E, MMM d, y G
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: M/d
       MEd: E, M/d
-      MMM: LLL
-      MMMd: MMM d
       MMMEd: E, MMM d
-      MMMMd: MMMM d
+      MMMMEd: E, MMMM d
       MMMMW: "'linggo' W 'ng' MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: M/d/y
       yMEd: E, M/d/y
+      yMM: MM/y
       yMMM: MMM y
       yMMMd: MMM d, y
       yMMMEd: E, MMM d, y
@@ -211,5 +178,3 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'linggo' w 'ng' Y"
-      MMMMEd: E, MMMM d
-      yMM: MM/y

@@ -1,6 +1,6 @@
 ---
 locale: oc
-generated_at: '2025-09-12T05:01:12Z'
+generated_at: '2025-09-12T07:04:20Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,7 +31,6 @@ datetime_formats:
         '10': oct.
         '11': nov.
         '12': dec.
-      narrow: {}
     stand-alone:
       wide:
         '1': genièr
@@ -46,7 +45,6 @@ datetime_formats:
         '10': octòbre
         '11': novembre
         '12': decembre
-      abbreviated: {}
       narrow:
         '1': G
         '2': F
@@ -70,11 +68,7 @@ datetime_formats:
         thu: dijòus
         fri: divendres
         sat: dissabte
-      abbreviated: {}
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: Dg
         mon: Dl
@@ -95,18 +89,6 @@ datetime_formats:
         '2': T2
         '3': T3
         '4': T4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
-  day_periods:
-    format:
-      wide: {}
-      abbreviated:
-        am: AM
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': Abans l’èra nòstra
@@ -122,9 +104,6 @@ datetime_formats:
     medium: d MMM y
     short: dd/MM/yy
   time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
     short: H'h'mm
   datetime_formats:
     full: "{1} 'a' {0}"
@@ -134,15 +113,10 @@ datetime_formats:
     available_formats:
       Bh: h'h' B
       Bhm: h'h'mm B
-      Bhms: h:mm:ss B
-      d: d
-      E: ccc
       EBhm: E h'h'mm B
-      EBhms: E h:mm:ss B
       Ed: ccc d
       Ehm: E h'h'mm a
       EHm: E HH'h'mm
-      Ehms: E h:mm:ss a
       EHms: E HH'h'mm ss 'seg'.
       Gy: y G
       GyMd: dd/MM/Y G
@@ -150,25 +124,19 @@ datetime_formats:
       GyMMMd: d MMM y G
       GyMMMEd: E d MMM y G
       h: h'h' a
-      H: HH
       hm: h'h'mm a
       Hm: HH'h'mm
       hms: h'h'mm:ss a
       Hms: HH'h'mm ss 'seg'.
-      hmsv: h:mm:ss a v
       Hmsv: HH'h'mm ss 'seg'. v
       hmv: h'h'mm a v
       Hmv: HH'h'mm v
-      M: L
       Md: dd/MM
       MEd: E dd/MM
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
       MMMMW: "'setmana' W MMMM"
-      ms: mm:ss
-      "y": "y"
       yM: MM/y
       yMd: dd/MM/y
       yMEd: E dd/MM/y

@@ -1,6 +1,6 @@
 ---
 locale: az
-generated_at: '2025-09-12T04:59:40Z'
+generated_at: '2025-09-12T07:04:09Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -31,23 +31,6 @@ datetime_formats:
         '10': okt
         '11': noy
         '12': dek
-      narrow: {}
-    stand-alone:
-      wide: {}
-      abbreviated: {}
-      narrow:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-        '8': '8'
-        '9': '9'
-        '10': '10'
-        '11': '11'
-        '12': '12'
   days:
     format:
       wide:
@@ -66,9 +49,7 @@ datetime_formats:
         thu: C.a.
         fri: C.
         sat: Ş.
-      narrow: {}
     stand-alone:
-      wide: {}
       abbreviated:
         sun: B.
         mon: B.E.
@@ -97,15 +78,9 @@ datetime_formats:
         '2': 2-ci kv.
         '3': 3-cü kv.
         '4': 4-cü kv.
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
-      wide: {}
       abbreviated:
-        am: AM
-        pm: PM
         midnight: gecəyarı
         noon: günorta
         morning1: sübh
@@ -114,9 +89,6 @@ datetime_formats:
         evening1: axşamüstü
         night1: axşam
         night2: gecə
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
     names:
       '0': bizim eradan əvvəl
@@ -124,17 +96,11 @@ datetime_formats:
     abbreviated:
       '0': b.e.ə.
       '1': b.e.
-    narrow: {}
   date_formats:
     full: d MMMM y, EEEE
     long: d MMMM y
     medium: d MMM y
     short: dd.MM.yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
   datetime_formats:
     full: "{1}/{0}"
     long: "{1} 'at' {0}"
@@ -144,40 +110,25 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: d E
       Ehm: E h:mm a
-      EHm: E HH:mm
       Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
-      Gy: G y
       GyMd: GGGGG d MMM y
       GyMMM: G MMM y
       GyMMMd: G d MMM y
       GyMMMEd: G d MMM y, E
-      h: h a
-      H: HH
       hm: h:mm a
-      Hm: HH:mm
       hms: h:mm:ss a
-      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
       hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: dd.MM
       MEd: dd.MM, E
-      MMM: LLL
       MMMd: d MMM
       MMMEd: d MMM, E
       MMMMd: d MMMM
       MMMMW: MMMM, W 'həftə'
-      ms: mm:ss
-      "y": "y"
       yM: MM.y
       yMd: dd.MM.y
       yMEd: dd.MM.y, E
@@ -185,6 +136,4 @@ datetime_formats:
       yMMMd: d MMM y
       yMMMEd: d MMM y, E
       yMMMM: MMMM y
-      yQQQ: y QQQ
-      yQQQQ: y QQQQ
       yw: Y, w 'həftə'

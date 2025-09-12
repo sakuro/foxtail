@@ -24,9 +24,13 @@ NUMBER_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/number_formats.yml")]
 DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
 
 # Clean tasks
+# CLEAN removes extracted CLDR source (can be re-extracted from zip)
 CLEAN.include(CLDR_EXTRACT_DIR)
-CLOBBER.include(CLDR_ZIP_PATH, PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES)
+# CLOBBER removes generated CLDR data files
+CLOBBER.include(PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES)
 CLOBBER.exclude(File.join(DATA_DIR, "README.md"))
+# Keep the downloaded zip file to avoid re-downloading
+CLOBBER.exclude(CLDR_ZIP_PATH)
 
 namespace :cldr do
   desc "Download CLDR core data to tmp directory"
@@ -137,13 +141,4 @@ namespace :cldr do
       extractor.extract_all
     end
   end
-
-  desc "Extract CLDR plural rules (alias for cldr:extract:plural_rules)"
-  task plural_rules: "extract:plural_rules"
-
-  desc "Extract CLDR number formats (alias for cldr:extract:number_formats)"
-  task number_formats: "extract:number_formats"
-
-  desc "Extract CLDR datetime formats (alias for cldr:extract:datetime_formats)"
-  task datetime_formats: "extract:datetime_formats"
 end

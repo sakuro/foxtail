@@ -1,6 +1,6 @@
 ---
 locale: sa
-generated_at: '2025-09-12T05:01:25Z'
+generated_at: '2025-09-12T07:04:21Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -44,22 +44,6 @@ datetime_formats:
         '10': अ
         '11': न
         '12': दि
-    stand-alone:
-      wide: {}
-      abbreviated: {}
-      narrow:
-        '1': '1'
-        '2': '2'
-        '3': '3'
-        '4': '4'
-        '5': '5'
-        '6': '6'
-        '7': '7'
-        '8': '8'
-        '9': '9'
-        '10': '10'
-        '11': '11'
-        '12': '12'
   days:
     format:
       wide:
@@ -78,10 +62,7 @@ datetime_formats:
         thu: गुरु
         fri: शुक्र
         sat: शनि
-      narrow: {}
     stand-alone:
-      wide: {}
-      abbreviated: {}
       narrow:
         sun: र
         mon: सो
@@ -102,26 +83,15 @@ datetime_formats:
         '2': त्रैमासिक2
         '3': त्रैमासिक3
         '4': त्रैमासिक4
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   day_periods:
     format:
       wide:
         am: पूर्वाह्न
         pm: अपराह्न
-      abbreviated:
-        am: AM
-        pm: PM
-    stand-alone:
-      wide: {}
-      abbreviated: {}
   eras:
-    names: {}
     abbreviated:
       '0': इ.स.पू.
       '1': संवत्
-    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -141,40 +111,19 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
-      d: d
-      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: E d
-      Ehm: E h:mm a
-      EHm: E HH:mm
-      Ehms: E h:mm:ss a
-      EHms: E HH:mm:ss
       Gy: y G
-      GyMd: GGGGG y-MM-dd
       GyMMM: MMM G y
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
-      h: h a
-      H: HH
-      hm: h:mm a
-      Hm: HH:mm
-      hms: h:mm:ss a
-      Hms: HH:mm:ss
-      hmsv: h:mm:ss a v
-      Hmsv: HH:mm:ss v
-      hmv: h:mm a v
-      Hmv: HH:mm v
-      M: L
       Md: d/M
       MEd: E, d/M
-      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: "'week' W 'of' MMM"
-      ms: mm:ss
-      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
@@ -184,4 +133,3 @@ datetime_formats:
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
-      yw: "'week' w 'of' Y"
