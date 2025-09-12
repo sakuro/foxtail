@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "yaml"
-require_relative "inheritance"
 
 module Foxtail
   module CLDR

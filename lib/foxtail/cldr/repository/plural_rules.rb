@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "locale"
-require_relative "base"
-require_relative "resolver"
 
 module Foxtail
   module CLDR

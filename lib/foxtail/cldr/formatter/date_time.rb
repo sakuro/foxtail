@@ -4,7 +4,6 @@ require "date"
 require "locale"
 require "strscan"
 require "time"
-require_relative "../pattern_parser/date_time"
 
 module Foxtail
   module CLDR

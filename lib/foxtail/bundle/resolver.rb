@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "scope"
-
 module Foxtail
   class Bundle
     # Pattern resolution engine

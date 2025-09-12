@@ -4,7 +4,6 @@ require "fileutils"
 require "rexml/document"
 require "time"
 require "yaml"
-require_relative "../repository/inheritance"
 
 module Foxtail
   module CLDR
