@@ -1,6 +1,6 @@
 ---
 locale: uz
-generated_at: '2025-09-12T04:11:22Z'
+generated_at: '2025-09-12T05:01:47Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -121,10 +121,10 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
-        midnight: yarim tun
         am: TO
-        noon: tush payti
         pm: TK
+        midnight: yarim tun
+        noon: tush payti
         morning1: ertalab
         afternoon1: kunduzi
         evening1: kechqurun
@@ -158,19 +158,26 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E, B h:mm
       EBhms: E, B h:mm:ss
+      Ed: d, E
       Ehm: E, h:mm a
       EHm: E, HH:mm
       Ehms: E, h:mm:ss a
       EHms: E, HH:mm:ss
+      Gy: G y
       GyMd: dd.MM.y GGGGG
       GyMMM: MMM, G y
       GyMMMd: d-MMM, G y
       GyMMMEd: E, d-MMM, G y
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a (v)
       Hmsv: HH:mm:ss (v)
       hmv: h:mm a (v)
@@ -178,10 +185,13 @@ datetime_formats:
       M: LL
       Md: dd/MM
       MEd: E, dd/MM
+      MMM: LLL
       MMMd: d-MMM
       MMMEd: E, d-MMM
       MMMMd: d-MMMM
       MMMMW: MMMM, W-'hafta'
+      ms: mm:ss
+      "y": "y"
       yM: MM.y
       yMd: dd/MM/y
       yMEd: E, dd/MM/y

@@ -1,13 +1,171 @@
 ---
 locale: dyo_SN
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:57Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Sanvie
+        '2': Fébirie
+        '3': Mars
+        '4': Aburil
+        '5': Mee
+        '6': Sueŋ
+        '7': Súuyee
+        '8': Ut
+        '9': Settembar
+        '10': Oktobar
+        '11': Novembar
+        '12': Disambar
+      abbreviated:
+        '1': Sa
+        '2': Fe
+        '3': Ma
+        '4': Ab
+        '5': Me
+        '6': Su
+        '7': Sú
+        '8': Ut
+        '9': Se
+        '10': Ok
+        '11': 'No'
+        '12': De
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': S
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': S
+        '7': S
+        '8': U
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: Dimas
+        mon: Teneŋ
+        tue: Talata
+        wed: Alarbay
+        thu: Aramisay
+        fri: Arjuma
+        sat: Sibiti
+      abbreviated:
+        sun: Dim
+        mon: Ten
+        tue: Tal
+        wed: Ala
+        thu: Ara
+        fri: Arj
+        sat: Sib
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: D
+        mon: T
+        tue: T
+        wed: A
+        thu: A
+        fri: A
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Ariŋuu Yeesu
+      '1': Atooŋe Yeesu
+    abbreviated:
+      '0': ArY
+      '1': AtY
+    narrow: {}
+  date_formats:
+    full: EEEE d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: d/M/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E d
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E d/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: m:ss
+      "y": "y"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: y MMMM
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"

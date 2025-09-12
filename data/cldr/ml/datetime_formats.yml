@@ -1,6 +1,6 @@
 ---
 locale: ml
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:01:02Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -107,6 +107,8 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
+        am: AM
+        pm: PM
         midnight: അർദ്ധരാത്രി
         noon: ഉച്ച
         morning1: പുലർച്ചെ
@@ -133,10 +135,10 @@ datetime_formats:
     medium: y, MMM d
     short: d/M/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
   datetime_formats:
     full: "{1} {0}"
     long: "{1} {0}"
@@ -146,15 +148,50 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E, B h:mm
       EBhms: E, B h:mm:ss
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
       GyMd: M/d/y G
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: d/M, E
-      MMdd: dd/MM
-      MMMMEd: MMMM d, E
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
       MMMMW: MMMM - ആഴ്ച W
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
       yMd: d/M/y
       yMEd: d-M-y, E
-      yMM: y-MM
+      yMMM: y MMM
+      yMMMd: y MMM d
+      yMMMEd: y MMM d, E
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
       yw: Y-ലെ ആഴ്ച w
+      MMdd: dd/MM
+      MMMMEd: MMMM d, E
+      yMM: y-MM

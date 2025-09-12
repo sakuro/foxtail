@@ -1,13 +1,160 @@
 ---
 locale: trw_PK
-generated_at: '2025-09-12T04:11:21Z'
+generated_at: '2025-09-12T05:01:44Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': جنوری
+        '2': فروری
+        '3': مارچ
+        '4': اپریل
+        '5': مئ
+        '6': جون
+        '7': جولائی
+        '8': اگست
+        '9': ستمبر
+        '10': اکتوبر
+        '11': نومبر
+        '12': دسمبر
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': ج
+        '2': ف
+        '3': م
+        '4': ا
+        '5': م
+        '6': ج
+        '7': ج
+        '8': ا
+        '9': س
+        '10': ا
+        '11': ن
+        '12': د
+  days:
+    format:
+      wide:
+        sun: ایکشیمے
+        mon: دُوشیمے
+        tue: گھن آنگا
+        wed: چارشیمے
+        thu: پَئ شیمے
+        fri: شُوگار
+        sat: لَو آنگا
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: ا
+        mon: د
+        tue: گ
+        wed: چ
+        thu: پ
+        fri: ش
+        sat: ل
+  quarters:
+    format:
+      wide:
+        '1': اول ڇامای
+        '2': دھویم ڇامای
+        '3': ڇوی ڇامای
+        '4': چوٹھوم ڇامای
+      abbreviated:
+        '1': اول ڇامای
+        '2': دوھیم ڇامای
+        '3': ڇوی ڇامای
+        '4': چوٹھوم ڇامای
+    stand-alone:
+      wide:
+        '1': اول ڇامای
+        '2': دوھیم ڇامای
+        '3': ڇوی ڇامای
+        '4': چوٹھوم ڇامای
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': عیسٰیؑ ما مُش
+      '1': عام دور
+    abbreviated:
+      '0': ع-م
+      '1': ع-د
+    narrow: {}
+  date_formats:
+    full: EEEE، d MMMM، y
+    long: d MMMM، y
+    medium: d MMM، y
+    short: d/M/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: GGGGG y-MM-dd
+      GyMMM: MMM y G
+      GyMMMd: d MMM، y G
+      GyMMMEd: E، d MMM، y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E، d/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E، d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMM سی ہفتہ W
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E، d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM، y
+      yMMMEd: E، d MMM، y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Yسی w ہفتہ

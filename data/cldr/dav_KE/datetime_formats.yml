@@ -1,13 +1,178 @@
 ---
 locale: dav_KE
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:54Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Mori ghwa imbiri
+        '2': Mori ghwa kawi
+        '3': Mori ghwa kadadu
+        '4': Mori ghwa kana
+        '5': Mori ghwa kasanu
+        '6': Mori ghwa karandadu
+        '7': Mori ghwa mfungade
+        '8': Mori ghwa wunyanya
+        '9': Mori ghwa ikenda
+        '10': Mori ghwa ikumi
+        '11': Mori ghwa ikumi na imweri
+        '12': Mori ghwa ikumi na iwi
+      abbreviated:
+        '1': Imb
+        '2': Kaw
+        '3': Kad
+        '4': Kan
+        '5': Kas
+        '6': Kar
+        '7': Mfu
+        '8': Wun
+        '9': Ike
+        '10': Iku
+        '11': Imw
+        '12': Iwi
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': I
+        '2': K
+        '3': K
+        '4': K
+        '5': K
+        '6': K
+        '7': M
+        '8': W
+        '9': I
+        '10': I
+        '11': I
+        '12': I
+  days:
+    format:
+      wide:
+        sun: Ituku ja jumwa
+        mon: Kuramuka jimweri
+        tue: Kuramuka kawi
+        wed: Kuramuka kadadu
+        thu: Kuramuka kana
+        fri: Kuramuka kasanu
+        sat: Kifula nguwo
+      abbreviated:
+        sun: Jum
+        mon: Jim
+        tue: Kaw
+        wed: Kad
+        thu: Kan
+        fri: Kas
+        sat: Ngu
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: J
+        mon: J
+        tue: K
+        wed: K
+        thu: K
+        fri: K
+        sat: "N"
+  quarters:
+    format:
+      wide:
+        '1': Kimu cha imbiri
+        '2': Kimu cha kawi
+        '3': Kimu cha kadadu
+        '4': Kimu cha kana
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: Luma lwa K
+        pm: luma lwa p
+      abbreviated:
+        am: Luma lwa K
+        pm: luma lwa p
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Kabla ya Kristo
+      '1': Baada ya Kristo
+    abbreviated:
+      '0': KK
+      '1': BK
+    narrow: {}
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: dd/MM/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: M/d
+      MEd: E, M/d
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: E, MMM d
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"
+      MMMMEd: E, MMMM d

@@ -1,13 +1,175 @@
 ---
 locale: ku_TR
-generated_at: '2025-09-12T04:11:15Z'
+generated_at: '2025-09-12T05:00:54Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': rêbendan
+        '2': sibat
+        '3': adar
+        '4': nîsan
+        '5': gulan
+        '6': hezîran
+        '7': tîrmeh
+        '8': tebax
+        '9': îlon
+        '10': cotmeh
+        '11': mijdar
+        '12': berfanbar
+      abbreviated:
+        '1': rbn
+        '2': sbt
+        '3': adr
+        '4': nsn
+        '5': gln
+        '6': hzr
+        '7': trm
+        '8': tbx
+        '9': îln
+        '10': cot
+        '11': mjd
+        '12': brf
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': R
+        '2': S
+        '3': A
+        '4': "N"
+        '5': G
+        '6': H
+        '7': T
+        '8': T
+        '9': Î
+        '10': C
+        '11': M
+        '12': B
+  days:
+    format:
+      wide:
+        sun: yekşem
+        mon: duşem
+        tue: sêşem
+        wed: çarşem
+        thu: pêncşem
+        fri: înî
+        sat: şemî
+      abbreviated:
+        sun: yşm
+        mon: dşm
+        tue: sşm
+        wed: çşm
+        thu: pşm
+        fri: înî
+        sat: şem
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: "Y"
+        mon: D
+        tue: S
+        wed: Ç
+        thu: P
+        fri: Î
+        sat: Ş
+  quarters:
+    format:
+      wide:
+        '1': çaryeka 1em
+        '2': çaryeka 2yem
+        '3': çaryeka 3yem
+        '4': çaryeka 4em
+      abbreviated:
+        '1': Ç1
+        '2': Ç2
+        '3': Ç3
+        '4': Ç4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: BN
+        pm: PN
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': berî mîladê
+      '1': piştî mîladê
+    abbreviated:
+      '0': BM
+      '1': PM
+    narrow: {}
+  date_formats:
+    full: EEEE, d'ê' MMMM'a' y'an'
+    long: d'ê' MMMM'a' y'an'
+    medium: d'ê' MMM'a' y'an'
+    short: dd.MM.y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h'ê' B
+      Bhm: h:mm'ê' B
+      Bhms: h:mm:ss'ê' B
+      d: d
+      E: ccc
+      EBhm: E, h:mm'ê' B
+      EBhms: E, h:mm:ss'ê' B
+      Ed: d E
+      Ehm: E, h:mm'ê' a
+      EHm: E HH:mm
+      Ehms: E, h:mm:ss'ê' a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG dd.MM.y
+      GyMMM: G MMM'a' y'an'
+      GyMMMd: G d'ê' MMM'a' y'an'
+      GyMMMEd: G d'ê' MMM'a' y'an', E
+      h: h'ê' a
+      H: HH
+      hm: h:mm'ê' a
+      Hm: HH:mm
+      hms: h:mm:ss'ê' a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss'ê' a 'bi' 'dema' v('y')'ê'
+      Hmsv: HH:mm:ss 'bi' 'dema' v('y')'ê'
+      hmv: h:mm'ê' a 'bi' 'dema' v('y')'ê'
+      Hmv: HH:mm 'bi' 'dema' v('y')'ê'
+      M: L
+      Md: dd.MM
+      MEd: E, dd.MM
+      MMM: LLL
+      MMMd: d'ê' MMM'ê'
+      MMMEd: E, d'ê' MMM'ê'
+      MMMMd: d'ê' MMMM'ê'
+      MMMMW: "'hefteya' W'em' 'ya' MMMM'ê'"
+      ms: mm:ss
+      "y": "y"
+      yM: MM.y
+      yMd: dd.MM.y
+      yMEd: E, dd.MM.y
+      yMMM: MMM'a' y'an'
+      yMMMd: d'ê' MMM'a' y'an'
+      yMMMEd: E, d'ê' MMM'a' y'an'
+      yMMMM: MMMM'a' y'an'
+      yQQQ: QQQ'em' 'ya' y'an'
+      yQQQQ: QQQQ 'ya' y'an'
+      yw: "'hefteya' w'em' 'ya' Y'an'"

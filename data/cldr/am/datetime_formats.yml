@@ -1,6 +1,6 @@
 ---
 locale: am
-generated_at: '2025-09-12T04:11:06Z'
+generated_at: '2025-09-12T04:59:32Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -97,10 +97,10 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
-        midnight: እኩለ ሌሊት
         am: ጥዋት
-        noon: ቀትር
         pm: ከሰዓት
+        midnight: እኩለ ሌሊት
+        noon: ቀትር
         morning1: ጥዋት
         afternoon1: ከሰዓት
         evening1: በምሽት
@@ -126,10 +126,10 @@ datetime_formats:
     medium: d MMM y
     short: dd/MM/y
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
   datetime_formats:
     full: "{1} {0}"
     long: "{1} {0}"
@@ -139,11 +139,15 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: E d
       Ehm: E a h:mm
+      EHm: E HH:mm
       Ehms: E a h:mm:ss
+      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d/M/y GGGGG
       GyMMM: MMM y G
@@ -152,12 +156,23 @@ datetime_formats:
       h: a h
       H: H
       hm: a h:mm
+      Hm: HH:mm
       hms: a h:mm:ss
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E፣ d/M
+      MMM: LLL
+      MMMd: MMM d
       MMMEd: E፣ MMM d
-      MMMMEd: E፣ MMMM d
+      MMMMd: MMMM d
       MMMMW: የMMMM Wኛ ሳምንት
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E፣ d/M/y
@@ -165,4 +180,7 @@ datetime_formats:
       yMMMd: MMM d y
       yMMMEd: E፣ MMM d y
       yMMMM: MMMM y
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
       yw: የY wኛ ሳምንት
+      MMMMEd: E፣ MMMM d

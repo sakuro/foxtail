@@ -1,13 +1,205 @@
 ---
 locale: eu_ES
-generated_at: '2025-09-12T04:11:10Z'
+generated_at: '2025-09-12T05:00:17Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': urtarrila
+        '2': otsaila
+        '3': martxoa
+        '4': apirila
+        '5': maiatza
+        '6': ekaina
+        '7': uztaila
+        '8': abuztua
+        '9': iraila
+        '10': urria
+        '11': azaroa
+        '12': abendua
+      abbreviated:
+        '1': urt.
+        '2': ots.
+        '3': mar.
+        '4': api.
+        '5': mai.
+        '6': eka.
+        '7': uzt.
+        '8': abu.
+        '9': ira.
+        '10': urr.
+        '11': aza.
+        '12': abe.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': U
+        '2': O
+        '3': M
+        '4': A
+        '5': M
+        '6': E
+        '7': U
+        '8': A
+        '9': I
+        '10': U
+        '11': A
+        '12': A
+  days:
+    format:
+      wide:
+        sun: igandea
+        mon: astelehena
+        tue: asteartea
+        wed: asteazkena
+        thu: osteguna
+        fri: ostirala
+        sat: larunbata
+      abbreviated:
+        sun: ig.
+        mon: al.
+        tue: ar.
+        wed: az.
+        thu: og.
+        fri: or.
+        sat: lr.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: I
+        mon: A
+        tue: A
+        wed: A
+        thu: O
+        fri: O
+        sat: L
+  quarters:
+    format:
+      wide:
+        '1': 1. hiruhilekoa
+        '2': 2. hiruhilekoa
+        '3': 3. hiruhilekoa
+        '4': 4. hiruhilekoa
+      abbreviated:
+        '1': 1Hh
+        '2': 2Hh
+        '3': 3Hh
+        '4': 4Hh
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: gauerdia
+        morning1: goizaldeko
+        morning2: goizeko
+        afternoon1: eguerdiko
+        afternoon2: arratsaldeko
+        evening1: iluntzeko
+        night1: gaueko
+      abbreviated:
+        am: AM
+        pm: PM
+        midnight: gauerdia
+        morning1: goizald.
+        morning2: goizeko
+        afternoon1: eguerd.
+        afternoon2: arrats.
+        evening1: iluntz.
+        night1: gaueko
+    stand-alone:
+      wide:
+        morning1: goizaldea
+        morning2: goiza
+        afternoon1: eguerdia
+        afternoon2: arratsaldea
+        evening1: iluntzea
+        night1: gaua
+      abbreviated:
+        morning1: goiz.
+        morning2: goiza
+        afternoon1: eguerd.
+        afternoon2: arrats.
+        evening1: iluntz.
+        night1: gaua
+  eras:
+    names:
+      '0': oraingo aroaren aurretik
+      '1': oraingo aroa
+    abbreviated:
+      '0': o.a.a.
+      '1': o.a.
+    narrow:
+      '0': G.a.a.
+      '1': G.a.
+  date_formats:
+    full: y('e')'ko' MMMM'ren' d('a'), EEEE
+    long: y('e')'ko' MMMM'ren' d('a')
+    medium: y('e')'ko' MMM d('a')
+    short: yy/M/d
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} ({0})"
+    long: "{1} ({0})"
+    medium: "{1} ({0})"
+    short: "{1} ({0})"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      d: d
+      E: ccc
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y. 'urteko' MMM
+      GyMMMd: G y. 'urteko' MMM d('a')
+      GyMMMEd: G y. 'urteko' MMM d('a'), E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: M/d
+      MEd: M/d, E
+      MMM: LLL
+      MMMd: MMM d('a')
+      MMMEd: MMM d('a'), E
+      MMMMd: MMMM'ren' d('a')
+      MMMMW: MMMM'ren' W. 'astea'
+      ms: mm:ss
+      "y": "y"
+      yM: y/M
+      yMd: y/M/d
+      yMEd: y/M/d, E
+      yMMM: y MMM
+      yMMMd: y MMM d('a')
+      yMMMEd: y MMM d('a'), E
+      yMMMM: y('e')'ko' MMMM
+      yQQQ: y('e')'ko' QQQ
+      yQQQQ: y('e')'ko' QQQQ
+      yw: Y. 'urteko' w. 'astea'
+      yMMMMd: y('e')'ko' MMMM'ren' d('a')
+      yMMMMEd: y('e')'ko' MMMM'ren' d('a'), E

@@ -1,6 +1,6 @@
 ---
 locale: bew
-generated_at: '2025-09-12T04:11:07Z'
+generated_at: '2025-09-12T04:59:43Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -130,8 +130,11 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
       Bhm: h.mm B
       Bhms: h.mm.ss B
+      d: d
+      E: ccc
       EBhm: E h.mm B
       EBhms: E h.mm.ss B
       Ed: E, d
@@ -145,6 +148,7 @@ datetime_formats:
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
       h: h a
+      H: HH
       hm: h.mm a
       Hm: HH.mm
       hms: h.mm.ss a
@@ -153,13 +157,16 @@ datetime_formats:
       Hmsv: HH.mm.ss v
       hmv: h.mm a v
       Hmv: HH.mm v
+      M: L
       Md: d/M
       MEd: E, d/M
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: "'minggu' 'ke'-W MMMM"
       ms: mm.ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y

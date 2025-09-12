@@ -1,6 +1,6 @@
 ---
 locale: nds_NL
-generated_at: '2025-09-12T04:09:52Z'
+generated_at: '2025-09-12T04:55:16Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -32,6 +32,9 @@ number_formats:
       symbol: "$"
     AUD:
       symbol: A$
+      display_names:
+        other: Austraalsch Dollar
+        one: Austraalsch Dollar
     AZN:
       symbol: "₼"
     BAM:
@@ -48,6 +51,9 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
+      display_names:
+        other: Brasiliaansch Real
+        one: Brasiliaansch Real
     BSD:
       symbol: "$"
     BWP:
@@ -56,10 +62,16 @@ number_formats:
       symbol: "$"
     CAD:
       symbol: CA$
+      display_names:
+        other: Kanada-Dollar
+        one: Kanaadsch Dollar
     CLP:
       symbol: "$"
     CNY:
       symbol: CN¥
+      display_names:
+        other: Renminbi
+        one: Chineesch Yuan
     COP:
       symbol: "$"
     CRC:
@@ -72,6 +84,9 @@ number_formats:
       symbol: Kč
     DKK:
       symbol: kr
+      display_names:
+        other: Däänsch Kronen
+        one: Däänsch Kroon
     DOP:
       symbol: "$"
     EGP:
@@ -80,12 +95,18 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: Euro
+        one: Euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
+      display_names:
+        other: Engelsch Pund
+        one: Britsch Pund Sterling
     GEL:
       symbol: "₾"
     GHS:
@@ -100,6 +121,9 @@ number_formats:
       symbol: "$"
     HKD:
       symbol: HK$
+      display_names:
+        other: Hongkong-Dollar
+        one: Hongkong-Dollar
     HNL:
       symbol: L
     HRK:
@@ -108,16 +132,25 @@ number_formats:
       symbol: Ft
     IDR:
       symbol: Rp
+      display_names:
+        other: Indoneesch Rupje
+        one: Indoneesch Rupje
     ILS:
       symbol: "₪"
     INR:
       symbol: "₹"
+      display_names:
+        other: Indsch Rupje
+        one: Indsch Rupje
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
+      display_names:
+        other: Japaansch Yen
+        one: Japaansch Yen
     KGS:
       symbol: "⃀"
     KHR:
@@ -128,6 +161,9 @@ number_formats:
       symbol: "₩"
     KRW:
       symbol: "₩"
+      display_names:
+        other: Koreaansch Won
+        one: Söödkoreansch Won
     KYD:
       symbol: "$"
     KZT:
@@ -154,6 +190,9 @@ number_formats:
       symbol: Rs
     MXN:
       symbol: MX$
+      display_names:
+        other: Mexiko-Peso
+        one: Mexikaansch Peso
     MYR:
       symbol: RM
     NAD:
@@ -164,6 +203,9 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
+      display_names:
+        other: Norweegsch Kronen
+        one: Norweegsch Kroon
     NPR:
       symbol: Rs
     NZD:
@@ -174,18 +216,27 @@ number_formats:
       symbol: Rs
     PLN:
       symbol: zł
+      display_names:
+        other: Poolsch Zloty
+        one: Poolsch Zloty
     PYG:
       symbol: "₲"
     RON:
       symbol: lei
     RUB:
       symbol: "₽"
+      display_names:
+        other: Russ’sch Ruvel
+        one: Russ’sch Ruvel
     RWF:
       symbol: RF
     SBD:
       symbol: "$"
     SEK:
       symbol: kr
+      display_names:
+        other: Sweedsch Kronen
+        one: Sweedsch Kroon
     SGD:
       symbol: "$"
     SHP:
@@ -200,18 +251,30 @@ number_formats:
       symbol: "£"
     THB:
       symbol: "฿"
+      display_names:
+        other: Thai-Baht
+        one: Thailannsch Baht
     TOP:
       symbol: T$
     TRY:
       symbol: "₺"
+      display_names:
+        other: Törksch Lira
+        one: Törksch Lira
     TTD:
       symbol: "$"
     TWD:
       symbol: NT$
+      display_names:
+        other: Taiwan-Dollar
+        one: Nieg Taiwan-Dollar
     UAH:
       symbol: "₴"
     USD:
       symbol: US$
+      display_names:
+        other: Dollar
+        one: US-Dollar
     UYU:
       symbol: "$"
     VEF:
@@ -230,10 +293,24 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
+      display_names:
+        other: "(nich begäng Geldsoort)"
+        one: Nich begäng Geldsoort
     ZAR:
       symbol: R
+      display_names:
+        other: Söödafrikaansch Rand
+        one: Söödafrikaansch Rand
     ZMW:
       symbol: ZK
+    CHF:
+      display_names:
+        other: Swiezer Franken
+        one: Swiezer Franken
+    SAR:
+      display_names:
+        other: Saudiaraabsch Rial
+        one: Saudsch Rial
 currency_fractions:
   ADP:
     digits: 0

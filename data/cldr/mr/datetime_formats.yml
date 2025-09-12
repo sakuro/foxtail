@@ -1,6 +1,6 @@
 ---
 locale: mr
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:01:04Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -97,6 +97,8 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
+        am: AM
+        pm: PM
         midnight: मध्यरात्र
         noon: मध्यान्ह
         morning1: पहाट
@@ -121,10 +123,10 @@ datetime_formats:
     medium: d MMM, y
     short: d/M/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
   datetime_formats:
     full: "{1} रोजी {0}"
     long: "{1} रोजी {0}"
@@ -134,26 +136,43 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: d E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
       GyMd: GGGGG d/M/y
       GyMMM: MMM G y
       GyMMMd: d MMM, G y
       GyMMMEd: E, d MMM, G y
+      h: h a
+      H: HH
+      hm: h:mm a
       Hm: H:mm
+      hms: h:mm:ss a
       Hms: H:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E, d/M
-      MMdd: dd-MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: MMMM चा W रा आठवडा
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
-      yMM: MM-y
       yMMM: MMM y
       yMMMd: d MMM, y
       yMMMEd: E, d, MMM y
@@ -161,3 +180,5 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: Y चा w वा आठवडा
+      MMdd: dd-MM
+      yMM: MM-y

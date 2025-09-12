@@ -1,6 +1,6 @@
 ---
 locale: smn
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:31Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -84,7 +84,14 @@ datetime_formats:
         fri: vástuppeivi
         sat: lávurdâh
       abbreviated: {}
-      narrow: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
   quarters:
     format:
       wide:
@@ -133,12 +140,20 @@ datetime_formats:
     medium: "{1} 'tme' {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E d.
       Ehm: E h.mm a
       EHm: E H.mm
       Ehms: E h.mm.ss a
       EHms: E H.mm.ss
       Gy: y G
+      GyMd: GGGGG y-MM-dd
       GyMMM: LLL y G
       GyMMMd: MMM d. y G
       GyMMMEd: E, MMM d. y G
@@ -152,13 +167,16 @@ datetime_formats:
       Hmsv: H.mm.ss v
       hmv: h.mm a v
       Hmv: H.mm v
+      M: L
       Md: d.M.
       MEd: E d.M.
+      MMM: LLL
       MMMd: MMM d.
       MMMEd: E, MMM d.
       MMMMd: MMMM d.
       MMMMW: "'okko' W, MMMM"
       ms: m.ss.
+      "y": "y"
       yM: L.y
       yMd: d.M.y
       yMEd: E d.M.y

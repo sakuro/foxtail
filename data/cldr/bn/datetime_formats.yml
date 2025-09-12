@@ -1,6 +1,6 @@
 ---
 locale: bn
-generated_at: '2025-09-12T04:11:07Z'
+generated_at: '2025-09-12T04:59:46Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -115,6 +115,8 @@ datetime_formats:
         evening1: সন্ধ্যাবেলায়
         night1: রাত্রিবেলায়
       abbreviated:
+        am: AM
+        pm: PM
         morning1: ভোর
         morning2: সকাল
         afternoon1: দুপুর
@@ -137,34 +139,56 @@ datetime_formats:
     medium: d MMM, y
     short: d/M/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
   datetime_formats:
     full: "{1} এ {0}"
     long: "{1} এ {0}"
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: d E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y G
       GyMd: dd-MM-y GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM, y G
       GyMMMEd: E, d MMM, y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E, d-M
-      MMdd: dd-MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
-      MMMMEd: E d MMMM
       MMMMW: MMMM এর Wয় সপ্তাহ
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
-      yMM: MM-y
       yMMM: MMM y
       yMMMd: d MMM, y
       yMMMEd: E, d MMM, y
@@ -172,3 +196,6 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: Y এর wতম সপ্তাহ
+      MMdd: dd-MM
+      MMMMEd: E d MMMM
+      yMM: MM-y

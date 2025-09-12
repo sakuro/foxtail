@@ -1,6 +1,6 @@
 ---
 locale: hy
-generated_at: '2025-09-12T04:11:13Z'
+generated_at: '2025-09-12T05:00:41Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -115,6 +115,8 @@ datetime_formats:
         evening1: երեկոյան
         night1: գիշերվա
       abbreviated:
+        am: AM
+        pm: PM
         midnight: կեսգիշեր
         noon: կեսօր
         morning1: առավոտյան
@@ -155,6 +157,8 @@ datetime_formats:
       Bh: B h-ին
       Bhm: B h:mm-ին
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E B h:mm-ին
       EBhms: E B h:mm:ss
       Ed: d, ccc
@@ -167,15 +171,26 @@ datetime_formats:
       GyMMM: G y թ. MMM
       GyMMMd: G y թ․ MMM d
       GyMMMEd: G y թ. MMM d, E
+      h: h a
       H: H
+      hm: h:mm a
       Hm: H:mm
+      hms: h:mm:ss a
       Hms: H:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: dd.MM
       MEd: dd.MM, E
+      MMM: LLL
       MMMd: d MMM
       MMMEd: d MMM, E
       MMMMd: d MMMM
       MMMMW: MMMM W-րդ շաբաթ
+      ms: mm:ss
+      "y": "y"
       yM: MM.y
       yMd: dd.MM.y
       yMEd: d.MM.y թ., E

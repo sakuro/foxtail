@@ -119,14 +119,6 @@ RSpec.describe Foxtail::CLDR::Extractors::BaseExtractor do
       end
     end
 
-    context "when locale file does not exist" do
-      it "logs warning and returns without error" do
-        allow(extractor).to receive(:log)
-        extractor.extract_locale("nonexistent")
-        expect(extractor).to have_received(:log).with(/Warning: Locale file not found/)
-      end
-    end
-
     context "when extracted data is empty" do
       let(:empty_extractor_class) do
         Class.new(described_class) do

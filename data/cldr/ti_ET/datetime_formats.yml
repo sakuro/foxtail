@@ -1,13 +1,190 @@
 ---
 locale: ti_ET
-generated_at: '2025-09-12T04:11:21Z'
+generated_at: '2025-09-12T05:01:42Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': ጥሪ
+        '2': ለካቲት
+        '3': መጋቢት
+        '4': ሚያዝያ
+        '5': ጉንበት
+        '6': ሰነ
+        '7': ሓምለ
+        '8': ነሓሰ
+        '9': መስከረም
+        '10': ጥቅምቲ
+        '11': ሕዳር
+        '12': ታሕሳስ
+      abbreviated:
+        '1': ጥሪ
+        '2': ለካ
+        '3': መጋ
+        '4': ሚያ
+        '5': ግን
+        '6': ሰነ
+        '7': ሓም
+        '8': ነሓ
+        '9': መስ
+        '10': ጥቅ
+        '11': ሕዳ
+        '12': ታሕ
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': ጥሪ
+        '2': ለካቲት
+        '3': መጋቢት
+        '4': ሚያዝያ
+        '5': ጉንበት
+        '6': ሰነ
+        '7': ሓምለ
+        '8': ነሓሰ
+        '9': መስከረም
+        '10': ጥቅምቲ
+        '11': ሕዳር
+        '12': ታሕሳስ
+      abbreviated: {}
+      narrow:
+        '1': ጥ
+        '2': ለ
+        '3': መ
+        '4': ሚ
+        '5': ግ
+        '6': ሰ
+        '7': ሓ
+        '8': ነ
+        '9': መ
+        '10': ጥ
+        '11': ሕ
+        '12': ታ
+  days:
+    format:
+      wide:
+        sun: ሰንበት
+        mon: ሰኑይ
+        tue: ሰሉስ
+        wed: ረቡዕ
+        thu: ሓሙስ
+        fri: ዓርቢ
+        sat: ቀዳም
+      abbreviated:
+        sun: ሰን
+        mon: ሰኑ
+        tue: ሰሉ
+        wed: ረቡ
+        thu: ሓሙ
+        fri: ዓር
+        sat: ቀዳ
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: ሰ
+        mon: ሰ
+        tue: ሰ
+        wed: ረ
+        thu: ሓ
+        fri: ዓ
+        sat: ቀ
+  quarters:
+    format:
+      wide:
+        '1': 1ይ ርብዒ
+        '2': 2ይ ርብዒ
+        '3': 3ይ ርብዒ
+        '4': 4ይ ርብዒ
+      abbreviated:
+        '1': ር1
+        '2': ር2
+        '3': ር3
+        '4': ር4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ቅ.ቀ.
+        pm: ድ.ቀ.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': ቅድመ ክርስቶስ
+      '1': ዓመተ ምሕረት
+    abbreviated:
+      '0': ቅ.ል.ክ
+      '1': ድ.ል.ክ
+    narrow: {}
+  date_formats:
+    full: EEEE፣ d MMMM y
+    long: MMMM d, y
+    medium: MMM d, y
+    short: M/d/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} ሰዓት {0}"
+    long: "{1} ሰዓት {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d E
+      Ehm: E፣ h:mm a
+      EHm: E፣ HH:mm
+      Ehms: E፣ h:mm:ss a
+      EHms: E፣ HH:mm:ss
+      Gy: y G
+      GyMd: M/d/y G
+      GyMMM: MMM y G
+      GyMMMd: MMM d, y G
+      GyMMMEd: E፣ d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E፣ d/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E፣ d MMM
+      MMMMd: d MMMM
+      MMMMW: ሰሙን W ናይ MMMM
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: M/d/y
+      yMEd: E፣ d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: ሰሙን w ናይ Y
+      MMdd: d/M
+      MMMMdd: d MMMM
+      yMM: M/y

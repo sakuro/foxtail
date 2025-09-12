@@ -1,18 +1,18 @@
 ---
 locale: smn
-generated_at: '2025-09-12T04:10:28Z'
+generated_at: '2025-09-12T04:57:19Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
-    nan: epiloho
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
     exponential: E
     infinity: "∞"
+    nan: epiloho
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
@@ -72,6 +72,9 @@ number_formats:
       symbol: Kč
     DKK:
       symbol: kr
+      display_names:
+        other: Tanska ruvnâ
+        one: Tanska ruvnâ
     DOP:
       symbol: "$"
     EGP:
@@ -80,6 +83,9 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: euro
+        one: euro
     FJD:
       symbol: "$"
     FKP:
@@ -114,6 +120,9 @@ number_formats:
       symbol: "₹"
     ISK:
       symbol: kr
+      display_names:
+        other: Island ruvnâ
+        one: Island ruvnâ
     JMD:
       symbol: "$"
     JPY:
@@ -164,6 +173,9 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
+      display_names:
+        other: Taažâ ruvnâ
+        one: Taažâ ruvnâ
     NPR:
       symbol: Rs
     NZD:
@@ -186,6 +198,9 @@ number_formats:
       symbol: "$"
     SEK:
       symbol: kr
+      display_names:
+        other: Ruotâ ruvnâ
+        one: Ruotâ ruvnâ
     SGD:
       symbol: "$"
     SHP:
@@ -234,6 +249,18 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
+    EEK:
+      display_names:
+        other: Eesti ruvnâ
+        one: Eesti ruvnâ
+    FIM:
+      display_names:
+        other: Suomâ märkki
+        one: Suomâ märkki
+    LVR:
+      display_names:
+        other: Latvia ruble
+        one: Latvia ruble
 currency_fractions:
   ADP:
     digits: 0

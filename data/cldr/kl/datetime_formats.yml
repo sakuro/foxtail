@@ -1,6 +1,6 @@
 ---
 locale: kl
-generated_at: '2025-09-12T04:11:14Z'
+generated_at: '2025-09-12T05:00:50Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -142,14 +142,50 @@ datetime_formats:
     medium: "{1} {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E, d
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E, d/M
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
       yMEd: E, y-MM-dd
       yMMM: LLL y
       yMMMd: dd MMM y
       yMMMEd: E, dd MMM y
+      yMMMM: y MMMM
       yQQQ: y QQQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"

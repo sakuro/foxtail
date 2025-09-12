@@ -1,6 +1,6 @@
 ---
 locale: pt
-generated_at: '2025-09-12T04:11:18Z'
+generated_at: '2025-09-12T05:01:17Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -97,6 +97,8 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
+        am: AM
+        pm: PM
         midnight: meia-noite
         noon: meio-dia
         morning1: da manhã
@@ -134,6 +136,13 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E, d
       Ehm: E, h:mm a
       EHm: E, HH:mm
@@ -145,28 +154,37 @@ datetime_formats:
       GyMMMd: d 'de' MMM 'de' y G
       GyMMMEd: E, d 'de' MMM 'de' y G
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: dd/MM
       MEd: E, dd/MM
-      MMdd: dd/MM
+      MMM: LLL
       MMMd: d 'de' MMM
       MMMEd: E, d 'de' MMM
       MMMMd: d 'de' MMMM
-      MMMMEd: E, d 'de' MMMM
       MMMMW: W'ª' 'semana' 'de' MMMM
+      ms: mm:ss
+      "y": "y"
       yM: MM/y
       yMd: dd/MM/y
       yMEd: E, dd/MM/y
-      yMM: MM/y
       yMMM: MMM 'de' y
       yMMMd: d 'de' MMM 'de' y
       yMMMEd: E, d 'de' MMM 'de' y
       yMMMM: MMMM 'de' y
-      yMMMMd: d 'de' MMMM 'de' y
-      yMMMMEd: E, d 'de' MMMM 'de' y
       yQQQ: QQQ 'de' y
       yQQQQ: QQQQ 'de' y
       yw: w'ª' 'semana' 'de' Y
+      MMdd: dd/MM
+      MMMMEd: E, d 'de' MMMM
+      yMM: MM/y
+      yMMMMd: d 'de' MMMM 'de' y
+      yMMMMEd: E, d 'de' MMMM 'de' y

@@ -1,13 +1,13 @@
 ---
 locale: pa_Arab
-generated_at: '2025-09-12T04:10:02Z'
+generated_at: '2025-09-12T04:55:49Z'
 cldr_version: '46'
 number_formats:
   symbols:
-    minus_sign: "‎-"
-    plus_sign: "‎+"
     decimal: "."
     group: ","
+    minus_sign: "‎-"
+    plus_sign: "‎+"
     percent_sign: "%"
     per_mille: "‰"
     exponential: E
@@ -80,6 +80,9 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: يورو
+        one: يورو
     FJD:
       symbol: "$"
     FKP:
@@ -112,6 +115,9 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
+      display_names:
+        other: روپئیہ [INR]
+        one: روپئیہ [INR]
     ISK:
       symbol: kr
     JMD:
@@ -171,7 +177,10 @@ number_formats:
     PHP:
       symbol: "₱"
     PKR:
-      symbol: Rs
+      symbol: ر
+      display_names:
+        other: روپئیہ
+        one: روپئیہ
     PLN:
       symbol: zł
     PYG:

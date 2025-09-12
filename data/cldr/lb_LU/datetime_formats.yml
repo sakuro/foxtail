@@ -1,13 +1,192 @@
 ---
 locale: lb_LU
-generated_at: '2025-09-12T04:11:15Z'
+generated_at: '2025-09-12T05:00:56Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Januar
+        '2': Februar
+        '3': Mäerz
+        '4': Abrëll
+        '5': Mee
+        '6': Juni
+        '7': Juli
+        '8': August
+        '9': September
+        '10': Oktober
+        '11': November
+        '12': Dezember
+      abbreviated:
+        '1': Jan.
+        '2': Feb.
+        '3': Mäe.
+        '4': Abr.
+        '5': Mee
+        '6': Juni
+        '7': Juli
+        '8': Aug.
+        '9': Sep.
+        '10': Okt.
+        '11': Nov.
+        '12': Dez.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mäe
+        '4': Abr
+        '5': Mee
+        '6': Jun
+        '7': Jul
+        '8': Aug
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Dez
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: Sonndeg
+        mon: Méindeg
+        tue: Dënschdeg
+        wed: Mëttwoch
+        thu: Donneschdeg
+        fri: Freideg
+        sat: Samschdeg
+      abbreviated:
+        sun: Son.
+        mon: Méi.
+        tue: Dën.
+        wed: Mët.
+        thu: Don.
+        fri: Fre.
+        sat: Sam.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        sun: Son
+        mon: Méi
+        tue: Dën
+        wed: Mët
+        thu: Don
+        fri: Fre
+        sat: Sam
+      narrow:
+        sun: S
+        mon: M
+        tue: D
+        wed: M
+        thu: D
+        fri: F
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1. Quartal
+        '2': 2. Quartal
+        '3': 3. Quartal
+        '4': 4. Quartal
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: moies
+        pm: nomëttes
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': v. e. Z.
+      '1': n. e. Z.
+    narrow: {}
+  date_formats:
+    full: EEEE, d. MMMM y
+    long: d. MMMM y
+    medium: d. MMM y
+    short: dd.MM.yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E, d.
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: GGGGG y-MM-dd
+      GyMMM: MMM y G
+      GyMMMd: d. MMM y G
+      GyMMMEd: E, d. MMM y G
+      h: h a
+      H: HH 'Auer'
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d.M.
+      MEd: E, d.M.
+      MMM: LLL
+      MMMd: d. MMM
+      MMMEd: E, d. MMM
+      MMMMd: d. MMMM
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M.y
+      yMd: d.M.y
+      yMEd: E, d.M.y
+      yMMM: MMM y
+      yMMMd: d. MMM y
+      yMMMEd: E, d. MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"

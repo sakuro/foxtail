@@ -1,13 +1,171 @@
 ---
 locale: nso_ZA
-generated_at: '2025-09-12T04:11:17Z'
+generated_at: '2025-09-12T05:01:12Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Janeware
+        '2': Febereware
+        '3': Matšhe
+        '4': Aporele
+        '5': Mei
+        '6': June
+        '7': Julae
+        '8': Agosetose
+        '9': Setemere
+        '10': Oktobore
+        '11': Nofemere
+        '12': Disemere
+      abbreviated:
+        '1': Phere
+        '2': Dibo
+        '3': Hlak
+        '4': Mora
+        '5': Mei
+        '6': June
+        '7': Mose
+        '8': Agosetose
+        '9': Lewe
+        '10': Dipha
+        '11': Diba
+        '12': Manth
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': P
+        '2': D
+        '3': H
+        '4': M
+        '5': M
+        '6': P
+        '7': M
+        '8': P
+        '9': L
+        '10': D
+        '11': D
+        '12': M
+  days:
+    format:
+      wide:
+        sun: Lamorena
+        mon: Mošupologo
+        tue: Labobedi
+        wed: Laboraro
+        thu: Labone
+        fri: Labohlano
+        sat: Mokibelo
+      abbreviated:
+        sun: Lam
+        mon: Mos
+        tue: Bed
+        wed: Rar
+        thu: Ne
+        fri: Hla
+        sat: Mok
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: L
+        mon: M
+        tue: B
+        wed: R
+        thu: "N"
+        fri: H
+        sat: M
+  quarters:
+    format:
+      wide:
+        '1': 1st Kotara
+        '2': 2nd Kotara
+        '3': 3rd Kotara
+        '4': 4th Kotara
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Before Common Era
+      '1': Common Era
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
+  date_formats:
+    full: y MMMM d, EEEE
+    long: y MMMM d
+    medium: y MMM d
+    short: y-MM-dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'ka' {0}"
+    long: "{1} 'ka' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: MM-dd
+      MEd: MM-dd, E
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'beke' 'ya' 'bo' W 'ya' MMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
+      yMEd: y-MM-dd, E
+      yMMM: y MMM
+      yMMMd: y MMM d
+      yMMMEd: y MMM d, E
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'beke' 'ya' 'bo' w 'ya' Y"

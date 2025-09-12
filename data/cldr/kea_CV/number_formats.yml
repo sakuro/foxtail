@@ -1,6 +1,6 @@
 ---
 locale: kea_CV
-generated_at: '2025-09-12T04:09:17Z'
+generated_at: '2025-09-12T04:53:20Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -19,6 +19,7 @@ number_formats:
     standard: "#,##0%"
   currency_formats:
     standard:
+    accounting: "#,##0.00 ¤;(#,##0.00 ¤)"
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -28,10 +29,16 @@ number_formats:
       symbol: "֏"
     AOA:
       symbol: Kz
+      display_names:
+        other: Kuanza
+        one: Kuanza
     ARS:
       symbol: "$"
     AUD:
       symbol: A$
+      display_names:
+        other: Dola australianu
+        one: Dola australianu
     AZN:
       symbol: "₼"
     BAM:
@@ -48,18 +55,30 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
+      display_names:
+        other: Rial brazileru
+        one: Rial brazileru
     BSD:
       symbol: "$"
     BWP:
       symbol: P
+      display_names:
+        other: Pula di Botsuana
+        one: Pula di Botsuana
     BZD:
       symbol: "$"
     CAD:
       symbol: CA$
+      display_names:
+        other: Dola kanadianu
+        one: Dola kanadianu
     CLP:
       symbol: "$"
     CNY:
       symbol: CN¥
+      display_names:
+        other: Iuan xines
+        one: Iuan xines
     COP:
       symbol: "$"
     CRC:
@@ -72,20 +91,32 @@ number_formats:
       symbol: Kč
     DKK:
       symbol: kr
+      display_names:
+        other: Kuroa dinamarkeza
+        one: Kuroa dinamarkeza
     DOP:
       symbol: "$"
     EGP:
       symbol: E£
+      display_names:
+        other: Libra ejípsiu
+        one: Libra ejípsiu
     ESP:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: euro
+        one: euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
+      display_names:
+        other: Libra britániku
+        one: Libra britániku
     GEL:
       symbol: "₾"
     GHS:
@@ -100,6 +131,9 @@ number_formats:
       symbol: "$"
     HKD:
       symbol: HK$
+      display_names:
+        other: Dola di Ong Kong
+        one: Dola di Ong Kong
     HNL:
       symbol: L
     HRK:
@@ -108,26 +142,41 @@ number_formats:
       symbol: Ft
     IDR:
       symbol: Rp
+      display_names:
+        other: Rupia indoneziu
+        one: Rupia indoneziu
     ILS:
       symbol: "₪"
     INR:
       symbol: "₹"
+      display_names:
+        other: Rupia indianu
+        one: Rupia indianu
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
+      display_names:
+        other: Ieni japones
+        one: Ieni japones
     KGS:
       symbol: "⃀"
     KHR:
       symbol: "៛"
     KMF:
       symbol: CF
+      display_names:
+        other: Franku di Komoris
+        one: Franku di Komoris
     KPW:
       symbol: "₩"
     KRW:
       symbol: "₩"
+      display_names:
+        other: Won sul-koreanu
+        one: Won sul-koreanu
     KYD:
       symbol: "$"
     KZT:
@@ -140,30 +189,51 @@ number_formats:
       symbol: Rs
     LRD:
       symbol: "$"
+      display_names:
+        other: Dola liberianu
+        one: Dola liberianu
     LTL:
       symbol: Lt
     LVL:
       symbol: Ls
     MGA:
       symbol: Ar
+      display_names:
+        other: Ariari di Madagaskar
+        one: Ariari di Madagaskar
     MMK:
       symbol: K
     MNT:
       symbol: "₮"
     MUR:
       symbol: Rs
+      display_names:
+        other: Rupia di Maurisias
+        one: Rupia di Maurisias
     MXN:
       symbol: MX$
+      display_names:
+        other: Pezu mexikanu
+        one: Pezu mexikanu
     MYR:
       symbol: RM
     NAD:
       symbol: "$"
+      display_names:
+        other: Dola namibianu
+        one: Dola namibianu
     NGN:
       symbol: "₦"
+      display_names:
+        other: Naira
+        one: Naira
     NIO:
       symbol: C$
     NOK:
       symbol: kr
+      display_names:
+        other: Kuroa norueges
+        one: Kuroa norueges
     NPR:
       symbol: Rs
     NZD:
@@ -174,44 +244,74 @@ number_formats:
       symbol: Rs
     PLN:
       symbol: zł
+      display_names:
+        other: Zloty polaku
+        one: Zloty polaku
     PYG:
       symbol: "₲"
     RON:
       symbol: lei
     RUB:
       symbol: "₽"
+      display_names:
+        other: Rublu rusu
+        one: Rublu rusu
     RWF:
       symbol: RF
+      display_names:
+        other: Franku ruandes
+        one: Franku ruandes
     SBD:
       symbol: "$"
     SEK:
       symbol: kr
+      display_names:
+        other: Kuroa sueku
+        one: Kuroa sueku
     SGD:
       symbol: "$"
     SHP:
       symbol: "£"
+      display_names:
+        other: Libra di Santa Ilena
+        one: Libra di Santa Ilena
     SRD:
       symbol: "$"
     SSP:
       symbol: "£"
     STN:
       symbol: Db
+      display_names:
+        other: Dobra di San Tume i Prínsipi
+        one: Dobra di San Tume i Prínsipi
     SYP:
       symbol: "£"
     THB:
       symbol: "฿"
+      display_names:
+        other: Baht tailandes
+        one: Baht tailandes
     TOP:
       symbol: T$
     TRY:
       symbol: "₺"
+      display_names:
+        other: Lira turku
+        one: Lira turku
     TTD:
       symbol: "$"
     TWD:
       symbol: NT$
+      display_names:
+        other: Dola Novu di Taiwan
+        one: Dola Novu di Taiwan
     UAH:
       symbol: "₴"
     USD:
       symbol: US$
+      display_names:
+        other: Dola merkanu
+        one: Dola merkanu
     UYU:
       symbol: "$"
     VEF:
@@ -220,20 +320,176 @@ number_formats:
       symbol: "₫"
     XAF:
       symbol: FCFA
+      display_names:
+        other: Franku CFA (BEAC)
+        one: Franku CFA (BEAC)
     XCD:
       symbol: EC$
     XCG:
       symbol: Cg.
     XOF:
       symbol: F CFA
+      display_names:
+        other: Franku CFA (BCEAO)
+        one: Franku CFA (BCEAO)
     XPF:
       symbol: CFPF
     XXX:
       symbol: "¤"
+      display_names:
+        other: "(mueda diskonxedu)"
+        one: Mueda diskonxedu
     ZAR:
       symbol: R
+      display_names:
+        other: Rand sulafrikanu
+        one: Rand sulafrikanu
     ZMW:
       symbol: ZK
+      display_names:
+        other: Kuaxa zambianu
+        one: Kuaxa zambianu
+    AED:
+      display_names:
+        other: Diren di Emiradus Arabi Unidu
+        one: Diren di Emiradus Arabi Unidu
+    BHD:
+      display_names:
+        other: Dinar di Barain
+        one: Dinar di Barain
+    BIF:
+      display_names:
+        other: Franku borundes
+        one: Franku borundes
+    CDF:
+      display_names:
+        other: Franku kongoles
+        one: Franku kongoles
+    CHF:
+      display_names:
+        other: Franku suisu
+        one: Franku suisu
+    CVE:
+      symbol: "​"
+      display_names:
+        other: Skudu Kabuverdianu
+        one: Skudu Kabuverdianu
+    DJF:
+      display_names:
+        other: Franku di Djibuti
+        one: Franku di Djibuti
+    DZD:
+      display_names:
+        other: Dinar arjelinu
+        one: Dinar arjelinu
+    ERN:
+      display_names:
+        other: Nafka di Eritreia
+        one: Nafka di Eritreia
+    ETB:
+      display_names:
+        other: Bir etiópiku
+        one: Bir etiópiku
+    GHC:
+      display_names:
+        other: Sedi di Gana (1979–2007)
+        one: Sedi di Gana (1979–2007)
+    GMD:
+      display_names:
+        other: Dalasi
+        one: Dalasi
+    GNS:
+      display_names:
+        other: Sili
+        one: Sili
+    KES:
+      display_names:
+        other: Xelin kenianu
+        one: Xelin kenianu
+    LSL:
+      display_names:
+        other: Loti di Lezotu
+        one: Loti di Lezotu
+    LYD:
+      display_names:
+        other: Dinar líbiu
+        one: Dinar líbiu
+    MAD:
+      display_names:
+        other: Diren marokinu
+        one: Diren marokinu
+    MRO:
+      display_names:
+        other: Ougia (1973–2017)
+        one: Ougia (1973–2017)
+    MRU:
+      display_names:
+        other: Ougia
+        one: Ougia
+    MWK:
+      display_names:
+        other: Kuaxa di Malaui
+        one: Kuaxa di Malaui
+    MZM:
+      display_names:
+        other: Metikal
+        one: Metikal
+    SAR:
+      display_names:
+        other: Rial saudita
+        one: Rial saudita
+    SCR:
+      display_names:
+        other: Rupia di Seixelis
+        one: Rupia di Seixelis
+    SDG:
+      display_names:
+        other: Libra sudanes
+        one: Libra sudanes
+    SDP:
+      display_names:
+        other: Libra sudanes antigu (1957–1998)
+        one: Libra sudanes antigu (1957–1998)
+    SLE:
+      display_names:
+        other: Leone di Sera Leoa
+        one: Leone di Sera Leoa
+    SLL:
+      display_names:
+        other: Leone di Sera Leoa (1964—2022)
+        one: Leone di Sera Leoa (1964—2022)
+    SOS:
+      display_names:
+        other: Xelin somalianu
+        one: Xelin somalianu
+    STD:
+      display_names:
+        other: Dobra di San Tume i Prínsipi (1977–2017)
+        one: Dobra di San Tume i Prínsipi (1977–2017)
+    SZL:
+      display_names:
+        other: Lilanjeni
+        one: Lilanjeni
+    TND:
+      display_names:
+        other: Dinar tunizianu
+        one: Dinar tunizianu
+    TZS:
+      display_names:
+        other: Xelin di Tanzánia
+        one: Xelin di Tanzánia
+    UGX:
+      display_names:
+        other: Xelin ugandensi
+        one: Xelin ugandensi
+    ZMK:
+      display_names:
+        other: Kuaxa zambianu (1968–2012)
+        one: Kuaxa zambianu (1968–2012)
+    ZWD:
+      display_names:
+        other: Dola di Zimbabue (1980–2008)
+        one: Dola di Zimbabue (1980–2008)
 currency_fractions:
   ADP:
     digits: 0

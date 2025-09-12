@@ -1,6 +1,6 @@
 ---
 locale: ca
-generated_at: '2025-09-12T04:11:08Z'
+generated_at: '2025-09-12T04:59:48Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -123,9 +123,9 @@ datetime_formats:
         am: a. m.
         pm: p. m.
       abbreviated:
-        midnight: mitjanit
         am: a. m.
         pm: p. m.
+        midnight: mitjanit
         morning1: matinada
         morning2: matí
         afternoon1: migdia
@@ -161,6 +161,13 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E h:mm a
       EHm: E H:mm
@@ -171,9 +178,6 @@ datetime_formats:
       GyMMM: LLL y G
       GyMMMd: d MMM 'del' y G
       GyMMMEd: E, d MMM 'del' y G
-      GyMMMM: LLLL 'del' y G
-      GyMMMMd: d MMMM 'del' y G
-      GyMMMMEd: E, d MMMM 'del' y G
       h: h a
       H: H
       hm: h:mm a
@@ -182,19 +186,18 @@ datetime_formats:
       Hms: H:mm:ss
       hmsv: h:mm:ss a v
       Hmsv: H:mm:ss v
-      hmsvvvv: h:mm:ss a (vvvv)
-      Hmsvvvv: H:mm:ss (vvvv)
       hmv: h:mm a v
       Hmv: H:mm v
-      hmvvvv: h:mm a (vvvv)
-      Hmvvvv: H:mm (vvvv)
+      M: L
       Md: d/M
       MEd: E d/M
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
-      MMMMEd: E, d MMMM
       MMMMW: "'setmana' W MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
@@ -202,8 +205,16 @@ datetime_formats:
       yMMMd: d MMM 'del' y
       yMMMEd: E, d MMM y
       yMMMM: LLLL 'del' y
-      yMMMMd: d MMMM 'del' y
-      yMMMMEd: E, d MMMM 'del' y
       yQQQ: QQQ y
       yQQQQ: QQQQ 'del' y
       yw: "'setmana' w 'del' Y"
+      GyMMMM: LLLL 'del' y G
+      GyMMMMd: d MMMM 'del' y G
+      GyMMMMEd: E, d MMMM 'del' y G
+      hmsvvvv: h:mm:ss a (vvvv)
+      Hmsvvvv: H:mm:ss (vvvv)
+      hmvvvv: h:mm a (vvvv)
+      Hmvvvv: H:mm (vvvv)
+      MMMMEd: E, d MMMM
+      yMMMMd: d MMMM 'del' y
+      yMMMMEd: E, d MMMM 'del' y

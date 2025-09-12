@@ -1,6 +1,6 @@
 ---
 locale: rif
-generated_at: '2025-09-12T04:10:11Z'
+generated_at: '2025-09-12T04:56:24Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -42,6 +42,9 @@ number_formats:
       symbol: "৳"
     BMD:
       symbol: "$"
+      display_names:
+        other: ddular n birmudan
+        one: Bermudan Dollar
     BND:
       symbol: "$"
     BOB:
@@ -54,8 +57,14 @@ number_formats:
       symbol: P
     BZD:
       symbol: "$"
+      display_names:
+        other: ddular n biliz
+        one: Belize Dollar
     CAD:
       symbol: CA$
+      display_names:
+        other: ddular n kanada
+        one: Canadian Dollar
     CLP:
       symbol: "$"
     CNY:
@@ -64,6 +73,9 @@ number_formats:
       symbol: "$"
     CRC:
       symbol: "₡"
+      display_names:
+        other: kulun n kustarika
+        one: Costa Rican Colón
     CUC:
       symbol: "$"
     CUP:
@@ -72,6 +84,9 @@ number_formats:
       symbol: Kč
     DKK:
       symbol: kr
+      display_names:
+        other: kruna n ddanmark
+        one: Danish Krone
     DOP:
       symbol: "$"
     EGP:
@@ -80,12 +95,18 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: uru
+        one: Euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
+      display_names:
+        other: ppaʷndd
+        one: British Pound
     GEL:
       symbol: "₾"
     GHS:
@@ -96,12 +117,18 @@ number_formats:
       symbol: FG
     GTQ:
       symbol: Q
+      display_names:
+        other: kwitzal n gwatimala
+        one: Guatemalan Quetzal
     GYD:
       symbol: "$"
     HKD:
       symbol: HK$
     HNL:
       symbol: L
+      display_names:
+        other: lempiras n hondura
+        one: Honduran Lempira
     HRK:
       symbol: kn
     HUF:
@@ -154,6 +181,9 @@ number_formats:
       symbol: Rs
     MXN:
       symbol: MX$
+      display_names:
+        other: pisus n miksiku
+        one: Mexican Peso
     MYR:
       symbol: RM
     NAD:
@@ -164,6 +194,9 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
+      display_names:
+        other: kruna n nnarwij
+        one: Norwegian Krone
     NPR:
       symbol: Rs
     NZD:
@@ -186,6 +219,9 @@ number_formats:
       symbol: "$"
     SEK:
       symbol: kr
+      display_names:
+        other: kruna n sswid
+        one: Swedish Krona
     SGD:
       symbol: "$"
     SHP:
@@ -212,6 +248,9 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
+      display_names:
+        other: ddular
+        one: US Dollar
     UYU:
       symbol: "$"
     VEF:
@@ -230,10 +269,29 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
+      display_names:
+        other: ttmneyat
+        one: ttmenyat
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
+    DZD:
+      display_names:
+        other: ddinar n ddzayer
+        one: Algerian Dinar
+    LYD:
+      display_names:
+        other: ddinar n libya
+        one: Libyan Dinar
+    MAD:
+      display_names:
+        other: derhem
+        one: Moroccan Dirham
+    TND:
+      display_names:
+        other: ddinar n tunes
+        one: Tunisian Dinar
 currency_fractions:
   ADP:
     digits: 0

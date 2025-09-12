@@ -1,6 +1,6 @@
 ---
 locale: jmc
-generated_at: '2025-09-12T04:11:13Z'
+generated_at: '2025-09-12T05:00:45Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -121,16 +121,56 @@ datetime_formats:
     medium: HH:mm:ss
     short: HH:mm
   datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: M/d
       MEd: E, M/d
+      MMM: LLL
+      MMMd: MMM d
       MMMEd: E, MMM d
-      MMMMEd: E, MMMM d
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M/y
+      yMd: y-MM-dd
       yMEd: E, M/d/y
       yMMM: MMM y
+      yMMMd: y MMM d
       yMMMEd: E, MMM d, y
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"
+      MMMMEd: E, MMMM d

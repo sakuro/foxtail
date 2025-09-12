@@ -1,18 +1,18 @@
 ---
 locale: tk
-generated_at: '2025-09-12T04:10:43Z'
+generated_at: '2025-09-12T04:58:11Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
-    nan: san däl
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
     exponential: E
     infinity: "∞"
+    nan: san däl
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
@@ -25,216 +25,763 @@ number_formats:
   currencies:
     AFN:
       symbol: "؋"
+      display_names:
+        other: owgan afganisi
+        one: owgan afganisi
     AMD:
       symbol: "֏"
+      display_names:
+        other: ermeni dramy
+        one: ermeni dramy
     AOA:
       symbol: Kz
+      display_names:
+        other: angola kwanzasy
+        one: angola kwanzasy
     ARS:
       symbol: "$"
+      display_names:
+        other: argentin pesosy
+        one: argentin pesosy
     AUD:
       symbol: A$
+      display_names:
+        other: awstraliýa dollary
+        one: awstraliýa dollary
     AZN:
       symbol: "₼"
+      display_names:
+        other: azerbaýjan manady
+        one: azerbaýjan manady
     BAM:
       symbol: KM
+      display_names:
+        other: konwertirlenýän bosniýa we gersegowina markasy
+        one: konwertirlenýän bosniýa we gersegowina markasy
     BBD:
       symbol: "$"
+      display_names:
+        other: barbados dollary
+        one: barbados dollary
     BDT:
       symbol: "৳"
+      display_names:
+        other: bangladeş takasy
+        one: bangladeş takasy
     BMD:
       symbol: "$"
+      display_names:
+        other: bermuda dollary
+        one: bermuda dollary
     BND:
       symbol: "$"
+      display_names:
+        other: bruneý dollary
+        one: bruneý dollary
     BOB:
       symbol: Bs
+      display_names:
+        other: boliwiýa boliwianosy
+        one: boliwiýa boliwianosy
     BRL:
       symbol: R$
+      display_names:
+        other: brazil realy
+        one: brazil realy
     BSD:
       symbol: "$"
+      display_names:
+        other: bagama dollary
+        one: bagama dollary
     BWP:
       symbol: P
+      display_names:
+        other: botswana pulasy
+        one: botswana pulasy
     BZD:
       symbol: "$"
+      display_names:
+        other: beliz dollary
+        one: beliz dollary
     CAD:
       symbol: CA$
+      display_names:
+        other: kanada dollary
+        one: kanada dollary
     CLP:
       symbol: "$"
+      display_names:
+        other: çili pesosy
+        one: çili pesosy
     CNY:
       symbol: CN¥
+      display_names:
+        other: hytaý ýuany
+        one: hytaý ýuany
     COP:
       symbol: "$"
+      display_names:
+        other: kolumbiýa pesosy
+        one: kolumbiýa pesosy
     CRC:
       symbol: "₡"
+      display_names:
+        other: kosta-rika kolony
+        one: kosta-rika kolony
     CUC:
       symbol: "$"
+      display_names:
+        other: konwertirlenýän kuba pesosy
+        one: konwertirlenýän kuba pesosy
     CUP:
       symbol: "$"
+      display_names:
+        other: kuba pesosy
+        one: kuba pesosy
     CZK:
       symbol: Kč
+      display_names:
+        other: çeh kronasy
+        one: çeh kronasy
     DKK:
       symbol: kr
+      display_names:
+        other: daniýa kronasy
+        one: daniýa kronasy
     DOP:
       symbol: "$"
+      display_names:
+        other: dominikan pesosy
+        one: dominikan pesosy
     EGP:
       symbol: E£
+      display_names:
+        other: müsür funty
+        one: müsür funty
     ESP:
       symbol: "₧"
     EUR:
-      symbol: "€"
+      symbol: EUR
+      display_names:
+        other: ýewro
+        one: ýewro
     FJD:
       symbol: "$"
+      display_names:
+        other: fiji dollary
+        one: fiji dollary
     FKP:
       symbol: "£"
+      display_names:
+        other: folklend adalarynyň funty
+        one: folklend adalarynyň funty
     GBP:
-      symbol: "£"
+      symbol: GBP
+      display_names:
+        other: britan funt sterlingi
+        one: britan funt sterlingi
     GEL:
       symbol: "₾"
+      display_names:
+        other: gruzin larisi
+        one: gruzin larisi
     GHS:
       symbol: GH₵
+      display_names:
+        other: gano sedisi
+        one: gano sedisi
     GIP:
       symbol: "£"
+      display_names:
+        other: gibraltar funty
+        one: gibraltar funty
     GNF:
       symbol: FG
+      display_names:
+        other: gwineý franky
+        one: gwineý franky
     GTQ:
       symbol: Q
+      display_names:
+        other: gwatemala ketsaly
+        one: gwatemala ketsaly
     GYD:
       symbol: "$"
+      display_names:
+        other: gaýana dollary
+        one: gaýana dollary
     HKD:
       symbol: HK$
+      display_names:
+        other: gonkong dollary
+        one: gonkong dollary
     HNL:
       symbol: L
+      display_names:
+        other: gonduras lempirasy
+        one: gonduras lempirasy
     HRK:
       symbol: kn
+      display_names:
+        other: horwat kunasy
+        one: horwat kunasy
     HUF:
       symbol: Ft
+      display_names:
+        other: wenger forinti
+        one: wenger forinti
     IDR:
       symbol: Rp
+      display_names:
+        other: indoneziýa rupiýasy
+        one: indoneziýa rupiýasy
     ILS:
       symbol: "₪"
+      display_names:
+        other: täze ysraýyl şekeli
+        one: täze ysraýyl şekeli
     INR:
       symbol: "₹"
+      display_names:
+        other: hindi rupiýasy
+        one: hindi rupiýasy
     ISK:
       symbol: kr
+      display_names:
+        other: islandiýa kronasy
+        one: islandiýa kronasy
     JMD:
       symbol: "$"
+      display_names:
+        other: ýamaýka dollary
+        one: ýamaýka dollary
     JPY:
       symbol: JP¥
+      display_names:
+        other: ýapon ýeni
+        one: ýapon ýeni
     KGS:
       symbol: "⃀"
+      display_names:
+        other: gyrgyz somy
+        one: gyrgyz somy
     KHR:
       symbol: "៛"
+      display_names:
+        other: kamboja riýeli
+        one: kamboja riýeli
     KMF:
       symbol: CF
+      display_names:
+        other: komor adalarynyň franky
+        one: komor adalarynyň franky
     KPW:
       symbol: "₩"
+      display_names:
+        other: demirgazyk koreý wony
+        one: demirgazyk koreý wony
     KRW:
       symbol: "₩"
+      display_names:
+        other: günorta koreý wony
+        one: günorta koreý wony
     KYD:
       symbol: "$"
+      display_names:
+        other: kaýman adalarynyň dollary
+        one: kaýman adalarynyň dollary
     KZT:
       symbol: "₸"
+      display_names:
+        other: gazak teňňesi
+        one: gazak teňňesi
     LAK:
       symbol: "₭"
+      display_names:
+        other: laos kipi
+        one: laos kipi
     LBP:
       symbol: L£
+      display_names:
+        other: liwan funty
+        one: liwan funty
     LKR:
       symbol: Rs
+      display_names:
+        other: şri-lanka rupiýasy
+        one: şri-lanka rupiýasy
     LRD:
       symbol: "$"
+      display_names:
+        other: liberiýa dollary
+        one: liberiýa dollary
     LTL:
       symbol: Lt
     LVL:
       symbol: Ls
     MGA:
       symbol: Ar
+      display_names:
+        other: malagasiý ariarisi
+        one: malagasiý ariarisi
     MMK:
       symbol: K
+      display_names:
+        other: mýanma kýaty
+        one: mýanma kýaty
     MNT:
       symbol: "₮"
+      display_names:
+        other: mongol tugrigi
+        one: mongol tugrigi
     MUR:
       symbol: Rs
+      display_names:
+        other: mawrikiý rupiýasy
+        one: mawrikiý rupiýasy
     MXN:
       symbol: MX$
+      display_names:
+        other: meksikan pesosy
+        one: meksikan pesosy
     MYR:
       symbol: RM
+      display_names:
+        other: malaýziýa ringgiti
+        one: malaýziýa ringgiti
     NAD:
       symbol: "$"
+      display_names:
+        other: namibiýa dollary
+        one: namibiýa dollary
     NGN:
       symbol: "₦"
+      display_names:
+        other: nigeriýa naýrasy
+        one: nigeriýa naýrasy
     NIO:
       symbol: C$
+      display_names:
+        other: nikaragua kordobasy
+        one: nikaragua kordobasy
     NOK:
       symbol: kr
+      display_names:
+        other: norwegiýa kronasy
+        one: norwegiýa kronasy
     NPR:
       symbol: Rs
+      display_names:
+        other: nepal rupiýasy
+        one: nepal rupiýasy
     NZD:
       symbol: NZ$
+      display_names:
+        other: täze zelandiýa dollary
+        one: täze zelandiýa dollary
     PHP:
-      symbol: "₱"
+      symbol: PHP
+      display_names:
+        other: filippin pesosy
+        one: filippin pesosy
     PKR:
       symbol: Rs
+      display_names:
+        other: päkistan rupiýasy
+        one: päkistan rupiýasy
     PLN:
       symbol: zł
+      display_names:
+        other: polýak zlotysy
+        one: polýak zlotysy
     PYG:
       symbol: "₲"
+      display_names:
+        other: paragwaý guaranisi
+        one: paragwaý guaranisi
     RON:
       symbol: lei
+      display_names:
+        other: rumyn leýi
+        one: rumyn leýi
     RUB:
       symbol: "₽"
+      display_names:
+        other: rus rubly
+        one: rus rubly
     RWF:
       symbol: RF
+      display_names:
+        other: ruanda franky
+        one: ruanda franky
     SBD:
       symbol: "$"
+      display_names:
+        other: solomon adalarynyň dollary
+        one: solomon adalarynyň dollary
     SEK:
       symbol: kr
+      display_names:
+        other: şwed kronasy
+        one: şwed kronasy
     SGD:
       symbol: "$"
+      display_names:
+        other: singapur dollary
+        one: singapur dollary
     SHP:
       symbol: "£"
+      display_names:
+        other: keramatly ýelena adasynyň funty
+        one: keramatly ýelena adasynyň funty
     SRD:
       symbol: "$"
+      display_names:
+        other: surinam dollary
+        one: surinam dollary
     SSP:
       symbol: "£"
+      display_names:
+        other: günorta sudan funty
+        one: günorta sudan funty
     STN:
       symbol: Db
+      display_names:
+        other: san-tome we prinsipi dobrasy
+        one: san-tome we prinsipi dobrasy
     SYP:
       symbol: "£"
+      display_names:
+        other: siriýa funty
+        one: siriýa funty
     THB:
       symbol: "฿"
+      display_names:
+        other: taýland baty
+        one: taýland baty
     TOP:
       symbol: T$
+      display_names:
+        other: tonga paangasy
+        one: tonga paangasy
     TRY:
       symbol: "₺"
+      display_names:
+        other: türk lirasy
+        one: türk lirasy
     TTD:
       symbol: "$"
+      display_names:
+        other: trininad we tobago dollary
+        one: trininad we tobago dollary
     TWD:
       symbol: NT$
+      display_names:
+        other: täze taýwan dollary
+        one: täze taýwan dollary
     UAH:
       symbol: "₴"
+      display_names:
+        other: ukrain griwnasy
+        one: ukrain griwnasy
     USD:
       symbol: US$
+      display_names:
+        other: ABŞ dollary
+        one: ABŞ dollary
     UYU:
       symbol: "$"
+      display_names:
+        other: urugwaý pesosy
+        one: urugwaý pesosy
     VEF:
       symbol: Bs
+      display_names:
+        other: wenesuela boliwary (2008–2018)
+        one: wenesuela boliwary (2008–2018)
     VND:
       symbol: "₫"
+      display_names:
+        other: wýetnam dongy
+        one: wýetnam dongy
     XAF:
       symbol: FCFA
+      display_names:
+        other: KFA BEAC franky
+        one: KFA BEAC franky
     XCD:
       symbol: EC$
+      display_names:
+        other: gündogar karib dollary
+        one: gündogar karib dollary
     XCG:
       symbol: Cg.
     XOF:
       symbol: F CFA
+      display_names:
+        other: KFA BCEAO franky
+        one: KFA BCEAO franky
     XPF:
       symbol: CFPF
+      display_names:
+        other: fransuz ýuwaş umman franky
+        one: fransuz ýuwaş umman franky
     XXX:
       symbol: "¤"
+      display_names:
+        other: näbelli pul birligi
+        one: näbelli pul birligi
     ZAR:
       symbol: R
+      display_names:
+        other: günorta afrika rendi
+        one: günorta afrika rendi
     ZMW:
       symbol: ZK
+      display_names:
+        other: zambiýa kwaçasy
+        one: zambiýa kwaçasy
+    AED:
+      display_names:
+        other: BAE dirhemi
+        one: BAE dirhemi
+    ALL:
+      display_names:
+        other: alban leki
+        one: alban leki
+    ANG:
+      display_names:
+        other: niderland antil guldeni
+        one: niderland antil guldeni
+    AWG:
+      display_names:
+        other: aruba florini
+        one: aruba florini
+    BGN:
+      display_names:
+        other: bolgar lewi
+        one: bolgar lewi
+    BHD:
+      display_names:
+        other: bahreýn dinary
+        one: bahreýn dinary
+    BIF:
+      display_names:
+        other: burundi franky
+        one: burundi franky
+    BTN:
+      display_names:
+        other: butan ngultrumy
+        one: butan ngultrumy
+    BYN:
+      symbol: р.
+      display_names:
+        other: belarus rubly
+        one: belarus rubly
+    BYR:
+      display_names:
+        other: belorus rubly (2000–2016)
+        one: belorus rubly (2000–2016)
+    CDF:
+      display_names:
+        other: kongo franky
+        one: kongo franky
+    CHF:
+      display_names:
+        other: şweýsar franky
+        one: şweýsar franky
+    CNH:
+      display_names:
+        other: hytaý ýuany (ofşor)
+        one: hytaý ýuany (ofşor)
+    CVE:
+      display_names:
+        other: kabo-werde eskudosy
+        one: kabo-werde eskudosy
+    DJF:
+      display_names:
+        other: jibuti franky
+        one: jibuti franky
+    DZD:
+      display_names:
+        other: alžir dinary
+        one: alžir dinary
+    ERN:
+      display_names:
+        other: eritreýa nakfasy
+        one: eritreýa nakfasy
+    ETB:
+      display_names:
+        other: efiopiýa byry
+        one: efiopiýa byry
+    GMD:
+      display_names:
+        other: gambiýa dalasisi
+        one: gambiýa dalasisi
+    HTG:
+      display_names:
+        other: gaiti gurdy
+        one: gaiti gurdy
+    IQD:
+      display_names:
+        other: yrak dinary
+        one: yrak dinary
+    IRR:
+      display_names:
+        other: eýran rialy
+        one: eýran rialy
+    JOD:
+      display_names:
+        other: iordan dinary
+        one: iordan dinary
+    KES:
+      display_names:
+        other: keniýa şillingi
+        one: keniýa şillingi
+    KWD:
+      display_names:
+        other: kuweýt dinary
+        one: kuweýt dinary
+    LSL:
+      display_names:
+        other: Lesoto lotisi
+        one: Lesoto lotisi
+    LYD:
+      display_names:
+        other: liwiýa dinary
+        one: liwiýa dinary
+    MAD:
+      display_names:
+        other: marokko dirhamy
+        one: marokko dirhamy
+    MDL:
+      display_names:
+        other: moldaw leýi
+        one: moldaw leýi
+    MKD:
+      display_names:
+        other: makedon dinary
+        one: makedon dinary
+    MOP:
+      display_names:
+        other: makao patakasy
+        one: makao patakasy
+    MRO:
+      display_names:
+        other: mawritan ugiýasy (1973–2017)
+        one: mawritan ugiýasy (1973–2017)
+    MRU:
+      display_names:
+        other: mawritan ugiýasy
+        one: mawritan ugiýasy
+    MVR:
+      display_names:
+        other: maldiw rufiýasy
+        one: maldiw rufiýasy
+    MWK:
+      display_names:
+        other: malawi kwaçasy
+        one: malawi kwaçasy
+    MZN:
+      display_names:
+        other: mozambik metikaly
+        one: mozambik metikaly
+    OMR:
+      display_names:
+        other: oman rialy
+        one: oman rialy
+    PAB:
+      display_names:
+        other: panama balboasy
+        one: panama balboasy
+    PEN:
+      display_names:
+        other: peru soly
+        one: peru soly
+    PGK:
+      display_names:
+        other: papua - täze gwineýa kinasy
+        one: papua - täze gwineýa kinasy
+    QAR:
+      display_names:
+        other: katar rialy
+        one: katar rialy
+    RSD:
+      display_names:
+        other: serb dinary
+        one: serb dinary
+    SAR:
+      display_names:
+        other: saud rialy
+        one: saud rialy
+    SCR:
+      display_names:
+        other: seýşel rupiýasy
+        one: seýşel rupiýasy
+    SDG:
+      display_names:
+        other: sudan funty
+        one: sudan funty
+    SLE:
+      display_names:
+        other: sýerra-leone leony
+        one: sýerra-leone leony
+    SLL:
+      display_names:
+        other: sýerra-leone leony (1964—2022)
+        one: sýerra-leone leony (1964—2022)
+    SOS:
+      display_names:
+        other: somali şillingi
+        one: somali şillingi
+    STD:
+      display_names:
+        other: san-tome we prinsipi dobrasy (1977–2017)
+        one: san-tome we prinsipi dobrasy (1977–2017)
+    SZL:
+      display_names:
+        other: swazi lilangeni
+        one: swazi lilangeni
+    TJS:
+      display_names:
+        other: täjik somonisi
+        one: täjik somonisi
+    TMT:
+      display_names:
+        other: türkmen manady
+        one: türkmen manady
+    TND:
+      display_names:
+        other: tunis dinary
+        one: tunis dinary
+    TZS:
+      display_names:
+        other: tanzaniýa şillingi
+        one: tanzaniýa şillingi
+    UGX:
+      display_names:
+        other: uganda şillingi
+        one: uganda şillingi
+    UZS:
+      display_names:
+        other: özbek somy
+        one: özbek somy
+    VES:
+      display_names:
+        other: wenesuela boliwary
+        one: wenesuela boliwary
+    VUV:
+      display_names:
+        other: wanuatu watusy
+        one: wanuatu watusy
+    WST:
+      display_names:
+        other: samoa talasy
+        one: samoa talasy
+    YER:
+      display_names:
+        other: ýemen rialy
+        one: ýemen rialy
 currency_fractions:
   ADP:
     digits: 0

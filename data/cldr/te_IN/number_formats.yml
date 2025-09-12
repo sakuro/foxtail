@@ -1,6 +1,6 @@
 ---
 locale: te_IN
-generated_at: '2025-09-12T04:10:40Z'
+generated_at: '2025-09-12T04:58:02Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -19,221 +19,795 @@ number_formats:
     standard: "#,##0%"
   currency_formats:
     standard:
+    accounting: "¤#,##0.00;(¤#,##0.00)"
   scientific_formats:
     standard: "#E0"
   currencies:
     AFN:
       symbol: "؋"
+      display_names:
+        other: ఆఫ్ఘాన్ ఆఫ్ఘానీలు
+        one: ఆఫ్ఘాన్ ఆఫ్ఘాని
     AMD:
       symbol: "֏"
+      display_names:
+        other: అమెరికన్ డ్రామ్‌లు
+        one: అమెరికన్ డ్రామ్
     AOA:
       symbol: Kz
+      display_names:
+        other: అంగోలాన్ క్వాన్‌జా‌లు
+        one: అంగోలాన్ క్వాన్‌జా
     ARS:
       symbol: "$"
+      display_names:
+        other: అర్జెంటీనా పెసోలు
+        one: అర్జెంటీనా పెసో
     AUD:
       symbol: A$
+      display_names:
+        other: ఆస్ట్రేలియన్ డాలర్‌లు
+        one: ఆస్ట్రేలియన్ డాలర్
     AZN:
       symbol: "₼"
+      display_names:
+        other: అజర్బైజాన్ మానట్‌లు
+        one: అజర్బైజాన్ మానట్
     BAM:
       symbol: KM
+      display_names:
+        other: బోస్నియా-హెర్జగోవినా మార్పిడి చెయ్యగలిగే మార్క్‌లు
+        one: బోస్నియా-హెర్జగోవినా మార్పిడి చెయ్యగలిగే మార్క్
     BBD:
       symbol: "$"
+      display_names:
+        other: బర్బాడియన్ డాలర్‌లు
+        one: బర్బాడియన్ డాలర్
     BDT:
       symbol: "৳"
+      display_names:
+        other: బాంగ్లాదేశ్ టాకాలు
+        one: బాంగ్లాదేశ్ టాకా
     BMD:
       symbol: "$"
+      display_names:
+        other: బెర్ముడన్ డాలర్‌లు
+        one: బెర్ముడన్ డాలర్
     BND:
       symbol: "$"
+      display_names:
+        other: బ్రూనై డాలర్‌లు
+        one: బ్రూనై డాలర్
     BOB:
       symbol: Bs
+      display_names:
+        other: బొలీవియన్ బొలీవియానోలు
+        one: బొలీవియన్ బొలీవియానో
     BRL:
       symbol: R$
+      display_names:
+        other: బ్రెజిలియన్ రియల్‌లు
+        one: బ్రెజిలియన్ రియల్
     BSD:
       symbol: "$"
+      display_names:
+        other: బహామియన్ డాలర్‌లు
+        one: బహామియన్ డాలర్
     BWP:
       symbol: P
+      display_names:
+        other: బోట్స్‌వానా పులాలు
+        one: బోట్స్‌వానా పులా
     BZD:
       symbol: "$"
+      display_names:
+        other: బెలీజ్ డాలర్‌లు
+        one: బెలీజ్ డాలర్
     CAD:
       symbol: CA$
+      display_names:
+        other: కెనడియన్ డాలర్‌లు
+        one: కెనడియన్ డాలర్
     CLP:
       symbol: "$"
+      display_names:
+        other: చిలియన్ పెసోలు
+        one: చిలియన్ పెసో
     CNY:
       symbol: CN¥
+      display_names:
+        other: చైనా దేశ యువాన్
+        one: చైనా దేశ యువాన్
     COP:
       symbol: "$"
+      display_names:
+        other: కొలంబియన్ పెసోలు
+        one: కొలంబియన్ పెసో
     CRC:
       symbol: "₡"
+      display_names:
+        other: కోస్టా రికన్ కోలోన్‌లు
+        one: కోస్టా రికన్ కోలోన్
     CUC:
       symbol: "$"
+      display_names:
+        other: క్యూబన్ కన్వర్టబుల్ పెసోలు
+        one: క్యూబన్ కన్వర్టబుల్ పెసో
     CUP:
       symbol: "$"
+      display_names:
+        other: క్యూబన్ పెసోలు
+        one: క్యూబన్ పెసో
     CZK:
       symbol: Kč
+      display_names:
+        other: చెక్ రిపబ్లిక్ కోరునాలు
+        one: చెక్ రిపబ్లిక్ కోరునా
     DKK:
       symbol: kr
+      display_names:
+        other: డానిష్ క్రోనర్
+        one: డానిష్ క్రోన్
     DOP:
       symbol: "$"
+      display_names:
+        other: డోమినికన్ పెసోలు
+        one: డోమినికన్ పెసో
     EGP:
       symbol: E£
+      display_names:
+        other: ఈజిప్షియన్ పౌండ్‌లు
+        one: ఈజిప్షియన్ పౌండ్
     ESP:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: యురోలు
+        one: యురొ
     FJD:
       symbol: "$"
+      display_names:
+        other: ఫీజియన్ డాలర్‌లు
+        one: ఫీజియన్ డాలర్
     FKP:
       symbol: "£"
+      display_names:
+        other: ఫాక్‌ల్యాండ్ దీవులు పౌండ్‌లు
+        one: ఫాక్‌ల్యాండ్ దీవులు పౌండ్
     GBP:
       symbol: "£"
+      display_names:
+        other: బ్రిటిష్ పౌండ్‌లు
+        one: బ్రిటిష్ పౌండ్
     GEL:
       symbol: "₾"
+      display_names:
+        other: జార్జియన్ లారీలు
+        one: జార్జియన్ లారి
     GHS:
       symbol: GH₵
+      display_names:
+        other: గానెయన్ సెడిలు
+        one: గానెయన్ సెడి
     GIP:
       symbol: "£"
+      display_names:
+        other: జిబ్రల్‌టూర్ పౌండ్‌లు
+        one: జిబ్రల్‌టూర్ పౌండ్
     GNF:
       symbol: FG
+      display_names:
+        other: గ్వినియన్ ఫ్రాంక్‌లు
+        one: గ్వినియన్ ఫ్రాంక్
     GTQ:
       symbol: Q
+      display_names:
+        other: గ్యుటెమాలన్ క్వెట్‌జల్‌లు
+        one: గ్యుటెమాలన్ క్వెట్‌జల్
     GYD:
       symbol: "$"
+      display_names:
+        other: గుయనియాస్ డాలర్‌లు
+        one: గుయనియాస్ డాలర్
     HKD:
       symbol: HK$
+      display_names:
+        other: హాంకాంగ్ డాలర్‌లు
+        one: హాంకాంగ్ డాలర్
     HNL:
       symbol: L
+      display_names:
+        other: హోండురన్ లెమిపిరాలు
+        one: హోండురన్ లెమిపిరా
     HRK:
       symbol: kn
+      display_names:
+        other: క్రొయేషియన్ క్యూనాలు
+        one: క్రొయేషియన్ క్యూన
     HUF:
       symbol: Ft
+      display_names:
+        other: హంగేరియన్ ఫోరింట్‌లు
+        one: హంగేరియన్ ఫోరింట్
     IDR:
       symbol: Rp
+      display_names:
+        other: ఇండోనేషియా రూపాయలు
+        one: ఇండోనేషియా రూపాయి
     ILS:
       symbol: "₪"
+      display_names:
+        other: ఇజ్రాయేలీ న్యూ షెకెల్ లు
+        one: ఇజ్రాయేలీ న్యూ షెకెల్
     INR:
       symbol: "₹"
+      display_names:
+        other: భారతదేశ రూపాయలు
+        one: భారతదేశ రూపాయి
     ISK:
       symbol: kr
+      display_names:
+        other: ఐస్లాండిక్ క్రోనర్
+        one: ఐస్లాండిక్ క్రోనా
     JMD:
       symbol: "$"
+      display_names:
+        other: జమైకన్ డాలర్‌లు
+        one: జమైకన్ డాలర్
     JPY:
       symbol: JP¥
+      display_names:
+        other: జపాను దేశ యెన్
+        one: జపాను దేశ యెన్
     KGS:
       symbol: "⃀"
+      display_names:
+        other: కిర్గిస్థాని సౌమ్‌లు
+        one: కిర్గిస్థాని సౌమ్
     KHR:
       symbol: "៛"
+      display_names:
+        other: కాంబోడియన్ రీల్‌లు
+        one: కాంబోడియన్ రీల్
     KMF:
       symbol: CF
+      display_names:
+        other: కొమోరియన్ ఫ్రాంక్‌లు
+        one: కొమోరియన్ ఫ్రాంక్
     KPW:
       symbol: "₩"
+      display_names:
+        other: ఉత్తర కొరియా వోన్
+        one: ఉత్తర కొరియా వోన్
     KRW:
       symbol: "₩"
+      display_names:
+        other: దక్షిణ కొరియా వోన్
+        one: దక్షిణ కొరియా వోన్
     KYD:
       symbol: "$"
+      display_names:
+        other: కేమాన్ దీవుల డాలర్‌లు
+        one: కేమాన్ దీవుల డాలర్
     KZT:
       symbol: "₸"
+      display_names:
+        other: ఖజికిస్థాన్ టెంగేలు
+        one: ఖజికిస్థాన్ టెంగే
     LAK:
       symbol: "₭"
+      display_names:
+        other: లాటియన్ కిప్‌లు
+        one: లాటియన్ కిప్
     LBP:
       symbol: L£
+      display_names:
+        other: లెబనీస్ పౌండ్‌లు
+        one: లెబనీస్ పౌండ్
     LKR:
       symbol: Rs
+      display_names:
+        other: శ్రీలంక రూపాయలు
+        one: శ్రీలంక రూపాయి
     LRD:
       symbol: "$"
+      display_names:
+        other: లిబేరియన్ డాలర్‌లు
+        one: లిబేరియన్ డాలర్
     LTL:
       symbol: Lt
+      display_names:
+        other: లిథోనియన్ లీటై
+        one: లిథోనియన్ లీటాస్
     LVL:
       symbol: Ls
+      display_names:
+        other: లాత్వియన్ లాటి
+        one: లాత్వియన్ లాట్స్
     MGA:
       symbol: Ar
+      display_names:
+        other: మలగసీ అరియరీలు
+        one: మలగసీ అరియరీ
     MMK:
       symbol: K
+      display_names:
+        other: మయన్మార్ క్యాట్‌లు
+        one: మయన్మార్ క్యాట్
     MNT:
       symbol: "₮"
+      display_names:
+        other: మంగోలియన్ టుగ్రిక్‌లు
+        one: మంగోలియన్ టుగ్రిక్
     MUR:
       symbol: Rs
+      display_names:
+        other: మారిషన్ రూపాయలు
+        one: మారిషన్ రూపాయి
     MXN:
       symbol: MX$
+      display_names:
+        other: మెక్సికన్ పెసోలు
+        one: మెక్సికన్ పెసో
     MYR:
       symbol: RM
+      display_names:
+        other: మలేషియా రింగ్గిట్‌లు
+        one: మలేషియా రింగ్గిట్
     NAD:
       symbol: "$"
+      display_names:
+        other: నమిబియన్ డాలర్‌లు
+        one: నమిబియన్ డాలర్
     NGN:
       symbol: "₦"
+      display_names:
+        other: నైజీరియన్ నైరాలు
+        one: నైజీరియన్ నైరా
     NIO:
       symbol: C$
+      display_names:
+        other: నికరగ్యుయన్ కొర్‌డుబులు
+        one: నికరగ్యుయన్ కొర్‌డుబు
     NOK:
       symbol: kr
+      display_names:
+        other: నార్వేజీయన్ క్రోనర్
+        one: నార్వేజీయన్ క్రోన్
     NPR:
       symbol: Rs
+      display_names:
+        other: నేపాలీయుల రూపాయలు
+        one: నేపాలీయుల రూపాయి
     NZD:
       symbol: NZ$
+      display_names:
+        other: న్యూజిలాండ్ డాలర్‌లు
+        one: న్యూజిలాండ్ డాలర్
     PHP:
       symbol: "₱"
+      display_names:
+        other: ఫిలిప్పిన్ పెసోలు
+        one: ఫిలిప్పిన్ పెసో
     PKR:
       symbol: Rs
+      display_names:
+        other: పాకిస్థాన్ రూపాయలు
+        one: పాకిస్థాన్ రూపాయి
     PLN:
       symbol: zł
+      display_names:
+        other: పోలిష్ జ్లోటీలు
+        one: పోలిష్ జ్లోటీ
     PYG:
       symbol: "₲"
+      display_names:
+        other: పరగ్వాయన్ గ్వారనీలు
+        one: పరగ్వాయన్ గ్వారని
     RON:
       symbol: lei
+      display_names:
+        other: రోమానియాన్ లీ
+        one: రోమానియాన్ లెయు
     RUB:
       symbol: "₽"
+      display_names:
+        other: రష్యన్ రూబల్‌లు
+        one: రష్యన్ రూబల్
     RWF:
       symbol: RF
+      display_names:
+        other: ర్వానడాన్ ఫ్రాంక్‌లు
+        one: ర్వానడాన్ ఫ్రాంక్
     SBD:
       symbol: "$"
+      display_names:
+        other: సోలోమన్ దీవుల డాలర్‌లు
+        one: సోలోమన్ దీవుల డాలర్
     SEK:
       symbol: kr
+      display_names:
+        other: స్వీడిష్ క్రోనర్
+        one: స్వీడిష్ క్రోనా
     SGD:
       symbol: "$"
+      display_names:
+        other: సింగపూర్ డాలర్‌లు
+        one: సింగపూర్ డాలర్
     SHP:
       symbol: "£"
+      display_names:
+        other: సెయింట్ హెలెనా పౌండ్‌లు
+        one: సెయింట్ హెలెనా పౌండ్
     SRD:
       symbol: "$"
+      display_names:
+        other: సురినామీయుల డాలర్‌లు
+        one: సురినామీయుల డాలర్
     SSP:
       symbol: "£"
+      display_names:
+        other: దక్షిణ సుడానీస్ పౌండ్‌లు
+        one: దక్షిణ సుడానీస్ పౌండ్
     STN:
       symbol: Db
+      display_names:
+        other: సావో టోమ్ మరియు ప్రిన్సిపి డోబ్రాలు
+        one: సావో టోమ్ మరియు ప్రిన్సిపి డోబ్రా
     SYP:
       symbol: "£"
+      display_names:
+        other: సిరీయన్ పౌండ్‌లు
+        one: సిరీయన్ పౌండ్
     THB:
       symbol: "฿"
+      display_names:
+        other: థాయ్ బాట్
+        one: థాయ్ బాట్
     TOP:
       symbol: T$
+      display_names:
+        other: టోంగాన్ పాంʻగా
+        one: టోంగాన్ పాంʻగా
     TRY:
       symbol: "₺"
+      display_names:
+        other: టర్కిస్ లీరా
+        one: టర్కిస్ లీరా
     TTD:
       symbol: "$"
+      display_names:
+        other: ట్రినిడాడ్ మరియు టొబాగో డాలర్‌లు
+        one: ట్రినిడాడ్ మరియు టొబాగో డాలర్
     TWD:
       symbol: NT$
+      display_names:
+        other: కొత్త తైవాన్ డాలర్‌లు
+        one: క్రొత్త తైవాన్ డాలర్
     UAH:
       symbol: "₴"
+      display_names:
+        other: ఉక్రయినియన్ హ్రివ్‌నియాలు
+        one: ఉక్రయినియన్ హ్రివ్‌నియా
     USD:
       symbol: US$
+      display_names:
+        other: అమెరికా డాలర్‌లు
+        one: అమెరికా డాలర్
     UYU:
       symbol: "$"
+      display_names:
+        other: ఉరుగ్వెయన్ పెసోలు
+        one: ఉరుగ్వెయన్ పెసో
     VEF:
       symbol: Bs
+      display_names:
+        other: వెనుజులా బోలివర్‌లు (2008–2018)
+        one: వెనుజులా బోలివర్ (2008–2018)
     VND:
       symbol: "₫"
+      display_names:
+        other: వియత్నామీయుల డాంగ్
+        one: వియత్నామీయుల డాంగ్
     XAF:
       symbol: FCFA
+      display_names:
+        other: సెంట్రల్ ఆఫ్రికన్ సిఎఫ్‌ఎ ఫ్రాంక్‌లు
+        one: సెంట్రల్ ఆఫ్రికన్ సిఎఫ్‌ఎ ఫ్రాంక్
     XCD:
       symbol: EC$
+      display_names:
+        other: తూర్పు కరీబియన్ డాలర్‌లు
+        one: తూర్పు కరీబియన్ డాలర్
     XCG:
       symbol: Cg.
     XOF:
       symbol: F CFA
+      display_names:
+        other: పశ్చిమ ఆఫ్రికన్ సిఏఫ్ఏ ఫ్రాంక్‌లు
+        one: పశ్చిమ ఆఫ్రికన్ సిఏఫ్ఏ ఫ్రాంక్
     XPF:
       symbol: CFPF
+      display_names:
+        other: సిఎఫ్‌పి ఫ్రాంక్‌లు
+        one: సిఎఫ్‌పి ఫ్రాంక్
     XXX:
       symbol: "¤"
+      display_names:
+        other: తెలియని కరెన్సీ
+        one: తెలియని కరెన్సీ ప్రమాణం
     ZAR:
       symbol: R
+      display_names:
+        other: దక్షిణ ఆఫ్రికా ర్యాండ్
+        one: దక్షిణ ఆఫ్రికా ర్యాండ్
     ZMW:
       symbol: ZK
+      display_names:
+        other: జాంబియన్ క్వాచాలు
+        one: జాంబియన్ క్వాచా
+    AED:
+      display_names:
+        other: యునైటెడ్ ఆరబ్ ఎమిరేట్స్ దిరామ్‌లు
+        one: యునైటెడ్ ఆరబ్ ఎమిరేట్స్ దిరామ్
+    ALL:
+      display_names:
+        other: ఆల్బేనియన్ లేక్
+        one: ఆల్బేనియన్ లేక్
+    ANG:
+      display_names:
+        other: నెదర్లాండ్స్ యాంటిల్లియన్ గిల్‌డర్‌లు
+        one: నెదర్లాండ్స్ యాంటిల్లియన్ గిల్‌డర్
+    AWG:
+      display_names:
+        other: అరుబన్ ఫ్లోరిన్
+        one: అరుబన్ ఫ్లోరిన్
+    BGN:
+      display_names:
+        other: బల్గేరియన్ లేవ
+        one: బల్గేరియన్ లేవ్
+    BHD:
+      display_names:
+        other: బహ్రెయిన్ దినార్‌లు
+        one: బహ్రెయిన్ దినార్
+    BIF:
+      display_names:
+        other: బురిండియన్ ఫ్రాంక్‌లు
+        one: బురిండియన్ ఫ్రాంక్
+    BTN:
+      display_names:
+        other: భూటానీయుల గుల్‌ట్రుమ్‌లు
+        one: భూటానీయుల గుల్‌ట్రుమ్
+    BYN:
+      symbol: р.
+      display_names:
+        other: బెలరూసియన్ రూబల్‌లు
+        one: బెలరూసియన్ రూబల్
+    BYR:
+      display_names:
+        other: బెలరూసియన్ రూబల్‌లు (2000–2016)
+        one: బెలరూసియన్ రూబల్ (2000–2016)
+    CDF:
+      display_names:
+        other: కొంగోలిస్ ఫ్రాంక్‌లు
+        one: కొంగోలిస్ ఫ్రాంక్
+    CHF:
+      display_names:
+        other: స్విస్ ఫ్రాంక్‌లు
+        one: స్విస్ ఫ్రాంక్
+    CNH:
+      display_names:
+        other: చైనీస్ యువాన్ (ఆఫ్‌షోర్)
+        one: చైనీస్ యువాన్ (ఆఫ్‌షోర్)
+    CVE:
+      display_names:
+        other: కేప్ వెర్డియన్ ఎస్కుడోలు
+        one: కేప్ వెర్డియన్ ఎస్కుడో
+    DJF:
+      display_names:
+        other: జిబోటియన్ ఫ్రాంక్‌లు
+        one: జిబోటియన్ ఫ్రాంక్
+    DZD:
+      display_names:
+        other: అల్జీరియన్ దీనార్‌లు
+        one: అల్జీరియన్ దీనార్
+    ERN:
+      display_names:
+        other: ఎరిట్రీన్ నక్ఫా‌లు
+        one: ఎరిట్రీన్ నక్ఫా
+    ETB:
+      display_names:
+        other: ఇథియోపియన్ బర్‌లు
+        one: ఇథియోపియన్ బర్
+    GMD:
+      display_names:
+        other: గాంబియన్ దలాసిలు
+        one: గాంబియన్ దలాసి
+    HTG:
+      display_names:
+        other: హైటియన్ గ్వోర్డేలు
+        one: హైటియన్ గ్వోర్డే
+    IQD:
+      display_names:
+        other: ఇరాకీ దీనార్‌లు
+        one: ఇరాకీ దీనార్
+    IRR:
+      display_names:
+        other: ఇరానియన్ రీయల్‌లు
+        one: ఇరానియన్ రీయల్
+    JOD:
+      display_names:
+        other: జోర్‌డానియన్ దీనార్‌లు
+        one: జోర్‌డానియన్ దీనార్
+    KES:
+      display_names:
+        other: కెన్యాన్ షిల్లింగ్‌లు
+        one: కెన్యాన్ షిల్లింగ్
+    KWD:
+      display_names:
+        other: కువైట్ దీనార్‌లు
+        one: కువైట్ దీనార్
+    LSL:
+      display_names:
+        other: లెసోధో లోటిలు
+        one: లెసోధో లోటి
+    LYD:
+      display_names:
+        other: లిబియన్ దీనార్‌లు
+        one: లిబియన్ దీనార్
+    MAD:
+      display_names:
+        other: మోరోకన్ దిర్హామ్‌లు
+        one: మోరోకన్ దిర్హామ్
+    MDL:
+      display_names:
+        other: మోల్‌డోవన్ లీ
+        one: మోల్‌డోవన్ ల్యూ
+    MKD:
+      display_names:
+        other: మెసిడోనియన్ దినారి
+        one: మెసిడోనియన్ దినార్
+    MOP:
+      display_names:
+        other: మకనీస్ పటాకాలు
+        one: మకనీస్ పటాక
+    MRO:
+      display_names:
+        other: మౌరిటానియన్ ఒగ్యియాలు (1973–2017)
+        one: మౌరిటానియన్ ఒగ్యియా (1973–2017)
+    MRU:
+      display_names:
+        other: మౌరిటానియన్ ఒగ్యియాలు
+        one: మౌరిటానియన్ ఒగ్యియా
+    MVP:
+      display_names:
+        other: మాల్దీవులు రూపాయిలు
+        one: మాల్దీవుల రూపాయి
+    MVR:
+      display_names:
+        other: మాల్దీవియన్ రుఫియాలు
+        one: మాల్దీవియన్ రుఫియా
+    MWK:
+      display_names:
+        other: మలావియన్ క్వాచాలు
+        one: మలావియన్ క్వాచా
+    MZN:
+      display_names:
+        other: మొజాంబికన్ మెటికల్‌లు
+        one: మొజాంబికన్ మెటికల్
+    OMR:
+      display_names:
+        other: ఒమాని రీయల్‌లు
+        one: ఒమాని రీయల్
+    PAB:
+      display_names:
+        other: పనామనియన్ బల్బోవాలు
+        one: పనామనియన్ బల్బోవ
+    PEN:
+      display_names:
+        other: పెరువియన్ సోల్‌లు
+        one: పెరువియన్ సోల్
+    PGK:
+      display_names:
+        other: పప్యూ న్యూ గ్యినియన్ కినా
+        one: పప్యూ న్యూ గ్యినియన్ కినా
+    QAR:
+      display_names:
+        other: క్వాటరి రీయల్‌లు
+        one: క్వాటరి రీయల్
+    RSD:
+      display_names:
+        other: సెర్బియన్ దీనార్‌లు
+        one: సెర్బియన్ దీనార్
+    SAR:
+      display_names:
+        other: సౌది రియల్‌లు
+        one: సౌది రియల్
+    SCR:
+      display_names:
+        other: సెయిచెల్లోయిస్ రూపాయలు
+        one: సెయిచెల్లోయిస్ రూపాయి
+    SDG:
+      display_names:
+        other: సుడానీస్ పౌండ్‌లు
+        one: సుడానీస్ పౌండ్
+    SLE:
+      display_names:
+        other: సియెరా లియోనియన్ లియోన్స్
+        one: సియెరా లియోనియన్ లియోన్
+    SLL:
+      display_names:
+        other: సీయిరు లియోనియన్ లీయోన్‌లు (1964—2022)
+        one: సీయిరు లియోనియన్ లీయోన్ (1964—2022)
+    SOS:
+      display_names:
+        other: సొమాలి షిల్లింగ్‌లు
+        one: సొమాలి షిల్లింగ్
+    STD:
+      display_names:
+        other: సావో టోమ్ మరియు ప్రిన్సిపి డోబ్రాలు (1977–2017)
+        one: సావో టోమ్ మరియు ప్రిన్సిపి డోబ్రా (1977–2017)
+    SZL:
+      display_names:
+        other: స్వాజి ఎమలాన్గేని
+        one: స్వాజి లిలాన్గేని
+    TJS:
+      display_names:
+        other: తజికిస్థాన్ సమోనీలు
+        one: తజికిస్థాన్ సమోని
+    TMT:
+      display_names:
+        other: తుర్క్‌మెనిస్థాని మనాట్
+        one: తుర్క్‌మెనిస్థాని మనాట్
+    TND:
+      display_names:
+        other: తునీషియన్ దీనార్‌లు
+        one: తునీషియన్ దీనార్
+    TZS:
+      display_names:
+        other: టాంజానియన్ షిల్లింగ్‌లు
+        one: టాంజానియన్ షిల్లింగ్
+    UGX:
+      display_names:
+        other: ఉగాండన్ షిల్లింగ్‌లు
+        one: ఉగాండన్ షిల్లింగ్
+    UZS:
+      display_names:
+        other: ఉజ్‌బెకిస్తాన్ సౌమ్
+        one: ఉజ్‌బెకిస్తాన్ సౌమ్
+    VES:
+      display_names:
+        other: వెనుజులా బోలివర్‌లు
+        one: వెనుజులా బోలివర్
+    VUV:
+      display_names:
+        other: వవాటు వటూలు
+        one: వనాటు వటు
+    WST:
+      display_names:
+        other: సమోయన్ తాలా
+        one: సమోయన్ తాలా
+    XAG:
+      display_names:
+        other: వెండి
+        one: వెండి
+    XAU:
+      display_names:
+        other: బంగారం
+        one: బంగారం
+    XPT:
+      display_names:
+        other: ప్లాటినం
+        one: ప్లాటినం
+    YER:
+      display_names:
+        other: ఎమునీ రీయల్‌లు
+        one: ఎమునీ రీయల్
+    ZMK:
+      display_names:
+        other: జాంబియన్ క్వాచా (1968–2012)
+        one: జాంబియన్ క్వాచా (1968–2012)
 currency_fractions:
   ADP:
     digits: 0

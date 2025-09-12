@@ -1,13 +1,179 @@
 ---
 locale: kea_CV
-generated_at: '2025-09-12T04:11:14Z'
+generated_at: '2025-09-12T05:00:47Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Janeru
+        '2': Febreru
+        '3': Marsu
+        '4': Abril
+        '5': Maiu
+        '6': Junhu
+        '7': Julhu
+        '8': Agostu
+        '9': Setenbru
+        '10': Otubru
+        '11': Nuvenbru
+        '12': Dizenbru
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Abr
+        '5': Mai
+        '6': Jun
+        '7': Jul
+        '8': Ago
+        '9': Set
+        '10': Otu
+        '11': Nuv
+        '12': Diz
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: dumingu
+        mon: sigunda-fera
+        tue: tersa-fera
+        wed: kuarta-fera
+        thu: kinta-fera
+        fri: sesta-fera
+        sat: sábadu
+      abbreviated:
+        sun: dum
+        mon: sig
+        tue: ter
+        wed: kua
+        thu: kin
+        fri: ses
+        sat: sab
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: D
+        mon: S
+        tue: T
+        wed: K
+        thu: K
+        fri: S
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1º trimestri
+        '2': 2º trimestri
+        '3': 3º trimestri
+        '4': 4º trimestri
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: am
+        pm: pm
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': antis di Era Kumun
+      '1': Era Kumun
+    abbreviated:
+      '0': AEK
+      '1': EK
+    narrow: {}
+  date_formats:
+    full: EEEE, d 'di' MMMM 'di' y
+    long: d 'di' MMMM 'di' y
+    medium: d MMM y
+    short: dd/MM/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1}, {0}"
+    long: "{1}, {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E, h:mm B
+      EBhms: E, h:mm:ss B
+      Ed: E, d
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: dd/MM/y GGGGG
+      GyMMM: LLL y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a (v)
+      Hmsv: HH:mm:ss (v)
+      hmv: h:mm a (v)
+      Hmv: HH:mm (v)
+      M: L
+      Md: dd/MM
+      MEd: E, dd/MM
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d 'di' MMMM
+      MMMMW: W'º' 'simana' 'di' MMMM
+      ms: mm:ss
+      "y": "y"
+      yM: LL/y
+      yMd: dd/MM/y
+      yMEd: E, dd/MM/y
+      yMMM: LLL y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: LLLL 'di' y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ 'di' y
+      yw: w'º' 'simana' 'di' Y
+      MMdd: dd/MM
+      MMMMEd: E, d 'di' MMMM
+      mmss: mm:ss
+      yMM: LL/y

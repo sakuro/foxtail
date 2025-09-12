@@ -1,13 +1,202 @@
 ---
 locale: fa_IR
-generated_at: '2025-09-12T04:11:11Z'
+generated_at: '2025-09-12T05:00:17Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': ژانویهٔ
+        '2': فوریهٔ
+        '3': مارس
+        '4': آوریل
+        '5': مهٔ
+        '6': ژوئن
+        '7': ژوئیهٔ
+        '8': اوت
+        '9': سپتامبر
+        '10': اکتبر
+        '11': نوامبر
+        '12': دسامبر
+      abbreviated:
+        '1': ژانویه
+        '2': فوریه
+        '3': مارس
+        '4': آوریل
+        '5': مه
+        '6': ژوئن
+        '7': ژوئیه
+        '8': اوت
+        '9': سپتامبر
+        '10': اکتبر
+        '11': نوامبر
+        '12': دسامبر
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': ژانویه
+        '2': فوریه
+        '3': مارس
+        '4': آوریل
+        '5': مه
+        '6': ژوئن
+        '7': ژوئیه
+        '8': اوت
+        '9': سپتامبر
+        '10': اکتبر
+        '11': نوامبر
+        '12': دسامبر
+      abbreviated: {}
+      narrow:
+        '1': ژ
+        '2': ف
+        '3': م
+        '4': آ
+        '5': م
+        '6': ژ
+        '7': ژ
+        '8': ا
+        '9': س
+        '10': ا
+        '11': ن
+        '12': د
+  days:
+    format:
+      wide:
+        sun: یکشنبه
+        mon: دوشنبه
+        tue: سه‌شنبه
+        wed: چهارشنبه
+        thu: پنجشنبه
+        fri: جمعه
+        sat: شنبه
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: ی
+        mon: د
+        tue: س
+        wed: چ
+        thu: پ
+        fri: ج
+        sat: ش
+  quarters:
+    format:
+      wide:
+        '1': سه‌ماههٔ اول
+        '2': سه‌ماههٔ دوم
+        '3': سه‌ماههٔ سوم
+        '4': سه‌ماههٔ چهارم
+      abbreviated:
+        '1': س‌م۱
+        '2': س‌م۲
+        '3': س‌م۳
+        '4': س‌م۴
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: قبل‌ازظهر
+        pm: بعدازظهر
+        morning1: بامداد
+        morning2: صبح
+        afternoon1: بعدازظهر
+        afternoon2: عصر
+        night1: شب
+        night2: نیمه‌شب
+      abbreviated:
+        am: ق.ظ.
+        pm: ب.ظ.
+        morning1: بامداد
+        morning2: صبح
+        afternoon1: ظهر
+        afternoon2: عصر
+        night1: شب
+        night2: نیمه‌شب
+    stand-alone:
+      wide:
+        am: قبل‌ازظهر
+        pm: بعدازظهر
+      abbreviated: {}
+  eras:
+    names:
+      '0': قبل از دوران مشترک
+      '1': دوران مشترک
+    abbreviated:
+      '0': ق.د.م
+      '1': د.م.
+    narrow:
+      '0': ق
+      '1': م
+  date_formats:
+    full: EEEE d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: y/M/d
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} ساعت {0}"
+    long: "{1} ساعت {0}"
+    medium: "{1}، {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E d
+      Ehm: E h:mm a
+      EHm: E H:mm
+      Ehms: E h:mm:ss a
+      EHms: E H:mm:ss
+      Gy: y G
+      GyMd: y/M/d GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      h: h a
+      H: H
+      hm: h:mm a
+      Hm: H:mm
+      hms: h:mm:ss a
+      Hms: H:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: H:mm:ss v
+      hmv: h:mm a v
+      Hmv: H:mm v
+      M: L
+      Md: M/d
+      MEd: E M/d
+      MMM: LLL
+      MMMd: d LLL
+      MMMEd: E d LLL
+      MMMMd: d LLLL
+      MMMMW: هفتهٔ Wم LLLL
+      ms: m:ss
+      "y": "y"
+      yM: y/M
+      yMd: y/M/d
+      yMEd: E y/M/d
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQQ y
+      yQQQQ: QQQQ y
+      yw: هفتهٔ wم Y
+      HHmmZ: HH:mm (Z)
+      MMMMEd: E d LLLL
+      mmss: mm:ss
+      yMMMMEEEEd: EEEE d MMMM y

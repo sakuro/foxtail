@@ -1,6 +1,6 @@
 ---
 locale: de
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:55Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -123,6 +123,8 @@ datetime_formats:
         evening1: abends
         night1: nachts
       abbreviated:
+        am: AM
+        pm: PM
         midnight: Mitternacht
         morning1: morgens
         morning2: vorm.
@@ -169,6 +171,13 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E, d.
       Ehm: E h:mm a
       EHm: E, HH:mm
@@ -182,23 +191,26 @@ datetime_formats:
       h: h 'Uhr' a
       H: HH 'Uhr'
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d.M.
       MEd: E, d.M.
-      MMd: d.MM.
-      MMdd: dd.MM.
+      MMM: LLL
       MMMd: d. MMM
       MMMEd: E, d. MMM
       MMMMd: d. MMMM
-      MMMMEd: E, d. MMMM
       MMMMW: "'Woche' W 'im' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d.M.y
       yMEd: E, d.M.y
-      yMM: MM.y
-      yMMdd: dd.MM.y
       yMMM: MMM y
       yMMMd: d. MMM y
       yMMMEd: E, d. MMM y
@@ -206,3 +218,8 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'Woche' w 'des' 'Jahres' Y"
+      MMd: d.MM.
+      MMdd: dd.MM.
+      MMMMEd: E, d. MMMM
+      yMM: MM.y
+      yMMdd: dd.MM.y

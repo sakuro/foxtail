@@ -4,6 +4,7 @@ require "fileutils"
 require "rexml/document"
 require "time"
 require "yaml"
+require_relative "../inheritance"
 
 module Foxtail
   module CLDR
@@ -16,6 +17,7 @@ module Foxtail
         def initialize(source_dir:, output_dir:)
           @source_dir = source_dir
           @output_dir = output_dir
+          @parent_locales = nil
         end
 
         # Template method for extracting all locales
@@ -35,20 +37,18 @@ module Foxtail
 
         # Template method for extracting a specific locale
         def extract_locale(locale_id)
-          xml_path = File.join(source_dir, "common", "main", "#{locale_id}.xml")
-
-          unless File.exist?(xml_path)
-            log "Warning: Locale file not found: #{xml_path}"
-            return
-          end
-
-          doc = REXML::Document.new(File.read(xml_path))
-          extracted_data = extract_data_from_xml(doc)
+          extracted_data = extract_locale_with_inheritance(locale_id)
 
           # Only write if we have meaningful data
-          return unless data?(extracted_data)
+          return unless extracted_data && data?(extracted_data)
 
           write_data(locale_id, extracted_data)
+        end
+
+        # Extract locale data with full CLDR inheritance chain
+        def extract_locale_with_inheritance(locale_id)
+          load_parent_locales_if_needed
+          Inheritance.load_inherited_data(locale_id, source_dir, self, parent_locales)
         end
 
         private def validate_source_directory
@@ -57,6 +57,17 @@ module Foxtail
           return if Dir.exist?(locales_dir)
 
           raise ArgumentError, "CLDR source directory not found: #{locales_dir}"
+        end
+
+        private def load_parent_locales_if_needed
+          return if @parent_locales
+
+          @parent_locales = Inheritance.load_parent_locales(source_dir)
+          log "Loaded #{@parent_locales.size} parent locale mappings" unless @parent_locales.empty?
+        end
+
+        private def parent_locales
+          @parent_locales ||= {}
         end
 
         private def ensure_locale_directory(locale_id)

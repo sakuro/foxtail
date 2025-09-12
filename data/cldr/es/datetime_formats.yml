@@ -1,6 +1,6 @@
 ---
 locale: es
-generated_at: '2025-09-12T04:11:10Z'
+generated_at: '2025-09-12T05:00:13Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -100,8 +100,8 @@ datetime_formats:
         pm: p. m.
       abbreviated:
         am: a. m.
-        noon: del mediodía
         pm: p. m.
+        noon: del mediodía
         morning1: de la madrugada
         morning2: de la mañana
         evening1: de la tarde
@@ -140,6 +140,13 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E, h:mm a
       EHm: E, H:mm
@@ -150,9 +157,6 @@ datetime_formats:
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
-      GyMMMM: MMMM 'de' y G
-      GyMMMMd: d 'de' MMMM 'de' y G
-      GyMMMMEd: E, d 'de' MMMM 'de' y G
       h: h a
       H: H
       hm: h:mm a
@@ -161,29 +165,36 @@ datetime_formats:
       Hms: H:mm:ss
       hmsv: h:mm:ss a v
       Hmsv: H:mm:ss v
-      hmsvvvv: h:mm:ss a (vvvv)
-      Hmsvvvv: H:mm:ss (vvvv)
       hmv: h:mm a v
       Hmv: H:mm v
+      M: L
       Md: d/M
       MEd: E, d/M
-      MMd: d/M
-      MMdd: d/M
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d 'de' MMMM
-      MMMMEd: E, d 'de' MMMM
       MMMMW: "'semana' W 'de' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: EEE, d/M/y
-      yMM: M/y
       yMMM: MMM y
       yMMMd: d MMM y
       yMMMEd: EEE, d MMM y
       yMMMM: MMMM 'de' y
-      yMMMMd: d 'de' MMMM 'de' y
-      yMMMMEd: EEE, d 'de' MMMM 'de' y
       yQQQ: QQQ y
       yQQQQ: QQQQ 'de' y
       yw: "'semana' w 'de' Y"
+      GyMMMM: MMMM 'de' y G
+      GyMMMMd: d 'de' MMMM 'de' y G
+      GyMMMMEd: E, d 'de' MMMM 'de' y G
+      hmsvvvv: h:mm:ss a (vvvv)
+      Hmsvvvv: H:mm:ss (vvvv)
+      MMd: d/M
+      MMdd: d/M
+      MMMMEd: E, d 'de' MMMM
+      yMM: M/y
+      yMMMMd: d 'de' MMMM 'de' y
+      yMMMMEd: EEE, d 'de' MMMM 'de' y

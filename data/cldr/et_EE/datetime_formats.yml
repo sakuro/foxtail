@@ -1,13 +1,189 @@
 ---
 locale: et_EE
-generated_at: '2025-09-12T04:11:10Z'
+generated_at: '2025-09-12T05:00:16Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': jaanuar
+        '2': veebruar
+        '3': märts
+        '4': aprill
+        '5': mai
+        '6': juuni
+        '7': juuli
+        '8': august
+        '9': september
+        '10': oktoober
+        '11': november
+        '12': detsember
+      abbreviated:
+        '1': jaan
+        '2': veebr
+        '3': märts
+        '4': apr
+        '5': mai
+        '6': juuni
+        '7': juuli
+        '8': aug
+        '9': sept
+        '10': okt
+        '11': nov
+        '12': dets
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': J
+        '2': V
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: pühapäev
+        mon: esmaspäev
+        tue: teisipäev
+        wed: kolmapäev
+        thu: neljapäev
+        fri: reede
+        sat: laupäev
+      abbreviated:
+        sun: P
+        mon: E
+        tue: T
+        wed: K
+        thu: "N"
+        fri: R
+        sat: L
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: P
+        mon: E
+        tue: T
+        wed: K
+        thu: "N"
+        fri: R
+        sat: L
+  quarters:
+    format:
+      wide:
+        '1': 1. kvartal
+        '2': 2. kvartal
+        '3': 3. kvartal
+        '4': 4. kvartal
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+        midnight: keskööl
+        noon: keskpäeval
+        morning1: hommikul
+        afternoon1: pärastlõunal
+        evening1: õhtul
+        night1: öösel
+    stand-alone:
+      wide: {}
+      abbreviated:
+        midnight: kesköö
+        noon: keskpäev
+        morning1: hommik
+        afternoon1: pärastlõuna
+        evening1: õhtu
+        night1: öö
+  eras:
+    names:
+      '0': enne meie ajaarvamist
+      '1': meie ajaarvamise järgi
+    abbreviated:
+      '0': e.m.a
+      '1': m.a.j
+    narrow: {}
+  date_formats:
+    full: EEEE, d. MMMM y
+    long: d. MMMM y
+    medium: d. MMM y
+    short: dd.MM.yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1}, 'kell' {0}"
+    long: "{1}, 'kell' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E, d
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: d.MM.y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d. MMM y G
+      GyMMMEd: E, d. MMMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: M
+      Md: d.M
+      MEd: E, d.M
+      MMM: MMMM
+      MMMd: d. MMM
+      MMMEd: E, d. MMM
+      MMMMd: d. MMMM
+      MMMMW: MMMM (W. 'nädal')
+      ms: mm:ss
+      "y": "y"
+      yM: M.y
+      yMd: d.M.y
+      yMEd: E, d.M.y
+      yMMM: MMM y
+      yMMMd: d. MMM y
+      yMMMEd: E, d. MMMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: w. 'nädal' (Y)
+      MMMMEd: E, d. MMMM
+      mmss: mm:ss

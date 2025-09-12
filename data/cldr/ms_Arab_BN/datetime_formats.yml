@@ -1,45 +1,156 @@
 ---
 locale: ms_Arab_BN
-generated_at: '2025-09-12T04:11:17Z'
+generated_at: '2025-09-12T05:01:05Z'
 cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide: {}
+      wide:
+        '1': جانواري
+        '2': فيبواري
+        '3': مچ
+        '4': اڤريل
+        '5': مي
+        '6': جون
+        '7': جولاي
+        '8': ݢوس
+        '9': سيڤتيمبر
+        '10': اوکتوبر
+        '11': نوۏيمبر
+        '12': ديسيمبر
       abbreviated: {}
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow: {}
+      narrow:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        '8': '8'
+        '9': '9'
+        '10': '10'
+        '11': '11'
+        '12': '12'
   days:
     format:
-      wide: {}
+      wide:
+        sun: احد
+        mon: اثنين
+        tue: ثلاث
+        wed: رابو
+        thu: خميس
+        fri: جمعة
+        sat: سبتو
       abbreviated: {}
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
   quarters:
     format:
-      wide: {}
-      abbreviated: {}
+      wide:
+        '1': سوکو ڤرتام
+        '2': سوکو ک-2
+        '3': سوکو ک-3
+        '4': سوکو ک-4
+      abbreviated:
+        '1': سوکو 1
+        '2': سوکو ک-2
+        '3': سوکو ک-3
+        '4': سوکو ک-4
     stand-alone:
       wide: {}
       abbreviated: {}
   day_periods:
     format:
       wide: {}
-      abbreviated: {}
+      abbreviated:
+        am: AM
+        pm: PM
     stand-alone:
       wide: {}
       abbreviated: {}
   eras:
     names: {}
-    abbreviated: {}
+    abbreviated:
+      '0': BCE
+      '1': CE
     narrow: {}
   date_formats:
     full: dd MMMM y
-  time_formats: {}
-  datetime_formats: {}
+    long: d MMMM y
+    medium: dd/MM/y
+    short: d/MM/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d-M
+      MEd: E، d-M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E، d MMM
+      MMMMd: d MMMM
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M-y
+      yMd: d/M/y
+      yMEd: E، d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E، d MMM y
+      yMMMM: y MMMM
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"
+      Hmm: H:mm
+      MMdd: dd/MM

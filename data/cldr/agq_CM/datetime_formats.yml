@@ -1,13 +1,171 @@
 ---
 locale: agq_CM
-generated_at: '2025-09-12T04:11:06Z'
+generated_at: '2025-09-12T04:59:32Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': ndzɔ̀ŋɔ̀nùm
+        '2': ndzɔ̀ŋɔ̀kƗ̀zùʔ
+        '3': ndzɔ̀ŋɔ̀tƗ̀dʉ̀ghà
+        '4': ndzɔ̀ŋɔ̀tǎafʉ̄ghā
+        '5': ndzɔ̀ŋèsèe
+        '6': ndzɔ̀ŋɔ̀nzùghò
+        '7': ndzɔ̀ŋɔ̀dùmlo
+        '8': ndzɔ̀ŋɔ̀kwîfɔ̀e
+        '9': ndzɔ̀ŋɔ̀tƗ̀fʉ̀ghàdzughù
+        '10': ndzɔ̀ŋɔ̀ghǔuwelɔ̀m
+        '11': ndzɔ̀ŋɔ̀chwaʔàkaa wo
+        '12': ndzɔ̀ŋèfwòo
+      abbreviated:
+        '1': nùm
+        '2': kɨz
+        '3': tɨd
+        '4': taa
+        '5': see
+        '6': nzu
+        '7': dum
+        '8': fɔe
+        '9': dzu
+        '10': lɔm
+        '11': kaa
+        '12': fwo
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': "n"
+        '2': k
+        '3': t
+        '4': t
+        '5': s
+        '6': z
+        '7': k
+        '8': f
+        '9': d
+        '10': l
+        '11': c
+        '12': f
+  days:
+    format:
+      wide:
+        sun: tsuʔntsɨ
+        mon: tsuʔukpà
+        tue: tsuʔughɔe
+        wed: tsuʔutɔ̀mlò
+        thu: tsuʔumè
+        fri: tsuʔughɨ̂m
+        sat: tsuʔndzɨkɔʔɔ
+      abbreviated:
+        sun: nts
+        mon: kpa
+        tue: ghɔ
+        wed: tɔm
+        thu: ume
+        fri: ghɨ
+        sat: dzk
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: "n"
+        mon: k
+        tue: g
+        wed: t
+        thu: u
+        fri: g
+        sat: d
+  quarters:
+    format:
+      wide:
+        '1': kɨbâ kɨ 1
+        '2': ugbâ u 2
+        '3': ugbâ u 3
+        '4': ugbâ u 4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: a.g
+        pm: a.k
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Sěe Kɨ̀lesto
+      '1': Bǎa Kɨ̀lesto
+    abbreviated:
+      '0': SK
+      '1': BK
+    narrow: {}
+  date_formats:
+    full: EEEE d MMMM y
+    long: d MMMM y
+    medium: d MMM, y
+    short: d/M/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E d/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: m:ss
+      "y": "y"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: y MMMM
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"

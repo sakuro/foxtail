@@ -1,13 +1,198 @@
 ---
 locale: sr_Cyrl_RS
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:35Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': јануар
+        '2': фебруар
+        '3': март
+        '4': април
+        '5': мај
+        '6': јун
+        '7': јул
+        '8': август
+        '9': септембар
+        '10': октобар
+        '11': новембар
+        '12': децембар
+      abbreviated:
+        '1': јан
+        '2': феб
+        '3': мар
+        '4': апр
+        '5': мај
+        '6': јун
+        '7': јул
+        '8': авг
+        '9': сеп
+        '10': окт
+        '11': нов
+        '12': дец
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': ј
+        '2': ф
+        '3': м
+        '4': а
+        '5': м
+        '6': ј
+        '7': ј
+        '8': а
+        '9': с
+        '10': о
+        '11': н
+        '12': д
+  days:
+    format:
+      wide:
+        sun: недеља
+        mon: понедељак
+        tue: уторак
+        wed: среда
+        thu: четвртак
+        fri: петак
+        sat: субота
+      abbreviated:
+        sun: нед
+        mon: пон
+        tue: уто
+        wed: сре
+        thu: чет
+        fri: пет
+        sat: суб
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: н
+        mon: п
+        tue: у
+        wed: с
+        thu: ч
+        fri: п
+        sat: с
+  quarters:
+    format:
+      wide:
+        '1': први квартал
+        '2': други квартал
+        '3': трећи квартал
+        '4': четврти квартал
+      abbreviated:
+        '1': 1. кв.
+        '2': 2. кв.
+        '3': 3. кв.
+        '4': 4. кв.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: поноћ
+        noon: подне
+        morning1: ујутру
+        afternoon1: по подне
+        evening1: увече
+        night1: ноћу
+      abbreviated:
+        am: AM
+        pm: PM
+        midnight: поноћ
+        noon: подне
+        morning1: ујутру
+        afternoon1: по подне
+        evening1: увече
+        night1: ноћу
+    stand-alone:
+      wide: {}
+      abbreviated:
+        morning1: јутро
+        afternoon1: поподне
+        evening1: вече
+        night1: ноћ
+  eras:
+    names:
+      '0': пре наше ере
+      '1': наше ере
+    abbreviated:
+      '0': п. н. е.
+      '1': н. е.
+    narrow:
+      '0': п.н.е.
+      '1': н.е.
+  date_formats:
+    full: EEEE, d. MMMM y.
+    long: d. MMMM y.
+    medium: d. M. y.
+    short: d. M. y.
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: hh:mm B
+      Bhms: hh:mm:ss B
+      d: d
+      E: E
+      EBhm: E h:mm B
+      EBhms: E, hh:mm:ss B
+      Ed: E d.
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y. G
+      GyMd: d.MM.y. GGGGG
+      GyMMM: MMM y. G
+      GyMMMd: d. MMM y. G
+      GyMMMEd: E, d. MMM y. G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d. M.
+      MEd: E, d. M.
+      MMM: LLL
+      MMMd: d. MMM
+      MMMEd: E d. MMM
+      MMMMd: d. MMMM
+      MMMMW: 'MMMM: W. ''недеља'''
+      ms: mm:ss
+      "y": y.
+      yM: M. y.
+      yMd: d. M. y.
+      yMEd: E, d. M. y.
+      yMMM: MMM y.
+      yMMMd: d. MMM y.
+      yMMMEd: E, d. MMM y.
+      yMMMM: MMMM y.
+      yQQQ: QQQ y.
+      yQQQQ: QQQQ y.
+      yw: w. 'недеља' 'у' Y.
+      MMdd: dd.MM.
+      MMMdd: dd.MMM
+      MMMMEd: E, d. MMMM
+      yMM: MM.y.
+      yMMdd: dd.MM.y.

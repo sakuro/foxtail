@@ -1,6 +1,6 @@
 ---
 locale: ee
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:58Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -136,6 +136,8 @@ datetime_formats:
       Bh: "'ga' h 'le' B 'me'"
       Bhm: "'ga' h 'aɖabaƒoƒo' mm 'le' B 'me'"
       Bhms: h:mm:ss 'le' B 'me'
+      d: d
+      E: ccc
       EBhm: "'ga' h:mm 'le' E B 'me'"
       EBhms: "'ga' h:mm:ss 'le' E B 'me'"
       Ed: E d
@@ -144,24 +146,30 @@ datetime_formats:
       Ehms: E a 'ga' h:mm:ss
       EHms: E 'ga' HH:mm:ss
       Gy: y G
+      GyMd: GGGGG y-MM-dd
       GyMMM: MMM y G
       GyMMMd: MMM d 'lia', y G
       GyMMMEd: E, MMM d 'lia' y G
       h: a 'ga' h
+      H: HH
       hm: a 'ga' h:mm
+      Hm: HH:mm
       hms: a 'ga' h:mm:ss
+      Hms: HH:mm:ss
       hmsv: a 'ga' h:mm:ss 'le' v
       Hmsv: "'ga' HH:mm:ss 'le' v"
       hmv: a 'ga' h:mm 'le' v
       Hmv: "'ga' HH:mm 'le' v"
+      M: L
       Md: M/d
       MEd: E, M/d
+      MMM: LLL
       MMMd: MMM d 'lia'
       MMMEd: E, MMM d 'lia'
       MMMMd: MMMM d 'lia'
-      MMMMEd: E, MMMM d 'lia'
       MMMMW: MMMM 'ƒe' 'kɔsiɖa' W 'lia'
       ms: "'aɖabaƒoƒo' mm:ss"
+      "y": "y"
       yM: M/y
       yMd: M/d/y
       yMEd: E, M/d/y
@@ -172,3 +180,4 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'kɔsiɖa' w 'lia' 'le' 'ƒe' Y 'me'"
+      MMMMEd: E, MMMM d 'lia'

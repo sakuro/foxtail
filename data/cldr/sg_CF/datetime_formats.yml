@@ -1,13 +1,178 @@
 ---
 locale: sg_CF
-generated_at: '2025-09-12T04:11:19Z'
+generated_at: '2025-09-12T05:01:28Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Nyenye
+        '2': Fulundïgi
+        '3': Mbängü
+        '4': Ngubùe
+        '5': Bêläwü
+        '6': Föndo
+        '7': Lengua
+        '8': Kükürü
+        '9': Mvuka
+        '10': Ngberere
+        '11': Nabändüru
+        '12': Kakauka
+      abbreviated:
+        '1': Nye
+        '2': Ful
+        '3': Mbä
+        '4': Ngu
+        '5': Bêl
+        '6': Fön
+        '7': Len
+        '8': Kük
+        '9': Mvu
+        '10': Ngb
+        '11': Nab
+        '12': Kak
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': "N"
+        '2': F
+        '3': M
+        '4': "N"
+        '5': B
+        '6': F
+        '7': L
+        '8': K
+        '9': M
+        '10': "N"
+        '11': "N"
+        '12': K
+  days:
+    format:
+      wide:
+        sun: Bikua-ôko
+        mon: Bïkua-ûse
+        tue: Bïkua-ptâ
+        wed: Bïkua-usïö
+        thu: Bïkua-okü
+        fri: Lâpôsö
+        sat: Lâyenga
+      abbreviated:
+        sun: Bk1
+        mon: Bk2
+        tue: Bk3
+        wed: Bk4
+        thu: Bk5
+        fri: Lâp
+        sat: Lây
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: K
+        mon: S
+        tue: T
+        wed: S
+        thu: K
+        fri: P
+        sat: "Y"
+  quarters:
+    format:
+      wide:
+        '1': Fângbisïö ôko
+        '2': Fângbisïö ûse
+        '3': Fângbisïö otâ
+        '4': Fângbisïö usïö
+      abbreviated:
+        '1': F4–1
+        '2': F4–2
+        '3': F4–3
+        '4': F4–4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ND
+        pm: LK
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Kôzo na Krîstu
+      '1': Na pekô tî Krîstu
+    abbreviated:
+      '0': KnK
+      '1': NpK
+    narrow: {}
+  date_formats:
+    full: EEEE d MMMM y
+    long: d MMMM y
+    medium: d MMM, y
+    short: d/M/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: M
+      Md: d/M
+      MEd: MM-dd, E
+      MMM: MMM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'week' W 'of' MMMM"
+      ms: m:ss
+      "y": "y"
+      yM: M/y
+      yMd: y-MM-dd
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: y MMM d
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"
+      MMd: d/MM
+      MMdd: dd/MM
+      MMMMEd: E d MMMM

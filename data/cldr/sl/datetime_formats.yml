@@ -1,6 +1,6 @@
 ---
 locale: sl
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:31Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -104,10 +104,10 @@ datetime_formats:
         evening1: zvečer
         night1: ponoči
       abbreviated:
-        midnight: opoln.
         am: dop.
-        noon: opold.
         pm: pop.
+        midnight: opoln.
+        noon: opold.
         morning1: zjut.
         morning2: dop.
         afternoon1: pop.
@@ -156,14 +156,19 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
       d: d.
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E, d.
       Ehm: E, h:mm a
       EHm: E, HH:mm
       Ehms: E, h:mm:ss a
       EHms: E, HH:mm:ss
       Gy: y G
-      GyM: MMM y G
       GyMd: d. M. y GGGGG
       GyMMM: MMM y G
       GyMMMd: d. MMM y G
@@ -171,15 +176,23 @@ datetime_formats:
       h: h a
       H: HH'h'
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d. M.
       MEd: E, d. M.
+      MMM: LLL
       MMMd: d. MMM
       MMMEd: E, d. MMM
       MMMMd: d. MMMM
       MMMMW: 'MMMM: W. ''teden'''
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d. M. y
       yMEd: E, d. M. y
@@ -190,3 +203,4 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: w. 'teden' 'leta' Y
+      GyM: MMM y G

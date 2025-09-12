@@ -1,13 +1,221 @@
 ---
 locale: lv_LV
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:01:00Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': janvāris
+        '2': februāris
+        '3': marts
+        '4': aprīlis
+        '5': maijs
+        '6': jūnijs
+        '7': jūlijs
+        '8': augusts
+        '9': septembris
+        '10': oktobris
+        '11': novembris
+        '12': decembris
+      abbreviated:
+        '1': janv.
+        '2': febr.
+        '3': marts
+        '4': apr.
+        '5': maijs
+        '6': jūn.
+        '7': jūl.
+        '8': aug.
+        '9': sept.
+        '10': okt.
+        '11': nov.
+        '12': dec.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: svētdiena
+        mon: pirmdiena
+        tue: otrdiena
+        wed: trešdiena
+        thu: ceturtdiena
+        fri: piektdiena
+        sat: sestdiena
+      abbreviated:
+        sun: svētd.
+        mon: pirmd.
+        tue: otrd.
+        wed: trešd.
+        thu: ceturtd.
+        fri: piektd.
+        sat: sestd.
+      narrow: {}
+    stand-alone:
+      wide:
+        sun: Svētdiena
+        mon: Pirmdiena
+        tue: Otrdiena
+        wed: Trešdiena
+        thu: Ceturtdiena
+        fri: Piektdiena
+        sat: Sestdiena
+      abbreviated:
+        sun: Svētd.
+        mon: Pirmd.
+        tue: Otrd.
+        wed: Trešd.
+        thu: Ceturtd.
+        fri: Piektd.
+        sat: Sestd.
+      narrow:
+        sun: S
+        mon: P
+        tue: O
+        wed: T
+        thu: C
+        fri: P
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1. ceturksnis
+        '2': 2. ceturksnis
+        '3': 3. ceturksnis
+        '4': 4. ceturksnis
+      abbreviated:
+        '1': 1. cet.
+        '2': 2. cet.
+        '3': 3. cet.
+        '4': 4. cet.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: pusnaktī
+        am: priekšpusdienā
+        noon: pusdienlaikā
+        pm: pēcpusdienā
+        morning1: no rīta
+        afternoon1: pēcpusdienā
+        evening1: vakarā
+        night1: naktī
+      abbreviated:
+        am: priekšp.
+        pm: pēcp.
+        midnight: pusnaktī
+        noon: pusd.
+        morning1: no rīta
+        afternoon1: pēcpusd.
+        evening1: vakarā
+        night1: naktī
+    stand-alone:
+      wide:
+        am: priekšpusdiena
+        noon: pusdienlaiks
+        pm: pēcpusdiena
+        morning1: rīts
+        afternoon1: pēcpusdiena
+        evening1: vakars
+        night1: nakts
+      abbreviated:
+        midnight: pusnakts
+        am: priekšp.
+        pm: pēcpusd.
+        morning1: rīts
+        afternoon1: pēcpusd.
+        evening1: vakars
+        night1: nakts
+  eras:
+    names:
+      '0': pirms mūsu ēras
+      '1': mūsu ērā
+    abbreviated:
+      '0': p.m.ē.
+      '1': m.ē.
+    narrow:
+      '0': pmē
+      '1': mē
+  date_formats:
+    full: EEEE, y. 'gada' d. MMMM
+    long: y. 'gada' d. MMMM
+    medium: y. 'gada' d. MMM
+    short: dd.MM.yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E, h:mm B
+      EBhms: E, h:mm:ss B
+      Ed: E, d.
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: G y. 'g'.
+      GyMd: GGGGG dd-MM-y
+      GyMMM: G y. 'g'. MMM
+      GyMMMd: G y. 'g'. d. MMM
+      GyMMMEd: E, G y. 'g'. d. MMM
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: dd.MM.
+      MEd: E, dd.MM.
+      MMM: LLL
+      MMMd: d. MMM
+      MMMEd: E, d. MMM
+      MMMMd: d. MMMM
+      MMMMW: MMMM, W. 'nedēļa'
+      ms: mm:ss
+      "y": y. 'g'.
+      yM: MM.y.
+      yMd: d.MM.y.
+      yMEd: E, d.MM.y.
+      yMMM: y. 'g'. MMM
+      yMMMd: y. 'g'. d. MMM
+      yMMMEd: E, y. 'g'. d. MMM
+      yMMMM: y. 'g'. MMMM
+      yQQQ: y. 'g'. QQQ
+      yQQQQ: y. 'g'. QQQQ
+      yw: Y. 'g'. w. 'nedēļa'
+      MMMMEd: E, d. MMMM
+      mmss: mm:ss

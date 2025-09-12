@@ -1,13 +1,181 @@
 ---
 locale: oc_FR
-generated_at: '2025-09-12T04:11:17Z'
+generated_at: '2025-09-12T05:01:13Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': de genièr
+        '2': de febrièr
+        '3': de març
+        '4': d’abril
+        '5': de mai
+        '6': de junh
+        '7': de julhet
+        '8': d’agost
+        '9': de setembre
+        '10': d’octòbre
+        '11': de novembre
+        '12': de decembre
+      abbreviated:
+        '1': gen.
+        '2': feb.
+        '3': març
+        '4': abr.
+        '5': mai
+        '6': junh
+        '7': jul.
+        '8': ago.
+        '9': set.
+        '10': oct.
+        '11': nov.
+        '12': dec.
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': genièr
+        '2': febrièr
+        '3': març
+        '4': abril
+        '5': mai
+        '6': junh
+        '7': julhet
+        '8': agost
+        '9': setembre
+        '10': octòbre
+        '11': novembre
+        '12': decembre
+      abbreviated: {}
+      narrow:
+        '1': G
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: dimenge
+        mon: diluns
+        tue: dimars
+        wed: dimècres
+        thu: dijòus
+        fri: divendres
+        sat: dissabte
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: Dg
+        mon: Dl
+        tue: Dm
+        wed: Dc
+        thu: Dj
+        fri: Dv
+        sat: Ds
+  quarters:
+    format:
+      wide:
+        '1': 1èr trimèstre
+        '2': 2nd trimèstre
+        '3': 3en trimèstre
+        '4': 4en trimèstre
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Abans l’èra nòstra
+      '1': L’èra nòstra
+    abbreviated:
+      '0': Ab. E.N.
+      '1': E.N.
+    narrow:
+      '1': CE
+  date_formats:
+    full: EEEE d MMMM 'de' y
+    long: d MMMM 'de' y
+    medium: d MMM y
+    short: dd/MM/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'a' {0}"
+    long: "{1} 'a' {0}"
+    medium: "{1} 'a' {0}"
+    short: "{1} 'a' {0}"
+    available_formats:
+      Bh: h'h' B
+      Bhm: h'h'mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h'h'mm B
+      EBhms: E h:mm:ss B
+      Ed: ccc d
+      Ehm: E h'h'mm a
+      EHm: E HH'h'mm
+      Ehms: E h:mm:ss a
+      EHms: E HH'h'mm ss 'seg'.
+      Gy: y G
+      GyMd: dd/MM/Y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      h: h'h' a
+      H: HH
+      hm: h'h'mm a
+      Hm: HH'h'mm
+      hms: h'h'mm:ss a
+      Hms: HH'h'mm ss 'seg'.
+      hmsv: h:mm:ss a v
+      Hmsv: HH'h'mm ss 'seg'. v
+      hmv: h'h'mm a v
+      Hmv: HH'h'mm v
+      M: L
+      Md: dd/MM
+      MEd: E dd/MM
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'setmana' W MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E dd/MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: LLLL 'de' y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ 'de' y
+      yw: "'setmana' w 'de' Y"

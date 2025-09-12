@@ -1,6 +1,6 @@
 ---
 locale: sq
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:33Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -107,10 +107,10 @@ datetime_formats:
         am: e paradites
         pm: e pasdites
       abbreviated:
-        midnight: e mesnatës
         am: p.d.
-        noon: e mesditës
         pm: m.d.
+        midnight: e mesnatës
+        noon: e mesditës
         morning1: e mëngjesit
         morning2: e paradites
         afternoon1: e pasdites
@@ -152,6 +152,13 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E, d
       Ehm: E, h:mm a
       EHm: E, HH:mm
@@ -163,20 +170,25 @@ datetime_formats:
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a, v
       Hmsv: HH:mm:ss, v
       hmv: h:mm a, v
       Hmv: HH:mm, v
+      M: L
       Md: d.M
       MEd: E, d.M
-      MMdd: d.M
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
-      MMMMEd: E, d MMMM
       MMMMW: "'java' W 'e' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M.y
       yMd: d.M.y
       yMEd: E, d.M.y
@@ -187,3 +199,5 @@ datetime_formats:
       yQQQ: QQQ, y
       yQQQQ: QQQQ, y
       yw: "'java' w 'e' Y"
+      MMdd: d.M
+      MMMMEd: E, d MMMM

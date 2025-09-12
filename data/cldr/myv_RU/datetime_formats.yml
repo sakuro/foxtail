@@ -1,13 +1,182 @@
 ---
 locale: myv_RU
-generated_at: '2025-09-12T04:11:17Z'
+generated_at: '2025-09-12T05:01:06Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': якшамков
+        '2': даволков
+        '3': эйзюрков
+        '4': чадыков
+        '5': панжиков
+        '6': аштемков
+        '7': медьков
+        '8': умарьков
+        '9': таштамков
+        '10': ожоков
+        '11': сундерьков
+        '12': ацамков
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        '1': якш
+        '2': дав
+        '3': эйз
+        '4': чад
+        '5': пан
+        '6': ашт
+        '7': мед
+        '8': ума
+        '9': таш
+        '10': ожо
+        '11': сун
+        '12': аца
+      narrow:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        '8': '8'
+        '9': '9'
+        '10': '10'
+        '11': '11'
+        '12': '12'
+  days:
+    format:
+      wide:
+        sun: таргочистэ
+        mon: атяньчистэ
+        tue: вастаньчистэ
+        wed: куншкачистэ
+        thu: калоньчистэ
+        fri: сюконьчистэ
+        sat: шлямочистэ
+      abbreviated:
+        sun: тар
+        mon: атя
+        tue: вас
+        wed: кун
+        thu: кал
+        fri: сюк
+        sat: шля
+      narrow: {}
+    stand-alone:
+      wide:
+        sun: таргочи
+        mon: атяньчи
+        tue: вастаньчи
+        wed: куншкачи
+        thu: калоньчи
+        fri: сюконьчи
+        sat: шлямочи
+      abbreviated: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: обедтэ икеле
+        pm: обедтэ мейле
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide:
+        am: обедтэ икеле
+        pm: обедтэ мейле
+      abbreviated: {}
+  eras:
+    names:
+      '0': Минек эрадо икеле
+      '1': Минек эрасто
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
+  date_formats:
+    full: y MMMM d, EEEE
+    long: y MMMM d
+    medium: y MMM d
+    short: y-MM-dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: MM-dd
+      MEd: MM-dd, E
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
+      yMEd: y-MM-dd, E
+      yMMM: y MMM
+      yMMMd: y MMM d
+      yMMMEd: y MMM d, E
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"

@@ -1,13 +1,191 @@
 ---
 locale: da_DK
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:54Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': januar
+        '2': februar
+        '3': marts
+        '4': april
+        '5': maj
+        '6': juni
+        '7': juli
+        '8': august
+        '9': september
+        '10': oktober
+        '11': november
+        '12': december
+      abbreviated:
+        '1': jan.
+        '2': feb.
+        '3': mar.
+        '4': apr.
+        '5': maj
+        '6': jun.
+        '7': jul.
+        '8': aug.
+        '9': sep.
+        '10': okt.
+        '11': nov.
+        '12': dec.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: søndag
+        mon: mandag
+        tue: tirsdag
+        wed: onsdag
+        thu: torsdag
+        fri: fredag
+        sat: lørdag
+      abbreviated:
+        sun: søn.
+        mon: man.
+        tue: tirs.
+        wed: ons.
+        thu: tors.
+        fri: fre.
+        sat: lør.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: O
+        thu: T
+        fri: F
+        sat: L
+  quarters:
+    format:
+      wide:
+        '1': 1. kvartal
+        '2': 2. kvartal
+        '3': 3. kvartal
+        '4': 4. kvartal
+      abbreviated:
+        '1': 1. kvt.
+        '2': 2. kvt.
+        '3': 3. kvt.
+        '4': 4. kvt.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+        midnight: midnat
+        morning1: om morgenen
+        morning2: om formiddagen
+        afternoon1: om eftermiddagen
+        evening1: om aftenen
+        night1: om natten
+    stand-alone:
+      wide: {}
+      abbreviated:
+        morning1: morgen
+        morning2: formiddag
+        afternoon1: eftermiddag
+        evening1: aften
+        night1: nat
+  eras:
+    names:
+      '0': før vesterlandsk tidsregning
+      '1': vesterlandsk tidsregning
+    abbreviated:
+      '0': f.v.t.
+      '1': v.t.
+    narrow:
+      '0': fvt
+      '1': vt
+  date_formats:
+    full: EEEE 'den' d. MMMM y
+    long: d. MMMM y
+    medium: d. MMM y
+    short: dd.MM.y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'kl'. {0}"
+    long: "{1} 'kl'. {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h.mm B
+      Bhms: h.mm.ss B
+      d: d.
+      E: ccc
+      EBhm: E h.mm B
+      EBhms: E h.mm.ss B
+      Ed: E 'den' d.
+      Ehm: E h.mm a
+      EHm: E HH.mm
+      Ehms: E h.mm.ss a
+      EHms: E HH.mm.ss
+      Gy: y G
+      GyMd: d.M.y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d. MMM y G
+      GyMMMEd: E d. MMM y G
+      h: h a
+      H: HH
+      hm: h.mm a
+      Hm: HH.mm
+      hms: h.mm.ss a
+      Hms: HH.mm.ss
+      hmsv: h.mm.ss a v
+      Hmsv: HH.mm.ss v
+      hmv: h.mm a v
+      Hmv: HH.mm v
+      M: M
+      Md: d.M
+      MEd: E d.M
+      MMM: MMM
+      MMMd: d. MMM
+      MMMEd: E d. MMM
+      MMMMd: d. MMMM
+      MMMMW: W. 'uge' 'i' MMMM
+      ms: mm.ss
+      "y": "y"
+      yM: M.y
+      yMd: d.M.y
+      yMEd: E d.M.y
+      yMMM: MMM y
+      yMMMd: d. MMM y
+      yMMMEd: E d. MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'uge' w 'i' Y"
+      MMdd: dd.MM
+      MMMMEd: E d. MMMM
+      yMM: MM.y

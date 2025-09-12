@@ -1,13 +1,163 @@
 ---
 locale: yi_UA
-generated_at: '2025-09-12T04:11:22Z'
+generated_at: '2025-09-12T05:01:51Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': יאַנואַר
+        '2': פֿעברואַר
+        '3': מערץ
+        '4': אַפּריל
+        '5': מיי
+        '6': יוני
+        '7': יולי
+        '8': אויגוסט
+        '9': סעפּטעמבער
+        '10': אקטאבער
+        '11': נאוועמבער
+        '12': דעצעמבער
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        '1': יאַנ
+        '2': פֿעב
+        '3': מערץ
+        '4': אַפּר
+        '5': מיי
+        '6': יוני
+        '7': יולי
+        '8': אויג
+        '9': סעפּ
+        '10': אקט
+        '11': נאוו
+        '12': דעצ
+      narrow:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        '8': '8'
+        '9': '9'
+        '10': '10'
+        '11': '11'
+        '12': '12'
+  days:
+    format:
+      wide:
+        sun: זונטיק
+        mon: מאָנטיק
+        tue: דינסטיק
+        wed: מיטוואך
+        thu: דאנערשטיק
+        fri: פֿרײַטיק
+        sat: שבת
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: פֿאַרמיטאָג
+        pm: נאָכמיטאָג
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
+  date_formats:
+    full: EEEE, dטן MMMM y
+    long: dטן MMMM y
+    medium: dטן MMM y
+    short: dd/MM/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1}, {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E דעם dטן
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: GGGGG y-MM-dd
+      GyMMM: MMM y G
+      GyMMMd: dטן MMM y G
+      GyMMMEd: E דעם dטן MMM yG
+      h: "‏h a"
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E, d/M
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M.y
+      yMd: d-M-y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: dטן MMM y
+      yMMMEd: E, dטן MMM y
+      yMMMM: MMMM y
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"
+      yMM: MM/y

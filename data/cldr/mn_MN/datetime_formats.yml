@@ -1,13 +1,200 @@
 ---
 locale: mn_MN
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:01:03Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': нэгдүгээр сар
+        '2': хоёрдугаар сар
+        '3': гуравдугаар сар
+        '4': дөрөвдүгээр сар
+        '5': тавдугаар сар
+        '6': зургаадугаар сар
+        '7': долоодугаар сар
+        '8': наймдугаар сар
+        '9': есдүгээр сар
+        '10': аравдугаар сар
+        '11': арван нэгдүгээр сар
+        '12': арван хоёрдугаар сар
+      abbreviated:
+        '1': 1-р сар
+        '2': 2-р сар
+        '3': 3-р сар
+        '4': 4-р сар
+        '5': 5-р сар
+        '6': 6-р сар
+        '7': 7-р сар
+        '8': 8-р сар
+        '9': 9-р сар
+        '10': 10-р сар
+        '11': 11-р сар
+        '12': 12-р сар
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': Нэгдүгээр сар
+        '2': Хоёрдугаар сар
+        '3': Гуравдугаар сар
+        '4': Дөрөвдүгээр сар
+        '5': Тавдугаар сар
+        '6': Зургаадугаар сар
+        '7': Долоодугаар сар
+        '8': Наймдугаар сар
+        '9': Есдүгээр сар
+        '10': Аравдугаар сар
+        '11': Арван нэгдүгээр сар
+        '12': Арван хоёрдугаар сар
+      abbreviated: {}
+      narrow:
+        '1': I
+        '2': II
+        '3': III
+        '4': IV
+        '5': V
+        '6': VI
+        '7': VII
+        '8': VIII
+        '9': IX
+        '10': X
+        '11': XI
+        '12': XII
+  days:
+    format:
+      wide:
+        sun: ням
+        mon: даваа
+        tue: мягмар
+        wed: лхагва
+        thu: пүрэв
+        fri: баасан
+        sat: бямба
+      abbreviated:
+        sun: Ня
+        mon: Да
+        tue: Мя
+        wed: Лх
+        thu: Пү
+        fri: Ба
+        sat: Бя
+      narrow: {}
+    stand-alone:
+      wide:
+        sun: Ням
+        mon: Даваа
+        tue: Мягмар
+        wed: Лхагва
+        thu: Пүрэв
+        fri: Баасан
+        sat: Бямба
+      abbreviated: {}
+      narrow:
+        sun: Ня
+        mon: Да
+        tue: Мя
+        wed: Лх
+        thu: Пү
+        fri: Ба
+        sat: Бя
+  quarters:
+    format:
+      wide:
+        '1': 1-р улирал
+        '2': 2-р улирал
+        '3': 3-р улирал
+        '4': 4-р улирал
+      abbreviated:
+        '1': I улирал
+        '2': II улирал
+        '3': III улирал
+        '4': IV улирал
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ү.ө.
+        pm: ү.х.
+        midnight: шөнө дунд
+        noon: үд дунд
+        morning1: өглөө
+        afternoon1: өдөр
+        evening1: орой
+        night1: шөнө
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': манай эриний өмнөх
+      '1': манай эриний
+    abbreviated:
+      '0': НТӨ
+      '1': НТ
+    narrow: {}
+  date_formats:
+    full: y 'оны' MMMM'ын' d, EEEE 'гараг'
+    long: y 'оны' MMMM'ын' d
+    medium: y 'оны' MMM'ын' d
+    short: y.MM.dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: B h 'ц'
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      d: d
+      E: ccc
+      EBhm: E. B h:mm
+      EBhms: E. B h:mm:ss
+      Ed: dd. E
+      Ehm: E. h:mm a
+      EHm: E. HH:mm
+      Ehms: E. h:mm:ss a
+      EHms: E. HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y 'оны' MMM
+      GyMMMd: G y 'оны' MMM'ын' d
+      GyMMMEd: G y 'оны' MMM'ын' d. E
+      h: h 'ц' a
+      H: HH 'ц'
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a (v)
+      Hmsv: HH:mm:ss (v)
+      hmv: h:mm a (v)
+      Hmv: HH:mm (v)
+      M: LLLLL
+      Md: MMMMM/dd
+      MEd: MMMMM/dd. E
+      MMM: LLL
+      MMMd: MMM'ын' d
+      MMMEd: MMM'ын' d. E
+      MMMMd: MMMM'ын' d
+      MMMMW: MMMM'ын' W-'р' 'долоо' 'хоног'
+      ms: mm:ss
+      "y": "y"
+      yM: y MMMMM
+      yMd: y.MM.dd
+      yMEd: y.MM.dd. E
+      yMMM: y 'оны' MMM
+      yMMMd: y 'оны' MMM'ын' d
+      yMMMEd: y 'оны' MMM'ын' d. E
+      yMMMM: y 'оны' MMMM
+      yQQQ: y 'оны' QQQ
+      yQQQQ: y 'оны' QQQQ
+      yw: Y 'оны' w-'р' 'долоо' 'хоног'

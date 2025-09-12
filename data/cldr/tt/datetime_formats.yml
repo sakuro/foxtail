@@ -1,6 +1,6 @@
 ---
 locale: tt
-generated_at: '2025-09-12T04:11:21Z'
+generated_at: '2025-09-12T05:01:45Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -35,7 +35,19 @@ datetime_formats:
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow: {}
+      narrow:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        '8': '8'
+        '9': '9'
+        '10': '10'
+        '11': '11'
+        '12': '12'
   days:
     format:
       wide:
@@ -84,7 +96,9 @@ datetime_formats:
   day_periods:
     format:
       wide: {}
-      abbreviated: {}
+      abbreviated:
+        am: AM
+        pm: PM
     stand-alone:
       wide: {}
       abbreviated: {}
@@ -112,23 +126,43 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
       EHm: E, HH:mm
+      Ehms: E h:mm:ss a
       EHms: E, HH:mm:ss
       Gy: G y 'ел'
+      GyMd: GGGGG y-MM-dd
       GyMMM: G y 'ел', MMM
       GyMMMd: G y 'ел', d MMM
       GyMMMEd: G y 'ел', d MMM, E
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: dd.MM
       MEd: dd.MM, E
+      MMM: LLL
       MMMd: d MMM
       MMMEd: d MMM, E
       MMMMd: d MMMM
       MMMMW: MMMM 'аеның' W 'атнасы'
+      ms: mm:ss
+      "y": "y"
       yM: MM.y
       yMd: dd.MM.y
       yMEd: dd.MM.y, E

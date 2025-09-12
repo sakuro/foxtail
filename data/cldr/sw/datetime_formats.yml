@@ -1,6 +1,6 @@
 ---
 locale: sw
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:38Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -63,7 +63,14 @@ datetime_formats:
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
   quarters:
     format:
       wide:
@@ -86,6 +93,8 @@ datetime_formats:
         evening1: jioni
         night1: usiku
       abbreviated:
+        am: AM
+        pm: PM
         midnight: saa sita za usiku
         noon: adhuhuri
         morning1: alfajiri
@@ -131,26 +140,43 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E d
       Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d/M/y GGGGG
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E, d/M
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
-      MMMMEd: E, d MMMM
       MMMMW: "'wiki' W 'ya' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
@@ -161,3 +187,4 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'wiki' w 'ya' Y"
+      MMMMEd: E, d MMMM

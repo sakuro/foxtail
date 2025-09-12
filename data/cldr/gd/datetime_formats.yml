@@ -1,6 +1,6 @@
 ---
 locale: gd
-generated_at: '2025-09-12T04:11:12Z'
+generated_at: '2025-09-12T05:00:35Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -143,32 +143,43 @@ datetime_formats:
       Bh: hB
       Bhm: h:mmB
       Bhms: h:mm:ssB
+      d: d
+      E: ccc
       EBhm: E h:mmB
       EBhms: E h:mm:ssB
       Ed: E, d
       Ehm: E h:mma
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d/M/y G
       GyMMM: LLL y G
       GyMMMd: d'mh' MMM y G
       GyMMMEd: E, d'mh' MMM y G
       h: ha
+      H: HH
       hm: h:mma
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mma v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E, d/M
-      MMdd: dd/MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d'mh' MMMM
       MMMMW: "'seachdain' W MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: L/y
       yMd: d/M/y
       yMEd: E, d/M/y
-      yMM: LL/y
       yMMM: LLL Y
       yMMMd: d MMM y
       yMMMEd: E, d MMM y
@@ -176,3 +187,5 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'seachdain' w 'dhe' Y"
+      MMdd: dd/MM
+      yMM: LL/y

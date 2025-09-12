@@ -1,13 +1,185 @@
 ---
 locale: ar_TD
-generated_at: '2025-09-12T04:11:06Z'
+generated_at: '2025-09-12T04:59:39Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': يناير
+        '2': فبراير
+        '3': مارس
+        '4': أبريل
+        '5': مايو
+        '6': يونيو
+        '7': يوليو
+        '8': أغسطس
+        '9': سبتمبر
+        '10': أكتوبر
+        '11': نوفمبر
+        '12': ديسمبر
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': ي
+        '2': ف
+        '3': م
+        '4': أ
+        '5': و
+        '6': ن
+        '7': ل
+        '8': غ
+        '9': س
+        '10': ك
+        '11': ب
+        '12': د
+  days:
+    format:
+      wide:
+        sun: الأحد
+        mon: الاثنين
+        tue: الثلاثاء
+        wed: الأربعاء
+        thu: الخميس
+        fri: الجمعة
+        sat: السبت
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: ح
+        mon: ن
+        tue: ث
+        wed: ر
+        thu: خ
+        fri: ج
+        sat: س
+  quarters:
+    format:
+      wide:
+        '1': الربع الأول
+        '2': الربع الثاني
+        '3': الربع الثالث
+        '4': الربع الرابع
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        morning1: في الصباح
+        morning2: صباحًا
+        afternoon1: ظهرًا
+        afternoon2: بعد الظهر
+        evening1: مساءً
+        night1: في المساء
+        night2: ليلاً
+      abbreviated:
+        am: ص
+        pm: م
+        morning1: فجرًا
+        morning2: ص
+        afternoon1: ظهرًا
+        afternoon2: بعد الظهر
+        evening1: مساءً
+        night1: في المساء
+        night2: ليلاً
+    stand-alone:
+      wide:
+        am: صباحًا
+        pm: مساءً
+        morning1: فجرًا
+        morning2: صباحًا
+        afternoon1: ظهرًا
+        afternoon2: بعد الظهر
+        evening1: مساءً
+        night1: منتصف الليل
+        night2: ليلاً
+      abbreviated:
+        morning1: فجرًا
+        morning2: ص
+        afternoon1: ظهرًا
+        afternoon2: بعد الظهر
+        evening1: مساءً
+        night1: منتصف الليل
+        night2: ليلاً
+  eras:
+    names:
+      '0': قبل الحقبة الحالية
+      '1': بعد الميلاد
+    abbreviated:
+      '0': ق. م
+      '1': ب.م
+    narrow: {}
+  date_formats:
+    full: EEEE، d MMMM y
+    long: d MMMM y
+    medium: dd‏/MM‏/y
+    short: d‏/M‏/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} في {0}"
+    long: "{1} في {0}"
+    medium: "{1}، {0}"
+    short: "{1}، {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E، d
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: dd-MM-y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E، d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d‏/M
+      MEd: E، d‏/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E، d MMM
+      MMMMd: d MMMM
+      MMMMW: الأسبوع W من MMMM
+      ms: mm:ss
+      "y": "y"
+      yM: M‏/y
+      yMd: d‏/M‏/y
+      yMEd: E، d‏/M‏/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E، d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: الأسبوع w من سنة Y
+      MMdd: dd‏/MM
+      MMMMEd: E، d MMMM
+      yMM: MM‏/y

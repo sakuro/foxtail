@@ -1,13 +1,191 @@
 ---
 locale: gd_GB
-generated_at: '2025-09-12T04:11:12Z'
+generated_at: '2025-09-12T05:00:35Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': dhen Fhaoilleach
+        '2': dhen Ghearran
+        '3': dhen Mhàrt
+        '4': dhen Ghiblean
+        '5': dhen Chèitean
+        '6': dhen Ògmhios
+        '7': dhen Iuchar
+        '8': dhen Lùnastal
+        '9': dhen t-Sultain
+        '10': dhen Dàmhair
+        '11': dhen t-Samhain
+        '12': dhen Dùbhlachd
+      abbreviated:
+        '1': Faoi
+        '2': Gearr
+        '3': Màrt
+        '4': Gibl
+        '5': Cèit
+        '6': Ògmh
+        '7': Iuch
+        '8': Lùna
+        '9': Sult
+        '10': Dàmh
+        '11': Samh
+        '12': Dùbh
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': Am Faoilleach
+        '2': An Gearran
+        '3': Am Màrt
+        '4': An Giblean
+        '5': An Cèitean
+        '6': An t-Ògmhios
+        '7': An t-Iuchar
+        '8': An Lùnastal
+        '9': An t-Sultain
+        '10': An Dàmhair
+        '11': An t-Samhain
+        '12': An Dùbhlachd
+      abbreviated: {}
+      narrow:
+        '1': F
+        '2': G
+        '3': M
+        '4': G
+        '5': C
+        '6': Ò
+        '7': I
+        '8': L
+        '9': S
+        '10': D
+        '11': S
+        '12': D
+  days:
+    format:
+      wide:
+        sun: DiDòmhnaich
+        mon: DiLuain
+        tue: DiMàirt
+        wed: DiCiadain
+        thu: DiarDaoin
+        fri: DihAoine
+        sat: DiSathairne
+      abbreviated:
+        sun: DiD
+        mon: DiL
+        tue: DiM
+        wed: DiC
+        thu: Dia
+        fri: Dih
+        sat: DiS
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: D
+        mon: L
+        tue: M
+        wed: C
+        thu: A
+        fri: H
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1d chairteal
+        '2': 2na cairteal
+        '3': 3s cairteal
+        '4': 4mh cairteal
+      abbreviated:
+        '1': C1
+        '2': C2
+        '3': C3
+        '4': C4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: m
+        pm: f
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': ron linn choitcheann
+      '1': dhen linn choitcheann
+    abbreviated:
+      '0': RC
+      '1': AD
+    narrow:
+      '0': R
+      '1': A
+  date_formats:
+    full: EEEE, d'mh' MMMM y
+    long: d'mh' MMMM y
+    medium: d'mh' MMM y
+    short: dd/MM/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'aig' {0}"
+    long: "{1} 'aig' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: hB
+      Bhm: h:mmB
+      Bhms: h:mm:ssB
+      d: d
+      E: ccc
+      EBhm: E h:mmB
+      EBhms: E h:mm:ssB
+      Ed: E, d
+      Ehm: E h:mma
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: d/M/y G
+      GyMMM: LLL y G
+      GyMMMd: d'mh' MMM y G
+      GyMMMEd: E, d'mh' MMM y G
+      h: ha
+      H: HH
+      hm: h:mma
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mma v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E, d/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d'mh' MMMM
+      MMMMW: "'seachdain' W MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: L/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: LLL Y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: LLLL y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'seachdain' w 'dhe' Y"
+      MMdd: dd/MM
+      yMM: LL/y

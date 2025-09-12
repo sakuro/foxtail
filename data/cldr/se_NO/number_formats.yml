@@ -1,6 +1,6 @@
 ---
 locale: se_NO
-generated_at: '2025-09-12T04:10:22Z'
+generated_at: '2025-09-12T04:56:58Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -80,6 +80,9 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: euro
+        one: euro
     FJD:
       symbol: "$"
     FKP:
@@ -164,6 +167,9 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
+      display_names:
+        other: norgga kruvdno
+        one: norgga kruvdno
     NPR:
       symbol: Rs
     NZD:
@@ -186,6 +192,9 @@ number_formats:
       symbol: "$"
     SEK:
       symbol: kr
+      display_names:
+        other: ruoŧŧa kruvdno
+        one: ruoŧŧa kruvdno
     SGD:
       symbol: "$"
     SHP:
@@ -234,6 +243,18 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
+    FIM:
+      display_names:
+        other: suoma márkki
+        one: suoma márkki
+    XAG:
+      display_names:
+        other: uns silba
+        one: uns silba
+    XAU:
+      display_names:
+        other: uns golli
+        one: uns golli
 currency_fractions:
   ADP:
     digits: 0

@@ -1,13 +1,178 @@
 ---
 locale: shi_Tfng
-generated_at: '2025-09-12T04:11:19Z'
+generated_at: '2025-09-12T05:01:29Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': ⵉⵏⵏⴰⵢⵔ
+        '2': ⴱⵕⴰⵢⵕ
+        '3': ⵎⴰⵕⵚ
+        '4': ⵉⴱⵔⵉⵔ
+        '5': ⵎⴰⵢⵢⵓ
+        '6': ⵢⵓⵏⵢⵓ
+        '7': ⵢⵓⵍⵢⵓⵣ
+        '8': ⵖⵓⵛⵜ
+        '9': ⵛⵓⵜⴰⵏⴱⵉⵔ
+        '10': ⴽⵜⵓⴱⵔ
+        '11': ⵏⵓⵡⴰⵏⴱⵉⵔ
+        '12': ⴷⵓⵊⴰⵏⴱⵉⵔ
+      abbreviated:
+        '1': ⵉⵏⵏ
+        '2': ⴱⵕⴰ
+        '3': ⵎⴰⵕ
+        '4': ⵉⴱⵔ
+        '5': ⵎⴰⵢ
+        '6': ⵢⵓⵏ
+        '7': ⵢⵓⵍ
+        '8': ⵖⵓⵛ
+        '9': ⵛⵓⵜ
+        '10': ⴽⵜⵓ
+        '11': ⵏⵓⵡ
+        '12': ⴷⵓⵊ
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': ⵉ
+        '2': ⴱ
+        '3': ⵎ
+        '4': ⵉ
+        '5': ⵎ
+        '6': ⵢ
+        '7': ⵢ
+        '8': ⵖ
+        '9': ⵛ
+        '10': ⴽ
+        '11': ⵏ
+        '12': ⴷ
+  days:
+    format:
+      wide:
+        sun: ⴰⵙⴰⵎⴰⵙ
+        mon: ⴰⵢⵏⴰⵙ
+        tue: ⴰⵙⵉⵏⴰⵙ
+        wed: ⴰⴽⵕⴰⵙ
+        thu: ⴰⴽⵡⴰⵙ
+        fri: ⵙⵉⵎⵡⴰⵙ
+        sat: ⴰⵙⵉⴹⵢⴰⵙ
+      abbreviated:
+        sun: ⴰⵙⴰ
+        mon: ⴰⵢⵏ
+        tue: ⴰⵙⵉ
+        wed: ⴰⴽⵕ
+        thu: ⴰⴽⵡ
+        fri: ⴰⵙⵉⵎ
+        sat: ⴰⵙⵉⴹ
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': ⴰⴽⵕⴰⴹⵢⵓⵔ 1
+        '2': ⴰⴽⵕⴰⴹⵢⵓⵔ 2
+        '3': ⴰⴽⵕⴰⴹⵢⵓⵔ 3
+        '4': ⴰⴽⵕⴰⴹⵢⵓⵔ 4
+      abbreviated:
+        '1': ⴰⴽ 1
+        '2': ⴰⴽ 2
+        '3': ⴰⴽ 3
+        '4': ⴰⴽ 4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ⵜⵉⴼⴰⵡⵜ
+        pm: ⵜⴰⴷⴳⴳⵯⴰⵜ
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': ⴷⴰⵜ ⵏ ⵄⵉⵙⴰ
+      '1': ⴷⴼⴼⵉⵔ ⵏ ⵄⵉⵙⴰ
+    abbreviated:
+      '0': ⴷⴰⵄ
+      '1': ⴷⴼⵄ
+    narrow: {}
+  date_formats:
+    full: EEEE d MMMM y
+    long: d MMMM y
+    medium: d MMM, y
+    short: d/M/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: M
+      Md: d/M
+      MEd: MM-dd, E
+      MMM: MMM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'week' W 'of' MMMM"
+      ms: m:ss
+      "y": "y"
+      yM: M/y
+      yMd: y-MM-dd
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: y MMM d
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"
+      MMd: d/MM
+      MMdd: dd/MM
+      MMMMEd: E d MMMM

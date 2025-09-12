@@ -1,6 +1,6 @@
 ---
 locale: mn
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:01:03Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -116,10 +116,10 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
-        midnight: шөнө дунд
         am: ү.ө.
-        noon: үд дунд
         pm: ү.х.
+        midnight: шөнө дунд
+        noon: үд дунд
         morning1: өглөө
         afternoon1: өдөр
         evening1: орой
@@ -154,6 +154,8 @@ datetime_formats:
       Bh: B h 'ц'
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E. B h:mm
       EBhms: E. B h:mm:ss
       Ed: dd. E
@@ -161,13 +163,17 @@ datetime_formats:
       EHm: E. HH:mm
       Ehms: E. h:mm:ss a
       EHms: E. HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
       GyMMM: G y 'оны' MMM
       GyMMMd: G y 'оны' MMM'ын' d
       GyMMMEd: G y 'оны' MMM'ын' d. E
       h: h 'ц' a
       H: HH 'ц'
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a (v)
       Hmsv: HH:mm:ss (v)
       hmv: h:mm a (v)
@@ -175,10 +181,13 @@ datetime_formats:
       M: LLLLL
       Md: MMMMM/dd
       MEd: MMMMM/dd. E
+      MMM: LLL
       MMMd: MMM'ын' d
       MMMEd: MMM'ын' d. E
       MMMMd: MMMM'ын' d
       MMMMW: MMMM'ын' W-'р' 'долоо' 'хоног'
+      ms: mm:ss
+      "y": "y"
       yM: y MMMMM
       yMd: y.MM.dd
       yMEd: y.MM.dd. E

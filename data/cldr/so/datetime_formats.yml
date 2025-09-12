@@ -1,6 +1,6 @@
 ---
 locale: so
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:32Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -142,17 +142,43 @@ datetime_formats:
     medium: "{1} 'ee' {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y G
       GyMd: M/d/y GGGGG
       GyMMM: MMM y G
       GyMMMd: MMM d, y G
       GyMMMEd: E, MMM d, y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: M/d
       MEd: E, M/d
+      MMM: LLL
+      MMMd: MMM d
       MMMEd: E, MMM d
-      MMMMEd: E, MMMM d
+      MMMMd: MMMM d
       MMMMW: "'toddobaadka' W 'ee' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: M/d/y
       yMEd: E, M/d/y
@@ -163,3 +189,4 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: "'toddobaadka' w 'ee' Y"
+      MMMMEd: E, MMMM d

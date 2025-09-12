@@ -1,6 +1,6 @@
 ---
 locale: cv
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:53Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -96,7 +96,9 @@ datetime_formats:
   day_periods:
     format:
       wide: {}
-      abbreviated: {}
+      abbreviated:
+        am: AM
+        pm: PM
     stand-alone:
       wide: {}
       abbreviated: {}
@@ -124,24 +126,43 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
       EBhm: ccc, h:mm B
       EBhms: ccc, h:mm:ss B
       Ed: ccc, d
+      Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y 'ҫ'. G
       GyMd: dd.MM.y GGGGG
       GyMMM: LLL y 'ҫ'. G
       GyMMMd: d MMM y 'ҫ'. G
       GyMMMEd: E, d MMM y 'ҫ'. G
+      h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: dd.MM
       MEd: E, dd.MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: ccc, d MMM
       MMMMd: d MMMM
       MMMMW: MMMM W-'мӗш' 'эрни'
+      ms: mm:ss
+      "y": "y"
       yM: MM.y
       yMd: dd.MM.y
       yMEd: ccc, dd.MM.y 'ҫ'.

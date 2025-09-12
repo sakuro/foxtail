@@ -1,22 +1,58 @@
 ---
 locale: se_FI
-generated_at: '2025-09-12T04:11:19Z'
+generated_at: '2025-09-12T05:01:28Z'
 cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide: {}
+      wide:
+        '1': ođđajagemánnu
+        '2': guovvamánnu
+        '3': njukčamánnu
+        '4': cuoŋománnu
+        '5': miessemánnu
+        '6': geassemánnu
+        '7': suoidnemánnu
+        '8': borgemánnu
+        '9': čakčamánnu
+        '10': golggotmánnu
+        '11': skábmamánnu
+        '12': juovlamánnu
       abbreviated:
+        '1': ođđj
+        '2': guov
+        '3': njuk
         '4': cuoŋ
+        '5': mies
+        '6': geas
+        '7': suoi
+        '8': borg
+        '9': čakč
+        '10': golg
+        '11': skáb
+        '12': juov
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated:
         '4': cuoŋ
-      narrow: {}
+      narrow:
+        '1': O
+        '2': G
+        '3': "N"
+        '4': C
+        '5': M
+        '6': G
+        '7': S
+        '8': B
+        '9': Č
+        '10': G
+        '11': S
+        '12': J
   days:
     format:
       wide:
+        sun: sotnabeaivi
         mon: mánnodat
         tue: disdat
         wed: gaskavahkku
@@ -101,26 +137,62 @@ datetime_formats:
     abbreviated:
       '0': oáá.
       '1': áá.
-    narrow: {}
+    narrow:
+      '0': ooá
+      '1': oá
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd.MM.y
-  time_formats: {}
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
   datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: d E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y G
+      GyMd: GGGGG y-MM-dd
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E d.M
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
       MMMMW: MMMM:'a' 'vahkku' W
+      ms: mm:ss
+      "y": "y"
       yM: MM.y
       yMd: dd.MM.y
       yMEd: E dd.MM.y
@@ -130,3 +202,4 @@ datetime_formats:
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"

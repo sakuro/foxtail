@@ -1,13 +1,186 @@
 ---
 locale: yrl_BR
-generated_at: '2025-09-12T04:11:23Z'
+generated_at: '2025-09-12T05:01:52Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': yepé
+        '2': mukũi
+        '3': musapíri
+        '4': irũdí
+        '5': pú
+        '6': pú-yepé
+        '7': pú-mukũi
+        '8': pú-musapíri
+        '9': pú-irũdí
+        '10': yepé-putimaã
+        '11': yepé-yepé
+        '12': yepé-mukũi
+      abbreviated:
+        '1': ye
+        '2': mk
+        '3': ms
+        '4': id
+        '5': pu
+        '6': py
+        '7': pm
+        '8': ps
+        '9': pi
+        '10': yp
+        '11': yy
+        '12': ym
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': "Y"
+        '2': M
+        '3': M
+        '4': I
+        '5': P
+        '6': P
+        '7': P
+        '8': P
+        '9': P
+        '10': "Y"
+        '11': "Y"
+        '12': "Y"
+  days:
+    format:
+      wide:
+        sun: mituú
+        mon: murakipí
+        tue: murakí-mukũi
+        wed: murakí-musapíri
+        thu: supapá
+        fri: yukuakú
+        sat: saurú
+      abbreviated:
+        sun: mit
+        mon: mur
+        tue: mmk
+        wed: mms
+        thu: sup
+        fri: yuk
+        sat: sau
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: M
+        mon: M
+        tue: M
+        wed: M
+        thu: S
+        fri: "Y"
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': yepésáwa musapíri-yasí
+        '2': mukũisawa musapíri-yasí
+        '3': musapírisawa musapíri-yasí
+        '4': irũdisawa musapíri-yasí
+      abbreviated:
+        '1': M1
+        '2': M2
+        '3': M3
+        '4': M4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+        midnight: pituna pyterupé
+        noon: iandé-ara-pyturepé
+        morning1: kuêma ramẽ
+        afternoon1: karuka ramẽ
+        evening1: pituna ramẽ
+        night1: pitunaeté ramẽ
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Era Kumũ senũdé
+      '1': Era Kumũ
+    abbreviated:
+      '0': EKS
+      '1': EK
+    narrow: {}
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: dd/MM/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E, d
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: GGGGG y-MM-dd
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E, dd/MM
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: W'ª' 'sẽmãna' MMMM
+      ms: mm:ss
+      "y": "y"
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E, dd/MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: w'ª' 'sẽmãna' Y
+      MMdd: dd/MM
+      MMMMEd: E, d MMMM
+      yMM: MM/y
+      yMMMMd: d MMMM y
+      yMMMMEd: E, d MMMM y

@@ -1,13 +1,156 @@
 ---
 locale: ckb_IQ
-generated_at: '2025-09-12T04:11:08Z'
+generated_at: '2025-09-12T04:59:52Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': کانوونی دووەم
+        '2': شوبات
+        '3': ئازار
+        '4': نیسان
+        '5': ئایار
+        '6': حوزەیران
+        '7': تەمووز
+        '8': ئاب
+        '9': ئەیلوول
+        '10': تشرینی یەکەم
+        '11': تشرینی دووەم
+        '12': کانونی یەکەم
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': ک
+        '2': ش
+        '3': ئ
+        '4': ن
+        '5': ئ
+        '6': ح
+        '7': ت
+        '8': ئ
+        '9': ئ
+        '10': ت
+        '11': ت
+        '12': ک
+  days:
+    format:
+      wide:
+        sun: یەکشەممە
+        mon: دووشەممە
+        tue: سێشەممە
+        wed: چوارشەممە
+        thu: پێنجشەممە
+        fri: ھەینی
+        sat: شەممە
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: ی
+        mon: د
+        tue: س
+        wed: چ
+        thu: پ
+        fri: ھ
+        sat: ش
+  quarters:
+    format:
+      wide:
+        '1': چارەکی یەکەم
+        '2': چارەکی دووەم
+        '3': چارەکی سێەم
+        '4': چارەکی چوارەم
+      abbreviated:
+        '1': چ١
+        '2': چ٢
+        '3': چ٣
+        '4': چ٤
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ب.ن
+        pm: د.ن
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow:
+      '0': پ.ن
+      '1': ز
+  date_formats:
+    full: y MMMM d, EEEE
+    long: dی MMMMی y
+    medium: y MMM d
+    short: y-MM-dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E dھەم
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: hی a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: MM-dd
+      MEd: E، M/d
+      MMM: LLL
+      MMMd: dی MMM
+      MMMEd: E، dی MMM
+      MMMMd: MMMM d
+      MMMMW: هەفتەی W ی MMMM
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E، d/M/y
+      yMMM: MMMی y
+      yMMMd: dی MMMی y
+      yMMMEd: E، dی MMMی y
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: هەفتەی w ی Y

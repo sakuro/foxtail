@@ -1,6 +1,6 @@
 ---
 locale: brx
-generated_at: '2025-09-12T04:11:08Z'
+generated_at: '2025-09-12T04:59:47Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -136,22 +136,40 @@ datetime_formats:
       Bh: B नि h
       Bhm: B नि h:mm
       Bhms: B नि h:mm:ss
+      d: d
+      E: ccc
       EBhm: E B नि h:mm
       EBhms: E B नि h:mm:ss
+      Ed: d, E
       Ehm: a h:mm, E
+      EHm: E HH:mm
       Ehms: a h:mm:ss, E
+      EHms: E HH:mm:ss
       Gy: Gy
       GyMd: GGGGG dd-MM-y
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
       GyMMMEd: G y MMM E d
       h: a नि h
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: a नि h:mm:ss v
+      Hmsv: HH:mm:ss v
       hmv: a h:mm v
+      Hmv: HH:mm v
+      M: L
       Md: M/d
       MEd: E, M/d
+      MMM: LLL
       MMMd: d-MMM
       MMMEd: E, MMM d
       MMMMd: MMMM d
-      MMMMEd: E, MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: dd-MM-y
       yMEd: E, M/d/y
@@ -161,3 +179,5 @@ datetime_formats:
       yMMMM: MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"
+      MMMMEd: E, MMMM d

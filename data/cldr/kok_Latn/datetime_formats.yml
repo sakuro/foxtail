@@ -1,6 +1,6 @@
 ---
 locale: kok_Latn
-generated_at: '2025-09-12T04:11:15Z'
+generated_at: '2025-09-12T05:00:52Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -116,7 +116,9 @@ datetime_formats:
       wide:
         am: sokallim
         pm: sanje
-      abbreviated: {}
+      abbreviated:
+        am: AM
+        pm: PM
     stand-alone:
       wide:
         am: sokallim
@@ -151,26 +153,40 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
+      Ed: d, E
       Ehm: E a h:mm
+      EHm: E HH:mm
       Ehms: E a h:mm:ss
+      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d-M-y G
       GyMMM: MMM y G
       GyMMMd: d MMM, y G
       GyMMMEd: E, d MMM, y G
       h: a h
+      H: HH
       hm: a h:mm
+      Hm: HH:mm
       hms: a h:mm:ss
+      Hms: HH:mm:ss
       hmsv: a h:mm:ss v
+      Hmsv: HH:mm:ss v
       hmv: a h:mm v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: dd-MM, E
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: MMMM -'acho' 'suman' W
+      ms: mm:ss
+      "y": "y"
       yM: M-y
       yMd: d-M-y
       yMEd: E, d-M-y

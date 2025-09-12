@@ -1,6 +1,6 @@
 ---
 locale: ms_Arab_BN
-generated_at: '2025-09-12T04:09:47Z'
+generated_at: '2025-09-12T04:54:57Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -19,6 +19,7 @@ number_formats:
     standard: "#,##0%"
   currency_formats:
     standard: "¤ #,##0.00"
+    accounting: "¤#,##0.00;(¤#,##0.00)"
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -44,6 +45,9 @@ number_formats:
       symbol: "$"
     BND:
       symbol: "$"
+      display_names:
+        other: دولر بروني
+        one: دولر بروني
     BOB:
       symbol: Bs
     BRL:
@@ -86,6 +90,9 @@ number_formats:
       symbol: "£"
     GBP:
       symbol: "£"
+      display_names:
+        other: ڤاٴون ستيرليڠ بريتيش
+        one: ڤاٴون ستيرليڠ بريتيش
     GEL:
       symbol: "₾"
     GHS:
@@ -108,6 +115,9 @@ number_formats:
       symbol: Ft
     IDR:
       symbol: Rp
+      display_names:
+        other: روڤياە إندونيسيا
+        one: روڤياە إندونيسيا
     ILS:
       symbol: "₪"
     INR:
@@ -156,6 +166,9 @@ number_formats:
       symbol: MX$
     MYR:
       symbol: RM
+      display_names:
+        other: ريڠݢيت مليسيا
+        one: ريڠݢيت مليسيا
     NAD:
       symbol: "$"
     NGN:
@@ -188,6 +201,9 @@ number_formats:
       symbol: kr
     SGD:
       symbol: "$"
+      display_names:
+        other: دولر سيڠاڤورا
+        one: دولر سيڠاڤورا
     SHP:
       symbol: "£"
     SRD:
@@ -230,6 +246,9 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
+      display_names:
+        other: مات واڠ تيدق دکتاهوءي
+        one: مات واڠ تيدق دکتاهوءي
     ZAR:
       symbol: R
     ZMW:

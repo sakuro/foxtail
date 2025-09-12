@@ -1,13 +1,182 @@
 ---
 locale: ce_RU
-generated_at: '2025-09-12T04:11:08Z'
+generated_at: '2025-09-12T04:59:50Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': январь
+        '2': февраль
+        '3': март
+        '4': апрель
+        '5': май
+        '6': июнь
+        '7': июль
+        '8': август
+        '9': сентябрь
+        '10': октябрь
+        '11': ноябрь
+        '12': декабрь
+      abbreviated:
+        '1': янв
+        '2': фев
+        '3': мар
+        '4': апр
+        '5': май
+        '6': июн
+        '7': июл
+        '8': авг
+        '9': сен
+        '10': окт
+        '11': ноя
+        '12': дек
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': Я
+        '2': Ф
+        '3': М
+        '4': А
+        '5': М
+        '6': И
+        '7': И
+        '8': А
+        '9': С
+        '10': О
+        '11': Н
+        '12': Д
+  days:
+    format:
+      wide:
+        sun: кӀира
+        mon: оршот
+        tue: шинара
+        wed: кхаара
+        thu: еара
+        fri: пӀераска
+        sat: шуот
+      abbreviated:
+        sun: кӀи
+        mon: ор
+        tue: ши
+        wed: кха
+        thu: еа
+        fri: пӀе
+        sat: шуо
+      narrow:
+        sun: кӀи
+        mon: ор
+        tue: ши
+        wed: кха
+        thu: еа
+        fri: пӀе
+        sat: шуо
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: кӀ
+        mon: о
+        tue: ш
+        wed: кх
+        thu: е
+        fri: пӀ
+        sat: ш
+  quarters:
+    format:
+      wide:
+        '1': 1-гӀа квартал
+        '2': 2-гӀа квартал
+        '3': 3-гӀа квартал
+        '4': 4-гӀа квартал
+      abbreviated:
+        '1': 1-гӀа кв.
+        '2': 2-гӀа кв.
+        '3': 3-гӀа кв.
+        '4': 4-гӀа кв.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': вайн эра тӀеяле
+      '1': вайн эрехь
+    abbreviated:
+      '0': МАССО
+      '1': в. э
+    narrow: {}
+  date_formats:
+    full: y MMMM d, EEEE
+    long: y MMMM d
+    medium: y MMM d
+    short: y-MM-dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: MM-dd
+      MEd: MM-dd, E
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
+      yMEd: y-MM-dd, E
+      yMMM: y MMM
+      yMMMd: y MMM d
+      yMMMEd: y MMM d, E
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"

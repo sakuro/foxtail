@@ -1,6 +1,6 @@
 ---
 locale: eu
-generated_at: '2025-09-12T04:11:10Z'
+generated_at: '2025-09-12T05:00:17Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -104,6 +104,8 @@ datetime_formats:
         evening1: iluntzeko
         night1: gaueko
       abbreviated:
+        am: AM
+        pm: PM
         midnight: gauerdia
         morning1: goizald.
         morning2: goizeko
@@ -155,32 +157,49 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
+      Ed: d, E
       Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
       GyMMM: G y. 'urteko' MMM
       GyMMMd: G y. 'urteko' MMM d('a')
       GyMMMEd: G y. 'urteko' MMM d('a'), E
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: M/d
       MEd: M/d, E
+      MMM: LLL
       MMMd: MMM d('a')
       MMMEd: MMM d('a'), E
       MMMMd: MMMM'ren' d('a')
       MMMMW: MMMM'ren' W. 'astea'
+      ms: mm:ss
+      "y": "y"
       yM: y/M
       yMd: y/M/d
       yMEd: y/M/d, E
+      yMMM: y MMM
       yMMMd: y MMM d('a')
       yMMMEd: y MMM d('a'), E
       yMMMM: y('e')'ko' MMMM
-      yMMMMd: y('e')'ko' MMMM'ren' d('a')
-      yMMMMEd: y('e')'ko' MMMM'ren' d('a'), E
       yQQQ: y('e')'ko' QQQ
       yQQQQ: y('e')'ko' QQQQ
       yw: Y. 'urteko' w. 'astea'
+      yMMMMd: y('e')'ko' MMMM'ren' d('a')
+      yMMMMEd: y('e')'ko' MMMM'ren' d('a'), E

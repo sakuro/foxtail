@@ -1,13 +1,191 @@
 ---
 locale: kl_GL
-generated_at: '2025-09-12T04:11:14Z'
+generated_at: '2025-09-12T05:00:50Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': januaarip
+        '2': februaarip
+        '3': marsip
+        '4': apriilip
+        '5': maajip
+        '6': juunip
+        '7': juulip
+        '8': aggustip
+        '9': septembarip
+        '10': oktobarip
+        '11': novembarip
+        '12': decembarip
+      abbreviated:
+        '1': jan
+        '2': febr
+        '3': mar
+        '4': apr
+        '5': maj
+        '6': jun
+        '7': jul
+        '8': aug
+        '9': sept
+        '10': okt
+        '11': nov
+        '12': dec
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': januaari
+        '2': februaari
+        '3': marsi
+        '4': apriili
+        '5': maaji
+        '6': juuni
+        '7': juuli
+        '8': aggusti
+        '9': septembari
+        '10': oktobari
+        '11': novembari
+        '12': decembari
+      abbreviated: {}
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: sapaat
+        mon: ataasinngorneq
+        tue: marlunngorneq
+        wed: pingasunngorneq
+        thu: sisamanngorneq
+        fri: tallimanngorneq
+        sat: arfininngorneq
+      abbreviated:
+        sun: sap
+        mon: ata
+        tue: mar
+        wed: pin
+        thu: sis
+        fri: tal
+        sat: arf
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: S
+        mon: A
+        tue: M
+        wed: P
+        thu: S
+        fri: T
+        sat: A
+  quarters:
+    format:
+      wide:
+        '1': ukiup sisamararterutaa 1
+        '2': ukiup sisamararterutaa 2
+        '3': ukiup sisamararterutaa 3
+        '4': ukiup sisamararterutaa 4
+      abbreviated:
+        '1': S1
+        '2': S2
+        '3': S3
+        '4': S4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: ulloqeqqata-tungaa
+        pm: ulloqeqqata-kingorna
+      abbreviated:
+        am: u.t.
+        pm: u.k.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': før vesterlandsk tidsregning
+      '1': vesterlandsk tidsregning
+    abbreviated:
+      '0': f.v.t.
+      '1': v.t.
+    narrow:
+      '0': Kr.s.
+      '1': Kr.k.
+  date_formats:
+    full: EEEE dd MMMM y
+    long: dd MMMM y
+    medium: dd MMM y
+    short: y-MM-dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E, d
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E, d/M
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
+      yMEd: E, y-MM-dd
+      yMMM: LLL y
+      yMMMd: dd MMM y
+      yMMMEd: E, dd MMM y
+      yMMMM: y MMMM
+      yQQQ: y QQQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"

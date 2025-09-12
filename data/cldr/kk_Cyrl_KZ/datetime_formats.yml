@@ -1,13 +1,198 @@
 ---
 locale: kk_Cyrl_KZ
-generated_at: '2025-09-12T04:11:14Z'
+generated_at: '2025-09-12T05:00:49Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': қаңтар
+        '2': ақпан
+        '3': наурыз
+        '4': сәуір
+        '5': мамыр
+        '6': маусым
+        '7': шілде
+        '8': тамыз
+        '9': қыркүйек
+        '10': қазан
+        '11': қараша
+        '12': желтоқсан
+      abbreviated:
+        '1': қаң.
+        '2': ақп.
+        '3': нау.
+        '4': сәу.
+        '5': мам.
+        '6': мау.
+        '7': шіл.
+        '8': там.
+        '9': қыр.
+        '10': қаз.
+        '11': қар.
+        '12': жел.
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': Қаңтар
+        '2': Ақпан
+        '3': Наурыз
+        '4': Сәуір
+        '5': Мамыр
+        '6': Маусым
+        '7': Шілде
+        '8': Тамыз
+        '9': Қыркүйек
+        '10': Қазан
+        '11': Қараша
+        '12': Желтоқсан
+      abbreviated: {}
+      narrow:
+        '1': Қ
+        '2': А
+        '3': Н
+        '4': С
+        '5': М
+        '6': М
+        '7': Ш
+        '8': Т
+        '9': Қ
+        '10': Қ
+        '11': Қ
+        '12': Ж
+  days:
+    format:
+      wide:
+        sun: жексенбі
+        mon: дүйсенбі
+        tue: сейсенбі
+        wed: сәрсенбі
+        thu: бейсенбі
+        fri: жұма
+        sat: сенбі
+      abbreviated:
+        sun: жс
+        mon: дс
+        tue: сс
+        wed: ср
+        thu: бс
+        fri: жм
+        sat: сб
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: Ж
+        mon: Д
+        tue: С
+        wed: С
+        thu: Б
+        fri: Ж
+        sat: С
+  quarters:
+    format:
+      wide:
+        '1': І тоқсан
+        '2': ІІ тоқсан
+        '3': ІІІ тоқсан
+        '4': IV тоқсан
+      abbreviated:
+        '1': І тқс.
+        '2': ІІ тқс.
+        '3': ІІІ тқс.
+        '4': IV тқс.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+        midnight: түн жарымы
+        noon: түскі
+        morning1: таңғы
+        afternoon1: түстен кейінгі
+        evening1: кешкі
+        night1: түнгі
+    stand-alone:
+      wide: {}
+      abbreviated:
+        noon: талтүс
+        morning1: таң
+        afternoon1: түстен кейін
+        evening1: кеш
+        night1: түн
+  eras:
+    names:
+      '0': біздің заманымызға дейін
+      '1': Біздің заманымыз
+    abbreviated:
+      '0': б.з.д.
+      '1': б.з.
+    narrow: {}
+  date_formats:
+    full: y 'ж'. d MMMM, EEEE
+    long: y 'ж'. d MMMM
+    medium: y 'ж'. dd MMM
+    short: dd.MM.yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1}, {0}"
+    long: "{1}, {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      d: d
+      E: ccc
+      EBhm: E, B h:mm
+      EBhms: E, B h:mm:ss
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y 'ж'.
+      GyMd: dd-MM-GGGGG y
+      GyMMM: G y 'ж'. MMM
+      GyMMMd: G y 'ж'. d MMM
+      GyMMMEd: G y 'ж'. d MMM, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: dd.MM
+      MEd: dd.MM, E
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: d MMM, E
+      MMMMd: d MMMM
+      MMMMW: MMMM 'айының' W-'аптасы'
+      ms: mm:ss
+      "y": "y"
+      yM: MM.y
+      yMd: dd.MM.y
+      yMEd: dd.MM.y, E
+      yMMM: y 'ж'. MMM
+      yMMMd: y 'ж'. d MMM
+      yMMMEd: y 'ж'. d MMM, E
+      yMMMM: y 'ж'. MMMM
+      yQQQ: y 'ж'. QQQ
+      yQQQQ: y 'ж'. QQQQ
+      yw: Y 'жылдың' w-'аптасы'

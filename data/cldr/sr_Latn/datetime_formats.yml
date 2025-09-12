@@ -1,6 +1,6 @@
 ---
 locale: sr_Latn
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:35Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -103,6 +103,8 @@ datetime_formats:
         evening1: uveče
         night1: noću
       abbreviated:
+        am: AM
+        pm: PM
         midnight: ponoć
         noon: podne
         morning1: ujutru
@@ -142,38 +144,46 @@ datetime_formats:
     medium: "{1} {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
       Bhm: hh:mm B
       Bhms: hh:mm:ss B
+      d: d
       E: E
+      EBhm: E h:mm B
       EBhms: E, hh:mm:ss B
       Ed: E d.
       Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y. G
       GyMd: d.MM.y. GGGGG
       GyMMM: MMM y. G
       GyMMMd: d. MMM y. G
       GyMMMEd: E, d. MMM y. G
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d. M.
       MEd: E, d. M.
-      MMdd: dd.MM.
+      MMM: LLL
       MMMd: d. MMM
-      MMMdd: dd.MMM
       MMMEd: E d. MMM
       MMMMd: d. MMMM
-      MMMMEd: E, d. MMMM
       MMMMW: 'MMMM: W. ''nedelja'''
+      ms: mm:ss
       "y": y.
       yM: M. y.
       yMd: d. M. y.
       yMEd: E, d. M. y.
-      yMM: MM.y.
-      yMMdd: dd.MM.y.
       yMMM: MMM y.
       yMMMd: d. MMM y.
       yMMMEd: E, d. MMM y.
@@ -181,3 +191,8 @@ datetime_formats:
       yQQQ: QQQ y.
       yQQQQ: QQQQ y.
       yw: w. 'nedelja' 'u' Y.
+      MMdd: dd.MM.
+      MMMdd: dd.MMM
+      MMMMEd: E, d. MMMM
+      yMM: MM.y.
+      yMMdd: dd.MM.y.

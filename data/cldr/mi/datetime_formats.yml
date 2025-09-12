@@ -1,6 +1,6 @@
 ---
 locale: mi
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:01:02Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -108,13 +108,17 @@ datetime_formats:
   day_periods:
     format:
       wide: {}
-      abbreviated: {}
+      abbreviated:
+        am: AM
+        pm: PM
     stand-alone:
       wide: {}
       abbreviated: {}
   eras:
     names: {}
-    abbreviated: {}
+    abbreviated:
+      '0': BCE
+      '1': CE
     narrow: {}
   date_formats:
     full: EEEE, d MMMM y
@@ -132,24 +136,43 @@ datetime_formats:
     medium: "{1} {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E, d
       Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y G
+      GyMd: GGGGG y-MM-dd
       GyMMM: MMM y G
       GyMMMd: d MMM y G
       GyMMMEd: E, d MMM y G
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: dd-MM
       MEd: E, dd-MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
       MMMMW: "'wiki' W 'o' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: MM-y
       yMd: dd-MM-y
       yMEd: E, dd-MM-y

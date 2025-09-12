@@ -1,13 +1,175 @@
 ---
 locale: kxv_Latn
-generated_at: '2025-09-12T04:11:15Z'
+generated_at: '2025-09-12T05:00:54Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': pusu lenju
+        '2': maha lenju
+        '3': pagu lenju
+        '4': hire lenju
+        '5': bese lenju
+        '6': jaṭṭa lenju
+        '7': aasaḍi lenju
+        '8': srabĩ lenju
+        '9': bado lenju
+        '10': dasara lenju
+        '11': divi lenju
+        '12': pande lenju
+      abbreviated:
+        '1': pusu
+        '2': maha
+        '3': pagu
+        '4': hire
+        '5': bese
+        '6': jaṭṭa
+        '7': aasaḍi
+        '8': srabĩ
+        '9': bado
+        '10': dasara
+        '11': divi
+        '12': pande
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': pu
+        '2': ma
+        '3': pa
+        '4': hi
+        '5': be
+        '6': ja
+        '7': aa
+        '8': sra
+        '9': b
+        '10': da
+        '11': di
+        '12': pa
+  days:
+    format:
+      wide:
+        sun: aadi vara
+        mon: smbara
+        tue: mangaḍa
+        wed: pudara
+        thu: laki vara
+        fri: sukru vara
+        sat: sani vara
+      abbreviated:
+        sun: aadi
+        mon: smba
+        tue: manga
+        wed: puda
+        thu: laki
+        fri: sukru
+        sat: sani
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: aa
+        mon: s
+        tue: ma
+        wed: pu
+        thu: la
+        fri: su
+        sat: sa
+  quarters:
+    format:
+      wide:
+        '1': 1sṭ kuarṭr
+        '2': 2nḍ kuarṭr
+        '3': 3rḍ kuarṭr
+        '4': 4th kuarṭr
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: am
+        pm: pm
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': neeti nki jug
+      '1': neeti jug
+    abbreviated:
+      '0': bce
+      '1': ce
+    narrow: {}
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: d/M/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'aã' {0}"
+    long: "{1} 'aã' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      d: d
+      E: ccc
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: E d
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: GGGGG d/M/y
+      GyMMM: MMM G y
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E, d/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMM 'tã' 'vara' W
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y 'tã' 'vara' w

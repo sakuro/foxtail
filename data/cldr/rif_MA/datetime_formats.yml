@@ -1,13 +1,175 @@
 ---
 locale: rif_MA
-generated_at: '2025-09-12T04:11:18Z'
+generated_at: '2025-09-12T05:01:21Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': yennayer
+        '2': febrayer
+        '3': mars
+        '4': yebril
+        '5': mayyu
+        '6': yunyu
+        '7': yulyuz
+        '8': ɣucct
+        '9': cutenber
+        '10': kṭuber
+        '11': nuwember
+        '12': dujember
+      abbreviated:
+        '1': yen
+        '2': feb
+        '3': mar
+        '4': yeb
+        '5': may
+        '6': yun
+        '7': yul
+        '8': ɣuc
+        '9': cut
+        '10': kṭu
+        '11': nuw
+        '12': duj
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': "y"
+        '2': f
+        '3': m
+        '4': "y"
+        '5': m
+        '6': "y"
+        '7': "y"
+        '8': ɣ
+        '9': c
+        '10': k
+        '11': "n"
+        '12': d
+  days:
+    format:
+      wide:
+        sun: lḥed
+        mon: letnayen
+        tue: ttlat
+        wed: larbeɛ
+        thu: lexmis
+        fri: jjemɛa
+        sat: ssebt
+      abbreviated:
+        sun: lḥe
+        mon: let
+        tue: ttl
+        wed: lar
+        thu: lex
+        fri: jje
+        sat: sse
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: l
+        mon: l
+        tue: t
+        wed: l
+        thu: l
+        fri: j
+        sat: s
+  quarters:
+    format:
+      wide:
+        '1': rrbeɛ wis 1
+        '2': rrbeɛ wis 2
+        '3': rrbeɛ wis 3
+        '4': rrbeɛ wis 4
+      abbreviated:
+        '1': r1
+        '2': r2
+        '3': r3
+        '4': r4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': akud zzat i yeccu
+      '1': akud n yiḍa
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
+  date_formats:
+    full: EEEE dd MMMM y
+    long: dd MMMM y
+    medium: dd MMM y
+    short: dd/MM/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'ɣer' {0}"
+    long: "{1} 'ɣer' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: dd
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E dd
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: dd/MM/y G
+      GyMMM: MMM y G
+      GyMMMd: dd MMM y G
+      GyMMMEd: E dd MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: dd/MM
+      MEd: E dd/MM
+      MMM: LLL
+      MMMd: dd MMM
+      MMMEd: E dd MMM
+      MMMMd: dd MMMM
+      MMMMW: "'simana' 'wis' W 'zeg' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E dd/MM/y
+      yMMM: MMM y
+      yMMMd: dd MMM y
+      yMMMEd: E dd MMM y
+      yMMMM: MMMM y
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'simana' 'wis' w 'zeg' Y"

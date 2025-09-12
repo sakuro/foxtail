@@ -1,6 +1,6 @@
 ---
 locale: es_DO
-generated_at: '2025-09-12T04:08:30Z'
+generated_at: '2025-09-12T04:50:37Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -43,6 +43,9 @@ number_formats:
       symbol: "৳"
     BMD:
       symbol: "$"
+      display_names:
+        other: dólares de Bermudas
+        one: dólar de Bermudas
     BND:
       symbol: "$"
     BOB:
@@ -74,7 +77,7 @@ number_formats:
     DKK:
       symbol: kr
     DOP:
-      symbol: "$"
+      symbol: RD$
     EGP:
       symbol: E£
     ESP:
@@ -133,6 +136,9 @@ number_formats:
       symbol: "$"
     KZT:
       symbol: "₸"
+      display_names:
+        other: tengues kazajos
+        one: tenge kazajo
     LAK:
       symbol: "₭"
     LBP:
@@ -163,6 +169,9 @@ number_formats:
       symbol: "₦"
     NIO:
       symbol: C$
+      display_names:
+        other: córdobas nicaragüenses
+        one: córdoba nicaragüense
     NOK:
       symbol: kr
     NPR:
@@ -201,6 +210,9 @@ number_formats:
       symbol: "£"
     THB:
       symbol: "฿"
+      display_names:
+        other: bahts tailandeses
+        one: baht tailandes
     TOP:
       symbol: T$
     TRY:
@@ -231,10 +243,37 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
+      display_names:
+        one: "(unidad de moneda desconocida)"
+        other: "(moneda desconocida)"
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
+    ANG:
+      display_names:
+        other: florines de las Antillas Neerlandesas
+        one: florín de las Antillas Neerlandesas
+    HTG:
+      display_names:
+        other: gourdes haitianos
+        one: gourde haitiano
+    MWK:
+      display_names:
+        other: kwachas malauíes
+        one: kwacha malauí
+    SLE:
+      display_names:
+        other: leones
+        one: leone
+    SLL:
+      display_names:
+        other: leones (1964—2022)
+        one: leone (1964—2022)
+    UZS:
+      display_names:
+        other: soms uzbekos
+        one: som uzbeko
 currency_fractions:
   ADP:
     digits: 0

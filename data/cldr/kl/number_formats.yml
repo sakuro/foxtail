@@ -1,16 +1,16 @@
 ---
 locale: kl
-generated_at: '2025-09-12T04:09:20Z'
+generated_at: '2025-09-12T04:53:32Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
     minus_sign: "−"
-    exponential: "×10^"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: "×10^"
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -71,7 +71,10 @@ number_formats:
     CZK:
       symbol: Kč
     DKK:
-      symbol: kr
+      symbol: kr.
+      display_names:
+        other: danmarkimut koruuni
+        one: danskinut koruuni
     DOP:
       symbol: "$"
     EGP:
@@ -80,6 +83,9 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: euro
+        one: euro
     FJD:
       symbol: "$"
     FKP:
@@ -163,7 +169,10 @@ number_formats:
     NIO:
       symbol: C$
     NOK:
-      symbol: kr
+      symbol: Nkr
+      display_names:
+        other: norskit koruuni
+        one: norskit koruuni
     NPR:
       symbol: Rs
     NZD:
@@ -185,7 +194,10 @@ number_formats:
     SBD:
       symbol: "$"
     SEK:
-      symbol: kr
+      symbol: Skr
+      display_names:
+        other: svenskit koruuni
+        one: svenskit koruuni
     SGD:
       symbol: "$"
     SHP:

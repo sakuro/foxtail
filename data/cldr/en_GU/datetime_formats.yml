@@ -1,13 +1,272 @@
 ---
 locale: en_GU
-generated_at: '2025-09-12T04:11:10Z'
+generated_at: '2025-09-12T05:00:04Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': January
+        '2': February
+        '3': March
+        '4': April
+        '5': May
+        '6': June
+        '7': July
+        '8': August
+        '9': September
+        '10': October
+        '11': November
+        '12': December
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': May
+        '6': Jun
+        '7': Jul
+        '8': Aug
+        '9': Sep
+        '10': Oct
+        '11': Nov
+        '12': Dec
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+    stand-alone:
+      wide:
+        '1': January
+        '2': February
+        '3': March
+        '4': April
+        '5': May
+        '6': June
+        '7': July
+        '8': August
+        '9': September
+        '10': October
+        '11': November
+        '12': December
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': May
+        '6': Jun
+        '7': Jul
+        '8': Aug
+        '9': Sep
+        '10': Oct
+        '11': Nov
+        '12': Dec
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: Sunday
+        mon: Monday
+        tue: Tuesday
+        wed: Wednesday
+        thu: Thursday
+        fri: Friday
+        sat: Saturday
+      abbreviated:
+        sun: Sun
+        mon: Mon
+        tue: Tue
+        wed: Wed
+        thu: Thu
+        fri: Fri
+        sat: Sat
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
+    stand-alone:
+      wide:
+        sun: Sunday
+        mon: Monday
+        tue: Tuesday
+        wed: Wednesday
+        thu: Thursday
+        fri: Friday
+        sat: Saturday
+      abbreviated:
+        sun: Sun
+        mon: Mon
+        tue: Tue
+        wed: Wed
+        thu: Thu
+        fri: Fri
+        sat: Sat
+      narrow:
+        sun: S
+        mon: M
+        tue: T
+        wed: W
+        thu: T
+        fri: F
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1st quarter
+        '2': 2nd quarter
+        '3': 3rd quarter
+        '4': 4th quarter
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+    stand-alone:
+      wide:
+        '1': 1st quarter
+        '2': 2nd quarter
+        '3': 3rd quarter
+        '4': 4th quarter
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+  day_periods:
+    format:
+      wide:
+        midnight: midnight
+        am: am
+        noon: noon
+        pm: pm
+        morning1: in the morning
+        afternoon1: in the afternoon
+        evening1: in the evening
+        night1: at night
+      abbreviated:
+        am: am
+        pm: pm
+        midnight: midnight
+        noon: noon
+        morning1: in the morning
+        afternoon1: in the afternoon
+        evening1: in the evening
+        night1: at night
+    stand-alone:
+      wide:
+        midnight: midnight
+        am: AM
+        noon: noon
+        pm: PM
+        morning1: morning
+        afternoon1: afternoon
+        evening1: evening
+        night1: night
+      abbreviated:
+        midnight: midnight
+        am: AM
+        noon: noon
+        pm: PM
+        morning1: morning
+        afternoon1: afternoon
+        evening1: evening
+        night1: night
+  eras:
+    names:
+      '0': Before Common Era
+      '1': Common Era
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow:
+      '0': B
+      '1': A
+  date_formats:
+    full: EEEE, MMMM d, y
+    long: MMMM d, y
+    medium: MMM d, y
+    short: M/d/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'at' {0}"
+    long: "{1} 'at' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: y G
+      GyMd: M/d/y G
+      GyMMM: MMM y G
+      GyMMMd: MMM d, y G
+      GyMMMEd: E, MMM d, y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: M/d
+      MEd: E, M/d
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: E, MMM d
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: M/d/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"

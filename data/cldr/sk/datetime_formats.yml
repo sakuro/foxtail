@@ -1,6 +1,6 @@
 ---
 locale: sk
-generated_at: '2025-09-12T04:11:19Z'
+generated_at: '2025-09-12T05:01:30Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -116,6 +116,8 @@ datetime_formats:
         evening1: večer
         night1: v noci
       abbreviated:
+        am: AM
+        pm: PM
         midnight: o poln.
         noon: napol.
         morning1: ráno
@@ -164,16 +166,23 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
       d: d.
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E d.
       Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y G
       GyMd: d. M. y GGGGG
       GyMMM: LLLL y G
       GyMMMd: d. M. y G
       GyMMMEd: E d. M. y G
-      GyMMMMd: d. M. y G
       h: h a
       H: H
       hm: h:mm a
@@ -187,12 +196,13 @@ datetime_formats:
       M: L.
       Md: d. M.
       MEd: E d. M.
+      MMM: LLL
       MMMd: d. M.
       MMMEd: E d. M.
       MMMMd: d. MMMM
-      MMMMEd: E d. MMMM
       MMMMW: W. 'týždeň' MMMM
-      mmss: mm:ss
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d. M. y
       yMEd: E d. M. y
@@ -200,7 +210,10 @@ datetime_formats:
       yMMMd: d. M. y
       yMMMEd: E d. M. y
       yMMMM: LLLL y
-      yMMMMd: d. MMMM y
       yQQQ: QQQ y
       yQQQQ: QQQQ y
       yw: w. 'týždeň' 'roka' Y
+      GyMMMMd: d. M. y G
+      MMMMEd: E d. MMMM
+      mmss: mm:ss
+      yMMMMd: d. MMMM y

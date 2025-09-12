@@ -1,6 +1,6 @@
 ---
 locale: hu
-generated_at: '2025-09-12T04:11:13Z'
+generated_at: '2025-09-12T05:00:40Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -113,10 +113,10 @@ datetime_formats:
         night1: éjjel
         night2: hajnal
       abbreviated:
-        midnight: éjfél
         am: de.
-        noon: dél
         pm: du.
+        midnight: éjfél
+        noon: dél
         morning1: reggel
         morning2: de.
         afternoon1: du.
@@ -161,11 +161,15 @@ datetime_formats:
       Bh: B h
       Bhm: B h:mm
       Bhms: B h:mm:ss
+      d: d
+      E: ccc
       EBhm: E B h:mm
       EBhms: E B h:mm:ss
       Ed: d., E
       Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: G y.
       GyMd: GGGGG y. MM. dd.
       GyMMM: G y. MMM
@@ -178,14 +182,18 @@ datetime_formats:
       hms: a h:mm:ss
       Hms: H:mm:ss
       hmsv: a h:mm:ss v
+      Hmsv: HH:mm:ss v
       hmv: a h:mm v
+      Hmv: HH:mm v
+      M: L
       Md: M. d.
       MEd: M. d., E
+      MMM: LLL
       MMMd: MMM d.
       MMMEd: MMM d., E
       MMMMd: MMMM d.
       MMMMW: MMMM W. 'hete'
-      mmss: mm:ss
+      ms: mm:ss
       "y": y.
       yM: y. M.
       yMd: y. MM. dd.
@@ -197,3 +205,4 @@ datetime_formats:
       yQQQ: y. QQQ
       yQQQQ: y. QQQQ
       yw: Y w. 'hete'
+      mmss: mm:ss

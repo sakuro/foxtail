@@ -1,48 +1,203 @@
 ---
 locale: sq_MK
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:33Z'
 cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide: {}
-      abbreviated: {}
+      wide:
+        '1': janar
+        '2': shkurt
+        '3': mars
+        '4': prill
+        '5': maj
+        '6': qershor
+        '7': korrik
+        '8': gusht
+        '9': shtator
+        '10': tetor
+        '11': nëntor
+        '12': dhjetor
+      abbreviated:
+        '1': jan
+        '2': shk
+        '3': mar
+        '4': pri
+        '5': maj
+        '6': qer
+        '7': korr
+        '8': gush
+        '9': sht
+        '10': tet
+        '11': nën
+        '12': dhj
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow: {}
+      narrow:
+        '1': j
+        '2': sh
+        '3': m
+        '4': p
+        '5': m
+        '6': q
+        '7': k
+        '8': g
+        '9': sh
+        '10': t
+        '11': "n"
+        '12': dh
   days:
     format:
-      wide: {}
-      abbreviated: {}
+      wide:
+        sun: e diel
+        mon: e hënë
+        tue: e martë
+        wed: e mërkurë
+        thu: e enjte
+        fri: e premte
+        sat: e shtunë
+      abbreviated:
+        sun: die
+        mon: hën
+        tue: mar
+        wed: mër
+        thu: enj
+        fri: pre
+        sat: sht
       narrow: {}
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow: {}
+      narrow:
+        sun: d
+        mon: h
+        tue: m
+        wed: m
+        thu: e
+        fri: p
+        sat: sh
   quarters:
     format:
-      wide: {}
-      abbreviated: {}
+      wide:
+        '1': tremujori i parë
+        '2': tremujori i dytë
+        '3': tremujori i tretë
+        '4': tremujori i katërt
+      abbreviated:
+        '1': tremujori I
+        '2': tremujori II
+        '3': tremujori III
+        '4': tremujori IV
     stand-alone:
-      wide: {}
-      abbreviated: {}
+      wide:
+        '1': Tremujori i 1-rë
+        '2': Tremujori i 2-të
+        '3': Tremujori i 3-të
+        '4': Tremujori i 4-t
+      abbreviated:
+        '1': Tremujori I
+        '2': Tremujori II
+        '3': Tremujori III
+        '4': Tremujori IV
   day_periods:
     format:
-      wide: {}
-      abbreviated: {}
+      wide:
+        am: e paradites
+        pm: e pasdites
+      abbreviated:
+        am: p.d.
+        pm: m.d.
+        midnight: e mesnatës
+        noon: e mesditës
+        morning1: e mëngjesit
+        morning2: e paradites
+        afternoon1: e pasdites
+        evening1: e mbrëmjes
+        night1: e natës
     stand-alone:
-      wide: {}
-      abbreviated: {}
+      wide:
+        am: paradite
+        pm: pasdite
+      abbreviated:
+        midnight: mesnatë
+        noon: mesditë
+        morning1: mëngjes
+        morning2: paradite
+        afternoon1: pasdite
+        evening1: mbrëmje
+        night1: natë
   eras:
-    names: {}
-    abbreviated: {}
+    names:
+      '0': para erës sonë
+      '1': erës sonë
+    abbreviated:
+      '0': p.e.s.
+      '1': e.s.
     narrow: {}
-  date_formats: {}
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: d.M.yy
   time_formats:
     full: HH:mm:ss zzzz
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-  datetime_formats: {}
+  datetime_formats:
+    full: "{1} 'në' {0}"
+    long: "{1} 'në' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E, d
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: d.M.y GGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a, v
+      Hmsv: HH:mm:ss, v
+      hmv: h:mm a, v
+      Hmv: HH:mm, v
+      M: L
+      Md: d.M
+      MEd: E, d.M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: "'java' W 'e' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M.y
+      yMd: d.M.y
+      yMEd: E, d.M.y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ, y
+      yQQQQ: QQQQ, y
+      yw: "'java' w 'e' Y"
+      MMdd: d.M
+      MMMMEd: E, d MMMM

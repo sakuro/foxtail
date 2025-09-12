@@ -1,6 +1,6 @@
 ---
 locale: vi
-generated_at: '2025-09-12T04:11:22Z'
+generated_at: '2025-09-12T05:01:49Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -59,7 +59,19 @@ datetime_formats:
         '10': Tháng 10
         '11': Tháng 11
         '12': Tháng 12
-      narrow: {}
+      narrow:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        '8': '8'
+        '9': '9'
+        '10': '10'
+        '11': '11'
+        '12': '12'
   days:
     format:
       wide:
@@ -119,10 +131,10 @@ datetime_formats:
         evening1: tối
         night1: đêm
       abbreviated:
-        midnight: nửa đêm
         am: SA
-        noon: TR
         pm: CH
+        midnight: nửa đêm
+        noon: TR
         morning1: sáng
         afternoon1: chiều
         evening1: tối
@@ -157,6 +169,10 @@ datetime_formats:
     short: "{0} {1}"
     available_formats:
       Bh: h 'giờ' B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
       EBhm: h:mm B E
       EBhms: h:mm:ss B E
       Ed: E, 'ngày' d
@@ -174,21 +190,24 @@ datetime_formats:
       hm: h:mm a
       Hm: H:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E, d/M
-      MMdd: dd-MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E, d MMM
       MMMMd: d MMMM
-      MMMMEd: E, d MMMM
       MMMMW: "'tuần' W 'của' 'tháng' M"
-      mmss: mm:ss
+      ms: mm:ss
+      "y": "y"
       yM: M/y
       yMd: d/M/y
       yMEd: E, d/M/y
-      yMM: "'tháng' MM, y"
       yMMM: MMM y
       yMMMd: d MMM, y
       yMMMEd: E, d MMM, y
@@ -196,3 +215,7 @@ datetime_formats:
       yQQQ: QQQ y
       yQQQQ: QQQQ 'năm' y
       yw: "'tuần' w 'của' 'năm' Y"
+      MMdd: dd-MM
+      MMMMEd: E, d MMMM
+      mmss: mm:ss
+      yMM: "'tháng' MM, y"

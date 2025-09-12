@@ -1,13 +1,162 @@
 ---
 locale: mgo_CM
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:01:01Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': iməg mbegtug
+        '2': imeg àbùbì
+        '3': imeg mbəŋchubi
+        '4': iməg ngwə̀t
+        '5': iməg fog
+        '6': iməg ichiibɔd
+        '7': iməg àdùmbə̀ŋ
+        '8': iməg ichika
+        '9': iməg kud
+        '10': iməg tèsiʼe
+        '11': iməg zò
+        '12': iməg krizmed
+      abbreviated:
+        '1': mbegtug
+        '2': imeg àbùbì
+        '3': imeg mbəŋchubi
+        '4': iməg ngwə̀t
+        '5': iməg fog
+        '6': iməg ichiibɔd
+        '7': iməg àdùmbə̀ŋ
+        '8': iməg ichika
+        '9': iməg kud
+        '10': iməg tèsiʼe
+        '11': iməg zò
+        '12': iməg krizmed
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': M1
+        '2': A2
+        '3': M3
+        '4': N4
+        '5': F5
+        '6': I6
+        '7': A7
+        '8': I8
+        '9': K9
+        '10': '10'
+        '11': '11'
+        '12': '12'
+  days:
+    format:
+      wide:
+        sun: Aneg 1
+        mon: Aneg 2
+        tue: Aneg 3
+        wed: Aneg 4
+        thu: Aneg 5
+        fri: Aneg 6
+        sat: Aneg 7
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: '1'
+        mon: '2'
+        tue: '3'
+        wed: '4'
+        thu: '5'
+        fri: '6'
+        sat: '7'
+  quarters:
+    format:
+      wide:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
+  date_formats:
+    full: EEEE, y MMMM dd
+    long: y MMMM d
+    medium: y MMM d
+    short: y-MM-dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: MM-dd
+      MEd: MM-dd, E
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
+      yMEd: y-MM-dd, E
+      yMMM: y MMM
+      yMMMd: y MMM d
+      yMMMEd: y MMM d, E
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"

@@ -1,6 +1,6 @@
 ---
 locale: oc
-generated_at: '2025-09-12T04:11:17Z'
+generated_at: '2025-09-12T05:01:12Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -101,7 +101,9 @@ datetime_formats:
   day_periods:
     format:
       wide: {}
-      abbreviated: {}
+      abbreviated:
+        am: AM
+        pm: PM
     stand-alone:
       wide: {}
       abbreviated: {}
@@ -132,10 +134,15 @@ datetime_formats:
     available_formats:
       Bh: h'h' B
       Bhm: h'h'mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
       EBhm: E h'h'mm B
+      EBhms: E h:mm:ss B
       Ed: ccc d
       Ehm: E h'h'mm a
       EHm: E HH'h'mm
+      Ehms: E h:mm:ss a
       EHms: E HH'h'mm ss 'seg'.
       Gy: y G
       GyMd: dd/MM/Y G
@@ -143,19 +150,25 @@ datetime_formats:
       GyMMMd: d MMM y G
       GyMMMEd: E d MMM y G
       h: h'h' a
+      H: HH
       hm: h'h'mm a
       Hm: HH'h'mm
       hms: h'h'mm:ss a
       Hms: HH'h'mm ss 'seg'.
+      hmsv: h:mm:ss a v
       Hmsv: HH'h'mm ss 'seg'. v
       hmv: h'h'mm a v
       Hmv: HH'h'mm v
+      M: L
       Md: dd/MM
       MEd: E dd/MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: E d MMM
       MMMMd: d MMMM
       MMMMW: "'setmana' W MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: MM/y
       yMd: dd/MM/y
       yMEd: E dd/MM/y

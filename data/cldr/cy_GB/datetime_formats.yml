@@ -1,13 +1,210 @@
 ---
 locale: cy_GB
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:54Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Ionawr
+        '2': Chwefror
+        '3': Mawrth
+        '4': Ebrill
+        '5': Mai
+        '6': Mehefin
+        '7': Gorffennaf
+        '8': Awst
+        '9': Medi
+        '10': Hydref
+        '11': Tachwedd
+        '12': Rhagfyr
+      abbreviated:
+        '1': Ion
+        '2': Chwef
+        '3': Maw
+        '4': Ebr
+        '5': Mai
+        '6': Meh
+        '7': Gorff
+        '8': Awst
+        '9': Medi
+        '10': Hyd
+        '11': Tach
+        '12': Rhag
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        '1': Ion
+        '2': Chw
+        '3': Maw
+        '4': Ebr
+        '5': Mai
+        '6': Meh
+        '7': Gor
+        '8': Awst
+        '9': Medi
+        '10': Hyd
+        '11': Tach
+        '12': Rhag
+      narrow:
+        '1': I
+        '2': Ch
+        '3': M
+        '4': E
+        '5': M
+        '6': M
+        '7': G
+        '8': A
+        '9': M
+        '10': H
+        '11': T
+        '12': Rh
+  days:
+    format:
+      wide:
+        sun: Dydd Sul
+        mon: Dydd Llun
+        tue: Dydd Mawrth
+        wed: Dydd Mercher
+        thu: Dydd Iau
+        fri: Dydd Gwener
+        sat: Dydd Sadwrn
+      abbreviated:
+        sun: Sul
+        mon: Llun
+        tue: Maw
+        wed: Mer
+        thu: Iau
+        fri: Gwen
+        sat: Sad
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        sun: Sul
+        mon: Llun
+        tue: Maw
+        wed: Mer
+        thu: Iau
+        fri: Gwe
+        sat: Sad
+      narrow:
+        sun: S
+        mon: Ll
+        tue: M
+        wed: M
+        thu: I
+        fri: G
+        sat: S
+  quarters:
+    format:
+      wide:
+        '1': chwarter 1af
+        '2': 2il chwarter
+        '3': 3ydd chwarter
+        '4': 4ydd chwarter
+      abbreviated:
+        '1': Ch1
+        '2': Ch2
+        '3': Ch3
+        '4': Ch4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: yb
+        pm: yh
+      abbreviated:
+        am: AM
+        pm: PM
+        midnight: canol nos
+        noon: canol dydd
+        morning1: y bore
+        afternoon1: y prynhawn
+        evening1: yr hwyr
+    stand-alone:
+      wide:
+        morning1: y bore
+        afternoon1: y prynhawn
+        evening1: yr hwyr
+      abbreviated:
+        morning1: bore
+        afternoon1: prynhawn
+        evening1: yr hwyr
+  eras:
+    names:
+      '0': Cyn Cyfnod Cyffredin
+      '1': Cyfnod Cyffredin
+    abbreviated:
+      '0': CCC
+      '1': CYCY
+    narrow:
+      '0': C
+      '1': O
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: dd/MM/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'am' {0}"
+    long: "{1} 'am' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: M/d/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d/M
+      MEd: E, d/M
+      MMM: LLL
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: MMMM d
+      MMMMW: "'wythnos' W 'o' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'wythnos' w 'o' Y"
+      yQ: Q y

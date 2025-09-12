@@ -1,16 +1,16 @@
 ---
 locale: en_AU
-generated_at: '2025-09-12T04:08:08Z'
+generated_at: '2025-09-12T04:49:07Z'
 cldr_version: '46'
 number_formats:
   symbols:
-    exponential: e
     decimal: "."
     group: ","
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: e
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -24,6 +24,9 @@ number_formats:
   currencies:
     AFN:
       symbol: "؋"
+      display_names:
+        one: Afghan Afghani
+        other: Afghan Afghanis
     AMD:
       symbol: "֏"
     AOA:
@@ -31,23 +34,35 @@ number_formats:
     ARS:
       symbol: "$"
     AUD:
-      symbol: A$
+      symbol: "$"
     AZN:
       symbol: "₼"
     BAM:
       symbol: KM
+      display_names:
+        other: Bosnia-Herzegovina convertible marka
+        one: Bosnia-Herzegovina convertible marka
     BBD:
       symbol: "$"
+      display_names:
+        other: Barbados dollars
+        one: Barbados dollar
     BDT:
-      symbol: "৳"
+      symbol: Tk
     BMD:
       symbol: "$"
+      display_names:
+        other: Bermuda dollars
+        one: Bermuda dollar
     BND:
       symbol: "$"
     BOB:
       symbol: Bs
+      display_names:
+        other: Bolivian boliviano
+        one: Bolivian boliviano
     BRL:
-      symbol: R$
+      symbol: BRL
     BSD:
       symbol: "$"
     BWP:
@@ -55,11 +70,11 @@ number_formats:
     BZD:
       symbol: "$"
     CAD:
-      symbol: CA$
+      symbol: CAD
     CLP:
       symbol: "$"
     CNY:
-      symbol: CN¥
+      symbol: CNY
     COP:
       symbol: "$"
     CRC:
@@ -67,7 +82,7 @@ number_formats:
     CUC:
       symbol: "$"
     CUP:
-      symbol: "$"
+      symbol: "₱"
     CZK:
       symbol: Kč
     DKK:
@@ -75,19 +90,22 @@ number_formats:
     DOP:
       symbol: "$"
     EGP:
-      symbol: E£
+      symbol: "£"
     ESP:
       symbol: "₧"
     EUR:
-      symbol: "€"
+      symbol: EUR
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
-      symbol: "£"
+      symbol: GBP
     GEL:
       symbol: "₾"
+      display_names:
+        one: Georgian lari
+        other: Georgian lari
     GHS:
       symbol: GH₵
     GIP:
@@ -99,7 +117,7 @@ number_formats:
     GYD:
       symbol: "$"
     HKD:
-      symbol: HK$
+      symbol: HKD
     HNL:
       symbol: L
     HRK:
@@ -109,15 +127,18 @@ number_formats:
     IDR:
       symbol: Rp
     ILS:
-      symbol: "₪"
+      symbol: ILS
+      display_names:
+        other: Israeli sheckles
+        one: Israeli shekel
     INR:
-      symbol: "₹"
+      symbol: INR
     ISK:
-      symbol: kr
+      symbol: Kr
     JMD:
       symbol: "$"
     JPY:
-      symbol: JP¥
+      symbol: JPY
     KGS:
       symbol: "⃀"
     KHR:
@@ -127,13 +148,19 @@ number_formats:
     KPW:
       symbol: "₩"
     KRW:
-      symbol: "₩"
+      symbol: KRW
     KYD:
       symbol: "$"
     KZT:
       symbol: "₸"
+      display_names:
+        one: Kazakhstani tenge
+        other: Kazakhstani tenge
     LAK:
       symbol: "₭"
+      display_names:
+        one: Laotian kip
+        other: Laotian kip
     LBP:
       symbol: L£
     LKR:
@@ -146,6 +173,8 @@ number_formats:
       symbol: Ls
     MGA:
       symbol: Ar
+      display_names:
+        other: Malagasy ariary
     MMK:
       symbol: K
     MNT:
@@ -153,7 +182,7 @@ number_formats:
     MUR:
       symbol: Rs
     MXN:
-      symbol: MX$
+      symbol: MXN
     MYR:
       symbol: RM
     NAD:
@@ -167,31 +196,40 @@ number_formats:
     NPR:
       symbol: Rs
     NZD:
-      symbol: NZ$
+      symbol: NZD
     PHP:
-      symbol: "₱"
+      symbol: PHP
     PKR:
       symbol: Rs
     PLN:
       symbol: zł
     PYG:
-      symbol: "₲"
+      symbol: Gs
     RON:
       symbol: lei
     RUB:
       symbol: "₽"
+      display_names:
+        other: Russian roubles
+        one: Russian rouble
     RWF:
       symbol: RF
     SBD:
       symbol: "$"
     SEK:
-      symbol: kr
+      symbol: Kr
     SGD:
       symbol: "$"
     SHP:
       symbol: "£"
+      display_names:
+        other: St Helena pounds
+        one: St Helena pound
     SRD:
       symbol: "$"
+      display_names:
+        other: Suriname dollars
+        one: Suriname dollar
     SSP:
       symbol: "£"
     STN:
@@ -204,36 +242,115 @@ number_formats:
       symbol: T$
     TRY:
       symbol: "₺"
+      display_names:
+        one: Turkish lira
+        other: Turkish lire
     TTD:
       symbol: "$"
     TWD:
-      symbol: NT$
+      symbol: TWD
     UAH:
       symbol: "₴"
     USD:
-      symbol: US$
+      symbol: USD
     UYU:
-      symbol: "$"
+      symbol: "$U"
+      display_names:
+        other: Peso Uruguayo
+        one: Peso Uruguayo
     VEF:
       symbol: Bs
     VND:
-      symbol: "₫"
+      symbol: VND
+      display_names:
+        one: Vietnamese dong
+        other: Vietnamese dongs
     XAF:
-      symbol: FCFA
+      symbol: XAF
     XCD:
-      symbol: EC$
+      symbol: XCD
     XCG:
       symbol: Cg.
     XOF:
-      symbol: F CFA
+      symbol: XOF
     XPF:
-      symbol: CFPF
+      symbol: CFP
     XXX:
       symbol: "¤"
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
+    BYB:
+      display_names:
+        other: Belarusian new roubles (1994–1999)
+        one: Belarusian new rouble (1994–1999)
+    BYN:
+      display_names:
+        other: Belarusian roubles
+        one: Belarusian rouble
+    BYR:
+      display_names:
+        other: Belarusian roubles (2000–2016)
+        one: Belarusian rouble (2000–2016)
+    ETB:
+      display_names:
+        other: Ethiopian birrs
+        one: Ethiopian birr
+    LSL:
+      display_names:
+        other: Lesotho lotis
+        one: Lesotho loti
+    LVR:
+      display_names:
+        other: Latvian roubles
+        one: Latvian rouble
+    MVR:
+      display_names:
+        other: Maldivian rufiyaas
+        one: Maldivian rufiyaa
+    RUR:
+      display_names:
+        other: Russian roubles (1991–1998)
+        one: Russian rouble (1991–1998)
+    TJR:
+      display_names:
+        other: Tajikistani roubles
+        one: Tajikistani rouble
+    VUV:
+      display_names:
+        other: Vanuatu vatus
+        one: Vanuatu vatu
+    MKD:
+      display_names:
+        one: Macedonian denar
+        other: Macedonian denar
+    PGK:
+      display_names:
+        one: Papua New Guinean kina
+        other: Papua New Guinean kinas
+    QAR:
+      display_names:
+        one: Qatari riyal
+        other: Quatari riyals
+    SCR:
+      symbol: Rs
+    SLL:
+      display_names:
+        other: Sierra Leonean leones (1964–2022)
+        one: Sierra Leonean leone (1964–2022)
+    UZS:
+      display_names:
+        one: Uzbekistani som
+        other: Uzbekistani soms
+    VES:
+      display_names:
+        other: Venezuelan bolívar
+        one: Venezuelan bolívar
+    WST:
+      display_names:
+        one: Samoan tala
+        other: Samoan talas
 currency_fractions:
   ADP:
     digits: 0

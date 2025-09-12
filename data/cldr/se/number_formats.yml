@@ -1,16 +1,16 @@
 ---
 locale: se
-generated_at: '2025-09-12T04:10:21Z'
+generated_at: '2025-09-12T04:56:57Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
     minus_sign: "−"
-    exponential: "·10^"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: "·10^"
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -71,7 +71,7 @@ number_formats:
     CZK:
       symbol: Kč
     DKK:
-      symbol: kr
+      symbol: Dkr
     DOP:
       symbol: "$"
     EGP:
@@ -80,12 +80,15 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: euro
+        one: euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
-      symbol: "£"
+      symbol: GB£
     GEL:
       symbol: "₾"
     GHS:
@@ -113,7 +116,7 @@ number_formats:
     INR:
       symbol: "₹"
     ISK:
-      symbol: kr
+      symbol: Ikr
     JMD:
       symbol: "$"
     JPY:
@@ -164,6 +167,9 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
+      display_names:
+        other: norgga kruvdno
+        one: norgga kruvdno
     NPR:
       symbol: Rs
     NZD:
@@ -185,7 +191,10 @@ number_formats:
     SBD:
       symbol: "$"
     SEK:
-      symbol: kr
+      symbol: Skr
+      display_names:
+        other: ruoŧŧa kruvdno
+        one: ruoŧŧa kruvdno
     SGD:
       symbol: "$"
     SHP:
@@ -234,6 +243,18 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
+    FIM:
+      display_names:
+        other: suoma márkki
+        one: suoma márkki
+    XAG:
+      display_names:
+        other: uns silba
+        one: uns silba
+    XAU:
+      display_names:
+        other: uns golli
+        one: uns golli
 currency_fractions:
   ADP:
     digits: 0

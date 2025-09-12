@@ -1,13 +1,203 @@
 ---
 locale: hsb_DE
-generated_at: '2025-09-12T04:11:13Z'
+generated_at: '2025-09-12T05:00:40Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': januara
+        '2': februara
+        '3': měrca
+        '4': apryla
+        '5': meje
+        '6': junija
+        '7': julija
+        '8': awgusta
+        '9': septembra
+        '10': oktobra
+        '11': nowembra
+        '12': decembra
+      abbreviated:
+        '1': jan.
+        '2': feb.
+        '3': měr.
+        '4': apr.
+        '5': mej.
+        '6': jun.
+        '7': jul.
+        '8': awg.
+        '9': sep.
+        '10': okt.
+        '11': now.
+        '12': dec.
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': januar
+        '2': februar
+        '3': měrc
+        '4': apryl
+        '5': meja
+        '6': junij
+        '7': julij
+        '8': awgust
+        '9': september
+        '10': oktober
+        '11': nowember
+        '12': december
+      abbreviated:
+        '1': jan
+        '2': feb
+        '3': měr
+        '4': apr
+        '5': mej
+        '6': jun
+        '7': jul
+        '8': awg
+        '9': sep
+        '10': okt
+        '11': now
+        '12': dec
+      narrow:
+        '1': j
+        '2': f
+        '3': m
+        '4': a
+        '5': m
+        '6': j
+        '7': j
+        '8': a
+        '9': s
+        '10': o
+        '11': "n"
+        '12': d
+  days:
+    format:
+      wide:
+        sun: njedźela
+        mon: póndźela
+        tue: wutora
+        wed: srjeda
+        thu: štwórtk
+        fri: pjatk
+        sat: sobota
+      abbreviated:
+        sun: nje
+        mon: pón
+        tue: wut
+        wed: srj
+        thu: štw
+        fri: pja
+        sat: sob
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: "n"
+        mon: p
+        tue: w
+        wed: s
+        thu: š
+        fri: p
+        sat: s
+  quarters:
+    format:
+      wide:
+        '1': 1. kwartal
+        '2': 2. kwartal
+        '3': 3. kwartal
+        '4': 4. kwartal
+      abbreviated:
+        '1': kw1
+        '2': kw2
+        '3': kw3
+        '4': kw4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: dopołdnja
+        pm: popołdnju
+      abbreviated:
+        am: dop.
+        pm: pop.
+    stand-alone:
+      wide:
+        am: dopołdnja
+        pm: popołdnju
+      abbreviated: {}
+  eras:
+    names:
+      '0': před našim ličenjom časa
+      '1': našeho ličenja časa
+    abbreviated:
+      '0': př.n.l.č.
+      '1': n.l.č.
+    narrow: {}
+  date_formats:
+    full: EEEE, d. MMMM y
+    long: d. MMMM y
+    medium: d.M.y
+    short: d.M.yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'w' {0}"
+    long: "{1} 'w' {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d.
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E, d.
+      Ehm: E, h:mm a
+      EHm: E, H:mm 'hodź'.
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: d.M.y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d. MMM y G
+      GyMMMEd: E, d. MMM y G
+      h: h a
+      H: H 'hodź'.
+      hm: h:mm a
+      Hm: H:mm 'hodź'.
+      hms: h:mm:ss a
+      Hms: H:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: H:mm:ss v
+      hmv: h:mm a v
+      Hmv: H:mm v
+      M: L
+      Md: d.M.
+      MEd: E, d.M.
+      MMM: LLL
+      MMMd: d. MMM
+      MMMEd: E, d. MMM
+      MMMMd: d. MMMM
+      MMMMW: W. 'tydźeń' MMMM
+      ms: mm:ss
+      "y": "y"
+      yM: M.y
+      yMd: d.M.y
+      yMEd: E, d.M.y
+      yMMM: MMM y
+      yMMMd: d. MMM y
+      yMMMEd: E, d. MMM y
+      yMMMM: LLLL y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: w. 'tydźeń' 'lěta' Y

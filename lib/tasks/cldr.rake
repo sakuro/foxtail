@@ -26,6 +26,7 @@ DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
 # Clean tasks
 CLEAN.include(CLDR_EXTRACT_DIR)
 CLOBBER.include(CLDR_ZIP_PATH, PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES)
+CLOBBER.exclude(File.join(DATA_DIR, "README.md"))
 
 namespace :cldr do
   desc "Download CLDR core data to tmp directory"

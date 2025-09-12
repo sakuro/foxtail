@@ -1,13 +1,179 @@
 ---
 locale: trv_TW
-generated_at: '2025-09-12T04:11:21Z'
+generated_at: '2025-09-12T05:01:44Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': Kingal idas
+        '2': Dha idas
+        '3': Tru idas
+        '4': Spat idas
+        '5': Rima idas
+        '6': Mataru idas
+        '7': Empitu idas
+        '8': Maspat idas
+        '9': Mngari idas
+        '10': Maxal idas
+        '11': Maxal kingal idas
+        '12': Maxal dha idas
+      abbreviated:
+        '1': Kii
+        '2': Dhi
+        '3': Tri
+        '4': Spi
+        '5': Rii
+        '6': Mti
+        '7': Emi
+        '8': Mai
+        '9': Mni
+        '10': Mxi
+        '11': Mxk
+        '12': Mxd
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': K
+        '2': D
+        '3': T
+        '4': S
+        '5': R
+        '6': M
+        '7': E
+        '8': P
+        '9': A
+        '10': M
+        '11': K
+        '12': D
+  days:
+    format:
+      wide:
+        sun: Jiyax sngayan
+        mon: tgKingal jiyax iyax sngayan
+        tue: tgDha jiyax iyax sngayan
+        wed: tgTru jiyax iyax sngayan
+        thu: tgSpac jiyax iyax sngayan
+        fri: tgRima jiyax iyax sngayan
+        sat: tgMataru jiyax iyax sngayan
+      abbreviated:
+        sun: Emp
+        mon: Kin
+        tue: Dha
+        wed: Tru
+        thu: Spa
+        fri: Rim
+        sat: Mat
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: E
+        mon: K
+        tue: D
+        wed: T
+        thu: S
+        fri: R
+        sat: M
+  quarters:
+    format:
+      wide:
+        '1': mnprxan
+        '2': mndha
+        '3': mntru
+        '4': mnspat
+      abbreviated:
+        '1': mn1
+        '2': mn2
+        '3': mn3
+        '4': mn4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: Brax kndaax
+        pm: Baubau kndaax
+      abbreviated:
+        am: AM
+        pm: PM
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Brah jikan Yisu Thulang
+      '1': Bukuy jikan Yisu Thulang
+    abbreviated:
+      '0': BRY
+      '1': BUY
+    narrow: {}
+  date_formats:
+    full: EEEE, y MMMM dd
+    long: y MMMM d
+    medium: y MMM d
+    short: y-MM-dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: H:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: M-d
+      MEd: E, M-d
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: E MMM d
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-M
+      yMd: y-MM-dd
+      yMEd: E, y-M-d
+      yMMM: y MMM
+      yMMMd: y MMM d
+      yMMMEd: E, y MMM d
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"
+      MMMMEd: E MMMM d
+      yQ: y Q

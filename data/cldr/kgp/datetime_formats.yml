@@ -1,6 +1,6 @@
 ---
 locale: kgp
-generated_at: '2025-09-12T04:11:14Z'
+generated_at: '2025-09-12T05:00:48Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -97,6 +97,8 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
+        am: AM
+        pm: PM
         midnight: kuty-si
         noon: kurã-kuju
         morning1: kusãg ki
@@ -130,38 +132,55 @@ datetime_formats:
     medium: "{1} {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
       Ed: E, d
       Ehm: E, h:mm a
       EHm: E, HH:mm
       Ehms: E, h:mm:ss a
       EHms: E, HH:mm:ss
       Gy: y G
+      GyMd: GGGGG y-MM-dd
       GyMMM: MMM, y G
       GyMMMd: d 'ne' MMM, y G
       GyMMMEd: E, d 'ne' MMM, y G
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: d/M
       MEd: E, dd/MM
-      MMdd: dd/MM
+      MMM: LLL
       MMMd: d 'ne' MMM
       MMMEd: E, d 'ne' MMM
       MMMMd: d 'ne' MMMM
-      MMMMEd: E, d 'ne' MMMM
       MMMMW: "'simỹnỹ' W 'ne' MMMM"
+      ms: mm:ss
+      "y": "y"
       yM: MM/y
       yMd: dd/MM/y
       yMEd: E, dd/MM/y
-      yMM: MM/y
       yMMM: MMM, y
       yMMMd: d 'ne' MMM, y
       yMMMEd: E, d 'ne' MMM, y
       yMMMM: MMMM, y
-      yMMMMd: d 'ne' MMMM, y
-      yMMMMEd: E, d 'ne' MMMM, y
       yQQQ: QQQ, y
       yQQQQ: QQQQ, y
       yw: "'simỹnỹ' w, Y"
+      MMdd: dd/MM
+      MMMMEd: E, d 'ne' MMMM
+      yMM: MM/y
+      yMMMMd: d 'ne' MMMM, y
+      yMMMMEd: E, d 'ne' MMMM, y

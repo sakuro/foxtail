@@ -1,6 +1,6 @@
 ---
 locale: ru
-generated_at: '2025-09-12T04:11:19Z'
+generated_at: '2025-09-12T05:01:23Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -127,6 +127,8 @@ datetime_formats:
         evening1: вечера
         night1: ночи
       abbreviated:
+        am: AM
+        pm: PM
         midnight: полн.
         noon: полд.
         morning1: утра
@@ -172,32 +174,46 @@ datetime_formats:
     medium: "{1}, {0}"
     short: "{1}, {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
       EBhm: ccc, h:mm B
       EBhms: ccc, h:mm:ss B
       Ed: ccc, d
       Ehm: E h:mm a
+      EHm: E HH:mm
       Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
       Gy: y 'г'. G
       GyMd: dd.MM.y GGGGG
       GyMMM: LLL y 'г'. G
       GyMMMd: d MMM y 'г'. G
       GyMMMEd: E, d MMM y 'г'. G
       h: h a
+      H: HH
       hm: h:mm a
+      Hm: HH:mm
       hms: h:mm:ss a
+      Hms: HH:mm:ss
       hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
       hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
       Md: dd.MM
       MEd: E, dd.MM
-      MMdd: dd.MM
+      MMM: LLL
       MMMd: d MMM
       MMMEd: ccc, d MMM
       MMMMd: d MMMM
       MMMMW: W-'я' 'неделя' MMMM
+      ms: mm:ss
+      "y": "y"
       yM: MM.y
       yMd: dd.MM.y
       yMEd: ccc, dd.MM.y 'г'.
-      yMM: MM.y
       yMMM: LLL y 'г'.
       yMMMd: d MMM y 'г'.
       yMMMEd: E, d MMM y 'г'.
@@ -205,3 +221,5 @@ datetime_formats:
       yQQQ: QQQ y 'г'.
       yQQQQ: QQQQ y 'г'.
       yw: w-'я' 'неделя' Y 'г'.
+      MMdd: dd.MM
+      yMM: MM.y

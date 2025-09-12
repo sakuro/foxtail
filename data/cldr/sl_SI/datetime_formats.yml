@@ -1,13 +1,206 @@
 ---
 locale: sl_SI
-generated_at: '2025-09-12T04:11:20Z'
+generated_at: '2025-09-12T05:01:31Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': januar
+        '2': februar
+        '3': marec
+        '4': april
+        '5': maj
+        '6': junij
+        '7': julij
+        '8': avgust
+        '9': september
+        '10': oktober
+        '11': november
+        '12': december
+      abbreviated:
+        '1': jan.
+        '2': feb.
+        '3': mar.
+        '4': apr.
+        '5': maj
+        '6': jun.
+        '7': jul.
+        '8': avg.
+        '9': sep.
+        '10': okt.
+        '11': nov.
+        '12': dec.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': j
+        '2': f
+        '3': m
+        '4': a
+        '5': m
+        '6': j
+        '7': j
+        '8': a
+        '9': s
+        '10': o
+        '11': "n"
+        '12': d
+  days:
+    format:
+      wide:
+        sun: nedelja
+        mon: ponedeljek
+        tue: torek
+        wed: sreda
+        thu: četrtek
+        fri: petek
+        sat: sobota
+      abbreviated:
+        sun: ned.
+        mon: pon.
+        tue: tor.
+        wed: sre.
+        thu: čet.
+        fri: pet.
+        sat: sob.
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: "n"
+        mon: p
+        tue: t
+        wed: s
+        thu: č
+        fri: p
+        sat: s
+  quarters:
+    format:
+      wide:
+        '1': 1. četrtletje
+        '2': 2. četrtletje
+        '3': 3. četrtletje
+        '4': 4. četrtletje
+      abbreviated:
+        '1': 1. čet.
+        '2': 2. čet.
+        '3': 3. čet.
+        '4': 4. čet.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: opolnoči
+        noon: opoldne
+        morning1: zjutraj
+        morning2: dopoldan
+        afternoon1: popoldan
+        evening1: zvečer
+        night1: ponoči
+      abbreviated:
+        am: dop.
+        pm: pop.
+        midnight: opoln.
+        noon: opold.
+        morning1: zjut.
+        morning2: dop.
+        afternoon1: pop.
+        evening1: zveč.
+        night1: ponoči
+    stand-alone:
+      wide:
+        midnight: polnoč
+        am: dopoldne
+        noon: poldne
+        pm: popoldne
+        morning1: jutro
+        morning2: dopoldne
+        afternoon1: popoldne
+        evening1: večer
+        night1: noč
+      abbreviated:
+        midnight: poln.
+        noon: pold.
+        morning1: jut.
+        morning2: dop.
+        afternoon1: pop.
+        evening1: zveč.
+        night1: noč
+  eras:
+    names:
+      '0': pred našim štetjem
+      '1': po našem štetju
+    abbreviated:
+      '0': pr. n. št.
+      '1': po n. št.
+    narrow: {}
+  date_formats:
+    full: EEEE, d. MMMM y
+    long: d. MMMM y
+    medium: d. MMM y
+    short: d. M. yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} 'ob' {0}"
+    long: "{1} 'ob' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d.
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: E, d.
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: d. M. y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d. MMM y G
+      GyMMMEd: E, d. MMM y G
+      h: h a
+      H: HH'h'
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: d. M.
+      MEd: E, d. M.
+      MMM: LLL
+      MMMd: d. MMM
+      MMMEd: E, d. MMM
+      MMMMd: d. MMMM
+      MMMMW: 'MMMM: W. ''teden'''
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: d. M. y
+      yMEd: E, d. M. y
+      yMMM: MMM y
+      yMMMd: d. MMM y
+      yMMMEd: E, d. MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: w. 'teden' 'leta' Y
+      GyM: MMM y G

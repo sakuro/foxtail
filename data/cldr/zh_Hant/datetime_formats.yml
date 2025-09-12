@@ -1,6 +1,6 @@
 ---
 locale: zh_Hant
-generated_at: '2025-09-12T04:11:23Z'
+generated_at: '2025-09-12T05:01:56Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -23,7 +23,19 @@ datetime_formats:
     stand-alone:
       wide: {}
       abbreviated: {}
-      narrow: {}
+      narrow:
+        '1': '1'
+        '2': '2'
+        '3': '3'
+        '4': '4'
+        '5': '5'
+        '6': '6'
+        '7': '7'
+        '8': '8'
+        '9': '9'
+        '10': '10'
+        '11': '11'
+        '12': '12'
   days:
     format:
       wide:
@@ -69,9 +81,9 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
-        midnight: 午夜
         am: 上午
         pm: 下午
+        midnight: 午夜
         morning1: 清晨
         morning2: 上午
         afternoon1: 中午
@@ -107,11 +119,14 @@ datetime_formats:
       Bhm: Bh:mm
       Bhms: Bh:mm:ss
       d: d日
+      E: ccc
       EBhm: E Bh:mm
       EBhms: E Bh:mm:ss
       Ed: d E
       Ehm: E Bh:mm
+      EHm: E HH:mm
       Ehms: E Bh:mm:ss
+      EHms: E HH:mm:ss
       Gy: Gy年
       GyMd: G y/M/d
       GyMMM: Gy年M月
@@ -120,7 +135,9 @@ datetime_formats:
       h: Bh時
       H: H時
       hm: Bh:mm
+      Hm: HH:mm
       hms: Bh:mm:ss
+      Hms: HH:mm:ss
       hmsv: Bh:mm:ss [v]
       Hmsv: HH:mm:ss [v]
       hmv: Bh:mm [v]
@@ -128,17 +145,16 @@ datetime_formats:
       M: M月
       Md: M/d
       MEd: M/d（E）
-      MMdd: MM/dd
+      MMM: LLL
       MMMd: M月d日
       MMMEd: M月d日 E
       MMMMd: M月d日
       MMMMW: MMMM的第W週
+      ms: mm:ss
       "y": y年
       yM: y/M
       yMd: y/M/d
       yMEd: y/M/d（E）
-      yMEEEEd: y年M月d日 EEEE
-      yMM: y/MM
       yMMM: y年M月
       yMMMd: y年M月d日
       yMMMEd: y年M月d日 E
@@ -146,3 +162,6 @@ datetime_formats:
       yQQQ: y年QQQ
       yQQQQ: y年QQQQ
       yw: Y年的第w週
+      MMdd: MM/dd
+      yMEEEEd: y年M月d日 EEEE
+      yMM: y/MM

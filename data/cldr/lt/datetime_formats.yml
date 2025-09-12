@@ -1,6 +1,6 @@
 ---
 locale: lt
-generated_at: '2025-09-12T04:11:16Z'
+generated_at: '2025-09-12T05:00:58Z'
 cldr_version: '46'
 datetime_formats:
   months:
@@ -113,10 +113,10 @@ datetime_formats:
     format:
       wide: {}
       abbreviated:
-        midnight: vidurnaktis
         am: priešpiet
-        noon: perpiet
         pm: popiet
+        midnight: vidurnaktis
+        noon: perpiet
         morning1: rytas
         afternoon1: popietė
         evening1: vakaras
@@ -155,9 +155,14 @@ datetime_formats:
     medium: "{1} {0}"
     short: "{1} {0}"
     available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
       d: dd
+      E: ccc
       EBhm: h:mm B, E
       EBhms: h:mm:ss B, E
+      Ed: d, E
       Ehm: hh:mm a, E
       EHm: HH:mm, E
       Ehms: hh:mm:ss a, E
@@ -167,30 +172,41 @@ datetime_formats:
       GyMMM: y-MM G
       GyMMMd: y-MM-dd G
       GyMMMEd: y-MM-dd G, E
-      GyMMMM: y 'm'. G, LLLL
-      GyMMMMd: y 'm'. G MMMM d 'd'.
-      GyMMMMEd: y 'm'. G MMMM d 'd'., E
       h: hh a
+      H: HH
       hm: hh:mm a
+      Hm: HH:mm
       hms: hh:mm:ss a
+      Hms: HH:mm:ss
       hmsv: hh:mm:ss a; v
       Hmsv: HH:mm:ss; v
       hmv: hh:mm a; v
       Hmv: HH:mm; v
       M: MM
       Md: MM-d
-      MMdd: MM-dd
+      MEd: MM-dd, E
       MMM: MM
       MMMd: MM-dd
       MMMEd: MM-dd, E
-      MMMM: LLLL
       MMMMd: MMMM d 'd'.
-      MMMMEd: MMMM d 'd'., E
       MMMMW: MMMM W 'sav'.
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
+      yMEd: y-MM-dd, E
       yMMM: y-MM
       yMMMd: y-MM-dd
       yMMMEd: y-MM-dd, E
       yMMMM: y 'm'. LLLL
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: Y w 'sav'.
+      GyMMMM: y 'm'. G, LLLL
+      GyMMMMd: y 'm'. G MMMM d 'd'.
+      GyMMMMEd: y 'm'. G MMMM d 'd'., E
+      MMdd: MM-dd
+      MMMM: LLLL
+      MMMMEd: MMMM d 'd'., E
       yMMMMd: y 'm'. MMMM d 'd'.
       yMMMMEd: y 'm'. MMMM d 'd'., E
-      yw: Y w 'sav'.

@@ -1,13 +1,186 @@
 ---
 locale: cu_RU
-generated_at: '2025-09-12T04:11:08Z'
+generated_at: '2025-09-12T04:59:53Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': і҆аннꙋа́рїа
+        '2': феврꙋа́рїа
+        '3': ма́рта
+        '4': а҆прі́ллїа
+        '5': ма́їа
+        '6': і҆ꙋ́нїа
+        '7': і҆ꙋ́лїа
+        '8': а҆́ѵгꙋста
+        '9': септе́мврїа
+        '10': ѻ҆ктѡ́врїа
+        '11': ное́мврїа
+        '12': деке́мврїа
+      abbreviated:
+        '1': і҆аⷩ҇
+        '2': феⷡ҇
+        '3': маⷬ҇
+        '4': а҆пⷬ҇
+        '5': маꙵ
+        '6': і҆ꙋⷩ҇
+        '7': і҆ꙋⷧ҇
+        '8': а҆́ѵⷢ҇
+        '9': сеⷫ҇
+        '10': ѻ҆кⷮ
+        '11': ноеⷨ
+        '12': деⷦ҇
+      narrow: {}
+    stand-alone:
+      wide:
+        '1': і҆аннꙋа́рїй
+        '2': феврꙋа́рїй
+        '3': ма́ртъ
+        '4': а҆прі́ллїй
+        '5': ма́їй
+        '6': і҆ꙋ́нїй
+        '7': і҆ꙋ́лїй
+        '8': а҆́ѵгꙋстъ
+        '9': септе́мврїй
+        '10': ѻ҆ктѡ́врїй
+        '11': ное́мврїй
+        '12': деке́мврїй
+      abbreviated: {}
+      narrow:
+        '1': І҆
+        '2': Ф
+        '3': М
+        '4': А҆
+        '5': М
+        '6': І҆
+        '7': І҆
+        '8': А҆
+        '9': С
+        '10': Ѻ҆
+        '11': Н
+        '12': Д
+  days:
+    format:
+      wide:
+        sun: недѣ́лѧ
+        mon: понедѣ́льникъ
+        tue: вто́рникъ
+        wed: среда̀
+        thu: четверто́къ
+        fri: пѧто́къ
+        sat: сꙋббѡ́та
+      abbreviated:
+        sun: ндⷧ҇ѧ
+        mon: пнⷣе
+        tue: втоⷬ҇
+        wed: срⷣе
+        thu: чеⷦ҇
+        fri: пѧⷦ҇
+        sat: сꙋⷠ҇
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: Н
+        mon: П
+        tue: В
+        wed: С
+        thu: Ч
+        fri: П
+        sat: С
+  quarters:
+    format:
+      wide:
+        '1': а҃_ѧ че́тверть
+        '2': в҃_ѧ че́тверть
+        '3': г҃_ѧ че́тверть
+        '4': д҃_ѧ че́тверть
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        '1': а҃
+        '2': в҃
+        '3': г҃
+        '4': д҃
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ДП
+        pm: ПП
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '1': по р. х.
+    abbreviated:
+      '0': пре́дъ р. х.
+      '1': ѿ р. х.
+    narrow: {}
+  date_formats:
+    full: EEEE, d MMMM 'л'. y.
+    long: y MMMM d
+    medium: y MMM d
+    short: y.MM.dd
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: MM-dd
+      MEd: MM-dd, E
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: MMM d, E
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: y-MM
+      yMd: y-MM-dd
+      yMEd: y-MM-dd, E
+      yMMM: y MMM
+      yMMMd: y MMM d
+      yMMMEd: y MMM d, E
+      yMMMM: y MMMM
+      yQQQ: y QQQ
+      yQQQQ: y QQQQ
+      yw: "'week' w 'of' Y"

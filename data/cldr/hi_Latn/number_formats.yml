@@ -1,6 +1,6 @@
 ---
 locale: hi_Latn
-generated_at: '2025-09-12T04:09:02Z'
+generated_at: '2025-09-12T04:52:36Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -25,6 +25,9 @@ number_formats:
   currencies:
     AFN:
       symbol: "؋"
+      display_names:
+        one: Afghan afghani
+        other: Afghan afghanis
     AMD:
       symbol: "֏"
     AOA:
@@ -43,6 +46,9 @@ number_formats:
       symbol: "৳"
     BMD:
       symbol: "$"
+      display_names:
+        other: Bermudian dollars
+        one: Bermudian dollar
     BND:
       symbol: "$"
     BOB:
@@ -65,6 +71,9 @@ number_formats:
       symbol: "$"
     CRC:
       symbol: "₡"
+      display_names:
+        other: Costa Rican colons
+        one: Costa Rican colon
     CUC:
       symbol: "$"
     CUP:
@@ -115,12 +124,18 @@ number_formats:
       symbol: "₹"
     ISK:
       symbol: kr
+      display_names:
+        other: Icelandic kronur
+        one: Icelandic krona
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
     KGS:
       symbol: "⃀"
+      display_names:
+        other: Kyrgyzstani soms
+        one: Kyrgyzstani som
     KHR:
       symbol: "៛"
     KMF:
@@ -133,6 +148,9 @@ number_formats:
       symbol: "$"
     KZT:
       symbol: "₸"
+      display_names:
+        one: Kazakhstani Tenge
+        other: Kazakhstani Tenges
     LAK:
       symbol: "₭"
     LBP:
@@ -147,6 +165,8 @@ number_formats:
       symbol: Ls
     MGA:
       symbol: Ar
+      display_names:
+        other: Malagasy ariary
     MMK:
       symbol: K
     MNT:
@@ -163,6 +183,9 @@ number_formats:
       symbol: "₦"
     NIO:
       symbol: C$
+      display_names:
+        other: Nicaraguan cordobas
+        one: Nicaraguan cordoba
     NOK:
       symbol: kr
     NPR:
@@ -181,6 +204,9 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
+      display_names:
+        other: Russian rubles
+        one: Russian ruble
     RWF:
       symbol: RF
     SBD:
@@ -191,12 +217,18 @@ number_formats:
       symbol: "$"
     SHP:
       symbol: "£"
+      display_names:
+        other: St Helena pounds
+        one: St Helena pound
     SRD:
       symbol: "$"
     SSP:
       symbol: "£"
     STN:
       symbol: Db
+      display_names:
+        other: Sao Tome & Principe dobras
+        one: Sao Tome & Principe dobra
     SYP:
       symbol: "£"
     THB:
@@ -217,6 +249,9 @@ number_formats:
       symbol: "$"
     VEF:
       symbol: Bs
+      display_names:
+        other: Venezuelan bolívars
+        one: Venezuelan bolívar
     VND:
       symbol: "₫"
     XAF:
@@ -231,10 +266,74 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
+      display_names:
+        one: currency ki unknown unit
+        other: "(unknown currency)"
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
+    BYB:
+      display_names:
+        other: Belarusian new roubles (1994–1999)
+        one: Belarusian new rouble (1994–1999)
+    BYN:
+      display_names:
+        other: Belarusian roubles
+        one: Belarusian rouble
+    BYR:
+      display_names:
+        other: Belarusian roubles (2000–2016)
+        one: Belarusian rouble (2000–2016)
+    ETB:
+      display_names:
+        other: Ethiopian birr
+    LSL:
+      display_names:
+        other: Lesotho lotis
+        one: Lesotho loti
+    LVR:
+      display_names:
+        other: Latvian roubles
+        one: Latvian rouble
+    MVR:
+      display_names:
+        other: Maldivian rufiyaa
+    RUR:
+      display_names:
+        other: Russian roubles (1991–1998)
+        one: Russian rouble (1991–1998)
+    TJR:
+      display_names:
+        other: Tajikistani roubles
+        one: Tajikistani rouble
+    VUV:
+      display_names:
+        other: Vanuatu vatu
+    SLE:
+      display_names:
+        one: Sierra Leonean Leone
+        other: Sierra Leonean Leones
+    TJS:
+      display_names:
+        one: Tajikistani Somoni
+        other: Tajikistani Somonis
+    TMT:
+      display_names:
+        one: Turkmenistani Manat
+        other: Turkmenistani Manat
+    UZS:
+      display_names:
+        one: Uzbekistani Som
+        other: Uzbekistani Som
+    VES:
+      display_names:
+        other: Venezuelan bolivars
+        one: Venezuelan bolivar
+    ALL:
+      display_names:
+        one: Albanian lek
+        other: Albanian leke
 currency_fractions:
   ADP:
     digits: 0

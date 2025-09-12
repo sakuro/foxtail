@@ -1,6 +1,6 @@
 ---
 locale: es_MX
-generated_at: '2025-09-12T04:08:32Z'
+generated_at: '2025-09-12T04:50:43Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -42,6 +42,9 @@ number_formats:
       symbol: "৳"
     BMD:
       symbol: "$"
+      display_names:
+        other: dólares de Bermudas
+        one: dólar de Bermudas
     BND:
       symbol: "$"
     BOB:
@@ -132,6 +135,9 @@ number_formats:
       symbol: "$"
     KZT:
       symbol: "₸"
+      display_names:
+        other: tengues kazajos
+        one: tenge kazajo
     LAK:
       symbol: "₭"
     LBP:
@@ -144,6 +150,9 @@ number_formats:
       symbol: Lt
     LVL:
       symbol: Ls
+      display_names:
+        one: lats letón
+        other: lats letones
     MGA:
       symbol: Ar
     MMK:
@@ -153,7 +162,7 @@ number_formats:
     MUR:
       symbol: Rs
     MXN:
-      symbol: MX$
+      symbol: "$"
     MYR:
       symbol: RM
     NAD:
@@ -162,6 +171,9 @@ number_formats:
       symbol: "₦"
     NIO:
       symbol: C$
+      display_names:
+        other: córdobas nicaragüenses
+        one: córdoba nicaragüense
     NOK:
       symbol: kr
     NPR:
@@ -178,6 +190,9 @@ number_formats:
       symbol: "₲"
     RON:
       symbol: lei
+      display_names:
+        one: leu rumano
+        other: lei rumanos
     RUB:
       symbol: "₽"
     RWF:
@@ -200,6 +215,9 @@ number_formats:
       symbol: "£"
     THB:
       symbol: "฿"
+      display_names:
+        other: bahts tailandeses
+        one: baht tailandés
     TOP:
       symbol: T$
     TRY:
@@ -230,10 +248,58 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
+      display_names:
+        one: "(moneda desconocida)"
+        other: "(moneda desconocida)"
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
+      display_names:
+        other: kwachas zambianos
+        one: kwacha zambiano
+    ANG:
+      display_names:
+        other: florines de las Antillas Neerlandesas
+        one: florín de las Antillas Neerlandesas
+    HTG:
+      display_names:
+        other: gourdes haitianos
+        one: gourde haitiano
+    MWK:
+      display_names:
+        other: kwachas malauíes
+        one: kwacha malauí
+    SLE:
+      display_names:
+        other: leones
+        one: leone
+    SLL:
+      display_names:
+        other: leones (1964—2022)
+        one: leone (1964—2022)
+    UZS:
+      display_names:
+        other: soms uzbekos
+        one: som uzbeko
+    BTN:
+      display_names:
+        other: ngultrums butaneses
+        one: ngultrum butanés
+    BYN:
+      symbol: p.
+    MRO:
+      symbol: MRU
+    MRU:
+      symbol: UM
+    MVR:
+      display_names:
+        other: rupias de Maldivas
+        one: rupia de Maldivas
+    VES:
+      display_names:
+        one: bolívar venezolano
+        other: bolivares venezolanos
 currency_fractions:
   ADP:
     digits: 0

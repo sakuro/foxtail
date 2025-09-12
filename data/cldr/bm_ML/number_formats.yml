@@ -1,6 +1,6 @@
 ---
 locale: bm_ML
-generated_at: '2025-09-12T04:07:46Z'
+generated_at: '2025-09-12T04:47:51Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -19,6 +19,7 @@ number_formats:
     standard: "#,##0%"
   currency_formats:
     standard:
+    accounting: "¤#,##0.00;(¤#,##0.00)"
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -28,10 +29,16 @@ number_formats:
       symbol: "֏"
     AOA:
       symbol: Kz
+      display_names:
+        other: angola Kwanza
+        one: angola Kwanza
     ARS:
       symbol: "$"
     AUD:
       symbol: A$
+      display_names:
+        other: ositirali Dolar
+        one: ositirali Dolar
     AZN:
       symbol: "₼"
     BAM:
@@ -52,14 +59,23 @@ number_formats:
       symbol: "$"
     BWP:
       symbol: P
+      display_names:
+        other: bɔtisiwana Pula
+        one: bɔtisiwana Pula
     BZD:
       symbol: "$"
     CAD:
       symbol: CA$
+      display_names:
+        other: kanada Dolar
+        one: kanada Dolar
     CLP:
       symbol: "$"
     CNY:
       symbol: CN¥
+      display_names:
+        other: siniwa Yuwan
+        one: siniwa Yuwan
     COP:
       symbol: "$"
     CRC:
@@ -76,16 +92,25 @@ number_formats:
       symbol: "$"
     EGP:
       symbol: E£
+      display_names:
+        other: eziputi Livri
+        one: eziputi Livri
     ESP:
       symbol: "₧"
     EUR:
       symbol: "€"
+      display_names:
+        other: ero
+        one: ero
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
+      display_names:
+        other: angilɛ Livri
+        one: angilɛ Livri
     GEL:
       symbol: "₾"
     GHS:
@@ -112,18 +137,27 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
+      display_names:
+        other: Ɛndu Rupi
+        one: Ɛndu Rupi
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
+      display_names:
+        other: zapɔne Yɛn
+        one: zapɔne Yɛn
     KGS:
       symbol: "⃀"
     KHR:
       symbol: "៛"
     KMF:
       symbol: CF
+      display_names:
+        other: komɔri Fraŋ
+        one: komɔri Fraŋ
     KPW:
       symbol: "₩"
     KRW:
@@ -140,26 +174,41 @@ number_formats:
       symbol: Rs
     LRD:
       symbol: "$"
+      display_names:
+        other: liberiya Dolar
+        one: liberiya Dolar
     LTL:
       symbol: Lt
     LVL:
       symbol: Ls
     MGA:
       symbol: Ar
+      display_names:
+        other: madagasikari Fraŋ
+        one: madagasikari Fraŋ
     MMK:
       symbol: K
     MNT:
       symbol: "₮"
     MUR:
       symbol: Rs
+      display_names:
+        other: morisi Rupi
+        one: morisi Rupi
     MXN:
       symbol: MX$
     MYR:
       symbol: RM
     NAD:
       symbol: "$"
+      display_names:
+        other: namibi Dolar
+        one: namibi Dolar
     NGN:
       symbol: "₦"
+      display_names:
+        other: nizeriya Nɛra
+        one: nizeriya Nɛra
     NIO:
       symbol: C$
     NOK:
@@ -182,6 +231,9 @@ number_formats:
       symbol: "₽"
     RWF:
       symbol: RF
+      display_names:
+        other: ruwanda Fraŋ
+        one: ruwanda Fraŋ
     SBD:
       symbol: "$"
     SEK:
@@ -190,12 +242,18 @@ number_formats:
       symbol: "$"
     SHP:
       symbol: "£"
+      display_names:
+        other: Ɛlɛni-Senu Livri
+        one: Ɛlɛni-Senu Livri
     SRD:
       symbol: "$"
     SSP:
       symbol: "£"
     STN:
       symbol: Db
+      display_names:
+        other: sawotome Dobra
+        one: sawotome Dobra
     SYP:
       symbol: "£"
     THB:
@@ -212,6 +270,9 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
+      display_names:
+        other: ameriki Dolar
+        one: ameriki Dolar
     UYU:
       symbol: "$"
     VEF:
@@ -220,20 +281,172 @@ number_formats:
       symbol: "₫"
     XAF:
       symbol: FCFA
+      display_names:
+        other: sefa Fraŋ (BEAC)
+        one: sefa Fraŋ (BEAC)
     XCD:
       symbol: EC$
     XCG:
       symbol: Cg.
     XOF:
       symbol: F CFA
+      display_names:
+        other: sefa Fraŋ (BCEAO)
+        one: sefa Fraŋ (BCEAO)
     XPF:
       symbol: CFPF
     XXX:
       symbol: "¤"
     ZAR:
       symbol: R
+      display_names:
+        other: sudafriki Randi
+        one: sudafriki Randi
     ZMW:
       symbol: ZK
+      display_names:
+        other: zambi Kwaca
+        one: zambi Kwaca
+    AED:
+      display_names:
+        other: arabu mara kafoli Diram
+        one: arabu mara kafoli Diram
+    BHD:
+      display_names:
+        other: bareyini Dinar
+        one: bareyini Dinar
+    BIF:
+      display_names:
+        other: burundi Fraŋ
+        one: burundi Fraŋ
+    CDF:
+      display_names:
+        other: kongole Fraŋ
+        one: kongole Fraŋ
+    CHF:
+      display_names:
+        other: suwisi Fraŋ
+        one: suwisi Fraŋ
+    CVE:
+      display_names:
+        other: capivɛrdi Esekudo
+        one: capivɛrdi Esekudo
+    DJF:
+      display_names:
+        other: jibuti Fraŋ
+        one: jibuti Fraŋ
+    DZD:
+      display_names:
+        other: alizeri Dinar
+        one: alizeri Dinar
+    ERN:
+      display_names:
+        other: eritere Nafika
+        one: eritere Nafika
+    ETB:
+      display_names:
+        other: etiopi Bir
+        one: etiopi Bir
+    GHC:
+      display_names:
+        other: gana Sedi
+        one: gana Sedi
+    GMD:
+      display_names:
+        other: gambi Dalasi
+        one: gambi Dalasi
+    GNS:
+      display_names:
+        other: gine Fraŋ
+        one: gine Fraŋ
+    KES:
+      display_names:
+        other: keniya Siling
+        one: keniya Siling
+    LSL:
+      display_names:
+        other: lesoto Loti
+        one: lesoto Loti
+    LYD:
+      display_names:
+        other: libi Dinar
+        one: libi Dinar
+    MAD:
+      display_names:
+        other: marɔku Diram
+        one: marɔku Diram
+    MRO:
+      display_names:
+        other: mɔritani Uguwiya (1973–2017)
+        one: mɔritani Uguwiya (1973–2017)
+    MRU:
+      display_names:
+        other: mɔritani Uguwiya
+        one: mɔritani Uguwiya
+    MWK:
+      display_names:
+        other: malawi Kwaca
+        one: malawi Kwaca
+    MZM:
+      display_names:
+        other: mozanbiki Metikali
+        one: mozanbiki Metikali
+    SAR:
+      display_names:
+        other: sawudiya Riyal
+        one: sawudiya Riyal
+    SCR:
+      display_names:
+        other: sesɛli Rupi
+        one: sesɛli Rupi
+    SDG:
+      display_names:
+        other: sudani Dinar
+        one: sudani Dinar
+    SDP:
+      display_names:
+        other: sudani Livri
+        one: sudani Livri
+    SLE:
+      display_names:
+        other: siyeralewɔni Lewɔni
+        one: siyeralewɔni Lewɔni
+    SLL:
+      display_names:
+        other: siyeralewɔni Lewɔni (1964—2022)
+        one: siyeralewɔni Lewɔni (1964—2022)
+    SOS:
+      display_names:
+        other: somali Siling
+        one: somali Siling
+    STD:
+      display_names:
+        other: sawotome Dobra (1977–2017)
+        one: sawotome Dobra (1977–2017)
+    SZL:
+      display_names:
+        other: swazilandi Lilangeni
+        one: swazilandi Lilangeni
+    TND:
+      display_names:
+        other: tunizi Dinar
+        one: tunizi Dinar
+    TZS:
+      display_names:
+        other: tanzani Siling
+        one: tanzani Siling
+    UGX:
+      display_names:
+        other: uganda Siling
+        one: uganda Siling
+    ZMK:
+      display_names:
+        other: zambi Kwaca (1968–2012)
+        one: zambi Kwaca (1968–2012)
+    ZWD:
+      display_names:
+        other: zimbabuwe Dolar
+        one: zimbabuwe Dolar
 currency_fractions:
   ADP:
     digits: 0

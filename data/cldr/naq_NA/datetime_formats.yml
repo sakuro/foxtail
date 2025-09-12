@@ -1,13 +1,176 @@
 ---
 locale: naq_NA
-generated_at: '2025-09-12T04:11:17Z'
+generated_at: '2025-09-12T05:01:07Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': ǃKhanni
+        '2': ǃKhanǀgôab
+        '3': ǀKhuuǁkhâb
+        '4': ǃHôaǂkhaib
+        '5': ǃKhaitsâb
+        '6': Gamaǀaeb
+        '7': ǂKhoesaob
+        '8': Aoǁkhuumûǁkhâb
+        '9': Taraǀkhuumûǁkhâb
+        '10': ǂNûǁnâiseb
+        '11': ǀHooǂgaeb
+        '12': Hôasoreǁkhâb
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': May
+        '6': Jun
+        '7': Jul
+        '8': Aug
+        '9': Sep
+        '10': Oct
+        '11': Nov
+        '12': Dec
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': J
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': J
+        '7': J
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
+  days:
+    format:
+      wide:
+        sun: Sontaxtsees
+        mon: Mantaxtsees
+        tue: Denstaxtsees
+        wed: Wunstaxtsees
+        thu: Dondertaxtsees
+        fri: Fraitaxtsees
+        sat: Satertaxtsees
+      abbreviated:
+        sun: Son
+        mon: Ma
+        tue: De
+        wed: Wu
+        thu: Do
+        fri: Fr
+        sat: Sat
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: S
+        mon: M
+        tue: E
+        wed: W
+        thu: D
+        fri: F
+        sat: A
+  quarters:
+    format:
+      wide:
+        '1': 1ro kwartals
+        '2': 2ǁî kwartals
+        '3': 3ǁî kwartals
+        '4': 4ǁî kwartals
+      abbreviated:
+        '1': KW1
+        '2': KW2
+        '3': KW3
+        '4': KW4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ǁgoagas
+        pm: ǃuias
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Xristub aiǃâ
+      '1': Xristub khaoǃgâ
+    abbreviated:
+      '0': BC
+      '1': AD
+    narrow: {}
+  date_formats:
+    full: EEEE, d MMMM y
+    long: d MMMM y
+    medium: d MMM y
+    short: dd/MM/y
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: h B
+      Bhm: h:mm B
+      Bhms: h:mm:ss B
+      d: d
+      E: ccc
+      EBhm: E h:mm B
+      EBhms: E h:mm:ss B
+      Ed: d, E
+      Ehm: E h:mm a
+      EHm: E HH:mm
+      Ehms: E h:mm:ss a
+      EHms: E HH:mm:ss
+      Gy: G y
+      GyMd: GGGGG y-MM-dd
+      GyMMM: G y MMM
+      GyMMMd: G y MMM d
+      GyMMMEd: G y MMM d, E
+      h: h a
+      H: HH
+      hm: h:mm a
+      Hm: HH:mm
+      hms: h:mm:ss a
+      Hms: HH:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: HH:mm:ss v
+      hmv: h:mm a v
+      Hmv: HH:mm v
+      M: L
+      Md: M/d
+      MEd: E, M/d
+      MMM: LLL
+      MMMd: MMM d
+      MMMEd: E, MMM d
+      MMMMd: MMMM d
+      MMMMW: "'week' W 'of' MMMM"
+      ms: mm:ss
+      "y": "y"
+      yM: M/y
+      yMd: y-MM-dd
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: y MMM d
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'of' Y"
+      MMMMEd: E, MMMM d

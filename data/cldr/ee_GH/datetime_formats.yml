@@ -1,13 +1,183 @@
 ---
 locale: ee_GH
-generated_at: '2025-09-12T04:11:09Z'
+generated_at: '2025-09-12T04:59:58Z'
 cldr_version: '46'
 datetime_formats:
-  months: {}
-  days: {}
-  quarters: {}
-  day_periods: {}
-  eras: {}
-  date_formats: {}
-  time_formats: {}
-  datetime_formats: {}
+  months:
+    format:
+      wide:
+        '1': dzove
+        '2': dzodze
+        '3': tedoxe
+        '4': afɔfĩe
+        '5': dame
+        '6': masa
+        '7': siamlɔm
+        '8': deasiamime
+        '9': anyɔnyɔ
+        '10': kele
+        '11': adeɛmekpɔxe
+        '12': dzome
+      abbreviated:
+        '1': dzv
+        '2': dzd
+        '3': ted
+        '4': afɔ
+        '5': dam
+        '6': mas
+        '7': sia
+        '8': dea
+        '9': any
+        '10': kel
+        '11': ade
+        '12': dzm
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        '1': d
+        '2': d
+        '3': t
+        '4': a
+        '5': d
+        '6': m
+        '7': s
+        '8': d
+        '9': a
+        '10': k
+        '11': a
+        '12': d
+  days:
+    format:
+      wide:
+        sun: kɔsiɖa
+        mon: dzoɖa
+        tue: blaɖa
+        wed: kuɖa
+        thu: yawoɖa
+        fri: fiɖa
+        sat: memleɖa
+      abbreviated:
+        sun: kɔs
+        mon: dzo
+        tue: bla
+        wed: kuɖ
+        thu: yaw
+        fri: fiɖ
+        sat: mem
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow:
+        sun: k
+        mon: d
+        tue: b
+        wed: k
+        thu: "y"
+        fri: f
+        sat: m
+  quarters:
+    format:
+      wide:
+        '1': kɔta gbãtɔ
+        '2': kɔta evelia
+        '3': kɔta etɔ̃lia
+        '4': kɔta enelia
+      abbreviated:
+        '1': k1
+        '2': k2
+        '3': k3
+        '4': k4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ŋdi
+        pm: ɣetrɔ
+        morning1: fɔŋli
+        morning2: ŋdi
+        afternoon1: ŋdɔ
+        afternoon2: ɣetrɔ
+        evening1: fiẽ
+        night1: zã
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Hafi Yesu Va
+      '1': Yesu ŋɔli
+    abbreviated:
+      '0': Bŋ
+      '1': Eŋ
+    narrow:
+      '0': hY
+  date_formats:
+    full: EEEE, MMMM d 'lia' y
+    long: MMMM d 'lia' y
+    medium: MMM d 'lia', y
+    short: M/d/yy
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{0} {1}"
+    long: "{0} {1}"
+    medium: "{0} {1}"
+    short: "{0} {1}"
+    available_formats:
+      Bh: "'ga' h 'le' B 'me'"
+      Bhm: "'ga' h 'aɖabaƒoƒo' mm 'le' B 'me'"
+      Bhms: h:mm:ss 'le' B 'me'
+      d: d
+      E: ccc
+      EBhm: "'ga' h:mm 'le' E B 'me'"
+      EBhms: "'ga' h:mm:ss 'le' E B 'me'"
+      Ed: E d
+      Ehm: E a 'ga' h:mm
+      EHm: E 'ga' HH:mm
+      Ehms: E a 'ga' h:mm:ss
+      EHms: E 'ga' HH:mm:ss
+      Gy: y G
+      GyMd: GGGGG y-MM-dd
+      GyMMM: MMM y G
+      GyMMMd: MMM d 'lia', y G
+      GyMMMEd: E, MMM d 'lia' y G
+      h: a 'ga' h
+      H: HH
+      hm: a 'ga' h:mm
+      Hm: HH:mm
+      hms: a 'ga' h:mm:ss
+      Hms: HH:mm:ss
+      hmsv: a 'ga' h:mm:ss 'le' v
+      Hmsv: "'ga' HH:mm:ss 'le' v"
+      hmv: a 'ga' h:mm 'le' v
+      Hmv: "'ga' HH:mm 'le' v"
+      M: L
+      Md: M/d
+      MEd: E, M/d
+      MMM: LLL
+      MMMd: MMM d 'lia'
+      MMMEd: E, MMM d 'lia'
+      MMMMd: MMMM d 'lia'
+      MMMMW: MMMM 'ƒe' 'kɔsiɖa' W 'lia'
+      ms: "'aɖabaƒoƒo' mm:ss"
+      "y": "y"
+      yM: M/y
+      yMd: M/d/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: MMM d 'lia', y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'kɔsiɖa' w 'lia' 'le' 'ƒe' Y 'me'"
+      MMMMEd: E, MMMM d 'lia'
