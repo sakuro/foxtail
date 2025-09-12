@@ -6,20 +6,11 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Configuration parameters: IgnoreLiteralBranches, IgnoreConstantBranches, IgnoreDuplicateElseBranch.
-Lint/DuplicateBranch:
-  Exclude:
-    - 'lib/foxtail/cldr/date_time_formats.rb'
-
-RSpec/AnyInstance:
-  Exclude:
-    - 'spec/spec_helper.rb'
-
 # Configuration parameters: AllowedMethods, RequireForNonPublicMethods.
 Style/DocumentationMethod:
   Exclude:
-    - 'lib/foxtail/cldr/date_time_pattern_parser.rb'
-    - 'lib/foxtail/cldr/number_pattern_parser.rb'
+    - 'lib/foxtail/cldr/pattern_parser/date_time.rb'
+    - 'lib/foxtail/cldr/pattern_parser/number.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: Max, AllowHeredoc, AllowURI, AllowQualifiedName, URISchemes, IgnoreCopDirectives, AllowedPatterns, SplitStrings.
@@ -27,6 +18,6 @@ Style/DocumentationMethod:
 Layout/LineLength:
   Exclude:
     - 'compat/ast_comparator.rb'
-    - 'lib/foxtail/cldr/extractors/number_formats_extractor.rb'
+    - 'lib/foxtail/cldr/extractor/number_formats.rb'
     - 'spec/foxtail/functions_spec.rb'
     - 'spec/foxtail/parser/stream_spec.rb'

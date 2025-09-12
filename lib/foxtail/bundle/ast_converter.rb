@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "ast"
-
 module Foxtail
   class Bundle
     # Convert Parser::AST to Bundle::AST

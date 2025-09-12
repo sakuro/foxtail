@@ -11,8 +11,8 @@ module Foxtail
     # Using lazy initialization to avoid circular loading issues
     def self.defaults
       @defaults ||= {
-        "NUMBER" => Functions::NumberFormatter.new.freeze,
-        "DATETIME" => Functions::DateTimeFormatter.new.freeze
+        "NUMBER" => CLDR::Formatter::Number.new.freeze,
+        "DATETIME" => CLDR::Formatter::DateTime.new.freeze
       }.freeze
     end
 
