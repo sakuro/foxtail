@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "tmpdir"
-require_relative "../../../../lib/foxtail/cldr/extractors/date_time_formats_extractor"
 
 RSpec.describe Foxtail::CLDR::Extractors::DateTimeFormatsExtractor do
   let(:fixture_source_dir) { File.join(__dir__, "..", "..", "..", "fixtures", "cldr") }

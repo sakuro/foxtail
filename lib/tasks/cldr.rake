@@ -1,12 +1,9 @@
 # frozen_string_literal: true
 
 require "fileutils"
+require "foxtail"
 require "rake/clean"
 require "shellwords"
-require_relative "../foxtail/cldr/extractors/date_time_formats_extractor"
-require_relative "../foxtail/cldr/extractors/locale_alias_extractor"
-require_relative "../foxtail/cldr/extractors/number_formats_extractor"
-require_relative "../foxtail/cldr/extractors/plural_rules_extractor"
 
 # CLDR version configuration
 CLDR_VERSION = "46"
