@@ -44,7 +44,6 @@ RSpec.describe Foxtail::CLDR::Inheritance do
 
     before do
       FileUtils.mkdir_p(supplemental_dir)
-      allow(inheritance).to receive(:log)
     end
 
     after { FileUtils.rm_rf(temp_dir) }
@@ -172,7 +171,6 @@ RSpec.describe Foxtail::CLDR::Inheritance do
 
     before do
       FileUtils.mkdir_p(main_dir)
-      allow(inheritance).to receive(:log)
     end
 
     after { FileUtils.rm_rf(temp_dir) }

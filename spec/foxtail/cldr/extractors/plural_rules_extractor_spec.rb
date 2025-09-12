@@ -7,11 +7,6 @@ RSpec.describe Foxtail::CLDR::Extractors::PluralRulesExtractor do
   let(:temp_output_dir) { Dir.mktmpdir }
   let(:extractor) { Foxtail::CLDR::Extractors::PluralRulesExtractor.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
 
-  before do
-    # Stub log method to prevent output during tests
-    allow(extractor).to receive(:log)
-  end
-
   after do
     FileUtils.rm_rf(temp_output_dir)
   end

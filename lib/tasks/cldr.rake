@@ -35,21 +35,21 @@ namespace :cldr do
   desc "Download CLDR core data to tmp directory"
   task :download do
     if Dir.exist?(CLDR_EXTRACT_DIR)
-      puts "CLDR core data already exists at #{CLDR_EXTRACT_DIR}"
-      puts "Remove the directory to re-download."
+      Foxtail::CLDR.logger.info "CLDR core data already exists at #{CLDR_EXTRACT_DIR}"
+      Foxtail::CLDR.logger.info "Remove the directory to re-download."
       next
     end
 
     # Create tmp directory if it doesn't exist
     FileUtils.mkdir_p(TMP_DIR)
 
-    puts "Downloading CLDR core data..."
+    Foxtail::CLDR.logger.info "Downloading CLDR core data..."
 
     # Download with curl using shelljoin for safety
     curl_cmd = ["curl", "-L", "-o", CLDR_ZIP_PATH, CLDR_CORE_URL]
     sh Shellwords.join(curl_cmd)
 
-    puts "Extracting CLDR core data..."
+    Foxtail::CLDR.logger.info "Extracting CLDR core data..."
 
     # Create extraction directory
     FileUtils.mkdir_p(CLDR_EXTRACT_DIR)
@@ -58,7 +58,7 @@ namespace :cldr do
     unzip_cmd = ["unzip", "-q", "-o", CLDR_ZIP_PATH, "-d", CLDR_EXTRACT_DIR]
     sh Shellwords.join(unzip_cmd)
 
-    puts "CLDR core data extracted to #{CLDR_EXTRACT_DIR}"
+    Foxtail::CLDR.logger.info "CLDR core data extracted to #{CLDR_EXTRACT_DIR}"
   end
 
   desc "Extract all CLDR data (uses rake task dependencies)"
@@ -69,7 +69,7 @@ namespace :cldr do
     task locale_aliases: :download do
       # Clean up existing locale_aliases file
       if File.exist?(LOCALE_ALIASES_FILE)
-        puts "Cleaning up existing locale_aliases file..."
+        Foxtail::CLDR.logger.info "Cleaning up existing locale_aliases file..."
         rm LOCALE_ALIASES_FILE, verbose: false
       end
 
@@ -83,8 +83,8 @@ namespace :cldr do
     desc "Extract CLDR data for a specific locale"
     task :locale, [:locale_id] => :download do |_task, args|
       unless args[:locale_id]
-        puts "Usage: rake cldr:extract:locale[locale_id]"
-        puts "Example: rake cldr:extract:locale[en]"
+        Foxtail::CLDR.logger.error "Usage: rake cldr:extract:locale[locale_id]"
+        Foxtail::CLDR.logger.error "Example: rake cldr:extract:locale[en]"
         exit 1
       end
 
@@ -111,7 +111,7 @@ namespace :cldr do
     task plural_rules: :download do
       # Clean up existing plural_rules files
       if PLURAL_RULES_FILES.any?
-        puts "Cleaning up #{PLURAL_RULES_FILES.size} existing plural_rules files..."
+        Foxtail::CLDR.logger.info "Cleaning up #{PLURAL_RULES_FILES.size} existing plural_rules files..."
         rm PLURAL_RULES_FILES, verbose: false
       end
 
@@ -127,7 +127,7 @@ namespace :cldr do
     task number_formats: :download do
       # Clean up existing number_formats files
       if NUMBER_FORMATS_FILES.any?
-        puts "Cleaning up #{NUMBER_FORMATS_FILES.size} existing number_formats files..."
+        Foxtail::CLDR.logger.info "Cleaning up #{NUMBER_FORMATS_FILES.size} existing number_formats files..."
         rm NUMBER_FORMATS_FILES, verbose: false
       end
 
@@ -143,7 +143,7 @@ namespace :cldr do
     task datetime_formats: :download do
       # Clean up existing datetime_formats files
       if DATETIME_FORMATS_FILES.any?
-        puts "Cleaning up #{DATETIME_FORMATS_FILES.size} existing datetime_formats files..."
+        Foxtail::CLDR.logger.info "Cleaning up #{DATETIME_FORMATS_FILES.size} existing datetime_formats files..."
         rm DATETIME_FORMATS_FILES, verbose: false
       end
 

@@ -29,8 +29,6 @@ RSpec.describe Foxtail::CLDR::Extractors::BaseExtractor do
   let(:extractor) { test_extractor_class.new(source_dir: test_source_dir, output_dir: test_output_dir) }
 
   before do
-    # Stub log method to prevent output during tests
-    allow(extractor).to receive(:log)
     # Create test directory structure
     FileUtils.mkdir_p(File.join(test_source_dir, "common", "main"))
     FileUtils.mkdir_p(test_output_dir)
@@ -67,10 +65,9 @@ RSpec.describe Foxtail::CLDR::Extractors::BaseExtractor do
     end
 
     it "processes all locale files" do
-      allow(extractor).to receive(:log)
       extractor.extract_all
-      expect(extractor).to have_received(:log).with("Extracting test data from 3 locales...")
-      expect(extractor).to have_received(:log).with("test data extraction complete")
+      expect(Foxtail::CLDR.logger).to have_received(:info).with("Extracting test data from 3 locales...")
+      expect(Foxtail::CLDR.logger).to have_received(:info).with("Test data extraction complete (3 locales)")
     end
 
     it "creates output files for each locale" do
@@ -142,7 +139,6 @@ RSpec.describe Foxtail::CLDR::Extractors::BaseExtractor do
 
       it "does not create output file when data? returns false" do
         empty_extractor = empty_extractor_class.new(source_dir: test_source_dir, output_dir: test_output_dir)
-        allow(empty_extractor).to receive(:log) # Stub log for empty_extractor too
         File.write(File.join(test_source_dir, "common", "main", "en.xml"), test_xml_content)
 
         empty_extractor.extract_locale("en")

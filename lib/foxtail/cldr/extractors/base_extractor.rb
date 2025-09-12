@@ -27,14 +27,14 @@ module Foxtail
           validate_source_directory
 
           locale_files = Dir.glob(File.join(source_dir, "common", "main", "*.xml"))
-          log "Extracting #{data_type_name} from #{locale_files.size} locales..."
+          CLDR.logger.info "Extracting #{data_type_name} from #{locale_files.size} locales..."
 
           locale_files.each do |xml_file|
             locale_id = File.basename(xml_file, ".xml")
             extract_locale(locale_id)
           end
 
-          log "#{data_type_name} extraction complete"
+          CLDR.logger.info "#{data_type_name.capitalize} extraction complete (#{locale_files.size} locales)"
         end
 
         # Template method for extracting a specific locale
@@ -88,7 +88,7 @@ module Foxtail
           return if @parent_locales
 
           @parent_locales = @inheritance.load_parent_locales(source_dir)
-          log "Loaded #{@parent_locales.size} parent locale mappings" unless @parent_locales.empty?
+          CLDR.logger.debug "Loaded #{@parent_locales.size} parent locale mappings" unless @parent_locales.empty?
         end
 
         private def parent_locales
@@ -103,7 +103,7 @@ module Foxtail
             doc = REXML::Document.new(File.read(xml_path))
             extract_data_from_xml(doc)
           rescue => e
-            log "Warning: Could not load data for locale #{locale_id}: #{e.message}"
+            CLDR.logger.warn "Could not load data for locale #{locale_id}: #{e.message}"
             nil
           end
         end
@@ -195,11 +195,6 @@ module Foxtail
         # @param data [Object] The extracted data
         private def write_data(locale_id, data)
           raise NotImplementedError, "Subclasses must implement write_data"
-        end
-
-        # Progress logging method for testing support
-        private def log(message)
-          puts message
         end
       end
     end

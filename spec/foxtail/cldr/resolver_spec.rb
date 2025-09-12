@@ -7,10 +7,6 @@ RSpec.describe Foxtail::CLDR::Resolver do
   let(:data_dir) { temp_dir }
   let(:inheritance) { Foxtail::CLDR::Inheritance.instance }
 
-  before do
-    allow(inheritance).to receive(:log)
-  end
-
   after { FileUtils.rm_rf(temp_dir) }
 
   describe "#resolve" do
