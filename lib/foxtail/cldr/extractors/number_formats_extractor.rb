@@ -133,7 +133,7 @@ module Foxtail
         private def extract_currency_fractions
           # Currency fractions come from supplemental data, not individual locale files
           # We need to read from supplemental/supplementalData.xml
-          supplemental_path = File.join(Dir.pwd, "tmp", "cldr-core", "common", "supplemental", "supplementalData.xml")
+          supplemental_path = File.join(source_dir, "common", "supplemental", "supplementalData.xml")
 
           return {} unless File.exist?(supplemental_path)
 
@@ -199,7 +199,7 @@ module Foxtail
         end
 
         private def load_root_currencies
-          root_path = File.join(Dir.pwd, "tmp", "cldr-core", "common", "main", "root.xml")
+          root_path = File.join(source_dir, "common", "main", "root.xml")
           return {} unless File.exist?(root_path)
 
           currencies = {}
