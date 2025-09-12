@@ -9,11 +9,15 @@ module Foxtail
     # Resolves missing data by traversing inheritance chain at runtime
     class Resolver
       def initialize(locale_id, data_dir: nil)
-        @locale_id = locale_id
+        @original_locale_id = locale_id
         @data_dir = data_dir || File.join(__dir__, "..", "..", "..", "data", "cldr")
         @inheritance = Inheritance.instance
         @cache = {}
         @loaded_locales = {}
+        @locale_aliases = nil
+
+        # Resolve locale alias to canonical form
+        @locale_id = resolve_canonical_locale(locale_id)
       end
 
       # Resolve a data path using inheritance chain
@@ -72,6 +76,8 @@ module Foxtail
 
         parent_locales = load_parent_locales_if_needed
         @inheritance_chain = @inheritance.resolve_inheritance_chain_with_parents(@locale_id, parent_locales)
+        log "Inheritance chain for #{@original_locale_id} -> #{@locale_id}: #{@inheritance_chain}"
+        @inheritance_chain
       end
 
       private def load_parent_locales_if_needed
@@ -98,14 +104,20 @@ module Foxtail
         return @loaded_locales[cache_key] if @loaded_locales.key?(cache_key)
 
         file_path = File.join(@data_dir, locale_id, "#{data_type}.yml")
+        log "Attempting to load: #{file_path}"
 
         data = if File.exist?(file_path)
                  begin
-                   YAML.load_file(file_path)
+                   loaded_data = YAML.load_file(file_path)
+                   log "Successfully loaded #{file_path} for locale #{locale_id}"
+                   loaded_data
                  rescue => e
                    log "Warning: Could not load #{file_path}: #{e.message}"
                    nil
                  end
+               else
+                 log "File does not exist: #{file_path}"
+                 nil
                end
 
         @loaded_locales[cache_key] = data
@@ -132,6 +144,33 @@ module Foxtail
 
       private def log(message)
         puts message
+      end
+
+      # Resolve locale identifier to canonical form using CLDR aliases
+      # @param locale_id [String] Original locale identifier (may be an alias)
+      # @return [String] Canonical locale identifier
+      private def resolve_canonical_locale(locale_id)
+        aliases = load_locale_aliases_if_needed
+        log "Loaded #{aliases.size} locale aliases: #{aliases.keys.first(5)}"
+        return locale_id if aliases.empty?
+
+        canonical = @inheritance.resolve_locale_alias(locale_id, aliases)
+
+        if canonical == locale_id
+          log "No alias found for: #{locale_id}"
+        else
+          log "Resolved locale alias: #{locale_id} -> #{canonical}"
+        end
+
+        canonical
+      end
+
+      # Load locale aliases from CLDR source if available, with caching
+      # @return [Hash] Locale aliases mapping
+      private def load_locale_aliases_if_needed
+        return @locale_aliases if @locale_aliases
+
+        @locale_aliases = @inheritance.load_locale_aliases(@data_dir)
       end
     end
   end

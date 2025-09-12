@@ -4,6 +4,7 @@ require "fileutils"
 require "rake/clean"
 require "shellwords"
 require_relative "../foxtail/cldr/extractors/datetime_formats_extractor"
+require_relative "../foxtail/cldr/extractors/locale_alias_extractor"
 require_relative "../foxtail/cldr/extractors/number_formats_extractor"
 require_relative "../foxtail/cldr/extractors/plural_rules_extractor"
 
@@ -22,12 +23,13 @@ CLDR_EXTRACT_DIR = File.join(TMP_DIR, "cldr-core")
 PLURAL_RULES_FILES = FileList[File.join(DATA_DIR, "*/plural_rules.yml")]
 NUMBER_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/number_formats.yml")]
 DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
+LOCALE_ALIASES_FILE = File.join(DATA_DIR, "locale_aliases.yml")
 
 # Clean tasks
 # CLEAN removes extracted CLDR source (can be re-extracted from zip)
 CLEAN.include(CLDR_EXTRACT_DIR)
 # CLOBBER removes generated CLDR data files
-CLOBBER.include(PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES)
+CLOBBER.include(PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES, LOCALE_ALIASES_FILE)
 CLOBBER.exclude(File.join(DATA_DIR, "README.md"))
 # Keep the downloaded zip file to avoid re-downloading
 CLOBBER.exclude(CLDR_ZIP_PATH)
@@ -63,9 +65,24 @@ namespace :cldr do
   end
 
   desc "Extract all CLDR data (uses rake task dependencies)"
-  task extract: %i[extract:plural_rules extract:number_formats extract:datetime_formats]
+  task extract: %i[extract:locale_aliases extract:plural_rules extract:number_formats extract:datetime_formats]
 
   namespace :extract do
+    desc "Extract CLDR locale aliases from downloaded CLDR core data"
+    task locale_aliases: :download do
+      # Clean up existing locale_aliases file
+      if File.exist?(LOCALE_ALIASES_FILE)
+        puts "Cleaning up existing locale_aliases file..."
+        rm LOCALE_ALIASES_FILE, verbose: false
+      end
+
+      extractor = Foxtail::CLDR::Extractors::LocaleAliasExtractor.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: DATA_DIR
+      )
+
+      extractor.extract_all
+    end
     desc "Extract CLDR data for a specific locale"
     task :locale, [:locale_id] => :download do |_task, args|
       unless args[:locale_id]

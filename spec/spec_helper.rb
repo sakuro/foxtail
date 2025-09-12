@@ -15,4 +15,10 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  # Suppress log output during tests
+  config.before do
+    allow(Foxtail::CLDR::Inheritance.instance).to receive(:log)
+    allow_any_instance_of(Foxtail::CLDR::Resolver).to receive(:log)
+  end
 end

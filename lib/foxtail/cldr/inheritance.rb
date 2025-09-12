@@ -2,6 +2,7 @@
 
 require "rexml/document"
 require "singleton"
+require "yaml"
 
 module Foxtail
   module CLDR
@@ -73,6 +74,57 @@ module Foxtail
         end
 
         parents
+      end
+
+      # Load locale alias mappings from CLDR supplemental data
+      # @param source_dir [String] Path to CLDR source directory
+      # @return [Hash] Mapping of alias locale to canonical locale
+      def load_locale_aliases(data_dir)
+        aliases_path = File.join(data_dir, "locale_aliases.yml")
+
+        return {} unless File.exist?(aliases_path)
+
+        begin
+          yaml_data = YAML.load_file(aliases_path)
+          aliases = yaml_data["locale_aliases"] || {}
+          log "Loaded #{aliases.size} locale aliases from #{aliases_path}"
+          aliases
+        rescue => e
+          log "Warning: Could not load locale aliases from #{aliases_path}: #{e.message}"
+          {}
+        end
+      end
+
+      # Resolve locale aliases to canonical form
+      # @param locale_id [String] The locale identifier (may be an alias)
+      # @param aliases [Hash] Mapping of alias to canonical locale
+      # @return [String] The canonical locale identifier
+      def resolve_locale_alias(locale_id, aliases)
+        return locale_id if aliases.empty?
+
+        # First try to resolve the entire locale_id as an alias
+        if aliases[locale_id]
+          result = aliases[locale_id]
+          log "Full locale alias resolution: #{locale_id} -> #{result}"
+          return result
+        end
+
+        # Handle complex locale identifiers by resolving each component
+        if locale_id.include?("_")
+          parts = locale_id.split("_")
+          log "Resolving compound locale #{locale_id}: parts = #{parts}"
+          resolved_parts = parts.map {|part|
+            resolved = aliases[part] || part
+            log "  #{part} -> #{resolved}"
+            resolved
+          }
+          result = resolved_parts.join("_")
+          log "Final resolved compound locale: #{locale_id} -> #{result}"
+        else
+          result = aliases[locale_id] || locale_id
+          log "Simple locale resolution: #{locale_id} -> #{result} (found: #{aliases.key?(locale_id)})"
+        end
+        result
       end
 
       # Resolve inheritance chain using CLDR parent locale data

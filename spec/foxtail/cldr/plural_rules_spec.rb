@@ -166,6 +166,11 @@ RSpec.describe Foxtail::CLDR::PluralRules do
           }
         })
 
+      # Mock locale aliases file
+      allow(File).to receive(:exist?)
+        .with(a_string_ending_with("data/cldr/locale_aliases.yml"))
+        .and_return(false)
+
       # Mock en locale
       allow(File).to receive(:exist?)
         .with(a_string_ending_with("data/cldr/en/plural_rules.yml"))
