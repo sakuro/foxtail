@@ -156,7 +156,7 @@ module Foxtail
               fractions[currency] = fraction_data unless fraction_data.empty?
             end
           rescue => e
-            log "Warning: Could not extract currency fractions: #{e.message}"
+            CLDR.logger.warn "Could not extract currency fractions: #{e.message}"
           end
 
           fractions
@@ -234,7 +234,7 @@ module Foxtail
               currencies[code] = currency_data unless currency_data.empty?
             end
           rescue => e
-            log "Warning: Could not extract root currencies: #{e.message}"
+            CLDR.logger.warn "Could not extract root currencies: #{e.message}"
           end
 
           currencies

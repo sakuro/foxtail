@@ -4,6 +4,7 @@ require "simplecov"
 
 require "foxtail"
 require_relative "support/locale_context"
+require_relative "support/logging_context"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -14,11 +15,5 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
-  end
-
-  # Suppress log output during tests
-  config.before do
-    allow(Foxtail::CLDR::Inheritance.instance).to receive(:log)
-    allow_any_instance_of(Foxtail::CLDR::Resolver).to receive(:log)
   end
 end

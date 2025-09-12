@@ -70,7 +70,7 @@ module Foxtail
             end
           end
         rescue => e
-          log "Warning: Could not load parent locales: #{e.message}"
+          CLDR.logger.warn "Could not load parent locales: #{e.message}"
         end
 
         parents
@@ -87,10 +87,10 @@ module Foxtail
         begin
           yaml_data = YAML.load_file(aliases_path)
           aliases = yaml_data["locale_aliases"] || {}
-          log "Loaded #{aliases.size} locale aliases from #{aliases_path}"
+          CLDR.logger.info "Loaded #{aliases.size} locale aliases from #{aliases_path}"
           aliases
         rescue => e
-          log "Warning: Could not load locale aliases from #{aliases_path}: #{e.message}"
+          CLDR.logger.warn "Could not load locale aliases from #{aliases_path}: #{e.message}"
           {}
         end
       end
@@ -105,24 +105,24 @@ module Foxtail
         # First try to resolve the entire locale_id as an alias
         if aliases[locale_id]
           result = aliases[locale_id]
-          log "Full locale alias resolution: #{locale_id} -> #{result}"
+          CLDR.logger.debug "Full locale alias resolution: #{locale_id} -> #{result}"
           return result
         end
 
         # Handle complex locale identifiers by resolving each component
         if locale_id.include?("_")
           parts = locale_id.split("_")
-          log "Resolving compound locale #{locale_id}: parts = #{parts}"
+          CLDR.logger.debug "Resolving compound locale #{locale_id}: parts = #{parts}"
           resolved_parts = parts.map {|part|
             resolved = aliases[part] || part
-            log "  #{part} -> #{resolved}"
+            CLDR.logger.debug "  #{part} -> #{resolved}"
             resolved
           }
           result = resolved_parts.join("_")
-          log "Final resolved compound locale: #{locale_id} -> #{result}"
+          CLDR.logger.debug "Final resolved compound locale: #{locale_id} -> #{result}"
         else
           result = aliases[locale_id] || locale_id
-          log "Simple locale resolution: #{locale_id} -> #{result} (found: #{aliases.key?(locale_id)})"
+          CLDR.logger.debug "Simple locale resolution: #{locale_id} -> #{result} (found: #{aliases.key?(locale_id)})"
         end
         result
       end
@@ -225,14 +225,9 @@ module Foxtail
           doc = REXML::Document.new(File.read(xml_path))
           extractor.__send__(:extract_data_from_xml, doc)
         rescue => e
-          log "Warning: Could not load data for locale #{locale}: #{e.message}"
+          CLDR.logger.warn "Could not load data for locale #{locale}: #{e.message}"
           nil
         end
-      end
-
-      # Progress logging method for testing support
-      def log(message)
-        puts message
       end
     end
   end

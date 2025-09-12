@@ -12,14 +12,14 @@ module Foxtail
         end
 
         private def extract_locale_aliases
-          log "Extracting locale aliases..."
+          CLDR.logger.info "Extracting #{data_type_name}..."
 
           aliases = load_locale_aliases_from_supplemental
 
           return if aliases.empty?
 
           write_alias_data(aliases)
-          log "Locale alias extraction complete - extracted #{aliases.size} aliases"
+          CLDR.logger.info "#{data_type_name.capitalize} extraction complete (#{aliases.size} aliases)"
         end
 
         private def load_locale_aliases_from_supplemental
@@ -80,9 +80,12 @@ module Foxtail
               aliases[type] = replacement
             end
           rescue => e
-            log "Warning: Could not load traditional aliases: #{e.message}"
+            CLDR.logger.warn "Could not load traditional aliases: #{e.message}"
           end
 
+          unless aliases.empty?
+            CLDR.logger.debug "Loaded #{aliases.size} traditional aliases from supplementalMetadata.xml"
+          end
           aliases
         end
 
@@ -111,10 +114,12 @@ module Foxtail
               end
             end
           rescue => e
-            log "Warning: Could not load likely subtags: #{e.message}"
+            CLDR.logger.warn "Could not load likely subtags: #{e.message}"
           end
 
-          log "Loaded #{aliases.size} likely subtag aliases" unless aliases.empty?
+          unless aliases.empty?
+            CLDR.logger.debug "Loaded #{aliases.size} likely subtag aliases from likelySubtags.xml"
+          end
           aliases
         end
 
@@ -128,7 +133,7 @@ module Foxtail
           }
 
           File.write(file_path, yaml_data.to_yaml)
-          log "Wrote locale aliases to #{file_path}"
+          CLDR.logger.debug "Wrote #{data_type_name} to #{file_path}"
         end
 
         private def validate_source_directory
