@@ -1,20 +1,10 @@
 ---
+locale: bew
+generated_at: '2025-09-12T04:11:07Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Pèb
-        '3': Mar
-        '4': Apr
-        '5': Méi
-        '6': Jun
-        '7': Jul
-        '8': Ags
-        '9': Sèp
-        '10': Okt
-        '11': Nop
-        '12': Dés
       wide:
         '1': Januari
         '2': Pèbruari
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Oktober
         '11': Nopèmber
         '12': Désèmber
+      abbreviated:
+        '1': Jan
+        '2': Pèb
+        '3': Mar
+        '4': Apr
+        '5': Méi
+        '6': Jun
+        '7': Jul
+        '8': Ags
+        '9': Sèp
+        '10': Okt
+        '11': Nop
+        '12': Dés
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': P
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Min
-        mon: Sen
-        tue: Sel
-        wed: Reb
-        thu: Kem
-        fri: Jum
-        sat: Sap
       wide:
         sun: Minggu
         mon: Senèn
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Kemis
         fri: Juma’at
         sat: Saptu
+      abbreviated:
+        sun: Min
+        mon: Sen
+        tue: Sel
+        wed: Reb
+        thu: Kem
+        fri: Jum
+        sat: Sap
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: M
         mon: S
@@ -69,6 +78,42 @@ datetime_formats:
         thu: K
         fri: J
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': kuartal ke-1
+        '2': kuartal ke-2
+        '3': kuartal ke-3
+        '4': kuartal ke-4
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: pagi/siang
+        pm: soré/malem
+      abbreviated:
+        am: pg/sg
+        pm: sr/mlm
+    stand-alone:
+      wide:
+        am: pagi/siang
+        pm: soré/malem
+      abbreviated: {}
+  eras:
+    names:
+      '0': Jaman Kita
+      '1': Masèhi
+    abbreviated:
+      '0': SJK
+      '1': JK
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +124,49 @@ datetime_formats:
     long: HH.mm.ss z
     medium: HH.mm.ss
     short: HH.mm
-locale: bew
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'jem' 'pukul' {0}"
+    long: "{1} 'jem' 'pukul' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bhm: h.mm B
+      Bhms: h.mm.ss B
+      EBhm: E h.mm B
+      EBhms: E h.mm.ss B
+      Ed: E, d
+      Ehm: E h.mm a
+      EHm: E HH.mm
+      Ehms: E h.mm.s a
+      EHms: E HH.mm.ss
+      Gy: y G
+      GyMd: d/M/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      hm: h.mm a
+      Hm: HH.mm
+      hms: h.mm.ss a
+      Hms: HH.mm.ss
+      hmsv: h.mm.ss. a v
+      Hmsv: HH.mm.ss v
+      hmv: h.mm a v
+      Hmv: HH.mm v
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: "'minggu' 'ke'-W MMMM"
+      ms: mm.ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'minggu' 'ke'-w Y"

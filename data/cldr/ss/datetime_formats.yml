@@ -1,20 +1,10 @@
 ---
+locale: ss
+generated_at: '2025-09-12T04:11:20Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Bhi
-        '2': Van
-        '3': Vol
-        '4': Mab
-        '5': Nkh
-        '6': Nhl
-        '7': Kho
-        '8': Ngc
-        '9': Nyo
-        '10': Mph
-        '11': Lwe
-        '12': Ngo
       wide:
         '1': Bhimbidvwane
         '2': iNdlovana
@@ -28,16 +18,26 @@ datetime_formats:
         '10': iMphala
         '11': Lweti
         '12': iNgongoni
+      abbreviated:
+        '1': Bhi
+        '2': Van
+        '3': Vol
+        '4': Mab
+        '5': Nkh
+        '6': Nhl
+        '7': Kho
+        '8': Ngc
+        '9': Nyo
+        '10': Mph
+        '11': Lwe
+        '12': Ngo
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: Son
-        mon: Mso
-        tue: Bil
-        wed: Tsa
-        thu: Ne
-        fri: Hla
-        sat: Mgc
       wide:
         sun: Lisontfo
         mon: uMsombuluko
@@ -46,7 +46,37 @@ datetime_formats:
         thu: Lesine
         fri: Lesihlanu
         sat: uMgcibelo
-locale: ss
-generated_at: '2025-09-06T03:52:41+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated:
+        sun: Son
+        mon: Mso
+        tue: Bil
+        wed: Tsa
+        thu: Ne
+        fri: Hla
+        sat: Mgc
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats: {}

@@ -1,14 +1,18 @@
 ---
+locale: smn
+generated_at: '2025-09-12T04:10:28Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+    nan: epiloho
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
-    nan: epiloho
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
@@ -68,8 +72,6 @@ number_formats:
       symbol: Kč
     DKK:
       symbol: kr
-      display_names:
-        other: Tanska ruvnâ
     DOP:
       symbol: "$"
     EGP:
@@ -78,8 +80,6 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: euro
     FJD:
       symbol: "$"
     FKP:
@@ -114,8 +114,6 @@ number_formats:
       symbol: "₹"
     ISK:
       symbol: kr
-      display_names:
-        other: Island ruvnâ
     JMD:
       symbol: "$"
     JPY:
@@ -166,8 +164,6 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
-      display_names:
-        other: Taažâ ruvnâ
     NPR:
       symbol: Rs
     NZD:
@@ -190,8 +186,6 @@ number_formats:
       symbol: "$"
     SEK:
       symbol: kr
-      display_names:
-        other: Ruotâ ruvnâ
     SGD:
       symbol: "$"
     SHP:
@@ -240,19 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    EEK:
-      display_names:
-        other: Eesti ruvnâ
-    FIM:
-      display_names:
-        other: Suomâ märkki
-    LVR:
-      display_names:
-        other: Latvia ruble
-locale: smn
-generated_at: '2025-09-10T23:53:17+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

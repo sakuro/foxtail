@@ -1,20 +1,24 @@
 ---
+locale: os
+generated_at: '2025-09-12T04:10:01Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+    nan: НН
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
-    nan: НН
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -44,9 +48,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: бразилиаг реалы
-        one: бразилиаг реал
     BSD:
       symbol: "$"
     BWP:
@@ -79,23 +80,14 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: евройы
-        one: евро
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: бритайнаг фунты
-        one: бритайнаг фунт
     GEL:
       symbol: "₾"
-      display_names:
-        other: лары
-        one: лар
     GHS:
       symbol: GH₵
     GIP:
@@ -188,9 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: сомы
-        one: сом
     RWF:
       symbol: RF
     SBD:
@@ -222,10 +211,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
-      display_names:
-        other: АИШ-ы доллары
-        one: АИШ-ы доллар
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -244,17 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: нӕзонгӕ валютӕйы
-        one: нӕзонгӕ валютӕ
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: os
-generated_at: '2025-09-10T23:53:15+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

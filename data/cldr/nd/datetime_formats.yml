@@ -1,20 +1,10 @@
 ---
+locale: nd
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Zib
-        '2': Nhlo
-        '3': Mbi
-        '4': Mab
-        '5': Nkw
-        '6': Nhla
-        '7': Ntu
-        '8': Ncw
-        '9': Mpan
-        '10': Mfu
-        '11': Lwe
-        '12': Mpal
       wide:
         '1': Zibandlela
         '2': Nhlolanja
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Mfumfu
         '11': Lwezi
         '12': Mpalakazi
+      abbreviated:
+        '1': Zib
+        '2': Nhlo
+        '3': Mbi
+        '4': Mab
+        '5': Nkw
+        '6': Nhla
+        '7': Ntu
+        '8': Ncw
+        '9': Mpan
+        '10': Mfu
+        '11': Lwe
+        '12': Mpal
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': Z
         '2': "N"
@@ -44,14 +50,6 @@ datetime_formats:
         '12': M
   days:
     format:
-      abbreviated:
-        sun: Son
-        mon: Mvu
-        tue: Sib
-        wed: Sit
-        thu: Sin
-        fri: Sih
-        sat: Mgq
       wide:
         sun: Sonto
         mon: Mvulo
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Sine
         fri: Sihlanu
         sat: Mgqibelo
+      abbreviated:
+        sun: Son
+        mon: Mvu
+        tue: Sib
+        wed: Sit
+        thu: Sin
+        fri: Sih
+        sat: Mgq
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: S
         mon: M
@@ -69,6 +78,36 @@ datetime_formats:
         thu: S
         fri: S
         sat: M
+  quarters:
+    format:
+      wide:
+        '1': Kota 1
+        '2': Kota 2
+        '3': Kota 3
+        '4': Kota 4
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': UKristo angakabuyi
+      '1': Ukristo ebuyile
+    abbreviated:
+      '0': BC
+      '1': AD
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +118,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: nd
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

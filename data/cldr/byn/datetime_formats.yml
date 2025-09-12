@@ -1,20 +1,10 @@
 ---
+locale: byn
+generated_at: '2025-09-12T04:11:08Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ልደት
-        '2': ካብኽ
-        '3': ክብላ
-        '4': ፋጅኺ
-        '5': ክቢቅ
-        '6': ም/ት
-        '7': ኰር
-        '8': ማርያ
-        '9': ያኸኒ
-        '10': መተሉ
-        '11': ም/ም
-        '12': ተሕሳ
       wide:
         '1': ልደትሪ
         '2': ካብኽብቲ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': መተሉ
         '11': ምኪኤል መሽወሪ
         '12': ተሕሳስሪ
+      abbreviated:
+        '1': ልደት
+        '2': ካብኽ
+        '3': ክብላ
+        '4': ፋጅኺ
+        '5': ክቢቅ
+        '6': ም/ት
+        '7': ኰር
+        '8': ማርያ
+        '9': ያኸኒ
+        '10': መተሉ
+        '11': ም/ም
+        '12': ተሕሳ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ል
         '2': ካ
@@ -44,14 +50,6 @@ datetime_formats:
         '12': ተ
   days:
     format:
-      abbreviated:
-        sun: ሰ/ቅ
-        mon: ሰኑ
-        tue: ሰሊጝ
-        wed: ለጓ
-        thu: ኣምድ
-        fri: ኣርብ
-        sat: ሰ/ሽ
       wide:
         sun: ሰንበር ቅዳዅ
         mon: ሰኑ
@@ -60,7 +58,18 @@ datetime_formats:
         thu: ኣምድ
         fri: ኣርብ
         sat: ሰንበር ሽጓዅ
+      abbreviated:
+        sun: ሰ/ቅ
+        mon: ሰኑ
+        tue: ሰሊጝ
+        wed: ለጓ
+        thu: ኣምድ
+        fri: ኣርብ
+        sat: ሰ/ሽ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ሰ
         mon: ሰ
@@ -69,6 +78,30 @@ datetime_formats:
         thu: ኣ
         fri: ኣ
         sat: ሰ
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: ፋዱስ ጃብ
+        pm: ፋዱስ ደምቢ
+      abbreviated:
+        am: ፋዱስ ጃብ
+        pm: ፋዱስ ደምቢ
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': ይጅ
+      '1': ኣድ
+    narrow: {}
   date_formats:
     full: EEEE፡ dd MMMM ግርጋ y G
     long: dd MMMM y
@@ -79,7 +112,4 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: byn
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats: {}

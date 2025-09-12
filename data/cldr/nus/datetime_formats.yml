@@ -1,20 +1,10 @@
 ---
+locale: nus
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Tiop
-        '2': Pɛt
-        '3': Duɔ̱ɔ̱
-        '4': Guak
-        '5': Duä
-        '6': Kor
-        '7': Pay
-        '8': Thoo
-        '9': Tɛɛ
-        '10': Laa
-        '11': Kur
-        '12': Tid
       wide:
         '1': Tiop thar pɛt
         '2': Pɛt
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Laath
         '11': Kur
         '12': Tio̱p in di̱i̱t
+      abbreviated:
+        '1': Tiop
+        '2': Pɛt
+        '3': Duɔ̱ɔ̱
+        '4': Guak
+        '5': Duä
+        '6': Kor
+        '7': Pay
+        '8': Thoo
+        '9': Tɛɛ
+        '10': Laa
+        '11': Kur
+        '12': Tid
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': T
         '2': P
@@ -44,14 +50,6 @@ datetime_formats:
         '12': T
   days:
     format:
-      abbreviated:
-        sun: Cäŋ
-        mon: Jiec
-        tue: Rɛw
-        wed: Diɔ̱k
-        thu: Ŋuaan
-        fri: Dhieec
-        sat: Bäkɛl
       wide:
         sun: Cäŋ kuɔth
         mon: Jiec la̱t
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Ŋuaan lätni
         fri: Dhieec lätni
         sat: Bäkɛl lätni
+      abbreviated:
+        sun: Cäŋ
+        mon: Jiec
+        tue: Rɛw
+        wed: Diɔ̱k
+        thu: Ŋuaan
+        fri: Dhieec
+        sat: Bäkɛl
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: C
         mon: J
@@ -69,6 +78,38 @@ datetime_formats:
         thu: Ŋ
         fri: D
         sat: B
+  quarters:
+    format:
+      wide:
+        '1': Päth diɔk tin nhiam
+        '2': Päth diɔk tin guurɛ
+        '3': Päth diɔk tin wä kɔɔriɛn
+        '4': Päth diɔk tin jiɔakdiɛn
+      abbreviated:
+        '1': P1
+        '2': P2
+        '3': P3
+        '4': P4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: RW
+        pm: TŊ
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': A ka̱n Yecu ni dap
+      '1': Ɛ ca Yecu dap
+    abbreviated:
+      '0': AY
+      '1': ƐY
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +120,21 @@ datetime_formats:
     long: z h:mm:ss a
     medium: h:mm:ss a
     short: h:mm a
-locale: nus
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E، d-M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E، d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E، d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

@@ -1,4 +1,7 @@
 ---
+locale: bgc
+generated_at: '2025-09-12T04:11:07Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,6 +18,12 @@ datetime_formats:
         '10': अक्टूबर
         '11': नवम्बर
         '12': दिसंबर
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
       wide:
@@ -25,12 +34,36 @@ datetime_formats:
         thu: बृहस्पतवार
         fri: शुक्रवार
         sat: शनिवार
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: तडके
+        pm: सांझ
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
+  date_formats: {}
   time_formats:
     full: h:mm:ss a zzzz
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: bgc
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats: {}

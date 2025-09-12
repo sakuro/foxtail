@@ -1,20 +1,10 @@
 ---
+locale: mfe
+generated_at: '2025-09-12T04:11:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': zan
-        '2': fev
-        '3': mar
-        '4': avr
-        '5': me
-        '6': zin
-        '7': zil
-        '8': out
-        '9': sep
-        '10': okt
-        '11': nov
-        '12': des
       wide:
         '1': zanvie
         '2': fevriye
@@ -28,7 +18,23 @@ datetime_formats:
         '10': oktob
         '11': novam
         '12': desam
+      abbreviated:
+        '1': zan
+        '2': fev
+        '3': mar
+        '4': avr
+        '5': me
+        '6': zin
+        '7': zil
+        '8': out
+        '9': sep
+        '10': okt
+        '11': nov
+        '12': des
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': z
         '2': f
@@ -44,14 +50,6 @@ datetime_formats:
         '12': d
   days:
     format:
-      abbreviated:
-        sun: dim
-        mon: lin
-        tue: mar
-        wed: mer
-        thu: ze
-        fri: van
-        sat: sam
       wide:
         sun: dimans
         mon: lindi
@@ -60,7 +58,18 @@ datetime_formats:
         thu: zedi
         fri: vandredi
         sat: samdi
+      abbreviated:
+        sun: dim
+        mon: lin
+        tue: mar
+        wed: mer
+        thu: ze
+        fri: van
+        sat: sam
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: d
         mon: l
@@ -69,6 +78,36 @@ datetime_formats:
         thu: z
         fri: v
         sat: s
+  quarters:
+    format:
+      wide:
+        '1': 1e trimes
+        '2': 2em trimes
+        '3': 3em trimes
+        '4': 4em trimes
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': avan Zezi-Krist
+      '1': apre Zezi-Krist
+    abbreviated:
+      '0': av. Z-K
+      '1': ap. Z-K
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +118,24 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: mfe
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      M: M
+      Md: d/M
+      MMd: d/MM
+      MMdd: dd/MM
+      MMM: MMM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMEd: E d MMMM
+      ms: m:ss
+      yM: M/y
+      yMEd: E d/M/y
+      yMM: MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

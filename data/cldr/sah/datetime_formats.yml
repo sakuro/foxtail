@@ -1,20 +1,10 @@
 ---
+locale: sah
+generated_at: '2025-09-12T04:11:19Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Тохс
-        '2': Олун
-        '3': Клн
-        '4': Мсу
-        '5': Ыам
-        '6': Бэс
-        '7': Отй
-        '8': Атр
-        '9': Блҕ
-        '10': Алт
-        '11': Сэт
-        '12': Ахс
       wide:
         '1': Тохсунньу
         '2': Олунньу
@@ -28,20 +18,21 @@ datetime_formats:
         '10': Алтынньы
         '11': Сэтинньи
         '12': ахсынньы
+      abbreviated:
+        '1': Тохс
+        '2': Олун
+        '3': Клн
+        '4': Мсу
+        '5': Ыам
+        '6': Бэс
+        '7': Отй
+        '8': Атр
+        '9': Блҕ
+        '10': Алт
+        '11': Сэт
+        '12': Ахс
+      narrow: {}
     stand-alone:
-      narrow:
-        '1': Т
-        '2': О
-        '3': К
-        '4': М
-        '5': Ы
-        '6': Б
-        '7': О
-        '8': А
-        '9': Б
-        '10': А
-        '11': С
-        '12': А
       wide:
         '1': тохсунньу
         '2': олунньу
@@ -55,16 +46,22 @@ datetime_formats:
         '10': алтынньы
         '11': сэтинньи
         '12': ахсынньы
+      abbreviated: {}
+      narrow:
+        '1': Т
+        '2': О
+        '3': К
+        '4': М
+        '5': Ы
+        '6': Б
+        '7': О
+        '8': А
+        '9': Б
+        '10': А
+        '11': С
+        '12': А
   days:
     format:
-      abbreviated:
-        sun: бс
-        mon: бн
-        tue: оп
-        wed: сэ
-        thu: чп
-        fri: бэ
-        sat: сб
       wide:
         sun: баскыһыанньа
         mon: бэнидиэнньик
@@ -73,7 +70,18 @@ datetime_formats:
         thu: чэппиэр
         fri: Бээтиҥсэ
         sat: субуота
+      abbreviated:
+        sun: бс
+        mon: бн
+        tue: оп
+        wed: сэ
+        thu: чп
+        fri: бэ
+        sat: сб
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: Б
         mon: Б
@@ -82,6 +90,38 @@ datetime_formats:
         thu: Ч
         fri: Б
         sat: С
+  quarters:
+    format:
+      wide:
+        '1': 1-кы кыбаартал
+        '2': 2-с кыбаартал
+        '3': 3-с кыбаартал
+        '4': 4-с кыбаартал
+      abbreviated:
+        '1': 1-кы кб
+        '2': 2-с кб
+        '3': 3-с кб
+        '4': 4-с кб
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ЭИ
+        pm: ЭК
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': биһиги ээрэбит иннинэ
+      '1': биһиги ээрэбит
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
   date_formats:
     full: y 'сыл' MMMM d 'күнэ', EEEE
     long: y, MMMM d
@@ -92,7 +132,19 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: sah
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y 'с'. G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      MMMMW: MMMM W 'нэдиэлэтэ'
+      yw: Y 'сыл' w 'нэдиэлэтэ'

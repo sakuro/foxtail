@@ -1,20 +1,10 @@
 ---
+locale: vec
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': jen
-        '2': feb
-        '3': mar
-        '4': apr
-        '5': maj
-        '6': jug
-        '7': luj
-        '8': ago
-        '9': set
-        '10': oto
-        '11': nov
-        '12': dez
       wide:
         '1': jenaro
         '2': febraro
@@ -28,7 +18,34 @@ datetime_formats:
         '10': otobre
         '11': novenbre
         '12': dezenbre
+      abbreviated:
+        '1': jen
+        '2': feb
+        '3': mar
+        '4': apr
+        '5': maj
+        '6': jug
+        '7': luj
+        '8': ago
+        '9': set
+        '10': oto
+        '11': nov
+        '12': dez
+      narrow: {}
     stand-alone:
+      wide:
+        '1': jenaro
+        '2': febraro
+        '3': marso
+        '4': aprile
+        '5': majo
+        '6': jugno
+        '7': lujo
+        '8': agosto
+        '9': setenbre
+        '10': otobre
+        '11': novenbre
+        '12': dezenbre
       abbreviated:
         '1': jen
         '2': feb
@@ -55,29 +72,8 @@ datetime_formats:
         '10': O
         '11': "N"
         '12': D
-      wide:
-        '1': jenaro
-        '2': febraro
-        '3': marso
-        '4': aprile
-        '5': majo
-        '6': jugno
-        '7': lujo
-        '8': agosto
-        '9': setenbre
-        '10': otobre
-        '11': novenbre
-        '12': dezenbre
   days:
     format:
-      abbreviated:
-        sun: dom
-        mon: lun
-        tue: mar
-        wed: mer
-        thu: zob
-        fri: vèn
-        sat: sab
       wide:
         sun: doménega
         mon: luni
@@ -86,7 +82,18 @@ datetime_formats:
         thu: zoba
         fri: vènare
         sat: sabo
+      abbreviated:
+        sun: dom
+        mon: lun
+        tue: mar
+        wed: mer
+        thu: zob
+        fri: vèn
+        sat: sab
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: D
         mon: L
@@ -95,6 +102,36 @@ datetime_formats:
         thu: Z
         fri: V
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1º trimestre
+        '2': 2º trimestre
+        '3': 3º trimestre
+        '4': 4º trimestre
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': vanti era comun
+      '1': era comun
+    abbreviated:
+      '0': v.e.c.
+      '1': e.c.
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -105,7 +142,35 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: vec
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1}, {0}"
+    long: "{1}, {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E d
+      Gy: y G
+      GyMd: dd/MM/y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      hmsv: h:mm:ss a (v)
+      Hmsv: HH:mm:ss (v)
+      hmv: h:mm a (v)
+      Hmv: HH:mm (v)
+      Md: dd/MM
+      MEd: E dd/MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: W'ª' 'setemana' 'de' MMMM
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E dd/MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: w'ª' 'setemana' 'de''l' Y

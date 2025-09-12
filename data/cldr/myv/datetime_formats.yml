@@ -1,4 +1,7 @@
 ---
+locale: myv
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,7 +18,10 @@ datetime_formats:
         '10': ожоков
         '11': сундерьков
         '12': ацамков
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         '1': якш
         '2': дав
@@ -29,16 +35,9 @@ datetime_formats:
         '10': ожо
         '11': сун
         '12': аца
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: тар
-        mon: атя
-        tue: вас
-        wed: кун
-        thu: кал
-        fri: сюк
-        sat: шля
       wide:
         sun: таргочистэ
         mon: атяньчистэ
@@ -47,6 +46,15 @@ datetime_formats:
         thu: калоньчистэ
         fri: сюконьчистэ
         sat: шлямочистэ
+      abbreviated:
+        sun: тар
+        mon: атя
+        tue: вас
+        wed: кун
+        thu: кал
+        fri: сюк
+        sat: шля
+      narrow: {}
     stand-alone:
       wide:
         sun: таргочи
@@ -56,7 +64,32 @@ datetime_formats:
         thu: калоньчи
         fri: сюконьчи
         sat: шлямочи
-locale: myv
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: обедтэ икеле
+        pm: обедтэ мейле
+      abbreviated: {}
+    stand-alone:
+      wide:
+        am: обедтэ икеле
+        pm: обедтэ мейле
+      abbreviated: {}
+  eras:
+    names:
+      '0': Минек эрадо икеле
+      '1': Минек эрасто
+    abbreviated: {}
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats: {}

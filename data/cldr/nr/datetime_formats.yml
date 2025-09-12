@@ -1,20 +1,10 @@
 ---
+locale: nr
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mat
-        '4': Apr
-        '5': Mey
-        '6': Jun
-        '7': Jul
-        '8': Arh
-        '9': Sep
-        '10': Okt
-        '11': Usi
-        '12': Dis
       wide:
         '1': Janabari
         '2': uFeberbari
@@ -28,16 +18,26 @@ datetime_formats:
         '10': Oktoba
         '11': Usinyikhaba
         '12': Disemba
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mat
+        '4': Apr
+        '5': Mey
+        '6': Jun
+        '7': Jul
+        '8': Arh
+        '9': Sep
+        '10': Okt
+        '11': Usi
+        '12': Dis
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: Son
-        mon: Mvu
-        tue: Bil
-        wed: Tha
-        thu: Ne
-        fri: Hla
-        sat: Gqi
       wide:
         sun: uSonto
         mon: uMvulo
@@ -46,7 +46,39 @@ datetime_formats:
         thu: uLesine
         fri: ngoLesihlanu
         sat: umGqibelo
-locale: nr
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated:
+        sun: Son
+        mon: Mvu
+        tue: Bil
+        wed: Tha
+        thu: Ne
+        fri: Hla
+        sat: Gqi
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': BC
+      '1': AD
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats: {}

@@ -1,20 +1,24 @@
 ---
+locale: syr
+generated_at: '2025-09-12T04:10:38Z'
+cldr_version: '46'
 number_formats:
   symbols:
+    nan: ܠܝܬ ܡܢܝܢܐ
     decimal: "."
     group: ","
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
-    nan: ܠܝܬ ܡܢܝܢܐ
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -193,7 +197,7 @@ number_formats:
     STN:
       symbol: Db
     SYP:
-      symbol: ل.س.‏
+      symbol: "£"
     THB:
       symbol: "฿"
     TOP:
@@ -230,10 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-locale: syr
-generated_at: '2025-09-10T23:53:18+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

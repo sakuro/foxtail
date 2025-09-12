@@ -1,20 +1,10 @@
 ---
+locale: agq
+generated_at: '2025-09-12T04:11:06Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': nùm
-        '2': kɨz
-        '3': tɨd
-        '4': taa
-        '5': see
-        '6': nzu
-        '7': dum
-        '8': fɔe
-        '9': dzu
-        '10': lɔm
-        '11': kaa
-        '12': fwo
       wide:
         '1': ndzɔ̀ŋɔ̀nùm
         '2': ndzɔ̀ŋɔ̀kƗ̀zùʔ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ndzɔ̀ŋɔ̀ghǔuwelɔ̀m
         '11': ndzɔ̀ŋɔ̀chwaʔàkaa wo
         '12': ndzɔ̀ŋèfwòo
+      abbreviated:
+        '1': nùm
+        '2': kɨz
+        '3': tɨd
+        '4': taa
+        '5': see
+        '6': nzu
+        '7': dum
+        '8': fɔe
+        '9': dzu
+        '10': lɔm
+        '11': kaa
+        '12': fwo
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': "n"
         '2': k
@@ -44,14 +50,6 @@ datetime_formats:
         '12': f
   days:
     format:
-      abbreviated:
-        sun: nts
-        mon: kpa
-        tue: ghɔ
-        wed: tɔm
-        thu: ume
-        fri: ghɨ
-        sat: dzk
       wide:
         sun: tsuʔntsɨ
         mon: tsuʔukpà
@@ -60,7 +58,18 @@ datetime_formats:
         thu: tsuʔumè
         fri: tsuʔughɨ̂m
         sat: tsuʔndzɨkɔʔɔ
+      abbreviated:
+        sun: nts
+        mon: kpa
+        tue: ghɔ
+        wed: tɔm
+        thu: ume
+        fri: ghɨ
+        sat: dzk
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: "n"
         mon: k
@@ -69,6 +78,34 @@ datetime_formats:
         thu: u
         fri: g
         sat: d
+  quarters:
+    format:
+      wide:
+        '1': kɨbâ kɨ 1
+        '2': ugbâ u 2
+        '3': ugbâ u 3
+        '4': ugbâ u 4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: a.g
+        pm: a.k
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Sěe Kɨ̀lesto
+      '1': Bǎa Kɨ̀lesto
+    abbreviated:
+      '0': SK
+      '1': BK
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +116,21 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: agq
-generated_at: '2025-09-06T03:52:30+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: d E
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

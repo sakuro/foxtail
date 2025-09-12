@@ -1,20 +1,10 @@
 ---
+locale: mgo
+generated_at: '2025-09-12T04:11:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': mbegtug
-        '2': imeg àbùbì
-        '3': imeg mbəŋchubi
-        '4': iməg ngwə̀t
-        '5': iməg fog
-        '6': iməg ichiibɔd
-        '7': iməg àdùmbə̀ŋ
-        '8': iməg ichika
-        '9': iməg kud
-        '10': iməg tèsiʼe
-        '11': iməg zò
-        '12': iməg krizmed
       wide:
         '1': iməg mbegtug
         '2': imeg àbùbì
@@ -28,7 +18,23 @@ datetime_formats:
         '10': iməg tèsiʼe
         '11': iməg zò
         '12': iməg krizmed
+      abbreviated:
+        '1': mbegtug
+        '2': imeg àbùbì
+        '3': imeg mbəŋchubi
+        '4': iməg ngwə̀t
+        '5': iməg fog
+        '6': iməg ichiibɔd
+        '7': iməg àdùmbə̀ŋ
+        '8': iməg ichika
+        '9': iməg kud
+        '10': iməg tèsiʼe
+        '11': iməg zò
+        '12': iməg krizmed
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': M1
         '2': A2
@@ -44,14 +50,6 @@ datetime_formats:
         '12': '12'
   days:
     format:
-      short:
-        sun: A1
-        mon: A2
-        tue: A3
-        wed: A4
-        thu: A5
-        fri: A6
-        sat: A7
       wide:
         sun: Aneg 1
         mon: Aneg 2
@@ -60,7 +58,11 @@ datetime_formats:
         thu: Aneg 5
         fri: Aneg 6
         sat: Aneg 7
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: '1'
         mon: '2'
@@ -69,6 +71,24 @@ datetime_formats:
         thu: '5'
         fri: '6'
         sat: '7'
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
   date_formats:
     full: EEEE, y MMMM dd
     long: y MMMM d
@@ -79,7 +99,8 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: mgo
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"

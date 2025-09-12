@@ -1,20 +1,10 @@
 ---
+locale: it
+generated_at: '2025-09-12T04:11:13Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': gen
-        '2': feb
-        '3': mar
-        '4': apr
-        '5': mag
-        '6': giu
-        '7': lug
-        '8': ago
-        '9': set
-        '10': ott
-        '11': nov
-        '12': dic
       wide:
         '1': gennaio
         '2': febbraio
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ottobre
         '11': novembre
         '12': dicembre
+      abbreviated:
+        '1': gen
+        '2': feb
+        '3': mar
+        '4': apr
+        '5': mag
+        '6': giu
+        '7': lug
+        '8': ago
+        '9': set
+        '10': ott
+        '11': nov
+        '12': dic
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': G
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: dom
-        mon: lun
-        tue: mar
-        wed: mer
-        thu: gio
-        fri: ven
-        sat: sab
       wide:
         sun: domenica
         mon: lunedì
@@ -60,7 +58,18 @@ datetime_formats:
         thu: giovedì
         fri: venerdì
         sat: sabato
+      abbreviated:
+        sun: dom
+        mon: lun
+        tue: mar
+        wed: mer
+        thu: gio
+        fri: ven
+        sat: sab
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: D
         mon: L
@@ -69,6 +78,54 @@ datetime_formats:
         thu: G
         fri: V
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1º trimestre
+        '2': 2º trimestre
+        '3': 3º trimestre
+        '4': 4º trimestre
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: mezzanotte
+        noon: mezzogiorno
+        morning1: di mattina
+        afternoon1: del pomeriggio
+        evening1: di sera
+        night1: di notte
+      abbreviated:
+        midnight: mezzanotte
+        noon: mezzogiorno
+        morning1: di mattina
+        afternoon1: di pomeriggio
+        evening1: di sera
+        night1: di notte
+    stand-alone:
+      wide: {}
+      abbreviated:
+        morning1: mattina
+        afternoon1: pomeriggio
+        evening1: sera
+        night1: notte
+  eras:
+    names:
+      '0': avanti Era Volgare
+      '1': Era Volgare
+    abbreviated:
+      '0': a.E.V.
+      '1': E.V.
+    narrow:
+      '0': aEV
+      '1': EV
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +136,38 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: it
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'alle' 'ore' {0}"
+    long: "{1} 'alle' 'ore' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: dd/MM/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd/MM
+      MEd: E dd/MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'settimana' W 'di' MMMM"
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E dd/MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'settimana' w 'del' Y"

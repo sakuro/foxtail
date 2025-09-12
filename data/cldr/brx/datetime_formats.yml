@@ -1,20 +1,10 @@
 ---
+locale: brx
+generated_at: '2025-09-12T04:11:08Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': जान
-        '2': फेब
-        '3': मार्च
-        '4': एप्रि
-        '5': मे
-        '6': जुन
-        '7': जुल
-        '8': आग
-        '9': सेप
-        '10': अक्ट’
-        '11': नवे
-        '12': डिसे
       wide:
         '1': जानुवारी
         '2': फेब्रूवारी
@@ -28,7 +18,23 @@ datetime_formats:
         '10': अक्ट’बर
         '11': नवेम्बर
         '12': डिसेम्बर
+      abbreviated:
+        '1': जान
+        '2': फेब
+        '3': मार्च
+        '4': एप्रि
+        '5': मे
+        '6': जुन
+        '7': जुल
+        '8': आग
+        '9': सेप
+        '10': अक्ट’
+        '11': नवे
+        '12': डिसे
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ज
         '2': फ
@@ -44,14 +50,6 @@ datetime_formats:
         '12': ड
   days:
     format:
-      abbreviated:
-        sun: रबि
-        mon: सम
-        tue: मंगल
-        wed: बुध
-        thu: बिस्थि
-        fri: सुखुर
-        sat: सनि
       wide:
         sun: रबिबार
         mon: समबार
@@ -60,15 +58,16 @@ datetime_formats:
         thu: बिस्थिबार
         fri: सुखुरबार
         sat: सनिबार
+      abbreviated:
+        sun: रबि
+        mon: सम
+        tue: मंगल
+        wed: बुध
+        thu: बिस्थि
+        fri: सुखुर
+        sat: सनि
+      narrow: {}
     stand-alone:
-      narrow:
-        sun: र
-        mon: स
-        tue: मं
-        wed: बु
-        thu: बि
-        fri: सु
-        sat: स
       wide:
         sun: रबिबार
         mon: समबार
@@ -77,6 +76,47 @@ datetime_formats:
         thu: बिस्थिबार
         fri: सुुखुरबार
         sat: सनिबार
+      abbreviated: {}
+      narrow:
+        sun: र
+        mon: स
+        tue: मं
+        wed: बु
+        thu: बि
+        fri: सु
+        sat: स
+  quarters:
+    format:
+      wide:
+        '1': ब्रै बाहागोनि सेथि खोन्दो
+        '2': ब्रै बाहागोनि नैथि खोन्दो
+        '3': ब्रै बाहागोनि थामथि खोन्दो
+        '4': ब्रै बाहागोनि ब्रैथि खोन्दो
+      abbreviated:
+        '1': किउ 1
+        '2': किउ 2
+        '3': किउ 3
+        '4': किउ 4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: फुं
+        pm: बेलासे
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': सादारन मुगानि सिगां
+      '1': सादारन मुगा
+    abbreviated:
+      '0': बि.सि.इ
+      '1': सि.इ.
+    narrow: {}
   date_formats:
     full: d MMMM y, EEEE
     long: d MMMM, y
@@ -87,7 +127,37 @@ datetime_formats:
     long: a h:mm:ss z
     medium: a h:mm:ss
     short: a नि h:mm
-locale: brx
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} नि {0} याव"
+    long: "{1} नि {0} याव"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B नि h
+      Bhm: B नि h:mm
+      Bhms: B नि h:mm:ss
+      EBhm: E B नि h:mm
+      EBhms: E B नि h:mm:ss
+      Ehm: a h:mm, E
+      Ehms: a h:mm:ss, E
+      Gy: Gy
+      GyMd: GGGGG dd-MM-y
+      GyMMMEd: G y MMM E d
+      h: a नि h
+      hmsv: a नि h:mm:ss v
+      hmv: a h:mm v
+      Md: M/d
+      MEd: E, M/d
+      MMMd: d-MMM
+      MMMEd: E, MMM d
+      MMMMd: MMMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMd: dd-MM-y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

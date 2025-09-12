@@ -1,20 +1,10 @@
 ---
+locale: ki
+generated_at: '2025-09-12T04:11:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': JEN
-        '2': WKR
-        '3': WGT
-        '4': WKN
-        '5': WTN
-        '6': WTD
-        '7': WMJ
-        '8': WNN
-        '9': WKD
-        '10': WIK
-        '11': WMW
-        '12': DIT
       wide:
         '1': Njenuarĩ
         '2': Mwere wa kerĩ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Mwere wa ikũmi
         '11': Mwere wa ikũmi na ũmwe
         '12': Ndithemba
+      abbreviated:
+        '1': JEN
+        '2': WKR
+        '3': WGT
+        '4': WKN
+        '5': WTN
+        '6': WTD
+        '7': WMJ
+        '8': WNN
+        '9': WKD
+        '10': WIK
+        '11': WMW
+        '12': DIT
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': K
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: KMA
-        mon: NTT
-        tue: NMN
-        wed: NMT
-        thu: ART
-        fri: NMA
-        sat: NMM
       wide:
         sun: Kiumia
         mon: Njumatatũ
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Aramithi
         fri: Njumaa
         sat: Njumamothi
+      abbreviated:
+        sun: KMA
+        mon: NTT
+        tue: NMN
+        wed: NMT
+        thu: ART
+        fri: NMA
+        sat: NMM
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: K
         mon: "N"
@@ -69,6 +78,38 @@ datetime_formats:
         thu: A
         fri: "N"
         sat: "N"
+  quarters:
+    format:
+      wide:
+        '1': Robo ya mbere
+        '2': Robo ya kerĩ
+        '3': Robo ya gatatũ
+        '4': Robo ya kana
+      abbreviated:
+        '1': R1
+        '2': R2
+        '3': R3
+        '4': R4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: Kiroko
+        pm: Hwaĩ-inĩ
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Mbere ya Kristo
+      '1': Thutha wa Kristo
+    abbreviated:
+      '0': MK
+      '1': TK
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +120,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: ki
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

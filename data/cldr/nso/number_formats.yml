@@ -1,12 +1,16 @@
 ---
+locale: nso
+generated_at: '2025-09-12T04:09:57Z'
+cldr_version: '46'
 number_formats:
   symbols:
-    decimal: "."
     group: " "
+    decimal: "."
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard: "¤#,##0.00"
     accounting: "¤#,##0.00"
   scientific_formats:
     standard: "#E0"
@@ -231,10 +235,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-locale: nso
-generated_at: '2025-09-10T23:53:14+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

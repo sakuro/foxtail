@@ -1,20 +1,10 @@
 ---
+locale: dyo
+generated_at: '2025-09-12T04:11:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Sa
-        '2': Fe
-        '3': Ma
-        '4': Ab
-        '5': Me
-        '6': Su
-        '7': Sú
-        '8': Ut
-        '9': Se
-        '10': Ok
-        '11': 'No'
-        '12': De
       wide:
         '1': Sanvie
         '2': Fébirie
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Oktobar
         '11': Novembar
         '12': Disambar
+      abbreviated:
+        '1': Sa
+        '2': Fe
+        '3': Ma
+        '4': Ab
+        '5': Me
+        '6': Su
+        '7': Sú
+        '8': Ut
+        '9': Se
+        '10': Ok
+        '11': 'No'
+        '12': De
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': S
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Dim
-        mon: Ten
-        tue: Tal
-        wed: Ala
-        thu: Ara
-        fri: Arj
-        sat: Sib
       wide:
         sun: Dimas
         mon: Teneŋ
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Aramisay
         fri: Arjuma
         sat: Sibiti
+      abbreviated:
+        sun: Dim
+        mon: Ten
+        tue: Tal
+        wed: Ala
+        thu: Ara
+        fri: Arj
+        sat: Sib
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: D
         mon: T
@@ -69,6 +78,28 @@ datetime_formats:
         thu: A
         fri: A
         sat: S
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Ariŋuu Yeesu
+      '1': Atooŋe Yeesu
+    abbreviated:
+      '0': ArY
+      '1': AtY
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +110,21 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: dyo
-generated_at: '2025-09-06T03:52:33+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

@@ -1,4 +1,7 @@
 ---
+locale: yue
+generated_at: '2025-09-12T04:11:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,16 +18,14 @@ datetime_formats:
         '10': 10月
         '11': 11月
         '12': 12月
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      short:
-        sun: 日
-        mon: 一
-        tue: 二
-        wed: 三
-        thu: 四
-        fri: 五
-        sat: 六
       wide:
         sun: 星期日
         mon: 星期一
@@ -33,7 +34,11 @@ datetime_formats:
         thu: 星期四
         fri: 星期五
         sat: 星期六
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: 日
         mon: 一
@@ -42,6 +47,39 @@ datetime_formats:
         thu: 四
         fri: 五
         sat: 六
+  quarters:
+    format:
+      wide:
+        '1': 第1季
+        '2': 第2季
+        '3': 第3季
+        '4': 第4季
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: 午夜
+        am: 上午
+        pm: 下午
+        morning1: 清晨
+        morning2: 朝早
+        afternoon1: 中午
+        afternoon2: 下晝
+        evening1: 夜晚
+        night1: 凌晨
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': 公元前
+      '1': 公元
+    narrow: {}
   date_formats:
     full: y年M月d日 EEEE
     long: y年M月d日
@@ -52,7 +90,50 @@ datetime_formats:
     long: ah:mm:ss [z]
     medium: ah:mm:ss
     short: ah:mm
-locale: yue
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1}{0}"
+    long: "{1}{0}"
+    medium: "{1}{0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: Bh時
+      Bhm: Bh:mm
+      Bhms: Bh:mm:ss
+      d: d日
+      EBhm: E Bh:mm
+      EBhms: E Bh:mm:ss
+      Ed: d E
+      Ehm: E ah:mm
+      Ehms: E ah:mm:ss
+      Gy: Gy年
+      GyMMM: Gy年M月
+      GyMMMd: Gy年M月d日
+      GyMMMEd: Gy年M月d日 E
+      h: ah時
+      H: H時
+      hm: ah:mm
+      hms: ah:mm:ss
+      hmsv: ah:mm:ss [v]
+      Hmsv: HH:mm:ss [v]
+      hmv: ah:mm [v]
+      Hmv: HH:mm [v]
+      M: M月
+      Md: M/d
+      MEd: M/d（E）
+      MMdd: MM/dd
+      MMMd: M月d日
+      MMMEd: M月d日 E
+      MMMMd: M月d日
+      MMMMW: M月第W個星期
+      "y": y年
+      yM: y/M
+      yMd: y/M/d
+      yMEd: y/M/d（E）
+      yMM: y/MM
+      yMMM: y年M月
+      yMMMd: y年M月d日
+      yMMMEd: y年M月d日 E
+      yMMMM: y年M月
+      yQQQ: y年QQQ
+      yQQQQ: y年QQQQ
+      yw: Y年第w個星期

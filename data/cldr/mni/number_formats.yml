@@ -1,4 +1,7 @@
 ---
+locale: mni
+generated_at: '2025-09-12T04:09:44Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -44,8 +48,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: ব্রাজিলিয়ান রেয়াল
     BSD:
       symbol: "$"
     BWP:
@@ -58,8 +60,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: চাইনিজ য়ুআন
     COP:
       symbol: "$"
     CRC:
@@ -80,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: য়ুরো
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: ব্রিটিশ পাউন্দ
     GEL:
       symbol: "₾"
     GHS:
@@ -116,16 +112,12 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: ইন্দিয়ান রুপী
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: জাপানিজ য়েন
     KGS:
       symbol: "⃀"
     KHR:
@@ -188,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: রুসিয়ান রুবল
     RWF:
       symbol: RF
     SBD:
@@ -221,9 +211,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
-      display_names:
-        other: য়ু এস দি
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -242,16 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: মশকখংদবা করেন্সি
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: mni
-generated_at: '2025-09-10T23:53:13+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

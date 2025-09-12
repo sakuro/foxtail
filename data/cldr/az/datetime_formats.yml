@@ -1,20 +1,10 @@
 ---
+locale: az
+generated_at: '2025-09-12T04:11:07Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': yan
-        '2': fev
-        '3': mar
-        '4': apr
-        '5': may
-        '6': iyn
-        '7': iyl
-        '8': avq
-        '9': sen
-        '10': okt
-        '11': noy
-        '12': dek
       wide:
         '1': yanvar
         '2': fevral
@@ -28,24 +18,26 @@ datetime_formats:
         '10': oktyabr
         '11': noyabr
         '12': dekabr
+      abbreviated:
+        '1': yan
+        '2': fev
+        '3': mar
+        '4': apr
+        '5': may
+        '6': iyn
+        '7': iyl
+        '8': avq
+        '9': sen
+        '10': okt
+        '11': noy
+        '12': dek
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: B.
-        mon: B.e.
-        tue: Ç.a.
-        wed: Ç.
-        thu: C.a.
-        fri: C.
-        sat: Ş.
-      short:
-        sun: B.
-        mon: B.E.
-        tue: Ç.A.
-        wed: Ç.
-        thu: C.A.
-        fri: C.
-        sat: Ş.
       wide:
         sun: bazar
         mon: bazar ertəsi
@@ -54,7 +46,17 @@ datetime_formats:
         thu: cümə axşamı
         fri: cümə
         sat: şənbə
+      abbreviated:
+        sun: B.
+        mon: B.e.
+        tue: Ç.a.
+        wed: Ç.
+        thu: C.a.
+        fri: C.
+        sat: Ş.
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         sun: B.
         mon: B.E.
@@ -71,6 +73,44 @@ datetime_formats:
         thu: '4'
         fri: '5'
         sat: '6'
+  quarters:
+    format:
+      wide:
+        '1': 1-ci kvartal
+        '2': 2-ci kvartal
+        '3': 3-cü kvartal
+        '4': 4-cü kvartal
+      abbreviated:
+        '1': 1-ci kv.
+        '2': 2-ci kv.
+        '3': 3-cü kv.
+        '4': 4-cü kv.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: gecəyarı
+        noon: günorta
+        morning1: sübh
+        morning2: səhər
+        afternoon1: gündüz
+        evening1: axşamüstü
+        night1: axşam
+        night2: gecə
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': bizim eradan əvvəl
+      '1': bizim era
+    abbreviated:
+      '0': b.e.ə.
+      '1': b.e.
+    narrow: {}
   date_formats:
     full: d MMMM y, EEEE
     long: d MMMM y
@@ -81,7 +121,40 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: az
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1}/{0}"
+    long: "{1} 'at' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: d E
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      GyMd: GGGGG d MMM y
+      GyMMM: G MMM y
+      GyMMMd: G d MMM y
+      GyMMMEd: G d MMM y, E
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd.MM
+      MEd: dd.MM, E
+      MMMd: d MMM
+      MMMEd: d MMM, E
+      MMMMd: d MMMM
+      MMMMW: MMMM, W 'həftə'
+      yM: MM.y
+      yMd: dd.MM.y
+      yMEd: dd.MM.y, E
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: d MMM y, E
+      yMMMM: MMMM y
+      yw: Y, w 'həftə'

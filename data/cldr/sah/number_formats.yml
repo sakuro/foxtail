@@ -1,14 +1,18 @@
 ---
+locale: sah
+generated_at: '2025-09-12T04:10:16Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+    nan: чыыһыла буотах
     minus_sign: "-"
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
-    nan: чыыһыла буотах
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
@@ -176,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: Арассыыйа солкуобайа
     RWF:
       symbol: RF
     SBD:
@@ -209,9 +211,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
-      display_names:
-        other: АХШ дуоллара
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -234,10 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-locale: sah
-generated_at: '2025-09-10T23:53:16+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

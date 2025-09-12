@@ -93,7 +93,7 @@ namespace :cldr do
       # Clean up existing plural_rules files
       if PLURAL_RULES_FILES.any?
         puts "Cleaning up #{PLURAL_RULES_FILES.size} existing plural_rules files..."
-        rm PLURAL_RULES_FILES
+        rm PLURAL_RULES_FILES, verbose: false
       end
 
       extractor = Foxtail::CLDR::Extractors::PluralRulesExtractor.new(
@@ -109,7 +109,7 @@ namespace :cldr do
       # Clean up existing number_formats files
       if NUMBER_FORMATS_FILES.any?
         puts "Cleaning up #{NUMBER_FORMATS_FILES.size} existing number_formats files..."
-        rm NUMBER_FORMATS_FILES
+        rm NUMBER_FORMATS_FILES, verbose: false
       end
 
       extractor = Foxtail::CLDR::Extractors::NumberFormatsExtractor.new(
@@ -125,7 +125,7 @@ namespace :cldr do
       # Clean up existing datetime_formats files
       if DATETIME_FORMATS_FILES.any?
         puts "Cleaning up #{DATETIME_FORMATS_FILES.size} existing datetime_formats files..."
-        rm DATETIME_FORMATS_FILES
+        rm DATETIME_FORMATS_FILES, verbose: false
       end
 
       extractor = Foxtail::CLDR::Extractors::DateTimeFormatsExtractor.new(

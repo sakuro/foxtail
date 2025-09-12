@@ -1,20 +1,10 @@
 ---
+locale: lag
+generated_at: '2025-09-12T04:11:15Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Fúngatɨ
-        '2': Naanɨ
-        '3': Keenda
-        '4': Ikúmi
-        '5': Inyambala
-        '6': Idwaata
-        '7': Mʉʉnchɨ
-        '8': Vɨɨrɨ
-        '9': Saatʉ
-        '10': Inyi
-        '11': Saano
-        '12': Sasatʉ
       wide:
         '1': Kʉfúngatɨ
         '2': Kʉnaanɨ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Kwiinyi
         '11': Kʉsaano
         '12': Kʉsasatʉ
+      abbreviated:
+        '1': Fúngatɨ
+        '2': Naanɨ
+        '3': Keenda
+        '4': Ikúmi
+        '5': Inyambala
+        '6': Idwaata
+        '7': Mʉʉnchɨ
+        '8': Vɨɨrɨ
+        '9': Saatʉ
+        '10': Inyi
+        '11': Saano
+        '12': Sasatʉ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': F
         '2': "N"
@@ -44,14 +50,6 @@ datetime_formats:
         '12': S
   days:
     format:
-      abbreviated:
-        sun: Píili
-        mon: Táatu
-        tue: Íne
-        wed: Táano
-        thu: Alh
-        fri: Ijm
-        sat: Móosi
       wide:
         sun: Jumapíiri
         mon: Jumatátu
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Alamíisi
         fri: Ijumáa
         sat: Jumamóosi
+      abbreviated:
+        sun: Píili
+        mon: Táatu
+        tue: Íne
+        wed: Táano
+        thu: Alh
+        fri: Ijm
+        sat: Móosi
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: P
         mon: T
@@ -69,6 +78,38 @@ datetime_formats:
         thu: A
         fri: I
         sat: M
+  quarters:
+    format:
+      wide:
+        '1': Ncholo ya 1
+        '2': Ncholo ya 2
+        '3': Ncholo ya 3
+        '4': Ncholo ya 4
+      abbreviated:
+        '1': Ncho 1
+        '2': Ncho 2
+        '3': Ncho 3
+        '4': Ncho 4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: TOO
+        pm: MUU
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Kɨrɨsitʉ sɨ anavyaal
+      '1': Kɨrɨsitʉ akavyaalwe
+    abbreviated:
+      '0': KSA
+      '1': KA
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +120,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: lag
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

@@ -67,9 +67,10 @@ RSpec.describe Foxtail::CLDR::Extractors::BaseExtractor do
     end
 
     it "processes all locale files" do
-      expect(extractor).to receive(:log).with("Extracting test data from 3 locales...")
-      expect(extractor).to receive(:log).with("test data extraction complete")
+      allow(extractor).to receive(:log)
       extractor.extract_all
+      expect(extractor).to have_received(:log).with("Extracting test data from 3 locales...")
+      expect(extractor).to have_received(:log).with("test data extraction complete")
     end
 
     it "creates output files for each locale" do
@@ -120,8 +121,9 @@ RSpec.describe Foxtail::CLDR::Extractors::BaseExtractor do
 
     context "when locale file does not exist" do
       it "logs warning and returns without error" do
-        expect(extractor).to receive(:log).with(/Warning: Locale file not found/)
+        allow(extractor).to receive(:log)
         extractor.extract_locale("nonexistent")
+        expect(extractor).to have_received(:log).with(/Warning: Locale file not found/)
       end
     end
 
@@ -148,7 +150,7 @@ RSpec.describe Foxtail::CLDR::Extractors::BaseExtractor do
 
       it "does not create output file when data? returns false" do
         empty_extractor = empty_extractor_class.new(source_dir: test_source_dir, output_dir: test_output_dir)
-        allow(empty_extractor).to receive(:log)  # Stub log for empty_extractor too
+        allow(empty_extractor).to receive(:log) # Stub log for empty_extractor too
         File.write(File.join(test_source_dir, "common", "main", "en.xml"), test_xml_content)
 
         empty_extractor.extract_locale("en")

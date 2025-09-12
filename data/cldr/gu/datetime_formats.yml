@@ -1,20 +1,10 @@
 ---
+locale: gu
+generated_at: '2025-09-12T04:11:12Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': જાન્યુ
-        '2': ફેબ્રુ
-        '3': માર્ચ
-        '4': એપ્રિલ
-        '5': મે
-        '6': જૂન
-        '7': જુલાઈ
-        '8': ઑગસ્ટ
-        '9': સપ્ટે
-        '10': ઑક્ટો
-        '11': નવે
-        '12': ડિસે
       wide:
         '1': જાન્યુઆરી
         '2': ફેબ્રુઆરી
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ઑક્ટોબર
         '11': નવેમ્બર
         '12': ડિસેમ્બર
+      abbreviated:
+        '1': જાન્યુ
+        '2': ફેબ્રુ
+        '3': માર્ચ
+        '4': એપ્રિલ
+        '5': મે
+        '6': જૂન
+        '7': જુલાઈ
+        '8': ઑગસ્ટ
+        '9': સપ્ટે
+        '10': ઑક્ટો
+        '11': નવે
+        '12': ડિસે
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': જા
         '2': ફે
@@ -44,22 +50,6 @@ datetime_formats:
         '12': ડિ
   days:
     format:
-      abbreviated:
-        sun: રવિ
-        mon: સોમ
-        tue: મંગળ
-        wed: બુધ
-        thu: ગુરુ
-        fri: શુક્ર
-        sat: શનિ
-      short:
-        sun: ર
-        mon: સો
-        tue: મં
-        wed: બુ
-        thu: ગુ
-        fri: શુ
-        sat: શ
       wide:
         sun: રવિવાર
         mon: સોમવાર
@@ -68,7 +58,18 @@ datetime_formats:
         thu: ગુરુવાર
         fri: શુક્રવાર
         sat: શનિવાર
+      abbreviated:
+        sun: રવિ
+        mon: સોમ
+        tue: મંગળ
+        wed: બુધ
+        thu: ગુરુ
+        fri: શુક્ર
+        sat: શનિ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ર
         mon: સો
@@ -77,6 +78,47 @@ datetime_formats:
         thu: ગુ
         fri: શુ
         sat: શ
+  quarters:
+    format:
+      wide:
+        '1': 1લો ત્રિમાસ
+        '2': 2જો ત્રિમાસ
+        '3': 3જો ત્રિમાસ
+        '4': 4થો ત્રિમાસ
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: મધ્યરાત્રિ
+        morning1: સવારે
+        afternoon1: બપોરે
+        evening1: સાંજે
+        night1: રાત્રે
+    stand-alone:
+      wide:
+        morning1: સવાર
+        afternoon1: બપોર
+        evening1: સાંજ
+        night1: રાત્રિ
+      abbreviated: {}
+  eras:
+    names:
+      '0': સામાન્ય યુગ પહેલા
+      '1': સામાન્ય યુગ
+    abbreviated:
+      '0': ઈ.સ.પૂર્વે
+      '1': સા.યુ.
+    narrow:
+      '0': ઇ સ પુ
+      '1': ઇસ
   date_formats:
     full: EEEE, d MMMM, y
     long: d MMMM, y
@@ -87,7 +129,29 @@ datetime_formats:
     long: hh:mm:ss a z
     medium: hh:mm:ss a
     short: hh:mm a
-locale: gu
-generated_at: '2025-09-06T03:52:35+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} એ {0} વાગ્યે"
+    long: "{1} એ {0} વાગ્યે"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E d
+      GyMMM: MMM, G y
+      GyMMMd: d MMM, G y
+      GyMMMEd: E, d MMM, G y
+      Md: d/M
+      MEd: E, d/M
+      MMdd: dd-MM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMMના W અઠવાડિયા
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMM: MM-y
+      yMMM: MMM y
+      yMMMd: d MMM, y
+      yMMMEd: E, d MMM, y
+      yMMMM: MMMM y
+      yw: Y ના w અઠવાડિયા

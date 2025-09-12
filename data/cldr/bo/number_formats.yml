@@ -1,4 +1,7 @@
 ---
+locale: bo
+generated_at: '2025-09-12T04:07:47Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -55,9 +59,7 @@ number_formats:
     CLP:
       symbol: "$"
     CNY:
-      symbol: "¥"
-      display_names:
-        other: ཡུ་ཨན་
+      symbol: CN¥
     COP:
       symbol: "$"
     CRC:
@@ -110,8 +112,6 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: རྒྱ་གར་སྒོར་
     ISK:
       symbol: kr
     JMD:
@@ -212,8 +212,6 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
-      display_names:
-        other: ཨ་རིའི་སྒོར་
     UYU:
       symbol: "$"
     VEF:
@@ -232,16 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: མ་རྟོགས་པའི་ནུས་མེད་དངུལ་ལོར
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: bo
-generated_at: '2025-09-10T23:53:04+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

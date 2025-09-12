@@ -1,20 +1,10 @@
 ---
+locale: tk
+generated_at: '2025-09-12T04:11:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ýan
-        '2': few
-        '3': mart
-        '4': apr
-        '5': maý
-        '6': iýun
-        '7': iýul
-        '8': awg
-        '9': sen
-        '10': okt
-        '11': noý
-        '12': dek
       wide:
         '1': ýanwar
         '2': fewral
@@ -28,7 +18,34 @@ datetime_formats:
         '10': oktýabr
         '11': noýabr
         '12': dekabr
+      abbreviated:
+        '1': ýan
+        '2': few
+        '3': mart
+        '4': apr
+        '5': maý
+        '6': iýun
+        '7': iýul
+        '8': awg
+        '9': sen
+        '10': okt
+        '11': noý
+        '12': dek
+      narrow: {}
     stand-alone:
+      wide:
+        '1': Ýanwar
+        '2': Fewral
+        '3': Mart
+        '4': Aprel
+        '5': Maý
+        '6': Iýun
+        '7': Iýul
+        '8': Awgust
+        '9': Sentýabr
+        '10': Oktýabr
+        '11': Noýabr
+        '12': Dekabr
       abbreviated:
         '1': Ýan
         '2': Few
@@ -55,37 +72,8 @@ datetime_formats:
         '10': O
         '11': "N"
         '12': D
-      wide:
-        '1': Ýanwar
-        '2': Fewral
-        '3': Mart
-        '4': Aprel
-        '5': Maý
-        '6': Iýun
-        '7': Iýul
-        '8': Awgust
-        '9': Sentýabr
-        '10': Oktýabr
-        '11': Noýabr
-        '12': Dekabr
   days:
     format:
-      abbreviated:
-        sun: ýek
-        mon: duş
-        tue: siş
-        wed: çar
-        thu: pen
-        fri: ann
-        sat: şen
-      short:
-        sun: ýb
-        mon: db
-        tue: sb
-        wed: çb
-        thu: pb
-        fri: an
-        sat: şb
       wide:
         sun: ýekşenbe
         mon: duşenbe
@@ -94,7 +82,24 @@ datetime_formats:
         thu: penşenbe
         fri: anna
         sat: şenbe
+      abbreviated:
+        sun: ýek
+        mon: duş
+        tue: siş
+        wed: çar
+        thu: pen
+        fri: ann
+        sat: şen
+      narrow: {}
     stand-alone:
+      wide:
+        sun: Ýekşenbe
+        mon: Duşenbe
+        tue: Sişenbe
+        wed: Çarşenbe
+        thu: Penşenbe
+        fri: Anna
+        sat: Şenbe
       abbreviated:
         sun: Ýek
         mon: Duş
@@ -111,22 +116,44 @@ datetime_formats:
         thu: P
         fri: A
         sat: Ş
-      short:
-        sun: Ýb
-        mon: Db
-        tue: Sb
-        wed: Çb
-        thu: Pb
-        fri: An
-        sat: Şb
+  quarters:
+    format:
       wide:
-        sun: Ýekşenbe
-        mon: Duşenbe
-        tue: Sişenbe
-        wed: Çarşenbe
-        thu: Penşenbe
-        fri: Anna
-        sat: Şenbe
+        '1': 1-nji çärýek
+        '2': 2-nji çärýek
+        '3': 3-nji çärýek
+        '4': 4-nji çärýek
+      abbreviated:
+        '1': 1Ç
+        '2': 2Ç
+        '3': 3Ç
+        '4': 4Ç
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: günortadan öň
+        pm: günortadan soň
+      abbreviated:
+        am: go.öň
+        pm: go.soň
+    stand-alone:
+      wide:
+        am: günortadan öň
+        pm: günortadan soň
+      abbreviated:
+        am: g.öň
+        pm: g.soň
+  eras:
+    names:
+      '0': Biziň eramyzdan öň
+      '1': Biziň eramyz
+    abbreviated:
+      '0': b.e.öň
+      '1': b.e.
+    narrow: {}
   date_formats:
     full: d MMMM y EEEE
     long: d MMMM y
@@ -137,7 +164,37 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: tk
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'sagat' {0}"
+    long: "{1} 'sagat' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: d E
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      GyMd: GGGGG dd.MM.y
+      GyMMM: G MMM y
+      GyMMMd: G d MMM y
+      GyMMMEd: G d MMM y, E
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd.MM
+      MEd: dd.MM E
+      MMMd: d MMM
+      MMMEd: d MMM E
+      MMMMd: d MMMM
+      MMMMEd: d MMMM E
+      MMMMW: "'hepde' W, MMMM"
+      mmss: mm:ss
+      yM: MM.y
+      yMd: dd.MM.y
+      yMEd: dd.MM.y E
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: d MMM y E
+      yMMMM: MMMM y
+      yw: "'hepde' w, Y"

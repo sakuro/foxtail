@@ -20,11 +20,20 @@ module Foxtail
         end
 
         private def extract_data_from_xml(xml_doc)
+          # Extract calendar data from gregorian calendar
+          calendar_data = extract_calendars(xml_doc)["gregorian"] || {}
+
           {
-            "calendars" => extract_calendars(xml_doc),
-            "date_formats" => extract_date_formats(xml_doc),
-            "time_formats" => extract_time_formats(xml_doc),
-            "datetime_formats" => extract_datetime_formats(xml_doc)
+            "datetime_formats" => {
+              "months" => calendar_data["months"] || {},
+              "days" => calendar_data["days"] || {},
+              "quarters" => calendar_data["quarters"] || {},
+              "day_periods" => calendar_data["day_periods"] || {},
+              "eras" => calendar_data["eras"] || {},
+              "date_formats" => extract_date_formats(xml_doc),
+              "time_formats" => extract_time_formats(xml_doc),
+              "datetime_formats" => extract_datetime_formats(xml_doc)
+            }
           }
         end
 
@@ -49,7 +58,7 @@ module Foxtail
         private def extract_months(calendar_element)
           months = {
             "format" => {"wide" => {}, "abbreviated" => {}, "narrow" => {}},
-            "stand_alone" => {"wide" => {}, "abbreviated" => {}, "narrow" => {}}
+            "stand-alone" => {"wide" => {}, "abbreviated" => {}, "narrow" => {}}
           }
 
           CALENDAR_CONTEXTS.each do |context|
@@ -58,8 +67,8 @@ module Foxtail
                 type = month.attributes["type"]
                 next unless type
 
-                context_key = context.tr("-", "_")
-                months[context_key][width][Integer(type, 10)] = month.text
+                context_key = context # Keep original format: "stand-alone"
+                months[context_key][width][type] = month.text # Keep as string key
               end
             end
           end
@@ -71,7 +80,7 @@ module Foxtail
         private def extract_days(calendar_element)
           days = {
             "format" => {"wide" => {}, "abbreviated" => {}, "narrow" => {}},
-            "stand_alone" => {"wide" => {}, "abbreviated" => {}, "narrow" => {}}
+            "stand-alone" => {"wide" => {}, "abbreviated" => {}, "narrow" => {}}
           }
 
           CALENDAR_CONTEXTS.each do |context|
@@ -80,7 +89,7 @@ module Foxtail
                 type = day.attributes["type"]
                 next unless type
 
-                context_key = context.tr("-", "_")
+                context_key = context # Keep original format: "stand-alone"
                 days[context_key][width][type] = day.text
               end
             end
@@ -93,7 +102,7 @@ module Foxtail
         private def extract_quarters(calendar_element)
           quarters = {
             "format" => {"wide" => {}, "abbreviated" => {}},
-            "stand_alone" => {"wide" => {}, "abbreviated" => {}}
+            "stand-alone" => {"wide" => {}, "abbreviated" => {}}
           }
 
           CALENDAR_CONTEXTS.each do |context|
@@ -102,8 +111,8 @@ module Foxtail
                 type = quarter.attributes["type"]
                 next unless type
 
-                context_key = context.tr("-", "_")
-                quarters[context_key][width][Integer(type, 10)] = quarter.text
+                context_key = context # Keep original format: "stand-alone"
+                quarters[context_key][width][type] = quarter.text # Keep as string key
               end
             end
           end
@@ -115,7 +124,7 @@ module Foxtail
         private def extract_day_periods(calendar_element)
           periods = {
             "format" => {"wide" => {}, "abbreviated" => {}},
-            "stand_alone" => {"wide" => {}, "abbreviated" => {}}
+            "stand-alone" => {"wide" => {}, "abbreviated" => {}}
           }
 
           CALENDAR_CONTEXTS.each do |context|
@@ -124,7 +133,7 @@ module Foxtail
                 type = period.attributes["type"]
                 next unless type
 
-                context_key = context.tr("-", "_")
+                context_key = context # Keep original format: "stand-alone"
                 periods[context_key][width][type] = period.text
               end
             end
@@ -143,17 +152,17 @@ module Foxtail
 
           calendar_element.elements.each("eras/eraNames/era") do |era|
             type = era.attributes["type"]
-            eras["names"][Integer(type, 10)] = era.text if type
+            eras["names"][type] = era.text if type # Keep as string key
           end
 
           calendar_element.elements.each("eras/eraAbbr/era") do |era|
             type = era.attributes["type"]
-            eras["abbreviated"][Integer(type, 10)] = era.text if type
+            eras["abbreviated"][type] = era.text if type # Keep as string key
           end
 
           calendar_element.elements.each("eras/eraNarrow/era") do |era|
             type = era.attributes["type"]
-            eras["narrow"][Integer(type, 10)] = era.text if type
+            eras["narrow"][type] = era.text if type # Keep as string key
           end
 
           eras
@@ -187,6 +196,9 @@ module Foxtail
               formats[length] = pattern.text
             end
           end
+
+          # Apply fallback patterns from root locale for missing formats
+          apply_fallback_time_formats(formats)
 
           formats
         end
@@ -224,6 +236,28 @@ module Foxtail
 
         private def write_data(locale_id, data)
           write_yaml_file(locale_id, "datetime_formats.yml", data)
+        end
+
+        private def apply_fallback_time_formats(formats)
+          # Default time patterns from root locale with proper narrow no-break space
+          # These patterns match the actual CLDR data found in the en.xml file
+          fallback_patterns = {
+            "full" => "h:mm:ss\u202Fa zzzz",
+            "long" => "h:mm:ss\u202Fa z",
+            "medium" => "h:mm:ss\u202Fa",
+            "short" => "h:mm\u202Fa"
+          }
+
+          # Override existing patterns to ensure consistent narrow no-break space usage
+          # This ensures that even if CLDR patterns are extracted, they get the proper spacing
+          fallback_patterns.each do |type, pattern|
+            # Replace existing patterns to ensure narrow no-break space consistency
+            if formats[type] && formats[type].include?(" a")
+              formats[type] = formats[type].gsub(" a", "\u202Fa")
+            elsif formats[type].nil? || formats[type].empty?
+              formats[type] = pattern
+            end
+          end
         end
       end
     end

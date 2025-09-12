@@ -1,20 +1,10 @@
 ---
+locale: xh
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mat
-        '4': Epr
-        '5': Mey
-        '6': Jun
-        '7': Jul
-        '8': Aga
-        '9': Sept
-        '10': Okt
-        '11': Nov
-        '12': Dis
       wide:
         '1': Janyuwari
         '2': Februwari
@@ -28,7 +18,6 @@ datetime_formats:
         '10': Okthobha
         '11': Novemba
         '12': Disemba
-    stand-alone:
       abbreviated:
         '1': Jan
         '2': Feb
@@ -38,10 +27,12 @@ datetime_formats:
         '6': Jun
         '7': Jul
         '8': Aga
-        '9': Sep
+        '9': Sept
         '10': Okt
         '11': Nov
         '12': Dis
+      narrow: {}
+    stand-alone:
       wide:
         '1': Janyuwari
         '2': Februwari
@@ -55,8 +46,30 @@ datetime_formats:
         '10': Okthoba
         '11': Novemba
         '12': Disemba
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mat
+        '4': Epr
+        '5': Mey
+        '6': Jun
+        '7': Jul
+        '8': Aga
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Dis
+      narrow: {}
   days:
     format:
+      wide:
+        sun: Cawe
+        mon: Mvulo
+        tue: Lwesibini
+        wed: Lwesithathu
+        thu: Lwesine
+        fri: Lwesihlanu
+        sat: Mgqibelo
       abbreviated:
         sun: Caw
         mon: Mvu
@@ -73,15 +86,8 @@ datetime_formats:
         thu: Sin
         fri: Hl
         sat: Mg
-      wide:
-        sun: Cawe
-        mon: Mvulo
-        tue: Lwesibini
-        wed: Lwesithathu
-        thu: Lwesine
-        fri: Lwesihlanu
-        sat: Mgqibelo
     stand-alone:
+      wide: {}
       abbreviated:
         sun: Caw
         mon: Mvu
@@ -98,6 +104,36 @@ datetime_formats:
         thu: Sin
         fri: Hl
         sat: Mg
+  quarters:
+    format:
+      wide:
+        '1': ikota yoku-1
+        '2': ikota yesi-2
+        '3': ikota yesi-3
+        '4': ikota yesi-4
+      abbreviated:
+        '1': Kota 1
+        '2': Kota 2
+        '3': Kota 3
+        '4': Kota 4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Phambi Kwexesha Eliqhelekileyo
+      '1': Ixesha Eliqhelekileyo
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
@@ -108,7 +144,34 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: xh
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} 'kwi' {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: d E
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: M/d/y G
+      GyMMM: MMM y G
+      GyMMMd: MMM d, y G
+      GyMMMEd: E, MMM d, y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      yM: M/y
+      yMd: M/d/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

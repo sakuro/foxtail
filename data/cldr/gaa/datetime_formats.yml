@@ -1,20 +1,10 @@
 ---
+locale: gaa
+generated_at: '2025-09-12T04:11:12Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Aha
-        '2': Ofl
-        '3': Ots
-        '4': Abe
-        '5': Agb
-        '6': Otu
-        '7': Maa
-        '8': Man
-        '9': Gbo
-        '10': Ant
-        '11': Ale
-        '12': Afu
       wide:
         '1': Aharabata
         '2': Oflɔ
@@ -28,20 +18,21 @@ datetime_formats:
         '10': Antɔŋ
         '11': Alemle
         '12': Afuabe
+      abbreviated:
+        '1': Aha
+        '2': Ofl
+        '3': Ots
+        '4': Abe
+        '5': Agb
+        '6': Otu
+        '7': Maa
+        '8': Man
+        '9': Gbo
+        '10': Ant
+        '11': Ale
+        '12': Afu
+      narrow: {}
     stand-alone:
-      narrow:
-        '1': A
-        '2': O
-        '3': O
-        '4': A
-        '5': A
-        '6': O
-        '7': M
-        '8': M
-        '9': G
-        '10': A
-        '11': A
-        '12': A
       wide:
         '1': Aharabata
         '2': Oflɔ
@@ -55,16 +46,22 @@ datetime_formats:
         '10': Antɔŋ
         '11': Alemle
         '12': Afuabe
+      abbreviated: {}
+      narrow:
+        '1': A
+        '2': O
+        '3': O
+        '4': A
+        '5': A
+        '6': O
+        '7': M
+        '8': M
+        '9': G
+        '10': A
+        '11': A
+        '12': A
   days:
     format:
-      abbreviated:
-        sun: Hɔg
-        mon: Ju
-        tue: Juf
-        wed: Shɔ
-        thu: Soo
-        fri: Soh
-        sat: Hɔɔ
       wide:
         sun: Hɔgbaa
         mon: Ju
@@ -73,7 +70,18 @@ datetime_formats:
         thu: Soo
         fri: Sohaa
         sat: Hɔɔ
+      abbreviated:
+        sun: Hɔg
+        mon: Ju
+        tue: Juf
+        wed: Shɔ
+        thu: Soo
+        fri: Soh
+        sat: Hɔɔ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: H
         mon: J
@@ -82,6 +90,42 @@ datetime_formats:
         thu: S
         fri: S
         sat: H
+  quarters:
+    format:
+      wide:
+        '1': nyɔji etɛ 1
+        '2': nyɔji etɛ 2
+        '3': nyɔji etɛ 3
+        '4': nyɔji etɛ 4
+      abbreviated:
+        '1': N1
+        '2': N2
+        '3': N3
+        '4': N4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: LEEBI
+        pm: SHWANE
+      abbreviated:
+        am: LB
+        pm: SN
+    stand-alone:
+      wide:
+        am: LEEBI
+        pm: SHWANE
+      abbreviated: {}
+  eras:
+    names:
+      '0': Dani Ŋmɛnɛŋmɛnɛ Beiaŋ
+      '1': Ŋmɛnɛŋmɛnɛ Beiaŋ
+    abbreviated:
+      '0': DŊB
+      '1': ŊB
+    narrow: {}
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
@@ -92,7 +136,28 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: gaa
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'be' 'ni' 'atswa' {0}"
+    long: "{1} 'be' 'ni' 'atswa' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E d
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: MMM d, y G
+      GyMMMEd: E, MMM d, y G
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMW: MMMM 'otsi' W
+      yM: M/y
+      yMd: M/d/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y 'otsi' w

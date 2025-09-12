@@ -1,4 +1,7 @@
 ---
+locale: km
+generated_at: '2025-09-12T04:11:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,7 +18,11 @@ datetime_formats:
         '10': តុលា
         '11': វិច្ឆិកា
         '12': ធ្នូ
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ម
         '2': ក
@@ -31,22 +38,6 @@ datetime_formats:
         '12': ធ
   days:
     format:
-      abbreviated:
-        sun: អាទិត្យ
-        mon: ចន្ទ
-        tue: អង្គារ
-        wed: ពុធ
-        thu: ព្រហ
-        fri: សុក្រ
-        sat: សៅរ៍
-      short:
-        sun: អា
-        mon: ច
-        tue: អ
-        wed: ពុ
-        thu: ព្រ
-        fri: សុ
-        sat: ស
       wide:
         sun: អាទិត្យ
         mon: ច័ន្ទ
@@ -55,15 +46,16 @@ datetime_formats:
         thu: ព្រហស្បតិ៍
         fri: សុក្រ
         sat: សៅរ៍
+      abbreviated:
+        sun: អាទិត្យ
+        mon: ចន្ទ
+        tue: អង្គារ
+        wed: ពុធ
+        thu: ព្រហ
+        fri: សុក្រ
+        sat: សៅរ៍
+      narrow: {}
     stand-alone:
-      narrow:
-        sun: អ
-        mon: ច
-        tue: អ
-        wed: ព
-        thu: ព
-        fri: ស
-        sat: ស
       wide:
         sun: អាទិត្យ
         mon: ចន្ទ
@@ -72,6 +64,52 @@ datetime_formats:
         thu: ព្រហស្បតិ៍
         fri: សុក្រ
         sat: សៅរ៍
+      abbreviated: {}
+      narrow:
+        sun: អ
+        mon: ច
+        tue: អ
+        wed: ព
+        thu: ព
+        fri: ស
+        sat: ស
+  quarters:
+    format:
+      wide:
+        '1': ត្រីមាសទី 1
+        '2': ត្រីមាសទី 2
+        '3': ត្រីមាសទី 3
+        '4': ត្រីមាសទី 4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: អធ្រាត្រ
+        noon: ថ្ងៃត្រង់
+        morning1: នៅពេល​ព្រឹក
+        afternoon1: នៅពេលរសៀល
+        evening1: នៅពេល​ល្ងាច
+        night1: នៅពេល​យប់
+    stand-alone:
+      wide: {}
+      abbreviated:
+        noon: ថ្ងៃ​ត្រង់
+        morning1: ព្រឹក
+        afternoon1: រសៀល
+        evening1: ល្ងាច
+        night1: យប់
+  eras:
+    names:
+      '0': មុន​គ្រិស្តសករាជ
+      '1': គ្រិស្តសករាជ
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -82,7 +120,30 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: km
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} នៅ​ម៉ោង {0}"
+    long: "{1} នៅ​ម៉ោង {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: d E
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: សប្តាហ៍ទី W នៃខែ MMMM
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: សប្តាហ៍ទី w នៃឆ្នាំ Y

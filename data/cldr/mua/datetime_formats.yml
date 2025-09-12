@@ -1,20 +1,10 @@
 ---
+locale: mua
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': FLO
-        '2': CLA
-        '3': CKI
-        '4': FMF
-        '5': MAD
-        '6': MBI
-        '7': MLI
-        '8': MAM
-        '9': FDE
-        '10': FMU
-        '11': FGW
-        '12': FYU
       wide:
         '1': Fĩi Loo
         '2': Cokcwaklaŋne
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Fĩi Mundaŋ
         '11': Fĩi Gwahlle
         '12': Fĩi Yuru
+      abbreviated:
+        '1': FLO
+        '2': CLA
+        '3': CKI
+        '4': FMF
+        '5': MAD
+        '6': MBI
+        '7': MLI
+        '8': MAM
+        '9': FDE
+        '10': FMU
+        '11': FGW
+        '12': FYU
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': O
         '2': A
@@ -44,14 +50,6 @@ datetime_formats:
         '12': "Y"
   days:
     format:
-      abbreviated:
-        sun: Cya
-        mon: Cla
-        tue: Czi
-        wed: Cko
-        thu: Cka
-        fri: Cga
-        sat: Cze
       wide:
         sun: Com’yakke
         mon: Comlaaɗii
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Comkaldǝɓlii
         fri: Comgaisuu
         sat: Comzyeɓsuu
+      abbreviated:
+        sun: Cya
+        mon: Cla
+        tue: Czi
+        wed: Cko
+        thu: Cka
+        fri: Cga
+        sat: Cze
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: "Y"
         mon: L
@@ -69,6 +78,38 @@ datetime_formats:
         thu: A
         fri: G
         sat: E
+  quarters:
+    format:
+      wide:
+        '1': Tai fĩi sai ma tǝn kee zah
+        '2': Tai fĩi sai zah lǝn gwa ma kee
+        '3': Tai fĩi sai zah lǝn sai ma kee
+        '4': Tai fĩi sai ma coo kee zah ‘na
+      abbreviated:
+        '1': F1
+        '2': F2
+        '3': F3
+        '4': F4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: comme
+        pm: lilli
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': KǝPel Kristu
+      '1': Pel Kristu
+    abbreviated:
+      '0': KK
+      '1': PK
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +120,21 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: mua
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

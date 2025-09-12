@@ -1,20 +1,10 @@
 ---
+locale: ksh
+generated_at: '2025-09-12T04:11:15Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Fäb
-        '3': Mäz
-        '4': Apr
-        '5': Mai
-        '6': Jun
-        '7': Jul
-        '8': Ouj
-        '9': Säp
-        '10': Okt
-        '11': Nov
-        '12': Dez
       wide:
         '1': Jannewa
         '2': Fäbrowa
@@ -28,7 +18,22 @@ datetime_formats:
         '10': Oktohber
         '11': Novämber
         '12': Dezämber
+      abbreviated:
+        '1': Jan
+        '2': Fäb
+        '3': Mäz
+        '4': Apr
+        '5': Mai
+        '6': Jun
+        '7': Jul
+        '8': Ouj
+        '9': Säp
+        '10': Okt
+        '11': Nov
+        '12': Dez
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         '1': Jan.
         '2': Fäb.
@@ -57,22 +62,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Su.
-        mon: Mo.
-        tue: Di.
-        wed: Me.
-        thu: Du.
-        fri: Fr.
-        sat: Sa.
-      short:
-        sun: Su
-        mon: Mo
-        tue: Di
-        wed: Me
-        thu: Du
-        fri: Fr
-        sat: Sa
       wide:
         sun: Sunndaach
         mon: Mohndaach
@@ -81,7 +70,18 @@ datetime_formats:
         thu: Dunnersdaach
         fri: Friidaach
         sat: Samsdaach
+      abbreviated:
+        sun: Su.
+        mon: Mo.
+        tue: Di.
+        wed: Me.
+        thu: Du.
+        fri: Fr.
+        sat: Sa.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: S
         mon: M
@@ -90,6 +90,44 @@ datetime_formats:
         thu: D
         fri: F
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1. Quattahl
+        '2': 2. Quattahl
+        '3': 3. Quattahl
+        '4': 4. Quattahl
+      abbreviated:
+        '1': 1.Q.
+        '2': 2.Q.
+        '3': 3.Q.
+        '4': 4.Q.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: Uhr vörmiddaachs
+        pm: Uhr nommendaachs
+      abbreviated:
+        am: v.M.
+        pm: n.M.
+    stand-alone:
+      wide:
+        am: Vörmeddaach
+        pm: Nommendaach
+      abbreviated: {}
+  eras:
+    names:
+      '0': vür de jewöhnlejje Ziggrääschnong
+      '1': en de jewöhnlejje Ziggrääschnong
+    abbreviated:
+      '0': v. Kr.
+      '1': n. K.
+    narrow:
+      '0': vdZ
+      '1': dZ
   date_formats:
     full: EEEE, 'dä' d. MMMM y
     long: d. MMMM y
@@ -100,7 +138,22 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: ksh
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E 'dä' d.
+      hm: h:mm a
+      Hm: H:mm
+      hms: h:mm:ss a
+      Hms: H:mm:ss
+      MEd: E d. M.
+      MMMd: d. MMM
+      MMMEd: E d. MMM
+      MMMMd: d. MMMM
+      yM: Y-MM
+      yMEd: E y-MM-dd
+      yMMM: MMM y
+      yMMMd: d. MMM. y
+      yMMMEd: E d. MMM. y
+      yMMMM: MMMM y
+      yQQQ: QQQy
+      yQQQQ: QQQQ y

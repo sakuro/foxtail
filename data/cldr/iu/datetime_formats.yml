@@ -1,4 +1,7 @@
 ---
+locale: iu
+generated_at: '2025-09-12T04:11:13Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,6 +18,12 @@ datetime_formats:
         '10': ᐆᑦᑑᕝᕙ
         '11': ᓄᕕᐱᕆ
         '12': ᑎᓯᐱᕆ
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
       wide:
@@ -25,6 +34,32 @@ datetime_formats:
         thu: ᓯᑕᒻᒥᖅ
         fri: ᑕᓪᓕᒻᒥᐅᑦ
         sat: ᓈᑦᓰᖑᔭᓛᕐᓂᐊᖅ
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: am
+        pm: pm
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
@@ -35,7 +70,18 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: iu
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E, d
+      Gy: y G
+      Md: MM/dd
+      MEd: E, MM/dd
+      MMMEd: E, MMM d
+      yM: MM/y
+      yMd: MM/dd/y
+      yMEd: E, MM/dd/y
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: E, MMM d, y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

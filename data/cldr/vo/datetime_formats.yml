@@ -1,20 +1,10 @@
 ---
+locale: vo
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': yan
-        '2': feb
-        '3': mäz
-        '4': prl
-        '5': may
-        '6': yun
-        '7': yul
-        '8': gst
-        '9': set
-        '10': ton
-        '11': nov
-        '12': dek
       wide:
         '1': yanul
         '2': febul
@@ -28,7 +18,22 @@ datetime_formats:
         '10': tobul
         '11': novul
         '12': dekul
+      abbreviated:
+        '1': yan
+        '2': feb
+        '3': mäz
+        '4': prl
+        '5': may
+        '6': yun
+        '7': yul
+        '8': gst
+        '9': set
+        '10': ton
+        '11': nov
+        '12': dek
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         '1': yan
         '2': feb
@@ -57,14 +62,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: su.
-        mon: mu.
-        tue: tu.
-        wed: ve.
-        thu: dö.
-        fri: fr.
-        sat: zä.
       wide:
         sun: sudel
         mon: mudel
@@ -73,7 +70,17 @@ datetime_formats:
         thu: dödel
         fri: fridel
         sat: zädel
+      abbreviated:
+        sun: su.
+        mon: mu.
+        tue: tu.
+        wed: ve.
+        thu: dö.
+        fri: fr.
+        sat: zä.
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         sun: Su
         mon: Mu
@@ -90,6 +97,34 @@ datetime_formats:
         thu: D
         fri: F
         sat: Z
+  quarters:
+    format:
+      wide:
+        '1': 1id yelafoldil
+        '2': 2id yelafoldil
+        '3': 3id yelafoldil
+        '4': 4id yelafoldil
+      abbreviated:
+        '1': Yf1
+        '2': Yf2
+        '3': Yf3
+        '4': Yf4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': b. t. kr.
+      '1': p. t. kr.
+    narrow: {}
   date_formats:
     full: y MMMM'a' 'd'. d'id'
     long: y MMMM d
@@ -100,7 +135,4 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: vo
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats: {}

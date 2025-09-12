@@ -1,20 +1,10 @@
 ---
+locale: guz
+generated_at: '2025-09-12T04:11:12Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Can
-        '2': Feb
-        '3': Mac
-        '4': Apr
-        '5': Mei
-        '6': Jun
-        '7': Cul
-        '8': Agt
-        '9': Sep
-        '10': Okt
-        '11': Nob
-        '12': Dis
       wide:
         '1': Chanuari
         '2': Feburari
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Okitoba
         '11': Nobemba
         '12': Disemba
+      abbreviated:
+        '1': Can
+        '2': Feb
+        '3': Mac
+        '4': Apr
+        '5': Mei
+        '6': Jun
+        '7': Cul
+        '8': Agt
+        '9': Sep
+        '10': Okt
+        '11': Nob
+        '12': Dis
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': C
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Cpr
-        mon: Ctt
-        tue: Cmn
-        wed: Cmt
-        thu: Ars
-        fri: Icm
-        sat: Est
       wide:
         sun: Chumapiri
         mon: Chumatato
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Aramisi
         fri: Ichuma
         sat: Esabato
+      abbreviated:
+        sun: Cpr
+        mon: Ctt
+        tue: Cmn
+        wed: Cmt
+        thu: Ars
+        fri: Icm
+        sat: Est
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: C
         mon: C
@@ -69,6 +78,40 @@ datetime_formats:
         thu: A
         fri: I
         sat: E
+  quarters:
+    format:
+      wide:
+        '1': Erobo entang’ani
+        '2': Erobo yakabere
+        '3': Erobo yagatato
+        '4': Erobo yakane
+      abbreviated:
+        '1': E1
+        '2': E2
+        '3': E3
+        '4': E4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: Mambia
+        pm: Mog
+      abbreviated:
+        am: Ma
+        pm: Mo
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Yeso ataiborwa
+      '1': Yeso kaiboirwe
+    abbreviated:
+      '0': YA
+      '1': YK
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +122,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: guz
-generated_at: '2025-09-06T03:52:35+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

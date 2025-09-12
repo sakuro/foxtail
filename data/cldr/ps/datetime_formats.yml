@@ -1,20 +1,10 @@
 ---
+locale: ps
+generated_at: '2025-09-12T04:11:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      narrow:
-        '1': ج
-        '2': ف
-        '3': م
-        '4': ا
-        '5': م
-        '6': ج
-        '7': ج
-        '8': ا
-        '9': س
-        '10': ا
-        '11': ن
-        '12': د
       wide:
         '1': جنوري
         '2': فبروري
@@ -28,20 +18,21 @@ datetime_formats:
         '10': اکتوبر
         '11': نومبر
         '12': دسمبر
+      abbreviated: {}
+      narrow:
+        '1': ج
+        '2': ف
+        '3': م
+        '4': ا
+        '5': م
+        '6': ج
+        '7': ج
+        '8': ا
+        '9': س
+        '10': ا
+        '11': ن
+        '12': د
     stand-alone:
-      abbreviated:
-        '1': جنوري
-        '2': فبروري
-        '3': مارچ
-        '4': اپریل
-        '5': مۍ
-        '6': جون
-        '7': جولای
-        '8': اګست
-        '9': سپتمبر
-        '10': اکتوبر
-        '11': نومبر
-        '12': دسمبر
       wide:
         '1': جنوري
         '2': فېبروري
@@ -55,6 +46,20 @@ datetime_formats:
         '10': اکتوبر
         '11': نومبر
         '12': دسمبر
+      abbreviated:
+        '1': جنوري
+        '2': فبروري
+        '3': مارچ
+        '4': اپریل
+        '5': مۍ
+        '6': جون
+        '7': جولای
+        '8': اګست
+        '9': سپتمبر
+        '10': اکتوبر
+        '11': نومبر
+        '12': دسمبر
+      narrow: {}
   days:
     format:
       wide:
@@ -65,6 +70,42 @@ datetime_formats:
         thu: پينځنۍ
         fri: جمعه
         sat: اونۍ
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide:
+        '1': لومړۍ ربعه
+        '2': ۲مه ربعه
+        '3': ۳مه ربعه
+        '4': ۴مه ربعه
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: غ.م.
+        pm: غ.و.
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated:
+        am: غ.م.
+        pm: غ.و.
+  eras:
+    names:
+      '0': له عام پېر دمخه
+      '1': عام پېر
+    abbreviated:
+      '0': له میلاد وړاندې
+      '1': ع.پ
+    narrow: {}
   date_formats:
     full: EEEE د y د MMMM d
     long: y MMMM d
@@ -75,7 +116,13 @@ datetime_formats:
     long: H:mm:ss (z)
     medium: H:mm:ss
     short: H:mm
-locale: ps
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      GyMd: M/d/y GGGGG
+      MMMEd: E, MMM d
+      MMMMW: اونۍ W د MMMM
+      yw: اونۍ w د Y

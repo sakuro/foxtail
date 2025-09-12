@@ -1,20 +1,10 @@
 ---
+locale: cs
+generated_at: '2025-09-12T04:11:08Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': led
-        '2': úno
-        '3': bře
-        '4': dub
-        '5': kvě
-        '6': čvn
-        '7': čvc
-        '8': srp
-        '9': zář
-        '10': říj
-        '11': lis
-        '12': pro
       wide:
         '1': ledna
         '2': února
@@ -28,6 +18,20 @@ datetime_formats:
         '10': října
         '11': listopadu
         '12': prosince
+      abbreviated:
+        '1': led
+        '2': úno
+        '3': bře
+        '4': dub
+        '5': kvě
+        '6': čvn
+        '7': čvc
+        '8': srp
+        '9': zář
+        '10': říj
+        '11': lis
+        '12': pro
+      narrow: {}
     stand-alone:
       wide:
         '1': leden
@@ -42,16 +46,10 @@ datetime_formats:
         '10': říjen
         '11': listopad
         '12': prosinec
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: ne
-        mon: po
-        tue: út
-        wed: st
-        thu: čt
-        fri: pá
-        sat: so
       wide:
         sun: neděle
         mon: pondělí
@@ -60,7 +58,18 @@ datetime_formats:
         thu: čtvrtek
         fri: pátek
         sat: sobota
+      abbreviated:
+        sun: ne
+        mon: po
+        tue: út
+        wed: st
+        thu: čt
+        fri: pá
+        sat: so
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: "N"
         mon: P
@@ -69,6 +78,61 @@ datetime_formats:
         thu: Č
         fri: P
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1. čtvrtletí
+        '2': 2. čtvrtletí
+        '3': 3. čtvrtletí
+        '4': 4. čtvrtletí
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: půlnoc
+        noon: poledne
+        morning1: ráno
+        morning2: dopoledne
+        afternoon1: odpoledne
+        evening1: večer
+        night1: v noci
+      abbreviated:
+        midnight: půln.
+        am: dop.
+        noon: pol.
+        pm: odp.
+        morning1: r.
+        morning2: dop.
+        afternoon1: odp.
+        evening1: več.
+        night1: v n.
+    stand-alone:
+      wide: {}
+      abbreviated:
+        midnight: půlnoc
+        noon: poledne
+        morning1: ráno
+        morning2: dopoledne
+        afternoon1: odpoledne
+        evening1: večer
+        night1: noc
+  eras:
+    names:
+      '0': před naším letopočtem
+      '1': našeho letopočtu
+    abbreviated:
+      '0': př. n. l.
+      '1': n. l.
+    narrow:
+      '0': př.n.l.
+      '1': n.l.
   date_formats:
     full: EEEE d. MMMM y
     long: d. MMMM y
@@ -79,7 +143,55 @@ datetime_formats:
     long: H:mm:ss z
     medium: H:mm:ss
     short: H:mm
-locale: cs
-generated_at: '2025-09-06T03:52:32+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'v' {0}"
+    long: "{1} 'v' {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      d: d.
+      Ed: E d.
+      Ehm: E h:mm a
+      EHm: E H:mm
+      Ehms: E h:mm:ss a
+      EHms: E H:mm:ss
+      Gy: y G
+      GyMd: d. M. y GGGGG
+      GyMMM: LLLL y G
+      GyMMMd: d. M. y G
+      GyMMMEd: E d. M. y G
+      GyMMMMd: d. MMMM y G
+      GyMMMMEd: E d. MMMM y G
+      h: h a
+      H: H
+      hm: h:mm a
+      Hm: H:mm
+      hms: h:mm:ss a
+      Hms: H:mm:ss
+      hmsv: h:mm:ss a v
+      Hmsv: H:mm:ss v
+      hmsvvvv: h:mm:ss a, vvvv
+      Hmsvvvv: H:mm:ss, vvvv
+      hmv: h:mm a v
+      Hmv: H:mm v
+      hmvvvv: h:mm a, vvvv
+      Hmvvvv: H:mm, vvvv
+      Md: d. M.
+      MEd: E d. M.
+      MMMd: d. M.
+      MMMEd: E d. M.
+      MMMMd: d. MMMM
+      MMMMEd: E d. MMMM
+      MMMMW: W. 'týden' MMMM
+      yM: M/y
+      yMd: d. M. y
+      yMEd: E d. M. y
+      yMMM: LLLL y
+      yMMMd: d. M. y
+      yMMMEd: E d. M. y
+      yMMMM: LLLL y
+      yMMMMd: d. MMMM y
+      yMMMMEd: E d. MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: w. 'týden' 'roku' Y

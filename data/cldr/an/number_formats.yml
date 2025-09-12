@@ -1,4 +1,7 @@
 ---
+locale: an
+generated_at: '2025-09-12T04:07:29Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -45,9 +49,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: reals brasilenyos
-        one: real brasilenyo
     BSD:
       symbol: "$"
     BWP:
@@ -60,9 +61,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: yuans chinos
-        one: yuan chino
     COP:
       symbol: "$"
     CRC:
@@ -82,19 +80,13 @@ number_formats:
     ESP:
       symbol: "₧"
     EUR:
-      symbol: r
-      display_names:
-        other: euros
-        one: euro
+      symbol: "€"
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: libras britanicas
-        one: libra britanica
     GEL:
       symbol: "₾"
     GHS:
@@ -121,18 +113,12 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: rupias indias
-        one: rupia india
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
-      symbol: "¥"
-      display_names:
-        other: yens chaponeses
-        one: yen chaponés
+      symbol: JP¥
     KGS:
       symbol: "⃀"
     KHR:
@@ -171,8 +157,6 @@ number_formats:
       symbol: MX$
     MYR:
       symbol: RM
-      display_names:
-        other: ringgit de Malasia
     NAD:
       symbol: "$"
     NGN:
@@ -187,9 +171,6 @@ number_formats:
       symbol: NZ$
     PHP:
       symbol: "₱"
-      display_names:
-        other: pisos filipinos
-        one: piso filipino
     PKR:
       symbol: Rs
     PLN:
@@ -200,9 +181,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: rublos rusos
-        one: rublo ruso
     RWF:
       symbol: RF
     SBD:
@@ -211,9 +189,6 @@ number_formats:
       symbol: kr
     SGD:
       symbol: "$"
-      display_names:
-        other: dolars de Singapur
-        one: dolar de Singapur
     SHP:
       symbol: "£"
     SRD:
@@ -226,8 +201,6 @@ number_formats:
       symbol: "£"
     THB:
       symbol: "฿"
-      display_names:
-        other: baht tailandés
     TOP:
       symbol: T$
     TRY:
@@ -240,9 +213,6 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
-      display_names:
-        other: dolars d’os Estaus Unius
-        one: dolar d’os Estaus Unius
     UYU:
       symbol: "$"
     VEF:
@@ -261,17 +231,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: "(moneda desconoixida)"
-        one: "(moneda desconoixida)"
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: an
-generated_at: '2025-09-10T23:53:02+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

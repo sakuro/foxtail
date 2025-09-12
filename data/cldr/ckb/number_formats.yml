@@ -1,12 +1,16 @@
 ---
+locale: ckb
+generated_at: '2025-09-12T04:07:56Z'
+cldr_version: '46'
 number_formats:
   symbols:
+    plus_sign: "‎+"
     decimal: "."
     group: ","
     minus_sign: "-"
-    plus_sign: "‎+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,14 +18,12 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
     AFN:
       symbol: "؋"
-      display_names:
-        other: ئەفغانیی ئەفغانستان
     AMD:
       symbol: "֏"
     AOA:
@@ -52,12 +54,8 @@ number_formats:
       symbol: P
     BZD:
       symbol: "$"
-      display_names:
-        other: دۆلاری بەلیزی
     CAD:
       symbol: CA$
-      display_names:
-        other: دۆلاری کەنەدی
     CLP:
       symbol: "$"
     CNY:
@@ -82,8 +80,6 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: یورۆ
     FJD:
       symbol: "$"
     FKP:
@@ -208,12 +204,8 @@ number_formats:
       symbol: T$
     TRY:
       symbol: "₺"
-      display_names:
-        other: لیرەی تورکیا
     TTD:
       symbol: "$"
-      display_names:
-        other: دۆلاری ترینیداد و تۆباگۆ
     TWD:
       symbol: NT$
     UAH:
@@ -242,44 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    BHD:
-      display_names:
-        other: دیناری بەحرەینی
-    DZD:
-      display_names:
-        other: دیناری جەزائیری
-    IQD:
-      symbol: د.ع.‏
-      display_names:
-        other: دیناری عێراقی
-    IRR:
-      display_names:
-        other: ڕیاڵی ئێرانی
-    JOD:
-      display_names:
-        other: دیناری ئوردنی
-    KWD:
-      display_names:
-        other: دیناری کووەیتی
-    OMR:
-      display_names:
-        other: ڕیاڵی عومانی
-    QAR:
-      display_names:
-        other: ڕیاڵی قەتەری
-    SAR:
-      display_names:
-        other: ڕیاڵی سەعوودی
-    TND:
-      display_names:
-        other: دیناری توونس
-    XAU:
-      display_names:
-        other: زێڕ
-locale: ckb
-generated_at: '2025-09-10T23:53:05+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

@@ -1,20 +1,10 @@
 ---
+locale: ml
+generated_at: '2025-09-12T04:11:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ജനു
-        '2': ഫെബ്രു
-        '3': മാർ
-        '4': ഏപ്രി
-        '5': മേയ്
-        '6': ജൂൺ
-        '7': ജൂലൈ
-        '8': ഓഗ
-        '9': സെപ്റ്റം
-        '10': ഒക്ടോ
-        '11': നവം
-        '12': ഡിസം
       wide:
         '1': ജനുവരി
         '2': ഫെബ്രുവരി
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ഒക്‌ടോബർ
         '11': നവംബർ
         '12': ഡിസംബർ
+      abbreviated:
+        '1': ജനു
+        '2': ഫെബ്രു
+        '3': മാർ
+        '4': ഏപ്രി
+        '5': മേയ്
+        '6': ജൂൺ
+        '7': ജൂലൈ
+        '8': ഓഗ
+        '9': സെപ്റ്റം
+        '10': ഒക്ടോ
+        '11': നവം
+        '12': ഡിസം
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ജ
         '2': ഫെ
@@ -44,6 +50,14 @@ datetime_formats:
         '12': ഡി
   days:
     format:
+      wide:
+        sun: ഞായറാഴ്‌ച
+        mon: തിങ്കളാഴ്‌ച
+        tue: ചൊവ്വാഴ്ച
+        wed: ബുധനാഴ്‌ച
+        thu: വ്യാഴാഴ്‌ച
+        fri: വെള്ളിയാഴ്‌ച
+        sat: ശനിയാഴ്‌ച
       abbreviated:
         sun: ഞായർ
         mon: തിങ്കൾ
@@ -60,31 +74,7 @@ datetime_formats:
         thu: വ്യാ
         fri: വെ
         sat: ശ
-      short:
-        sun: ഞാ
-        mon: തി
-        tue: ചൊ
-        wed: ബു
-        thu: വ്യാ
-        fri: വെ
-        sat: ശ
-      wide:
-        sun: ഞായറാഴ്‌ച
-        mon: തിങ്കളാഴ്‌ച
-        tue: ചൊവ്വാഴ്ച
-        wed: ബുധനാഴ്‌ച
-        thu: വ്യാഴാഴ്‌ച
-        fri: വെള്ളിയാഴ്‌ച
-        sat: ശനിയാഴ്‌ച
     stand-alone:
-      narrow:
-        sun: ഞാ
-        mon: തി
-        tue: ചൊ
-        wed: ബു
-        thu: വ്യാ
-        fri: വെ
-        sat: ശ
       wide:
         sun: ഞായറാഴ്‌ച
         mon: തിങ്കളാഴ്‌ച
@@ -93,6 +83,50 @@ datetime_formats:
         thu: വ്യാഴാഴ്‌ച
         fri: വെള്ളിയാഴ്‌ച
         sat: ശനിയാഴ്‌ച
+      abbreviated: {}
+      narrow:
+        sun: ഞാ
+        mon: തി
+        tue: ചൊ
+        wed: ബു
+        thu: വ്യാ
+        fri: വെ
+        sat: ശ
+  quarters:
+    format:
+      wide:
+        '1': ഒന്നാം പാദം
+        '2': രണ്ടാം പാദം
+        '3': മൂന്നാം പാദം
+        '4': നാലാം പാദം
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: അർദ്ധരാത്രി
+        noon: ഉച്ച
+        morning1: പുലർച്ചെ
+        morning2: രാവിലെ
+        afternoon1: ഉച്ചയ്ക്ക്
+        afternoon2: ഉച്ചതിരിഞ്ഞ്
+        evening1: വൈകുന്നേരം
+        evening2: സന്ധ്യ
+        night1: രാത്രി
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': ബി.സി.ഇ.
+      '1': സി.ഇ.
+    abbreviated:
+      '0': ബിസിഇ
+      '1': സിഇ
+    narrow: {}
   date_formats:
     full: y, MMMM d, EEEE
     long: y, MMMM d
@@ -103,7 +137,24 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: ml
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E, B h:mm
+      EBhms: E, B h:mm:ss
+      GyMd: M/d/y G
+      Md: d/M
+      MEd: d/M, E
+      MMdd: dd/MM
+      MMMMEd: MMMM d, E
+      MMMMW: MMMM - ആഴ്ച W
+      yMd: d/M/y
+      yMEd: d-M-y, E
+      yMM: y-MM
+      yw: Y-ലെ ആഴ്ച w

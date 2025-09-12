@@ -1,4 +1,7 @@
 ---
+locale: ug
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,24 +18,14 @@ datetime_formats:
         '10': ئۆكتەبىر
         '11': نويابىر
         '12': دېكابىر
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: يە
-        mon: دۈ
-        tue: سە
-        wed: چا
-        thu: پە
-        fri: جۈ
-        sat: شە
-      short:
-        sun: ي
-        mon: د
-        tue: س
-        wed: چ
-        thu: پ
-        fri: ج
-        sat: ش
       wide:
         sun: يەكشەنبە
         mon: دۈشەنبە
@@ -41,7 +34,18 @@ datetime_formats:
         thu: پەيشەنبە
         fri: جۈمە
         sat: شەنبە
+      abbreviated:
+        sun: يە
+        mon: دۈ
+        tue: سە
+        wed: چا
+        thu: پە
+        fri: جۈ
+        sat: شە
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ي
         mon: د
@@ -50,6 +54,38 @@ datetime_formats:
         thu: پ
         fri: ج
         sat: ش
+  quarters:
+    format:
+      wide:
+        '1': بىرىنچى پەسىل
+        '2': ئىككىنچى پەسىل
+        '3': ئۈچىنچى پەسىل
+        '4': تۆتىنچى پەسىل
+      abbreviated:
+        '1': 1-پەسىل
+        '2': 2-پەسىل
+        '3': 3-پەسىل
+        '4': 4-پەسىل
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: چۈشتىن بۇرۇن
+        pm: چۈشتىن كېيىن
+      abbreviated:
+        am: چ.ب
+        pm: چ.ك
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': مىلادىيەدىن بۇرۇن
+    abbreviated:
+      '1': مىلادىيە
+    narrow: {}
   date_formats:
     full: y d-MMMM، EEEE
     long: d-MMMM، y
@@ -60,7 +96,26 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: ug
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1}، {0}"
+    short: "{1}، {0}"
+    available_formats:
+      Ed: d E
+      Gy: y G
+      GyMMM: y MMM G
+      GyMMMd: y d-MMM G
+      GyMMMEd: y d-MMM، E G
+      Md: d-M
+      MEd: d-M، E
+      MMMd: d-MMM
+      MMMEd: d-MMM، E
+      MMMMd: d-MMMM
+      MMMMW: MMMM، W-ھەپتە
+      yM: M-y
+      yMd: y-d-M
+      yMEd: y-d-M، E
+      yMMMd: y d-MMM
+      yMMMEd: y d-MMM، E
+      yw: Y، w-ھەپتە

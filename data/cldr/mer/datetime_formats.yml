@@ -1,20 +1,10 @@
 ---
+locale: mer
+generated_at: '2025-09-12T04:11:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': JAN
-        '2': FEB
-        '3': MAC
-        '4': ĨPU
-        '5': MĨĨ
-        '6': NJU
-        '7': NJR
-        '8': AGA
-        '9': SPT
-        '10': OKT
-        '11': NOV
-        '12': DEC
       wide:
         '1': Januarĩ
         '2': Feburuarĩ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Oktũba
         '11': Novemba
         '12': Dicemba
+      abbreviated:
+        '1': JAN
+        '2': FEB
+        '3': MAC
+        '4': ĨPU
+        '5': MĨĨ
+        '6': NJU
+        '7': NJR
+        '8': AGA
+        '9': SPT
+        '10': OKT
+        '11': NOV
+        '12': DEC
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: KIU
-        mon: MRA
-        tue: WAI
-        wed: WET
-        thu: WEN
-        fri: WTN
-        sat: JUM
       wide:
         sun: Kiumia
         mon: Muramuko
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Wena
         fri: Wetano
         sat: Jumamosi
+      abbreviated:
+        sun: KIU
+        mon: MRA
+        tue: WAI
+        wed: WET
+        thu: WEN
+        fri: WTN
+        sat: JUM
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: K
         mon: M
@@ -69,6 +78,34 @@ datetime_formats:
         thu: W
         fri: W
         sat: J
+  quarters:
+    format:
+      wide:
+        '1': Ĩmwe kĩrĩ inya
+        '2': Ijĩrĩ kĩrĩ inya
+        '3': Ithatũ kĩrĩ inya
+        '4': Inya kĩrĩ inya
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: RŨ
+        pm: ŨG
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Mbere ya Kristũ
+      '1': Nyuma ya Kristũ
+    abbreviated:
+      '0': MK
+      '1': NK
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +116,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: mer
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

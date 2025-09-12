@@ -1,7 +1,23 @@
 ---
+locale: mt
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': Jannar
+        '2': Frar
+        '3': Marzu
+        '4': April
+        '5': Mejju
+        '6': Ġunju
+        '7': Lulju
+        '8': Awwissu
+        '9': Settembru
+        '10': Ottubru
+        '11': Novembru
+        '12': Diċembru
       abbreviated:
         '1': Jan
         '2': Fra
@@ -28,20 +44,9 @@ datetime_formats:
         '10': O
         '11': "N"
         '12': D
-      wide:
-        '1': Jannar
-        '2': Frar
-        '3': Marzu
-        '4': April
-        '5': Mejju
-        '6': Ġunju
-        '7': Lulju
-        '8': Awwissu
-        '9': Settembru
-        '10': Ottubru
-        '11': Novembru
-        '12': Diċembru
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': Jn
         '2': Fr
@@ -57,6 +62,14 @@ datetime_formats:
         '12': Dċ
   days:
     format:
+      wide:
+        sun: Il-Ħadd
+        mon: It-Tnejn
+        tue: It-Tlieta
+        wed: L-Erbgħa
+        thu: Il-Ħamis
+        fri: Il-Ġimgħa
+        sat: Is-Sibt
       abbreviated:
         sun: Ħad
         mon: Tne
@@ -73,15 +86,9 @@ datetime_formats:
         thu: Ħm
         fri: Ġm
         sat: Sb
-      wide:
-        sun: Il-Ħadd
-        mon: It-Tnejn
-        tue: It-Tlieta
-        wed: L-Erbgħa
-        thu: Il-Ħamis
-        fri: Il-Ġimgħa
-        sat: Is-Sibt
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: Ħd
         mon: Tn
@@ -90,6 +97,36 @@ datetime_formats:
         thu: Ħm
         fri: Ġm
         sat: Sb
+  quarters:
+    format:
+      wide:
+        '1': 1el kwart
+        '2': 2ni kwart
+        '3': 3et kwart
+        '4': 4ba’ kwart
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Qabel Kristu
+      '1': Wara Kristu
+    abbreviated:
+      '0': QEK
+      '1': EK
+    narrow: {}
   date_formats:
     full: EEEE, d 'ta'’ MMMM y
     long: d 'ta'’ MMMM y
@@ -100,7 +137,32 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: mt
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      GyMMM: MMM y G
+      GyMMMd: d MMM, y G
+      GyMMMEd: E, d 'ta'’ MMM, y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      MEd: E, M-d
+      MMMEd: E, d 'ta'’ MMM
+      MMMMd: d 'ta'’ MMMM
+      MMMMW: W 'ġimgħa' 'ta''' MMMM
+      yMd: M/d/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d 'ta'’ MMM, y
+      yMMMEd: E, d 'ta'’ MMM, y
+      yMMMM: MMMM y
+      yQQQ: QQQ - y
+      yQQQQ: QQQQ - y
+      yw: w 'ġimgħa' 'ta''' Y

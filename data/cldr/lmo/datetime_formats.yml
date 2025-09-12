@@ -1,4 +1,7 @@
 ---
+locale: lmo
+generated_at: '2025-09-12T04:11:15Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,6 +18,12 @@ datetime_formats:
         '10': otover
         '11': november
         '12': dicember
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
       wide:
@@ -25,7 +34,34 @@ datetime_formats:
         thu: sgiovedì
         fri: venerdì
         sat: sabet
-locale: lmo
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: del matin
+        pm: de sira
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats:
+    available_formats:
+      yMMMd: d MMM y

@@ -1,4 +1,7 @@
 ---
+locale: su
+generated_at: '2025-09-12T04:10:35Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -44,8 +48,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: real Brasil
     BSD:
       symbol: "$"
     BWP:
@@ -58,8 +60,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: yuan Tiongkok
     COP:
       symbol: "$"
     CRC:
@@ -80,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: pound Inggris
     GEL:
       symbol: "₾"
     GHS:
@@ -112,22 +108,16 @@ number_formats:
       symbol: Ft
     IDR:
       symbol: Rp
-      display_names:
-        other: rupee Indonésia
     ILS:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: rupee India
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
-      symbol: "¥"
-      display_names:
-        other: yén Jepang
+      symbol: JP¥
     KGS:
       symbol: "⃀"
     KHR:
@@ -190,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: rubel Rusia
     RWF:
       symbol: RF
     SBD:
@@ -223,9 +211,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
-      display_names:
-        other: dolar A.S.
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -244,16 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: "(mata uang teu dikenal)"
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: su
-generated_at: '2025-09-10T23:53:18+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

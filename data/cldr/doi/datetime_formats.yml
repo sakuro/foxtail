@@ -1,20 +1,10 @@
 ---
+locale: doi
+generated_at: '2025-09-12T04:11:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': जन.
-        '2': फर.
-        '3': मार्च
-        '4': अप्रैल
-        '5': मेई
-        '6': जून
-        '7': जुलाई
-        '8': अग.
-        '9': सित.
-        '10': अक्तू.
-        '11': नव.
-        '12': दिस.
       wide:
         '1': जनवरी
         '2': फरवरी
@@ -28,7 +18,23 @@ datetime_formats:
         '10': अक्तूबर
         '11': नवंबर
         '12': दिसंबर
+      abbreviated:
+        '1': जन.
+        '2': फर.
+        '3': मार्च
+        '4': अप्रैल
+        '5': मेई
+        '6': जून
+        '7': जुलाई
+        '8': अग.
+        '9': सित.
+        '10': अक्तू.
+        '11': नव.
+        '12': दिस.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ज
         '2': फ
@@ -44,6 +50,14 @@ datetime_formats:
         '12': दि
   days:
     format:
+      wide:
+        sun: ऐतबार
+        mon: सोमबार
+        tue: मंगलबार
+        wed: बुधबार
+        thu: बीरबार
+        fri: शुक्रबार
+        sat: शनिबार
       abbreviated:
         sun: ऐत
         mon: सोम
@@ -60,15 +74,9 @@ datetime_formats:
         thu: बी.
         fri: शु.
         sat: श.
-      wide:
-        sun: ऐतबार
-        mon: सोमबार
-        tue: मंगलबार
-        wed: बुधबार
-        thu: बीरबार
-        fri: शुक्रबार
-        sat: शनिबार
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ऐ
         mon: सो
@@ -77,6 +85,39 @@ datetime_formats:
         thu: बी.
         fri: शु.
         sat: श.
+  quarters:
+    format:
+      wide:
+        '1': पैहली त्रमाही
+        '2': दूई त्रमाही
+        '3': त्री त्रमाही
+        '4': चौथी त्रमाही
+      abbreviated:
+        '1': त्र.1
+        '2': त्र.2
+        '3': त्र.3
+        '4': त्र.4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: सवेर
+        pm: दपैहर बाद
+      abbreviated:
+        am: सवेर
+        pm: स’ञ
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '1': ई. सन्
+    abbreviated:
+      '0': ई.पू.
+      '1': सन्
+    narrow: {}
   date_formats:
     full: EEEE, d, MMMM y
     long: d, MMMM y
@@ -87,7 +128,28 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: doi
-generated_at: '2025-09-06T03:52:33+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} गी {0}"
+    long: "{1} गी {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E d
+      GyMMMd: d, MMM G y
+      GyMMMEd: E, d, MMM G y
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMM दा हफ्ता W
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d, MMM y
+      yMMMEd: E, d, MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y दा हफ्ता w

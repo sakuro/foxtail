@@ -1,20 +1,10 @@
 ---
+locale: ce
+generated_at: '2025-09-12T04:11:08Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': янв
-        '2': фев
-        '3': мар
-        '4': апр
-        '5': май
-        '6': июн
-        '7': июл
-        '8': авг
-        '9': сен
-        '10': окт
-        '11': ноя
-        '12': дек
       wide:
         '1': январь
         '2': февраль
@@ -28,7 +18,23 @@ datetime_formats:
         '10': октябрь
         '11': ноябрь
         '12': декабрь
+      abbreviated:
+        '1': янв
+        '2': фев
+        '3': мар
+        '4': апр
+        '5': май
+        '6': июн
+        '7': июл
+        '8': авг
+        '9': сен
+        '10': окт
+        '11': ноя
+        '12': дек
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': Я
         '2': Ф
@@ -44,6 +50,14 @@ datetime_formats:
         '12': Д
   days:
     format:
+      wide:
+        sun: кӀира
+        mon: оршот
+        tue: шинара
+        wed: кхаара
+        thu: еара
+        fri: пӀераска
+        sat: шуот
       abbreviated:
         sun: кӀи
         mon: ор
@@ -60,15 +74,9 @@ datetime_formats:
         thu: еа
         fri: пӀе
         sat: шуо
-      wide:
-        sun: кӀира
-        mon: оршот
-        tue: шинара
-        wed: кхаара
-        thu: еара
-        fri: пӀераска
-        sat: шуот
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: кӀ
         mon: о
@@ -77,7 +85,36 @@ datetime_formats:
         thu: е
         fri: пӀ
         sat: ш
-locale: ce
-generated_at: '2025-09-06T03:52:32+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  quarters:
+    format:
+      wide:
+        '1': 1-гӀа квартал
+        '2': 2-гӀа квартал
+        '3': 3-гӀа квартал
+        '4': 4-гӀа квартал
+      abbreviated:
+        '1': 1-гӀа кв.
+        '2': 2-гӀа кв.
+        '3': 3-гӀа кв.
+        '4': 4-гӀа кв.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': вайн эра тӀеяле
+      '1': вайн эрехь
+    abbreviated:
+      '0': МАССО
+      '1': в. э
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats: {}

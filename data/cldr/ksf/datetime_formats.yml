@@ -1,20 +1,10 @@
 ---
+locale: ksf
+generated_at: '2025-09-12T04:11:15Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ŋ1
-        '2': ŋ2
-        '3': ŋ3
-        '4': ŋ4
-        '5': ŋ5
-        '6': ŋ6
-        '7': ŋ7
-        '8': ŋ8
-        '9': ŋ9
-        '10': ŋ10
-        '11': ŋ11
-        '12': ŋ12
       wide:
         '1': ŋwíí a ntɔ́ntɔ
         '2': ŋwíí akǝ bɛ́ɛ
@@ -28,16 +18,26 @@ datetime_formats:
         '10': ŋwíí akǝ ntɛk
         '11': ŋwíí akǝ ntɛk di bɔ́k
         '12': ŋwíí akǝ ntɛk di bɛ́ɛ
+      abbreviated:
+        '1': ŋ1
+        '2': ŋ2
+        '3': ŋ3
+        '4': ŋ4
+        '5': ŋ5
+        '6': ŋ6
+        '7': ŋ7
+        '8': ŋ8
+        '9': ŋ9
+        '10': ŋ10
+        '11': ŋ11
+        '12': ŋ12
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: sɔ́n
-        mon: lǝn
-        tue: maa
-        wed: mɛk
-        thu: jǝǝ
-        fri: júm
-        sat: sam
       wide:
         sun: sɔ́ndǝ
         mon: lǝndí
@@ -46,7 +46,18 @@ datetime_formats:
         thu: jǝǝdí
         fri: júmbá
         sat: samdí
+      abbreviated:
+        sun: sɔ́n
+        mon: lǝn
+        tue: maa
+        wed: mɛk
+        thu: jǝǝ
+        fri: júm
+        sat: sam
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: s
         mon: l
@@ -55,6 +66,38 @@ datetime_formats:
         thu: j
         fri: j
         sat: s
+  quarters:
+    format:
+      wide:
+        '1': id́ɛ́n kǝbǝk kǝ ntɔ́ntɔ́
+        '2': idɛ́n kǝbǝk kǝ kǝbɛ́ɛ
+        '3': idɛ́n kǝbǝk kǝ kǝráá
+        '4': idɛ́n kǝbǝk kǝ kǝnin
+      abbreviated:
+        '1': i1
+        '2': i2
+        '3': i3
+        '4': i4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: sárúwá
+        pm: cɛɛ́nko
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': di Yɛ́sus aká yálɛ
+      '1': cámɛɛn kǝ kǝbɔpka Y
+    abbreviated:
+      '0': d.Y.
+      '1': k.Y.
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -65,7 +108,21 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: ksf
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

@@ -1,20 +1,10 @@
 ---
+locale: mgh
+generated_at: '2025-09-12T04:11:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Kwa
-        '2': Una
-        '3': Rar
-        '4': Che
-        '5': Tha
-        '6': Moc
-        '7': Sab
-        '8': Nan
-        '9': Tis
-        '10': Kum
-        '11': Moj
-        '12': Yel
       wide:
         '1': Mweri wo kwanza
         '2': Mweri wo unayeli
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Mweri wo kumi
         '11': Mweri wo kumi na moja
         '12': Mweri wo kumi na yel’li
+      abbreviated:
+        '1': Kwa
+        '2': Una
+        '3': Rar
+        '4': Che
+        '5': Tha
+        '6': Moc
+        '7': Sab
+        '8': Nan
+        '9': Tis
+        '10': Kum
+        '11': Moj
+        '12': Yel
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': K
         '2': U
@@ -44,14 +50,6 @@ datetime_formats:
         '12': "Y"
   days:
     format:
-      abbreviated:
-        sun: Sab
-        mon: Jtt
-        tue: Jnn
-        wed: Jtn
-        thu: Ara
-        fri: Iju
-        sat: Jmo
       wide:
         sun: Sabato
         mon: Jumatatu
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Arahamisi
         fri: Ijumaa
         sat: Jumamosi
+      abbreviated:
+        sun: Sab
+        mon: Jtt
+        tue: Jnn
+        wed: Jtn
+        thu: Ara
+        fri: Iju
+        sat: Jmo
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: S
         mon: J
@@ -69,6 +78,30 @@ datetime_formats:
         thu: A
         fri: I
         sat: J
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: wichishu
+        pm: mchochil’l
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Hinapiya yesu
+      '1': Yopia yesu
+    abbreviated:
+      '0': HY
+      '1': YY
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +112,20 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: mgh
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: E, MMM d, y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

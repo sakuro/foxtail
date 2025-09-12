@@ -1,20 +1,10 @@
 ---
+locale: kgp
+generated_at: '2025-09-12T04:11:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': 1Ky.
-        '2': 2Ky.
-        '3': 3Ky.
-        '4': 4Ky.
-        '5': 5Ky.
-        '6': 6Ky.
-        '7': 7Ky.
-        '8': 8Ky.
-        '9': 9Ky.
-        '10': 10Ky.
-        '11': 11Ky.
-        '12': 12Ky.
       wide:
         '1': 1-Kysã
         '2': 2-Kysã
@@ -28,7 +18,23 @@ datetime_formats:
         '10': 10-Kysã
         '11': 11-Kysã
         '12': 12-Kysã
+      abbreviated:
+        '1': 1Ky.
+        '2': 2Ky.
+        '3': 3Ky.
+        '4': 4Ky.
+        '5': 5Ky.
+        '6': 6Ky.
+        '7': 7Ky.
+        '8': 8Ky.
+        '9': 9Ky.
+        '10': 10Ky.
+        '11': 11Ky.
+        '12': 12Ky.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': 1K
         '2': 2K
@@ -44,22 +50,6 @@ datetime_formats:
         '12': 12K
   days:
     format:
-      abbreviated:
-        sun: num.
-        mon: pir.
-        tue: rég.
-        wed: tẽg.
-        thu: vẽn.
-        fri: pén.
-        sat: sav.
-      short:
-        sun: N.
-        mon: 1kh.
-        tue: 2kh.
-        wed: 3kh.
-        thu: 4kh.
-        fri: 5kh.
-        sat: S.
       wide:
         sun: numĩggu
         mon: pir-kurã-há
@@ -68,7 +58,18 @@ datetime_formats:
         thu: vẽnhkãgra-kurã-há
         fri: pénkar-kurã-há
         sat: savnu
+      abbreviated:
+        sun: num.
+        mon: pir.
+        tue: rég.
+        wed: tẽg.
+        thu: vẽn.
+        fri: pén.
+        sat: sav.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: N.
         mon: P.
@@ -77,6 +78,42 @@ datetime_formats:
         thu: V.
         fri: P.
         sat: S.
+  quarters:
+    format:
+      wide:
+        '1': 1ⁿ kysã-tẽgtũ
+        '2': 2ᵍᵉ kysã-tẽgtũ
+        '3': 3ⁿʰ kysã-tẽgtũ
+        '4': 4ⁿ kysã-tẽgtũ
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: kuty-si
+        noon: kurã-kuju
+        morning1: kusãg ki
+        afternoon1: rãkãnh kỹ
+        evening1: kuty kỹ
+        night1: kurã ge
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': vãsỹ Kórég ju
+      '1': vãsỹ Kórég kã
+    abbreviated:
+      '0': VKJ
+      '1': VK
+    narrow: {}
   date_formats:
     full: EEEE, d 'ne' MMMM, y
     long: d 'ne' MMMM, y
@@ -87,7 +124,44 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: kgp
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E, d
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMMM: MMM, y G
+      GyMMMd: d 'ne' MMM, y G
+      GyMMMEd: E, d 'ne' MMM, y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E, dd/MM
+      MMdd: dd/MM
+      MMMd: d 'ne' MMM
+      MMMEd: E, d 'ne' MMM
+      MMMMd: d 'ne' MMMM
+      MMMMEd: E, d 'ne' MMMM
+      MMMMW: "'simỹnỹ' W 'ne' MMMM"
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E, dd/MM/y
+      yMM: MM/y
+      yMMM: MMM, y
+      yMMMd: d 'ne' MMM, y
+      yMMMEd: E, d 'ne' MMM, y
+      yMMMM: MMMM, y
+      yMMMMd: d 'ne' MMMM, y
+      yMMMMEd: E, d 'ne' MMMM, y
+      yQQQ: QQQ, y
+      yQQQQ: QQQQ, y
+      yw: "'simỹnỹ' w, Y"

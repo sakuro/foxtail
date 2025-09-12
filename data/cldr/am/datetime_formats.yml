@@ -1,20 +1,10 @@
 ---
+locale: am
+generated_at: '2025-09-12T04:11:06Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ጃን
-        '2': ፌብ
-        '3': ማርች
-        '4': ኤፕሪ
-        '5': ሜይ
-        '6': ጁን
-        '7': ጁላይ
-        '8': ኦገስ
-        '9': ሴፕቴ
-        '10': ኦክቶ
-        '11': ኖቬም
-        '12': ዲሴም
       wide:
         '1': ጃንዋሪ
         '2': ፌብሩዋሪ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ኦክቶበር
         '11': ኖቬምበር
         '12': ዲሴምበር
+      abbreviated:
+        '1': ጃን
+        '2': ፌብ
+        '3': ማርች
+        '4': ኤፕሪ
+        '5': ሜይ
+        '6': ጁን
+        '7': ጁላይ
+        '8': ኦገስ
+        '9': ሴፕቴ
+        '10': ኦክቶ
+        '11': ኖቬም
+        '12': ዲሴም
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ጃ
         '2': ፌ
@@ -44,22 +50,6 @@ datetime_formats:
         '12': ዲ
   days:
     format:
-      abbreviated:
-        sun: እሑድ
-        mon: ሰኞ
-        tue: ማክሰ
-        wed: ረቡዕ
-        thu: ሐሙስ
-        fri: ዓርብ
-        sat: ቅዳሜ
-      short:
-        sun: እ
-        mon: ሰ
-        tue: ማ
-        wed: ረ
-        thu: ሐ
-        fri: ዓ
-        sat: ቅ
       wide:
         sun: እሑድ
         mon: ሰኞ
@@ -68,7 +58,18 @@ datetime_formats:
         thu: ሐሙስ
         fri: ዓርብ
         sat: ቅዳሜ
+      abbreviated:
+        sun: እሑድ
+        mon: ሰኞ
+        tue: ማክሰ
+        wed: ረቡዕ
+        thu: ሐሙስ
+        fri: ዓርብ
+        sat: ቅዳሜ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: እ
         mon: ሰ
@@ -77,6 +78,48 @@ datetime_formats:
         thu: ሐ
         fri: ዓ
         sat: ቅ
+  quarters:
+    format:
+      wide:
+        '1': 1ኛው ሩብ
+        '2': 2ኛው ሩብ
+        '3': 3ኛው ሩብ
+        '4': 4ኛው ሩብ
+      abbreviated:
+        '1': ሩብ1
+        '2': ሩብ2
+        '3': ሩብ3
+        '4': ሩብ4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: እኩለ ሌሊት
+        am: ጥዋት
+        noon: ቀትር
+        pm: ከሰዓት
+        morning1: ጥዋት
+        afternoon1: ከሰዓት
+        evening1: በምሽት
+        night1: በሌሊት
+    stand-alone:
+      wide: {}
+      abbreviated:
+        morning1: ጥዋት
+        afternoon1: ከሰዓት
+        evening1: ምሽት
+        night1: ሌሊት
+  eras:
+    names:
+      '0': ዓመተ ዓለም
+      '1': ዓ/ም
+    abbreviated:
+      '0': ዓ/ዓ
+      '1': ዓ/ም
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -87,7 +130,39 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: am
-generated_at: '2025-09-06T03:52:30+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: E d
+      Ehm: E a h:mm
+      Ehms: E a h:mm:ss
+      Gy: y G
+      GyMd: d/M/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: MMM d y G
+      GyMMMEd: E MMM d y G
+      h: a h
+      H: H
+      hm: a h:mm
+      hms: a h:mm:ss
+      Md: d/M
+      MEd: E፣ d/M
+      MMMEd: E፣ MMM d
+      MMMMEd: E፣ MMMM d
+      MMMMW: የMMMM Wኛ ሳምንት
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E፣ d/M/y
+      yMMM: MMM y
+      yMMMd: MMM d y
+      yMMMEd: E፣ MMM d y
+      yMMMM: MMMM y
+      yw: የY wኛ ሳምንት

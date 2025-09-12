@@ -1,4 +1,7 @@
 ---
+locale: vmw
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,6 +18,12 @@ datetime_formats:
         '10': outubru
         '11': novembru
         '12': dezembru
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
       wide:
@@ -25,7 +34,35 @@ datetime_formats:
         thu: namaxexe
         fri: namathanu
         sat: esaabadu
-locale: vmw
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: vaasisu
+        pm: makaaripi
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats:
+    available_formats:
+      yMd: d/M/y
+      yMMMd: d MMM y

@@ -1,4 +1,7 @@
 ---
+locale: fr
+generated_at: '2025-09-12T04:20:00Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -300,7 +304,7 @@ number_formats:
         other: kips laotiens
         one: kip laotien
     LBP:
-      symbol: "£LB"
+      symbol: "£L"
       display_names:
         other: livres libanaises
         one: livre libanaise
@@ -480,7 +484,7 @@ number_formats:
         other: dollars de Trinité-et-Tobago
         one: dollar de Trinité-et-Tobago
     TWD:
-      symbol: TWD
+      symbol: NT$
       display_names:
         other: nouveaux dollars taïwanais
         one: nouveau dollar taïwanais
@@ -1224,6 +1228,7 @@ number_formats:
     VEB:
       display_names:
         other: bolivar vénézuélien (1871–2008)
+        one: bolivar vénézuélien (1871–2008)
     VES:
       display_names:
         other: bolivars vénézuéliens
@@ -1358,10 +1363,6 @@ number_formats:
       display_names:
         other: dollars zimbabwéens (2008)
         one: dollar zimbabwéen (2008)
-locale: fr
-generated_at: '2025-09-10T23:53:07+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

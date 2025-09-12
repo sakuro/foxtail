@@ -1,20 +1,10 @@
 ---
+locale: lg
+generated_at: '2025-09-12T04:11:15Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mar
-        '4': Apu
-        '5': Maa
-        '6': Juu
-        '7': Jul
-        '8': Agu
-        '9': Seb
-        '10': Oki
-        '11': Nov
-        '12': Des
       wide:
         '1': Janwaliyo
         '2': Febwaliyo
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Okitobba
         '11': Novemba
         '12': Desemba
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Apu
+        '5': Maa
+        '6': Juu
+        '7': Jul
+        '8': Agu
+        '9': Seb
+        '10': Oki
+        '11': Nov
+        '12': Des
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Sab
-        mon: Bal
-        tue: Lw2
-        wed: Lw3
-        thu: Lw4
-        fri: Lw5
-        sat: Lw6
       wide:
         sun: Sabbiiti
         mon: Balaza
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Lwakuna
         fri: Lwakutaano
         sat: Lwamukaaga
+      abbreviated:
+        sun: Sab
+        mon: Bal
+        tue: Lw2
+        wed: Lw3
+        thu: Lw4
+        fri: Lw5
+        sat: Lw6
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: S
         mon: B
@@ -69,6 +78,36 @@ datetime_formats:
         thu: L
         fri: L
         sat: L
+  quarters:
+    format:
+      wide:
+        '1': Kyakuna 1
+        '2': Kyakuna 2
+        '3': Kyakuna 3
+        '4': Kyakuna 4
+      abbreviated:
+        '1': Kya1
+        '2': Kya2
+        '3': Kya3
+        '4': Kya4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Kulisito nga tannaza
+      '1': Bukya Kulisito Azaal
+    abbreviated:
+      '0': BC
+      '1': AD
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +118,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: lg
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

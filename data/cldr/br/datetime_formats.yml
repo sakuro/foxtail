@@ -1,20 +1,10 @@
 ---
+locale: br
+generated_at: '2025-09-12T04:11:07Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Gen.
-        '2': Cʼhwe.
-        '3': Meur.
-        '4': Ebr.
-        '5': Mae
-        '6': Mezh.
-        '7': Goue.
-        '8': Eost
-        '9': Gwen.
-        '10': Here
-        '11': Du
-        '12': Kzu.
       wide:
         '1': Genver
         '2': Cʼhwevrer
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Here
         '11': Du
         '12': Kerzu
+      abbreviated:
+        '1': Gen.
+        '2': Cʼhwe.
+        '3': Meur.
+        '4': Ebr.
+        '5': Mae
+        '6': Mezh.
+        '7': Goue.
+        '8': Eost
+        '9': Gwen.
+        '10': Here
+        '11': Du
+        '12': Kzu.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': '01'
         '2': '02'
@@ -44,14 +50,6 @@ datetime_formats:
         '12': '12'
   days:
     format:
-      abbreviated:
-        sun: Sul
-        mon: Lun
-        tue: Meu.
-        wed: Mer.
-        thu: Yaou
-        fri: Gwe.
-        sat: Sad.
       wide:
         sun: Sul
         mon: Lun
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Yaou
         fri: Gwener
         sat: Sadorn
+      abbreviated:
+        sun: Sul
+        mon: Lun
+        tue: Meu.
+        wed: Mer.
+        thu: Yaou
+        fri: Gwe.
+        sat: Sad.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: Su
         mon: L
@@ -69,6 +78,38 @@ datetime_formats:
         thu: "Y"
         fri: G
         sat: Sa
+  quarters:
+    format:
+      wide:
+        '1': 1añ trimiziad
+        '2': 2l trimiziad
+        '3': 3e trimiziad
+        '4': 4e trimiziad
+      abbreviated:
+        '1': 1añ trim.
+        '2': 2l trim.
+        '3': 3e trim.
+        '4': 4e trim.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: A.M.
+        pm: G.M.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': a-raok an amzervezh kristen
+      '1': an amzervezh kristen
+    abbreviated:
+      '0': AAK
+      '1': AK
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +120,38 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: br
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'da' {0}"
+    long: "{1} 'da' {0}"
+    medium: "{1}, {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      M: MM
+      Md: dd/MM
+      MEd: E dd/MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'sizhun' W 'miz' MMMM"
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E dd/MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'sizhun' w Y"

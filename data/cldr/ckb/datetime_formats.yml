@@ -1,4 +1,7 @@
 ---
+locale: ckb
+generated_at: '2025-09-12T04:11:08Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,7 +18,11 @@ datetime_formats:
         '10': تشرینی یەکەم
         '11': تشرینی دووەم
         '12': کانونی یەکەم
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ک
         '2': ش
@@ -31,14 +38,6 @@ datetime_formats:
         '12': ک
   days:
     format:
-      short:
-        sun: ١ش
-        mon: ٢ش
-        tue: ٣ش
-        wed: ٤ش
-        thu: ٥ش
-        fri: ھ
-        sat: ش
       wide:
         sun: یەکشەممە
         mon: دووشەممە
@@ -47,7 +46,11 @@ datetime_formats:
         thu: پێنجشەممە
         fri: ھەینی
         sat: شەممە
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ی
         mon: د
@@ -56,6 +59,38 @@ datetime_formats:
         thu: پ
         fri: ھ
         sat: ش
+  quarters:
+    format:
+      wide:
+        '1': چارەکی یەکەم
+        '2': چارەکی دووەم
+        '3': چارەکی سێەم
+        '4': چارەکی چوارەم
+      abbreviated:
+        '1': چ١
+        '2': چ٢
+        '3': چ٣
+        '4': چ٤
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: ب.ن
+        pm: د.ن
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow:
+      '0': پ.ن
+      '1': ز
   date_formats:
     full: y MMMM d, EEEE
     long: dی MMMMی y
@@ -66,7 +101,22 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: ckb
-generated_at: '2025-09-06T03:52:32+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E dھەم
+      h: hی a
+      MEd: E، M/d
+      MMMd: dی MMM
+      MMMEd: E، dی MMM
+      MMMMW: هەفتەی W ی MMMM
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E، d/M/y
+      yMMM: MMMی y
+      yMMMd: dی MMMی y
+      yMMMEd: E، dی MMMی y
+      yw: هەفتەی w ی Y

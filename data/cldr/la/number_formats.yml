@@ -1,4 +1,7 @@
 ---
+locale: la
+generated_at: '2025-09-12T04:09:30Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -76,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: Euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: Libra sterlingorum
     GEL:
       symbol: "₾"
     GHS:
@@ -100,8 +100,6 @@ number_formats:
       symbol: "$"
     HKD:
       symbol: HK$
-      display_names:
-        other: Dollarium Hongkongense
     HNL:
       symbol: L
     HRK:
@@ -120,8 +118,6 @@ number_formats:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: Yen
     KGS:
       symbol: "⃀"
     KHR:
@@ -158,8 +154,6 @@ number_formats:
       symbol: Rs
     MXN:
       symbol: MX$
-      display_names:
-        other: Pensum Mexicanum
     MYR:
       symbol: RM
     NAD:
@@ -170,8 +164,6 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
-      display_names:
-        other: Corona Norvegiae
     NPR:
       symbol: Rs
     NZD:
@@ -220,8 +212,6 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
-      display_names:
-        other: Dollarium Civitatum Foederatarum
     UYU:
       symbol: "$"
     VEF:
@@ -244,40 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    CHF:
-      display_names:
-        other: Francus Helveticus
-    FIM:
-      display_names:
-        other: Marca Finniae
-    GRD:
-      display_names:
-        other: Drachma
-    ITL:
-      display_names:
-        other: Lira Italiana
-    PEN:
-      display_names:
-        other: Nuevo Sol
-    RUR:
-      display_names:
-        other: Rubelus Russicus
-    XAG:
-      display_names:
-        other: Argentum
-    XAU:
-      display_names:
-        other: Aurum
-    XPD:
-      display_names:
-        other: Palladium
-    XPT:
-      display_names:
-        other: Platinum
-locale: la
-generated_at: '2025-09-10T23:53:12+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

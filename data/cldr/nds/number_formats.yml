@@ -1,4 +1,7 @@
 ---
+locale: nds
+generated_at: '2025-09-12T04:09:52Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -27,9 +31,7 @@ number_formats:
     ARS:
       symbol: "$"
     AUD:
-      symbol: AU$
-      display_names:
-        other: Austraalsch Dollar
+      symbol: A$
     AZN:
       symbol: "₼"
     BAM:
@@ -46,8 +48,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: Brasiliaansch Real
     BSD:
       symbol: "$"
     BWP:
@@ -56,14 +56,10 @@ number_formats:
       symbol: "$"
     CAD:
       symbol: CA$
-      display_names:
-        other: Kanada-Dollar
     CLP:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: Renminbi
     COP:
       symbol: "$"
     CRC:
@@ -76,8 +72,6 @@ number_formats:
       symbol: Kč
     DKK:
       symbol: kr
-      display_names:
-        other: Däänsch Kronen
     DOP:
       symbol: "$"
     EGP:
@@ -86,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: Euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: Engelsch Pund
     GEL:
       symbol: "₾"
     GHS:
@@ -110,8 +100,6 @@ number_formats:
       symbol: "$"
     HKD:
       symbol: HK$
-      display_names:
-        other: Hongkong-Dollar
     HNL:
       symbol: L
     HRK:
@@ -120,22 +108,16 @@ number_formats:
       symbol: Ft
     IDR:
       symbol: Rp
-      display_names:
-        other: Indoneesch Rupje
     ILS:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: Indsch Rupje
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: Japaansch Yen
     KGS:
       symbol: "⃀"
     KHR:
@@ -146,8 +128,6 @@ number_formats:
       symbol: "₩"
     KRW:
       symbol: "₩"
-      display_names:
-        other: Koreaansch Won
     KYD:
       symbol: "$"
     KZT:
@@ -174,8 +154,6 @@ number_formats:
       symbol: Rs
     MXN:
       symbol: MX$
-      display_names:
-        other: Mexiko-Peso
     MYR:
       symbol: RM
     NAD:
@@ -186,8 +164,6 @@ number_formats:
       symbol: C$
     NOK:
       symbol: kr
-      display_names:
-        other: Norweegsch Kronen
     NPR:
       symbol: Rs
     NZD:
@@ -198,24 +174,18 @@ number_formats:
       symbol: Rs
     PLN:
       symbol: zł
-      display_names:
-        other: Poolsch Zloty
     PYG:
       symbol: "₲"
     RON:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: Russ’sch Ruvel
     RWF:
       symbol: RF
     SBD:
       symbol: "$"
     SEK:
       symbol: kr
-      display_names:
-        other: Sweedsch Kronen
     SGD:
       symbol: "$"
     SHP:
@@ -230,26 +200,18 @@ number_formats:
       symbol: "£"
     THB:
       symbol: "฿"
-      display_names:
-        other: Thai-Baht
     TOP:
       symbol: T$
     TRY:
       symbol: "₺"
-      display_names:
-        other: Törksch Lira
     TTD:
       symbol: "$"
     TWD:
       symbol: NT$
-      display_names:
-        other: Taiwan-Dollar
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
-      display_names:
-        other: Dollar
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -268,24 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: "(nich begäng Geldsoort)"
     ZAR:
       symbol: R
-      display_names:
-        other: Söödafrikaansch Rand
     ZMW:
       symbol: ZK
-    CHF:
-      display_names:
-        other: Swiezer Franken
-    SAR:
-      display_names:
-        other: Saudiaraabsch Rial
-locale: nds
-generated_at: '2025-09-10T23:53:14+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

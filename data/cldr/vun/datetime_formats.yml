@@ -1,20 +1,10 @@
 ---
+locale: vun
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mac
-        '4': Apr
-        '5': Mei
-        '6': Jun
-        '7': Jul
-        '8': Ago
-        '9': Sep
-        '10': Okt
-        '11': Nov
-        '12': Des
       wide:
         '1': Januari
         '2': Februari
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Oktoba
         '11': Novemba
         '12': Desemba
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mac
+        '4': Apr
+        '5': Mei
+        '6': Jun
+        '7': Jul
+        '8': Ago
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Des
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Jpi
-        mon: Jtt
-        tue: Jnn
-        wed: Jtn
-        thu: Alh
-        fri: Iju
-        sat: Jmo
       wide:
         sun: Jumapilyi
         mon: Jumatatuu
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Alhamisi
         fri: Ijumaa
         sat: Jumamosi
+      abbreviated:
+        sun: Jpi
+        mon: Jtt
+        tue: Jnn
+        wed: Jtn
+        thu: Alh
+        fri: Iju
+        sat: Jmo
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: J
         mon: J
@@ -69,6 +78,38 @@ datetime_formats:
         thu: A
         fri: I
         sat: J
+  quarters:
+    format:
+      wide:
+        '1': Robo 1
+        '2': Robo 2
+        '3': Robo 3
+        '4': Robo 4
+      abbreviated:
+        '1': R1
+        '2': R2
+        '3': R3
+        '4': R4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: utuko
+        pm: kyiukonyi
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Kabla ya Kristu
+      '1': Baada ya Kristu
+    abbreviated:
+      '0': KK
+      '1': BK
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +120,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: vun
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

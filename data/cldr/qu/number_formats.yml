@@ -1,4 +1,7 @@
 ---
+locale: qu
+generated_at: '2025-09-12T04:10:08Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,600 +18,223 @@ number_formats:
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard: "#,##0.00;(#,##0.00)"
+    accounting: "#,##0.00;(#,##0.00)"
   scientific_formats:
     standard: "#E0"
   currencies:
     AFN:
       symbol: "؋"
-      display_names:
-        other: Afgani afgano
     AMD:
       symbol: "֏"
-      display_names:
-        other: drams Armenios
     AOA:
       symbol: Kz
-      display_names:
-        other: Kwanza angoleño
     ARS:
       symbol: "$"
-      display_names:
-        other: Peso argentino
     AUD:
       symbol: A$
-      display_names:
-        other: Dólar Australiano
     AZN:
       symbol: "₼"
-      display_names:
-        other: manats Azerbaiyanos
     BAM:
       symbol: KM
-      display_names:
-        other: Marco bosnioherzegovino
     BBD:
-      symbol: BBG
-      display_names:
-        other: Dólar de Barbados
+      symbol: "$"
     BDT:
       symbol: "৳"
-      display_names:
-        other: Taka bangladesí
     BMD:
-      symbol: DBM
-      display_names:
-        other: Dólar bermudeño
+      symbol: "$"
     BND:
       symbol: "$"
-      display_names:
-        other: Dólar de Brunéi
     BOB:
       symbol: Bs
-      display_names:
-        other: Boliviano
     BRL:
       symbol: R$
-      display_names:
-        other: Real brasileño
     BSD:
       symbol: "$"
-      display_names:
-        other: Dólar bahameño
     BWP:
       symbol: P
-      display_names:
-        other: Pula Botswano
     BZD:
-      symbol: DBZ
-      display_names:
-        other: Dólar beliceño
+      symbol: "$"
     CAD:
-      symbol: "$CA"
-      display_names:
-        other: Dólar canadiense
+      symbol: CA$
     CLP:
       symbol: "$"
-      display_names:
-        other: Peso chileno
     CNY:
       symbol: CN¥
-      display_names:
-        other: Yuan chino
     COP:
       symbol: "$"
-      display_names:
-        other: Peso colombiano
     CRC:
       symbol: "₡"
-      display_names:
-        other: Colón costarricense
     CUC:
       symbol: "$"
-      display_names:
-        other: Peso cubano convertible
     CUP:
       symbol: "$"
-      display_names:
-        other: Peso cubano
     CZK:
       symbol: Kč
-      display_names:
-        other: Corona checa
     DKK:
       symbol: kr
-      display_names:
-        other: Corona danesa
     DOP:
       symbol: "$"
-      display_names:
-        other: Peso dominicano
     EGP:
       symbol: E£
-      display_names:
-        other: Libra egipcia
     ESP:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: euro
     FJD:
       symbol: "$"
-      display_names:
-        other: Dólar Fiyiano
     FKP:
       symbol: "£"
-      display_names:
-        other: Libra malvinense
     GBP:
       symbol: "£"
-      display_names:
-        other: Libra esterlina
     GEL:
       symbol: "₾"
-      display_names:
-        other: Lari georgiano
     GHS:
-      symbol: GHC
-      display_names:
-        other: Cedi ganés
+      symbol: GH₵
     GIP:
       symbol: "£"
-      display_names:
-        other: Libra gibraltareña
     GNF:
       symbol: FG
-      display_names:
-        other: Franco guineano
     GTQ:
       symbol: Q
-      display_names:
-        other: Quetzal guatemalteco
     GYD:
       symbol: "$"
-      display_names:
-        other: Dólar guyanés
     HKD:
       symbol: HK$
-      display_names:
-        other: Dólar de Hong Kong
     HNL:
       symbol: L
-      display_names:
-        other: Lempira hondureño
     HRK:
       symbol: kn
-      display_names:
-        other: Kuna croata
     HUF:
       symbol: Ft
-      display_names:
-        other: Florín húngaro
     IDR:
       symbol: Rp
-      display_names:
-        other: Rupia indonesia
     ILS:
       symbol: "₪"
-      display_names:
-        other: Nuevo séquel
     INR:
       symbol: "₹"
-      display_names:
-        other: Rupia india
     ISK:
       symbol: kr
-      display_names:
-        other: Corona islandesa
     JMD:
       symbol: "$"
-      display_names:
-        other: Dólar jamaiquino
     JPY:
       symbol: JP¥
-      display_names:
-        other: Yen japonés
     KGS:
       symbol: "⃀"
-      display_names:
-        other: Som kirguís
     KHR:
       symbol: "៛"
-      display_names:
-        other: Riel camboyano
     KMF:
       symbol: CF
-      display_names:
-        other: Franco comorense
     KPW:
       symbol: "₩"
-      display_names:
-        other: Won norcoreano
     KRW:
       symbol: "₩"
-      display_names:
-        other: Won surcoreano
     KYD:
       symbol: "$"
-      display_names:
-        other: Dólar de las islas caimán
     KZT:
       symbol: "₸"
-      display_names:
-        other: Tenge kazajo
     LAK:
       symbol: "₭"
-      display_names:
-        other: Kip laosiano
     LBP:
       symbol: L£
-      display_names:
-        other: Libra libanesa
     LKR:
       symbol: Rs
-      display_names:
-        other: Rupia de Sri Lanka
     LRD:
       symbol: "$"
-      display_names:
-        other: Dólar liberiano
     LTL:
       symbol: Lt
     LVL:
       symbol: Ls
     MGA:
       symbol: Ar
-      display_names:
-        other: Ariary malgache
     MMK:
       symbol: K
-      display_names:
-        other: Kyat birmano
     MNT:
       symbol: "₮"
-      display_names:
-        other: Tugrik mongol
     MUR:
       symbol: Rs
-      display_names:
-        other: Rupia de mauricio
     MXN:
       symbol: MX$
-      display_names:
-        other: Peso mexicano
     MYR:
       symbol: RM
-      display_names:
-        other: Ringgit malayo
     NAD:
       symbol: "$"
-      display_names:
-        other: Dólar namibio
     NGN:
       symbol: "₦"
-      display_names:
-        other: Naira nigeriano
     NIO:
       symbol: C$
-      display_names:
-        other: Córdova nicaragüense
     NOK:
       symbol: kr
-      display_names:
-        other: Corona noruega
     NPR:
       symbol: Rs
-      display_names:
-        other: Rupia Nepalí
     NZD:
       symbol: NZ$
-      display_names:
-        other: Dólar neozelandés
     PHP:
-      symbol: PHP
-      display_names:
-        other: Peso filipino
+      symbol: "₱"
     PKR:
       symbol: Rs
-      display_names:
-        other: Rupia pakistaní
     PLN:
       symbol: zł
-      display_names:
-        other: Zloty
     PYG:
       symbol: "₲"
-      display_names:
-        other: Guaraní paraguayo
     RON:
       symbol: lei
-      display_names:
-        other: Leu rumano
     RUB:
       symbol: "₽"
-      display_names:
-        other: Rublo ruso
     RWF:
       symbol: RF
-      display_names:
-        other: Franco ruandés
     SBD:
       symbol: "$"
-      display_names:
-        other: Dólar de las Islas Salomón
     SEK:
       symbol: kr
-      display_names:
-        other: Corona sueca
     SGD:
       symbol: "$"
-      display_names:
-        other: Dólar de Singapur
     SHP:
       symbol: "£"
-      display_names:
-        other: Libra de santa helena
     SRD:
       symbol: "$"
-      display_names:
-        other: Dólar Surinamés
     SSP:
       symbol: "£"
-      display_names:
-        other: Libra sursudanesa
     STN:
       symbol: Db
-      display_names:
-        other: Dobra santotomense
     SYP:
       symbol: "£"
-      display_names:
-        other: Libra siria
     THB:
       symbol: "฿"
-      display_names:
-        other: Baht tailandés
     TOP:
       symbol: T$
-      display_names:
-        other: Paʻanga tongano
     TRY:
       symbol: "₺"
-      display_names:
-        other: Lira turca
     TTD:
       symbol: "$"
-      display_names:
-        other: Dólar de trinidad y tobago
     TWD:
       symbol: NT$
-      display_names:
-        other: Nuevo dólar taiwanés
     UAH:
       symbol: "₴"
-      display_names:
-        other: Grivna
     USD:
-      symbol: "$US"
-      display_names:
-        other: Dólar americano
+      symbol: US$
     UYU:
       symbol: "$"
-      display_names:
-        other: Peso uruguayo
     VEF:
       symbol: Bs
     VND:
       symbol: "₫"
-      display_names:
-        other: Dong vietnamita
     XAF:
       symbol: FCFA
-      display_names:
-        other: Franco CFA de áfrica central
     XCD:
       symbol: EC$
-      display_names:
-        other: Dólar del caribe oriental
     XCG:
       symbol: Cg.
     XOF:
       symbol: F CFA
-      display_names:
-        other: Franco CFA de áfrica occidental
     XPF:
       symbol: CFPF
-      display_names:
-        other: Franco CFP
     XXX:
       symbol: "¤"
-      display_names:
-        other: Mana riqsisqa qullqi
     ZAR:
       symbol: R
-      display_names:
-        other: Rand sudafricano
     ZMW:
       symbol: ZK
-      display_names:
-        other: Kwacha zambiano
-    AED:
-      display_names:
-        other: UAE dirhams
-    ALL:
-      display_names:
-        other: Lek albanés
-    ANG:
-      display_names:
-        other: Florín antillano neerlandés
-    AWG:
-      display_names:
-        other: Florín arubeño
-    BGN:
-      display_names:
-        other: Lev
-    BHD:
-      display_names:
-        other: Dinar bareiní
-    BIF:
-      display_names:
-        other: Franco burundés
-    BTN:
-      display_names:
-        other: Ngultrum butanés
-    BYN:
-      display_names:
-        other: Nuevo rublo bielorruso
-    CDF:
-      display_names:
-        other: Franco congoleño
-    CHF:
-      display_names:
-        other: Franco suizo
-    CNH:
-      display_names:
-        other: Yuan chino (offshore)
-    CVE:
-      display_names:
-        other: Escudo caboverdiano
-    DJF:
-      display_names:
-        other: Franco yibutiano
-    DZD:
-      display_names:
-        other: Dinar argelino
-    ERN:
-      display_names:
-        other: Nakfa Eritreano
-    ETB:
-      display_names:
-        other: Birr etíope
-    GMD:
-      display_names:
-        other: Dalasi
-    HTG:
-      display_names:
-        other: Gourde haitiano
-    IQD:
-      display_names:
-        other: Dinar iraquí
-    IRR:
-      display_names:
-        other: Rial iraní
-    JOD:
-      display_names:
-        other: Dinar jordano
-    KES:
-      display_names:
-        other: Chelín keniano
-    KWD:
-      display_names:
-        other: Dinar kuwaití
-    LSL:
-      display_names:
-        other: Lesoto lotis qullqi
-    LYD:
-      display_names:
-        other: Dinar libio
-    MAD:
-      display_names:
-        other: Dírham marroquí
-    MDL:
-      display_names:
-        other: Leu moldavo
-    MKD:
-      display_names:
-        other: Dinar macedonio
-    MOP:
-      display_names:
-        other: Pataca macaense
-    MRU:
-      display_names:
-        other: Uguiya Mauritano
-    MVR:
-      display_names:
-        other: Rupia de Maldivas
-    MWK:
-      display_names:
-        other: Kwacha malauí
-    MZN:
-      display_names:
-        other: Metical mozambiqueño
-    OMR:
-      display_names:
-        other: Rial omaní
-    PAB:
-      display_names:
-        other: Balboa panameño
-    PEN:
-      symbol: S/
-      display_names:
-        other: Sol peruano
-    PGK:
-      display_names:
-        other: Kina papuano
-    QAR:
-      display_names:
-        other: Riyal catarí
-    RSD:
-      display_names:
-        other: Dinar serbio
-    SAR:
-      display_names:
-        other: Riyal saudí
-    SCR:
-      display_names:
-        other: Rupia de seychelles
-    SDG:
-      display_names:
-        other: Libra sudanesa
-    SLE:
-      display_names:
-        other: Leone qullqi de Sierra Leona
-    SLL:
-      display_names:
-        other: Leones qullqi de Sierra Leona (1964–2022)
-    SOS:
-      display_names:
-        other: Chelín somalí
-    SZL:
-      display_names:
-        other: Lilangeni swazi
-    TJS:
-      display_names:
-        other: Somoni tayiko
-    TMT:
-      display_names:
-        other: Manat turcomano
-    TND:
-      display_names:
-        other: Dinar tunecino
-    TZS:
-      display_names:
-        other: Chelín tanzano
-    UGX:
-      display_names:
-        other: Chelín ugandés
-    UZS:
-      display_names:
-        other: Som Ubzeko
-    VES:
-      display_names:
-        other: Bolívar venezolano
-    VUV:
-      display_names:
-        other: Vatu vanuatu
-    WST:
-      display_names:
-        other: Tala samoano
-    YER:
-      display_names:
-        other: Rial yemení
-locale: qu
-generated_at: '2025-09-10T23:53:16+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

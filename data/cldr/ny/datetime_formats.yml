@@ -1,20 +1,10 @@
 ---
+locale: ny
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mal
-        '4': Epu
-        '5': Mei
-        '6': Jun
-        '7': Jul
-        '8': Oga
-        '9': Sep
-        '10': Oku
-        '11': Nov
-        '12': Dis
       wide:
         '1': Januwale
         '2': Febuluwale
@@ -28,16 +18,26 @@ datetime_formats:
         '10': Okutoba
         '11': Novemba
         '12': Disemba
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mal
+        '4': Epu
+        '5': Mei
+        '6': Jun
+        '7': Jul
+        '8': Oga
+        '9': Sep
+        '10': Oku
+        '11': Nov
+        '12': Dis
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: Mul
-        mon: Lem
-        tue: Wir
-        wed: Tat
-        thu: Nai
-        fri: San
-        sat: Wer
       wide:
         sun: Lamulungu
         mon: Lolemba
@@ -46,12 +46,41 @@ datetime_formats:
         thu: Lachinayi
         fri: Lachisanu
         sat: Loweruka
+      abbreviated:
+        sun: Mul
+        mon: Lem
+        tue: Wir
+        wed: Tat
+        thu: Nai
+        fri: San
+        sat: Wer
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
+  date_formats: {}
   time_formats:
     full: h:mm:ss a zzzz
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: ny
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats: {}

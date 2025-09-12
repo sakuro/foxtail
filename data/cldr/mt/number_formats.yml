@@ -1,4 +1,7 @@
 ---
+locale: mt
+generated_at: '2025-09-12T04:09:48Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -76,8 +80,6 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: ewro
     FJD:
       symbol: "$"
     FKP:
@@ -167,7 +169,7 @@ number_formats:
     NZD:
       symbol: NZ$
     PHP:
-      symbol: PHP
+      symbol: "₱"
     PKR:
       symbol: Rs
     PLN:
@@ -228,25 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: Munita Mhix Magħrufa jew Mhix Valida
-        one: Munita mhix magħrufa jew mhix valida
-        two: Munita Mhix Magħrufa jew Mhix Valida
-        few: Munita Mhix Magħrufa jew Mhix Valida
-        many: Munita Mhix Magħrufa jew Mhix Valida
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-    BYN:
-      symbol: р.
-    MTL:
-      display_names:
-        other: Lira Maltija
-locale: mt
-generated_at: '2025-09-10T23:53:14+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

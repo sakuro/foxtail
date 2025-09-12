@@ -1,27 +1,29 @@
 ---
+locale: bgn
+generated_at: '2025-09-12T04:07:44Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "٫"
     group: "،"
+    percent_sign: "٪"
+    nan: ناعدد
     minus_sign: "-"
     plus_sign: "+"
-    percent_sign: "٪"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
-    nan: ناعدد
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
     AFN:
       symbol: "؋"
-      display_names:
-        other: اوگانستانئ اوگانی
     AMD:
       symbol: "֏"
     AOA:
@@ -38,8 +40,6 @@ number_formats:
       symbol: "$"
     BDT:
       symbol: "৳"
-      display_names:
-        other: بنگلادیشئ ٹاکه
     BMD:
       symbol: "$"
     BND:
@@ -112,8 +112,6 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: هندوستانئ روپی
     ISK:
       symbol: kr
     JMD:
@@ -140,8 +138,6 @@ number_formats:
       symbol: L£
     LKR:
       symbol: Rs
-      display_names:
-        other: سریلانکایی روپی
     LRD:
       symbol: "$"
     LTL:
@@ -170,16 +166,12 @@ number_formats:
       symbol: kr
     NPR:
       symbol: Rs
-      display_names:
-        other: نیپالین روپی
     NZD:
       symbol: NZ$
     PHP:
       symbol: "₱"
     PKR:
       symbol: Rs
-      display_names:
-        other: پاکستانئ روپی
     PLN:
       symbol: zł
     PYG:
@@ -188,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: روسین روبل
     RWF:
       symbol: RF
     SBD:
@@ -244,20 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    BTN:
-      display_names:
-        other: بوتانئ انگولٹروم
-    IRR:
-      symbol: ریال
-      display_names:
-        other: ایرانئ ریال
-    MVR:
-      display_names:
-        other: مالدیوی روپی
-locale: bgn
-generated_at: '2025-09-10T23:53:03+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

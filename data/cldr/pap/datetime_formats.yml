@@ -1,20 +1,10 @@
 ---
+locale: pap
+generated_at: '2025-09-12T04:11:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Yan
-        '2': Feb
-        '3': Mar
-        '4': Apr
-        '5': Mei
-        '6': Yün
-        '7': Yül
-        '8': Oug
-        '9': Sèp
-        '10': Òkt
-        '11': Nov
-        '12': Des
       wide:
         '1': Yanüari
         '2': Febrüari
@@ -28,7 +18,22 @@ datetime_formats:
         '10': Òktober
         '11': Novèmber
         '12': Desèmber
+      abbreviated:
+        '1': Yan
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': Mei
+        '6': Yün
+        '7': Yül
+        '8': Oug
+        '9': Sèp
+        '10': Òkt
+        '11': Nov
+        '12': Des
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         '1': yan
         '2': feb
@@ -42,6 +47,7 @@ datetime_formats:
         '10': òkt
         '11': nov
         '12': des
+      narrow: {}
   days:
     format:
       wide:
@@ -52,7 +58,11 @@ datetime_formats:
         thu: djaweps
         fri: djabièrnè
         sat: djasabra
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: dd
         mon: dl
@@ -61,6 +71,44 @@ datetime_formats:
         thu: dw
         fri: db
         sat: ds
+  quarters:
+    format:
+      wide:
+        '1': di promé kuartal
+        '2': di dos kuartal
+        '3': di tres kuartal
+        '4': di kuanter kuartal
+      abbreviated:
+        '1': 1 kuartal
+        '2': 2 kuartal
+        '3': 3 kuartal
+        '4': 4 kuartal
+    stand-alone:
+      wide:
+        '1': di promé kuartal
+        '2': di dos kuartal
+        '3': di tres kuartal
+        '4': di kuanter kuartal
+      abbreviated:
+        '1': 1 kuartal
+        '2': 2 kuartal
+        '3': 3 kuartal
+        '4': 4 kuartal
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Promé ku Era Komun
+      '1': Era Komun
+    abbreviated:
+      '0': P.E.K
+      '1': E.K
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -71,7 +119,31 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: pap
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E, d
+      Gy: y G
+      GyMd: dd-MM-y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      Md: dd-MM
+      MEd: E, dd-MM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: "'siman' W 'di' MMMM"
+      yM: MM-y
+      yMd: dd-MM-y
+      yMEd: E, dd-MM-y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'siman' w 'di' Y"

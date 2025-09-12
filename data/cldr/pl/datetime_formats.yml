@@ -1,7 +1,23 @@
 ---
+locale: pl
+generated_at: '2025-09-12T04:11:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': stycznia
+        '2': lutego
+        '3': marca
+        '4': kwietnia
+        '5': maja
+        '6': czerwca
+        '7': lipca
+        '8': sierpnia
+        '9': września
+        '10': października
+        '11': listopada
+        '12': grudnia
       abbreviated:
         '1': sty
         '2': lut
@@ -28,33 +44,7 @@ datetime_formats:
         '10': p
         '11': l
         '12': g
-      wide:
-        '1': stycznia
-        '2': lutego
-        '3': marca
-        '4': kwietnia
-        '5': maja
-        '6': czerwca
-        '7': lipca
-        '8': sierpnia
-        '9': września
-        '10': października
-        '11': listopada
-        '12': grudnia
     stand-alone:
-      narrow:
-        '1': S
-        '2': L
-        '3': M
-        '4': K
-        '5': M
-        '6': C
-        '7': L
-        '8': S
-        '9': W
-        '10': P
-        '11': L
-        '12': G
       wide:
         '1': styczeń
         '2': luty
@@ -68,8 +58,30 @@ datetime_formats:
         '10': październik
         '11': listopad
         '12': grudzień
+      abbreviated: {}
+      narrow:
+        '1': S
+        '2': L
+        '3': M
+        '4': K
+        '5': M
+        '6': C
+        '7': L
+        '8': S
+        '9': W
+        '10': P
+        '11': L
+        '12': G
   days:
     format:
+      wide:
+        sun: niedziela
+        mon: poniedziałek
+        tue: wtorek
+        wed: środa
+        thu: czwartek
+        fri: piątek
+        sat: sobota
       abbreviated:
         sun: niedz.
         mon: pon.
@@ -86,23 +98,9 @@ datetime_formats:
         thu: c
         fri: p
         sat: s
-      short:
-        sun: nie
-        mon: pon
-        tue: wto
-        wed: śro
-        thu: czw
-        fri: pią
-        sat: sob
-      wide:
-        sun: niedziela
-        mon: poniedziałek
-        tue: wtorek
-        wed: środa
-        thu: czwartek
-        fri: piątek
-        sat: sobota
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: "N"
         mon: P
@@ -111,6 +109,50 @@ datetime_formats:
         thu: C
         fri: P
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': I kwartał
+        '2': II kwartał
+        '3': III kwartał
+        '4': IV kwartał
+      abbreviated:
+        '1': I kw.
+        '2': II kw.
+        '3': III kw.
+        '4': IV kw.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: o północy
+        noon: w południe
+        morning1: rano
+        morning2: przed południem
+        afternoon1: po południu
+        evening1: wieczorem
+        night1: w nocy
+    stand-alone:
+      wide: {}
+      abbreviated:
+        midnight: północ
+        noon: południe
+        morning1: rano
+        morning2: przedpołudnie
+        afternoon1: popołudnie
+        evening1: wieczór
+        night1: noc
+  eras:
+    names:
+      '0': p.n.e.
+      '1': n.e.
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -121,7 +163,46 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: pl
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E, d
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: d.MM.y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      GyMMMM: LLLL y G
+      GyMMMMd: d MMMM y G
+      GyMMMMEd: E, d MMMM y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d.MM
+      MEd: E, d.MM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMEd: E, d MMMM
+      MMMMW: LLLL, 'tydz'. W
+      yM: MM.y
+      yMd: d.MM.y
+      yMEd: E, d.MM.y
+      yMMM: LLL y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: LLLL y
+      yMMMMd: d MMMM y
+      yMMMMEd: E, d MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y, 'tydz'. w

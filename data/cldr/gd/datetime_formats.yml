@@ -1,20 +1,10 @@
 ---
+locale: gd
+generated_at: '2025-09-12T04:11:12Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Faoi
-        '2': Gearr
-        '3': Màrt
-        '4': Gibl
-        '5': Cèit
-        '6': Ògmh
-        '7': Iuch
-        '8': Lùna
-        '9': Sult
-        '10': Dàmh
-        '11': Samh
-        '12': Dùbh
       wide:
         '1': dhen Fhaoilleach
         '2': dhen Ghearran
@@ -28,20 +18,21 @@ datetime_formats:
         '10': dhen Dàmhair
         '11': dhen t-Samhain
         '12': dhen Dùbhlachd
+      abbreviated:
+        '1': Faoi
+        '2': Gearr
+        '3': Màrt
+        '4': Gibl
+        '5': Cèit
+        '6': Ògmh
+        '7': Iuch
+        '8': Lùna
+        '9': Sult
+        '10': Dàmh
+        '11': Samh
+        '12': Dùbh
+      narrow: {}
     stand-alone:
-      narrow:
-        '1': F
-        '2': G
-        '3': M
-        '4': G
-        '5': C
-        '6': Ò
-        '7': I
-        '8': L
-        '9': S
-        '10': D
-        '11': S
-        '12': D
       wide:
         '1': Am Faoilleach
         '2': An Gearran
@@ -55,24 +46,22 @@ datetime_formats:
         '10': An Dàmhair
         '11': An t-Samhain
         '12': An Dùbhlachd
+      abbreviated: {}
+      narrow:
+        '1': F
+        '2': G
+        '3': M
+        '4': G
+        '5': C
+        '6': Ò
+        '7': I
+        '8': L
+        '9': S
+        '10': D
+        '11': S
+        '12': D
   days:
     format:
-      abbreviated:
-        sun: DiD
-        mon: DiL
-        tue: DiM
-        wed: DiC
-        thu: Dia
-        fri: Dih
-        sat: DiS
-      short:
-        sun: Dò
-        mon: Lu
-        tue: Mà
-        wed: Ci
-        thu: Da
-        fri: hA
-        sat: Sa
       wide:
         sun: DiDòmhnaich
         mon: DiLuain
@@ -81,7 +70,18 @@ datetime_formats:
         thu: DiarDaoin
         fri: DihAoine
         sat: DiSathairne
+      abbreviated:
+        sun: DiD
+        mon: DiL
+        tue: DiM
+        wed: DiC
+        thu: Dia
+        fri: Dih
+        sat: DiS
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: D
         mon: L
@@ -90,6 +90,40 @@ datetime_formats:
         thu: A
         fri: H
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1d chairteal
+        '2': 2na cairteal
+        '3': 3s cairteal
+        '4': 4mh cairteal
+      abbreviated:
+        '1': C1
+        '2': C2
+        '3': C3
+        '4': C4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: m
+        pm: f
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': ron linn choitcheann
+      '1': dhen linn choitcheann
+    abbreviated:
+      '0': RC
+      '1': AD
+    narrow:
+      '0': R
+      '1': A
   date_formats:
     full: EEEE, d'mh' MMMM y
     long: d'mh' MMMM y
@@ -100,7 +134,45 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: gd
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'aig' {0}"
+    long: "{1} 'aig' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: hB
+      Bhm: h:mmB
+      Bhms: h:mm:ssB
+      EBhm: E h:mmB
+      EBhms: E h:mm:ssB
+      Ed: E, d
+      Ehm: E h:mma
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: d/M/y G
+      GyMMM: LLL y G
+      GyMMMd: d'mh' MMM y G
+      GyMMMEd: E, d'mh' MMM y G
+      h: ha
+      hm: h:mma
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mma v
+      Md: d/M
+      MEd: E, d/M
+      MMdd: dd/MM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d'mh' MMMM
+      MMMMW: "'seachdain' W MMMM"
+      yM: L/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMM: LL/y
+      yMMM: LLL Y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: LLLL y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'seachdain' w 'dhe' Y"

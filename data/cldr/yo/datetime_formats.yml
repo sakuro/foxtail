@@ -1,4 +1,7 @@
 ---
+locale: yo
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,7 +18,10 @@ datetime_formats:
         '10': Oṣù Ọ̀wàrà
         '11': Oṣù Bélú
         '12': Oṣù Ọ̀pẹ̀
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         '1': Oṣù Ṣẹ́rẹ́
         '2': Oṣù Èrèlè
@@ -44,22 +50,6 @@ datetime_formats:
         '12': Ọ̀
   days:
     format:
-      abbreviated:
-        sun: Àìkú
-        mon: Ajé
-        tue: Ìsẹ́gun
-        wed: Ọjọ́rú
-        thu: Ọjọ́bọ
-        fri: Ẹtì
-        sat: Àbámẹ́ta
-      short:
-        sun: Àìkú
-        mon: Ajé
-        tue: Ìsẹ́gun
-        wed: Ọjọ́rú
-        thu: Ọjọ́bọ
-        fri: Ẹtì
-        sat: Àbámẹ́ta
       wide:
         sun: Ọjọ́ Àìkú
         mon: Ọjọ́ Ajé
@@ -68,7 +58,24 @@ datetime_formats:
         thu: Ọjọ́bọ
         fri: Ọjọ́ Ẹtì
         sat: Ọjọ́ Àbámẹ́ta
+      abbreviated:
+        sun: Àìkú
+        mon: Ajé
+        tue: Ìsẹ́gun
+        wed: Ọjọ́rú
+        thu: Ọjọ́bọ
+        fri: Ẹtì
+        sat: Àbámẹ́ta
+      narrow: {}
     stand-alone:
+      wide:
+        sun: Àìkú
+        mon: Ajé
+        tue: Ìsẹ́gun
+        wed: Ọjọ́rú
+        thu: Ọjọ́bọ
+        fri: Ẹtì
+        sat: Àbámẹ́ta
       abbreviated:
         sun: Àìkú
         mon: Ajé
@@ -85,22 +92,33 @@ datetime_formats:
         thu: Ọ
         fri: Ẹ
         sat: À
-      short:
-        sun: Àìkú
-        mon: Ajé
-        tue: Ìsẹ́gun
-        wed: Ọjọ́rú
-        thu: Ọjọ́bọ
-        fri: Ẹtì
-        sat: Àbámẹ́ta
+  quarters:
+    format:
       wide:
-        sun: Àìkú
-        mon: Ajé
-        tue: Ìsẹ́gun
-        wed: Ọjọ́rú
-        thu: Ọjọ́bọ
-        fri: Ẹtì
-        sat: Àbámẹ́ta
+        '1': Ìdámẹ́rin kíní
+        '2': Ìdámẹ́rin Kejì
+        '3': Ìdámẹ́rin Kẹta
+        '4': Ìdámẹ́rin Kẹrin
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: Àárọ̀
+        pm: Ọ̀sán
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Sáájú ìgbà mímọ̀
+      '1': Lehin Kristi
+    abbreviated:
+      '1': CE
+    narrow: {}
   date_formats:
     full: EEEE, d MMM y
     long: d MMM y
@@ -111,7 +129,33 @@ datetime_formats:
     long: H:mm:ss z
     medium: H:m:s
     short: H:m
-locale: yo
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'ní' {0}"
+    long: "{1} 'ní' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E, d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      GyMd: d/M/y GGGGG
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: d MMM, E
+      MMMMd: d MMMM
+      MMMMEd: d, MMMM E
+      yM: M/y
+      yMd: d/M/y
+      yMEd: d/M/y, E
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM , y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

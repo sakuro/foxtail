@@ -1,4 +1,7 @@
 ---
+locale: apc
+generated_at: '2025-09-12T04:11:06Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,6 +18,12 @@ datetime_formats:
         '10': تشرين الأول
         '11': تشرين التاني
         '12': كانون الأول
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
       wide:
@@ -25,7 +34,32 @@ datetime_formats:
         thu: الخميس
         fri: الجمعة
         sat: السبت
-locale: apc
-generated_at: '2025-09-06T03:52:30+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: صباحا
+        pm: مساء
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats: {}

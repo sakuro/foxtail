@@ -1,20 +1,10 @@
 ---
+locale: ta
+generated_at: '2025-09-12T04:11:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ஜன.
-        '2': பிப்.
-        '3': மார்.
-        '4': ஏப்.
-        '5': மே
-        '6': ஜூன்
-        '7': ஜூலை
-        '8': ஆக.
-        '9': செப்.
-        '10': அக்.
-        '11': நவ.
-        '12': டிச.
       wide:
         '1': ஜனவரி
         '2': பிப்ரவரி
@@ -28,7 +18,23 @@ datetime_formats:
         '10': அக்டோபர்
         '11': நவம்பர்
         '12': டிசம்பர்
+      abbreviated:
+        '1': ஜன.
+        '2': பிப்.
+        '3': மார்.
+        '4': ஏப்.
+        '5': மே
+        '6': ஜூன்
+        '7': ஜூலை
+        '8': ஆக.
+        '9': செப்.
+        '10': அக்.
+        '11': நவ.
+        '12': டிச.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ஜ
         '2': பி
@@ -44,22 +50,6 @@ datetime_formats:
         '12': டி
   days:
     format:
-      abbreviated:
-        sun: ஞாயி.
-        mon: திங்.
-        tue: செவ்.
-        wed: புத.
-        thu: வியா.
-        fri: வெள்.
-        sat: சனி
-      short:
-        sun: ஞா
-        mon: தி
-        tue: செ
-        wed: பு
-        thu: வி
-        fri: வெ
-        sat: ச
       wide:
         sun: ஞாயிறு
         mon: திங்கள்
@@ -68,7 +58,18 @@ datetime_formats:
         thu: வியாழன்
         fri: வெள்ளி
         sat: சனி
+      abbreviated:
+        sun: ஞாயி.
+        mon: திங்.
+        tue: செவ்.
+        wed: புத.
+        thu: வியா.
+        fri: வெள்.
+        sat: சனி
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ஞா
         mon: தி
@@ -77,6 +78,53 @@ datetime_formats:
         thu: வி
         fri: வெ
         sat: ச
+  quarters:
+    format:
+      wide:
+        '1': முதல் காலாண்டு
+        '2': இரண்டாம் காலாண்டு
+        '3': மூன்றாம் காலாண்டு
+        '4': நான்காம் காலாண்டு
+      abbreviated:
+        '1': கா.1
+        '2': கா.2
+        '3': கா.3
+        '4': கா.4
+    stand-alone:
+      wide:
+        '1': முதல் காலாண்டு
+        '2': இரண்டாம் காலாண்டு
+        '3': மூன்றாம் காலாண்டு
+        '4': நான்காம் காலாண்டு
+      abbreviated:
+        '1': கா.1
+        '2': கா.2
+        '3': கா.3
+        '4': கா.4
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        midnight: நள்ளிரவு
+        noon: நண்பகல்
+        morning1: அதிகாலை
+        morning2: காலை
+        afternoon1: மதியம்
+        afternoon2: பிற்பகல்
+        evening1: மாலை
+        evening2: அந்தி மாலை
+        night1: இரவு
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': கிறிஸ்துவுக்கு முன்
+      '1': அன்னோ டோமினி
+    abbreviated:
+      '0': பொ.ச.மு
+      '1': பொ.ச
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM, y
     long: d MMMM, y
@@ -87,7 +135,33 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: ta
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} அன்று {0}"
+    long: "{1} அன்று {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: d E
+      GyMd: d/M/y G
+      Md: d/M
+      MEd: dd-MM, E
+      MMdd: dd-MM
+      MMMd: d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMM W -ஆம் வாரம்
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMM: MM-y
+      yMMM: MMM y
+      yMMMd: d MMM, y
+      yMMMEd: E, d MMM, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y ஆம் ஆண்டின் w -ஆம் வாரம்

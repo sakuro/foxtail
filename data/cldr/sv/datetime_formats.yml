@@ -1,20 +1,10 @@
 ---
+locale: sv
+generated_at: '2025-09-12T04:11:20Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': jan.
-        '2': feb.
-        '3': mars
-        '4': apr.
-        '5': maj
-        '6': juni
-        '7': juli
-        '8': aug.
-        '9': sep.
-        '10': okt.
-        '11': nov.
-        '12': dec.
       wide:
         '1': januari
         '2': februari
@@ -28,7 +18,23 @@ datetime_formats:
         '10': oktober
         '11': november
         '12': december
+      abbreviated:
+        '1': jan.
+        '2': feb.
+        '3': mars
+        '4': apr.
+        '5': maj
+        '6': juni
+        '7': juli
+        '8': aug.
+        '9': sep.
+        '10': okt.
+        '11': nov.
+        '12': dec.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,22 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: sön
-        mon: mån
-        tue: tis
-        wed: ons
-        thu: tors
-        fri: fre
-        sat: lör
-      short:
-        sun: sö
-        mon: må
-        tue: ti
-        wed: 'on'
-        thu: to
-        fri: fr
-        sat: lö
       wide:
         sun: söndag
         mon: måndag
@@ -68,7 +58,18 @@ datetime_formats:
         thu: torsdag
         fri: fredag
         sat: lördag
+      abbreviated:
+        sun: sön
+        mon: mån
+        tue: tis
+        wed: ons
+        thu: tors
+        fri: fre
+        sat: lör
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: S
         mon: M
@@ -77,17 +78,106 @@ datetime_formats:
         thu: T
         fri: F
         sat: L
+  quarters:
+    format:
+      wide:
+        '1': 1:a kvartalet
+        '2': 2:a kvartalet
+        '3': 3:e kvartalet
+        '4': 4:e kvartalet
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: midnatt
+        morning1: på morgonen
+        morning2: på förmiddagen
+        afternoon1: på eftermiddagen
+        evening1: på kvällen
+        night1: på natten
+      abbreviated:
+        midnight: midnatt
+        am: fm
+        pm: em
+        morning1: på morg.
+        morning2: på förm.
+        afternoon1: på efterm.
+        evening1: på kvällen
+        night1: på natten
+    stand-alone:
+      wide:
+        am: förmiddag
+        pm: eftermiddag
+        morning1: morgon
+        morning2: förmiddag
+        afternoon1: eftermiddag
+        evening1: kväll
+        night1: natt
+      abbreviated:
+        morning1: morgon
+        morning2: förm.
+        afternoon1: efterm.
+        evening1: kväll
+        night1: natt
+  eras:
+    names:
+      '0': före västerländsk tideräkning
+      '1': västerländsk tideräkning
+    abbreviated:
+      '0': f.v.t.
+      '1': v.t.
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: y-MM-dd
   time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: sv
-generated_at: '2025-09-06T03:52:41+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: "'kl'. HH.mm.ss zzzz"
+    long: HH.mm.ss z
+    medium: HH.mm.ss
+    short: HH.mm
+  datetime_formats:
+    full: "{1} 'kl'. {0}"
+    long: "{1} 'kl'. {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: y-MM-dd GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E d/M
+      MMd: d/M
+      MMdd: dd/MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMEd: E d MMMM
+      MMMMW: "'vecka' W 'i' MMMM"
+      yMEd: E, y-MM-dd
+      yMM: y-MM
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'vecka' w, Y"

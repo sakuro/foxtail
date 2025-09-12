@@ -1,4 +1,7 @@
 ---
+locale: bem
+generated_at: '2025-09-12T04:07:42Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -230,11 +234,7 @@ number_formats:
     ZAR:
       symbol: R
     ZMW:
-      symbol: K
-locale: bem
-generated_at: '2025-09-10T23:53:03+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      symbol: ZK
 currency_fractions:
   ADP:
     digits: 0

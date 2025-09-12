@@ -1,20 +1,10 @@
 ---
+locale: hu
+generated_at: '2025-09-12T04:11:13Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': jan.
-        '2': febr.
-        '3': márc.
-        '4': ápr.
-        '5': máj.
-        '6': jún.
-        '7': júl.
-        '8': aug.
-        '9': szept.
-        '10': okt.
-        '11': nov.
-        '12': dec.
       wide:
         '1': január
         '2': február
@@ -28,7 +18,23 @@ datetime_formats:
         '10': október
         '11': november
         '12': december
+      abbreviated:
+        '1': jan.
+        '2': febr.
+        '3': márc.
+        '4': ápr.
+        '5': máj.
+        '6': jún.
+        '7': júl.
+        '8': aug.
+        '9': szept.
+        '10': okt.
+        '11': nov.
+        '12': dec.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: V
-        mon: H
-        tue: K
-        wed: Sze
-        thu: Cs
-        fri: P
-        sat: Szo
       wide:
         sun: vasárnap
         mon: hétfő
@@ -60,7 +58,18 @@ datetime_formats:
         thu: csütörtök
         fri: péntek
         sat: szombat
+      abbreviated:
+        sun: V
+        mon: H
+        tue: K
+        wed: Sze
+        thu: Cs
+        fri: P
+        sat: Szo
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: V
         mon: H
@@ -69,6 +78,70 @@ datetime_formats:
         thu: Cs
         fri: P
         sat: Sz
+  quarters:
+    format:
+      wide:
+        '1': I. negyedév
+        '2': II. negyedév
+        '3': III. negyedév
+        '4': IV. negyedév
+      abbreviated:
+        '1': I. n.év
+        '2': II. n.év
+        '3': III. n.év
+        '4': IV. n.év
+    stand-alone:
+      wide:
+        '1': 1. negyedév
+        '2': 2. negyedév
+        '3': 3. negyedév
+        '4': 4. negyedév
+      abbreviated:
+        '1': 1. n.év
+        '2': 2. n.év
+        '3': 3. n.év
+        '4': 4. n.év
+  day_periods:
+    format:
+      wide:
+        midnight: éjfél
+        noon: dél
+        morning1: reggel
+        morning2: délelőtt
+        afternoon1: délután
+        evening1: este
+        night1: éjjel
+        night2: hajnal
+      abbreviated:
+        midnight: éjfél
+        am: de.
+        noon: dél
+        pm: du.
+        morning1: reggel
+        morning2: de.
+        afternoon1: du.
+        evening1: este
+        night1: éjjel
+        night2: hajnal
+    stand-alone:
+      wide:
+        morning1: reggel
+        morning2: délelőtt
+        afternoon1: délután
+        evening1: este
+        night1: éjjel
+        night2: hajnal
+      abbreviated: {}
+  eras:
+    names:
+      '0': időszámításunk előtt
+      '1': i. sz.
+    abbreviated:
+      '0': i.e.
+      '1': i.sz.
+    narrow:
+      '0': ie.
+      '1': isz.
   date_formats:
     full: y. MMMM d., EEEE
     long: y. MMMM d.
@@ -79,7 +152,48 @@ datetime_formats:
     long: H:mm:ss z
     medium: H:mm:ss
     short: H:mm
-locale: hu
-generated_at: '2025-09-06T03:52:35+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: d., E
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: G y.
+      GyMd: GGGGG y. MM. dd.
+      GyMMM: G y. MMM
+      GyMMMd: G y. MMM d.
+      GyMMMEd: G y. MMM d., E
+      h: a h
+      H: H
+      hm: a h:mm
+      Hm: H:mm
+      hms: a h:mm:ss
+      Hms: H:mm:ss
+      hmsv: a h:mm:ss v
+      hmv: a h:mm v
+      Md: M. d.
+      MEd: M. d., E
+      MMMd: MMM d.
+      MMMEd: MMM d., E
+      MMMMd: MMMM d.
+      MMMMW: MMMM W. 'hete'
+      mmss: mm:ss
+      "y": y.
+      yM: y. M.
+      yMd: y. MM. dd.
+      yMEd: y. MM. dd., E
+      yMMM: y. MMM
+      yMMMd: y. MMM d.
+      yMMMEd: y. MMM d., E
+      yMMMM: y. MMMM
+      yQQQ: y. QQQ
+      yQQQQ: y. QQQQ
+      yw: Y w. 'hete'

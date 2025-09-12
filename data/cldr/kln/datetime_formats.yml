@@ -1,20 +1,10 @@
 ---
+locale: kln
+generated_at: '2025-09-12T04:11:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Mul
-        '2': Ngat
-        '3': Taa
-        '4': Iwo
-        '5': Mam
-        '6': Paa
-        '7': Nge
-        '8': Roo
-        '9': Bur
-        '10': Epe
-        '11': Kpt
-        '12': Kpa
       wide:
         '1': Mulgul
         '2': Ng’atyaato
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Epeeso
         '11': Kipsuunde ne taai
         '12': Kipsuunde nebo aeng’
+      abbreviated:
+        '1': Mul
+        '2': Ngat
+        '3': Taa
+        '4': Iwo
+        '5': Mam
+        '6': Paa
+        '7': Nge
+        '8': Roo
+        '9': Bur
+        '10': Epe
+        '11': Kpt
+        '12': Kpa
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': M
         '2': "N"
@@ -44,14 +50,6 @@ datetime_formats:
         '12': K
   days:
     format:
-      abbreviated:
-        sun: Kts
-        mon: Kot
-        tue: Koo
-        wed: Kos
-        thu: Koa
-        fri: Kom
-        sat: Kol
       wide:
         sun: Kotisap
         mon: Kotaai
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Koang’wan
         fri: Komuut
         sat: Kolo
+      abbreviated:
+        sun: Kts
+        mon: Kot
+        tue: Koo
+        wed: Kos
+        thu: Koa
+        fri: Kom
+        sat: Kol
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: T
         mon: T
@@ -69,6 +78,40 @@ datetime_formats:
         thu: A
         fri: M
         sat: L
+  quarters:
+    format:
+      wide:
+        '1': Robo netai
+        '2': Robo nebo aeng’
+        '3': Robo nebo somok
+        '4': Robo nebo ang’wan
+      abbreviated:
+        '1': R1
+        '2': R2
+        '3': R3
+        '4': R4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: karoon
+        pm: kooskoliny
+      abbreviated:
+        am: krn
+        pm: koosk
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Amait kesich Jesu
+      '1': Kokakesich Jesu
+    abbreviated:
+      '0': AM
+      '1': KO
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +122,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: kln
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

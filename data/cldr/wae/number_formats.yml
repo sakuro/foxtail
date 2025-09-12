@@ -1,4 +1,7 @@
 ---
+locale: wae
+generated_at: '2025-09-12T04:10:55Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -44,9 +48,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: Brasilianiši Real
-        one: Brasilianišä Real
     BSD:
       symbol: "$"
     BWP:
@@ -59,9 +60,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: Chinesiši Yuan
-        one: Chinesišä Yuan
     COP:
       symbol: "$"
     CRC:
@@ -82,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: Euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: Pfund
     GEL:
       symbol: "₾"
     GHS:
@@ -118,17 +112,12 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: Indiši Rupie
-        one: Indišä Rupie
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
-      symbol: "¥"
-      display_names:
-        other: Yen
+      symbol: JP¥
     KGS:
       symbol: "⃀"
     KHR:
@@ -191,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: Rubel
     RWF:
       symbol: RF
     SBD:
@@ -224,9 +211,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
-      display_names:
-        other: Dollar
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -245,16 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: Unbekannti Wãrig
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: wae
-generated_at: '2025-09-10T23:53:20+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

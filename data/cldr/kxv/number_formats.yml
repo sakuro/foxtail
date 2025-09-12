@@ -1,4 +1,7 @@
 ---
+locale: kxv
+generated_at: '2025-09-12T04:09:28Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -45,8 +49,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: brājil ti riel
     BSD:
       symbol: "$"
     BWP:
@@ -59,8 +61,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: cin ti yuān
     COP:
       symbol: "$"
     CRC:
@@ -81,16 +81,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: yuro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: briṭis pāunḍ
     GEL:
       symbol: "₾"
     GHS:
@@ -117,16 +113,12 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: bārat ti ṭnkā
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: jāpān ti yēn
     KGS:
       symbol: "⃀"
     KHR:
@@ -189,8 +181,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: rūs ti rūbel
     RWF:
       symbol: RF
     SBD:
@@ -223,8 +213,6 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
-      display_names:
-        other: iūes ḍalār
     UYU:
       symbol: "$"
     VEF:
@@ -243,16 +231,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: puṇātī lēmbū
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: kxv
-generated_at: '2025-09-10T23:53:12+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

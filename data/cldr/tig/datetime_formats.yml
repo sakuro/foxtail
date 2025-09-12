@@ -1,20 +1,10 @@
 ---
+locale: tig
+generated_at: '2025-09-12T04:11:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ጃንዩ
-        '2': ፌብሩ
-        '3': ማርች
-        '4': ኤፕረ
-        '5': ሜይ
-        '6': ጁን
-        '7': ጁላይ
-        '8': ኦገስ
-        '9': ሴፕቴ
-        '10': ኦክተ
-        '11': ኖቬም
-        '12': ዲሴም
       wide:
         '1': ጃንዩወሪ
         '2': ፌብሩወሪ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ኦክተውበር
         '11': ኖቬምበር
         '12': ዲሴምበር
+      abbreviated:
+        '1': ጃንዩ
+        '2': ፌብሩ
+        '3': ማርች
+        '4': ኤፕረ
+        '5': ሜይ
+        '6': ጁን
+        '7': ጁላይ
+        '8': ኦገስ
+        '9': ሴፕቴ
+        '10': ኦክተ
+        '11': ኖቬም
+        '12': ዲሴም
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ጃ
         '2': ፌ
@@ -44,14 +50,6 @@ datetime_formats:
         '12': ዲ
   days:
     format:
-      abbreviated:
-        sun: ሰ/ዓ
-        mon: ሰኖ
-        tue: ታላሸ
-        wed: ኣረር
-        thu: ከሚሽ
-        fri: ጅምዓ
-        sat: ሰ/ን
       wide:
         sun: ሰንበት ዓባይ
         mon: ሰኖ
@@ -60,7 +58,18 @@ datetime_formats:
         thu: ከሚሽ
         fri: ጅምዓት
         sat: ሰንበት ንኢሽ
+      abbreviated:
+        sun: ሰ/ዓ
+        mon: ሰኖ
+        tue: ታላሸ
+        wed: ኣረር
+        thu: ከሚሽ
+        fri: ጅምዓ
+        sat: ሰ/ን
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ሰ
         mon: ሰ
@@ -69,6 +78,28 @@ datetime_formats:
         thu: ከ
         fri: ጅ
         sat: ሰ
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: ቀደም ሰርምዕል
+        pm: ሓቆ ስርምዕል
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': ዓ/ዓ
+      '1': ዓ/ም
+    narrow: {}
   date_formats:
     full: EEEE፡ dd MMMM ዮም y G
     long: dd MMMM y
@@ -79,7 +110,4 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: tig
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats: {}

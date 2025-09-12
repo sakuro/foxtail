@@ -1,4 +1,7 @@
 ---
+locale: nnh
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,6 +18,12 @@ datetime_formats:
         '10': saŋ tàŋa tsetsáʼ
         '11': saŋ mejwoŋó
         '12': saŋ lùm
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
       wide:
@@ -25,12 +34,48 @@ datetime_formats:
         thu: mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ
         fri: mvfò màga lyɛ̌ʼ
         sat: màga lyɛ̌ʼ
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: mbaʼámbaʼ
+        pm: ncwònzém
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': mé zyé Yěsô
+      '1': mé gÿo ńzyé Yěsô
+    abbreviated:
+      '0': m.z.Y.
+      '1': m.g.n.Y.
+    narrow: {}
   date_formats:
     full: EEEE , 'lyɛ'̌ʼ d 'na' MMMM, y
     long: "'lyɛ'̌ʼ d 'na' MMMM, y"
     medium: d MMM, y
     short: dd/MM/yy
-locale: nnh
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  time_formats: {}
+  datetime_formats:
+    full: "{1},{0}"
+    long: "{1}, {0}"
+    available_formats:
+      yMd: d/M/y
+      yMEd: E , 'lyɛ'̌ʼ d 'na' M, y
+      yMMM: MMM y
+      yMMMd: "'lyɛ'̌ʼ d 'na' MMMM, y"
+      yMMMEd: E , 'lyɛ'̌ʼ d 'na' MMM, y

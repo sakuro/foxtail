@@ -1,4 +1,7 @@
 ---
+locale: hnj
+generated_at: '2025-09-12T04:11:12Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,7 +18,17 @@ datetime_formats:
         '10': "\U0001E12A\U0001E131\U0001E100\U0001E124\U0001E134"
         '11': "\U0001E11A\U0001E126\U0001E132\U0001E124\U0001E11A\U0001E104\U0001E130\U0001E12B"
         '12': "\U0001E112\U0001E129\U0001E131\U0001E114\U0001E12C\U0001E134"
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
+    format:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
     stand-alone:
       wide:
         sun: "\U0001E10E\U0001E124\U0001E132"
@@ -25,7 +38,27 @@ datetime_formats:
         thu: "\U0001E119\U0001E124\U0001E131\U0001E128"
         fri: "\U0001E111\U0001E124\U0001E131\U0001E128"
         sat: "\U0001E10A\U0001E127\U0001E133"
-locale: hnj
-generated_at: '2025-09-06T03:52:35+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated:
+      '0': "\U0001E11C\U0001E106\U0001E12A"
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats: {}

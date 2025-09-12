@@ -1,20 +1,10 @@
 ---
+locale: dav
+generated_at: '2025-09-12T04:11:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Imb
-        '2': Kaw
-        '3': Kad
-        '4': Kan
-        '5': Kas
-        '6': Kar
-        '7': Mfu
-        '8': Wun
-        '9': Ike
-        '10': Iku
-        '11': Imw
-        '12': Iwi
       wide:
         '1': Mori ghwa imbiri
         '2': Mori ghwa kawi
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Mori ghwa ikumi
         '11': Mori ghwa ikumi na imweri
         '12': Mori ghwa ikumi na iwi
+      abbreviated:
+        '1': Imb
+        '2': Kaw
+        '3': Kad
+        '4': Kan
+        '5': Kas
+        '6': Kar
+        '7': Mfu
+        '8': Wun
+        '9': Ike
+        '10': Iku
+        '11': Imw
+        '12': Iwi
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': I
         '2': K
@@ -44,14 +50,6 @@ datetime_formats:
         '12': I
   days:
     format:
-      abbreviated:
-        sun: Jum
-        mon: Jim
-        tue: Kaw
-        wed: Kad
-        thu: Kan
-        fri: Kas
-        sat: Ngu
       wide:
         sun: Ituku ja jumwa
         mon: Kuramuka jimweri
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Kuramuka kana
         fri: Kuramuka kasanu
         sat: Kifula nguwo
+      abbreviated:
+        sun: Jum
+        mon: Jim
+        tue: Kaw
+        wed: Kad
+        thu: Kan
+        fri: Kas
+        sat: Ngu
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: J
         mon: J
@@ -69,6 +78,40 @@ datetime_formats:
         thu: K
         fri: K
         sat: "N"
+  quarters:
+    format:
+      wide:
+        '1': Kimu cha imbiri
+        '2': Kimu cha kawi
+        '3': Kimu cha kadadu
+        '4': Kimu cha kana
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: Luma lwa K
+        pm: luma lwa p
+      abbreviated:
+        am: Luma lwa K
+        pm: luma lwa p
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Kabla ya Kristo
+      '1': Baada ya Kristo
+    abbreviated:
+      '0': KK
+      '1': BK
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +122,19 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: dav
-generated_at: '2025-09-06T03:52:32+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

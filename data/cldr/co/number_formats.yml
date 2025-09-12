@@ -1,4 +1,7 @@
 ---
+locale: co
+generated_at: '2025-09-12T04:07:56Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -57,8 +61,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: yuan chinese
     COP:
       symbol: "$"
     CRC:
@@ -78,17 +80,13 @@ number_formats:
     ESP:
       symbol: "₧"
     EUR:
-      symbol: EUR
-      display_names:
-        other: euro
+      symbol: "€"
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
-      symbol: "£GB"
-      display_names:
-        other: libre sterline
+      symbol: "£"
     GEL:
       symbol: "₾"
     GHS:
@@ -114,17 +112,13 @@ number_formats:
     ILS:
       symbol: "₪"
     INR:
-      symbol: INR
-      display_names:
-        other: rupie indiane
+      symbol: "₹"
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: yen giappunese
     KGS:
       symbol: "⃀"
     KHR:
@@ -187,8 +181,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: rubli russii
     RWF:
       symbol: RF
     SBD:
@@ -220,7 +212,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$US"
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -239,16 +231,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: munete scunnisciute
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-locale: co
-generated_at: '2025-09-10T23:53:05+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

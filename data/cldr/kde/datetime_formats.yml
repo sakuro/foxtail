@@ -1,20 +1,10 @@
 ---
+locale: kde
+generated_at: '2025-09-12T04:11:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mac
-        '4': Apr
-        '5': Mei
-        '6': Jun
-        '7': Jul
-        '8': Ago
-        '9': Sep
-        '10': Okt
-        '11': Nov
-        '12': Des
       wide:
         '1': Mwedi Ntandi
         '2': Mwedi wa Pili
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Mwedi wa Nnyano na Nnyano
         '11': Mwedi wa Nnyano na Nnyano na U
         '12': Mwedi wa Nnyano na Nnyano na M
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mac
+        '4': Apr
+        '5': Mei
+        '6': Jun
+        '7': Jul
+        '8': Ago
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Des
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Ll2
-        mon: Ll3
-        tue: Ll4
-        wed: Ll5
-        thu: Ll6
-        fri: Ll7
-        sat: Ll1
       wide:
         sun: Liduva lyapili
         mon: Liduva lyatatu
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Liduva lyannyano na linji
         fri: Liduva lyannyano na mavili
         sat: Liduva litandi
+      abbreviated:
+        sun: Ll2
+        mon: Ll3
+        tue: Ll4
+        wed: Ll5
+        thu: Ll6
+        fri: Ll7
+        sat: Ll1
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: '2'
         mon: '3'
@@ -69,6 +78,38 @@ datetime_formats:
         thu: '6'
         fri: '7'
         sat: '1'
+  quarters:
+    format:
+      wide:
+        '1': Lobo 1
+        '2': Lobo 2
+        '3': Lobo 3
+        '4': Lobo 4
+      abbreviated:
+        '1': L1
+        '2': L2
+        '3': L3
+        '4': L4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: Muhi
+        pm: Chilo
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Akanapawa Yesu
+      '1': Nankuida Yesu
+    abbreviated:
+      '0': AY
+      '1': NY
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +120,17 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: kde
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

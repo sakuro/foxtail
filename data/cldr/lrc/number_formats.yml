@@ -1,4 +1,7 @@
 ---
+locale: lrc
+generated_at: '2025-09-12T04:09:35Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -44,8 +48,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: رئال بئرئزیل
     BSD:
       symbol: "$"
     BWP:
@@ -58,8 +60,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: یوان چین
     COP:
       symbol: "$"
     CRC:
@@ -80,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: یورو
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: پوند بئریتانیا
     GEL:
       symbol: "₾"
     GHS:
@@ -116,16 +112,12 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: روٙپیه هئن
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: یئن جاپوٙن
     KGS:
       symbol: "⃀"
     KHR:
@@ -188,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: روٙبل روٙسیه
     RWF:
       symbol: RF
     SBD:
@@ -240,18 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: پیل نادیار
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-    IQD:
-      symbol: د.ع.‏
-locale: lrc
-generated_at: '2025-09-10T23:53:12+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

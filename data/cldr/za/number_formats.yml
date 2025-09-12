@@ -1,4 +1,7 @@
 ---
+locale: za
+generated_at: '2025-09-12T04:11:02Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -55,9 +59,7 @@ number_formats:
     CLP:
       symbol: "$"
     CNY:
-      symbol: "¥"
-      display_names:
-        other: yinzminzbi
+      symbol: CN¥
     COP:
       symbol: "$"
     CRC:
@@ -209,9 +211,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
-      display_names:
-        other: meijyenz
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -234,13 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    CNH:
-      display_names:
-        other: yinzminzbi (lizan)
-locale: za
-generated_at: '2025-09-10T23:53:21+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

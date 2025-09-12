@@ -1,20 +1,10 @@
 ---
+locale: cy
+generated_at: '2025-09-12T04:11:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Ion
-        '2': Chwef
-        '3': Maw
-        '4': Ebr
-        '5': Mai
-        '6': Meh
-        '7': Gorff
-        '8': Awst
-        '9': Medi
-        '10': Hyd
-        '11': Tach
-        '12': Rhag
       wide:
         '1': Ionawr
         '2': Chwefror
@@ -28,7 +18,22 @@ datetime_formats:
         '10': Hydref
         '11': Tachwedd
         '12': Rhagfyr
+      abbreviated:
+        '1': Ion
+        '2': Chwef
+        '3': Maw
+        '4': Ebr
+        '5': Mai
+        '6': Meh
+        '7': Gorff
+        '8': Awst
+        '9': Medi
+        '10': Hyd
+        '11': Tach
+        '12': Rhag
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         '1': Ion
         '2': Chw
@@ -57,22 +62,6 @@ datetime_formats:
         '12': Rh
   days:
     format:
-      abbreviated:
-        sun: Sul
-        mon: Llun
-        tue: Maw
-        wed: Mer
-        thu: Iau
-        fri: Gwen
-        sat: Sad
-      short:
-        sun: Su
-        mon: Ll
-        tue: Ma
-        wed: Me
-        thu: Ia
-        fri: Gw
-        sat: Sa
       wide:
         sun: Dydd Sul
         mon: Dydd Llun
@@ -81,7 +70,17 @@ datetime_formats:
         thu: Dydd Iau
         fri: Dydd Gwener
         sat: Dydd Sadwrn
+      abbreviated:
+        sun: Sul
+        mon: Llun
+        tue: Maw
+        wed: Mer
+        thu: Iau
+        fri: Gwen
+        sat: Sad
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         sun: Sul
         mon: Llun
@@ -98,6 +97,51 @@ datetime_formats:
         thu: I
         fri: G
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': chwarter 1af
+        '2': 2il chwarter
+        '3': 3ydd chwarter
+        '4': 4ydd chwarter
+      abbreviated:
+        '1': Ch1
+        '2': Ch2
+        '3': Ch3
+        '4': Ch4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: yb
+        pm: yh
+      abbreviated:
+        midnight: canol nos
+        noon: canol dydd
+        morning1: y bore
+        afternoon1: y prynhawn
+        evening1: yr hwyr
+    stand-alone:
+      wide:
+        morning1: y bore
+        afternoon1: y prynhawn
+        evening1: yr hwyr
+      abbreviated:
+        morning1: bore
+        afternoon1: prynhawn
+        evening1: yr hwyr
+  eras:
+    names:
+      '0': Cyn Cyfnod Cyffredin
+      '1': Cyfnod Cyffredin
+    abbreviated:
+      '0': CCC
+      '1': CYCY
+    narrow:
+      '0': C
+      '1': O
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -108,7 +152,39 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: cy
-generated_at: '2025-09-06T03:52:32+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'am' {0}"
+    long: "{1} 'am' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: M/d/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMW: "'wythnos' W 'o' MMMM"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQ: Q y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'wythnos' w 'o' Y"

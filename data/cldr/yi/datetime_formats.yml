@@ -1,4 +1,7 @@
 ---
+locale: yi
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,7 +18,10 @@ datetime_formats:
         '10': אקטאבער
         '11': נאוועמבער
         '12': דעצעמבער
+      abbreviated: {}
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         '1': יאַנ
         '2': פֿעב
@@ -29,6 +35,7 @@ datetime_formats:
         '10': אקט
         '11': נאוו
         '12': דעצ
+      narrow: {}
   days:
     format:
       wide:
@@ -39,6 +46,32 @@ datetime_formats:
         thu: דאנערשטיק
         fri: פֿרײַטיק
         sat: שבת
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: פֿאַרמיטאָג
+        pm: נאָכמיטאָג
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
   date_formats:
     full: EEEE, dטן MMMM y
     long: dטן MMMM y
@@ -49,7 +82,25 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: yi
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1}, {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E דעם dטן
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: dטן MMM y G
+      GyMMMEd: E דעם dטן MMM yG
+      h: "‏h a"
+      Md: d/M
+      MEd: E, d/M
+      yM: M.y
+      yMd: d-M-y
+      yMEd: E, d/M/y
+      yMM: MM/y
+      yMMM: MMM y
+      yMMMd: dטן MMM y
+      yMMMEd: E, dטן MMM y
+      yMMMM: MMMM y

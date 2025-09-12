@@ -1,4 +1,7 @@
 ---
+locale: tig
+generated_at: '2025-09-12T04:10:42Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -44,8 +48,6 @@ number_formats:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: የብራዚል ሪል
     BSD:
       symbol: "$"
     BWP:
@@ -58,8 +60,6 @@ number_formats:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: የቻይና ዩአን ረንሚንቢ
     COP:
       symbol: "$"
     CRC:
@@ -80,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: አውሮ
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: የእንግሊዝ ፓውንድ ስተርሊንግ
     GEL:
       symbol: "₾"
     GHS:
@@ -116,16 +112,12 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: የሕንድ ሩፒ
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: የጃፓን የን
     KGS:
       symbol: "⃀"
     KHR:
@@ -188,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: የራሻ ሩብል
     RWF:
       symbol: RF
     SBD:
@@ -222,8 +212,6 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
-      display_names:
-        other: የአሜሪካን ዶላር
     UYU:
       symbol: "$"
     VEF:
@@ -246,15 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    ERN:
-      symbol: Nfk
-    ETB:
-      display_names:
-        other: የኢትዮጵያ ብር
-locale: tig
-generated_at: '2025-09-10T23:53:19+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

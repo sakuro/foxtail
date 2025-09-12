@@ -1,20 +1,10 @@
 ---
+locale: ka
+generated_at: '2025-09-12T04:11:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': იან
-        '2': თებ
-        '3': მარ
-        '4': აპრ
-        '5': მაი
-        '6': ივნ
-        '7': ივლ
-        '8': აგვ
-        '9': სექ
-        '10': ოქტ
-        '11': ნოე
-        '12': დეკ
       wide:
         '1': იანვარი
         '2': თებერვალი
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ოქტომბერი
         '11': ნოემბერი
         '12': დეკემბერი
+      abbreviated:
+        '1': იან
+        '2': თებ
+        '3': მარ
+        '4': აპრ
+        '5': მაი
+        '6': ივნ
+        '7': ივლ
+        '8': აგვ
+        '9': სექ
+        '10': ოქტ
+        '11': ნოე
+        '12': დეკ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ი
         '2': თ
@@ -44,22 +50,6 @@ datetime_formats:
         '12': დ
   days:
     format:
-      abbreviated:
-        sun: კვი
-        mon: ორშ
-        tue: სამ
-        wed: ოთხ
-        thu: ხუთ
-        fri: პარ
-        sat: შაბ
-      short:
-        sun: კვ
-        mon: ორ
-        tue: სმ
-        wed: ოთ
-        thu: ხთ
-        fri: პრ
-        sat: შბ
       wide:
         sun: კვირა
         mon: ორშაბათი
@@ -68,7 +58,18 @@ datetime_formats:
         thu: ხუთშაბათი
         fri: პარასკევი
         sat: შაბათი
+      abbreviated:
+        sun: კვი
+        mon: ორშ
+        tue: სამ
+        wed: ოთხ
+        thu: ხუთ
+        fri: პარ
+        sat: შაბ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: კ
         mon: ო
@@ -77,6 +78,54 @@ datetime_formats:
         thu: ხ
         fri: პ
         sat: შ
+  quarters:
+    format:
+      wide:
+        '1': I კვარტალი
+        '2': II კვარტალი
+        '3': III კვარტალი
+        '4': IV კვარტალი
+      abbreviated:
+        '1': I კვ.
+        '2': II კვ.
+        '3': III კვ.
+        '4': IV კვ.
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: შუაღამეს
+        noon: შუადღეს
+        morning1: დილით
+        afternoon1: ნაშუადღევს
+        evening1: საღამოს
+        night1: ღამით
+      abbreviated:
+        midnight: შუაღამეს
+        noon: შუადღ.
+        morning1: დილ.
+        afternoon1: ნაშუადღ.
+        evening1: საღ.
+        night1: ღამ.
+    stand-alone:
+      wide: {}
+      abbreviated:
+        midnight: შუაღამე
+        noon: შუადღე
+        morning1: დილა
+        afternoon1: ნაშუადღევი
+        evening1: საღამო
+        night1: ღამე
+  eras:
+    names:
+      '0': ჩვენს ერამდე
+      '1': ჩვენი ერა
+    abbreviated:
+      '0': ჩვ. ერამდე
+      '1': ჩვ. ერა
+    narrow: {}
   date_formats:
     full: EEEE, dd MMMM, y
     long: d MMMM, y
@@ -87,7 +136,35 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: ka
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1}, {0}"
+    long: "{1}, {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: d E
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: d.M.y GGGGG
+      GyMMM: MMM. y G
+      GyMMMd: d MMM. y G
+      GyMMMEd: E, d MMM. y G
+      Md: d.M
+      MEd: E, d.M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMMს კვირა W
+      yM: M.y
+      yMd: d.M.y
+      yMEd: E, d.M.y
+      yMMM: MMM. y
+      yMMMd: d MMM. y
+      yMMMEd: E, d MMM. y
+      yMMMM: MMMM, y
+      yQQQ: QQQ, y
+      yQQQQ: QQQQ, y
+      yw: კვირა w, Y

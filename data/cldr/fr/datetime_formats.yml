@@ -1,20 +1,10 @@
 ---
+locale: fr
+generated_at: '2025-09-12T04:20:01Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': janv.
-        '2': févr.
-        '3': mars
-        '4': avr.
-        '5': mai
-        '6': juin
-        '7': juil.
-        '8': août
-        '9': sept.
-        '10': oct.
-        '11': nov.
-        '12': déc.
       wide:
         '1': janvier
         '2': février
@@ -28,7 +18,23 @@ datetime_formats:
         '10': octobre
         '11': novembre
         '12': décembre
+      abbreviated:
+        '1': janv.
+        '2': févr.
+        '3': mars
+        '4': avr.
+        '5': mai
+        '6': juin
+        '7': juil.
+        '8': août
+        '9': sept.
+        '10': oct.
+        '11': nov.
+        '12': déc.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,22 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: dim.
-        mon: lun.
-        tue: mar.
-        wed: mer.
-        thu: jeu.
-        fri: ven.
-        sat: sam.
-      short:
-        sun: di
-        mon: lu
-        tue: ma
-        wed: me
-        thu: je
-        fri: ve
-        sat: sa
       wide:
         sun: dimanche
         mon: lundi
@@ -68,7 +58,18 @@ datetime_formats:
         thu: jeudi
         fri: vendredi
         sat: samedi
+      abbreviated:
+        sun: dim.
+        mon: lun.
+        tue: mar.
+        wed: mer.
+        thu: jeu.
+        fri: ven.
+        sat: sam.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: D
         mon: L
@@ -77,6 +78,56 @@ datetime_formats:
         thu: J
         fri: V
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1er trimestre
+        '2': 2e trimestre
+        '3': 3e trimestre
+        '4': 4e trimestre
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: minuit
+        noon: midi
+        morning1: du matin
+        afternoon1: de l’après-midi
+        evening1: du soir
+        night1: du matin
+      abbreviated:
+        midnight: minuit
+        noon: midi
+        morning1: matin
+        afternoon1: après-midi
+        evening1: soir
+        night1: matin
+    stand-alone:
+      wide:
+        morning1: matin
+        afternoon1: après-midi
+        evening1: soir
+        night1: matin
+      abbreviated:
+        morning1: mat.
+        afternoon1: ap.m.
+        evening1: soir
+        night1: matin
+  eras:
+    names:
+      '0': avant l’ère commune
+      '1': de l’ère commune
+    abbreviated:
+      '0': AEC
+      '1': EC
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -87,7 +138,40 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: fr
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'à' {0}"
+    long: "{1} 'à' {0}"
+    medium: "{1}, {0}"
+    short: "{1} {0}"
+    available_formats:
+      E: E
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: dd/MM/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      h: h a
+      H: HH 'h'
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd/MM
+      MEd: E dd/MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'semaine' W (MMMM)"
+      yM: MM/y
+      yMd: dd/MM/y
+      yMEd: E dd/MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'semaine' w 'de' Y"

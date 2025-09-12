@@ -1,20 +1,10 @@
 ---
+locale: sat
+generated_at: '2025-09-12T04:11:19Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ᱡᱟᱱ
-        '2': ᱯᱷᱟ
-        '3': ᱢᱟᱨ
-        '4': ᱟᱯᱨ
-        '5': ᱢᱮ
-        '6': ᱡᱩᱱ
-        '7': ᱡᱩᱞ
-        '8': ᱟᱜᱟ
-        '9': ᱥᱮᱯ
-        '10': ᱚᱠᱴ
-        '11': ᱱᱟᱣ
-        '12': ᱫᱤᱥ
       wide:
         '1': ᱡᱟᱱᱣᱟᱨᱤ
         '2': ᱯᱷᱟᱨᱣᱟᱨᱤ
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ᱚᱠᱴᱚᱵᱟᱨ
         '11': ᱱᱟᱣᱟᱢᱵᱟᱨ
         '12': ᱫᱤᱥᱟᱢᱵᱟᱨ
+      abbreviated:
+        '1': ᱡᱟᱱ
+        '2': ᱯᱷᱟ
+        '3': ᱢᱟᱨ
+        '4': ᱟᱯᱨ
+        '5': ᱢᱮ
+        '6': ᱡᱩᱱ
+        '7': ᱡᱩᱞ
+        '8': ᱟᱜᱟ
+        '9': ᱥᱮᱯ
+        '10': ᱚᱠᱴ
+        '11': ᱱᱟᱣ
+        '12': ᱫᱤᱥ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ᱡ
         '2': ᱯ
@@ -44,14 +50,6 @@ datetime_formats:
         '12': ᱫ
   days:
     format:
-      abbreviated:
-        sun: ᱥᱤᱸ
-        mon: ᱚᱛ
-        tue: ᱵᱟ
-        wed: ᱥᱟᱹ
-        thu: ᱥᱟᱹᱨ
-        fri: ᱡᱟᱹ
-        sat: ᱧᱩ
       wide:
         sun: ᱥᱤᱸᱜᱮ
         mon: ᱚᱛᱮ
@@ -60,7 +58,18 @@ datetime_formats:
         thu: ᱥᱟᱹᱨᱫᱤ
         fri: ᱡᱟᱹᱨᱩᱢ
         sat: ᱧᱩᱦᱩᱢ
+      abbreviated:
+        sun: ᱥᱤᱸ
+        mon: ᱚᱛ
+        tue: ᱵᱟ
+        wed: ᱥᱟᱹ
+        thu: ᱥᱟᱹᱨ
+        fri: ᱡᱟᱹ
+        sat: ᱧᱩ
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ᱥ
         mon: ᱚ
@@ -69,6 +78,36 @@ datetime_formats:
         thu: ᱥ
         fri: ᱡ
         sat: ᱧ
+  quarters:
+    format:
+      wide:
+        '1': ᱑ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ
+        '2': ᱒ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ
+        '3': ᱓ᱭᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ
+        '4': ᱔ᱟᱜ ᱯᱮ ᱪᱟᱸᱫᱚᱠᱤᱭᱟᱹ
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: ᱥᱮᱛᱟᱜ
+        pm: ᱧᱤᱫᱟᱹ
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': ᱥᱟᱫᱷᱨᱚᱬ ᱡᱩᱜᱽ ᱢᱟᱲᱟᱝ
+      '1': ᱥᱟᱫ ᱥᱮᱨᱢᱟ ᱥᱚᱱ
+    abbreviated:
+      '0': ᱵᱤ ᱥᱤ ᱤ
+      '1': ᱤᱥᱣᱤ
+    narrow:
+      '0': ᱵᱤ ᱥᱤ ᱤ
+      '1': ᱥᱟ
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +118,8 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: sat
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"

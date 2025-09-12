@@ -1,20 +1,10 @@
 ---
+locale: vi
+generated_at: '2025-09-12T04:11:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': thg 1
-        '2': thg 2
-        '3': thg 3
-        '4': thg 4
-        '5': thg 5
-        '6': thg 6
-        '7': thg 7
-        '8': thg 8
-        '9': thg 9
-        '10': thg 10
-        '11': thg 11
-        '12': thg 12
       wide:
         '1': tháng 1
         '2': tháng 2
@@ -28,20 +18,21 @@ datetime_formats:
         '10': tháng 10
         '11': tháng 11
         '12': tháng 12
-    stand-alone:
       abbreviated:
-        '1': Tháng 1
-        '2': Tháng 2
-        '3': Tháng 3
-        '4': Tháng 4
-        '5': Tháng 5
-        '6': Tháng 6
-        '7': Tháng 7
-        '8': Tháng 8
-        '9': Tháng 9
-        '10': Tháng 10
-        '11': Tháng 11
-        '12': Tháng 12
+        '1': thg 1
+        '2': thg 2
+        '3': thg 3
+        '4': thg 4
+        '5': thg 5
+        '6': thg 6
+        '7': thg 7
+        '8': thg 8
+        '9': thg 9
+        '10': thg 10
+        '11': thg 11
+        '12': thg 12
+      narrow: {}
+    stand-alone:
       wide:
         '1': Tháng 1
         '2': Tháng 2
@@ -55,24 +46,22 @@ datetime_formats:
         '10': Tháng 10
         '11': Tháng 11
         '12': Tháng 12
+      abbreviated:
+        '1': Tháng 1
+        '2': Tháng 2
+        '3': Tháng 3
+        '4': Tháng 4
+        '5': Tháng 5
+        '6': Tháng 6
+        '7': Tháng 7
+        '8': Tháng 8
+        '9': Tháng 9
+        '10': Tháng 10
+        '11': Tháng 11
+        '12': Tháng 12
+      narrow: {}
   days:
     format:
-      abbreviated:
-        sun: CN
-        mon: Th 2
-        tue: Th 3
-        wed: Th 4
-        thu: Th 5
-        fri: Th 6
-        sat: Th 7
-      short:
-        sun: CN
-        mon: T2
-        tue: T3
-        wed: T4
-        thu: T5
-        fri: T6
-        sat: T7
       wide:
         sun: Chủ Nhật
         mon: Thứ Hai
@@ -81,7 +70,18 @@ datetime_formats:
         thu: Thứ Năm
         fri: Thứ Sáu
         sat: Thứ Bảy
+      abbreviated:
+        sun: CN
+        mon: Th 2
+        tue: Th 3
+        wed: Th 4
+        thu: Th 5
+        fri: Th 6
+        sat: Th 7
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: CN
         mon: T2
@@ -90,6 +90,56 @@ datetime_formats:
         thu: T5
         fri: T6
         sat: T7
+  quarters:
+    format:
+      wide:
+        '1': Quý 1
+        '2': Quý 2
+        '3': Quý 3
+        '4': Quý 4
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+    stand-alone:
+      wide:
+        '1': quý 1
+        '2': quý 2
+        '3': quý 3
+        '4': quý 4
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        midnight: nửa đêm
+        noon: trưa
+        morning1: sáng
+        afternoon1: chiều
+        evening1: tối
+        night1: đêm
+      abbreviated:
+        midnight: nửa đêm
+        am: SA
+        noon: TR
+        pm: CH
+        morning1: sáng
+        afternoon1: chiều
+        evening1: tối
+        night1: đêm
+    stand-alone:
+      wide:
+        noon: trưa
+      abbreviated: {}
+  eras:
+    names:
+      '0': Trước Công Nguyên
+      '1': Sau Công Nguyên
+    abbreviated:
+      '0': TCN
+      '1': SCN
+    narrow:
+      '1': CN
   date_formats:
     full: EEEE, d MMMM, y
     long: d MMMM, y
@@ -100,7 +150,49 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: vi
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "'lúc' {0} {1}"
+    long: "'lúc' {0} {1}"
+    medium: "{0} {1}"
+    short: "{0} {1}"
+    available_formats:
+      Bh: h 'giờ' B
+      EBhm: h:mm B E
+      EBhms: h:mm:ss B E
+      Ed: E, 'ngày' d
+      Ehm: h:mm a E
+      EHm: HH:mm E
+      Ehms: h:mm:ss a E
+      EHms: HH:mm:ss E
+      Gy: y G
+      GyMd: d/M/y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM, y G
+      GyMMMEd: E, d MMM, y G
+      h: h a
+      H: HH 'giờ'
+      hm: h:mm a
+      Hm: H:mm
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E, d/M
+      MMdd: dd-MM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMEd: E, d MMMM
+      MMMMW: "'tuần' W 'của' 'tháng' M"
+      mmss: mm:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMM: "'tháng' MM, y"
+      yMMM: MMM y
+      yMMMd: d MMM, y
+      yMMMEd: E, d MMM, y
+      yMMMM: MMMM 'năm' y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ 'năm' y
+      yw: "'tuần' w 'của' 'năm' Y"

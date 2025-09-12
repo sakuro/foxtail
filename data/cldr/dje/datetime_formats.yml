@@ -1,20 +1,10 @@
 ---
+locale: dje
+generated_at: '2025-09-12T04:11:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Žan
-        '2': Fee
-        '3': Mar
-        '4': Awi
-        '5': Me
-        '6': Žuw
-        '7': Žuy
-        '8': Ut
-        '9': Sek
-        '10': Okt
-        '11': Noo
-        '12': Dee
       wide:
         '1': Žanwiye
         '2': Feewiriye
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Oktoobur
         '11': Noowanbur
         '12': Deesanbur
+      abbreviated:
+        '1': Žan
+        '2': Fee
+        '3': Mar
+        '4': Awi
+        '5': Me
+        '6': Žuw
+        '7': Žuy
+        '8': Ut
+        '9': Sek
+        '10': Okt
+        '11': Noo
+        '12': Dee
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': Ž
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Alh
-        mon: Ati
-        tue: Ata
-        wed: Ala
-        thu: Alm
-        fri: Alz
-        sat: Asi
       wide:
         sun: Alhadi
         mon: Atinni
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Alhamisi
         fri: Alzuma
         sat: Asibti
+      abbreviated:
+        sun: Alh
+        mon: Ati
+        tue: Ata
+        wed: Ala
+        thu: Alm
+        fri: Alz
+        sat: Asi
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: H
         mon: T
@@ -69,6 +78,40 @@ datetime_formats:
         thu: M
         fri: Z
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': Arrubu 1
+        '2': Arrubu 2
+        '3': Arrubu 3
+        '4': Arrubu 4
+      abbreviated:
+        '1': A1
+        '2': A2
+        '3': A3
+        '4': A4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: Subbaahi
+        pm: Zaarikay b
+      abbreviated:
+        am: Subbaahi
+        pm: Zaarikay b
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Isaa jine
+      '1': Isaa zamanoo
+    abbreviated:
+      '0': IJ
+      '1': IZ
+    narrow: {}
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -79,7 +122,21 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: dje
-generated_at: '2025-09-06T03:52:33+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

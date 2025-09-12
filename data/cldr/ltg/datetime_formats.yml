@@ -1,4 +1,7 @@
 ---
+locale: ltg
+generated_at: '2025-09-12T04:11:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,6 +18,8 @@ datetime_formats:
         '10': oktobris
         '11': novembris
         '12': decembris
+      abbreviated: {}
+      narrow: {}
     stand-alone:
       wide:
         '1': janvars
@@ -29,6 +34,8 @@ datetime_formats:
         '10': oktobris
         '11': novembris
         '12': decembris
+      abbreviated: {}
+      narrow: {}
   days:
     format:
       wide:
@@ -39,7 +46,46 @@ datetime_formats:
         thu: catūrtdīne
         fri: pīktdīne
         sat: sastdīne
-locale: ltg
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
+  quarters:
+    format:
+      wide:
+        '1': 1. catūrksnis
+        '2': 2. catūrksnis
+        '3': 3. catūrksnis
+        '4': 4. catūrksnis
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: prīškpušdīnē
+        pm: piecpušdīnē
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': pyrma myusu erys
+      '1': myusu erā
+    abbreviated:
+      '0': p.m.e.
+      '1': m.e.
+    narrow: {}
+  date_formats: {}
+  time_formats: {}
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      yMd: d.MM.y.
+      yMMMd: y. 'g'. d. MMM

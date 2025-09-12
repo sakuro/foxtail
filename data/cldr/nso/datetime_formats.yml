@@ -1,20 +1,10 @@
 ---
+locale: nso
+generated_at: '2025-09-12T04:11:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Phere
-        '2': Dibo
-        '3': Hlak
-        '4': Mora
-        '5': Mei
-        '6': June
-        '7': Mose
-        '8': Agosetose
-        '9': Lewe
-        '10': Dipha
-        '11': Diba
-        '12': Manth
       wide:
         '1': Janeware
         '2': Febereware
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Oktobore
         '11': Nofemere
         '12': Disemere
+      abbreviated:
+        '1': Phere
+        '2': Dibo
+        '3': Hlak
+        '4': Mora
+        '5': Mei
+        '6': June
+        '7': Mose
+        '8': Agosetose
+        '9': Lewe
+        '10': Dipha
+        '11': Diba
+        '12': Manth
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': P
         '2': D
@@ -44,14 +50,6 @@ datetime_formats:
         '12': M
   days:
     format:
-      abbreviated:
-        sun: Lam
-        mon: Mos
-        tue: Bed
-        wed: Rar
-        thu: Ne
-        fri: Hla
-        sat: Mok
       wide:
         sun: Lamorena
         mon: Mošupologo
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Labone
         fri: Labohlano
         sat: Mokibelo
+      abbreviated:
+        sun: Lam
+        mon: Mos
+        tue: Bed
+        wed: Rar
+        thu: Ne
+        fri: Hla
+        sat: Mok
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: L
         mon: M
@@ -69,6 +78,32 @@ datetime_formats:
         thu: "N"
         fri: H
         sat: M
+  quarters:
+    format:
+      wide:
+        '1': 1st Kotara
+        '2': 2nd Kotara
+        '3': 3rd Kotara
+        '4': 4th Kotara
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Before Common Era
+      '1': Common Era
+    abbreviated:
+      '0': BCE
+      '1': CE
+    narrow: {}
   date_formats:
     full: y MMMM d, EEEE
     long: y MMMM d
@@ -78,7 +113,18 @@ datetime_formats:
     full: HH:mm:ss zzzz
     medium: HH:mm:ss
     short: HH:mm
-locale: nso
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'ka' {0}"
+    long: "{1} 'ka' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      MMMMW: "'beke' 'ya' 'bo' W 'ya' MMM"
+      yw: "'beke' 'ya' 'bo' w 'ya' Y"

@@ -1,20 +1,10 @@
 ---
+locale: th
+generated_at: '2025-09-12T04:11:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ม.ค.
-        '2': ก.พ.
-        '3': มี.ค.
-        '4': เม.ย.
-        '5': พ.ค.
-        '6': มิ.ย.
-        '7': ก.ค.
-        '8': ส.ค.
-        '9': ก.ย.
-        '10': ต.ค.
-        '11': พ.ย.
-        '12': ธ.ค.
       wide:
         '1': มกราคม
         '2': กุมภาพันธ์
@@ -28,7 +18,23 @@ datetime_formats:
         '10': ตุลาคม
         '11': พฤศจิกายน
         '12': ธันวาคม
+      abbreviated:
+        '1': ม.ค.
+        '2': ก.พ.
+        '3': มี.ค.
+        '4': เม.ย.
+        '5': พ.ค.
+        '6': มิ.ย.
+        '7': ก.ค.
+        '8': ส.ค.
+        '9': ก.ย.
+        '10': ต.ค.
+        '11': พ.ย.
+        '12': ธ.ค.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': ม.ค.
         '2': ก.พ.
@@ -44,14 +50,6 @@ datetime_formats:
         '12': ธ.ค.
   days:
     format:
-      abbreviated:
-        sun: อา.
-        mon: จ.
-        tue: อ.
-        wed: พ.
-        thu: พฤ.
-        fri: ศ.
-        sat: ส.
       wide:
         sun: วันอาทิตย์
         mon: วันจันทร์
@@ -60,7 +58,18 @@ datetime_formats:
         thu: วันพฤหัสบดี
         fri: วันศุกร์
         sat: วันเสาร์
+      abbreviated:
+        sun: อา.
+        mon: จ.
+        tue: อ.
+        wed: พ.
+        thu: พฤ.
+        fri: ศ.
+        sat: ส.
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: อา
         mon: จ
@@ -69,6 +78,57 @@ datetime_formats:
         thu: พฤ
         fri: ศ
         sat: ส
+  quarters:
+    format:
+      wide:
+        '1': ไตรมาส 1
+        '2': ไตรมาส 2
+        '3': ไตรมาส 3
+        '4': ไตรมาส 4
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        am: ก่อนเที่ยง
+        pm: หลังเที่ยง
+      abbreviated:
+        midnight: เที่ยงคืน
+        noon: เที่ยง
+        morning1: ในตอนเช้า
+        afternoon1: ในตอนบ่าย
+        afternoon2: บ่าย
+        evening1: ในตอนเย็น
+        evening2: ค่ำ
+        night1: กลางคืน
+    stand-alone:
+      wide:
+        morning1: ในตอนเช้า
+        afternoon1: ในตอนบ่าย
+        afternoon2: บ่าย
+        evening1: ในตอนเย็น
+        evening2: ค่ำ
+        night1: กลางคืน
+      abbreviated:
+        am: ก่อนเที่ยง
+        pm: หลังเที่ยง
+        morning1: ตอนเช้า
+        afternoon1: ตอนบ่าย
+        afternoon2: บ่าย
+        evening1: ตอนเย็น
+        evening2: ค่ำ
+        night1: กลางคืน
+  eras:
+    names:
+      '0': ก่อนสามัญศักราช
+      '1': สามัญศักราช
+    abbreviated:
+      '0': ก่อน ส.ศ.
+      '1': ส.ศ.
+    narrow:
+      '0': ก.ส.ศ.
   date_formats:
     full: EEEEที่ d MMMM G y
     long: d MMMM G y
@@ -79,7 +139,42 @@ datetime_formats:
     long: H นาฬิกา mm นาที ss วินาที z
     medium: HH:mm:ss
     short: HH:mm
-locale: th
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} เวลา {0}"
+    long: "{1} เวลา {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: E d
+      EHm: E HH:mm น.
+      GyMd: d/M/GGGGG y
+      GyMMM: MMM G y
+      GyMMMd: d MMM G y
+      GyMMMEd: E d MMM G y
+      GyMMMEEEEd: EEEEที่ d MMM G y
+      Hm: HH:mm น.
+      hmv: h:mm น. a v
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMEEEEd: EEEEที่ d MMM
+      MMMMd: d MMMM
+      MMMMEd: E d MMMM
+      MMMMEEEEd: EEEEที่ d MMMM
+      MMMMW: สัปดาห์ที่ W ของเดือนMMMM
+      mmss: mm:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMEEEEd: EEEEที่ d MMM y
+      yMMMM: MMMM y
+      yMMMMd: d MMMM y
+      yMMMMEd: E d MMMM y
+      yMMMMEEEEd: EEEEที่ d MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ G y
+      yw: สัปดาห์ที่ w ของปี Y

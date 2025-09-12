@@ -1,4 +1,7 @@
 ---
+locale: ab
+generated_at: '2025-09-12T04:07:26Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -38,8 +42,6 @@ number_formats:
       symbol: "৳"
     BMD:
       symbol: "$"
-      display_names:
-        other: бермудтәи адоллар
     BND:
       symbol: "$"
     BOB:
@@ -78,8 +80,6 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: евро
     FJD:
       symbol: "$"
     FKP:
@@ -87,7 +87,7 @@ number_formats:
     GBP:
       symbol: "£"
     GEL:
-      symbol: ლ
+      symbol: "₾"
     GHS:
       symbol: GH₵
     GIP:
@@ -117,7 +117,7 @@ number_formats:
     JMD:
       symbol: "$"
     JPY:
-      symbol: "¥"
+      symbol: JP¥
     KGS:
       symbol: "⃀"
     KHR:
@@ -169,7 +169,7 @@ number_formats:
     NZD:
       symbol: NZ$
     PHP:
-      symbol: PHP
+      symbol: "₱"
     PKR:
       symbol: Rs
     PLN:
@@ -177,7 +177,7 @@ number_formats:
     PYG:
       symbol: "₲"
     RON:
-      symbol: L
+      symbol: lei
     RUB:
       symbol: "₽"
     RWF:
@@ -211,7 +211,7 @@ number_formats:
     UAH:
       symbol: "₴"
     USD:
-      symbol: "$"
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -230,22 +230,10 @@ number_formats:
       symbol: CFPF
     XXX:
       symbol: "¤"
-      display_names:
-        other: "(еилкаам авалиута)"
     ZAR:
       symbol: R
     ZMW:
       symbol: ZK
-    SLE:
-      display_names:
-        other: леоне
-    SLL:
-      display_names:
-        other: леоне (1964—2022)
-locale: ab
-generated_at: '2025-09-10T23:53:02+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0

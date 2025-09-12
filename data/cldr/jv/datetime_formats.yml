@@ -1,20 +1,10 @@
 ---
+locale: jv
+generated_at: '2025-09-12T04:11:13Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mar
-        '4': Apr
-        '5': Mei
-        '6': Jun
-        '7': Jul
-        '8': Agt
-        '9': Sep
-        '10': Okt
-        '11': Nov
-        '12': Des
       wide:
         '1': Januari
         '2': Februari
@@ -28,7 +18,23 @@ datetime_formats:
         '10': Oktober
         '11': November
         '12': Desember
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': Mei
+        '6': Jun
+        '7': Jul
+        '8': Agt
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Des
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         '1': J
         '2': F
@@ -44,14 +50,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Ahad
-        mon: Sen
-        tue: Sel
-        wed: Rab
-        thu: Kam
-        fri: Jum
-        sat: Sab
       wide:
         sun: Ahad
         mon: Senin
@@ -60,7 +58,18 @@ datetime_formats:
         thu: Kamis
         fri: Jumat
         sat: Sabtu
+      abbreviated:
+        sun: Ahad
+        mon: Sen
+        tue: Sel
+        wed: Rab
+        thu: Kam
+        fri: Jum
+        sat: Sab
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: A
         mon: S
@@ -69,6 +78,38 @@ datetime_formats:
         thu: K
         fri: J
         sat: S
+  quarters:
+    format:
+      wide:
+        '1': triwulan kaping pisan
+        '2': triwulan kaping loro
+        '3': triwulan kaping telu
+        '4': triwulan kaping papat
+      abbreviated:
+        '1': TW1
+        '2': TW2
+        '3': TW3
+        '4': TW4
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: Isuk
+        pm: Wengi
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names:
+      '0': Sakdurunge Era Umum
+      '1': Era Umum
+    abbreviated:
+      '0': SEU
+      '1': EU
+    narrow: {}
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -79,7 +120,38 @@ datetime_formats:
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: jv
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'ing' {0}"
+    long: "{1} 'ing' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E, d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: d/M/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      h: h a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd/MM
+      MEd: E dd/MM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: "'pekan' W 'ing' MMMM"
+      yM: MM-y
+      yMd: dd-MM-y
+      yMEd: E, dd-MM-y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'pekan' w 'ing' Y"

@@ -1,7 +1,23 @@
 ---
+locale: dz
+generated_at: '2025-09-12T04:11:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': ཟླ་དངཔ་
+        '2': ཟླ་གཉིས་པ་
+        '3': ཟླ་གསུམ་པ་
+        '4': ཟླ་བཞི་པ་
+        '5': ཟླ་ལྔ་པ་
+        '6': ཟླ་དྲུག་པ
+        '7': ཟླ་བདུན་པ་
+        '8': ཟླ་བརྒྱད་པ་
+        '9': ཟླ་དགུ་པ་
+        '10': ཟླ་བཅུ་པ་
+        '11': ཟླ་བཅུ་གཅིག་པ་
+        '12': ཟླ་བཅུ་གཉིས་པ་
       abbreviated:
         '1': ༡
         '2': ༢
@@ -28,20 +44,20 @@ datetime_formats:
         '10': ༡༠
         '11': ༡༡
         '12': ༡༢
-      wide:
-        '1': ཟླ་དངཔ་
-        '2': ཟླ་གཉིས་པ་
-        '3': ཟླ་གསུམ་པ་
-        '4': ཟླ་བཞི་པ་
-        '5': ཟླ་ལྔ་པ་
-        '6': ཟླ་དྲུག་པ
-        '7': ཟླ་བདུན་པ་
-        '8': ཟླ་བརྒྱད་པ་
-        '9': ཟླ་དགུ་པ་
-        '10': ཟླ་བཅུ་པ་
-        '11': ཟླ་བཅུ་གཅིག་པ་
-        '12': ཟླ་བཅུ་གཉིས་པ་
     stand-alone:
+      wide:
+        '1': སྤྱི་ཟླ་དངཔ་
+        '2': སྤྱི་ཟླ་གཉིས་པ་
+        '3': སྤྱི་ཟླ་གསུམ་པ་
+        '4': སྤྱི་ཟླ་བཞི་པ
+        '5': སྤྱི་ཟླ་ལྔ་པ་
+        '6': སྤྱི་ཟླ་དྲུག་པ
+        '7': སྤྱི་ཟླ་བདུན་པ་
+        '8': སྤྱི་ཟླ་བརྒྱད་པ་
+        '9': སྤྱི་ཟླ་དགུ་པ་
+        '10': སྤྱི་ཟླ་བཅུ་པ་
+        '11': སྤྱི་ཟླ་བཅུ་གཅིག་པ་
+        '12': སྤྱི་ཟླ་བཅུ་གཉིས་པ་
       abbreviated:
         '1': ཟླ་༡
         '2': ཟླ་༢
@@ -68,29 +84,8 @@ datetime_formats:
         '10': ༡༠
         '11': ༡༡
         '12': ༡༢
-      wide:
-        '1': སྤྱི་ཟླ་དངཔ་
-        '2': སྤྱི་ཟླ་གཉིས་པ་
-        '3': སྤྱི་ཟླ་གསུམ་པ་
-        '4': སྤྱི་ཟླ་བཞི་པ
-        '5': སྤྱི་ཟླ་ལྔ་པ་
-        '6': སྤྱི་ཟླ་དྲུག་པ
-        '7': སྤྱི་ཟླ་བདུན་པ་
-        '8': སྤྱི་ཟླ་བརྒྱད་པ་
-        '9': སྤྱི་ཟླ་དགུ་པ་
-        '10': སྤྱི་ཟླ་བཅུ་པ་
-        '11': སྤྱི་ཟླ་བཅུ་གཅིག་པ་
-        '12': སྤྱི་ཟླ་བཅུ་གཉིས་པ་
   days:
     format:
-      abbreviated:
-        sun: ཟླ་
-        mon: མིར་
-        tue: ལྷག་
-        wed: ཕུར་
-        thu: སངས་
-        fri: སྤེན་
-        sat: ཉི་
       wide:
         sun: གཟའ་ཟླ་བ་
         mon: གཟའ་མིག་དམར་
@@ -99,7 +94,18 @@ datetime_formats:
         thu: གཟའ་པ་སངས་
         fri: གཟའ་སྤེན་པ་
         sat: གཟའ་ཉི་མ་
+      abbreviated:
+        sun: ཟླ་
+        mon: མིར་
+        tue: ལྷག་
+        wed: ཕུར་
+        thu: སངས་
+        fri: སྤེན་
+        sat: ཉི་
+      narrow: {}
     stand-alone:
+      wide: {}
+      abbreviated: {}
       narrow:
         sun: ཟླ
         mon: མིར
@@ -108,6 +114,34 @@ datetime_formats:
         thu: སངྶ
         fri: སྤེན
         sat: ཉི
+  quarters:
+    format:
+      wide:
+        '1': བཞི་དཔྱ་དང་པ་
+        '2': བཞི་དཔྱ་གཉིས་པ་
+        '3': བཞི་དཔྱ་གསུམ་པ་
+        '4': བཞི་དཔྱ་བཞི་པ་
+      abbreviated:
+        '1': བཞི་དཔྱ་༡
+        '2': བཞི་དཔྱ་༢
+        '3': བཞི་དཔྱ་༣
+        '4': བཞི་དཔྱ་༤
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        am: སྔ་ཆ་
+        pm: ཕྱི་ཆ་
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    abbreviated: {}
+    narrow: {}
   date_formats:
     full: EEEE, སྤྱི་ལོ་y MMMM ཚེས་dd
     long: སྤྱི་ལོ་y MMMM ཚེས་ dd
@@ -118,7 +152,24 @@ datetime_formats:
     long: ཆུ་ཚོད་ h སྐར་མ་ mm:ss a z
     medium: ཆུ་ཚོད་h:mm:ss a
     short: ཆུ་ཚོད་ h སྐར་མ་ mm a
-locale: dz
-generated_at: '2025-09-06T03:52:33+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    long: "{1} {0}"
+    medium: "{1} {0}"
+    short: "{1} {0}"
+    available_formats:
+      Ed: d E
+      GyMMM: G y སྤྱི་ཟླ་MMM
+      GyMMMEd: གཟའ་E, G ལོy ཟླ་MMM ཚེ་d
+      h: ཆུ་ཚོད་h a
+      H: ཆུ་ཚོད་HH
+      Md: M-d
+      MEd: E, M-d
+      MMM: སྤྱི་LLL
+      MMMd: སྤྱི་LLL ཚེ་d
+      MMMEd: E, སྤྱི་LLL ཚེ་d
+      yM: y-M
+      yMd: y-M-d
+      yMEd: E, y-M-d
+      yMMM: y སྤྱི་ཟླ་MMM
+      yMMMEd: གཟའ་E, ལོy ཟླ་MMM ཚེ་d

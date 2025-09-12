@@ -1,4 +1,7 @@
 ---
+locale: om
+generated_at: '2025-09-12T04:10:00Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -38,44 +42,28 @@ number_formats:
       symbol: "৳"
     BMD:
       symbol: "$"
-      display_names:
-        other: Doolaarota Beermudaa
-        one: Doolaara Beermudaa
     BND:
       symbol: "$"
     BOB:
       symbol: Bs
     BRL:
       symbol: R$
-      display_names:
-        other: Brazilian Real
     BSD:
       symbol: "$"
     BWP:
       symbol: P
     BZD:
       symbol: "$"
-      display_names:
-        other: Doolaarota Beliizee
-        one: Doolaara Beliizee
     CAD:
       symbol: CA$
-      display_names:
-        other: Doolaarota Kanaadaa
-        one: Doolaara Kanaadaa
     CLP:
       symbol: "$"
     CNY:
       symbol: CN¥
-      display_names:
-        other: Chinese Yuan Renminbi
     COP:
       symbol: "$"
     CRC:
       symbol: "₡"
-      display_names:
-        other: Koloonota Kostaa Rikaa
-        one: Koloonii Kostaa Rikaa
     CUC:
       symbol: "$"
     CUP:
@@ -92,16 +80,12 @@ number_formats:
       symbol: "₧"
     EUR:
       symbol: "€"
-      display_names:
-        other: Euro
     FJD:
       symbol: "$"
     FKP:
       symbol: "£"
     GBP:
       symbol: "£"
-      display_names:
-        other: British Pound
     GEL:
       symbol: "₾"
     GHS:
@@ -128,16 +112,12 @@ number_formats:
       symbol: "₪"
     INR:
       symbol: "₹"
-      display_names:
-        other: Indian Rupee
     ISK:
       symbol: kr
     JMD:
       symbol: "$"
     JPY:
       symbol: JP¥
-      display_names:
-        other: Japanese Yen
     KGS:
       symbol: "⃀"
     KHR:
@@ -200,8 +180,6 @@ number_formats:
       symbol: lei
     RUB:
       symbol: "₽"
-      display_names:
-        other: Russian Ruble
     RWF:
       symbol: RF
     SBD:
@@ -234,9 +212,6 @@ number_formats:
       symbol: "₴"
     USD:
       symbol: US$
-      display_names:
-        other: Doolarota Ameerikaa
-        one: Doolaara Ameerikaa
     UYU:
       symbol: "$"
     VEF:
@@ -259,14 +234,6 @@ number_formats:
       symbol: R
     ZMW:
       symbol: ZK
-    ETB:
-      symbol: Br
-      display_names:
-        other: Itoophiyaa Birrii
-locale: om
-generated_at: '2025-09-10T23:53:15+09:00'
-cldr_version: v46
-source: Unicode CLDR
 currency_fractions:
   ADP:
     digits: 0
