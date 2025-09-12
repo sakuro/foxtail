@@ -36,8 +36,8 @@ RSpec.describe Foxtail::Functions do
     it "returns class instances instead of lambdas for better performance" do
       result = Foxtail::Functions.defaults
 
-      expect(result["NUMBER"]).to be_a(Foxtail::Functions::NumberFormatter)
-      expect(result["DATETIME"]).to be_a(Foxtail::Functions::DateTimeFormatter)
+      expect(result["NUMBER"]).to be_a(Foxtail::CLDR::Formatter::Number)
+      expect(result["DATETIME"]).to be_a(Foxtail::CLDR::Formatter::DateTime)
     end
   end
 end

@@ -51,7 +51,7 @@ Style/MissingElse:
 Naming/PredicateMethod:
   Exclude:
     - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
-    - 'lib/foxtail/cldr/plural_rules.rb'     # evaluate_simple_condition() - evaluates CLDR conditions
+    - 'lib/foxtail/cldr/repository/plural_rules.rb'     # evaluate_simple_condition() - evaluates CLDR conditions
     - 'compat/compatibility_tester.rb'       # span_related() - checks difference type rather than boolean property
     - 'compat/ast_comparator.rb'             # span_related() - checks difference type rather than boolean property
 
@@ -84,7 +84,7 @@ RSpec/MultipleExpectations:
 # Currency formatting tests require nested context for clear organization of test cases
 RSpec/NestedGroups:
   Exclude:
-    - 'spec/foxtail/functions/number_formatter_spec.rb'  # Currency formatting tests need logical grouping
+    - 'spec/foxtail/cldr/formatter/number_spec.rb'  # Currency formatting tests need logical grouping
 
 # The after(:all) hooks in compatibility tests are safe - they only output summaries
 # and don't modify state or create database records that could leak between tests
@@ -112,15 +112,14 @@ Style/OptionHash:
     - 'lib/foxtail/bundle.rb'                      # Bundle#format(id, args={}) - public API
     - 'lib/foxtail/bundle/ast_converter.rb'       # Internal converter initialization
     - 'lib/foxtail/bundle/scope.rb'               # Scope.new(bundle, args={}) - public API
-    - 'lib/foxtail/functions/number_formatter.rb'      # NumberFormatter#call(value, options={}) - matches Intl.NumberFormat API
-    - 'lib/foxtail/functions/date_time_formatter.rb'   # DateTimeFormatter#call(value, options={}) - matches Intl.DateTimeFormat API
+    - 'lib/foxtail/cldr/formatter/date_time.rb'   # DateTimeFormatter#call(value, options={}) - matches Intl.DateTimeFormat API
 
 # Duplicate branches provide intentional fallback behavior for robustness
 Lint/DuplicateBranch:
   Exclude:
     - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
-    - 'lib/foxtail/cldr/datetime_formats.rb'      # Default datetime format patterns (medium as fallback)
-    - 'lib/foxtail/functions/date_time_formatter.rb'  # CLDR style normalization with wide as default
+    - 'lib/foxtail/cldr/repository/date_time_formats.rb'      # Default datetime format patterns (medium as fallback)
+    - 'lib/foxtail/cldr/formatter/date_time.rb'  # CLDR style normalization with wide as default
 
 # Number conversions are safe for statistical percentages (integers to float)
 Lint/NumberConversion:

@@ -1,0 +1,129 @@
+# frozen_string_literal: true
+
+require "time"
+
+RSpec.describe Foxtail::CLDR::Formatter::DateTime do
+  subject(:formatter) { Foxtail::CLDR::Formatter::DateTime.new }
+
+  let(:test_time) { Time.new(2023, 6, 15, 14, 30, 45) }
+
+  describe "#call" do
+    context "with locale options" do
+      it "formats with English locale" do
+        result = formatter.call(test_time, locale: locale("en"), dateStyle: "full")
+        expect(result).to eq("Thursday, June 15, 2023")
+      end
+
+      it "formats with Japanese locale" do
+        result = formatter.call(test_time, locale: locale("ja"), dateStyle: "full")
+        expect(result).to eq("2023年6月15日木曜日")
+      end
+
+      it "formats month names in Japanese" do
+        result = formatter.call(test_time, locale: locale("ja"), month: "long")
+        expect(result).to eq("6月")
+      end
+
+      it "formats weekday names in Japanese" do
+        result = formatter.call(test_time, locale: locale("ja"), weekday: "long")
+        expect(result).to eq("木曜日")
+      end
+
+      it "raises CLDR::DataNotAvailable for unknown locales" do
+        expect {
+          formatter.call(test_time, locale: locale("unknown"), month: "long")
+        }.to raise_error(Foxtail::CLDR::Repository::DataNotAvailable)
+      end
+    end
+
+    context "with different date/time styles" do
+      let(:en_locale) { locale("en") }
+
+      it "formats with dateStyle medium" do
+        result = formatter.call(test_time, locale: en_locale, dateStyle: "medium")
+        expect(result).to eq("Jun 15, 2023")
+      end
+
+      it "formats with dateStyle full" do
+        result = formatter.call(test_time, locale: en_locale, dateStyle: "full")
+        expect(result).to eq("Thursday, June 15, 2023")
+      end
+
+      it "formats with timeStyle short" do
+        result = formatter.call(test_time, locale: en_locale, timeStyle: "short")
+        # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
+        expect(result).to eq("2:30\u202FPM")
+      end
+
+      it "combines dateStyle and timeStyle" do
+        result = formatter.call(test_time, locale: en_locale, dateStyle: "medium", timeStyle: "short")
+        # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
+        expect(result).to eq("Jun 15, 2023 2:30\u202FPM")
+      end
+    end
+
+    context "with invalid input" do
+      it "raises ArgumentError for invalid date strings" do
+        expect {
+          formatter.call("not a date", locale: locale("en"))
+        }.to raise_error(ArgumentError)
+      end
+
+      it "raises ArgumentError for unparseable date strings" do
+        expect {
+          formatter.call("2023-13-99", locale: locale("en"))
+        }.to raise_error(ArgumentError)
+      end
+    end
+
+    context "with custom patterns" do
+      let(:en_locale) { locale("en") }
+      let(:ja_locale) { locale("ja") }
+
+      it "formats with simple custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "yyyy-MM-dd")
+        expect(result).to eq("2023-06-15")
+      end
+
+      it "formats with custom pattern including weekday and month names" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "EEEE, MMMM d, yyyy")
+        expect(result).to eq("Thursday, June 15, 2023")
+      end
+
+      it "formats with abbreviated names in custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "EEE, MMM d")
+        expect(result).to eq("Thu, Jun 15")
+      end
+
+      it "formats with time components in custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "HH:mm:ss")
+        expect(result).to eq("14:30:45")
+      end
+
+      it "formats with 12-hour time in custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "h:mm a")
+        expect(result).to eq("2:30 PM")
+      end
+
+      it "formats with complex custom pattern" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "EEEE, d MMMM yyyy 'at' HH:mm")
+        expect(result).to eq("Thursday, 15 June 2023 at 14:30")
+      end
+
+      it "uses locale-specific names in custom patterns" do
+        result = formatter.call(test_time, locale: ja_locale, pattern: "yyyy年MMMMd日(EEEE)")
+        expect(result).to eq("2023年6月15日(木曜日)")
+      end
+
+      it "handles literal text in custom patterns" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "'Today is' EEEE")
+        expect(result).to eq("Today is Thursday")
+      end
+
+      it "handles mixed tokens and literals" do
+        result = formatter.call(test_time, locale: en_locale, pattern: "Date: dd/MM/yyyy Time: HH:mm")
+        expect(result).to eq("Date: 15/06/2023 Time: 14:30")
+      end
+    end
+  end
+end

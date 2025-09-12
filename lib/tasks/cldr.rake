@@ -73,7 +73,7 @@ namespace :cldr do
         rm LOCALE_ALIASES_FILE, verbose: false
       end
 
-      extractor = Foxtail::CLDR::Extractors::LocaleAliasExtractor.new(
+      extractor = Foxtail::CLDR::Extractor::LocaleAliases.new(
         source_dir: CLDR_EXTRACT_DIR,
         output_dir: DATA_DIR
       )
@@ -90,15 +90,15 @@ namespace :cldr do
 
       # Extract each data type for the specific locale
       extractors = [
-        Foxtail::CLDR::Extractors::PluralRulesExtractor.new(
+        Foxtail::CLDR::Extractor::PluralRules.new(
           source_dir: CLDR_EXTRACT_DIR,
           output_dir: DATA_DIR
         ),
-        Foxtail::CLDR::Extractors::NumberFormatsExtractor.new(
+        Foxtail::CLDR::Extractor::NumberFormats.new(
           source_dir: CLDR_EXTRACT_DIR,
           output_dir: DATA_DIR
         ),
-        Foxtail::CLDR::Extractors::DateTimeFormatsExtractor.new(
+        Foxtail::CLDR::Extractor::DateTimeFormats.new(
           source_dir: CLDR_EXTRACT_DIR,
           output_dir: DATA_DIR
         )
@@ -115,7 +115,7 @@ namespace :cldr do
         rm PLURAL_RULES_FILES, verbose: false
       end
 
-      extractor = Foxtail::CLDR::Extractors::PluralRulesExtractor.new(
+      extractor = Foxtail::CLDR::Extractor::PluralRules.new(
         source_dir: CLDR_EXTRACT_DIR,
         output_dir: DATA_DIR
       )
@@ -131,7 +131,7 @@ namespace :cldr do
         rm NUMBER_FORMATS_FILES, verbose: false
       end
 
-      extractor = Foxtail::CLDR::Extractors::NumberFormatsExtractor.new(
+      extractor = Foxtail::CLDR::Extractor::NumberFormats.new(
         source_dir: CLDR_EXTRACT_DIR,
         output_dir: DATA_DIR
       )
@@ -147,7 +147,7 @@ namespace :cldr do
         rm DATETIME_FORMATS_FILES, verbose: false
       end
 
-      extractor = Foxtail::CLDR::Extractors::DateTimeFormatsExtractor.new(
+      extractor = Foxtail::CLDR::Extractor::DateTimeFormats.new(
         source_dir: CLDR_EXTRACT_DIR,
         output_dir: DATA_DIR
       )
