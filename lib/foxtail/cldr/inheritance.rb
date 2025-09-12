@@ -1,17 +1,24 @@
 # frozen_string_literal: true
 
 require "rexml/document"
+require "singleton"
 
 module Foxtail
   module CLDR
     # Handles CLDR locale inheritance chain resolution and data merging
     # Implements the complete CLDR inheritance model:
     # root → language → language_Script → language_Territory → language_Script_Territory
-    module Inheritance
+    class Inheritance
+      include Singleton
+
+      def initialize
+        @parent_locales = nil
+      end
+
       # Parse a locale identifier and return the complete inheritance chain
       # @param locale [String] Locale identifier (e.g., "en_US", "zh_Hans_CN")
       # @return [Array<String>] Inheritance chain from most specific to root
-      def self.resolve_inheritance_chain(locale)
+      def resolve_inheritance_chain(locale)
         chain = [locale]
 
         # Handle different locale patterns
@@ -38,7 +45,7 @@ module Foxtail
       # Load parent locale mappings from CLDR supplemental data
       # @param source_dir [String] Path to CLDR source directory
       # @return [Hash] Mapping of locale to parent locale
-      def self.load_parent_locales(source_dir)
+      def load_parent_locales(source_dir)
         supplemental_path = File.join(source_dir, "common", "supplemental", "supplementalData.xml")
 
         return {} unless File.exist?(supplemental_path)
@@ -72,7 +79,7 @@ module Foxtail
       # @param locale [String] Locale identifier
       # @param parent_locales [Hash] Parent locale mappings from supplemental data
       # @return [Array<String>] Complete inheritance chain
-      def self.resolve_inheritance_chain_with_parents(locale, parent_locales)
+      def resolve_inheritance_chain_with_parents(locale, parent_locales)
         chain = []
         current = locale
         seen = Set.new
@@ -106,7 +113,7 @@ module Foxtail
       # @param parent_data [Hash] Data from parent locale
       # @param child_data [Hash] Data from child locale
       # @return [Hash] Merged data with child overrides
-      def self.merge_data(parent_data, child_data)
+      def merge_data(parent_data, child_data)
         return child_data.dup if parent_data.nil? || parent_data.empty?
         return parent_data.dup if child_data.nil? || child_data.empty?
 
@@ -131,7 +138,7 @@ module Foxtail
       # @param extractor [BaseExtractor] Extractor instance for data extraction
       # @param parent_locales [Hash] Optional parent locale mappings
       # @return [Hash] Fully inherited and merged data
-      def self.load_inherited_data(locale, source_dir, extractor, parent_locales={})
+      def load_inherited_data(locale, source_dir, extractor, parent_locales={})
         chain = if parent_locales.empty?
                   resolve_inheritance_chain(locale)
                 else
@@ -157,7 +164,7 @@ module Foxtail
       # @param source_dir [String] Path to CLDR source directory
       # @param extractor [BaseExtractor] Extractor instance for data extraction
       # @return [Hash, nil] Raw locale data or nil if not found
-      def self.load_locale_data(locale, source_dir, extractor)
+      def load_locale_data(locale, source_dir, extractor)
         xml_path = File.join(source_dir, "common", "main", "#{locale}.xml")
 
         return nil unless File.exist?(xml_path)
@@ -172,7 +179,7 @@ module Foxtail
       end
 
       # Progress logging method for testing support
-      def self.log(message)
+      def log(message)
         puts message
       end
     end

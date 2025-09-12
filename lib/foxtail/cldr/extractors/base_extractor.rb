@@ -18,6 +18,7 @@ module Foxtail
           @source_dir = source_dir
           @output_dir = output_dir
           @parent_locales = nil
+          @inheritance = Inheritance.instance
         end
 
         # Template method for extracting all locales
@@ -48,7 +49,7 @@ module Foxtail
         # Extract locale data with full CLDR inheritance chain
         def extract_locale_with_inheritance(locale_id)
           load_parent_locales_if_needed
-          Inheritance.load_inherited_data(locale_id, source_dir, self, parent_locales)
+          @inheritance.load_inherited_data(locale_id, source_dir, self, parent_locales)
         end
 
         private def validate_source_directory
@@ -62,7 +63,7 @@ module Foxtail
         private def load_parent_locales_if_needed
           return if @parent_locales
 
-          @parent_locales = Inheritance.load_parent_locales(source_dir)
+          @parent_locales = @inheritance.load_parent_locales(source_dir)
           log "Loaded #{@parent_locales.size} parent locale mappings" unless @parent_locales.empty?
         end
 

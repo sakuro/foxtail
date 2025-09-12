@@ -3,46 +3,48 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Inheritance do
-  describe ".resolve_inheritance_chain" do
+  let(:inheritance) { Foxtail::CLDR::Inheritance.instance }
+
+  describe "#resolve_inheritance_chain" do
     it "resolves simple language locale" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain("en")
+      chain = inheritance.resolve_inheritance_chain("en")
       expect(chain).to eq(%w[en root])
     end
 
     it "resolves language_Territory locale" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain("en_US")
+      chain = inheritance.resolve_inheritance_chain("en_US")
       expect(chain).to eq(%w[en_US en root])
     end
 
     it "resolves language_Script locale" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain("zh_Hans")
+      chain = inheritance.resolve_inheritance_chain("zh_Hans")
       expect(chain).to eq(%w[zh_Hans zh root])
     end
 
     it "resolves language_Script_Territory locale" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain("zh_Hans_CN")
+      chain = inheritance.resolve_inheritance_chain("zh_Hans_CN")
       expect(chain).to eq(%w[zh_Hans_CN zh_Hans zh root])
     end
 
     it "handles root locale" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain("root")
+      chain = inheritance.resolve_inheritance_chain("root")
       expect(chain).to eq(["root"])
     end
 
     it "handles complex locales with three-letter language codes" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain("ast_ES")
+      chain = inheritance.resolve_inheritance_chain("ast_ES")
       expect(chain).to eq(%w[ast_ES ast root])
     end
   end
 
-  describe ".load_parent_locales" do
+  describe "#load_parent_locales" do
     let(:temp_dir) { Dir.mktmpdir }
     let(:supplemental_dir) { File.join(temp_dir, "common", "supplemental") }
     let(:supplemental_file) { File.join(supplemental_dir, "supplementalData.xml") }
 
     before do
       FileUtils.mkdir_p(supplemental_dir)
-      allow(Foxtail::CLDR::Inheritance).to receive(:log)
+      allow(inheritance).to receive(:log)
     end
 
     after { FileUtils.rm_rf(temp_dir) }
@@ -60,7 +62,7 @@ RSpec.describe Foxtail::CLDR::Inheritance do
 
       File.write(supplemental_file, xml_content)
 
-      parents = Foxtail::CLDR::Inheritance.load_parent_locales(temp_dir)
+      parents = inheritance.load_parent_locales(temp_dir)
 
       expect(parents).to eq({
         "en_AU" => "en_001",
@@ -72,19 +74,19 @@ RSpec.describe Foxtail::CLDR::Inheritance do
     end
 
     it "returns empty hash when supplemental file does not exist" do
-      parents = Foxtail::CLDR::Inheritance.load_parent_locales(temp_dir)
+      parents = inheritance.load_parent_locales(temp_dir)
       expect(parents).to eq({})
     end
 
     it "handles malformed XML gracefully" do
       File.write(supplemental_file, "invalid xml")
 
-      parents = Foxtail::CLDR::Inheritance.load_parent_locales(temp_dir)
+      parents = inheritance.load_parent_locales(temp_dir)
       expect(parents).to eq({})
     end
   end
 
-  describe ".resolve_inheritance_chain_with_parents" do
+  describe "#resolve_inheritance_chain_with_parents" do
     let(:parent_locales) do
       {
         "en_AU" => "en_001",
@@ -94,29 +96,29 @@ RSpec.describe Foxtail::CLDR::Inheritance do
     end
 
     it "uses parent locales mappings when available" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain_with_parents("en_AU", parent_locales)
+      chain = inheritance.resolve_inheritance_chain_with_parents("en_AU", parent_locales)
       expect(chain).to eq(%w[en_AU en_001 en root])
     end
 
     it "falls back to algorithmic resolution when no parent mapping exists" do
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain_with_parents("de_DE", parent_locales)
+      chain = inheritance.resolve_inheritance_chain_with_parents("de_DE", parent_locales)
       expect(chain).to eq(%w[de_DE de root])
     end
 
     it "prevents infinite loops in parent chains" do
       circular_parents = {"a" => "b", "b" => "a"}
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain_with_parents("a", circular_parents)
+      chain = inheritance.resolve_inheritance_chain_with_parents("a", circular_parents)
       expect(chain).to eq(%w[a b root])
     end
 
     it "handles chain ending in root explicitly" do
       explicit_root = {"en_US" => "en", "en" => "root"}
-      chain = Foxtail::CLDR::Inheritance.resolve_inheritance_chain_with_parents("en_US", explicit_root)
+      chain = inheritance.resolve_inheritance_chain_with_parents("en_US", explicit_root)
       expect(chain).to eq(%w[en_US en root])
     end
   end
 
-  describe ".merge_data" do
+  describe "#merge_data" do
     it "merges nested hash structures" do
       parent_data = {
         "numbers" => {
@@ -132,7 +134,7 @@ RSpec.describe Foxtail::CLDR::Inheritance do
         }
       }
 
-      merged = Foxtail::CLDR::Inheritance.merge_data(parent_data, child_data)
+      merged = inheritance.merge_data(parent_data, child_data)
 
       expect(merged).to eq({
         "numbers" => {
@@ -147,7 +149,7 @@ RSpec.describe Foxtail::CLDR::Inheritance do
       parent_data = {"format" => "parent", "shared" => "parent"}
       child_data = {"format" => "child", "extra" => "child"}
 
-      merged = Foxtail::CLDR::Inheritance.merge_data(parent_data, child_data)
+      merged = inheritance.merge_data(parent_data, child_data)
 
       expect(merged).to eq({
         "format" => "child",
@@ -157,20 +159,20 @@ RSpec.describe Foxtail::CLDR::Inheritance do
     end
 
     it "handles nil and empty data" do
-      expect(Foxtail::CLDR::Inheritance.merge_data(nil, {"a" => 1})).to eq({"a" => 1})
-      expect(Foxtail::CLDR::Inheritance.merge_data({"a" => 1}, nil)).to eq({"a" => 1})
-      expect(Foxtail::CLDR::Inheritance.merge_data({}, {"a" => 1})).to eq({"a" => 1})
+      expect(inheritance.merge_data(nil, {"a" => 1})).to eq({"a" => 1})
+      expect(inheritance.merge_data({"a" => 1}, nil)).to eq({"a" => 1})
+      expect(inheritance.merge_data({}, {"a" => 1})).to eq({"a" => 1})
     end
   end
 
-  describe ".load_inherited_data" do
+  describe "#load_inherited_data" do
     let(:temp_dir) { Dir.mktmpdir }
     let(:main_dir) { File.join(temp_dir, "common", "main") }
     let(:extractor) { instance_double(Foxtail::CLDR::Extractors::BaseExtractor) }
 
     before do
       FileUtils.mkdir_p(main_dir)
-      allow(Foxtail::CLDR::Inheritance).to receive(:log)
+      allow(inheritance).to receive(:log)
     end
 
     after { FileUtils.rm_rf(temp_dir) }
@@ -207,7 +209,7 @@ RSpec.describe Foxtail::CLDR::Inheritance do
         end
       end
 
-      merged_data = Foxtail::CLDR::Inheritance.load_inherited_data("en_US", temp_dir, extractor)
+      merged_data = inheritance.load_inherited_data("en_US", temp_dir, extractor)
 
       expected = {
         "symbols" => {"decimal" => ".", "group" => ","},
@@ -222,7 +224,7 @@ RSpec.describe Foxtail::CLDR::Inheritance do
 
       File.write(File.join(main_dir, "root.xml"), "<ldml></ldml>")
 
-      merged_data = Foxtail::CLDR::Inheritance.load_inherited_data("missing_US", temp_dir, extractor)
+      merged_data = inheritance.load_inherited_data("missing_US", temp_dir, extractor)
 
       expect(merged_data).to eq({"test" => "data"})
     end
