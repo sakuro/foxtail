@@ -3,7 +3,7 @@
 require "fileutils"
 require "rake/clean"
 require "shellwords"
-require_relative "../foxtail/cldr/extractors/datetime_formats_extractor"
+require_relative "../foxtail/cldr/extractors/date_time_formats_extractor"
 require_relative "../foxtail/cldr/extractors/locale_alias_extractor"
 require_relative "../foxtail/cldr/extractors/number_formats_extractor"
 require_relative "../foxtail/cldr/extractors/plural_rules_extractor"
