@@ -15,8 +15,7 @@ module Foxtail
   loader.inflector.inflect(
     "ast" => "AST",
     "ast_converter" => "ASTConverter",
-    "cldr" => "CLDR",
-    "datetime_formats" => "DateTimeFormats"
+    "cldr" => "CLDR"
   )
 
   loader.setup
