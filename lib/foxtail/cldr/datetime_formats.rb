@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require "locale"
+require_relative "base"
+require_relative "resolver"
 
 module Foxtail
   module CLDR
@@ -19,12 +21,12 @@ module Foxtail
     class DateTimeFormats < Base
       def initialize(locale)
         super
-        @data = load_data["datetime_formats"] || {}
+        @resolver = Resolver.new(@locale.to_simple.to_s)
       end
 
       # Get month name (1-12)
       def month_name(month, width="wide", context="format")
-        months = @data.dig("months", context, width)
+        months = @resolver.resolve("datetime_formats.months.#{context}.#{width}", "datetime_formats")
         return month.to_s unless months
 
         months[month.to_s] || month.to_s
@@ -32,7 +34,7 @@ module Foxtail
 
       # Get weekday name (sun, mon, tue, wed, thu, fri, sat)
       def weekday_name(day, width="wide", context="format")
-        days = @data.dig("days", context, width)
+        days = @resolver.resolve("datetime_formats.days.#{context}.#{width}", "datetime_formats")
         return day.to_s unless days
 
         days[day.to_s] || day.to_s
@@ -40,12 +42,12 @@ module Foxtail
 
       # Get date format pattern
       def date_pattern(style="medium")
-        @data.dig("date_formats", style) || default_date_pattern(style)
+        @resolver.resolve("datetime_formats.date_formats.#{style}", "datetime_formats") || default_date_pattern(style)
       end
 
       # Get time format pattern
       def time_pattern(style="medium")
-        @data.dig("time_formats", style) || default_time_pattern(style)
+        @resolver.resolve("datetime_formats.time_formats.#{style}", "datetime_formats") || default_time_pattern(style)
       end
 
       # Get datetime format pattern (combination)

@@ -1,15 +1,10 @@
 ---
+locale: sid
+generated_at: '2025-09-12T07:04:21Z'
+cldr_version: '46'
 datetime_formats:
   days:
     format:
-      abbreviated:
-        sun: Sam
-        mon: San
-        tue: Mak
-        wed: Row
-        thu: Ham
-        fri: Arb
-        sat: Qid
       wide:
         sun: Sambata
         mon: Sanyo
@@ -18,15 +13,31 @@ datetime_formats:
         thu: Hamuse
         fri: Arbe
         sat: Qidaame
+      abbreviated:
+        sun: Sam
+        mon: San
+        tue: Mak
+        wed: Row
+        thu: Ham
+        fri: Arb
+        sat: Qid
     stand-alone:
       narrow:
-        sun: S
         mon: S
         tue: M
         wed: R
         thu: H
         fri: A
         sat: Q
+  day_periods:
+    format:
+      abbreviated:
+        am: soodo
+        pm: hawwaro
+  eras:
+    abbreviated:
+      '0': YIA
+      '1': YIG
   date_formats:
     full: EEEE, MMMM dd, y
     long: dd MMMM y
@@ -37,7 +48,3 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: sid
-generated_at: '2025-09-06T03:52:41+09:00'
-cldr_version: v46
-source: Unicode CLDR

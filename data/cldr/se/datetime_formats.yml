@@ -1,20 +1,10 @@
 ---
+locale: se
+generated_at: '2025-09-12T07:04:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ođđj
-        '2': guov
-        '3': njuk
-        '4': cuo
-        '5': mies
-        '6': geas
-        '7': suoi
-        '8': borg
-        '9': čakč
-        '10': golg
-        '11': skáb
-        '12': juov
       wide:
         '1': ođđajagemánnu
         '2': guovvamánnu
@@ -28,6 +18,19 @@ datetime_formats:
         '10': golggotmánnu
         '11': skábmamánnu
         '12': juovlamánnu
+      abbreviated:
+        '1': ođđj
+        '2': guov
+        '3': njuk
+        '4': cuo
+        '5': mies
+        '6': geas
+        '7': suoi
+        '8': borg
+        '9': čakč
+        '10': golg
+        '11': skáb
+        '12': juov
     stand-alone:
       narrow:
         '1': O
@@ -44,14 +47,6 @@ datetime_formats:
         '12': J
   days:
     format:
-      abbreviated:
-        sun: sotn
-        mon: vuos
-        tue: maŋ
-        wed: gask
-        thu: duor
-        fri: bear
-        sat: láv
       wide:
         sun: sotnabeaivi
         mon: vuossárga
@@ -60,16 +55,51 @@ datetime_formats:
         thu: duorasdat
         fri: bearjadat
         sat: lávvardat
+      abbreviated:
+        sun: sotn
+        mon: vuos
+        tue: maŋ
+        wed: gask
+        thu: duor
+        fri: bear
+        sat: láv
     stand-alone:
       narrow:
-        sun: S
         mon: V
         tue: M
         wed: G
         thu: D
         fri: B
         sat: L
-locale: se
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  day_periods:
+    format:
+      wide:
+        am: iđitbeaivet
+        pm: eahketbeaivet
+      abbreviated:
+        am: i.b.
+        pm: e.b.
+    stand-alone:
+      wide:
+        am: iđitbeaivi
+        pm: eahketbeaivi
+  eras:
+    names:
+      '0': ovdal Kristtusa
+      '1': maŋŋel Kristtusa
+    narrow:
+      '0': ooá
+      '1': oá
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v

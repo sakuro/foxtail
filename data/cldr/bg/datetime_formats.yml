@@ -1,20 +1,10 @@
 ---
+locale: bg
+generated_at: '2025-09-12T07:04:10Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': яну
-        '2': фев
-        '3': март
-        '4': апр
-        '5': май
-        '6': юни
-        '7': юли
-        '8': авг
-        '9': сеп
-        '10': окт
-        '11': ное
-        '12': дек
       wide:
         '1': януари
         '2': февруари
@@ -28,6 +18,19 @@ datetime_formats:
         '10': октомври
         '11': ноември
         '12': декември
+      abbreviated:
+        '1': яну
+        '2': фев
+        '3': март
+        '4': апр
+        '5': май
+        '6': юни
+        '7': юли
+        '8': авг
+        '9': сеп
+        '10': окт
+        '11': ное
+        '12': дек
     stand-alone:
       narrow:
         '1': я
@@ -44,14 +47,6 @@ datetime_formats:
         '12': д
   days:
     format:
-      abbreviated:
-        sun: нд
-        mon: пн
-        tue: вт
-        wed: ср
-        thu: чт
-        fri: пт
-        sat: сб
       wide:
         sun: неделя
         mon: понеделник
@@ -60,6 +55,14 @@ datetime_formats:
         thu: четвъртък
         fri: петък
         sat: събота
+      abbreviated:
+        sun: нд
+        mon: пн
+        tue: вт
+        wed: ср
+        thu: чт
+        fri: пт
+        sat: сб
     stand-alone:
       narrow:
         sun: н
@@ -69,6 +72,39 @@ datetime_formats:
         thu: ч
         fri: п
         sat: с
+  quarters:
+    format:
+      wide:
+        '1': 1. тримесечие
+        '2': 2. тримесечие
+        '3': 3. тримесечие
+        '4': 4. тримесечие
+      abbreviated:
+        '1': 1. трим.
+        '2': 2. трим.
+        '3': 3. трим.
+        '4': 4. трим.
+  day_periods:
+    format:
+      wide:
+        am: пр.об.
+        pm: сл.об.
+      abbreviated:
+        midnight: полунощ
+        am: am
+        pm: pm
+        morning1: сутринта
+        morning2: на обяд
+        afternoon1: следобед
+        evening1: вечерта
+        night1: през нощта
+  eras:
+    names:
+      '0': преди новата ера
+      '1': след новата ера
+    abbreviated:
+      '0': пр.н.е.
+      '1': сл.н.е.
   date_formats:
     full: EEEE, d MMMM y 'г'.
     long: d MMMM y 'г'.
@@ -79,7 +115,61 @@ datetime_formats:
     long: H:mm:ss 'ч'. z
     medium: H:mm:ss
     short: H:mm
-locale: bg
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'в' {0}"
+    long: "{1} 'в' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: h 'ч'. B
+      Bhm: h:mm 'ч'. B
+      Bhms: h:mm:ss 'ч'. B
+      EBhm: E, h:mm 'ч'. B
+      EBhms: E, h:mm:ss 'ч'. B
+      Ed: E, d
+      Ehm: E, h:mm 'ч'. a
+      EHm: E, HH:mm 'ч'.
+      Ehms: E, h:mm:ss 'ч'. a
+      EHms: E, HH:mm:ss 'ч'.
+      Gy: y 'г'. G
+      GyMd: dd.MM.y 'г'. GGGGG
+      GyMMM: MM.y 'г'. G
+      GyMMMd: d.MM.y 'г'. G
+      GyMMMEd: E, d.MM.y 'г'. G
+      GyMMMM: MMMM y 'г'. G
+      GyMMMMd: d MMMM y 'г'. G
+      GyMMMMEd: E, d MMMM y 'г'. G
+      h: h 'ч'. a
+      H: HH 'ч'.
+      hm: h:mm 'ч'. a
+      Hm: HH:mm 'ч'.
+      hms: h:mm:ss 'ч'. a
+      Hms: HH:mm:ss 'ч'.
+      hmsv: h:mm:ss 'ч'. a v
+      Hmsv: HH:mm:ss 'ч'. v
+      hmv: h:mm 'ч'. a v
+      Hmv: HH:mm 'ч'. v
+      Md: d.MM
+      MEd: E, d.MM
+      MMM: MM
+      MMMd: d.MM
+      MMMEd: E, d.MM
+      MMMM: LLLL
+      MMMMd: d MMMM
+      MMMMdd: d MMMM
+      MMMMEd: E, d MMMM
+      MMMMW: "'седмица' W 'от' MMMM"
+      ms: m:ss
+      "y": y 'г'.
+      yM: MM.y 'г'.
+      yMd: d.MM.y 'г'.
+      yMEd: E, d.MM.y 'г'.
+      yMMM: MM.y 'г'.
+      yMMMd: d.MM.y 'г'.
+      yMMMEd: E, d.MM.y 'г'.
+      yMMMM: MMMM y 'г'.
+      yMMMMd: d MMMM y 'г'.
+      yMMMMEd: E, d MMMM y 'г'.
+      yQQQ: QQQ y 'г'.
+      yQQQQ: QQQQ y 'г'.
+      yw: "'седмица' w 'от' Y 'г'."

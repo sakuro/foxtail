@@ -1,20 +1,10 @@
 ---
+locale: eo
+generated_at: '2025-09-12T07:04:12Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mar
-        '4': Apr
-        '5': Maj
-        '6': Jun
-        '7': Jul
-        '8': Aŭg
-        '9': Sep
-        '10': Okt
-        '11': Nov
-        '12': Dec
       wide:
         '1': Januaro
         '2': Februaro
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Oktobro
         '11': Novembro
         '12': Decembro
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': Maj
+        '6': Jun
+        '7': Jul
+        '8': Aŭg
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Dec
     stand-alone:
       narrow:
         '1': J
@@ -44,14 +47,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: di
-        mon: lu
-        tue: ma
-        wed: me
-        thu: ĵa
-        fri: ve
-        sat: sa
       wide:
         sun: dimanĉo
         mon: lundo
@@ -60,6 +55,14 @@ datetime_formats:
         thu: ĵaŭdo
         fri: vendredo
         sat: sabato
+      abbreviated:
+        sun: di
+        mon: lu
+        tue: ma
+        wed: me
+        thu: ĵa
+        fri: ve
+        sat: sa
     stand-alone:
       narrow:
         sun: d
@@ -69,17 +72,55 @@ datetime_formats:
         thu: ĵ
         fri: v
         sat: s
+  quarters:
+    format:
+      wide:
+        '1': 1-a jarkvarono
+        '2': 2-a jarkvarono
+        '3': 3-a jarkvarono
+        '4': 4-a jarkvarono
+      abbreviated:
+        '1': 1. jk.
+        '2': 2. jk.
+        '3': 3. jk.
+        '4': 4. jk.
+  day_periods:
+    format:
+      abbreviated:
+        am: atm
+        pm: ptm
+  eras:
+    names:
+      '0': antaŭ Kristo
+      '1': post Kristo
+    abbreviated:
+      '0': a.K.
+      '1': p.K.
   date_formats:
     full: EEEE, 'la' d-'a' 'de' MMMM y
     long: y-MMMM-dd
     medium: y-MMM-dd
     short: yy-MM-dd
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: eo
-generated_at: '2025-09-06T03:52:33+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'je' {0}"
+    long: "{1} 'je' {0}"
+    available_formats:
+      Gy: y G
+      GyMd: d MMM y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      MEd: E, MM-dd
+      MMM: MMM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: W-'a' 'semajno' 'de' MMMM
+      yMEd: E, y-MM-dd
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ 'de' y
+      yw: w-'a' 'semajno' 'de' Y

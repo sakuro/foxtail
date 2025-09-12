@@ -1,20 +1,10 @@
 ---
+locale: luo
+generated_at: '2025-09-12T07:04:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': DAC
-        '2': DAR
-        '3': DAD
-        '4': DAN
-        '5': DAH
-        '6': DAU
-        '7': DAO
-        '8': DAB
-        '9': DOC
-        '10': DAP
-        '11': DGI
-        '12': DAG
       wide:
         '1': Dwe mar Achiel
         '2': Dwe mar Ariyo
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Dwe mar Apar
         '11': Dwe mar gi achiel
         '12': Dwe mar Apar gi ariyo
+      abbreviated:
+        '1': DAC
+        '2': DAR
+        '3': DAD
+        '4': DAN
+        '5': DAH
+        '6': DAU
+        '7': DAO
+        '8': DAB
+        '9': DOC
+        '10': DAP
+        '11': DGI
+        '12': DAG
     stand-alone:
       narrow:
         '1': C
@@ -44,14 +47,6 @@ datetime_formats:
         '12': P
   days:
     format:
-      abbreviated:
-        sun: JMP
-        mon: WUT
-        tue: TAR
-        wed: TAD
-        thu: TAN
-        fri: TAB
-        sat: NGS
       wide:
         sun: Jumapil
         mon: Wuok Tich
@@ -60,26 +55,61 @@ datetime_formats:
         thu: Tich Ang’wen
         fri: Tich Abich
         sat: Ngeso
+      abbreviated:
+        sun: JMP
+        mon: WUT
+        tue: TAR
+        wed: TAD
+        thu: TAN
+        fri: TAB
+        sat: NGS
     stand-alone:
       narrow:
         sun: J
         mon: W
-        tue: T
         wed: T
-        thu: T
         fri: T
         sat: "N"
+  quarters:
+    format:
+      wide:
+        '1': nus mar nus 1
+        '2': nus mar nus 2
+        '3': nus mar nus 3
+        '4': nus mar nus 4
+      abbreviated:
+        '1': NMN1
+        '2': NMN2
+        '3': NMN3
+        '4': NMN4
+  day_periods:
+    format:
+      abbreviated:
+        am: OD
+        pm: OT
+  eras:
+    names:
+      '0': Kapok Kristo obiro
+      '1': Ka Kristo osebiro
+    abbreviated:
+      '0': BC
+      '1': AD
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: luo
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

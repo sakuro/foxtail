@@ -1,4 +1,7 @@
 ---
+locale: or
+generated_at: '2025-09-12T07:04:20Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -31,14 +34,6 @@ datetime_formats:
         '12': ଡି
   days:
     format:
-      abbreviated:
-        sun: ରବି
-        mon: ସୋମ
-        tue: ମଙ୍ଗଳ
-        wed: ବୁଧ
-        thu: ଗୁରୁ
-        fri: ଶୁକ୍ର
-        sat: ଶନି
       wide:
         sun: ରବିବାର
         mon: ସୋମବାର
@@ -47,6 +42,14 @@ datetime_formats:
         thu: ଗୁରୁବାର
         fri: ଶୁକ୍ରବାର
         sat: ଶନିବାର
+      abbreviated:
+        sun: ରବି
+        mon: ସୋମ
+        tue: ମଙ୍ଗଳ
+        wed: ବୁଧ
+        thu: ଗୁରୁ
+        fri: ଶୁକ୍ର
+        sat: ଶନି
     stand-alone:
       narrow:
         sun: ର
@@ -56,17 +59,68 @@ datetime_formats:
         thu: ଗୁ
         fri: ଶୁ
         sat: ଶ
+  quarters:
+    format:
+      wide:
+        '1': 1ମ ତ୍ରୟମାସ
+        '2': 2ୟ ତ୍ରୟମାସ
+        '3': 3ୟ ତ୍ରୟମାସ
+        '4': 4ର୍ଥ ତ୍ରୟମାସ
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': 3ୟ ତ୍ରୟମାସ
+        '4': 4ର୍ଥ ତ୍ରୟମାସ
+    stand-alone:
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+  day_periods:
+    stand-alone:
+      abbreviated:
+        am: ପୂର୍ବାହ୍ନ
+        pm: ଅପରାହ୍ନ
+  eras:
+    names:
+      '0': ସାମ୍ପ୍ରତିକ ଯୁଗ ପୂର୍ବରୁ
+      '1': ସାମ୍ପ୍ରତିକ ଯୁଗ
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
     medium: MMM d, y
     short: M/d/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: or
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{0} ଠାରେ {1}"
+    long: "{0} ଠାରେ {1}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: d E
+      Gy: y G
+      GyMd: M/d/y G
+      GyMMM: MMM y G
+      GyMMMd: MMM d, y G
+      GyMMMEd: E, MMM d, y G
+      Md: M/d
+      MEd: E, M/d
+      MMdd: dd-MM
+      MMMEd: E, MMM d
+      MMMMW: MMMM ର ସପ୍ତାହ W
+      yM: M/y
+      yMd: M/d/y
+      yMEd: E, M/d/y
+      yMM: MM-y
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y ର ସପ୍ତାହ w

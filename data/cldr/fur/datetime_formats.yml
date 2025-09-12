@@ -1,20 +1,10 @@
 ---
+locale: fur
+generated_at: '2025-09-12T07:04:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Zen
-        '2': Fev
-        '3': Mar
-        '4': Avr
-        '5': Mai
-        '6': Jug
-        '7': Lui
-        '8': Avo
-        '9': Set
-        '10': Otu
-        '11': Nov
-        '12': Dic
       wide:
         '1': Zenâr
         '2': Fevrâr
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Otubar
         '11': Novembar
         '12': Dicembar
+      abbreviated:
+        '1': Zen
+        '2': Fev
+        '3': Mar
+        '4': Avr
+        '5': Mai
+        '6': Jug
+        '7': Lui
+        '8': Avo
+        '9': Set
+        '10': Otu
+        '11': Nov
+        '12': Dic
     stand-alone:
       narrow:
         '1': Z
@@ -44,14 +47,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: dom
-        mon: lun
-        tue: mar
-        wed: mie
-        thu: joi
-        fri: vin
-        sat: sab
       wide:
         sun: domenie
         mon: lunis
@@ -60,6 +55,14 @@ datetime_formats:
         thu: joibe
         fri: vinars
         sat: sabide
+      abbreviated:
+        sun: dom
+        mon: lun
+        tue: mar
+        wed: mie
+        thu: joi
+        fri: vin
+        sat: sab
     stand-alone:
       narrow:
         sun: D
@@ -68,18 +71,47 @@ datetime_formats:
         wed: M
         thu: J
         fri: V
-        sat: S
+  quarters:
+    format:
+      wide:
+        '1': Prin trimestri
+        '2': Secont trimestri
+        '3': Tierç trimestri
+        '4': Cuart trimestri
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+  day_periods:
+    format:
+      abbreviated:
+        am: a.
+        pm: p.
+  eras:
+    abbreviated:
+      '0': pdC
+      '1': ddC
   date_formats:
     full: EEEE d 'di' MMMM 'dal' y
     long: d 'di' MMMM 'dal' y
     medium: dd/MM/y
     short: dd/MM/yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: fur
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: d E
+      Hm: H:mm
+      Md: d/M
+      MEd: E d/M
+      MMd: d/MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d 'di' MMMM
+      MMMMEd: E d MMMM
+      yM: M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMEd: E d MMM y
+      yMMMM: LLLL 'dal' y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

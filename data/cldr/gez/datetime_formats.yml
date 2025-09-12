@@ -1,4 +1,7 @@
 ---
+locale: gez
+generated_at: '2025-09-12T07:04:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -48,17 +51,22 @@ datetime_formats:
         thu: ሐ
         fri: ዓ
         sat: ቀ
+  day_periods:
+    format:
+      abbreviated:
+        am: ጽባሕ
+        pm: ምሴት
+  eras:
+    abbreviated:
+      '0': ዓ/ዓ
+      '1': ዓ/ም
   date_formats:
     full: EEEE፥ dd MMMM መዓልት y G
     long: dd MMMM y
     medium: dd-MMM-y
     short: dd/MM/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: gez
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

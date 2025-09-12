@@ -1,7 +1,23 @@
 ---
+locale: scn
+generated_at: '2025-09-12T07:04:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': jinnaru
+        '2': frivaru
+        '3': marzu
+        '4': aprili
+        '5': maju
+        '6': giugnu
+        '7': giugnettu
+        '8': agustu
+        '9': sittèmmiru
+        '10': uttùviru
+        '11': nuvèmmiru
+        '12': dicèmmiru
       abbreviated:
         '1': jin
         '2': fri
@@ -15,6 +31,7 @@ datetime_formats:
         '10': utt
         '11': nuv
         '12': dic
+    stand-alone:
       wide:
         '1': jinnaru
         '2': frivaru
@@ -28,7 +45,6 @@ datetime_formats:
         '10': uttùviru
         '11': nuvèmmiru
         '12': dicèmmiru
-    stand-alone:
       narrow:
         '1': J
         '2': F
@@ -42,21 +58,16 @@ datetime_formats:
         '10': U
         '11': "N"
         '12': D
-      wide:
-        '1': jinnaru
-        '2': frivaru
-        '3': marzu
-        '4': aprili
-        '5': maju
-        '6': giugnu
-        '7': giugnettu
-        '8': agustu
-        '9': sittèmmiru
-        '10': uttùviru
-        '11': nuvèmmiru
-        '12': dicèmmiru
   days:
     format:
+      wide:
+        sun: dumìnica
+        mon: lunnidìa
+        tue: martidìa
+        wed: mercuridìa
+        thu: jovidìa
+        fri: venniridìa
+        sat: sàbbatu
       abbreviated:
         sun: dum
         mon: lun
@@ -73,23 +84,15 @@ datetime_formats:
         thu: j
         fri: v
         sat: s
-      short:
-        sun: du
-        mon: lu
-        tue: ma
-        wed: me
-        thu: jo
-        fri: ve
-        sat: sa
-      wide:
-        sun: dumìnica
-        mon: lunnidìa
-        tue: martidìa
-        wed: mercuridìa
-        thu: jovidìa
-        fri: venniridìa
-        sat: sàbbatu
     stand-alone:
+      wide:
+        sun: dumìnica
+        mon: lunnidìa
+        tue: martidìa
+        wed: mercuridìa
+        thu: jovidìa
+        fri: venniridìa
+        sat: sàbbatu
       abbreviated:
         sun: dum
         mon: lun
@@ -106,33 +109,71 @@ datetime_formats:
         thu: j
         fri: v
         sat: s
-      short:
-        sun: du
-        mon: lu
-        tue: ma
-        wed: me
-        thu: jo
-        fri: ve
-        sat: sa
+  quarters:
+    format:
       wide:
-        sun: dumìnica
-        mon: lunnidìa
-        tue: martidìa
-        wed: mercuridìa
-        thu: jovidìa
-        fri: venniridìa
-        sat: sàbbatu
+        '1': 1ᵘ trimestri
+        '2': 2ᵘ trimestri
+        '3': 3ᵘ trimestri
+        '4': 4ᵘ trimestri
+      abbreviated:
+        '1': 1T
+        '2': 2T
+        '3': 3T
+        '4': 4T
+    stand-alone:
+      wide:
+        '1': 1ᵘ trimestri
+        '2': 2ᵘ trimestri
+        '3': 3ᵘ trimestri
+        '4': 4ᵘ trimestri
+      abbreviated:
+        '1': 1T
+        '2': 2T
+        '3': 3T
+        '4': 4T
+  eras:
+    names:
+      '0': prima di l’èbbica cumuni
+      '1': èbbica cumuni
+    abbreviated:
+      '0': p.E.C.
+      '1': E.C.
+    narrow:
+      '0': pEC
+      '1': EC
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: d/M/yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: scn
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: d/M/y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'simana' W 'di' MMMM"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ 'dû' y
+      yw: "'simana' w 'dû' Y"

@@ -1,4 +1,7 @@
 ---
+locale: gn
+generated_at: '2025-09-12T07:04:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -25,7 +28,8 @@ datetime_formats:
         thu: Arapo
         fri: Arapoteĩ
         sat: Arapokõi
-locale: gn
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

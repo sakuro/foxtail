@@ -1,7 +1,23 @@
 ---
+locale: gl
+generated_at: '2025-09-12T07:04:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': xaneiro
+        '2': febreiro
+        '3': marzo
+        '4': abril
+        '5': maio
+        '6': xuño
+        '7': xullo
+        '8': agosto
+        '9': setembro
+        '10': outubro
+        '11': novembro
+        '12': decembro
       abbreviated:
         '1': xan.
         '2': feb.
@@ -28,19 +44,6 @@ datetime_formats:
         '10': o.
         '11': n.
         '12': d.
-      wide:
-        '1': xaneiro
-        '2': febreiro
-        '3': marzo
-        '4': abril
-        '5': maio
-        '6': xuño
-        '7': xullo
-        '8': agosto
-        '9': setembro
-        '10': outubro
-        '11': novembro
-        '12': decembro
     stand-alone:
       narrow:
         '1': X
@@ -57,6 +60,14 @@ datetime_formats:
         '12': D
   days:
     format:
+      wide:
+        sun: domingo
+        mon: luns
+        tue: martes
+        wed: mércores
+        thu: xoves
+        fri: venres
+        sat: sábado
       abbreviated:
         sun: dom.
         mon: luns
@@ -73,22 +84,6 @@ datetime_formats:
         thu: x.
         fri: v.
         sat: s.
-      short:
-        sun: do.
-        mon: lu.
-        tue: ma.
-        wed: mé.
-        thu: xo.
-        fri: ve.
-        sat: sá.
-      wide:
-        sun: domingo
-        mon: luns
-        tue: martes
-        wed: mércores
-        thu: xoves
-        fri: venres
-        sat: sábado
     stand-alone:
       narrow:
         sun: D
@@ -97,18 +92,87 @@ datetime_formats:
         wed: M
         thu: X
         fri: V
-        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1.º trimestre
+        '2': 2.º trimestre
+        '3': 3.º trimestre
+        '4': 4.º trimestre
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+  day_periods:
+    format:
+      abbreviated:
+        midnight: da noite
+        am: a.m.
+        pm: p.m.
+        morning1: da madrugada
+        morning2: da mañá
+        afternoon1: do mediodía
+        evening1: da tarde
+        night1: da noite
+    stand-alone:
+      abbreviated:
+        midnight: medianoite
+        morning1: madrugada
+        morning2: mañá
+        afternoon1: mediodía
+        evening1: tarde
+        night1: noite
+  eras:
+    names:
+      '0': antes da era común
+      '1': da era común
+    abbreviated:
+      '0': a.e.c.
+      '1': e.c.
   date_formats:
     full: EEEE, d 'de' MMMM 'de' y
     long: d 'de' MMMM 'de' y
     medium: d 'de' MMM 'de' y
     short: dd/MM/yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: gl
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1}, {0}"
+    long: "{1}, {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      EBhm: E, h:mm B
+      EBhms: E, h:mm:ss B
+      Ed: E d
+      Ehm: E, h:mm a
+      EHm: E, HH:mm
+      Ehms: E, h:mm:ss a
+      EHms: E, HH:mm:ss
+      Gy: y G
+      GyMd: d/M/y GGGGG
+      GyMMM: MMM 'de' y G
+      GyMMMd: d 'de' MMM 'de' y G
+      GyMMMEd: E, d 'de' MMM 'de' y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E, d/M
+      MMdd: dd/MM
+      MMMd: d 'de' MMM
+      MMMEd: E, d 'de' MMM
+      MMMMd: d 'de' MMMM
+      MMMMEd: E, d 'de' MMMM
+      MMMMW: W.'ª' 'semana' 'de' MMMM
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMM: MM/y
+      yMMM: MMM 'de' y
+      yMMMd: d 'de' MMM 'de' y
+      yMMMEd: E, d 'de' MMM 'de' y
+      yMMMM: MMMM 'de' y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ 'de' y
+      yw: w.'ª' 'semana' 'de' Y

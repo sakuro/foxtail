@@ -1,644 +1,264 @@
 ---
+locale: tzm
+generated_at: '2025-09-12T07:03:49Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
-  scientific_formats:
-    standard: "#E0"
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
     AOA:
-      symbol: Kz
       display_names:
         other: Kwanza Unguli
-    ARS:
-      symbol: "$"
+        one: Kwanza Unguli
     AUD:
       symbol: A$
       display_names:
         other: Ḍular Usṭrali
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
+        one: Ḍular Usṭrali
     BWP:
-      symbol: P
       display_names:
         other: Pula Ubutswani
-    BZD:
-      symbol: "$"
+        one: Pula Ubutswani
     CAD:
       symbol: CA$
       display_names:
         other: Ḍular Ukanadi
-    CLP:
-      symbol: "$"
+        one: Ḍular Ukanadi
     CNY:
       symbol: CN¥
       display_names:
         other: Ywan Renminbi Ucinwi
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
+        one: Ywan Renminbi Ucinwi
     EGP:
-      symbol: E£
       display_names:
         other: Junih Umiṣṛi
-    ESP:
-      symbol: "₧"
+        one: Junih Umiṣṛi
     EUR:
-      symbol: "€"
       display_names:
         other: Uṛu
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
+        one: Uṛu
     GBP:
-      symbol: "£"
       display_names:
         other: Junih Ubriṭani
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
+        one: Junih Ubriṭani
     HKD:
       symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
     INR:
-      symbol: "₹"
       display_names:
         other: Rupi Uḥindi
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
+        one: Rupi Uḥindi
     JPY:
       symbol: JP¥
       display_names:
         other: Yann Ujappuni
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
+        one: Yann Ujappuni
     KMF:
-      symbol: CF
       display_names:
         other: Frank Uqumuri
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
+        one: Frank Uqumuri
     LRD:
-      symbol: "$"
       display_names:
         other: Ḍular Ulibiri
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
+        one: Ḍular Ulibiri
     MGA:
-      symbol: Ar
       display_names:
         other: Aryari Umalɣaci
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
+        one: Aryari Umalɣaci
     MUR:
-      symbol: Rs
       display_names:
         other: Rupi Umurisi
+        one: Rupi Umurisi
     MXN:
       symbol: MX$
-    MYR:
-      symbol: RM
     NAD:
-      symbol: "$"
       display_names:
         other: Ḍular Unamibi
+        one: Ḍular Unamibi
     NGN:
-      symbol: "₦"
       display_names:
         other: Nayra Unijiri
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
+        one: Nayra Unijiri
     NZD:
       symbol: NZ$
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
     RWF:
-      symbol: RF
       display_names:
         other: Frank Urwandi
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
+        one: Frank Urwandi
     SHP:
-      symbol: "£"
       display_names:
         other: Junih Usantehilini
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
+        one: Junih Usantehilini
     STN:
-      symbol: Db
       display_names:
         other: Dubra Usawṭumi
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
+        one: Dubra Usawṭumi
     TRY:
       symbol: "₺"
-    TTD:
-      symbol: "$"
     TWD:
       symbol: NT$
-    UAH:
-      symbol: "₴"
     USD:
       symbol: US$
       display_names:
         other: Ḍular Umirikani
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
+        one: Ḍular Umirikani
     XAF:
-      symbol: FCFA
       display_names:
         other: Frank CFA (BEAC)
+        one: Frank CFA (BEAC)
     XCD:
       symbol: EC$
-    XCG:
-      symbol: Cg.
     XOF:
-      symbol: F CFA
       display_names:
         other: Frank CFA (BCEAO)
-    XPF:
-      symbol: CFPF
-    XXX:
-      symbol: "¤"
+        one: Frank CFA (BCEAO)
     ZAR:
-      symbol: R
       display_names:
         other: Rand Ufriki Unzul
+        one: Rand Ufriki Unzul
     ZMW:
-      symbol: ZK
       display_names:
         other: Kwača Uzambi
+        one: Kwača Uzambi
     AED:
       display_names:
         other: Derhem Uymarati
+        one: Derhem Uymarati
     BHD:
       display_names:
         other: Ḍinar Ubaḥrayni
+        one: Ḍinar Ubaḥrayni
     BIF:
       display_names:
         other: Frank Uburundi
+        one: Frank Uburundi
     CDF:
       display_names:
         other: Frank Ukunguli
+        one: Frank Ukunguli
     CHF:
       display_names:
         other: Frank Uswisri
+        one: Frank Uswisri
     CVE:
       display_names:
         other: Iskudu Ukabuvirdyani
+        one: Iskudu Ukabuvirdyani
     DJF:
       display_names:
         other: Frank Uğibuti
+        one: Frank Uğibuti
     DZD:
       display_names:
         other: Ḍinar Udzayri
+        one: Ḍinar Udzayri
     ERN:
       display_names:
         other: Nakfa Uyritri
+        one: Nakfa Uyritri
     ETB:
       display_names:
         other: Birr Uyityuppi
+        one: Birr Uyityuppi
     GHC:
       display_names:
         other: Sidi Uɣani
+        one: Sidi Uɣani
     GMD:
       display_names:
         other: Dalasi Agambi
+        one: Dalasi Agambi
     GNS:
       display_names:
         other: Frank Uɣini
+        one: Frank Uɣini
     KES:
       display_names:
         other: Cillin Ukini
+        one: Cillin Ukini
     LSL:
       display_names:
         other: Luti Ulusuṭi
+        one: Luti Ulusuṭi
     LYD:
       display_names:
         other: Ḍinar Ulibi
+        one: Ḍinar Ulibi
     MAD:
       display_names:
         other: Derhem Umeṛṛuki
+        one: Derhem Umeṛṛuki
     MRO:
       display_names:
         other: Uqiyya Umuritani (1973–2017)
+        one: Uqiyya Umuritani (1973–2017)
     MRU:
       display_names:
         other: Uqiyya Umuritani
+        one: Uqiyya Umuritani
     MWK:
       display_names:
         other: Kwača Umalawi
+        one: Kwača Umalawi
     MZM:
       display_names:
         other: Mitikal Umuzambiqi
+        one: Mitikal Umuzambiqi
     SAR:
       display_names:
         other: Ryal Usaεudi
+        one: Ryal Usaεudi
     SCR:
       display_names:
         other: Rupi Usicili
+        one: Rupi Usicili
     SDG:
       display_names:
         other: Junih Usudani
+        one: Junih Usudani
     SDP:
       display_names:
         other: Junih Usudani (1956–2007)
+        one: Junih Usudani (1956–2007)
     SLE:
       display_names:
         other: Lyun Usirralyuni
+        one: Lyun Usirralyuni
     SLL:
       display_names:
         other: Lyun Usirralyuni (1964—2022)
+        one: Lyun Usirralyuni (1964—2022)
     SOS:
       display_names:
         other: Cilin Uṣumali
+        one: Cilin Uṣumali
     STD:
       display_names:
         other: Dubra Usawṭumi (1977–2017)
+        one: Dubra Usawṭumi (1977–2017)
     SZL:
       display_names:
         other: Lilanjini Uswazi
+        one: Lilanjini Uswazi
     TND:
       display_names:
         other: Ḍinar Utunsi
+        one: Ḍinar Utunsi
     TZS:
       display_names:
         other: Cilin Uṭanzani
+        one: Cilin Uṭanzani
     UGX:
       display_names:
         other: Cilin Uɣandi (1966–1987)
+        one: Cilin Uɣandi (1966–1987)
     ZMK:
       display_names:
         other: Kwača Uzambi (1968–2012)
+        one: Kwača Uzambi (1968–2012)
     ZWD:
       display_names:
         other: Ḍular Uzimbabwi
-locale: tzm
-generated_at: '2025-09-10T23:53:19+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0
+        one: Ḍular Uzimbabwi

@@ -1,20 +1,10 @@
 ---
+locale: mi
+generated_at: '2025-09-12T07:04:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Hān
-        '2': Pēp
-        '3': Māe
-        '4': Āpe
-        '5': Mei
-        '6': Hun
-        '7': Hūr
-        '8': Āku
-        '9': Hep
-        '10': Oke
-        '11': Noe
-        '12': Tīh
       wide:
         '1': Hānuere
         '2': Pēpuere
@@ -28,20 +18,20 @@ datetime_formats:
         '10': Oketopa
         '11': Noema
         '12': Tīhema
+      abbreviated:
+        '1': Hān
+        '2': Pēp
+        '3': Māe
+        '4': Āpe
+        '5': Mei
+        '6': Hun
+        '7': Hūr
+        '8': Āku
+        '9': Hep
+        '10': Oke
+        '11': Noe
+        '12': Tīh
     stand-alone:
-      narrow:
-        '1': H
-        '2': P
-        '3': M
-        '4': Ā
-        '5': M
-        '6': H
-        '7': H
-        '8': Ā
-        '9': H
-        '10': O
-        '11': "N"
-        '12': T
       wide:
         '1': Hānuere
         '2': Pēpuere
@@ -55,24 +45,21 @@ datetime_formats:
         '10': Oketopa
         '11': Noema
         '12': Tīhema
+      narrow:
+        '1': H
+        '2': P
+        '3': M
+        '4': Ā
+        '5': M
+        '6': H
+        '7': H
+        '8': Ā
+        '9': H
+        '10': O
+        '11': "N"
+        '12': T
   days:
     format:
-      abbreviated:
-        sun: Rāt
-        mon: Man
-        tue: Tūr
-        wed: Wen
-        thu: Tāi
-        fri: Par
-        sat: Rāh
-      short:
-        sun: Rāt
-        mon: Man
-        tue: Tū
-        wed: Wen
-        thu: Tāi
-        fri: Par
-        sat: Rāh
       wide:
         sun: Rātapu
         mon: Mane
@@ -81,15 +68,31 @@ datetime_formats:
         thu: Tāite
         fri: Paraire
         sat: Rāhoroi
+      abbreviated:
+        sun: Rāt
+        mon: Man
+        tue: Tūr
+        wed: Wen
+        thu: Tāi
+        fri: Par
+        sat: Rāh
     stand-alone:
       narrow:
         sun: Rt
-        mon: M
-        tue: T
-        wed: W
-        thu: T
         fri: P
         sat: Rh
+  quarters:
+    format:
+      wide:
+        '1': Hauwhā tuatahi
+        '2': Hauwhā tuarua
+        '3': Hauwhā tuatoru
+        '4': Hauwhā tuawhā
+      abbreviated:
+        '1': HW1
+        '2': HW2
+        '3': HW3
+        '4': HW4
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -100,7 +103,32 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: mi
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E, d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd-MM
+      MEd: E, dd-MM
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: "'wiki' W 'o' MMMM"
+      yM: MM-y
+      yMd: dd-MM-y
+      yMEd: E, dd-MM-y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'wiki' w 'o' Y"

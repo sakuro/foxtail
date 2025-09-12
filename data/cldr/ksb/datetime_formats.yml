@@ -1,20 +1,10 @@
 ---
+locale: ksb
+generated_at: '2025-09-12T07:04:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mac
-        '4': Apr
-        '5': Mei
-        '6': Jun
-        '7': Jul
-        '8': Ago
-        '9': Sep
-        '10': Okt
-        '11': Nov
-        '12': Des
       wide:
         '1': Januali
         '2': Febluali
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Oktoba
         '11': Novemba
         '12': Desemba
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mac
+        '4': Apr
+        '5': Mei
+        '6': Jun
+        '7': Jul
+        '8': Ago
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Des
     stand-alone:
       narrow:
         '1': J
@@ -44,14 +47,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Jpi
-        mon: Jtt
-        tue: Jmn
-        wed: Jtn
-        thu: Alh
-        fri: Iju
-        sat: Jmo
       wide:
         sun: Jumaapii
         mon: Jumaatatu
@@ -60,6 +55,14 @@ datetime_formats:
         thu: Alhamisi
         fri: Ijumaa
         sat: Jumaamosi
+      abbreviated:
+        sun: Jpi
+        mon: Jtt
+        tue: Jmn
+        wed: Jtn
+        thu: Alh
+        fri: Iju
+        sat: Jmo
     stand-alone:
       narrow:
         sun: '2'
@@ -69,17 +72,46 @@ datetime_formats:
         thu: A
         fri: I
         sat: '1'
+  quarters:
+    format:
+      wide:
+        '1': Lobo ya bosi
+        '2': Lobo ya mbii
+        '3': Lobo ya nnd’atu
+        '4': Lobo ya nne
+      abbreviated:
+        '1': L1
+        '2': L2
+        '3': L3
+        '4': L4
+  day_periods:
+    format:
+      abbreviated:
+        am: makeo
+        pm: nyiaghuo
+  eras:
+    names:
+      '0': Kabla ya Klisto
+      '1': Baada ya Klisto
+    abbreviated:
+      '0': KK
+      '1': BK
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: ksb
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

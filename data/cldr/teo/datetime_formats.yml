@@ -1,20 +1,10 @@
 ---
+locale: teo
+generated_at: '2025-09-12T07:04:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Rar
-        '2': Muk
-        '3': Kwa
-        '4': Dun
-        '5': Mar
-        '6': Mod
-        '7': Jol
-        '8': Ped
-        '9': Sok
-        '10': Tib
-        '11': Lab
-        '12': Poo
       wide:
         '1': Orara
         '2': Omuk
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Otibar
         '11': Olabor
         '12': Opoo
+      abbreviated:
+        '1': Rar
+        '2': Muk
+        '3': Kwa
+        '4': Dun
+        '5': Mar
+        '6': Mod
+        '7': Jol
+        '8': Ped
+        '9': Sok
+        '10': Tib
+        '11': Lab
+        '12': Poo
     stand-alone:
       narrow:
         '1': R
@@ -44,14 +47,6 @@ datetime_formats:
         '12': P
   days:
     format:
-      abbreviated:
-        sun: Jum
-        mon: Bar
-        tue: Aar
-        wed: Uni
-        thu: Ung
-        fri: Kan
-        sat: Sab
       wide:
         sun: Nakaejuma
         mon: Nakaebarasa
@@ -60,6 +55,14 @@ datetime_formats:
         thu: Nakaung’on
         fri: Nakakany
         sat: Nakasabiti
+      abbreviated:
+        sun: Jum
+        mon: Bar
+        tue: Aar
+        wed: Uni
+        thu: Ung
+        fri: Kan
+        sat: Sab
     stand-alone:
       narrow:
         sun: J
@@ -68,18 +71,46 @@ datetime_formats:
         wed: U
         thu: U
         fri: K
-        sat: S
+  quarters:
+    format:
+      wide:
+        '1': Akwota abe
+        '2': Akwota Aane
+        '3': Akwota auni
+        '4': Akwota Aung’on
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+  day_periods:
+    format:
+      abbreviated:
+        am: Taparachu
+        pm: Ebongi
+  eras:
+    names:
+      '0': Kabla ya Christo
+      '1': Baada ya Christo
+    abbreviated:
+      '0': KK
+      '1': BK
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: teo
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

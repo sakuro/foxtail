@@ -1,10 +1,9 @@
 ---
 locale: prg
+generated_at: '2025-09-12T07:00:20Z'
+cldr_version: '46'
 plural_rules:
   zero: n % 10 = 0 or n % 100 = 11..19 or v = 2 and f % 100 = 11..19
   one: n % 10 = 1 and n % 100 != 11 or v = 2 and f % 10 = 1 and f % 100 != 11 or v
     != 2 and f % 10 = 1
   other: ''
-generated_at: '2025-09-06T03:52:16+09:00'
-cldr_version: v46
-source: Unicode CLDR

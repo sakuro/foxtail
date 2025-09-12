@@ -1,20 +1,10 @@
 ---
+locale: tig
+generated_at: '2025-09-12T07:04:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ጃንዩ
-        '2': ፌብሩ
-        '3': ማርች
-        '4': ኤፕረ
-        '5': ሜይ
-        '6': ጁን
-        '7': ጁላይ
-        '8': ኦገስ
-        '9': ሴፕቴ
-        '10': ኦክተ
-        '11': ኖቬም
-        '12': ዲሴም
       wide:
         '1': ጃንዩወሪ
         '2': ፌብሩወሪ
@@ -28,6 +18,19 @@ datetime_formats:
         '10': ኦክተውበር
         '11': ኖቬምበር
         '12': ዲሴምበር
+      abbreviated:
+        '1': ጃንዩ
+        '2': ፌብሩ
+        '3': ማርች
+        '4': ኤፕረ
+        '5': ሜይ
+        '6': ጁን
+        '7': ጁላይ
+        '8': ኦገስ
+        '9': ሴፕቴ
+        '10': ኦክተ
+        '11': ኖቬም
+        '12': ዲሴም
     stand-alone:
       narrow:
         '1': ጃ
@@ -44,14 +47,6 @@ datetime_formats:
         '12': ዲ
   days:
     format:
-      abbreviated:
-        sun: ሰ/ዓ
-        mon: ሰኖ
-        tue: ታላሸ
-        wed: ኣረር
-        thu: ከሚሽ
-        fri: ጅምዓ
-        sat: ሰ/ን
       wide:
         sun: ሰንበት ዓባይ
         mon: ሰኖ
@@ -60,6 +55,14 @@ datetime_formats:
         thu: ከሚሽ
         fri: ጅምዓት
         sat: ሰንበት ንኢሽ
+      abbreviated:
+        sun: ሰ/ዓ
+        mon: ሰኖ
+        tue: ታላሸ
+        wed: ኣረር
+        thu: ከሚሽ
+        fri: ጅምዓ
+        sat: ሰ/ን
     stand-alone:
       narrow:
         sun: ሰ
@@ -69,17 +72,22 @@ datetime_formats:
         thu: ከ
         fri: ጅ
         sat: ሰ
+  day_periods:
+    format:
+      wide:
+        am: ቀደም ሰርምዕል
+        pm: ሓቆ ስርምዕል
+  eras:
+    abbreviated:
+      '0': ዓ/ዓ
+      '1': ዓ/ም
   date_formats:
     full: EEEE፡ dd MMMM ዮም y G
     long: dd MMMM y
     medium: dd-MMM-y
     short: dd/MM/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: tig
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

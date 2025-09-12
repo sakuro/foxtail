@@ -1,40 +1,27 @@
 ---
+locale: yrl
+generated_at: '2025-09-12T07:04:02Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
-  scientific_formats:
-    standard: "#E0"
+    standard:
   currencies:
     AFN:
-      symbol: "؋"
       display_names:
         other: Afegani-ita afegawara
         one: Afegani afegawara
     AMD:
-      symbol: "֏"
       display_names:
         other: Darã-ita arimeniawara
         one: Darã arimeniawara
     AOA:
-      symbol: Kz
       display_names:
         other: Kuãsa-ita ãgulawara
         one: Kuãsa ãgulawara
     ARS:
-      symbol: "$"
       display_names:
         other: Pusewa-ita argẽtinu-ita
         one: Pusewa argẽtinu
@@ -44,32 +31,26 @@ number_formats:
         other: Dóra-ita Ausitaraliwara
         one: Dóra Ausitaraliwara
     AZN:
-      symbol: "₼"
       display_names:
         other: Manati-ita aseri-ita
         one: Manati aseri
     BAM:
-      symbol: KM
       display_names:
         other: Marku yumuyerewa-ita Businiya-Eseguwinawara
         one: Marku yumuyerewa Businiya-Eseguwinawara
     BBD:
-      symbol: "$"
       display_names:
         other: Dóra-ita barbaduwara
         one: Dóra barbaduwara
     BDT:
-      symbol: "৳"
       display_names:
         other: Taka-ita Bẽgariwara
         one: Taka Bẽgariwara
     BMD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Bemudawara
         one: Dóra Bemudawara
     BND:
-      symbol: "$"
       display_names:
         other: Dóra-ita Buruneiwara
         one: Dóra Buruneiwara
@@ -79,22 +60,18 @@ number_formats:
         other: Buriwiyanu-ita Buríwia suí
         one: Buriwiyanu Buriwia suí
     BRL:
-      symbol: R$
       display_names:
         other: Reau-ita Brasiuwara
         one: Reau Brasiuwara
     BSD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Bayamawara
         one: Dóra Bayamawara
     BWP:
-      symbol: P
       display_names:
         other: Pura-ita Butisuwanawara
         one: Pura Butisuwanawara
     BZD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Belisiwara
         one: Dóra Belisiwara
@@ -104,7 +81,6 @@ number_formats:
         other: Dóra-ita Kanadáwara
         one: Dóra Kanadáwara
     CLP:
-      symbol: "$"
       display_names:
         other: Pusewa-ita Xiriwara
         one: Pusewa Xiriwara
@@ -114,97 +90,79 @@ number_formats:
         other: Yuwã-ita Xinawara
         one: Yuwã Xinawara
     COP:
-      symbol: "$"
+      symbol: COP
       display_names:
         other: Pusewa-ita Kurũbiyawara
         one: Peso Kurũbiyawara
     CRC:
-      symbol: "₡"
       display_names:
         other: Kurũ-ita Kupe-Rikawara
         one: Kurũ Kupe-Rikawara
     CUC:
-      symbol: "$"
       display_names:
         other: Pusewa-ita Kubawara Yumuyerewa
         one: Pusewa Kubawara Yumuyerewa
     CUP:
-      symbol: "$"
       display_names:
         other: Pusewa-ita Kubawara
         one: Pusewa Kubawara
     CZK:
-      symbol: Kč
       display_names:
         other: Kuruwa-ita Xekawara
         one: Kuruwa Xekawara
     DKK:
-      symbol: kr
       display_names:
         other: Kuruwa-ita Dinamakawara
         one: Kuruwa Dinamakawara
     DOP:
-      symbol: "$"
       display_names:
         other: Pusewa-ita Dominikawara
         one: Pusewa Dominikawara
     EGP:
-      symbol: E£
       display_names:
         other: Ribara-ita Egituwara
         one: Ribara Egituwara
     ESP:
-      symbol: "₧"
       display_names:
         other: Peseta-ita Isipãyawara
         one: Peseta Isipãyawara
     EUR:
-      symbol: "€"
       display_names:
         other: Euru-ita
         one: Euru
     FJD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Fiyiwara
         one: Dóra Fiyiwara
     FKP:
-      symbol: "£"
       display_names:
         other: Ribara-ita Mawinawara
         one: Ribara Mawinawara
     GBP:
-      symbol: "£"
       display_names:
         other: Ribara-ita esiterina
         one: Ribara esiterina
     GEL:
-      symbol: "₾"
       display_names:
         other: Rari-ita geugiyanu
         one: Rari geugiyanu
     GHS:
-      symbol: GH₵
       display_names:
         other: Sedi ganei-ita
         one: Sedi ganei
     GIP:
-      symbol: "£"
       display_names:
         other: Ribara-ita Gibarautáwara
         one: Ribara Gibarautáwara
     GNF:
-      symbol: FG
       display_names:
         other: Farãku-ita Ginewara
         one: Farãku Ginewara
     GTQ:
-      symbol: Q
       display_names:
         other: Ketisau-ita Guatemawara
         one: Ketisau Guatemawara
     GYD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Gianawara
         one: Dóra Gianawara
@@ -214,42 +172,34 @@ number_formats:
         other: Dóra-ita Hũgi-Kũgiwara
         one: Dóra Hũgi-Kũgiwara
     HNL:
-      symbol: L
       display_names:
         other: Ribara-ita Ũdurawara
         one: Ribara Ũdurawara
     HRK:
-      symbol: kn
       display_names:
         other: Kuna-ita Kuruata
         one: Kuna Kuruata
     HUF:
-      symbol: Ft
       display_names:
         other: Fulurĩ-ita Ũgiriyawara
         one: Fulurĩ Ũgiriyawara
     IDR:
-      symbol: Rp
       display_names:
         other: Rupiya-ita Ĩdunesiyawara
         one: Rupiya Ĩdunesiyawara
     ILS:
-      symbol: "₪"
       display_names:
         other: Pisusawa Xekeu-ita Isiraelẽsi
         one: Pisusawa Xekeu Isiraelẽsi
     INR:
-      symbol: "₹"
       display_names:
         other: Rupiya-ita Ĩdiawara
         one: Rupiya Ĩdiawara
     ISK:
-      symbol: kr
       display_names:
         other: Kuruwa-ita Isirãdiawara
         one: Kuruwa Isirãdiawara
     JMD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Yamaikawara
         one: Dóra Yamaikawara
@@ -259,87 +209,70 @@ number_formats:
         other: Iyene-ita Nipõwara
         one: Iyene Nipõwara
     KGS:
-      symbol: "⃀"
       display_names:
         other: Sumu-ita Kirigiretãmawara
         one: Sumu Kirigiretãmawara
     KHR:
-      symbol: "៛"
       display_names:
         other: Rieu-ita Kãbuyawara
         one: Rieu Kãbuyawara
     KMF:
-      symbol: CF
       display_names:
         other: Farãku-ita Kumurewara
         one: Farãku Kumurewara
     KPW:
-      symbol: "₩"
       display_names:
         other: Wõ-ita nuti-kureyanu
         one: Wõ nuti-kureyanu
     KRW:
-      symbol: "₩"
       display_names:
         other: Wõ-ita su-kureyanu
         one: Wõ su-kureyanu
     KYD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Kaimãwara
         one: Dóra Kaimãwara
     KZT:
-      symbol: "₸"
       display_names:
         other: Tẽge-ita Kasakiwara
         one: Tẽge Kasakiwara
     LAK:
-      symbol: "₭"
       display_names:
         other: Kipi-ita Rawosiwara
         one: Kipi Rawosiwara
     LBP:
-      symbol: L£
       display_names:
         other: Ribara-ita Ribanuwara
         one: Ribara Ribanuwara
     LKR:
-      symbol: Rs
       display_names:
         other: Rupiya-ita Sirirãkawara
         one: Rupiya Sirirãkawara
     LRD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Riberiyawara
         one: Dóra Riberiyawara
     LTL:
-      symbol: Lt
       display_names:
         other: Rita-ita Rituwãniwara
         one: Rita Rituwãniwara
     LVL:
-      symbol: Ls
       display_names:
         other: Rati-ita Retuniyawara
         one: Rati Retuniyawara
     MGA:
-      symbol: Ar
       display_names:
         other: Ariyari-ita maugaxi-ita
         one: Ariyari maugaxi
     MMK:
-      symbol: K
       display_names:
         other: Kiyati-ita Miayamawara
         one: Kiyati Miayamawara
     MNT:
-      symbol: "₮"
       display_names:
         other: Tugiriki-ita Mũguriyawara
         one: Tugiriki Mũguriyawara
     MUR:
-      symbol: Rs
       display_names:
         other: Rupiya-ita Maurisiwara
         one: Rupiya Maurisiwara
@@ -349,32 +282,26 @@ number_formats:
         other: Pesu-ita Mexikuwara
         one: Pusewa Mexikuwara
     MYR:
-      symbol: RM
       display_names:
         other: Rĩgiti-ita malayu-ita
         one: Rĩgiti malayu
     NAD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Namibiyawara
         one: Dóra Namibiyawara
     NGN:
-      symbol: "₦"
       display_names:
         other: Naira-ita Nigeriyawara
         one: Naira Nigeriyawara
     NIO:
-      symbol: C$
       display_names:
         other: Koduba-ita Nikaraguwara
         one: Koduba Nikaraguwara
     NOK:
-      symbol: kr
       display_names:
         other: Kuruwa-ita Nuruwegawara
         one: Kuruwa Nuruwegawara
     NPR:
-      symbol: Rs
       display_names:
         other: Rupiya-ita Nepauwara
         one: Rupiya nNpauwara
@@ -389,17 +316,14 @@ number_formats:
         other: Pusewa-ita Firipinawara
         one: Pusewa Firipinawara
     PKR:
-      symbol: Rs
       display_names:
         other: Rupiya-ita Pakiretãwara
         one: Rupiya Pakiretãwara
     PLN:
-      symbol: zł
       display_names:
         other: Ziroti-ita Puruniyawara
         one: Ziroti Puruniyawara
     PYG:
-      symbol: "₲"
       display_names:
         other: Guwarani-ita Paraguwaiwara
         one: Guwarani Paraguwaiwara
@@ -409,47 +333,38 @@ number_formats:
         other: Leu-ita Rumeniyawara
         one: Leu Rumeniyawara
     RUB:
-      symbol: "₽"
       display_names:
         other: Ruburu-ita Rusiyawara
         one: Ruburu Rusiyawara
     RWF:
-      symbol: RF
       display_names:
         other: Farãku-ita Ruãdawara
         one: Farãku Ruãdawara
     SBD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Kapuãma-ita Sarumũ yara
         one: Dóra Kapuãma-ita Sarumũ yara
     SEK:
-      symbol: kr
       display_names:
         other: Kuruwa-ita Suwésiyawara
         one: Kuruwa Suwésiyawara
     SGD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Sĩgapurawara
         one: Dóra Sĩgapurawara
     SHP:
-      symbol: "£"
       display_names:
         other: Ribara-ita Sãta Herena yara
         one: Ribara Sãta Herena yara
     SRD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Surinãmiyawara
         one: Dóra Surinãmiyawara
     SSP:
-      symbol: "£"
       display_names:
         other: Ribara-ita Su-Sudãniyawara
         one: Ribara Su-Sudãniyawara
     STN:
-      symbol: Db
       display_names:
         other: Dobara-ita Sãtu Tumé asuí Pirĩsipi yara
         one: Dobara Sãtu Tumé asuí Pirĩsipi yara
@@ -459,12 +374,10 @@ number_formats:
         other: Ribara-ita Síriya
         one: Ribara Síriya
     THB:
-      symbol: "฿"
       display_names:
         other: Baht-ita Tairetãmawara
         one: Baht Tairetãmawara
     TOP:
-      symbol: T$
       display_names:
         other: Pawãga-ita Tũgawara
         one: Pawãga Tũgawara
@@ -474,7 +387,6 @@ number_formats:
         other: Rira-ita turka-ita
         one: Rira turka
     TTD:
-      symbol: "$"
       display_names:
         other: Dóra-ita Tirinidadi asuí Tobagu yara
         one: Dóra Tirinidadi asuí Tobagu yara
@@ -484,7 +396,6 @@ number_formats:
         other: Pisasuwa-ita Dóra-ita Taiwãwara
         one: Pisasuwa Dóra Taiwãwara
     UAH:
-      symbol: "₴"
       display_names:
         other: Hiryuwiniya-ita Ukaraniyãwara
         one: Hiryuwiniya Ukaraniyãwara
@@ -494,17 +405,14 @@ number_formats:
         other: Dóra-ita Mexikuwara
         one: Dóra Mexikuwara
     UYU:
-      symbol: "$"
       display_names:
         other: Pusewa-ita Uruguwaiwara
         one: Pusewa Uruguwaiwara
     VEF:
-      symbol: Bs
       display_names:
         other: Buriwari-ita Wenesuerawara (2008–2018)
         one: Buriwari Wenesuerawara (2008–2018)
     VND:
-      symbol: "₫"
       display_names:
         other: Dong-ita wietinamita-ita
         one: Dong wietinamita
@@ -518,8 +426,6 @@ number_formats:
       display_names:
         other: Dóra-ita Karibi Uriẽtawara yara
         one: Dóra Karibi Uriẽtawara yara
-    XCG:
-      symbol: Cg.
     XOF:
       symbol: CFA
       display_names:
@@ -531,12 +437,10 @@ number_formats:
         other: Farãku CFP-ita
         one: Farãku CFP
     XXX:
-      symbol: "¤"
       display_names:
         other: "(moweda-ita ũbawaukua awa-ita)"
         one: "(yepesawa munetariya ũbawaukua awa)"
     ZAR:
-      symbol: R
       display_names:
         other: Rãdi-ita Su-Afirikawara
         one: Rãdi Su-Afirikawara
@@ -749,6 +653,7 @@ number_formats:
     CSD:
       display_names:
         other: Dinari Kuxiímawara Sewiyawara
+        one: Dinari Sewiyawara (2002–2006)
     CSK:
       display_names:
         other: Kuruwa Kirĩbawa-ita Xekusirowaka
@@ -864,6 +769,7 @@ number_formats:
     ILR:
       display_names:
         other: Xekeu Kuxiímawara Isirayerita
+        one: Xekeu Kuxiímawara Isirayerita
     IQD:
       display_names:
         other: Dinari-ita Irakiwara
@@ -875,6 +781,7 @@ number_formats:
     ISJ:
       display_names:
         other: Kuruwa Kuxiímawara Isirãdiawara
+        one: Kuruwa Kuxiímawara Isirãdiawara
     ITL:
       display_names:
         other: Rira-ita Itariyawara
@@ -1006,6 +913,7 @@ number_formats:
     MZM:
       display_names:
         other: Metikau Kuxiímawara Musãbikiwara
+        one: Metikau Musãbikiwara (1980–2006)
     MZN:
       display_names:
         other: Metikau-ita Musãbikiwara
@@ -1083,6 +991,7 @@ number_formats:
     SDD:
       display_names:
         other: Dinari Kuxiímawara Sudawara
+        one: Dinari Sudawara (1992–2007)
     SDG:
       display_names:
         other: Ribara-ita Sudawara
@@ -1200,7 +1109,7 @@ number_formats:
         other: Buriwari-ita Wenesuerawara (1871–2008)
         one: Buriwari Wenesuerawara (1871–2008)
     VES:
-      symbol: Bs.S
+      symbol: VES
       display_names:
         other: Buriwari-ita Wenesuerawara
         one: Buriwari Wenesuerawara
@@ -1324,262 +1233,3 @@ number_formats:
       display_names:
         other: Dóra-ita Sĩbabuwewara (2008)
         one: Dóra Sĩbabuwewara (2008)
-locale: yrl
-generated_at: '2025-09-10T23:53:20+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0

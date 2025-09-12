@@ -1,4 +1,7 @@
 ---
+locale: lkt
+generated_at: '2025-09-12T07:04:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -17,14 +20,6 @@ datetime_formats:
         '12': Tȟahékapšuŋ Wí
   days:
     format:
-      narrow:
-        sun: A
-        mon: W
-        tue: "N"
-        wed: "Y"
-        thu: T
-        fri: Z
-        sat: O
       wide:
         sun: Aŋpétuwakȟaŋ
         mon: Aŋpétuwaŋži
@@ -33,6 +28,14 @@ datetime_formats:
         thu: Aŋpétutopa
         fri: Aŋpétuzaptaŋ
         sat: Owáŋgyužažapi
+      narrow:
+        sun: A
+        mon: W
+        tue: "N"
+        wed: "Y"
+        thu: T
+        fri: Z
+        sat: O
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
@@ -43,7 +46,3 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: lkt
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR

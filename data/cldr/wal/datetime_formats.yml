@@ -1,20 +1,10 @@
 ---
+locale: wal
+generated_at: '2025-09-12T07:04:24Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ጃንዩ
-        '2': ፌብሩ
-        '3': ማርች
-        '4': ኤፕረ
-        '5': ሜይ
-        '6': ጁን
-        '7': ጁላይ
-        '8': ኦገስ
-        '9': ሴፕቴ
-        '10': ኦክተ
-        '11': ኖቬም
-        '12': ዲሴም
       wide:
         '1': ጃንዩወሪ
         '2': ፌብሩወሪ
@@ -28,6 +18,19 @@ datetime_formats:
         '10': ኦክተውበር
         '11': ኖቬምበር
         '12': ዲሴምበር
+      abbreviated:
+        '1': ጃንዩ
+        '2': ፌብሩ
+        '3': ማርች
+        '4': ኤፕረ
+        '5': ሜይ
+        '6': ጁን
+        '7': ጁላይ
+        '8': ኦገስ
+        '9': ሴፕቴ
+        '10': ኦክተ
+        '11': ኖቬም
+        '12': ዲሴም
     stand-alone:
       narrow:
         '1': ጃ
@@ -61,17 +64,22 @@ datetime_formats:
         thu: ሃ
         fri: አ
         sat: ቄ
+  day_periods:
+    format:
+      abbreviated:
+        am: ማለዶ
+        pm: ቃማ
+  eras:
+    abbreviated:
+      '0': አዳ ዎዴ
+      '1': ግሮተታ ላይታ
   date_formats:
     full: EEEE፥ dd MMMM ጋላሳ y G
     long: dd MMMM y
     medium: dd-MMM-y
     short: dd/MM/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: wal
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

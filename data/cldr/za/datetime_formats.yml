@@ -1,4 +1,7 @@
 ---
+locale: za
+generated_at: '2025-09-12T07:04:25Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -25,7 +28,21 @@ datetime_formats:
         thu: singhgizseiq
         fri: singhgizhaj
         sat: singhgizroek
-locale: za
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  day_periods:
+    format:
+      wide:
+        am: banhaet
+        pm: banringzgvaq
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      hm: a h:mm
+      hms: a h:mm:ss
+      hmsv: v a h:mm:ss
+      Hmsv: v HH:mm:ss
+      yMd: y/M/d
+      yMMMd: "'bi' y 'ndwen' M 'ngoenz' d"

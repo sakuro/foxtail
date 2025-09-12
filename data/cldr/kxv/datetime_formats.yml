@@ -1,20 +1,10 @@
 ---
+locale: kxv
+generated_at: '2025-09-12T07:04:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': pusu
-        '2': maha
-        '3': pagu
-        '4': hire
-        '5': bese
-        '6': jaṭṭa
-        '7': aasaḍi
-        '8': srabĩ
-        '9': bado
-        '10': dasara
-        '11': divi
-        '12': pande
       wide:
         '1': pusu lenju
         '2': maha lenju
@@ -28,6 +18,19 @@ datetime_formats:
         '10': dasara lenju
         '11': divi lenju
         '12': pande lenju
+      abbreviated:
+        '1': pusu
+        '2': maha
+        '3': pagu
+        '4': hire
+        '5': bese
+        '6': jaṭṭa
+        '7': aasaḍi
+        '8': srabĩ
+        '9': bado
+        '10': dasara
+        '11': divi
+        '12': pande
     stand-alone:
       narrow:
         '1': pu
@@ -44,22 +47,6 @@ datetime_formats:
         '12': pa
   days:
     format:
-      abbreviated:
-        sun: aadi
-        mon: smba
-        tue: manga
-        wed: puda
-        thu: laki
-        fri: sukru
-        sat: sani
-      short:
-        sun: aa
-        mon: s
-        tue: ma
-        wed: pu
-        thu: laki
-        fri: su
-        sat: sa
       wide:
         sun: aadi vara
         mon: smbara
@@ -68,6 +55,14 @@ datetime_formats:
         thu: laki vara
         fri: sukru vara
         sat: sani vara
+      abbreviated:
+        sun: aadi
+        mon: smba
+        tue: manga
+        wed: puda
+        thu: laki
+        fri: sukru
+        sat: sani
     stand-alone:
       narrow:
         sun: aa
@@ -77,6 +72,30 @@ datetime_formats:
         thu: la
         fri: su
         sat: sa
+  quarters:
+    format:
+      wide:
+        '1': 1sṭ kuarṭr
+        '2': 2nḍ kuarṭr
+        '3': 3rḍ kuarṭr
+        '4': 4th kuarṭr
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+  day_periods:
+    format:
+      abbreviated:
+        am: am
+        pm: pm
+  eras:
+    names:
+      '0': neeti nki jug
+      '1': neeti jug
+    abbreviated:
+      '0': bce
+      '1': ce
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -87,7 +106,38 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: kxv
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'aã' {0}"
+    long: "{1} 'aã' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: GGGGG d/M/y
+      GyMMM: MMM G y
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMM 'tã' 'vara' W
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y 'tã' 'vara' w

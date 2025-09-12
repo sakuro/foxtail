@@ -1,4 +1,7 @@
 ---
+locale: hnj
+generated_at: '2025-09-12T07:04:15Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -25,7 +28,11 @@ datetime_formats:
         thu: "\U0001E119\U0001E124\U0001E131\U0001E128"
         fri: "\U0001E111\U0001E124\U0001E131\U0001E128"
         sat: "\U0001E10A\U0001E127\U0001E133"
-locale: hnj
-generated_at: '2025-09-06T03:52:35+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  eras:
+    abbreviated:
+      '0': "\U0001E11C\U0001E106\U0001E12A"
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

@@ -1,638 +1,255 @@
 ---
+locale: rn
+generated_at: '2025-09-12T07:03:11Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00¤"
-  scientific_formats:
-    standard: "#E0"
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
     AOA:
-      symbol: Kz
       display_names:
         other: Ikwanza ryo muri Angola
-    ARS:
-      symbol: "$"
+        one: Ikwanza ryo muri Angola
     AUD:
       symbol: A$
       display_names:
         other: Idolari ryo muri Ositaraliya
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
+        one: Idolari ryo muri Ositaraliya
     BWP:
-      symbol: P
       display_names:
         other: Ipula ryo muri Botswana
-    BZD:
-      symbol: "$"
+        one: Ipula ryo muri Botswana
     CAD:
       symbol: CA$
       display_names:
         other: Idolari rya Kanada
-    CLP:
-      symbol: "$"
+        one: Idolari rya Kanada
     CNY:
       symbol: CN¥
       display_names:
         other: Iyuwani ryo mu Bushinwa
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
+        one: Iyuwani ryo mu Bushinwa
     EGP:
-      symbol: E£
       display_names:
         other: Ipawundi rya Misiri
-    ESP:
-      symbol: "₧"
+        one: Ipawundi rya Misiri
     EUR:
-      symbol: "€"
       display_names:
         other: Iyero
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
+        one: Iyero
     GBP:
-      symbol: "£"
       display_names:
         other: Ipawundi ryo mu Bwongereza
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
+        one: Ipawundi ryo mu Bwongereza
     HKD:
       symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
     INR:
-      symbol: "₹"
       display_names:
         other: Irupiya ryo mu Buhindi
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
+        one: Irupiya ryo mu Buhindi
     JPY:
       symbol: JP¥
       display_names:
         other: Iyeni ry’Ubuyapani
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
+        one: Iyeni ry’Ubuyapani
     KMF:
-      symbol: CF
       display_names:
         other: Ifaranga rya Komore
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
+        one: Ifaranga rya Komore
     LRD:
-      symbol: "$"
       display_names:
         other: Idolari rya Liberiya
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
+        one: Idolari rya Liberiya
     MGA:
-      symbol: Ar
       display_names:
         other: Iriyari ryo muri Madagasikari
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
+        one: Iriyari ryo muri Madagasikari
     MUR:
-      symbol: Rs
       display_names:
         other: Irupiya ryo mu birwa bya Morise
+        one: Irupiya ryo mu birwa bya Morise
     MXN:
       symbol: MX$
-    MYR:
-      symbol: RM
     NAD:
-      symbol: "$"
       display_names:
         other: Idolari rya Namibiya
+        one: Idolari rya Namibiya
     NGN:
-      symbol: "₦"
       display_names:
         other: Inayira ryo muri Nijeriya
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
+        one: Inayira ryo muri Nijeriya
     NZD:
       symbol: NZ$
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
     RWF:
-      symbol: RF
       display_names:
         other: Ifaranga ry’u Rwanda
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
+        one: Ifaranga ry’u Rwanda
     SHP:
-      symbol: "£"
       display_names:
         other: Ipawundi rya Sente Helena
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
+        one: Ipawundi rya Sente Helena
     STN:
-      symbol: Db
       display_names:
         other: Idobura ryo muri Sawotome na Perensipe
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
+        one: Idobura ryo muri Sawotome na Perensipe
     TRY:
       symbol: "₺"
-    TTD:
-      symbol: "$"
     TWD:
       symbol: NT$
-    UAH:
-      symbol: "₴"
     USD:
       symbol: US$
       display_names:
         other: Idolari ry’abanyamerika
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
-    XAF:
-      symbol: FCFA
+        one: Idolari ry’abanyamerika
     XCD:
       symbol: EC$
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: F CFA
-    XPF:
-      symbol: CFPF
-    XXX:
-      symbol: "¤"
     ZAR:
-      symbol: R
       display_names:
         other: Irandi ryo muri Afurika y’Epfo
+        one: Irandi ryo muri Afurika y’Epfo
     ZMW:
-      symbol: ZK
       display_names:
         other: Ikwaca ryo muri Zambiya
+        one: Ikwaca ryo muri Zambiya
     AED:
       display_names:
         other: Idiramu ryo muri Leta Zunze Ubumwe z’Abarabu
+        one: Idiramu ryo muri Leta Zunze Ubumwe z’Abarabu
     BHD:
       display_names:
         other: Idinari ry’iribahireyini
+        one: Idinari ry’iribahireyini
     BIF:
       symbol: FBu
       display_names:
         other: Ifaranga ry’Uburundi
+        one: Ifaranga ry’Uburundi
     CDF:
       display_names:
         other: Ifaranga rya Kongo
+        one: Ifaranga rya Kongo
     CHF:
       display_names:
         other: Ifaranga ry’Ubusuwisi
+        one: Ifaranga ry’Ubusuwisi
     CVE:
       display_names:
         other: Irikaboveridiyano ryo muri Esikudo
+        one: Irikaboveridiyano ryo muri Esikudo
     DJF:
       display_names:
         other: Ifaranga ryo muri Jibuti
+        one: Ifaranga ryo muri Jibuti
     DZD:
       display_names:
         other: Idinari ryo muri Alijeriya
+        one: Idinari ryo muri Alijeriya
     ERN:
       display_names:
         other: Irinakufa ryo muri Eritereya
+        one: Irinakufa ryo muri Eritereya
     ETB:
       display_names:
         other: Ibiri ryo muri Etiyopiya
+        one: Ibiri ryo muri Etiyopiya
     GHC:
       display_names:
         other: Icedi ryo muri Gana
+        one: Icedi ryo muri Gana
     GMD:
       display_names:
         other: Idalasi ryo muri Gambiya
+        one: Idalasi ryo muri Gambiya
     GNS:
       display_names:
         other: Ifaranga ryo muri Gineya
+        one: Ifaranga ryo muri Gineya
     KES:
       display_names:
         other: Ishilingi rya Kenya
+        one: Ishilingi rya Kenya
     LSL:
       display_names:
         other: Iloti ryo muro Lesoto
+        one: Iloti ryo muro Lesoto
     LYD:
       display_names:
         other: Idinari rya Libiya
+        one: Idinari rya Libiya
     MAD:
       display_names:
         other: Idiramu ryo muri Maroke
+        one: Idiramu ryo muri Maroke
     MRO:
       display_names:
         other: Ugwiya ryo muri Moritaniya (1973–2017)
+        one: Ugwiya ryo muri Moritaniya (1973–2017)
     MRU:
       display_names:
         other: Ugwiya ryo muri Moritaniya
+        one: Ugwiya ryo muri Moritaniya
     MWK:
       display_names:
         other: Ikwaca ryo muri Malawi
+        one: Ikwaca ryo muri Malawi
     MZM:
       display_names:
         other: Irimetikali ryo muri Mozambike
+        one: Irimetikali ryo muri Mozambike
     SAR:
       display_names:
         other: Iriyari ryo muri Arabiya Sawudite
+        one: Iriyari ryo muri Arabiya Sawudite
     SCR:
       display_names:
         other: Irupiya ryo mu birwa bya Sayisheli
+        one: Irupiya ryo mu birwa bya Sayisheli
     SDG:
       display_names:
         other: Ipawundi rya Sudani
+        one: Ipawundi rya Sudani
     SLE:
       display_names:
         other: Ilewone
+        one: Ilewone
     SLL:
       display_names:
         other: Ilewone (1964—2022)
+        one: Ilewone (1964—2022)
     SOS:
       display_names:
         other: Ishilingi ryo muri Somaliya
+        one: Ishilingi ryo muri Somaliya
     STD:
       display_names:
         other: Idobura ryo muri Sawotome na Perensipe (1977–2017)
+        one: Idobura ryo muri Sawotome na Perensipe (1977–2017)
     SZL:
       display_names:
         other: Ililangeni
+        one: Ililangeni
     TND:
       display_names:
         other: Idinari ryo muri Tuniziya
+        one: Idinari ryo muri Tuniziya
     TZS:
       display_names:
         other: Ishilingi rya Tanzaniya
+        one: Ishilingi rya Tanzaniya
     UGX:
       display_names:
         other: Ishilingi ry’Ubugande
+        one: Ishilingi ry’Ubugande
     ZMK:
       display_names:
         other: Ikwaca ryo muri Zambiya (1968–2012)
+        one: Ikwaca ryo muri Zambiya (1968–2012)
     ZWD:
       display_names:
         other: Idolari ryo muri Zimbabwe
-locale: rn
-generated_at: '2025-09-10T23:53:16+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0
+        one: Idolari ryo muri Zimbabwe

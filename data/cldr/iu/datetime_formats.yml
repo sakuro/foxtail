@@ -1,4 +1,7 @@
 ---
+locale: iu
+generated_at: '2025-09-12T07:04:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -25,17 +28,33 @@ datetime_formats:
         thu: ᓯᑕᒻᒥᖅ
         fri: ᑕᓪᓕᒻᒥᐅᑦ
         sat: ᓈᑦᓰᖑᔭᓛᕐᓂᐊᖅ
+  day_periods:
+    format:
+      abbreviated:
+        am: am
+        pm: pm
   date_formats:
     full: EEEE, MMMM d, y
     long: MMMM d, y
     medium: MMM d, y
     short: MM/dd/y
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: iu
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      Ed: E, d
+      Gy: y G
+      Md: MM/dd
+      MEd: E, MM/dd
+      MMMEd: E, MMM d
+      yM: MM/y
+      yMd: MM/dd/y
+      yMEd: E, MM/dd/y
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: E, MMM d, y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

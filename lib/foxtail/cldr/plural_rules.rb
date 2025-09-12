@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-require "yaml"
+require "locale"
+require_relative "base"
+require_relative "resolver"
 
 module Foxtail
   module CLDR
@@ -19,7 +21,7 @@ module Foxtail
     class PluralRules < Base
       def initialize(locale)
         super
-        @rules = load_data["plural_rules"] || {}
+        @resolver = Resolver.new(@locale.to_simple.to_s)
       end
 
       # Select appropriate plural category for the given number
@@ -31,7 +33,7 @@ module Foxtail
 
         # Test each rule condition in priority order
         %w[zero one two few many].each do |category|
-          condition = @rules[category]
+          condition = @resolver.resolve("plural_rules.#{category}", "plural_rules")
           next if condition.nil? || condition.empty?
 
           if evaluate_condition(condition, operands)

@@ -1,20 +1,10 @@
 ---
+locale: trv
+generated_at: '2025-09-12T07:04:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Kii
-        '2': Dhi
-        '3': Tri
-        '4': Spi
-        '5': Rii
-        '6': Mti
-        '7': Emi
-        '8': Mai
-        '9': Mni
-        '10': Mxi
-        '11': Mxk
-        '12': Mxd
       wide:
         '1': Kingal idas
         '2': Dha idas
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Maxal idas
         '11': Maxal kingal idas
         '12': Maxal dha idas
+      abbreviated:
+        '1': Kii
+        '2': Dhi
+        '3': Tri
+        '4': Spi
+        '5': Rii
+        '6': Mti
+        '7': Emi
+        '8': Mai
+        '9': Mni
+        '10': Mxi
+        '11': Mxk
+        '12': Mxd
     stand-alone:
       narrow:
         '1': K
@@ -44,14 +47,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: Emp
-        mon: Kin
-        tue: Dha
-        wed: Tru
-        thu: Spa
-        fri: Rim
-        sat: Mat
       wide:
         sun: Jiyax sngayan
         mon: tgKingal jiyax iyax sngayan
@@ -60,6 +55,14 @@ datetime_formats:
         thu: tgSpac jiyax iyax sngayan
         fri: tgRima jiyax iyax sngayan
         sat: tgMataru jiyax iyax sngayan
+      abbreviated:
+        sun: Emp
+        mon: Kin
+        tue: Dha
+        wed: Tru
+        thu: Spa
+        fri: Rim
+        sat: Mat
     stand-alone:
       narrow:
         sun: E
@@ -69,17 +72,45 @@ datetime_formats:
         thu: S
         fri: R
         sat: M
+  quarters:
+    format:
+      wide:
+        '1': mnprxan
+        '2': mndha
+        '3': mntru
+        '4': mnspat
+      abbreviated:
+        '1': mn1
+        '2': mn2
+        '3': mn3
+        '4': mn4
+  day_periods:
+    format:
+      wide:
+        am: Brax kndaax
+        pm: Baubau kndaax
+  eras:
+    names:
+      '0': Brah jikan Yisu Thulang
+      '1': Bukuy jikan Yisu Thulang
+    abbreviated:
+      '0': BRY
+      '1': BUY
   date_formats:
     full: EEEE, y MMMM dd
-    long: y MMMM d
-    medium: y MMM d
-    short: y-MM-dd
   time_formats:
     full: h:mm:ss a zzzz
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: trv
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Hm: H:mm
+      Md: M-d
+      MEd: E, M-d
+      MMMEd: E MMM d
+      MMMMEd: E MMMM d
+      yM: y-M
+      yMEd: E, y-M-d
+      yMMMEd: E, y MMM d
+      yQ: y Q

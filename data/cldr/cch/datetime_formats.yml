@@ -1,20 +1,10 @@
 ---
+locale: cch
+generated_at: '2025-09-12T07:04:11Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Dyon
-        '2': Baa
-        '3': Atat
-        '4': Anas
-        '5': Atyo
-        '6': Achi
-        '7': Atar
-        '8': Awur
-        '9': Shad
-        '10': Shak
-        '11': Naba
-        '12': Nata
       wide:
         '1': Pen Dyon
         '2': Pen Baʼa
@@ -28,16 +18,21 @@ datetime_formats:
         '10': Pen Shakur
         '11': Pen Kur Naba
         '12': Pen Kur Natat
+      abbreviated:
+        '1': Dyon
+        '2': Baa
+        '3': Atat
+        '4': Anas
+        '5': Atyo
+        '6': Achi
+        '7': Atar
+        '8': Awur
+        '9': Shad
+        '10': Shak
+        '11': Naba
+        '12': Nata
   days:
     format:
-      abbreviated:
-        sun: Yok
-        mon: Tung
-        tue: Gitung
-        wed: Tsan
-        thu: Nas
-        fri: Nat
-        sat: Chir
       wide:
         sun: Wai Yoka Bawai
         mon: Wai Tunga
@@ -46,17 +41,21 @@ datetime_formats:
         thu: Wai Na Nas
         fri: Wai Na Tiyon
         sat: Wai Na Chirim
+      abbreviated:
+        sun: Yok
+        mon: Tung
+        tue: Gitung
+        wed: Tsan
+        thu: Nas
+        fri: Nat
+        sat: Chir
+  eras:
+    names:
+      '0': Gabanin Miladi
+      '1': Miladi
+    abbreviated:
+      '0': GM
+      '1': M
   date_formats:
     full: EEEE, y MMMM dd
-    long: y MMMM d
-    medium: y MMM d
     short: yy/MM/dd
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: cch
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR

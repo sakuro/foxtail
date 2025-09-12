@@ -1,20 +1,10 @@
 ---
+locale: fy
+generated_at: '2025-09-12T07:04:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan
-        '2': Feb
-        '3': Mrt
-        '4': Apr
-        '5': Mai
-        '6': Jun
-        '7': Jul
-        '8': Aug
-        '9': Sep
-        '10': Okt
-        '11': Nov
-        '12': Des
       wide:
         '1': Jannewaris
         '2': Febrewaris
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Oktober
         '11': Novimber
         '12': Desimber
+      abbreviated:
+        '1': Jan
+        '2': Feb
+        '3': Mrt
+        '4': Apr
+        '5': Mai
+        '6': Jun
+        '7': Jul
+        '8': Aug
+        '9': Sep
+        '10': Okt
+        '11': Nov
+        '12': Des
     stand-alone:
       narrow:
         '1': J
@@ -44,14 +47,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: si
-        mon: mo
-        tue: ti
-        wed: wo
-        thu: to
-        fri: fr
-        sat: so
       wide:
         sun: snein
         mon: moandei
@@ -60,17 +55,70 @@ datetime_formats:
         thu: tongersdei
         fri: freed
         sat: sneon
+      abbreviated:
+        sun: si
+        mon: mo
+        tue: ti
+        wed: wo
+        thu: to
+        fri: fr
+        sat: so
+  quarters:
+    format:
+      wide:
+        '1': 1e fearnsjier
+        '2': 2e fearnsjier
+        '3': 3e fearnsjier
+        '4': 4e fearnsjier
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+  eras:
+    names:
+      '0': foar gewoane jiertelling
+      '1': gewoane jiertelling
+    abbreviated:
+      '0': f.g.j.
+      '1': g.j.
+    narrow:
+      '0': fgj
+      '1': gj
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd-MM-yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: fy
-generated_at: '2025-09-06T03:52:34+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'om' {0}"
+    long: "{1} 'om' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      GyMd: d/M/y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d-M
+      MEd: E d-M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMW: "'wike' W 'fan' MMMM"
+      yM: M-y
+      yMd: d-M-y
+      yMEd: E d-M-y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'wike' w 'fan' Y"

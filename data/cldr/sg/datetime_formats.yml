@@ -1,20 +1,10 @@
 ---
+locale: sg
+generated_at: '2025-09-12T07:04:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Nye
-        '2': Ful
-        '3': Mbä
-        '4': Ngu
-        '5': Bêl
-        '6': Fön
-        '7': Len
-        '8': Kük
-        '9': Mvu
-        '10': Ngb
-        '11': Nab
-        '12': Kak
       wide:
         '1': Nyenye
         '2': Fulundïgi
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Ngberere
         '11': Nabändüru
         '12': Kakauka
+      abbreviated:
+        '1': Nye
+        '2': Ful
+        '3': Mbä
+        '4': Ngu
+        '5': Bêl
+        '6': Fön
+        '7': Len
+        '8': Kük
+        '9': Mvu
+        '10': Ngb
+        '11': Nab
+        '12': Kak
     stand-alone:
       narrow:
         '1': "N"
@@ -44,14 +47,6 @@ datetime_formats:
         '12': K
   days:
     format:
-      abbreviated:
-        sun: Bk1
-        mon: Bk2
-        tue: Bk3
-        wed: Bk4
-        thu: Bk5
-        fri: Lâp
-        sat: Lây
       wide:
         sun: Bikua-ôko
         mon: Bïkua-ûse
@@ -60,26 +55,67 @@ datetime_formats:
         thu: Bïkua-okü
         fri: Lâpôsö
         sat: Lâyenga
+      abbreviated:
+        sun: Bk1
+        mon: Bk2
+        tue: Bk3
+        wed: Bk4
+        thu: Bk5
+        fri: Lâp
+        sat: Lây
     stand-alone:
       narrow:
         sun: K
         mon: S
-        tue: T
         wed: S
         thu: K
         fri: P
         sat: "Y"
+  quarters:
+    format:
+      wide:
+        '1': Fângbisïö ôko
+        '2': Fângbisïö ûse
+        '3': Fângbisïö otâ
+        '4': Fângbisïö usïö
+      abbreviated:
+        '1': F4–1
+        '2': F4–2
+        '3': F4–3
+        '4': F4–4
+  day_periods:
+    format:
+      abbreviated:
+        am: ND
+        pm: LK
+  eras:
+    names:
+      '0': Kôzo na Krîstu
+      '1': Na pekô tî Krîstu
+    abbreviated:
+      '0': KnK
+      '1': NpK
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM, y
     short: d/M/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: sg
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      M: M
+      Md: d/M
+      MMd: d/MM
+      MMdd: dd/MM
+      MMM: MMM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMEd: E d MMMM
+      ms: m:ss
+      yM: M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

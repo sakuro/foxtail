@@ -1,4 +1,7 @@
 ---
+locale: tok
+generated_at: '2025-09-12T07:04:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -25,7 +28,23 @@ datetime_formats:
         thu: 'suno esun #4'
         fri: 'suno esun #5'
         sat: 'suno esun #6'
-locale: tok
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  day_periods:
+    format:
+      wide:
+        am: pi open suno
+        pm: pi pini suno
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      hm: "#h:mm a"
+      Hm: "#HH:mm"
+      hms: "#h:mm:ss a"
+      Hms: "#HH:mm:ss"
+      hmsv: "#h:mm:ss a 'lon' v"
+      Hmsv: "#HH:mm:ss 'lon' v"
+      yMd: "#y)#M)#d"
+      yMMMd: "'sike' #y ) #M ) #d"

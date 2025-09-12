@@ -1,41 +1,25 @@
 ---
+locale: kn
+generated_at: '2025-09-12T07:02:19Z'
+cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
-  scientific_formats:
-    standard: "#E0"
   currencies:
     AFN:
-      symbol: "؋"
       display_names:
         other: ಅಫ್‌ಘನ್ ಅಫಘಾನಿಗಳು
         one: ಅಫ್‌ಘನ್ ಅಫಘಾನಿ
     AMD:
-      symbol: "֏"
       display_names:
         other: ಅರ್ಮೆನಿಯನ್ ಡ್ರಾಮ್‌ಗಳು
         one: ಅರ್ಮೆನಿಯನ್ ಡ್ರಾಮ್
     AOA:
-      symbol: Kz
       display_names:
         other: ಅಂಗೋಲಾದ ಕ್ವಾನ್ಝಾಗಳು
         one: ಅಂಗೋಲಾದ ಕ್ವಾನ್ಝಾ
     ARS:
-      symbol: "$"
       display_names:
         other: ಅರ್ಜೆಂಟಿನಾ ಪೆಸೊಗಳು
         one: ಅರ್ಜೆಂಟಿನಾ ಪೆಸೊ
@@ -45,57 +29,46 @@ number_formats:
         other: ಆಸ್ಟ್ರೇಲಿಯನ್ ಡಾಲರ್‌‌ಗಳು
         one: ಆಸ್ಟ್ರೇಲಿಯನ್ ಡಾಲರ್‌
     AZN:
-      symbol: "₼"
       display_names:
         other: ಅಝರ್‌ಬೈಜಾನಿ ಮನಾತ್‌ಗಳು
         one: ಅಝರ್‌ಬೈಜಾನಿ ಮನಾತ್
     BAM:
-      symbol: KM
       display_names:
         other: ಬೋಸ್ನಿಯಾ-ಹರ್ಜ್‌ಗೋವಿನ ಪರಿವರ್ತನೀಯ ಗುರುತುಗಳು
         one: ಬೋಸ್ನಿಯಾ-ಹರ್ಜ್‌ಗೋವಿನ ಪರಿವರ್ತನೀಯ ಗುರುತು
     BBD:
-      symbol: "$"
       display_names:
         other: ಬರ್ಬಾಡಿಯನ್ ಡಾಲರ್‌ಗಳು
         one: ಬರ್ಬಾಡಿಯನ್ ಡಾಲರ್
     BDT:
-      symbol: "৳"
       display_names:
         other: ಬಾಂಗ್ಲಾದೇಶದ ಟಾಕಾಗಳು
         one: ಬಾಂಗ್ಲಾದೇಶದ ಟಾಕಾ
     BMD:
-      symbol: "$"
       display_names:
         other: ಬರ್ಮುಡನ್ ಡಾಲರ್‌ಗಳು
         one: ಬರ್ಮುಡನ್ ಡಾಲರ್
     BND:
-      symbol: "$"
       display_names:
         other: ಬ್ರೂನಿ ಡಾಲರ್‌ಗಳು
         one: ಬ್ರೂನಿ ಡಾಲರ್
     BOB:
-      symbol: Bs
       display_names:
         other: ಬೊಲಿವಿಯಾದ ಬೊಲಿವಿಯಾನೊಗಳು
         one: ಬೊಲಿವಿಯಾದ ಬೊಲಿವಿಯಾನೊ
     BRL:
-      symbol: R$
       display_names:
         other: ಬ್ರೆಜಿಲಿಯನ್ ರಿಯಲ್‍ಗಳು
         one: ಬ್ರೆಜಿಲಿಯನ್‌ ರಿಯಲ್
     BSD:
-      symbol: "$"
       display_names:
         other: ಬಹಾಮಿಯನ್ ಡಾಲರ್‌ಗಳು
         one: ಬಹಾಮಿಯನ್ ಡಾಲರ್
     BWP:
-      symbol: P
       display_names:
         other: ಬೋಟ್ಸ್‌ವಾನನ್ ಪುಲಾಗಳು
         one: ಬೋಟ್ಸ್‌ವಾನನ್ ಪುಲಾ
     BZD:
-      symbol: "$"
       display_names:
         other: ಬೆಲೀಜ್ ಡಾಲರ್‌‍ಗಳು
         one: ಬೆಲೀಜ್ ಡಾಲರ್
@@ -105,7 +78,6 @@ number_formats:
         other: ಕೆನಡಾದ ಡಾಲರ್‌ಗಳು
         one: ಕೆನಡಾದ ಡಾಲರ್
     CLP:
-      symbol: "$"
       display_names:
         other: ಚಿಲಿಯ ಪೆಸೊಗಳು
         one: ಚಿಲಿಯ ಪೆಸೊ
@@ -113,95 +85,76 @@ number_formats:
       symbol: CN¥
       display_names:
         other: ಚೈನೀಸ್ ಯುವಾನ್
+        one: ಚೈನೀಸ್ ಯುವಾನ್
     COP:
-      symbol: "$"
       display_names:
         other: ಕೊಲೊಂಬಿಯೋದ ಪೆಸೊಗಳು
         one: ಕೊಲೊಂಬಿಯೋದ ಪೆಸೊ
     CRC:
-      symbol: "₡"
       display_names:
         other: ಕೋಸ್ಟಾ ರಿಕಾದ ಕೊಲೊನ್‌ಗಳು
         one: ಕೋಸ್ಟಾ ರಿಕಾದ ಕೊಲೊನ್‌
     CUC:
-      symbol: "$"
       display_names:
         other: ಕ್ಯೂಬಾದ ಪರಿವರ್ತನೀಯ ಪೆಸೊಗಳು
         one: ಕ್ಯೂಬಾದ ಪರಿವರ್ತನೀಯ ಪೆಸೊ
     CUP:
-      symbol: "$"
       display_names:
         other: ಕ್ಯೂಬಾದ ಪೆಸೊಗಳು
         one: ಕ್ಯೂಬಾದ ಪೆಸೊ
     CZK:
-      symbol: Kč
       display_names:
         other: ಝೆಕ್ ಗಣರಾಜ್ಯ ಕೊರೂನಗಳು
         one: ಝೆಕ್ ಗಣರಾಜ್ಯ ಕೊರೂನ
     DKK:
-      symbol: kr
       display_names:
         other: ಡ್ಯಾನಿಶ್ ಕ್ರೋನರ್
         one: ಡ್ಯಾನಿಶ್ ಕ್ರೋನ್
     DOP:
-      symbol: "$"
       display_names:
         other: ಡೊಮಿನಿಕನ್ ಪೆಸೊಗಳು
         one: ಡೊಮಿನಿಕನ್ ಪೆಸೊ
     EGP:
-      symbol: E£
       display_names:
         other: ಈಜಿಪ್ಷಿಯನ್ ಪೌಂಡ್‍ಗಳು
         one: ಈಜಿಪ್ಷಿಯನ್ ಪೌಂಡ್‍
-    ESP:
-      symbol: "₧"
     EUR:
-      symbol: "€"
       display_names:
         other: ಯೂರೊಗಳು
         one: ಯೂರೊ
     FJD:
-      symbol: "$"
       display_names:
         other: ಫಿಜಿಯನ್ ಡಾಲರ್‌ಗಳು
         one: ಫಿಜಿಯನ್ ಡಾಲರ್
     FKP:
-      symbol: "£"
       display_names:
         other: ಫಾಕ್‌ಲ್ಯಾಂಡ್ ದ್ವೀಪಗಳ ಪೌಂಡ್‍ಗಳು
         one: ಫಾಕ್‌ಲ್ಯಾಂಡ್ ದ್ವೀಪಗಳ ಪೌಂಡ್
     GBP:
-      symbol: "£"
       display_names:
         other: ಬ್ರಿಟಿಷ್ ಪೌಂಡ್‍ಗಳು
         one: ಬ್ರಿಟಿಷ್ ಪೌಂಡ್
     GEL:
-      symbol: "₾"
       display_names:
         other: ಜಾರ್ಜಿಯಾದ ಲಾರಿಗಳು
         one: ಜಾರ್ಜಿಯಾದ ಲಾರಿ
     GHS:
-      symbol: GH₵
       display_names:
         other: ಘಾನಾದ ಸೆದಿಗಳು
         one: ಘಾನಾದ ಸೆದಿ
     GIP:
-      symbol: "£"
       display_names:
         other: ಗಿಬ್ರಾಲ್ಟರ್ ಪೌಂಡ್‍ಗಳು
         one: ಗಿಬ್ರಾಲ್ಟರ್ ಪೌಂಡ್
     GNF:
-      symbol: FG
       display_names:
         other: ಗಿನಿಯನ್ ಫ್ರಾಂಕ್‌ಗಳು
         one: ಗಿನಿಯನ್ ಫ್ರಾಂಕ್
     GTQ:
-      symbol: Q
       display_names:
         other: ಗ್ವಾಟೆಮಾಲಾದ ಕುಯಿಟ್ಸಲ್‌‌‍ಗಳು
         one: ಗ್ವಾಟೆಮಾಲಾದ ಕುಯಿಟ್ಸಲ್‌‌
     GYD:
-      symbol: "$"
       display_names:
         other: ಗುಯಾನೀಸ್‌ ಡಾಲರ್‌‌ಗಳು
         one: ಗುಯಾನೀಸ್‌ ಡಾಲರ್‌
@@ -211,40 +164,34 @@ number_formats:
         other: ಹಾಂಗ್ ಕಾಂಗ್ ಡಾಲರ್‌ಗಳು
         one: ಹಾಂಗ್ ಕಾಂಗ್ ಡಾಲರ್
     HNL:
-      symbol: L
       display_names:
         other: ಹೊಂಡುರಾನ್‌ ಲೆಂಪಿರಾಗಳು
         one: ಹೊಂಡುರಾನ್‌ ಲೆಂಪಿರಾ
     HRK:
-      symbol: kn
       display_names:
         other: ಕ್ರೊಯೆಷ್ಯಾದ ಕೂನಾಗಳು
         one: ಕ್ರೊಯೆಷ್ಯಾದ ಕೂನಾ
     HUF:
-      symbol: Ft
       display_names:
         other: ಹಂಗೇರಿಯನ್ ಫೋರಿಂಟ್‍ಗಳು
         one: ಹಂಗೇರಿಯನ್ ಫೋರಿಂಟ್
     IDR:
-      symbol: Rp
       display_names:
         other: ಇಂಡೊನೇಷ್ಯಾ ರುಪೈ
+        one: ಇಂಡೊನೇಷ್ಯಾ ರುಪೈ
     ILS:
-      symbol: "₪"
       display_names:
         other: ಇಸ್ರೇಲಿ ನ್ಯೂ ಶೇಖಲ್‍ಗಳು
         one: ಇಸ್ರೇಲಿ ನ್ಯೂ ಶೇಖಲ್
     INR:
-      symbol: "₹"
       display_names:
         other: ಭಾರತೀಯ ರೂಪಾಯಿಗಳು
         one: ಭಾರತೀಯ ರೂಪಾಯಿ
     ISK:
-      symbol: kr
       display_names:
         other: ಐಸ್‌ಲ್ಯಾಂಡಿಕ್ ಕ್ರೋನಾ
+        one: ಐಸ್‌ಲ್ಯಾಂಡಿಕ್ ಕ್ರೋನಾ
     JMD:
-      symbol: "$"
       display_names:
         other: ಜಮೈಕನ್ ಡಾಲರ್‌ಗಳು
         one: ಜಮೈಕನ್ ಡಾಲರ್
@@ -252,85 +199,72 @@ number_formats:
       symbol: JP¥
       display_names:
         other: ಜಪಾನೀಸ್ ಯೆನ್
+        one: ಜಪಾನೀಸ್ ಯೆನ್
     KGS:
-      symbol: "⃀"
       display_names:
         other: ಕಿರ್ಗಿಸ್ತಾನಿ ಸೋಮ್
+        one: ಕಿರ್ಗಿಸ್ತಾನಿ ಸೋಮ್
     KHR:
-      symbol: "៛"
       display_names:
         other: ಕಾಂಬೋಡಿಯನ್ ರಿಯಲ್‍ಗಳು
         one: ಕಾಂಬೋಡಿಯನ್ ರಿಯಲ್
     KMF:
-      symbol: CF
       display_names:
         other: ಕೊಮೊರಿಯನ್ ಫ್ರಾಂಕ್‍ಗಳು
         one: ಕೊಮೊರಿಯನ್ ಫ್ರಾಂಕ್
     KPW:
-      symbol: "₩"
       display_names:
         other: ಉತ್ತರ ಕೊರಿಯನ್ ವೋನ್
+        one: ಉತ್ತರ ಕೊರಿಯನ್ ವೋನ್
     KRW:
-      symbol: "₩"
       display_names:
         other: ದಕ್ಷಿಣ ಕೊರಿಯನ್ ವೊನ್
+        one: ದಕ್ಷಿಣ ಕೊರಿಯನ್ ವೊನ್
     KYD:
-      symbol: "$"
       display_names:
         other: ಕೆಮ್ಯಾನ್‌ ಐಲ್ಯಾಂಡ್‌ನ ಡಾಲರ್‌‌ಗಳು
         one: ಕೆಮ್ಯಾನ್‌ ಐಲ್ಯಾಂಡ್‌ನ ಡಾಲರ್‌
     KZT:
-      symbol: "₸"
       display_names:
         other: ಕಜಾಕಿಸ್ತಾನಿ ತೆಂಗೆಗಳು
         one: ಕಜಾಕಿಸ್ತಾನಿ ತೆಂಗೆ
     LAK:
-      symbol: "₭"
       display_names:
         other: ಲೋಟಿಯನ್ ಕಿಪ್‍ಗಳು
         one: ಲೋಟಿಯನ್ ಕಿಪ್
     LBP:
-      symbol: L£
       display_names:
         other: ಲೆಬೆನೀಸ್ ಪೌಂಡ್‍ಗಳು
         one: ಲೆಬೆನೀಸ್ ಪೌಂಡ್
     LKR:
-      symbol: Rs
       display_names:
         other: ಶ್ರೀಲಂಕಾದ ರುಪೀಗಳು
         one: ಶ್ರೀಲಂಕಾದ ರುಪೀ
     LRD:
-      symbol: "$"
       display_names:
         other: ಲಿಬೇರಿಯನ್ ಡಾಲರ್‌ಗಳು
         one: ಲಿಬೇರಿಯನ್ ಡಾಲರ್
     LTL:
-      symbol: Lt
       display_names:
         other: ಲಿಥುನಿಯನ್‌ ಲಿತಾಯ್
         one: ಲಿಥುನಿಯನ್‌ ಲಿತಾಸ್‌
     LVL:
-      symbol: Ls
       display_names:
         other: ಲ್ಯಾಟ್ವಿಯನ್ ಲ್ಯಾಟಿ
         one: ಲ್ಯಾಟ್ವಿಯನ್ ಲ್ಯಾಟ್ಸ್
     MGA:
-      symbol: Ar
       display_names:
         other: ಮಲಗಾಸಿ ಅರಿಯಾರಿಗಳು
         one: ಮಲಗಾಸಿ ಅರಿಯಾರಿ
     MMK:
-      symbol: K
       display_names:
         other: ಮ್ಯಾನ್ಮಾರ್ ಕ್ಯಾಟ್‍ಗಳು
         one: ಮ್ಯಾನ್ಮಾರ್ ಕ್ಯಾಟ್
     MNT:
-      symbol: "₮"
       display_names:
         other: ಮಂಗೋಲಿಯಾದ ತುಗ್ರಿಕ್‌‌‌ಗಳು
         one: ಮಂಗೋಲಿಯಾದ ತುಗ್ರಿಕ್‌‌
     MUR:
-      symbol: Rs
       display_names:
         other: ಮಾರಿಷಿಯನ್ ರುಪಿಗಳು
         one: ಮಾರಿಷಿಯನ್ ರುಪಿ
@@ -340,32 +274,26 @@ number_formats:
         other: ಮೆಕ್ಸಿಕೊದ ಪೆಸೊಗಳು
         one: ಮೆಕ್ಸಿಕೊದ ಪೆಸೊ
     MYR:
-      symbol: RM
       display_names:
         other: ಮಲೇಶಿಯನ್ ರಿಂಗಿಟ್‌ಗಳು
         one: ಮಲೇಶಿಯನ್ ರಿಂಗಿಟ್
     NAD:
-      symbol: "$"
       display_names:
         other: ನಮೀಬಿಯನ್ ಡಾಲರ್‌‍ಗಳು
         one: ನಮೀಬಿಯನ್ ಡಾಲರ್
     NGN:
-      symbol: "₦"
       display_names:
         other: ನೈಜೀರಿಯಾದ ನೇರಾಗಳು
         one: ನೈಜೀರಿಯಾದ ನೇರಾ
     NIO:
-      symbol: C$
       display_names:
         other: ನಿಕಾರಗ್ವಾದ ಕರ್ದೊಬಾಗಳು
         one: ನಿಕಾರಗ್ವಾದ ಕರ್ದೊಬಾ
     NOK:
-      symbol: kr
       display_names:
         other: ನಾರ್ವೇಯ ಕ್ರೋನರ್
         one: ನಾರ್ವೇಯ ಕ್ರೋನ್
     NPR:
-      symbol: Rs
       display_names:
         other: ನೇಪಾಳದ ರುಪೀಗಳು
         one: ನೇಪಾಳದ ರುಪೀ
@@ -380,17 +308,14 @@ number_formats:
         other: ಫಿಲಿಪ್ಪೈನ್ ಪಿಸೊಗಳು
         one: ಫಿಲಿಪ್ಪೈನ್ ಪಿಸೊ
     PKR:
-      symbol: Rs
       display_names:
         other: ಪಾಕಿಸ್ತಾನದ ರುಪೀಗಳು
         one: ಪಾಕಿಸ್ತಾನದ ರುಪೀ
     PLN:
-      symbol: zł
       display_names:
         other: ಪೊಲಿಶ್ ಝ್ಲೋಟಿಗಳು
         one: ಪೊಲಿಶ್ ಝ್ಲೋಟಿ
     PYG:
-      symbol: "₲"
       display_names:
         other: ಪೆರುಗ್ವೇಯ ಗ್ವಾರನೀಗಳು
         one: ಪೆರುಗ್ವೇಯ ಗ್ವಾರನೀ
@@ -400,69 +325,59 @@ number_formats:
         other: ರೊಮೇನಿಯನ್ ಲೆಯ್
         one: ರೊಮೇನಿಯನ್ ಲೆವು
     RUB:
-      symbol: "₽"
       display_names:
         other: ರಶಿಯನ್ ರೂಬಲ್‍ಗಳು
         one: ರಶಿಯನ್ ರೂಬಲ್
     RWF:
-      symbol: RF
       display_names:
         other: ರುವಾಂಡನ್ ಫ್ರಾಂಕ್‍ಗಳು
         one: ರುವಾಂಡನ್ ಫ್ರಾಂಕ್
     SBD:
-      symbol: "$"
       display_names:
         other: ಸೊಲೊಮನ್ ದ್ವೀಪಗಳ ಡಾಲರ್‌ಗಳು
         one: ಸೊಲೊಮನ್ ದ್ವೀಪಗಳ ಡಾಲರ್
     SEK:
-      symbol: kr
       display_names:
         other: ಸ್ವೀಡಿಷ್ ಕ್ರೋನರ್
         one: ಸ್ವೀಡಿಷ್ ಕ್ರೋನಾ
     SGD:
-      symbol: "$"
       display_names:
         other: ಸಿಂಗಾಪುರ್ ಡಾಲರ್‌‌ಗಳು
         one: ಸಿಂಗಾಪುರ್ ಡಾಲರ್‌
     SHP:
-      symbol: "£"
       display_names:
         other: ಸೇಂಟ್ ಹೆಲೇನಾ ಪೌಂಡ್‌ಗಳು
         one: ಸೇಂಟ್ ಹೆಲೇನಾ ಪೌಂಡ್
     SRD:
-      symbol: "$"
       display_names:
         other: ಸುರಿನಾಮೀಸ್ ಡಾಲರ್‌ಗಳು
         one: ಸುರಿನಾಮೀಸ್ ಡಾಲರ್
     SSP:
-      symbol: "£"
       display_names:
         other: ದಕ್ಷಿಣ ಸೂಡಾನೀಸ್ ಪೌಂಡ್‍‍ಗಳು
         one: ದಕ್ಷಿಣ ಸೂಡಾನೀಸ್ ಪೌಂಡ್‍
     STN:
-      symbol: Db
       display_names:
         other: ಸಾವೊ ಟೋಮ್ ಮತ್ತು ಪ್ರಿನ್ಸಿಪ್ ದೊಬ್ರಾಗಳು
         one: ಸಾವೊ ಟೋಮ್ ಮತ್ತು ಪ್ರಿನ್ಸಿಪ್ ದೊಬ್ರಾ
     SYP:
-      symbol: "£"
       display_names:
         other: ಸಿರಿಯನ್ ಪೌಂಡ್‌ಗಳು
         one: ಸಿರಿಯನ್ ಪೌಂಡ್
     THB:
-      symbol: "฿"
       display_names:
         other: ಥಾಯ್ ಬಹ್ತ್
+        one: ಥಾಯ್ ಬಹ್ತ್
     TOP:
-      symbol: T$
       display_names:
         other: ಟೊಂಗಾ ಪಾಂಗ
+        one: ಟೊಂಗಾ ಪಾಂಗ
     TRY:
       symbol: "₺"
       display_names:
         other: ಟರ್ಕಿಶ್ ಲಿರಾ
+        one: ಟರ್ಕಿಶ್ ಲಿರಾ
     TTD:
-      symbol: "$"
       display_names:
         other: ಟ್ರಿನಿಡಾಡ್ ಮತ್ತು ಟೊಬಾಗೊ ಡಾಲರ್‌ಗಳು
         one: ಟ್ರಿನಿಡಾಡ್ ಮತ್ತು ಟೊಬಾಗೊ ಡಾಲರ್
@@ -472,31 +387,26 @@ number_formats:
         other: ನ್ಯೂ ತೈವಾನ್ ಡಾಲರ್‌ಗಳು
         one: ನ್ಯೂ ತೈವಾನ್ ಡಾಲರ್
     UAH:
-      symbol: "₴"
       display_names:
         other: ಉಕ್ರೇನಿಯನ್ ಹ್ರಿವ್ನೀಯಗಳು
         one: ಉಕ್ರೇನಿಯನ್ ಹ್ರಿವ್ನೀಯ
     USD:
-      symbol: "$"
       display_names:
         other: ಅಮೆರಿಕದ ಡಾಲರ್‌‌ಗಳು
         one: ಅಮೆರಿಕದ ಡಾಲರ್‌
     UYU:
-      symbol: "$"
       display_names:
         other: ಉರುಗ್ವೆಯ ಪೆಸೊಗಳು
         one: ಉರುಗ್ವೆಯ ಪೆಸೊ
     VEF:
-      symbol: Bs
       display_names:
         other: ವೆನಿಜುಲಿಯನ್ ಬೊಲಿವರ್‌ಗಳು (2008–2018)
         one: ವೆನಿಜುಲಿಯನ್ ಬೊಲಿವರ್ (2008–2018)
     VND:
-      symbol: "₫"
       display_names:
         other: ವಿಯೆಟ್ನಾಮೀಸ್ ಡಾಂಗ್
+        one: ವಿಯೆಟ್ನಾಮೀಸ್ ಡಾಂಗ್
     XAF:
-      symbol: FCFA
       display_names:
         other: ಮಧ್ಯ ಆಫ್ರಿಕನ್ CFA ಫ್ರಾಂಕ್‌ಗಳು
         one: ಮಧ್ಯ ಆಫ್ರಿಕನ್ CFA ಫ್ರಾಂಕ್
@@ -505,29 +415,23 @@ number_formats:
       display_names:
         other: ಪೂರ್ವ ಕೆರೀಬಿಯನ್ ಡಾಲರ್‌ಗಳು
         one: ಪೂರ್ವ ಕೆರೀಬಿಯನ್ ಡಾಲರ್
-    XCG:
-      symbol: Cg.
     XOF:
-      symbol: F CFA
       display_names:
         other: ಪಶ್ಚಿಮ ಆಫ್ರಿಕಾದ CFA ಫ್ರಾಂಕ್‌ಗಳು
         one: ಪಶ್ಚಿಮ ಆಫ್ರಿಕಾದ CFA ಫ್ರಾಂಕ್
     XPF:
-      symbol: CFPF
       display_names:
         other: "[CFP] ಫ್ರಾಂಕ್‌ಗಳು"
         one: "[CFP] ಫ್ರಾಂಕ್"
     XXX:
-      symbol: "¤"
       display_names:
         other: "(ಅಪರಿಚಿತ ಕರೆನ್ಸಿ)"
         one: "(ಅಪರಿಚಿತ ಕರೆನ್ಸಿ ಯುನಿಟ್)"
     ZAR:
-      symbol: R
       display_names:
         other: ದಕ್ಷಿಣ ಆಫ್ರಿಕನ್ ರಾಂಡ್
+        one: ದಕ್ಷಿಣ ಆಫ್ರಿಕನ್ ರಾಂಡ್
     ZMW:
-      symbol: ZK
       display_names:
         other: ಜಾಂಬಿಯಾ ಕ್ವಾಚಗಳು
         one: ಜಾಂಬಿಯಾ ಕ್ವಾಚ
@@ -538,6 +442,7 @@ number_formats:
     ALL:
       display_names:
         other: ಅಲ್‌ಬೇನಿಯನ್ ಲೆಕ್
+        one: ಅಲ್‌ಬೇನಿಯನ್ ಲೆಕ್
     ANG:
       display_names:
         other: ನೆದರ್ಲೆಂಡ್ಸ್ ಆಂಟಿಲಿಯನ್ ಗಿಲ್ಡರ್‌ಗಳು
@@ -545,6 +450,7 @@ number_formats:
     AWG:
       display_names:
         other: ಅರುಬನ್ ಫ್ಲೊರೀನ್‌‌
+        one: ಅರುಬನ್ ಫ್ಲೊರೀನ್‌‌
     BGN:
       display_names:
         other: ಬಲ್ಗೇರಿಯನ್ ಲೀವಾ
@@ -581,6 +487,7 @@ number_formats:
     CNH:
       display_names:
         other: ಚೈನೀಸ್ ಯುವಾನ್ (ಆಫ್‌ಶೋರ್)
+        one: ಚೈನೀಸ್ ಯುವಾನ್ (ಆಫ್‌ಶೋರ್)
     CVE:
       display_names:
         other: ಕೇಪ್ ವರ್ಡಿನ್ ಎಸ್‌ಕೂಡೊಗಳು
@@ -688,6 +595,7 @@ number_formats:
     PGK:
       display_names:
         other: ಪಪುವಾ ನ್ಯೂ ಗಿನಿಯನ್ ಕಿನಾ
+        one: ಪಪುವಾ ನ್ಯೂ ಗಿನಿಯನ್ ಕಿನಾ
     QAR:
       display_names:
         other: ಖತಾರಿ ರಿಯಲ್‍ಗಳು
@@ -707,6 +615,7 @@ number_formats:
     SDG:
       display_names:
         other: ಸುಡಾನೀಸ್ ಪೌಂಡ್
+        one: ಸುಡಾನೀಸ್ ಪೌಂಡ್
     SLE:
       display_names:
         other: ಸಿಯೆರಾ ಲಿಯೋನಿಯನ್ ಲಿಯೋನ್‌ಗಳು
@@ -734,6 +643,7 @@ number_formats:
     TMT:
       display_names:
         other: ಟರ್ಕ್‍ಮೆನಿಸ್ತಾನ್ ಮನಾತ್
+        one: ಟರ್ಕ್‍ಮೆನಿಸ್ತಾನ್ ಮನಾತ್
     TND:
       display_names:
         other: ಟ್ಯುನೀಷಿಯನ್‌ ದಿನಾರ್‌ಗಳು
@@ -749,6 +659,7 @@ number_formats:
     UZS:
       display_names:
         other: ಉಜ್ಬೇಕಿಸ್ತಾನ್ ಸೊಮ್
+        one: ಉಜ್ಬೇಕಿಸ್ತಾನ್ ಸೊಮ್
     VES:
       display_names:
         other: ವೆನಿಜುಲಿಯನ್ ಬೊಲಿವರ್‌ಗಳು
@@ -760,6 +671,7 @@ number_formats:
     WST:
       display_names:
         other: ಸಮೋನ್ ತಲಾ
+        one: ಸಮೋನ್ ತಲಾ
     YER:
       display_names:
         other: ಯೆಮೆನಿ ರಿಯಲ್‍ಗಳು
@@ -767,262 +679,4 @@ number_formats:
     ZMK:
       display_names:
         other: ಜಾಂಬಿಯಾ ಕ್ವಾಚ (1968–2012)
-locale: kn
-generated_at: '2025-09-10T23:53:11+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0
+        one: ಜಾಂಬಿಯಾ ಕ್ವಾಚ (1968–2012)

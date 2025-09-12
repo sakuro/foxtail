@@ -1,4 +1,7 @@
 ---
+locale: nnh
+generated_at: '2025-09-12T07:04:19Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -25,12 +28,34 @@ datetime_formats:
         thu: mbɔ́ɔntè tsetsɛ̀ɛ lyɛ̌ʼ
         fri: mvfò màga lyɛ̌ʼ
         sat: màga lyɛ̌ʼ
+  day_periods:
+    format:
+      abbreviated:
+        am: mbaʼámbaʼ
+        pm: ncwònzém
+  eras:
+    names:
+      '0': mé zyé Yěsô
+      '1': mé gÿo ńzyé Yěsô
+    abbreviated:
+      '0': m.z.Y.
+      '1': m.g.n.Y.
   date_formats:
     full: EEEE , 'lyɛ'̌ʼ d 'na' MMMM, y
     long: "'lyɛ'̌ʼ d 'na' MMMM, y"
     medium: d MMM, y
     short: dd/MM/yy
-locale: nnh
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1},{0}"
+    long: "{1}, {0}"
+    available_formats:
+      yMd: d/M/y
+      yMEd: E , 'lyɛ'̌ʼ d 'na' M, y
+      yMMM: MMM y
+      yMMMd: "'lyɛ'̌ʼ d 'na' MMMM, y"
+      yMMMEd: E , 'lyɛ'̌ʼ d 'na' MMM, y

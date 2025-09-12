@@ -1,4 +1,7 @@
 ---
+locale: bho
+generated_at: '2025-09-12T07:04:10Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -25,12 +28,13 @@ datetime_formats:
         thu: बृहस्पतिबार
         fri: शुक्रबार
         sat: सनीचर
+  day_periods:
+    format:
+      wide:
+        am: भोर
+        pm: सांझ
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: bho
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

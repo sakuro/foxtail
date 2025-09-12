@@ -1,20 +1,10 @@
 ---
+locale: bal
+generated_at: '2025-09-12T07:04:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': جن
-        '2': پر
-        '3': مار
-        '4': اپر
-        '5': مئیی
-        '6': جون
-        '7': جۆل
-        '8': اگست
-        '9': ستم
-        '10': اکت
-        '11': نئوم
-        '12': دسم
       wide:
         '1': جنوری
         '2': پروری
@@ -28,16 +18,21 @@ datetime_formats:
         '10': اکتوبر
         '11': نئومبر
         '12': دسمبر
+      abbreviated:
+        '1': جن
+        '2': پر
+        '3': مار
+        '4': اپر
+        '5': مئیی
+        '6': جون
+        '7': جۆل
+        '8': اگست
+        '9': ستم
+        '10': اکت
+        '11': نئوم
+        '12': دسم
   days:
     format:
-      abbreviated:
-        sun: یک
-        mon: دو
-        tue: سئے
-        wed: چار
-        thu: پنچ
-        fri: جمه
-        sat: شم
       wide:
         sun: یکشمبه
         mon: دوشمبه
@@ -46,17 +41,37 @@ datetime_formats:
         thu: پنچشمبه
         fri: جمه
         sat: شمبه
+      abbreviated:
+        sun: یک
+        mon: دو
+        tue: سئے
+        wed: چار
+        thu: پنچ
+        fri: جمه
+        sat: شم
+  quarters:
+    format:
+      wide:
+        '1': ائوَلی چارِک
+        '2': دومی چارِک
+        '3': سئیمی چارِک
+        '4': چارُمی چارِک
+      abbreviated:
+        '1': 1/4
+        '2': 2/4
+        '3': 3/4
+        '4': 4/4
   date_formats:
     full: EEEE, d MMMM, y
     long: d MMMM, y
     medium: d MMM, y
     short: d/M/yy
   time_formats:
-    full: hh:mm:ss a zzzz
-    long: hh:mm:ss a zzz
-    medium: hh:mm:ss a
-    short: hh:mm a
-locale: bal
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: hh:mm:ss a zzzz
+    long: hh:mm:ss a zzz
+    medium: hh:mm:ss a
+    short: hh:mm a
+  datetime_formats:
+    available_formats:
+      yMd: dd-MM-y
+      yMMMd: d MMM y

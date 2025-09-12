@@ -1,20 +1,10 @@
 ---
+locale: rm
+generated_at: '2025-09-12T07:04:20Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': schan.
-        '2': favr.
-        '3': mars
-        '4': avr.
-        '5': matg
-        '6': zercl.
-        '7': fan.
-        '8': avust
-        '9': sett.
-        '10': oct.
-        '11': nov.
-        '12': dec.
       wide:
         '1': da schaner
         '2': da favrer
@@ -28,20 +18,20 @@ datetime_formats:
         '10': d’october
         '11': da november
         '12': da december
+      abbreviated:
+        '1': schan.
+        '2': favr.
+        '3': mars
+        '4': avr.
+        '5': matg
+        '6': zercl.
+        '7': fan.
+        '8': avust
+        '9': sett.
+        '10': oct.
+        '11': nov.
+        '12': dec.
     stand-alone:
-      narrow:
-        '1': S
-        '2': F
-        '3': M
-        '4': A
-        '5': M
-        '6': Z
-        '7': F
-        '8': A
-        '9': S
-        '10': O
-        '11': "N"
-        '12': D
       wide:
         '1': schaner
         '2': favrer
@@ -55,16 +45,21 @@ datetime_formats:
         '10': october
         '11': november
         '12': december
+      narrow:
+        '1': S
+        '2': F
+        '3': M
+        '4': A
+        '5': M
+        '6': Z
+        '7': F
+        '8': A
+        '9': S
+        '10': O
+        '11': "N"
+        '12': D
   days:
     format:
-      abbreviated:
-        sun: du
-        mon: gli
-        tue: ma
-        wed: me
-        thu: gie
-        fri: ve
-        sat: so
       wide:
         sun: dumengia
         mon: glindesdi
@@ -73,6 +68,14 @@ datetime_formats:
         thu: gievgia
         fri: venderdi
         sat: sonda
+      abbreviated:
+        sun: du
+        mon: gli
+        tue: ma
+        wed: me
+        thu: gie
+        fri: ve
+        sat: so
     stand-alone:
       narrow:
         sun: D
@@ -81,18 +84,59 @@ datetime_formats:
         wed: M
         thu: G
         fri: V
-        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1. quartal
+        '2': 2. quartal
+        '3': 3. quartal
+        '4': 4. quartal
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+  eras:
+    names:
+      '0': avant Cristus
+      '1': suenter Cristus
   date_formats:
     full: EEEE, 'ils' d MMMM y
     long: d MMMM y
     medium: dd-MM-y
     short: dd-MM-yy
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: rm
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d.
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: dd-MM-y GGGGG
+      GyMMM: LLL y G
+      GyMMMd: dd-MM-y GGGGG
+      GyMMMEd: E, dd-MM-y GGGGG
+      GyMMMMd: d MMMM y G
+      GyMMMMEd: E, d MMMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd-MM
+      MEd: E, dd-MM
+      MMMd: dd-MM
+      MMMEd: E, dd-MM
+      MMMMd: d MMMM
+      MMMMEd: E, d MMMM
+      MMMMW: W. 'emna' MMMM
+      yM: LL-y
+      yMd: dd-MM-y
+      yMEd: E, dd-MM-y
+      yMMM: LLL y
+      yMMMd: dd-MM-y
+      yMMMEd: E, dd-MM-y
+      yMMMM: LLLL y
+      yMMMMd: d MMMM y
+      yMMMMEd: E, d MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: w. 'emna' 'dal' Y

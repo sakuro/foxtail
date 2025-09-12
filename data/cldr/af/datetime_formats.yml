@@ -1,20 +1,10 @@
 ---
+locale: af
+generated_at: '2025-09-12T07:04:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Jan.
-        '2': Feb.
-        '3': Mrt.
-        '4': Apr.
-        '5': Mei
-        '6': Jun.
-        '7': Jul.
-        '8': Aug.
-        '9': Sep.
-        '10': Okt.
-        '11': Nov.
-        '12': Des.
       wide:
         '1': Januarie
         '2': Februarie
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Oktober
         '11': November
         '12': Desember
+      abbreviated:
+        '1': Jan.
+        '2': Feb.
+        '3': Mrt.
+        '4': Apr.
+        '5': Mei
+        '6': Jun.
+        '7': Jul.
+        '8': Aug.
+        '9': Sep.
+        '10': Okt.
+        '11': Nov.
+        '12': Des.
     stand-alone:
       narrow:
         '1': J
@@ -44,14 +47,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: So.
-        mon: Ma.
-        tue: Di.
-        wed: Wo.
-        thu: Do.
-        fri: Vr.
-        sat: Sa.
       wide:
         sun: Sondag
         mon: Maandag
@@ -60,26 +55,93 @@ datetime_formats:
         thu: Donderdag
         fri: Vrydag
         sat: Saterdag
+      abbreviated:
+        sun: So.
+        mon: Ma.
+        tue: Di.
+        wed: Wo.
+        thu: Do.
+        fri: Vr.
+        sat: Sa.
     stand-alone:
       narrow:
-        sun: S
-        mon: M
         tue: D
-        wed: W
         thu: D
         fri: V
-        sat: S
+  quarters:
+    format:
+      wide:
+        '1': 1ste kwartaal
+        '2': 2de kwartaal
+        '3': 3de kwartaal
+        '4': 4de kwartaal
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+  day_periods:
+    format:
+      abbreviated:
+        midnight: middernag
+        am: vm.
+        pm: nm.
+        morning1: die oggend
+        afternoon1: die middag
+        evening1: die aand
+        night1: die nag
+    stand-alone:
+      abbreviated:
+        morning1: oggend
+        afternoon1: middag
+        evening1: aand
+        night1: nag
+  eras:
+    names:
+      '0': voor die gewone jaartelling
+      '1': gewone jaartelling
+    abbreviated:
+      '0': v.g.j.
+      '1': g.j.
+    narrow:
+      '0': vgj
+      '1': gj
   date_formats:
     full: EEEE dd MMMM y
     long: dd MMMM y
     medium: dd MMM y
-    short: y-MM-dd
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: af
-generated_at: '2025-09-06T03:52:30+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'om' {0}"
+    long: "{1} 'om' {0}"
+    available_formats:
+      Bhm: hh:mm B
+      Bhms: hh:mm:ss B
+      EBhm: E hh:mm B
+      EBhms: E hh:mm:ss B
+      Ed: E d
+      Ehm: E hh:mm a
+      Ehms: E hh:mm:ss a
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: dd MMM y G
+      GyMMMEd: E dd MMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd-MM
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMEd: E d MMMM
+      MMMMW: "'week' W 'van' MMMM"
+      yM: MM-y
+      yMEd: E y-MM-dd
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'week' w 'van' Y"

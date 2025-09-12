@@ -1,20 +1,10 @@
 ---
+locale: mai
+generated_at: '2025-09-12T07:04:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': जन॰
-        '2': फ़र॰
-        '3': मार्च
-        '4': अप्रैल
-        '5': मई
-        '6': जून
-        '7': जुल॰
-        '8': अग॰
-        '9': सित॰
-        '10': अक्तू॰
-        '11': नव॰
-        '12': दिस॰
       wide:
         '1': जनवरी
         '2': फरवरी
@@ -28,7 +18,33 @@ datetime_formats:
         '10': अक्तूबर
         '11': नवंबर
         '12': दिसंबर
+      abbreviated:
+        '1': जन॰
+        '2': फ़र॰
+        '3': मार्च
+        '4': अप्रैल
+        '5': मई
+        '6': जून
+        '7': जुल॰
+        '8': अग॰
+        '9': सित॰
+        '10': अक्तू॰
+        '11': नव॰
+        '12': दिस॰
     stand-alone:
+      wide:
+        '1': जनवरी
+        '2': फरवरी
+        '3': मार्च
+        '4': अप्रैल
+        '5': मई
+        '6': जून
+        '7': जुलाई
+        '8': अगस्त
+        '9': सितंबर
+        '10': अक्टूबर
+        '11': नवंबर
+        '12': दिसंबर
       abbreviated:
         '1': जन॰
         '2': फर॰
@@ -55,29 +71,8 @@ datetime_formats:
         '10': अ
         '11': न
         '12': दि
-      wide:
-        '1': जनवरी
-        '2': फरवरी
-        '3': मार्च
-        '4': अप्रैल
-        '5': मई
-        '6': जून
-        '7': जुलाई
-        '8': अगस्त
-        '9': सितंबर
-        '10': अक्टूबर
-        '11': नवंबर
-        '12': दिसंबर
   days:
     format:
-      abbreviated:
-        sun: रवि
-        mon: सोम
-        tue: मंगल
-        wed: बुध
-        thu: गुरु
-        fri: शुक्र
-        sat: शनि
       wide:
         sun: रवि दिन
         mon: सोम दिन
@@ -86,6 +81,14 @@ datetime_formats:
         thu: बृहस्पति दिन
         fri: शुक्र दिन
         sat: शनि दिन
+      abbreviated:
+        sun: रवि
+        mon: सोम
+        tue: मंगल
+        wed: बुध
+        thu: गुरु
+        fri: शुक्र
+        sat: शनि
     stand-alone:
       narrow:
         sun: र
@@ -95,17 +98,69 @@ datetime_formats:
         thu: गु
         fri: शु
         sat: श
+  quarters:
+    format:
+      wide:
+        '1': पहिल तिमाही
+        '2': दोसर तिमाही
+        '3': तेसर तिमाही
+        '4': चारिम तिमाही
+      abbreviated:
+        '1': ति1
+        '2': ति2
+        '3': ति3
+        '4': ति4
+  day_periods:
+    format:
+      abbreviated:
+        am: भोर
+        pm: सांझ
+    stand-alone:
+      abbreviated:
+        am: पूर्वाह्न
+        pm: अपराह्न
+  eras:
+    abbreviated:
+      '0': ईसवी पूर्व
+      '1': ईसवी
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: d/M/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: mai
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} के {0}"
+    long: "{1} के {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: E d
+      Gy: y G
+      GyMd: dd-MM-y G
+      GyMMM: MMM G y
+      GyMMMd: d MMM y G
+      GyMMMEd: E, MMM d, y G
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

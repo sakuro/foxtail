@@ -1,20 +1,10 @@
 ---
+locale: lu
+generated_at: '2025-09-12T07:04:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Cio
-        '2': Lui
-        '3': Lus
-        '4': Muu
-        '5': Lum
-        '6': Luf
-        '7': Kab
-        '8': Lush
-        '9': Lut
-        '10': Lun
-        '11': Kas
-        '12': Cis
       wide:
         '1': Ciongo
         '2': Lùishi
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Lungùdi
         '11': Kaswèkèsè
         '12': Ciswà
+      abbreviated:
+        '1': Cio
+        '2': Lui
+        '3': Lus
+        '4': Muu
+        '5': Lum
+        '6': Luf
+        '7': Kab
+        '8': Lush
+        '9': Lut
+        '10': Lun
+        '11': Kas
+        '12': Cis
     stand-alone:
       narrow:
         '1': C
@@ -44,14 +47,6 @@ datetime_formats:
         '12': C
   days:
     format:
-      abbreviated:
-        sun: Lum
-        mon: Nko
-        tue: Ndy
-        wed: Ndg
-        thu: Njw
-        fri: Ngv
-        sat: Lub
       wide:
         sun: Lumingu
         mon: Nkodya
@@ -60,6 +55,14 @@ datetime_formats:
         thu: Njòwa
         fri: Ngòvya
         sat: Lubingu
+      abbreviated:
+        sun: Lum
+        mon: Nko
+        tue: Ndy
+        wed: Ndg
+        thu: Njw
+        fri: Ngv
+        sat: Lub
     stand-alone:
       narrow:
         sun: L
@@ -69,17 +72,50 @@ datetime_formats:
         thu: "N"
         fri: "N"
         sat: L
+  quarters:
+    format:
+      wide:
+        '1': Mueji 1
+        '2': Mueji 2
+        '3': Mueji 3
+        '4': Mueji 4
+      abbreviated:
+        '1': M1
+        '2': M2
+        '3': M3
+        '4': M4
+  day_periods:
+    format:
+      abbreviated:
+        am: Dinda
+        pm: Dilolo
+  eras:
+    names:
+      '0': Kumpala kwa Yezu Kli
+      '1': Kunyima kwa Yezu Kli
+    abbreviated:
+      '0': kmp. Y.K.
+      '1': kny. Y. K.
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: d/M/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: lu
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

@@ -1,20 +1,10 @@
 ---
+locale: haw
+generated_at: '2025-09-12T07:04:14Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Ian.
-        '2': Pep.
-        '3': Mal.
-        '4': ʻAp.
-        '5': Mei
-        '6': Iun.
-        '7': Iul.
-        '8': ʻAu.
-        '9': Kep.
-        '10': ʻOk.
-        '11': Now.
-        '12': Kek.
       wide:
         '1': Ianuali
         '2': Pepeluali
@@ -28,16 +18,21 @@ datetime_formats:
         '10': ʻOkakopa
         '11': Nowemapa
         '12': Kekemapa
+      abbreviated:
+        '1': Ian.
+        '2': Pep.
+        '3': Mal.
+        '4': ʻAp.
+        '5': Mei
+        '6': Iun.
+        '7': Iul.
+        '8': ʻAu.
+        '9': Kep.
+        '10': ʻOk.
+        '11': Now.
+        '12': Kek.
   days:
     format:
-      abbreviated:
-        sun: LP
-        mon: P1
-        tue: P2
-        wed: P3
-        thu: P4
-        fri: P5
-        sat: P6
       wide:
         sun: Lāpule
         mon: Poʻakahi
@@ -46,6 +41,14 @@ datetime_formats:
         thu: Poʻahā
         fri: Poʻalima
         sat: Poʻaono
+      abbreviated:
+        sun: LP
+        mon: P1
+        tue: P2
+        wed: P3
+        thu: P4
+        fri: P5
+        sat: P6
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
@@ -56,7 +59,26 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: haw
-generated_at: '2025-09-06T03:52:35+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y

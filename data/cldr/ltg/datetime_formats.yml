@@ -1,4 +1,7 @@
 ---
+locale: ltg
+generated_at: '2025-09-12T07:04:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -39,7 +42,34 @@ datetime_formats:
         thu: catūrtdīne
         fri: pīktdīne
         sat: sastdīne
-locale: ltg
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  quarters:
+    format:
+      wide:
+        '1': 1. catūrksnis
+        '2': 2. catūrksnis
+        '3': 3. catūrksnis
+        '4': 4. catūrksnis
+  day_periods:
+    format:
+      wide:
+        am: prīškpušdīnē
+        pm: piecpušdīnē
+  eras:
+    names:
+      '0': pyrma myusu erys
+      '1': myusu erā
+    abbreviated:
+      '0': p.m.e.
+      '1': m.e.
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      yMd: d.MM.y.
+      yMMMd: y. 'g'. d. MMM

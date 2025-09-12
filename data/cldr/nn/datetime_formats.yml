@@ -1,7 +1,19 @@
 ---
+locale: nn
+generated_at: '2025-09-12T07:04:19Z'
+cldr_version: '46'
 datetime_formats:
+  months:
+    format:
+      narrow: {}
+    stand-alone:
+      wide: {}
   days:
     format:
+      wide:
+        mon: måndag
+        tue: tysdag
+        sat: laurdag
       abbreviated:
         sun: sø.
         mon: må.
@@ -10,23 +22,9 @@ datetime_formats:
         thu: to.
         fri: fr.
         sat: la.
-      short:
-        sun: sø.
-        mon: må.
-        tue: ty.
-        wed: on.
-        thu: to.
-        fri: fr.
-        sat: la.
-      wide:
-        sun: søndag
-        mon: måndag
-        tue: tysdag
-        wed: onsdag
-        thu: torsdag
-        fri: fredag
-        sat: laurdag
+      narrow: {}
     stand-alone:
+      wide: {}
       abbreviated:
         sun: søn
         mon: mån
@@ -35,17 +33,38 @@ datetime_formats:
         thu: tor
         fri: fre
         sat: lau
-  date_formats:
-    full: EEEE d. MMMM y
-    long: d. MMMM y
-    medium: d. MMM y
-    short: dd.MM.y
+  quarters:
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide:
+        morning1: på morgonen
+        night1: på natta
+      abbreviated:
+        am: f.m.
+        pm: e.m.
+    stand-alone:
+      wide:
+        morning1: morgon
+      abbreviated: {}
+  eras:
+    names:
+      '0': før vår tidsrekning
+      '1': etter vår tidsrekning
+    narrow:
+      '0': fvt
+      '1': vt
   time_formats:
-    full: "'kl'. HH:mm:ss zzzz"
+    full: "'kl'. HH.mm.ss zzzz"
     long: HH:mm:ss z
     medium: HH:mm:ss
     short: HH:mm
-locale: nn
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} {0}"
+    available_formats:
+      EHm: E HH:mm
+      EHms: E HH:mm:ss
+      MMMMW: "'veke' W 'i' MMMM"
+      yw: "'veke' w 'i' Y"

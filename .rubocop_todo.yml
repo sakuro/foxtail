@@ -6,12 +6,22 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-Rake/MethodDefinitionInTask:
+RSpec/AnyInstance:
   Exclude:
-    - 'lib/tasks/cldr.rake'
+    - 'spec/spec_helper.rb'
 
 # Configuration parameters: AllowedMethods, RequireForNonPublicMethods.
 Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/cldr/date_time_pattern_parser.rb'
     - 'lib/foxtail/cldr/number_pattern_parser.rb'
+
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: Max, AllowHeredoc, AllowURI, AllowQualifiedName, URISchemes, IgnoreCopDirectives, AllowedPatterns, SplitStrings.
+# URISchemes: http, https
+Layout/LineLength:
+  Exclude:
+    - 'compat/ast_comparator.rb'
+    - 'lib/foxtail/cldr/extractors/number_formats_extractor.rb'
+    - 'spec/foxtail/functions_spec.rb'
+    - 'spec/foxtail/parser/stream_spec.rb'

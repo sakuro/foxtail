@@ -1,20 +1,10 @@
 ---
+locale: to
+generated_at: '2025-09-12T07:04:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Sān
-        '2': Fēp
-        '3': Maʻa
-        '4': ʻEpe
-        '5': Mē
-        '6': Sun
-        '7': Siu
-        '8': ʻAok
-        '9': Sēp
-        '10': ʻOka
-        '11': Nōv
-        '12': Tīs
       wide:
         '1': Sānuali
         '2': Fēpueli
@@ -28,20 +18,20 @@ datetime_formats:
         '10': ʻOkatopa
         '11': Nōvema
         '12': Tīsema
+      abbreviated:
+        '1': Sān
+        '2': Fēp
+        '3': Maʻa
+        '4': ʻEpe
+        '5': Mē
+        '6': Sun
+        '7': Siu
+        '8': ʻAok
+        '9': Sēp
+        '10': ʻOka
+        '11': Nōv
+        '12': Tīs
     stand-alone:
-      narrow:
-        '1': S
-        '2': F
-        '3': M
-        '4': ʻE
-        '5': M
-        '6': S
-        '7': S
-        '8': ʻA
-        '9': S
-        '10': ʻO
-        '11': "N"
-        '12': T
       wide:
         '1': Sānuali
         '2': Fēpueli
@@ -55,16 +45,21 @@ datetime_formats:
         '10': ʻOkatopa
         '11': Nōvema
         '12': Tīsema
+      narrow:
+        '1': S
+        '2': F
+        '3': M
+        '4': ʻE
+        '5': M
+        '6': S
+        '7': S
+        '8': ʻA
+        '9': S
+        '10': ʻO
+        '11': "N"
+        '12': T
   days:
     format:
-      abbreviated:
-        sun: Sāp
-        mon: Mōn
-        tue: Tūs
-        wed: Pul
-        thu: Tuʻa
-        fri: Fal
-        sat: Tok
       wide:
         sun: Sāpate
         mon: Mōnite
@@ -73,15 +68,51 @@ datetime_formats:
         thu: Tuʻapulelulu
         fri: Falaite
         sat: Tokonaki
+      abbreviated:
+        sun: Sāp
+        mon: Mōn
+        tue: Tūs
+        wed: Pul
+        thu: Tuʻa
+        fri: Fal
+        sat: Tok
     stand-alone:
       narrow:
-        sun: S
-        mon: M
-        tue: T
         wed: P
-        thu: T
-        fri: F
         sat: T
+  quarters:
+    format:
+      wide:
+        '1': kuata ʻuluaki
+        '2': kuata ua
+        '3': kuata tolu
+        '4': kuata fā
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+    stand-alone:
+      wide:
+        '1': kuata 1
+        '2': kuata 2
+        '3': kuata 3
+        '4': kuata 4
+  day_periods:
+    format:
+      wide:
+        am: hengihengi
+        pm: efiafi
+      abbreviated:
+        am: HH
+        pm: EA
+  eras:
+    names:
+      '0': ki muʻa
+      '1': taʻu ʻo Sīsū
+    abbreviated:
+      '0': KM
+      '1': TS
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -92,7 +123,38 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: to
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1}, {0}"
+    long: "{1}, {0}"
+    medium: "{1}, {0}"
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: dd MM y GGGGG
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMEd: E d MMMM
+      MMMMW: "'uike' 'hono' W ʻ'o' MMMM"
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMM: MM-y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'uike' 'hono' w ʻ'o' Y"

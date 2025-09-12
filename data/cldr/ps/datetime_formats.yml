@@ -1,20 +1,10 @@
 ---
+locale: ps
+generated_at: '2025-09-12T07:04:20Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      narrow:
-        '1': ج
-        '2': ف
-        '3': م
-        '4': ا
-        '5': م
-        '6': ج
-        '7': ج
-        '8': ا
-        '9': س
-        '10': ا
-        '11': ن
-        '12': د
       wide:
         '1': جنوري
         '2': فبروري
@@ -28,10 +18,23 @@ datetime_formats:
         '10': اکتوبر
         '11': نومبر
         '12': دسمبر
+      narrow:
+        '1': ج
+        '2': ف
+        '3': م
+        '4': ا
+        '5': م
+        '6': ج
+        '7': ج
+        '8': ا
+        '9': س
+        '10': ا
+        '11': ن
+        '12': د
     stand-alone:
-      abbreviated:
+      wide:
         '1': جنوري
-        '2': فبروري
+        '2': فېبروري
         '3': مارچ
         '4': اپریل
         '5': مۍ
@@ -42,9 +45,9 @@ datetime_formats:
         '10': اکتوبر
         '11': نومبر
         '12': دسمبر
-      wide:
+      abbreviated:
         '1': جنوري
-        '2': فېبروري
+        '2': فبروري
         '3': مارچ
         '4': اپریل
         '5': مۍ
@@ -65,17 +68,40 @@ datetime_formats:
         thu: پينځنۍ
         fri: جمعه
         sat: اونۍ
+  quarters:
+    format:
+      wide:
+        '1': لومړۍ ربعه
+        '2': ۲مه ربعه
+        '3': ۳مه ربعه
+        '4': ۴مه ربعه
+  day_periods:
+    format:
+      wide:
+        am: غ.م.
+        pm: غ.و.
+    stand-alone:
+      abbreviated:
+        am: غ.م.
+        pm: غ.و.
+  eras:
+    names:
+      '0': له عام پېر دمخه
+      '1': عام پېر
+    abbreviated:
+      '0': له میلاد وړاندې
+      '1': ع.پ
   date_formats:
     full: EEEE د y د MMMM d
-    long: y MMMM d
-    medium: y MMM d
     short: y/M/d
   time_formats:
     full: H:mm:ss (zzzz)
     long: H:mm:ss (z)
     medium: H:mm:ss
     short: H:mm
-locale: ps
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      GyMd: M/d/y GGGGG
+      MMMEd: E, MMM d
+      MMMMW: اونۍ W د MMMM
+      yw: اونۍ w د Y

@@ -1,20 +1,10 @@
 ---
+locale: ku
+generated_at: '2025-09-12T07:04:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': rbn
-        '2': sbt
-        '3': adr
-        '4': nsn
-        '5': gln
-        '6': hzr
-        '7': trm
-        '8': tbx
-        '9': îln
-        '10': cot
-        '11': mjd
-        '12': brf
       wide:
         '1': rêbendan
         '2': sibat
@@ -28,6 +18,19 @@ datetime_formats:
         '10': cotmeh
         '11': mijdar
         '12': berfanbar
+      abbreviated:
+        '1': rbn
+        '2': sbt
+        '3': adr
+        '4': nsn
+        '5': gln
+        '6': hzr
+        '7': trm
+        '8': tbx
+        '9': îln
+        '10': cot
+        '11': mjd
+        '12': brf
     stand-alone:
       narrow:
         '1': R
@@ -44,22 +47,6 @@ datetime_formats:
         '12': B
   days:
     format:
-      abbreviated:
-        sun: yşm
-        mon: dşm
-        tue: sşm
-        wed: çşm
-        thu: pşm
-        fri: înî
-        sat: şem
-      short:
-        sun: yş
-        mon: dş
-        tue: sş
-        wed: çş
-        thu: pş
-        fri: în
-        sat: şm
       wide:
         sun: yekşem
         mon: duşem
@@ -68,6 +55,14 @@ datetime_formats:
         thu: pêncşem
         fri: înî
         sat: şemî
+      abbreviated:
+        sun: yşm
+        mon: dşm
+        tue: sşm
+        wed: çşm
+        thu: pşm
+        fri: înî
+        sat: şem
     stand-alone:
       narrow:
         sun: "Y"
@@ -77,17 +72,69 @@ datetime_formats:
         thu: P
         fri: Î
         sat: Ş
+  quarters:
+    format:
+      wide:
+        '1': çaryeka 1em
+        '2': çaryeka 2yem
+        '3': çaryeka 3yem
+        '4': çaryeka 4em
+      abbreviated:
+        '1': Ç1
+        '2': Ç2
+        '3': Ç3
+        '4': Ç4
+  day_periods:
+    format:
+      abbreviated:
+        am: BN
+        pm: PN
+  eras:
+    names:
+      '0': berî mîladê
+      '1': piştî mîladê
+    abbreviated:
+      '0': BM
+      '1': PM
   date_formats:
     full: EEEE, d'ê' MMMM'a' y'an'
     long: d'ê' MMMM'a' y'an'
     medium: d'ê' MMM'a' y'an'
     short: dd.MM.y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: ku
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Bh: h'ê' B
+      Bhm: h:mm'ê' B
+      Bhms: h:mm:ss'ê' B
+      EBhm: E, h:mm'ê' B
+      EBhms: E, h:mm:ss'ê' B
+      Ed: d E
+      Ehm: E, h:mm'ê' a
+      Ehms: E, h:mm:ss'ê' a
+      GyMd: GGGGG dd.MM.y
+      GyMMM: G MMM'a' y'an'
+      GyMMMd: G d'ê' MMM'a' y'an'
+      GyMMMEd: G d'ê' MMM'a' y'an', E
+      h: h'ê' a
+      hm: h:mm'ê' a
+      hms: h:mm:ss'ê' a
+      hmsv: h:mm:ss'ê' a 'bi' 'dema' v('y')'ê'
+      Hmsv: HH:mm:ss 'bi' 'dema' v('y')'ê'
+      hmv: h:mm'ê' a 'bi' 'dema' v('y')'ê'
+      Hmv: HH:mm 'bi' 'dema' v('y')'ê'
+      Md: dd.MM
+      MEd: E, dd.MM
+      MMMd: d'ê' MMM'ê'
+      MMMEd: E, d'ê' MMM'ê'
+      MMMMd: d'ê' MMMM'ê'
+      MMMMW: "'hefteya' W'em' 'ya' MMMM'ê'"
+      yM: MM.y
+      yMd: dd.MM.y
+      yMEd: E, dd.MM.y
+      yMMM: MMM'a' y'an'
+      yMMMd: d'ê' MMM'a' y'an'
+      yMMMEd: E, d'ê' MMM'a' y'an'
+      yMMMM: MMMM'a' y'an'
+      yQQQ: QQQ'em' 'ya' y'an'
+      yQQQQ: QQQQ 'ya' y'an'
+      yw: "'hefteya' w'em' 'ya' Y'an'"

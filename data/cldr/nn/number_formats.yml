@@ -1,4 +1,7 @@
 ---
+locale: nn
+generated_at: '2025-09-12T07:02:54Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
@@ -7,6 +10,7 @@ number_formats:
     plus_sign: "+"
     percent_sign: "%"
     per_mille: "‰"
+    exponential: E
     infinity: "∞"
     nan: NaN
   decimal_formats:
@@ -14,7 +18,7 @@ number_formats:
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
+    standard:
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -110,6 +114,7 @@ number_formats:
       symbol: Ft
       display_names:
         other: ungarske forintar
+        one: ungarske forintar
     IDR:
       symbol: Rp
       display_names:
@@ -119,10 +124,12 @@ number_formats:
       symbol: "₪"
       display_names:
         other: nye israelske sheklar
+        one: nye israelske sheklar
     INR:
       symbol: "₹"
       display_names:
         other: indiske rupiar
+        one: indiske rupiar
     ISK:
       symbol: kr
     JMD:
@@ -151,12 +158,13 @@ number_formats:
       symbol: Rs
       display_names:
         other: srilankiske rupiar
+        one: srilankiske rupiar
     LRD:
       symbol: "$"
     LTL:
       symbol: Lt
       display_names:
-        other: litauiske lita
+        one: litauiske lita
     LVL:
       symbol: Ls
       display_names:
@@ -172,6 +180,7 @@ number_formats:
       symbol: Rs
       display_names:
         other: mauritiske rupiar
+        one: mauritiske rupiar
     MXN:
       symbol: MX$
     MYR:
@@ -188,6 +197,7 @@ number_formats:
       symbol: Rs
       display_names:
         other: nepalske rupiar
+        one: nepalske rupiar
     NZD:
       symbol: NZ$
       display_names:
@@ -199,6 +209,7 @@ number_formats:
       symbol: Rs
       display_names:
         other: pakistanske rupiar
+        one: pakistanske rupiar
     PLN:
       symbol: zł
     PYG:
@@ -210,11 +221,11 @@ number_formats:
       symbol: lei
       display_names:
         other: rumenske leuar
-        one: rumensk leu
     RUB:
       symbol: "₽"
       display_names:
         other: russiske rublar
+        one: russiske rublar
     RWF:
       symbol: RF
     SBD:
@@ -238,7 +249,6 @@ number_formats:
     TOP:
       symbol: T$
     TRY:
-      symbol: "₺"
       display_names:
         other: tyrkiske lira
         one: tyrkisk lira
@@ -254,7 +264,6 @@ number_formats:
       symbol: "$"
       display_names:
         one: uruguayansk peso
-        other: uruguayanske pesos
     VEF:
       symbol: Bs
     VND:
@@ -284,69 +293,73 @@ number_formats:
     ADP:
       display_names:
         other: andorranske peseta
+        one: andorranske peseta
     AFA:
       display_names:
-        other: afghanske afghani (1927–2002)
+        one: afghanske afghani (1927–2002)
     AOK:
       display_names:
         other: angolske kwanza (1977–1990)
+        one: angolske kwanza (1977–1990)
     AON:
       display_names:
         other: angolske nye kwanza (1990–2000)
+        one: angolske nye kwanza (1990–2000)
     AOR:
       display_names:
         other: angolske kwanza reajustado (1995–1999)
+        one: angolske kwanza reajustado (1995–1999)
     ARA:
       display_names:
         other: argentiske austral
+        one: argentiske austral
     ARP:
       display_names:
         other: argentinske peso (1983–1985)
+        one: argentinske peso (1983–1985)
     ATS:
       display_names:
         other: austerrikske schilling
+        one: austerrikske schilling
     AWG:
       display_names:
         other: arubiske florinar
-    BAD:
-      display_names:
-        other: bosnisk-hercegovinske dinarer (1992–1994)
-        one: bosnisk-hercegovinsk dinar (1992–1994)
+        one: arubiske florinar
     BAN:
       display_names:
         other: nye bosnisk-hercegovinske dinarar (1994–1997)
+        one: nye bosnisk-hercegovinske dinarar (1994–1997)
     BEC:
       display_names:
         other: belgiske franc (konvertibel)
+        one: belgiske franc (konvertibel)
     BEL:
       display_names:
         other: belgiske franc (finansiell)
+        one: belgiske franc (finansiell)
     BGL:
       display_names:
         other: bulgarsk hard lev
+        one: bulgarsk hard lev
     BHD:
       display_names:
         other: bahrainske dinarar
+        one: bahrainske dinarar
     BOP:
       display_names:
         other: boliviske peso
+        one: boliviske peso
     BOV:
       display_names:
         other: boliviske mvdol
+        one: boliviske mvdol
     BRB:
       display_names:
         other: brasiliansk cruzeiro novo (1967–1986)
     BRC:
       display_names:
         other: brasilianske cruzado
-    BRN:
-      display_names:
-        other: brasilianske cruzado novo (1989–1990)
-        one: brasiliansk cruzado novo (1989–1990)
-    BRR:
-      display_names:
-        other: brasilianske cruzeiro (1993–1994)
-        one: brasiliansk cruzeiro (1993–1994)
+        one: brasilianske cruzado
     BUK:
       display_names:
         other: burmesisk kyat
@@ -357,16 +370,11 @@ number_formats:
     BYN:
       display_names:
         other: nye belarusiske rublar
+        one: nye belarusiske rublar
     BYR:
       display_names:
         other: belarusiske rublar (2000–2016)
         one: belarusisk rubel (2000–2016)
-    CHE:
-      display_names:
-        other: WIR-euro
-    CHW:
-      display_names:
-        other: WIR-franc
     COU:
       display_names:
         other: unidad de valor real
@@ -378,6 +386,7 @@ number_formats:
     CVE:
       display_names:
         other: kappverdiske escudo
+        one: kappverdiske escudo
     DDM:
       display_names:
         other: austtyske mark
@@ -385,13 +394,13 @@ number_formats:
     DZD:
       display_names:
         other: algeriske dinarar
+        one: algeriske dinarar
     EEK:
       display_names:
-        one: estisk kroon
         other: estiske kroon
     GHC:
       display_names:
-        other: ghanesiske cedi (1979–2007)
+        one: ghanesiske cedi (1979–2007)
     GQE:
       display_names:
         one: ekvatorialguineansk ekwele
@@ -399,14 +408,13 @@ number_formats:
     GRD:
       display_names:
         other: greske drakmar
-        one: gresk drakme
     GWP:
       display_names:
         other: Guinea-Bissau-peso
+        one: Guinea-Bissau-peso
     HRD:
       display_names:
         other: kroatiske dinarar
-        one: kroatisk dinar
     IQD:
       display_names:
         other: irakiske dinarar
@@ -414,12 +422,15 @@ number_formats:
     IRR:
       display_names:
         other: iranske rial
+        one: iranske rial
     JOD:
       display_names:
         other: jordanske dinarar
+        one: jordanske dinarar
     KWD:
       display_names:
         other: kuwaitiske dinarar
+        one: kuwaitiske dinarar
     LTT:
       display_names:
         other: litauiske talona
@@ -427,25 +438,30 @@ number_formats:
     LUC:
       display_names:
         other: luxemburgske konvertibel franc
+        one: luxemburgske konvertibel franc
     LVR:
       display_names:
         other: latviske rublar
+        one: latviske rublar
     LYD:
       display_names:
         other: libyske dinarar
+        one: libyske dinarar
     MDL:
       display_names:
         other: moldovske leuar
-        one: moldovsk leu
     MKD:
       display_names:
         other: makedonske denarar
+        one: makedonske denarar
     MKN:
       display_names:
         other: makedonske denarar (1992–1993)
+        one: makedonske denarar (1992–1993)
     MVP:
       display_names:
         other: maldiviske rupiar
+        one: maldiviske rupiar
     MXP:
       display_names:
         other: meksikanske sølvpeso (MXP)
@@ -453,7 +469,6 @@ number_formats:
     MZM:
       display_names:
         one: gammal mosambikisk metical
-        other: gamle mosambikiske metical
     NIC:
       display_names:
         other: nicaraguanske cordoba
@@ -461,6 +476,7 @@ number_formats:
     OMR:
       display_names:
         other: omanske rial
+        one: omanske rial
     PLZ:
       display_names:
         one: polsk zloty (PLZ)
@@ -468,6 +484,7 @@ number_formats:
     QAR:
       display_names:
         other: qatarske rial
+        one: qatarske rial
     ROL:
       display_names:
         other: gamle rumenske lei
@@ -475,9 +492,11 @@ number_formats:
     RSD:
       display_names:
         other: serbiske dinarar
+        one: serbiske dinarar
     RUR:
       display_names:
         other: russiske rublar (1991–1998)
+        one: russiske rublar (1991–1998)
     SAR:
       display_names:
         other: saudiarabiske rial
@@ -485,6 +504,7 @@ number_formats:
     SCR:
       display_names:
         other: seychelliske rupiar
+        one: seychelliske rupiar
     SDD:
       display_names:
         other: gamle sudanske dinarar
@@ -496,10 +516,10 @@ number_formats:
     SLL:
       display_names:
         other: sierraleonsk leone (1964—2022)
+        one: sierraleonsk leone (1964—2022)
     SUR:
       display_names:
         other: sovjetiske rublar
-        one: sovjetisk rubel
     SZL:
       display_names:
         other: eswatiniske emalangeni
@@ -507,10 +527,10 @@ number_formats:
     TJR:
       display_names:
         other: tadsjikiske rublar
-        one: tadsjikisk rubel
     TND:
       display_names:
         other: tunisiske dinarar
+        one: tunisiske dinarar
     TRL:
       display_names:
         other: gamle tyrkiske lire
@@ -570,25 +590,23 @@ number_formats:
     YDD:
       display_names:
         other: jemenittiske dinarar
-        one: jemenittisk dinar
     YER:
       display_names:
         other: jemenittiske rial
+        one: jemenittiske rial
     YUD:
       display_names:
         other: jugoslaviske dinarar (hard)
-        one: jugoslavisk dinar (hard)
     YUM:
       display_names:
         other: jugoslaviske noviy-dinarar
-        one: jugoslavisk noviy-dinar
     YUN:
       display_names:
         other: jugoslaviske konvertible dinarar
-        one: jugoslavisk konvertibel dinar
     ZAL:
       display_names:
         other: sørafrikanske rand (finansiell)
+        one: sørafrikanske rand (finansiell)
     ZRN:
       display_names:
         other: zairisk ny zaire
@@ -598,10 +616,7 @@ number_formats:
     ZWD:
       display_names:
         other: zimbabwisk dollar
-locale: nn
-generated_at: '2025-09-10T23:53:14+09:00'
-cldr_version: v46
-source: Unicode CLDR
+        one: zimbabwisk dollar
 currency_fractions:
   ADP:
     digits: 0

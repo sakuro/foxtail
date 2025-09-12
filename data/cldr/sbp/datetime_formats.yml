@@ -1,20 +1,10 @@
 ---
+locale: sbp
+generated_at: '2025-09-12T07:04:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Mup
-        '2': Mwi
-        '3': Msh
-        '4': Mun
-        '5': Mag
-        '6': Muj
-        '7': Msp
-        '8': Mpg
-        '9': Mye
-        '10': Mok
-        '11': Mus
-        '12': Muh
       wide:
         '1': Mupalangulwa
         '2': Mwitope
@@ -28,16 +18,21 @@ datetime_formats:
         '10': Mokhu
         '11': Musongandembwe
         '12': Muhaano
+      abbreviated:
+        '1': Mup
+        '2': Mwi
+        '3': Msh
+        '4': Mun
+        '5': Mag
+        '6': Muj
+        '7': Msp
+        '8': Mpg
+        '9': Mye
+        '10': Mok
+        '11': Mus
+        '12': Muh
   days:
     format:
-      abbreviated:
-        sun: Mul
-        mon: Jtt
-        tue: Jnn
-        wed: Jtn
-        thu: Alh
-        fri: Iju
-        sat: Jmo
       wide:
         sun: Mulungu
         mon: Jumatatu
@@ -46,6 +41,14 @@ datetime_formats:
         thu: Alahamisi
         fri: Ijumaa
         sat: Jumamosi
+      abbreviated:
+        sun: Mul
+        mon: Jtt
+        tue: Jnn
+        wed: Jtn
+        thu: Alh
+        fri: Iju
+        sat: Jmo
     stand-alone:
       narrow:
         sun: M
@@ -55,17 +58,49 @@ datetime_formats:
         thu: A
         fri: I
         sat: J
+  quarters:
+    format:
+      wide:
+        '1': Lobo 1
+        '2': Lobo 2
+        '3': Lobo 3
+        '4': Lobo 4
+      abbreviated:
+        '1': L1
+        '2': L2
+        '3': L3
+        '4': L4
+  day_periods:
+    format:
+      abbreviated:
+        am: Lwamilawu
+        pm: Pashamihe
+  eras:
+    names:
+      '0': Ashanali uKilisito
+      '1': Pamwandi ya Kilisto
+    abbreviated:
+      '0': AK
+      '1': PK
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: sbp
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      ms: m:ss
+      yM: M/y
+      yMd: M/d/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMd: MMM d y
+      yMMMEd: E, MMM d, y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

@@ -1,20 +1,10 @@
 ---
+locale: ve
+generated_at: '2025-09-12T07:04:24Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Pha
-        '2': Luh
-        '3': Ṱhf
-        '4': Lam
-        '5': Shu
-        '6': Lwi
-        '7': Lwa
-        '8': Ṱha
-        '9': Khu
-        '10': Tsh
-        '11': Ḽar
-        '12': Nye
       wide:
         '1': Phando
         '2': Luhuhi
@@ -28,16 +18,21 @@ datetime_formats:
         '10': Tshimedzi
         '11': Ḽara
         '12': Nyendavhusiku
+      abbreviated:
+        '1': Pha
+        '2': Luh
+        '3': Ṱhf
+        '4': Lam
+        '5': Shu
+        '6': Lwi
+        '7': Lwa
+        '8': Ṱha
+        '9': Khu
+        '10': Tsh
+        '11': Ḽar
+        '12': Nye
   days:
     format:
-      abbreviated:
-        sun: Swo
-        mon: Mus
-        tue: Vhi
-        wed: Rar
-        thu: Ṋa
-        fri: Ṱan
-        sat: Mug
       wide:
         sun: Swondaha
         mon: Musumbuluwo
@@ -46,7 +41,28 @@ datetime_formats:
         thu: Ḽavhuṋa
         fri: Ḽavhuṱanu
         sat: Mugivhela
-locale: ve
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated:
+        sun: Swo
+        mon: Mus
+        tue: Vhi
+        wed: Rar
+        thu: Ṋa
+        fri: Ṱan
+        sat: Mug
+  quarters:
+    format:
+      wide:
+        '1': Kotara ya u thoma
+        '2': Kotara ya vhuvhili
+        '3': Kotara ya vhuraru
+        '4': Kotara ya vhuṋa
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

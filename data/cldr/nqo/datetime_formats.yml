@@ -1,20 +1,10 @@
 ---
+locale: nqo
+generated_at: '2025-09-12T07:04:19Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ߓߌ߲ߠ
-        '2': ߞߏ߲ߞ
-        '3': ߕߙߊ
-        '4': ߞߏ߲ߘ
-        '5': ߘߓߊ߬ߕ
-        '6': ߥߊ߬ߛ
-        '7': ߞߊ߬ߙ
-        '8': ߘߓߊ߬ߓ
-        '9': ߕߎߟߊߝߌ߲
-        '10': ߞߏ߲ߓ
-        '11': ߣߍߣ
-        '12': ߞߏߟ
       wide:
         '1': ߓߌ߲ߠߊߥߎߟߋ߲
         '2': ߞߏ߲ߞߏߜߍ
@@ -28,6 +18,19 @@ datetime_formats:
         '10': ߞߏ߲ߓߌߕߌ߮
         '11': ߣߍߣߍߓߊ
         '12': ߞߏߟߌ߲ߞߏߟߌ߲
+      abbreviated:
+        '1': ߓߌ߲ߠ
+        '2': ߞߏ߲ߞ
+        '3': ߕߙߊ
+        '4': ߞߏ߲ߘ
+        '5': ߘߓߊ߬ߕ
+        '6': ߥߊ߬ߛ
+        '7': ߞߊ߬ߙ
+        '8': ߘߓߊ߬ߓ
+        '9': ߕߎߟߊߝߌ߲
+        '10': ߞߏ߲ߓ
+        '11': ߣߍߣ
+        '12': ߞߏߟ
     stand-alone:
       narrow:
         '1': ߓ
@@ -44,22 +47,6 @@ datetime_formats:
         '12': ߞ
   days:
     format:
-      abbreviated:
-        sun: ߞߊ߯ߙ
-        mon: ߞߐ߬ߓ
-        tue: ߞߐ߬ߟߏ߲
-        wed: ߞߎߣ
-        thu: ߓߌߟ
-        fri: ߛߌ߬ߣ
-        sat: ߞߍ߲ߘ
-      short:
-        sun: ߞߊ߯
-        mon: ߞߐ߬
-        tue: ߞߐ߬ߟߏ߲
-        wed: ߞߎ
-        thu: ߓߌ
-        fri: ߛߌ߬
-        sat: ߞߍ߲
       wide:
         sun: ߞߊ߯ߙߌߟߏ߲
         mon: ߞߐ߬ߓߊ߬ߟߏ߲
@@ -68,6 +55,14 @@ datetime_formats:
         thu: ߓߌߟߏ߲
         fri: ߛߌ߬ߣߌ߲߬ߟߏ߲
         sat: ߞߍ߲ߘߍߟߏ߲
+      abbreviated:
+        sun: ߞߊ߯ߙ
+        mon: ߞߐ߬ߓ
+        tue: ߞߐ߬ߟߏ߲
+        wed: ߞߎߣ
+        thu: ߓߌߟ
+        fri: ߛߌ߬ߣ
+        sat: ߞߍ߲ߘ
     stand-alone:
       abbreviated:
         sun: ߞߊ߯ߙ
@@ -85,15 +80,39 @@ datetime_formats:
         thu: ߓ
         fri: ߛ
         sat: ߞ
-      short:
-        sun: ߞߊ߯
-        mon: ߞߐ߬ߓ
-        tue: ߞߐ߬ߟ
-        wed: ߞߎ
-        thu: ߓߌ
-        fri: ߛߌ߬
-        sat: ߞߍ߲
-locale: nqo
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  quarters:
+    format:
+      wide:
+        '1': ߞߊߙߏߛߓߊ߫ ߁߭
+        '2': ߞߊߙߏߛߓߊ߫ ߂߲
+        '3': ߞߊߙߏߛߓߊ߫ ߃߲
+        '4': ߞߊߙߏߛߓߊ߫ ߄߲
+      abbreviated:
+        '1': ߞߛ߁
+        '2': ߞߛ߂
+        '3': ߞߛ߃
+        '4': ߞߛ߄
+  day_periods:
+    format:
+      abbreviated:
+        am: ߛ
+        pm: ߥ
+  eras:
+    names:
+      '0': ߞߊ߬ߝߏ߬ߙߋ߲ ߥߎ߬ߛߎ ߢߍ߫
+      '1': ߞߊ߬ߝߏ߬ߙߋ߲ ߠߊ߫ ߥߎ߬ߛߎ
+    abbreviated:
+      '0': ߌߛ. ߡ. ߢߍ߫
+      '1': ߌߛ. ߡ. ߞߐ߫
+    narrow:
+      '0': ߌߛ. ߢߍ߫
+      '1': ߌߛ. ߞߐ߫
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      yMd: y / dd / MM
+      yMMMd: y / dd MMM

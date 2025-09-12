@@ -1,47 +1,31 @@
 ---
+locale: gd
+generated_at: '2025-09-12T07:01:52Z'
+cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
-  scientific_formats:
-    standard: "#E0"
   currencies:
     AFN:
-      symbol: "؋"
       display_names:
         other: afghani Afghanach
         one: afghani Afghanach
         two: afghani Afghanach
         few: afghani Afghanach
     AMD:
-      symbol: "֏"
       display_names:
         other: dram Airmeineach
         one: dram Airmeineach
         two: dhram Airmeineach
         few: dram Airmeineach
     AOA:
-      symbol: Kz
       display_names:
         other: kwanza Angòlach
         one: kwanza Angòlach
         two: kwanza Angòlach
         few: kwanza Angòlach
     ARS:
-      symbol: "$"
       display_names:
         other: peso Argantaineach
         one: pheso Argantaineach
@@ -55,77 +39,66 @@ number_formats:
         two: dholar Astràilianach
         few: dolaran Astràilianach
     AZN:
-      symbol: "₼"
       display_names:
         other: manat Asarbaideànach
         one: mhanat Asarbaideànach
         two: mhanat Asarbaideànach
         few: manat Asarbaideànach
     BAM:
-      symbol: KM
       display_names:
         other: mark iompachail Bhosna agus Hearsagobhana
         one: mhark iompachail Bhosna agus Hearsagobhana
         two: mhark iompachail Bhosna agus Hearsagobhana
         few: mark iompachail Bhosna agus Hearsagobhana
     BBD:
-      symbol: "$"
       display_names:
         other: dolar Barbadach
         one: dolar Barbadach
         two: dholar Barbadach
         few: dolaran Barbadach
     BDT:
-      symbol: "৳"
       display_names:
         other: taka Bangladaiseach
         one: taka Bangladaiseach
         two: thaka Bangladaiseach
         few: taka Bangladaiseach
     BMD:
-      symbol: "$"
       display_names:
         other: dolar Bearmùdach
         one: dolar Bearmùdach
         two: dholar Bearmùdach
         few: dolaran Bearmùdach
     BND:
-      symbol: "$"
       display_names:
         other: dolar Brùnaigheach
         one: dolar Brùnaigheach
         two: dholar Brùnaigheach
         few: dolaran Brùnaigheach
     BOB:
-      symbol: Bs
       display_names:
         other: boliviano Boilibhiach
         one: bholiviano Boilibhiach
         two: bholiviano Boilibhiach
         few: boliviano Boilibhiach
     BRL:
-      symbol: R$
       display_names:
         other: real Braisileach
         one: real Braisileach
         two: real Braisileach
         few: real Braisileach
     BSD:
-      symbol: "$"
       display_names:
         other: dolar Bathamach
         one: dolar Bathamach
         two: dholar Bathamach
         few: dolaran Bathamach
     BWP:
-      symbol: P
       display_names:
         other: pula Botsuanach
         one: phula Botsuanach
         two: phula Botsuanach
         few: pula Botsuanach
     BZD:
-      symbol: "$"
       display_names:
         other: dolar Beilìseach
         one: dolar Beilìseach
@@ -139,7 +112,6 @@ number_formats:
         two: dholar Canadach
         few: dolaran Canadach
     CLP:
-      symbol: "$"
       display_names:
         other: peso Sileach
         one: pheso Sileach
@@ -153,133 +125,114 @@ number_formats:
         two: yuan Sìneach
         few: yuan Sìneach
     COP:
-      symbol: "$"
       display_names:
         other: peso Coloimbeach
         one: pheso Coloimbeach
         two: pheso Coloimbeach
         few: pesothan Coloimbeach
     CRC:
-      symbol: "₡"
       display_names:
         other: colón Costa Rìceach
         one: cholón Chosta Rìcea
         two: cholón Costa Rìceach
         few: colón Costa Rìceach
     CUC:
-      symbol: "$"
       display_names:
         other: peso iompachail Cùbach
         one: pheso iompachail Cùbach
         two: pheso iompachail Cùbach
         few: pesothan iompachail Cùbach
     CUP:
-      symbol: "$"
       display_names:
         other: peso Cùbach
         one: pheso Cùbach
         two: pheso Cùbach
         few: pesothan Cùbach
     CZK:
-      symbol: Kč
       display_names:
         other: koruna Seiceach
         one: koruna Seiceach
         two: koruna Seiceach
         few: koruna Seiceach
     DKK:
-      symbol: kr
       display_names:
         other: krone Danmhairgeach
         one: krone Danmhairgeach
         two: krone Danmhairgeach
         few: kroner Danmhairgeach
     DOP:
-      symbol: "$"
       display_names:
         other: peso Doiminiceach
         one: pheso Doiminiceach
         two: pheso Doiminiceach
         few: pesothan Doiminiceach
     EGP:
-      symbol: E£
       display_names:
         other: punnd Èipheiteach
         one: phunnd Èipheiteach
         two: phunnd Èipheiteach
         few: puinnd Èipheiteach
     ESP:
-      symbol: "₧"
       display_names:
         other: peseta Spàinnteach
         one: pheseta Spàinnteach
         two: pheseta Spàinnteach
         few: peseta Spàinnteach
     EUR:
-      symbol: "€"
       display_names:
         other: Eòro
         one: Eòro
         two: Eòro
         few: Eòrothan
     FJD:
-      symbol: "$"
       display_names:
         other: dolar Fìditheach
         one: dolar Fìditheach
         two: dholar Fìditheach
         few: dolaran Fìditheach
     FKP:
-      symbol: "£"
       display_names:
         other: punnd Fàclannach
         one: phunnd Fàclannach
         two: phunnd Fàclannach
         few: puinnd Fhàclannach
     GBP:
-      symbol: "£"
       display_names:
         other: punnd Sasannach
         one: phunnd Sasannach
         two: phunnd Sasannach
         few: puinnd Shasannach
     GEL:
-      symbol: "₾"
       display_names:
         other: lari Cairtbheileach
         one: lari Cairtbheileach
         two: lari Cairtbheileach
         few: lari Cairtbheileach
     GHS:
-      symbol: GH₵
       display_names:
         other: cedi Gànach
         one: chedi Gànach
         two: chedi Gànach
         few: cedi Gànach
     GIP:
-      symbol: "£"
       display_names:
         other: punnd Diobraltarach
         one: phunnd Diobraltarach
         two: phunnd Diobraltarach
         few: puinnd Dhiobraltarach
     GNF:
-      symbol: FG
       display_names:
         other: franc Ginitheach
         one: fhranc Ginitheach
         two: fhranc Ginitheach
         few: franc Ginitheach
     GTQ:
-      symbol: Q
       display_names:
         other: quetzal Guatamalach
         one: quetzal Guatamalach
         two: quetzal Guatamalach
         few: quetzal Guatamalach
     GYD:
-      symbol: "$"
       display_names:
         other: dolar Guidheànach
         one: dolar Guidheànach
@@ -293,56 +246,48 @@ number_formats:
         two: dholar Hong Kong
         few: dolaran Hong Kong
     HNL:
-      symbol: L
       display_names:
         other: lempira Hondùrach
         one: lempira Hondùrach
         two: lempira Hondùrach
         few: lempira Hondùrach
     HRK:
-      symbol: kn
       display_names:
         other: kuna Cròthaiseach
         one: kuna Cròthaiseach
         two: kuna Cròthaiseach
         few: kuna Cròthaiseach
     HUF:
-      symbol: Ft
       display_names:
         other: forint Ungaireach
         one: fhorint Ungaireach
         two: fhorint Ungaireach
         few: forint Ungaireach
     IDR:
-      symbol: Rp
       display_names:
         other: rupiah Innd-Innseach
         one: rupiah Innd-Innseach
         two: rupiah Innd-Innseach
         few: rupiah Innd-Innseach
     ILS:
-      symbol: "₪"
       display_names:
         other: secel ùr Iosraeleach
         one: shecel ùr Iosraeleach
         two: shecel ùr Iosraeleach
         few: secelean ùra Iosraeleach
     INR:
-      symbol: "₹"
       display_names:
         other: rupee Innseanach
         one: rupee Innseanach
         two: rupee Innseanach
         few: rupee Innseanach
     ISK:
-      symbol: kr
       display_names:
         other: króna Innis Tìleach
         one: króna Innis Tìleach
         two: króna Innis Tìleach
         few: krónur Innis Tìleach
     JMD:
-      symbol: "$"
       display_names:
         other: dolar Diameugach
         one: dolar Diameugach
@@ -356,119 +301,102 @@ number_formats:
         two: yen Seapanach
         few: yen Seapanach
     KGS:
-      symbol: "⃀"
       display_names:
         other: som Cìorgasach
         one: som Cìorgasach
         two: shom Cìorgasach
         few: som Cìorgasach
     KHR:
-      symbol: "៛"
       display_names:
         other: riel Cambuideach
         one: riel Cambuideach
         two: riel Cambuideach
         few: riel Cambuideach
     KMF:
-      symbol: CF
       display_names:
         other: franc Comorosach
         one: fhranc Comorosach
         two: fhranc Comorosach
         few: franc Comorosach
     KPW:
-      symbol: "₩"
       display_names:
         other: won Choirèa a Tuath
         one: won Choirèa a Tuath
         two: won Choirèa a Tuath
         few: won Choirèa a Tuath
     KRW:
-      symbol: "₩"
       display_names:
         other: won Choirèa a Deas
         one: won Choirèa a Deas
         two: won Choirèa a Deas
         few: won Choirèa a Deas
     KYD:
-      symbol: "$"
       display_names:
         other: dolar Caimeanach
         one: dolar Caimeanach
         two: dholar Caimeanach
         few: dolaran Caimeanach
     KZT:
-      symbol: "₸"
       display_names:
         other: tenge Casachach
         one: tenge Casachach
         two: thenge Casachach
         few: tenge Casachach
     LAK:
-      symbol: "₭"
       display_names:
         other: kip Làthosach
         one: kip Làthosach
         two: kip Làthosach
         few: kip Làthosach
     LBP:
-      symbol: L£
       display_names:
         other: punnd Leabanach
         one: phunnd Leabanach
         two: phunnd Leabanach
         few: puinnd Leabanach
     LKR:
-      symbol: Rs
       display_names:
         other: rupee Sri Lancach
         one: rupee Sri Lancach
         two: rupee Sri Lancach
         few: rupee Sri Lancach
     LRD:
-      symbol: "$"
       display_names:
         other: dolar Libèireach
         one: dolar Libèireach
         two: dholar Libèireach
         few: dolaran Libèireach
     LTL:
-      symbol: Lt
       display_names:
         other: litas Liotuaineach
         one: litas Liotuaineach
         two: litas Liotuaineach
         few: litas Liotuaineach
     LVL:
-      symbol: Ls
       display_names:
         other: lats Laitbheach
         one: lats Laitbheach
         two: lats Laitbheach
         few: lats Laitbheach
     MGA:
-      symbol: Ar
       display_names:
         other: ariary Madagasgarach
         one: ariary Madagasgarach
         two: ariary Madagasgarach
         few: ariary Madagasgarach
     MMK:
-      symbol: K
       display_names:
         other: kyat Miànmarach
         one: kyat Miànmarach
         two: kyat Miànmarach
         few: kyat Miànmarach
     MNT:
-      symbol: "₮"
       display_names:
         other: tugrik Mongolach
         one: tugrik Mongolach
         two: thugrik Mongolach
         few: tugrik Mongolach
     MUR:
-      symbol: Rs
       display_names:
         other: rupee Moiriseasach
         one: rupee Moiriseasach
@@ -482,42 +410,36 @@ number_formats:
         two: pheso Meagsagach
         few: pesothan Meagsagach
     MYR:
-      symbol: RM
       display_names:
         other: ringgit Malaidheach
         one: ringgit Malaidheach
         two: ringgit Malaidheach
         few: ringgit Malaidheach
     NAD:
-      symbol: "$"
       display_names:
         other: dolar Naimibitheach
         one: dolar Naimibitheach
         two: dholar Naimibitheach
         few: dolaran Naimibitheach
     NGN:
-      symbol: "₦"
       display_names:
         other: naira Nigèiriach
         one: naira Nigèiriach
         two: naira Nigèiriach
         few: naira Nigèiriach
     NIO:
-      symbol: C$
       display_names:
         other: córdoba Niocaragach
         one: chórdoba Niocaragach
         two: chórdoba Niocaragach
         few: córdoba Niocaragach
     NOK:
-      symbol: kr
       display_names:
         other: krone Nirribheach
         one: krone Nirribheach
         two: krone Nirribheach
         few: kroner Nirribheach
     NPR:
-      symbol: Rs
       display_names:
         other: rupee Neapàlach
         one: rupee Neapàlach
@@ -538,21 +460,18 @@ number_formats:
         two: pheso Filipineach
         few: pesothan Filipineach
     PKR:
-      symbol: Rs
       display_names:
         other: rupee Pagastànach
         one: rupee Pagastànach
         two: rupee Pagastànach
         few: rupee Pagastànach
     PLN:
-      symbol: zł
       display_names:
         other: złoty Pòlainneach
         one: złoty Pòlainneach
         two: złoty Pòlainneach
         few: złoty Pòlainneach
     PYG:
-      symbol: "₲"
       display_names:
         other: guaraní Paraguaidheach
         one: ghuaraní Paraguaidheach
@@ -566,84 +485,72 @@ number_formats:
         two: leu Romàineach
         few: leu Romàineach
     RUB:
-      symbol: "₽"
       display_names:
         other: rùbal Ruiseach
         one: rùbal Ruiseach
         two: rùbal Ruiseach
         few: rùbalan Ruiseach
     RWF:
-      symbol: RF
       display_names:
         other: franc Rubhandach
         one: fhranc Rubhandach
         two: fhranc Rubhandach
         few: franc Rubhandach
     SBD:
-      symbol: "$"
       display_names:
         other: dolar Eileanan Sholaimh
         one: dolar Eileanan Sholaimh
         two: dholar Eileanan Sholaimh
         few: dolaran Eileanan Sholaimh
     SEK:
-      symbol: kr
       display_names:
         other: krona Suaineach
         one: krona Suaineach
         two: krona Suaineach
         few: kronor Suaineach
     SGD:
-      symbol: "$"
       display_names:
         other: dolar Singeapòrach
         one: dolar Singeapòrach
         two: dholar Singeapòrach
         few: dolaran Singeapòrach
     SHP:
-      symbol: "£"
       display_names:
         other: punnd Eilean Naomh Eilidh
         one: phunnd Eilean Naomh Eilidh
         two: phunnd Eilean Naomh Eilidh
         few: puinnd Eilean Naomh Eilidh
     SRD:
-      symbol: "$"
       display_names:
         other: dolar Suranamach
         one: dolar Suranamach
         two: dholar Suranamach
         few: dolaran Suranamach
     SSP:
-      symbol: "£"
       display_names:
         other: punnd Sudàin a Deas
         one: phunnd Sudàin a Deas
         two: phunnd Sudàin a Deas
         few: puinnd Shudàin a Deas
     STN:
-      symbol: Db
       display_names:
         other: dobra São Tomé agus Príncipe
         one: dobra São Tomé agus Príncipe
         two: dhobra São Tomé agus Príncipe
         few: dobra São Tomé agus Príncipe
     SYP:
-      symbol: "£"
       display_names:
         other: punnd Siridheach
         one: phunnd Siridheach
         two: phunnd Siridheach
         few: puinnd Shiridheach
     THB:
-      symbol: "฿"
       display_names:
         other: baht Tàidheach
         one: bhaht Tàidheach
         two: bhaht Tàidheach
         few: baht Tàidheach
     TOP:
-      symbol: T$
       display_names:
         other: paʻanga Tongach
         one: phaʻanga Tongach
@@ -657,7 +564,6 @@ number_formats:
         two: lira Turcach
         few: lira Turcach
     TTD:
-      symbol: "$"
       display_names:
         other: dolar Thrianaid agus Thobago
         one: dolar Thrianaid agus Thobago
@@ -671,42 +577,36 @@ number_formats:
         two: dholar ùr Taidh-Bhànach
         few: dolaran ùra Taidh-Bhànach
     UAH:
-      symbol: "₴"
       display_names:
         other: hryvnia Ucràineach
         one: hryvnia Ucràineach
         two: hryvnia Ucràineach
         few: hryvnia Ucràineach
     USD:
-      symbol: "$"
       display_names:
         other: dolar nan Stàitean Aonaichte
         one: dolar nan Stàitean Aonaichte
         two: dholar nan Stàitean Aonaichte
         few: dolaran nan Stàitean Aonaichte
     UYU:
-      symbol: "$"
       display_names:
         other: peso Uruguaidheach
         one: pheso Uruguaidheach
         two: pheso Uruguaidheach
         few: pesothan Uruguaidheach
     VEF:
-      symbol: Bs
       display_names:
         other: bolívar Bheinisealach (2008–2018)
         one: bholívar Bheinisealach (2008–2018)
         two: bholívar Bheinisealach (2008–2018)
         few: bolívar Bheinisealach (2008–2018)
     VND:
-      symbol: "₫"
       display_names:
         other: dong Bhiet-Namach
         one: dong Bhiet-Namach
         two: dhong Bhiet-Namach
         few: dong Bhiet-Namach
     XAF:
-      symbol: FCFA
       display_names:
         other: franc CFA Meadhan-Afragach
         one: fhranc CFA Meadhan-Afragach
@@ -720,21 +620,18 @@ number_formats:
         two: dholar Caraibeach earach
         few: dolaran Caraibeach earach
     XCG:
-      symbol: Cg.
       display_names:
         other: gulden Caraibeach
         one: ghulden Caraibeach
         two: ghulden Caraibeach
         few: gulden Caraibeach
     XOF:
-      symbol: F CFA
       display_names:
         other: franc CFA Afraga an Iar
         one: fhranc CFA Afraga an Iar
         two: fhranc CFA Afraga an Iar
         few: franc CFA Afraga an Iar
     XPF:
-      symbol: CFPF
       display_names:
         other: franc CFP
         one: fhranc CFP
@@ -748,14 +645,12 @@ number_formats:
         two: "(aonad airgeadra neo–aithnichte)"
         few: "(aonadan airgeadra neo–aithnichte)"
     ZAR:
-      symbol: R
       display_names:
         other: rand Afraga a Deas
         one: rand Afraga a Deas
         two: rand Afraga a Deas
         few: rand Afraga a Deas
     ZMW:
-      symbol: ZK
       display_names:
         other: kwacha Sàimbitheach
         one: kwacha Sàimbitheach
@@ -1963,262 +1858,3 @@ number_formats:
         one: dolar Sìombabuthach (2008)
         two: dholar Sìombabuthach (2008)
         few: dolaran Sìombabuthach (2008)
-locale: gd
-generated_at: '2025-09-10T23:53:08+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0

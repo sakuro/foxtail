@@ -27,11 +27,21 @@ bundle exec rake cldr:download
 # Generate plural rules from predefined data (recommended)
 bundle exec rake cldr:generate_plural_rules
 
+# Extract all CLDR data
+bundle exec rake cldr:extract
+
 # Extract plural rules from downloaded CLDR data
-bundle exec rake cldr:extract_plural_rules
+bundle exec rake cldr:extract:plural_rules
 
 # Extract datetime formats from downloaded CLDR data  
-bundle exec rake cldr:extract_datetime_formats
+bundle exec rake cldr:extract:datetime_formats
+
+# Extract number formats from downloaded CLDR data
+bundle exec rake cldr:extract:number_formats
+
+# Extract all data types for a specific locale (useful for development/testing)
+bundle exec rake cldr:extract:locale[en]
+bundle exec rake cldr:extract:locale[ja]
 
 # List all available locales with plural rules
 bundle exec rake cldr:list_locales
@@ -63,8 +73,11 @@ The extraction code is implemented in `lib/tasks/cldr.rake` and provides several
 
 1. **`cldr:download`** - Downloads Unicode CLDR core data (30MB+ zip file)
 2. **`cldr:generate_plural_rules`** - Generates static YAML files from predefined rules (no external dependencies)
-3. **`cldr:extract_plural_rules`** - Extracts plural rules from downloaded CLDR XML data
-4. **`cldr:extract_datetime_formats`** - Extracts datetime formats from downloaded CLDR XML data
+3. **`cldr:extract`** - Extracts all CLDR data from downloaded CLDR XML data
+4. **`cldr:extract:locale[locale_id]`** - Extracts all data types for a specific locale (useful for development/testing)
+5. **`cldr:extract:plural_rules`** - Extracts plural rules from downloaded CLDR XML data
+6. **`cldr:extract:datetime_formats`** - Extracts datetime formats from downloaded CLDR XML data
+7. **`cldr:extract:number_formats`** - Extracts number formats from downloaded CLDR XML data
 
 The rake task implementation shows the complete extraction logic and can be used as reference for understanding how the data is structured and processed.
 

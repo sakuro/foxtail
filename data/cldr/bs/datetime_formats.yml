@@ -1,20 +1,10 @@
 ---
+locale: bs
+generated_at: '2025-09-12T07:04:10Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': jan
-        '2': feb
-        '3': mar
-        '4': apr
-        '5': maj
-        '6': jun
-        '7': jul
-        '8': aug
-        '9': sep
-        '10': okt
-        '11': nov
-        '12': dec
       wide:
         '1': januar
         '2': februar
@@ -28,6 +18,19 @@ datetime_formats:
         '10': oktobar
         '11': novembar
         '12': decembar
+      abbreviated:
+        '1': jan
+        '2': feb
+        '3': mar
+        '4': apr
+        '5': maj
+        '6': jun
+        '7': jul
+        '8': aug
+        '9': sep
+        '10': okt
+        '11': nov
+        '12': dec
     stand-alone:
       narrow:
         '1': j
@@ -44,6 +47,14 @@ datetime_formats:
         '12': d
   days:
     format:
+      wide:
+        sun: nedjelja
+        mon: ponedjeljak
+        tue: utorak
+        wed: srijeda
+        thu: četvrtak
+        fri: petak
+        sat: subota
       abbreviated:
         sun: ned
         mon: pon
@@ -60,14 +71,6 @@ datetime_formats:
         thu: Č
         fri: P
         sat: S
-      wide:
-        sun: nedjelja
-        mon: ponedjeljak
-        tue: utorak
-        wed: srijeda
-        thu: četvrtak
-        fri: petak
-        sat: subota
     stand-alone:
       narrow:
         sun: "n"
@@ -77,17 +80,91 @@ datetime_formats:
         thu: č
         fri: p
         sat: s
+  quarters:
+    format:
+      wide:
+        '1': Prvi kvartal
+        '2': Drugi kvartal
+        '3': Treći kvartal
+        '4': Četvrti kvartal
+      abbreviated:
+        '1': KV1
+        '2': KV2
+        '3': KV3
+        '4': KV4
+  day_periods:
+    format:
+      wide:
+        am: prijepodne
+        pm: popodne
+      abbreviated:
+        midnight: ponoć
+        am: a. m.
+        noon: podne
+        pm: p. m.
+        morning1: ujutro
+        afternoon1: poslijepodne
+        evening1: navečer
+        night1: po noći
+    stand-alone:
+      wide:
+        am: prijepodne
+        pm: popodne
+      abbreviated:
+        am: a. m.
+        pm: p. m.
+  eras:
+    names:
+      '0': prije nove ere
+      '1': nove ere
+    abbreviated:
+      '0': p. n. e.
+      '1': n. e.
+    narrow:
+      '0': p.n.e.
   date_formats:
     full: EEEE, d. MMMM y.
     long: d. MMMM y.
     medium: d. MMM y.
     short: d. M. y.
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: bs
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'u' {0}"
+    long: "{1} 'u' {0}"
+    medium: "{1} 'u' {0}"
+    short: "{1} 'u' {0}"
+    available_formats:
+      d: d.
+      Ed: E, d.
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y. G
+      GyMd: d. M. y. G
+      GyMMM: MMM y. G
+      GyMMMd: d. MMM y. G
+      GyMMMEd: E, d. MMM y. G
+      hm: hh:mm a
+      hms: hh:mm:ss a
+      hmsv: h:mm:ss a (v)
+      Hmsv: HH:mm:ss (v)
+      hmv: h:mm a (v)
+      Hmv: HH:mm (v)
+      Md: d. M.
+      MEd: E, d. M.
+      MMdd: d. M.
+      MMMd: d. MMM
+      MMMEd: E, d. MMM
+      MMMMd: d. MMMM
+      MMMMEd: E, d. MMMM
+      MMMMW: W. 'sedmica' 'mjesec' MMMM
+      "y": y.
+      yM: MM/y
+      yMd: d. M. y.
+      yMEd: E, d. M. y.
+      yMM: M. y.
+      yMMM: MMM y.
+      yMMMd: d. MMM y.
+      yMMMEd: E, d. MMM y.
+      yMMMM: LLLL y.
+      yQQQ: QQQ y.
+      yQQQQ: QQQQ y.
+      yw: w. 'sedmica' 'u' Y.

@@ -1,4 +1,7 @@
 ---
+locale: kkj
+generated_at: '2025-09-12T07:04:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -13,7 +16,6 @@ datetime_formats:
         '8': fɛ
         '9': njapi
         '10': nyukul
-        '11': M11
         '12': ɓulɓusɛ
   days:
     format:
@@ -34,23 +36,28 @@ datetime_formats:
         thu: ye
         fri: va
         sat: ms
-      short:
-        sun: so
-        mon: lu
-        tue: ma
-        wed: mɛ
-        thu: ye
-        fri: va
-        sat: ms
   date_formats:
     full: EEEE dd MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM y
   time_formats:
-    medium: HH:mm:ss
-    short: HH:mm
-locale: kkj
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      Md: dd/MM
+      MEd: E dd/MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      yM: MM y
+      yMd: dd/MM y
+      yMEd: E dd/MM y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y

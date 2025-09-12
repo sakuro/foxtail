@@ -1,20 +1,10 @@
 ---
+locale: xnr
+generated_at: '2025-09-12T07:04:24Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': जन॰
-        '2': फ़र॰
-        '3': मार्च
-        '4': अप्रैल
-        '5': मई
-        '6': जून
-        '7': जुल॰
-        '8': अग॰
-        '9': सित॰
-        '10': अक्तू॰
-        '11': नव॰
-        '12': दिस॰
       wide:
         '1': जनवरी
         '2': फ़रवरी
@@ -28,6 +18,19 @@ datetime_formats:
         '10': अक्तूबर
         '11': नवंबर
         '12': दिसंबर
+      abbreviated:
+        '1': जन॰
+        '2': फ़र॰
+        '3': मार्च
+        '4': अप्रैल
+        '5': मई
+        '6': जून
+        '7': जुल॰
+        '8': अग॰
+        '9': सित॰
+        '10': अक्तू॰
+        '11': नव॰
+        '12': दिस॰
     stand-alone:
       narrow:
         '1': ज
@@ -44,22 +47,6 @@ datetime_formats:
         '12': दि
   days:
     format:
-      abbreviated:
-        sun: तोआर
-        mon: सोआर
-        tue: मंगल
-        wed: बुध
-        thu: वीर
-        fri: शुक्कर
-        sat: शनि
-      short:
-        sun: त
-        mon: सो
-        tue: मं
-        wed: बु
-        thu: वी
-        fri: शु
-        sat: श
       wide:
         sun: तोआर
         mon: सोआर
@@ -68,6 +55,14 @@ datetime_formats:
         thu: वीरवार
         fri: शुक्करवार
         sat: शनिच्चरवार
+      abbreviated:
+        sun: तोआर
+        mon: सोआर
+        tue: मंगल
+        wed: बुध
+        thu: वीर
+        fri: शुक्कर
+        sat: शनि
     stand-alone:
       narrow:
         sun: त
@@ -77,17 +72,70 @@ datetime_formats:
         thu: वी
         fri: शु
         sat: श
+  quarters:
+    format:
+      wide:
+        '1': पैले तिन मीन्ने
+        '2': दूजे तिन मीन्ने
+        '3': तीजे तिन मीन्ने
+        '4': चौथे तिन मीन्ने
+      abbreviated:
+        '1': ति1
+        '2': ति2
+        '3': ति3
+        '4': ति4
+  day_periods:
+    format:
+      abbreviated:
+        am: भ्यागा
+        pm: दपेहरा/संजा
+  eras:
+    names:
+      '0': ईसवी ते पैले
+      '1': ईसवी सन
+    abbreviated:
+      '0': ईसा-पैले
+      '1': ईसवी
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: d/M/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: xnr
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1}, {0}"
+    long: "{1}, {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Bh: B h
+      Bhm: B h:mm
+      Bhms: B h:mm:ss
+      EBhm: E B h:mm
+      EBhms: E B h:mm:ss
+      Ed: E d
+      Gy: y G
+      GyMd: d/M/y G
+      GyMMM: MMM G y
+      GyMMMd: d MMM y G
+      GyMMMEd: E, d MMM y G
+      Md: d/M
+      MEd: E, d/M
+      MMMd: d MMM
+      MMMEd: E, d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMM दा सप्ताह W
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E, d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E, d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Y दा सप्ताह w

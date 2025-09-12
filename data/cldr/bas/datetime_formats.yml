@@ -1,20 +1,10 @@
 ---
+locale: bas
+generated_at: '2025-09-12T07:04:09Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': kɔn
-        '2': mac
-        '3': mat
-        '4': mto
-        '5': mpu
-        '6': hil
-        '7': nje
-        '8': hik
-        '9': dip
-        '10': bio
-        '11': may
-        '12': liɓ
       wide:
         '1': Kɔndɔŋ
         '2': Màcɛ̂l
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Bìòôm
         '11': Màyɛsèp
         '12': Lìbuy li ńyèe
+      abbreviated:
+        '1': kɔn
+        '2': mac
+        '3': mat
+        '4': mto
+        '5': mpu
+        '6': hil
+        '7': nje
+        '8': hik
+        '9': dip
+        '10': bio
+        '11': may
+        '12': liɓ
     stand-alone:
       narrow:
         '1': k
@@ -44,14 +47,6 @@ datetime_formats:
         '12': l
   days:
     format:
-      abbreviated:
-        sun: nɔy
-        mon: nja
-        tue: uum
-        wed: ŋge
-        thu: mbɔ
-        fri: kɔɔ
-        sat: jon
       wide:
         sun: ŋgwà nɔ̂y
         mon: ŋgwà njaŋgumba
@@ -60,6 +55,14 @@ datetime_formats:
         thu: ŋgwà mbɔk
         fri: ŋgwà kɔɔ
         sat: ŋgwà jôn
+      abbreviated:
+        sun: nɔy
+        mon: nja
+        tue: uum
+        wed: ŋge
+        thu: mbɔ
+        fri: kɔɔ
+        sat: jon
     stand-alone:
       narrow:
         sun: "n"
@@ -69,17 +72,53 @@ datetime_formats:
         thu: m
         fri: k
         sat: j
+  quarters:
+    format:
+      wide:
+        '1': Kèk bisu i soŋ iaâ
+        '2': Kèk i ńyonos biɓaà i soŋ iaâ
+        '3': Kèk i ńyonos biaâ i soŋ iaâ
+        '4': Kèk i ńyonos binâ i soŋ iaâ
+      abbreviated:
+        '1': K1s3
+        '2': K2s3
+        '3': K3s3
+        '4': K4s3
+  day_periods:
+    format:
+      wide:
+        am: I bikɛ̂glà
+        pm: I ɓugajɔp
+      abbreviated:
+        am: I bikɛ̂glà
+        pm: I ɓugajɔp
+  eras:
+    names:
+      '0': bisū bi Yesù Krǐstò
+      '1': i mbūs Yesù Krǐstò
+    abbreviated:
+      '0': b.Y.K
+      '1': m.Y.K
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM, y
     short: d/M/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: bas
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

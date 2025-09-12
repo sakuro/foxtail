@@ -1,20 +1,10 @@
 ---
+locale: mer
+generated_at: '2025-09-12T07:04:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': JAN
-        '2': FEB
-        '3': MAC
-        '4': ĨPU
-        '5': MĨĨ
-        '6': NJU
-        '7': NJR
-        '8': AGA
-        '9': SPT
-        '10': OKT
-        '11': NOV
-        '12': DEC
       wide:
         '1': Januarĩ
         '2': Feburuarĩ
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Oktũba
         '11': Novemba
         '12': Dicemba
+      abbreviated:
+        '1': JAN
+        '2': FEB
+        '3': MAC
+        '4': ĨPU
+        '5': MĨĨ
+        '6': NJU
+        '7': NJR
+        '8': AGA
+        '9': SPT
+        '10': OKT
+        '11': NOV
+        '12': DEC
     stand-alone:
       narrow:
         '1': J
@@ -44,14 +47,6 @@ datetime_formats:
         '12': D
   days:
     format:
-      abbreviated:
-        sun: KIU
-        mon: MRA
-        tue: WAI
-        wed: WET
-        thu: WEN
-        fri: WTN
-        sat: JUM
       wide:
         sun: Kiumia
         mon: Muramuko
@@ -60,26 +55,56 @@ datetime_formats:
         thu: Wena
         fri: Wetano
         sat: Jumamosi
+      abbreviated:
+        sun: KIU
+        mon: MRA
+        tue: WAI
+        wed: WET
+        thu: WEN
+        fri: WTN
+        sat: JUM
     stand-alone:
       narrow:
         sun: K
-        mon: M
         tue: W
-        wed: W
         thu: W
         fri: W
         sat: J
+  quarters:
+    format:
+      wide:
+        '1': Ĩmwe kĩrĩ inya
+        '2': Ijĩrĩ kĩrĩ inya
+        '3': Ithatũ kĩrĩ inya
+        '4': Inya kĩrĩ inya
+  day_periods:
+    format:
+      abbreviated:
+        am: RŨ
+        pm: ŨG
+  eras:
+    names:
+      '0': Mbere ya Kristũ
+      '1': Nyuma ya Kristũ
+    abbreviated:
+      '0': MK
+      '1': NK
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: mer
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

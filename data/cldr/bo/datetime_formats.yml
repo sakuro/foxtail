@@ -1,20 +1,10 @@
 ---
+locale: bo
+generated_at: '2025-09-12T07:04:10Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ཟླ་༡
-        '2': ཟླ་༢
-        '3': ཟླ་༣
-        '4': ཟླ་༤
-        '5': ཟླ་༥
-        '6': ཟླ་༦
-        '7': ཟླ་༧
-        '8': ཟླ་༨
-        '9': ཟླ་༩
-        '10': ཟླ་༡༠
-        '11': ཟླ་༡༡
-        '12': ཟླ་༡༢
       wide:
         '1': ཟླ་བ་དང་པོ
         '2': ཟླ་བ་གཉིས་པ
@@ -28,6 +18,19 @@ datetime_formats:
         '10': ཟླ་བ་བཅུ་པ
         '11': ཟླ་བ་བཅུ་གཅིག་པ
         '12': ཟླ་བ་བཅུ་གཉིས་པ
+      abbreviated:
+        '1': ཟླ་༡
+        '2': ཟླ་༢
+        '3': ཟླ་༣
+        '4': ཟླ་༤
+        '5': ཟླ་༥
+        '6': ཟླ་༦
+        '7': ཟླ་༧
+        '8': ཟླ་༨
+        '9': ཟླ་༩
+        '10': ཟླ་༡༠
+        '11': ཟླ་༡༡
+        '12': ཟླ་༡༢
     stand-alone:
       wide:
         '1': ཟླ་བ་དང་པོ་
@@ -44,14 +47,6 @@ datetime_formats:
         '12': ཟླ་བ་བཅུ་གཉིས་པ་
   days:
     format:
-      abbreviated:
-        sun: ཉི་མ་
-        mon: ཟླ་བ་
-        tue: མིག་དམར་
-        wed: ལྷག་པ་
-        thu: ཕུར་བུ་
-        fri: པ་སངས་
-        sat: སྤེན་པ་
       wide:
         sun: གཟའ་ཉི་མ་
         mon: གཟའ་ཟླ་བ་
@@ -60,6 +55,14 @@ datetime_formats:
         thu: གཟའ་ཕུར་བུ་
         fri: གཟའ་པ་སངས་
         sat: གཟའ་སྤེན་པ་
+      abbreviated:
+        sun: ཉི་མ་
+        mon: ཟླ་བ་
+        tue: མིག་དམར་
+        wed: ལྷག་པ་
+        thu: ཕུར་བུ་
+        fri: པ་སངས་
+        sat: སྤེན་པ་
     stand-alone:
       narrow:
         sun: ཉི
@@ -69,17 +72,32 @@ datetime_formats:
         thu: ཕུར
         fri: སངས
         sat: སྤེན
+  quarters:
+    format:
+      wide:
+        '1': དུས་ཚིགས་དང་པོ།
+        '2': དུས་ཚིགས་གཉིས་པ།
+        '3': དུས་ཚིགས་གསུམ་པ།
+        '4': དུས་ཚིགས་བཞི་པ།
+  day_periods:
+    format:
+      abbreviated:
+        am: སྔ་དྲོ་
+        pm: ཕྱི་དྲོ་
+  eras:
+    abbreviated:
+      '0': སྤྱི་ལོ་སྔོན་
+      '1': སྤྱི་ལོ་
   date_formats:
     full: y MMMMའི་ཚེས་d, EEEE
     long: སྤྱི་ལོ་y MMMMའི་ཚེས་d
     medium: y ལོའི་MMMཚེས་d
-    short: y-MM-dd
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: bo
-generated_at: '2025-09-06T03:52:31+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      GyMMM: G y LLLL
+      MMMd: MMMཚེས་d
+      MMMEd: MMMཚེས་d, E
+      MMMMd: MMMMའི་ཚེས་d
+      yMMM: y LLL
+      yMMMd: y ལོའི་MMMཚེས་d
+      yMMMMd: སྤྱི་ལོ་y MMMMའི་ཚེས་d

@@ -1,7 +1,23 @@
 ---
+locale: mni
+generated_at: '2025-09-12T07:04:19Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': জনুৱারী
+        '2': ফেব্রুৱারি
+        '3': মার্চ
+        '4': এপ্রিল
+        '5': মে
+        '6': জুন
+        '7': জুলাই
+        '8': "‌ওগষ্ট"
+        '9': সেপ্টেম্বর
+        '10': ওক্টোবর
+        '11': নভেম্বর
+        '12': ডিসেম্বর
       abbreviated:
         '1': জন
         '2': ফেব্রুৱারি
@@ -28,20 +44,20 @@ datetime_formats:
         '10': ওক
         '11': নব
         '12': ডি
+    stand-alone:
       wide:
-        '1': জনুৱারী
+        '1': জানুৱারি
         '2': ফেব্রুৱারি
         '3': মার্চ
         '4': এপ্রিল
         '5': মে
         '6': জুন
         '7': জুলাই
-        '8': "‌ওগষ্ট"
+        '8': ওগষ্ট
         '9': সেপ্টেম্বর
         '10': ওক্টোবর
-        '11': নভেম্বর
+        '11': নবেম্বর
         '12': ডিসেম্বর
-    stand-alone:
       abbreviated:
         '1': জানু
         '2': ফেব্রু
@@ -68,29 +84,8 @@ datetime_formats:
         '10': ও
         '11': নব
         '12': ডি
-      wide:
-        '1': জানুৱারি
-        '2': ফেব্রুৱারি
-        '3': মার্চ
-        '4': এপ্রিল
-        '5': মে
-        '6': জুন
-        '7': জুলাই
-        '8': ওগষ্ট
-        '9': সেপ্টেম্বর
-        '10': ওক্টোবর
-        '11': নবেম্বর
-        '12': ডিসেম্বর
   days:
     format:
-      narrow:
-        sun: নোং
-        mon: নিং
-        tue: লৈবা
-        wed: য়ুম
-        thu: শগো
-        fri: ইরা
-        sat: থাং
       wide:
         sun: নোংমাইজিং
         mon: নিংথৌকাবা
@@ -99,6 +94,14 @@ datetime_formats:
         thu: শগোলশেন
         fri: ইরাই
         sat: থাংজ
+      narrow:
+        sun: নোং
+        mon: নিং
+        tue: লৈবা
+        wed: য়ুম
+        thu: শগো
+        fri: ইরা
+        sat: থাং
     stand-alone:
       narrow:
         sun: নো
@@ -108,17 +111,47 @@ datetime_formats:
         thu: শগ
         fri: ইরা
         sat: থাং
+  quarters:
+    format:
+      wide:
+        '1': অহানবা মসুং
+        '2': অনীশুবা মসুং
+        '3': অহুমশুবা মসুং
+        '4': মরীশুবা মসুং
+  day_periods:
+    format:
+      wide:
+        am: এ এম
+        pm: পি এম
+      abbreviated:
+        am: নুমাং
+  eras:
+    abbreviated:
+      '0': বি সি ই
+      '1': সি ই
   date_formats:
     full: MMMM d, y, EEEE
     long: MMMM d, y
     medium: MMM d, y
     short: d/M/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: mni
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    full: "{1} গী {0} দা"
+    long: "{1} গী {0} দা"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      GyMd: GGGGG dd-MM-y
+      Md: d/M
+      MEd: d/M, E
+      yM: M/y
+      yMd: d/M/y
+      yMEd: d/M/y, E
+      yMMM: MMM y
+      yMMMd: MMM d, y
+      yMMMEd: MMM d, y, E
+      yMMMM: MMMM y

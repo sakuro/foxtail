@@ -1,4 +1,7 @@
 ---
+locale: trw
+generated_at: '2025-09-12T07:04:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -48,17 +51,60 @@ datetime_formats:
         thu: پ
         fri: ش
         sat: ل
+  quarters:
+    format:
+      wide:
+        '1': اول ڇامای
+        '2': دھویم ڇامای
+        '3': ڇوی ڇامای
+        '4': چوٹھوم ڇامای
+      abbreviated:
+        '1': اول ڇامای
+        '2': دوھیم ڇامای
+        '3': ڇوی ڇامای
+        '4': چوٹھوم ڇامای
+    stand-alone:
+      wide:
+        '1': اول ڇامای
+        '2': دوھیم ڇامای
+        '3': ڇوی ڇامای
+        '4': چوٹھوم ڇامای
+  eras:
+    names:
+      '0': عیسٰیؑ ما مُش
+      '1': عام دور
+    abbreviated:
+      '0': ع-م
+      '1': ع-د
   date_formats:
     full: EEEE، d MMMM، y
     long: d MMMM، y
     medium: d MMM، y
     short: d/M/yy
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: trw
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      Gy: y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM، y G
+      GyMMMEd: E، d MMM، y G
+      Md: d/M
+      MEd: E، d/M
+      MMMd: d MMM
+      MMMEd: E، d MMM
+      MMMMd: d MMMM
+      MMMMW: MMMM سی ہفتہ W
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E، d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM، y
+      yMMMEd: E، d MMM، y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: Yسی w ہفتہ

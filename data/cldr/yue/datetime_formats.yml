@@ -1,58 +1,58 @@
 ---
+locale: yue
+generated_at: '2025-09-12T07:04:25Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      wide:
-        '1': 1月
-        '2': 2月
-        '3': 3月
-        '4': 4月
-        '5': 5月
-        '6': 6月
-        '7': 7月
-        '8': 8月
-        '9': 9月
-        '10': 10月
-        '11': 11月
-        '12': 12月
+      abbreviated: {}
+      narrow: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+      narrow: {}
   days:
     format:
-      short:
-        sun: 日
-        mon: 一
-        tue: 二
-        wed: 三
-        thu: 四
-        fri: 五
-        sat: 六
-      wide:
-        sun: 星期日
-        mon: 星期一
-        tue: 星期二
-        wed: 星期三
-        thu: 星期四
-        fri: 星期五
-        sat: 星期六
+      narrow: {}
     stand-alone:
-      narrow:
-        sun: 日
-        mon: 一
-        tue: 二
-        wed: 三
-        thu: 四
-        fri: 五
-        sat: 六
-  date_formats:
-    full: y年M月d日 EEEE
-    long: y年M月d日
-    medium: y年M月d日
-    short: y/M/d
+      wide: {}
+      abbreviated: {}
+  quarters:
+    format:
+      abbreviated: {}
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  day_periods:
+    format:
+      wide: {}
+      abbreviated:
+        morning2: 朝早
+        afternoon2: 下晝
+        evening1: 夜晚
+    stand-alone:
+      wide: {}
+      abbreviated: {}
+  eras:
+    names: {}
+    narrow: {}
   time_formats:
     full: ah:mm:ss [zzzz]
     long: ah:mm:ss [z]
     medium: ah:mm:ss
     short: ah:mm
-locale: yue
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1}{0}"
+    long: "{1}{0}"
+    medium: "{1}{0}"
+    short: "{1} {0}"
+    available_formats:
+      Ehm: E ah:mm
+      Ehms: E ah:mm:ss
+      h: ah時
+      hm: ah:mm
+      hms: ah:mm:ss
+      hmsv: ah:mm:ss [v]
+      hmv: ah:mm [v]
+      MMMMW: M月第W個星期
+      yw: Y年第w個星期

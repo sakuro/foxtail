@@ -1,20 +1,10 @@
 ---
+locale: ssy
+generated_at: '2025-09-12T07:04:22Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Qun
-        '2': Nah
-        '3': Cig
-        '4': Agd
-        '5': Cax
-        '6': Qas
-        '7': Qad
-        '8': Leq
-        '9': Way
-        '10': Dit
-        '11': Xim
-        '12': Kax
       wide:
         '1': Qunxa Garablu
         '2': Kudo
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Diteli
         '11': Ximoli
         '12': Kaxxa Garablu
+      abbreviated:
+        '1': Qun
+        '2': Nah
+        '3': Cig
+        '4': Agd
+        '5': Cax
+        '6': Qas
+        '7': Qad
+        '8': Leq
+        '9': Way
+        '10': Dit
+        '11': Xim
+        '12': Kax
     stand-alone:
       narrow:
         '1': Q
@@ -44,14 +47,6 @@ datetime_formats:
         '12': K
   days:
     format:
-      abbreviated:
-        sun: Nab
-        mon: San
-        tue: Sal
-        wed: Rab
-        thu: Cam
-        fri: Jum
-        sat: Qun
       wide:
         sun: Naba Sambat
         mon: Sani
@@ -60,6 +55,14 @@ datetime_formats:
         thu: Camus
         fri: Jumqata
         sat: Qunxa Sambat
+      abbreviated:
+        sun: Nab
+        mon: San
+        tue: Sal
+        wed: Rab
+        thu: Cam
+        fri: Jum
+        sat: Qun
     stand-alone:
       narrow:
         sun: "N"
@@ -69,6 +72,18 @@ datetime_formats:
         thu: C
         fri: J
         sat: Q
+  day_periods:
+    format:
+      abbreviated:
+        am: saaku
+        pm: carra
+  eras:
+    names:
+      '0': Yaasuusuk Duma
+      '1': Yaasuusuk Wadir
+    abbreviated:
+      '0': YD
+      '1': YW
   date_formats:
     full: EEEE, MMMM dd, y
     long: dd MMMM y
@@ -79,7 +94,3 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: ssy
-generated_at: '2025-09-06T03:52:41+09:00'
-cldr_version: v46
-source: Unicode CLDR

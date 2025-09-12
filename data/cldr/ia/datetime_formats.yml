@@ -1,7 +1,23 @@
 ---
+locale: ia
+generated_at: '2025-09-12T07:04:15Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': januario
+        '2': februario
+        '3': martio
+        '4': april
+        '5': maio
+        '6': junio
+        '7': julio
+        '8': augusto
+        '9': septembre
+        '10': octobre
+        '11': novembre
+        '12': decembre
       abbreviated:
         '1': jan
         '2': feb
@@ -28,37 +44,8 @@ datetime_formats:
         '10': o
         '11': "n"
         '12': d
-      wide:
-        '1': januario
-        '2': februario
-        '3': martio
-        '4': april
-        '5': maio
-        '6': junio
-        '7': julio
-        '8': augusto
-        '9': septembre
-        '10': octobre
-        '11': novembre
-        '12': decembre
   days:
     format:
-      abbreviated:
-        sun: dom
-        mon: lun
-        tue: mar
-        wed: mer
-        thu: jov
-        fri: ven
-        sat: sab
-      short:
-        sun: do
-        mon: lu
-        tue: ma
-        wed: me
-        thu: jo
-        fri: ve
-        sat: sa
       wide:
         sun: dominica
         mon: lunedi
@@ -67,6 +54,14 @@ datetime_formats:
         thu: jovedi
         fri: venerdi
         sat: sabbato
+      abbreviated:
+        sun: dom
+        mon: lun
+        tue: mar
+        wed: mer
+        thu: jov
+        fri: ven
+        sat: sab
     stand-alone:
       narrow:
         sun: d
@@ -76,17 +71,61 @@ datetime_formats:
         thu: j
         fri: v
         sat: s
+  quarters:
+    format:
+      wide:
+        '1': 1me trimestre
+        '2': 2nde trimestre
+        '3': 3tie trimestre
+        '4': 4te trimestre
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+  eras:
+    names:
+      '0': ante era commun
+      '1': era commun
+    abbreviated:
+      '0': aEC
+      '1': EC
   date_formats:
     full: EEEE 'le' d 'de' MMMM y
     long: d 'de' MMMM y
     medium: d MMM y
     short: dd-MM-y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: ia
-generated_at: '2025-09-06T03:52:35+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'a' {0}"
+    long: "{1} 'a' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      GyMd: dd-MM-y G
+      GyMMM: MMM y G
+      GyMMMd: d MMM y G
+      GyMMMEd: E d MMM y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      Md: dd-MM
+      MEd: E dd-MM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d 'de' MMMM
+      MMMMW: "'septimana' W 'de' MMMM"
+      yM: MM-y
+      yMd: dd-MM-y
+      yMEd: E dd-MM-y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ 'de' y
+      yw: "'septimana' w 'de' Y"

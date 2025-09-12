@@ -1,20 +1,10 @@
 ---
+locale: la
+generated_at: '2025-09-12T07:04:17Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Ian
-        '2': Feb
-        '3': Mar
-        '4': Apr
-        '5': Mai
-        '6': Iun
-        '7': Iul
-        '8': Aug
-        '9': Sep
-        '10': Oct
-        '11': Nov
-        '12': Dec
       wide:
         '1': Ianuarii
         '2': Februarii
@@ -28,6 +18,19 @@ datetime_formats:
         '10': Octobris
         '11': Novembris
         '12': Decembris
+      abbreviated:
+        '1': Ian
+        '2': Feb
+        '3': Mar
+        '4': Apr
+        '5': Mai
+        '6': Iun
+        '7': Iul
+        '8': Aug
+        '9': Sep
+        '10': Oct
+        '11': Nov
+        '12': Dec
     stand-alone:
       wide:
         '1': Ianuarius
@@ -44,14 +47,6 @@ datetime_formats:
         '12': December
   days:
     format:
-      abbreviated:
-        sun: Dom
-        mon: Lun
-        tue: Mar
-        wed: Mer
-        thu: Iov
-        fri: Ven
-        sat: Sab
       wide:
         sun: Dominica
         mon: dies Lunae
@@ -60,21 +55,49 @@ datetime_formats:
         thu: dies Iovis
         fri: dies Veneris
         sat: dies Sabbati
+      abbreviated:
+        sun: Dom
+        mon: Lun
+        tue: Mar
+        wed: Mer
+        thu: Iov
+        fri: Ven
+        sat: Sab
     stand-alone:
       wide:
         sun: Dominica
         sat: Sabbatum
+  quarters:
+    format:
+      wide:
+        '1': prima quarta
+        '2': secunda quarta
+        '3': tertia quarta
+        '4': quarta quarta
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+  day_periods:
+    format:
+      abbreviated:
+        am: a.m.
+        pm: p.m.
+  eras:
+    names:
+      '0': ante Christum natum
+      '1': post Christum natum
+    abbreviated:
+      '0': a.C.n.
+      '1': p.C.n.
   date_formats:
     full: EEEE, 'die' d MMMM y G
     long: "'die' d MMMM y G"
     medium: "'die' d MMM y G"
     short: d M y G
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: la
-generated_at: '2025-09-06T03:52:37+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'de' {0}"
+    long: "{1} 'de' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"

@@ -1,4 +1,7 @@
 ---
+locale: mzn
+generated_at: '2025-09-12T07:04:19Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -15,7 +18,15 @@ datetime_formats:
         '10': اکتبر
         '11': نوامبر
         '12': دسامبر
-locale: mzn
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  eras:
+    names:
+      '0': قبل میلادی تقویم
+      '1': میلادی
+    abbreviated:
+      '0': پ.م.
+      '1': م
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a

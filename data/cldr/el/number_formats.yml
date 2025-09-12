@@ -1,40 +1,28 @@
 ---
+locale: el
+generated_at: '2025-09-12T07:01:03Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
+    exponential: e
   currency_formats:
     standard: "#,##0.00 ¤"
-  scientific_formats:
-    standard: "#E0"
   currencies:
     AFN:
-      symbol: "؋"
       display_names:
         other: αφγάνια Αφγανιστάν
         one: αφγάνι Αφγανιστάν
     AMD:
-      symbol: "֏"
       display_names:
         other: ντραμ Αρμενίας
         one: ντραμ Αρμενίας
     AOA:
-      symbol: Kz
       display_names:
         other: κουάνζα Ανγκόλας
         one: κουάνζα Ανγκόλας
     ARS:
-      symbol: "$"
       display_names:
         other: πέσο Αργεντινής
         one: πέσο Αργεντινής
@@ -44,57 +32,46 @@ number_formats:
         other: δολάρια Αυστραλίας
         one: δολάριο Αυστραλίας
     AZN:
-      symbol: "₼"
       display_names:
         other: μανάτ Αζερμπαϊτζάν
         one: μανάτ Αζερμπαϊτζάν
     BAM:
-      symbol: KM
       display_names:
         other: μετατρέψιμα μάρκα Βοσνίας-Ερζεγοβίνης
         one: μετατρέψιμο μάρκο Βοσνίας-Ερζεγοβίνης
     BBD:
-      symbol: "$"
       display_names:
         other: δολάρια Μπαρμπέιντος
         one: δολάριο Μπαρμπέιντος
     BDT:
-      symbol: "৳"
       display_names:
         other: τάκα Μπαγκλαντές
         one: τάκα Μπαγκλαντές
     BMD:
-      symbol: "$"
       display_names:
         other: δολάρια Βερμούδων
         one: δολάριο Βερμούδων
     BND:
-      symbol: "$"
       display_names:
         other: δολάρια Μπρουνέι
         one: δολάριο Μπρουνέι
     BOB:
-      symbol: Bs
       display_names:
         other: μπολιβιάνο Βολιβίας
         one: μπολιβιάνο Βολιβίας
     BRL:
-      symbol: R$
       display_names:
         other: ρεάλ Βραζιλίας
         one: ρεάλ Βραζιλίας
     BSD:
-      symbol: "$"
       display_names:
         other: δολάρια Μπαχαμών
         one: δολάριο Μπαχαμών
     BWP:
-      symbol: P
       display_names:
         other: πούλα Μποτσουάνας
         one: πούλα Μποτσουάνας
     BZD:
-      symbol: "$"
       display_names:
         other: δολάρια Μπελίζ
         one: δολάριο Μπελίζ
@@ -104,7 +81,6 @@ number_formats:
         other: δολάρια Καναδά
         one: δολάριο Καναδά
     CLP:
-      symbol: "$"
       display_names:
         other: πέσο Χιλής
         one: πέσο Χιλής
@@ -114,97 +90,78 @@ number_formats:
         other: γουάν Κίνας
         one: γουάν Κίνας
     COP:
-      symbol: "$"
       display_names:
         other: πέσο Κολομβίας
         one: πέσο Κολομβίας
     CRC:
-      symbol: "₡"
       display_names:
         other: κολόν Κόστα Ρίκα
         one: κολόν Κόστα Ρίκα
     CUC:
-      symbol: "$"
       display_names:
         other: μετατρέψιμα πέσο Κούβας
         one: μετατρέψιμο πέσο Κούβας
     CUP:
-      symbol: "$"
       display_names:
         other: πέσο Κούβας
         one: πέσο Κούβας
     CZK:
-      symbol: Kč
       display_names:
         other: κορόνες Τσεχίας
         one: κορόνα Τσεχίας
     DKK:
-      symbol: kr
       display_names:
         other: κορόνες Δανίας
         one: κορόνα Δανίας
     DOP:
-      symbol: "$"
       display_names:
         other: πέσο Δομινικανής Δημοκρατίας
         one: πέσο Δομινικανής Δημοκρατίας
     EGP:
-      symbol: E£
       display_names:
         other: λίρες Αιγύπτου
         one: λίρα Αιγύπτου
     ESP:
-      symbol: "₧"
       display_names:
         other: πεσέτες Ισπανίας
         one: πεσέτα Ισπανίας
     EUR:
-      symbol: "€"
       display_names:
         other: ευρώ
         one: ευρώ
     FJD:
-      symbol: "$"
       display_names:
         other: δολάρια Φίτζι
         one: δολάριο Φίτζι
     FKP:
-      symbol: "£"
       display_names:
         other: λίρες Νήσων Φόκλαντ
         one: λίρα Νήσων Φόκλαντ
     GBP:
-      symbol: "£"
       display_names:
         other: λίρες στερλίνες Βρετανίας
         one: λίρα στερλίνα Βρετανίας
     GEL:
-      symbol: "₾"
       display_names:
         other: λάρι Γεωργίας
         one: λάρι Γεωργίας
     GHS:
-      symbol: GH₵
       display_names:
         other: σέντι Γκάνας
         one: σέντι Γκάνας
     GIP:
-      symbol: "£"
       display_names:
         other: λίρες Γιβραλτάρ
         one: λίρα Γιβραλτάρ
     GNF:
-      symbol: FG
       display_names:
         other: φράγκα Γουινέας
         one: φράγκο Γουινέας
     GTQ:
-      symbol: Q
       display_names:
         other: κουετσάλ Γουατεμάλας
         one: κουετσάλ Γουατεμάλας
     GYD:
-      symbol: "$"
       display_names:
         other: δολάρια Γουιάνας
         one: δολάριο Γουιάνας
@@ -214,42 +171,34 @@ number_formats:
         other: δολάρια Χονγκ Κονγκ
         one: δολάριο Χονγκ Κονγκ
     HNL:
-      symbol: L
       display_names:
         other: λεμπίρα Ονδούρας
         one: λεμπίρα Ονδούρας
     HRK:
-      symbol: kn
       display_names:
         other: κούνα Κροατίας
         one: κούνα Κροατίας
     HUF:
-      symbol: Ft
       display_names:
         other: φιορίνια Ουγγαρίας
         one: φιορίνι Ουγγαρίας
     IDR:
-      symbol: Rp
       display_names:
         other: ρουπία Ινδονησίας
         one: ρουπία Ινδονησίας
     ILS:
-      symbol: "₪"
       display_names:
         other: νέα σέκελ Ισραήλ
         one: νέο σέκελ Ισραήλ
     INR:
-      symbol: "₹"
       display_names:
         other: ρουπίες Ινδίας
         one: ρουπία Ινδίας
     ISK:
-      symbol: kr
       display_names:
         other: κορόνες Ισλανδίας
         one: κορόνα Ισλανδίας
     JMD:
-      symbol: "$"
       display_names:
         other: δολάρια Τζαμάικας
         one: δολάριο Τζαμάικας
@@ -259,87 +208,70 @@ number_formats:
         other: γιεν Ιαπωνίας
         one: γιεν Ιαπωνίας
     KGS:
-      symbol: "⃀"
       display_names:
         other: σομ Κιργιζίας
         one: σομ Κιργιζίας
     KHR:
-      symbol: "៛"
       display_names:
         other: ρίελ Καμπότζης
         one: ρίελ Καμπότζης
     KMF:
-      symbol: CF
       display_names:
         other: φράγκα Κομορών
         one: φράγκο Κομορών
     KPW:
-      symbol: "₩"
       display_names:
         other: γουόν Βόρειας Κορέας
         one: γουόν Βόρειας Κορέας
     KRW:
-      symbol: "₩"
       display_names:
         other: γουόν Νότιας Κορέας
         one: γουόν Νότιας Κορέας
     KYD:
-      symbol: "$"
       display_names:
         other: δολάρια Νήσων Κέιμαν
         one: δολάριο Νήσων Κέιμαν
     KZT:
-      symbol: "₸"
       display_names:
         other: τένγκε Καζακστάν
         one: τένγκε Καζακστάν
     LAK:
-      symbol: "₭"
       display_names:
         other: κιπ Λάος
         one: κιπ Λάος
     LBP:
-      symbol: L£
       display_names:
         other: λίρες Λιβάνου
         one: λίρα Λιβάνου
     LKR:
-      symbol: Rs
       display_names:
         other: ρουπίες Σρι Λάνκα
         one: ρουπία Σρι Λάνκα
     LRD:
-      symbol: "$"
       display_names:
         other: δολάρια Λιβερίας
         one: δολάριο Λιβερίας
     LTL:
-      symbol: Lt
       display_names:
         other: λίτα Λιθουανίας
         one: λίτα Λιθουανίας
     LVL:
-      symbol: Ls
       display_names:
         other: λατς Λετονίας
         one: λατς Λετονίας
     MGA:
-      symbol: Ar
       display_names:
         other: αριάρι Μαδαγασκάρης
         one: αριάρι Μαδαγασκάρης
     MMK:
-      symbol: K
       display_names:
         other: κιάτ Μιανμάρ
         one: κιάτ Μιανμάρ
     MNT:
-      symbol: "₮"
       display_names:
         other: τουγκρίκ Μογγολίας
         one: τουγκρίκ Μογγολίας
     MUR:
-      symbol: Rs
       display_names:
         other: ρουπίες Μαυρικίου
         one: ρουπία Μαυρικίου
@@ -349,32 +281,26 @@ number_formats:
         other: πέσο Μεξικού
         one: πέσο Μεξικού
     MYR:
-      symbol: RM
       display_names:
         other: ρινγκίτ Μαλαισίας
         one: ρινγκίτ Μαλαισίας
     NAD:
-      symbol: "$"
       display_names:
         other: δολάρια Ναμίμπιας
         one: δολάριο Ναμίμπιας
     NGN:
-      symbol: "₦"
       display_names:
         other: νάιρα Νιγηρίας
         one: νάιρα Νιγηρίας
     NIO:
-      symbol: C$
       display_names:
         other: χρυσές κόρδοβα Νικαράγουας
         one: χρυσή κόρδοβα Νικαράγουας
     NOK:
-      symbol: kr
       display_names:
         other: κορόνες Νορβηγίας
         one: κορόνα Νορβηγίας
     NPR:
-      symbol: Rs
       display_names:
         other: ρουπίες Νεπάλ
         one: ρουπία Νεπάλ
@@ -389,82 +315,66 @@ number_formats:
         other: πέσο Φιλιππίνων
         one: πέσο Φιλιππίνων
     PKR:
-      symbol: Rs
       display_names:
         other: ρουπίες Πακιστάν
         one: ρουπία Πακιστάν
     PLN:
-      symbol: zł
       display_names:
         other: ζλότι Πολωνίας
         one: ζλότι Πολωνίας
     PYG:
-      symbol: "₲"
       display_names:
         other: γκουαρανί Παραγουάης
         one: γκουαρανί Παραγουάης
     RON:
-      symbol: lei
       display_names:
         other: λέου Ρουμανίας
         one: λέου Ρουμανίας
     RUB:
-      symbol: "₽"
       display_names:
         other: ρούβλια Ρωσίας
         one: ρούβλι Ρωσίας
     RWF:
-      symbol: RF
       display_names:
         other: φράγκα Ρουάντας
         one: φράγκο Ρουάντας
     SBD:
-      symbol: "$"
       display_names:
         other: δολάρια Νήσων Σολομώντος
         one: δολάριο Νήσων Σολομώντος
     SEK:
-      symbol: kr
       display_names:
         other: κορόνες Σουηδίας
         one: κορόνα Σουηδίας
     SGD:
-      symbol: "$"
       display_names:
         other: δολάρια Σιγκαπούρης
         one: δολάριο Σιγκαπούρης
     SHP:
-      symbol: "£"
       display_names:
         other: λίρες Αγίας Ελένης
         one: λίρα Αγίας Ελένης
     SRD:
-      symbol: "$"
       display_names:
         other: δολάρια Σουρινάμ
         one: δολάριο Σουρινάμ
     SSP:
-      symbol: "£"
       display_names:
         other: λίρες Νότιου Σουδάν
         one: λίρα Νότιου Σουδάν
     STN:
-      symbol: Db
       display_names:
         other: ντόμπρα Σάο Τομέ και Πρίνσιπε
         one: ντόμπρα Σάο Τομέ και Πρίνσιπε
     SYP:
-      symbol: "£"
       display_names:
         other: λίρες Συρίας
         one: λίρα Συρίας
     THB:
-      symbol: "฿"
       display_names:
         other: μπατ Ταϊλάνδης
         one: μπατ Ταϊλάνδης
     TOP:
-      symbol: T$
       display_names:
         other: παάγκα Τόνγκα
         one: παάγκα Τόνγκα
@@ -474,7 +384,6 @@ number_formats:
         other: λίρες Τουρκίας
         one: λίρα Τουρκίας
     TTD:
-      symbol: "$"
       display_names:
         other: δολάρια Τρινιντάντ και Τομπάγκο
         one: δολάριο Τρινιντάντ και Τομπάγκο
@@ -484,32 +393,26 @@ number_formats:
         other: νέα δολάρια Ταϊβάν
         one: νέο δολάριο Ταϊβάν
     UAH:
-      symbol: "₴"
       display_names:
         other: γρίβνα Ουκρανίας
         one: γρίβνα Ουκρανίας
     USD:
-      symbol: "$"
       display_names:
         other: δολάρια ΗΠΑ
         one: δολάριο ΗΠΑ
     UYU:
-      symbol: "$"
       display_names:
         other: πέσο Ουρουγουάης
         one: πέσο Ουρουγουάης
     VEF:
-      symbol: Bs
       display_names:
         other: μπολιβάρ Βενεζουέλας (2008–2018)
         one: μπολιβάρ Βενεζουέλας (2008–2018)
     VND:
-      symbol: "₫"
       display_names:
         other: ντονγκ Βιετνάμ
         one: ντονγκ Βιετνάμ
     XAF:
-      symbol: FCFA
       display_names:
         other: φράγκα CFA Κεντρικής Αφρικής
         one: φράγκο CFA Κεντρικής Αφρικής
@@ -518,30 +421,23 @@ number_formats:
       display_names:
         other: δολάρια Ανατολικής Καραϊβικής
         one: δολάριο Ανατολικής Καραϊβικής
-    XCG:
-      symbol: Cg.
     XOF:
-      symbol: F CFA
       display_names:
         other: φράγκα CFA Δυτικής Αφρικής
         one: φράγκο CFA Δυτικής Αφρικής
     XPF:
-      symbol: CFPF
       display_names:
         other: φράγκα CFP
         one: φράγκο CFP
     XXX:
-      symbol: "¤"
       display_names:
         other: "(άγνωστο νόμισμα)"
         one: "(άγνωστο νόμισμα)"
     ZAR:
-      symbol: R
       display_names:
         other: ραντ Νότιας Αφρικής
         one: ραντ Νότιας Αφρικής
     ZMW:
-      symbol: ZK
       display_names:
         other: κουάτσα Ζάμπιας
         one: κουάτσα Ζάμπιας
@@ -721,6 +617,7 @@ number_formats:
     CLE:
       display_names:
         other: Εσκούδο Χιλής
+        one: Εσκούδο Χιλής
     CLF:
       display_names:
         other: ουνιδάδες ντε φομέντο Χιλής
@@ -893,6 +790,7 @@ number_formats:
     LUC:
       display_names:
         other: Μετατρέψιμο Φράγκο Λουξεμβούργου
+        one: Μετατρέψιμο Φράγκο Λουξεμβούργου
     LUF:
       display_names:
         other: φράγκα Λουξεμβούργου
@@ -900,6 +798,7 @@ number_formats:
     LUL:
       display_names:
         other: Οικονομικό Φράγκο Λουξεμβούργου
+        one: Οικονομικό Φράγκο Λουξεμβούργου
     LVR:
       display_names:
         other: ρούβλια Λετονίας
@@ -1271,266 +1170,8 @@ number_formats:
     ZWL:
       display_names:
         other: Δολάριο Ζιμπάμπουε (2009)
+        one: Δολάριο Ζιμπάμπουε (2009)
     ZWR:
       display_names:
         one: Δολάριο Ζιμπάμπουε (2008)
         other: Δολάρια Ζιμπάμπουε (2008)
-locale: el
-generated_at: '2025-09-10T23:53:06+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0

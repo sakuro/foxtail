@@ -1,20 +1,10 @@
 ---
+locale: nmg
+generated_at: '2025-09-12T07:04:19Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': ng1
-        '2': ng2
-        '3': ng3
-        '4': ng4
-        '5': ng5
-        '6': ng6
-        '7': ng7
-        '8': ng8
-        '9': ng9
-        '10': ng10
-        '11': ng11
-        '12': kris
       wide:
         '1': ngwɛn matáhra
         '2': ngwɛn ńmba
@@ -28,16 +18,21 @@ datetime_formats:
         '10': ngwɛn wum
         '11': ngwɛn wum navǔr
         '12': krísimin
+      abbreviated:
+        '1': ng1
+        '2': ng2
+        '3': ng3
+        '4': ng4
+        '5': ng5
+        '6': ng6
+        '7': ng7
+        '8': ng8
+        '9': ng9
+        '10': ng10
+        '11': ng11
+        '12': kris
   days:
     format:
-      abbreviated:
-        sun: sɔ́n
-        mon: mɔ́n
-        tue: smb
-        wed: sml
-        thu: smn
-        fri: mbs
-        sat: sas
       wide:
         sun: sɔ́ndɔ
         mon: mɔ́ndɔ
@@ -46,6 +41,14 @@ datetime_formats:
         thu: sɔ́ndɔ mafú mána
         fri: mabágá má sukul
         sat: sásadi
+      abbreviated:
+        sun: sɔ́n
+        mon: mɔ́n
+        tue: smb
+        wed: sml
+        thu: smn
+        fri: mbs
+        sat: sas
     stand-alone:
       narrow:
         sun: s
@@ -55,17 +58,50 @@ datetime_formats:
         thu: s
         fri: m
         sat: s
+  quarters:
+    format:
+      wide:
+        '1': Tindɛ nvúr
+        '2': Tindɛ ńmba
+        '3': Tindɛ ńlal
+        '4': Tindɛ ńna
+      abbreviated:
+        '1': T1
+        '2': T2
+        '3': T3
+        '4': T4
+  day_periods:
+    format:
+      abbreviated:
+        am: maná
+        pm: kugú
+  eras:
+    names:
+      '0': Bó Lahlɛ̄
+      '1': Pfiɛ Burī
+    abbreviated:
+      '0': BL
+      '1': PB
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: d/M/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: nmg
-generated_at: '2025-09-06T03:52:39+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Ed: E d
+      hm: h:mm a
+      hms: h:mm:ss a
+      Md: d/M
+      MEd: E d/M
+      MMMd: d MMM
+      MMMEd: E d MMM
+      ms: m:ss
+      yM: M/y
+      yMd: d/M/y
+      yMEd: E d/M/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

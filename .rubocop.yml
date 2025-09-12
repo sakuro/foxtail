@@ -55,9 +55,9 @@ Naming/PredicateMethod:
     - 'compat/compatibility_tester.rb'       # span_related() - checks difference type rather than boolean property
     - 'compat/ast_comparator.rb'             # span_related() - checks difference type rather than boolean property
 
-# Allow common short parameter names in parser contexts  
+# Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
-  AllowedNames: 
+  AllowedNames:
     - ps  # parser state - used throughout lib/foxtail/parser.rb
     - ch  # character - used in lib/foxtail/parser/stream.rb for character operations
     - id  # identifier - used in lib/foxtail/bundle.rb, lib/foxtail/bundle/scope.rb, and AST classes
@@ -110,7 +110,7 @@ Style/DocumentationMethod:
 Style/OptionHash:
   Exclude:
     - 'lib/foxtail/bundle.rb'                      # Bundle#format(id, args={}) - public API
-    - 'lib/foxtail/bundle/ast_converter.rb'       # Internal converter initialization  
+    - 'lib/foxtail/bundle/ast_converter.rb'       # Internal converter initialization
     - 'lib/foxtail/bundle/scope.rb'               # Scope.new(bundle, args={}) - public API
     - 'lib/foxtail/functions/number_formatter.rb'      # NumberFormatter#call(value, options={}) - matches Intl.NumberFormat API
     - 'lib/foxtail/functions/date_time_formatter.rb'   # DateTimeFormatter#call(value, options={}) - matches Intl.DateTimeFormat API
@@ -134,6 +134,7 @@ Rake/MethodDefinitionInTask:
 
 # Long lines that improve readability when not split
 Layout/LineLength:
+  AllowedPatterns:
+    - '\.elements\.each\(".*"'  # XPath expressions in CLDR data extraction are more readable on single lines
   Exclude:
-    - 'lib/tasks/cldr.rake'  # Long XPath expressions for CLDR data extraction are more readable on single lines
     - 'compat/compatibility_reporter.rb'  # Report formatting strings are clearer as single lines

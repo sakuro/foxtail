@@ -1,20 +1,10 @@
 ---
+locale: ts
+generated_at: '2025-09-12T07:04:23Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Sun
-        '2': Yan
-        '3': Kul
-        '4': Dzi
-        '5': Mud
-        '6': Kho
-        '7': Maw
-        '8': Mha
-        '9': Ndz
-        '10': Nhl
-        '11': Huk
-        '12': N’w
       wide:
         '1': Sunguti
         '2': Nyenyenyani
@@ -28,16 +18,21 @@ datetime_formats:
         '10': Nhlangula
         '11': Hukuri
         '12': N’wendzamhala
+      abbreviated:
+        '1': Sun
+        '2': Yan
+        '3': Kul
+        '4': Dzi
+        '5': Mud
+        '6': Kho
+        '7': Maw
+        '8': Mha
+        '9': Ndz
+        '10': Nhl
+        '11': Huk
+        '12': N’w
   days:
     format:
-      abbreviated:
-        sun: Son
-        mon: Mus
-        tue: Bir
-        wed: Har
-        thu: Ne
-        fri: Tlh
-        sat: Mug
       wide:
         sun: Sonta
         mon: Musumbhunuku
@@ -46,7 +41,37 @@ datetime_formats:
         thu: Ravumune
         fri: Ravuntlhanu
         sat: Mugqivela
-locale: ts
-generated_at: '2025-09-06T03:52:42+09:00'
-cldr_version: v46
-source: Unicode CLDR
+      abbreviated:
+        sun: Son
+        mon: Mus
+        tue: Bir
+        wed: Har
+        thu: Ne
+        fri: Tlh
+        sat: Mug
+  quarters:
+    format:
+      wide:
+        '1': Kotara yo sungula
+        '2': Kotara ya vumbirhi
+        '3': Kotara ya vunharhu
+        '4': Kotara ya vumune
+      abbreviated:
+        '1': K1
+        '2': K2
+        '3': K3
+        '4': K4
+  time_formats:
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      MMMMW: "'week' W 'of' MMM"

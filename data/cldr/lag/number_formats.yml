@@ -1,642 +1,258 @@
 ---
+locale: lag
+generated_at: '2025-09-12T07:02:28Z'
+cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
-    standard: "¤ #,##0.00"
-  scientific_formats:
-    standard: "#E0"
+    standard:
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
     AOA:
-      symbol: Kz
       display_names:
         other: Kwáanza ya Angóola
-    ARS:
-      symbol: "$"
+        one: Kwáanza ya Angóola
     AUD:
       symbol: A$
       display_names:
         other: Dóola ya Ausitereelía
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
+        one: Dóola ya Ausitereelía
     BWP:
-      symbol: P
       display_names:
         other: Púula ya Botiswáana
-    BZD:
-      symbol: "$"
+        one: Púula ya Botiswáana
     CAD:
       symbol: CA$
       display_names:
         other: Dóola ya Kánada
-    CLP:
-      symbol: "$"
+        one: Dóola ya Kánada
     CNY:
       symbol: CN¥
       display_names:
         other: Yúani Renimínibi ya Chíina
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
+        one: Yúani Renimínibi ya Chíina
     EGP:
-      symbol: E£
       display_names:
         other: Páundi ya Mísiri
-    ESP:
-      symbol: "₧"
+        one: Páundi ya Mísiri
     EUR:
-      symbol: "€"
       display_names:
         other: Yúuro
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
+        one: Yúuro
     GBP:
-      symbol: "£"
       display_names:
         other: Páundi ya Ʉɨngɨréesa
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
+        one: Páundi ya Ʉɨngɨréesa
     HKD:
       symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
     INR:
-      symbol: "₹"
       display_names:
         other: Rupía ya Índia
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
+        one: Rupía ya Índia
     JPY:
       symbol: JP¥
       display_names:
         other: Yéeni ya Japáani
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
+        one: Yéeni ya Japáani
     KMF:
-      symbol: CF
       display_names:
         other: Faráanga ya Komóoro
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
+        one: Faráanga ya Komóoro
     LRD:
-      symbol: "$"
       display_names:
         other: Dóola ya Libéria
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
+        one: Dóola ya Libéria
     MGA:
-      symbol: Ar
       display_names:
         other: Mpía ya bukini
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
+        one: Mpía ya bukini
     MUR:
-      symbol: Rs
       display_names:
         other: Rupía ya Moríisi
+        one: Rupía ya Moríisi
     MXN:
       symbol: MX$
-    MYR:
-      symbol: RM
     NAD:
-      symbol: "$"
       display_names:
         other: Dóola ya Namíbia
+        one: Dóola ya Namíbia
     NGN:
-      symbol: "₦"
       display_names:
         other: Naíira ya Niijéria
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
+        one: Naíira ya Niijéria
     NZD:
       symbol: NZ$
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
     RWF:
-      symbol: RF
       display_names:
         other: Faráanga ya Rwáanda
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
+        one: Faráanga ya Rwáanda
     SHP:
-      symbol: "£"
       display_names:
         other: Páundi ya Mʉtakatíifu Heléena
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
+        one: Páundi ya Mʉtakatíifu Heléena
     STN:
-      symbol: Db
       display_names:
         other: Dóbura ya SaoTóome na Pirínsipe
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
+        one: Dóbura ya SaoTóome na Pirínsipe
     TRY:
       symbol: "₺"
-    TTD:
-      symbol: "$"
     TWD:
       symbol: NT$
-    UAH:
-      symbol: "₴"
     USD:
       symbol: US$
       display_names:
         other: Dóola ya Amerɨ́ka
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
+        one: Dóola ya Amerɨ́ka
     XAF:
-      symbol: FCFA
       display_names:
         other: Faráanga ya CFA BEAC
+        one: Faráanga ya CFA BEAC
     XCD:
       symbol: EC$
-    XCG:
-      symbol: Cg.
     XOF:
-      symbol: F CFA
       display_names:
         other: Faráanga ya CFA BCEAO
-    XPF:
-      symbol: CFPF
-    XXX:
-      symbol: "¤"
+        one: Faráanga ya CFA BCEAO
     ZAR:
-      symbol: R
       display_names:
         other: Ráandi ya Afɨrɨka ya Saame
+        one: Ráandi ya Afɨrɨka ya Saame
     ZMW:
-      symbol: ZK
       display_names:
         other: Kwácha ya Sámbia
+        one: Kwácha ya Sámbia
     AED:
       display_names:
         other: Diriháamu ya Ʉtemi wa Kɨaráabu
+        one: Diriháamu ya Ʉtemi wa Kɨaráabu
     BHD:
       display_names:
         other: Dináari ya Baharéeni
+        one: Dináari ya Baharéeni
     BIF:
       display_names:
         other: Faráanga ya Burúundi
+        one: Faráanga ya Burúundi
     CDF:
       display_names:
         other: Faráanga ya Kóongo
+        one: Faráanga ya Kóongo
     CHF:
       display_names:
         other: Faráaka ya Uswíisi
+        one: Faráaka ya Uswíisi
     CVE:
       display_names:
         other: Esikúudo ya Kepuvéede
+        one: Esikúudo ya Kepuvéede
     DJF:
       display_names:
         other: Faráanga ya Jibóuti
+        one: Faráanga ya Jibóuti
     DZD:
       display_names:
         other: Dináairi ya Alijéria
+        one: Dináairi ya Alijéria
     ERN:
       display_names:
         other: Nákɨfa ya Eriterea
+        one: Nákɨfa ya Eriterea
     ETB:
       display_names:
         other: Bíiri ya Ʉhabéeshi
+        one: Bíiri ya Ʉhabéeshi
     GHC:
       display_names:
         other: Séedi ya Gáana
+        one: Séedi ya Gáana
     GMD:
       display_names:
         other: Daláasi ya Gámbia
+        one: Daláasi ya Gámbia
     GNS:
       display_names:
         other: Faráanga ya Gíine
+        one: Faráanga ya Gíine
     KES:
       display_names:
         other: Shilíingi ya Kéenya
+        one: Shilíingi ya Kéenya
     LSL:
       display_names:
         other: Lóoti ya Lesóoto
+        one: Lóoti ya Lesóoto
     LYD:
       display_names:
         other: Dináari ya Líbia
+        one: Dináari ya Líbia
     MAD:
       display_names:
         other: Diriháamu ya Moróoko
+        one: Diriháamu ya Moróoko
     MRO:
       display_names:
         other: Ungwíiya ya Moritánia (1973–2017)
+        one: Ungwíiya ya Moritánia (1973–2017)
     MRU:
       display_names:
         other: Ungwíiya ya Moritánia
+        one: Ungwíiya ya Moritánia
     MWK:
       display_names:
         other: Kwáacha ya Maláawi
+        one: Kwáacha ya Maláawi
     MZM:
       display_names:
         other: Metikáali ya Musumbíiji
+        one: Metikáali ya Musumbíiji
     SAR:
       display_names:
         other: Riyáali ya Saudía
+        one: Riyáali ya Saudía
     SCR:
       display_names:
         other: Rupía ya Shelishéeli
+        one: Rupía ya Shelishéeli
     SDG:
       display_names:
         other: Páundi ya Sudáani
+        one: Páundi ya Sudáani
     SLE:
       display_names:
         other: Leóoni
+        one: Leóoni
     SLL:
       display_names:
         other: Leóoni (1964—2022)
+        one: Leóoni (1964—2022)
     SOS:
       display_names:
         other: Shilíingi ya Somália
+        one: Shilíingi ya Somália
     STD:
       display_names:
         other: Dóbura ya SaoTóome na Pirínsipe (1977–2017)
+        one: Dóbura ya SaoTóome na Pirínsipe (1977–2017)
     SZL:
       display_names:
         other: Lilengéeni
+        one: Lilengéeni
     TND:
       display_names:
         other: Dináari ya Tunísia
+        one: Dináari ya Tunísia
     TZS:
       symbol: TSh
       display_names:
         other: Shilíingi ya Taansanía
+        one: Shilíingi ya Taansanía
     UGX:
       display_names:
         other: Shilíingi ya Ugáanda
+        one: Shilíingi ya Ugáanda
     ZMK:
       display_names:
         other: Kwácha ya Sámbia (1968–2012)
+        one: Kwácha ya Sámbia (1968–2012)
     ZWD:
       display_names:
         other: Dóola ya Simbáabwe
-locale: lag
-generated_at: '2025-09-10T23:53:12+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0
+        one: Dóola ya Simbáabwe

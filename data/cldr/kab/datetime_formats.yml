@@ -1,7 +1,23 @@
 ---
+locale: kab
+generated_at: '2025-09-12T07:04:16Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
+      wide:
+        '1': Yennayer
+        '2': Fuṛar
+        '3': Meɣres
+        '4': Yebrir
+        '5': Mayyu
+        '6': Yunyu
+        '7': Yulyu
+        '8': Ɣuct
+        '9': Ctembeṛ
+        '10': Tubeṛ
+        '11': Nunembeṛ
+        '12': Duǧembeṛ
       abbreviated:
         '1': Yen
         '2': Fur
@@ -28,19 +44,6 @@ datetime_formats:
         '10': T
         '11': W
         '12': D
-      wide:
-        '1': Yennayer
-        '2': Fuṛar
-        '3': Meɣres
-        '4': Yebrir
-        '5': Mayyu
-        '6': Yunyu
-        '7': Yulyu
-        '8': Ɣuct
-        '9': Ctembeṛ
-        '10': Tubeṛ
-        '11': Nunembeṛ
-        '12': Duǧembeṛ
     stand-alone:
       abbreviated:
         '1': Yen
@@ -70,6 +73,14 @@ datetime_formats:
         '12': D
   days:
     format:
+      wide:
+        sun: Yanass
+        mon: Sanass
+        tue: Kraḍass
+        wed: Kuẓass
+        thu: Samass
+        fri: Sḍisass
+        sat: Sayass
       abbreviated:
         sun: Yan
         mon: San
@@ -86,23 +97,15 @@ datetime_formats:
         thu: M
         fri: S
         sat: S
-      short:
-        sun: Cr
-        mon: Ri
-        tue: Ra
-        wed: Hd
-        thu: Mh
-        fri: Sm
-        sat: Sd
-      wide:
-        sun: Yanass
-        mon: Sanass
-        tue: Kraḍass
-        wed: Kuẓass
-        thu: Samass
-        fri: Sḍisass
-        sat: Sayass
     stand-alone:
+      wide:
+        sun: Acer
+        mon: Arim
+        tue: Aram
+        wed: Ahad
+        thu: Amhad
+        fri: Sem
+        sat: Sed
       abbreviated:
         sun: Ace
         mon: Ari
@@ -118,23 +121,48 @@ datetime_formats:
         wed: K
         thu: S
         fri: S
-        sat: S
-      short:
-        sun: Cr
-        mon: Ri
-        tue: Ra
-        wed: Hd
-        thu: Md
-        fri: Sm
-        sat: Sd
+  quarters:
+    format:
       wide:
-        sun: Acer
-        mon: Arim
-        tue: Aram
-        wed: Ahad
-        thu: Amhad
-        fri: Sem
-        sat: Sed
+        '1': akraḍaggur amenzu
+        '2': akraḍaggur wis-sin
+        '3': akraḍaggur wis-kraḍ
+        '4': akraḍaggur wis-kuẓ
+      abbreviated:
+        '1': Kḍg1
+        '2': Kḍg2
+        '3': Kḍg3
+        '4': Kḍg4
+    stand-alone:
+      wide:
+        '1': akraḍyur 1u
+        '2': akraḍyur w2
+        '3': akraḍyur w3
+        '4': akraḍyur w4
+      abbreviated:
+        '1': Kḍy1
+        '2': Kḍy2
+        '3': Kḍy3
+        '4': Kḍy4
+  day_periods:
+    format:
+      wide:
+        am: n tufat
+        pm: n tmeddit
+      abbreviated:
+        am: n tufat
+        pm: n tmeddit
+    stand-alone:
+      abbreviated:
+        am: FT
+        pm: MD
+  eras:
+    names:
+      '0': send tallit tamagnut
+      '1': Tallit tamagnut
+    abbreviated:
+      '0': NTƐ
+      '1': LTƐ
   date_formats:
     full: EEEE d MMMM y
     long: d MMMM y
@@ -145,7 +173,39 @@ datetime_formats:
     long: h:mm:ss a z
     medium: h:mm:ss a
     short: h:mm a
-locale: kab
-generated_at: '2025-09-06T03:52:36+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    full: "{1} 'ɣef' {0}"
+    long: "{1} 'ɣef' {0}"
+    medium: "{1}, {0}"
+    short: "{1}, {0}"
+    available_formats:
+      Ed: E d
+      Ehm: E h:mm a
+      Ehms: E h:mm:ss a
+      Gy: y G
+      hm: h:mm a
+      hms: h:mm:ss a
+      hmsv: h:mm:ss a v
+      hmv: h:mm a v
+      M: M
+      Md: d/M
+      MMd: d/MM
+      MMdd: dd/MM
+      MMM: MMM
+      MMMd: d MMM
+      MMMEd: E d MMM
+      MMMMd: d MMMM
+      MMMMEd: E d MMMM
+      MMMMW: "'imalas' W 'n' MMMM"
+      ms: m:ss
+      yM: M/y
+      yMd: dd/MM/y
+      yMEd: E d/M/y
+      yMM: MM/y
+      yMMM: MMM y
+      yMMMd: d MMM y
+      yMMMEd: E d MMM y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y
+      yw: "'imalas' w 'n' Y"

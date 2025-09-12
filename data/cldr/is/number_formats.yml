@@ -1,40 +1,27 @@
 ---
+locale: is
+generated_at: '2025-09-12T07:02:05Z'
+cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
     standard: "#,##0.00 ¤"
-  scientific_formats:
-    standard: "#E0"
   currencies:
     AFN:
-      symbol: "؋"
       display_names:
         other: afganar
         one: afgani
     AMD:
-      symbol: "֏"
       display_names:
         other: armensk drömm
         one: armenskt dramm
     AOA:
-      symbol: Kz
       display_names:
         other: angólskar kvönsur
         one: angólsk kvansa
     ARS:
-      symbol: "$"
       display_names:
         other: argentínskir pesar
         one: argentínskur pesi
@@ -44,37 +31,30 @@ number_formats:
         other: ástralskir dalir
         one: ástralskur dalur
     AZN:
-      symbol: "₼"
       display_names:
         other: asersk manöt
         one: aserskt manat
     BAM:
-      symbol: KM
       display_names:
         other: skiptanleg Bosníu og Hersegóvínu-mörk
         one: skiptanlegt Bosníu og Hersegóvínu-mark
     BBD:
-      symbol: "$"
       display_names:
         other: barbadoskir dalir
         one: barbadoskur dalur
     BDT:
-      symbol: "৳"
       display_names:
         other: bangladesskar tökur
         one: bangladessk taka
     BMD:
-      symbol: "$"
       display_names:
         other: Bermúdadalir
         one: Bermúdadalur
     BND:
-      symbol: "$"
       display_names:
         other: brúneiskir dalir
         one: brúneiskur dalur
     BOB:
-      symbol: Bs
       display_names:
         other: bólivíanar
         one: bólivíani
@@ -84,17 +64,14 @@ number_formats:
         other: brasilísk ríöl
         one: brasilískt ríal
     BSD:
-      symbol: "$"
       display_names:
         other: Bahamadalir
         one: Bahamadalur
     BWP:
-      symbol: P
       display_names:
         other: botsvanskar púlur
         one: botsvönsk púla
     BZD:
-      symbol: "$"
       display_names:
         other: belískir dalir
         one: belískur dalur
@@ -104,7 +81,6 @@ number_formats:
         other: Kanadadalir
         one: Kanadadalur
     CLP:
-      symbol: "$"
       display_names:
         other: síleskir pesar
         one: síleskur pesi
@@ -114,27 +90,22 @@ number_formats:
         other: kínversk júön
         one: kínverskt júan
     COP:
-      symbol: "$"
       display_names:
         other: kólumbískir pesar
         one: kólumbískur pesi
     CRC:
-      symbol: "₡"
       display_names:
         other: kostarísk kólon
         one: kostarískt kólon
     CUC:
-      symbol: "$"
       display_names:
         other: kúbverskir skiptanlegir pesar
         one: kúbverskur skiptanlegur pesi
     CUP:
-      symbol: "$"
       display_names:
         other: kúbverskir pesar
         one: kúbverskur pesi
     CZK:
-      symbol: Kč
       display_names:
         other: tékkneskar krónur
         one: tékknesk króna
@@ -144,31 +115,27 @@ number_formats:
         other: danskar krónur
         one: dönsk króna
     DOP:
-      symbol: "$"
       display_names:
         other: dóminískir pesar
         one: dóminískur pesi
     EGP:
-      symbol: E£
       display_names:
         other: egypsk pund
         one: egypskt pund
     ESP:
-      symbol: "₧"
       display_names:
         other: Spænskur peseti
+        one: Spænskur peseti
     EUR:
       symbol: EUR
       display_names:
         other: evrur
         one: evra
     FJD:
-      symbol: "$"
       display_names:
         other: fídjískir dalir
         one: fídjískur dalur
     FKP:
-      symbol: "£"
       display_names:
         other: falklensk pund
         one: falklenskt pund
@@ -176,32 +143,28 @@ number_formats:
       symbol: GBP
       display_names:
         other: sterlingspund
+        one: sterlingspund
     GEL:
-      symbol: "₾"
       display_names:
         other: georgískir larar
         one: georgískur lari
     GHS:
-      symbol: GH₵
       display_names:
         other: ganverskir sedar
         one: ganverskur sedi
     GIP:
-      symbol: "£"
       display_names:
         other: Gíbraltarspund
+        one: Gíbraltarspund
     GNF:
-      symbol: FG
       display_names:
         other: Gíneufrankar
         one: Gíneufranki
     GTQ:
-      symbol: Q
       display_names:
         other: gvatemölsk kvesöl
         one: gvatemalskt kvesal
     GYD:
-      symbol: "$"
       display_names:
         other: gvæjanskir dalir
         one: gvæjanskur dalur
@@ -211,27 +174,22 @@ number_formats:
         other: Hong Kong-dalir
         one: Hong Kong-dalur
     HNL:
-      symbol: L
       display_names:
         other: hondúrskar lempírur
         one: hondúrsk lempíra
     HRK:
-      symbol: kn
       display_names:
         other: króatískar kúnur
         one: króatísk kúna
     HUF:
-      symbol: Ft
       display_names:
         other: ungverskar fórintur
         one: ungversk fórinta
     IDR:
-      symbol: Rp
       display_names:
         other: indónesískar rúpíur
         one: indónesísk rúpía
     ILS:
-      symbol: "₪"
       display_names:
         other: nýir ísraelskir siklar
         one: nýr ísraelskur sikill
@@ -246,7 +204,6 @@ number_formats:
         other: íslenskar krónur
         one: íslensk króna
     JMD:
-      symbol: "$"
       display_names:
         other: jamaískir dalir
         one: jamaískur dalur
@@ -256,22 +213,18 @@ number_formats:
         other: japönsk jen
         one: japanskt jen
     KGS:
-      symbol: "⃀"
       display_names:
         other: kirgisk som
         one: kirgiskt som
     KHR:
-      symbol: "៛"
       display_names:
         other: kambódísk ríöl
         one: kambódískt ríal
     KMF:
-      symbol: CF
       display_names:
         other: kómoreyskir frankar
         one: kómoreyskur franki
     KPW:
-      symbol: "₩"
       display_names:
         other: norðurkóresk vonn
         one: norðurkóreskt vonn
@@ -281,62 +234,50 @@ number_formats:
         other: suðurkóresk vonn
         one: suðurkóreskt vonn
     KYD:
-      symbol: "$"
       display_names:
         other: caymaneyskir dalir
         one: caymaneyskur dalur
     KZT:
-      symbol: "₸"
       display_names:
         other: kasöksk tengi
         one: kasakst tengi
     LAK:
-      symbol: "₭"
       display_names:
         other: laosk kip
         one: laoskt kip
     LBP:
-      symbol: L£
       display_names:
         other: líbönsk pund
         one: líbanskt pund
     LKR:
-      symbol: Rs
       display_names:
         other: srílanskar rúpíur
         one: srílönsk rúpía
     LRD:
-      symbol: "$"
       display_names:
         other: líberískir dalir
         one: líberískur dalur
     LTL:
-      symbol: Lt
       display_names:
         other: litháísk lít
         one: litháískt lít
     LVL:
-      symbol: Ls
       display_names:
         other: lettnesk löt
         one: lettneskt lat
     MGA:
-      symbol: Ar
       display_names:
         other: Madagaskararjarar
         one: Madagaskararjari
     MMK:
-      symbol: K
       display_names:
         other: mjanmörsk kjöt
         one: mjanmarskt kjat
     MNT:
-      symbol: "₮"
       display_names:
         other: mongólskir túríkar
         one: mongólskur túríkur
     MUR:
-      symbol: Rs
       display_names:
         other: máritískar rúpíur
         one: máritísk rúpía
@@ -346,22 +287,18 @@ number_formats:
         other: mexíkóskir pesar
         one: mexíkóskur pesi
     MYR:
-      symbol: RM
       display_names:
         other: malasísk ringit
         one: malasískt ringit
     NAD:
-      symbol: "$"
       display_names:
         other: namibískir dalir
         one: namibískur dalur
     NGN:
-      symbol: "₦"
       display_names:
         other: nígerískar nærur
         one: nígerísk næra
     NIO:
-      symbol: C$
       display_names:
         other: níkaragskar kordóvur
         one: níkarögsk kordóva
@@ -371,7 +308,6 @@ number_formats:
         other: norskar krónur
         one: norsk króna
     NPR:
-      symbol: Rs
       display_names:
         other: nepalskar rúpíur
         one: nepölsk rúpía
@@ -386,37 +322,30 @@ number_formats:
         other: filippseyskir pesar
         one: filippseyskur pesi
     PKR:
-      symbol: Rs
       display_names:
         other: pakistanskar rúpíur
         one: pakistönsk rúpía
     PLN:
-      symbol: zł
       display_names:
         other: pólsk slot
         one: pólskt slot
     PYG:
-      symbol: "₲"
       display_names:
         other: paragvæsk gvaraní
         one: paragvæskt gvaraní
     RON:
-      symbol: lei
       display_names:
         other: rúmensk lei
         one: rúmenskt lei
     RUB:
-      symbol: "₽"
       display_names:
         other: rússneskar rúblur
         one: rússnesk rúbla
     RWF:
-      symbol: RF
       display_names:
         other: rúandskir frankar
         one: rúandskur franki
     SBD:
-      symbol: "$"
       display_names:
         other: salómonseyskir dalir
         one: salómonseyskur dalur
@@ -426,42 +355,34 @@ number_formats:
         other: sænskar krónur
         one: sænsk króna
     SGD:
-      symbol: "$"
       display_names:
         other: singapúrskir dalir
         one: singapúrskur dalur
     SHP:
-      symbol: "£"
       display_names:
         other: helensk pund
         one: helenskt pund
     SRD:
-      symbol: "$"
       display_names:
         other: Súrínamdalir
         one: Súrínamdalur
     SSP:
-      symbol: "£"
       display_names:
         other: suðursúdönsk pund
         one: suðursúdanskt pund
     STN:
-      symbol: Db
       display_names:
         other: Saó Tóme og Prinsípe-dóbrur
         one: Saó Tóme og Prinsípe-dóbra
     SYP:
-      symbol: "£"
       display_names:
         other: sýrlensk pund
         one: sýrlenskt pund
     THB:
-      symbol: "฿"
       display_names:
         other: taílensk böt
         one: taílenskt bat
     TOP:
-      symbol: T$
       display_names:
         other: Tongapöngur
         one: Tongapanga
@@ -471,17 +392,15 @@ number_formats:
         other: tyrkneskar lírur
         one: tyrknesk líra
     TTD:
-      symbol: "$"
       display_names:
         other: Trínidad og Tóbagó-dalir
         one: Trínidad og Tóbagó-dalur
     TWD:
-      symbol: TWD
+      symbol: NT$
       display_names:
         other: taívanskir dalir
         one: taívanskur dalur
     UAH:
-      symbol: "₴"
       display_names:
         other: úkraínskar hrinjur
         one: úkraínsk hrinja
@@ -491,12 +410,10 @@ number_formats:
         other: Bandaríkjadalir
         one: Bandaríkjadalur
     UYU:
-      symbol: "$"
       display_names:
         other: úrúgvæskir pesar
         one: úrúgvæskur pesi
     VEF:
-      symbol: Bs
       display_names:
         other: venesúelskir bólívarar (2008–2018)
         one: venesúelskur bólívari (2008–2018)
@@ -506,7 +423,6 @@ number_formats:
         other: víetnömsk dong
         one: víetnamskt dong
     XAF:
-      symbol: FCFA
       display_names:
         other: miðafrískir frankar
         one: miðafrískur franki
@@ -515,36 +431,30 @@ number_formats:
       display_names:
         other: austurkarabískir dalir
         one: austurkarabískur dalur
-    XCG:
-      symbol: Cg.
     XOF:
-      symbol: F CFA
       display_names:
         other: vesturafrískir frankar
         one: vesturafrískur franki
     XPF:
-      symbol: CFPF
       display_names:
         other: pólinesískir frankar
         one: pólinesískur franki
     XXX:
-      symbol: "¤"
       display_names:
         other: "(óþekktur gjaldmiðill)"
         one: "(óþekkt mynteining gjaldmiðils)"
     ZAR:
-      symbol: R
       display_names:
         other: suðurafrísk rönd
         one: suðurafrískt rand
     ZMW:
-      symbol: ZK
       display_names:
         other: sambískar kvökur
         one: sambísk kvaka
     ADP:
       display_names:
         other: Andorrskur peseti
+        one: Andorrskur peseti
     AED:
       display_names:
         other: arabísk dírhöm
@@ -560,12 +470,15 @@ number_formats:
     ARA:
       display_names:
         other: Argentine Austral
+        one: Argentine Austral
     ARP:
       display_names:
         other: Argentískur pesi (1983–1985)
+        one: Argentískur pesi (1983–1985)
     ATS:
       display_names:
         other: Austurrískur skildingur
+        one: Austurrískur skildingur
     AWG:
       display_names:
         other: arúbanskar flórínur
@@ -573,9 +486,11 @@ number_formats:
     BEF:
       display_names:
         other: Belgískur franki
+        one: Belgískur franki
     BGL:
       display_names:
         other: Lef
+        one: Lef
     BGN:
       display_names:
         other: búlgörsk lef
@@ -591,9 +506,11 @@ number_formats:
     BOP:
       display_names:
         other: Bólivískur pesi
+        one: Bólivískur pesi
     BOV:
       display_names:
         other: Bolivian Mvdol
+        one: Bolivian Mvdol
     BTN:
       display_names:
         other: bútönsk núltrum
@@ -601,6 +518,7 @@ number_formats:
     BUK:
       display_names:
         other: Búrmverskt kjat
+        one: Búrmverskt kjat
     BYN:
       display_names:
         other: hvítrússneskar rúblur
@@ -628,6 +546,7 @@ number_formats:
     CSK:
       display_names:
         other: Tékknesk króna, eldri
+        one: Tékknesk króna, eldri
     CVE:
       display_names:
         other: grænhöfðeyskir skútar
@@ -635,12 +554,15 @@ number_formats:
     CYP:
       display_names:
         other: Kýpverskt pund
+        one: Kýpverskt pund
     DDM:
       display_names:
         other: Austurþýskt mark
+        one: Austurþýskt mark
     DEM:
       display_names:
         other: Þýskt mark
+        one: Þýskt mark
     DJF:
       display_names:
         other: djíbútískir frankar
@@ -652,6 +574,7 @@ number_formats:
     ECS:
       display_names:
         other: Ecuador Sucre
+        one: Ecuador Sucre
     EEK:
       display_names:
         other: eistneskar krónur
@@ -667,9 +590,11 @@ number_formats:
     FIM:
       display_names:
         other: Finnskt mark
+        one: Finnskt mark
     FRF:
       display_names:
         other: Franskur franki
+        one: Franskur franki
     GMD:
       display_names:
         other: gambískir dalasar
@@ -677,9 +602,11 @@ number_formats:
     GRD:
       display_names:
         other: Drakma
+        one: Drakma
     GWE:
       display_names:
         other: Portúgalskur, gíneskur skúti
+        one: Portúgalskur, gíneskur skúti
     HTG:
       display_names:
         other: haítískir gúrdar
@@ -687,9 +614,11 @@ number_formats:
     IEP:
       display_names:
         other: Írskt pund
+        one: Írskt pund
     ILP:
       display_names:
         other: Ísraelskt pund
+        one: Ísraelskt pund
     IQD:
       display_names:
         other: írakskir denarar
@@ -701,6 +630,7 @@ number_formats:
     ITL:
       display_names:
         other: Ítölsk líra
+        one: Ítölsk líra
     JOD:
       display_names:
         other: jórdanskir denarar
@@ -720,12 +650,15 @@ number_formats:
     LTT:
       display_names:
         other: Lithuanian Talonas
+        one: Lithuanian Talonas
     LUF:
       display_names:
         other: Lúxemborgarfranki
+        one: Lúxemborgarfranki
     LVR:
       display_names:
         other: Lettnesk rúbla
+        one: Lettnesk rúbla
     LYD:
       display_names:
         other: líbískir denarar
@@ -737,6 +670,7 @@ number_formats:
     MAF:
       display_names:
         other: Marokkóskur franki
+        one: Marokkóskur franki
     MDL:
       display_names:
         other: moldavísk lei
@@ -744,6 +678,7 @@ number_formats:
     MGF:
       display_names:
         other: Madagaskur franki
+        one: Madagaskur franki
     MKD:
       display_names:
         other: makedónskir denarar
@@ -751,6 +686,7 @@ number_formats:
     MLF:
       display_names:
         other: Malískur franki
+        one: Malískur franki
     MOP:
       display_names:
         other: makaóskar patökur
@@ -766,9 +702,11 @@ number_formats:
     MTL:
       display_names:
         other: Meltnesk líra
+        one: Meltnesk líra
     MTP:
       display_names:
         other: Maltneskt pund
+        one: Maltneskt pund
     MVR:
       display_names:
         other: maldíveyskar rúpíur
@@ -780,12 +718,15 @@ number_formats:
     MXP:
       display_names:
         other: Mexíkóskur silfurpesi (1861–1992)
+        one: Mexíkóskur silfurpesi (1861–1992)
     MXV:
       display_names:
         other: Mexíkóskur pesi, UDI
+        one: Mexíkóskur pesi, UDI
     MZE:
       display_names:
         other: Mósambískur skúti
+        one: Mósambískur skúti
     MZN:
       display_names:
         other: mósambísk metiköl
@@ -797,6 +738,7 @@ number_formats:
     NLG:
       display_names:
         other: Hollenskt gyllini
+        one: Hollenskt gyllini
     OMR:
       display_names:
         other: ómönsk ríöl
@@ -816,9 +758,11 @@ number_formats:
     PLZ:
       display_names:
         other: Slot
+        one: Slot
     PTE:
       display_names:
         other: Portúgalskur skúti
+        one: Portúgalskur skúti
     QAR:
       display_names:
         other: katörsk ríöl
@@ -826,6 +770,7 @@ number_formats:
     ROL:
       display_names:
         other: Rúmenskt lei (1952–2006)
+        one: Rúmenskt lei (1952–2006)
     RSD:
       display_names:
         other: serbneskir denarar
@@ -833,6 +778,7 @@ number_formats:
     RUR:
       display_names:
         other: Rússnesk rúbla (1991–1998)
+        one: Rússnesk rúbla (1991–1998)
     SAR:
       display_names:
         other: sádiarabísk ríöl
@@ -844,6 +790,7 @@ number_formats:
     SDD:
       display_names:
         other: Súdanskur denari
+        one: Súdanskur denari
     SDG:
       display_names:
         other: súdönsk pund
@@ -851,12 +798,15 @@ number_formats:
     SDP:
       display_names:
         other: Súdanskt pund (1957–1998)
+        one: Súdanskt pund (1957–1998)
     SIT:
       display_names:
         other: Slóvenskur dalur
+        one: Slóvenskur dalur
     SKK:
       display_names:
         other: Slóvakísk króna
+        one: Slóvakísk króna
     SLE:
       display_names:
         other: síerraleónskar ljónur
@@ -872,6 +822,7 @@ number_formats:
     SRG:
       display_names:
         other: Suriname Guilder
+        one: Suriname Guilder
     STD:
       display_names:
         other: Saó Tóme og Prinsípe-dóbrur (1977–2017)
@@ -879,9 +830,11 @@ number_formats:
     SUR:
       display_names:
         other: Soviet Rouble
+        one: Soviet Rouble
     SVC:
       display_names:
         other: El Salvador Colon
+        one: El Salvador Colon
     SZL:
       display_names:
         other: svasílenskir lílangenar
@@ -889,6 +842,7 @@ number_formats:
     TJR:
       display_names:
         other: Tadsjiksk rúbla
+        one: Tadsjiksk rúbla
     TJS:
       display_names:
         other: tadsjikskir sómónar
@@ -896,6 +850,7 @@ number_formats:
     TMM:
       display_names:
         other: Túrkmenskt manat (1993–2009)
+        one: Túrkmenskt manat (1993–2009)
     TMT:
       display_names:
         other: túrkmensk manöt
@@ -907,9 +862,11 @@ number_formats:
     TPE:
       display_names:
         other: Tímorskur skúti
+        one: Tímorskur skúti
     TRL:
       display_names:
         other: Tyrknesk líra (1922–2005)
+        one: Tyrknesk líra (1922–2005)
     TZS:
       display_names:
         other: tansanískir skildingar
@@ -917,6 +874,7 @@ number_formats:
     UAK:
       display_names:
         other: Ukrainian Karbovanetz
+        one: Ukrainian Karbovanetz
     UGX:
       display_names:
         other: úgandskir skildingar
@@ -924,9 +882,11 @@ number_formats:
     USN:
       display_names:
         other: Bandaríkjadalur (næsta dag)
+        one: Bandaríkjadalur (næsta dag)
     USS:
       display_names:
         other: Bandaríkjadalur (sama dag)
+        one: Bandaríkjadalur (sama dag)
     UZS:
       display_names:
         other: úsbeksk súm
@@ -934,6 +894,7 @@ number_formats:
     VEB:
       display_names:
         other: Bolívar í Venesúela (1871–2008)
+        one: Bolívar í Venesúela (1871–2008)
     VES:
       display_names:
         other: venesúelskir bólívarar
@@ -949,27 +910,35 @@ number_formats:
     XAG:
       display_names:
         other: unse silfur
+        one: unse silfur
     XAU:
       display_names:
         other: unse gull
+        one: unse gull
     XDR:
       display_names:
         other: Sérstök dráttarréttindi
+        one: Sérstök dráttarréttindi
     XFO:
       display_names:
         other: Franskur gullfranki
+        one: Franskur gullfranki
     XFU:
       display_names:
         other: Franskur franki, UIC
+        one: Franskur franki, UIC
     XPD:
       display_names:
         other: unse palladín
+        one: unse palladín
     XPT:
       display_names:
         other: unse platína
+        one: unse platína
     YDD:
       display_names:
         other: Jemenskur denari
+        one: Jemenskur denari
     YER:
       display_names:
         other: jemensk ríöl
@@ -977,271 +946,16 @@ number_formats:
     YUM:
       display_names:
         other: Júgóslavneskur denari
+        one: Júgóslavneskur denari
     ZAL:
       display_names:
         other: Rand (viðskipta)
+        one: Rand (viðskipta)
     ZMK:
       display_names:
         other: Zambian Kwacha (1968–2012)
+        one: Zambian Kwacha (1968–2012)
     ZWD:
       display_names:
         other: Simbabveskur dalur
-locale: is
-generated_at: '2025-09-10T23:53:10+09:00'
-cldr_version: v46
-source: Unicode CLDR
-currency_fractions:
-  ADP:
-    digits: 0
-    rounding: 0
-  AFN:
-    digits: 0
-    rounding: 0
-  ALL:
-    digits: 0
-    rounding: 0
-  AMD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  BHD:
-    digits: 3
-    rounding: 0
-  BIF:
-    digits: 0
-    rounding: 0
-  BYR:
-    digits: 0
-    rounding: 0
-  BYN:
-    digits: 2
-    rounding: 0
-  CAD:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CHF:
-    digits: 2
-    rounding: 0
-    cash_rounding: 5
-  CLF:
-    digits: 4
-    rounding: 0
-  CLP:
-    digits: 0
-    rounding: 0
-  COP:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CRC:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  CZK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  DEFAULT:
-    digits: 2
-    rounding: 0
-  DJF:
-    digits: 0
-    rounding: 0
-  DKK:
-    digits: 2
-    rounding: 0
-    cash_rounding: 50
-  ESP:
-    digits: 0
-    rounding: 0
-  GNF:
-    digits: 0
-    rounding: 0
-  GYD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  HUF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IDR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  IQD:
-    digits: 0
-    rounding: 0
-  IRR:
-    digits: 0
-    rounding: 0
-  ISK:
-    digits: 0
-    rounding: 0
-  ITL:
-    digits: 0
-    rounding: 0
-  JOD:
-    digits: 3
-    rounding: 0
-  JPY:
-    digits: 0
-    rounding: 0
-  KMF:
-    digits: 0
-    rounding: 0
-  KPW:
-    digits: 0
-    rounding: 0
-  KRW:
-    digits: 0
-    rounding: 0
-  KWD:
-    digits: 3
-    rounding: 0
-  LAK:
-    digits: 0
-    rounding: 0
-  LBP:
-    digits: 0
-    rounding: 0
-  LUF:
-    digits: 0
-    rounding: 0
-  LYD:
-    digits: 3
-    rounding: 0
-  MGA:
-    digits: 0
-    rounding: 0
-  MGF:
-    digits: 0
-    rounding: 0
-  MMK:
-    digits: 0
-    rounding: 0
-  MNT:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  MRO:
-    digits: 0
-    rounding: 0
-  MUR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  NOK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  OMR:
-    digits: 3
-    rounding: 0
-  PKR:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  PYG:
-    digits: 0
-    rounding: 0
-  RSD:
-    digits: 0
-    rounding: 0
-  RWF:
-    digits: 0
-    rounding: 0
-  SEK:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  SLE:
-    digits: 2
-    rounding: 0
-  SLL:
-    digits: 0
-    rounding: 0
-  SOS:
-    digits: 0
-    rounding: 0
-  STD:
-    digits: 0
-    rounding: 0
-  SYP:
-    digits: 0
-    rounding: 0
-  TMM:
-    digits: 0
-    rounding: 0
-  TND:
-    digits: 3
-    rounding: 0
-  TRL:
-    digits: 0
-    rounding: 0
-  TZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  TWD:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UGX:
-    digits: 0
-    rounding: 0
-  UZS:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  UYI:
-    digits: 0
-    rounding: 0
-  UYW:
-    digits: 4
-    rounding: 0
-  VEF:
-    digits: 2
-    rounding: 0
-    cash_digits: 0
-    cash_rounding: 0
-  VND:
-    digits: 0
-    rounding: 0
-  VUV:
-    digits: 0
-    rounding: 0
-  XAF:
-    digits: 0
-    rounding: 0
-  XOF:
-    digits: 0
-    rounding: 0
-  XPF:
-    digits: 0
-    rounding: 0
-  YER:
-    digits: 0
-    rounding: 0
-  ZMK:
-    digits: 0
-    rounding: 0
-  ZWD:
-    digits: 0
-    rounding: 0
+        one: Simbabveskur dalur

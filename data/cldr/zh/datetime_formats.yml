@@ -1,20 +1,10 @@
 ---
+locale: zh
+generated_at: '2025-09-12T07:04:25Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': 1月
-        '2': 2月
-        '3': 3月
-        '4': 4月
-        '5': 5月
-        '6': 6月
-        '7': 7月
-        '8': 8月
-        '9': 9月
-        '10': 10月
-        '11': 11月
-        '12': 12月
       wide:
         '1': 一月
         '2': 二月
@@ -28,16 +18,21 @@ datetime_formats:
         '10': 十月
         '11': 十一月
         '12': 十二月
+      abbreviated:
+        '1': 1月
+        '2': 2月
+        '3': 3月
+        '4': 4月
+        '5': 5月
+        '6': 6月
+        '7': 7月
+        '8': 8月
+        '9': 9月
+        '10': 10月
+        '11': 11月
+        '12': 12月
   days:
     format:
-      abbreviated:
-        sun: 周日
-        mon: 周一
-        tue: 周二
-        wed: 周三
-        thu: 周四
-        fri: 周五
-        sat: 周六
       wide:
         sun: 星期日
         mon: 星期一
@@ -46,6 +41,14 @@ datetime_formats:
         thu: 星期四
         fri: 星期五
         sat: 星期六
+      abbreviated:
+        sun: 周日
+        mon: 周一
+        tue: 周二
+        wed: 周三
+        thu: 周四
+        fri: 周五
+        sat: 周六
     stand-alone:
       narrow:
         sun: 日
@@ -55,6 +58,42 @@ datetime_formats:
         thu: 四
         fri: 五
         sat: 六
+  quarters:
+    format:
+      wide:
+        '1': 第一季度
+        '2': 第二季度
+        '3': 第三季度
+        '4': 第四季度
+      abbreviated:
+        '1': 1季度
+        '2': 2季度
+        '3': 3季度
+        '4': 4季度
+  day_periods:
+    format:
+      wide:
+        midnight: 午夜
+        morning1: 清晨
+        morning2: 上午
+        afternoon1: 中午
+        afternoon2: 下午
+        evening1: 晚上
+        night1: 凌晨
+      abbreviated:
+        midnight: 午夜
+        am: 上午
+        pm: 下午
+        morning1: 早上
+        morning2: 上午
+        afternoon1: 中午
+        afternoon2: 下午
+        evening1: 晚上
+        night1: 凌晨
+  eras:
+    abbreviated:
+      '0': 公元前
+      '1': 公元
   date_formats:
     full: y年M月d日EEEE
     long: y年M月d日
@@ -63,9 +102,49 @@ datetime_formats:
   time_formats:
     full: zzzz HH:mm:ss
     long: z HH:mm:ss
-    medium: HH:mm:ss
-    short: HH:mm
-locale: zh
-generated_at: '2025-09-06T03:52:43+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      Bh: Bh时
+      Bhm: Bh:mm
+      Bhms: Bh:mm:ss
+      d: d日
+      EBhm: EBh:mm
+      EBhms: EBh:mm:ss
+      Ed: d日E
+      Ehm: Eah:mm
+      EHm: EHH:mm
+      Ehms: Eah:mm:ss
+      EHms: EHH:mm:ss
+      Gy: Gy年
+      GyMMM: Gy年M月
+      GyMMMd: Gy年M月d日
+      GyMMMEd: Gy年M月d日E
+      h: ah时
+      H: H时
+      hm: ah:mm
+      hms: ah:mm:ss
+      hmsv: v ah:mm:ss
+      Hmsv: v HH:mm:ss
+      hmv: v ah:mm
+      Hmv: v HH:mm
+      M: M月
+      Md: M/d
+      MEd: M/dE
+      MMdd: MM/dd
+      MMMd: M月d日
+      MMMEd: M月d日E
+      MMMMd: M月d日
+      MMMMW: MMMM第W周
+      "y": y年
+      yM: y/M
+      yMd: y/M/d
+      yMEd: y/M/dE
+      yMEEEEd: y年M月d日EEEE
+      yMM: y年M月
+      yMMM: y年M月
+      yMMMd: y年M月d日
+      yMMMEd: y年M月d日E
+      yMMMM: y年M月
+      yQQQ: y年第Q季度
+      yQQQQ: y年第Q季度
+      yw: Y年第w周

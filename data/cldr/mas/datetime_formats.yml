@@ -1,20 +1,10 @@
 ---
+locale: mas
+generated_at: '2025-09-12T07:04:18Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
-      abbreviated:
-        '1': Dal
-        '2': Ará
-        '3': Ɔɛn
-        '4': Doy
-        '5': Lép
-        '6': Rok
-        '7': Sás
-        '8': Bɔ́r
-        '9': Kús
-        '10': Gís
-        '11': Shʉ́
-        '12': Ntʉ́
       wide:
         '1': Oladalʉ́
         '2': Arát
@@ -28,16 +18,21 @@ datetime_formats:
         '10': Olgísan
         '11': Pʉshʉ́ka
         '12': Ntʉ́ŋʉ́s
+      abbreviated:
+        '1': Dal
+        '2': Ará
+        '3': Ɔɛn
+        '4': Doy
+        '5': Lép
+        '6': Rok
+        '7': Sás
+        '8': Bɔ́r
+        '9': Kús
+        '10': Gís
+        '11': Shʉ́
+        '12': Ntʉ́
   days:
     format:
-      abbreviated:
-        sun: Jpi
-        mon: Jtt
-        tue: Jnn
-        wed: Jtn
-        thu: Alh
-        fri: Iju
-        sat: Jmo
       wide:
         sun: Jumapílí
         mon: Jumatátu
@@ -46,6 +41,14 @@ datetime_formats:
         thu: Alaámisi
         fri: Jumáa
         sat: Jumamósi
+      abbreviated:
+        sun: Jpi
+        mon: Jtt
+        tue: Jnn
+        wed: Jtn
+        thu: Alh
+        fri: Iju
+        sat: Jmo
     stand-alone:
       narrow:
         sun: '2'
@@ -55,17 +58,46 @@ datetime_formats:
         thu: '6'
         fri: '7'
         sat: '1'
+  quarters:
+    format:
+      wide:
+        '1': Erobo 1
+        '2': Erobo 2
+        '3': Erobo 3
+        '4': Erobo 4
+      abbreviated:
+        '1': E1
+        '2': E2
+        '3': E3
+        '4': E4
+  day_periods:
+    format:
+      abbreviated:
+        am: Ɛnkakɛnyá
+        pm: Ɛndámâ
+  eras:
+    names:
+      '0': Meínō Yɛ́sʉ
+      '1': Eínō Yɛ́sʉ
+    abbreviated:
+      '0': MY
+      '1': EY
   date_formats:
     full: EEEE, d MMMM y
     long: d MMMM y
     medium: d MMM y
     short: dd/MM/y
-  time_formats:
-    full: HH:mm:ss zzzz
-    long: HH:mm:ss z
-    medium: HH:mm:ss
-    short: HH:mm
-locale: mas
-generated_at: '2025-09-06T03:52:38+09:00'
-cldr_version: v46
-source: Unicode CLDR
+  datetime_formats:
+    available_formats:
+      hm: h:mm a
+      Md: M/d
+      MEd: E, M/d
+      MMMEd: E, MMM d
+      MMMMEd: E, MMMM d
+      yM: M/y
+      yMEd: E, M/d/y
+      yMMM: MMM y
+      yMMMEd: E, MMM d, y
+      yMMMM: MMMM y
+      yQQQ: QQQ y
+      yQQQQ: QQQQ y

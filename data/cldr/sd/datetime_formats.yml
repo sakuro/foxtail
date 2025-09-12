@@ -1,4 +1,7 @@
 ---
+locale: sd
+generated_at: '2025-09-12T07:04:21Z'
+cldr_version: '46'
 datetime_formats:
   months:
     format:
@@ -48,17 +51,52 @@ datetime_formats:
         thu: خم
         fri: جمعو
         sat: ڇنڇر
+  quarters:
+    format:
+      wide:
+        '1': پهرين ٽي ماهي
+        '2': ٻين ٽي ماهي
+        '3': ٽين ٽي ماهي
+        '4': چوٿين ٽي ماهي
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q5
+    stand-alone:
+      abbreviated:
+        '1': Q1
+        '2': Q2
+        '3': Q3
+        '4': Q4
+  day_periods:
+    format:
+      wide:
+        am: صبح، منجهند
+        pm: منجهند، شام
+      abbreviated:
+        am: صبح، منجهند
+        pm: شام، منجهند
+    stand-alone:
+      wide:
+        am: صبح، منجهند
+        pm: منجهند، شام
+      abbreviated:
+        am: صبح، منجهند
+        pm: منجهند، شام
+  eras:
+    names:
+      '0': عام دور کان پهرين
+      '1': عام دور
   date_formats:
     full: EEEE, MMMM d, y
-    long: y MMMM d
-    medium: y MMM d
-    short: y-MM-dd
   time_formats:
-    full: h:mm:ss a zzzz
-    long: h:mm:ss a z
-    medium: h:mm:ss a
-    short: h:mm a
-locale: sd
-generated_at: '2025-09-06T03:52:40+09:00'
-cldr_version: v46
-source: Unicode CLDR
+    full: h:mm:ss a zzzz
+    long: h:mm:ss a z
+    medium: h:mm:ss a
+    short: h:mm a
+  datetime_formats:
+    available_formats:
+      GyMd: M/d/y G
+      MMMMW: ھفتو W جو MMMM
+      yw: ھفتو w جو Y
