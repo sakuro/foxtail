@@ -297,4 +297,73 @@ RSpec.describe Foxtail::Bundle::Resolver do
       expect(scope.errors).to include("Unknown message attribute: hello.missing")
     end
   end
+
+  describe "plural category matching" do
+    it "matches plural categories using CLDR rules" do
+      # Test English plural rules (1 is "one", others are "other")
+      expr = {
+        "type" => "select",
+        "selector" => {"type" => "var", "name" => "count"},
+        "variants" => [
+          {"key" => {"type" => "str", "value" => "one"}, "value" => "one item"},
+          {"key" => {"type" => "str", "value" => "other"}, "value" => "many items"}
+        ],
+        "star" => 1
+      }
+
+      # Test count = 1 (should match "one")
+      scope_with_one = Foxtail::Bundle::Scope.new(bundle, {count: 1})
+      result = resolver.resolve_expression(expr, scope_with_one)
+      expect(result).to eq("one item")
+
+      # Test count = 2 (should match "other")
+      scope_with_two = Foxtail::Bundle::Scope.new(bundle, {count: 2})
+      result = resolver.resolve_expression(expr, scope_with_two)
+      expect(result).to eq("many items")
+    end
+
+    it "handles numeric selectors with string variants" do
+      expr = {
+        "type" => "select",
+        "selector" => {"type" => "var", "name" => "count"},
+        "variants" => [
+          {"key" => {"type" => "num", "value" => 0}, "value" => "no items"},
+          {"key" => {"type" => "str", "value" => "one"}, "value" => "one item"},
+          {"key" => {"type" => "str", "value" => "other"}, "value" => "many items"}
+        ],
+        "star" => 2
+      }
+
+      # Exact numeric match should take precedence
+      scope_with_zero = Foxtail::Bundle::Scope.new(bundle, {count: 0})
+      result = resolver.resolve_expression(expr, scope_with_zero)
+      expect(result).to eq("no items")
+
+      # Plural rule matching for non-exact matches
+      scope_with_one = Foxtail::Bundle::Scope.new(bundle, {count: 1})
+      result = resolver.resolve_expression(expr, scope_with_one)
+      expect(result).to eq("one item")
+    end
+
+    it "falls back to default when plural rules fail" do
+      # Test with unsupported locale that might fail plural rule evaluation
+      plural_rules_double = instance_double(Foxtail::CLDR::Repository::PluralRules)
+      allow(Foxtail::CLDR::Repository::PluralRules).to receive(:new).and_return(plural_rules_double)
+      allow(plural_rules_double).to receive(:select).and_raise("Error")
+
+      expr = {
+        "type" => "select",
+        "selector" => {"type" => "var", "name" => "count"},
+        "variants" => [
+          {"key" => {"type" => "str", "value" => "one"}, "value" => "one item"},
+          {"key" => {"type" => "str", "value" => "other"}, "value" => "many items"}
+        ],
+        "star" => 1
+      }
+
+      scope_with_one = Foxtail::Bundle::Scope.new(bundle, {count: 1})
+      result = resolver.resolve_expression(expr, scope_with_one)
+      expect(result).to eq("many items") # Should fall back to default
+    end
+  end
 end

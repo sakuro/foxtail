@@ -332,7 +332,7 @@ module Foxtail
 
         # Try each locale in the bundle's chain for plural rules
         @bundle.locales.each do |locale|
-          plural_rules = Foxtail::CLDR::PluralRules.new(locale)
+          plural_rules = Foxtail::CLDR::Repository::PluralRules.new(locale)
           plural_category = plural_rules.select(numeric_value)
           return key_str.to_s == plural_category
         rescue
