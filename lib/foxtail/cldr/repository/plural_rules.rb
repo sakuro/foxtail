@@ -65,22 +65,16 @@ module Foxtail
               integer_part, fraction_part = str.split(".")
               i = Integer(integer_part, 10).abs
 
-              # Remove trailing zeros to check if there's actual fractional content
-              visible_fraction = fraction_part.sub(/0+$/, "")
+              # CLDR-compliant approach: v counts all visible fraction digits
+              # including trailing zeros, as per CLDR specification
+              v = fraction_part.length
 
-              # Practical approach: treat numbers like 1.0, 2.00 as integers
-              # This is more intuitive for currency formatting (e.g., "$1.00" = "1 dollar")
-              # While not strictly CLDR-compliant, it matches user expectations
-              if visible_fraction.empty?
-                # No significant fractional part (e.g., "1.0" or "1.00")
-                v = w = f = t = 0
-              else
-                # Has significant fractional part (e.g., "1.5" or "1.01")
-                v = fraction_part.length
-                w = visible_fraction.length # number of visible fraction digits (without trailing zeros)
-                f = Integer(fraction_part, 10) # fraction digits as integer
-                t = Integer(visible_fraction, 10) # visible fraction as integer
-              end
+              # Remove trailing zeros for w and t
+              visible_fraction = fraction_part.sub(/0+$/, "")
+              w = visible_fraction.length # number of visible fraction digits (without trailing zeros)
+
+              f = Integer(fraction_part, 10) # fraction digits as integer
+              t = visible_fraction.empty? ? 0 : Integer(visible_fraction, 10) # visible fraction as integer
             else
               i = Integer(n)
               v = w = f = t = 0

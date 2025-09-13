@@ -142,11 +142,11 @@ RSpec.describe Foxtail::CLDR::Repository::PluralRules do
       let(:rules) { Foxtail::CLDR::Repository::PluralRules.new(locale("en")) }
 
       it "handles float numbers correctly" do
-        # Practical approach: treat 1.0 as integer for better user experience
-        # This deviates from strict CLDR spec but is more intuitive for currency formatting
-        expect(rules.select(1.0)).to eq("one")   # v=0 (no significant fraction)
+        # CLDR-compliant approach for "en" locale: 1.0 has visible decimal point, so it's "other"
+        # Per CLDR spec: @decimal 0.0~1.5 are examples of "other" category for English
+        expect(rules.select(1.0)).to eq("other") # v=1 (visible decimal point)
         expect(rules.select(1.5)).to eq("other") # v=1 (has fractional digits)
-        expect(rules.select(2.0)).to eq("other") # v=0 but i=2 (plural for 2)
+        expect(rules.select(2.0)).to eq("other") # v=1 (visible decimal point)
       end
     end
   end
@@ -201,9 +201,9 @@ RSpec.describe Foxtail::CLDR::Repository::PluralRules do
     # Test internal method through behavior
     it "correctly extracts integer operands" do
       # Test via behavior: English "one" rule is "i = 1 and v = 0"
-      # We treat trailing-zero decimals as integers for practical purposes
-      expect(rules.select(1)).to eq("one")    # i=1, v=0
-      expect(rules.select(1.0)).to eq("one")  # i=1, v=0 (no significant fraction)
+      # CLDR-compliant: 1.0 has visible fraction digits so it's "other"
+      expect(rules.select(1)).to eq("one") # i=1, v=0
+      expect(rules.select(1.0)).to eq("other") # i=1, v=1 (visible decimal point)
       expect(rules.select(1.5)).to eq("other") # i=1, v=1 (has visible fraction)
     end
   end

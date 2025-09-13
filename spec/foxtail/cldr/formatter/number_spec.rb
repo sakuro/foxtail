@@ -263,9 +263,9 @@ RSpec.describe Foxtail::CLDR::Formatter::Number do
           expect(result).to eq("US dollar 1.00")
         end
 
-        it "formats singular currency name for 1.0 (trailing zero)" do
+        it "formats plural currency name for 1.0 (CLDR-compliant)" do
           result = formatter.call(1.0, pattern: "¤¤¤ #,##0.00", locale: en_locale, currency: "USD")
-          expect(result).to eq("US dollar 1.00")
+          expect(result).to eq("US dollars 1.00")
         end
 
         it "formats plural currency name for 2" do
