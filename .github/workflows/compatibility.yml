@@ -12,7 +12,7 @@ on:
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
       - 'spec/parser/**'
-      - 'compat/**'
+      - 'compat/fluent_js/**'
       - '.github/workflows/compatibility.yml'
 
   pull_request:
@@ -21,7 +21,7 @@ on:
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
       - 'spec/parser/**'
-      - 'compat/**'
+      - 'compat/fluent_js/**'
       - '.github/workflows/compatibility.yml'
 
   # Allow manual triggering for comprehensive testing
@@ -49,13 +49,13 @@ jobs:
           
       - name: Generate compatibility report
         run: |
-          bundle exec rake compatibility:report
+          bundle exec rake compatibility:fluentjs
           
       - name: Upload compatibility reports
         uses: actions/upload-artifact@v4
         with:
           name: compatibility-reports
-          path: compatibility_report.md
+          path: fluentjs_compatibility_report.md
           retention-days: 30
           
       - name: Extract compatibility summary
@@ -63,7 +63,7 @@ jobs:
         id: extract-summary
         run: |
           # Read the markdown report
-          REPORT=$(cat compatibility_report.md)
+          REPORT=$(cat fluentjs_compatibility_report.md)
           
           # Extract the summary table and total fixtures line
           SUMMARY=$(echo "$REPORT" | sed -n '/## Summary/,/*Total fixtures:/p')
