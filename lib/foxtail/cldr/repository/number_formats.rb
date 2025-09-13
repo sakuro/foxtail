@@ -107,6 +107,21 @@ module Foxtail
             currency_code
         end
 
+        # Get all currency names (plural forms) for a given currency code
+        # Returns a hash with plural categories as keys
+        # @param currency_code [String] the currency code (e.g., "USD")
+        # @return [Hash<Symbol, String>] hash with plural categories (:one, :other, etc.)
+        def currency_names(currency_code)
+          display_names = @resolver.resolve(
+            "number_formats.currencies.#{currency_code}.display_names",
+            "number_formats"
+          )
+          return {other: currency_code} unless display_names
+
+          # Convert string keys to symbols for consistency with PluralRules
+          display_names.transform_keys(&:to_sym)
+        end
+
         # Get decimal digits for a currency (defaults to 2 if not found)
         def currency_digits(currency_code)
           @resolver.resolve("currency_fractions.#{currency_code}.digits", "number_formats") || 2
