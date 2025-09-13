@@ -174,7 +174,7 @@ module Foxtail
 
           # Process non-digit tokens before digits
           pattern_info[:prefix_tokens].each do |token|
-            result += format_non_digit_token(token, number_formats, options, decimal_value)
+            result += format_non_digit_token(token, number_formats, decimal_value, options)
           end
 
           # Format the integer part with grouping
@@ -208,7 +208,7 @@ module Foxtail
             result += if has_scientific && token.is_a?(Foxtail::CLDR::PatternParser::Number::ExponentToken)
                         format_exponent_token_with_value(token, exponent, number_formats)
                       else
-                        format_non_digit_token(token, number_formats, options, decimal_value)
+                        format_non_digit_token(token, number_formats, decimal_value, options)
                       end
           end
 
@@ -335,10 +335,10 @@ module Foxtail
         end
 
         # Format non-digit tokens
-        private def format_non_digit_token(token, number_formats, options, decimal_value)
+        private def format_non_digit_token(token, number_formats, decimal_value, options)
           case token
           when Foxtail::CLDR::PatternParser::Number::CurrencyToken
-            format_currency_token(token, number_formats, options, decimal_value)
+            format_currency_token(token, number_formats, decimal_value, options)
           when Foxtail::CLDR::PatternParser::Number::PercentToken
             number_formats.percent_sign
           when Foxtail::CLDR::PatternParser::Number::PerMilleToken
@@ -359,7 +359,7 @@ module Foxtail
         end
 
         # Format currency token
-        private def format_currency_token(token, number_formats, options, decimal_value)
+        private def format_currency_token(token, number_formats, decimal_value, options)
           currency_code = options[:currency] || "USD"
 
           case token.currency_type
