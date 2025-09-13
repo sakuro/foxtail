@@ -1,24 +1,14 @@
 ---
 locale: ro_RO
-generated_at: '2025-09-12T07:03:12Z'
+generated_at: '2025-09-13T17:40:09Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    exponential: E
-    infinity: "∞"
-    nan: NaN
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard:
+    standard: 
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -202,8 +192,12 @@ number_formats:
       symbol: "฿"
     TOP:
       symbol: T$
+    TRY:
+      symbol: "₺"
     TTD:
       symbol: "$"
+    TWD:
+      symbol: NT$
     UAH:
       symbol: "₴"
     USD:

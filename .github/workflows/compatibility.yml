@@ -12,8 +12,10 @@ on:
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
       - 'lib/foxtail/cldr/formatter/**'
+      - 'lib/foxtail/cldr/extractor/**'
       - 'spec/parser/**'
       - 'compat/**'
+      - 'data/cldr/**'
       - '.github/workflows/compatibility.yml'
 
   pull_request:
@@ -22,8 +24,10 @@ on:
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
       - 'lib/foxtail/cldr/formatter/**'
+      - 'lib/foxtail/cldr/extractor/**'
       - 'spec/parser/**'
       - 'compat/**'
+      - 'data/cldr/**'
       - '.github/workflows/compatibility.yml'
 
   # Allow manual triggering for comprehensive testing
@@ -37,7 +41,7 @@ jobs:
   fluent-js:
     runs-on: ubuntu-latest
     name: Fluent.js Compatibility
-    if: contains(github.event.head_commit.modified, 'lib/foxtail/parser') || contains(github.event.head_commit.modified, 'compat/fluent_js') || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request' || github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v5
@@ -94,7 +98,7 @@ jobs:
   node-intl:
     runs-on: ubuntu-latest
     name: Node.js Intl Compatibility
-    if: contains(github.event.head_commit.modified, 'lib/foxtail/cldr/formatter') || contains(github.event.head_commit.modified, 'compat/node_intl') || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request' || github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v5
