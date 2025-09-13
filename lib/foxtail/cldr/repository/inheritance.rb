@@ -76,7 +76,7 @@ module Foxtail
           begin
             yaml_data = YAML.load_file(aliases_path)
             aliases = yaml_data["locale_aliases"] || {}
-            CLDR.logger.info "Loaded #{aliases.size} locale aliases from #{aliases_path}"
+            CLDR.logger.debug "Loaded #{aliases.size} locale aliases from #{aliases_path}"
             aliases
           rescue => e
             CLDR.logger.warn "Could not load locale aliases from #{aliases_path}: #{e.message}"

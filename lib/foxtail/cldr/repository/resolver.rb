@@ -102,7 +102,7 @@ module Foxtail
           data = if File.exist?(file_path)
                    begin
                      loaded_data = YAML.load_file(file_path)
-                     CLDR.logger.info "Successfully loaded #{file_path} for locale #{locale_id}"
+                     CLDR.logger.debug "Successfully loaded #{file_path} for locale #{locale_id}"
                      loaded_data
                    rescue => e
                      CLDR.logger.warn "Could not load #{file_path}: #{e.message}"
@@ -140,7 +140,7 @@ module Foxtail
         # @return [String] Canonical locale identifier
         private def resolve_canonical_locale(locale_id)
           aliases = load_locale_aliases_if_needed
-          CLDR.logger.info "Loaded #{aliases.size} locale aliases: #{aliases.keys.first(5)}"
+          CLDR.logger.debug "Loaded #{aliases.size} locale aliases: #{aliases.keys.first(5)}"
           return locale_id if aliases.empty?
 
           canonical = @inheritance.resolve_locale_alias(locale_id, aliases)
@@ -148,7 +148,7 @@ module Foxtail
           if canonical == locale_id
             CLDR.logger.debug "No alias found for: #{locale_id}"
           else
-            CLDR.logger.info "Resolved locale alias: #{locale_id} -> #{canonical}"
+            CLDR.logger.debug "Resolved locale alias: #{locale_id} -> #{canonical}"
           end
 
           canonical
