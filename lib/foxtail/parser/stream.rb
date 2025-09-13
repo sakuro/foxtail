@@ -41,14 +41,17 @@ module Foxtail
         @string[offset]
       end
 
+      # @api private
       def current_char
         char_at(@index)
       end
 
+      # @api private
       def current_peek
         char_at(@index + @peek_offset)
       end
 
+      # @api private
       def next
         @peek_offset = 0
         # Skip over the CRLF as if it was a single character.
@@ -59,6 +62,7 @@ module Foxtail
         @string[@index]
       end
 
+      # @api private
       def peek
         # Skip over the CRLF as if it was a single character.
         if @string[@index + @peek_offset] == "\r" && @string[@index + @peek_offset + 1] == "\n"
@@ -68,10 +72,12 @@ module Foxtail
         @string[@index + @peek_offset]
       end
 
+      # @api private
       def reset_peek(offset=0)
         @peek_offset = offset
       end
 
+      # @api private
       def skip_to_peek
         @index += @peek_offset
         @peek_offset = 0
@@ -79,18 +85,21 @@ module Foxtail
 
       # FluentParserStream methods
 
+      # @api private
       def peek_blank_inline
         start = @index + @peek_offset
         peek while current_peek == " "
         @string.slice(start, @index + @peek_offset - start)
       end
 
+      # @api private
       def skip_blank_inline
         blank = peek_blank_inline
         skip_to_peek
         blank
       end
 
+      # @api private
       def peek_blank_block
         blank = ""
         loop do
@@ -112,16 +121,19 @@ module Foxtail
         end
       end
 
+      # @api private
       def skip_blank_block
         blank = peek_blank_block
         skip_to_peek
         blank
       end
 
+      # @api private
       def peek_blank
         peek while current_peek == " " || current_peek == EOL
       end
 
+      # @api private
       def skip_blank
         peek_blank
         skip_to_peek
@@ -151,6 +163,7 @@ module Foxtail
         raise ParseError.new("E0003", "\u2424")
       end
 
+      # @api private
       def take_char
         ch = current_char
         if ch == EOF
@@ -268,6 +281,7 @@ module Foxtail
         current_peek == "."
       end
 
+      # @api private
       def skip_to_next_entry_start(junk_start)
         last_newline = @string.rindex(EOL, @index)
         if last_newline && junk_start < last_newline
@@ -300,6 +314,7 @@ module Foxtail
         raise ParseError.new("E0004", "a-zA-Z")
       end
 
+      # @api private
       def take_id_char
         take_char do |ch|
           cc = ch.ord
@@ -311,6 +326,7 @@ module Foxtail
         end
       end
 
+      # @api private
       def take_digit
         take_char do |ch|
           cc = ch.ord
@@ -318,6 +334,7 @@ module Foxtail
         end
       end
 
+      # @api private
       def take_hex_digit
         take_char do |ch|
           cc = ch.ord
