@@ -39,27 +39,22 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
 
   describe "#load_parent_locales" do
     let(:temp_dir) { Dir.mktmpdir }
-    let(:supplemental_dir) { File.join(temp_dir, "common", "supplemental") }
-    let(:supplemental_file) { File.join(supplemental_dir, "supplementalData.xml") }
-
-    before do
-      FileUtils.mkdir_p(supplemental_dir)
-    end
+    let(:parent_locales_file) { File.join(temp_dir, "parent_locales.yml") }
 
     after { FileUtils.rm_rf(temp_dir) }
 
-    it "loads parent locale mappings from supplemental data" do
-      xml_content = <<~XML
-        <?xml version="1.0" encoding="UTF-8"?>
-        <supplementalData>
-          <parentLocales>
-            <parentLocale parent="en_001" locales="en_AU en_CA en_NZ"/>
-            <parentLocale parent="es_419" locales="es_AR es_MX"/>
-          </parentLocales>
-        </supplementalData>
-      XML
+    it "loads parent locale mappings from YAML data" do
+      yaml_content = {
+        "parent_locales" => {
+          "en_AU" => "en_001",
+          "en_CA" => "en_001",
+          "en_NZ" => "en_001",
+          "es_AR" => "es_419",
+          "es_MX" => "es_419"
+        }
+      }
 
-      File.write(supplemental_file, xml_content)
+      File.write(parent_locales_file, yaml_content.to_yaml)
 
       parents = inheritance.load_parent_locales(temp_dir)
 
@@ -72,16 +67,18 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
       })
     end
 
-    it "returns empty hash when supplemental file does not exist" do
-      parents = inheritance.load_parent_locales(temp_dir)
-      expect(parents).to eq({})
+    it "raises ArgumentError when parent locales file does not exist" do
+      expect {
+        inheritance.load_parent_locales(temp_dir)
+      }.to raise_error(ArgumentError, /Parent locales data not found/)
     end
 
-    it "handles malformed XML gracefully" do
-      File.write(supplemental_file, "invalid xml")
+    it "raises ArgumentError when YAML is malformed" do
+      File.write(parent_locales_file, "invalid: yaml: [")
 
-      parents = inheritance.load_parent_locales(temp_dir)
-      expect(parents).to eq({})
+      expect {
+        inheritance.load_parent_locales(temp_dir)
+      }.to raise_error(ArgumentError, /Could not load parent locales/)
     end
   end
 
@@ -161,70 +158,6 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
       expect(inheritance.merge_data(nil, {"a" => 1})).to eq({"a" => 1})
       expect(inheritance.merge_data({"a" => 1}, nil)).to eq({"a" => 1})
       expect(inheritance.merge_data({}, {"a" => 1})).to eq({"a" => 1})
-    end
-  end
-
-  describe "#load_inherited_data" do
-    let(:temp_dir) { Dir.mktmpdir }
-    let(:main_dir) { File.join(temp_dir, "common", "main") }
-    let(:extractor) { instance_double(Foxtail::CLDR::Extractor::Base) }
-
-    before do
-      FileUtils.mkdir_p(main_dir)
-    end
-
-    after { FileUtils.rm_rf(temp_dir) }
-
-    it "loads and merges data following inheritance chain" do
-      # Create test XML files
-      root_xml = <<~XML
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ldml><numbers><symbols><decimal>.</decimal><group>,</group></symbols></numbers></ldml>
-      XML
-
-      en_xml = <<~XML
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ldml><numbers><symbols><decimal>.</decimal></symbols><currencies><USD><symbol>$</symbol></USD></currencies></numbers></ldml>
-      XML
-
-      en_us_xml = <<~XML
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ldml><numbers><currencies><USD><name>Dollar</name></USD></currencies></numbers></ldml>
-      XML
-
-      File.write(File.join(main_dir, "root.xml"), root_xml)
-      File.write(File.join(main_dir, "en.xml"), en_xml)
-      File.write(File.join(main_dir, "en_US.xml"), en_us_xml)
-
-      # Mock extractor responses
-      allow(extractor).to receive(:extract_data_from_xml) do |doc|
-        if doc.to_s.include?("group")
-          {"symbols" => {"decimal" => ".", "group" => ","}}
-        elsif doc.to_s.include?("Dollar")
-          {"currencies" => {"USD" => {"name" => "Dollar"}}}
-        else
-          {"symbols" => {"decimal" => "."}, "currencies" => {"USD" => {"symbol" => "$"}}}
-        end
-      end
-
-      merged_data = inheritance.load_inherited_data("en_US", temp_dir, extractor)
-
-      expected = {
-        "symbols" => {"decimal" => ".", "group" => ","},
-        "currencies" => {"USD" => {"symbol" => "$", "name" => "Dollar"}}
-      }
-
-      expect(merged_data).to eq(expected)
-    end
-
-    it "handles missing locale files gracefully" do
-      allow(extractor).to receive(:extract_data_from_xml).and_return({"test" => "data"})
-
-      File.write(File.join(main_dir, "root.xml"), "<ldml></ldml>")
-
-      merged_data = inheritance.load_inherited_data("missing_US", temp_dir, extractor)
-
-      expect(merged_data).to eq({"test" => "data"})
     end
   end
 end

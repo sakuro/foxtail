@@ -86,8 +86,8 @@ module Foxtail
         private def load_parent_locales_if_needed
           return if @parent_locales
 
-          @parent_locales = @inheritance.load_parent_locales(source_dir)
-          CLDR.logger.debug "Loaded #{@parent_locales.size} parent locale mappings" unless @parent_locales.empty?
+          @parent_locales = @inheritance.load_parent_locales(@output_dir)
+          CLDR.logger.debug "Loaded #{@parent_locales.size} parent locale mappings from extracted data"
         end
 
         private def parent_locales

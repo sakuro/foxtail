@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "rexml/document"
 require "singleton"
 require "yaml"
 
@@ -44,37 +43,26 @@ module Foxtail
           chain
         end
 
-        # Load parent locale mappings from CLDR supplemental data
-        # @param source_dir [String] Path to CLDR source directory
+        # Load parent locale mappings from extracted YAML data
+        # @param data_dir [String] Path to extracted CLDR data directory
         # @return [Hash] Mapping of locale to parent locale
-        def load_parent_locales(source_dir)
-          supplemental_path = File.join(source_dir, "common", "supplemental", "supplementalData.xml")
+        # @raise [ArgumentError] if parent_locales.yml is not found
+        def load_parent_locales(data_dir)
+          parent_locales_path = File.join(data_dir, "parent_locales.yml")
 
-          return {} unless File.exist?(supplemental_path)
-
-          parents = {}
-
-          begin
-            doc = REXML::Document.new(File.read(supplemental_path))
-
-            # Extract parent locale relationships
-            doc.elements.each("supplementalData/parentLocales/parentLocale") do |parent_element|
-              parent = parent_element.attributes["parent"]
-              locales_attr = parent_element.attributes["locales"]
-
-              next unless parent && locales_attr
-
-              # Parse locale list: "en_AU en_CA" -> ["en_AU", "en_CA"]
-              locales = locales_attr.split(/\s+/)
-              locales.each do |locale|
-                parents[locale] = parent
-              end
-            end
-          rescue => e
-            CLDR.logger.warn "Could not load parent locales: #{e.message}"
+          unless File.exist?(parent_locales_path)
+            raise ArgumentError, "Parent locales data not found: #{parent_locales_path}. " \
+                                 "Run parent locales extraction first."
           end
 
-          parents
+          begin
+            yaml_data = YAML.load_file(parent_locales_path)
+            parent_locales = yaml_data["parent_locales"] || {}
+            CLDR.logger.debug "Loaded #{parent_locales.size} parent locale mappings from #{parent_locales_path}"
+            parent_locales
+          rescue => e
+            raise ArgumentError, "Could not load parent locales from #{parent_locales_path}: #{e.message}"
+          end
         end
 
         # Load locale alias mappings from CLDR supplemental data
@@ -183,52 +171,6 @@ module Foxtail
           end
 
           merged
-        end
-
-        # Load and merge data for a locale following complete inheritance chain
-        # @param locale [String] Target locale
-        # @param source_dir [String] Path to CLDR source directory
-        # @param extractor [BaseExtractor] Extractor instance for data extraction
-        # @param parent_locales [Hash] Optional parent locale mappings
-        # @return [Hash] Fully inherited and merged data
-        def load_inherited_data(locale, source_dir, extractor, parent_locales={})
-          chain = if parent_locales.empty?
-                    resolve_inheritance_chain(locale)
-                  else
-                    resolve_inheritance_chain_with_parents(locale, parent_locales)
-                  end
-
-          # Start with empty data and merge from root to specific
-          merged_data = {}
-
-          # Process inheritance chain in reverse (root first)
-          chain.reverse_each do |chain_locale|
-            locale_data = load_locale_data(chain_locale, source_dir, extractor)
-            next if locale_data.nil?
-
-            merged_data = merge_data(merged_data, locale_data)
-          end
-
-          merged_data
-        end
-
-        # Load raw data for a single locale without inheritance
-        # @param locale [String] Locale identifier
-        # @param source_dir [String] Path to CLDR source directory
-        # @param extractor [BaseExtractor] Extractor instance for data extraction
-        # @return [Hash, nil] Raw locale data or nil if not found
-        def load_locale_data(locale, source_dir, extractor)
-          xml_path = File.join(source_dir, "common", "main", "#{locale}.xml")
-
-          return nil unless File.exist?(xml_path)
-
-          begin
-            doc = REXML::Document.new(File.read(xml_path))
-            extractor.__send__(:extract_data_from_xml, doc)
-          rescue => e
-            CLDR.logger.warn "Could not load data for locale #{locale}: #{e.message}"
-            nil
-          end
         end
       end
     end

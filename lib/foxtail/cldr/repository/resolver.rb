@@ -15,6 +15,7 @@ module Foxtail
           @cache = {}
           @loaded_locales = {}
           @locale_aliases = nil
+          @parent_locales = nil
 
           # Resolve locale alias to canonical form
           @locale_id = resolve_canonical_locale(locale_id)
@@ -83,20 +84,12 @@ module Foxtail
         private def load_parent_locales_if_needed
           return @parent_locales if @parent_locales
 
-          # Try to load from source directory if available
-          source_dir = find_source_directory
-          @parent_locales = source_dir ? @inheritance.load_parent_locales(source_dir) : {}
-        end
-
-        private def find_source_directory
-          # Look for common CLDR source patterns
-          possible_paths = [
-            File.join(Dir.pwd, "tmp", "cldr-core"),
-            File.join(Dir.pwd, "tmp", "cldr"),
-            ENV.fetch("CLDR_SOURCE_DIR", nil)
-          ].compact
-
-          possible_paths.find {|path| File.directory?(File.join(path, "common", "main")) }
+          begin
+            @parent_locales = @inheritance.load_parent_locales(@data_dir)
+          rescue ArgumentError => e
+            CLDR.logger.warn "#{e.message}. Falling back to algorithmic inheritance."
+            @parent_locales = {}
+          end
         end
 
         private def load_locale_data(locale_id, data_type)
