@@ -157,21 +157,10 @@ module Foxtail
         end
 
         private def merge_locale_and_root_currencies(xml_doc)
-          # Start with comprehensive root currencies
-          currencies = load_root_currencies
-
-          # Override with locale-specific currency data - this preserves previous behavior
-          # where locale-specific currency symbols took precedence over root symbols
-          locale_currencies = extract_currencies(xml_doc)
-          locale_currencies.each do |code, locale_data|
-            if currencies[code]
-              currencies[code].merge!(locale_data)
-            else
-              currencies[code] = locale_data
-            end
-          end
-
-          currencies
+          # Extract only locale-specific currency data
+          # Runtime inheritance system handles missing currencies via locale inheritance chain
+          # This preserves correct CLDR inheritance (e.g., en_US inherits from en, not root)
+          extract_currencies(xml_doc)
         end
 
         private def extract_all_currencies
