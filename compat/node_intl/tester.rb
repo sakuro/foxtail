@@ -12,7 +12,7 @@ class NodeIntlTester
   private_constant :COMPARATOR_SCRIPT
 
   # Test result structure
-  TestResult = Data.define(:id, :value, :locale, :options, :foxtail_result, :node_result, :status, :error) do
+  TestResult = Data.define(:id, :value, :locale, :options, :foxtail_result, :node_result, :status, :error) {
     def success?
       status == :match
     end
@@ -20,7 +20,7 @@ class NodeIntlTester
     def failure?
       status == :mismatch || status == :error
     end
-  end
+  }
 
   def initialize
     @test_cases = []
@@ -73,31 +73,29 @@ class NodeIntlTester
     compare_results(test_cases, node_results)
   end
 
-  private
-
-  def add_decimal_tests
-    values = [0, 1, 12, 123, 1234, 12345, 123456, 1234567, 1.5, 12.34, 123.456, -123.45]
-    locales = ["en-US", "ja-JP", "de-DE", "fr-FR"]
+  private def add_decimal_tests
+    values = [0, 1, 12, 123, 1234, 12345, 123_456, 1_234_567, 1.5, 12.34, 123.456, -123.45]
+    locales = %w[en-US ja-JP de-DE fr-FR]
 
     values.each do |value|
       locales.each do |locale|
         @test_cases << {
-          id: "decimal_#{locale.gsub('-', '_')}_#{value.to_s.gsub('-', 'neg').gsub('.', '_')}",
-          value: value,
-          locale: locale,
-          options: { style: "decimal" }
+          id: "decimal_#{locale.tr("-", "_")}_#{value.to_s.gsub("-", "neg").tr(".", "_")}",
+          value:,
+          locale:,
+          options: {style: "decimal"}
         }
       end
     end
   end
 
-  def add_currency_tests
+  private def add_currency_tests
     values = [0, 1, 12.34, 123.45, 1234.56, -123.45]
     test_cases = [
-      { locale: "en-US", currency: "USD" },
-      { locale: "ja-JP", currency: "JPY" },
-      { locale: "de-DE", currency: "EUR" },
-      { locale: "fr-FR", currency: "EUR" }
+      {locale: "en-US", currency: "USD"},
+      {locale: "ja-JP", currency: "JPY"},
+      {locale: "de-DE", currency: "EUR"},
+      {locale: "fr-FR", currency: "EUR"}
     ]
 
     values.each do |value|
@@ -106,48 +104,48 @@ class NodeIntlTester
         currency = test_case[:currency]
 
         @test_cases << {
-          id: "currency_#{locale.gsub('-', '_')}_#{currency}_#{value.to_s.gsub('-', 'neg').gsub('.', '_')}",
-          value: value,
-          locale: locale,
-          options: { style: "currency", currency: currency }
+          id: "currency_#{locale.tr("-", "_")}_#{currency}_#{value.to_s.gsub("-", "neg").tr(".", "_")}",
+          value:,
+          locale:,
+          options: {style: "currency", currency:}
         }
       end
     end
   end
 
-  def add_percent_tests
+  private def add_percent_tests
     values = [0, 0.1, 0.12, 0.123, 1, 1.23, -0.45]
-    locales = ["en-US", "ja-JP", "de-DE", "fr-FR"]
+    locales = %w[en-US ja-JP de-DE fr-FR]
 
     values.each do |value|
       locales.each do |locale|
         @test_cases << {
-          id: "percent_#{locale.gsub('-', '_')}_#{value.to_s.gsub('-', 'neg').gsub('.', '_')}",
-          value: value,
-          locale: locale,
-          options: { style: "percent" }
+          id: "percent_#{locale.tr("-", "_")}_#{value.to_s.gsub("-", "neg").tr(".", "_")}",
+          value:,
+          locale:,
+          options: {style: "percent"}
         }
       end
     end
   end
 
-  def add_scientific_tests
-    values = [0, 1, 123, 0.000001, 123456789, 1.23e-10, 1.23e10]
-    locales = ["en-US", "ja-JP"]
+  private def add_scientific_tests
+    values = [0, 1, 123, 0.000001, 123_456_789, 1.23e-10, 1.23e10]
+    locales = %w[en-US ja-JP]
 
     values.each do |value|
       locales.each do |locale|
         @test_cases << {
-          id: "scientific_#{locale.gsub('-', '_')}_#{value.to_s.gsub('-', 'neg').gsub('.', '_').gsub('+', 'pos')}",
-          value: value,
-          locale: locale,
-          options: { notation: "scientific" }
+          id: "scientific_#{locale.tr("-", "_")}_#{value.to_s.gsub("-", "neg").tr(".", "_").gsub("+", "pos")}",
+          value:,
+          locale:,
+          options: {notation: "scientific"}
         }
       end
     end
   end
 
-  def execute_node_comparator(input_data)
+  private def execute_node_comparator(input_data)
     input_json = JSON.generate(input_data)
 
     stdout, stderr, status = Open3.capture3("node", COMPARATOR_SCRIPT.to_s, stdin_data: input_json)
@@ -163,8 +161,8 @@ class NodeIntlTester
     nil
   end
 
-  def compare_results(test_cases, node_results)
-    results_by_id = (node_results["results"] || []).to_h { |r| [r["id"], r] }
+  private def compare_results(test_cases, node_results)
+    results_by_id = (node_results["results"] || []).to_h {|r| [r["id"], r] }
 
     test_cases.map do |test_case|
       node_result = results_by_id[test_case[:id]]
@@ -189,7 +187,7 @@ class NodeIntlTester
           foxtail_result: nil,
           node_result: nil,
           status: :error,
-          error: "Node.js error: #{node_result['error']}"
+          error: "Node.js error: #{node_result["error"]}"
         )
       else
         foxtail_result = format_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
@@ -205,16 +203,16 @@ class NodeIntlTester
           value: test_case[:value],
           locale: test_case[:locale],
           options: test_case[:options],
-          foxtail_result: foxtail_result,
+          foxtail_result:,
           node_result: node_result["result"],
-          status: status,
+          status:,
           error: nil
         )
       end
     end
   end
 
-  def format_with_foxtail(value, locale, options)
+  private def format_with_foxtail(value, locale, options)
     formatter = Foxtail::CLDR::Formatter::Number.new
     locale_tag = Locale::Tag.parse(locale)
 

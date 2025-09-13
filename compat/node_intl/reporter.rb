@@ -10,7 +10,7 @@ class NodeIntlReporter
   def generate_summary_report
     total = @results.size
     matches = @results.count(&:success?)
-    percentage = total.zero? ? 0.0 : (matches.to_f / total * 100).round(1)
+    percentage = total.zero? ? 0.0 : (Float(matches) / total * 100).round(1)
 
     "Node.js Intl Compatibility: #{matches}/#{total} matches (#{percentage}%)"
   end
@@ -26,12 +26,12 @@ class NodeIntlReporter
     # Overall statistics
     total = @results.size
     matches = @results.count(&:success?)
-    mismatches = @results.count { |r| r.status == :mismatch }
-    errors = @results.count { |r| r.status == :error }
+    mismatches = @results.count {|r| r.status == :mismatch }
+    errors = @results.count {|r| r.status == :error }
 
-    match_percentage = total.zero? ? 0.0 : (matches.to_f / total * 100).round(1)
-    mismatch_percentage = total.zero? ? 0.0 : (mismatches.to_f / total * 100).round(1)
-    error_percentage = total.zero? ? 0.0 : (errors.to_f / total * 100).round(1)
+    match_percentage = total.zero? ? 0.0 : (Float(matches) / total * 100).round(1)
+    mismatch_percentage = total.zero? ? 0.0 : (Float(mismatches) / total * 100).round(1)
+    error_percentage = total.zero? ? 0.0 : (Float(errors) / total * 100).round(1)
 
     report << "| Metric | Count | Percentage |"
     report << "|--------|------:|-----------:|"
@@ -52,9 +52,13 @@ class NodeIntlReporter
     categories.each do |category, results|
       total_cat = results.size
       matches_cat = results.count(&:success?)
-      percentage_cat = total_cat.zero? ? 0.0 : (matches_cat.to_f / total_cat * 100).round(1)
+      percentage_cat = total_cat.zero? ? 0.0 : (Float(matches_cat) / total_cat * 100).round(1)
 
-      status_icon = percentage_cat == 100.0 ? "✅" : percentage_cat >= 90.0 ? "⚠️" : "❌"
+      status_icon = if percentage_cat == 100.0
+                      "✅"
+                    else
+                      percentage_cat >= 90.0 ? "⚠️" : "❌"
+                    end
 
       report << "| #{status_icon} #{category.capitalize} | #{matches_cat} | #{total_cat} | #{percentage_cat}% |"
     end
@@ -62,7 +66,7 @@ class NodeIntlReporter
     report << ""
 
     # Detailed results for mismatches
-    mismatches = @results.select { |r| r.status == :mismatch }
+    mismatches = @results.select {|r| r.status == :mismatch }
     if mismatches.any?
       report << "## Mismatches"
       report << ""
@@ -80,7 +84,7 @@ class NodeIntlReporter
     end
 
     # Errors
-    errors = @results.select { |r| r.status == :error }
+    errors = @results.select {|r| r.status == :error }
     if errors.any?
       report << "## Errors"
       report << ""
@@ -99,9 +103,7 @@ class NodeIntlReporter
     report.join("\n")
   end
 
-  private
-
-  def group_by_category
+  private def group_by_category
     @results.group_by do |result|
       case result.id
       when /^decimal_/
