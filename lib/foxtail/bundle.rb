@@ -40,8 +40,8 @@ module Foxtail
     #   A single locale or array of locale instances for fallback chain
     # @param options [Hash] Configuration options
     # @option options [Hash] :functions Custom formatting functions (defaults to NUMBER and DATETIME)
-    # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks (default: true)
-    # @option options [Proc, nil] :transform Optional message transformation function
+    # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks (default: true, not currently implemented)
+    # @option options [Proc, nil] :transform Optional message transformation function (not currently implemented)
     # @raise [ArgumentError] if locales are not Locale::Tag::Simple instances
     #
     # @example Basic bundle creation
