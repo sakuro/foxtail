@@ -10,5 +10,10 @@ module Foxtail
     def self.logger
       @logger ||= Dry.Logger(:cldr)
     end
+
+    # Set logger instance for CLDR-related operations
+    def self.logger=(new_logger)
+      @logger = new_logger
+    end
   end
 end

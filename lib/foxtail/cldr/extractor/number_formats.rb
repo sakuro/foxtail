@@ -5,10 +5,6 @@ module Foxtail
     module Extractor
       # Extracts number format data from CLDR XML and writes to YAML files
       class NumberFormats < Base
-        private def data_type_name
-          "number formats"
-        end
-
         private def extract_data_from_xml(xml_doc)
           formats = extract_format_patterns(xml_doc)
 

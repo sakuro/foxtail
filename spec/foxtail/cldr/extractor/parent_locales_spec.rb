@@ -63,6 +63,12 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
     end
 
     context "when file exists with same content" do
+      before do
+        # Allow info and debug logging throughout the test
+        allow(Foxtail::CLDR.logger).to receive(:info)
+        allow(Foxtail::CLDR.logger).to receive(:debug)
+      end
+
       let(:initial_mtime) do
         # Write initial file
         extractor.extract_all
@@ -71,17 +77,20 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
       end
 
       it "skips writing when only generated_at would differ" do
-        allow(Foxtail::CLDR.logger).to receive(:debug)
         initial_mtime # Ensure file exists with recorded mtime
 
         result = extractor.extract_all
 
-        # File modification time should not change
+        # File modification time should not change when skipping
         expect(File.mtime(file_path)).to eq(initial_mtime)
-        expect(Foxtail::CLDR.logger).to have_received(:debug).with(/Skipping.*only generated_at differs/)
 
         # But should still return the data
         expect(result["parent_locales"]).to include("en_AU" => "en_001")
+
+        # Should have logged info messages 3 times total:
+        # - 2 from initial write (Extracting... and complete)
+        # - 1 from second call (Extracting... only, skips complete when not writing)
+        expect(Foxtail::CLDR.logger).to have_received(:info).exactly(3).times
       end
     end
 

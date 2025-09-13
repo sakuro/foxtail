@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
+require "dry/inflector"
 require "fileutils"
+require "pathname"
 require "rexml/document"
 require "time"
 require "yaml"
@@ -13,12 +15,39 @@ module Foxtail
         attr_reader :source_dir
         attr_reader :output_dir
 
+        # Shared cache across all extractor instances
+        # @return [Hash] Cache for extracted data shared between instances
+        def self.extracted_data_cache
+          @extracted_data_cache ||= {}
+        end
+
+        # Class method to access the shared inflector (lazy initialization)
+        # @return [Dry::Inflector] Inflector instance for string transformations
+        def self.inflector
+          @inflector ||= Dry::Inflector.new do |inflections|
+            # Register DateTime as an acronym so DateTimeFormats becomes datetime_formats
+            inflections.acronym("DateTime")
+          end
+        end
+
         def initialize(source_dir:, output_dir:)
           @source_dir = source_dir
           @output_dir = output_dir
           @parent_locales = nil
           @inheritance = Repository::Inheritance.instance
-          @extracted_data_cache = {}
+          @processed_files = []
+        end
+
+        # Instance method to access the shared inflector
+        # @return [Dry::Inflector] Inflector instance for string transformations
+        def inflector
+          self.class.inflector
+        end
+
+        # Access shared cache instance
+        # @return [Hash] Cache for extracted data shared between instances
+        def extracted_data_cache
+          self.class.extracted_data_cache
         end
 
         # Template method for extracting all locales
@@ -26,14 +55,22 @@ module Foxtail
           validate_source_directory
 
           locale_files = Dir.glob(File.join(source_dir, "common", "main", "*.xml"))
-          CLDR.logger.info "Extracting #{data_type_name} from #{locale_files.size} locales..."
+          CLDR.logger.info "Extracting #{self.class.name.split("::").last} from #{locale_files.size} locales..."
 
-          locale_files.each do |xml_file|
+          locale_files.each_with_index do |xml_file, index|
             locale_id = File.basename(xml_file, ".xml")
             extract_locale(locale_id)
+
+            # Progress indicator every 100 locales
+            if (index + 1) % 100 == 0
+              CLDR.logger.info "Progress: #{index + 1}/#{locale_files.size} locales processed"
+            end
           end
 
-          CLDR.logger.info "#{data_type_name.capitalize} extraction complete (#{locale_files.size} locales)"
+          # Clean up obsolete files after processing all locales
+          cleanup_obsolete_files
+
+          CLDR.logger.info "#{self.class.name.split("::").last} extraction complete (#{locale_files.size} locales)"
         end
 
         # Template method for extracting a specific locale
@@ -48,30 +85,35 @@ module Foxtail
 
         # Extract minimal locale data (only differences from parent)
         def extract_locale_with_inheritance(locale_id)
-          return @extracted_data_cache[locale_id] if @extracted_data_cache.key?(locale_id)
+          # Use underscore class name for cache key
+          class_name = self.class.name ? self.class.name.split("::").last : "data"
+          cache_key = "#{inflector.underscore(class_name)}:#{locale_id}"
 
-          load_parent_locales_if_needed
+          return extracted_data_cache[cache_key] if extracted_data_cache.key?(cache_key)
 
           # Get raw data for this locale
           raw_data = load_raw_locale_data(locale_id)
-          return nil unless raw_data
+          unless raw_data
+            extracted_data_cache[cache_key] = nil
+            return nil
+          end
 
           # Get parent data to compare against
-          parent_locale = get_parent_locale(locale_id)
-          unless parent_locale
-            @extracted_data_cache[locale_id] = raw_data
+          parent_locale_id = parent_locale(locale_id)
+          unless parent_locale_id
+            extracted_data_cache[cache_key] = raw_data
             return raw_data
           end
 
-          parent_data = extract_locale_with_inheritance(parent_locale)
+          parent_data = extract_locale_with_inheritance(parent_locale_id)
           unless parent_data
-            @extracted_data_cache[locale_id] = raw_data
+            extracted_data_cache[cache_key] = raw_data
             return raw_data
           end
 
           # Extract only the differences
           result = extract_differences(raw_data, parent_data)
-          @extracted_data_cache[locale_id] = result
+          extracted_data_cache[cache_key] = result
           result
         end
 
@@ -83,15 +125,8 @@ module Foxtail
           raise ArgumentError, "CLDR source directory not found: #{locales_dir}"
         end
 
-        private def load_parent_locales_if_needed
-          return if @parent_locales
-
-          @parent_locales = @inheritance.load_parent_locales(@output_dir)
-          CLDR.logger.debug "Loaded #{@parent_locales.size} parent locale mappings from extracted data"
-        end
-
         private def parent_locales
-          @parent_locales ||= {}
+          @parent_locales ||= @inheritance.load_parent_locales(@output_dir)
         end
 
         private def load_raw_locale_data(locale_id)
@@ -107,7 +142,7 @@ module Foxtail
           end
         end
 
-        private def get_parent_locale(locale_id)
+        private def parent_locale(locale_id)
           return nil if locale_id == "root"
 
           # Check explicit parent mappings first
@@ -151,6 +186,7 @@ module Foxtail
           ensure_locale_directory(locale_id)
 
           file_path = File.join(output_dir, locale_id, filename)
+          @processed_files << file_path
 
           yaml_data = {
             "locale" => locale_id,
@@ -167,10 +203,10 @@ module Foxtail
 
           # Skip writing if only generated_at differs
           if should_skip_write?(file_path, yaml_data)
-            CLDR.logger.debug "Skipping #{file_path} - only generated_at differs"
             return
           end
 
+          CLDR.logger.debug "Writing #{relative_path(file_path)}"
           File.write(file_path, yaml_data.to_yaml)
         end
 
@@ -193,12 +229,41 @@ module Foxtail
           end
         end
 
-        # Abstract methods - subclasses must implement these
+        # Clean up files that are no longer needed (not processed in this run)
+        private def cleanup_obsolete_files
+          filename = data_filename
+          existing_files = Dir.glob(File.join(output_dir, "*", filename))
+          obsolete_files = existing_files - @processed_files
 
-        # @return [String] Human-readable name of the data type (e.g., "plural rules")
-        private def data_type_name
-          raise NotImplementedError, "Subclasses must implement data_type_name"
+          if obsolete_files.any?
+            CLDR.logger.info "Removing #{obsolete_files.size} obsolete #{self.class.name.split("::").last} files..."
+            obsolete_files.each do |file_path|
+              CLDR.logger.debug "Removing obsolete file: #{relative_path(file_path)}"
+              File.delete(file_path)
+            end
+          else
+            CLDR.logger.debug "No obsolete #{self.class.name.split("::").last} files to remove"
+          end
         end
+
+        # Automatically derive data filename from class name using inflector
+        private def data_filename
+          # Get the class name without module prefix (e.g., "DateTimeFormats")
+          # Handle anonymous classes (for testing)
+          class_name = self.class.name ? self.class.name.split("::").last : "data"
+          # Convert to snake_case and add .yml extension
+          "#{inflector.underscore(class_name)}.yml"
+        end
+
+        # Convert absolute path to relative path from data output directory
+        private def relative_path(file_path)
+          Pathname.new(file_path).relative_path_from(Pathname.new(output_dir)).to_s
+        rescue ArgumentError
+          # Fallback to absolute path if relative path calculation fails
+          file_path
+        end
+
+        # Abstract methods - subclasses must implement these
 
         # Extract data from parsed XML document
         # @param xml_doc [REXML::Document] The parsed XML document
