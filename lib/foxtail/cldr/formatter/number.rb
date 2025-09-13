@@ -371,11 +371,11 @@ module Foxtail
             # CLDR ¤¤¤ pattern: Display currency names with plural-aware selection
             # See: https://unicode.org/reports/tr35/tr35-numbers.html#Currencies
             #
-            # Examples:
-            #   1 → "US dollar"
-            #   2 → "US dollars"
-            #   1.5 → "US dollars"
-            #   1.0 → "US dollar" (treated as integer for practical purposes)
+            # Examples (CLDR-compliant for English):
+            #   1 → "US dollar" (integer, "one" category)
+            #   2 → "US dollars" (integer > 1, "other" category)
+            #   1.5 → "US dollars" (decimal, "other" category)
+            #   1.0 → "US dollars" (visible decimal, "other" category per CLDR)
             #
             # Use original value for plural determination (not transformed value)
             original_value = options[:original_value] || decimal_value
