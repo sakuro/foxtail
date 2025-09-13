@@ -27,10 +27,12 @@ module Foxtail
             @value = value
           end
 
+          # @api private
           def ==(other)
             other.is_a?(self.class) && other.value == value
           end
 
+          # @api private
           def to_s
             value
           end
@@ -38,6 +40,7 @@ module Foxtail
 
         # Represents digit placeholders (0, #)
         class DigitToken < Token
+          # @api private
           def digit_count
             value.length
           end
@@ -53,6 +56,7 @@ module Foxtail
 
         # Represents currency symbol (¤)
         class CurrencyToken < Token
+          # @api private
           def currency_type
             case value.length
             when 2 then :code       # ¤¤ -> USD
@@ -88,6 +92,7 @@ module Foxtail
 
         # Represents scientific notation exponent (E)
         class ExponentToken < Token
+          # @api private
           def exponent_digits
             # Count the digits after E (e.g., "E0" -> 1, "E00" -> 2, "E+000" -> 3)
             match = value.match(/E\+?(0+)$/i)
@@ -107,6 +112,7 @@ module Foxtail
 
         # Represents quoted literal text
         class QuotedToken < Token
+          # @api private
           def literal_text
             # Remove surrounding quotes and handle escaped quotes
             value[1..-2].gsub("''", "'")

@@ -6,10 +6,27 @@ module Foxtail
   class Resource
     include Enumerable
 
+    # @return [Array<Hash>] Parsed FTL entries (messages and terms)
     attr_reader :entries
+
+    # @return [Array<Hash>] Parse errors encountered during processing
     attr_reader :errors
 
     # Parse FTL source string into a Resource
+    #
+    # @param source [String] FTL source text to parse
+    # @param options [Hash] Parsing options
+    # @option options [Boolean] :skip_junk Skip invalid entries (default: true)
+    # @option options [Boolean] :skip_comments Skip comment entries (default: true)
+    # @return [Foxtail::Resource] New resource with parsed entries
+    # @raise [ArgumentError] if source is not a string
+    #
+    # @example Parse FTL content
+    #   source = <<~FTL
+    #     hello = Hello, {$name}!
+    #     goodbye = Goodbye!
+    #   FTL
+    #   resource = Foxtail::Resource.from_string(source)
     def self.from_string(source, **options)
       parser = Parser.new
       parser_resource = parser.parse(source)

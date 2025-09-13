@@ -11,17 +11,28 @@ module Foxtail
       class Number
         # Format numbers with locale-specific formatting
         #
-        # @param value [Numeric, String] The value to format
-        # @param locale [Locale] The locale for formatting
+        # @param args [Array] Positional arguments (first argument is the value to format)
+        # @param locale [Locale::Tag] The locale for formatting
         # @param options [Hash] Formatting options
         # @option options [String] :style Format style ("decimal", "percent", "currency", "scientific")
-        # @option options [String] :pattern Custom CLDR pattern
-        # @option options [String] :currency Currency code for currency formatting
+        # @option options [String] :pattern Custom CLDR pattern (overrides style)
+        # @option options [String] :currency Currency code for currency formatting (e.g., "USD", "JPY")
         # @option options [Integer] :minimumFractionDigits Minimum decimal places
         # @option options [Integer] :maximumFractionDigits Maximum decimal places
         # @raise [ArgumentError] when the value cannot be parsed as a number
-        # @raise [Foxtail::CLDR::DataNotAvailable] when CLDR data is not available for the locale
         # @return [String] Formatted number string
+        #
+        # @example Basic decimal formatting
+        #   formatter.call(1234.5, locale: Locale::Tag.parse("en-US"))
+        #   # => "1,234.5"
+        #
+        # @example Currency formatting
+        #   formatter.call(100, locale: Locale::Tag.parse("en-US"), style: "currency", currency: "USD")
+        #   # => "US$100.00"
+        #
+        # @example Custom pattern with currency names
+        #   formatter.call(100, locale: Locale::Tag.parse("en-US"), pattern: "#,##0.00 ¤¤¤", currency: "USD")
+        #   # => "100.00 US dollars"
         def call(*args, locale:, **options)
           # Get the first positional argument (the value to format)
           value = args.first

@@ -29,10 +29,12 @@ module Foxtail
             @value = value
           end
 
+          # @api private
           def ==(other)
             other.is_a?(self.class) && other.value == value
           end
 
+          # @api private
           def to_s
             value
           end
@@ -40,6 +42,7 @@ module Foxtail
 
         # Represents a CLDR field pattern (yyyy, MM, dd, etc.)
         class FieldToken < Token
+          # @api private
           def field_type
             case value[0]
             when "y", "Y" then :year
@@ -55,6 +58,7 @@ module Foxtail
             end
           end
 
+          # @api private
           def field_length
             value.length
           end
@@ -66,6 +70,7 @@ module Foxtail
 
         # Represents quoted literal text
         class QuotedToken < Token
+          # @api private
           def literal_text
             # Remove surrounding quotes and handle escaped quotes
             value[1..-2].gsub("''", "'")

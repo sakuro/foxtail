@@ -101,6 +101,7 @@ RSpec/ContextWording:
 Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/parser/stream.rb'                    # Internal stream processing utilities
+    - 'lib/foxtail/cldr/pattern_parser/number.rb'      # Internal pattern parsing utilities
     - 'compat/compatibility_tester.rb'                  # Internal compatibility testing utilities
     - 'compat/compatibility_reporter.rb'                # Internal compatibility reporting utilities
     - 'compat/ast_comparator.rb'                        # Internal AST comparison utilities
