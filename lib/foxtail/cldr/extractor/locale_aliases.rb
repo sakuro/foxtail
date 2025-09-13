@@ -132,6 +132,12 @@ module Foxtail
             "locale_aliases" => aliases
           }
 
+          # Skip writing if only generated_at differs
+          if should_skip_write?(file_path, yaml_data)
+            CLDR.logger.debug "Skipping #{file_path} - only generated_at differs"
+            return
+          end
+
           File.write(file_path, yaml_data.to_yaml)
           CLDR.logger.debug "Wrote #{data_type_name} to #{file_path}"
         end
