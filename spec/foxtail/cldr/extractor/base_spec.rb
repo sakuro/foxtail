@@ -189,4 +189,156 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
       end
     end
   end
+
+  describe "#should_skip_write?" do
+    let(:file_path) { File.join(test_output_dir, "test_file.yml") }
+
+    context "when file does not exist" do
+      it "returns false" do
+        expect(extractor.__send__(:should_skip_write?, file_path, {})).to be false
+      end
+    end
+
+    context "when file exists" do
+      let(:existing_data) do
+        {
+          "locale" => "en",
+          "generated_at" => "2023-01-01T00:00:00Z",
+          "cldr_version" => "46",
+          "test_key" => "test_value"
+        }
+      end
+
+      before do
+        File.write(file_path, existing_data.to_yaml)
+      end
+
+      context "when only generated_at differs" do
+        let(:new_data) do
+          {
+            "locale" => "en",
+            "generated_at" => "2023-12-31T23:59:59Z",
+            "cldr_version" => "46",
+            "test_key" => "test_value"
+          }
+        end
+
+        it "returns true" do
+          expect(extractor.__send__(:should_skip_write?, file_path, new_data)).to be true
+        end
+      end
+
+      context "when data content differs" do
+        let(:new_data) do
+          {
+            "locale" => "en",
+            "generated_at" => "2023-12-31T23:59:59Z",
+            "cldr_version" => "46",
+            "test_key" => "different_value"
+          }
+        end
+
+        it "returns false" do
+          expect(extractor.__send__(:should_skip_write?, file_path, new_data)).to be false
+        end
+      end
+
+      context "when new field is added" do
+        let(:new_data) do
+          {
+            "locale" => "en",
+            "generated_at" => "2023-12-31T23:59:59Z",
+            "cldr_version" => "46",
+            "test_key" => "test_value",
+            "new_field" => "new_value"
+          }
+        end
+
+        it "returns false" do
+          expect(extractor.__send__(:should_skip_write?, file_path, new_data)).to be false
+        end
+      end
+
+      context "when existing file is corrupted" do
+        before do
+          File.write(file_path, "invalid yaml content: [")
+        end
+
+        it "returns false" do
+          expect(extractor.__send__(:should_skip_write?, file_path, existing_data)).to be false
+        end
+      end
+
+      context "when existing file contains non-hash data" do
+        before do
+          File.write(file_path, "just a string".to_yaml)
+        end
+
+        it "returns false" do
+          expect(extractor.__send__(:should_skip_write?, file_path, existing_data)).to be false
+        end
+      end
+    end
+  end
+
+  describe "write_yaml_file with skip logic" do
+    let(:locale_id) { "en" }
+    let(:filename) { "test_data.yml" }
+    let(:test_data) { {"test_key" => "test_value"} }
+    let(:file_path) { File.join(test_output_dir, locale_id, filename) }
+
+    context "when file does not exist" do
+      it "writes the file" do
+        expect(File.exist?(file_path)).to be false
+
+        extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
+
+        expect(File.exist?(file_path)).to be true
+        content = YAML.load_file(file_path)
+        expect(content["test_key"]).to eq("test_value")
+      end
+    end
+
+    context "when file exists with same content" do
+      let(:initial_mtime) do
+        # Write initial file
+        extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
+        sleep(0.01) # Wait to ensure mtime would change if file is rewritten
+        File.mtime(file_path)
+      end
+
+      it "skips writing when only generated_at would differ" do
+        allow(Foxtail::CLDR.logger).to receive(:debug)
+        initial_mtime # Ensure file exists with recorded mtime
+
+        extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
+
+        # File modification time should not change
+        expect(File.mtime(file_path)).to eq(initial_mtime)
+        expect(Foxtail::CLDR.logger).to have_received(:debug).with(/Skipping.*only generated_at differs/)
+      end
+    end
+
+    context "when file exists with different content" do
+      let(:initial_mtime) do
+        # Write initial file
+        extractor.__send__(:write_yaml_file, locale_id, filename, {"old_key" => "old_value"})
+        sleep(0.01) # Wait to ensure mtime would change
+        File.mtime(file_path)
+      end
+
+      it "overwrites the file when content differs" do
+        initial_mtime # Ensure file exists with recorded mtime
+
+        extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
+
+        # File should be updated
+        expect(File.mtime(file_path)).to be > initial_mtime
+
+        content = YAML.load_file(file_path)
+        expect(content["test_key"]).to eq("test_value")
+        expect(content["old_key"]).to be_nil
+      end
+    end
+  end
 end

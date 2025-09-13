@@ -165,7 +165,32 @@ module Foxtail
             yaml_data["data"] = data
           end
 
+          # Skip writing if only generated_at differs
+          if should_skip_write?(file_path, yaml_data)
+            CLDR.logger.debug "Skipping #{file_path} - only generated_at differs"
+            return
+          end
+
           File.write(file_path, yaml_data.to_yaml)
+        end
+
+        # Check if we should skip writing the file
+        # @param file_path [String] Path to the file
+        # @param new_data [Hash] Data to be written
+        # @return [Boolean] true if write should be skipped
+        private def should_skip_write?(file_path, new_data)
+          return false unless File.exist?(file_path)
+
+          begin
+            existing_data = YAML.load_file(file_path)
+            return false unless existing_data.is_a?(Hash)
+
+            # Compare data without generated_at
+            new_data.except("generated_at") == existing_data.except("generated_at")
+          rescue => e
+            CLDR.logger.debug "Error comparing existing file: #{e.message}"
+            false
+          end
         end
 
         # Abstract methods - subclasses must implement these

@@ -58,4 +58,74 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
       end
     end
   end
+
+  describe "write_alias_data with skip logic" do
+    let(:test_aliases) do
+      {
+        "zh_TW" => "zh_Hant_TW",
+        "no_NO" => "nb_NO"
+      }
+    end
+    let(:file_path) { File.join(temp_output_dir, "locale_aliases.yml") }
+
+    context "when file does not exist" do
+      it "writes the file" do
+        expect(File.exist?(file_path)).to be false
+
+        extractor.__send__(:write_alias_data, test_aliases)
+
+        expect(File.exist?(file_path)).to be true
+        content = YAML.load_file(file_path)
+        expect(content["locale_aliases"]).to eq(test_aliases)
+      end
+    end
+
+    context "when file exists with same content" do
+      let(:initial_mtime) do
+        # Write initial file
+        extractor.__send__(:write_alias_data, test_aliases)
+        sleep(0.01) # Wait to ensure mtime would change if file is rewritten
+        File.mtime(file_path)
+      end
+
+      it "skips writing when only generated_at would differ" do
+        allow(Foxtail::CLDR.logger).to receive(:debug)
+        initial_mtime # Ensure file exists with recorded mtime
+
+        extractor.__send__(:write_alias_data, test_aliases)
+
+        # File modification time should not change
+        expect(File.mtime(file_path)).to eq(initial_mtime)
+        expect(Foxtail::CLDR.logger).to have_received(:debug).with(/Skipping.*only generated_at differs/)
+      end
+    end
+
+    context "when file exists with different content" do
+      let(:old_aliases) do
+        {
+          "old_alias" => "old_target"
+        }
+      end
+
+      let(:initial_mtime) do
+        # Write initial file with different content
+        extractor.__send__(:write_alias_data, old_aliases)
+        sleep(0.01) # Wait to ensure mtime would change
+        File.mtime(file_path)
+      end
+
+      it "overwrites the file when content differs" do
+        initial_mtime # Ensure file exists with recorded mtime
+
+        extractor.__send__(:write_alias_data, test_aliases)
+
+        # File should be updated
+        expect(File.mtime(file_path)).to be > initial_mtime
+
+        content = YAML.load_file(file_path)
+        expect(content["locale_aliases"]).to eq(test_aliases)
+        expect(content["locale_aliases"]["old_alias"]).to be_nil
+      end
+    end
+  end
 end

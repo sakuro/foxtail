@@ -12,11 +12,19 @@ module Foxtail
         # @return [Hash] Parent locale mappings
         def extract_all
           parent_locales_data = {
+            "generated_at" => Time.now.utc.iso8601,
+            "cldr_version" => ENV.fetch("CLDR_VERSION", "46"),
             "parent_locales" => extract_parent_locales_data
           }
 
           output_path = File.join(@output_dir, "parent_locales.yml")
           FileUtils.mkdir_p(File.dirname(output_path))
+
+          # Skip writing if only generated_at differs
+          if should_skip_write?(output_path, parent_locales_data)
+            CLDR.logger.debug "Skipping #{output_path} - only generated_at differs"
+            return parent_locales_data
+          end
 
           File.write(output_path, YAML.dump(parent_locales_data))
           CLDR.logger.info "Extracted parent locales data to #{output_path}"
@@ -54,6 +62,7 @@ module Foxtail
 
           parents
         end
+
         private def extract_parent_locales_data
           load_parent_locales_from_source
         end

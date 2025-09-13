@@ -46,4 +46,67 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
       expect(result["parent_locales"]).to include("en_AU" => "en_001")
     end
   end
+
+  describe "extract_all with skip logic" do
+    let(:file_path) { File.join(temp_output_dir, "parent_locales.yml") }
+
+    context "when file does not exist" do
+      it "writes the file" do
+        expect(File.exist?(file_path)).to be false
+
+        extractor.extract_all
+
+        expect(File.exist?(file_path)).to be true
+        content = YAML.load_file(file_path)
+        expect(content["parent_locales"]).to include("en_AU" => "en_001")
+      end
+    end
+
+    context "when file exists with same content" do
+      let(:initial_mtime) do
+        # Write initial file
+        extractor.extract_all
+        sleep(0.01) # Wait to ensure mtime would change if file is rewritten
+        File.mtime(file_path)
+      end
+
+      it "skips writing when only generated_at would differ" do
+        allow(Foxtail::CLDR.logger).to receive(:debug)
+        initial_mtime # Ensure file exists with recorded mtime
+
+        result = extractor.extract_all
+
+        # File modification time should not change
+        expect(File.mtime(file_path)).to eq(initial_mtime)
+        expect(Foxtail::CLDR.logger).to have_received(:debug).with(/Skipping.*only generated_at differs/)
+
+        # But should still return the data
+        expect(result["parent_locales"]).to include("en_AU" => "en_001")
+      end
+    end
+
+    context "when CLDR version changes" do
+      let(:initial_mtime) do
+        # Write initial file
+        extractor.extract_all
+        sleep(0.01) # Wait to ensure mtime would change
+        File.mtime(file_path)
+      end
+
+      it "overwrites the file when CLDR version differs" do
+        initial_mtime # Ensure file exists with recorded mtime
+
+        # Change CLDR version
+        allow(ENV).to receive(:fetch).with("CLDR_VERSION", "46").and_return("47")
+
+        extractor.extract_all
+
+        # File should be updated
+        expect(File.mtime(file_path)).to be > initial_mtime
+
+        content = YAML.load_file(file_path)
+        expect(content["cldr_version"]).to eq("47")
+      end
+    end
+  end
 end
