@@ -135,7 +135,15 @@ module Foxtail
             format_value = decimal_value.negative? ? decimal_value.abs : decimal_value
           else
             pattern_tokens = tokens
-            format_value = decimal_value
+            # For negative numbers without explicit negative pattern, use absolute value
+            # and add minus sign as prefix token
+            if decimal_value.negative?
+              format_value = decimal_value.abs
+              minus_token = Foxtail::CLDR::PatternParser::Number::MinusToken.new("-")
+              pattern_tokens = [minus_token] + pattern_tokens
+            else
+              format_value = decimal_value
+            end
           end
 
           # Apply all multiplications here (centralized logic)
