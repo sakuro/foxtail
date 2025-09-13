@@ -52,8 +52,8 @@ Naming/PredicateMethod:
   Exclude:
     - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
     - 'lib/foxtail/cldr/repository/plural_rules.rb'     # evaluate_simple_condition() - evaluates CLDR conditions
-    - 'compat/compatibility_tester.rb'       # span_related() - checks difference type rather than boolean property
-    - 'compat/ast_comparator.rb'             # span_related() - checks difference type rather than boolean property
+    - 'compat/fluent_js/compatibility_tester.rb'  # span_related() - checks difference type rather than boolean property
+    - 'compat/fluent_js/ast_comparator.rb'       # span_related() - checks difference type rather than boolean property
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
@@ -102,9 +102,11 @@ Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/parser/stream.rb'                    # Internal stream processing utilities
     - 'lib/foxtail/cldr/pattern_parser/number.rb'      # Internal pattern parsing utilities
-    - 'compat/compatibility_tester.rb'                  # Internal compatibility testing utilities
-    - 'compat/compatibility_reporter.rb'                # Internal compatibility reporting utilities
-    - 'compat/ast_comparator.rb'                        # Internal AST comparison utilities
+    - 'compat/fluent_js/compatibility_tester.rb'        # Internal compatibility testing utilities
+    - 'compat/fluent_js/compatibility_reporter.rb'      # Internal compatibility reporting utilities
+    - 'compat/fluent_js/ast_comparator.rb'              # Internal AST comparison utilities
+    - 'compat/node_intl/tester.rb'                      # Internal Node.js Intl testing utilities
+    - 'compat/node_intl/reporter.rb'                    # Internal Node.js Intl reporting utilities
 
 # Options hashes are part of the established API for Bundle, Scope, and Functions
 # Changing to keyword arguments would break existing usage and tests
@@ -125,7 +127,13 @@ Lint/DuplicateBranch:
 # Number conversions are safe for statistical percentages (integers to float)
 Lint/NumberConversion:
   Exclude:
-    - 'compat/compatibility_reporter.rb'  # Statistical percentage calculations with known integer inputs
+    - 'compat/fluent_js/compatibility_reporter.rb'  # Statistical percentage calculations with known integer inputs
+    - 'compat/node_intl/reporter.rb'                    # Statistical percentage calculations with known integer inputs
+
+# Float comparisons are acceptable for exact percentage thresholds in reports
+Lint/FloatComparison:
+  Exclude:
+    - 'compat/node_intl/reporter.rb'                    # 100.0% threshold comparison for report icons
 
 # Task-scoped methods prevent global namespace pollution (see rubocop-rake#42)
 Rake/MethodDefinitionInTask:
@@ -137,4 +145,5 @@ Layout/LineLength:
   AllowedPatterns:
     - '\.elements\.each\(".*"'  # XPath expressions in CLDR data extraction are more readable on single lines
   Exclude:
-    - 'compat/compatibility_reporter.rb'  # Report formatting strings are clearer as single lines
+    - 'compat/fluent_js/compatibility_reporter.rb'  # Report formatting strings are clearer as single lines
+    - 'compat/fluent_js/ast_comparator.rb'              # Error messages are clearer as single lines

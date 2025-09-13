@@ -7,7 +7,7 @@ require_relative "ast_comparator"
 # Executes fluent.js compatibility tests
 class CompatibilityTester
   # Path to fluent.js fixtures
-  SYNTAX_FIXTURES_ROOT = Pathname.new(__dir__).parent / "fluent.js" / "fluent-syntax" / "test"
+  SYNTAX_FIXTURES_ROOT = Pathname.new(__dir__).parent.parent / "fluent.js" / "fluent-syntax" / "test"
   private_constant :SYNTAX_FIXTURES_ROOT
   STRUCTURE_FIXTURES = SYNTAX_FIXTURES_ROOT / "fixtures_structure"
   private_constant :STRUCTURE_FIXTURES

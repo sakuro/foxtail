@@ -55,8 +55,8 @@ class CompatibilityReporter
       content_differences: differences,
       parsing_failures: failures,
       known_incompatibilities: known_incompatible,
-      perfect_percentage: total > 0 ? (perfect.to_f / total * 100).round(1) : 0,
-      functional_percentage: total > 0 ? (functional.to_f / total * 100).round(1) : 0,
+      perfect_percentage: total > 0 ? (Float(perfect) / total * 100).round(1) : 0,
+      functional_percentage: total > 0 ? (Float(functional) / total * 100).round(1) : 0,
       structure_stats: calculate_category_stats(structure_results),
       reference_stats: calculate_category_stats(reference_results)
     }
@@ -71,8 +71,8 @@ class CompatibilityReporter
       total:,
       perfect:,
       functional:,
-      perfect_percentage: total > 0 ? (perfect.to_f / total * 100).round(1) : 0,
-      functional_percentage: total > 0 ? (functional.to_f / total * 100).round(1) : 0
+      perfect_percentage: total > 0 ? (Float(perfect) / total * 100).round(1) : 0,
+      functional_percentage: total > 0 ? (Float(functional) / total * 100).round(1) : 0
     }
   end
 
@@ -82,10 +82,10 @@ class CompatibilityReporter
       | Metric | Count | Percentage |
       |--------|------:|-----------:|
       | Perfect matches | #{@stats[:perfect_matches]} | #{@stats[:perfect_percentage]}% |
-      | Partial matches | #{@stats[:partial_matches]} | #{(@stats[:partial_matches].to_f / @stats[:total_fixtures] * 100).round(1)}% |
-      | Content differences | #{@stats[:content_differences]} | #{(@stats[:content_differences].to_f / @stats[:total_fixtures] * 100).round(1)}% |
-      | Parsing failures | #{@stats[:parsing_failures]} | #{(@stats[:parsing_failures].to_f / @stats[:total_fixtures] * 100).round(1)}% |
-      | Known incompatibilities | #{@stats[:known_incompatibilities]} | #{(@stats[:known_incompatibilities].to_f / @stats[:total_fixtures] * 100).round(1)}% |
+      | Partial matches | #{@stats[:partial_matches]} | #{(Float(@stats[:partial_matches]) / @stats[:total_fixtures] * 100).round(1)}% |
+      | Content differences | #{@stats[:content_differences]} | #{(Float(@stats[:content_differences]) / @stats[:total_fixtures] * 100).round(1)}% |
+      | Parsing failures | #{@stats[:parsing_failures]} | #{(Float(@stats[:parsing_failures]) / @stats[:total_fixtures] * 100).round(1)}% |
+      | Known incompatibilities | #{@stats[:known_incompatibilities]} | #{(Float(@stats[:known_incompatibilities]) / @stats[:total_fixtures] * 100).round(1)}% |
 
       *Total fixtures: #{@stats[:total_fixtures]}*
     MARKDOWN
