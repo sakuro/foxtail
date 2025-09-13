@@ -5,6 +5,12 @@ require "foxtail"
 require "rake/clean"
 require "shellwords"
 
+# Task to set debug logging for CLDR operations
+desc "Set debug logging level for CLDR operations"
+task :set_debug_logging do
+  Foxtail::CLDR.logger.level = :debug
+end
+
 # CLDR version configuration
 CLDR_VERSION = "46"
 CLDR_CORE_URL = "https://unicode.org/Public/cldr/#{CLDR_VERSION}/core.zip".freeze
@@ -40,7 +46,7 @@ CLOBBER.exclude(CLDR_ZIP_PATH)
 
 namespace :cldr do
   desc "Download CLDR core data to tmp directory"
-  task :download do
+  task download: :set_debug_logging do
     if Dir.exist?(CLDR_EXTRACT_DIR)
       Foxtail::CLDR.logger.info "CLDR core data already exists at #{CLDR_EXTRACT_DIR}"
       Foxtail::CLDR.logger.info "Remove the directory to re-download."
@@ -79,7 +85,7 @@ namespace :cldr do
 
   namespace :extract do
     desc "Extract CLDR parent locales from downloaded CLDR core data"
-    task parent_locales: :download do
+    task parent_locales: %i[set_debug_logging download] do
       # Clean up existing parent_locales file
       if File.exist?(PARENT_LOCALES_FILE)
         Foxtail::CLDR.logger.info "Cleaning up existing parent_locales file..."
@@ -95,7 +101,7 @@ namespace :cldr do
     end
 
     desc "Extract CLDR locale aliases from downloaded CLDR core data"
-    task locale_aliases: :download do
+    task locale_aliases: %i[set_debug_logging download] do
       # Clean up existing locale_aliases file
       if File.exist?(LOCALE_ALIASES_FILE)
         Foxtail::CLDR.logger.info "Cleaning up existing locale_aliases file..."
@@ -110,7 +116,7 @@ namespace :cldr do
       extractor.extract_all
     end
     desc "Extract CLDR data for a specific locale"
-    task :locale, [:locale_id] => :download do |_task, args|
+    task :locale, [:locale_id] => %i[set_debug_logging download] do |_task, args|
       unless args[:locale_id]
         Foxtail::CLDR.logger.error "Usage: rake cldr:extract:locale[locale_id]"
         Foxtail::CLDR.logger.error "Example: rake cldr:extract:locale[en]"
@@ -137,7 +143,7 @@ namespace :cldr do
     end
 
     desc "Extract CLDR plural rules from downloaded CLDR core data"
-    task plural_rules: %i[download parent_locales] do
+    task plural_rules: %i[set_debug_logging download parent_locales] do
       # Clean up existing plural_rules files
       if PLURAL_RULES_FILES.any?
         Foxtail::CLDR.logger.info "Cleaning up #{PLURAL_RULES_FILES.size} existing plural_rules files..."
@@ -153,7 +159,7 @@ namespace :cldr do
     end
 
     desc "Extract CLDR number formats from downloaded CLDR core data"
-    task number_formats: %i[download parent_locales] do
+    task number_formats: %i[set_debug_logging download parent_locales] do
       # Clean up existing number_formats files
       if NUMBER_FORMATS_FILES.any?
         Foxtail::CLDR.logger.info "Cleaning up #{NUMBER_FORMATS_FILES.size} existing number_formats files..."
@@ -169,7 +175,7 @@ namespace :cldr do
     end
 
     desc "Extract CLDR datetime formats from downloaded CLDR core data"
-    task datetime_formats: %i[download parent_locales] do
+    task datetime_formats: %i[set_debug_logging download parent_locales] do
       # Clean up existing datetime_formats files
       if DATETIME_FORMATS_FILES.any?
         Foxtail::CLDR.logger.info "Cleaning up #{DATETIME_FORMATS_FILES.size} existing datetime_formats files..."
