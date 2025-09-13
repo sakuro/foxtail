@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "../../compat/compatibility_reporter"
-require_relative "../../compat/compatibility_tester"
+require_relative "../../compat/fluent_js/compatibility_reporter"
+require_relative "../../compat/fluent_js/compatibility_tester"
 require_relative "../foxtail"
 
 namespace :compatibility do
