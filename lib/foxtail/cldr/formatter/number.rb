@@ -105,9 +105,6 @@ module Foxtail
         private def apply_style_transformations(decimal_value, options)
           style = options[:style] || "decimal"
           case style
-          when "percent"
-            # Multiply by 100 for percentage display
-            decimal_value * 100
           when "currency"
             # Round to currency-specific decimal places
             if options[:maximumFractionDigits] == 0
@@ -116,6 +113,7 @@ module Foxtail
               decimal_value
             end
           else
+            # No multiplication here - handled in format_with_pattern
             decimal_value
           end
         end
@@ -140,17 +138,16 @@ module Foxtail
             format_value = decimal_value
           end
 
-          # Apply pattern-based multipliers only for custom patterns
-          # (Built-in style patterns already handle multipliers in apply_style_transformations)
-          if options[:pattern]
-            has_percent = pattern_tokens.any?(Foxtail::CLDR::PatternParser::Number::PercentToken)
-            has_permille = pattern_tokens.any?(Foxtail::CLDR::PatternParser::Number::PerMilleToken)
+          # Apply all multiplications here (centralized logic)
+          has_percent = pattern_tokens.any?(Foxtail::CLDR::PatternParser::Number::PercentToken)
+          has_permille = pattern_tokens.any?(Foxtail::CLDR::PatternParser::Number::PerMilleToken)
+          style = options[:style] || "decimal"
 
-            if has_permille
-              format_value *= 1000
-            elsif has_percent
-              format_value *= 100
-            end
+          # Apply multipliers based on pattern tokens or style
+          if has_permille
+            format_value *= 1000
+          elsif has_percent || style == "percent"
+            format_value *= 100
           end
 
           # Build formatted string from tokens
