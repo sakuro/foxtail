@@ -13,9 +13,6 @@ module Foxtail
 
         QUARTER_DAY_PERIOD_WIDTHS = %w[wide abbreviated].freeze
         private_constant :QUARTER_DAY_PERIOD_WIDTHS
-        private def data_type_name
-          "datetime formats"
-        end
 
         private def extract_data_from_xml(xml_doc)
           # Extract calendar data from gregorian calendar

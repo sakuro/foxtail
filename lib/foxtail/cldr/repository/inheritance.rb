@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "pathname"
 require "singleton"
 require "yaml"
 
@@ -58,7 +59,18 @@ module Foxtail
           begin
             yaml_data = YAML.load_file(parent_locales_path)
             parent_locales = yaml_data["parent_locales"] || {}
-            CLDR.logger.debug "Loaded #{parent_locales.size} parent locale mappings from #{parent_locales_path}"
+
+            # Log only on first load
+            unless @parent_locales_logged
+              relative_path = begin
+                Pathname.new(parent_locales_path).relative_path_from(Pathname.new(data_dir)).to_s
+              rescue
+                parent_locales_path
+              end
+              CLDR.logger.debug "Loaded #{parent_locales.size} parent locale mappings from #{relative_path}"
+              @parent_locales_logged = true
+            end
+
             parent_locales
           rescue => e
             raise ArgumentError, "Could not load parent locales from #{parent_locales_path}: #{e.message}"

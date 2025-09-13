@@ -6,8 +6,8 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
   # Create a concrete test class since BaseExtractor is abstract
   let(:test_extractor_class) do
     Class.new(described_class) do
-      def data_type_name
-        "test data"
+      def self.name
+        "TestExtractor"
       end
 
       def extract_data_from_xml(_xml_doc)
@@ -19,7 +19,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
       end
 
       def write_data(locale_id, data)
-        write_yaml_file(locale_id, "test_data.yml", data)
+        write_yaml_file(locale_id, "test_extractor.yml", data)
       end
     end
   end
@@ -64,15 +64,15 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
   describe "#extract_all" do
     it "processes all locale files" do
       extractor.extract_all
-      expect(Foxtail::CLDR.logger).to have_received(:info).with("Extracting test data from 3 locales...")
-      expect(Foxtail::CLDR.logger).to have_received(:info).with("Test data extraction complete (3 locales)")
+      expect(Foxtail::CLDR.logger).to have_received(:info).with("Extracting TestExtractor from 3 locales...")
+      expect(Foxtail::CLDR.logger).to have_received(:info).with("TestExtractor extraction complete (3 locales)")
     end
 
     it "creates output files for each locale" do
       extractor.extract_all
 
       %w[en fr de].each do |locale|
-        file_path = File.join(test_output_dir, locale, "test_data.yml")
+        file_path = File.join(test_output_dir, locale, "test_extractor.yml")
         expect(File.exist?(file_path)).to be true
       end
     end
@@ -97,7 +97,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
       it "creates output file" do
         extractor.extract_locale("en")
-        file_path = File.join(test_output_dir, "en", "test_data.yml")
+        file_path = File.join(test_output_dir, "en", "test_extractor.yml")
 
         expect(File.exist?(file_path)).to be true
 
@@ -157,10 +157,6 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
   describe "abstract methods" do
     let(:abstract_extractor) { Foxtail::CLDR::Extractor::Base.new(source_dir: test_source_dir, output_dir: test_output_dir) }
-
-    it "raises NotImplementedError for data_type_name" do
-      expect { abstract_extractor.__send__(:data_type_name) }.to raise_error(NotImplementedError)
-    end
 
     it "raises NotImplementedError for extract_data_from_xml" do
       doc = REXML::Document.new("<test/>")
@@ -283,7 +279,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
   describe "write_yaml_file with skip logic" do
     let(:locale_id) { "en" }
-    let(:filename) { "test_data.yml" }
+    let(:filename) { "test_extractor.yml" }
     let(:test_data) { {"test_key" => "test_value"} }
     let(:file_path) { File.join(test_output_dir, locale_id, filename) }
 
@@ -300,6 +296,11 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     end
 
     context "when file exists with same content" do
+      before do
+        # Allow debug logging throughout the test
+        allow(Foxtail::CLDR.logger).to receive(:debug)
+      end
+
       let(:initial_mtime) do
         # Write initial file
         extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
@@ -308,14 +309,15 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
       end
 
       it "skips writing when only generated_at would differ" do
-        allow(Foxtail::CLDR.logger).to receive(:debug)
         initial_mtime # Ensure file exists with recorded mtime
 
         extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
 
-        # File modification time should not change
+        # File modification time should not change when skipping
         expect(File.mtime(file_path)).to eq(initial_mtime)
-        expect(Foxtail::CLDR.logger).to have_received(:debug).with(/Skipping.*only generated_at differs/)
+
+        # Should have logged exactly once (from initial write in let block)
+        expect(Foxtail::CLDR.logger).to have_received(:debug).once
       end
     end
 

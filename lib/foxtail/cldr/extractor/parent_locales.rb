@@ -11,6 +11,8 @@ module Foxtail
         # Extract parent locale mappings for all components
         # @return [Hash] Parent locale mappings
         def extract_all
+          CLDR.logger.info "Extracting ParentLocales..."
+
           parent_locales_data = {
             "generated_at" => Time.now.utc.iso8601,
             "cldr_version" => ENV.fetch("CLDR_VERSION", "46"),
@@ -22,12 +24,11 @@ module Foxtail
 
           # Skip writing if only generated_at differs
           if should_skip_write?(output_path, parent_locales_data)
-            CLDR.logger.debug "Skipping #{output_path} - only generated_at differs"
             return parent_locales_data
           end
 
           File.write(output_path, YAML.dump(parent_locales_data))
-          CLDR.logger.info "Extracted parent locales data to #{output_path}"
+          CLDR.logger.info "ParentLocales extraction complete"
 
           parent_locales_data
         end
@@ -61,6 +62,10 @@ module Foxtail
           end
 
           parents
+        end
+        # Single file extractor - no cleanup needed
+        private def cleanup_obsolete_files
+          # No-op: parent locales generates a single file, no cleanup needed
         end
 
         private def extract_parent_locales_data

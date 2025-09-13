@@ -11,15 +11,20 @@ module Foxtail
           extract_locale_aliases
         end
 
+        # Single file extractor - no cleanup needed
+        private def cleanup_obsolete_files
+          # No-op: locale aliases generates a single file, no cleanup needed
+        end
+
         private def extract_locale_aliases
-          CLDR.logger.info "Extracting #{data_type_name}..."
+          CLDR.logger.info "Extracting LocaleAliases..."
 
           aliases = load_locale_aliases_from_supplemental
 
           return if aliases.empty?
 
           write_alias_data(aliases)
-          CLDR.logger.info "#{data_type_name.capitalize} extraction complete (#{aliases.size} aliases)"
+          CLDR.logger.info "LocaleAliases extraction complete (#{aliases.size} aliases)"
         end
 
         private def load_locale_aliases_from_supplemental
@@ -134,12 +139,11 @@ module Foxtail
 
           # Skip writing if only generated_at differs
           if should_skip_write?(file_path, yaml_data)
-            CLDR.logger.debug "Skipping #{file_path} - only generated_at differs"
             return
           end
 
           File.write(file_path, yaml_data.to_yaml)
-          CLDR.logger.debug "Wrote #{data_type_name} to #{file_path}"
+          CLDR.logger.debug "Wrote LocaleAliases to #{relative_path(file_path)}"
         end
 
         private def validate_source_directory
@@ -151,10 +155,6 @@ module Foxtail
         end
 
         # Template method implementations (not used for supplemental data)
-        private def data_type_name
-          "locale aliases"
-        end
-
         private def extract_data_from_xml(_xml_doc)
           # Not used - we override extract_all instead
           nil

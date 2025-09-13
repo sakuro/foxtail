@@ -81,6 +81,11 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
     end
 
     context "when file exists with same content" do
+      before do
+        # Allow debug logging throughout the test
+        allow(Foxtail::CLDR.logger).to receive(:debug)
+      end
+
       let(:initial_mtime) do
         # Write initial file
         extractor.__send__(:write_alias_data, test_aliases)
@@ -89,14 +94,15 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
       end
 
       it "skips writing when only generated_at would differ" do
-        allow(Foxtail::CLDR.logger).to receive(:debug)
         initial_mtime # Ensure file exists with recorded mtime
 
         extractor.__send__(:write_alias_data, test_aliases)
 
-        # File modification time should not change
+        # File modification time should not change when skipping
         expect(File.mtime(file_path)).to eq(initial_mtime)
-        expect(Foxtail::CLDR.logger).to have_received(:debug).with(/Skipping.*only generated_at differs/)
+
+        # Should have logged exactly once (from initial write in let block)
+        expect(Foxtail::CLDR.logger).to have_received(:debug).once
       end
     end
 

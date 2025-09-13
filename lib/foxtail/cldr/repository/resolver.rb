@@ -75,20 +75,17 @@ module Foxtail
         private def inheritance_chain
           return @inheritance_chain if @inheritance_chain
 
-          parent_locales = load_parent_locales_if_needed
           @inheritance_chain = @inheritance.resolve_inheritance_chain_with_parents(@locale_id, parent_locales)
           CLDR.logger.debug "Inheritance chain for #{@original_locale_id} -> #{@locale_id}: #{@inheritance_chain}"
           @inheritance_chain
         end
 
-        private def load_parent_locales_if_needed
-          return @parent_locales if @parent_locales
-
-          begin
-            @parent_locales = @inheritance.load_parent_locales(@data_dir)
+        private def parent_locales
+          @parent_locales ||= begin
+            @inheritance.load_parent_locales(@data_dir)
           rescue ArgumentError => e
             CLDR.logger.warn "#{e.message}. Falling back to algorithmic inheritance."
-            @parent_locales = {}
+            {}
           end
         end
 

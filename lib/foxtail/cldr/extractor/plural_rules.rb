@@ -15,7 +15,7 @@ module Foxtail
             return
           end
 
-          CLDR.logger.info "Extracting #{data_type_name} from supplemental data..."
+          CLDR.logger.info "Extracting PluralRules from supplemental data..."
 
           doc = REXML::Document.new(File.read(supplemental_path))
           locale_rules_map = extract_all_locales_from_supplemental(doc)
@@ -26,7 +26,7 @@ module Foxtail
             write_data(locale_id, rules_data)
           end
 
-          CLDR.logger.info "#{data_type_name.capitalize} extraction complete (#{locale_rules_map.size} locales)"
+          CLDR.logger.info "PluralRules extraction complete (#{locale_rules_map.size} locales)"
         end
 
         # Override extract_locale since plural rules come from supplemental data
@@ -50,9 +50,6 @@ module Foxtail
           else
             CLDR.logger.warn "No plural rules found for locale: #{locale_id}"
           end
-        end
-        private def data_type_name
-          "plural rules"
         end
 
         # Not used for plural rules - they come from supplemental data
