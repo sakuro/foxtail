@@ -245,9 +245,10 @@ module Foxtail
 
             currency_data = {}
 
-            # Symbol
-            currency.elements.each("symbol") do |symbol|
-              currency_data["symbol"] = symbol.text
+            # Symbol (prefer non-narrow, same logic as load_root_currencies)
+            symbol_element = currency.elements["symbol[not(@alt)]"] || currency.elements["symbol"]
+            if symbol_element
+              currency_data["symbol"] = symbol_element.text
             end
 
             # Display names with nested structure

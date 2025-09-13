@@ -1,24 +1,14 @@
 ---
 locale: sr_Latn_BA
-generated_at: '2025-09-12T07:03:33Z'
+generated_at: '2025-09-13T17:40:50Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    exponential: E
-    infinity: "∞"
-    nan: NaN
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard:
+    standard: 
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -57,8 +47,12 @@ number_formats:
       symbol: P
     BZD:
       symbol: "$"
+    CAD:
+      symbol: CA$
     CLP:
       symbol: "$"
+    CNY:
+      symbol: CN¥
     COP:
       symbol: "$"
     CRC:
@@ -97,6 +91,8 @@ number_formats:
       symbol: Q
     GYD:
       symbol: "$"
+    HKD:
+      symbol: HK$
     HNL:
       symbol: L
     HRK:
@@ -153,6 +149,8 @@ number_formats:
       symbol: "₮"
     MUR:
       symbol: Rs
+    MXN:
+      symbol: MX$
     MYR:
       symbol: RM
     NAD:
@@ -205,10 +203,16 @@ number_formats:
       symbol: "฿"
     TOP:
       symbol: T$
+    TRY:
+      symbol: "₺"
     TTD:
       symbol: "$"
+    TWD:
+      symbol: NT$
     UAH:
       symbol: "₴"
+    USD:
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -217,6 +221,8 @@ number_formats:
       symbol: "₫"
     XAF:
       symbol: FCFA
+    XCD:
+      symbol: EC$
     XCG:
       symbol: Cg.
     XOF:

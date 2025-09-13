@@ -82,7 +82,7 @@ RSpec.describe Foxtail::CLDR::Formatter::Number do
 
         it "formats negative USD amounts" do
           result = formatter.call(-1234.50, locale: en_locale, style: "currency", currency: "USD")
-          expect(result).to eq("$-1,234.50")
+          expect(result).to eq("-$1,234.50")
         end
 
         it "formats negative USD with accounting style" do

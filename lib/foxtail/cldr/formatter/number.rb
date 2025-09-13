@@ -127,23 +127,15 @@ module Foxtail
           # Split positive and negative patterns if present
           separator_index = tokens.find_index {|t| t.is_a?(Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken) }
 
+          # Always use absolute value for formatting (we handle sign separately)
+          format_value = decimal_value.negative? ? decimal_value.abs : decimal_value
+
           if separator_index
             positive_tokens = tokens[0...separator_index]
             negative_tokens = tokens[(separator_index + 1)..]
             pattern_tokens = decimal_value.negative? ? negative_tokens : positive_tokens
-            # Use absolute value for negative patterns (pattern handles the sign display)
-            format_value = decimal_value.negative? ? decimal_value.abs : decimal_value
           else
             pattern_tokens = tokens
-            # For negative numbers without explicit negative pattern, use absolute value
-            # and add minus sign as prefix token
-            if decimal_value.negative?
-              format_value = decimal_value.abs
-              minus_token = Foxtail::CLDR::PatternParser::Number::MinusToken.new("-")
-              pattern_tokens = [minus_token] + pattern_tokens
-            else
-              format_value = decimal_value
-            end
           end
 
           # Apply all multiplications here (centralized logic)
@@ -159,7 +151,14 @@ module Foxtail
           end
 
           # Build formatted string from tokens
-          build_formatted_string(format_value, pattern_tokens, number_formats, options)
+          # Pass original sign information via options
+          original_was_negative = decimal_value.negative? && !separator_index
+          build_formatted_string(
+            format_value,
+            pattern_tokens,
+            number_formats,
+            options.merge(original_was_negative:)
+          )
         end
 
         # Build the final formatted string from tokens
@@ -188,9 +187,38 @@ module Foxtail
           # Format the number according to the pattern
           result = ""
 
-          # Process non-digit tokens before digits
-          pattern_info[:prefix_tokens].each do |token|
-            result += format_non_digit_token(token, number_formats, decimal_value, options)
+          # Determine minus sign placement for negative numbers without explicit negative pattern
+          if options[:original_was_negative]
+            # Check if there's a space or other non-currency tokens between currency and digits
+            has_separator_after_currency = pattern_info[:prefix_tokens].size > 1 &&
+                                           pattern_info[:prefix_tokens].any? {|t| !t.is_a?(Foxtail::CLDR::PatternParser::Number::CurrencyToken) }
+
+            if has_separator_after_currency
+              # Currency name with separator: "¤¤¤ #,##0.00"
+              # Pattern: [CurrencyToken("¤¤¤"), LiteralToken(" ")] + digits
+              # Result:  "US dollar -1.00"
+              #          ^^^^^^^^^^^   ^^^^^^
+              #          prefix tokens minus+digits
+              pattern_info[:prefix_tokens].each do |token|
+                result += format_non_digit_token(token, number_formats, decimal_value, options)
+              end
+              result += number_formats.minus_sign
+            else
+              # Currency symbol without separator: "¤#,##0.00"
+              # Pattern: [CurrencyToken("¤")] + digits
+              # Result:  "-$1,234.50"
+              #          ^ ^^^^^^^^^
+              #          minus+prefix+digits
+              result += number_formats.minus_sign
+              pattern_info[:prefix_tokens].each do |token|
+                result += format_non_digit_token(token, number_formats, decimal_value, options)
+              end
+            end
+          else
+            # Normal positive case - just process prefix tokens
+            pattern_info[:prefix_tokens].each do |token|
+              result += format_non_digit_token(token, number_formats, decimal_value, options)
+            end
           end
 
           # Format the integer part with grouping

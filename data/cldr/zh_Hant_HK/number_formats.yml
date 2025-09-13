@@ -1,24 +1,14 @@
 ---
 locale: zh_Hant_HK
-generated_at: '2025-09-12T07:04:07Z'
+generated_at: '2025-09-13T17:41:57Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    exponential: E
-    infinity: "∞"
-    nan: NaN
   decimal_formats:
     standard: "#,##0.###"
   percent_formats:
     standard: "#,##0%"
   currency_formats:
-    standard:
+    standard: 
   scientific_formats:
     standard: "#E0"
   currencies:
@@ -76,11 +66,14 @@ number_formats:
         other: 伯利茲元
         one: 伯利茲元
     CAD:
+      symbol: CA$
       display_names:
         other: 加拿大元
         one: 加拿大元
     CLP:
       symbol: "$"
+    CNY:
+      symbol: CN¥
     COP:
       symbol: "$"
     CRC:
@@ -135,6 +128,7 @@ number_formats:
     GYD:
       symbol: "$"
     HKD:
+      symbol: HK$
       display_names:
         other: 港元
         one: 港元
@@ -215,6 +209,8 @@ number_formats:
       display_names:
         other: 毛里裘斯盧布
         one: 毛里裘斯盧布
+    MXN:
+      symbol: MX$
     MYR:
       symbol: RM
     NAD:
@@ -231,6 +227,7 @@ number_formats:
     NPR:
       symbol: Rs
     NZD:
+      symbol: NZ$
       display_names:
         other: 紐西蘭元
         one: 紐西蘭元
@@ -289,13 +286,19 @@ number_formats:
       display_names:
         other: 湯加潘加
         one: 湯加潘加
+    TRY:
+      symbol: "₺"
     TTD:
       symbol: "$"
       display_names:
         other: 千里達和多巴哥元
         one: 千里達和多巴哥元
+    TWD:
+      symbol: NT$
     UAH:
       symbol: "₴"
+    USD:
+      symbol: US$
     UYU:
       symbol: "$"
     VEF:
@@ -308,6 +311,7 @@ number_formats:
         other: 中非法郎
         one: 中非法郎
     XCD:
+      symbol: EC$
       display_names:
         other: 東加勒比元
         one: 東加勒比元
