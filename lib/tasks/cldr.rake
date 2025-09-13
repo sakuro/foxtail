@@ -21,12 +21,19 @@ PLURAL_RULES_FILES = FileList[File.join(DATA_DIR, "*/plural_rules.yml")]
 NUMBER_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/number_formats.yml")]
 DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
 LOCALE_ALIASES_FILE = File.join(DATA_DIR, "locale_aliases.yml")
+PARENT_LOCALES_FILE = File.join(DATA_DIR, "parent_locales.yml")
 
 # Clean tasks
 # CLEAN removes extracted CLDR source (can be re-extracted from zip)
 CLEAN.include(CLDR_EXTRACT_DIR)
 # CLOBBER removes generated CLDR data files
-CLOBBER.include(PLURAL_RULES_FILES, NUMBER_FORMATS_FILES, DATETIME_FORMATS_FILES, LOCALE_ALIASES_FILE)
+CLOBBER.include(
+  PLURAL_RULES_FILES,
+  NUMBER_FORMATS_FILES,
+  DATETIME_FORMATS_FILES,
+  LOCALE_ALIASES_FILE,
+  PARENT_LOCALES_FILE
+)
 CLOBBER.exclude(File.join(DATA_DIR, "README.md"))
 # Keep the downloaded zip file to avoid re-downloading
 CLOBBER.exclude(CLDR_ZIP_PATH)
@@ -62,9 +69,31 @@ namespace :cldr do
   end
 
   desc "Extract all CLDR data (uses rake task dependencies)"
-  task extract: %i[extract:locale_aliases extract:plural_rules extract:number_formats extract:datetime_formats]
+  task extract: %i[
+    extract:parent_locales
+    extract:locale_aliases
+    extract:plural_rules
+    extract:number_formats
+    extract:datetime_formats
+  ]
 
   namespace :extract do
+    desc "Extract CLDR parent locales from downloaded CLDR core data"
+    task parent_locales: :download do
+      # Clean up existing parent_locales file
+      if File.exist?(PARENT_LOCALES_FILE)
+        Foxtail::CLDR.logger.info "Cleaning up existing parent_locales file..."
+        rm PARENT_LOCALES_FILE, verbose: false
+      end
+
+      extractor = Foxtail::CLDR::Extractor::ParentLocales.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: DATA_DIR
+      )
+
+      extractor.extract_all
+    end
+
     desc "Extract CLDR locale aliases from downloaded CLDR core data"
     task locale_aliases: :download do
       # Clean up existing locale_aliases file
@@ -108,7 +137,7 @@ namespace :cldr do
     end
 
     desc "Extract CLDR plural rules from downloaded CLDR core data"
-    task plural_rules: :download do
+    task plural_rules: %i[download parent_locales] do
       # Clean up existing plural_rules files
       if PLURAL_RULES_FILES.any?
         Foxtail::CLDR.logger.info "Cleaning up #{PLURAL_RULES_FILES.size} existing plural_rules files..."
@@ -124,7 +153,7 @@ namespace :cldr do
     end
 
     desc "Extract CLDR number formats from downloaded CLDR core data"
-    task number_formats: :download do
+    task number_formats: %i[download parent_locales] do
       # Clean up existing number_formats files
       if NUMBER_FORMATS_FILES.any?
         Foxtail::CLDR.logger.info "Cleaning up #{NUMBER_FORMATS_FILES.size} existing number_formats files..."
@@ -140,7 +169,7 @@ namespace :cldr do
     end
 
     desc "Extract CLDR datetime formats from downloaded CLDR core data"
-    task datetime_formats: :download do
+    task datetime_formats: %i[download parent_locales] do
       # Clean up existing datetime_formats files
       if DATETIME_FORMATS_FILES.any?
         Foxtail::CLDR.logger.info "Cleaning up #{DATETIME_FORMATS_FILES.size} existing datetime_formats files..."
