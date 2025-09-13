@@ -37,12 +37,8 @@ $ gem install foxtail
 ```ruby
 require 'foxtail'
 
-# Create a bundle for a specific locale
-locale = Locale::Tag.parse("en-US")
-bundle = Foxtail::Bundle.new(locale)
-
-# Load FTL resources
-resource = Foxtail::Resource.from_string(<<~FTL)
+# English (US)
+en_resource = Foxtail::Resource.from_string(<<~FTL)
   hello = Hello, {$name}!
   emails = You have {$count ->
     [0] no emails
@@ -51,52 +47,79 @@ resource = Foxtail::Resource.from_string(<<~FTL)
   }.
 FTL
 
-bundle.add_resource(resource)
-
-# Format messages
-bundle.format("hello", name: "Alice")
+en_bundle = Foxtail::Bundle.new(Locale::Tag.parse("en-US"))
+en_bundle.add_resource(en_resource)
+en_bundle.format("hello", name: "Alice")
 # => "Hello, Alice!"
-
-bundle.format("emails", count: 0)
-# => "You have no emails."
-
-bundle.format("emails", count: 1)
+en_bundle.format("emails", count: 1)
 # => "You have one email."
 
-bundle.format("emails", count: 5)
-# => "You have 5 emails."
+# Japanese
+ja_resource = Foxtail::Resource.from_string(<<~FTL)
+  hello = こんにちは、{$name}さん！
+  emails = メールが{$count}件あります。
+FTL
+
+ja_bundle = Foxtail::Bundle.new(Locale::Tag.parse("ja"))
+ja_bundle.add_resource(ja_resource)
+ja_bundle.format("hello", name: "太郎")
+# => "こんにちは、太郎さん！"
+ja_bundle.format("emails", count: 1)
+# => "メールが1件あります。"
 ```
 
 ### Advanced Features
 
+Numbers, dates, and currencies with CLDR formatting. CLDR (Unicode Common Locale Data Repository) provides locale-specific formatting rules for numbers, dates, currencies, and pluralization across 200+ locales:
+
 ```ruby
-# Numbers and dates with CLDR formatting
-resource = Foxtail::Resource.from_string(<<~FTL)
-  price = The price is {NUMBER($amount)}.
+# English (US)
+en_resource = Foxtail::Resource.from_string(<<~FTL)
+  price = The price is {NUMBER($amount, style: "currency", currency: "USD")}.
   discount = Sale: {NUMBER($percent, style: "percent")} off!
-  deadline = Deadline: {DATETIME($date, dateStyle: "long")}.
 FTL
 
-bundle.add_resource(resource)
-bundle.format("price", amount: 42.99)
-# => "The price is 42.99."
-
-bundle.format("discount", percent: 0.15)
+en_bundle = Foxtail::Bundle.new(Locale::Tag.parse("en-US"))
+en_bundle.add_resource(en_resource)
+en_bundle.format("price", amount: 1234.50)
+# => "The price is $1,234.50."
+en_bundle.format("discount", percent: 0.15)
 # => "Sale: 15% off!"
 
-# Note: Currency formatting (style: "currency", currency: "USD") is not yet fully implemented
-# Currently uses simplified formatting with default "$" symbol
-
-# Terms and references
-resource = Foxtail::Resource.from_string(<<~FTL)
-  -brand = Foxtail
-  welcome = Welcome to {-brand}!
-  title = {-brand} - Ruby Localization
+# Japanese
+ja_resource = Foxtail::Resource.from_string(<<~FTL)
+  price = 価格は{NUMBER($amount, style: "currency", currency: "JPY")}です。
+  discount = セール：{NUMBER($percent, style: "percent")}オフ！
 FTL
 
-bundle.add_resource(resource)
-bundle.format("welcome")
-# => "Welcome to Foxtail!"
+ja_bundle = Foxtail::Bundle.new(Locale::Tag.parse("ja"))
+ja_bundle.add_resource(ja_resource)
+ja_bundle.format("price", amount: 1234)
+# => "価格は￥1,234です。"
+ja_bundle.format("discount", percent: 0.15)
+# => "セール：15%オフ！"
+
+# Pattern selection with strings
+pattern_resource = Foxtail::Resource.from_string(<<~FTL)
+  greeting = {$gender ->
+    [male] Hello, Mr. {$name}!
+    [female] Hello, Ms. {$name}!
+   *[other] Hello, {$name}!
+  }
+FTL
+
+en_bundle.add_resource(pattern_resource)
+en_bundle.format("greeting", gender: "male", name: "John")
+# => "Hello, Mr. John!"
+
+# Currency names with custom pattern
+currency_resource = Foxtail::Resource.from_string(<<~FTL)
+  price-name = {NUMBER($amount, pattern: "#,##0.00 ¤¤¤", currency: "USD")}
+FTL
+
+en_bundle.add_resource(currency_resource)
+en_bundle.format("price-name", amount: 100)
+# => "100.00 US dollars"
 ```
 
 
@@ -115,48 +138,33 @@ This will install dependencies and set up the fluent.js submodule for compatibil
 ```bash
 # Run all tests
 $ bundle exec rake spec
-
-# Run specific test types
-$ bundle exec rspec spec/foxtail/parser_spec.rb
-$ bundle exec rspec spec/foxtail/bundle_spec.rb
 ```
 
 ### Compatibility Testing
 
-Foxtail includes comprehensive compatibility testing against fluent.js:
+```bash
+# Test compatibility with fluent.js (97/98 passing)
+$ bundle exec rake compatibility:report
+```
+
+### CLDR Data Extraction
 
 ```bash
-# Generate compatibility report (97/98 fixtures passing, 99.0%)
-$ bundle exec rake compatibility:report
+# Extract CLDR data for development
+$ bundle exec rake cldr:extract
 ```
 
 ### Code Quality
 
 ```bash
-# Run linter
-$ bundle exec rake rubocop
-
-# Auto-fix issues
-$ bundle exec rubocop -a
-
 # Run all checks (tests + linting)
 $ bundle exec rake
 ```
 
 ## Architecture
 
-Foxtail consists of two main components:
-
-### Parser System
-- **Foxtail::Parser** - FTL syntax parser
-- **Foxtail::Parser::AST** - Abstract Syntax Tree implementation
-- **Foxtail::Parser::Stream** - Character stream processing
-
-### Bundle System
-- **Foxtail::Bundle** - Runtime message formatting
-- **Foxtail::Resource** - FTL resource loading and management
-- **Foxtail::Functions** - Built-in formatting functions (NUMBER, DATETIME)
-- **Foxtail::CLDR** - Unicode CLDR integration
+- **Parser System** - FTL syntax parsing and AST implementation
+- **Bundle System** - Runtime message formatting with CLDR integration
 
 ## Documentation
 
@@ -166,16 +174,11 @@ Foxtail consists of two main components:
 ## Compatibility
 
 - **Ruby**: 3.2.9 or higher
-- **fluent.js**: High compatibility (97/98 test fixtures passing)
-- **Unicode**: Full Unicode support including astral plane characters
-- **CLDR**: Unicode CLDR integration for localization
+- **fluent.js**: 97/98 test fixtures passing (99.0%)
 
 ## Performance
 
-Foxtail focuses on runtime efficiency:
-- Fast message resolution
-- Parsing done at resource load time
-- Efficient CLDR data handling
+- Fast message resolution with efficient CLDR data handling
 
 ## Contributing
 
