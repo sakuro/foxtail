@@ -37,12 +37,20 @@ module Foxtail
     # Create a new Bundle instance.
     #
     # @param locales [Locale::Tag::Simple, Array<Locale::Tag::Simple>]
-    #   One or more locale instances
+    #   A single locale or array of locale instances for fallback chain
     # @param options [Hash] Configuration options
-    # @option options [Hash] :functions Custom formatting functions
-    # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks
+    # @option options [Hash] :functions Custom formatting functions (defaults to NUMBER and DATETIME)
+    # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks (default: true)
     # @option options [Proc, nil] :transform Optional message transformation function
-    # @raise [ArgumentError] if locales are not Locale instances
+    # @raise [ArgumentError] if locales are not Locale::Tag::Simple instances
+    #
+    # @example Basic bundle creation
+    #   locale = Locale::Tag.parse("en-US")
+    #   bundle = Foxtail::Bundle.new(locale)
+    #
+    # @example Bundle with fallback locales
+    #   locales = [Locale::Tag.parse("en-US"), Locale::Tag.parse("en")]
+    #   bundle = Foxtail::Bundle.new(locales)
     def initialize(locales, **options)
       # Accept only Locale instances for type safety
       @locales = Array(locales).each_with_object([]) {|locale, acc|
@@ -102,6 +110,18 @@ module Foxtail
     end
 
     # Format a message with the given arguments
+    #
+    # @param id [String, Symbol] Message identifier to format
+    # @param args [Hash] Arguments to substitute into the message
+    # @return [String] Formatted message string, or the id itself if message not found
+    #
+    # @example Basic message formatting
+    #   bundle.format("hello", name: "Alice")
+    #   # => "Hello, Alice!" (assuming message: hello = Hello, {$name}!)
+    #
+    # @example Pluralization
+    #   bundle.format("emails", count: 1)
+    #   # => "You have one email." (assuming plural message)
     def format(id, args={})
       message = message(id)
       return id.to_s unless message
