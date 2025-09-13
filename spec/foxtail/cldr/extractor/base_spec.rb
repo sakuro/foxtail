@@ -29,9 +29,23 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
   let(:extractor) { test_extractor_class.new(source_dir: test_source_dir, output_dir: test_output_dir) }
 
   before do
-    # Create test directory structure
-    FileUtils.mkdir_p(File.join(test_source_dir, "common", "main"))
+    # Setup test directory structure with fixtures
     FileUtils.mkdir_p(test_output_dir)
+    setup_extractor_test_fixture(test_source_dir)
+
+    # Create parent_locales.yml for Extractor tests
+    create_parent_locales_file
+  end
+
+  def create_parent_locales_file
+    parent_locales_data = {
+      "parent_locales" => {
+        "en_AU" => "en_001",
+        "en_001" => "en",
+        "es_MX" => "es_419"
+      }
+    }
+    File.write(File.join(test_output_dir, "parent_locales.yml"), parent_locales_data.to_yaml)
   end
 
   after do
@@ -48,22 +62,6 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
   end
 
   describe "#extract_all" do
-    before do
-      # Create test XML files
-      %w[en fr de].each do |locale|
-        xml_content = <<~XML
-          <?xml version="1.0" encoding="UTF-8" ?>
-          <ldml>
-            <identity>
-              <language type="#{locale}"/>
-            </identity>
-          </ldml>
-        XML
-
-        File.write(File.join(test_source_dir, "common", "main", "#{locale}.xml"), xml_content)
-      end
-    end
-
     it "processes all locale files" do
       extractor.extract_all
       expect(Foxtail::CLDR.logger).to have_received(:info).with("Extracting test data from 3 locales...")
@@ -93,10 +91,6 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     end
 
     context "when locale file exists" do
-      before do
-        File.write(File.join(test_source_dir, "common", "main", "en.xml"), test_xml_content)
-      end
-
       it "extracts locale data successfully" do
         expect { extractor.extract_locale("en") }.not_to raise_error
       end
@@ -139,12 +133,24 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
       it "does not create output file when data? returns false" do
         empty_extractor = empty_extractor_class.new(source_dir: test_source_dir, output_dir: test_output_dir)
-        File.write(File.join(test_source_dir, "common", "main", "en.xml"), test_xml_content)
 
         empty_extractor.extract_locale("en")
 
         file_path = File.join(test_output_dir, "en", "empty_data.yml")
         expect(File.exist?(file_path)).to be false
+      end
+    end
+
+    context "when parent_locales.yml is missing" do
+      before do
+        # Remove parent_locales.yml to test error handling
+        FileUtils.rm_f(File.join(test_output_dir, "parent_locales.yml"))
+      end
+
+      it "raises ArgumentError with appropriate message" do
+        expect {
+          extractor.extract_locale("en")
+        }.to raise_error(ArgumentError, /Parent locales data not found.*Run parent locales extraction first/)
       end
     end
   end

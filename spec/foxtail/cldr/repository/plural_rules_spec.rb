@@ -173,6 +173,18 @@ RSpec.describe Foxtail::CLDR::Repository::PluralRules do
         .with(a_string_ending_with("data/cldr/locale_aliases.yml"))
         .and_return(false)
 
+      # Mock parent locales file
+      allow(File).to receive(:exist?)
+        .with(a_string_ending_with("data/cldr/parent_locales.yml"))
+        .and_return(true)
+      allow(YAML).to receive(:load_file)
+        .with(a_string_ending_with("data/cldr/parent_locales.yml"))
+        .and_return({
+          "parent_locales" => {
+            "en_AU" => "en_001"
+          }
+        })
+
       # Mock en locale
       allow(File).to receive(:exist?)
         .with(a_string_ending_with("data/cldr/en/plural_rules.yml"))

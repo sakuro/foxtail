@@ -191,6 +191,68 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
         expect(canonical).to eq("en_US")
       end
     end
+
+    context "with parent locales data" do
+      before do
+        # Create parent locales YAML file
+        parent_locales_data = {
+          "parent_locales" => {
+            "en_AU" => "en_001",
+            "en_001" => "en",
+            "es_MX" => "es_419"
+          }
+        }
+        File.write(File.join(data_dir, "parent_locales.yml"), parent_locales_data.to_yaml)
+
+        # Create test data for inheritance chain testing
+        create_test_data("root", {
+          "number_formats" => {
+            "symbols" => {"decimal" => ".", "group" => ","}
+          }
+        })
+
+        create_test_data("en", {
+          "number_formats" => {
+            "currencies" => {"USD" => {"name" => "US Dollar"}}
+          }
+        })
+
+        create_test_data("en_001", {
+          "number_formats" => {
+            "currencies" => {"USD" => {"symbol" => "US$"}}
+          }
+        })
+      end
+
+      let(:resolver) { Foxtail::CLDR::Repository::Resolver.new("en_AU", data_dir:) }
+
+      it "uses parent locales for inheritance chain resolution" do
+        # Should resolve with chain: en_AU -> en_001 -> en -> root
+        result = resolver.resolve("number_formats.currencies.USD", "number_formats")
+
+        # Should get symbol from en_001 and name from en
+        expect(result).to eq({
+          "symbol" => "US$", # from en_001
+          "name" => "US Dollar" # from en
+        })
+      end
+
+      it "falls back to algorithmic inheritance when parent locales file is missing" do
+        # Remove parent locales file
+        FileUtils.rm(File.join(data_dir, "parent_locales.yml"))
+
+        resolver_without_parents = Foxtail::CLDR::Repository::Resolver.new("en_AU", data_dir:)
+
+        # Should resolve with algorithmic chain: en_AU -> en -> root
+        # (en_001 would be skipped)
+        result = resolver_without_parents.resolve("number_formats.currencies.USD", "number_formats")
+
+        # Should only get name from en (no symbol from en_001)
+        expect(result).to eq({
+          "name" => "US Dollar" # from en only
+        })
+      end
+    end
   end
 
   private def create_test_data(locale, data)

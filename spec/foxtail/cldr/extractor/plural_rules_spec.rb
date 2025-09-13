@@ -3,12 +3,18 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Extractor::PluralRules do
-  let(:fixture_source_dir) { File.join(__dir__, "..", "..", "..", "fixtures", "cldr") }
+  let(:fixture_source_dir) { File.join(Dir.tmpdir, "test_plural_rules_source") }
   let(:temp_output_dir) { Dir.mktmpdir }
   let(:extractor) { Foxtail::CLDR::Extractor::PluralRules.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
 
+  before do
+    # Setup fixture source directory
+    setup_cldr_fixture(fixture_source_dir, %w[plurals.xml])
+  end
+
   after do
     FileUtils.rm_rf(temp_output_dir)
+    FileUtils.rm_rf(fixture_source_dir)
   end
 
   describe "#extract_all" do

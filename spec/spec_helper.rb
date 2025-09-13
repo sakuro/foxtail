@@ -3,6 +3,7 @@
 require "simplecov"
 
 require "foxtail"
+require_relative "support/cldr_fixture_helper"
 require_relative "support/locale_context"
 require_relative "support/logging_context"
 
@@ -16,4 +17,7 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  # Include CLDR fixture helper
+  config.include CLDRFixtureHelper
 end

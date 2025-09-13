@@ -3,12 +3,32 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
-  let(:fixture_source_dir) { File.join(__dir__, "..", "..", "..", "fixtures", "cldr") }
+  let(:fixture_source_dir) { File.join(Dir.tmpdir, "test_datetime_formats_source") }
   let(:temp_output_dir) { Dir.mktmpdir }
   let(:extractor) { Foxtail::CLDR::Extractor::DateTimeFormats.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
 
+  before do
+    # Setup fixture source directory
+    setup_basic_cldr_fixture(fixture_source_dir)
+
+    # Create parent_locales.yml for Extractor tests
+    create_parent_locales_file
+  end
+
   after do
     FileUtils.rm_rf(temp_output_dir)
+    FileUtils.rm_rf(fixture_source_dir)
+  end
+
+  def create_parent_locales_file
+    parent_locales_data = {
+      "parent_locales" => {
+        "en_AU" => "en_001",
+        "en_001" => "en",
+        "es_MX" => "es_419"
+      }
+    }
+    File.write(File.join(temp_output_dir, "parent_locales.yml"), parent_locales_data.to_yaml)
   end
 
   describe "#extract_locale" do
