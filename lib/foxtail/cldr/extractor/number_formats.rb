@@ -57,8 +57,8 @@ module Foxtail
             end
           end
 
-          # Apply fallback symbols from root locale for missing symbols
-          apply_fallback_symbols(symbols)
+          # Runtime inheritance system handles missing symbols via locale inheritance chain
+          # This preserves correct CLDR inheritance (e.g., de_DE inherits from de, not root)
 
           symbols
         end
