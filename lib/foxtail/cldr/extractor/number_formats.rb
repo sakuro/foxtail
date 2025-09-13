@@ -86,23 +86,10 @@ module Foxtail
           currency_element = xml_doc.elements[xpath]
           formats["currency"] = currency_element.text if currency_element
 
-          # Apply fallback patterns from root locale for missing standard patterns
-          apply_fallback_patterns(formats)
+          # Runtime inheritance system handles missing patterns via locale inheritance chain
+          # This preserves correct CLDR inheritance
 
           formats
-        end
-
-        private def apply_fallback_patterns(formats)
-          # Default patterns from root locale when not specified
-          fallback_patterns = {
-            "decimal" => "#,##0.###",
-            "percent" => "#,##0%",
-            "scientific" => "#E0"
-          }
-
-          fallback_patterns.each do |type, pattern|
-            formats[type] = pattern if formats[type].nil? || formats[type].empty?
-          end
         end
 
         private def apply_fallback_symbols(symbols)
