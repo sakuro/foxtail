@@ -37,6 +37,8 @@ Co-Authored-By: Agent Name <agent@email>
 4. **Imperative mood**: "Fix bug" not "Fixed bug" or "Fixes bug"
 5. **No period at end of subject**
 6. **Include AI attribution** for AI-generated commits
+7. **Keep messages concise**: Focus on the main change, avoid tangential details
+8. **Don't mention reverted changes**: If you undid something that didn't exist before this commit, don't mention it
 
 ### Common Emoji Codes
 
@@ -53,7 +55,9 @@ Co-Authored-By: Agent Name <agent@email>
 | 🔥 | `:fire:` | Removing code/files |
 | 📦 | `:package:` | Updating dependencies |
 
-### Commit Command Example
+### MANDATORY: Always Use Heredoc for Commit Messages
+
+**REQUIRED: Use quoted heredoc for ALL multi-line commits**
 
 ```bash
 git commit -m "$(cat <<'EOF'
@@ -70,7 +74,24 @@ EOF
 )"
 ```
 
-**Important**: Use heredoc with single quotes (`<<'EOF'`) to preserve special characters.
+**⚠️ CRITICAL: Shell Safety Rules**
+
+**FORBIDDEN: These will break or corrupt commits**
+```bash
+# ❌ NEVER use unquoted strings with special characters
+git commit -m ":bug: Fix issue with `backticks` and $variables"
+
+# ❌ NEVER use unquoted heredoc (causes variable expansion)
+git commit -m "$(cat <<EOF
+:bug: Commit message with $dangerous variables
+EOF
+)"
+```
+
+**REQUIRED: Use quoted heredoc with single quotes**
+- Always use `<<'EOF'` (single quotes) not `<<EOF` or `<<"EOF"`
+- Single quotes prevent shell variable expansion and preserve special characters
+- This is the ONLY safe way for complex commit messages
 
 ## Branch Management
 
@@ -98,15 +119,26 @@ git switch -c feature/your-feature-name
 
 Always use the `gh` CLI tool for creating pull requests.
 
-### Basic PR Creation
+### MANDATORY: Always Use Temporary Files or Heredoc
 
+**NEVER use inline `--body` for complex content**. Always use one of these methods:
+
+**Method 1: Temporary file (RECOMMENDED)**
 ```bash
-gh pr create --title ":emoji: Clear descriptive title" --body "PR description"
+# Create temporary file for PR body
+cat > /tmp/pr_body.md <<'EOF'
+## Summary
+Your PR description with `backticks` and complex markdown
+EOF
+
+# Create PR using temp file
+gh pr create --title ":emoji: Clear descriptive title" --body-file /tmp/pr_body.md
+
+# Clean up
+rm /tmp/pr_body.md
 ```
 
-### PR with Complex Body
-
-For PR bodies containing backticks or complex markdown, use command substitution with heredoc:
+**Method 2: Heredoc with command substitution**
 
 ```bash
 gh pr create --title ":memo: Update documentation" --body "$(cat <<'EOF'
@@ -128,6 +160,36 @@ new_code
 ```
 
 :robot: Generated with [Agent Name](http://agent.url)
+EOF
+)"
+```
+
+### ⚠️ CRITICAL RULES FOR PR BODY CREATION
+
+**FORBIDDEN: These commands will fail or corrupt your PR**
+```bash
+# ❌ NEVER use inline --body with complex content
+gh pr create --title "Title" --body "Multi-line content with `backticks`"
+
+# ❌ NEVER use unescaped heredoc in --body
+gh pr create --title "Title" --body "$(cat <<EOF
+Unquoted heredoc causes shell expansion issues
+EOF
+)"
+```
+
+**REQUIRED: Use these patterns only**
+```bash
+# ✅ ALWAYS use temporary file for complex content
+cat > /tmp/pr_body.md <<'EOF'
+Your content here
+EOF
+gh pr create --title "Title" --body-file /tmp/pr_body.md
+rm /tmp/pr_body.md
+
+# ✅ OR use quoted heredoc with command substitution
+gh pr create --title "Title" --body "$(cat <<'EOF'
+Your content here
 EOF
 )"
 ```
@@ -245,6 +307,7 @@ git add -p    # Review and stage changes interactively
 6. **Write clear PR descriptions**: Include before/after examples when relevant
 7. **Link issues**: Use "Fixes #123" in PR descriptions
 8. **Update documentation**: Keep README and CHANGELOG current
+9. **Write concise commit messages**: Focus on what matters, skip implementation details that don't affect the main purpose
 
 ## Example Workflow
 
@@ -281,9 +344,24 @@ EOF
 # 6. Push branch
 git push -u origin fix/performance-issue
 
-# 7. Create PR
+# 7. Create PR (use temporary file)
+cat > /tmp/pr_body.md <<'EOF'
+Fixes #42 - Performance regression in render method
+
+## Changes
+- Memoization of expensive calculations
+- 3x faster rendering
+- Reduces memory allocations
+
+## Test Results
+- All tests pass
+- Performance benchmarks included
+EOF
+
 gh pr create --title ":zap: Fix performance regression in render method" \
-  --body "Fixes #42 - Memoization of expensive calculations"
+  --body-file /tmp/pr_body.md
+
+rm /tmp/pr_body.md
 
 # 8. After approval, merge
 gh pr merge 7 --merge \

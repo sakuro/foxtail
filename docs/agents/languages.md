@@ -110,32 +110,33 @@ end
 
 ### Issues and Pull Requests
 
-**Rule**: Prefer English for titles and descriptions to maximize visibility and collaboration.
+**Rule**: Use English for titles and descriptions to maximize visibility and collaboration.
 
-**GitHub Issues**:
-- **Title**: English preferred
-- **Description**: English preferred, but user's language acceptable
-- **Technical details**: English strongly preferred
+> **Note**: The English requirements below apply specifically to AI agents. Human users are welcome to use their preferred language for issue descriptions, though English is still encouraged for broader accessibility.
 
-**Pull Requests**:
+**GitHub Issues** (AI agent requirements):
+- **Title**: English required
+- **Description**: English required
+- **Technical details**: English required
+
+**Pull Requests** (AI agent requirements):
 - **Title**: English required (follows commit message conventions)
-- **Description**: English preferred
-- **Code review comments**: English preferred
+- **Description**: English required
+- **Code review comments**: English required
 
 **Examples**:
 ```
-✅ Preferred
+✅ Required
 Title: Fix performance regression in cache invalidation
 Description: Resolves issue where cache invalidation was O(n²)...
 
-✅ Acceptable  
+❌ Not allowed
+Title: キャッシュの性能問題を修正
+Description: キャッシュ無効化のパフォーマンス問題を修正しました。
+
+❌ Not allowed  
 Title: Fix performance regression in cache invalidation
 Description: キャッシュ無効化のパフォーマンス問題を修正しました。
-O(n²)のアルゴリズムをO(n)に改善しています。
-
-❌ Avoid
-Title: キャッシュの性能問題を修正
-Description: [Japanese description]
 ```
 
 ## File and Directory Names

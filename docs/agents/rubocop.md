@@ -46,10 +46,10 @@ This guide outlines a safe, repeatable process to fix RuboCop offenses while pre
 - Ensure `rake` (tests + lint) is green.
 - Commit messages must start with a GitHub `:emoji:` and use imperative mood.
   Examples:
-  - `:lipstick: RuboCop: safe autocorrect in lib/fasti/cli.rb`
+  - `:lipstick: RuboCop: safe autocorrect in lib/tint_me/style.rb`
   - `:rotating_light: RuboCop: fix Lint/UnusedMethodArgument`
 
 ## PR Guidance
-- Keep changes small and single‑purpose (e.g., "fix Style/StringLiterals in lib/fasti").
+- Keep changes small and single‑purpose (e.g., “fix Style/StringLiterals in lib/tint_me”).
 - Include before/after snippets if unsafe autocorrect or refactor was applied.
 - Link any rule changes to rationale and project conventions.
