@@ -9,9 +9,11 @@ module Foxtail
       EOL = "\n"
       public_constant :EOL
 
+      # End of file marker
       EOF = nil
       public_constant :EOF
 
+      # Characters that have special meaning at the start of a line in FTL
       SPECIAL_LINE_START_CHARS = ["}", ".", "[", "*"].freeze
       public_constant :SPECIAL_LINE_START_CHARS
 

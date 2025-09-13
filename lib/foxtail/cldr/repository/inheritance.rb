@@ -66,7 +66,7 @@ module Foxtail
         end
 
         # Load locale alias mappings from CLDR supplemental data
-        # @param source_dir [String] Path to CLDR source directory
+        # @param data_dir [String] Path to CLDR data directory
         # @return [Hash] Mapping of alias locale to canonical locale
         def load_locale_aliases(data_dir)
           aliases_path = File.join(data_dir, "locale_aliases.yml")

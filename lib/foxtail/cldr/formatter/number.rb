@@ -11,7 +11,7 @@ module Foxtail
       class Number
         # Format numbers with locale-specific formatting
         #
-        # @param value [Numeric, String] The value to format
+        # @param args [Array] Arguments (first argument is the value to format)
         # @param locale [Locale] The locale for formatting
         # @param options [Hash] Formatting options
         # @option options [String] :style Format style ("decimal", "percent", "currency", "scientific")
