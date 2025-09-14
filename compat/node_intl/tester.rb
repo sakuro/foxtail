@@ -77,13 +77,13 @@ class NodeIntlTester
     ]
 
     # All valid style values
-    styles = ["decimal", "currency", "percent", "unit"]
+    styles = %w[decimal currency percent unit]
 
     # All valid notation values
-    notations = ["standard", "scientific", "engineering", "compact"]
+    notations = %w[standard scientific engineering compact]
 
     # Test locales
-    locales = ["en-US", "ja-JP", "de-DE", "fr-FR"]
+    locales = %w[en-US ja-JP de-DE fr-FR]
 
     styles.each do |style|
       notations.each do |notation|
@@ -95,16 +95,14 @@ class NodeIntlTester
             # Add required parameters for specific styles
             case style
             when "currency"
-              case locale
-              when "ja-JP"
-                options[:currency] = "JPY"
-              when "de-DE"
-                options[:currency] = "EUR"
-              when "fr-FR"
-                options[:currency] = "EUR"
-              else
-                options[:currency] = "USD"
-              end
+              options[:currency] = case locale
+                                   when "ja-JP"
+                                     "JPY"
+                                   when "de-DE", "fr-FR"
+                                     "EUR"
+                                   else
+                                     "USD"
+                                   end
             when "unit"
               options[:unit] = "kilometer"
               options[:unitDisplay] = "short"

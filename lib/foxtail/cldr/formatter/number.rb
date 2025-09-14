@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "bigdecimal"
+require "bigdecimal/math"
 require "locale"
 
 module Foxtail
@@ -153,13 +154,15 @@ module Foxtail
           format_value = decimal_value.negative? ? decimal_value.abs : decimal_value
 
           pattern_tokens, has_separator = case tokens
-                                         in [*positive, Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken, *negative]
-                                           # Pattern with both positive and negative forms (e.g., "#,##0.00;(#,##0.00)")
-                                           [decimal_value.negative? ? negative : positive, true]
-                                         in _
-                                           # Pattern with only positive form
-                                           [tokens, false]
-                                         end
+                                          in [*positive,
+                                              Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken,
+                                              *negative]
+                                            # Pattern with positive and negative forms (e.g., "#,##0.00;(#,##0.00)")
+                                            [decimal_value.negative? ? negative : positive, true]
+                                          in _
+                                            # Pattern with only positive form
+                                            [tokens, false]
+                                          end
 
           # Apply all multiplications here (centralized logic)
           has_percent = pattern_tokens.any?(Foxtail::CLDR::PatternParser::Number::PercentToken)
@@ -203,13 +206,13 @@ module Foxtail
           exponent = 0
 
           if has_scientific
-            if notation == "engineering"
-              # For engineering notation, normalize to mantissa form with exponent as multiple of 3
-              normalized_result = normalize_for_engineering(decimal_value, pattern_info)
-            else
-              # For scientific notation, normalize the number to mantissa form (1-10 × 10^exp)
-              normalized_result = normalize_for_scientific(decimal_value, pattern_info)
-            end
+            normalized_result = if notation == "engineering"
+                                  # For engineering notation, normalize to mantissa form with exponent as multiple of 3
+                                  normalize_for_engineering(decimal_value, pattern_info)
+                                else
+                                  # For scientific notation, normalize the number to mantissa form (1-10 × 10^exp)
+                                  normalize_for_scientific(decimal_value, pattern_info)
+                                end
             mantissa = normalized_result[:mantissa]
             exponent = normalized_result[:exponent]
             decimal_value = mantissa
@@ -528,7 +531,7 @@ module Foxtail
 
           # Calculate exponent
           abs_value = decimal_value.abs
-          exponent = Math.log10(Float(abs_value)).floor
+          exponent = bigdecimal_log10(abs_value).floor
 
           # Format exponent with required digits
           exponent_str = exponent.abs.to_s.rjust(token.exponent_digits, "0")
@@ -557,7 +560,7 @@ module Foxtail
           abs_value = decimal_value.abs
 
           # Calculate exponent to normalize mantissa between 1-10
-          exponent = Math.log10(Float(abs_value)).floor
+          exponent = bigdecimal_log10(abs_value).floor
 
           # Calculate mantissa by dividing by 10^exponent
           mantissa = abs_value / (BigDecimal(10)**exponent)
@@ -575,7 +578,7 @@ module Foxtail
           abs_value = decimal_value.abs
 
           # Calculate exponent to normalize mantissa between 1-10 first
-          raw_exponent = Math.log10(Float(abs_value)).floor
+          raw_exponent = bigdecimal_log10(abs_value).floor
 
           # Adjust exponent to be multiple of 3
           # Engineering notation uses exponents: ..., -6, -3, 0, 3, 6, 9, ...
@@ -594,7 +597,7 @@ module Foxtail
         private def format_compact_number(decimal_value, number_formats, options)
           style = options[:style] || "decimal"
 
-          # Note: Percent multiplication already applied in format_number method (line 168-170)
+          # NOTE: Percent multiplication already applied in format_number method (line 168-170)
 
           # Handle zero value with style
           if decimal_value.zero?
@@ -657,7 +660,7 @@ module Foxtail
 
         # Find the appropriate compact pattern from CLDR data
         private def find_compact_pattern(decimal_value, number_formats, compact_display)
-          abs_value = decimal_value.abs.to_f
+          abs_value = decimal_value.abs
           patterns = number_formats.compact_patterns(compact_display)
 
           return nil if patterns.empty?
@@ -669,7 +672,8 @@ module Foxtail
           best_divisor = 1
 
           # Sort magnitudes in ascending order and find the highest one that the value reaches
-          magnitudes = patterns.keys.map { |k| Integer(k, 10) }.sort
+          magnitudes = patterns.keys.map {|k| Integer(k, 10) }
+          magnitudes.sort!
           magnitudes.each do |magnitude|
             # Value must be >= magnitude to use this pattern
             next if abs_value < magnitude
@@ -696,8 +700,8 @@ module Foxtail
 
         # Apply CLDR compact pattern (e.g., "0万", "0K") to format the number
         private def apply_compact_pattern(decimal_value, compact_info)
-          # Note: decimal_value should already be positive (abs applied by caller)
-          scaled_value = Float(decimal_value) / compact_info[:divisor]
+          # NOTE: decimal_value should already be positive (abs applied by caller)
+          scaled_value = decimal_value / BigDecimal(compact_info[:divisor])
           pattern = compact_info[:pattern]
 
           # Parse pattern into tokens
@@ -705,7 +709,7 @@ module Foxtail
           tokens = parser.parse(pattern)
 
           # Count digit tokens to determine how many digits to show
-          digit_tokens = tokens.select { |t| t.is_a?(Foxtail::CLDR::PatternParser::Number::DigitToken) }
+          digit_tokens = tokens.select {|t| t.is_a?(Foxtail::CLDR::PatternParser::Number::DigitToken) }
           zero_count = digit_tokens.sum(&:digit_count)
 
           # Format number based on the pattern's zero count
@@ -735,12 +739,13 @@ module Foxtail
               end
             when Foxtail::CLDR::PatternParser::Number::LiteralToken,
                  Foxtail::CLDR::PatternParser::Number::QuotedToken
+
               # Keep literal tokens (including unit symbols like "K", "万")
-              if token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken)
-                result_parts << token.literal_text
-              else
-                result_parts << token.to_s
-              end
+              result_parts << if token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+                                token.literal_text
+                              else
+                                token.to_s
+                              end
             else
               # Keep other tokens as-is
               result_parts << token.to_s
@@ -754,17 +759,17 @@ module Foxtail
         private def format_compact_single_digit(scaled_value)
           if scaled_value >= 10
             scaled_value.round.to_s
-          elsif scaled_value.round(1) == scaled_value.round
-            scaled_value.round.to_s
+          elsif scaled_value.round(1) == scaled_value.round(0)
+            scaled_value.round(0).to_s
           else
-            "%.1f" % scaled_value.round(1)
+            scaled_value.round(1).to_s("F")
           end
         end
 
         # Format scaled value for multi-digit compact patterns (e.g., "00K", "000K")
         private def format_compact_multiple_digits(scaled_value, _zero_count)
           # For multi-digit patterns, show integer value
-          scaled_value.round.to_s
+          scaled_value.round(0).to_s
         end
 
         # Find the base divisor for a unit by finding the smallest magnitude with the same unit symbol
@@ -795,22 +800,22 @@ module Foxtail
           tokens = parser.parse(pattern)
 
           # Get all non-digit tokens and join them to form the unit symbol
-          unit_tokens = tokens.reject do |token|
+          unit_tokens = tokens.reject {|token|
             token.is_a?(Foxtail::CLDR::PatternParser::Number::DigitToken)
-          end
+          }
 
-          unit_tokens.map do |token|
+          unit_tokens.map {|token|
             case token
             when Foxtail::CLDR::PatternParser::Number::QuotedToken
               token.literal_text
             else
               token.to_s
             end
-          end.join
+          }.join
         end
 
         # Combine scientific pattern with style-specific symbols
-        private def combine_pattern_with_style(base_pattern, style, number_formats, options)
+        private def combine_pattern_with_style(base_pattern, style, number_formats, _options)
           case style
           when "currency"
             currency_pattern = number_formats.currency_pattern
@@ -840,6 +845,7 @@ module Foxtail
                  Foxtail::CLDR::PatternParser::Number::DecimalToken,
                  Foxtail::CLDR::PatternParser::Number::GroupToken,
                  Foxtail::CLDR::PatternParser::Number::ExponentToken
+
               # Replace with number pattern tokens (only once)
               unless number_tokens_inserted
                 combined_tokens.concat(number_tokens)
@@ -871,7 +877,7 @@ module Foxtail
           end
         end
 
-        private def apply_style_pattern_to_compact_result(formatted_number, pattern, style_symbol, number_formats)
+        private def apply_style_pattern_to_compact_result(formatted_number, pattern, style_symbol, _number_formats)
           parser = Foxtail::CLDR::PatternParser::Number.new
           tokens = parser.parse(pattern)
 
@@ -882,28 +888,38 @@ module Foxtail
             when Foxtail::CLDR::PatternParser::Number::DigitToken,
                  Foxtail::CLDR::PatternParser::Number::DecimalToken,
                  Foxtail::CLDR::PatternParser::Number::GroupToken
+
               # Replace number tokens with formatted number (only once)
               if result_parts.empty? || !result_parts.last.is_a?(String) || result_parts.last != formatted_number
                 result_parts << formatted_number
               end
-            when Foxtail::CLDR::PatternParser::Number::CurrencyToken
-              # Replace currency token with actual symbol
-              result_parts << style_symbol
-            when Foxtail::CLDR::PatternParser::Number::PercentToken
-              # Replace percent token with actual symbol
+            when Foxtail::CLDR::PatternParser::Number::CurrencyToken,
+                 Foxtail::CLDR::PatternParser::Number::PercentToken
+
+              # Replace currency/percent token with actual symbol
               result_parts << style_symbol
             when Foxtail::CLDR::PatternParser::Number::LiteralToken,
                  Foxtail::CLDR::PatternParser::Number::QuotedToken
+
               # Keep literal tokens (including spaces)
-              if token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken)
-                result_parts << token.literal_text
-              else
-                result_parts << token.to_s
-              end
+              result_parts << if token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+                                token.literal_text
+                              else
+                                token.to_s
+                              end
             end
           end
 
           result_parts.join
+        end
+
+        # Calculate log10 using BigDecimal arithmetic to maintain precision
+        private def bigdecimal_log10(value)
+          return BigDecimal("-Infinity") if value <= 0
+
+          # Use BigMath.log with precision of 10 digits
+          # log10(x) = log(x) / log(10)
+          BigMath.log(value, 10) / BigMath.log(BigDecimal(10), 10)
         end
       end
     end

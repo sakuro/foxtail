@@ -142,7 +142,7 @@ module Foxtail
         end
 
         # Get compact format pattern for given magnitude and display style
-        def compact_pattern(magnitude, compact_display = "short", count = "other")
+        def compact_pattern(magnitude, compact_display="short", count="other")
           pattern = @resolver.resolve(
             "number_formats.compact_formats.#{compact_display}.#{magnitude}.#{count}",
             "number_formats"
@@ -160,7 +160,7 @@ module Foxtail
         end
 
         # Get all compact format patterns for a display style
-        def compact_patterns(compact_display = "short")
+        def compact_patterns(compact_display="short")
           @resolver.resolve("number_formats.compact_formats.#{compact_display}", "number_formats") || {}
         end
 
