@@ -1,435 +1,44 @@
 ---
 locale: ko
-generated_at: '2025-09-13T17:38:25Z'
+generated_at: '2025-09-14T06:10:44Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        other: 0천
+      '10000':
+        other: 0만
+      '100000':
+        other: 00만
+      '1000000':
+        other: 000만
+      '10000000':
+        other: 0000만
+      '100000000':
+        other: 0억
+      '1000000000':
+        other: 00억
+      '10000000000':
+        other: 000억
+      '100000000000':
+        other: 0000억
+      '1000000000000':
+        other: 0조
+      '10000000000000':
+        other: 00조
+      '100000000000000':
+        other: 000조
   currencies:
-    AFN:
-      display_names:
-        other: 아프가니스탄 아프가니
-        one: 아프가니스탄 아프가니
-    AMD:
-      display_names:
-        other: 아르메니아 드람
-        one: 아르메니아 드람
-    AOA:
-      display_names:
-        other: 앙골라 콴자
-        one: 앙골라 콴자
-    ARS:
-      display_names:
-        other: 아르헨티나 페소
-        one: 아르헨티나 페소
-    AUD:
-      symbol: AU$
-      display_names:
-        other: 호주 달러
-        one: 호주 달러
-    AZN:
-      display_names:
-        other: 아제르바이잔 마나트
-        one: 아제르바이잔 마나트
-    BAM:
-      display_names:
-        other: 보스니아-헤르체고비나 태환 마르크
-        one: 보스니아-헤르체고비나 태환 마르크
-    BBD:
-      display_names:
-        other: 바베이도스 달러
-        one: 바베이도스 달러
-    BDT:
-      display_names:
-        other: 방글라데시 타카
-        one: 방글라데시 타카
-    BMD:
-      display_names:
-        other: 버뮤다 달러
-        one: 버뮤다 달러
-    BND:
-      display_names:
-        other: 부루나이 달러
-        one: 부루나이 달러
-    BOB:
-      display_names:
-        other: 볼리비아 볼리비아노
-        one: 볼리비아 볼리비아노
-    BRL:
-      display_names:
-        other: 브라질 레알
-        one: 브라질 레알
-    BSD:
-      display_names:
-        other: 바하마 달러
-        one: 바하마 달러
-    BWP:
-      display_names:
-        other: 보츠와나 풀라
-        one: 보츠와나 풀라
-    BZD:
-      display_names:
-        other: 벨리즈 달러
-        one: 벨리즈 달러
-    CAD:
-      display_names:
-        other: 캐나다 달러
-        one: 캐나다 달러
-    CLP:
-      display_names:
-        other: 칠레 페소
-        one: 칠레 페소
-    CNY:
-      display_names:
-        other: 중국 위안화
-        one: 중국 위안화
-    COP:
-      display_names:
-        other: 콜롬비아 페소
-        one: 콜롬비아 페소
-    CRC:
-      display_names:
-        other: 코스타리카 콜론
-        one: 코스타리카 콜론
-    CUC:
-      display_names:
-        other: 쿠바 태환 페소
-        one: 쿠바 태환 페소
-    CUP:
-      display_names:
-        other: 쿠바 페소
-        one: 쿠바 페소
-    CZK:
-      display_names:
-        other: 체코 코루나
-        one: 체코 코루나
-    DKK:
-      display_names:
-        other: 덴마크 크로네
-        one: 덴마크 크로네
-    DOP:
-      display_names:
-        other: 도미니카 페소
-        one: 도미니카 페소
-    EGP:
-      display_names:
-        other: 이집트 파운드
-        one: 이집트 파운드
-    ESP:
-      display_names:
-        other: 스페인 페세타
-        one: 스페인 페세타
-    EUR:
-      display_names:
-        other: 유로
-        one: 유로
-    FJD:
-      display_names:
-        other: 피지 달러
-        one: 피지 달러
-    FKP:
-      display_names:
-        other: 포클랜드제도 파운드
-        one: 포클랜드제도 파운드
-    GBP:
-      display_names:
-        other: 영국 파운드
-        one: 영국 파운드
-    GEL:
-      display_names:
-        other: 조지아 라리
-        one: 조지아 라리
-    GHS:
-      display_names:
-        other: 가나 세디
-        one: 가나 세디
-    GIP:
-      display_names:
-        other: 지브롤터 파운드
-        one: 지브롤터 파운드
-    GNF:
-      display_names:
-        other: 기니 프랑
-        one: 기니 프랑
-    GTQ:
-      display_names:
-        other: 과테말라 케트살
-        one: 과테말라 케트살
-    GYD:
-      display_names:
-        other: 가이아나 달러
-        one: 가이아나 달러
-    HKD:
-      display_names:
-        other: 홍콩 달러
-        one: 홍콩 달러
-    HNL:
-      display_names:
-        other: 온두라스 렘피라
-        one: 온두라스 렘피라
-    HRK:
-      display_names:
-        other: 크로아티아 쿠나
-        one: 크로아티아 쿠나
-    HUF:
-      display_names:
-        other: 헝가리 포린트
-        one: 헝가리 포린트
-    IDR:
-      display_names:
-        other: 인도네시아 루피아
-        one: 인도네시아 루피아
-    ILS:
-      display_names:
-        other: 이스라엘 신권 세켈
-        one: 이스라엘 신권 세켈
-    INR:
-      display_names:
-        other: 인도 루피
-        one: 인도 루피
-    ISK:
-      display_names:
-        other: 아이슬란드 크로나
-        one: 아이슬란드 크로나
-    JMD:
-      display_names:
-        other: 자메이카 달러
-        one: 자메이카 달러
-    JPY:
-      display_names:
-        other: 일본 엔화
-        one: 일본 엔화
-    KGS:
-      display_names:
-        other: 키르기스스탄 솜
-        one: 키르기스스탄 솜
-    KHR:
-      display_names:
-        other: 캄보디아 리엘
-        one: 캄보디아 리엘
-    KMF:
-      display_names:
-        other: 코모르 프랑
-        one: 코모르 프랑
-    KPW:
-      display_names:
-        other: 조선 민주주의 인민 공화국 원
-        one: 조선 민주주의 인민 공화국 원
-    KRW:
-      display_names:
-        other: 대한민국 원
-        one: 대한민국 원
-    KYD:
-      display_names:
-        other: 케이맨 제도 달러
-        one: 케이맨 제도 달러
-    KZT:
-      display_names:
-        other: 카자흐스탄 텡게
-        one: 카자흐스탄 텡게
-    LAK:
-      display_names:
-        other: 라오스 키프
-        one: 라오스 키프
-    LBP:
-      display_names:
-        other: 레바논 파운드
-        one: 레바논 파운드
-    LKR:
-      display_names:
-        other: 스리랑카 루피
-        one: 스리랑카 루피
-    LRD:
-      display_names:
-        other: 라이베리아 달러
-        one: 라이베리아 달러
-    LTL:
-      display_names:
-        other: 리투아니아 리타
-        one: 리투아니아 리타
-    LVL:
-      display_names:
-        other: 라트비아 라트
-        one: 라트비아 라트
-    MGA:
-      display_names:
-        other: 마다가스카르 아리아리
-        one: 마다가스카르 아리아리
-    MMK:
-      display_names:
-        other: 미얀마 키얏
-        one: 미얀마 키얏
-    MNT:
-      display_names:
-        other: 몽골 투그릭
-        one: 몽골 투그릭
-    MUR:
-      display_names:
-        other: 모리셔스 루피
-        one: 모리셔스 루피
-    MXN:
-      display_names:
-        other: 멕시코 페소
-        one: 멕시코 페소
-    MYR:
-      display_names:
-        other: 말레이시아 링깃
-        one: 말레이시아 링깃
-    NAD:
-      display_names:
-        other: 나미비아 달러
-        one: 나미비아 달러
-    NGN:
-      display_names:
-        other: 나이지리아 나이라
-        one: 나이지리아 나이라
-    NIO:
-      display_names:
-        other: 니카라과 코르도바
-        one: 니카라과 코르도바
-    NOK:
-      display_names:
-        other: 노르웨이 크로네
-        one: 노르웨이 크로네
-    NPR:
-      display_names:
-        other: 네팔 루피
-        one: 네팔 루피
-    NZD:
-      display_names:
-        other: 뉴질랜드 달러
-        one: 뉴질랜드 달러
-    PHP:
-      symbol: PHP
-      display_names:
-        other: 필리핀 페소
-        one: 필리핀 페소
-    PKR:
-      display_names:
-        other: 파키스탄 루피
-        one: 파키스탄 루피
-    PLN:
-      display_names:
-        other: 폴란드 즈워티
-        one: 폴란드 즈워티
-    PYG:
-      display_names:
-        other: 파라과이 과라니
-        one: 파라과이 과라니
-    RON:
-      symbol: L
-      display_names:
-        other: 루마니아 레우
-        one: 루마니아 레우
-    RUB:
-      display_names:
-        other: 러시아 루블
-        one: 러시아 루블
-    RWF:
-      display_names:
-        other: 르완다 프랑
-        one: 르완다 프랑
-    SBD:
-      display_names:
-        other: 솔로몬 제도 달러
-        one: 솔로몬 제도 달러
-    SEK:
-      display_names:
-        other: 스웨덴 크로나
-        one: 스웨덴 크로나
-    SGD:
-      display_names:
-        other: 싱가포르 달러
-        one: 싱가포르 달러
-    SHP:
-      display_names:
-        other: 세인트헬레나 파운드
-        one: 세인트헬레나 파운드
-    SRD:
-      display_names:
-        other: 수리남 달러
-        one: 수리남 달러
-    SSP:
-      display_names:
-        other: 남수단 파운드
-        one: 남수단 파운드
-    STN:
-      display_names:
-        other: 상투메 프린시페 도브라
-        one: 상투메 프린시페 도브라
-    SYP:
-      display_names:
-        other: 시리아 파운드
-        one: 시리아 파운드
-    THB:
-      display_names:
-        other: 태국 바트
-        one: 태국 바트
-    TOP:
-      display_names:
-        other: 통가 파앙가
-        one: 통가 파앙가
-    TRY:
-      display_names:
-        other: 튀르키예 리라
-        one: 튀르키예 리라
-    TTD:
-      display_names:
-        other: 트리니다드 토바고 달러
-        one: 트리니다드 토바고 달러
-    TWD:
-      display_names:
-        other: 신 타이완 달러
-        one: 신 타이완 달러
-    UAH:
-      display_names:
-        other: 우크라이나 그리브나
-        one: 우크라이나 그리브나
-    USD:
-      display_names:
-        other: 미국 달러
-        one: 미국 달러
-    UYU:
-      display_names:
-        other: 우루과이 페소
-        one: 우루과이 페소
-    VEF:
-      display_names:
-        other: 베네수엘라 볼리바르 (2008–2018)
-        one: 베네수엘라 볼리바르 (2008–2018)
-    VND:
-      display_names:
-        other: 베트남 동
-        one: 베트남 동
-    XAF:
-      display_names:
-        other: 중앙아프리카 CFA 프랑
-        one: 중앙아프리카 CFA 프랑
-    XCD:
-      display_names:
-        other: 동카리브 달러
-        one: 동카리브 달러
-    XOF:
-      display_names:
-        other: 서아프리카 CFA 프랑
-        one: 서아프리카 CFA 프랑
-    XPF:
-      display_names:
-        other: CFP 프랑
-        one: CFP 프랑
-    XXX:
-      display_names:
-        other: "(알 수 없는 통화 단위)"
-        one: 알 수 없는 통화 단위
-    ZAR:
-      display_names:
-        other: 남아프리카 랜드
-        one: 남아프리카 랜드
-    ZMW:
-      display_names:
-        other: 잠비아 콰차
-        one: 잠비아 콰차
     ADP:
       display_names:
         other: 안도라 페세타
@@ -442,14 +51,26 @@ number_formats:
       display_names:
         other: 아프가니 (1927–2002)
         one: 아프가니 (1927–2002)
+    AFN:
+      display_names:
+        other: 아프가니스탄 아프가니
+        one: 아프가니스탄 아프가니
     ALL:
       display_names:
         other: 알바니아 레크
         one: 알바니아 레크
+    AMD:
+      display_names:
+        other: 아르메니아 드람
+        one: 아르메니아 드람
     ANG:
       display_names:
         other: 네덜란드령 안틸레스 길더
         one: 네덜란드령 안틸레스 길더
+    AOA:
+      display_names:
+        other: 앙골라 콴자
+        one: 앙골라 콴자
     AOK:
       display_names:
         other: 앙골라 콴자 (1977–1990)
@@ -478,10 +99,19 @@ number_formats:
       display_names:
         other: 아르헨티나 페소 (1983–1985)
         one: 아르헨티나 페소 (1983–1985)
+    ARS:
+      display_names:
+        other: 아르헨티나 페소
+        one: 아르헨티나 페소
     ATS:
       display_names:
         other: 호주 실링
         one: 호주 실링
+    AUD:
+      symbol: AU$
+      display_names:
+        other: 호주 달러
+        one: 호주 달러
     AWG:
       display_names:
         other: 아루바 플로린
@@ -490,14 +120,30 @@ number_formats:
       display_names:
         other: 아제르바이젠 마나트(1993–2006)
         one: 아제르바이젠 마나트(1993–2006)
+    AZN:
+      display_names:
+        other: 아제르바이잔 마나트
+        one: 아제르바이잔 마나트
     BAD:
       display_names:
         other: 보스니아-헤르체고비나 디나르
         one: 보스니아-헤르체고비나 디나르
+    BAM:
+      display_names:
+        other: 보스니아-헤르체고비나 태환 마르크
+        one: 보스니아-헤르체고비나 태환 마르크
     BAN:
       display_names:
         other: 보스니아-헤르체고비나 신디나르 (1994–1997)
         one: 보스니아-헤르체고비나 신디나르 (1994–1997)
+    BBD:
+      display_names:
+        other: 바베이도스 달러
+        one: 바베이도스 달러
+    BDT:
+      display_names:
+        other: 방글라데시 타카
+        one: 방글라데시 타카
     BEC:
       display_names:
         other: 벨기에 프랑 (태환)
@@ -534,6 +180,18 @@ number_formats:
       display_names:
         other: 부룬디 프랑
         one: 부룬디 프랑
+    BMD:
+      display_names:
+        other: 버뮤다 달러
+        one: 버뮤다 달러
+    BND:
+      display_names:
+        other: 부루나이 달러
+        one: 부루나이 달러
+    BOB:
+      display_names:
+        other: 볼리비아 볼리비아노
+        one: 볼리비아 볼리비아노
     BOL:
       display_names:
         other: 볼리비아 볼리비아노 (1863–1963)
@@ -558,6 +216,10 @@ number_formats:
       display_names:
         other: 브라질 크루제이루 (1990–1993)
         one: 브라질 크루제이루 (1990–1993)
+    BRL:
+      display_names:
+        other: 브라질 레알
+        one: 브라질 레알
     BRN:
       display_names:
         other: 브라질 크루자두 노보
@@ -570,6 +232,10 @@ number_formats:
       display_names:
         other: 브라질 크루제이루 (1942–1967)
         one: 브라질 크루제이루 (1942–1967)
+    BSD:
+      display_names:
+        other: 바하마 달러
+        one: 바하마 달러
     BTN:
       display_names:
         other: 부탄 눌투눔
@@ -578,6 +244,10 @@ number_formats:
       display_names:
         other: 버마 차트
         one: 버마 차트
+    BWP:
+      display_names:
+        other: 보츠와나 풀라
+        one: 보츠와나 풀라
     BYB:
       display_names:
         other: 벨라루스 신권 루블 (1994–1999)
@@ -591,6 +261,14 @@ number_formats:
       display_names:
         other: 벨라루스 루블 (2000–2016)
         one: 벨라루스 루블 (2000–2016)
+    BZD:
+      display_names:
+        other: 벨리즈 달러
+        one: 벨리즈 달러
+    CAD:
+      display_names:
+        other: 캐나다 달러
+        one: 캐나다 달러
     CDF:
       display_names:
         other: 콩고 프랑
@@ -615,14 +293,30 @@ number_formats:
       display_names:
         other: 칠레 (UF)
         one: 칠레 (UF)
+    CLP:
+      display_names:
+        other: 칠레 페소
+        one: 칠레 페소
     CNH:
       display_names:
         other: 중국 위안화(역외)
         one: 중국 위안화(역외)
+    CNY:
+      display_names:
+        other: 중국 위안화
+        one: 중국 위안화
+    COP:
+      display_names:
+        other: 콜롬비아 페소
+        one: 콜롬비아 페소
     COU:
       display_names:
         other: 콜롬비아 실가 단위
         one: 콜롬비아 실가 단위
+    CRC:
+      display_names:
+        other: 코스타리카 콜론
+        one: 코스타리카 콜론
     CSD:
       display_names:
         other: 고 세르비아 디나르
@@ -631,6 +325,14 @@ number_formats:
       display_names:
         other: 체코슬로바키아 동전 코루나
         one: 체코슬로바키아 동전 코루나
+    CUC:
+      display_names:
+        other: 쿠바 태환 페소
+        one: 쿠바 태환 페소
+    CUP:
+      display_names:
+        other: 쿠바 페소
+        one: 쿠바 페소
     CVE:
       display_names:
         other: 카보베르데 에스쿠도
@@ -639,6 +341,10 @@ number_formats:
       display_names:
         other: 싸이프러스 파운드
         one: 싸이프러스 파운드
+    CZK:
+      display_names:
+        other: 체코 코루나
+        one: 체코 코루나
     DDM:
       display_names:
         other: 동독 오스트마르크
@@ -651,6 +357,14 @@ number_formats:
       display_names:
         other: 지부티 프랑
         one: 지부티 프랑
+    DKK:
+      display_names:
+        other: 덴마크 크로네
+        one: 덴마크 크로네
+    DOP:
+      display_names:
+        other: 도미니카 페소
+        one: 도미니카 페소
     DZD:
       display_names:
         other: 알제리 디나르
@@ -667,6 +381,10 @@ number_formats:
       display_names:
         other: 에스토니아 크룬
         one: 에스토니아 크룬
+    EGP:
+      display_names:
+        other: 이집트 파운드
+        one: 이집트 파운드
     ERN:
       display_names:
         other: 에리트리아 나크파
@@ -679,30 +397,66 @@ number_formats:
       display_names:
         other: 스페인 페세타(변환 예금)
         one: 스페인 페세타(변환 예금)
+    ESP:
+      display_names:
+        other: 스페인 페세타
+        one: 스페인 페세타
     ETB:
       display_names:
         other: 에티오피아 비르
         one: 에티오피아 비르
+    EUR:
+      display_names:
+        other: 유로
+        one: 유로
     FIM:
       display_names:
         other: 핀란드 마르카
         one: 핀란드 마르카
+    FJD:
+      display_names:
+        other: 피지 달러
+        one: 피지 달러
+    FKP:
+      display_names:
+        other: 포클랜드제도 파운드
+        one: 포클랜드제도 파운드
     FRF:
       display_names:
         other: 프랑스 프랑
         one: 프랑스 프랑
+    GBP:
+      display_names:
+        other: 영국 파운드
+        one: 영국 파운드
     GEK:
       display_names:
         other: 그루지야 지폐 라리트
         one: 그루지야 지폐 라리트
+    GEL:
+      display_names:
+        other: 조지아 라리
+        one: 조지아 라리
     GHC:
       display_names:
         other: 가나 시디 (1979–2007)
         one: 가나 시디 (1979–2007)
+    GHS:
+      display_names:
+        other: 가나 세디
+        one: 가나 세디
+    GIP:
+      display_names:
+        other: 지브롤터 파운드
+        one: 지브롤터 파운드
     GMD:
       display_names:
         other: 감비아 달라시
         one: 감비아 달라시
+    GNF:
+      display_names:
+        other: 기니 프랑
+        one: 기니 프랑
     GNS:
       display_names:
         other: 기니 시리
@@ -715,6 +469,10 @@ number_formats:
       display_names:
         other: 그리스 드라크마
         one: 그리스 드라크마
+    GTQ:
+      display_names:
+        other: 과테말라 케트살
+        one: 과테말라 케트살
     GWE:
       display_names:
         other: 포르투갈령 기니 에스쿠도
@@ -723,14 +481,38 @@ number_formats:
       display_names:
         other: 기네비쏘 페소
         one: 기네비쏘 페소
+    GYD:
+      display_names:
+        other: 가이아나 달러
+        one: 가이아나 달러
+    HKD:
+      display_names:
+        other: 홍콩 달러
+        one: 홍콩 달러
+    HNL:
+      display_names:
+        other: 온두라스 렘피라
+        one: 온두라스 렘피라
     HRD:
       display_names:
         other: 크로아티아 디나르
         one: 크로아티아 디나르
+    HRK:
+      display_names:
+        other: 크로아티아 쿠나
+        one: 크로아티아 쿠나
     HTG:
       display_names:
         other: 아이티 구르드
         one: 아이티 구르드
+    HUF:
+      display_names:
+        other: 헝가리 포린트
+        one: 헝가리 포린트
+    IDR:
+      display_names:
+        other: 인도네시아 루피아
+        one: 인도네시아 루피아
     IEP:
       display_names:
         other: 아일랜드 파운드
@@ -739,6 +521,14 @@ number_formats:
       display_names:
         other: 이스라엘 파운드
         one: 이스라엘 파운드
+    ILS:
+      display_names:
+        other: 이스라엘 신권 세켈
+        one: 이스라엘 신권 세켈
+    INR:
+      display_names:
+        other: 인도 루피
+        one: 인도 루피
     IQD:
       display_names:
         other: 이라크 디나르
@@ -747,30 +537,90 @@ number_formats:
       display_names:
         other: 이란 리얄
         one: 이란 리얄
+    ISK:
+      display_names:
+        other: 아이슬란드 크로나
+        one: 아이슬란드 크로나
     ITL:
       display_names:
         other: 이탈리아 리라
         one: 이탈리아 리라
+    JMD:
+      display_names:
+        other: 자메이카 달러
+        one: 자메이카 달러
     JOD:
       display_names:
         other: 요르단 디나르
         one: 요르단 디나르
+    JPY:
+      display_names:
+        other: 일본 엔화
+        one: 일본 엔화
     KES:
       display_names:
         other: 케냐 실링
         one: 케냐 실링
+    KGS:
+      display_names:
+        other: 키르기스스탄 솜
+        one: 키르기스스탄 솜
+    KHR:
+      display_names:
+        other: 캄보디아 리엘
+        one: 캄보디아 리엘
+    KMF:
+      display_names:
+        other: 코모르 프랑
+        one: 코모르 프랑
+    KPW:
+      display_names:
+        other: 조선 민주주의 인민 공화국 원
+        one: 조선 민주주의 인민 공화국 원
     KRH:
       display_names:
         other: 대한민국 환 (1953–1962)
         one: 대한민국 환 (1953–1962)
+    KRW:
+      display_names:
+        other: 대한민국 원
+        one: 대한민국 원
     KWD:
       display_names:
         other: 쿠웨이트 디나르
         one: 쿠웨이트 디나르
+    KYD:
+      display_names:
+        other: 케이맨 제도 달러
+        one: 케이맨 제도 달러
+    KZT:
+      display_names:
+        other: 카자흐스탄 텡게
+        one: 카자흐스탄 텡게
+    LAK:
+      display_names:
+        other: 라오스 키프
+        one: 라오스 키프
+    LBP:
+      display_names:
+        other: 레바논 파운드
+        one: 레바논 파운드
+    LKR:
+      display_names:
+        other: 스리랑카 루피
+        one: 스리랑카 루피
+    LRD:
+      display_names:
+        other: 라이베리아 달러
+        one: 라이베리아 달러
     LSL:
       display_names:
         other: 레소토 로티
         one: 레소토 로티
+    LTL:
+      display_names:
+        other: 리투아니아 리타
+        one: 리투아니아 리타
     LTT:
       display_names:
         other: 룩셈부르크 타로나
@@ -787,6 +637,10 @@ number_formats:
       display_names:
         other: 룩셈부르크 재정 프랑
         one: 룩셈부르크 재정 프랑
+    LVL:
+      display_names:
+        other: 라트비아 라트
+        one: 라트비아 라트
     LVR:
       display_names:
         other: 라트비아 루블
@@ -815,6 +669,10 @@ number_formats:
       display_names:
         other: 몰도바 레이
         one: 몰도바 레이
+    MGA:
+      display_names:
+        other: 마다가스카르 아리아리
+        one: 마다가스카르 아리아리
     MGF:
       display_names:
         other: 마다가스카르 프랑
@@ -827,6 +685,14 @@ number_formats:
       display_names:
         other: 말리 프랑
         one: 말리 프랑
+    MMK:
+      display_names:
+        other: 미얀마 키얏
+        one: 미얀마 키얏
+    MNT:
+      display_names:
+        other: 몽골 투그릭
+        one: 몽골 투그릭
     MOP:
       display_names:
         other: 마카오 파타카
@@ -847,6 +713,10 @@ number_formats:
       display_names:
         other: 몰타 파운드
         one: 몰타 파운드
+    MUR:
+      display_names:
+        other: 모리셔스 루피
+        one: 모리셔스 루피
     MVR:
       display_names:
         other: 몰디브 제도 루피아
@@ -855,6 +725,10 @@ number_formats:
       display_names:
         other: 말라위 콰차
         one: 말라위 콰차
+    MXN:
+      display_names:
+        other: 멕시코 페소
+        one: 멕시코 페소
     MXP:
       display_names:
         other: 멕시코 실버 페소 (1861–1992)
@@ -863,6 +737,10 @@ number_formats:
       display_names:
         other: 멕시코 (UDI)
         one: 멕시코 (UDI)
+    MYR:
+      display_names:
+        other: 말레이시아 링깃
+        one: 말레이시아 링깃
     MZE:
       display_names:
         other: 모잠비크 에스쿠도
@@ -875,14 +753,38 @@ number_formats:
       display_names:
         other: 모잠비크 메티칼
         one: 모잠비크 메티칼
+    NAD:
+      display_names:
+        other: 나미비아 달러
+        one: 나미비아 달러
+    NGN:
+      display_names:
+        other: 나이지리아 나이라
+        one: 나이지리아 나이라
     NIC:
       display_names:
         other: 니카라과 코르도바 오로(1988~1991)
         one: 니카라과 코르도바(1988~1991)
+    NIO:
+      display_names:
+        other: 니카라과 코르도바
+        one: 니카라과 코르도바
     NLG:
       display_names:
         other: 네델란드 길더
         one: 네델란드 길더
+    NOK:
+      display_names:
+        other: 노르웨이 크로네
+        one: 노르웨이 크로네
+    NPR:
+      display_names:
+        other: 네팔 루피
+        one: 네팔 루피
+    NZD:
+      display_names:
+        other: 뉴질랜드 달러
+        one: 뉴질랜드 달러
     OMR:
       display_names:
         other: 오만 리알
@@ -907,6 +809,19 @@ number_formats:
       display_names:
         other: 파푸아뉴기니 키나
         one: 파푸아뉴기니 키나
+    PHP:
+      symbol: PHP
+      display_names:
+        other: 필리핀 페소
+        one: 필리핀 페소
+    PKR:
+      display_names:
+        other: 파키스탄 루피
+        one: 파키스탄 루피
+    PLN:
+      display_names:
+        other: 폴란드 즈워티
+        one: 폴란드 즈워티
     PLZ:
       display_names:
         other: 폴란드 즐로티 (1950–1995)
@@ -915,6 +830,10 @@ number_formats:
       display_names:
         other: 포르투갈 에스쿠도
         one: 포르투갈 에스쿠도
+    PYG:
+      display_names:
+        other: 파라과이 과라니
+        one: 파라과이 과라니
     QAR:
       display_names:
         other: 카타르 리얄
@@ -927,18 +846,35 @@ number_formats:
       display_names:
         other: 루마니아 레이
         one: 루마니아 레이
+    RON:
+      symbol: L
+      display_names:
+        other: 루마니아 레우
+        one: 루마니아 레우
     RSD:
       display_names:
         other: 세르비아 디나르
         one: 세르비아 디나르
+    RUB:
+      display_names:
+        other: 러시아 루블
+        one: 러시아 루블
     RUR:
       display_names:
         other: 러시아 루블 (1991–1998)
         one: 러시아 루블 (1991–1998)
+    RWF:
+      display_names:
+        other: 르완다 프랑
+        one: 르완다 프랑
     SAR:
       display_names:
         other: 사우디아라비아 리얄
         one: 사우디아라비아 리얄
+    SBD:
+      display_names:
+        other: 솔로몬 제도 달러
+        one: 솔로몬 제도 달러
     SCR:
       display_names:
         other: 세이셸 루피
@@ -955,6 +891,18 @@ number_formats:
       display_names:
         other: 고 수단 파운드
         one: 고 수단 파운드
+    SEK:
+      display_names:
+        other: 스웨덴 크로나
+        one: 스웨덴 크로나
+    SGD:
+      display_names:
+        other: 싱가포르 달러
+        one: 싱가포르 달러
+    SHP:
+      display_names:
+        other: 세인트헬레나 파운드
+        one: 세인트헬레나 파운드
     SIT:
       display_names:
         other: 슬로베니아 톨라르
@@ -975,14 +923,26 @@ number_formats:
       display_names:
         other: 소말리아 실링
         one: 소말리아 실링
+    SRD:
+      display_names:
+        other: 수리남 달러
+        one: 수리남 달러
     SRG:
       display_names:
         other: 수리남 길더
         one: 수리남 길더
+    SSP:
+      display_names:
+        other: 남수단 파운드
+        one: 남수단 파운드
     STD:
       display_names:
         other: 상투메 프린시페 도브라 (1977–2017)
         one: 상투메 프린시페 도브라 (1977–2017)
+    STN:
+      display_names:
+        other: 상투메 프린시페 도브라
+        one: 상투메 프린시페 도브라
     SUR:
       display_names:
         other: 소련 루블
@@ -991,10 +951,18 @@ number_formats:
       display_names:
         other: 엘살바도르 콜론
         one: 엘살바도르 콜론
+    SYP:
+      display_names:
+        other: 시리아 파운드
+        one: 시리아 파운드
     SZL:
       display_names:
         other: 스와질란드 릴랑게니
         one: 스와질란드 릴랑게니
+    THB:
+      display_names:
+        other: 태국 바트
+        one: 태국 바트
     TJR:
       display_names:
         other: 타지키스탄 루블
@@ -1015,6 +983,10 @@ number_formats:
       display_names:
         other: 튀니지 디나르
         one: 튀니지 디나르
+    TOP:
+      display_names:
+        other: 통가 파앙가
+        one: 통가 파앙가
     TPE:
       display_names:
         other: 티모르 에스쿠도
@@ -1023,10 +995,26 @@ number_formats:
       display_names:
         other: 터키 리라(1922~2005)
         one: 터키 리라(1922~2005)
+    TRY:
+      display_names:
+        other: 튀르키예 리라
+        one: 튀르키예 리라
+    TTD:
+      display_names:
+        other: 트리니다드 토바고 달러
+        one: 트리니다드 토바고 달러
+    TWD:
+      display_names:
+        other: 신 타이완 달러
+        one: 신 타이완 달러
     TZS:
       display_names:
         other: 탄자니아 실링
         one: 탄자니아 실링
+    UAH:
+      display_names:
+        other: 우크라이나 그리브나
+        one: 우크라이나 그리브나
     UAK:
       display_names:
         other: 우크라이나 카보바네츠
@@ -1039,6 +1027,10 @@ number_formats:
       display_names:
         other: 우간다 실링
         one: 우간다 실링
+    USD:
+      display_names:
+        other: 미국 달러
+        one: 미국 달러
     USN:
       display_names:
         other: 미국 달러(다음날)
@@ -1055,6 +1047,10 @@ number_formats:
       display_names:
         other: 우루과이 페소 (1975–1993)
         one: 우루과이 페소 (1975–1993)
+    UYU:
+      display_names:
+        other: 우루과이 페소
+        one: 우루과이 페소
     UZS:
       display_names:
         other: 우즈베키스탄 숨
@@ -1063,10 +1059,18 @@ number_formats:
       display_names:
         other: 베네주엘라 볼리바르 (1871–2008)
         one: 베네주엘라 볼리바르 (1871–2008)
+    VEF:
+      display_names:
+        other: 베네수엘라 볼리바르 (2008–2018)
+        one: 베네수엘라 볼리바르 (2008–2018)
     VES:
       display_names:
         other: 베네수엘라 볼리바르
         one: 베네수엘라 볼리바르
+    VND:
+      display_names:
+        other: 베트남 동
+        one: 베트남 동
     VNN:
       display_names:
         other: 베트남 동 (1978–1985)
@@ -1079,6 +1083,10 @@ number_formats:
       display_names:
         other: 서 사모아 탈라
         one: 서 사모아 탈라
+    XAF:
+      display_names:
+        other: 중앙아프리카 CFA 프랑
+        one: 중앙아프리카 CFA 프랑
     XAG:
       display_names:
         other: 은화
@@ -1103,6 +1111,10 @@ number_formats:
       display_names:
         other: 유럽 계산 단위 (XBD)
         one: 유럽 계산 단위 (XBD)
+    XCD:
+      display_names:
+        other: 동카리브 달러
+        one: 동카리브 달러
     XDR:
       display_names:
         other: 특별인출권
@@ -1119,10 +1131,18 @@ number_formats:
       display_names:
         other: 프랑스 프랑 (UIC)
         one: 프랑스 프랑 (UIC)
+    XOF:
+      display_names:
+        other: 서아프리카 CFA 프랑
+        one: 서아프리카 CFA 프랑
     XPD:
       display_names:
         other: 팔라듐
         one: 팔라듐
+    XPF:
+      display_names:
+        other: CFP 프랑
+        one: CFP 프랑
     XPT:
       display_names:
         other: 백금
@@ -1135,6 +1155,10 @@ number_formats:
       display_names:
         other: 테스트 통화 코드
         one: 테스트 통화 코드
+    XXX:
+      display_names:
+        other: "(알 수 없는 통화 단위)"
+        one: 알 수 없는 통화 단위
     YDD:
       display_names:
         other: 예멘 디나르
@@ -1159,10 +1183,18 @@ number_formats:
       display_names:
         other: 남아프리카 랜드 (금융)
         one: 남아프리카 랜드 (금융)
+    ZAR:
+      display_names:
+        other: 남아프리카 랜드
+        one: 남아프리카 랜드
     ZMK:
       display_names:
         other: 쟘비아 콰쳐 (1968–2012)
         one: 쟘비아 콰쳐 (1968–2012)
+    ZMW:
+      display_names:
+        other: 잠비아 콰차
+        one: 잠비아 콰차
     ZRN:
       display_names:
         other: 자이르 신권 자이르
@@ -1183,3 +1215,1125 @@ number_formats:
       display_names:
         other: 짐바브웨 달러 (2008)
         one: 짐바브웨 달러 (2008)
+  units:
+    g-force:
+      long:
+        display_name: 중력가속도
+        other: "{0} 중력가속도"
+      short:
+        other: "{0}G"
+    meter-per-square-second:
+      long:
+        display_name: 미터 매 초 제곱
+        other: 제곱 초당 {0}미터
+      short:
+        other: "{0}m/s²"
+    revolution:
+      long:
+        display_name: 회전
+        other: "{0}회전"
+      short:
+        other: "{0}rev"
+    radian:
+      long:
+        display_name: 라디안
+        other: "{0}라디안"
+      short:
+        other: "{0}rad"
+    degree:
+      long:
+        display_name: 도
+        other: "{0}도"
+      short:
+        display_name: "°"
+    arc-minute:
+      long:
+        display_name: 분각
+        other: "{0}분각"
+      short:
+        display_name: "′"
+    arc-second:
+      long:
+        display_name: 각초
+        other: "{0}각초"
+      short:
+        display_name: "″"
+    square-kilometer:
+      long:
+        display_name: 제곱킬로미터
+        other: "{0}제곱킬로미터"
+        per_unit_pattern: 제곱킬로미터당 {0}
+      short:
+        other: "{0}km²"
+    hectare:
+      long:
+        display_name: 헥타르
+        other: "{0}헥타르"
+      short:
+        display_name: ha
+        other: "{0}ha"
+    square-meter:
+      long:
+        display_name: 제곱미터
+        other: "{0}제곱미터"
+        per_unit_pattern: 제곱미터당 {0}
+      short:
+        other: "{0}m²"
+    square-centimeter:
+      long:
+        display_name: 제곱센티미터
+        other: "{0}제곱센티미터"
+        per_unit_pattern: 제곱센티미터당 {0}
+      short:
+        other: "{0}cm²"
+    square-mile:
+      long:
+        display_name: 제곱마일
+        other: "{0}제곱마일"
+        per_unit_pattern: 제곱마일당 {0}
+      short:
+        other: "{0}mi²"
+    acre:
+      long:
+        display_name: 에이커
+        other: "{0}에이커"
+      short:
+        display_name: ac
+        other: "{0}ac"
+    square-yard:
+      long:
+        display_name: 제곱야드
+        other: "{0}제곱야드"
+      short:
+        other: "{0}yd²"
+    square-foot:
+      long:
+        display_name: 제곱피트
+        other: "{0}제곱피트"
+      short:
+        other: "{0}ft²"
+    square-inch:
+      long:
+        display_name: 제곱인치
+        other: "{0}제곱인치"
+        per_unit_pattern: 제곱인치당 {0}
+      short:
+        other: "{0}in²"
+    karat:
+      long:
+        display_name: 캐럿
+        other: "{0}캐럿"
+      short:
+        other: "{0}kt"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: 데시리터당 밀리그램
+        other: 데시리터당 {0}밀리그램
+      short:
+        other: "{0}mg/dL"
+    millimole-per-liter:
+      long:
+        display_name: 리터당 밀리몰
+        other: 리터당 {0}밀리몰
+      short:
+        other: "{0}mmol/L"
+    mole:
+      long:
+        display_name: 몰
+        other: "{0}몰"
+      short:
+        other: "{0}mol"
+    liter-per-kilometer:
+      long:
+        display_name: 킬로미터당 리터
+        other: 킬로미터당 {0}리터
+      short:
+        other: "{0}L/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: 100킬로미터당 리터
+        other: 100킬로미터당 {0}리터
+      short:
+        other: "{0}L/100km"
+    mile-per-gallon:
+      long:
+        display_name: 갤런당 마일
+        other: 갤런당 {0}마일
+      short:
+        display_name: mpg
+        other: "{0}mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: 영국식 갤런당 마일
+        other: 영국식 갤런당 {0}마일
+      short:
+        other: "{0}mpg Imp."
+    petabyte:
+      long:
+        display_name: 페타바이트
+        other: "{0}페타바이트"
+      short:
+        other: "{0}PB"
+    terabyte:
+      long:
+        display_name: 테라바이트
+        other: "{0}테라바이트"
+      short:
+        other: "{0}TB"
+    terabit:
+      long:
+        display_name: 테라비트
+        other: "{0}테라비트"
+      short:
+        other: "{0}Tb"
+    gigabyte:
+      long:
+        display_name: 기가바이트
+        other: "{0}기가바이트"
+      short:
+        other: "{0}GB"
+    gigabit:
+      long:
+        display_name: 기가비트
+        other: "{0}기가비트"
+      short:
+        other: "{0}Gb"
+    megabyte:
+      long:
+        display_name: 메가바이트
+        other: "{0}메가바이트"
+      short:
+        other: "{0}MB"
+    megabit:
+      long:
+        display_name: 메가비트
+        other: "{0}메가비트"
+      short:
+        other: "{0}Mb"
+    kilobyte:
+      long:
+        display_name: 킬로바이트
+        other: "{0}킬로바이트"
+      short:
+        other: "{0}kB"
+    kilobit:
+      long:
+        display_name: 킬로비트
+        other: "{0}킬로비트"
+      short:
+        other: "{0}kb"
+    byte:
+      long:
+        display_name: 바이트
+        other: "{0}바이트"
+      short:
+        other: "{0}byte"
+      narrow:
+        display_name: B
+    bit:
+      long:
+        display_name: 비트
+        other: "{0}비트"
+      short:
+        other: "{0}bit"
+    century:
+      long:
+        display_name: 세기
+        other: "{0}세기"
+      short:
+        display_name: C
+        other: "{0}C"
+    year:
+      long:
+        per_unit_pattern: 연당 {0}
+      short:
+        display_name: 년
+        other: "{0}년"
+        per_unit_pattern: "{0}/년"
+    month:
+      long:
+        per_unit_pattern: 월당 {0}
+      short:
+        display_name: 개월
+        other: "{0}개월"
+        per_unit_pattern: "{0}/월"
+    week:
+      long:
+        per_unit_pattern: 주당 {0}
+      short:
+        display_name: 주
+        other: "{0}주"
+        per_unit_pattern: "{0}/주"
+    day:
+      long:
+        per_unit_pattern: 일당 {0}
+      short:
+        display_name: 일
+        other: "{0}일"
+        per_unit_pattern: "{0}/일"
+    hour:
+      long:
+        per_unit_pattern: 시간당 {0}
+      short:
+        display_name: 시간
+        other: "{0}시간"
+      narrow:
+        per_unit_pattern: "{0}/시간"
+    minute:
+      long:
+        per_unit_pattern: 분당 {0}
+      short:
+        display_name: 분
+        other: "{0}분"
+      narrow:
+        per_unit_pattern: "{0}/분"
+    second:
+      long:
+        per_unit_pattern: 초당 {0}
+      short:
+        display_name: 초
+        other: "{0}초"
+      narrow:
+        per_unit_pattern: "{0}/초"
+    millisecond:
+      long:
+        other: "{0}밀리초"
+      short:
+        display_name: 밀리초
+        other: "{0}ms"
+      narrow:
+        display_name: ms
+    microsecond:
+      long:
+        display_name: 마이크로초
+        other: "{0}마이크로초"
+      short:
+        other: "{0}μs"
+    nanosecond:
+      long:
+        display_name: 나노초
+        other: "{0}나노초"
+      short:
+        other: "{0}ns"
+    ampere:
+      long:
+        display_name: 암페어
+        other: "{0}암페어"
+      short:
+        other: "{0}A"
+    milliampere:
+      long:
+        display_name: 밀리암페어
+        other: "{0}밀리암페어"
+      short:
+        other: "{0}mA"
+    ohm:
+      long:
+        display_name: 옴
+        other: "{0}옴"
+      short:
+        other: "{0}Ω"
+    volt:
+      long:
+        display_name: 볼트
+        other: "{0}볼트"
+      short:
+        display_name: V
+        other: "{0}V"
+    kilocalorie:
+      long:
+        display_name: 킬로칼로리
+        other: "{0}킬로칼로리"
+      short:
+        other: "{0}kcal"
+    calorie:
+      long:
+        display_name: 칼로리
+        other: "{0}칼로리"
+      short:
+        other: "{0}cal"
+    foodcalorie:
+      long:
+        display_name: 칼로리
+        other: "{0}칼로리"
+      short:
+        display_name: Cal
+        other: "{0}Cal"
+    kilojoule:
+      long:
+        display_name: 킬로줄
+        other: "{0}킬로줄"
+      short:
+        other: "{0}kJ"
+    kilowatt-hour:
+      long:
+        display_name: 킬로와트시
+        other: "{0}킬로와트시"
+      short:
+        other: "{0}kWh"
+    electronvolt:
+      long:
+        display_name: 전자볼트
+        other: "{0}전자볼트"
+      short:
+        other: "{0}eV"
+    british-thermal-unit:
+      long:
+        display_name: 영국 열량 단위
+        other: "{0}영국 열량 단위"
+      short:
+        other: "{0}Btu"
+    pound-force:
+      long:
+        display_name: 파운드포스
+        other: "{0}파운드포스"
+      short:
+        other: "{0}lbf"
+    newton:
+      long:
+        display_name: 뉴턴
+        other: "{0}뉴턴"
+      short:
+        other: "{0}N"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: 100킬로미터당 킬로와트시
+        other: 100킬로미터당 {0}킬로와트시
+      short:
+        other: "{0}kWh/100km"
+    gigahertz:
+      long:
+        display_name: 기가헤르츠
+        other: "{0}기가헤르츠"
+      short:
+        other: "{0}GHz"
+    megahertz:
+      long:
+        display_name: 메가헤르츠
+        other: "{0}메가헤르츠"
+      short:
+        other: "{0}MHz"
+    kilohertz:
+      long:
+        display_name: 킬로헤르츠
+        other: "{0}킬로헤르츠"
+      short:
+        other: "{0}kHz"
+    hertz:
+      long:
+        display_name: 헤르츠
+        other: "{0}헤르츠"
+      short:
+        other: "{0}Hz"
+    dot-per-centimeter:
+      long:
+        display_name: 센티미터당 도트 수
+        other: 센티미터당 {0}도트
+      short:
+        display_name: dpcm
+        other: "{0}dpcm"
+    dot-per-inch:
+      long:
+        display_name: 인치당 도트 수
+        other: 인치당 {0}도트
+      short:
+        display_name: dpi
+        other: "{0}dpi"
+    earth-radius:
+      long:
+        display_name: 지구 반경
+        other: "{0}지구 반경"
+      short:
+        other: "{0}R⊕"
+    kilometer:
+      long:
+        display_name: 킬로미터
+        other: "{0}킬로미터"
+        per_unit_pattern: 킬로미터당 {0}
+      short:
+        other: "{0}km"
+    meter:
+      long:
+        display_name: 미터
+        other: "{0}미터"
+        per_unit_pattern: 미터당 {0}
+      short:
+        display_name: m
+        other: "{0}m"
+    decimeter:
+      long:
+        display_name: 데시미터
+        other: "{0}데시미터"
+      short:
+        other: "{0}dm"
+    centimeter:
+      long:
+        display_name: 센티미터
+        other: "{0}센티미터"
+        per_unit_pattern: 센티미터당 {0}
+      short:
+        other: "{0}cm"
+    millimeter:
+      long:
+        display_name: 밀리미터
+        other: "{0}밀리미터"
+      short:
+        other: "{0}mm"
+    micrometer:
+      long:
+        display_name: 마이크로미터
+        other: "{0}마이크로미터"
+      short:
+        other: "{0}μm"
+    nanometer:
+      long:
+        display_name: 나노미터
+        other: "{0}나노미터"
+      short:
+        other: "{0}nm"
+    picometer:
+      long:
+        display_name: 피코미터
+        other: "{0}피코미터"
+      short:
+        other: "{0}pm"
+    mile:
+      long:
+        display_name: 마일
+        other: "{0}마일"
+      short:
+        other: "{0}mi"
+    yard:
+      long:
+        display_name: 야드
+        other: "{0}야드"
+      short:
+        other: "{0}yd"
+    foot:
+      long:
+        display_name: 피트
+        other: "{0}피트"
+        per_unit_pattern: 피트당 {0}
+      short:
+        other: "{0}ft"
+      narrow:
+        other: "{0}′"
+    inch:
+      long:
+        display_name: 인치
+        other: "{0}인치"
+        per_unit_pattern: 인치당 {0}
+      short:
+        other: "{0}in"
+      narrow:
+        other: "{0}″"
+    parsec:
+      long:
+        display_name: 파섹
+        other: "{0}파섹"
+      short:
+        other: "{0}pc"
+    light-year:
+      long:
+        display_name: 광년
+        other: "{0}광년"
+      short:
+        other: "{0}ly"
+    astronomical-unit:
+      long:
+        display_name: 천문 단위
+        other: "{0}천문 단위"
+      short:
+        other: "{0}au"
+    furlong:
+      long:
+        display_name: 펄롱
+        other: "{0}펄롱"
+      short:
+        other: "{0}fur"
+    fathom:
+      long:
+        display_name: 패덤
+        other: "{0}패덤"
+      short:
+        other: "{0}fth"
+    nautical-mile:
+      long:
+        display_name: 해리
+        other: "{0}해리"
+      short:
+        other: "{0}nmi"
+    mile-scandinavian:
+      long:
+        display_name: 스칸디나비아 마일
+        other: "{0}스칸디나비아 마일"
+      short:
+        other: "{0}smi"
+    point:
+      long:
+        display_name: 포인트
+        other: "{0}포인트"
+      short:
+        other: "{0}pt"
+    solar-radius:
+      long:
+        display_name: 태양 반경
+        other: "{0}태양 반경"
+      short:
+        other: "{0}R☉"
+    lux:
+      long:
+        display_name: 룩스
+        other: "{0}룩스"
+      short:
+        other: "{0}lx"
+    candela:
+      long:
+        display_name: 칸델라
+        other: "{0}칸델라"
+      short:
+        other: "{0}cd"
+    lumen:
+      long:
+        display_name: 루멘
+        other: "{0}루멘"
+      short:
+        other: "{0}lm"
+    solar-luminosity:
+      long:
+        display_name: 태양 광도
+        other: "{0}태양 광도"
+      short:
+        other: "{0}L☉"
+    tonne:
+      long:
+        display_name: 메트릭 톤
+        other: "{0}메트릭 톤"
+      short:
+        other: "{0}t"
+    kilogram:
+      long:
+        display_name: 킬로그램
+        other: "{0}킬로그램"
+        per_unit_pattern: 킬로그램당 {0}
+      short:
+        other: "{0}kg"
+    gram:
+      long:
+        other: "{0}그램"
+        per_unit_pattern: 그램당 {0}
+      short:
+        display_name: 그램
+        other: "{0}g"
+      narrow:
+        display_name: g
+    milligram:
+      long:
+        display_name: 밀리그램
+        other: "{0}밀리그램"
+      short:
+        other: "{0}mg"
+    microgram:
+      long:
+        display_name: 마이크로그램
+        other: "{0}마이크로그램"
+      short:
+        other: "{0}μg"
+    ton:
+      long:
+        display_name: 톤
+        other: "{0}톤"
+      short:
+        other: "{0}tn"
+    stone:
+      long:
+        display_name: 스톤
+        other: "{0}스톤"
+      short:
+        other: "{0}st"
+    pound:
+      long:
+        display_name: 파운드
+        other: "{0}파운드"
+        per_unit_pattern: 파운드당 {0}
+      short:
+        other: "{0}lb"
+    ounce:
+      long:
+        display_name: 온스
+        other: "{0}온스"
+        per_unit_pattern: 온스당 {0}
+      short:
+        other: "{0}oz"
+    ounce-troy:
+      long:
+        display_name: 트로이 온스
+        other: "{0}트로이 온스"
+      short:
+        other: "{0}oz t"
+    carat:
+      long:
+        display_name: 캐럿
+        other: "{0}캐럿"
+      short:
+        other: "{0}CD"
+    dalton:
+      long:
+        display_name: 돌턴
+        other: "{0}돌턴"
+      short:
+        other: "{0}Da"
+    earth-mass:
+      long:
+        display_name: 지구 질량
+        other: "{0}지구 질량"
+      short:
+        other: "{0}M⊕"
+    solar-mass:
+      long:
+        display_name: 태양 질량
+        other: "{0}태양 질량"
+      short:
+        other: "{0}M☉"
+    grain:
+      long:
+        display_name: 그레인
+        other: "{0}그레인"
+      short:
+        other: "{0}grain"
+    gigawatt:
+      long:
+        display_name: 기가와트
+        other: "{0}기가와트"
+      short:
+        other: "{0}GW"
+    megawatt:
+      long:
+        display_name: 메가와트
+        other: "{0}메가와트"
+      short:
+        other: "{0}MW"
+    kilowatt:
+      long:
+        display_name: 킬로와트
+        other: "{0}킬로와트"
+      short:
+        other: "{0}kW"
+    watt:
+      long:
+        display_name: 와트
+        other: "{0}와트"
+      short:
+        display_name: w
+        other: "{0}W"
+    milliwatt:
+      long:
+        display_name: 밀리와트
+        other: "{0}밀리와트"
+      short:
+        other: "{0}mW"
+    horsepower:
+      long:
+        display_name: 마력
+        other: "{0}마력"
+      short:
+        other: "{0}hp"
+      narrow:
+        other: "{0}HP"
+    millimeter-ofhg:
+      long:
+        display_name: 수은주밀리미터
+        other: "{0}수은주밀리미터"
+      short:
+        display_name: mmHg
+        other: "{0}mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: 제곱인치당 파운드
+        other: "{0}제곱인치당 파운드"
+      short:
+        other: "{0}psi"
+    inch-ofhg:
+      long:
+        display_name: 수은주인치
+        other: "{0}수은주인치"
+      short:
+        other: "{0}inHg"
+    bar:
+      long:
+        display_name: 바
+        other: "{0}바"
+      short:
+        other: "{0}bar"
+    millibar:
+      long:
+        display_name: 밀리바
+        other: "{0}밀리바"
+      short:
+        other: "{0}mb"
+    pascal:
+      long:
+        display_name: 파스칼
+        other: "{0}파스칼"
+      short:
+        other: "{0}Pa"
+    hectopascal:
+      long:
+        display_name: 헥토파스칼
+        other: "{0}헥토파스칼"
+      short:
+        other: "{0}hPa"
+    kilopascal:
+      long:
+        display_name: 킬로파스칼
+        other: "{0}킬로파스칼"
+      short:
+        other: "{0}kPa"
+    megapascal:
+      long:
+        display_name: 메가파스칼
+        other: "{0}메가파스칼"
+      short:
+        other: "{0}MPa"
+    kilometer-per-hour:
+      long:
+        display_name: 시간당 킬로미터
+        other: 시속 {0}킬로미터
+      short:
+        other: "{0}km/h"
+    meter-per-second:
+      long:
+        display_name: 미터 매 초
+        other: 초속 {0}미터
+      short:
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        display_name: 시간당 마일
+        other: 시속 {0}마일
+      short:
+        other: "{0}mi/h"
+      narrow:
+        other: "{0}mph"
+    knot:
+      long:
+        display_name: 노트
+        other: "{0}노트"
+      short:
+        other: "{0}kn"
+    beaufort:
+      long:
+        display_name: 보퍼트
+        other: 보퍼트 계급 {0}
+      narrow:
+        other: B{0}
+    generic:
+      long:
+        display_name: 도
+        other: "{0}도"
+    celsius:
+      long:
+        display_name: 섭씨
+        other: 섭씨 {0}도
+    fahrenheit:
+      long:
+        display_name: 화씨
+        other: 화씨 {0}도
+    kelvin:
+      long:
+        display_name: 켈빈
+        other: "{0}켈빈"
+      short:
+        other: "{0}K"
+    newton-meter:
+      long:
+        display_name: 뉴턴미터
+        other: "{0}뉴턴미터"
+      short:
+        other: "{0}N⋅m"
+    cubic-kilometer:
+      long:
+        display_name: 세제곱킬로미터
+        other: "{0}세제곱킬로미터"
+      short:
+        other: "{0}km³"
+    cubic-meter:
+      long:
+        display_name: 세제곱미터
+        other: "{0}세제곱미터"
+        per_unit_pattern: 세제곱미터당 {0}
+      short:
+        other: "{0}m³"
+    cubic-centimeter:
+      long:
+        display_name: 세제곱센티미터
+        other: "{0}세제곱센티미터"
+        per_unit_pattern: 세제곱센티미터당 {0}
+      short:
+        other: "{0}cm³"
+    cubic-mile:
+      long:
+        display_name: 세제곱마일
+        other: "{0}세제곱마일"
+      short:
+        other: "{0}mi³"
+    cubic-yard:
+      long:
+        display_name: 세제곱야드
+        other: "{0}세제곱야드"
+      short:
+        other: "{0}yd³"
+    cubic-foot:
+      long:
+        display_name: 세제곱피트
+        other: "{0}세제곱피트"
+      short:
+        other: "{0}ft³"
+    cubic-inch:
+      long:
+        display_name: 세제곱인치
+        other: "{0}세제곱인치"
+      short:
+        other: "{0}in³"
+    megaliter:
+      long:
+        display_name: 메가리터
+        other: "{0}메가리터"
+      short:
+        other: "{0}ML"
+    hectoliter:
+      long:
+        display_name: 헥토리터
+        other: "{0}헥토리터"
+      short:
+        other: "{0}hL"
+    liter:
+      long:
+        other: "{0}리터"
+        per_unit_pattern: 리터당 {0}
+      short:
+        display_name: 리터
+        other: "{0}L"
+        per_unit_pattern: "{0}/L"
+    deciliter:
+      long:
+        display_name: 데시리터
+        other: "{0}데시리터"
+      short:
+        other: "{0}dL"
+    centiliter:
+      long:
+        display_name: 센티리터
+        other: "{0}센티리터"
+      short:
+        other: "{0}cL"
+    milliliter:
+      long:
+        display_name: 밀리리터
+        other: "{0}밀리리터"
+      short:
+        other: "{0}mL"
+    pint-metric:
+      long:
+        display_name: 미터식 파인트
+        other: "{0}미터식 파인트"
+      short:
+        other: "{0}mpt"
+    cup-metric:
+      long:
+        display_name: 미터식 컵
+        other: "{0}미터식 컵"
+      short:
+        other: "{0}mc"
+    acre-foot:
+      long:
+        display_name: 에이커 피트
+        other: "{0}에이커 피트"
+      short:
+        other: "{0}ac ft"
+    bushel:
+      long:
+        display_name: 부셸
+        other: "{0}부셸"
+      short:
+        other: "{0}bu"
+    gallon:
+      long:
+        display_name: 갤런
+        other: "{0}갤런"
+        per_unit_pattern: 갤런당 {0}
+      short:
+        display_name: gal
+        other: "{0}gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        display_name: 영국식 갤런
+        other: "{0}영국식 갤런"
+        per_unit_pattern: 영국식 갤런당 {0}
+      short:
+        other: "{0}gal Imp."
+    quart:
+      long:
+        display_name: 쿼트
+        other: "{0}쿼트"
+      short:
+        other: "{0}qt"
+    pint:
+      long:
+        display_name: 파인트
+        other: "{0}파인트"
+      short:
+        other: "{0}pt"
+    fluid-ounce:
+      long:
+        display_name: 액량 온스
+        other: "{0}액량 온스"
+      short:
+        display_name: fl oz
+        other: "{0}fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: 영국 액량 온스
+        other: "{0}영국 액량 온스"
+      short:
+        other: "{0}fl oz Imp."
+    tablespoon:
+      long:
+        display_name: 테이블스푼
+        other: "{0}테이블스푼"
+      short:
+        other: "{0}tbsp"
+    teaspoon:
+      long:
+        display_name: 티스푼
+        other: "{0}티스푼"
+      short:
+        other: "{0}tsp"
+    barrel:
+      long:
+        display_name: 배럴
+        other: "{0}배럴"
+      short:
+        other: "{0}bbl"
+    dessert-spoon:
+      long:
+        display_name: 디저트스푼
+        other: "{0}디저트스푼"
+      short:
+        other: "{0}dstspn"
+    dessert-spoon-imperial:
+      long:
+        display_name: 영국 디저트스푼
+        other: "{0}영국 디저트스푼"
+      short:
+        other: "{0}dstspn Imp"
+      narrow:
+        display_name: dsp Imp
+        other: "{0}dsp-Imp"
+    drop:
+      long:
+        display_name: 방울
+        other: "{0}방울"
+      short:
+        other: "{0}drop"
+    dram:
+      long:
+        display_name: 영국 액량 드램
+        other: "{0}영국 액량 드램"
+      short:
+        other: "{0}dram fl"
+    jigger:
+      long:
+        display_name: 지거
+        other: "{0}지거"
+      short:
+        other: "{0}jigger"
+    pinch:
+      long:
+        display_name: 꼬집
+        other: "{0}꼬집"
+      short:
+        other: "{0}pinch"
+    quart-imperial:
+      long:
+        display_name: 영국 쿼트
+        other: "{0}영국 쿼트"
+      short:
+        other: "{0}qt Imp."
+    portion-per-1e9:
+      long:
+        other: "{0}ppb"
+      short:
+        other: "{0}ppb"
+      narrow:
+        other: "{0}ppb"
+    night:
+      long:
+        display_name: 박
+        other: "{0}박"
+        per_unit_pattern: 1박당 {0}
+      short:
+        display_name: 박
+        other: "{0}박"
+        per_unit_pattern: "{0}/박"
+      narrow:
+        display_name: 박
+        other: "{0}박"
+        per_unit_pattern: "{0}/박"
+    dunam:
+      short:
+        display_name: 두남
+        other: "{0}두남"
+    item:
+      short:
+        display_name: 항목
+        other: "{0}개 항목"
+    permillion:
+      short:
+        other: "{0}ppm"
+    decade:
+      short:
+        other: "{0}dec"
+    quarter:
+      short:
+        display_name: 분기
+        other: "{0}분기"
+        per_unit_pattern: "{0}/분기"
+    joule:
+      short:
+        display_name: 줄
+        other: "{0}줄"
+    therm-us:
+      short:
+        display_name: 미국 섬
+        other: "{0}섬"
+    em:
+      short:
+        other: "{0}em"
+    pixel:
+      short:
+        other: "{0}px"
+    megapixel:
+      short:
+        other: "{0}MP"
+    pixel-per-centimeter:
+      short:
+        other: "{0}ppcm"
+    pixel-per-inch:
+      short:
+        other: "{0}ppi"
+    dot:
+      short:
+        display_name: 도트
+        other: "{0}도트"
+    atmosphere:
+      short:
+        other: "{0}atm"
+    pound-force-foot:
+      short:
+        other: "{0}lbf⋅ft"
+    cup:
+      short:
+        display_name: 컵
+        other: "{0}컵"

@@ -1,231 +1,113 @@
 ---
 locale: yrl_VE
-generated_at: '2025-09-13T17:41:46Z'
+generated_at: '2025-09-14T06:12:57Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
-  scientific_formats:
-    standard: "#E0"
+  compact_formats:
+    long:
+      '1000000':
+        one: 0 millón
+        other: 0 millón-ita
+      '10000000':
+        one: 00 millón
+        other: 00 millón-ita
+      '100000000':
+        one: 000 millón
+        other: 000 millón-ita
+      '1000000000':
+        one: 0 billón
+        other: 0 billón-ita
+      '10000000000':
+        one: 00 billón
+        other: 00 billón-ita
+      '100000000000':
+        one: 000 billón
+        other: 000 billón-ita
+      '1000000000000':
+        one: 0 tirillón
+        other: 0 tirillón-ita
+      '10000000000000':
+        one: 00 tirillón
+        other: 00 tirillón-ita
+      '100000000000000':
+        one: 000 tirillón
+        other: 000 tirillón-ita
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
-    ARS:
-      symbol: "$"
-    AUD:
-      symbol: A$
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
-    BZD:
-      symbol: "$"
-    CAD:
-      symbol: CA$
-    CLP:
-      symbol: "$"
-    CNY:
-      symbol: CN¥
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
-    EGP:
-      symbol: E£
-    ESP:
-      symbol: "₧"
-    EUR:
-      symbol: "€"
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
-    GBP:
-      symbol: "£"
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
-    HKD:
-      symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
-    INR:
-      symbol: "₹"
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
-    JPY:
-      symbol: JP¥
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
-    KMF:
-      symbol: CF
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
-    LRD:
-      symbol: "$"
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
-    MXN:
-      symbol: MX$
-    MYR:
-      symbol: RM
-    NAD:
-      symbol: "$"
-    NGN:
-      symbol: "₦"
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
-    NZD:
-      symbol: NZ$
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
-    RWF:
-      symbol: RF
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
-    SHP:
-      symbol: "£"
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
-    TRY:
-      symbol: "₺"
-    TTD:
-      symbol: "$"
-    TWD:
-      symbol: NT$
-    UAH:
-      symbol: "₴"
-    USD:
-      symbol: US$
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
-    XAF:
-      symbol: FCFA
-    XCD:
-      symbol: EC$
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: F CFA
-    XPF:
-      symbol: CFPF
-    XXX:
-      symbol: "¤"
-    ZAR:
-      symbol: R
-    ZMW:
-      symbol: ZK
     AOR:
       display_names:
         other: Kuãsa-ita ãgulawara yumuñãwa-itayuiri (AOR)
         one: Kuãsa ãgulawara yumuñãwa yuiri (AOR)
+  units:
+    square-mile:
+      long:
+        display_name: milla kuadaradu-ita
+        one: "{0} milla kuadaradu"
+        other: "{0} milla kuadaradu-ita"
+        per_unit_pattern: "{0} milla kuadaradu rupi"
+      category: area
+      short:
+        display_name: milla-itá²
+    permillion:
+      long:
+        display_name: pisawera-ita millón rupi
+        one: "{0} pisawera millón rupi"
+        other: "{0} pisawera-ita millón rupi"
+      category: concentr
+      short:
+        display_name: pisawera millón rupi
+    mile-per-gallon:
+      long:
+        display_name: milla-ita karóti rupi
+        one: "{0} milla karóti rupi"
+        other: "{0} milla-ita karóti rupi"
+      category: consumption
+      short:
+        display_name: milla-itá/gal
+    mile-per-gallon-imperial:
+      long:
+        display_name: milla-ita karóti ĩperiawa rupi
+        one: "{0} milla karóti ĩperiawa rupi"
+        other: "{0} milla-ita karóti ĩperiawa rupi"
+      category: consumption
+      short:
+        display_name: millas/gal. imp.
+    mile:
+      long:
+        display_name: milla-ita
+        one: "{0} milla"
+        other: "{0} milla-ita"
+      category: length
+      short:
+        display_name: milla
+      narrow:
+        one: "{0} milla"
+        other: "{0} milla"
+    nautical-mile:
+      long:
+        display_name: milla paranãuara-ita
+        one: "{0} milla paranãuara"
+        other: "{0} milla paranãuara-ita"
+      category: length
+    mile-scandinavian:
+      long:
+        display_name: milla esikãdinaua-ita
+        one: "{0} milla esikãdinaua"
+        other: "{0} milla esikãdinaua-ita"
+      category: length
+    mile-per-hour:
+      long:
+        display_name: milla-ita hura rupi
+        one: "{0} milla hura rupi"
+        other: "{0} milla-ita hura rupi"
+      category: speed
+      short:
+        display_name: milla-itá/hura
+    cubic-mile:
+      long:
+        display_name: milla kúbika-ita
+        one: "{0} milla kúbika"
+        other: "{0} milla kúbika-ita"
+      category: volume
 currency_fractions:
   ADP:
     digits: 0

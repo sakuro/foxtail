@@ -1,40 +1,169 @@
 ---
 locale: fa
-generated_at: '2025-09-13T17:36:48Z'
+generated_at: '2025-09-14T06:09:41Z'
 cldr_version: '46'
 number_formats:
   symbols:
     minus_sign: "‎−"
     plus_sign: "‎+"
     nan: ناعدد
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "‎¤ #,##0.00"
     accounting: "‎¤ #,##0.00;‎(¤ #,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 هزار
+        other: 0 هزار
+      '10000':
+        one: 00 هزار
+        other: 00 هزار
+      '100000':
+        one: 000 هزار
+        other: 000 هزار
+      '1000000':
+        one: 0 میلیون
+        other: 0 میلیون
+      '10000000':
+        one: 00 میلیون
+        other: 00 میلیون
+      '100000000':
+        one: 000 میلیون
+        other: 000 میلیون
+      '1000000000':
+        one: 0 میلیارد
+        other: 0 میلیارد
+      '10000000000':
+        one: 00 میلیارد
+        other: 00 میلیارد
+      '100000000000':
+        one: 000 میلیارد
+        other: 000 میلیارد
+      '1000000000000':
+        one: 0 تریلیون
+        other: 0 تریلیون
+      '10000000000000':
+        one: 00 تریلیون
+        other: 00 تریلیون
+      '100000000000000':
+        one: 000 تریلیون
+        other: 000 تریلیون
+    long:
+      '1000':
+        one: 0 هزار
+        other: 0 هزار
+      '10000':
+        one: 00 هزار
+        other: 00 هزار
+      '100000':
+        one: 000 هزار
+        other: 000 هزار
+      '1000000':
+        one: 0 میلیون
+        other: 0 میلیون
+      '10000000':
+        one: 00 میلیون
+        other: 00 میلیون
+      '100000000':
+        one: 000 میلیون
+        other: 000 میلیون
+      '1000000000':
+        one: 0 میلیارد
+        other: 0 میلیارد
+      '10000000000':
+        one: 00 میلیارد
+        other: 00 میلیارد
+      '100000000000':
+        one: 000 میلیارد
+        other: 000 میلیارد
+      '1000000000000':
+        one: 0 هزارمیلیارد
+        other: 0 هزارمیلیارد
+      '10000000000000':
+        one: 00 هزارمیلیارد
+        other: 00 هزارمیلیارد
+      '100000000000000':
+        one: 000 هزارمیلیارد
+        other: 000 هزارمیلیارد
   currencies:
+    ADP:
+      display_names:
+        other: پزتای آندورا
+        one: پزتای آندورا
+    AED:
+      display_names:
+        other: درهم امارات متحدهٔ عربی
+        one: درهم امارات متحدهٔ عربی
+    AFA:
+      display_names:
+        other: افغانی افغانستان (۱۹۲۷ تا ۲۰۰۲)
+        one: افغانی افغانستان (۱۹۲۷ تا ۲۰۰۲)
     AFN:
       display_names:
         other: افغانی افغانستان
         one: افغانی افغانستان
+    ALK:
+      display_names:
+        other: لک آلبانی (۱۹۴۶ تا ۱۹۶۵)
+        one: لک آلبانی (۱۹۴۶ تا ۱۹۶۵)
+    ALL:
+      display_names:
+        other: لک آلبانی
+        one: لک آلبانی
     AMD:
       display_names:
         other: درام ارمنستان
         one: درام ارمنستان
+    ANG:
+      display_names:
+        other: گیلدر آنتیل هلند
+        one: گیلدر آنتیل هلند
     AOA:
       display_names:
         other: کوانزای آنگولا
         one: کوانزای آنگولا
+    ARM:
+      display_names:
+        other: پزوی آرژانتین (۱۸۸۱ تا ۱۹۷۰)
+        one: پزوی آرژانتین (۱۸۸۱ تا ۱۹۷۰)
+    ARP:
+      display_names:
+        other: پزوی آرژانتین (۱۹۸۳ تا ۱۹۸۵)
+        one: پزوی آرژانتین (۱۹۸۳ تا ۱۹۸۵)
     ARS:
       display_names:
         other: پزوی آرژانتین
         one: پزوی آرژانتین
+    ATS:
+      display_names:
+        other: شیلینگ اتریش
+        one: شیلینگ اتریش
     AUD:
       display_names:
         other: دلار استرالیا
         one: دلار استرالیا
+    AWG:
+      display_names:
+        other: فلورین آروبا
+        one: فلورین آروبا
+    AZM:
+      display_names:
+        other: منات جمهوری آذربایجان (۱۹۹۳ تا ۲۰۰۶)
+        one: منات جمهوری آذربایجان (۱۹۹۳ تا ۲۰۰۶)
     AZN:
       display_names:
         other: منات جمهوری آذربایجان
         one: منات جمهوری آذربایجان
+    BAD:
+      display_names:
+        other: دینار بوسنی و هرزگوین (۱۹۹۲ تا ۱۹۹۴)
+        one: دینار بوسنی و هرزگوین (۱۹۹۲ تا ۱۹۹۴)
     BAM:
       display_names:
         other: مارک تبدیل‌پذیر بوسنی و هرزگوین
@@ -47,6 +176,26 @@ number_formats:
       display_names:
         other: تاکای بنگلادش
         one: تاکای بنگلادش
+    BEF:
+      display_names:
+        other: فرانک بلژیک
+        one: فرانک بلژیک
+    BEL:
+      display_names:
+        other: فرانک بلژیک (مالی)
+        one: فرانک بلژیک (مالی)
+    BGN:
+      display_names:
+        other: لو بلغارستان
+        one: لو بلغارستان
+    BHD:
+      display_names:
+        other: دینار بحرین
+        one: دینار بحرین
+    BIF:
+      display_names:
+        other: فرانک بوروندی
+        one: فرانک بوروندی
     BMD:
       display_names:
         other: دلار برمودا
@@ -59,6 +208,10 @@ number_formats:
       display_names:
         other: بولیویانوی بولیوی
         one: بولیویانوی بولیوی
+    BOP:
+      display_names:
+        other: پزوی بولیوی
+        one: پزوی بولیوی
     BRL:
       display_names:
         other: رئال برزیل
@@ -67,10 +220,27 @@ number_formats:
       display_names:
         other: دلار باهاما
         one: دلار باهاما
+    BTN:
+      display_names:
+        other: انگولتروم بوتان
+        one: انگولتروم بوتان
     BWP:
       display_names:
         other: پولای بوتسوانا
         one: پولای بوتسوانا
+    BYB:
+      display_names:
+        other: روبل جدید بلاروس (۱۹۹۴ تا ۱۹۹۹)
+        one: روبل جدید بلاروس (۱۹۹۴ تا ۱۹۹۹)
+    BYN:
+      symbol: Br
+      display_names:
+        other: روبل بلاروس
+        one: روبل بلاروس
+    BYR:
+      display_names:
+        other: روبل بلاروسی (۲۰۱۶–۲۰۰۰)
+        one: روبل بلاروسی (۲۰۱۶–۲۰۰۰)
     BZD:
       display_names:
         other: دلار بلیز
@@ -80,10 +250,22 @@ number_formats:
       display_names:
         other: دلار کانادا
         one: دلار کانادا
+    CDF:
+      display_names:
+        other: فرانک کنگو
+        one: فرانک کنگو
+    CHF:
+      display_names:
+        other: فرانک سوئیس
+        one: فرانک سوئیس
     CLP:
       display_names:
         other: پزوی شیلی
         one: پزوی شیلی
+    CNH:
+      display_names:
+        other: یوآن چین (برون‌مرزی)
+        one: یوآن چین (برون‌مرزی)
     CNY:
       symbol: "¥CN"
       display_names:
@@ -97,6 +279,10 @@ number_formats:
       display_names:
         other: کولون کاستاریکا
         one: کولون کاستاریکا
+    CSD:
+      display_names:
+        other: دینار صربستان (۲۰۰۲ تا ۲۰۰۶)
+        one: دینار صربستان (۲۰۰۲ تا ۲۰۰۶)
     CUC:
       display_names:
         other: پزوی تبدیل‌پذیر کوبا
@@ -105,10 +291,30 @@ number_formats:
       display_names:
         other: پزوی کوبا
         one: پزوی کوبا
+    CVE:
+      display_names:
+        other: اسکودوی کیپ‌ورد
+        one: اسکودوی کیپ‌ورد
+    CYP:
+      display_names:
+        other: پوند قبرس
+        one: پوند قبرس
     CZK:
       display_names:
         other: کورونای جمهوری چک
         one: کورونای جمهوری چک
+    DDM:
+      display_names:
+        other: مارک آلمان شرقی
+        one: مارک آلمان شرقی
+    DEM:
+      display_names:
+        other: مارک آلمان
+        one: مارک آلمان
+    DJF:
+      display_names:
+        other: فرانک جیبوتی
+        one: فرانک جیبوتی
     DKK:
       display_names:
         other: کرون دانمارک
@@ -117,14 +323,30 @@ number_formats:
       display_names:
         other: پزوی جمهوری دومینیکن
         one: پزوی جمهوری دومینیکن
+    DZD:
+      display_names:
+        other: دینار الجزایر
+        one: دینار الجزایر
+    EEK:
+      display_names:
+        other: کرون استونی
+        one: کرون استونی
     EGP:
       display_names:
         other: پوند مصر
         one: پوند مصر
+    ERN:
+      display_names:
+        other: ناکفای اریتره
+        one: ناکفای اریتره
     ESP:
       display_names:
         other: پزتای اسپانیا
         one: پزتای اسپانیا
+    ETB:
+      display_names:
+        other: بیر اتیوپی
+        one: بیر اتیوپی
     EUR:
       display_names:
         other: یورو
@@ -137,6 +359,10 @@ number_formats:
       display_names:
         other: پوند جزایر فالکلند
         one: پوند جزایر فالکلند
+    FRF:
+      display_names:
+        other: فرانک فرانسه
+        one: فرانک فرانسه
     GBP:
       display_names:
         other: پوند بریتانیا
@@ -153,14 +379,26 @@ number_formats:
       display_names:
         other: پوند جبل‌الطارق
         one: پوند جبل‌الطارق
+    GMD:
+      display_names:
+        other: دالاسی گامبیا
+        one: دالاسی گامبیا
     GNF:
       display_names:
         other: فرانک گینه
         one: فرانک گینه
+    GRD:
+      display_names:
+        other: دراخمای یونان
+        one: دراخمای یونان
     GTQ:
       display_names:
         other: کتزال گواتمالا
         one: کتزال گواتمالا
+    GWP:
+      display_names:
+        other: پزوی گینهٔ بیسائو
+        one: پزوی گینهٔ بیسائو
     GYD:
       display_names:
         other: دلار گویانا
@@ -174,10 +412,18 @@ number_formats:
       display_names:
         other: لمپیرای هندوراس
         one: لمپیرای هندوراس
+    HRD:
+      display_names:
+        other: دینار کرواسی
+        one: دینار کرواسی
     HRK:
       display_names:
         other: کونای کرواسی
         one: کونای کرواسی
+    HTG:
+      display_names:
+        other: گورد هائیتی
+        one: گورد هائیتی
     HUF:
       display_names:
         other: فورینت مجارستان
@@ -186,6 +432,18 @@ number_formats:
       display_names:
         other: روپیهٔ اندونزی
         one: روپیهٔ اندونزی
+    IEP:
+      display_names:
+        other: پوند ایرلند
+        one: پوند ایرلند
+    ILP:
+      display_names:
+        other: پوند اسرائیل
+        one: پوند اسرائیل
+    ILR:
+      display_names:
+        other: شقل اسرائیل (۱۹۸۰ تا ۱۹۸۵)
+        one: شقل اسرائیل (۱۹۸۰ تا ۱۹۸۵)
     ILS:
       display_names:
         other: شِکِل جدید اسرائیل
@@ -194,19 +452,44 @@ number_formats:
       display_names:
         other: روپیهٔ هند
         one: روپیهٔ هند
+    IQD:
+      display_names:
+        other: دینار عراق
+        one: دینار عراق
+    IRR:
+      symbol: ریال
+      display_names:
+        other: ریال ایران
+        one: ریال ایران
+    ISJ:
+      display_names:
+        other: کرونای ایسلند (۱۹۱۸ تا ۱۹۸۱)
+        one: کرونای ایسلند (۱۹۱۸ تا ۱۹۸۱)
     ISK:
       display_names:
         other: کرونای ایسلند
         one: کرونای ایسلند
+    ITL:
+      display_names:
+        other: لیرهٔ ایتالیا
+        one: لیرهٔ ایتالیا
     JMD:
       display_names:
         other: دلار جامائیکا
         one: دلار جامائیکا
+    JOD:
+      display_names:
+        other: دینار اردن
+        one: دینار اردن
     JPY:
       symbol: "¥"
       display_names:
         other: ین ژاپن
         one: ین ژاپن
+    KES:
+      display_names:
+        other: شیلینگ کنیا
+        one: شیلینگ کنیا
     KGS:
       display_names:
         other: سوم قرقیزستان
@@ -223,10 +506,18 @@ number_formats:
       display_names:
         other: وون کرهٔ شمالی
         one: وون کرهٔ شمالی
+    KRO:
+      display_names:
+        other: وون کرهٔ جنوبی (۱۹۴۵ تا ۱۹۵۳)
+        one: وون کرهٔ جنوبی (۱۹۴۵ تا ۱۹۵۳)
     KRW:
       display_names:
         other: وون کرهٔ جنوبی
         one: وون کرهٔ جنوبی
+    KWD:
+      display_names:
+        other: دینار کویت
+        one: دینار کویت
     KYD:
       display_names:
         other: دلار جزایر کِیمن
@@ -251,410 +542,14 @@ number_formats:
       display_names:
         other: دلار لیبریا
         one: دلار لیبریا
-    LTL:
-      display_names:
-        other: لیتاس لیتوانی
-        one: لیتاس لیتوانی
-    LVL:
-      display_names:
-        other: لاتس لتونی
-        one: لاتس لتونی
-    MGA:
-      display_names:
-        other: آریاری مالاگاسی
-        one: آریاری مالاگاسی
-    MMK:
-      display_names:
-        other: کیات میانمار
-        one: کیات میانمار
-    MNT:
-      display_names:
-        other: توگریک مغولستان
-        one: توگریک مغولستان
-    MUR:
-      display_names:
-        other: روپیهٔ موریس
-        one: روپیهٔ موریس
-    MXN:
-      symbol: "$MX"
-      display_names:
-        other: پزوی مکزیک
-        one: پزوی مکزیک
-    MYR:
-      display_names:
-        other: رینگیت مالزی
-        one: رینگیت مالزی
-    NAD:
-      display_names:
-        other: دلار نامیبیا
-        one: دلار نامیبیا
-    NGN:
-      display_names:
-        other: نایرای نیجریه
-        one: نایرای نیجریه
-    NIO:
-      display_names:
-        other: کوردوبای نیکاراگوئه
-        one: کوردوبای نیکاراگوئه
-    NOK:
-      display_names:
-        other: کرون نروژ
-        one: کرون نروژ
-    NPR:
-      display_names:
-        other: روپیهٔ نپال
-        one: روپیهٔ نپال
-    NZD:
-      symbol: "$NZ"
-      display_names:
-        other: دلار زلاند نو
-        one: دلار زلاند نو
-    PHP:
-      symbol: PHP
-      display_names:
-        other: پزوی فیلیپین
-        one: پزوی فیلیپین
-    PKR:
-      display_names:
-        other: روپیهٔ پاکستان
-        one: روپیهٔ پاکستان
-    PLN:
-      display_names:
-        other: زلوتی لهستان
-        one: زلوتی لهستان
-    PYG:
-      display_names:
-        other: گوارانی پاراگوئه
-        one: گوارانی پاراگوئه
-    RON:
-      display_names:
-        other: لئوی رومانی
-        one: لئوی رومانی
-    RUB:
-      display_names:
-        other: روبل روسیه
-        one: روبل روسیه
-    RWF:
-      display_names:
-        other: فرانک رواندا
-        one: فرانک رواندا
-    SBD:
-      display_names:
-        other: دلار جزایر سلیمان
-        one: دلار جزایر سلیمان
-    SEK:
-      display_names:
-        other: کرون سوئد
-        one: کرون سوئد
-    SGD:
-      display_names:
-        other: دلار سنگاپور
-        one: دلار سنگاپور
-    SHP:
-      display_names:
-        other: پوند سنت هلن
-        one: پوند سنت هلن
-    SRD:
-      display_names:
-        other: دلار سورینام
-        one: دلار سورینام
-    SSP:
-      display_names:
-        other: پوند سودان جنوبی
-        one: پوند سودان جنوبی
-    STN:
-      display_names:
-        other: دوبرای سائوتومه و پرنسیپ
-        one: دوبرای سائوتومه و پرنسیپ
-    SYP:
-      display_names:
-        other: لیرهٔ سوریه
-        one: لیرهٔ سوریه
-    THB:
-      display_names:
-        other: بات تایلند
-        one: بات تایلند
-    TOP:
-      display_names:
-        other: پاآنگای تونگا
-        one: پاآنگای تونگا
-    TRY:
-      display_names:
-        other: لیرهٔ ترکیه
-        one: لیرهٔ ترکیه
-    TTD:
-      display_names:
-        other: دلار ترینیداد و توباگو
-        one: دلار ترینیداد و توباگو
-    TWD:
-      display_names:
-        other: دلار جدید تایوان
-        one: دلار جدید تایوان
-    UAH:
-      display_names:
-        other: هریونیای اوکراین
-        one: هریونیای اوکراین
-    USD:
-      symbol: "$"
-      display_names:
-        other: دلار آمریکا
-        one: دلار آمریکا
-    UYU:
-      display_names:
-        other: پزوی اوروگوئه
-        one: پزوی اوروگوئه
-    VEF:
-      display_names:
-        other: بولیوار ونزوئلا (۲۰۰۸ تا ۲۰۱۸)
-        one: بولیوار ونزوئلا (۲۰۰۸ تا ۲۰۱۸)
-    VND:
-      display_names:
-        other: دانگ ویتنام
-        one: دانگ ویتنام
-    XAF:
-      display_names:
-        other: فرانک CFA مرکز افریقا
-        one: فرانک CFA مرکز افریقا
-    XCD:
-      symbol: "$EC"
-      display_names:
-        other: دلار شرق کارائیب
-        one: دلار شرق کارائیب
-    XOF:
-      symbol: فرانک CFA
-      display_names:
-        other: فرانک CFA غرب افریقا
-        one: فرانک CFA غرب افریقا
-    XPF:
-      display_names:
-        other: فرانک اقیانوسیه
-        one: فرانک اقیانوسیه
-    XXX:
-      display_names:
-        other: "(ارز نامشخص)"
-        one: "(ارز نامشخص)"
-    ZAR:
-      display_names:
-        other: راند افریقای جنوبی
-        one: راند افریقای جنوبی
-    ZMW:
-      display_names:
-        other: کواچای زامبیا
-        one: کواچای زامبیا
-    ADP:
-      display_names:
-        other: پزتای آندورا
-        one: پزتای آندورا
-    AED:
-      display_names:
-        other: درهم امارات متحدهٔ عربی
-        one: درهم امارات متحدهٔ عربی
-    AFA:
-      display_names:
-        other: افغانی افغانستان (۱۹۲۷ تا ۲۰۰۲)
-        one: افغانی افغانستان (۱۹۲۷ تا ۲۰۰۲)
-    ALK:
-      display_names:
-        other: لک آلبانی (۱۹۴۶ تا ۱۹۶۵)
-        one: لک آلبانی (۱۹۴۶ تا ۱۹۶۵)
-    ALL:
-      display_names:
-        other: لک آلبانی
-        one: لک آلبانی
-    ANG:
-      display_names:
-        other: گیلدر آنتیل هلند
-        one: گیلدر آنتیل هلند
-    ARM:
-      display_names:
-        other: پزوی آرژانتین (۱۸۸۱ تا ۱۹۷۰)
-        one: پزوی آرژانتین (۱۸۸۱ تا ۱۹۷۰)
-    ARP:
-      display_names:
-        other: پزوی آرژانتین (۱۹۸۳ تا ۱۹۸۵)
-        one: پزوی آرژانتین (۱۹۸۳ تا ۱۹۸۵)
-    ATS:
-      display_names:
-        other: شیلینگ اتریش
-        one: شیلینگ اتریش
-    AWG:
-      display_names:
-        other: فلورین آروبا
-        one: فلورین آروبا
-    AZM:
-      display_names:
-        other: منات جمهوری آذربایجان (۱۹۹۳ تا ۲۰۰۶)
-        one: منات جمهوری آذربایجان (۱۹۹۳ تا ۲۰۰۶)
-    BAD:
-      display_names:
-        other: دینار بوسنی و هرزگوین (۱۹۹۲ تا ۱۹۹۴)
-        one: دینار بوسنی و هرزگوین (۱۹۹۲ تا ۱۹۹۴)
-    BEF:
-      display_names:
-        other: فرانک بلژیک
-        one: فرانک بلژیک
-    BEL:
-      display_names:
-        other: فرانک بلژیک (مالی)
-        one: فرانک بلژیک (مالی)
-    BGN:
-      display_names:
-        other: لو بلغارستان
-        one: لو بلغارستان
-    BHD:
-      display_names:
-        other: دینار بحرین
-        one: دینار بحرین
-    BIF:
-      display_names:
-        other: فرانک بوروندی
-        one: فرانک بوروندی
-    BOP:
-      display_names:
-        other: پزوی بولیوی
-        one: پزوی بولیوی
-    BTN:
-      display_names:
-        other: انگولتروم بوتان
-        one: انگولتروم بوتان
-    BYB:
-      display_names:
-        other: روبل جدید بلاروس (۱۹۹۴ تا ۱۹۹۹)
-        one: روبل جدید بلاروس (۱۹۹۴ تا ۱۹۹۹)
-    BYN:
-      symbol: Br
-      display_names:
-        other: روبل بلاروس
-        one: روبل بلاروس
-    BYR:
-      display_names:
-        other: روبل بلاروسی (۲۰۱۶–۲۰۰۰)
-        one: روبل بلاروسی (۲۰۱۶–۲۰۰۰)
-    CDF:
-      display_names:
-        other: فرانک کنگو
-        one: فرانک کنگو
-    CHF:
-      display_names:
-        other: فرانک سوئیس
-        one: فرانک سوئیس
-    CNH:
-      display_names:
-        other: یوآن چین (برون‌مرزی)
-        one: یوآن چین (برون‌مرزی)
-    CSD:
-      display_names:
-        other: دینار صربستان (۲۰۰۲ تا ۲۰۰۶)
-        one: دینار صربستان (۲۰۰۲ تا ۲۰۰۶)
-    CVE:
-      display_names:
-        other: اسکودوی کیپ‌ورد
-        one: اسکودوی کیپ‌ورد
-    CYP:
-      display_names:
-        other: پوند قبرس
-        one: پوند قبرس
-    DDM:
-      display_names:
-        other: مارک آلمان شرقی
-        one: مارک آلمان شرقی
-    DEM:
-      display_names:
-        other: مارک آلمان
-        one: مارک آلمان
-    DJF:
-      display_names:
-        other: فرانک جیبوتی
-        one: فرانک جیبوتی
-    DZD:
-      display_names:
-        other: دینار الجزایر
-        one: دینار الجزایر
-    EEK:
-      display_names:
-        other: کرون استونی
-        one: کرون استونی
-    ERN:
-      display_names:
-        other: ناکفای اریتره
-        one: ناکفای اریتره
-    ETB:
-      display_names:
-        other: بیر اتیوپی
-        one: بیر اتیوپی
-    FRF:
-      display_names:
-        other: فرانک فرانسه
-        one: فرانک فرانسه
-    GMD:
-      display_names:
-        other: دالاسی گامبیا
-        one: دالاسی گامبیا
-    GRD:
-      display_names:
-        other: دراخمای یونان
-        one: دراخمای یونان
-    GWP:
-      display_names:
-        other: پزوی گینهٔ بیسائو
-        one: پزوی گینهٔ بیسائو
-    HRD:
-      display_names:
-        other: دینار کرواسی
-        one: دینار کرواسی
-    HTG:
-      display_names:
-        other: گورد هائیتی
-        one: گورد هائیتی
-    IEP:
-      display_names:
-        other: پوند ایرلند
-        one: پوند ایرلند
-    ILP:
-      display_names:
-        other: پوند اسرائیل
-        one: پوند اسرائیل
-    ILR:
-      display_names:
-        other: شقل اسرائیل (۱۹۸۰ تا ۱۹۸۵)
-        one: شقل اسرائیل (۱۹۸۰ تا ۱۹۸۵)
-    IQD:
-      display_names:
-        other: دینار عراق
-        one: دینار عراق
-    IRR:
-      symbol: ریال
-      display_names:
-        other: ریال ایران
-        one: ریال ایران
-    ISJ:
-      display_names:
-        other: کرونای ایسلند (۱۹۱۸ تا ۱۹۸۱)
-        one: کرونای ایسلند (۱۹۱۸ تا ۱۹۸۱)
-    ITL:
-      display_names:
-        other: لیرهٔ ایتالیا
-        one: لیرهٔ ایتالیا
-    JOD:
-      display_names:
-        other: دینار اردن
-        one: دینار اردن
-    KES:
-      display_names:
-        other: شیلینگ کنیا
-        one: شیلینگ کنیا
-    KRO:
-      display_names:
-        other: وون کرهٔ جنوبی (۱۹۴۵ تا ۱۹۵۳)
-        one: وون کرهٔ جنوبی (۱۹۴۵ تا ۱۹۵۳)
-    KWD:
-      display_names:
-        other: دینار کویت
-        one: دینار کویت
     LSL:
       display_names:
         other: لوتی لسوتو
         one: لوتی لسوتو
+    LTL:
+      display_names:
+        other: لیتاس لیتوانی
+        one: لیتاس لیتوانی
     LTT:
       display_names:
         other: تالوناس لیتوانی
@@ -667,6 +562,10 @@ number_formats:
       display_names:
         other: فرانک مالی لوگزامبورگ
         one: فرانک مالی لوگزامبورگ
+    LVL:
+      display_names:
+        other: لاتس لتونی
+        one: لاتس لتونی
     LVR:
       display_names:
         other: روبل لتونی
@@ -691,6 +590,10 @@ number_formats:
       display_names:
         other: لئوی مولداوی
         one: لئوی مولداوی
+    MGA:
+      display_names:
+        other: آریاری مالاگاسی
+        one: آریاری مالاگاسی
     MGF:
       display_names:
         other: فرانک ماداگاسکار
@@ -707,6 +610,14 @@ number_formats:
       display_names:
         other: فرانک مالی
         one: فرانک مالی
+    MMK:
+      display_names:
+        other: کیات میانمار
+        one: کیات میانمار
+    MNT:
+      display_names:
+        other: توگریک مغولستان
+        one: توگریک مغولستان
     MOP:
       display_names:
         other: پاتاکای ماکائو
@@ -727,6 +638,10 @@ number_formats:
       display_names:
         other: پوند مالت
         one: پوند مالت
+    MUR:
+      display_names:
+        other: روپیهٔ موریس
+        one: روپیهٔ موریس
     MVP:
       display_names:
         other: روپیهٔ مالدیو (۱۹۴۷ تا ۱۹۸۱)
@@ -739,10 +654,19 @@ number_formats:
       display_names:
         other: کواچای مالاوی
         one: کواچای مالاوی
+    MXN:
+      symbol: "$MX"
+      display_names:
+        other: پزوی مکزیک
+        one: پزوی مکزیک
     MXP:
       display_names:
         other: پزوی نقرهٔ مکزیک (۱۸۶۱ تا ۱۹۹۲)
         one: پزوی نقرهٔ مکزیک (۱۸۶۱ تا ۱۹۹۲)
+    MYR:
+      display_names:
+        other: رینگیت مالزی
+        one: رینگیت مالزی
     MZE:
       display_names:
         other: اسکودوی موزامبیک
@@ -751,10 +675,35 @@ number_formats:
       display_names:
         other: متیکال موزامبیک
         one: متیکال موزامبیک
+    NAD:
+      display_names:
+        other: دلار نامیبیا
+        one: دلار نامیبیا
+    NGN:
+      display_names:
+        other: نایرای نیجریه
+        one: نایرای نیجریه
+    NIO:
+      display_names:
+        other: کوردوبای نیکاراگوئه
+        one: کوردوبای نیکاراگوئه
     NLG:
       display_names:
         other: گیلدر هلند
         one: گیلدر هلند
+    NOK:
+      display_names:
+        other: کرون نروژ
+        one: کرون نروژ
+    NPR:
+      display_names:
+        other: روپیهٔ نپال
+        one: روپیهٔ نپال
+    NZD:
+      symbol: "$NZ"
+      display_names:
+        other: دلار زلاند نو
+        one: دلار زلاند نو
     OMR:
       display_names:
         other: ریال عمان
@@ -779,10 +728,27 @@ number_formats:
       display_names:
         other: کینای پاپوا گینهٔ نو
         one: کینای پاپوا گینهٔ نو
+    PHP:
+      symbol: PHP
+      display_names:
+        other: پزوی فیلیپین
+        one: پزوی فیلیپین
+    PKR:
+      display_names:
+        other: روپیهٔ پاکستان
+        one: روپیهٔ پاکستان
+    PLN:
+      display_names:
+        other: زلوتی لهستان
+        one: زلوتی لهستان
     PTE:
       display_names:
         other: اسکودوی پرتغال
         one: اسکودوی پرتغال
+    PYG:
+      display_names:
+        other: گوارانی پاراگوئه
+        one: گوارانی پاراگوئه
     QAR:
       display_names:
         other: ریال قطر
@@ -791,18 +757,34 @@ number_formats:
       display_names:
         other: دلار رودزیا
         one: دلار رودزیا
+    RON:
+      display_names:
+        other: لئوی رومانی
+        one: لئوی رومانی
     RSD:
       display_names:
         other: دینار صربستان
         one: دینار صربستان
+    RUB:
+      display_names:
+        other: روبل روسیه
+        one: روبل روسیه
     RUR:
       display_names:
         other: روبل روسیه (۱۹۹۱ تا ۱۹۹۸)
         one: روبل روسیه (۱۹۹۱ تا ۱۹۹۸)
+    RWF:
+      display_names:
+        other: فرانک رواندا
+        one: فرانک رواندا
     SAR:
       display_names:
         other: ریال سعودی
         one: ریال سعودی
+    SBD:
+      display_names:
+        other: دلار جزایر سلیمان
+        one: دلار جزایر سلیمان
     SCR:
       display_names:
         other: روپیهٔ سیشل
@@ -815,6 +797,18 @@ number_formats:
       display_names:
         other: پوند سودان
         one: پوند سودان
+    SEK:
+      display_names:
+        other: کرون سوئد
+        one: کرون سوئد
+    SGD:
+      display_names:
+        other: دلار سنگاپور
+        one: دلار سنگاپور
+    SHP:
+      display_names:
+        other: پوند سنت هلن
+        one: پوند سنت هلن
     SLE:
       display_names:
         other: لئون سیرالئون
@@ -827,22 +821,42 @@ number_formats:
       display_names:
         other: شیلینگ سومالی
         one: شیلینگ سومالی
+    SRD:
+      display_names:
+        other: دلار سورینام
+        one: دلار سورینام
     SRG:
       display_names:
         other: گیلدر سورینام
         one: گیلدر سورینام
+    SSP:
+      display_names:
+        other: پوند سودان جنوبی
+        one: پوند سودان جنوبی
     STD:
       display_names:
         other: دوبرای سائوتومه و پرنسیپ (۱۹۷۷ تا ۲۰۱۷)
         one: دوبرای سائوتومه و پرنسیپ (۱۹۷۷ تا ۲۰۱۷)
+    STN:
+      display_names:
+        other: دوبرای سائوتومه و پرنسیپ
+        one: دوبرای سائوتومه و پرنسیپ
     SUR:
       display_names:
         other: روبل شوروی
         one: روبل شوروی
+    SYP:
+      display_names:
+        other: لیرهٔ سوریه
+        one: لیرهٔ سوریه
     SZL:
       display_names:
         other: لیلانگنی سوازیلند
         one: لیلانگنی سوازیلند
+    THB:
+      display_names:
+        other: بات تایلند
+        one: بات تایلند
     TJR:
       display_names:
         other: روبل تاجیکستان
@@ -863,6 +877,10 @@ number_formats:
       display_names:
         other: دینار تونس
         one: دینار تونس
+    TOP:
+      display_names:
+        other: پاآنگای تونگا
+        one: پاآنگای تونگا
     TPE:
       display_names:
         other: اسکودوی تیمور
@@ -871,10 +889,26 @@ number_formats:
       display_names:
         other: لیرهٔ ترکیه (۱۹۲۲ تا ۲۰۰۵)
         one: لیرهٔ ترکیه (۱۹۲۲ تا ۲۰۰۵)
+    TRY:
+      display_names:
+        other: لیرهٔ ترکیه
+        one: لیرهٔ ترکیه
+    TTD:
+      display_names:
+        other: دلار ترینیداد و توباگو
+        one: دلار ترینیداد و توباگو
+    TWD:
+      display_names:
+        other: دلار جدید تایوان
+        one: دلار جدید تایوان
     TZS:
       display_names:
         other: شیلینگ تانزانیا
         one: شیلینگ تانزانیا
+    UAH:
+      display_names:
+        other: هریونیای اوکراین
+        one: هریونیای اوکراین
     UGS:
       display_names:
         other: شیلینگ اوگاندا (۱۹۶۶ تا ۱۹۸۷)
@@ -883,6 +917,11 @@ number_formats:
       display_names:
         other: شیلینگ اوگاندا
         one: شیلینگ اوگاندا
+    USD:
+      symbol: "$"
+      display_names:
+        other: دلار آمریکا
+        one: دلار آمریکا
     USN:
       display_names:
         other: دلار امریکا (روز بعد)
@@ -895,6 +934,10 @@ number_formats:
       display_names:
         other: پزوی اوروگوئه (۱۹۷۵ تا ۱۹۹۳)
         one: پزوی اوروگوئه (۱۹۷۵ تا ۱۹۹۳)
+    UYU:
+      display_names:
+        other: پزوی اوروگوئه
+        one: پزوی اوروگوئه
     UZS:
       display_names:
         other: سوم ازبکستان
@@ -903,10 +946,18 @@ number_formats:
       display_names:
         other: بولیوار ونزوئلا (۱۸۷۱ تا ۲۰۰۸)
         one: بولیوار ونزوئلا (۱۸۷۱ تا ۲۰۰۸)
+    VEF:
+      display_names:
+        other: بولیوار ونزوئلا (۲۰۰۸ تا ۲۰۱۸)
+        one: بولیوار ونزوئلا (۲۰۰۸ تا ۲۰۱۸)
     VES:
       display_names:
         other: بولیوار ونزوئلا
         one: بولیوار ونزوئلا
+    VND:
+      display_names:
+        other: دانگ ویتنام
+        one: دانگ ویتنام
     VUV:
       display_names:
         other: واتوی وانوواتو
@@ -915,6 +966,10 @@ number_formats:
       display_names:
         other: تالای ساموا
         one: تالای ساموا
+    XAF:
+      display_names:
+        other: فرانک CFA مرکز افریقا
+        one: فرانک CFA مرکز افریقا
     XAG:
       display_names:
         other: اونس تروا نقره
@@ -923,14 +978,28 @@ number_formats:
       display_names:
         other: اونس تروا طلا
         one: اونس تروا طلا
+    XCD:
+      symbol: "$EC"
+      display_names:
+        other: دلار شرق کارائیب
+        one: دلار شرق کارائیب
     XFO:
       display_names:
         other: فرانک طلای فرانسه
         one: فرانک طلای فرانسه
+    XOF:
+      symbol: فرانک CFA
+      display_names:
+        other: فرانک CFA غرب افریقا
+        one: فرانک CFA غرب افریقا
     XPD:
       display_names:
         other: پالادیم
         one: پالادیم
+    XPF:
+      display_names:
+        other: فرانک اقیانوسیه
+        one: فرانک اقیانوسیه
     XPT:
       display_names:
         other: اونس تروا پلاتین
@@ -939,6 +1008,10 @@ number_formats:
       display_names:
         other: واحد ارز آزمایشی
         one: واحد ارز آزمایشی
+    XXX:
+      display_names:
+        other: "(ارز نامشخص)"
+        one: "(ارز نامشخص)"
     YDD:
       display_names:
         other: دینار یمن
@@ -947,10 +1020,18 @@ number_formats:
       display_names:
         other: ریال یمن
         one: ریال یمن
+    ZAR:
+      display_names:
+        other: راند افریقای جنوبی
+        one: راند افریقای جنوبی
     ZMK:
       display_names:
         other: کواچای زامبیا (۱۹۶۸ تا ۲۰۱۲)
         one: کواچای زامبیا (۱۹۶۸ تا ۲۰۱۲)
+    ZMW:
+      display_names:
+        other: کواچای زامبیا
+        one: کواچای زامبیا
     ZWD:
       display_names:
         other: دلار زیمبابوه (۱۹۸۰ تا ۲۰۰۸)
@@ -963,3 +1044,1643 @@ number_formats:
       display_names:
         other: دلار زیمبابوه (۲۰۰۸)
         one: دلار زیمبابوه (۲۰۰۸)
+  units:
+    g-force:
+      long:
+        one: "{0} جی"
+        other: "{0} جی"
+      short:
+        display_name: گرانش
+      narrow:
+        one: "{0}G"
+        other: "{0}Gs"
+    meter-per-square-second:
+      long:
+        display_name: متر بر مجذور ثانیه
+        one: "{0} متر بر مجذور ثانیه"
+        other: "{0} متر بر مجذور ثانیه"
+      short:
+        display_name: متر/مجذور ثانیه
+        one: "{0}‎ m/s²"
+        other: "{0}‎ m/s²"
+      narrow:
+        display_name: m/s²
+    arc-minute:
+      long:
+        one: "{0} دقیقهٔ قوسی"
+        other: "{0} دقیقهٔ قوسی"
+      short:
+        display_name: دقیقهٔ قوسی
+        one: "{0} د.قوسی"
+        other: "{0} د.قوسی"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+    arc-second:
+      long:
+        one: "{0} ثانیهٔ قوسی"
+        other: "{0} ثانیهٔ قوسی"
+      short:
+        display_name: ثانیهٔ قوسی
+        one: "{0} ث.قوسی"
+        other: "{0} ث.قوسی"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    square-kilometer:
+      long:
+        one: "{0} کیلومتر مربع"
+        other: "{0} کیلومتر مربع"
+        per_unit_pattern: "{0} در کیلومتر مربع"
+      short:
+        display_name: کیلومتر مربع
+        one: "{0}‎ km²"
+        other: "{0}‎ km²"
+      narrow:
+        display_name: km²
+        one: "{0}km²"
+        other: "{0}km²"
+    hectare:
+      long:
+        one: "{0} هکتار"
+        other: "{0} هکتار"
+      short:
+        display_name: هکتار
+        one: "{0} هکتار"
+        other: "{0} هکتار"
+      narrow:
+        one: "{0}ha"
+        other: "{0}ha"
+    square-meter:
+      long:
+        one: "{0} متر مربع"
+        other: "{0} متر مربع"
+        per_unit_pattern: "{0} در متر مربع"
+      short:
+        display_name: متر مربع
+        per_unit_pattern: "{0}‎/m²"
+      narrow:
+        one: "{0}m²"
+        other: "{0}m²"
+    square-centimeter:
+      long:
+        display_name: سانتی‌متر مربع
+        one: "{0} سانتی‌متر مربع"
+        other: "{0} سانتی‌متر مربع"
+        per_unit_pattern: "{0} در سانتی‌متر مربع"
+      short:
+        one: "{0}‎ cm²"
+        other: "{0}‎ cm²"
+        per_unit_pattern: "{0}‎/cm²"
+    square-mile:
+      long:
+        per_unit_pattern: "{0} در مایل مربع"
+      short:
+        display_name: مایل مربع
+        one: "{0} مایل مربع"
+        other: "{0} مایل مربع"
+        per_unit_pattern: "{0}‎/mi²"
+      narrow:
+        display_name: mi²
+        one: "{0} mi²"
+        other: "{0} mi²"
+    square-inch:
+      long:
+        per_unit_pattern: "{0} در اینچ مربع"
+      short:
+        display_name: اینچ مربع
+        one: "{0} اینچ مربع"
+        other: "{0} اینچ مربع"
+        per_unit_pattern: "{0}/اینچ مربع"
+      narrow:
+        display_name: in²
+        one: "{0}in²"
+        other: "{0}in²"
+        per_unit_pattern: "{0}/in²"
+    milligram-ofglucose-per-deciliter:
+      long:
+        one: "{0} میلی‌گرم در دسی‌لیتر"
+        other: "{0} میلی‌گرم در دسی‌لیتر"
+      short:
+        display_name: میلی‌گرم در دسی‌لیتر
+    millimole-per-liter:
+      long:
+        display_name: میلی‌مول در لیتر
+        one: "{0} میلی‌مول در لیتر"
+        other: "{0} میلی‌مول در لیتر"
+      short:
+        display_name: میلی‌مول/لیتر
+    permillion:
+      long:
+        display_name: بخش در میلیون
+        one: "{0} بخش در میلیون"
+        other: "{0} بخش در میلیون"
+      short:
+        display_name: بخش/میلیون
+      narrow:
+        one: "{0}ppm"
+        other: "{0}ppm"
+    percent:
+      long:
+        one: "{0} درصد"
+        other: "{0} درصد"
+      short:
+        display_name: درصد
+        one: "{0}٪"
+        other: "{0}٪"
+      narrow:
+        display_name: "٪"
+    permille:
+      long:
+        one: "{0} هزارم"
+        other: "{0} هزارم"
+      short:
+        display_name: هزارم
+    permyriad:
+      long:
+        one: "{0} ده‌هزارم"
+        other: "{0} ده‌هزارم"
+      short:
+        display_name: ده‌هزارم
+    liter-per-kilometer:
+      long:
+        display_name: لیتر در کیلومتر
+        one: "{0} لیتر در کیلومتر"
+        other: "{0} لیتر در کیلومتر"
+      short:
+        display_name: لیتر/کیلومتر
+        one: "{0} ل./ک.م."
+        other: "{0} ل./ک.م."
+    liter-per-100-kilometer:
+      long:
+        display_name: لیتر در ۱۰۰ کیلومتر
+        one: "{0} لیتر در ۱۰۰ کیلومتر"
+        other: "{0} لیتر در ۱۰۰ کیلومتر"
+      short:
+        display_name: لیتر/۱۰۰ کیلومتر
+        one: "{0} ل./۱۰۰ ک.م."
+        other: "{0} ل./۱۰۰ ک.م."
+    mile-per-gallon:
+      long:
+        display_name: مایل در گالن
+      short:
+        display_name: مایل/گالن
+        one: "{0} مایل در گالن"
+        other: "{0} مایل در گالن"
+    mile-per-gallon-imperial:
+      long:
+        display_name: مایل در امپریال گالن
+        one: "{0} مایل در امپریال گالن"
+        other: "{0} مایل در امپریال گالن"
+      short:
+        display_name: مایل/امپریال گالن
+      narrow:
+        one: "{0}m/gUK"
+        other: "{0}m/gUK"
+    petabyte:
+      long:
+        one: "{0} پتابایت"
+        other: "{0} پتابایت"
+      short:
+        display_name: پتابایت
+      narrow:
+        one: "{0}PB"
+        other: "{0}PB"
+    terabyte:
+      long:
+        one: "{0} ترابایت"
+        other: "{0} ترابایت"
+      short:
+        display_name: ترابایت
+      narrow:
+        one: "{0}TB"
+        other: "{0}TB"
+    terabit:
+      long:
+        one: "{0} ترابیت"
+        other: "{0} ترابیت"
+      short:
+        display_name: ترابیت
+      narrow:
+        one: "{0}Tb"
+        other: "{0}Tb"
+    gigabyte:
+      long:
+        display_name: گیگابایت
+        one: "{0} گیگابایت"
+        other: "{0} گیگابایت"
+      narrow:
+        one: "{0}GB"
+        other: "{0}GB"
+    gigabit:
+      long:
+        one: "{0} گیگابیت"
+        other: "{0} گیگابیت"
+      short:
+        display_name: گیگابیت
+      narrow:
+        one: "{0}Gb"
+        other: "{0}Gb"
+    megabyte:
+      long:
+        display_name: مگابایت
+        one: "{0} مگابایت"
+        other: "{0} مگابایت"
+      narrow:
+        one: "{0}MB"
+        other: "{0}MB"
+    megabit:
+      long:
+        one: "{0} مگابیت"
+        other: "{0} مگابیت"
+      short:
+        display_name: مگابیت
+      narrow:
+        one: "{0}Mb"
+        other: "{0}Mb"
+    kilobyte:
+      long:
+        one: "{0} کیلوبایت"
+        other: "{0} کیلوبایت"
+      short:
+        display_name: کیلوبایت
+      narrow:
+        one: "{0}kB"
+        other: "{0}kB"
+    kilobit:
+      long:
+        one: "{0} کیلوبیت"
+        other: "{0} کیلوبیت"
+      short:
+        display_name: کیلوبیت
+      narrow:
+        one: "{0}kb"
+        other: "{0}kb"
+    year:
+      long:
+        per_unit_pattern: "{0} در سال"
+      short:
+        display_name: سال
+        one: "{0} سال"
+        other: "{0} سال"
+        per_unit_pattern: "{0}/سال"
+    quarter:
+      long:
+        one: "{0} سه‌ماهه"
+        other: "{0} سه‌ماهه"
+        per_unit_pattern: "{0} در سه‌ماه"
+      short:
+        display_name: سه‌ماه
+        one: "{0} سه‌ماه"
+        other: "{0}سه‌ماه"
+        per_unit_pattern: "{0}/سه‌ماه"
+      narrow:
+        one: "{0}سه‌ماه"
+        other: "{0}سه‌ماه"
+    month:
+      long:
+        per_unit_pattern: "{0} در ماه"
+      short:
+        display_name: ماه
+        one: "{0} ماه"
+        other: "{0} ماه"
+        per_unit_pattern: "{0}/ماه"
+    week:
+      long:
+        per_unit_pattern: "{0} در هفته"
+      short:
+        display_name: هفته
+        one: "{0} هفته"
+        other: "{0} هفته"
+        per_unit_pattern: "{0}/هفته"
+    day:
+      long:
+        per_unit_pattern: "{0} در روز"
+      short:
+        display_name: روز
+        one: "{0} روز"
+        other: "{0} روز"
+        per_unit_pattern: "{0}/روز"
+    microsecond:
+      long:
+        one: "{0} میکروثانیه"
+        other: "{0} میکروثانیه"
+      short:
+        display_name: میکروثانیه
+        one: "{0}μs"
+        other: "{0}μs"
+    kilocalorie:
+      long:
+        display_name: کیلوکالری
+        one: "{0} کیلوکالری"
+        other: "{0} کیلوکالری"
+      short:
+        display_name: ک.کالری
+        one: "{0} ک.کالری"
+        other: "{0} ک.کالری"
+    kilojoule:
+      long:
+        display_name: کیلوژول
+        one: "{0} کیلوژول"
+        other: "{0} کیلوژول"
+      short:
+        display_name: ک.ژول
+        one: "{0} ک.ژول"
+        other: "{0} ک.ژول"
+      narrow:
+        display_name: kJ
+        one: "{0}kJ"
+        other: "{0}kJ"
+    kilowatt-hour:
+      long:
+        display_name: کیلووات‌ساعت
+        one: "{0} کیلووات‌ساعت"
+        other: "{0} کیلووات‌ساعت"
+      short:
+        display_name: ک.وات‌ساعت
+        one: "{0} ک.و.ساعت"
+        other: "{0} ک.و.ساعت"
+      narrow:
+        display_name: kWh
+        one: "{0}kWh"
+        other: "{0}kWh"
+    electronvolt:
+      long:
+        display_name: الکترون ولت
+        one: "{0} الکترون‌ولت"
+        other: "{0} الکترون‌ولت"
+      short:
+        display_name: الکترون‌ولت
+      narrow:
+        display_name: eV
+        one: "{0}eV"
+        other: "{0}eV"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: کیلووات-ساعت در ۱۰۰ کیلومتر
+        one: "{0} کیلووات-ساعت در ۱۰۰ کیلومتر"
+        other: "{0} کیلووات-ساعت در ۱۰۰ کیلومتر"
+      short:
+        display_name: ک.وا.س/۱۰۰ ک.م
+        one: "{0} ک.وا.س/۱۰۰ ک.م"
+        other: "{0} ک.وا.س/۱۰۰ ک.م"
+      narrow:
+        one: "{0}ک.وا.س/۱۰۰ ک.م"
+        other: "{0} ک.وا.س/۱۰۰ ک.م"
+    kilohertz:
+      long:
+        display_name: کیلوهرتز
+        one: "{0} کیلوهرتز"
+        other: "{0} کیلوهرتز"
+      short:
+        display_name: ک.هرتز
+        one: "{0} ک.هرتز"
+        other: "{0} ک.هرتز"
+      narrow:
+        display_name: kHz
+        one: "{0}kHz"
+        other: "{0}kHz"
+    em:
+      long:
+        display_name: em تایپوگرافی
+    pixel:
+      long:
+        one: "{0} پیکسل"
+        other: "{0} پیکسل"
+      short:
+        display_name: پیکسل
+      narrow:
+        one: "{0}px"
+        other: "{0}px"
+    megapixel:
+      long:
+        one: "{0} مگاپیکسل"
+        other: "{0} مگاپیکسل"
+      short:
+        display_name: مگاپیکسل
+      narrow:
+        one: "{0}MP"
+        other: "{0}MP"
+    pixel-per-centimeter:
+      long:
+        display_name: پیکسل در سانتی‌متر
+        one: "{0} پیکسل در سانتی‌متر"
+        other: "{0} پیکسل در سانتی‌متر"
+      narrow:
+        one: "{0}ppcm"
+        other: "{0}ppcm"
+    pixel-per-inch:
+      long:
+        display_name: پیکسل در اینچ
+        one: "{0} پیکسل در اینچ"
+        other: "{0} پیکسل در اینچ"
+    dot-per-centimeter:
+      long:
+        display_name: نقطه در سانتی‌متر
+        one: "{0} نقطه در سانتی‌متر"
+        other: "{0} نقطه در سانتی‌متر"
+      short:
+        display_name: dpcm
+        one: "{0} dpcm"
+        other: "{0} dpcm"
+    dot-per-inch:
+      long:
+        display_name: نقطه در اینچ
+        one: "{0} نقطه در اینچ"
+        other: "{0} نقطه در اینچ"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+      narrow:
+        one: "{0}dpi"
+        other: "{0}dpi"
+    dot:
+      long:
+        one: "{0}نقطه"
+        other: "{0}نقطه"
+      short:
+        display_name: نقطه
+        one: "{0} نقطه"
+        other: "{0} نقطه"
+      narrow:
+        one: "{0}dot"
+        other: "{0}dot"
+    earth-radius:
+      long:
+        display_name: شعاع زمین
+        one: "{0} شعاع زمین"
+        other: "{0} شعاع زمین"
+    kilometer:
+      long:
+        per_unit_pattern: "{0} در کیلومتر"
+      short:
+        display_name: کیلومتر
+        one: "{0} کیلومتر"
+        other: "{0} کیلومتر"
+        per_unit_pattern: "{0}/کیلومتر"
+      narrow:
+        display_name: km
+        one: "{0}km"
+        other: "{0}km"
+        per_unit_pattern: "{0}‎/km"
+    meter:
+      long:
+        one: "{0} متر"
+        other: "{0} متر"
+        per_unit_pattern: "{0} در متر"
+      short:
+        display_name: متر
+        one: "{0}متر"
+        other: "{0}متر"
+        per_unit_pattern: "{0}/متر"
+      narrow:
+        display_name: m
+        one: "{0}m"
+        other: "{0}m"
+        per_unit_pattern: "{0}‎/m"
+    centimeter:
+      long:
+        per_unit_pattern: "{0} در سانتی‌متر"
+      short:
+        display_name: سانتی‌متر
+        one: "{0} سانتی‌متر"
+        other: "{0} سانتی‌متر"
+        per_unit_pattern: "{0}/سانتی‌متر"
+      narrow:
+        display_name: cm
+        one: "{0}cm"
+        other: "{0}cm"
+        per_unit_pattern: "{0}/cm"
+    foot:
+      long:
+        per_unit_pattern: "{0} در فوت"
+      short:
+        display_name: فوت
+        one: "{0} فوت"
+        other: "{0} فوت"
+        per_unit_pattern: "{0}/فوت"
+      narrow:
+        display_name: ft
+        one: "{0}ft"
+        other: "{0}ft"
+        per_unit_pattern: "{0}/ft"
+    inch:
+      long:
+        per_unit_pattern: "{0} در اینچ"
+      short:
+        display_name: اینچ
+        one: "{0} اینچ"
+        other: "{0} اینچ"
+        per_unit_pattern: "{0}/اینچ"
+      narrow:
+        display_name: in
+        one: "{0}in"
+        other: "{0}in"
+    astronomical-unit:
+      long:
+        display_name: واحد نجومی
+      short:
+        one: "{0} واحد نجومی"
+        other: "{0} واحد نجومی"
+      narrow:
+        one: "{0}au"
+        other: "{0}au"
+    mile-scandinavian:
+      long:
+        one: "{0} مایل اسکاندیناوی"
+        other: "{0} مایل اسکاندیناوی"
+      short:
+        display_name: مایل اسکاندیناوی
+        one: "{0}‎ smi"
+        other: "{0}‎ smi"
+      narrow:
+        display_name: smi
+    candela:
+      long:
+        display_name: شمع
+        one: "{0} شمع"
+        other: "{0} شمع"
+    lumen:
+      long:
+        display_name: لومن
+        one: "{0} لومن"
+        other: "{0} لومن"
+    solar-luminosity:
+      long:
+        one: "{0} تابندگی خورشید"
+        other: "{0} تابندگی خورشید"
+      short:
+        display_name: تابندگی خورشید
+        one: "{0} ☉L"
+        other: "{0} ☉L"
+    tonne:
+      long:
+        display_name: تن متریک
+        one: "{0} تن متریک"
+        other: "{0} تن متریک"
+      short:
+        display_name: تُن
+        one: "{0} تُن"
+        other: "{0} تُن"
+      narrow:
+        one: "{0}t"
+        other: "{0}t"
+    kilogram:
+      long:
+        per_unit_pattern: "{0} در کیلوگرم"
+      short:
+        display_name: کیلوگرم
+        one: "{0} کیلوگرم"
+        other: "{0} کیلوگرم"
+        per_unit_pattern: "{0}‎/kg"
+      narrow:
+        display_name: kg
+        one: "{0}kg"
+        other: "{0}kg"
+    milligram:
+      long:
+        display_name: میلی‌گرم
+      short:
+        one: "{0} میلی‌گرم"
+        other: "{0} میلی‌گرم"
+      narrow:
+        one: "{0}mg"
+        other: "{0}mg"
+    microgram:
+      long:
+        display_name: میکروگرم
+      short:
+        display_name: میکروگرم
+        one: "{0} میکروگرم"
+        other: "{0} میکروگرم"
+      narrow:
+        one: "{0}μg"
+        other: "{0}μg"
+    earth-mass:
+      long:
+        one: "{0} جرم زمین"
+        other: "{0} جرم زمین"
+      short:
+        display_name: جرم زمین
+        one: "{0} M⊕"
+        other: "{0} ⊕M"
+      narrow:
+        display_name: M⊕
+        one: "{0}M⊕"
+        other: "{0}M⊕"
+    solar-mass:
+      long:
+        one: "{0} جرم خورشید"
+        other: "{0} جرم خورشید"
+      short:
+        display_name: جرم خورشید
+        one: "{0} ☉M"
+        other: "{0} ☉M"
+      narrow:
+        display_name: M☉
+        one: "{0}M☉"
+        other: "{0}M☉"
+    kilowatt:
+      long:
+        display_name: کیلووات
+        one: "{0} کیلووات"
+        other: "{0} کیلووات"
+      short:
+        display_name: ک.وات
+        one: "{0} ک.وات"
+        other: "{0} ک.وات"
+      narrow:
+        one: "{0}kW"
+        other: "{0}kW"
+    millimeter-ofhg:
+      long:
+        one: "{0} میلی‌متر جیوه"
+        other: "{0} میلی‌متر جیوه"
+      short:
+        display_name: میلی‌متر جیوه
+        one: "{0} م‌م جیوه"
+        other: "{0} م‌م جیوه"
+    pound-force-per-square-inch:
+      long:
+        one: "{0} پوند در اینچ مربع"
+        other: "{0} پوند در اینچ مربع"
+      short:
+        display_name: پوند در اینچ مربع
+        one: "{0}‎ psi"
+        other: "{0}‎ psi"
+    kilopascal:
+      long:
+        display_name: کیلوپاسکال
+        one: "{0} کیلوپاسکال"
+        other: "{0} کیلوپاسکال"
+      short:
+        display_name: ک.پاسکال
+        one: "{0} ک.پاسکال"
+        other: "{0} ک.پاسکال"
+    kilometer-per-hour:
+      long:
+        one: "{0} کیلومتر در ساعت"
+        other: "{0} کیلومتر در ساعت"
+      short:
+        display_name: کیلومتر در ساعت
+        one: "{0}‎ km/h"
+        other: "{0}‎ km/h"
+      narrow:
+        display_name: km/hr
+    meter-per-second:
+      long:
+        one: "{0} متر در ثانیه"
+        other: "{0} متر در ثانیه"
+      short:
+        display_name: متر در ثانیه
+      narrow:
+        display_name: m/s
+        one: "{0}m/s"
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        one: "{0} مایل در ساعت"
+        other: "{0} مایل در ساعت"
+      short:
+        display_name: مایل در ساعت
+        one: "{0}‎ mph"
+        other: "{0}‎ mph"
+      narrow:
+        display_name: mi/h
+        one: "{0}mph"
+        other: "{0}mph"
+    celsius:
+      long:
+        one: "{0} درجهٔ سلسیوس"
+        other: "{0} درجهٔ سلسیوس"
+      short:
+        display_name: درجهٔ سلسیوس
+      narrow:
+        display_name: "‎°C"
+    fahrenheit:
+      long:
+        one: "{0} درجهٔ فارنهایت"
+        other: "{0} درجهٔ فارنهایت"
+      short:
+        display_name: درجهٔ فارنهایت
+      narrow:
+        display_name: "‎°F"
+    kelvin:
+      long:
+        one: "{0} درجهٔ کلوین"
+        other: "{0} درجهٔ کلوین"
+      short:
+        display_name: درجهٔ کلوین
+        one: "‎{0} K"
+        other: "‎{0} K"
+      narrow:
+        one: "{0}K"
+        other: "{0}K"
+    cubic-kilometer:
+      long:
+        one: "{0} کیلومتر مکعب"
+        other: "{0} کیلومتر مکعب"
+      short:
+        display_name: کیلومتر مکعب
+        one: "{0}‎ km³"
+        other: "{0}‎ km³"
+      narrow:
+        one: "{0}km³"
+        other: "{0}km³"
+    cubic-meter:
+      long:
+        one: "{0} متر مکعب"
+        other: "{0} متر مکعب"
+        per_unit_pattern: "{0} در متر مکعب"
+      short:
+        display_name: متر مکعب
+        one: "{0}m³"
+        other: "{0}m³"
+        per_unit_pattern: "{0}‎/m³"
+      narrow:
+        display_name: m³
+    cubic-centimeter:
+      long:
+        display_name: سانتی‌متر مکعب
+        one: "{0} سانتی‌متر مکعب"
+        other: "{0} سانتی‌متر مکعب"
+        per_unit_pattern: "{0} در سانتی‌متر مکعب"
+      short:
+        one: "{0}‎ cm³"
+        other: "{0}‎ cm³"
+        per_unit_pattern: "{0}‎ /cm³"
+    cubic-mile:
+      long:
+        display_name: مایل مکعب
+        one: "{0} مایل مکعب"
+        other: "{0} مایل مکعب"
+      short:
+        one: "{0}mi³"
+        other: "{0}mi³"
+    cubic-yard:
+      long:
+        one: "{0} یارد مکعب"
+        other: "{0} یارد مکعب"
+      short:
+        display_name: یارد مکعب
+        one: "{0}yd³"
+        other: "{0}yd³"
+      narrow:
+        display_name: yd³
+    cubic-foot:
+      long:
+        one: "{0} فوت مکعب"
+        other: "{0} فوت مکعب"
+      short:
+        display_name: فوت مکعب
+        one: "{0}ft³"
+        other: "{0}ft³"
+      narrow:
+        display_name: ft³
+    cubic-inch:
+      long:
+        one: "{0} اینچ مکعب"
+        other: "{0} اینچ مکعب"
+      short:
+        display_name: اینچ مکعب
+        one: "{0}in³"
+        other: "{0}in³"
+      narrow:
+        display_name: in³
+    megaliter:
+      long:
+        one: "{0} مگالیتر"
+        other: "{0} مگالیتر"
+      short:
+        display_name: مگالیتر
+        one: "{0}ML"
+        other: "{0}ML"
+      narrow:
+        display_name: ML
+    hectoliter:
+      long:
+        display_name: هکتولیتر
+        one: "{0} هکتولیتر"
+        other: "{0} هکتولیتر"
+      short:
+        one: "{0}hL"
+        other: "{0}hL"
+    liter:
+      long:
+        one: "{0} لیتر"
+        other: "{0} لیتر"
+        per_unit_pattern: "{0} در لیتر"
+      short:
+        display_name: لیتر
+        one: "{0}L"
+        other: "{0}L"
+        per_unit_pattern: "{0}‎/L"
+    deciliter:
+      long:
+        display_name: دسی‌لیتر
+        one: "{0} دسی‌لیتر"
+        other: "{0} دسی‌لیتر"
+      short:
+        one: "{0}dL"
+        other: "{0}dL"
+    centiliter:
+      long:
+        display_name: سانتی‌لیتر
+        one: "{0} سانتی‌لیتر"
+        other: "{0} سانتی‌لیتر"
+      short:
+        one: "{0}cL"
+        other: "{0}cL"
+    gallon-imperial:
+      long:
+        per_unit_pattern: "{0} در گالن امپریال"
+      short:
+        display_name: گالن امپریال
+        one: "{0} گالن امپریال"
+        other: "{0} گالن امپریال"
+        per_unit_pattern: "{0}/گالن امپریال"
+      narrow:
+        one: "{0}galIm"
+        other: "{0}galIm"
+        per_unit_pattern: "{0}/galIm"
+    fluid-ounce:
+      long:
+        one: "{0} اونس سیال"
+        other: "{0} اونس سیال"
+      short:
+        display_name: اونس سیال
+        one: "{0}‎ fl oz"
+        other: "{0}‎ fl oz"
+      narrow:
+        one: "{0}fl oz"
+        other: "{0}fl oz"
+    fluid-ounce-imperial:
+      long:
+        one: "{0} اونس سیال انگلیسی"
+        other: "{0} اونس سیال انگلیسی"
+      short:
+        display_name: اونس سیال انگلیسی
+        one: "{0} fl oz Imp"
+        other: "{0} fl oz Imp"
+      narrow:
+        display_name: Imp fl oz
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        display_name: قاشق غذاخوری
+        one: "{0} قاشق غذاخوری"
+        other: "{0} قاشق غذاخوری"
+      short:
+        display_name: قاشق غ.
+        one: "{0} ق.غ.خ"
+        other: "{0} ق.غ.خ"
+      narrow:
+        one: "{0} ق.غ.خ"
+        other: "{0} ق.غ.خ"
+    teaspoon:
+      long:
+        display_name: قاشق چای‌خوری
+        one: "{0} قاشق چای‌خوری"
+        other: "{0} قاشق چای‌خوری"
+      short:
+        display_name: ق.چای‌خوری
+        one: "{0} ق.چ."
+        other: "{0} ق.چ."
+      narrow:
+        display_name: ق.چ.خ
+        one: "{0}ق.چ."
+        other: "{0}ق.چ."
+    dessert-spoon:
+      long:
+        one: "{0} قاشق دسرخوری"
+        other: "{0} قاشق دسرخوری"
+      short:
+        display_name: قاشق دسرخوری
+        one: "{0} ق.دس.خ."
+        other: "{0} ق.دس.خ."
+      narrow:
+        display_name: ق.دس.خ
+    dessert-spoon-imperial:
+      long:
+        one: "{0} قاشق دسرخوری انگلیسی"
+        other: "{0} قاشق دسرخوری انگلیسی"
+      short:
+        display_name: قاشق دسرخوری انگلیسی
+        one: "{0} ق.دس. انگلیسی"
+        other: "{0} ق.دس. انگلیسی"
+    dram:
+      long:
+        display_name: درم
+        one: "{0} درم"
+        other: "{0} درم"
+      short:
+        display_name: درم سیال
+        one: "{0} درم سیال"
+        other: "{0} درم سیال"
+      narrow:
+        display_name: fl.dr.
+        one: "{0}fl.dr."
+        other: "{0}fl.dr."
+    portion-per-1e9:
+      long:
+        display_name: بخش در بیلیون
+        one: "{0} بخش در بیلیون"
+        other: "{0} بخش در بیلیون"
+      short:
+        display_name: بخش در بیلیون
+      narrow:
+        display_name: بخش در بیلیون
+    night:
+      long:
+        display_name: شب
+        one: "{0} شب"
+        other: "{0} شب"
+        per_unit_pattern: "{0} در شب"
+      short:
+        display_name: شب
+        one: "{0} شب"
+        other: "{0} شب"
+        per_unit_pattern: "{0}/شب"
+      narrow:
+        display_name: شب
+        one: "{0} شب"
+        other: "{0} شب"
+        per_unit_pattern: "{0}/شب"
+    revolution:
+      short:
+        display_name: دور
+        one: "{0} دور"
+        other: "{0} دور"
+    radian:
+      short:
+        display_name: رادیان
+        one: "{0} رادیان"
+        other: "{0} رادیان"
+    degree:
+      short:
+        display_name: درجه
+        one: "{0} درجه"
+        other: "{0} درجه"
+      narrow:
+        one: "{0}°"
+        other: "{0}°"
+    acre:
+      short:
+        display_name: جریب
+        one: "{0} جریب"
+        other: "{0} جریب"
+      narrow:
+        one: "{0}ac"
+        other: "{0}ac"
+    square-yard:
+      short:
+        display_name: یارد مربع
+        one: "{0} یارد مربع"
+        other: "{0} یارد مربع"
+      narrow:
+        display_name: yd²
+        one: "{0}yd²"
+        other: "{0}yd²"
+    square-foot:
+      short:
+        display_name: فوت مربع
+        one: "{0} فوت مربع"
+        other: "{0} فوت مربع"
+      narrow:
+        display_name: ft²
+        one: "{0}ft²"
+        other: "{0}ft²"
+    dunam:
+      short:
+        display_name: دونوم
+        one: "{0} دونوم"
+        other: "{0} دونوم"
+      narrow:
+        one: "{0}دونوم"
+        other: "{0}دونوم"
+    karat:
+      short:
+        display_name: عیار
+        one: "{0} عیار"
+        other: "{0} عیار"
+    item:
+      short:
+        display_name: مورد
+        one: "{0} مورد"
+        other: "{0} مورد"
+      narrow:
+        one: "{0}مورد"
+        other: "{0}مورد"
+    mole:
+      short:
+        display_name: مول
+        one: "{0} مول"
+        other: "{0} مول"
+    byte:
+      short:
+        display_name: بایت
+        one: "{0} بایت"
+        other: "{0} بایت"
+    bit:
+      short:
+        display_name: بیت
+        one: "{0} بیت"
+        other: "{0} بیت"
+    century:
+      short:
+        display_name: سده
+        one: "{0} سده"
+        other: "{0} سده"
+    decade:
+      short:
+        display_name: دهه
+        one: "{0} دهه"
+        other: "{0} دهه"
+    hour:
+      short:
+        display_name: ساعت
+        one: "{0} ساعت"
+        other: "{0} ساعت"
+        per_unit_pattern: "{0} در ساعت"
+      narrow:
+        one: "{0}h"
+        other: "{0}h"
+        per_unit_pattern: "{0}/ساعت"
+    minute:
+      short:
+        display_name: دقیقه
+        one: "{0} دقیقه"
+        other: "{0} دقیقه"
+        per_unit_pattern: "{0} در دقیقه"
+      narrow:
+        one: "{0}m"
+        other: "{0}m"
+        per_unit_pattern: "{0}/دقیقه"
+    second:
+      short:
+        display_name: ثانیه
+        one: "{0} ثانیه"
+        other: "{0} ثانیه"
+        per_unit_pattern: "{0} در ثانیه"
+      narrow:
+        one: "{0}s"
+        other: "{0}s"
+        per_unit_pattern: "{0}/ثانیه"
+    millisecond:
+      short:
+        display_name: میلی‌ثانیه
+        one: "{0} میلی‌ثانیه"
+        other: "{0} میلی‌ثانیه"
+      narrow:
+        one: "{0}ms"
+        other: "{0}ms"
+    nanosecond:
+      short:
+        display_name: نانوثانیه
+        one: "{0} نانوثانیه"
+        other: "{0} نانوثانیه"
+      narrow:
+        one: "{0}ns"
+        other: "{0}ns"
+    ampere:
+      short:
+        display_name: آمپر
+        one: "{0} آمپر"
+        other: "{0} آمپر"
+      narrow:
+        display_name: amp
+        one: "{0}A"
+        other: "{0}A"
+    milliampere:
+      short:
+        display_name: میلی‌آمپر
+        one: "{0} میلی‌آمپر"
+        other: "{0} میلی‌آمپر"
+      narrow:
+        display_name: mA
+        one: "{0}mA"
+        other: "{0}mA"
+    ohm:
+      short:
+        display_name: اهم
+        one: "{0} اهم"
+        other: "{0} اهم"
+      narrow:
+        one: "{0}Ω"
+        other: "{0}Ω"
+    volt:
+      short:
+        display_name: ولت
+        one: "{0} ولت"
+        other: "{0} ولت"
+      narrow:
+        one: "{0}V"
+        other: "{0}V"
+    calorie:
+      short:
+        display_name: کالری
+        one: "{0} کالری"
+        other: "{0} کالری"
+      narrow:
+        display_name: cal
+        one: "{0}cal"
+        other: "{0}cal"
+    foodcalorie:
+      short:
+        display_name: کالری
+        one: "{0} کالری"
+        other: "{0} کالری"
+      narrow:
+        display_name: Cal
+        one: "{0}Cal"
+        other: "{0}Cal"
+    joule:
+      short:
+        display_name: ژول
+        one: "{0} ژول"
+        other: "{0} ژول"
+      narrow:
+        one: "{0}J"
+        other: "{0}J"
+    british-thermal-unit:
+      short:
+        display_name: بی‌تی‌یو
+        one: "{0} بی‌تی‌یو"
+        other: "{0} بی‌تی‌یو"
+      narrow:
+        display_name: BTU
+        one: "{0}Btu"
+        other: "{0}Btu"
+    therm-us:
+      short:
+        display_name: ترم آمریکایی
+        one: "{0} ترم آمریکایی"
+        other: "{0} ترم آمریکایی"
+    pound-force:
+      short:
+        display_name: پوند-نیرو
+        one: "{0} پوند-نیرو"
+        other: "{0} پوند-نیرو"
+    newton:
+      short:
+        display_name: نیوتن
+        one: "{0} نیوتن"
+        other: "{0} نیوتن"
+    gigahertz:
+      short:
+        display_name: گیگاهرتز
+        one: "{0} گیگاهرتز"
+        other: "{0} گیگاهرتز"
+      narrow:
+        display_name: GHz
+        one: "{0}GHz"
+        other: "{0}GHz"
+    megahertz:
+      short:
+        display_name: مگاهرتز
+        one: "{0} مگاهرتز"
+        other: "{0} مگاهرتز"
+      narrow:
+        display_name: MHz
+        one: "{0}MHz"
+        other: "{0}MHz"
+    hertz:
+      short:
+        display_name: هرتز
+        one: "{0} هرتز"
+        other: "{0} هرتز"
+      narrow:
+        display_name: Hz
+        one: "{0}Hz"
+        other: "{0}Hz"
+    decimeter:
+      short:
+        display_name: دسی‌متر
+        one: "{0} دسی‌متر"
+        other: "{0} دسی‌متر"
+      narrow:
+        display_name: dm
+        one: "{0}dm"
+        other: "{0}dm"
+    millimeter:
+      short:
+        display_name: میلی‌متر
+        one: "{0} میلی‌متر"
+        other: "{0} میلی‌متر"
+      narrow:
+        display_name: mm
+        one: "{0}mm"
+        other: "{0}mm"
+    micrometer:
+      short:
+        display_name: میکرومتر
+        one: "{0} میکرومتر"
+        other: "{0} میکرومتر"
+      narrow:
+        display_name: μm
+        one: "{0}μm"
+        other: "{0}μm"
+    nanometer:
+      short:
+        display_name: نانومتر
+        one: "{0} نانومتر"
+        other: "{0} نانومتر"
+      narrow:
+        display_name: nm
+        one: "{0}nm"
+        other: "{0}nm"
+    picometer:
+      short:
+        display_name: پیکومتر
+        one: "{0} پیکومتر"
+        other: "{0} پیکومتر"
+      narrow:
+        display_name: pm
+        one: "{0}pm"
+        other: "{0}pm"
+    mile:
+      short:
+        display_name: مایل
+        one: "{0} مایل"
+        other: "{0} مایل"
+      narrow:
+        display_name: mi
+        one: "{0}mi"
+        other: "{0}mi"
+    yard:
+      short:
+        display_name: یارد
+        one: "{0} یارد"
+        other: "{0} یارد"
+      narrow:
+        display_name: yd
+        one: "{0}yd"
+        other: "{0}yd"
+    parsec:
+      short:
+        display_name: پارسک
+        one: "{0} پارسک"
+        other: "{0} پارسک"
+      narrow:
+        one: "{0}pc"
+        other: "{0}pc"
+    light-year:
+      short:
+        display_name: سال نوری
+        one: "{0} سال نوری"
+        other: "{0} سال نوری"
+      narrow:
+        display_name: ly
+        one: "{0}ly"
+        other: "{0}ly"
+    furlong:
+      short:
+        display_name: فرلانگ
+        one: "{0} فرلانگ"
+        other: "{0} فرلانگ"
+      narrow:
+        one: "{0}fur"
+        other: "{0}fur"
+    fathom:
+      short:
+        display_name: فاتوم
+        one: "{0} فاتوم"
+        other: "{0} فاتوم"
+      narrow:
+        one: "{0}fth"
+        other: "{0}fth"
+    nautical-mile:
+      short:
+        display_name: مایل دریایی
+        one: "{0} مایل دریایی"
+        other: "{0} مایل دریایی"
+      narrow:
+        display_name: nmi
+        one: "{0}nmi"
+        other: "{0}nmi"
+    point:
+      short:
+        display_name: پوینت
+        one: "{0} پوینت"
+        other: "{0} پوینت"
+      narrow:
+        display_name: pts
+        one: "{0}pt"
+        other: "{0}pt"
+    solar-radius:
+      short:
+        display_name: شعاع خورشید
+        one: "{0} شعاع خورشید"
+        other: "{0} شعاع خورشید"
+      narrow:
+        display_name: R☉
+        one: "{0}R☉"
+        other: "{0}R☉"
+    lux:
+      short:
+        display_name: لوکس
+        one: "{0} لوکس"
+        other: "{0} لوکس"
+    gram:
+      short:
+        display_name: گرم
+        one: "{0} گرم"
+        other: "{0} گرم"
+      narrow:
+        one: "{0}g"
+        other: "{0}g"
+    ton:
+      short:
+        display_name: تن
+        one: "{0} تن"
+        other: "{0} تن"
+      narrow:
+        one: "{0}tn"
+        other: "{0}tn"
+    stone:
+      short:
+        display_name: سنگ
+        one: "{0} سنگ"
+        other: "{0} سنگ"
+      narrow:
+        one: "{0}st"
+        other: "{0}st"
+    pound:
+      short:
+        one: "{0} پوند"
+        other: "{0} پوند"
+        per_unit_pattern: "{0} در پوند"
+      narrow:
+        one: "{0}lb"
+        other: "{0}lb"
+    ounce:
+      short:
+        display_name: اونس
+        one: "{0} اونس"
+        other: "{0} اونس"
+        per_unit_pattern: "{0} در اونس"
+      narrow:
+        display_name: oz
+        one: "{0}oz"
+        other: "{0}oz"
+        per_unit_pattern: "{0}/oz"
+    ounce-troy:
+      short:
+        display_name: اونس تروا
+        one: "{0} اونس تروا"
+        other: "{0} اونس تروا"
+      narrow:
+        display_name: oz t
+        one: "{0}oz t"
+        other: "{0}oz t"
+    carat:
+      short:
+        display_name: قیراط
+        one: "{0} قیراط"
+        other: "{0} قیراط"
+      narrow:
+        one: "{0}CD"
+        other: "{0}CD"
+    dalton:
+      short:
+        display_name: دالتون
+        one: "{0} دالتون"
+        other: "{0} دالتون"
+      narrow:
+        display_name: Da
+        one: "{0}Da"
+        other: "{0}Da"
+    grain:
+      short:
+        display_name: دانه
+        one: "{0} دانه"
+        other: "{0} دانه"
+      narrow:
+        display_name: gr
+        one: "{0}gr"
+        other: "{0}gr"
+    gigawatt:
+      short:
+        display_name: گیگاوات
+        one: "{0} گیگاوات"
+        other: "{0} گیگاوات"
+      narrow:
+        display_name: GW
+        one: "{0}GW"
+        other: "{0}GW"
+    megawatt:
+      short:
+        display_name: مگاوات
+        one: "{0} مگاوات"
+        other: "{0} مگاوات"
+    watt:
+      short:
+        display_name: وات
+        one: "{0} وات"
+        other: "{0} وات"
+      narrow:
+        one: "{0}W"
+        other: "{0}W"
+    milliwatt:
+      short:
+        display_name: میلی‌وات
+        one: "{0} میلی‌وات"
+        other: "{0} میلی‌وات"
+      narrow:
+        display_name: mW
+        one: "{0}mW"
+        other: "{0}mW"
+    horsepower:
+      short:
+        display_name: اسب بخار
+        one: "{0} اسب بخار"
+        other: "{0} اسب بخار"
+      narrow:
+        display_name: hp
+        one: "{0}hp"
+        other: "{0}hp"
+    inch-ofhg:
+      short:
+        display_name: اینچ جیوه
+        one: "{0} اینچ جیوه"
+        other: "{0} اینچ جیوه"
+      narrow:
+        one: "{0}inHg"
+        other: "{0}inHg"
+    bar:
+      short:
+        display_name: بار
+        one: "{0} بار"
+        other: "{0} بار"
+    millibar:
+      short:
+        display_name: میلی‌بار
+        one: "{0} میلی‌بار"
+        other: "{0} میلی‌بار"
+      narrow:
+        one: "{0}mbar"
+        other: "{0}mbar"
+    atmosphere:
+      short:
+        display_name: اتمسفر
+        one: "{0} اتمسفر"
+        other: "{0} اتمسفر"
+      narrow:
+        one: "{0}اتمسفر"
+        other: "{0}اتمسفر"
+    pascal:
+      short:
+        display_name: پاسکال
+        one: "{0} پاسکال"
+        other: "{0} پاسکال"
+      narrow:
+        one: "{0}Pa"
+        other: "{0}Pa"
+    hectopascal:
+      short:
+        display_name: هکتوپاسکال
+        one: "{0} هکتوپاسکال"
+        other: "{0} هکتوپاسکال"
+      narrow:
+        one: "{0}hPa"
+        other: "{0}hPa"
+    megapascal:
+      short:
+        display_name: مگاپاسکال
+        one: "{0} مگاپاسکال"
+        other: "{0} مگاپاسکال"
+    knot:
+      short:
+        display_name: گره
+        one: "{0} گره"
+        other: "{0} گره"
+      narrow:
+        display_name: kn
+        one: "{0}kn"
+        other: "{0}kn"
+    beaufort:
+      short:
+        display_name: بوفورت
+        one: "{0} بوفورت"
+        other: "{0} بوفورت"
+      narrow:
+        one: B{0}
+        other: "{0}بوفورت"
+    pound-force-foot:
+      short:
+        display_name: پوند-فوت
+        one: "{0} پوند-فوت"
+        other: "{0} پوند-فوت"
+    newton-meter:
+      short:
+        display_name: نیوتن‌متر
+        one: "{0} نیوتن‌متر"
+        other: "{0} نیوتن‌متر"
+    milliliter:
+      short:
+        display_name: میلی‌لیتر
+        one: "{0} میلی‌لیتر"
+        other: "{0} میلی‌لیتر"
+      narrow:
+        display_name: mL
+        one: "{0}mL"
+        other: "{0}mL"
+    pint-metric:
+      short:
+        display_name: پاینت متریک
+        one: "{0} پاینت متریک"
+        other: "{0} پاینت متریک"
+      narrow:
+        one: "{0}mpt"
+        other: "{0}mpt"
+    cup-metric:
+      short:
+        display_name: پیمانهٔ متریک
+        one: "{0} پیمانهٔ متریک"
+        other: "{0} پیمانهٔ متریک"
+      narrow:
+        one: "{0}mc"
+        other: "{0}mc"
+    acre-foot:
+      short:
+        display_name: جریب فوت
+        one: "{0} جریب فوت"
+        other: "{0} جریب فوت"
+      narrow:
+        one: "{0}ac ft"
+        other: "{0}ac ft"
+    bushel:
+      short:
+        display_name: بوشل
+        one: "{0} بوشل"
+        other: "{0} بوشل"
+      narrow:
+        one: "{0}bu"
+        other: "{0}bu"
+    gallon:
+      short:
+        display_name: گالن
+        one: "{0} گالن"
+        other: "{0} گالن"
+        per_unit_pattern: "{0} در گالن"
+    quart:
+      short:
+        display_name: کوارت
+        one: "{0} کوارت"
+        other: "{0} کوارت"
+      narrow:
+        display_name: qt
+        one: "{0}qt"
+        other: "{0}qt"
+    pint:
+      short:
+        display_name: پاینت
+        one: "{0} پاینت"
+        other: "{0} پاینت"
+      narrow:
+        display_name: pt
+        one: "{0}pt"
+        other: "{0}pt"
+    cup:
+      short:
+        display_name: پیمانه
+        one: "{0} پیمانه"
+        other: "{0} پیمانه"
+      narrow:
+        one: "{0}c"
+        other: "{0}c"
+    barrel:
+      short:
+        display_name: بشکه
+        one: "{0} بشکه"
+        other: "{0} بشکه"
+      narrow:
+        display_name: bbl
+        one: "{0}bbl"
+        other: "{0}bbl"
+    drop:
+      short:
+        display_name: قطره
+        one: "{0} قطره"
+        other: "{0} قطره"
+    jigger:
+      short:
+        display_name: گیلاس
+        one: "{0} گیلاس"
+        other: "{0} گیلاس"
+    pinch:
+      short:
+        display_name: سرانگشت
+        one: "{0} سرانگشت"
+        other: "{0} سرانگشت"
+    quart-imperial:
+      short:
+        display_name: کوارت انگلیسی
+        one: "{0} کوارت انگلیسی"
+        other: "{0} کوارت انگلیسی"
+      narrow:
+        display_name: qt Imp
+        one: "{0}qt-Imp."
+        other: "{0}qt-Imp."

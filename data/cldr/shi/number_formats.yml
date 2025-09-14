@@ -1,14 +1,24 @@
 ---
 locale: shi
-generated_at: '2025-09-13T17:40:28Z'
+generated_at: '2025-09-14T06:12:04Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: ⴰⴷⵔⵉⵎ ⵏ ⵍⵉⵎⴰⵔⴰⵜ
+        one: ⴰⴷⵔⵉⵎ ⵏ ⵍⵉⵎⴰⵔⴰⵜ
     AOA:
       display_names:
         other: ⴽⵡⴰⵏⵣⴰ ⵏ ⴰⵏⴳⵓⵍⴰ
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵓⵙⵜⵔⴰⵍⵢⴰ
         one: ⴰⴷⵓⵍⴰⵔ ⵏ ⵓⵙⵜⵔⴰⵍⵢⴰ
-    BWP:
-      display_names:
-        other: ⴰⴱⵓⵍⴰ ⵏ ⴱⵓⵜⵙⵡⴰⵏⴰ
-        one: ⴰⴱⵓⵍⴰ ⵏ ⴱⵓⵜⵙⵡⴰⵏⴰ
-    CAD:
-      display_names:
-        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⴽⴰⵏⴰⴷⴰ
-        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⴽⴰⵏⴰⴷⴰ
-    CNY:
-      display_names:
-        other: ⴰⵢⴰⵏ ⵏ ⵛⵛⵉⵏⵡⴰ
-        one: ⴰⵢⴰⵏ ⵏ ⵛⵛⵉⵏⵡⴰ
-    EGP:
-      display_names:
-        other: ⴰⵊⵏⵉⵀ ⵏ ⵎⵉⵚⵕ
-        one: ⴰⵊⵏⵉⵀ ⵏ ⵎⵉⵚⵕ
-    EUR:
-      display_names:
-        other: ⵓⵔⵓ
-        one: ⵓⵔⵓ
-    GBP:
-      display_names:
-        other: ⴰⵊⵏⵉⵀ ⴰⵙⵜⵔⵍⵉⵏⵉ ⵏ ⵏⵏⴳⵍⵉⵣ
-        one: ⴰⵊⵏⵉⵀ ⴰⵙⵜⵔⵍⵉⵏⵉ ⵏ ⵏⵏⴳⵍⵉⵣ
-    INR:
-      display_names:
-        other: ⴰⵔⵓⴱⵉ ⵏ ⵍⵀⵉⵏⴷ
-        one: ⴰⵔⵓⴱⵉ ⵏ ⵍⵀⵉⵏⴷ
-    JPY:
-      display_names:
-        other: ⴰⵢⴰⵏ ⵏ ⵍⵢⴰⴱⴰⵏ
-        one: ⴰⵢⴰⵏ ⵏ ⵍⵢⴰⴱⴰⵏ
-    KMF:
-      display_names:
-        other: ⴼⵔⴰⵏⴽ ⵏ ⵇⵓⵎⵓⵕ
-        one: ⴼⵔⴰⵏⴽ ⵏ ⵇⵓⵎⵓⵕ
-    LRD:
-      display_names:
-        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵍⵉⴱⵉⵔⵢⴰ
-        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⵍⵉⴱⵉⵔⵢⴰ
-    MGA:
-      display_names:
-        other: ⴼⵔⴰⵏⴽ ⵏ ⵎⴰⴷⴰⵖⴰⵛⵇⴰⵔ
-        one: ⴼⵔⴰⵏⴽ ⵏ ⵎⴰⴷⴰⵖⴰⵛⵇⴰⵔ
-    MUR:
-      display_names:
-        other: ⴰⵔⵓⴱⵉ ⵏ ⵎⵓⵔⵉⵙ
-        one: ⴰⵔⵓⴱⵉ ⵏ ⵎⵓⵔⵉⵙ
-    NAD:
-      display_names:
-        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵏⴰⵎⵉⴱⵢⴰ
-        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⵏⴰⵎⵉⴱⵢⴰ
-    NGN:
-      display_names:
-        other: ⵏⴰⵢⵔⴰ ⵏ ⵏⵉⵊⵉⵔⵢⴰ
-        one: ⵏⴰⵢⵔⴰ ⵏ ⵏⵉⵊⵉⵔⵢⴰ
-    RWF:
-      display_names:
-        other: ⴰⴼⵔⴰⵏⴽ ⵏ ⵔⵡⴰⵏⴷⴰ
-        one: ⴰⴼⵔⴰⵏⴽ ⵏ ⵔⵡⴰⵏⴷⴰ
-    SHP:
-      display_names:
-        other: ⴰⵊⵏⵉⵀ ⵏ ⵙⴰⵏⵜⵉⵍⵉⵏ
-        one: ⴰⵊⵏⵉⵀ ⵏ ⵙⴰⵏⵜⵉⵍⵉⵏ
-    STN:
-      display_names:
-        other: ⴰⴷⵓⴱⵔⴰ ⵏ ⵙⴰⵏⵟⵓⵎⵉ
-        one: ⴰⴷⵓⴱⵔⴰ ⵏ ⵙⴰⵏⵟⵓⵎⵉ
-    USD:
-      display_names:
-        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵉⵡⵓⵏⴰⴽ ⵉⵎⵓⵏⵏ
-        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⵉⵡⵓⵏⴰⴽ ⵉⵎⵓⵏⵏ
-    XAF:
-      display_names:
-        other: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ
-        one: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ
-    XOF:
-      display_names:
-        other: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ ⴱⵉⵙⴰⵡ
-        one: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ ⴱⵉⵙⴰⵡ
-    ZAR:
-      display_names:
-        other: ⴰⵔⴰⵏⴷ ⵏ ⴰⴼⵔⵉⵇⵢⴰ ⵏ ⵉⴼⴼⵓⵙ
-        one: ⴰⵔⴰⵏⴷ ⵏ ⴰⴼⵔⵉⵇⵢⴰ ⵏ ⵉⴼⴼⵓⵙ
-    ZMW:
-      display_names:
-        other: ⴰⴽⵡⴰⵛⴰ ⵏ ⵣⴰⵎⴱⵢⴰ
-        one: ⴰⴽⵡⴰⵛⴰ ⵏ ⵣⴰⵎⴱⵢⴰ
-    AED:
-      display_names:
-        other: ⴰⴷⵔⵉⵎ ⵏ ⵍⵉⵎⴰⵔⴰⵜ
-        one: ⴰⴷⵔⵉⵎ ⵏ ⵍⵉⵎⴰⵔⴰⵜ
     BHD:
       display_names:
         other: ⴰⴷⵉⵏⴰⵔ ⵏ ⴱⵃⵔⴰⵢⵏ
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: ⴼⵔⴰⵏⴽ ⵏ ⴱⵓⵔⵓⵏⴷⵉ
         one: ⴼⵔⴰⵏⴽ ⵏ ⴱⵓⵔⵓⵏⴷⵉ
+    BWP:
+      display_names:
+        other: ⴰⴱⵓⵍⴰ ⵏ ⴱⵓⵜⵙⵡⴰⵏⴰ
+        one: ⴰⴱⵓⵍⴰ ⵏ ⴱⵓⵜⵙⵡⴰⵏⴰ
+    CAD:
+      display_names:
+        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⴽⴰⵏⴰⴷⴰ
+        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⴽⴰⵏⴰⴷⴰ
     CDF:
       display_names:
         other: ⴼⵔⴰⵏⴽ ⵏ ⴽⵓⵏⴳⵓ
@@ -125,6 +51,10 @@ number_formats:
       display_names:
         other: ⴰⴼⵔⴰⵏⴽ ⵏ ⵙⵡⵉⵙⵔⴰ
         one: ⴰⴼⵔⴰⵏⴽ ⵏ ⵙⵡⵉⵙⵔⴰ
+    CNY:
+      display_names:
+        other: ⴰⵢⴰⵏ ⵏ ⵛⵛⵉⵏⵡⴰ
+        one: ⴰⵢⴰⵏ ⵏ ⵛⵛⵉⵏⵡⴰ
     CVE:
       display_names:
         other: ⵉⵙⴽⵓⴷⵓ ⵏ ⴽⴰⴱⴱⵉⵔⴷⵉ
@@ -137,6 +67,10 @@ number_formats:
       display_names:
         other: ⴰⴷⵉⵏⴰⵔ ⵏ ⴷⵣⴰⵢⵔ
         one: ⴰⴷⵉⵏⴰⵔ ⵏ ⴷⵣⴰⵢⵔ
+    EGP:
+      display_names:
+        other: ⴰⵊⵏⵉⵀ ⵏ ⵎⵉⵚⵕ
+        one: ⴰⵊⵏⵉⵀ ⵏ ⵎⵉⵚⵕ
     ERN:
       display_names:
         other: ⵏⴰⴼⴽⴰ ⵏ ⵉⵔⵉⵜⵉⵔⵢⴰ
@@ -145,6 +79,14 @@ number_formats:
       display_names:
         other: ⴱⵉⵔ ⵏ ⵉⵜⵢⵓⴱⵢⴰ
         one: ⴱⵉⵔ ⵏ ⵉⵜⵢⵓⴱⵢⴰ
+    EUR:
+      display_names:
+        other: ⵓⵔⵓ
+        one: ⵓⵔⵓ
+    GBP:
+      display_names:
+        other: ⴰⵊⵏⵉⵀ ⴰⵙⵜⵔⵍⵉⵏⵉ ⵏ ⵏⵏⴳⵍⵉⵣ
+        one: ⴰⵊⵏⵉⵀ ⴰⵙⵜⵔⵍⵉⵏⵉ ⵏ ⵏⵏⴳⵍⵉⵣ
     GHC:
       display_names:
         other: ⵙⵉⴷⵉ ⵏ ⵖⴰⵏⴰ
@@ -157,10 +99,26 @@ number_formats:
       display_names:
         other: ⴼⵔⴰⵏⴽ ⵏ ⵖⵉⵏⵢⴰ
         one: ⴼⵔⴰⵏⴽ ⵏ ⵖⵉⵏⵢⴰ
+    INR:
+      display_names:
+        other: ⴰⵔⵓⴱⵉ ⵏ ⵍⵀⵉⵏⴷ
+        one: ⴰⵔⵓⴱⵉ ⵏ ⵍⵀⵉⵏⴷ
+    JPY:
+      display_names:
+        other: ⴰⵢⴰⵏ ⵏ ⵍⵢⴰⴱⴰⵏ
+        one: ⴰⵢⴰⵏ ⵏ ⵍⵢⴰⴱⴰⵏ
     KES:
       display_names:
         other: ⴰⵛⵉⵍⵉⵏ ⵏ ⴽⵉⵏⵢⴰ
         one: ⴰⵛⵉⵍⵉⵏ ⵏ ⴽⵉⵏⵢⴰ
+    KMF:
+      display_names:
+        other: ⴼⵔⴰⵏⴽ ⵏ ⵇⵓⵎⵓⵕ
+        one: ⴼⵔⴰⵏⴽ ⵏ ⵇⵓⵎⵓⵕ
+    LRD:
+      display_names:
+        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵍⵉⴱⵉⵔⵢⴰ
+        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⵍⵉⴱⵉⵔⵢⴰ
     LSL:
       display_names:
         other: ⵍⵓⵜⵉ ⵏ ⵍⵉⵚⵓⵟⵓ
@@ -173,6 +131,10 @@ number_formats:
       display_names:
         other: ⴰⴷⵔⵉⵎ ⵏ ⵍⵎⵖⵔⵉⴱ
         one: ⴰⴷⵔⵉⵎ ⵏ ⵍⵎⵖⵔⵉⴱ
+    MGA:
+      display_names:
+        other: ⴼⵔⴰⵏⴽ ⵏ ⵎⴰⴷⴰⵖⴰⵛⵇⴰⵔ
+        one: ⴼⵔⴰⵏⴽ ⵏ ⵎⴰⴷⴰⵖⴰⵛⵇⴰⵔ
     MRO:
       display_names:
         other: ⵓⵇⵉⵢⵢⴰ ⵏ ⵎⵓⵕⵉⵟⴰⵏⵢⴰ (1973–2017)
@@ -181,6 +143,10 @@ number_formats:
       display_names:
         other: ⵓⵇⵉⵢⵢⴰ ⵏ ⵎⵓⵕⵉⵟⴰⵏⵢⴰ
         one: ⵓⵇⵉⵢⵢⴰ ⵏ ⵎⵓⵕⵉⵟⴰⵏⵢⴰ
+    MUR:
+      display_names:
+        other: ⴰⵔⵓⴱⵉ ⵏ ⵎⵓⵔⵉⵙ
+        one: ⴰⵔⵓⴱⵉ ⵏ ⵎⵓⵔⵉⵙ
     MWK:
       display_names:
         other: ⴽⵡⴰⵛⴰ ⵏ ⵎⴰⵍⴰⵡⵉ
@@ -189,6 +155,18 @@ number_formats:
       display_names:
         other: ⴰⵎⵉⵜⵉⴽⵍ ⵏ ⵎⵓⵣⵏⴱⵉⵇ
         one: ⴰⵎⵉⵜⵉⴽⵍ ⵏ ⵎⵓⵣⵏⴱⵉⵇ
+    NAD:
+      display_names:
+        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵏⴰⵎⵉⴱⵢⴰ
+        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⵏⴰⵎⵉⴱⵢⴰ
+    NGN:
+      display_names:
+        other: ⵏⴰⵢⵔⴰ ⵏ ⵏⵉⵊⵉⵔⵢⴰ
+        one: ⵏⴰⵢⵔⴰ ⵏ ⵏⵉⵊⵉⵔⵢⴰ
+    RWF:
+      display_names:
+        other: ⴰⴼⵔⴰⵏⴽ ⵏ ⵔⵡⴰⵏⴷⴰ
+        one: ⴰⴼⵔⴰⵏⴽ ⵏ ⵔⵡⴰⵏⴷⴰ
     SAR:
       display_names:
         other: ⴰⵔⵢⴰⵍ ⵏ ⵙⵙⴰⵄⵓⴷⵉⵢⴰ
@@ -205,6 +183,10 @@ number_formats:
       display_names:
         other: ⴰⵊⵏⵉⵀ ⵏ ⵙⵙⵓⴷⴰⵏ
         one: ⴰⵊⵏⵉⵀ ⵏ ⵙⵙⵓⴷⴰⵏ
+    SHP:
+      display_names:
+        other: ⴰⵊⵏⵉⵀ ⵏ ⵙⴰⵏⵜⵉⵍⵉⵏ
+        one: ⴰⵊⵏⵉⵀ ⵏ ⵙⴰⵏⵜⵉⵍⵉⵏ
     SLE:
       display_names:
         other: ⵍⵉⵢⵓⵏ
@@ -221,6 +203,10 @@ number_formats:
       display_names:
         other: ⴰⴷⵓⴱⵔⴰ ⵏ ⵙⴰⵏⵟⵓⵎⵉ (1977–2017)
         one: ⴰⴷⵓⴱⵔⴰ ⵏ ⵙⴰⵏⵟⵓⵎⵉ (1977–2017)
+    STN:
+      display_names:
+        other: ⴰⴷⵓⴱⵔⴰ ⵏ ⵙⴰⵏⵟⵓⵎⵉ
+        one: ⴰⴷⵓⴱⵔⴰ ⵏ ⵙⴰⵏⵟⵓⵎⵉ
     SZL:
       display_names:
         other: ⵍⵉⵍⴰⵏⵊⵉⵏⵉ
@@ -237,10 +223,30 @@ number_formats:
       display_names:
         other: ⴰⵛⵉⵍⵉⵏ ⵏ ⵓⵖⴰⵏⴷⴰ
         one: ⴰⵛⵉⵍⵉⵏ ⵏ ⵓⵖⴰⵏⴷⴰ
+    USD:
+      display_names:
+        other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵉⵡⵓⵏⴰⴽ ⵉⵎⵓⵏⵏ
+        one: ⴰⴷⵓⵍⴰⵔ ⵏ ⵉⵡⵓⵏⴰⴽ ⵉⵎⵓⵏⵏ
+    XAF:
+      display_names:
+        other: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ
+        one: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ
+    XOF:
+      display_names:
+        other: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ ⴱⵉⵙⴰⵡ
+        one: ⴼⵔⴰⵏⴽ ⵚⵉⴼⴰ ⴱⵉⵙⴰⵡ
+    ZAR:
+      display_names:
+        other: ⴰⵔⴰⵏⴷ ⵏ ⴰⴼⵔⵉⵇⵢⴰ ⵏ ⵉⴼⴼⵓⵙ
+        one: ⴰⵔⴰⵏⴷ ⵏ ⴰⴼⵔⵉⵇⵢⴰ ⵏ ⵉⴼⴼⵓⵙ
     ZMK:
       display_names:
         other: ⴰⴽⵡⴰⵛⴰ ⵏ ⵣⴰⵎⴱⵢⴰ (1968–2012)
         one: ⴰⴽⵡⴰⵛⴰ ⵏ ⵣⴰⵎⴱⵢⴰ (1968–2012)
+    ZMW:
+      display_names:
+        other: ⴰⴽⵡⴰⵛⴰ ⵏ ⵣⴰⵎⴱⵢⴰ
+        one: ⴰⴽⵡⴰⵛⴰ ⵏ ⵣⴰⵎⴱⵢⴰ
     ZWD:
       display_names:
         other: ⴰⴷⵓⵍⴰⵔ ⵏ ⵣⵉⵎⴱⴰⴱⵡⵉ

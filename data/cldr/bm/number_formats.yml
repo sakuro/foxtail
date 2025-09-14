@@ -1,12 +1,22 @@
 ---
 locale: bm
-generated_at: '2025-09-13T17:35:01Z'
+generated_at: '2025-09-14T06:08:37Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: arabu mara kafoli Diram
+        one: arabu mara kafoli Diram
     AOA:
       display_names:
         other: angola Kwanza
@@ -15,98 +25,6 @@ number_formats:
       display_names:
         other: ositirali Dolar
         one: ositirali Dolar
-    BWP:
-      display_names:
-        other: bɔtisiwana Pula
-        one: bɔtisiwana Pula
-    CAD:
-      display_names:
-        other: kanada Dolar
-        one: kanada Dolar
-    CNY:
-      display_names:
-        other: siniwa Yuwan
-        one: siniwa Yuwan
-    EGP:
-      display_names:
-        other: eziputi Livri
-        one: eziputi Livri
-    EUR:
-      display_names:
-        other: ero
-        one: ero
-    GBP:
-      display_names:
-        other: angilɛ Livri
-        one: angilɛ Livri
-    INR:
-      display_names:
-        other: Ɛndu Rupi
-        one: Ɛndu Rupi
-    JPY:
-      display_names:
-        other: zapɔne Yɛn
-        one: zapɔne Yɛn
-    KMF:
-      display_names:
-        other: komɔri Fraŋ
-        one: komɔri Fraŋ
-    LRD:
-      display_names:
-        other: liberiya Dolar
-        one: liberiya Dolar
-    MGA:
-      display_names:
-        other: madagasikari Fraŋ
-        one: madagasikari Fraŋ
-    MUR:
-      display_names:
-        other: morisi Rupi
-        one: morisi Rupi
-    NAD:
-      display_names:
-        other: namibi Dolar
-        one: namibi Dolar
-    NGN:
-      display_names:
-        other: nizeriya Nɛra
-        one: nizeriya Nɛra
-    RWF:
-      display_names:
-        other: ruwanda Fraŋ
-        one: ruwanda Fraŋ
-    SHP:
-      display_names:
-        other: Ɛlɛni-Senu Livri
-        one: Ɛlɛni-Senu Livri
-    STN:
-      display_names:
-        other: sawotome Dobra
-        one: sawotome Dobra
-    USD:
-      display_names:
-        other: ameriki Dolar
-        one: ameriki Dolar
-    XAF:
-      display_names:
-        other: sefa Fraŋ (BEAC)
-        one: sefa Fraŋ (BEAC)
-    XOF:
-      display_names:
-        other: sefa Fraŋ (BCEAO)
-        one: sefa Fraŋ (BCEAO)
-    ZAR:
-      display_names:
-        other: sudafriki Randi
-        one: sudafriki Randi
-    ZMW:
-      display_names:
-        other: zambi Kwaca
-        one: zambi Kwaca
-    AED:
-      display_names:
-        other: arabu mara kafoli Diram
-        one: arabu mara kafoli Diram
     BHD:
       display_names:
         other: bareyini Dinar
@@ -115,6 +33,14 @@ number_formats:
       display_names:
         other: burundi Fraŋ
         one: burundi Fraŋ
+    BWP:
+      display_names:
+        other: bɔtisiwana Pula
+        one: bɔtisiwana Pula
+    CAD:
+      display_names:
+        other: kanada Dolar
+        one: kanada Dolar
     CDF:
       display_names:
         other: kongole Fraŋ
@@ -123,6 +49,10 @@ number_formats:
       display_names:
         other: suwisi Fraŋ
         one: suwisi Fraŋ
+    CNY:
+      display_names:
+        other: siniwa Yuwan
+        one: siniwa Yuwan
     CVE:
       display_names:
         other: capivɛrdi Esekudo
@@ -135,6 +65,10 @@ number_formats:
       display_names:
         other: alizeri Dinar
         one: alizeri Dinar
+    EGP:
+      display_names:
+        other: eziputi Livri
+        one: eziputi Livri
     ERN:
       display_names:
         other: eritere Nafika
@@ -143,6 +77,14 @@ number_formats:
       display_names:
         other: etiopi Bir
         one: etiopi Bir
+    EUR:
+      display_names:
+        other: ero
+        one: ero
+    GBP:
+      display_names:
+        other: angilɛ Livri
+        one: angilɛ Livri
     GHC:
       display_names:
         other: gana Sedi
@@ -155,10 +97,26 @@ number_formats:
       display_names:
         other: gine Fraŋ
         one: gine Fraŋ
+    INR:
+      display_names:
+        other: Ɛndu Rupi
+        one: Ɛndu Rupi
+    JPY:
+      display_names:
+        other: zapɔne Yɛn
+        one: zapɔne Yɛn
     KES:
       display_names:
         other: keniya Siling
         one: keniya Siling
+    KMF:
+      display_names:
+        other: komɔri Fraŋ
+        one: komɔri Fraŋ
+    LRD:
+      display_names:
+        other: liberiya Dolar
+        one: liberiya Dolar
     LSL:
       display_names:
         other: lesoto Loti
@@ -171,6 +129,10 @@ number_formats:
       display_names:
         other: marɔku Diram
         one: marɔku Diram
+    MGA:
+      display_names:
+        other: madagasikari Fraŋ
+        one: madagasikari Fraŋ
     MRO:
       display_names:
         other: mɔritani Uguwiya (1973–2017)
@@ -179,6 +141,10 @@ number_formats:
       display_names:
         other: mɔritani Uguwiya
         one: mɔritani Uguwiya
+    MUR:
+      display_names:
+        other: morisi Rupi
+        one: morisi Rupi
     MWK:
       display_names:
         other: malawi Kwaca
@@ -187,6 +153,18 @@ number_formats:
       display_names:
         other: mozanbiki Metikali
         one: mozanbiki Metikali
+    NAD:
+      display_names:
+        other: namibi Dolar
+        one: namibi Dolar
+    NGN:
+      display_names:
+        other: nizeriya Nɛra
+        one: nizeriya Nɛra
+    RWF:
+      display_names:
+        other: ruwanda Fraŋ
+        one: ruwanda Fraŋ
     SAR:
       display_names:
         other: sawudiya Riyal
@@ -203,6 +181,10 @@ number_formats:
       display_names:
         other: sudani Livri
         one: sudani Livri
+    SHP:
+      display_names:
+        other: Ɛlɛni-Senu Livri
+        one: Ɛlɛni-Senu Livri
     SLE:
       display_names:
         other: siyeralewɔni Lewɔni
@@ -219,6 +201,10 @@ number_formats:
       display_names:
         other: sawotome Dobra (1977–2017)
         one: sawotome Dobra (1977–2017)
+    STN:
+      display_names:
+        other: sawotome Dobra
+        one: sawotome Dobra
     SZL:
       display_names:
         other: swazilandi Lilangeni
@@ -235,10 +221,30 @@ number_formats:
       display_names:
         other: uganda Siling
         one: uganda Siling
+    USD:
+      display_names:
+        other: ameriki Dolar
+        one: ameriki Dolar
+    XAF:
+      display_names:
+        other: sefa Fraŋ (BEAC)
+        one: sefa Fraŋ (BEAC)
+    XOF:
+      display_names:
+        other: sefa Fraŋ (BCEAO)
+        one: sefa Fraŋ (BCEAO)
+    ZAR:
+      display_names:
+        other: sudafriki Randi
+        one: sudafriki Randi
     ZMK:
       display_names:
         other: zambi Kwaca (1968–2012)
         one: zambi Kwaca (1968–2012)
+    ZMW:
+      display_names:
+        other: zambi Kwaca
+        one: zambi Kwaca
     ZWD:
       display_names:
         other: zimbabuwe Dolar

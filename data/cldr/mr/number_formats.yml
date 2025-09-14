@@ -1,24 +1,113 @@
 ---
 locale: mr
-generated_at: '2025-09-13T17:39:13Z'
+generated_at: '2025-09-14T06:11:16Z'
 cldr_version: '46'
 number_formats:
   decimal_formats:
     standard: "#,##,##0.###"
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
   scientific_formats:
     standard: "[#E0]"
+  compact_formats:
+    short:
+      '1000':
+        one: 0 ह
+        other: 0 ह
+      '10000':
+        one: 00 ह
+        other: 00 ह
+      '100000':
+        one: 0 लाख
+        other: 0 लाख
+      '1000000':
+        one: 00 लाख
+        other: 00 लाख
+      '10000000':
+        one: 0 कोटी
+        other: 0 कोटी
+      '100000000':
+        one: 00 कोटी
+        other: 00 कोटी
+      '1000000000':
+        one: 0 अब्ज
+        other: 0 अब्ज
+      '10000000000':
+        one: 00 अब्ज
+        other: 00 अब्ज
+      '100000000000':
+        one: 0 खर्व
+        other: 0 खर्व
+      '1000000000000':
+        one: 00 खर्व
+        other: 00 खर्व
+      '10000000000000':
+        one: 0 पद्म
+        other: 0 पद्म
+      '100000000000000':
+        one: 00 पद्म
+        other: 00 पद्म
+    long:
+      '1000':
+        one: 0 हजार
+        other: 0 हजार
+      '10000':
+        one: 00 हजार
+        other: 00 हजार
+      '100000':
+        one: 0 लाख
+        other: 0 लाख
+      '1000000':
+        one: 00 लाख
+        other: 00 लाख
+      '10000000':
+        one: 0 कोटी
+        other: 0 कोटी
+      '100000000':
+        one: 00 कोटी
+        other: 00 कोटी
+      '1000000000':
+        one: 0 अब्ज
+        other: 0 अब्ज
+      '10000000000':
+        one: 00 अब्ज
+        other: 00 अब्ज
+      '100000000000':
+        one: 0 खर्व
+        other: 0 खर्व
+      '1000000000000':
+        one: 00 खर्व
+        other: 00 खर्व
+      '10000000000000':
+        one: 0 पद्म
+        other: 0 पद्म
+      '100000000000000':
+        one: 00 पद्म
+        other: 00 पद्म
   currencies:
+    AED:
+      display_names:
+        other: संयुक्त अरब अमीरात दिरहॅम
+        one: संयुक्त अरब अमीरात दिरहॅम
     AFN:
       display_names:
         other: अफगाण अफगाणी
         one: अफगाण अफगाणी
+    ALL:
+      display_names:
+        other: अल्बानियन लेके
+        one: अल्बानियन लेक
     AMD:
       display_names:
         other: आर्मेनियन द्रॅम
         one: आर्मेनियन द्रॅम
+    ANG:
+      display_names:
+        other: नेदरलँडचे अँटिलीन गिल्डर्स
+        one: नेदरलँडचा अँटिलीन गिल्डर
     AOA:
       display_names:
         other: अँगोलन क्वॅन्झास
@@ -31,6 +120,10 @@ number_formats:
       display_names:
         other: ऑस्ट्रेलियन डॉलर्स
         one: ऑस्ट्रेलियन डॉलर
+    AWG:
+      display_names:
+        other: अरुबा फ्लोरिन
+        one: अरुबा फ्लोरिन
     AZN:
       display_names:
         other: अझरबैझानी मानाट
@@ -47,6 +140,18 @@ number_formats:
       display_names:
         other: बांगलादेशी टका
         one: बांगलादेशी टका
+    BGN:
+      display_names:
+        other: बल्गेरियन लेवा
+        one: बल्गेरियन लेव
+    BHD:
+      display_names:
+        other: बाहरिनी दिनार
+        one: बाहरिनी दिनार
+    BIF:
+      display_names:
+        other: बुरुंडियन फ्रँक्स
+        one: बुरुंडियन फ्रँक
     BMD:
       display_names:
         other: बर्मुडा डॉलर्स
@@ -67,10 +172,22 @@ number_formats:
       display_names:
         other: बहामी डॉलर्स
         one: बहामी डॉलर
+    BTN:
+      display_names:
+        other: भूतानी एंगल्ट्रम
+        one: भूतानी एंगल्ट्रम
     BWP:
       display_names:
         other: बोट्सवाना पुलाज
         one: बोट्सवानन पुला
+    BYN:
+      display_names:
+        other: बेलारुशियन रुबल्स
+        one: बेलारुशियन रुबल
+    BYR:
+      display_names:
+        other: बेलारुशियन रुबल्स (2000–2016)
+        one: बेलारुशियन रुबल (2000–2016)
     BZD:
       display_names:
         other: बेलीझ डॉलर्स
@@ -79,10 +196,22 @@ number_formats:
       display_names:
         other: कॅनडियन डॉलर्स
         one: कॅनडियन डॉलर
+    CDF:
+      display_names:
+        other: काँगोलीज फ्रँक्स
+        one: काँगोलीज फ्रँक
+    CHF:
+      display_names:
+        other: स्विस फ्रँक्स
+        one: स्विस फ्रँक
     CLP:
       display_names:
         other: चिली पेसोज
         one: चिली पेसो
+    CNH:
+      display_names:
+        other: चिनी युआन (ऑफशोर)
+        one: चिनी युआन (ऑफशोर)
     CNY:
       display_names:
         other: चीनी युआन
@@ -103,10 +232,18 @@ number_formats:
       display_names:
         other: क्यूबन पेसोज
         one: क्यूबन पेसो
+    CVE:
+      display_names:
+        other: केप व्हर्डेयन एस्कुडोज
+        one: केप व्हर्डेयन एस्कुडो
     CZK:
       display_names:
         other: झेक प्रजासत्ताक कोरुनाज
         one: झेक प्रजासत्ताक कोरुना
+    DJF:
+      display_names:
+        other: जिबौटियन फ्रँक्स
+        one: जिबौटियन फ्रँक
     DKK:
       display_names:
         other: डॅनिश क्रोन
@@ -115,10 +252,22 @@ number_formats:
       display_names:
         other: डोमिनिकन पेसोज
         one: डोमिनिकन पेसो
+    DZD:
+      display_names:
+        other: अल्जेरियन दिनार
+        one: अल्जेरियन दिनार
     EGP:
       display_names:
         other: इजिप्शियन पाउंड्स
         one: इजिप्शियन पाउंड
+    ERN:
+      display_names:
+        other: इरिट्रियन नाक्फाज
+        one: इरिट्रियन नाक्फा
+    ETB:
+      display_names:
+        other: इथिओपियन बिर्स
+        one: इथिओपियन बिर
     EUR:
       display_names:
         other: युरो
@@ -148,6 +297,10 @@ number_formats:
       display_names:
         other: जिब्राल्टर पाउंड्स
         one: जिब्राल्टर पाउंड
+    GMD:
+      display_names:
+        other: गाम्बियन डालासीस
+        one: गाम्बियन डालासी
     GNF:
       display_names:
         other: गिनी फ्रँक्स
@@ -172,6 +325,10 @@ number_formats:
       display_names:
         other: क्रोएशियन कूनाज
         one: क्रोएशियन कूना
+    HTG:
+      display_names:
+        other: हैती गोअर्ड्स
+        one: हैती गोअर्ड
     HUF:
       display_names:
         other: हंगेरियन फॉरिन्ट्स
@@ -188,6 +345,14 @@ number_formats:
       display_names:
         other: भारतीय रुपये
         one: भारतीय रुपया
+    IQD:
+      display_names:
+        other: इराकी दिनार
+        one: इराकी दिनार
+    IRR:
+      display_names:
+        other: इराणी रियाल
+        one: इराणी रियाल
     ISK:
       display_names:
         other: आइसलँडिक क्रोन्युर
@@ -196,10 +361,18 @@ number_formats:
       display_names:
         other: जमैकन डॉलर्स
         one: जमैकन डॉलर
+    JOD:
+      display_names:
+        other: जॉर्डनियन दिनार
+        one: जॉर्डनियन दिनार
     JPY:
       display_names:
         other: जपानी येन
         one: जपानी येन
+    KES:
+      display_names:
+        other: केनियन शिलिंग्स
+        one: केनियन शिलिंग
     KGS:
       display_names:
         other: किरगिस्तानी सॉम
@@ -220,6 +393,10 @@ number_formats:
       display_names:
         other: दक्षिण कोरियन वॉन
         one: दक्षिण कोरियन वॉन
+    KWD:
+      display_names:
+        other: कुवैती दिनार
+        one: कुवैती दिनार
     KYD:
       display_names:
         other: केमेन आयलॅंड डॉलर्स
@@ -244,6 +421,10 @@ number_formats:
       display_names:
         other: लाइबेरियन डॉलर्स
         one: लाइबेरियन डॉलर
+    LSL:
+      display_names:
+        other: लेसोटो लोटी
+        one: लेसोटो लोटी
     LTL:
       display_names:
         other: लिथुआनियन लिटाई
@@ -252,10 +433,26 @@ number_formats:
       display_names:
         other: लाट्व्हियन लाटी
         one: लाट्व्हियन लाट्झ
+    LYD:
+      display_names:
+        other: लिबियन दिनार
+        one: लिबियाचा दिनार
+    MAD:
+      display_names:
+        other: मोरोक्कन दिरहाम
+        one: मोरोक्को दिरहॅम
+    MDL:
+      display_names:
+        other: मोल्डोवन लेई
+        one: मोल्डोवन लेउ
     MGA:
       display_names:
         other: मालागासी एरियारीज
         one: मालागासी एरियारी
+    MKD:
+      display_names:
+        other: मॅसेडोनियन देनारी
+        one: मॅसेडोनियन देनार
     MMK:
       display_names:
         other: म्यानमार क्याट
@@ -264,10 +461,30 @@ number_formats:
       display_names:
         other: मंगोलियन टुग्रिक्स
         one: मंगोलियन टुग्रिक
+    MOP:
+      display_names:
+        other: मॅकॅनीज् पटाकाज
+        one: मॅकॅनीज् पटाका
+    MRO:
+      display_names:
+        other: मॉरिटानियन ओगियाज (1973–2017)
+        one: मॉरिटानियन ओगिया (1973–2017)
+    MRU:
+      display_names:
+        other: मॉरिटानियन ओगियाज
+        one: मॉरिटानियन ओगिया
     MUR:
       display_names:
         other: मॉरिशियन रुपीज
         one: मॉरिशियन रुपी
+    MVR:
+      display_names:
+        other: मालदीवियन रुफिया
+        one: मालदीवियन रुफिया
+    MWK:
+      display_names:
+        other: मालावियन क्वाचास
+        one: मालावियन क्वाचा
     MXN:
       display_names:
         other: मेक्सिको पेसोज
@@ -276,6 +493,10 @@ number_formats:
       display_names:
         other: मलेशियन रिंगिट
         one: मलेशियन रिंगिट
+    MZN:
+      display_names:
+        other: मोझांबिकन मेटिकल्स
+        one: मोझांबिकन मेटिकल
     NAD:
       display_names:
         other: नमिबियन डॉलर्स
@@ -300,6 +521,22 @@ number_formats:
       display_names:
         other: न्यूझीलँड डॉलर्स
         one: न्यूझीलँड डॉलर
+    OMR:
+      display_names:
+        other: ओमानी रियाल
+        one: ओमानी रियाल
+    PAB:
+      display_names:
+        other: पनामा बाल्बोआज
+        one: पनामा बाल्बोआ
+    PEN:
+      display_names:
+        other: पेरुवियन सोल्स
+        one: पेरुवियन सोल
+    PGK:
+      display_names:
+        other: पापुआ न्यू गिनीयन किना
+        one: पापुआ न्यू गिनीयन किना
     PHP:
       symbol: PHP
       display_names:
@@ -317,10 +554,18 @@ number_formats:
       display_names:
         other: पराग्वे ग्वारानीज
         one: पराग्वे ग्वारानी
+    QAR:
+      display_names:
+        other: कतारी रियाल
+        one: कतारी रियाल
     RON:
       display_names:
         other: रोमानियन लेई
         one: रोमानियन लेऊ
+    RSD:
+      display_names:
+        other: सर्बियन दिनार
+        one: सर्बियन दिनार
     RUB:
       display_names:
         other: रशियन रुबल्स
@@ -329,10 +574,22 @@ number_formats:
       display_names:
         other: रवांडा फ्रँक्स
         one: रवांडा फ्रँक
+    SAR:
+      display_names:
+        other: सौदी रियाल
+        one: सौदी रियाल
     SBD:
       display_names:
         other: सोलोमन आयलँड्स डॉलर्स
         one: सोलोमन आयलँड्स डॉलर
+    SCR:
+      display_names:
+        other: सेशेलोईस रुपीज
+        one: सेशेलोईस रुपी
+    SDG:
+      display_names:
+        other: सुदानी पाउंड्स
+        one: सुदानी पाउंड
     SEK:
       display_names:
         other: स्वीडिश क्रोनोर
@@ -345,6 +602,18 @@ number_formats:
       display_names:
         other: सेंट हेलेना पाउंड्स
         one: सेंट हेलेना पाउंड
+    SLE:
+      display_names:
+        other: सिएरा लिऑनचे लिऑन्स
+        one: सिएरा लिऑनचा लिऑन
+    SLL:
+      display_names:
+        other: सिएरा लिऑनचे लिऑन्स (1964—2022)
+        one: सिएरा लिऑनचा लिऑन (1964—2022)
+    SOS:
+      display_names:
+        other: सोमाली शिलिंग
+        one: सोमाली शिलिंग्स
     SRD:
       display_names:
         other: सुरिनामी डॉलर्स
@@ -353,6 +622,10 @@ number_formats:
       display_names:
         other: दक्षिण सुदानी पाउंड्स
         one: दक्षिण सुदानी पाउंड
+    STD:
+      display_names:
+        other: साओ टोम आणि प्रिन्सिपे डोबराज (1977–2017)
+        one: साओ टोम आणि प्रिन्सिपे डोबरा (1977–2017)
     STN:
       display_names:
         other: साओ टोम आणि प्रिन्सिपे डोबराज
@@ -361,10 +634,26 @@ number_formats:
       display_names:
         other: सीरियन पाउंड्स
         one: सीरियन पाउंड
+    SZL:
+      display_names:
+        other: स्वाझी एमालांगेनी
+        one: स्वाझी लीलांगेनी
     THB:
       display_names:
         other: थाई बाहत
         one: थाई बाहत
+    TJS:
+      display_names:
+        other: ताजकीस्तानी सोमोनीज
+        one: ताजकीस्तानी सोमोनी
+    TMT:
+      display_names:
+        other: तुर्कमेनिस्तानी मानाट
+        one: तुर्कमेनिस्तानी मानाट
+    TND:
+      display_names:
+        other: ट्यूनिशियन दिनार
+        one: ट्यूनिशियन दिनार
     TOP:
       display_names:
         other: टोंगन पाआंगा
@@ -381,10 +670,18 @@ number_formats:
       display_names:
         other: न्यू तैवान डॉलर्स
         one: न्यू तैवान डॉलर
+    TZS:
+      display_names:
+        other: टांझानियन शिलिंग्स
+        one: टांझानियन शिलिंग
     UAH:
       display_names:
         other: युक्रेनियन रिवनियाज
         one: युक्रेनियन रिवनिया
+    UGX:
+      display_names:
+        other: युगांडा शिलिंग्स
+        one: युगांडा शिलिंग
     USD:
       symbol: "$"
       display_names:
@@ -394,14 +691,30 @@ number_formats:
       display_names:
         other: उरुग्वेचे पेसोज
         one: उरुग्वेचा पेसो
+    UZS:
+      display_names:
+        other: उझबेकिस्तानी सोम
+        one: उझबेकिस्तानी सोम
     VEF:
       display_names:
         other: व्हेनेझुएला बोलिव्हार्स (2008–2018)
         one: व्हेनेझुएला बोलिव्हार (2008–2018)
+    VES:
+      display_names:
+        other: व्हेनेझुएला बोलिव्हार्स
+        one: व्हेनेझुएला बोलिव्हार
     VND:
       display_names:
         other: व्हिएतनामी डोंग
         one: व्हिएतनामी डोंग
+    VUV:
+      display_names:
+        other: वानुआतु वाटु
+        one: वानुआतु वाटु
+    WST:
+      display_names:
+        other: सामोअन टाला
+        one: सामोअन टाला
     XAF:
       display_names:
         other: मध्य आफ्रिकन [CFA] फ्रँक
@@ -422,255 +735,3143 @@ number_formats:
       display_names:
         other: "(अज्ञात चलन)"
         one: "(चलनाचे अज्ञात एकक)"
-    ZAR:
-      display_names:
-        other: दक्षिण आफ्रिकी रँड
-        one: दक्षिण आफ्रिकी रँड
-    ZMW:
-      display_names:
-        other: झांबियन क्वाचास
-        one: झांबियन क्वाचा
-    AED:
-      display_names:
-        other: संयुक्त अरब अमीरात दिरहॅम
-        one: संयुक्त अरब अमीरात दिरहॅम
-    ALL:
-      display_names:
-        other: अल्बानियन लेके
-        one: अल्बानियन लेक
-    ANG:
-      display_names:
-        other: नेदरलँडचे अँटिलीन गिल्डर्स
-        one: नेदरलँडचा अँटिलीन गिल्डर
-    AWG:
-      display_names:
-        other: अरुबा फ्लोरिन
-        one: अरुबा फ्लोरिन
-    BGN:
-      display_names:
-        other: बल्गेरियन लेवा
-        one: बल्गेरियन लेव
-    BHD:
-      display_names:
-        other: बाहरिनी दिनार
-        one: बाहरिनी दिनार
-    BIF:
-      display_names:
-        other: बुरुंडियन फ्रँक्स
-        one: बुरुंडियन फ्रँक
-    BTN:
-      display_names:
-        other: भूतानी एंगल्ट्रम
-        one: भूतानी एंगल्ट्रम
-    BYN:
-      display_names:
-        other: बेलारुशियन रुबल्स
-        one: बेलारुशियन रुबल
-    BYR:
-      display_names:
-        other: बेलारुशियन रुबल्स (2000–2016)
-        one: बेलारुशियन रुबल (2000–2016)
-    CDF:
-      display_names:
-        other: काँगोलीज फ्रँक्स
-        one: काँगोलीज फ्रँक
-    CHF:
-      display_names:
-        other: स्विस फ्रँक्स
-        one: स्विस फ्रँक
-    CNH:
-      display_names:
-        other: चिनी युआन (ऑफशोर)
-        one: चिनी युआन (ऑफशोर)
-    CVE:
-      display_names:
-        other: केप व्हर्डेयन एस्कुडोज
-        one: केप व्हर्डेयन एस्कुडो
-    DJF:
-      display_names:
-        other: जिबौटियन फ्रँक्स
-        one: जिबौटियन फ्रँक
-    DZD:
-      display_names:
-        other: अल्जेरियन दिनार
-        one: अल्जेरियन दिनार
-    ERN:
-      display_names:
-        other: इरिट्रियन नाक्फाज
-        one: इरिट्रियन नाक्फा
-    ETB:
-      display_names:
-        other: इथिओपियन बिर्स
-        one: इथिओपियन बिर
-    GMD:
-      display_names:
-        other: गाम्बियन डालासीस
-        one: गाम्बियन डालासी
-    HTG:
-      display_names:
-        other: हैती गोअर्ड्स
-        one: हैती गोअर्ड
-    IQD:
-      display_names:
-        other: इराकी दिनार
-        one: इराकी दिनार
-    IRR:
-      display_names:
-        other: इराणी रियाल
-        one: इराणी रियाल
-    JOD:
-      display_names:
-        other: जॉर्डनियन दिनार
-        one: जॉर्डनियन दिनार
-    KES:
-      display_names:
-        other: केनियन शिलिंग्स
-        one: केनियन शिलिंग
-    KWD:
-      display_names:
-        other: कुवैती दिनार
-        one: कुवैती दिनार
-    LSL:
-      display_names:
-        other: लेसोटो लोटी
-        one: लेसोटो लोटी
-    LYD:
-      display_names:
-        other: लिबियन दिनार
-        one: लिबियाचा दिनार
-    MAD:
-      display_names:
-        other: मोरोक्कन दिरहाम
-        one: मोरोक्को दिरहॅम
-    MDL:
-      display_names:
-        other: मोल्डोवन लेई
-        one: मोल्डोवन लेउ
-    MKD:
-      display_names:
-        other: मॅसेडोनियन देनारी
-        one: मॅसेडोनियन देनार
-    MOP:
-      display_names:
-        other: मॅकॅनीज् पटाकाज
-        one: मॅकॅनीज् पटाका
-    MRO:
-      display_names:
-        other: मॉरिटानियन ओगियाज (1973–2017)
-        one: मॉरिटानियन ओगिया (1973–2017)
-    MRU:
-      display_names:
-        other: मॉरिटानियन ओगियाज
-        one: मॉरिटानियन ओगिया
-    MVR:
-      display_names:
-        other: मालदीवियन रुफिया
-        one: मालदीवियन रुफिया
-    MWK:
-      display_names:
-        other: मालावियन क्वाचास
-        one: मालावियन क्वाचा
-    MZN:
-      display_names:
-        other: मोझांबिकन मेटिकल्स
-        one: मोझांबिकन मेटिकल
-    OMR:
-      display_names:
-        other: ओमानी रियाल
-        one: ओमानी रियाल
-    PAB:
-      display_names:
-        other: पनामा बाल्बोआज
-        one: पनामा बाल्बोआ
-    PEN:
-      display_names:
-        other: पेरुवियन सोल्स
-        one: पेरुवियन सोल
-    PGK:
-      display_names:
-        other: पापुआ न्यू गिनीयन किना
-        one: पापुआ न्यू गिनीयन किना
-    QAR:
-      display_names:
-        other: कतारी रियाल
-        one: कतारी रियाल
-    RSD:
-      display_names:
-        other: सर्बियन दिनार
-        one: सर्बियन दिनार
-    SAR:
-      display_names:
-        other: सौदी रियाल
-        one: सौदी रियाल
-    SCR:
-      display_names:
-        other: सेशेलोईस रुपीज
-        one: सेशेलोईस रुपी
-    SDG:
-      display_names:
-        other: सुदानी पाउंड्स
-        one: सुदानी पाउंड
-    SLE:
-      display_names:
-        other: सिएरा लिऑनचे लिऑन्स
-        one: सिएरा लिऑनचा लिऑन
-    SLL:
-      display_names:
-        other: सिएरा लिऑनचे लिऑन्स (1964—2022)
-        one: सिएरा लिऑनचा लिऑन (1964—2022)
-    SOS:
-      display_names:
-        other: सोमाली शिलिंग
-        one: सोमाली शिलिंग्स
-    STD:
-      display_names:
-        other: साओ टोम आणि प्रिन्सिपे डोबराज (1977–2017)
-        one: साओ टोम आणि प्रिन्सिपे डोबरा (1977–2017)
-    SZL:
-      display_names:
-        other: स्वाझी एमालांगेनी
-        one: स्वाझी लीलांगेनी
-    TJS:
-      display_names:
-        other: ताजकीस्तानी सोमोनीज
-        one: ताजकीस्तानी सोमोनी
-    TMT:
-      display_names:
-        other: तुर्कमेनिस्तानी मानाट
-        one: तुर्कमेनिस्तानी मानाट
-    TND:
-      display_names:
-        other: ट्यूनिशियन दिनार
-        one: ट्यूनिशियन दिनार
-    TZS:
-      display_names:
-        other: टांझानियन शिलिंग्स
-        one: टांझानियन शिलिंग
-    UGX:
-      display_names:
-        other: युगांडा शिलिंग्स
-        one: युगांडा शिलिंग
-    UZS:
-      display_names:
-        other: उझबेकिस्तानी सोम
-        one: उझबेकिस्तानी सोम
-    VES:
-      display_names:
-        other: व्हेनेझुएला बोलिव्हार्स
-        one: व्हेनेझुएला बोलिव्हार
-    VUV:
-      display_names:
-        other: वानुआतु वाटु
-        one: वानुआतु वाटु
-    WST:
-      display_names:
-        other: सामोअन टाला
-        one: सामोअन टाला
     YER:
       display_names:
         other: येमेनी रियाल
         one: येमेनी रियाल
+    ZAR:
+      display_names:
+        other: दक्षिण आफ्रिकी रँड
+        one: दक्षिण आफ्रिकी रँड
     ZMK:
       display_names:
         other: झांबियन क्वाचा (1968–2012)
         one: झांबियन क्वाचा (1968–2012)
+    ZMW:
+      display_names:
+        other: झांबियन क्वाचास
+        one: झांबियन क्वाचा
+  units:
+    g-force:
+      long:
+        one: "{0} जी-फोर्स"
+        one_ablative: "{0} जी-फोर्सपासून"
+        one_accusative: "{0} जी-फोर्सला"
+        one_dative: "{0} जी-फोर्सला"
+        one_ergative: "{0} जी-फोर्सने"
+        one_genitive: "{0} जी-फोर्सचा"
+        one_locative: "{0} जी-फोर्सशी"
+        other: "{0} जी-फोर्स"
+        other_ablative: "{0} जी-फोर्सहून"
+        other_accusative: "{0} जी-फोर्सना"
+        other_dative: "{0} जी-फोर्ससाठी"
+        other_ergative: "{0} जी-फोर्सनी"
+        other_genitive: "{0} जी-फोर्सचे"
+        other_locative: "{0} जी-फोर्सचा"
+        gender: masculine
+      short:
+        display_name: जी-फोर्स
+      narrow:
+        one: "{0}जी"
+        other: "{0}जी"
+    meter-per-square-second:
+      long:
+        display_name: मीटर प्रति सेकंद चौरस
+        one: "{0} मीटर प्रति सेकंद चौरस"
+        one_ablative: "{0} मीटर प्रति सेकंद चौरसपासून"
+        one_accusative: "{0} मीटर प्रति सेकंद चौरसला"
+        one_dative: "{0} मीटर प्रति सेकंद चौरससाठी"
+        one_ergative: "{0} मीटर प्रति सेकंद चौरसने"
+        one_genitive: "{0} मीटर प्रति सेकंद चौरसचा"
+        one_locative: "{0} मीटर प्रति सेकंद चौरसमध्ये"
+        other: "{0} मीटर प्रति सेकंद चौरस"
+        other_ablative: "{0} मीटर प्रति सेकंद चौरसपासून"
+        other_accusative: "{0} मीटर प्रति सेकंद चौरसना"
+        other_dative: "{0} मीटर प्रति सेकंद चौरसना"
+        other_ergative: "{0} मीटर प्रति सेकंद चौरसाने"
+        other_genitive: "{0} मीटर प्रति सेकंद चौरसाचा"
+        other_locative: "{0} मीटर प्रति सेकंद चौरसात"
+        gender: neuter
+      short:
+        display_name: मीटर/सेक²
+        one: "{0} मी/से²"
+        other: "{0} मी/से²"
+    revolution:
+      long:
+        display_name: परिभ्रमण
+        one: "{0} परिभ्रमण"
+        one_ablative: "{0} परिभ्रमणापासून"
+        one_accusative: "{0} परिभ्रमणाला"
+        one_dative: "{0} परिभ्रमणाला"
+        one_ergative: "{0} परिभ्रमणाने"
+        one_genitive: "{0} परिभ्रमणाचा"
+        one_locative: "{0} परिभ्रमणाशी"
+        other: "{0} परिभ्रमणे"
+        other_ablative: "{0} परिभ्रमणांहून"
+        other_accusative: "{0} परिभ्रमणांना"
+        other_dative: "{0} परिभ्रमणांसाठी"
+        other_ergative: "{0} परिभ्रमणांनी"
+        other_genitive: "{0} परिभ्रमणांचे"
+        other_locative: "{0} परिभ्रमणांचा"
+        gender: neuter
+      short:
+        display_name: परिभ्र.
+        one: "{0} परिभ्र."
+        other: "{0} परिभ्र."
+    radian:
+      long:
+        one: "{0} रेडियन"
+        one_ablative: "{0} रेडियनपासून"
+        one_accusative: "{0} रेडियनला"
+        one_dative: "{0} रेडियनला"
+        one_ergative: "{0} रेडियनने"
+        one_genitive: "{0} रेडियनचा"
+        one_locative: "{0} रेडियनशी"
+        other: "{0} रेडियन"
+        other_ablative: "{0} रेडियनहून"
+        other_accusative: "{0} रेडियनना"
+        other_dative: "{0} रेडियनसाठी"
+        other_ergative: "{0} रेडियननी"
+        other_genitive: "{0} रेडियनचे"
+        other_locative: "{0} रेडियनचा"
+        gender: feminine
+      short:
+        display_name: रेडियन
+    degree:
+      long:
+        one: "{0} अंश"
+        one_ablative: "{0} अंशापासून"
+        one_accusative: "{0} अंशाला"
+        one_dative: "{0} अंशाला"
+        one_ergative: "{0} अंशाने"
+        one_genitive: "{0} अंशाचा"
+        one_locative: "{0} अंशाशी"
+        other: "{0} अंश"
+        other_ablative: "{0} अंशांहून"
+        other_accusative: "{0} अंशांना"
+        other_dative: "{0} अंशांसाठी"
+        other_ergative: "{0} अंशांनी"
+        other_genitive: "{0} अंशांचे"
+        other_locative: "{0} अंशांचा"
+        gender: masculine
+      short:
+        display_name: अंश
+        one: "{0} अंश"
+        other: "{0} अंश"
+      narrow:
+        one: "{0}°"
+        other: "{0}°"
+    arc-minute:
+      long:
+        display_name: आर्कमिनिटे
+        one: "{0} आर्कमिनिट"
+        one_ablative: "{0} आर्कमिनिटापासून"
+        one_accusative: "{0} आर्कमिनिटाला"
+        one_dative: "{0} आर्कमिनिटाला"
+        one_ergative: "{0} आर्कमिनिटाने"
+        one_genitive: "{0} आर्कमिनिटाचा"
+        one_locative: "{0} आर्कमिनिटाशी"
+        other: "{0} आर्कमिनिटे"
+        other_ablative: "{0} आर्कमिनिटांहून"
+        other_accusative: "{0} आर्कमिनिटांना"
+        other_dative: "{0} आर्कमिनिटांसाठी"
+        other_ergative: "{0} आर्कमिनिटांनी"
+        other_genitive: "{0} आर्कमिनिटांचे"
+        other_locative: "{0} आर्कमिनिटांचा"
+        gender: masculine
+      short:
+        display_name: आर्कमिनि
+        one: "{0} आर्कमिनि"
+        other: "{0} आर्कमिनि"
+      narrow:
+        one: "{0}′"
+        other: "{0}'"
+    arc-second:
+      long:
+        display_name: आर्कसेकंद
+        one: "{0} आर्कसेकंद"
+        one_ablative: "{0} आर्कसेकंदापासून"
+        one_accusative: "{0} आर्कसेकंदास"
+        one_dative: "{0} आर्कसेकंदाला"
+        one_ergative: "{0} आर्कसेकंदाने"
+        one_genitive: "{0} आर्कसेकंदाचा"
+        one_locative: "{0} आर्कसेकंदाशी"
+        other: "{0} आर्कसेकंद"
+        other_ablative: "{0} आर्कसेकंदांपासून"
+        other_accusative: "{0} आर्कसेकंदांना"
+        other_dative: "{0} आर्कसेकंदांसाठी"
+        other_ergative: "{0} आर्कसेकंदांनी"
+        other_genitive: "{0} आर्कसेकंदांचे"
+        other_locative: "{0} आर्कसेकंदांचा"
+        gender: masculine
+      short:
+        display_name: आर्कसेक
+        one: "{0} आर्कसेक"
+        other: "{0} आर्कसेक"
+      narrow:
+        one: "{0}″"
+        other: '{0}"'
+    square-kilometer:
+      long:
+        display_name: चौरस किलोमीटर
+        one: "{0} चौरस किलोमीटर"
+        one_ablative: "{0} चौरस किलोमीटरहून"
+        one_accusative: "{0} चौरस किलोमीटरला"
+        one_dative: "{0} चौरस किलोमीटरला"
+        one_ergative: "{0} चौरस किलोमीटरने"
+        one_genitive: "{0} चौरस किलोमीटरचा"
+        one_locative: "{0} चौरस किलोमीटरमध्ये"
+        other: "{0} चौरस किलोमीटर"
+        other_ablative: "{0} चौरस किलोमीटरपासून"
+        other_accusative: "{0} चौरस किलोमीटरना"
+        other_dative: "{0} चौरस किलोमीटरसाठी"
+        other_ergative: "{0} चौरस किलोमीटरनी"
+        other_genitive: "{0} चौरस किलोमीटरचे"
+        other_locative: "{0} चौरस किलोमीटरमध्ये"
+        gender: neuter
+        per_unit_pattern: "{0} पर चौरस किलोमीटर"
+      short:
+        display_name: किमी²
+        one: "{0} किमी²"
+        other: "{0} किमी²"
+      narrow:
+        per_unit_pattern: "{0}/किमी²"
+    hectare:
+      long:
+        one: "{0} हेक्टर"
+        one_ablative: "{0} हेक्टरपासून"
+        one_accusative: "{0} हेक्टरला"
+        one_dative: "{0} हेक्टरला"
+        one_ergative: "{0} हेक्टरने"
+        one_genitive: "{0} हेक्टरचा"
+        one_locative: "{0} हेक्टरशी"
+        other: "{0} हेक्टर"
+        other_ablative: "{0} हेक्टरहून"
+        other_accusative: "{0} हेक्टरना"
+        other_dative: "{0} हेक्टरसाठी"
+        other_ergative: "{0} हेक्टरनी"
+        other_genitive: "{0} हेक्टरचे"
+        other_locative: "{0} हेक्टरचा"
+        gender: masculine
+      short:
+        display_name: हेक्टर
+        one: "{0} हेक्टर"
+        other: "{0} हेक्टर"
+      narrow:
+        one: "{0}हेक्टर"
+        other: "{0}हेक्टर"
+    square-meter:
+      long:
+        display_name: चौरस मीटर
+        one: "{0} चौरस मीटर"
+        one_ablative: "{0} चौरस मीटरहून"
+        one_accusative: "{0} चौरस मीटरला"
+        one_dative: "{0} चौरस मीटरला"
+        one_ergative: "{0} चौरस मीटरने"
+        one_genitive: "{0} चौरस मीटरचा"
+        one_locative: "{0} चौरस मीटरमध्ये"
+        other: "{0} चौरस मीटर"
+        other_ablative: "{0} चौरस मीटरपासून"
+        other_accusative: "{0} चौरस मीटरनी"
+        other_dative: "{0} चौरस मीटरसाठी"
+        other_ergative: "{0} चौरस मीटरनी"
+        other_genitive: "{0} चौरस मीटरचे"
+        other_locative: "{0} चौरस मीटरमध्ये"
+        gender: neuter
+        per_unit_pattern: "{0} दर चौरस मीटर"
+      short:
+        display_name: मीटर²
+        one: "{0} मी²"
+        other: "{0} मी²"
+        per_unit_pattern: "{0}/मी²"
+    square-centimeter:
+      long:
+        display_name: चौरस सेंटीमीटर
+        one: "{0} चौरस सेंटीमीटर"
+        one_ablative: "{0} चौरस सेंटीमीटरहून"
+        one_accusative: "{0} चौरस सेंटीमीटरला"
+        one_dative: "{0} चौरस सेंटीमीटरला"
+        one_ergative: "{0} चौरस सेंटीमीटरने"
+        one_genitive: "{0} चौरस सेंटीमीटरचा"
+        one_locative: "{0} चौरस सेंटीमीटरमध्ये"
+        other: "{0} चौरस सेंटीमीटर"
+        other_ablative: "{0} चौरस सेंटीमीटरपासून"
+        other_accusative: "{0} चौरस सेंटीमीटरनी"
+        other_dative: "{0} चौरस सेंटीमीटरसाठी"
+        other_ergative: "{0} चौरस सेंटीमीटरनी"
+        other_genitive: "{0} चौरस सेंटीमीटरचे"
+        other_locative: "{0} चौरस सेंटीमीटरमध्ये"
+        gender: neuter
+        per_unit_pattern: "{0} दर चौरस सेंटीमीटर"
+      short:
+        display_name: सेंमी²
+        one: "{0} सेंमी²"
+        other: "{0} सेंमी²"
+      narrow:
+        per_unit_pattern: "{0}/सेंमी²"
+    square-mile:
+      long:
+        one: "{0} चौरस मैल"
+        other: "{0} चौरस मैल"
+        per_unit_pattern: "{0} पर चौरस मैल"
+      short:
+        display_name: चौरस मैल
+        one: "{0} चौ मै"
+        other: "{0} चौ मै"
+      narrow:
+        display_name: मै²
+        one: "{0}मै²"
+        other: "{0}मै²"
+        per_unit_pattern: "{0}/मै²"
+    square-yard:
+      long:
+        display_name: वर्ग यार्ड
+        one: "{0} वर्ग यार्ड"
+        other: "{0} वर्ग यार्ड"
+      short:
+        display_name: यार्ड²
+        one: "{0} यार्ड²"
+        other: "{0} यार्ड²"
+    square-foot:
+      long:
+        one: "{0} चौरस फूट"
+        other: "{0} चौरस फूट"
+      short:
+        display_name: चौरस फूट
+        one: "{0} चौ फूट"
+        other: "{0} चौ फूट"
+      narrow:
+        display_name: फूट²
+        one: "{0} फूट²"
+        other: "{0}फूट²"
+    square-inch:
+      long:
+        display_name: चौरस इंच
+        one: "{0} चौरस इंच"
+        other: "{0} चौरस इंच"
+        per_unit_pattern: "{0} दर चौरस इंच"
+      short:
+        display_name: इंच²
+        one: "{0} इंच²"
+        other: "{0} इंच²"
+        per_unit_pattern: "{0}/इंच²"
+    karat:
+      long:
+        one: "{0} कॅरेट"
+        one_ablative: "{0} कॅरेटपासून"
+        one_accusative: "{0} कॅरेटला"
+        one_dative: "{0} कॅरेटला"
+        one_ergative: "{0} कॅरेटने"
+        one_genitive: "{0} कॅरेटचा"
+        one_locative: "{0} कॅरेटशी"
+        other: "{0} कॅरेट्स"
+        other_ablative: "{0} कॅरेट्सहून"
+        other_accusative: "{0} कॅरेट्सना"
+        other_dative: "{0} कॅरेट्ससाठी"
+        other_ergative: "{0} कॅरेट्सनी"
+        other_genitive: "{0} कॅरेट्सचे"
+        other_locative: "{0} कॅरेट्सचा"
+        gender: neuter
+      short:
+        display_name: कॅरेट्स
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: मिलीग्रामस् पर डेसीलिटर
+        one: "{0} मिलीग्रॅम प्रति डेसीलिटर"
+        one_ablative: "{0} मिलीग्रॅम प्रति डेसीलिटरनी"
+        one_accusative: "{0} मिलीग्रॅम प्रति डेसीलिटरला"
+        one_dative: "{0} मिलीग्रॅम प्रति डेसीलिटरसाठी"
+        one_ergative: "{0} मिलीग्रॅम प्रति डेसीलिटरने"
+        one_genitive: "{0} मिलीग्रॅम प्रति डेसीलिटरचे"
+        one_locative: "{0} मिलीग्रॅम प्रति डेसीलिटरहून"
+        other: "{0} मिलीग्रॅम्स प्रति डेसीलिटर"
+        other_ablative: "{0} मिलीग्रॅम्स प्रति डेसीलिटरहून"
+        other_accusative: "{0} मिलीग्रॅम्स प्रति डेसीलिटरना"
+        other_dative: "{0} मिलीग्रॅम्स प्रति डेसीलिटरसाठी"
+        other_ergative: "{0} मिलीग्रॅम्स प्रति डेसीलिटरने"
+        other_genitive: "{0} मिलीग्रॅम्स प्रति डेसीलिटरचे"
+        other_locative: "{0} मिलीग्रॅम्स प्रति डेसीलिटरहून"
+        gender: neuter
+    millimole-per-liter:
+      long:
+        display_name: मिलीमोलस् पर लिटर
+        one: "{0} मिलीमोल पर लिटर"
+        one_ablative: "{0} मिलीमोल पर लिटरपासून"
+        one_accusative: "{0} मिलीमोल पर लिटरला"
+        one_dative: "{0} मिलीमोल पर लिटरला"
+        one_ergative: "{0} मिलीमोल पर लिटरने"
+        one_genitive: "{0} मिलीमोल पर लिटरचा"
+        one_locative: "{0} मिलीमोल पर लिटरमध्ये"
+        other: "{0} मिलीमोलस् पर लिटर"
+        other_ablative: "{0} मिलीमोलस् पर लिटरपासून"
+        other_accusative: "{0} मिलीमोलस् पर लिटरना"
+        other_dative: "{0} मिलीमोलस् पर लिटरसाठी"
+        other_ergative: "{0} मिलीमोलस् पर लिटरने"
+        other_genitive: "{0} मिलीमोलस् पर लिटरचा"
+        other_locative: "{0} मिलीमोलस् पर लिटरमध्ये"
+        gender: neuter
+      short:
+        display_name: मिलीमोल/लिटर
+        one: "{0} मिलीमो. /लि."
+        other: "{0} मिलीमो. /लि."
+      narrow:
+        display_name: मिलीमो./लि.
+        one: "{0}मिलीमो./लि."
+        other: "{0}मिलीमो./लि."
+    item:
+      long:
+        one: "{0} आयटम"
+        one_ablative: "{0} आयटमहून"
+        one_accusative: "{0} आयटमला"
+        one_dative: "{0} आयटमला"
+        one_ergative: "{0} आयटमने"
+        one_genitive: "{0} आयटमचा"
+        one_locative: "{0} आयटममध्ये"
+        other: "{0} आयटम"
+        other_ablative: "{0} आयटमपासून"
+        other_accusative: "{0} आयटमना"
+        other_dative: "{0} आयटमना"
+        other_ergative: "{0} आयटमनी"
+        other_genitive: "{0} आयटमचे"
+        other_locative: "{0} आयटममध्ये"
+        gender: masculine
+      short:
+        display_name: आयटम
+        one: "{0} आयटम"
+        other: "{0} आयटम"
+      narrow:
+        one: "{0}आयटम"
+        other: "{0}आयटम"
+    permillion:
+      long:
+        display_name: भाग प्रति दशलक्ष
+        one: "{0} भाग प्रति दशलक्ष"
+        one_ablative: "{0} भाग प्रति दशलक्षापासून"
+        one_accusative: "{0} भाग प्रति दशलक्षास"
+        one_dative: "{0} भाग प्रति दशलक्षाला"
+        one_ergative: "{0} भाग प्रति दशलक्षाने"
+        one_genitive: "{0} भाग प्रति दशलक्षाचा"
+        one_locative: "{0} भाग प्रति दशलक्षाशी"
+        other: "{0} भाग प्रति दशलक्ष"
+        other_ablative: "{0} भाग प्रति दशलक्षांपासून"
+        other_accusative: "{0} भाग प्रति दशलक्षांना"
+        other_dative: "{0} भाग प्रति दशलक्षांसाठी"
+        other_ergative: "{0} भाग प्रति दशलक्षांनी"
+        other_genitive: "{0} भाग प्रति दशलक्षांचे"
+        other_locative: "{0} भाग प्रति दशलक्षांचा"
+        gender: neuter
+      short:
+        display_name: भाग/दशलक्ष
+      narrow:
+        display_name: ppm
+        one: "{0}ppm"
+        other: "{0}ppm"
+    percent:
+      long:
+        one: "{0} टक्के"
+        one_ablative: "{0} टक्क्यापासून"
+        one_accusative: "{0} टक्क्यास"
+        one_dative: "{0} टक्क्याला"
+        one_ergative: "{0} टक्क्याने"
+        one_genitive: "{0} टक्क्याचा"
+        one_locative: "{0} टक्क्याशी"
+        other: "{0} टक्के"
+        other_ablative: "{0} टक्क्यांपासून"
+        other_accusative: "{0} टक्क्यांना"
+        other_dative: "{0} टक्क्यांसाठी"
+        other_ergative: "{0} टक्क्यांनी"
+        other_genitive: "{0} टक्क्यांचे"
+        other_locative: "{0} टक्क्यांचा"
+        gender: neuter
+      short:
+        display_name: टक्के
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        one: "{0} प्रतिमैल"
+        one_ablative: "{0} प्रतिमैलापासून"
+        one_accusative: "{0} प्रतिमैलास"
+        one_dative: "{0} प्रतिमैलाला"
+        one_ergative: "{0} प्रतिमैलाने"
+        one_genitive: "{0} प्रतिमैलाचा"
+        one_locative: "{0} प्रतिमैलाशी"
+        other: "{0} प्रतिमैल"
+        other_ablative: "{0} प्रतिमैलांपासून"
+        other_accusative: "{0} प्रतिमैलांना"
+        other_dative: "{0} प्रतिमैलांसाठी"
+        other_ergative: "{0} प्रतिमैलांनी"
+        other_genitive: "{0} प्रतिमैलांचे"
+        other_locative: "{0} प्रतिमैलांचा"
+        gender: masculine
+      short:
+        display_name: प्रतिमैल
+    permyriad:
+      long:
+        one: "{0} पर्मिरेड"
+        one_ablative: "{0} पर्मिरेडपासून"
+        one_accusative: "{0} पर्मिरेडला"
+        one_dative: "{0} पर्मिरेडला"
+        one_ergative: "{0} पर्मिरेडने"
+        one_genitive: "{0} पर्मिरेडचा"
+        one_locative: "{0} पर्मिरेडशी"
+        other: "{0} पर्मिरेड"
+        other_ablative: "{0} पर्मिरेडहून"
+        other_accusative: "{0} पर्मिरेडना"
+        other_dative: "{0} पर्मिरेडसाठी"
+        other_ergative: "{0} पर्मिरेडनी"
+        other_genitive: "{0} पर्मिरेडचे"
+        other_locative: "{0} पर्मिरेडचा"
+        gender: masculine
+      short:
+        display_name: पर्मिरेड
+    mole:
+      long:
+        one: "{0} मोल"
+        one_ablative: "{0} मोलपासून"
+        one_accusative: "{0} मोलला"
+        one_dative: "{0} मोलला"
+        one_ergative: "{0} मोलने"
+        one_genitive: "{0} मोलचा"
+        one_locative: "{0} मोलशी"
+        other: "{0} मोल"
+        other_ablative: "{0} मोलहून"
+        other_accusative: "{0} मोलना"
+        other_dative: "{0} मोलसाठी"
+        other_ergative: "{0} मोलनी"
+        other_genitive: "{0} मोलचे"
+        other_locative: "{0} मोलचा"
+        gender: masculine
+      short:
+        display_name: मोल
+        one: "{0} मोल"
+        other: "{0} मोल"
+    liter-per-kilometer:
+      long:
+        display_name: लीटर प्रति किलोमीटर
+        one: "{0} लीटर प्रति किलोमीटर"
+        one_ablative: "{0} लीटर प्रति किलोमीटरहून"
+        one_accusative: "{0} लीटर प्रति किलोमीटरला"
+        one_dative: "{0} लीटर प्रति किलोमीटरला"
+        one_ergative: "{0} लीटर प्रति किलोमीटरने"
+        one_genitive: "{0} लीटर प्रति किलोमीटरचा"
+        one_locative: "{0} लीटर प्रति किलोमीटरमध्ये"
+        other: "{0} लीटर प्रति किलोमीटर"
+        other_ablative: "{0} लीटर प्रति किलोमीटरपासून"
+        other_accusative: "{0} लीटर प्रति किलोमीटरना"
+        other_dative: "{0} लीटर प्रति किलोमीटरसाठी"
+        other_ergative: "{0} लीटर प्रति किलोमीटरने"
+        other_genitive: "{0} लीटर प्रति किलोमीटरचा"
+        other_locative: "{0} लीटर प्रति किलोमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: लीटर/किमी
+        one: "{0} ली/किमी"
+        other: "{0} ली/किमी"
+    liter-per-100-kilometer:
+      long:
+        display_name: लीटर प्रति 100 किलोमीटर
+        one: "{0} लीटर प्रति 100 किलोमीटर"
+        one_ablative: "{0} लीटर प्रति 100 किलोमीटरहून"
+        one_accusative: "{0} लीटर प्रति 100 किलोमीटरला"
+        one_dative: "{0} लीटर प्रति 100 किलोमीटरला"
+        one_ergative: "{0} लीटर प्रति 100 किलोमीटरने"
+        one_genitive: "{0} लीटर प्रति 100 किलोमीटरचा"
+        one_locative: "{0} लीटर प्रति 100 किलोमीटरमध्ये"
+        other: "{0} लीटर प्रति 100 किलोमीटर"
+        other_ablative: "{0} लीटर प्रति 100 किलोमीटरपासून"
+        other_accusative: "{0} लीटर प्रति 100 किलोमीटरना"
+        other_dative: "{0} लीटर प्रति 100 किलोमीटरना"
+        other_ergative: "{0} लीटर प्रति 100 किलोमीटरनी"
+        other_genitive: "{0} लीटर प्रति 100 किलोमीटरची"
+        other_locative: "{0} लीटर प्रति 100 किलोमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: ली/100किमी
+        one: "{0} ली/100किमी"
+        other: "{0} ली/100किमी"
+    mile-per-gallon:
+      long:
+        display_name: मैल प्रति गॅलन
+        one: "{0} मैल प्रति गॅलन"
+        other: "{0} मैल प्रति गॅलन"
+      short:
+        display_name: मैल/गॅलन
+        one: "{0} mpg"
+        other: "{0} mpg"
+      narrow:
+        one: "{0}mpg"
+        other: "{0}mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: मैल प्रति इम्पिरिअल गॅलन
+        one: "{0} मैल प्रति इम्पि गॅलन"
+        other: "{0} मैल प्रति इम्पि गॅलन"
+      short:
+        display_name: मैल/गॅलन इम्पि.
+      narrow:
+        display_name: mpg UK
+        one: "{0}m/gUK"
+        other: "{0}m/gUK"
+    petabyte:
+      long:
+        display_name: पेटाबाइट्स
+        one: "{0} पेटाबाइट"
+        one_ablative: "{0} पेटाबाइटहून"
+        one_accusative: "{0} पेटाबाइटला"
+        one_dative: "{0} पेटाबाइटला"
+        one_ergative: "{0} पेटाबाइटने"
+        one_genitive: "{0} पेटाबाइटचा"
+        one_locative: "{0} पेटाबाइटमध्ये"
+        other: "{0} पेटाबाइट्स"
+        other_ablative: "{0} पेटाबाइट्सपासून"
+        other_accusative: "{0} पेटाबाइट्सना"
+        other_dative: "{0} पेटाबाइट्ससाठी"
+        other_ergative: "{0} पेटाबाइट्सनी"
+        other_genitive: "{0} पेटाबाइट्सचे"
+        other_locative: "{0} पेटाबाइट्समध्ये"
+        gender: masculine
+      short:
+        display_name: PByte
+      narrow:
+        display_name: PB
+        one: "{0}PB"
+        other: "{0}PB"
+    terabyte:
+      long:
+        display_name: टेराबाइट्स
+        one: "{0} टेराबाइट"
+        one_ablative: "{0} टेराबाइटहून"
+        one_accusative: "{0} टेराबाइटला"
+        one_dative: "{0} टेराबाइटला"
+        one_ergative: "{0} टेराबाइटने"
+        one_genitive: "{0} टेराबाइटचा"
+        one_locative: "{0} टेराबाइट"
+        other: "{0} टेराबाइट्स"
+        other_ablative: "{0} टेराबाइट्सपासून"
+        other_accusative: "{0} टेराबाइट्सना"
+        other_dative: "{0} टेराबाइट्ससाठी"
+        other_ergative: "{0} टेराबाइट्सनी"
+        other_genitive: "{0} टेराबाइट्सचे"
+        other_locative: "{0} टेराबाइट्समध्ये"
+        gender: masculine
+      short:
+        display_name: TByte
+      narrow:
+        display_name: TB
+        one: "{0}TB"
+        other: "{0}TB"
+    terabit:
+      long:
+        display_name: टेराबिट
+        one: "{0} टेराबिट"
+        one_ablative: "{0} टेराबिटहून"
+        one_accusative: "{0} टेराबिटला"
+        one_dative: "{0} टेराबिटला"
+        one_ergative: "{0} टेराबिटने"
+        one_genitive: "{0} टेराबिटचा"
+        one_locative: "{0} टेराबिटमध्ये"
+        other: "{0} टेराबिट"
+        other_ablative: "{0} टेराबिटपासून"
+        other_accusative: "{0} टेराबिटना"
+        other_dative: "{0} टेराबिटसाठी"
+        other_ergative: "{0} टेराबिटनी"
+        other_genitive: "{0} टेराबिटचे"
+        other_locative: "{0} टेराबिटमध्ये"
+        gender: masculine
+      short:
+        display_name: Tbit
+      narrow:
+        display_name: Tb
+        one: "{0}Tb"
+        other: "{0}Tb"
+    gigabyte:
+      long:
+        display_name: गिगाबाइट
+        one: "{0} गिगाबाइट"
+        one_ablative: "{0} गिगाबाइटहून"
+        one_accusative: "{0} गिगाबाइटला"
+        one_dative: "{0} गिगाबाइटला"
+        one_ergative: "{0} गिगाबाइटने"
+        one_genitive: "{0} गिगाबाइटचा"
+        one_locative: "{0} गिगाबाइटमध्ये"
+        other: "{0} गिगाबाइट"
+        other_ablative: "{0} गिगाबाइटपासून"
+        other_accusative: "{0} गिगाबाइटना"
+        other_dative: "{0} गिगाबाइटसाठी"
+        other_ergative: "{0} गिगाबाइटनी"
+        other_genitive: "{0} गिगाबाइटचे"
+        other_locative: "{0} गिगाबाइटमध्ये"
+        gender: masculine
+      short:
+        display_name: GByte
+      narrow:
+        display_name: GB
+        one: "{0}GB"
+        other: "{0}GB"
+    gigabit:
+      long:
+        display_name: गिगाबिट
+        one: "{0} गिगाबिट"
+        one_ablative: "{0} गिगाबिटहून"
+        one_accusative: "{0} गिगाबिटला"
+        one_dative: "{0} गिगाबिटला"
+        one_ergative: "{0} गिगाबिटने"
+        one_genitive: "{0} गिगाबिटचा"
+        one_locative: "{0} गिगाबिटमध्ये"
+        other: "{0} गिगाबिट"
+        other_ablative: "{0} गिगाबिटपासून"
+        other_accusative: "{0} गिगाबिटना"
+        other_dative: "{0} गिगाबिटसाठी"
+        other_ergative: "{0} गिगाबिटनी"
+        other_genitive: "{0} गिगाबिटचे"
+        other_locative: "{0} गिगाबिटमध्ये"
+        gender: masculine
+      short:
+        display_name: Gbit
+      narrow:
+        display_name: Gb
+        one: "{0}Gb"
+        other: "{0}Gb"
+    megabyte:
+      long:
+        display_name: मेगाबाइट
+        one: "{0} मेगाबाइट"
+        one_ablative: "{0} मेगाबाइटहून"
+        one_accusative: "{0} मेगाबाइटला"
+        one_dative: "{0} मेगाबाइटला"
+        one_ergative: "{0} मेगाबाइटने"
+        one_genitive: "{0} मेगाबाइटचा"
+        one_locative: "{0} मेगाबाइटमध्ये"
+        other: "{0} मेगाबाइट"
+        other_ablative: "{0} मेगाबाइटपासून"
+        other_accusative: "{0} मेगाबाइटना"
+        other_dative: "{0} मेगाबाइटसाठी"
+        other_ergative: "{0} मेगाबाइटनी"
+        other_genitive: "{0} मेगाबाइटचे"
+        other_locative: "{0} मेगाबाइटमध्ये"
+        gender: masculine
+      short:
+        display_name: MByte
+      narrow:
+        display_name: MB
+        one: "{0}MB"
+        other: "{0}MB"
+    megabit:
+      long:
+        display_name: मेगाबिट
+        one: "{0} मेगाबिट"
+        one_ablative: "{0} मेगाबिटहून"
+        one_accusative: "{0} मेगाबिटला"
+        one_dative: "{0} मेगाबिटला"
+        one_ergative: "{0} मेगाबिटने"
+        one_genitive: "{0} मेगाबिटचा"
+        one_locative: "{0} मेगाबिटमध्ये"
+        other: "{0} मेगाबिट"
+        other_ablative: "{0} मेगाबिटपासून"
+        other_accusative: "{0} मेगाबिटना"
+        other_dative: "{0} मेगाबिटसाठी"
+        other_ergative: "{0} मेगाबिटनी"
+        other_genitive: "{0} मेगाबिटचा"
+        other_locative: "{0} मेगाबिटमध्ये"
+        gender: masculine
+      short:
+        display_name: Mbit
+      narrow:
+        display_name: Mb
+        one: "{0}Mb"
+        other: "{0}Mb"
+    kilobyte:
+      long:
+        display_name: किलोबाइट
+        one: "{0} किलोबाइट"
+        one_ablative: "{0} किलोबाइटहून"
+        one_accusative: "{0} किलोबाइटला"
+        one_dative: "{0} किलोबाइटला"
+        one_ergative: "{0} किलोबाइटने"
+        one_genitive: "{0} किलोबाइटचा"
+        one_locative: "{0} किलोबाइटमध्ये"
+        other: "{0} किलोबाइट"
+        other_ablative: "{0} किलोबाइटपासून"
+        other_accusative: "{0} किलोबाइटना"
+        other_dative: "{0} किलोबाइटसाठी"
+        other_ergative: "{0} किलोबाइटने"
+        other_genitive: "{0} किलोबाइटचे"
+        other_locative: "{0} किलोबाइटमध्ये"
+        gender: masculine
+      short:
+        display_name: kByte
+      narrow:
+        display_name: kB
+        one: "{0}kB"
+        other: "{0}kB"
+    kilobit:
+      long:
+        display_name: किलोबिट
+        one: "{0} किलोबिट"
+        one_ablative: "{0} किलोबिटहून"
+        one_accusative: "{0} किलोबिटला"
+        one_dative: "{0} किलोबिटला"
+        one_ergative: "{0} किलोबिटने"
+        one_genitive: "{0} किलोबिटचा"
+        one_locative: "{0} किलोबिटमध्ये"
+        other: "{0} किलोबिट"
+        other_ablative: "{0} किलोबिटपासून"
+        other_accusative: "{0} किलोबिटना"
+        other_dative: "{0} किलोबिटसाठी"
+        other_ergative: "{0} किलोबिटनी"
+        other_genitive: "{0} किलोबिटचे"
+        other_locative: "{0} किलोबिटमध्ये"
+        gender: masculine
+      short:
+        display_name: kbit
+      narrow:
+        display_name: kb
+        one: "{0}kb"
+        other: "{0}kb"
+    byte:
+      long:
+        one: "{0} बाइट"
+        one_ablative: "{0} बाइटपासून"
+        one_accusative: "{0} बाइटला"
+        one_dative: "{0} बाइटला"
+        one_ergative: "{0} बाइटने"
+        one_genitive: "{0} बाइटचा"
+        one_locative: "{0} बाइटशी"
+        other: "{0} बाइट"
+        other_ablative: "{0} बाइटहून"
+        other_accusative: "{0} बाइटना"
+        other_dative: "{0} बाइटसाठी"
+        other_ergative: "{0} बाइटनी"
+        other_genitive: "{0} बाइटचे"
+        other_locative: "{0} बाइटचा"
+        gender: neuter
+      short:
+        display_name: बाइट
+        one: "{0} बाइट"
+        other: "{0} बाइट"
+      narrow:
+        display_name: B
+        one: "{0}B"
+        other: "{0}B"
+    bit:
+      long:
+        one: "{0} बिट"
+        one_ablative: "{0} बिटपासून"
+        one_accusative: "{0} बिटला"
+        one_dative: "{0} बिटला"
+        one_ergative: "{0} बिटने"
+        one_genitive: "{0} बिटचा"
+        one_locative: "{0} बिटशी"
+        other: "{0} बिट"
+        other_ablative: "{0} बिटहून"
+        other_accusative: "{0} बिटना"
+        other_dative: "{0} बिटसाठी"
+        other_ergative: "{0} बिटनी"
+        other_genitive: "{0} बिटचे"
+        other_locative: "{0} बिटचा"
+        gender: masculine
+      short:
+        display_name: बिट
+        one: "{0} बिट"
+        other: "{0} बिट"
+    century:
+      long:
+        display_name: शतके
+        one: "{0} शतक"
+        one_ablative: "{0} शतकापासून"
+        one_accusative: "{0} शतकास"
+        one_dative: "{0} शतकाला"
+        one_ergative: "{0} शतकाने"
+        one_genitive: "{0} शतकाचा"
+        one_locative: "{0} शतकाशी"
+        other: "{0} शतके"
+        other_ablative: "{0} शतकांपासून"
+        other_accusative: "{0} शतकांना"
+        other_dative: "{0} शतकांसाठी"
+        other_ergative: "{0} शतकांनी"
+        other_genitive: "{0} शतकांचे"
+        other_locative: "{0} शतकांचा"
+        gender: neuter
+      short:
+        display_name: श
+        one: "{0} श"
+        other: "{0} श"
+    decade:
+      long:
+        display_name: दशके
+        one: "{0} दशक"
+        one_ablative: "{0} दशकापासून"
+        one_accusative: "{0} दशकास"
+        one_dative: "{0} दशकाला"
+        one_ergative: "{0} दशकाने"
+        one_genitive: "{0} दशकाचा"
+        one_locative: "{0} दशकाशी"
+        other: "{0} दशके"
+        other_ablative: "{0} दशकांपासून"
+        other_accusative: "{0} दशकांना"
+        other_dative: "{0} दशकांसाठी"
+        other_ergative: "{0} दशकांनी"
+        other_genitive: "{0} दशकांचे"
+        other_locative: "{0} दशकांचा"
+        gender: neuter
+      short:
+        display_name: द
+        one: "{0} द"
+        other: "{0} द"
+    year:
+      long:
+        one: "{0} वर्ष"
+        one_ablative: "{0} वर्षापासून"
+        one_accusative: "{0} वर्षास"
+        one_dative: "{0} वर्षाला"
+        one_ergative: "{0} वर्षाने"
+        one_genitive: "{0} वर्षाचा"
+        one_locative: "{0} वर्षाशी"
+        other: "{0} वर्षे"
+        other_ablative: "{0} वर्षांपासून"
+        other_accusative: "{0} वर्षांना"
+        other_dative: "{0} वर्षांसाठी"
+        other_ergative: "{0} वर्षांनी"
+        other_genitive: "{0} वर्षांचे"
+        other_locative: "{0} वर्षांचा"
+        gender: neuter
+        per_unit_pattern: "{0} दर वर्षी"
+      short:
+        display_name: वर्षे
+        one: "{0} वर्ष"
+        other: "{0} वर्षे"
+        per_unit_pattern: "{0}/वर्षी"
+      narrow:
+        display_name: वर्ष
+        one: "{0}व"
+        other: "{0}व"
+    quarter:
+      long:
+        one: "{0} तिमाही"
+        one_ablative: "{0} तिमाहीपासून"
+        one_accusative: "{0} तिमाहीस"
+        one_dative: "{0} तिमाहीला"
+        one_ergative: "{0} तिमाहीने"
+        one_genitive: "{0} तिमाहीचा"
+        one_locative: "{0} तिमाहीत"
+        other: "{0} तिमाही"
+        other_ablative: "{0} तिमाहींपासून"
+        other_accusative: "{0} तिमाहींनी"
+        other_dative: "{0} तिमाहींसाठी"
+        other_ergative: "{0} तिमाहींनी"
+        other_genitive: "{0} तिमाहींचा"
+        other_locative: "{0} तिमाहींचे"
+        gender: feminine
+        per_unit_pattern: "{0} दर तिमाही"
+      short:
+        display_name: तिमाही
+        one: "{0} तिमाही"
+        other: "{0} तिमाही"
+        per_unit_pattern: "{0}/तिमाही"
+      narrow:
+        one: "{0}ति"
+        other: "{0}ति"
+    month:
+      long:
+        one: "{0} महिना"
+        one_ablative: "{0} महिन्यापासून"
+        one_accusative: "{0} महिन्यास"
+        one_dative: "{0} महिन्याला"
+        one_ergative: "{0} महिन्याने"
+        one_genitive: "{0} महिन्याचा"
+        one_locative: "{0} महिन्याशी"
+        other: "{0} महिने"
+        other_ablative: "{0} महिन्यांपासून"
+        other_accusative: "{0} महिन्यांना"
+        other_dative: "{0} महिन्यांसाठी"
+        other_ergative: "{0} महिन्यांनी"
+        other_genitive: "{0} महिन्यांचे"
+        other_locative: "{0} महिन्यांचा"
+        gender: masculine
+        per_unit_pattern: "{0} दर महिना"
+      short:
+        display_name: महिने
+        one: "{0} महिना"
+        other: "{0} महिने"
+        per_unit_pattern: "{0}/म"
+      narrow:
+        display_name: महिना
+        one: "{0}म"
+        other: "{0}म"
+    week:
+      long:
+        one: "{0} आठवडा"
+        one_ablative: "{0} आठवड्यापासून"
+        one_accusative: "{0} आठवड्यास"
+        one_dative: "{0} आठवड्याला"
+        one_ergative: "{0} आठवड्याने"
+        one_genitive: "{0} आठवड्याचा"
+        one_locative: "{0} आठवड्याशी"
+        other: "{0} आठवडे"
+        other_ablative: "{0} आठवड्यांपासून"
+        other_accusative: "{0} आठवड्यांना"
+        other_dative: "{0} आठवड्यांसाठी"
+        other_ergative: "{0} आठवड्यांनी"
+        other_genitive: "{0} आठवड्यांचे"
+        other_locative: "{0} आठवड्यांचा"
+        gender: masculine
+        per_unit_pattern: "{0} दर आठवडा"
+      short:
+        display_name: आठवडे
+        one: "{0} आ"
+        other: "{0} आ"
+        per_unit_pattern: "{0}/आ"
+      narrow:
+        display_name: आ
+        one: "{0}आ"
+        other: "{0}आ"
+    day:
+      long:
+        one: "{0} दिवस"
+        one_ablative: "{0} दिवसाहून"
+        one_accusative: "{0} दिवसास"
+        one_dative: "{0} दिवसाने"
+        one_ergative: "{0} दिवसाशी"
+        one_genitive: "{0} दिवसाची"
+        one_locative: "{0} दिवसा"
+        other: "{0} दिवस"
+        other_ablative: "{0} दिवसांहून"
+        other_accusative: "{0} दिवसांनी"
+        other_dative: "{0} दिवसांना"
+        other_ergative: "{0} दिवसांशी"
+        other_genitive: "{0} दिवसांचे"
+        other_locative: "{0} दिवसांच्या"
+        gender: masculine
+        per_unit_pattern: "{0} दर दिवशी"
+      short:
+        display_name: दिवस
+        one: "{0} दिवस"
+        other: "{0} दिवस"
+        per_unit_pattern: "{0}/दि"
+      narrow:
+        one: "{0}दि"
+        other: "{0}दि"
+    hour:
+      long:
+        one: "{0} तास"
+        one_ablative: "{0} तासापासून"
+        one_accusative: "{0} तासास"
+        one_dative: "{0} तासाला"
+        one_ergative: "{0} तासाने"
+        one_genitive: "{0} तासाचा"
+        one_locative: "{0} तासाशी"
+        other: "{0} तास"
+        other_ablative: "{0} तासांपासून"
+        other_accusative: "{0} तासांना"
+        other_dative: "{0} तासांसाठी"
+        other_ergative: "{0} तासांनी"
+        other_genitive: "{0} तासांचे"
+        other_locative: "{0} तासांचा"
+        gender: masculine
+        per_unit_pattern: "{0} प्रति तास"
+      short:
+        display_name: तास
+        one: "{0} ता"
+        other: "{0} ता"
+        per_unit_pattern: "{0}प्रता"
+      narrow:
+        one: "{0}ता"
+        other: "{0}ता"
+        per_unit_pattern: "{0}/ता"
+    minute:
+      long:
+        one: "{0} मिनिट"
+        one_ablative: "{0} मिनिटापासून"
+        one_accusative: "{0} मिनिटास"
+        one_dative: "{0} मिनिटाला"
+        one_ergative: "{0} मिनिटाने"
+        one_genitive: "{0} मिनिटाचा"
+        one_locative: "{0} मिनिटाशी"
+        other: "{0} मिनिटे"
+        other_ablative: "{0} मिनिटांपासून"
+        other_accusative: "{0} मिनिटांना"
+        other_dative: "{0} मिनिटांसाठी"
+        other_ergative: "{0} मिनिटांनी"
+        other_genitive: "{0} मिनिटांचे"
+        other_locative: "{0} मिनिटांचा"
+        gender: masculine
+        per_unit_pattern: "{0} दर मिनिट"
+      short:
+        display_name: मिनिटे
+        one: "{0} मिनि"
+        other: "{0} मिनि"
+        per_unit_pattern: "{0}/मिनि"
+      narrow:
+        one: "{0}मि"
+        other: "{0}मि"
+    second:
+      long:
+        one: "{0} सेकंद"
+        one_ablative: "{0} सेकंदापासून"
+        one_accusative: "{0} सेकंदास"
+        one_dative: "{0} सेकंदाला"
+        one_ergative: "{0} सेकंदाने"
+        one_genitive: "{0} सेकंदाचा"
+        one_locative: "{0} सेकंदाशी"
+        other: "{0} सेकंद"
+        other_ablative: "{0} सेकंदांपासून"
+        other_accusative: "{0} सेकंदांना"
+        other_dative: "{0} सेकंदांसाठी"
+        other_ergative: "{0} सेकंदांनी"
+        other_genitive: "{0} सेकंदांचे"
+        other_locative: "{0} सेकंदांचा"
+        gender: masculine
+        per_unit_pattern: "{0} प्रति सेकंद"
+      short:
+        display_name: सेकंद
+        one: "{0} से"
+        other: "{0} से"
+        per_unit_pattern: "{0}प्रसे"
+      narrow:
+        one: "{0}से"
+        other: "{0}से"
+        per_unit_pattern: "{0}/से"
+    millisecond:
+      long:
+        one: "{0} मिलिसेकंद"
+        one_ablative: "{0} मिलिसेकंदापासून"
+        one_accusative: "{0} मिलिसेकंदाला"
+        one_dative: "{0} मिलिसेकंदासाठी"
+        one_ergative: "{0} मिलिसेकंदाने"
+        one_genitive: "{0} मिलिसेकंदाचा"
+        one_locative: "{0} मिलिसेकंदात"
+        other: "{0} मिलिसेकंद"
+        other_ablative: "{0} मिलिसेकंदांहून"
+        other_accusative: "{0} मिलिसेकंदांनी"
+        other_dative: "{0} मिलिसेकंदांसाठी"
+        other_ergative: "{0} मिलिसेकंदांत"
+        other_genitive: "{0} मिलिसेकंदांचा"
+        other_locative: "{0} मिलिसेकंदांत"
+        gender: masculine
+      short:
+        display_name: मिलिसेकंद
+        one: "{0} मिलिसे"
+        other: "{0} मिलिसे"
+    microsecond:
+      long:
+        display_name: मायक्रोसेकंद
+        one: "{0} मायक्रोसेकंद"
+        one_ablative: "{0} मायक्रोसेकंदापासून"
+        one_accusative: "{0} मायक्रोसेकंदाला"
+        one_dative: "{0} मायक्रोसेकंदासाठी"
+        one_ergative: "{0} मायक्रोसेकंदाने"
+        one_genitive: "{0} मायक्रोसेकंदाचा"
+        one_locative: "{0} मायक्रोसेकंदात"
+        other: "{0} मायक्रोसेकंद"
+        other_ablative: "{0} मायक्रोसेकंदांपासून"
+        other_accusative: "{0} मायक्रोसेकंदांना"
+        other_dative: "{0} मायक्रोसेकंदांसाठी"
+        other_ergative: "{0} मायक्रोसेकंदांनी"
+        other_genitive: "{0} मायक्रोसेकंदांचे"
+        other_locative: "{0} मायक्रोसेकंदांत"
+        gender: masculine
+    nanosecond:
+      long:
+        display_name: नॅनोसेकंद
+        one: "{0} नॅनोसेकंद"
+        one_ablative: "{0} नॅनोसेकंदाहून"
+        one_accusative: "{0} नॅनोसेकंदाला"
+        one_dative: "{0} नॅनोसेकंदासाठी"
+        one_ergative: "{0} नॅनोसेकंदाने"
+        one_genitive: "{0} नॅनोसेकंदाचा"
+        one_locative: "{0} नॅनोसेकंदात"
+        other: "{0} नॅनोसेकंद"
+        other_ablative: "{0} नॅनोसेकंदांहून"
+        other_accusative: "{0} नॅनोसेकंदांनी"
+        other_dative: "{0} नॅनोसेकंदांसाठी"
+        other_ergative: "{0} नॅनोसेकंदांनी"
+        other_genitive: "{0} नॅनोसेकंदांचे"
+        other_locative: "{0} नॅनोसेकंदांत"
+        gender: masculine
+      short:
+        display_name: नॅनोसेक
+        one: "{0} नॅसे"
+        other: "{0} नॅसे"
+      narrow:
+        display_name: नॅसे
+    ampere:
+      long:
+        display_name: अँपियर
+        one: "{0} अँपियर"
+        one_ablative: "{0} अँपियरपासून"
+        one_accusative: "{0} अँपियरला"
+        one_dative: "{0} अँपियरला"
+        one_ergative: "{0} अँपियरने"
+        one_genitive: "{0} अँपियरचा"
+        one_locative: "{0} अँपियरशी"
+        other: "{0} अँपियर"
+        other_ablative: "{0} अँपियरहून"
+        other_accusative: "{0} अँपियरना"
+        other_dative: "{0} अँपियरसाठी"
+        other_ergative: "{0} अँपियरनी"
+        other_genitive: "{0} अँपियरचे"
+        other_locative: "{0} अँपियरचा"
+        gender: masculine
+      short:
+        display_name: अँप्स
+    milliampere:
+      long:
+        display_name: मिलिअँपियर
+        one: "{0} मिलिअँपियर"
+        one_ablative: "{0} मिलिअँपियरहून"
+        one_accusative: "{0} मिलिअँपियरला"
+        one_dative: "{0} मिलिअँपियरला"
+        one_ergative: "{0} मिलिअँपियरने"
+        one_genitive: "{0} मिलिअँपियरचा"
+        one_locative: "{0} मिलिअँपियरमध्ये"
+        other: "{0} मिलिअँपियर"
+        other_ablative: "{0} मिलिअँपियरपासून"
+        other_accusative: "{0} मिलिअँपियरना"
+        other_dative: "{0} मिलिअँपियरसाठी"
+        other_ergative: "{0} मिलिअँपियरने"
+        other_genitive: "{0} मिलिअँपियरचा"
+        other_locative: "{0} मिलिअँपियरमध्ये"
+        gender: neuter
+      short:
+        display_name: मिलिअँप्स
+    ohm:
+      long:
+        one: "{0} ओहम"
+        one_ablative: "{0} ओहमपासून"
+        one_accusative: "{0} ओहमला"
+        one_dative: "{0} ओहमला"
+        one_ergative: "{0} ओहमने"
+        one_genitive: "{0} ओहमचा"
+        one_locative: "{0} ओहमशी"
+        other: "{0} ओहम"
+        other_ablative: "{0} ओहमहून"
+        other_accusative: "{0} ओहमना"
+        other_dative: "{0} ओहमसाठी"
+        other_ergative: "{0} ओहमनी"
+        other_genitive: "{0} ओहमचे"
+        other_locative: "{0} ओहमचा"
+        gender: masculine
+      short:
+        display_name: ओहम
+    volt:
+      long:
+        one: "{0} व्होल्ट"
+        one_ablative: "{0} व्होल्टपासून"
+        one_accusative: "{0} व्होल्टला"
+        one_dative: "{0} व्होल्टला"
+        one_ergative: "{0} व्होल्टने"
+        one_genitive: "{0} व्होल्टचा"
+        one_locative: "{0} व्होल्टशी"
+        other: "{0} व्होल्ट"
+        other_ablative: "{0} व्होल्टहून"
+        other_accusative: "{0} व्होल्टना"
+        other_dative: "{0} व्होल्टसाठी"
+        other_ergative: "{0} व्होल्टनी"
+        other_genitive: "{0} व्होल्टचे"
+        other_locative: "{0} व्होल्टचा"
+        gender: masculine
+      short:
+        display_name: व्होल्ट
+    kilocalorie:
+      long:
+        display_name: किलोकॅलरी
+        one: "{0} किलोकॅलरी"
+        one_ablative: "{0} किलोकॅलरीतून"
+        one_accusative: "{0} किलोकॅलरीला"
+        one_dative: "{0} किलोकॅलोरीसाठी"
+        one_ergative: "{0} किलोकॅलरीने"
+        one_genitive: "{0} किलोकॅलरीचा"
+        one_locative: "{0} किलोकॅलरीला"
+        other: "{0} किलोकॅलरी"
+        other_ablative: "{0} किलोकॅलरीहून"
+        other_accusative: "{0} किलोकॅलरींना"
+        other_dative: "{0} किलोकॅलरीसाठी"
+        other_ergative: "{0} किलोकॅलरी"
+        other_genitive: "{0} किलोकॅलरीची"
+        other_locative: "{0} किलोकॅलरीतून"
+        gender: feminine
+      short:
+        display_name: किकॅ
+        one: "{0} किकॅ"
+        other: "{0} किकॅ"
+      narrow:
+        display_name: किकॅल
+        one: "{0} किकॅ"
+        other: "{0} किकॅ"
+    calorie:
+      long:
+        display_name: कॅलरीज
+        one: "{0} कॅलरी"
+        one_ablative: "{0} कॅलरीपासून"
+        one_accusative: "{0} कॅलरीला"
+        one_dative: "{0} कॅलरीला"
+        one_ergative: "{0} कॅलरीने"
+        one_genitive: "{0} कॅलरीचा"
+        one_locative: "{0} कॅलरीशी"
+        other: "{0} कॅलरीज"
+        other_ablative: "{0} कॅलरीजहून"
+        other_accusative: "{0} कॅलरीजना"
+        other_dative: "{0} कॅलरीजसाठी"
+        other_ergative: "{0} कॅलरीजनी"
+        other_genitive: "{0} कॅलरीजचे"
+        other_locative: "{0} कॅलरीजचा"
+        gender: feminine
+      short:
+        display_name: कॅ
+    foodcalorie:
+      long:
+        display_name: कॅलरीज
+        one: "{0} कॅलरी"
+        other: "{0} कॅलरीज"
+      short:
+        display_name: Cal
+        one: "{0} Cal"
+        other: "{0} Cal"
+    kilojoule:
+      long:
+        one: "{0} किलोज्यूल"
+        one_ablative: "{0} किलोज्यूलहून"
+        one_accusative: "{0} किलोज्यूलला"
+        one_dative: "{0} किलोज्यूलला"
+        one_ergative: "{0} किलोज्यूलने"
+        one_genitive: "{0} किलोज्यूलचा"
+        one_locative: "{0} किलोज्यूलमध्ये"
+        other: "{0} किलोज्यूल"
+        other_ablative: "{0} किलोज्यूलपासून"
+        other_accusative: "{0} किलोज्यूलना"
+        other_dative: "{0} किलोज्यूलसाठी"
+        other_ergative: "{0} किलोज्यूलनी"
+        other_genitive: "{0} किलोज्यूलचा"
+        other_locative: "{0} किलोज्यूलमध्ये"
+        gender: neuter
+      short:
+        display_name: किलोज्यूल
+    joule:
+      long:
+        one: "{0} ज्यूल"
+        one_ablative: "{0} ज्यूलपासून"
+        one_accusative: "{0} ज्यूलला"
+        one_dative: "{0} ज्यूलला"
+        one_ergative: "{0} ज्यूलने"
+        one_genitive: "{0} ज्यूलचा"
+        one_locative: "{0} ज्यूलशी"
+        other: "{0} ज्यूल"
+        other_ablative: "{0} ज्यूलहून"
+        other_accusative: "{0} ज्यूलना"
+        other_dative: "{0} ज्यूलसाठी"
+        other_ergative: "{0} ज्यूलनी"
+        other_genitive: "{0} ज्यूलचे"
+        other_locative: "{0} ज्यूलचा"
+        gender: masculine
+      short:
+        display_name: ज्यूल
+    kilowatt-hour:
+      long:
+        display_name: किलोवॉट-तास
+        one: "{0} किलोवॉट तास"
+        one_ablative: "{0} किलोवॉट तासहून"
+        one_accusative: "{0} किलोवॉट तासाला"
+        one_dative: "{0} किलोवॉट तासाला"
+        one_ergative: "{0} किलोवॉट तासाने"
+        one_genitive: "{0} किलोवॉट तासाचा"
+        one_locative: "{0} किलोवॉट तासात"
+        other: "{0} किलोवॉट-तास"
+        other_ablative: "{0} किलोवॉट-तासांपासून"
+        other_accusative: "{0} किलोवॉट-तासांनी"
+        other_dative: "{0} किलोवॉट-तासांसाठी"
+        other_ergative: "{0} किलोवॉट-तासांनी"
+        other_genitive: "{0} किलोवॉट-तासांचा"
+        other_locative: "{0} किलोवॉट-तासांमध्ये"
+        gender: neuter
+      short:
+        display_name: kW-तास
+    electronvolt:
+      long:
+        display_name: इलेक्ट्रॉनव्होल्ट्स
+        one: "{0} इलेक्ट्रॉनव्होल्ट"
+        other: "{0} इलेक्ट्रॉनव्होल्ट्स"
+      short:
+        display_name: इलेक्ट्रॉनव्होल्ट
+    british-thermal-unit:
+      long:
+        display_name: ब्रिटिश थर्मल युनिट
+        one: "{0} ब्रिटिश थर्मल युनिट"
+        other: "{0} ब्रिटिश थर्मल युनिट"
+      short:
+        display_name: BTU
+        one: "{0} बिटीयू"
+        other: "{0} बिटीयू"
+      narrow:
+        one: "{0}Btu"
+        other: "{0}Btu"
+    pound-force:
+      long:
+        display_name: पाउंड्स ऑफ फोर्स
+        one: "{0} पाउंड ऑफ फोर्स"
+        other: "{0} पाउंड्स ऑफ फोर्स"
+      short:
+        display_name: पाउंड-फोर्स
+      narrow:
+        display_name: lbf
+        one: "{0}lbf"
+        other: "{0}lbf"
+    newton:
+      long:
+        display_name: न्यूटन्स
+        one: "{0} न्यूटन"
+        one_ablative: "{0} न्यूटनपासून"
+        one_accusative: "{0} न्यूटनला"
+        one_dative: "{0} न्यूटनला"
+        one_ergative: "{0} न्यूटनने"
+        one_genitive: "{0} न्यूटनचा"
+        one_locative: "{0} न्यूटनशी"
+        other: "{0} न्यूटन्स"
+        other_ablative: "{0} न्यूटनहून"
+        other_accusative: "{0} न्यूटनना"
+        other_dative: "{0} न्यूटनसाठी"
+        other_ergative: "{0} न्यूटननी"
+        other_genitive: "{0} न्यूटनचे"
+        other_locative: "{0} न्यूटनचा"
+        other_oblique: "{0} न्यूटन"
+        gender: masculine
+      short:
+        display_name: न्यूटन
+      narrow:
+        display_name: "N"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: किलोवॉट-तास प्रति 100 किलोमीटर
+        one: "{0} किलोवॉट-तास प्रति 100 किलोमीटर"
+        one_ablative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरपासून"
+        one_accusative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरला"
+        one_dative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरला"
+        one_ergative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरने"
+        one_genitive: "{0} किलोवॉट-तास प्रति 100 किलोमीटरचा"
+        one_locative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरमध्ये"
+        other: "{0} किलोवॉट-तास प्रति 100 किलोमीटर"
+        other_ablative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरपासून"
+        other_accusative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरना"
+        other_dative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरसाठी"
+        other_ergative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरनी"
+        other_genitive: "{0} किलोवॉट-तास प्रति 100 किलोमीटरचा"
+        other_locative: "{0} किलोवॉट-तास प्रति 100 किलोमीटरमध्ये"
+        gender: neuter
+      narrow:
+        one: "{0}kWh/100km"
+        other: "{0}kWh/100km"
+    gigahertz:
+      long:
+        display_name: गिगाहर्ट्झ
+        one: "{0} गिगाहर्ट्झ"
+        one_ablative: "{0} गिगाहर्ट्झहून"
+        one_accusative: "{0} गिगाहर्ट्झला"
+        one_dative: "{0} गिगाहर्ट्झला"
+        one_ergative: "{0} गिगाहर्ट्झने"
+        one_genitive: "{0} गिगाहर्ट्झचा"
+        one_locative: "{0} गिगाहर्ट्झमध्ये"
+        other: "{0} गिगाहर्ट्झ"
+        other_ablative: "{0} गिगाहर्ट्झपासून"
+        other_accusative: "{0} गिगाहर्ट्झना"
+        other_dative: "{0} गिगाहर्ट्झसाठी"
+        other_ergative: "{0} गिगाहर्ट्झनी"
+        other_genitive: "{0} गिगाहर्ट्झचा"
+        other_locative: "{0} गिगाहर्ट्झमध्ये"
+        gender: neuter
+    megahertz:
+      long:
+        display_name: मेगाहर्ट्झ
+        one: "{0} मेगाहर्ट्झ"
+        one_ablative: "{0} मेगाहर्ट्झहून"
+        one_accusative: "{0} मेगाहर्ट्झला"
+        one_dative: "{0} मेगाहर्ट्झला"
+        one_ergative: "{0} मेगाहर्ट्झने"
+        one_genitive: "{0} मेगाहर्ट्झचा"
+        one_locative: "{0} मेगाहर्ट्झमध्ये"
+        other: "{0} मेगाहर्ट्झ"
+        other_ablative: "{0} मेगाहर्ट्झपासून"
+        other_accusative: "{0} मेगाहर्ट्झना"
+        other_dative: "{0} मेगाहर्ट्झसाठी"
+        other_ergative: "{0} मेगाहर्ट्झने"
+        other_genitive: "{0} मेगाहर्ट्झचा"
+        other_locative: "{0} मेगाहर्ट्झमध्ये"
+        gender: neuter
+    kilohertz:
+      long:
+        display_name: किलोहर्ट्झ
+        one: "{0} किलोहर्ट्झ"
+        one_ablative: "{0} किलोहर्ट्झहून"
+        one_accusative: "{0} किलोहर्ट्झला"
+        one_dative: "{0} किलोहर्ट्झला"
+        one_ergative: "{0} किलोहर्ट्झने"
+        one_genitive: "{0} किलोहर्ट्झचा"
+        one_locative: "{0} किलोहर्ट्झमध्ये"
+        other: "{0} किलोहर्ट्झ"
+        other_ablative: "{0} किलोहर्ट्झपासून"
+        other_accusative: "{0} किलोहर्ट्झना"
+        other_dative: "{0} किलोहर्ट्झसाठी"
+        other_ergative: "{0} किलोहर्ट्झनी"
+        other_genitive: "{0} किलोहर्ट्झचे"
+        other_locative: "{0} किलोहर्ट्झमध्ये"
+        gender: neuter
+    hertz:
+      long:
+        display_name: हर्ट्झ
+        one: "{0} हर्ट्झ"
+        one_ablative: "{0} हर्ट्झपासून"
+        one_accusative: "{0} हर्ट्झला"
+        one_dative: "{0} हर्ट्झला"
+        one_ergative: "{0} हर्ट्झने"
+        one_genitive: "{0} हर्ट्झचा"
+        one_locative: "{0} हर्ट्झशी"
+        other: "{0} हर्ट्झ"
+        other_ablative: "{0} हर्ट्झहून"
+        other_accusative: "{0} हर्ट्झना"
+        other_dative: "{0} हर्ट्झसाठी"
+        other_ergative: "{0} हर्ट्झनी"
+        other_genitive: "{0} हर्ट्झचे"
+        other_locative: "{0} हर्ट्झचा"
+        gender: neuter
+    em:
+      long:
+        display_name: टायपोग्राफिक em
+        one: "{0} em"
+        one_ablative: "{0} em पासून"
+        one_accusative: "{0} em ला"
+        one_dative: "{0} em ला"
+        one_ergative: "{0} em ने"
+        one_genitive: "{0} em चा"
+        one_locative: "{0} em शी"
+        other: "{0} ems"
+        other_ablative: "{0} em पासून"
+        other_accusative: "{0} em ना"
+        other_dative: "{0} em साठी"
+        other_ergative: "{0} em नी"
+        other_genitive: "{0} em चे"
+        other_locative: "{0} em चा"
+        gender: masculine
+    pixel:
+      long:
+        one: "{0} पिक्सेल"
+        one_ablative: "{0} पिक्सेलपासून"
+        one_accusative: "{0} पिक्सेलला"
+        one_dative: "{0} पिक्सेलला"
+        one_ergative: "{0} पिक्सेलने"
+        one_genitive: "{0} पिक्सेलचा"
+        one_locative: "{0} पिक्सेलशी"
+        other: "{0} पिक्सेल्स"
+        other_ablative: "{0} पिक्सेल्सपासून"
+        other_accusative: "{0} पिक्सेल्सना"
+        other_dative: "{0} पिक्सेल्ससाठी"
+        other_ergative: "{0} पिक्सेल्सनी"
+        other_genitive: "{0} पिक्सेल्सचे"
+        other_locative: "{0} पिक्सेल्सचा"
+        gender: masculine
+      short:
+        display_name: पिक्सेल्स
+        one: "{0} पि"
+        other: "{0} पि"
+    megapixel:
+      long:
+        display_name: मेगापिक्सेल्स
+        one: "{0} मेगापिक्सेल"
+        one_ablative: "{0} मेगापिक्सेलहून"
+        one_accusative: "{0} मेगापिक्सेलला"
+        one_dative: "{0} मेगापिक्सेलला"
+        one_ergative: "{0} मेगापिक्सेलने"
+        one_genitive: "{0} मेगापिक्सेलचा"
+        one_locative: "{0} मेगापिक्सेलनी"
+        other: "{0} मेगापिक्सेल्स"
+        other_ablative: "{0} मेगापिक्सेल्सहून"
+        other_accusative: "{0} मेगापिक्सेल्सला"
+        other_dative: "{0} मेगापिक्सेल्ससाठी"
+        other_ergative: "{0} मेगापिक्सेल्सनी"
+        other_genitive: "{0} मेगापिक्सेल्सचा"
+        other_locative: "{0} मेगापिक्सेल्समध्ये"
+        gender: masculine
+      short:
+        display_name: मे पि
+        one: "{0} मे पि"
+        other: "{0} मे पि"
+    pixel-per-centimeter:
+      long:
+        display_name: पिक्सेल्स प्रति सेंटीमीटर
+        one: "{0} पिक्सेल प्रति सेंटीमीटर"
+        one_ablative: "{0} पिक्सेल प्रति सेंटीमीटरहून"
+        one_accusative: "{0} पिक्सेल प्रति सेंटीमीटरला"
+        one_dative: "{0} पिक्सेल प्रति सेंटीमीटरला"
+        one_ergative: "{0} पिक्सेल प्रति सेंटीमीटरने"
+        one_genitive: "{0} पिक्सेल प्रति सेंटीमीटरचा"
+        one_locative: "{0} पिक्सेल प्रति सेंटीमीटरमध्ये"
+        other: "{0} पिक्सेल्स प्रति सेंटीमीटर"
+        other_ablative: "{0} पिक्सेल्स प्रति सेंटीमीटरपासून"
+        other_accusative: "{0} पिक्सेल्स प्रति सेंटीमीटरला"
+        other_dative: "{0} पिक्सेल्स प्रति सेंटीमीटरला"
+        other_ergative: "{0} पिक्सेल्स प्रति सेंटीमीटरनी"
+        other_genitive: "{0} पिक्सेल्स प्रति सेंटीमीटरचा"
+        other_locative: "{0} पिक्सेल्स प्रति सेंटीमीटरमध्ये"
+        gender: masculine
+      short:
+        display_name: पि प्र सेंमी
+        one: "{0} पि प्र सेंमी"
+        other: "{0} पि प्र सेंमी"
+      narrow:
+        one: "{0}ppcm"
+        other: "{0}ppcm"
+    pixel-per-inch:
+      long:
+        display_name: पिक्सेल्स प्रति इंच
+        one: "{0} पिक्सेल प्रति इंच"
+        other: "{0} पिक्सेल्स प्रति इंच"
+      short:
+        display_name: पि प्र इं
+        one: "{0} पि प्र इं"
+        other: "{0} पि प्र इं"
+    dot-per-centimeter:
+      long:
+        display_name: पिक्सेल्स प्रति सेंटिमीटर
+        one: प्रति सेंटिमीटर {0} पिक्सेल्स
+        other: प्रति सेंटिमीटर {0} पिक्सेल्स
+      narrow:
+        display_name: प्र सें बिं
+        one: "{0} प्र सें बिं"
+        other: "{0} पि प्र सेंमी"
+    dot-per-inch:
+      long:
+        display_name: पिक्सेल्स प्रति इंच
+        one: प्रति इंच {0} पिक्सेल
+        other: प्रति इंच {0} पिक्सेल्स
+      short:
+        one: प्र इं {0} पि
+        other: "{0} प्र इं बिं"
+      narrow:
+        one: "{0} प्र इं बिं"
+        other: "{0} प्र इं बिं"
+    earth-radius:
+      long:
+        display_name: पृथ्वी त्रिज्या
+        one: "{0} पृथ्वी त्रिज्या"
+        other: "{0} पृथ्वी त्रिज्या"
+    kilometer:
+      long:
+        display_name: किलोमीटर
+        one: "{0} किलोमीटर"
+        one_ablative: "{0} किलोमीटरहून"
+        one_accusative: "{0} किलोमीटरला"
+        one_dative: "{0} किलोमीटरला"
+        one_ergative: "{0} किलोमीटरने"
+        one_genitive: "{0} किलोमीटरचा"
+        one_locative: "{0} किलोमीटरमध्ये"
+        other: "{0} किलोमीटर"
+        other_ablative: "{0} किलोमीटरपासून"
+        other_accusative: "{0} किलोमीटरना"
+        other_dative: "{0} किलोमीटरना"
+        other_ergative: "{0} किलोमीटरनी"
+        other_genitive: "{0} किलोमीटरचे"
+        other_locative: "{0} किलोमीटरमध्ये"
+        gender: neuter
+        per_unit_pattern: "{0} दर किलोमीटर"
+      short:
+        display_name: किमी
+        one: "{0} किमी"
+        other: "{0} किमी"
+        per_unit_pattern: "{0}/किमी"
+      narrow:
+        one: "{0}किमी"
+        other: "{0}किमी"
+    meter:
+      long:
+        one: "{0} मीटर"
+        one_ablative: "{0} मीटरपासून"
+        one_accusative: "{0} मीटरला"
+        one_dative: "{0} मीटरला"
+        one_ergative: "{0} मीटरने"
+        one_genitive: "{0} मीटरचा"
+        one_locative: "{0} मीटरशी"
+        other: "{0} मीटर"
+        other_ablative: "{0} मीटरपासून"
+        other_accusative: "{0} मीटरना"
+        other_dative: "{0} मीटरसाठी"
+        other_ergative: "{0} मीटरनी"
+        other_genitive: "{0} मीटरचे"
+        other_locative: "{0} मीटरचा"
+        gender: masculine
+        per_unit_pattern: "{0} दर मीटर"
+      short:
+        display_name: मीटर
+        one: "{0} मी"
+        other: "{0} मी"
+        per_unit_pattern: "{0}/मी"
+      narrow:
+        one: "{0}मी"
+        other: "{0}मी"
+    decimeter:
+      long:
+        display_name: डेसीमीटर
+        one: "{0} डेसीमीटर"
+        one_ablative: "{0} डेसीमीटरहून"
+        one_accusative: "{0} डेसीमीटरला"
+        one_dative: "{0} डेसीमीटरला"
+        one_ergative: "{0} डेसीमीटरने"
+        one_genitive: "{0} डेसीमीटरचा"
+        one_locative: "{0} डेसीमीटरमध्ये"
+        other: "{0} डेसीमीटर"
+        other_ablative: "{0} डेसीमीटरपासून"
+        other_accusative: "{0} डेसीमीटरना"
+        other_dative: "{0} डेसीमीटरना"
+        other_ergative: "{0} डेसीमीटरनी"
+        other_genitive: "{0} डेसीमीटरचे"
+        other_locative: "{0} डेसीमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: डेमी
+    centimeter:
+      long:
+        display_name: सेंटीमीटर
+        one: "{0} सेंटीमीटर"
+        one_ablative: "{0} सेंटीमीटरपासून"
+        one_accusative: "{0} सेंटीमीटरला"
+        one_dative: "{0} सेंटीमीटरला"
+        one_ergative: "{0} सेंटीमीटरने"
+        one_genitive: "{0} सेंटीमीटरचा"
+        one_locative: "{0} सेंटीमीटरमध्ये"
+        other: "{0} सेंटीमीटर"
+        other_ablative: "{0} सेंटीमीटरपासून"
+        other_accusative: "{0} सेंटीमीटरना"
+        other_dative: "{0} सेंटीमीटरसाठी"
+        other_ergative: "{0} सेंटीमीटरने"
+        other_genitive: "{0} सेंटीमीटरचा"
+        other_locative: "{0} सेंटीमीटरमध्ये"
+        gender: neuter
+        per_unit_pattern: "{0} दर सेंटीमीटर"
+      short:
+        display_name: सेंमी
+        one: "{0} सेंमी"
+        other: "{0} सेंमी"
+        per_unit_pattern: "{0}/सेंमी"
+      narrow:
+        one: "{0}सेंमी"
+        other: "{0}सेंमी"
+    millimeter:
+      long:
+        display_name: मिलिमीटर
+        one: "{0} मिलिमीटर"
+        one_ablative: "{0} मिलिमीटरपासून"
+        one_accusative: "{0} मिलिमीटरला"
+        one_dative: "{0} मिलिमीटरला"
+        one_ergative: "{0} मिलिमीटरने"
+        one_genitive: "{0} मिलिमीटरचा"
+        one_locative: "{0} मिलिमीटरमध्ये"
+        other: "{0} मिलिमीटर"
+        other_ablative: "{0} मिलिमीटरपासून"
+        other_accusative: "{0} मिलिमीटरना"
+        other_dative: "{0} मिलिमीटरसाठी"
+        other_ergative: "{0} मिलिमीटरनी"
+        other_genitive: "{0} मिलिमीटरचे"
+        other_locative: "{0} मिलिमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: मिमी
+        one: "{0} मिमी"
+        other: "{0} मिमी"
+      narrow:
+        one: "{0}मिमी"
+        other: "{0}मिमी"
+    micrometer:
+      long:
+        one: "{0} मायक्रोमीटर"
+        one_ablative: "{0} मायक्रोमीटरहून"
+        one_accusative: "{0} मायक्रोमीटरला"
+        one_dative: "{0} मायक्रोमीटरला"
+        one_ergative: "{0} मायक्रोमीटरने"
+        one_genitive: "{0} मायक्रोमीटरचा"
+        one_locative: "{0} मायक्रोमीटरमध्ये"
+        other: "{0} मायक्रोमीटर"
+        other_ablative: "{0} मायक्रोमीटरपासून"
+        other_accusative: "{0} मायक्रोमीटरना"
+        other_dative: "{0} मायक्रोमीटरसाठी"
+        other_ergative: "{0} मायक्रोमीटरनी"
+        other_genitive: "{0} मायक्रोमीटरचे"
+        other_locative: "{0} मायक्रोमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: मायक्रोमीटर
+    nanometer:
+      long:
+        display_name: नॅनोमीटर
+        one: "{0} नॅनोमीटर"
+        one_ablative: "{0} नॅनोमीटरहून"
+        one_accusative: "{0} नॅनोमीटरला"
+        one_dative: "{0} नॅनोमीटरला"
+        one_ergative: "{0} नॅनोमीटरने"
+        one_genitive: "{0} नॅनोमीटरचा"
+        one_locative: "{0} नॅनोमीटरमध्ये"
+        other: "{0} नॅनोमीटर"
+        other_ablative: "{0} नॅनोमीटरपासून"
+        other_accusative: "{0} नॅनोमीटरना"
+        other_dative: "{0} नॅनोमीटरसाठी"
+        other_ergative: "{0} नॅनोमीटरने"
+        other_genitive: "{0} नॅनोमीटरचा"
+        other_locative: "{0} नॅनोमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: नॅमी
+        one: "{0} नॅमी"
+        other: "{0} नॅमी"
+    picometer:
+      long:
+        display_name: पिकोमीटर
+        one: "{0} पिकोमीटर"
+        one_ablative: "{0} पिकोमीटरहून"
+        one_accusative: "{0} पिकोमीटरला"
+        one_dative: "{0} पिकोमीटरला"
+        one_ergative: "{0} पिकोमीटरने"
+        one_genitive: "{0} पिकोमीटरचा"
+        one_locative: "{0} पिकोमीटरमध्ये"
+        other: "{0} पिकोमीटर"
+        other_ablative: "{0} पिकोमीटरपासून"
+        other_accusative: "{0} पिकोमीटरना"
+        other_dative: "{0} पिकोमीटरना"
+        other_ergative: "{0} पिकोमीटरनी"
+        other_genitive: "{0} पिकोमीटरचे"
+        other_locative: "{0} पिकोमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: पिमी
+        one: "{0} पिमी"
+        other: "{0} पिमी"
+      narrow:
+        one: "{0}पिमी"
+        other: "{0}पिमी"
+    foot:
+      long:
+        per_unit_pattern: "{0} दर फूट"
+      short:
+        display_name: फूट
+        one: "{0} फूट"
+        other: "{0} फूट"
+        per_unit_pattern: "{0}/फूट"
+      narrow:
+        one: "{0}'"
+        other: "{0}'"
+    inch:
+      long:
+        per_unit_pattern: "{0} दर इंच"
+      short:
+        display_name: इंच
+        one: "{0} इंच"
+        other: "{0} इंच"
+        per_unit_pattern: "{0}/इंच"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    parsec:
+      long:
+        one: "{0} पार्सेक"
+        other: "{0} पार्सेक"
+      short:
+        display_name: पार्सेक
+    light-year:
+      long:
+        one: "{0} प्रकाश वर्ष"
+        other: "{0} प्रकाश वर्षे"
+      short:
+        display_name: प्रकाश वर्षे
+        one: "{0} प्रव"
+        other: "{0} प्रव"
+      narrow:
+        one: "{0}प्रव"
+        other: "{0}प्रव"
+    astronomical-unit:
+      long:
+        display_name: खगोलीय एकके
+        one: "{0} खगोलीय एकक"
+        other: "{0} खगोलीय एकके"
+    furlong:
+      long:
+        one: "{0} फर्लांग"
+        other: "{0} फर्लांग"
+      short:
+        display_name: फर्लांग
+    fathom:
+      long:
+        one: "{0} फॅदम"
+        other: "{0} फॅदम"
+      short:
+        display_name: फॅदम
+    nautical-mile:
+      long:
+        display_name: नॉटिकल मैल
+        one: "{0} नॉटिकल मैल"
+        other: "{0} नॉटिकल मैल"
+    mile-scandinavian:
+      long:
+        display_name: मैल-स्कॅन्डीनेव्हियन
+        one: "{0} मैल-स्कॅन्डीनेव्हियन"
+        one_ablative: "{0} मैल-स्कॅन्डीनेव्हियनपासून"
+        one_accusative: "{0} मैल-स्कॅन्डीनेव्हियनला"
+        one_dative: "{0} मैल-स्कॅन्डीनेव्हियनला"
+        one_ergative: "{0} मैल-स्कॅन्डीनेव्हियनने"
+        one_genitive: "{0} मैल-स्कॅन्डीनेव्हियनचा"
+        one_locative: "{0} मैल-स्कॅन्डीनेव्हियनशी"
+        other: "{0} मैल-स्कॅन्डीनेव्हियन"
+        other_ablative: "{0} मैल-स्कॅन्डीनेव्हियनपासून"
+        other_accusative: "{0} मैल-स्कॅन्डीनेव्हियनना"
+        other_dative: "{0} मैल-स्कॅन्डीनेव्हियनसाठी"
+        other_ergative: "{0} मैल-स्कॅन्डीनेव्हियननी"
+        other_genitive: "{0} मैल-स्कॅन्डीनेव्हियनचे"
+        other_locative: "{0} मैल-स्कॅन्डीनेव्हियनचा"
+        gender: masculine
+    point:
+      long:
+        one: "{0} बिंदु"
+        one_ablative: "{0} बिंदुपासून"
+        one_accusative: "{0} बिंदूला"
+        one_dative: "{0} बिंदूसाठी"
+        one_ergative: "{0} बिंदुने"
+        one_genitive: "{0} बिंदूच्या"
+        one_locative: बिंदूचा
+        other: "{0} बिंदु"
+        other_ablative: "{0} बिंदुपासून"
+        other_accusative: "{0} बिंदुला"
+        other_dative: "{0} बिंदुस"
+        other_ergative: "{0} बिंदुने"
+        other_genitive: "{0} बिंदुच्या"
+        other_locative: "{0} बिंदुचा"
+        gender: masculine
+      short:
+        display_name: बिंदु
+        one: "{0} बिंदु"
+        other: "{0} बिंदु"
+    solar-radius:
+      long:
+        one: "{0} सौर त्रिज्या"
+        other: "{0} सौर त्रिज्या"
+      short:
+        display_name: सौर त्रिज्या
+    lux:
+      long:
+        one: "{0} लक्स"
+        one_ablative: "{0} लक्सपासून"
+        one_accusative: "{0} लक्सला"
+        one_dative: "{0} लक्सला"
+        one_ergative: "{0} लक्सने"
+        one_genitive: "{0} लक्सचा"
+        one_locative: "{0} लक्सशी"
+        other: "{0} लक्स"
+        other_ablative: "{0} लक्सहून"
+        other_accusative: "{0} लक्सना"
+        other_dative: "{0} लक्ससाठी"
+        other_ergative: "{0} लक्सनी"
+        other_genitive: "{0} लक्सचे"
+        other_locative: "{0} लक्सचा"
+        gender: feminine
+      short:
+        display_name: लक्स
+    candela:
+      long:
+        display_name: कँडेला
+        one: "{0} कँडेला"
+        one_ablative: "{0} कँडेलापासून"
+        one_accusative: "{0} कँडेलाला"
+        one_dative: "{0} कँडेलास"
+        one_ergative: "{0} कँडेलाने"
+        one_genitive: "{0} कँडेलाचा"
+        one_locative: "{0} कँडेलाशी"
+        other: "{0} कँडेला"
+        other_ablative: "{0} कँडेलाहून"
+        other_accusative: "{0} कँडेलाना"
+        other_dative: "{0} कँडेलासाठी"
+        other_ergative: "{0} कँडेलानी"
+        other_genitive: "{0} कँडेलाचे"
+        other_locative: "{0} कँडेलाचा"
+        gender: feminine
+    lumen:
+      long:
+        display_name: लुमेन
+        one: "{0} लुमेन"
+        one_ablative: "{0} लुमेनपासून"
+        one_accusative: "{0} लुमेनला"
+        one_dative: "{0} लुमेनला"
+        one_ergative: "{0} लुमेनने"
+        one_genitive: "{0} लुमेनचा"
+        one_locative: "{0} लुमेनशी"
+        other: "{0} लुमेन"
+        other_ablative: "{0} लुमेनहून"
+        other_accusative: "{0} लुमेनना"
+        other_dative: "{0} लुमेनसाठी"
+        other_ergative: "{0} लुमेननी"
+        other_genitive: "{0} लुमेनचे"
+        other_locative: "{0} लुमेनचा"
+        gender: masculine
+    solar-luminosity:
+      long:
+        one: "{0} सौर प्रकाश"
+        other: "{0} सौर प्रकाश"
+      short:
+        display_name: सौर प्रकाश
+      narrow:
+        display_name: L☉
+    tonne:
+      long:
+        display_name: मेट्रिक टन
+        one: "{0} मेट्रिक टन"
+        one_ablative: "{0} मेट्रिक टनपासून"
+        one_accusative: "{0} मेट्रिक टनला"
+        one_dative: "{0} मेट्रिक टनला"
+        one_ergative: "{0} मेट्रिक टनने"
+        one_genitive: "{0} मेट्रिक टनचा"
+        one_locative: "{0} मेट्रिक टनशी"
+        other: "{0} मेट्रिक टन"
+        other_ablative: "{0} मेट्रिक टनहून"
+        other_accusative: "{0} मेट्रिक टनना"
+        other_dative: "{0} मेट्रिक टनना"
+        other_ergative: "{0} मेट्रिक टनसाठी"
+        other_genitive: "{0} मेट्रिक टननी"
+        other_locative: "{0} मेट्रिक टनचे"
+        gender: neuter
+    kilogram:
+      long:
+        display_name: किलोग्रॅम
+        one: "{0} किलोग्रॅम"
+        one_ablative: "{0} किलोग्रॅमपासून"
+        one_accusative: "{0} किलोग्रॅमला"
+        one_dative: "{0} किलोग्रॅमला"
+        one_ergative: "{0} किलोग्रॅमने"
+        one_genitive: "{0} किलोग्रॅमचा"
+        one_locative: "{0} किलोग्रॅमशी"
+        other: "{0} किलोग्रॅम"
+        other_ablative: "{0} किलोग्रॅमहून"
+        other_accusative: "{0} किलोग्रॅमना"
+        other_dative: "{0} किलोग्रॅमसाठी"
+        other_ergative: "{0} किलोग्रॅमनी"
+        other_genitive: "{0} किलोग्रॅमचे"
+        other_locative: "{0} किलोग्रॅमचा"
+        gender: masculine
+        per_unit_pattern: "{0} दर किलोग्रॅम"
+      short:
+        display_name: किग्रॅ
+        one: "{0} किग्रॅ"
+        other: "{0} किग्रॅ"
+        per_unit_pattern: "{0}/किग्रॅ"
+      narrow:
+        one: "{0}किग्रॅ"
+        other: "{0}किग्रॅ"
+    gram:
+      long:
+        one: "{0} ग्रॅम"
+        one_ablative: "{0} ग्रॅमपासून"
+        one_accusative: "{0} ग्रॅमला"
+        one_dative: "{0} ग्रॅमला"
+        one_ergative: "{0} ग्रॅमने"
+        one_genitive: "{0} ग्रॅमचा"
+        one_locative: "{0} ग्रॅमशी"
+        other: "{0} ग्रॅम"
+        other_ablative: "{0} ग्रॅमहून"
+        other_accusative: "{0} ग्रॅमना"
+        other_dative: "{0} ग्रॅमसाठी"
+        other_ergative: "{0} ग्रॅमनी"
+        other_genitive: "{0} ग्रॅमचे"
+        other_locative: "{0} ग्रॅमचा"
+        gender: masculine
+        per_unit_pattern: "{0} दर ग्रॅम"
+      short:
+        display_name: ग्रॅम
+        one: "{0} ग्रॅ"
+        other: "{0} ग्रॅ"
+        per_unit_pattern: "{0}/ग्रॅ"
+      narrow:
+        one: "{0}ग्रॅ"
+        other: "{0}ग्रॅ"
+    milligram:
+      long:
+        display_name: मिलिग्रॅम
+        one: "{0} मिलिग्रॅम"
+        one_ablative: "{0} मिलिग्रॅमहून"
+        one_accusative: "{0} मिलिग्रॅमला"
+        one_dative: "{0} मिलिग्रॅमला"
+        one_ergative: "{0} मिलिग्रॅमने"
+        one_genitive: "{0} मिलिग्रॅमचा"
+        one_locative: "{0} मिलिग्रॅममध्ये"
+        other: "{0} मिलिग्रॅम"
+        other_ablative: "{0} मिलिग्रॅमपासून"
+        other_accusative: "{0} मिलिग्रॅमना"
+        other_dative: "{0} मिलिग्रॅमसाठी"
+        other_ergative: "{0} मिलिग्रॅमनी"
+        other_genitive: "{0} मिलिग्रॅमचे"
+        other_locative: "{0} मिलिग्रॅममध्ये"
+        gender: neuter
+      short:
+        display_name: मिग्रॅ
+        one: "{0} मिग्रॅ"
+        other: "{0} मिग्रॅ"
+    microgram:
+      long:
+        display_name: मायक्रोग्रॅम
+        one: "{0} मायक्रोग्रॅम"
+        one_ablative: "{0} मायक्रोग्रॅमहून"
+        one_accusative: "{0} मायक्रोग्रॅमला"
+        one_dative: "{0} मायक्रोग्रॅमला"
+        one_ergative: "{0} मायक्रोग्रॅमने"
+        one_genitive: "{0} मायक्रोग्रॅमचा"
+        one_locative: "{0} मायक्रोग्रॅममध्ये"
+        other: "{0} मायक्रोग्रॅम"
+        other_ablative: "{0} मायक्रोग्रॅमपासून"
+        other_accusative: "{0} मायक्रोग्रॅमना"
+        other_dative: "{0} मायक्रोग्रॅमसाठी"
+        other_ergative: "{0} मायक्रोग्रॅमनी"
+        other_genitive: "{0} मायक्रोग्रॅमचे"
+        other_locative: "{0} मायक्रोग्रॅममध्ये"
+        gender: neuter
+    pound:
+      long:
+        per_unit_pattern: "{0} दर पाउंड"
+      short:
+        display_name: पाउंड
+        one: "{0} पाउंड"
+        other: "{0} पाउंड"
+      narrow:
+        one: "{0}#"
+        other: "{0}#"
+    ounce:
+      long:
+        per_unit_pattern: "{0} दर औंस"
+      short:
+        display_name: औंस
+        one: "{0} औंस"
+        other: "{0} औंस"
+      narrow:
+        one: "{0}औंस"
+        other: "{0}औंस"
+    ounce-troy:
+      long:
+        display_name: ट्रॉय औंस
+        one: "{0} ट्रॉय औंस"
+        other: "{0} ट्रॉय औंस"
+      short:
+        display_name: oz ट्रॉय
+      narrow:
+        display_name: oz t
+    carat:
+      long:
+        one: "{0} कॅरेट"
+        one_ablative: "{0} कॅरेटपासून"
+        one_accusative: "{0} कॅरेटला"
+        one_dative: "{0} कॅरेटला"
+        one_ergative: "{0} कॅरेटने"
+        one_genitive: "{0} कॅरेटचा"
+        one_locative: "{0} कॅरेटशी"
+        other: "{0} कॅरेट्स"
+        other_ablative: "{0} कॅरेट्सहून"
+        other_accusative: "{0} कॅरेट्सना"
+        other_dative: "{0} कॅरेट्ससाठी"
+        other_ergative: "{0} कॅरेट्सनी"
+        other_genitive: "{0} कॅरेट्सचे"
+        other_locative: "{0} कॅरेट्सचा"
+        gender: neuter
+      short:
+        display_name: कॅरेट्स
+    earth-mass:
+      long:
+        one: "{0} पृथ्वी द्रव्यमान"
+        other: "{0} पृथ्वी द्रव्यमान"
+      short:
+        display_name: पृथ्वी द्रव्यमान
+      narrow:
+        display_name: M⊕
+    solar-mass:
+      long:
+        one: "{0} सौर द्रव्यमान"
+        other: "{0} सौर द्रव्यमान"
+      short:
+        display_name: सौर द्रव्यमान
+      narrow:
+        display_name: M☉
+    gigawatt:
+      long:
+        display_name: गिगावॉट
+        one: "{0} गिगावॉट"
+        one_ablative: "{0} गिगावॉटहून"
+        one_accusative: "{0} गिगावॉटला"
+        one_dative: "{0} गिगावॉटला"
+        one_ergative: "{0} गिगावॉटने"
+        one_genitive: "{0} गिगावॉटचा"
+        one_locative: "{0} गिगावॉटमध्ये"
+        other: "{0} गिगावॉट"
+        other_ablative: "{0} गिगावॉटपासून"
+        other_accusative: "{0} गिगावॉटना"
+        other_dative: "{0} गिगावॉटसाठी"
+        other_ergative: "{0} गिगावॉटनी"
+        other_genitive: "{0} गिगावॉटचे"
+        other_locative: "{0} गिगावॉटमध्ये"
+        gender: neuter
+    megawatt:
+      long:
+        display_name: मेगावॉट
+        one: "{0} मेगावॉट"
+        one_ablative: "{0} मेगावॉटहून"
+        one_accusative: "{0} मेगावॉटला"
+        one_dative: "{0} मेगावॉटला"
+        one_ergative: "{0} मेगावॉटने"
+        one_genitive: "{0} मेगावॉटचा"
+        one_locative: "{0} मेगावॉटमध्ये"
+        other: "{0} मेगावॉट"
+        other_ablative: "{0} मेगावॉटपासून"
+        other_accusative: "{0} मेगावॉटना"
+        other_dative: "{0} मेगावॉटना"
+        other_ergative: "{0} मेगावॉटनी"
+        other_genitive: "{0} मेगावॉटचे"
+        other_locative: "{0} मेगावॉटमध्ये"
+        gender: neuter
+    kilowatt:
+      long:
+        display_name: किलोवॉट
+        one: "{0} किलोवॉट"
+        one_ablative: "{0} किलोवॉटहून"
+        one_accusative: "{0} किलोवॉटला"
+        one_dative: "{0} किलोवॉटला"
+        one_ergative: "{0} किलोवॉटने"
+        one_genitive: "{0} किलोवॉटचा"
+        one_locative: "{0} किलोवॉटमध्ये"
+        other: "{0} किलोवॉट"
+        other_ablative: "{0} किलोवॉटपासून"
+        other_accusative: "{0} किलोवॉटना"
+        other_dative: "{0} किलोवॉटसाठी"
+        other_ergative: "{0} किलोवॉटनी"
+        other_genitive: "{0} किलोवॉटचे"
+        other_locative: "{0} किलोवॉटमध्ये"
+        gender: neuter
+      short:
+        display_name: किवॉ
+        one: "{0} किवॉ"
+        other: "{0} किवॉ"
+      narrow:
+        one: "{0}किवॉ"
+        other: "{0}किवॉ"
+    watt:
+      long:
+        one: "{0} वॉट"
+        one_ablative: "{0} वॉटपासून"
+        one_accusative: "{0} वॉटला"
+        one_dative: "{0} वॉटला"
+        one_ergative: "{0} वॉटने"
+        one_genitive: "{0} वॉटचा"
+        one_locative: "{0} वॉटशी"
+        other: "{0} वॉट"
+        other_ablative: "{0} वॉटहून"
+        other_accusative: "{0} वॉटना"
+        other_dative: "{0} वॉटसाठी"
+        other_ergative: "{0} वॉटनी"
+        other_genitive: "{0} वॉटचे"
+        other_locative: "{0} वॉटचा"
+        gender: masculine
+      short:
+        display_name: वॉट
+        one: "{0} वॉ"
+        other: "{0} वॉ"
+      narrow:
+        one: "{0}वॉ"
+        other: "{0}वॉ"
+    milliwatt:
+      long:
+        display_name: मिलिवॉट
+        one: "{0} मिलिवॉट"
+        one_ablative: "{0} मिलिवॉटहून"
+        one_accusative: "{0} मिलिवॉटला"
+        one_dative: "{0} मिलिवॉटला"
+        one_ergative: "{0} मिलिवॉटने"
+        one_genitive: "{0} मिलिवॉटचा"
+        one_locative: "{0} मिलिवॉटमध्ये"
+        other: "{0} मिलिवॉट"
+        other_ablative: "{0} मिलिवॉटपासून"
+        other_accusative: "{0} मिलिवॉटना"
+        other_dative: "{0} मिलिवॉटसाठी"
+        other_ergative: "{0} मिलिवॉटनी"
+        other_genitive: "{0} मिलिवॉटचे"
+        other_locative: "{0} मिलिवॉटमध्ये"
+        gender: neuter
+    horsepower:
+      long:
+        display_name: हॉर्सपॉवर
+        one: "{0} हॉर्सपॉवर"
+        other: "{0} हॉर्सपॉवर"
+      narrow:
+        one: "{0} हॉपॉ"
+        other: "{0}हॉपॉ"
+    millimeter-ofhg:
+      long:
+        display_name: मर्क्यूरी मिलिमीटर
+        one: "{0} मर्क्यूरी मिलिमीटर"
+        one_ablative: "{0} मर्क्यूरी मिलिमीटरहून"
+        one_accusative: "{0} मर्क्यूरी मिलिमीटरला"
+        one_dative: "{0} मर्क्यूरी मिलिमीटरसाठी"
+        one_ergative: "{0} मर्क्यूरी मिलिमीटरने"
+        one_genitive: "{0} मर्क्यूरी मिलिमीटरचे"
+        one_locative: "{0} मर्क्यूरी मिलिमीटरचा"
+        other: "{0} मर्क्यूरी मिलिमीटर"
+        other_ablative: "{0} मर्क्यूरी मिलिमीटरहून"
+        other_accusative: "{0} मर्क्यूरी मिलिमीटरना"
+        other_dative: "{0} मर्क्यूरी मिलिमीटरला"
+        other_ergative: "{0} मर्क्यूरी मिलिमीटरने"
+        other_genitive: "{0} मर्क्यूरी मिलिमीटरच्या"
+        other_locative: "{0} मर्क्यूरी मिलिमीटरपासून"
+        gender: neuter
+      narrow:
+        one: "{0}mmHg"
+        other: "{0}mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: प्रति चौरस इंच पाउंड
+        one: "{0} प्रति चौरस इंच पाउंड"
+        other: "{0} प्रति चौरस इंच पाउंड"
+      narrow:
+        one: "{0}psi"
+        other: "{0}psi"
+    inch-ofhg:
+      long:
+        display_name: मर्क्यूरी इंच
+        one: "{0} मर्क्यूरी इंच"
+        other: "{0} मर्क्यूरी इंच"
+      short:
+        display_name: in Hg
+      narrow:
+        display_name: "″ हेग्रॅ"
+        one: '{0}" हेग्रॅ'
+        other: '{0}" हेग्रॅ'
+    bar:
+      long:
+        one: "{0} बार"
+        one_ablative: "{0} बारपासून"
+        one_accusative: "{0} बारला"
+        one_dative: "{0} बारला"
+        one_ergative: "{0} बारने"
+        one_genitive: "{0} बारचा"
+        one_locative: "{0} बारशी"
+        other: "{0} बार"
+        other_ablative: "{0} बारहून"
+        other_accusative: "{0} बारना"
+        other_dative: "{0} बारसाठी"
+        other_ergative: "{0} बारनी"
+        other_genitive: "{0} बारचे"
+        other_locative: "{0} बारचा"
+        gender: masculine
+      short:
+        display_name: बार
+        one: "{0} बार"
+        other: "{0} बार"
+    millibar:
+      long:
+        one: "{0} मिलिबार"
+        one_ablative: "{0} मिलिबारहून"
+        one_accusative: "{0} मिलिबारला"
+        one_dative: "{0} मिलिबारला"
+        one_ergative: "{0} मिलिबारने"
+        one_genitive: "{0} मिलिबारचा"
+        one_locative: "{0} मिलिबारमध्ये"
+        other: "{0} मिलिबार"
+        other_ablative: "{0} मिलिबारपासून"
+        other_accusative: "{0} मिलिबारना"
+        other_dative: "{0} मिलिबारसाठी"
+        other_ergative: "{0} मिलिबारनी"
+        other_genitive: "{0} मिलिबारचे"
+        other_locative: "{0} मिलिबारमध्ये"
+        gender: masculine
+      short:
+        display_name: मिलिबार
+      narrow:
+        one: "{0}मिबा"
+        other: "{0}मिबा"
+    atmosphere:
+      long:
+        display_name: वातावरण
+        one: "{0} वातावरण"
+        one_ablative: "{0} वातावरणापासून"
+        one_accusative: "{0} वातावरणाला"
+        one_dative: "{0} वातावरणाला"
+        one_ergative: "{0} वातावरणाने"
+        one_genitive: "{0} वातावरणाचा"
+        one_locative: "{0} वातावरणाशी"
+        other: "{0} वातावरण"
+        other_ablative: "{0} वातावरणांहून"
+        other_accusative: "{0} वातावरणांना"
+        other_dative: "{0} वातावरणांसाठी"
+        other_ergative: "{0} वातावरणांनी"
+        other_genitive: "{0} वातावरणांचे"
+        other_locative: "{0} वातावरणांचा"
+        gender: neuter
+    pascal:
+      long:
+        display_name: पास्काल
+        one: "{0} पास्कल"
+        one_ablative: "{0} पास्कलपासून"
+        one_accusative: पास्कलला
+        one_dative: "{0} पास्कलला"
+        one_ergative: "{0} पास्कलने"
+        one_genitive: "{0} पास्कलचा"
+        one_locative: "{0} पास्कलशी"
+        one_oblique: "{0} पास्कल"
+        other: "{0} पास्कल"
+        other_ablative: "{0} पास्कलहून"
+        other_accusative: "{0} पास्कलना"
+        other_dative: "{0} पास्कलसाठी"
+        other_ergative: "{0} पास्कलनी"
+        other_genitive: "{0} पास्कल"
+        other_locative: "{0} पास्कलचा"
+        gender: masculine
+    hectopascal:
+      long:
+        display_name: हेक्टोपास्कल
+        one: "{0} हेक्टोपास्कल"
+        one_ablative: "{0} हेक्टोपास्कलहून"
+        one_accusative: "{0} हेक्टोपास्कलला"
+        one_dative: "{0} हेक्टोपास्कलला"
+        one_ergative: "{0} हेक्टोपास्कलने"
+        one_genitive: "{0} हेक्टोपास्कलचा"
+        one_locative: "{0} हेक्टोपास्कलमध्ये"
+        other: "{0} हेक्टोपास्कल"
+        other_ablative: "{0} हेक्टोपास्कलपासून"
+        other_accusative: "{0} हेक्टोपास्कलना"
+        other_dative: "{0} हेक्टोपास्कलसाठी"
+        other_ergative: "{0} हेक्टोपास्कलनी"
+        other_genitive: "{0} हेक्टोपास्कलचा"
+        other_locative: "{0} हेक्टोपास्कलमध्ये"
+        gender: masculine
+      narrow:
+        one: "{0}हेक्टोपा"
+        other: "{0}हेक्टोपा"
+    kilopascal:
+      long:
+        display_name: किलोपास्कल
+        one: "{0} किलोपास्कल"
+        one_ablative: "{0} किलोपास्कलहून"
+        one_accusative: "{0} किलोपास्कलला"
+        one_dative: "{0} किलोपास्कलला"
+        one_ergative: "{0} किलोपास्कलने"
+        one_genitive: "{0} किलोपास्कलचा"
+        one_locative: "{0} किलोपास्कलमध्ये"
+        other: "{0} किलोपास्कल"
+        other_ablative: "{0} किलोपास्कलपासून"
+        other_accusative: "{0} किलोपास्कलना"
+        other_dative: "{0} किलोपास्कलसाठी"
+        other_ergative: "{0} किलोपास्कलनी"
+        other_genitive: "{0} किलोपास्कलचे"
+        other_locative: "{0} किलोपास्कलमध्ये"
+        gender: masculine
+    megapascal:
+      long:
+        display_name: मेगापास्कल
+        one: "{0} मेगापास्कल"
+        one_ablative: "{0} मेगापास्कलहून"
+        one_accusative: "{0} मेगापास्कलला"
+        one_dative: "{0} मेगापास्कलला"
+        one_ergative: "{0} मेगापास्कलने"
+        one_genitive: "{0} मेगापास्कलचा"
+        one_locative: "{0} मेगापास्कलमध्ये"
+        other: "{0} मेगापास्कल्स"
+        other_ablative: "{0} मेगापास्कल्सपासून"
+        other_accusative: "{0} मेगापास्कल्सना"
+        other_dative: "{0} मेगापास्कल्ससाठी"
+        other_ergative: "{0} मेगापास्कल्सनी"
+        other_genitive: "{0} मेगापास्कल्सचा"
+        other_locative: "{0} मेगापास्कल्समध्ये"
+        gender: masculine
+    kilometer-per-hour:
+      long:
+        display_name: किलोमीटर प्रति तास
+        one: "{0} किलोमीटर प्रति तास"
+        one_ablative: "{0} किलोमीटर प्रति तासपासून"
+        one_accusative: "{0} किलोमीटर प्रति तासाला"
+        one_dative: "{0} किलोमीटर प्रति तासाला"
+        one_ergative: "{0} किलोमीटर प्रति तासाने"
+        one_genitive: "{0} किलोमीटर प्रति तासाचा"
+        one_locative: "{0} किलोमीटर प्रति तासात"
+        other: "{0} किलोमीटर प्रति तास"
+        other_ablative: "{0} किलोमीटर प्रति तासांपासून"
+        other_accusative: "{0} किलोमीटर प्रति तासांनी"
+        other_dative: "{0} किलोमीटर प्रति तासासाठी"
+        other_ergative: "{0} किलोमीटर प्रति तासांनी"
+        other_genitive: "{0} किलोमीटर प्रति तासांचा"
+        other_locative: "{0} किलोमीटर प्रति तासात"
+        gender: neuter
+      short:
+        display_name: किमी/तास
+        one: "{0} किप्रता"
+        other: "{0} किप्रता"
+      narrow:
+        one: "{0}किप्रता"
+        other: "{0}किप्रता"
+    meter-per-second:
+      long:
+        display_name: मीटर प्रति सेकंद
+        one: "{0} मीटर प्रति सेकंद"
+        one_ablative: "{0} मीटर प्रति सेकंदापासून"
+        one_accusative: "{0} मीटर प्रति सेकंदाला"
+        one_dative: "{0} मीटर प्रति सेकंदाला"
+        one_ergative: "{0} मीटर प्रति सेकंदाने"
+        one_genitive: "{0} मीटर प्रति सेकंदाचा"
+        one_locative: "{0} मीटर प्रति सेकंदात"
+        other: "{0} मीटर प्रति सेकंद"
+        other_ablative: "{0} मीटर प्रति सेकंदांपासून"
+        other_accusative: "{0} मीटर प्रति सेकंदांनी"
+        other_dative: "{0} मीटर प्रति सेकंदांसाठी"
+        other_ergative: "{0} मीटर प्रति सेकंदांनी"
+        other_genitive: "{0} मीटर प्रति सेकंदांचा"
+        other_locative: "{0} मीटर प्रति सेकंदांत"
+        gender: neuter
+      short:
+        display_name: मीटर/सेक
+        one: "{0} मी/से"
+        other: "{0} मी/से"
+      narrow:
+        one: "{0}मी/से"
+        other: "{0}मी/से"
+    mile-per-hour:
+      long:
+        display_name: मैल प्रति तास
+        one: "{0} मैल प्रति तास"
+        other: "{0} मैल प्रति तास"
+      short:
+        display_name: मैल/तास
+        one: "{0} मैप्रता"
+        other: "{0} मैप्रता"
+      narrow:
+        one: "{0}मैप्रता"
+        other: "{0}मैप्रता"
+    knot:
+      long:
+        display_name: नॉट
+        one: "{0} नॉट"
+        other: "{0} नॉट"
+    beaufort:
+      long:
+        display_name: ब्युफोर्ट
+        one: "{0} ब्युफोर्ट"
+        other: "{0} ब्युफोर्ट"
+      short:
+        one: "{0} ब्यु"
+      narrow:
+        one: B{0}
+        other: B {0}
+    generic:
+      long:
+        one: "{0}°"
+        one_ablative: "{0} अंशापासून"
+        one_accusative: "{0} अंशाला"
+        one_dative: "{0} अंशाला"
+        one_ergative: "{0} अंशाने"
+        one_genitive: "{0} अंशाचा"
+        one_locative: "{0} अंशाशी"
+        one_oblique: "{0} अंश"
+        other: "{0} अंश"
+        other_ablative: "{0} अंशांहून"
+        other_accusative: "{0} अंशांना"
+        other_dative: "{0} अंशांसाठी"
+        other_ergative: "{0} अंशांनी"
+        other_genitive: "{0} अंशांचे"
+        other_locative: "{0} अंशांचा"
+        gender: masculine
+    celsius:
+      long:
+        one: "{0} अंश सेल्सिअस"
+        one_ablative: "{0} अंश सेल्सिअसपासून"
+        one_accusative: "{0} अंश सेल्सिअसला"
+        one_dative: "{0} अंश सेल्सिअसला"
+        one_ergative: "{0} अंश सेल्सिअसने"
+        one_genitive: "{0} अंश सेल्सिअसचा"
+        one_locative: "{0} अंश सेल्सिअसशी"
+        other: "{0} अंश सेल्सिअस"
+        other_ablative: "{0} अंश सेल्सिअसहून"
+        other_accusative: "{0} अंश सेल्सिअसना"
+        other_dative: "{0} अंश सेल्सिअससाठी"
+        other_ergative: "{0} अंश सेल्सिअसनी"
+        other_genitive: "{0} अंश सेल्सिअसचे"
+        other_locative: "{0} अंश सेल्सिअसचा"
+        gender: neuter
+      short:
+        display_name: अंश सेल्सिअस
+        one: "{0}°से"
+        other: "{0}°से"
+      narrow:
+        display_name: "°से"
+    fahrenheit:
+      long:
+        one: "{0} अंश फॅरनहाईट"
+        other: "{0} अंश फॅरनहाईट"
+      short:
+        display_name: अंश फॅरनहाईट
+        one: "{0}°फॅ"
+        other: "{0}°फॅ"
+      narrow:
+        display_name: "°फॅ"
+        one: "{0}°"
+        other: "{0}°"
+    kelvin:
+      long:
+        one: "{0} केल्व्हिन"
+        one_ablative: "{0} केल्व्हिनपासून"
+        one_accusative: "{0} केल्व्हिनला"
+        one_dative: "{0} केल्व्हिनला"
+        one_ergative: "{0} केल्व्हिनने"
+        one_genitive: "{0} केल्व्हिनचा"
+        one_locative: "{0} केल्व्हिनशी"
+        other: "{0} केल्व्हिन"
+        other_ablative: "{0} केल्व्हिनहून"
+        other_accusative: "{0} केल्व्हिनना"
+        other_dative: "{0} केल्व्हिनसाठी"
+        other_ergative: "{0} केल्व्हिननी"
+        other_genitive: "{0} केल्व्हिनचे"
+        other_locative: "{0} केल्व्हिनचा"
+        gender: neuter
+      short:
+        display_name: केल्व्हिन
+    pound-force-foot:
+      long:
+        display_name: पाउंड-फूट
+        one: "{0} पाउंड-फुट"
+        other: "{0} पाउंड-फूट"
+    newton-meter:
+      long:
+        display_name: न्यूटन-मीटर
+        one: "{0} न्यूटन-मीटर"
+        one_ablative: "{0} न्यूटन-मीटरहून"
+        one_accusative: "{0} न्यूटन-मीटरला"
+        one_dative: "{0} न्यूटन-मीटरला"
+        one_ergative: "{0} न्यूटन-मीटरने"
+        one_genitive: "{0} न्यूटन-मीटरचा"
+        one_locative: "{0} न्यूटन-मीटरमध्ये"
+        other: "{0} न्यूटन-मीटर"
+        other_ablative: "{0} न्यूटन-मीटरपासून"
+        other_accusative: "{0} न्यूटन-मीटरना"
+        other_dative: "{0} न्यूटन-मीटरसाठी"
+        other_ergative: "{0} न्यूटन-मीटरनी"
+        other_genitive: "{0} न्यूटन-मीटरचा"
+        other_locative: "{0} न्यूटन-मीटरमध्ये"
+        gender: neuter
+    cubic-kilometer:
+      long:
+        display_name: घन किलोमीटर
+        one: "{0} घन किलोमीटर"
+        one_ablative: "{0} घन किलोमीटरहून"
+        one_accusative: "{0} घन किलोमीटरला"
+        one_dative: "{0} घन किलोमीटरला"
+        one_ergative: "{0} घन किलोमीटरने"
+        one_genitive: "{0} घन किलोमीटरचा"
+        one_locative: "{0} घन किलोमीटरमध्ये"
+        other: "{0} घन किलोमीटर"
+        other_ablative: "{0} घन किलोमीटरपासून"
+        other_accusative: "{0} घन किलोमीटरना"
+        other_dative: "{0} घन किलोमीटरना"
+        other_ergative: "{0} घन किलोमीटरनी"
+        other_genitive: "{0} घन किलोमीटरचे"
+        other_locative: "{0} घन किलोमीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: किमी³
+        one: "{0} किमी³"
+        other: "{0} किमी³"
+      narrow:
+        one: "{0}किमी³"
+        other: "{0}किमी³"
+    cubic-meter:
+      long:
+        display_name: घन मीटर
+        one: "{0} घन मीटर"
+        one_ablative: "{0} घन मीटरहून"
+        one_accusative: "{0} घन मीटरला"
+        one_dative: "{0} घन मीटरला"
+        one_ergative: "{0} घन मीटरने"
+        one_genitive: "{0} घन मीटरचा"
+        one_locative: "{0} घन मीटरमध्ये"
+        other: "{0} घन मीटर"
+        other_ablative: "{0} घन मीटरहून"
+        other_accusative: "{0} घन मीटरनी"
+        other_dative: "{0} घन मीटरसाठी"
+        other_ergative: "{0} घन मीटरने"
+        other_genitive: "{0} घन मीटरचे"
+        other_locative: "{0} घन मीटरमध्ये"
+        gender: neuter
+        per_unit_pattern: "{0} दर घन मीटर"
+      short:
+        display_name: मी³
+        one: "{0} मी³"
+        other: "{0} मी³"
+        per_unit_pattern: "{0}/मी³"
+    cubic-centimeter:
+      long:
+        display_name: घन सेंटीमीटर
+        one: "{0} घन सेंटीमीटर"
+        one_ablative: "{0} घन सेंटीमीटरहून"
+        one_accusative: "{0} घन सेंटीमीटरला"
+        one_dative: "{0} घन सेंटीमीटरला"
+        one_ergative: "{0} घन सेंटीमीटरने"
+        one_genitive: "{0} घन सेंटीमीटरचा"
+        one_locative: "{0} घन सेंटीमीटरमध्ये"
+        other: "{0} घन सेंटीमीटर"
+        other_ablative: "{0} घन सेंटीमीटरहून"
+        other_accusative: "{0} घन सेंटीमीटरहला"
+        other_dative: "{0} घन सेंटीमीटरला"
+        other_ergative: "{0} घन सेंटीमीटरने"
+        other_genitive: "{0} घन सेंटीमीटरचा"
+        other_locative: "{0} घन सेंटीमीटरमध्ये"
+        gender: neuter
+        per_unit_pattern: "{0} प्रति घन सेंटिमीटर"
+      short:
+        display_name: सेंमी³
+        one: "{0} सेंमी³"
+        other: "{0} सेंमी³"
+        per_unit_pattern: "{0}/सेंमी³"
+    cubic-mile:
+      long:
+        display_name: घन मैल
+        one: "{0} घन मैल"
+        other: "{0} घन मैल"
+      short:
+        display_name: मै³
+        one: "{0} मै³"
+        other: "{0} मै³"
+      narrow:
+        one: "{0}मै³"
+        other: "{0}मै³"
+    cubic-yard:
+      long:
+        display_name: घन यार्ड
+        one: "{0} घन यार्ड"
+        other: "{0} घन यार्ड"
+      short:
+        display_name: यार्ड³
+        one: "{0} यार्ड³"
+        other: "{0} यार्ड³"
+    cubic-foot:
+      long:
+        display_name: घन फूट
+        one: "{0} घन फूट"
+        other: "{0} घन फूट"
+      short:
+        display_name: फूट³
+        one: "{0} फूट³"
+        other: "{0} फूट³"
+    cubic-inch:
+      long:
+        display_name: घन इंच
+        one: "{0} घन इंच"
+        other: "{0} घन इंच"
+      short:
+        display_name: इंच³
+        one: "{0} इंच³"
+        other: "{0} इंच³"
+    megaliter:
+      long:
+        display_name: मेगालीटर
+        one: "{0} मेगालीटर"
+        one_ablative: "{0} मेगालीटरहून"
+        one_accusative: "{0} मेगालीटरला"
+        one_dative: "{0} मेगालीटरला"
+        one_ergative: "{0} मेगालीटरने"
+        one_genitive: "{0} मेगालीटरचा"
+        one_locative: "{0} मेगालीटरमध्ये"
+        other: "{0} मेगालीटर"
+        other_ablative: "{0} मेगालीटरपासून"
+        other_accusative: "{0} मेगालीटरना"
+        other_dative: "{0} मेगालीटरसाठी"
+        other_ergative: "{0} मेगालीटरनी"
+        other_genitive: "{0} मेगालीटरचे"
+        other_locative: "{0} मेगालीटरमध्ये"
+        gender: neuter
+    hectoliter:
+      long:
+        display_name: हेक्टोलीटर
+        one: "{0} हेक्टोलीटर"
+        one_ablative: "{0} हेक्टोलीटरहून"
+        one_accusative: "{0} हेक्टोलीटरला"
+        one_dative: "{0} हेक्टोलीटरला"
+        one_ergative: "{0} हेक्टोलीटरने"
+        one_genitive: "{0} हेक्टोलीटरचा"
+        one_locative: "{0} हेक्टोलीटरमध्ये"
+        other: "{0} हेक्टोलीटर"
+        other_ablative: "{0} हेक्टोलीटरपासून"
+        other_accusative: "{0} हेक्टोलीटरना"
+        other_dative: "{0} हेक्टोलीटरना"
+        other_ergative: "{0} हेक्टोलीटरनी"
+        other_genitive: "{0} हेक्टोलीटरचे"
+        other_locative: "{0} हेक्टोलीटरमध्ये"
+        gender: neuter
+    liter:
+      long:
+        one: "{0} लीटर"
+        one_ablative: "{0} लीटरपासून"
+        one_accusative: "{0} लीटरला"
+        one_dative: "{0} लीटरला"
+        one_ergative: "{0} लीटरने"
+        one_genitive: "{0} लीटरचा"
+        one_locative: "{0} लीटरशी"
+        other: "{0} लीटर"
+        other_ablative: "{0} लीटरहून"
+        other_accusative: "{0} लीटरना"
+        other_dative: "{0} लीटरसाठी"
+        other_ergative: "{0} लीटरनी"
+        other_genitive: "{0} लीटरचे"
+        other_locative: "{0} लीटरचा"
+        gender: neuter
+        per_unit_pattern: "{0} दर लीटर"
+      short:
+        display_name: लीटर
+        one: "{0} ली"
+        other: "{0} ली"
+        per_unit_pattern: "{0}/ली"
+      narrow:
+        one: "{0}ली"
+        other: "{0}ली"
+    deciliter:
+      long:
+        display_name: डेसीलीटर
+        one: "{0} डेसीलीटर"
+        one_ablative: "{0} डेसीलीटरहून"
+        one_accusative: "{0} डेसीलीटरला"
+        one_dative: "{0} डेसीलीटरला"
+        one_ergative: "{0} डेसीलीटरने"
+        one_genitive: "{0} डेसीलीटरचा"
+        one_locative: "{0} डेसीलीटरमध्ये"
+        other: "{0} डेसीलीटर"
+        other_ablative: "{0} डेसीलीटरपासून"
+        other_accusative: "{0} डेसीलीटरना"
+        other_dative: "{0} डेसीलीटरसाठी"
+        other_ergative: "{0} डेसीलीटरनी"
+        other_genitive: "{0} डेसीलीटरचे"
+        other_locative: "{0} डेसीलीटरमध्ये"
+        gender: neuter
+    centiliter:
+      long:
+        display_name: सेंटीलीटर
+        one: "{0} सेंटीलीटर"
+        one_ablative: "{0} सेंटीलीटरहून"
+        one_accusative: "{0} सेंटीलीटरला"
+        one_dative: "{0} सेंटीलीटरला"
+        one_ergative: "{0} सेंटीलीटरने"
+        one_genitive: "{0} सेंटीलीटरचा"
+        one_locative: "{0} सेंटीलीटरमध्ये"
+        other: "{0} सेंटीलीटर"
+        other_ablative: "{0} सेंटीलीटरपासून"
+        other_accusative: "{0} सेंटीलीटरना"
+        other_dative: "{0} सेंटीलीटरसाठी"
+        other_ergative: "{0} सेंटीलीटरनी"
+        other_genitive: "{0} सेंटीलीटरचे"
+        other_locative: "{0} सेंटीलीटरमध्ये"
+        gender: neuter
+    milliliter:
+      long:
+        display_name: मिलीलीटर
+        one: "{0} मिलीलीटर"
+        one_ablative: "{0} मिलीलीटरहून"
+        one_accusative: "{0} मिलीलीटरला"
+        one_dative: "{0} मिलीलीटरला"
+        one_ergative: "{0} मिलीलीटरने"
+        one_genitive: "{0} मिलीलीटरचा"
+        one_locative: "{0} मिलीलीटरमध्ये"
+        other: "{0} मिलीलीटर"
+        other_ablative: "{0} मिलीलीटरपासून"
+        other_accusative: "{0} मिलीलीटरना"
+        other_dative: "{0} मिलीलीटरना"
+        other_ergative: "{0} मिलीलीटरने"
+        other_genitive: "{0} मिलीलीटरचे"
+        other_locative: "{0} मिलीलीटरमध्ये"
+        gender: neuter
+      short:
+        display_name: मिली
+        one: "{0} मिली"
+        other: "{0} मिली"
+    pint-metric:
+      long:
+        display_name: मेट्रिक पिंट
+        one: "{0} मेट्रिक पिंट"
+        one_ablative: "{0} मेट्रिक पिंटपासून"
+        one_accusative: "{0} मेट्रिक पिंटला"
+        one_dative: "{0} मेट्रिक पिंटला"
+        one_ergative: "{0} मेट्रिक पिंटने"
+        one_genitive: "{0} मेट्रिक पिंटचा"
+        one_locative: "{0} मेट्रिक पिंटशी"
+        other: "{0} मेट्रिक पिंट"
+        other_ablative: "{0} मेट्रिक पिंटहून"
+        other_accusative: "{0} मेट्रिक पिंटना"
+        other_dative: "{0} मेट्रिक पिंटसाठी"
+        other_ergative: "{0} मेट्रिक पिंटनी"
+        other_genitive: "{0} मेट्रिक पिंटचे"
+        other_locative: "{0} मेट्रिक पिंटचा"
+        gender: neuter
+    cup-metric:
+      long:
+        display_name: मेट्रिक कप
+        one: "{0} मेट्रिक कप"
+        one_ablative: "{0} मेट्रिक कपपासून"
+        one_accusative: "{0} मेट्रिक कपला"
+        one_dative: "{0} मेट्रिक कपला"
+        one_ergative: "{0} मेट्रिक कपने"
+        one_genitive: "{0} मेट्रिक कपचा"
+        one_locative: "{0} मेट्रिक कपशी"
+        other: "{0} मेट्रिक कप"
+        other_ablative: "{0} मेट्रिक कपहून"
+        other_accusative: "{0} मेट्रिक कपना"
+        other_dative: "{0} मेट्रिक कपसाठी"
+        other_ergative: "{0} मेट्रिक कपनी"
+        other_genitive: "{0} मेट्रिक कपचे"
+        other_locative: "{0} मेट्रिक कपचा"
+        gender: neuter
+    acre-foot:
+      long:
+        display_name: एकर-फूट
+        one: "{0} एकर-फूट"
+        other: "{0} एकर-फूट"
+    bushel:
+      long:
+        one: "{0} बुशेल"
+        other: "{0} बुशेल"
+      short:
+        display_name: बुशेल
+    gallon:
+      long:
+        display_name: गॅलन
+        one: "{0} गॅलन"
+        other: "{0} गॅलन"
+        per_unit_pattern: "{0} दर गॅलन"
+      short:
+        display_name: gal
+        one: "{0} gal"
+        other: "{0} gal"
+        per_unit_pattern: "{0}/गॅ"
+    gallon-imperial:
+      long:
+        display_name: इम्पिरीयल गॅलन
+        one: "{0} इम्पिरीयल गॅलन"
+        other: "{0} इम्पिरीयल गॅलन"
+        per_unit_pattern: "{0} पर इम्पिरीयल गॅलन"
+      short:
+        display_name: इम्पि. गॅ.
+        one: "{0} गॅ इम्पि"
+        other: "{0} गॅ इम्पि"
+        per_unit_pattern: "{0}/गॅ इम्पि"
+    quart:
+      long:
+        display_name: क्वार्ट
+        one: "{0} क्वार्ट"
+        other: "{0} क्वार्ट"
+    pint:
+      long:
+        one: "{0} पिंट"
+        other: "{0} पिंट"
+      short:
+        display_name: पिंट
+    cup:
+      long:
+        one: "{0} कप"
+        other: "{0} कप"
+      short:
+        display_name: कप
+    fluid-ounce:
+      long:
+        display_name: फ्लूइड औंस
+        one: "{0} फ्लूइड औंस"
+        other: "{0} फ्लूइड औंस"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: इम्पे. फ्लुईड औंस
+        one: "{0} इम्पे. फ्लुईड औंस"
+        other: "{0} इम्पे. फ्लुईड औंस"
+      short:
+        display_name: इम्पे. फ्लु औं
+      narrow:
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        display_name: टेबलस्पून
+        one: "{0} टेबलस्पून"
+        other: "{0} टेबलस्पून"
+    teaspoon:
+      long:
+        display_name: टीस्पून
+        one: "{0} टीस्पून"
+        other: "{0} टीस्पून"
+    barrel:
+      long:
+        one: "{0} बॅरल"
+        other: "{0} बॅरल"
+      short:
+        display_name: बॅरल
+    dessert-spoon:
+      long:
+        display_name: डेझर्ट स्पून
+        one: "{0} डेझर्ट स्पून"
+        other: "{0} डेझर्ट स्पून"
+    dessert-spoon-imperial:
+      long:
+        display_name: इंपि. डेझर्ट स्पून
+        one: "{0} इंपि. डेझर्ट स्पून"
+        other: "{0} इंपि. डेझर्ट स्पून"
+      narrow:
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+    dram:
+      long:
+        display_name: ड्रॅम
+        one: "{0} ड्रॅम"
+        other: "{0} ड्रॅम"
+      narrow:
+        display_name: fl.dr.
+        one: "{0}fl.dr."
+        other: "{0}fl.dr."
+    quart-imperial:
+      long:
+        display_name: इंपि. क्वार्ट
+        one: "{0} इंपि. क्वार्ट"
+        other: "{0} इंपि. क्वार्ट"
+      narrow:
+        one: "{0}qt-Imp."
+        other: "{0}qt-Imp."
+    light-speed:
+      long:
+        display_name: प्रकाश
+        one: प्रकाश
+        one_ablative: प्रकाशापासून
+        one_accusative: प्रकाशाला
+        one_dative: प्रकाशासाठी
+        one_ergative: प्रकाशाने
+        one_genitive: प्रकाशाचे
+        one_locative: प्रकाशामध्ये
+        other: "{0} प्रकाश"
+        other_ablative: "{0} प्रकाशापासून"
+        other_accusative: "{0} प्रकाशाला"
+        other_dative: "{0} प्रकाशासाठी"
+        other_ergative: "{0} प्रकाश"
+        other_genitive: "{0} प्रकाशांचे"
+        other_locative: "{0} प्रकाशामध्ये"
+        gender: masculine
+      short:
+        display_name: प्र
+        one: "{0} प्रकाश"
+        other: "{0} प्रकाश"
+      narrow:
+        display_name: प्र
+        one: "{0} प्रकाश"
+        other: "{0} प्रकाश"
+    portion-per-1e9:
+      long:
+        display_name: भाग प्रति अब्ज
+        one: "{0} भाग प्रति अब्ज"
+        one_ablative: "{0} भाग प्रति अब्जाहून"
+        one_accusative: "{0} भाग प्रति अब्जना"
+        one_dative: "{0} भाग प्रति अब्जासाठी"
+        one_ergative: "{0} भाग प्रति अब्जाने"
+        one_genitive: "{0} भाग प्रति अब्जचे"
+        one_locative: "{0} भाग प्रति अब्जहून"
+        other: "{0} भाग प्रति अब्ज"
+        other_ablative: "{0} भाग प्रति अब्जांहून"
+        other_accusative: "{0} भाग प्रति अब्जांना"
+        other_dative: "{0} भाग प्रति अब्जांसाठी"
+        other_ergative: "{0} भाग प्रति अब्जांनी"
+        other_genitive: "{0} भाग प्रति अब्जांचे"
+        other_locative: "{0} भाग प्रति अब्जांहून"
+        gender: neuter
+      short:
+        display_name: भाग/अब्ज
+        one: "{0} भाग प्रति अब्ज"
+        other: "{0} भाप्रअ"
+      narrow:
+        display_name: भाग/अब्ज
+        one: "{0} भाग/अब्ज"
+        other: "{0} भाग/अब्ज"
+    night:
+      long:
+        display_name: रात्री
+        one: रात्र
+        one_ablative: "{0} रात्रीपासून"
+        one_accusative: रात्री
+        one_dative: रात्री
+        one_ergative: "{0} रात्रीने"
+        one_genitive: रात्रीचा
+        one_locative: रात्री
+        other: "{0} रात्री"
+        other_ablative: "{0} रात्रीपासून"
+        other_accusative: "{0} रात्री"
+        other_dative: "{0} रात्री"
+        other_ergative: "{0} रात्रीने"
+        other_genitive: "{0} रात्रीला"
+        other_locative: "{0} रात्रीस"
+        gender: feminine
+        per_unit_pattern: "{0}/रात्र"
+      short:
+        display_name: रात्री
+        one: "{0} रात्र"
+        other: "{0} रात्र"
+        per_unit_pattern: "{0}/रात्र"
+      narrow:
+        display_name: रात्री
+        one: "{0} रात्र"
+        other: "{0} रात्र"
+        per_unit_pattern: "{0}/रात्र"
+    acre:
+      short:
+        display_name: एकर
+        one: "{0} एकर"
+        other: "{0} एकर"
+      narrow:
+        one: "{0}एकर"
+        other: "{0}एकर"
+    dunam:
+      short:
+        display_name: दुनाम
+        one: "{0} दुनाम"
+        other: "{0} दुनाम"
+    mile:
+      short:
+        display_name: मैल
+        one: "{0} मैल"
+        other: "{0} मैल"
+    yard:
+      short:
+        display_name: यार्ड
+        one: "{0} यार्ड"
+        other: "{0} यार्ड"
+      narrow:
+        one: "{0}यार्ड"
+        other: "{0}यार्ड"
+    ton:
+      short:
+        display_name: टन
+        one: "{0} टन"
+        other: "{0} टन"
+    stone:
+      short:
+        display_name: स्टोन
+        one: "{0} स्टोन"
+        other: "{0} स्टोन"
+      narrow:
+        one: "{0}स्टोन"
+        other: "{0}स्टोन"
+    dalton:
+      short:
+        display_name: डाल्टन
+        one: "{0} डाल्टन"
+        other: "{0} डाल्टन"
+    grain:
+      short:
+        display_name: अल्पांश
+        one: "{0} अल्पांश"
+        other: "{0} अल्पांश"
+    drop:
+      short:
+        display_name: पात
+        one: "{0} पात"
+        other: "{0} पात"
+    jigger:
+      short:
+        display_name: जिगर
+        one: "{0} जिगर"
+        other: "{0} जिगर"
+    pinch:
+      short:
+        display_name: आकुंचन
+        one: "{0} आकुंचन"
+        other: "{0} आकुंचन"

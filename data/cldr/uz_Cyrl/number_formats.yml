@@ -1,19 +1,108 @@
 ---
 locale: uz_Cyrl
-generated_at: '2025-09-13T17:41:28Z'
+generated_at: '2025-09-14T06:12:45Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
     nan: ҳақиқий сон эмас
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0минг
+        other: 0минг
+      '10000':
+        one: 00минг
+        other: 00минг
+      '100000':
+        one: 000минг
+        other: 000минг
+      '1000000':
+        one: 0млн
+        other: 0млн
+      '10000000':
+        one: 00млн
+        other: 00млн
+      '100000000':
+        one: 000млн
+        other: 000млн
+      '1000000000':
+        one: 0млрд
+        other: 0млрд
+      '10000000000':
+        one: 00млрд
+        other: 00млрд
+      '100000000000':
+        one: 000млрд
+        other: 000млрд
+      '1000000000000':
+        one: 0трлн
+        other: 0трлн
+      '10000000000000':
+        one: 00трлн
+        other: 00трлн
+      '100000000000000':
+        one: 000трлн
+        other: 000трлн
+    long:
+      '1000':
+        one: 0 минг
+        other: 0 минг
+      '10000':
+        one: 00 минг
+        other: 00 минг
+      '100000':
+        one: 000 минг
+        other: 000 минг
+      '1000000':
+        one: 0 миллион
+        other: 0 миллион
+      '10000000':
+        one: 00 миллион
+        other: 00 миллион
+      '100000000':
+        one: 000 миллион
+        other: 000 миллион
+      '1000000000':
+        one: 0 миллиард
+        other: 0 миллиард
+      '10000000000':
+        one: 00 миллиард
+        other: 00 миллиард
+      '100000000000':
+        one: 000 миллиард
+        other: 000 миллиард
+      '1000000000000':
+        one: 0 трилион
+        other: 0 трилион
+      '10000000000000':
+        one: 00 трилион
+        other: 00 трилион
+      '100000000000000':
+        one: 000 трилион
+        other: 000 трилион
   currencies:
+    ANG:
+      display_names:
+        other: Голланд Антил гульдени
+        one: Голланд Антил гульдени
     ARS:
       display_names:
         other: Аргентина песоси
         one: Аргентина песоси
+    AWG:
+      display_names:
+        other: Аруба флорини
+        one: Аруба флорини
     BBD:
       display_names:
         other: Барбадос доллари
@@ -70,6 +159,10 @@ number_formats:
       display_names:
         other: Доминикан песоси
         one: Доминикан песоси
+    DZD:
+      display_names:
+        other: Жазоир динори
+        one: Жазоир динори
     EGP:
       display_names:
         other: Миср фунти
@@ -98,6 +191,10 @@ number_formats:
       display_names:
         other: Гондурас лемпираси
         one: Гондурас лемпираси
+    HTG:
+      display_names:
+        other: Гаити гурдаси
+        one: Гаити гурдаси
     INR:
       display_names:
         other: Ҳинд рупияси
@@ -114,6 +211,14 @@ number_formats:
       display_names:
         other: Кайман ороли доллари
         one: Кайман ороли доллари
+    LYD:
+      display_names:
+        other: Ливия динори
+        one: Ливия динори
+    MAD:
+      display_names:
+        other: Марокаш дирҳами
+        one: Марокаш дирҳами
     MXN:
       display_names:
         other: Мексика песоси
@@ -122,6 +227,14 @@ number_formats:
       display_names:
         other: Никарагуа кордобаси
         one: Никарагуа кордобаси
+    PAB:
+      display_names:
+        other: Панама бальбоаси
+        one: Панама бальбоаси
+    PEN:
+      display_names:
+        other: Перу сол
+        one: Перу сол
     PYG:
       display_names:
         other: Парагвай гуарани
@@ -146,52 +259,180 @@ number_formats:
       display_names:
         other: Уругвай песоси
         one: Уругвай песоси
-    VEF:
-      display_names:
-        other: Венесуэла боливари (2008–2018)
-        one: Венесуэла боливари (2008–2018)
-    XCD:
-      display_names:
-        other: Шарқ Кариб доллари
-        one: Шарқ Кариб доллари
-    ANG:
-      display_names:
-        other: Голланд Антил гульдени
-        one: Голланд Антил гульдени
-    AWG:
-      display_names:
-        other: Аруба флорини
-        one: Аруба флорини
-    DZD:
-      display_names:
-        other: Жазоир динори
-        one: Жазоир динори
-    HTG:
-      display_names:
-        other: Гаити гурдаси
-        one: Гаити гурдаси
-    LYD:
-      display_names:
-        other: Ливия динори
-        one: Ливия динори
-    MAD:
-      display_names:
-        other: Марокаш дирҳами
-        one: Марокаш дирҳами
-    PAB:
-      display_names:
-        other: Панама бальбоаси
-        one: Панама бальбоаси
-    PEN:
-      display_names:
-        other: Перу сол
-        one: Перу сол
     UZS:
       symbol: сўм
       display_names:
         other: Ўзбекистон сўм
         one: Ўзбекистон сўм
+    VEF:
+      display_names:
+        other: Венесуэла боливари (2008–2018)
+        one: Венесуэла боливари (2008–2018)
     VES:
       display_names:
         other: Венесуэла боливари
         one: Венесуэла боливари
+    XCD:
+      display_names:
+        other: Шарқ Кариб доллари
+        one: Шарқ Кариб доллари
+  units:
+    year:
+      long:
+        one: "{0} йил"
+        other: "{0} йил"
+      short:
+        display_name: йил
+        one: "{0} й"
+        other: "{0} й"
+    week:
+      long:
+        one: "{0} ҳафта"
+        other: "{0} ҳафта"
+      short:
+        display_name: ҳафта
+        one: "{0} ҳафт"
+        other: "{0} ҳафт"
+    minute:
+      long:
+        one: "{0} дақиқа"
+        other: "{0} дақиқа"
+      short:
+        display_name: дақиқа
+        one: "{0} дақ"
+        other: "{0} дақ"
+    millisecond:
+      long:
+        one: "{0} миллисония"
+        other: "{0} миллисония"
+      short:
+        display_name: миллисония
+        one: "{0} мс"
+        other: "{0} мс"
+    g-force:
+      short:
+        display_name: G
+    degree:
+      short:
+        display_name: "°"
+    arc-minute:
+      short:
+        display_name: "′"
+    arc-second:
+      short:
+        display_name: "″"
+    hectare:
+      short:
+        display_name: ha
+    acre:
+      short:
+        display_name: ac
+    month:
+      short:
+        display_name: ой
+        one: "{0} ой"
+        other: "{0} ой"
+    day:
+      short:
+        display_name: кун
+        one: "{0} кун"
+        other: "{0} кун"
+      narrow:
+        one: "{0} к"
+        other: "{0} к"
+    hour:
+      short:
+        display_name: соат
+        one: "{0} соат"
+        other: "{0} соат"
+      narrow:
+        one: "{0} с"
+        other: "{0} с"
+    second:
+      short:
+        display_name: сония
+        one: "{0} сония"
+        other: "{0} сония"
+      narrow:
+        one: "{0} сон"
+        other: "{0} сон"
+    kilometer:
+      short:
+        display_name: км
+        one: "{0} км"
+        other: "{0} км"
+    meter:
+      short:
+        display_name: м
+        one: "{0} м"
+        other: "{0} м"
+    centimeter:
+      short:
+        display_name: см
+        one: "{0} см"
+        other: "{0} см"
+    millimeter:
+      short:
+        display_name: мм
+        one: "{0} мм"
+        other: "{0} мм"
+    picometer:
+      short:
+        display_name: пм
+        one: "{0} пм"
+        other: "{0} пм"
+    mile:
+      short:
+        display_name: миля
+        one: "{0} миля"
+        other: "{0} миля"
+    yard:
+      short:
+        display_name: ярд
+        one: "{0} ярд"
+        other: "{0} ярд"
+    foot:
+      short:
+        display_name: фут
+        one: "{0} фут"
+        other: "{0} фут"
+    inch:
+      short:
+        display_name: дюйм
+        one: "{0} дюйм"
+        other: "{0} дюйм"
+    light-year:
+      short:
+        display_name: ё.й.
+        one: "{0} ё.й."
+        other: "{0} ё.й."
+    kilogram:
+      short:
+        display_name: кг
+        one: "{0} кг"
+        other: "{0} кг"
+    gram:
+      short:
+        display_name: г
+        one: "{0} г"
+        other: "{0} г"
+    pound:
+      short:
+        display_name: фунт
+        one: "{0} фунт"
+        other: "{0} фунт"
+    ounce:
+      short:
+        display_name: унция
+        one: "{0} унция"
+        other: "{0} унция"
+    watt:
+      short:
+        display_name: W
+    liter:
+      short:
+        display_name: l
+    celsius:
+      narrow:
+        one: "{0}°"
+        other: "{0}°"

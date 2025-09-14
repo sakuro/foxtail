@@ -1,23 +1,116 @@
 ---
 locale: ky
-generated_at: '2025-09-13T17:38:40Z'
+generated_at: '2025-09-14T06:10:53Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
     nan: сан эмес
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 миң
+        other: 0 миң
+      '10000':
+        one: 00 миң
+        other: 00 миң
+      '100000':
+        one: 000 миң
+        other: 000 миң
+      '1000000':
+        one: 0 млн
+        other: 0 млн
+      '10000000':
+        one: 00 млн
+        other: 00 млн
+      '100000000':
+        one: 000 млн
+        other: 000 млн
+      '1000000000':
+        one: 0 млд
+        other: 0 млд
+      '10000000000':
+        one: 00 млд
+        other: 00 млд
+      '100000000000':
+        one: 000 млд
+        other: 000 млд
+      '1000000000000':
+        one: 0 трлн
+        other: 0 трлн
+      '10000000000000':
+        one: 00 трлн
+        other: 00 трлн
+      '100000000000000':
+        one: 000 трлн
+        other: 000 трлн
+    long:
+      '1000':
+        one: 0 миң
+        other: 0 миң
+      '10000':
+        one: 00 миң
+        other: 00 миң
+      '100000':
+        one: 000 миң
+        other: 000 миң
+      '1000000':
+        one: 0 миллион
+        other: 0 миллион
+      '10000000':
+        one: 00 миллион
+        other: 00 миллион
+      '100000000':
+        one: 000 миллион
+        other: 000 миллион
+      '1000000000':
+        one: 0 миллиард
+        other: 0 миллиард
+      '10000000000':
+        one: 00 миллиард
+        other: 00 миллиард
+      '100000000000':
+        one: 000 миллиард
+        other: 000 миллиард
+      '1000000000000':
+        one: 0 триллион
+        other: 0 триллион
+      '10000000000000':
+        one: 00 триллион
+        other: 00 триллион
+      '100000000000000':
+        one: 000 триллион
+        other: 000 триллион
   currencies:
+    AED:
+      display_names:
+        other: БАЭ дирхамы
+        one: БАЭ дирхамы
     AFN:
       display_names:
         other: Афганстан афганиси
         one: Афганстан афганиси
+    ALL:
+      display_names:
+        other: албан леги
+        one: албан леги
     AMD:
       display_names:
         other: Армения драмы
         one: Армения драмы
+    ANG:
+      display_names:
+        other: нидерланд-антил гулдени
+        one: нидерланд-антил гулдени
     AOA:
       display_names:
         other: Ангола кванзасы
@@ -31,6 +124,10 @@ number_formats:
       display_names:
         other: Австралия доллары
         one: Австралия доллары
+    AWG:
+      display_names:
+        other: аруба флорини
+        one: аруба флорини
     AZN:
       display_names:
         other: Азербайжан манаты
@@ -47,6 +144,18 @@ number_formats:
       display_names:
         other: Бангладеш такасы
         one: Бангладеш такасы
+    BGN:
+      display_names:
+        other: болгар левиси
+        one: болгар левиси
+    BHD:
+      display_names:
+        other: Бахрейн динары
+        one: Бахрейн динары
+    BIF:
+      display_names:
+        other: Бурунди франкы
+        one: Бурунди франкы
     BMD:
       symbol: BD$
       display_names:
@@ -70,10 +179,23 @@ number_formats:
       display_names:
         other: багама доллары
         one: багама доллары
+    BTN:
+      display_names:
+        other: Бутан нгултруму
+        one: Бутан нгултруму
     BWP:
       display_names:
         other: Ботсвана пуласы
         one: Ботсвана пуласы
+    BYN:
+      symbol: р.
+      display_names:
+        other: беларусь рублу
+        one: беларусь рублу
+    BYR:
+      display_names:
+        other: беларусь рублу (2000–2016)
+        one: беларусь рублу (2000–2016)
     BZD:
       symbol: BZ$
       display_names:
@@ -84,10 +206,22 @@ number_formats:
       display_names:
         other: канада доллары
         one: канада доллары
+    CDF:
+      display_names:
+        other: Конго франкы
+        one: Конго франкы
+    CHF:
+      display_names:
+        other: швейцария франкы
+        one: швейцария франкы
     CLP:
       display_names:
         other: чили песосу
         one: чили песосу
+    CNH:
+      display_names:
+        other: Кытай юаны (оффшор)
+        one: Кытай юаны (оффшор)
     CNY:
       display_names:
         other: Кытай юаны
@@ -108,10 +242,18 @@ number_formats:
       display_names:
         other: куба песосу
         one: куба песосу
+    CVE:
+      display_names:
+        other: Кабо-Верде эскудосу
+        one: Кабо-Верде эскудосу
     CZK:
       display_names:
         other: чех кронасы
         one: чех кронасы
+    DJF:
+      display_names:
+        other: Жибути франкы
+        one: Жибути франкы
     DKK:
       display_names:
         other: дания крону
@@ -121,11 +263,23 @@ number_formats:
       display_names:
         other: доминикан песосу
         one: доминикан песосу
+    DZD:
+      display_names:
+        other: алжир динары
+        one: алжир динары
     EGP:
       symbol: LE
       display_names:
         other: египет фунту
         one: египет фунту
+    ERN:
+      display_names:
+        other: Эритреа накфасы
+        one: Эритреа накфасы
+    ETB:
+      display_names:
+        other: Эфиопия бирри
+        one: Эфиопия бирри
     EUR:
       display_names:
         other: евро
@@ -155,6 +309,10 @@ number_formats:
       display_names:
         other: гибралтар фунту
         one: гибралтар фунту
+    GMD:
+      display_names:
+        other: Гамбия даласиси
+        one: Гамбия даласиси
     GNF:
       display_names:
         other: Гине франкы
@@ -181,6 +339,10 @@ number_formats:
       display_names:
         other: хорват кунасы
         one: хорват кунасы
+    HTG:
+      display_names:
+        other: гаити гурдусу
+        one: гаити гурдусу
     HUF:
       display_names:
         other: венгр форинти
@@ -199,6 +361,14 @@ number_formats:
       display_names:
         other: Индия руписи
         one: Индия руписи
+    IQD:
+      display_names:
+        other: Ирак динары
+        one: Ирак динары
+    IRR:
+      display_names:
+        other: Иран риалы
+        one: Иран риалы
     ISK:
       display_names:
         other: исландия крону
@@ -208,10 +378,18 @@ number_formats:
       display_names:
         other: ямайка доллары
         one: ямайка доллары
+    JOD:
+      display_names:
+        other: Йордания динары
+        one: Йордания динары
     JPY:
       display_names:
         other: Жапан йени
         one: Жапан йени
+    KES:
+      display_names:
+        other: Кения шиллинги
+        one: Кения шиллинги
     KGS:
       symbol: сом
       display_names:
@@ -234,6 +412,10 @@ number_formats:
       display_names:
         other: Түштүк Корея вону
         one: Түштүк Корея вону
+    KWD:
+      display_names:
+        other: Кувейт динары
+        one: Кувейт динары
     KYD:
       display_names:
         other: кайман доллары
@@ -258,6 +440,10 @@ number_formats:
       display_names:
         other: Либерия доллары
         one: Либерия доллары
+    LSL:
+      display_names:
+        other: Лесото лотиси
+        one: Лесото лотиси
     LTL:
       display_names:
         other: литва литасы
@@ -266,10 +452,26 @@ number_formats:
       display_names:
         other: латвия латы
         one: латвия латы
+    LYD:
+      display_names:
+        other: ливия динары
+        one: ливия динары
+    MAD:
+      display_names:
+        other: марокко дирхамы
+        one: марокко дирхамы
+    MDL:
+      display_names:
+        other: молдован лейи
+        one: молдован лейи
     MGA:
       display_names:
         other: Мадагаскар ариариси
         one: Мадагаскар ариариси
+    MKD:
+      display_names:
+        other: македон денары
+        one: македон денары
     MMK:
       display_names:
         other: Мйанмар кйаты
@@ -278,10 +480,30 @@ number_formats:
       display_names:
         other: Монгол тугриги
         one: Монгол тугриги
+    MOP:
+      display_names:
+        other: Макау патакасы
+        one: Макау патакасы
+    MRO:
+      display_names:
+        other: Мавритания угиясы (1973–2017)
+        one: Мавритания угиясы (1973–2017)
+    MRU:
+      display_names:
+        other: Мавритания угиясы
+        one: Мавритания угиясы
     MUR:
       display_names:
         other: Мавританий руписи
         one: Мавританий руписи
+    MVR:
+      display_names:
+        other: Малдив руфийасы
+        one: Малдив руфийасы
+    MWK:
+      display_names:
+        other: Малави квачасы
+        one: Малави квачасы
     MXN:
       symbol: MXN
       display_names:
@@ -291,6 +513,10 @@ number_formats:
       display_names:
         other: Малайзия ринггити
         one: Малайзия ринггити
+    MZN:
+      display_names:
+        other: Мозамбик метикалы
+        one: Мозамбик метикалы
     NAD:
       display_names:
         other: Намибия доллары
@@ -316,6 +542,22 @@ number_formats:
       display_names:
         other: Жаңы Зеландия доллары
         one: Жаңы Зеландия доллары
+    OMR:
+      display_names:
+        other: Оман риалы
+        one: Оман риалы
+    PAB:
+      display_names:
+        other: панама балбоасы
+        one: панама балбоасы
+    PEN:
+      display_names:
+        other: перу солу
+        one: перу солу
+    PGK:
+      display_names:
+        other: Папуа Жаңы Гвинея кинасы
+        one: Папуа Жаңы Гвинея кинасы
     PHP:
       symbol: PHP
       display_names:
@@ -333,10 +575,18 @@ number_formats:
       display_names:
         other: парагвай гуараниси
         one: парагвай гуараниси
+    QAR:
+      display_names:
+        other: Катар риалы
+        one: Катар риалы
     RON:
       display_names:
         other: румын лейи
         one: румын лейи
+    RSD:
+      display_names:
+        other: серб динары
+        one: серб динары
     RUB:
       display_names:
         other: орус рублу
@@ -345,10 +595,22 @@ number_formats:
       display_names:
         other: Руанда франкы
         one: Руанда франкы
+    SAR:
+      display_names:
+        other: Сауд риалы
+        one: Сауд риалы
     SBD:
       display_names:
         other: Соломон аралдарынын доллары
         one: Соломон аралдарынын доллары
+    SCR:
+      display_names:
+        other: Сейшел руписи
+        one: Сейшел руписи
+    SDG:
+      display_names:
+        other: судан фунту
+        one: судан фунту
     SEK:
       display_names:
         other: швеция крону
@@ -361,6 +623,18 @@ number_formats:
       display_names:
         other: Ыйык Елена аралынын фунту
         one: Ыйык Елена аралынын фунту
+    SLE:
+      display_names:
+        other: Сиерра-Леоне леонеси
+        one: Сиерра-Леоне леонеси
+    SLL:
+      display_names:
+        other: Сиерра-Леоне леонеси (1964—2022)
+        one: Сиерра-Леоне леонеси (1964—2022)
+    SOS:
+      display_names:
+        other: Сомали шиллинги
+        one: Сомали шиллинги
     SRD:
       display_names:
         other: суринам доллары
@@ -369,6 +643,10 @@ number_formats:
       display_names:
         other: Түштүк Судан фунту
         one: Түштүк Судан фунту
+    STD:
+      display_names:
+        other: Сао Томе жана Принсипе добрасы (1977–2017)
+        one: Сао Томе жана Принсипе добрасы (1977–2017)
     STN:
       display_names:
         other: Сао Томе жана Принсипе добрасы
@@ -377,10 +655,26 @@ number_formats:
       display_names:
         other: Сирия фунту
         one: Сирия фунту
+    SZL:
+      display_names:
+        other: Свази эмалангени
+        one: Свази лилангени
     THB:
       display_names:
         other: Тай баты
         one: Тай баты
+    TJS:
+      display_names:
+        other: Тажикстан сомониси
+        one: Тажикстан сомониси
+    TMT:
+      display_names:
+        other: Түркмөнстан манаты
+        one: Түркмөнстан манаты
+    TND:
+      display_names:
+        other: тунис динары
+        one: тунис динары
     TOP:
       display_names:
         other: Тонга паангасы
@@ -399,10 +693,18 @@ number_formats:
       display_names:
         other: Тайвань жаңы доллары
         one: Тайвань жаңы доллары
+    TZS:
+      display_names:
+        other: Танзания шиллинги
+        one: Танзания шиллинги
     UAH:
       display_names:
         other: украин гривени
         one: украин гривени
+    UGX:
+      display_names:
+        other: Уганда шиллинги
+        one: Уганда шиллинги
     USD:
       symbol: USD
       display_names:
@@ -412,14 +714,30 @@ number_formats:
       display_names:
         other: уругвай песосу
         one: уругвай песосу
+    UZS:
+      display_names:
+        other: Өзбекстан суму
+        one: Өзбекстан суму
     VEF:
       display_names:
         other: венесуэла боливары (2008–2018)
         one: венесуэла боливары (2008–2018)
+    VES:
+      display_names:
+        other: Венесуэла боливары
+        one: Венесуэла боливары
     VND:
       display_names:
         other: Вьетнам доңу
         one: Вьетнам доңу
+    VUV:
+      display_names:
+        other: Вануату ватусу
+        one: Вануату ватусу
+    WST:
+      display_names:
+        other: Самоа таласы
+        one: Самоа таласы
     XAF:
       display_names:
         other: Борбордук Африка КФА франкы
@@ -441,6 +759,10 @@ number_formats:
       display_names:
         other: "(белгисиз акча)"
         one: "(белгисиз акча бирдиги)"
+    YER:
+      display_names:
+        other: Йемен риалы
+        one: Йемен риалы
     ZAR:
       display_names:
         other: Түштүк Африка ранды
@@ -449,244 +771,1491 @@ number_formats:
       display_names:
         other: Замбия квачасы
         one: Замбия квачасы
-    AED:
-      display_names:
-        other: БАЭ дирхамы
-        one: БАЭ дирхамы
-    ALL:
-      display_names:
-        other: албан леги
-        one: албан леги
-    ANG:
-      display_names:
-        other: нидерланд-антил гулдени
-        one: нидерланд-антил гулдени
-    AWG:
-      display_names:
-        other: аруба флорини
-        one: аруба флорини
-    BGN:
-      display_names:
-        other: болгар левиси
-        one: болгар левиси
-    BHD:
-      display_names:
-        other: Бахрейн динары
-        one: Бахрейн динары
-    BIF:
-      display_names:
-        other: Бурунди франкы
-        one: Бурунди франкы
-    BTN:
-      display_names:
-        other: Бутан нгултруму
-        one: Бутан нгултруму
-    BYN:
-      symbol: р.
-      display_names:
-        other: беларусь рублу
-        one: беларусь рублу
-    BYR:
-      display_names:
-        other: беларусь рублу (2000–2016)
-        one: беларусь рублу (2000–2016)
-    CDF:
-      display_names:
-        other: Конго франкы
-        one: Конго франкы
-    CHF:
-      display_names:
-        other: швейцария франкы
-        one: швейцария франкы
-    CNH:
-      display_names:
-        other: Кытай юаны (оффшор)
-        one: Кытай юаны (оффшор)
-    CVE:
-      display_names:
-        other: Кабо-Верде эскудосу
-        one: Кабо-Верде эскудосу
-    DJF:
-      display_names:
-        other: Жибути франкы
-        one: Жибути франкы
-    DZD:
-      display_names:
-        other: алжир динары
-        one: алжир динары
-    ERN:
-      display_names:
-        other: Эритреа накфасы
-        one: Эритреа накфасы
-    ETB:
-      display_names:
-        other: Эфиопия бирри
-        one: Эфиопия бирри
-    GMD:
-      display_names:
-        other: Гамбия даласиси
-        one: Гамбия даласиси
-    HTG:
-      display_names:
-        other: гаити гурдусу
-        one: гаити гурдусу
-    IQD:
-      display_names:
-        other: Ирак динары
-        one: Ирак динары
-    IRR:
-      display_names:
-        other: Иран риалы
-        one: Иран риалы
-    JOD:
-      display_names:
-        other: Йордания динары
-        one: Йордания динары
-    KES:
-      display_names:
-        other: Кения шиллинги
-        one: Кения шиллинги
-    KWD:
-      display_names:
-        other: Кувейт динары
-        one: Кувейт динары
-    LSL:
-      display_names:
-        other: Лесото лотиси
-        one: Лесото лотиси
-    LYD:
-      display_names:
-        other: ливия динары
-        one: ливия динары
-    MAD:
-      display_names:
-        other: марокко дирхамы
-        one: марокко дирхамы
-    MDL:
-      display_names:
-        other: молдован лейи
-        one: молдован лейи
-    MKD:
-      display_names:
-        other: македон денары
-        one: македон денары
-    MOP:
-      display_names:
-        other: Макау патакасы
-        one: Макау патакасы
-    MRO:
-      display_names:
-        other: Мавритания угиясы (1973–2017)
-        one: Мавритания угиясы (1973–2017)
-    MRU:
-      display_names:
-        other: Мавритания угиясы
-        one: Мавритания угиясы
-    MVR:
-      display_names:
-        other: Малдив руфийасы
-        one: Малдив руфийасы
-    MWK:
-      display_names:
-        other: Малави квачасы
-        one: Малави квачасы
-    MZN:
-      display_names:
-        other: Мозамбик метикалы
-        one: Мозамбик метикалы
-    OMR:
-      display_names:
-        other: Оман риалы
-        one: Оман риалы
-    PAB:
-      display_names:
-        other: панама балбоасы
-        one: панама балбоасы
-    PEN:
-      display_names:
-        other: перу солу
-        one: перу солу
-    PGK:
-      display_names:
-        other: Папуа Жаңы Гвинея кинасы
-        one: Папуа Жаңы Гвинея кинасы
-    QAR:
-      display_names:
-        other: Катар риалы
-        one: Катар риалы
-    RSD:
-      display_names:
-        other: серб динары
-        one: серб динары
-    SAR:
-      display_names:
-        other: Сауд риалы
-        one: Сауд риалы
-    SCR:
-      display_names:
-        other: Сейшел руписи
-        one: Сейшел руписи
-    SDG:
-      display_names:
-        other: судан фунту
-        one: судан фунту
-    SLE:
-      display_names:
-        other: Сиерра-Леоне леонеси
-        one: Сиерра-Леоне леонеси
-    SLL:
-      display_names:
-        other: Сиерра-Леоне леонеси (1964—2022)
-        one: Сиерра-Леоне леонеси (1964—2022)
-    SOS:
-      display_names:
-        other: Сомали шиллинги
-        one: Сомали шиллинги
-    STD:
-      display_names:
-        other: Сао Томе жана Принсипе добрасы (1977–2017)
-        one: Сао Томе жана Принсипе добрасы (1977–2017)
-    SZL:
-      display_names:
-        other: Свази эмалангени
-        one: Свази лилангени
-    TJS:
-      display_names:
-        other: Тажикстан сомониси
-        one: Тажикстан сомониси
-    TMT:
-      display_names:
-        other: Түркмөнстан манаты
-        one: Түркмөнстан манаты
-    TND:
-      display_names:
-        other: тунис динары
-        one: тунис динары
-    TZS:
-      display_names:
-        other: Танзания шиллинги
-        one: Танзания шиллинги
-    UGX:
-      display_names:
-        other: Уганда шиллинги
-        one: Уганда шиллинги
-    UZS:
-      display_names:
-        other: Өзбекстан суму
-        one: Өзбекстан суму
-    VES:
-      display_names:
-        other: Венесуэла боливары
-        one: Венесуэла боливары
-    VUV:
-      display_names:
-        other: Вануату ватусу
-        one: Вануату ватусу
-    WST:
-      display_names:
-        other: Самоа таласы
-        one: Самоа таласы
-    YER:
-      display_names:
-        other: Йемен риалы
-        one: Йемен риалы
+  units:
+    g-force:
+      long:
+        one: "{0} оордук күчү"
+        other: "{0} оордук күчү"
+      short:
+        display_name: оордук күчү
+        one: "{0} о.к."
+        other: "{0} о.к."
+    meter-per-square-second:
+      long:
+        display_name: квадраттык секундасына метр
+        one: квадраттык секундасына {0} метр
+        other: квадраттык секундасына {0} метр
+      short:
+        display_name: метр/сек²
+        one: "{0} м/сек²"
+        other: "{0} м/сек²"
+    radian:
+      long:
+        display_name: радиан
+        one: "{0} радиан"
+        other: "{0} радиан"
+      short:
+        display_name: рад.
+        one: "{0} рад"
+        other: "{0} рад."
+    degree:
+      long:
+        one: "{0} градус"
+        other: "{0} градус"
+      short:
+        display_name: градус
+        one: "{0} град"
+        other: "{0} град"
+      narrow:
+        one: "{0}°"
+        other: "{0}°"
+    arc-minute:
+      long:
+        display_name: аркмүнөт
+        one: "{0} аркмүнөт"
+        other: "{0} аркмүнөт"
+      short:
+        display_name: аркмүн
+        one: "{0} аркмүн"
+        other: "{0} аркмүн"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+    arc-second:
+      long:
+        display_name: арксекунд
+        one: "{0} арксекунд"
+        other: "{0} арксекунд"
+      short:
+        display_name: арксек
+        one: "{0} арксек"
+        other: "{0} арксек"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: чарчы километр
+        one: "{0} чарчы километр"
+        other: "{0} чарчы километр"
+        per_unit_pattern: чарчы километрине {0}
+      short:
+        display_name: км²
+        one: "{0} км²"
+        other: "{0} км²"
+        per_unit_pattern: "{0}/км²"
+    hectare:
+      long:
+        one: "{0} гектар"
+        other: "{0} гектар"
+      short:
+        display_name: гектар
+        one: "{0} га"
+        other: "{0} га"
+    square-meter:
+      long:
+        display_name: чарчы метр
+        one: "{0} чарчы метр"
+        other: "{0} чарчы метр"
+        per_unit_pattern: чарчы метрине {0}
+      short:
+        display_name: метр²
+        one: "{0} м²"
+        other: "{0} м²"
+        per_unit_pattern: "{0}/м²"
+    square-centimeter:
+      long:
+        display_name: чарчы сантиметр
+        one: "{0} чарчы сантиметр"
+        other: "{0} чарчы сантиметр"
+        per_unit_pattern: чарчы сантиметрине {0}
+      short:
+        display_name: см²
+        one: "{0} см²"
+        other: "{0} см²"
+        per_unit_pattern: "{0}/см²"
+    square-mile:
+      long:
+        one: "{0} чарчы миля"
+        other: "{0} чарчы миля"
+        per_unit_pattern: чарчы милясына {0}
+      short:
+        display_name: чарчы миля
+        one: "{0} мл²"
+        other: "{0} мл²"
+        per_unit_pattern: "{0}/ми²"
+      narrow:
+        one: "{0} ми²"
+        other: "{0} ми²"
+    square-yard:
+      long:
+        display_name: чарчы ярд
+        one: "{0} чарчы ярд"
+        other: "{0} чарчы ярд"
+      short:
+        display_name: ярд²
+        one: "{0} ярд²"
+        other: "{0} ярд²"
+    square-foot:
+      long:
+        one: "{0} чарчы фут"
+        other: "{0} чарчы фут"
+      short:
+        display_name: чарчы фут
+        one: "{0} фут²"
+        other: "{0} фут²"
+    square-inch:
+      long:
+        display_name: чарчы дюйм
+        one: "{0} чарчы дюйм"
+        other: "{0} чарчы дюйм"
+        per_unit_pattern: чарчы дюймуна {0}
+      short:
+        display_name: дюйм²
+        one: "{0} дюйм²"
+        other: "{0} дюйм²"
+        per_unit_pattern: "{0}/дюйм²"
+    karat:
+      long:
+        one: "{0} карат"
+        other: "{0} карат"
+      short:
+        display_name: карат
+        one: "{0} кт"
+        other: "{0} кт"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: децилитрга миллиграмм
+        one: децилитрга {0} миллиграмм
+        other: децилитрга {0} миллиграмм
+      short:
+        display_name: мг/дл
+        one: "{0} мг/дл"
+        other: "{0} мг/дл"
+    millimole-per-liter:
+      long:
+        display_name: литрине миллимоль
+        one: литрине {0} миллимоль
+        other: литрине {0} миллимоль
+      short:
+        display_name: миллимоль/литр
+        one: "{0} ммоль/л"
+        other: "{0} ммоль/л"
+      narrow:
+        one: "{0}ммоль/л"
+        other: "{0}ммоль/л"
+    permillion:
+      long:
+        display_name: миллионго бөлүктөр
+        one: миллионго {0} бөлүк
+        other: миллионго {0} бөлүк
+      short:
+        display_name: миллионго/бөлүк
+    percent:
+      long:
+        one: "{0} пайыз"
+        other: "{0} пайыз"
+      short:
+        display_name: пайыз
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        one: "{0} промилле"
+        other: "{0} промилле"
+      short:
+        display_name: промилле
+    mole:
+      long:
+        display_name: мольдор
+      short:
+        display_name: моль
+        one: "{0} моль"
+        other: "{0} моль"
+    liter-per-kilometer:
+      long:
+        display_name: километрине литр
+        one: километрине {0} литр
+        other: километрине {0} литр
+      short:
+        display_name: литр/км
+        one: "{0} л/км"
+        other: "{0} л/км"
+    liter-per-100-kilometer:
+      long:
+        display_name: 100 километрге литр
+        one: 100 километрге {0} литр
+        other: 100 километрге {0} литр
+      short:
+        display_name: л/100 км
+        one: "{0} л/100км"
+        other: "{0} л/100км"
+      narrow:
+        display_name: 100 км/л
+    mile-per-gallon:
+      long:
+        display_name: миляга/галлон
+        one: "{0} миляга/галлон"
+        other: "{0} миляга/галлон"
+      short:
+        display_name: мил/гал
+        one: "{0} мил/гал"
+        other: "{0} мил/гал"
+    mile-per-gallon-imperial:
+      long:
+        display_name: англ. галлонуна миля
+        one: англ. галлонуна {0} миля
+        other: англ. галлонуна {0} миля
+      short:
+        display_name: миля/англ. галлонуна
+        one: "{0} мил/англ.гал"
+        other: "{0} мил/англ.гал"
+      narrow:
+        one: "{0} мил/анг.гал"
+        other: "{0}мил/англ.гал"
+    petabyte:
+      long:
+        display_name: петабайт
+        one: "{0} петабайт"
+        other: "{0} ПТБ"
+      short:
+        display_name: ПТб
+        one: "{0} Птб"
+        other: "{0} Птб"
+    terabyte:
+      long:
+        display_name: терабайт
+        one: "{0} терабайт"
+        other: "{0} терабайт"
+      short:
+        display_name: ТБайт
+        one: "{0} ТБ"
+        other: "{0} ТБ"
+    terabit:
+      long:
+        display_name: терабит
+        one: "{0} терабит"
+        other: "{0} терабит"
+      short:
+        display_name: Тбит
+        one: "{0} Тб"
+        other: "{0} Тб"
+    gigabyte:
+      long:
+        display_name: гигабайт
+        one: "{0} гигабайт"
+        other: "{0} гигабайт"
+      short:
+        display_name: Гбайт
+        one: "{0} ГБ"
+        other: "{0} ГБ"
+    gigabit:
+      long:
+        display_name: гигабит
+        one: "{0} гигабит"
+        other: "{0} гигабит"
+      short:
+        display_name: Гбит
+        one: "{0} Гб"
+        other: "{0} Гб"
+    megabyte:
+      long:
+        display_name: мегабайт
+        one: "{0} мегабайт"
+        other: "{0} мегабайт"
+      short:
+        display_name: МБайт
+        one: "{0} МБ"
+        other: "{0} МБ"
+    megabit:
+      long:
+        display_name: мегабит
+        one: "{0} мегабит"
+        other: "{0} мегабит"
+      short:
+        display_name: Мбит
+        one: "{0} Мб"
+        other: "{0} Мб"
+    kilobyte:
+      long:
+        display_name: килобайт
+        one: "{0} килобайт"
+        other: "{0} килобайт"
+      short:
+        display_name: кБайт
+        one: "{0} кБ"
+        other: "{0} кБ"
+    kilobit:
+      long:
+        display_name: килобит
+        one: "{0} килобит"
+        other: "{0} килобит"
+      short:
+        display_name: кбит
+        one: "{0} кб"
+        other: "{0} кб"
+    century:
+      long:
+        display_name: кылым
+        one: "{0} кылым"
+        other: "{0} кылым"
+      short:
+        display_name: к.
+        one: "{0} к."
+        other: "{0} к."
+    year:
+      long:
+        one: "{0} жыл"
+        other: "{0} жыл"
+        per_unit_pattern: жылына {0}
+      short:
+        display_name: жыл
+        one: "{0}-ж."
+        other: "{0} ж."
+        per_unit_pattern: "{0}/ж"
+      narrow:
+        one: "{0} ж."
+        other: "{0} ж."
+    quarter:
+      long:
+        display_name: чейрек
+        one: "{0}/чейрек"
+        other: "{0}/чейрек"
+      short:
+        display_name: чрк
+        one: "{0}/чрк"
+        other: "{0}/чрк"
+        per_unit_pattern: "{0}/ч"
+      narrow:
+        one: "{0}/ч"
+        other: "{0}/ч"
+    month:
+      long:
+        per_unit_pattern: айына {0}
+      short:
+        display_name: ай
+        one: "{0} ай"
+        other: "{0} ай"
+        per_unit_pattern: а/{0}
+    week:
+      long:
+        one: "{0} апта"
+        other: "{0} апта"
+        per_unit_pattern: аптасына {0}
+      short:
+        display_name: апта
+        one: "{0} апт"
+        other: "{0} апт"
+        per_unit_pattern: "{0}/апт"
+      narrow:
+        display_name: апт
+        one: "{0} ап"
+        other: "{0} ап"
+    day:
+      long:
+        per_unit_pattern: күнүнө {0}
+      short:
+        display_name: күн
+        one: "{0} күн"
+        other: "{0} күн"
+        per_unit_pattern: "{0}/күн"
+      narrow:
+        one: "{0} кн"
+        other: "{0} кн"
+    hour:
+      long:
+        one: "{0} саат"
+        other: "{0} саат"
+        per_unit_pattern: саатына {0}
+      short:
+        display_name: саат
+        one: "{0} ст"
+        other: "{0} ст"
+        per_unit_pattern: "{0}/ст"
+    minute:
+      long:
+        one: "{0} мүнөт"
+        other: "{0} мүнөт"
+        per_unit_pattern: мүнөтүнө {0}
+      short:
+        display_name: мүнөт
+        one: "{0} мүн"
+        other: "{0} мүн"
+        per_unit_pattern: "{0}/мүн"
+      narrow:
+        display_name: мүн
+    second:
+      long:
+        one: "{0} секунд"
+        other: "{0} секунд"
+        per_unit_pattern: секундуна {0}
+      short:
+        display_name: секунд
+        one: "{0} сек"
+        other: "{0} сек"
+        per_unit_pattern: "{0}/сек"
+      narrow:
+        display_name: сек
+    millisecond:
+      long:
+        one: "{0} миллисекунд"
+        other: "{0} миллисекунд"
+      short:
+        display_name: миллисекунд
+        one: "{0} мсек"
+        other: "{0} мсек"
+      narrow:
+        display_name: миллисек
+    microsecond:
+      long:
+        display_name: микросекунд
+        one: "{0} микросекунд"
+        other: "{0} микросекунд"
+      short:
+        display_name: μсек
+        one: "{0}μс"
+        other: "{0}μс"
+    nanosecond:
+      long:
+        display_name: наносекунд
+        one: "{0} наносекунд"
+        other: "{0} наносекунд"
+      short:
+        display_name: наносек
+        one: "{0} нс"
+        other: "{0} нс"
+    ampere:
+      long:
+        display_name: ампер
+        one: "{0} ампер"
+        other: "{0} ампер"
+      short:
+        display_name: амп
+    milliampere:
+      long:
+        display_name: миллиампер
+        one: "{0} миллиампер"
+        other: "{0} миллиампер"
+      short:
+        display_name: миллиамп
+        one: "{0} мА"
+        other: "{0} мА"
+    ohm:
+      long:
+        one: "{0} ом"
+        other: "{0} ом"
+      short:
+        display_name: ом
+    volt:
+      long:
+        one: "{0} вольт"
+        other: "{0} вольт"
+      short:
+        display_name: вольт
+        one: "{0} В"
+        other: "{0} В"
+    kilocalorie:
+      long:
+        display_name: килокалория
+        one: "{0} килокалория"
+        other: "{0} килокалория"
+      short:
+        display_name: ккал
+        one: "{0} ккал"
+        other: "{0} ккал"
+    calorie:
+      long:
+        display_name: калория
+        one: "{0} калория"
+        other: "{0} калория"
+      short:
+        display_name: кал
+        one: "{0} кал"
+        other: "{0} кал"
+    foodcalorie:
+      long:
+        display_name: Калориялар
+        one: "{0} Калория"
+        other: "{0} Калория"
+      short:
+        display_name: Кал
+        one: "{0} Кал"
+        other: "{0} Кал"
+    kilojoule:
+      long:
+        one: "{0} киложоул"
+        other: "{0} киложоул"
+      short:
+        display_name: киложоул
+        one: "{0} кж"
+        other: "{0} кж"
+    joule:
+      long:
+        one: "{0} жоул"
+        other: "{0} жоул"
+      short:
+        display_name: жоул
+        one: "{0} ж"
+        other: "{0} ж"
+    kilowatt-hour:
+      long:
+        display_name: килловат-саат
+        one: "{0} килловат-саат"
+        other: "{0} килловат-саат"
+      short:
+        display_name: кВ-саат
+        one: "{0} кВ-саат"
+        other: "{0} кВ-саат"
+    british-thermal-unit:
+      long:
+        display_name: Британдык жылуулук бирдиктери
+        one: "{0} Британдык жылуулук бирдиги"
+        other: "{0} Британдык жылуулук бирдиги"
+    therm-us:
+      long:
+        display_name: терм АКШ
+      short:
+        display_name: Терм АКШ
+        one: "{0} терм АКШ"
+        other: "{0} терм АКШ"
+      narrow:
+        one: "{0}термАКШ"
+        other: "{0}термАКШ"
+    pound-force:
+      long:
+        display_name: күч фунттары
+        one: "{0}күч фунту"
+        other: "{0}күч фунттары"
+      short:
+        display_name: күч-фунттары
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: 100 километрге киловатт саат
+      short:
+        display_name: кВт*с/100км
+        one: "{0} кВт*с/100км"
+        other: "{0} кВт*с/100км"
+      narrow:
+        one: "{0}кВт*с/100км"
+        other: "{0}кВт*с/100км"
+    gigahertz:
+      long:
+        display_name: гигагерц
+        one: "{0} гигагерц"
+        other: "{0} гигагерц"
+      short:
+        display_name: Ггц
+        one: "{0} Ггц"
+        other: "{0} Ггц"
+    megahertz:
+      long:
+        display_name: мегагерц
+        one: "{0} мегагерц"
+        other: "{0} мегагерц"
+      short:
+        display_name: МГЦ
+        one: "{0} МГЦ"
+        other: "{0} МГЦ"
+    kilohertz:
+      long:
+        display_name: килогерц
+        one: "{0} килогерц"
+        other: "{0} килогерц"
+      short:
+        display_name: кГц
+        one: "{0} кГц"
+        other: "{0} кГц"
+    hertz:
+      long:
+        display_name: герц
+        one: "{0} герц"
+        other: "{0} герц"
+      short:
+        display_name: Гц
+        one: "{0} Гц"
+        other: "{0} Гц"
+    dot-per-centimeter:
+      long:
+        display_name: сантиметрге чекиттер
+        one: сантиметрге {0} чекит
+        other: сантиметрге {0} чекиттер
+      short:
+        display_name: dpcm
+        one: "{0} dpcm"
+        other: "{0} dpcm"
+      narrow:
+        one: "{0}dpcm"
+        other: "{0}dpcm"
+    dot-per-inch:
+      long:
+        display_name: дюйм үчүн чекиттер
+        one: дюйм үчүн чекит
+        other: "{0} дюйм үчүн чекит"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+    dot:
+      long:
+        display_name: чекит
+      short:
+        display_name: графикалык чекит
+        one: "{0} графикалык чекит"
+        other: "{0} графикалык чекит"
+      narrow:
+        one: "{0}грф чкт"
+        other: "{0}грф чкт"
+    earth-radius:
+      long:
+        display_name: жер радиусу
+        one: жер радиусу
+        other: "{0} жер радиусу"
+    kilometer:
+      long:
+        display_name: километр
+        one: "{0} километр"
+        other: "{0} километр"
+        per_unit_pattern: километрине {0}
+      short:
+        display_name: км
+        one: "{0} км"
+        other: "{0} км"
+        per_unit_pattern: "{0}/км"
+    meter:
+      long:
+        one: "{0} метр"
+        other: "{0} метр"
+        per_unit_pattern: метрине {0}
+      short:
+        display_name: метр
+        one: "{0} м"
+        other: "{0} м"
+        per_unit_pattern: "{0}/м"
+      narrow:
+        one: "{0}м"
+        other: "{0}м"
+    decimeter:
+      long:
+        display_name: дециметр
+        one: "{0} дециметр"
+        other: "{0} дециметр"
+      short:
+        display_name: дм
+        one: "{0} дм"
+        other: "{0} дм"
+    centimeter:
+      long:
+        display_name: сантиметр
+        one: "{0} сантиметр"
+        other: "{0} сантиметр"
+        per_unit_pattern: сантиметрине {0}
+      short:
+        display_name: см
+        one: "{0} см"
+        other: "{0} см"
+        per_unit_pattern: "{0}/см"
+    millimeter:
+      long:
+        one: "{0} миллиметр"
+        other: "{0} миллиметр"
+      short:
+        display_name: миллиметр
+        one: "{0} мм"
+        other: "{0} мм"
+      narrow:
+        display_name: мм
+    micrometer:
+      long:
+        display_name: микрометр
+        one: "{0} микрометр"
+        other: "{0} микрометр"
+      short:
+        display_name: μметр
+        one: "{0} μм"
+        other: "{0} μм"
+    nanometer:
+      long:
+        display_name: нанометр
+        one: "{0} нанометр"
+        other: "{0} нанометр"
+      short:
+        display_name: нм
+        one: "{0} нм"
+        other: "{0} нм"
+    picometer:
+      long:
+        display_name: пикометр
+        one: "{0} пикометр"
+        other: "{0} пикометр"
+      short:
+        display_name: пм
+        one: "{0} пм"
+        other: "{0} пм"
+    foot:
+      long:
+        per_unit_pattern: футуна {0}
+      short:
+        display_name: фут
+        one: "{0} фут"
+        other: "{0} фут"
+        per_unit_pattern: "{0}/ф"
+    inch:
+      long:
+        per_unit_pattern: дюймуна {0}
+      short:
+        display_name: дюйм
+        one: "{0} дюйм"
+        other: "{0} дюйм"
+        per_unit_pattern: "{0}/д"
+      narrow:
+        per_unit_pattern: "{0} дюйм"
+    parsec:
+      long:
+        one: "{0} парсек"
+        other: "{0} парсек"
+      short:
+        display_name: парсек
+        one: "{0} пс"
+        other: "{0} пс"
+    light-year:
+      long:
+        one: "{0} жарык жыл"
+        other: "{0} жарык жыл"
+      short:
+        display_name: жарык жыл
+        one: "{0} жар.ж."
+        other: "{0} жар.ж."
+    astronomical-unit:
+      long:
+        display_name: астрономиялык бирдик
+        one: "{0} астрономиялык бирдик"
+        other: "{0} астрономиялык бирдик"
+      short:
+        display_name: а. б.
+        one: "{0} а.б."
+        other: "{0} а.б."
+    nautical-mile:
+      long:
+        display_name: деңиз милясы
+        one: "{0} деңиз милясы"
+        other: "{0} деңиз милясы"
+      short:
+        display_name: дең. мил.
+        one: "{0} дең. мил."
+        other: "{0} дең. мил."
+      narrow:
+        one: "{0}nmi"
+        other: "{0}nmi"
+    point:
+      long:
+        one: "{0} чекит"
+        other: "{0} чекит"
+      short:
+        display_name: чекиттер
+        one: "{0} чкт"
+        other: "{0} чкт"
+    solar-radius:
+      long:
+        one: "{0} күн радиусу"
+        other: "{0} күн радиустары"
+      short:
+        display_name: күн радиустары
+    lux:
+      long:
+        one: "{0} люкс"
+        other: "{0} люкс"
+      short:
+        display_name: люкс
+        one: "{0} лк"
+        other: "{0} лк"
+    candela:
+      long:
+        display_name: кандела
+        one: "{0} кандела"
+        other: "{0} кандела"
+    lumen:
+      long:
+        display_name: люмен
+        one: "{0} люмен"
+        other: "{0} люмен"
+    solar-luminosity:
+      long:
+        one: "{0} күндүн жарык күчү"
+        other: "{0} күндүн жарык күчү"
+      short:
+        display_name: күндүн жарык күчү
+    tonne:
+      long:
+        display_name: метр тонна
+        one: "{0} метр тонна"
+        other: "{0} метр тонна"
+      short:
+        display_name: т
+        one: "{0} т"
+        other: "{0} т"
+    kilogram:
+      long:
+        display_name: килограмм
+        one: "{0} килограмм"
+        other: "{0} килограмм"
+        per_unit_pattern: килограммына {0}
+      short:
+        display_name: кг
+        one: "{0} кг"
+        other: "{0} кг"
+        per_unit_pattern: "{0}/кг"
+    gram:
+      long:
+        one: "{0} грамм"
+        other: "{0} грамм"
+        per_unit_pattern: граммына {0}
+      short:
+        display_name: грамм
+        one: "{0} гр"
+        other: "{0} гр"
+        per_unit_pattern: гр/{0}
+      narrow:
+        per_unit_pattern: "{0}/гр"
+    milligram:
+      long:
+        display_name: миллиграмм
+        one: "{0} миллиграмм"
+        other: "{0} миллиграмм"
+      short:
+        display_name: мг
+        one: "{0} мг"
+        other: "{0} мг"
+    microgram:
+      long:
+        display_name: микрограмм
+        one: "{0} микрограмм"
+        other: "{0} микрограмм"
+      short:
+        display_name: мкг
+        one: "{0} мкг"
+        other: "{0} мкг"
+    ton:
+      long:
+        one: Америкалык тонна
+        other: "{0} тонна"
+      short:
+        display_name: Америкалык тонна
+        one: "{0} АКШ тон."
+        other: "{0} АКШ тон."
+      narrow:
+        display_name: тонна
+        one: "{0} тон."
+        other: "{0} тон."
+    pound:
+      long:
+        per_unit_pattern: фунтуна {0}
+      short:
+        display_name: фунт
+        one: "{0} фунт"
+        other: "{0} фунт"
+        per_unit_pattern: фунт/{0}
+      narrow:
+        one: "{0}#"
+        other: "{0}#"
+        per_unit_pattern: "{0}/фунт"
+    ounce:
+      long:
+        display_name: унция
+        one: "{0} унция"
+        other: "{0} унция"
+        per_unit_pattern: унциясына {0}
+      short:
+        display_name: унц.
+        one: "{0} унц."
+        other: "{0} унц."
+        per_unit_pattern: унц/{0}
+      narrow:
+        per_unit_pattern: "{0}/унц."
+    ounce-troy:
+      long:
+        display_name: троя унциясы
+        one: "{0} троя унциясы"
+        other: "{0} троя унциясы"
+      short:
+        display_name: тр. унц.
+        one: "{0} тр. унц."
+        other: "{0} тр. унц."
+    carat:
+      long:
+        one: "{0} карат"
+        other: "{0} карат"
+      short:
+        display_name: карат
+        one: "{0} кар."
+        other: "{0} кар."
+    earth-mass:
+      long:
+        display_name: Жер массасы
+        one: "{0} Жер массасы"
+        other: "{0} Жер массалары"
+      short:
+        display_name: Жер массалары
+      narrow:
+        display_name: M⊕
+    solar-mass:
+      long:
+        one: "{0} күн массасы"
+        other: "{0} күн массасы"
+      short:
+        display_name: күн массасы
+    gigawatt:
+      long:
+        display_name: гигаватт
+        one: "{0} гигаватт"
+        other: "{0} гигаватт"
+      short:
+        display_name: ГВт
+        one: "{0} ГВт"
+        other: "{0} ГВт"
+    megawatt:
+      long:
+        display_name: мегаватт
+        one: "{0} мегаватт"
+        other: "{0} мегаватт"
+      short:
+        display_name: МВт
+        one: "{0} МВт"
+        other: "{0} МВт"
+    kilowatt:
+      long:
+        display_name: киловатт
+        one: "{0} киловатт"
+        other: "{0} киловатт"
+      short:
+        display_name: кВт
+        one: "{0} кВт"
+        other: "{0} кВт"
+    watt:
+      long:
+        one: "{0} ватт"
+        other: "{0} ватт"
+      short:
+        display_name: ватт
+        one: "{0} Вт"
+        other: "{0} Вт"
+    milliwatt:
+      long:
+        display_name: милливатт
+        one: "{0} милливатт"
+        other: "{0} милливатт"
+      short:
+        display_name: мвт
+        one: "{0} мвт"
+        other: "{0} мвт"
+    horsepower:
+      long:
+        display_name: аттын күчү
+        one: "{0} аттын күчү"
+        other: "{0} аттын күчү"
+      short:
+        display_name: а.к.
+        one: "{0} а.к."
+        other: "{0} а.к."
+      narrow:
+        one: "{0} ат"
+        other: "{0} ат"
+    millimeter-ofhg:
+      long:
+        display_name: миллиметр сымап мамычасы
+        one: "{0} миллиметр сымап мамычасы"
+        other: "{0} миллиметр сымап мамычасы"
+      short:
+        display_name: мм.с.м.
+        one: "{0} мм.с. м."
+        other: "{0} мм.с. м."
+    pound-force-per-square-inch:
+      long:
+        display_name: чарчы дюймга фунт
+        one: чарчы дюймга {0} фунт
+        other: чарчы дюймга {0} фунт
+      short:
+        display_name: фчд
+        one: "{0} фчд"
+        other: "{0} фчд"
+    inch-ofhg:
+      long:
+        one: "{0} дюйм сымап мамычасы"
+        other: "{0} дюйм сымап мамычасы"
+      short:
+        display_name: дюйм сымап мамычасы
+    millibar:
+      long:
+        one: "{0} миллибар"
+        other: "{0} миллибар"
+      short:
+        display_name: миллибар
+        one: "{0} мбар"
+        other: "{0} мбар"
+      narrow:
+        one: "{0} мб"
+        other: "{0} мб"
+    atmosphere:
+      long:
+        display_name: атмосфера
+        one: "{0} атмосфера"
+        other: "{0} атм"
+      short:
+        display_name: атм
+        one: "{0} атм"
+        other: "{0} атм"
+    hectopascal:
+      long:
+        display_name: гектопаскаль
+        one: "{0} гектопаскаль"
+        other: "{0} гектопаскаль"
+      short:
+        display_name: гПа
+        one: "{0} гПа"
+        other: "{0} гПа"
+    megapascal:
+      long:
+        display_name: мегапаскаль
+        one: "{0} мегапаскаль"
+        other: "{0} мегапаскаль"
+    kilometer-per-hour:
+      long:
+        display_name: саатына километр
+        one: саатына {0} километр
+        other: саатына {0} километр
+      short:
+        display_name: км/саат
+        one: "{0} км/с"
+        other: "{0} км/с"
+    meter-per-second:
+      long:
+        display_name: секундасына метр
+        one: секундасына {0} метр
+        other: секундасына {0} метр
+      short:
+        display_name: метр/сек.
+        one: "{0} м/сек."
+        other: "{0} м/сек."
+      narrow:
+        one: "{0} м/с"
+        other: "{0} м/с"
+    mile-per-hour:
+      long:
+        display_name: саатына миля
+        one: саатына {0} миля
+        other: саатына {0} миля
+      short:
+        display_name: миля/саатына
+        one: "{0} миля/с"
+        other: "{0} миля/с"
+      narrow:
+        one: "{0} чак/с"
+        other: "{0} чак/с"
+    knot:
+      long:
+        display_name: түйүн
+        one: "{0} түйүн"
+        other: "{0} түйүн"
+      short:
+        display_name: тн
+        one: "{0} тн"
+        other: "{0} тн"
+    generic:
+      long:
+        one: "{0} градус"
+        other: "{0} градус"
+    celsius:
+      long:
+        display_name: Цельсий градусу
+        one: "{0} Цельсий градусу"
+        other: "{0} Цельсий градусу"
+      short:
+        display_name: Цельсий град.
+      narrow:
+        display_name: "°C"
+        one: "{0}°"
+        other: "{0}°"
+    fahrenheit:
+      long:
+        display_name: Фаренгейт градусу
+        one: "{0} Фаренгейт градусу"
+        other: "{0} Фаренгейт градусу"
+      short:
+        display_name: Ф. град
+    kelvin:
+      long:
+        display_name: Келвин градусу
+        one: "{0} Келвин градусу"
+        other: "{0} Келвин градусу"
+      short:
+        display_name: К град.
+    newton-meter:
+      long:
+        display_name: ньютон-метрлери
+        one: ньютон-метри
+        other: "{0} ньютон-метрлери"
+      short:
+        display_name: N m
+    cubic-kilometer:
+      long:
+        one: "{0} куб километр"
+        other: "{0} куб километр"
+      short:
+        display_name: куб километр
+        one: "{0} км³"
+        other: "{0} км³"
+    cubic-meter:
+      long:
+        display_name: куб метр
+        one: "{0} куб метр"
+        other: "{0} куб метр"
+        per_unit_pattern: куб метрине {0}
+      short:
+        display_name: м³
+        one: "{0} м³"
+        other: "{0} м³"
+        per_unit_pattern: "{0}/м³"
+    cubic-centimeter:
+      long:
+        display_name: куб сантиметр
+        one: "{0} куб сантиметр"
+        other: "{0} куб сантиметр"
+        per_unit_pattern: куб сантиметрине {0}
+      short:
+        display_name: см³
+        one: "{0} см³"
+        other: "{0} см³"
+        per_unit_pattern: "{0}/см³"
+    cubic-mile:
+      long:
+        display_name: куб миля
+        one: "{0} куб миля"
+        other: "{0} куб миля"
+      short:
+        display_name: мил³
+        one: "{0} мил³"
+        other: "{0} мил³"
+    cubic-yard:
+      long:
+        display_name: куб ярд
+        one: "{0} куб ярд"
+        other: "{0} куб ярд"
+      short:
+        display_name: ярд³
+        one: "{0} ярд³"
+        other: "{0} ярд³"
+    cubic-foot:
+      long:
+        display_name: куб фут
+        one: "{0} куб фут"
+        other: "{0} куб фут"
+      short:
+        display_name: фут³
+        one: "{0} фут³"
+        other: "{0} фут³"
+    cubic-inch:
+      long:
+        display_name: куб дюйм
+        one: "{0} куб дюйм"
+        other: "{0} куб дюйм"
+      short:
+        display_name: дюйм³
+        one: "{0} дюйм³"
+        other: "{0} дюйм³"
+    megaliter:
+      long:
+        display_name: мегалитр
+        one: "{0} мегалитр"
+        other: "{0} мегалитр"
+      short:
+        display_name: мгл
+        one: "{0} мгл"
+        other: "{0} мгл"
+    hectoliter:
+      long:
+        display_name: гектолитр
+        one: "{0} гектолитр"
+        other: "{0} гектолитр"
+      short:
+        display_name: гл
+        one: "{0} гл"
+        other: "{0} гл"
+    liter:
+      long:
+        one: "{0} литр"
+        other: "{0} литр"
+        per_unit_pattern: литрине {0}
+      short:
+        display_name: литр
+        one: "{0} л"
+        other: "{0} л"
+        per_unit_pattern: "{0}/л"
+    deciliter:
+      long:
+        display_name: децилитр
+        one: "{0} децилитр"
+        other: "{0} децилитр"
+      short:
+        display_name: дл
+        one: "{0} дл"
+        other: "{0} дл"
+    centiliter:
+      long:
+        display_name: сантилитр
+        one: "{0} сантилитр"
+        other: "{0} сантилитр"
+      short:
+        display_name: сЛ
+        one: "{0} сЛ"
+        other: "{0} сЛ"
+    milliliter:
+      long:
+        display_name: миллилитр
+        one: "{0} миллилитр"
+        other: "{0} миллилитр"
+      short:
+        display_name: мл
+        one: "{0} мл"
+        other: "{0} мл"
+    pint-metric:
+      long:
+        display_name: метрикалык пинта
+        one: "{0} метрикалык пинта"
+        other: "{0} метрикалык пинта"
+      short:
+        display_name: мпт
+        one: "{0} мпт"
+        other: "{0} мпт"
+      narrow:
+        display_name: пт
+    acre-foot:
+      long:
+        one: "{0} акр-фут"
+        other: "{0} акр-фут"
+      short:
+        display_name: акр-фут
+        one: "{0} ак. фт."
+        other: "{0} ак. фт."
+    bushel:
+      long:
+        one: "{0} бушел"
+        other: "{0} бушел"
+      short:
+        display_name: бушел
+    gallon:
+      long:
+        display_name: галлон
+        one: "{0} галлон"
+        other: "{0} галлон"
+        per_unit_pattern: галлонуна {0}
+      short:
+        display_name: гал
+        one: "{0} гал"
+        other: "{0} гал"
+        per_unit_pattern: "{0}/АКШ гал"
+    gallon-imperial:
+      long:
+        display_name: англ. галлону
+        one: "{0} англ. галлону"
+        other: "{0} англ. галлону"
+        per_unit_pattern: англ. галлонуна {0}
+      short:
+        display_name: англ. гал
+        one: "{0} англ. гал"
+        other: "{0} англ. гал"
+        per_unit_pattern: англ. гал/{0}
+      narrow:
+        one: "{0}англ.гал"
+        other: "{0}англ.гал"
+    quart:
+      long:
+        display_name: кварта
+        one: "{0} кварта"
+        other: "{0} кварта"
+      short:
+        display_name: квр
+        one: "{0} квр"
+        other: "{0} квр"
+    pint:
+      long:
+        display_name: пинта
+        one: "{0} пинта"
+        other: "{0} пинта"
+      short:
+        display_name: пт
+        one: "{0} пт"
+        other: "{0} пт"
+    cup:
+      long:
+        one: "{0} чөйчөк"
+        other: "{0} чөйчөк"
+      short:
+        display_name: чөйчөк
+        one: "{0} чөй."
+        other: "{0} чөй."
+    fluid-ounce:
+      long:
+        display_name: суюк унция
+        one: "{0} суюк унция"
+        other: "{0} суюк унция"
+      short:
+        display_name: с. унц.
+        one: "{0} с. унц."
+        other: "{0} с. унц."
+    fluid-ounce-imperial:
+      long:
+        display_name: Имп. суюктук унциялары
+        one: "{0} Имп. суюктук унциялары"
+        other: "{0} имп. суюктук унциясы"
+      short:
+        display_name: Имп.суюк.унц
+      narrow:
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        display_name: чоң кашык
+        one: "{0} чоң кашык"
+        other: "{0} чоң кашык"
+      short:
+        display_name: чоң каш.
+        one: "{0} чоң каш."
+        other: "{0} чоң каш."
+      narrow:
+        one: "{0}чң.кш"
+        other: "{0}чң.кш"
+    teaspoon:
+      long:
+        display_name: чай кашык
+        one: "{0} чай кашык"
+        other: "{0} чай кашык"
+      short:
+        display_name: чай каш.
+        one: "{0} чай каш."
+        other: "{0} чай каш."
+      narrow:
+        one: "{0}чй.кш"
+        other: "{0}чй.кш"
+    dram:
+      long:
+        display_name: драм
+        one: "{0} драм"
+        other: "{0} драм"
+      short:
+        display_name: драм суюктук
+      narrow:
+        one: "{0}fl.dr."
+        other: "{0}fl.dr."
+    light-speed:
+      long:
+        display_name: жарык
+        one: "{0} жарык"
+        other: "{0} жарык"
+      short:
+        display_name: жарык
+        one: "{0} жарык"
+        other: "{0} жарык"
+      narrow:
+        display_name: жарык
+        one: "{0} жарык"
+        other: "{0} жарык"
+    portion-per-1e9:
+      long:
+        display_name: мкг/л
+        one: "{0} мкг/л"
+        other: "{0} мкг/л"
+      short:
+        display_name: мкг/л
+        one: "{0} мкг/л"
+        other: "{0} мкг/л"
+      narrow:
+        display_name: мкг/л
+        one: "{0} мкг/л"
+        other: "{0} мкг/л"
+    night:
+      long:
+        display_name: түн
+        one: "{0}/түн"
+        other: "{0}/түн"
+        per_unit_pattern: "{0}/түнүнө"
+      short:
+        display_name: түн
+        one: "{0}/түн"
+        other: "{0}/түн"
+        per_unit_pattern: "{0}/түн"
+      narrow:
+        display_name: түн
+        one: "{0}/түн"
+        other: "{0}/түн"
+        per_unit_pattern: "{0}/түн"
+    acre:
+      short:
+        display_name: акр
+        one: "{0} акр"
+        other: "{0} акр"
+    item:
+      short:
+        display_name: нерсе
+        one: "{0} нерсе"
+        other: "{0} нерсе"
+    byte:
+      short:
+        display_name: байт
+        one: "{0} байт"
+        other: "{0} байт"
+    bit:
+      short:
+        display_name: бит
+        one: "{0} бит"
+        other: "{0} бит"
+    decade:
+      short:
+        display_name: декада
+        one: "{0} декада"
+        other: "{0} декада"
+      narrow:
+        one: "{0} дек."
+        other: "{0} дек."
+    mile:
+      short:
+        display_name: миля
+        one: "{0} миля"
+        other: "{0} миля"
+    yard:
+      short:
+        display_name: ярд
+        one: "{0} ярд"
+        other: "{0} ярд"
+    grain:
+      short:
+        display_name: грэйн
+        one: "{0} грэйн"
+        other: "{0} грэйн"
+    drop:
+      short:
+        display_name: дроп
+        one: "{0} дроп"
+        other: "{0} дроп"
+    jigger:
+      short:
+        display_name: жиггер
+        one: "{0} жиггер"
+        other: "{0} жиггер"
+    pinch:
+      short:
+        display_name: пинч
+        one: "{0} пинч"
+        other: "{0} пинч"
+    dessert-spoon:
+      narrow:
+        display_name: dsp
+        one: "{0}dsp"
+        other: "{0}dsp"
+    dessert-spoon-imperial:
+      narrow:
+        display_name: dsp Imp
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+    quart-imperial:
+      narrow:
+        one: "{0}qt-Imp."
+        other: "{0}qt-Imp."

@@ -1,438 +1,71 @@
 ---
 locale: id
-generated_at: '2025-09-13T17:37:52Z'
+generated_at: '2025-09-14T06:10:21Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        other: 0 rb
+      '10000':
+        other: 00 rb
+      '100000':
+        other: 000 rb
+      '1000000':
+        other: 0 jt
+      '10000000':
+        other: 00 jt
+      '100000000':
+        other: 000 jt
+      '1000000000':
+        other: 0 M
+      '10000000000':
+        other: 00 M
+      '100000000000':
+        other: 000 M
+      '1000000000000':
+        other: 0 T
+      '10000000000000':
+        other: 00 T
+      '100000000000000':
+        other: 000 T
+    long:
+      '1000':
+        other: 0 ribu
+      '10000':
+        other: 00 ribu
+      '100000':
+        other: 000 ribu
+      '1000000':
+        other: 0 juta
+      '10000000':
+        other: 00 juta
+      '100000000':
+        other: 000 juta
+      '1000000000':
+        other: 0 miliar
+      '10000000000':
+        other: 00 miliar
+      '100000000000':
+        other: 000 miliar
+      '1000000000000':
+        other: 0 triliun
+      '10000000000000':
+        other: 00 triliun
+      '100000000000000':
+        other: 000 triliun
   currencies:
-    AFN:
-      display_names:
-        other: Afgani Afganistan
-        one: Afgani Afganistan
-    AMD:
-      display_names:
-        other: Dram Armenia
-        one: Dram Armenia
-    AOA:
-      display_names:
-        other: Kwanza Angola
-        one: Kwanza Angola
-    ARS:
-      display_names:
-        other: Peso Argentina
-        one: Peso Argentina
-    AUD:
-      symbol: AU$
-      display_names:
-        other: Dolar Australia
-        one: Dolar Australia
-    AZN:
-      display_names:
-        other: Manat Azerbaijan
-        one: Manat Azerbaijan
-    BAM:
-      display_names:
-        other: Mark Konvertibel Bosnia-Herzegovina
-        one: Mark Konvertibel Bosnia-Herzegovina
-    BBD:
-      display_names:
-        other: Dolar Barbados
-        one: Dolar Barbados
-    BDT:
-      display_names:
-        other: Taka Bangladesh
-        one: Taka Bangladesh
-    BMD:
-      display_names:
-        other: Dolar Bermuda
-        one: Dolar Bermuda
-    BND:
-      display_names:
-        other: Dolar Brunei
-        one: Dolar Brunei
-    BOB:
-      display_names:
-        other: Boliviano
-        one: Boliviano
-    BRL:
-      display_names:
-        other: Real Brasil
-        one: Real Brasil
-    BSD:
-      display_names:
-        other: Dolar Bahama
-        one: Dolar Bahama
-    BWP:
-      display_names:
-        other: Pula Botswana
-        one: Pula Botswana
-    BZD:
-      display_names:
-        other: Dolar Belize
-        one: Dolar Belize
-    CAD:
-      display_names:
-        other: Dolar Kanada
-        one: Dolar Kanada
-    CLP:
-      display_names:
-        other: Peso Cile
-        one: Peso Cile
-    CNY:
-      display_names:
-        other: Yuan Tiongkok
-        one: Yuan Tiongkok
-    COP:
-      display_names:
-        other: Peso Kolombia
-        one: Peso Kolombia
-    CRC:
-      display_names:
-        other: Colon Kosta Rika
-        one: Colon Kosta Rika
-    CUC:
-      display_names:
-        other: Peso Konvertibel Kuba
-        one: Peso Konvertibel Kuba
-    CUP:
-      display_names:
-        other: Peso Kuba
-        one: Peso Kuba
-    CZK:
-      display_names:
-        other: Koruna Ceko
-        one: Koruna Ceko
-    DKK:
-      display_names:
-        other: Krone Denmark
-        one: Krone Denmark
-    DOP:
-      display_names:
-        other: Peso Dominika
-        one: Peso Dominika
-    EGP:
-      display_names:
-        other: Pound Mesir
-        one: Pound Mesir
-    ESP:
-      display_names:
-        other: Peseta Spanyol
-        one: Peseta Spanyol
-    EUR:
-      display_names:
-        other: Euro
-        one: Euro
-    FJD:
-      display_names:
-        other: Dolar Fiji
-        one: Dolar Fiji
-    FKP:
-      display_names:
-        other: Pound Kepulauan Falkland
-        one: Pound Kepulauan Falkland
-    GBP:
-      display_names:
-        other: Pound Inggris
-        one: Pound Inggris
-    GEL:
-      display_names:
-        other: Lari Georgia
-        one: Lari Georgia
-    GHS:
-      display_names:
-        other: Cedi Ghana
-        one: Cedi Ghana
-    GIP:
-      display_names:
-        other: Pound Gibraltar
-        one: Pound Gibraltar
-    GNF:
-      display_names:
-        other: Franc Guinea
-        one: Franc Guinea
-    GTQ:
-      display_names:
-        other: Quetzal Guatemala
-        one: Quetzal Guatemala
-    GYD:
-      display_names:
-        other: Dolar Guyana
-        one: Dolar Guyana
-    HKD:
-      display_names:
-        other: Dolar Hong Kong
-        one: Dolar Hong Kong
-    HNL:
-      display_names:
-        other: Lempira Honduras
-        one: Lempira Honduras
-    HRK:
-      display_names:
-        other: Kuna Kroasia
-        one: Kuna Kroasia
-    HUF:
-      display_names:
-        other: Forint Hungaria
-        one: Forint Hungaria
-    IDR:
-      display_names:
-        other: Rupiah Indonesia
-        one: Rupiah Indonesia
-    ILS:
-      display_names:
-        other: Shekel Baru Israel
-        one: Shekel Baru Israel
-    INR:
-      symbol: Rs
-      display_names:
-        other: Rupee India
-        one: Rupee India
-    ISK:
-      display_names:
-        other: Krona Islandia
-        one: Krona Islandia
-    JMD:
-      display_names:
-        other: Dolar Jamaika
-        one: Dolar Jamaika
-    JPY:
-      display_names:
-        other: Yen Jepang
-        one: Yen Jepang
-    KGS:
-      display_names:
-        other: Som Kirgizstan
-        one: Som Kirgizstan
-    KHR:
-      display_names:
-        other: Riel Kamboja
-        one: Riel Kamboja
-    KMF:
-      display_names:
-        other: Franc Komoro
-        one: Franc Komoro
-    KPW:
-      display_names:
-        other: Won Korea Utara
-        one: Won Korea Utara
-    KRW:
-      display_names:
-        other: Won Korea Selatan
-        one: Won Korea Selatan
-    KYD:
-      display_names:
-        other: Dolar Kepulauan Cayman
-        one: Dolar Kepulauan Cayman
-    KZT:
-      display_names:
-        other: Tenge Kazakhstan
-        one: Tenge Kazakhstan
-    LAK:
-      display_names:
-        other: Kip Laos
-        one: Kip Laos
-    LBP:
-      display_names:
-        other: Pound Lebanon
-        one: Pound Lebanon
-    LKR:
-      display_names:
-        other: Rupee Sri Lanka
-        one: Rupee Sri Lanka
-    LRD:
-      display_names:
-        other: Dolar Liberia
-        one: Dolar Liberia
-    LTL:
-      display_names:
-        other: Litas Lituania
-        one: Litas Lituania
-    LVL:
-      display_names:
-        other: Lats Latvia
-        one: Lats Latvia
-    MGA:
-      display_names:
-        other: Ariary Madagaskar
-        one: Ariary Madagaskar
-    MMK:
-      display_names:
-        other: Kyat Myanmar
-        one: Kyat Myanmar
-    MNT:
-      display_names:
-        other: Tugrik Mongolia
-        one: Tugrik Mongolia
-    MUR:
-      display_names:
-        other: Rupee Mauritius
-        one: Rupee Mauritius
-    MXN:
-      display_names:
-        other: Peso Meksiko
-        one: Peso Meksiko
-    MYR:
-      display_names:
-        other: Ringgit Malaysia
-        one: Ringgit Malaysia
-    NAD:
-      display_names:
-        other: Dolar Namibia
-        one: Dolar Namibia
-    NGN:
-      display_names:
-        other: Naira Nigeria
-        one: Naira Nigeria
-    NIO:
-      display_names:
-        other: Cordoba Nikaragua
-        one: Cordoba Nikaragua
-    NOK:
-      display_names:
-        other: Krone Norwegia
-        one: Krone Norwegia
-    NPR:
-      display_names:
-        other: Rupee Nepal
-        one: Rupee Nepal
-    NZD:
-      display_names:
-        other: Dolar Selandia Baru
-        one: Dolar Selandia Baru
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Peso Filipina
-        one: Peso Filipina
-    PKR:
-      display_names:
-        other: Rupee Pakistan
-        one: Rupee Pakistan
-    PLN:
-      display_names:
-        other: Zloty Polandia
-        one: Zloty Polandia
-    PYG:
-      display_names:
-        other: Guarani Paraguay
-        one: Guarani Paraguay
-    RON:
-      display_names:
-        other: Leu Rumania
-        one: Leu Rumania
-    RUB:
-      display_names:
-        other: Rubel Rusia
-        one: Rubel Rusia
-    RWF:
-      display_names:
-        other: Franc Rwanda
-        one: Franc Rwanda
-    SBD:
-      display_names:
-        other: Dolar Kepulauan Solomon
-        one: Dolar Kepulauan Solomon
-    SEK:
-      display_names:
-        other: Krona Swedia
-        one: Krona Swedia
-    SGD:
-      display_names:
-        other: Dolar Singapura
-        one: Dolar Singapura
-    SHP:
-      display_names:
-        other: Pound Saint Helena
-        one: Pound Saint Helena
-    SRD:
-      display_names:
-        other: Dolar Suriname
-        one: Dolar Suriname
-    SSP:
-      display_names:
-        other: Pound Sudan Selatan
-        one: Pound Sudan Selatan
-    STN:
-      display_names:
-        other: Dobra Sao Tome dan Principe
-        one: Dobra Sao Tome dan Principe
-    SYP:
-      display_names:
-        other: Pound Suriah
-        one: Pound Suriah
-    THB:
-      display_names:
-        other: Baht Thailand
-        one: Baht Thailand
-    TOP:
-      display_names:
-        other: Paʻanga Tonga
-        one: Paʻanga Tonga
-    TRY:
-      display_names:
-        other: Lira Turki
-        one: Lira Turki
-    TTD:
-      display_names:
-        other: Dolar Trinidad dan Tobago
-        one: Dolar Trinidad dan Tobago
-    TWD:
-      display_names:
-        other: Dolar Baru Taiwan
-        one: Dolar Baru Taiwan
-    UAH:
-      display_names:
-        other: Hryvnia Ukraina
-        one: Hryvnia Ukraina
-    USD:
-      display_names:
-        other: Dolar Amerika Serikat
-        one: Dolar Amerika Serikat
-    UYU:
-      display_names:
-        other: Peso Uruguay
-        one: Peso Uruguay
-    VEF:
-      display_names:
-        other: Bolivar Venezuela (2008–2018)
-        one: Bolivar Venezuela (2008–2018)
-    VND:
-      display_names:
-        other: Dong Vietnam
-        one: Dong Vietnam
-    XAF:
-      display_names:
-        other: Franc CFA Afrika Tengah
-        one: Franc CFA Afrika Tengah
-    XCD:
-      display_names:
-        other: Dolar Karibia Timur
-        one: Dolar Karibia Timur
-    XOF:
-      display_names:
-        other: Franc CFA Afrika Barat
-        one: Franc CFA Afrika Barat
-    XPF:
-      display_names:
-        other: Franc CFP
-        one: Franc CFP
-    XXX:
-      symbol: XXX
-      display_names:
-        other: "(mata uang tidak dikenal)"
-        one: Mata Uang Tidak Dikenal
-    ZAR:
-      display_names:
-        other: Rand Afrika Selatan
-        one: Rand Afrika Selatan
-    ZMW:
-      display_names:
-        other: Kwacha Zambia
-        one: Kwacha Zambia
     ADP:
       display_names:
         other: Peseta Andorra
@@ -445,14 +78,26 @@ number_formats:
       display_names:
         other: Afgani Afganistan (1927–2002)
         one: Afgani Afganistan (1927–2002)
+    AFN:
+      display_names:
+        other: Afgani Afganistan
+        one: Afgani Afganistan
     ALL:
       display_names:
         other: Lek Albania
         one: Lek Albania
+    AMD:
+      display_names:
+        other: Dram Armenia
+        one: Dram Armenia
     ANG:
       display_names:
         other: Guilder Antilla Belanda
         one: Guilder Antilla Belanda
+    AOA:
+      display_names:
+        other: Kwanza Angola
+        one: Kwanza Angola
     AOK:
       display_names:
         other: Kwanza Angola (1977–1991)
@@ -481,10 +126,19 @@ number_formats:
       display_names:
         other: Peso Argentina (1983–1985)
         one: Peso Argentina (1983–1985)
+    ARS:
+      display_names:
+        other: Peso Argentina
+        one: Peso Argentina
     ATS:
       display_names:
         other: Schilling Austria
         one: Schilling Austria
+    AUD:
+      symbol: AU$
+      display_names:
+        other: Dolar Australia
+        one: Dolar Australia
     AWG:
       display_names:
         other: Florin Aruba
@@ -493,14 +147,30 @@ number_formats:
       display_names:
         other: Manat Azerbaijan (1993–2006)
         one: Manat Azerbaijan (1993–2006)
+    AZN:
+      display_names:
+        other: Manat Azerbaijan
+        one: Manat Azerbaijan
     BAD:
       display_names:
         other: Dinar Bosnia-Herzegovina (1992–1994)
         one: Dinar Bosnia-Herzegovina (1992–1994)
+    BAM:
+      display_names:
+        other: Mark Konvertibel Bosnia-Herzegovina
+        one: Mark Konvertibel Bosnia-Herzegovina
     BAN:
       display_names:
         other: Dinar Baru Bosnia-Herzegovina (1994–1997)
         one: Dinar Baru Bosnia-Herzegovina (1994–1997)
+    BBD:
+      display_names:
+        other: Dolar Barbados
+        one: Dolar Barbados
+    BDT:
+      display_names:
+        other: Taka Bangladesh
+        one: Taka Bangladesh
     BEC:
       display_names:
         other: Franc Belgia (konvertibel)
@@ -537,6 +207,18 @@ number_formats:
       display_names:
         other: Franc Burundi
         one: Franc Burundi
+    BMD:
+      display_names:
+        other: Dolar Bermuda
+        one: Dolar Bermuda
+    BND:
+      display_names:
+        other: Dolar Brunei
+        one: Dolar Brunei
+    BOB:
+      display_names:
+        other: Boliviano
+        one: Boliviano
     BOL:
       display_names:
         other: Boliviano Bolivia (1863–1963)
@@ -561,6 +243,10 @@ number_formats:
       display_names:
         other: Cruzeiro Brasil (1990–1993)
         one: Cruzeiro Brasil (1990–1993)
+    BRL:
+      display_names:
+        other: Real Brasil
+        one: Real Brasil
     BRN:
       display_names:
         other: Cruzado Baru Brasil (1989–1990)
@@ -573,6 +259,10 @@ number_formats:
       display_names:
         other: Cruzeiro Brasil (1942–1967)
         one: Cruzeiro Brasil (1942–1967)
+    BSD:
+      display_names:
+        other: Dolar Bahama
+        one: Dolar Bahama
     BTN:
       display_names:
         other: Ngultrum Bhutan
@@ -581,6 +271,10 @@ number_formats:
       display_names:
         other: Kyat Burma
         one: Kyat Burma
+    BWP:
+      display_names:
+        other: Pula Botswana
+        one: Pula Botswana
     BYB:
       display_names:
         other: Rubel Baru Belarus (1994–1999)
@@ -594,6 +288,14 @@ number_formats:
       display_names:
         other: Rubel Belarusia (2000–2016)
         one: Rubel Belarusia (2000–2016)
+    BZD:
+      display_names:
+        other: Dolar Belize
+        one: Dolar Belize
+    CAD:
+      display_names:
+        other: Dolar Kanada
+        one: Dolar Kanada
     CDF:
       display_names:
         other: Franc Kongo
@@ -618,14 +320,30 @@ number_formats:
       display_names:
         other: Satuan Hitung (UF) Cile
         one: Satuan Hitung (UF) Cile
+    CLP:
+      display_names:
+        other: Peso Cile
+        one: Peso Cile
     CNH:
       display_names:
         other: Yuan Tiongkok (luar negeri)
         one: Yuan Tiongkok (luar negeri)
+    CNY:
+      display_names:
+        other: Yuan Tiongkok
+        one: Yuan Tiongkok
+    COP:
+      display_names:
+        other: Peso Kolombia
+        one: Peso Kolombia
     COU:
       display_names:
         other: Unit Nilai Nyata Kolombia
         one: Unit Nilai Nyata Kolombia
+    CRC:
+      display_names:
+        other: Colon Kosta Rika
+        one: Colon Kosta Rika
     CSD:
       display_names:
         other: Dinar Serbia (2002–2006)
@@ -634,6 +352,14 @@ number_formats:
       display_names:
         other: Hard Koruna Cheska
         one: Hard Koruna Cheska
+    CUC:
+      display_names:
+        other: Peso Konvertibel Kuba
+        one: Peso Konvertibel Kuba
+    CUP:
+      display_names:
+        other: Peso Kuba
+        one: Peso Kuba
     CVE:
       display_names:
         other: Escudo Tanjung Verde
@@ -642,6 +368,10 @@ number_formats:
       display_names:
         other: Pound Siprus
         one: Pound Siprus
+    CZK:
+      display_names:
+        other: Koruna Ceko
+        one: Koruna Ceko
     DDM:
       display_names:
         other: Mark Jerman Timur
@@ -654,6 +384,14 @@ number_formats:
       display_names:
         other: Franc Jibuti
         one: Franc Jibuti
+    DKK:
+      display_names:
+        other: Krone Denmark
+        one: Krone Denmark
+    DOP:
+      display_names:
+        other: Peso Dominika
+        one: Peso Dominika
     DZD:
       display_names:
         other: Dinar Aljazair
@@ -670,6 +408,10 @@ number_formats:
       display_names:
         other: Kroon Estonia
         one: Kroon Estonia
+    EGP:
+      display_names:
+        other: Pound Mesir
+        one: Pound Mesir
     ERN:
       display_names:
         other: Nakfa Eritrea
@@ -682,30 +424,66 @@ number_formats:
       display_names:
         other: Peseta Spanyol (konvertibel)
         one: Peseta Spanyol (konvertibel)
+    ESP:
+      display_names:
+        other: Peseta Spanyol
+        one: Peseta Spanyol
     ETB:
       display_names:
         other: Birr Etiopia
         one: Birr Etiopia
+    EUR:
+      display_names:
+        other: Euro
+        one: Euro
     FIM:
       display_names:
         other: Markka Finlandia
         one: Markka Finlandia
+    FJD:
+      display_names:
+        other: Dolar Fiji
+        one: Dolar Fiji
+    FKP:
+      display_names:
+        other: Pound Kepulauan Falkland
+        one: Pound Kepulauan Falkland
     FRF:
       display_names:
         other: Franc Prancis
         one: Franc Prancis
+    GBP:
+      display_names:
+        other: Pound Inggris
+        one: Pound Inggris
     GEK:
       display_names:
         other: Kupon Larit Georgia
         one: Kupon Larit Georgia
+    GEL:
+      display_names:
+        other: Lari Georgia
+        one: Lari Georgia
     GHC:
       display_names:
         other: Cedi Ghana (1979–2007)
         one: Cedi Ghana (1979–2007)
+    GHS:
+      display_names:
+        other: Cedi Ghana
+        one: Cedi Ghana
+    GIP:
+      display_names:
+        other: Pound Gibraltar
+        one: Pound Gibraltar
     GMD:
       display_names:
         other: Dalasi Gambia
         one: Dalasi Gambia
+    GNF:
+      display_names:
+        other: Franc Guinea
+        one: Franc Guinea
     GNS:
       display_names:
         other: Syli Guinea
@@ -718,6 +496,10 @@ number_formats:
       display_names:
         other: Drachma Yunani
         one: Drachma Yunani
+    GTQ:
+      display_names:
+        other: Quetzal Guatemala
+        one: Quetzal Guatemala
     GWE:
       display_names:
         other: Escudo Guinea Portugal
@@ -726,14 +508,38 @@ number_formats:
       display_names:
         other: Peso Guinea-Bissau
         one: Peso Guinea-Bissau
+    GYD:
+      display_names:
+        other: Dolar Guyana
+        one: Dolar Guyana
+    HKD:
+      display_names:
+        other: Dolar Hong Kong
+        one: Dolar Hong Kong
+    HNL:
+      display_names:
+        other: Lempira Honduras
+        one: Lempira Honduras
     HRD:
       display_names:
         other: Dinar Kroasia
         one: Dinar Kroasia
+    HRK:
+      display_names:
+        other: Kuna Kroasia
+        one: Kuna Kroasia
     HTG:
       display_names:
         other: Gourde Haiti
         one: Gourde Haiti
+    HUF:
+      display_names:
+        other: Forint Hungaria
+        one: Forint Hungaria
+    IDR:
+      display_names:
+        other: Rupiah Indonesia
+        one: Rupiah Indonesia
     IEP:
       display_names:
         other: Pound Irlandia
@@ -746,6 +552,15 @@ number_formats:
       display_names:
         other: Shekel Israel (1980–1985)
         one: Shekel Israel
+    ILS:
+      display_names:
+        other: Shekel Baru Israel
+        one: Shekel Baru Israel
+    INR:
+      symbol: Rs
+      display_names:
+        other: Rupee India
+        one: Rupee India
     IQD:
       display_names:
         other: Dinar Irak
@@ -758,18 +573,46 @@ number_formats:
       display_names:
         other: Krona Islandia (1918–1981)
         one: Krona Islandia (1918–1981)
+    ISK:
+      display_names:
+        other: Krona Islandia
+        one: Krona Islandia
     ITL:
       display_names:
         other: Lira Italia
         one: Lira Italia
+    JMD:
+      display_names:
+        other: Dolar Jamaika
+        one: Dolar Jamaika
     JOD:
       display_names:
         other: Dinar Yordania
         one: Dinar Yordania
+    JPY:
+      display_names:
+        other: Yen Jepang
+        one: Yen Jepang
     KES:
       display_names:
         other: Shilling Kenya
         one: Shilling Kenya
+    KGS:
+      display_names:
+        other: Som Kirgizstan
+        one: Som Kirgizstan
+    KHR:
+      display_names:
+        other: Riel Kamboja
+        one: Riel Kamboja
+    KMF:
+      display_names:
+        other: Franc Komoro
+        one: Franc Komoro
+    KPW:
+      display_names:
+        other: Won Korea Utara
+        one: Won Korea Utara
     KRH:
       display_names:
         other: Hwan Korea Selatan (1953–1962)
@@ -778,14 +621,46 @@ number_formats:
       display_names:
         other: Won Korea Selatan (1945–1953)
         one: Won Korea Selatan (1945–1953)
+    KRW:
+      display_names:
+        other: Won Korea Selatan
+        one: Won Korea Selatan
     KWD:
       display_names:
         other: Dinar Kuwait
         one: Dinar Kuwait
+    KYD:
+      display_names:
+        other: Dolar Kepulauan Cayman
+        one: Dolar Kepulauan Cayman
+    KZT:
+      display_names:
+        other: Tenge Kazakhstan
+        one: Tenge Kazakhstan
+    LAK:
+      display_names:
+        other: Kip Laos
+        one: Kip Laos
+    LBP:
+      display_names:
+        other: Pound Lebanon
+        one: Pound Lebanon
+    LKR:
+      display_names:
+        other: Rupee Sri Lanka
+        one: Rupee Sri Lanka
+    LRD:
+      display_names:
+        other: Dolar Liberia
+        one: Dolar Liberia
     LSL:
       display_names:
         other: Loti Lesotho
         one: Loti Lesotho
+    LTL:
+      display_names:
+        other: Litas Lituania
+        one: Litas Lituania
     LTT:
       display_names:
         other: Talonas Lituania
@@ -802,6 +677,10 @@ number_formats:
       display_names:
         other: Financial Franc Luksemburg
         one: Financial Franc Luksemburg
+    LVL:
+      display_names:
+        other: Lats Latvia
+        one: Lats Latvia
     LVR:
       display_names:
         other: Rubel Latvia
@@ -830,6 +709,10 @@ number_formats:
       display_names:
         other: Leu Moldova
         one: Leu Moldova
+    MGA:
+      display_names:
+        other: Ariary Madagaskar
+        one: Ariary Madagaskar
     MGF:
       display_names:
         other: Franc Malagasi
@@ -846,6 +729,14 @@ number_formats:
       display_names:
         other: Franc Mali
         one: Franc Mali
+    MMK:
+      display_names:
+        other: Kyat Myanmar
+        one: Kyat Myanmar
+    MNT:
+      display_names:
+        other: Tugrik Mongolia
+        one: Tugrik Mongolia
     MOP:
       display_names:
         other: Pataca Makau
@@ -866,6 +757,10 @@ number_formats:
       display_names:
         other: Pound Malta
         one: Pound Malta
+    MUR:
+      display_names:
+        other: Rupee Mauritius
+        one: Rupee Mauritius
     MVP:
       display_names:
         other: Rufiyaa Maladewa (1947–1981)
@@ -878,6 +773,10 @@ number_formats:
       display_names:
         other: Kwacha Malawi
         one: Kwacha Malawi
+    MXN:
+      display_names:
+        other: Peso Meksiko
+        one: Peso Meksiko
     MXP:
       display_names:
         other: Peso Perak Meksiko
@@ -886,6 +785,10 @@ number_formats:
       display_names:
         other: Unit Investasi Meksiko
         one: Unit Investasi Meksiko
+    MYR:
+      display_names:
+        other: Ringgit Malaysia
+        one: Ringgit Malaysia
     MZE:
       display_names:
         other: Escudo Mozambik
@@ -898,14 +801,38 @@ number_formats:
       display_names:
         other: Metical Mozambik
         one: Metical Mozambik
+    NAD:
+      display_names:
+        other: Dolar Namibia
+        one: Dolar Namibia
+    NGN:
+      display_names:
+        other: Naira Nigeria
+        one: Naira Nigeria
     NIC:
       display_names:
         other: Cordoba Nikaragua (1988–1991)
         one: Cordoba Nikaragua (1988–1991)
+    NIO:
+      display_names:
+        other: Cordoba Nikaragua
+        one: Cordoba Nikaragua
     NLG:
       display_names:
         other: Guilder Belanda
         one: Guilder Belanda
+    NOK:
+      display_names:
+        other: Krone Norwegia
+        one: Krone Norwegia
+    NPR:
+      display_names:
+        other: Rupee Nepal
+        one: Rupee Nepal
+    NZD:
+      display_names:
+        other: Dolar Selandia Baru
+        one: Dolar Selandia Baru
     OMR:
       display_names:
         other: Rial Oman
@@ -930,6 +857,19 @@ number_formats:
       display_names:
         other: Kina Papua Nugini
         one: Kina Papua Nugini
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Peso Filipina
+        one: Peso Filipina
+    PKR:
+      display_names:
+        other: Rupee Pakistan
+        one: Rupee Pakistan
+    PLN:
+      display_names:
+        other: Zloty Polandia
+        one: Zloty Polandia
     PLZ:
       display_names:
         other: Zloty Polandia (1950–1995)
@@ -938,6 +878,10 @@ number_formats:
       display_names:
         other: Escudo Portugal
         one: Escudo Portugal
+    PYG:
+      display_names:
+        other: Guarani Paraguay
+        one: Guarani Paraguay
     QAR:
       display_names:
         other: Rial Qatar
@@ -950,18 +894,34 @@ number_formats:
       display_names:
         other: Leu Rumania (1952–2006)
         one: Leu Rumania (1952–2006)
+    RON:
+      display_names:
+        other: Leu Rumania
+        one: Leu Rumania
     RSD:
       display_names:
         other: Dinar Serbia
         one: Dinar Serbia
+    RUB:
+      display_names:
+        other: Rubel Rusia
+        one: Rubel Rusia
     RUR:
       display_names:
         other: Rubel Rusia (1991–1998)
         one: Rubel Rusia (1991–1998)
+    RWF:
+      display_names:
+        other: Franc Rwanda
+        one: Franc Rwanda
     SAR:
       display_names:
         other: Riyal Arab Saudi
         one: Riyal Arab Saudi
+    SBD:
+      display_names:
+        other: Dolar Kepulauan Solomon
+        one: Dolar Kepulauan Solomon
     SCR:
       display_names:
         other: Rupee Seychelles
@@ -978,6 +938,18 @@ number_formats:
       display_names:
         other: Pound Sudan (1957–1998)
         one: Pound Sudan (1957–1998)
+    SEK:
+      display_names:
+        other: Krona Swedia
+        one: Krona Swedia
+    SGD:
+      display_names:
+        other: Dolar Singapura
+        one: Dolar Singapura
+    SHP:
+      display_names:
+        other: Pound Saint Helena
+        one: Pound Saint Helena
     SIT:
       display_names:
         other: Tolar Slovenia
@@ -998,14 +970,26 @@ number_formats:
       display_names:
         other: Shilling Somalia
         one: Shilling Somalia
+    SRD:
+      display_names:
+        other: Dolar Suriname
+        one: Dolar Suriname
     SRG:
       display_names:
         other: Guilder Suriname
         one: Guilder Suriname
+    SSP:
+      display_names:
+        other: Pound Sudan Selatan
+        one: Pound Sudan Selatan
     STD:
       display_names:
         other: Dobra Sao Tome dan Principe (1977–2017)
         one: Dobra Sao Tome dan Principe (1977–2017)
+    STN:
+      display_names:
+        other: Dobra Sao Tome dan Principe
+        one: Dobra Sao Tome dan Principe
     SUR:
       display_names:
         other: Rubel Soviet
@@ -1014,10 +998,18 @@ number_formats:
       display_names:
         other: Colon El Savador
         one: Colon El Savador
+    SYP:
+      display_names:
+        other: Pound Suriah
+        one: Pound Suriah
     SZL:
       display_names:
         other: Lilangeni Swaziland
         one: Lilangeni Swaziland
+    THB:
+      display_names:
+        other: Baht Thailand
+        one: Baht Thailand
     TJR:
       display_names:
         other: Rubel Tajikistan
@@ -1038,6 +1030,10 @@ number_formats:
       display_names:
         other: Dinar Tunisia
         one: Dinar Tunisia
+    TOP:
+      display_names:
+        other: Paʻanga Tonga
+        one: Paʻanga Tonga
     TPE:
       display_names:
         other: Escudo Timor
@@ -1046,10 +1042,26 @@ number_formats:
       display_names:
         other: Lira Turki (1922–2005)
         one: Lira Turki (1922–2005)
+    TRY:
+      display_names:
+        other: Lira Turki
+        one: Lira Turki
+    TTD:
+      display_names:
+        other: Dolar Trinidad dan Tobago
+        one: Dolar Trinidad dan Tobago
+    TWD:
+      display_names:
+        other: Dolar Baru Taiwan
+        one: Dolar Baru Taiwan
     TZS:
       display_names:
         other: Shilling Tanzania
         one: Shilling Tanzania
+    UAH:
+      display_names:
+        other: Hryvnia Ukraina
+        one: Hryvnia Ukraina
     UAK:
       display_names:
         other: Karbovanet Ukraina
@@ -1062,6 +1074,10 @@ number_formats:
       display_names:
         other: Shilling Uganda
         one: Shilling Uganda
+    USD:
+      display_names:
+        other: Dolar Amerika Serikat
+        one: Dolar Amerika Serikat
     USN:
       display_names:
         other: Dolar AS (Hari berikutnya)
@@ -1078,6 +1094,10 @@ number_formats:
       display_names:
         other: Peso Uruguay (1975–1993)
         one: Peso Uruguay (1975–1993)
+    UYU:
+      display_names:
+        other: Peso Uruguay
+        one: Peso Uruguay
     UZS:
       display_names:
         other: Som Uzbekistan
@@ -1086,10 +1106,18 @@ number_formats:
       display_names:
         other: Bolivar Venezuela (1871–2008)
         one: Bolivar Venezuela (1871–2008)
+    VEF:
+      display_names:
+        other: Bolivar Venezuela (2008–2018)
+        one: Bolivar Venezuela (2008–2018)
     VES:
       display_names:
         other: Bolivar Venezuela
         one: Bolivar Venezuela
+    VND:
+      display_names:
+        other: Dong Vietnam
+        one: Dong Vietnam
     VNN:
       display_names:
         other: Dong Vietnam (1978–1985)
@@ -1102,6 +1130,10 @@ number_formats:
       display_names:
         other: Tala Samoa
         one: Tala Samoa
+    XAF:
+      display_names:
+        other: Franc CFA Afrika Tengah
+        one: Franc CFA Afrika Tengah
     XAG:
       display_names:
         other: Silver
@@ -1126,6 +1158,10 @@ number_formats:
       display_names:
         other: Satuan Hitung Eropa (XBD)
         one: Satuan Hitung Eropa (XBD)
+    XCD:
+      display_names:
+        other: Dolar Karibia Timur
+        one: Dolar Karibia Timur
     XDR:
       display_names:
         other: Hak Khusus Menggambar
@@ -1142,10 +1178,18 @@ number_formats:
       display_names:
         other: Franc UIC Perancis
         one: Franc UIC Perancis
+    XOF:
+      display_names:
+        other: Franc CFA Afrika Barat
+        one: Franc CFA Afrika Barat
     XPD:
       display_names:
         other: Palladium
         one: Palladium
+    XPF:
+      display_names:
+        other: Franc CFP
+        one: Franc CFP
     XPT:
       display_names:
         other: Platinum
@@ -1158,6 +1202,11 @@ number_formats:
       display_names:
         other: Kode Mata Uang Pengujian
         one: Kode Mata Uang Pengujian
+    XXX:
+      symbol: XXX
+      display_names:
+        other: "(mata uang tidak dikenal)"
+        one: Mata Uang Tidak Dikenal
     YDD:
       display_names:
         other: Dinar Yaman
@@ -1186,10 +1235,18 @@ number_formats:
       display_names:
         other: Rand Afrika Selatan (Keuangan)
         one: Rand Afrika Selatan (Keuangan)
+    ZAR:
+      display_names:
+        other: Rand Afrika Selatan
+        one: Rand Afrika Selatan
     ZMK:
       display_names:
         other: Kwacha Zambia (1968–2012)
         one: Kwacha Zambia (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwacha Zambia
+        one: Kwacha Zambia
     ZRN:
       display_names:
         other: Zaire Baru Zaire (1993–1998)
@@ -1210,3 +1267,1105 @@ number_formats:
       display_names:
         other: Dolar Zimbabwe (2008)
         one: Dolar Zimbabwe (2008)
+  units:
+    g-force:
+      long:
+        other: "{0} g-force"
+    meter-per-square-second:
+      long:
+        display_name: meter per detik persegi
+        other: "{0} meter per detik persegi"
+      short:
+        display_name: meter/dtk²
+        other: "{0} m/dtk²"
+      narrow:
+        display_name: m/d²
+        other: "{0} m/d²"
+    revolution:
+      long:
+        display_name: revolusi
+        other: "{0} revolusi"
+    radian:
+      long:
+        other: "{0} radian"
+      short:
+        display_name: radian
+      narrow:
+        display_name: rad
+    degree:
+      long:
+        other: "{0} derajat"
+      short:
+        display_name: derajat
+    arc-minute:
+      long:
+        display_name: menit busur
+        other: "{0} menit busur"
+      short:
+        display_name: mnt busur
+        other: "{0} mnt busur"
+      narrow:
+        other: "{0}′"
+    arc-second:
+      long:
+        display_name: detik busur
+        other: "{0} detik busur"
+      short:
+        display_name: dtk busur
+        other: "{0} dtk busur"
+      narrow:
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: kilometer persegi
+        other: "{0} kilometer persegi"
+        per_unit_pattern: "{0} per kilometer persegi"
+    hectare:
+      long:
+        other: "{0} hektare"
+      short:
+        display_name: hektare
+    square-meter:
+      long:
+        display_name: meter persegi
+        other: "{0} meter persegi"
+        per_unit_pattern: "{0} per meter persegi"
+      short:
+        display_name: meter²
+    square-centimeter:
+      long:
+        display_name: sentimeter persegi
+        other: "{0} sentimeter persegi"
+        per_unit_pattern: "{0} per sentimeter persegi"
+    square-mile:
+      long:
+        other: "{0} mil persegi"
+        per_unit_pattern: "{0} per mil persegi"
+      short:
+        display_name: mil persegi
+      narrow:
+        display_name: mi²
+    acre:
+      long:
+        other: "{0} ekar"
+      short:
+        display_name: ekar
+    square-yard:
+      long:
+        display_name: yard persegi
+        other: "{0} yard persegi"
+      short:
+        display_name: yard²
+      narrow:
+        display_name: yd²
+    square-foot:
+      long:
+        other: "{0} kaki persegi"
+      short:
+        display_name: kaki persegi
+      narrow:
+        display_name: ft²
+    square-inch:
+      long:
+        display_name: inci persegi
+        other: "{0} inci persegi"
+        per_unit_pattern: "{0} per inci persegi"
+      short:
+        display_name: inci²
+      narrow:
+        display_name: in²
+    karat:
+      long:
+        other: "{0} karat"
+      short:
+        display_name: karat
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: milligram per desiliter
+        other: "{0} milligram per desiliter"
+    millimole-per-liter:
+      long:
+        display_name: millimol per liter
+        other: "{0} millimol per liter"
+      short:
+        display_name: millimol/liter
+      narrow:
+        display_name: mmol/L
+    permillion:
+      long:
+        display_name: bagian per juta
+        other: "{0} bagian per juta"
+      short:
+        display_name: bagian/juta
+      narrow:
+        display_name: ppm
+    percent:
+      long:
+        other: "{0} persen"
+      short:
+        display_name: persen
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        other: "{0} permil"
+      short:
+        display_name: permil
+      narrow:
+        display_name: "‰"
+    permyriad:
+      long:
+        other: "{0} permyriad"
+      short:
+        display_name: permyriad
+      narrow:
+        display_name: "‱"
+    liter-per-kilometer:
+      long:
+        display_name: liter per kilometer
+        other: "{0} liter per kilometer"
+      short:
+        display_name: liter/km
+      narrow:
+        display_name: L/km
+    liter-per-100-kilometer:
+      long:
+        display_name: liter per 100 kilometer
+        other: "{0} liter per 100 kilometer"
+      short:
+        display_name: L/100 km
+        other: "{0} L/100 km"
+    mile-per-gallon:
+      long:
+        display_name: mil per galon
+        other: "{0} mil per galon"
+      short:
+        display_name: mil/gal
+        other: "{0} mpg"
+      narrow:
+        display_name: mpg
+    mile-per-gallon-imperial:
+      long:
+        display_name: mil per galon Imp.
+        other: "{0} mil per galon Imp."
+      short:
+        display_name: mil/gal Imp.
+      narrow:
+        display_name: mpg UK
+        other: "{0} m/gUK"
+    petabyte:
+      long:
+        display_name: petabyte
+        other: "{0} petabyte"
+      short:
+        display_name: PByte
+      narrow:
+        display_name: PB
+    terabyte:
+      long:
+        display_name: terabyte
+        other: "{0} terabyte"
+      short:
+        display_name: TByte
+      narrow:
+        display_name: TB
+    terabit:
+      long:
+        display_name: terabit
+        other: "{0} terabit"
+      short:
+        display_name: Tbit
+      narrow:
+        display_name: Tb
+    gigabyte:
+      long:
+        display_name: gigabyte
+        other: "{0} gigabyte"
+      short:
+        display_name: GByte
+      narrow:
+        display_name: GB
+    gigabit:
+      long:
+        display_name: gigabit
+        other: "{0} gigabit"
+      short:
+        display_name: Gbit
+      narrow:
+        display_name: Gb
+    megabyte:
+      long:
+        display_name: megabyte
+        other: "{0} megabyte"
+      short:
+        display_name: MByte
+      narrow:
+        display_name: MB
+    megabit:
+      long:
+        display_name: megabit
+        other: "{0} megabit"
+      short:
+        display_name: Mbit
+      narrow:
+        display_name: Mb
+    kilobyte:
+      long:
+        display_name: kilobyte
+        other: "{0} kilobyte"
+      short:
+        display_name: kByte
+      narrow:
+        display_name: kB
+    kilobit:
+      long:
+        display_name: kilobit
+        other: "{0} kilobit"
+      short:
+        display_name: kbit
+      narrow:
+        display_name: kb
+    decade:
+      long:
+        display_name: dekade
+        other: "{0} dekade"
+      short:
+        display_name: dek
+        other: "{0} dek"
+    year:
+      long:
+        other: "{0} tahun"
+        per_unit_pattern: "{0} per tahun"
+      short:
+        display_name: tahun
+        other: "{0} thn"
+        per_unit_pattern: "{0}/thn"
+      narrow:
+        display_name: thn
+    quarter:
+      long:
+        display_name: kuartal
+        other: "{0} kuartal"
+      short:
+        display_name: krt
+        other: "{0} krt"
+        per_unit_pattern: "{0}/k"
+      narrow:
+        other: "{0}k"
+    month:
+      long:
+        other: "{0} bulan"
+        per_unit_pattern: "{0} per bulan"
+      short:
+        display_name: bulan
+        other: "{0} bln"
+        per_unit_pattern: "{0}/bln"
+    week:
+      long:
+        other: "{0} minggu"
+        per_unit_pattern: "{0} per minggu"
+      short:
+        display_name: minggu
+        other: "{0} mgg"
+        per_unit_pattern: "{0}/mgg"
+      narrow:
+        display_name: mgg
+    day:
+      long:
+        other: "{0} hari"
+        per_unit_pattern: "{0} per hari"
+      short:
+        display_name: hari
+        other: "{0} hr"
+        per_unit_pattern: "{0}/hr"
+    hour:
+      long:
+        other: "{0} jam"
+        per_unit_pattern: "{0} per jam"
+      short:
+        display_name: jam
+        other: "{0} j"
+        per_unit_pattern: "{0}/j"
+    minute:
+      long:
+        display_name: menit
+        other: "{0} menit"
+        per_unit_pattern: "{0} per menit"
+      short:
+        display_name: mnt
+        other: "{0} mnt"
+        per_unit_pattern: "{0}/mnt"
+    second:
+      long:
+        display_name: detik
+        other: "{0} detik"
+        per_unit_pattern: "{0} per detik"
+      short:
+        display_name: dtk
+        other: "{0} dtk"
+        per_unit_pattern: "{0}/dtk"
+    millisecond:
+      long:
+        display_name: milidetik
+        other: "{0} milidetik"
+      short:
+        display_name: milidtk
+        other: "{0} md"
+    microsecond:
+      long:
+        display_name: mikrodetik
+        other: "{0} mikrodetik"
+      short:
+        display_name: μdtk
+        other: "{0} μd"
+    nanosecond:
+      long:
+        display_name: nanodetik
+        other: "{0} nanodetik"
+      short:
+        display_name: nanodtk
+        other: "{0} ndtk"
+    ampere:
+      long:
+        display_name: ampere
+        other: "{0} ampere"
+    milliampere:
+      long:
+        display_name: miliampere
+        other: "{0} miliampere"
+      short:
+        display_name: miliamp
+      narrow:
+        display_name: mA
+    ohm:
+      long:
+        other: "{0} ohm"
+    volt:
+      long:
+        other: "{0} volt"
+    kilocalorie:
+      long:
+        display_name: kilokalori
+        other: "{0} kilokalori"
+      short:
+        display_name: kkal
+        other: "{0} kkal"
+    calorie:
+      long:
+        display_name: kalori
+        other: "{0} kalori"
+      short:
+        display_name: kal
+        other: "{0} kal"
+    foodcalorie:
+      long:
+        display_name: Kalori
+        other: "{0} Kalori"
+      short:
+        display_name: Kal
+        other: "{0} Kal"
+    kilojoule:
+      long:
+        other: "{0} kilojoule"
+      short:
+        display_name: kilojoule
+      narrow:
+        display_name: kJ
+    joule:
+      long:
+        other: "{0} joule"
+    kilowatt-hour:
+      long:
+        display_name: kilowatt-jam
+        other: "{0} kilowatt-jam"
+      short:
+        display_name: kW-jam
+      narrow:
+        display_name: kWh
+    electronvolt:
+      long:
+        other: "{0} elektronvolt"
+      short:
+        display_name: elektronvolt
+      narrow:
+        display_name: eV
+    british-thermal-unit:
+      long:
+        display_name: satuan panas Britania
+        other: "{0} satuan panas Britania"
+      short:
+        display_name: BTU
+    pound-force:
+      long:
+        other: "{0} pound gaya"
+      short:
+        display_name: pound gaya
+      narrow:
+        display_name: lbf
+    newton:
+      long:
+        other: "{0} newton"
+      short:
+        display_name: newton
+      narrow:
+        display_name: "N"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: kilowatt-jam per 100 kilometer
+        other: "{0} kilowatt-jam per 100 kilometer"
+    gigahertz:
+      long:
+        display_name: gigahertz
+        other: "{0} gigahertz"
+    megahertz:
+      long:
+        display_name: megahertz
+        other: "{0} megahertz"
+    kilohertz:
+      long:
+        display_name: kilohertz
+        other: "{0} kilohertz"
+    hertz:
+      long:
+        display_name: hertz
+        other: "{0} hertz"
+    em:
+      long:
+        display_name: em tipografis
+    pixel:
+      long:
+        other: "{0} piksel"
+      short:
+        display_name: piksel
+      narrow:
+        display_name: px
+    megapixel:
+      long:
+        other: "{0} megapiksel"
+      short:
+        display_name: megapiksel
+      narrow:
+        display_name: MP
+    pixel-per-centimeter:
+      long:
+        display_name: piksel per sentimeter
+        other: "{0} piksel per sentimeter"
+    pixel-per-inch:
+      long:
+        display_name: piksel per inci
+        other: "{0} piksel per inci"
+    dot-per-centimeter:
+      long:
+        display_name: dot per sentimeter
+        other: "{0} dot per sentimeter"
+      short:
+        display_name: dpcm
+        other: "{0} dpcm"
+    dot-per-inch:
+      long:
+        display_name: dot per inci
+        other: "{0} dot per inci"
+      short:
+        display_name: dpi
+        other: "{0} dpi"
+    earth-radius:
+      long:
+        display_name: jari-jari Bumi
+        other: "{0} jari-jari Bumi"
+    kilometer:
+      long:
+        display_name: kilometer
+        other: "{0} kilometer"
+        per_unit_pattern: "{0} per kilometer"
+    meter:
+      long:
+        other: "{0} meter"
+        per_unit_pattern: "{0} per meter"
+    decimeter:
+      long:
+        display_name: desimeter
+        other: "{0} desimeter"
+    centimeter:
+      long:
+        display_name: sentimeter
+        other: "{0} sentimeter"
+        per_unit_pattern: "{0} per sentimeter"
+    millimeter:
+      long:
+        display_name: milimeter
+        other: "{0} milimeter"
+    micrometer:
+      long:
+        display_name: mikrometer
+        other: "{0} mikrometer"
+      short:
+        display_name: μmeter
+    nanometer:
+      long:
+        display_name: nanometer
+        other: "{0} nanometer"
+    picometer:
+      long:
+        display_name: pikometer
+        other: "{0} pikometer"
+    mile:
+      long:
+        other: "{0} mil"
+      short:
+        display_name: mil
+      narrow:
+        display_name: mi
+    yard:
+      long:
+        other: "{0} yard"
+      short:
+        display_name: yard
+      narrow:
+        display_name: yd
+    foot:
+      long:
+        other: "{0} kaki"
+        per_unit_pattern: "{0} per kaki"
+      short:
+        display_name: kaki
+      narrow:
+        display_name: ft
+        other: "{0}′"
+    inch:
+      long:
+        other: "{0} inci"
+        per_unit_pattern: "{0} per inci"
+      short:
+        display_name: inci
+      narrow:
+        display_name: in
+        other: "{0}″"
+    parsec:
+      long:
+        other: "{0} parsec"
+      short:
+        display_name: parsec
+    light-year:
+      long:
+        display_name: tahun cahaya
+        other: "{0} tahun cahaya"
+      short:
+        display_name: thn cahaya
+        other: "{0} tc"
+      narrow:
+        display_name: tc
+    astronomical-unit:
+      long:
+        display_name: satuan astronomi
+        other: "{0} satuan astronomi"
+      short:
+        display_name: sa
+        other: "{0} sa"
+    furlong:
+      long:
+        other: "{0} furlong"
+      short:
+        display_name: furlong
+    fathom:
+      long:
+        display_name: depa
+        other: "{0} depa"
+      short:
+        display_name: dp
+        other: "{0} dp"
+      narrow:
+        display_name: depa
+    nautical-mile:
+      long:
+        display_name: mil laut
+        other: "{0} mil laut"
+    mile-scandinavian:
+      long:
+        display_name: mil skandinavia
+        other: "{0} mil skandinavia"
+    point:
+      long:
+        other: "{0} poin"
+      short:
+        display_name: poin
+        other: "{0} p"
+      narrow:
+        display_name: p
+    solar-radius:
+      long:
+        other: "{0} radius Matahari"
+      short:
+        display_name: radius Matahari
+      narrow:
+        display_name: R☉
+    lux:
+      long:
+        other: "{0} lux"
+      short:
+        display_name: lux
+    candela:
+      long:
+        display_name: candela
+        other: "{0} candela"
+    lumen:
+      long:
+        display_name: lumen
+        other: "{0} lumen"
+    solar-luminosity:
+      long:
+        other: "{0} luminositas matahari"
+      short:
+        display_name: luminositas matahari
+      narrow:
+        display_name: L☉
+    tonne:
+      long:
+        display_name: metrik ton
+        other: "{0} metrik ton"
+    kilogram:
+      long:
+        display_name: kilogram
+        other: "{0} kilogram"
+        per_unit_pattern: "{0} per kilogram"
+    gram:
+      long:
+        other: "{0} gram"
+        per_unit_pattern: "{0} per gram"
+    milligram:
+      long:
+        display_name: miligram
+        other: "{0} miligram"
+    microgram:
+      long:
+        display_name: mikrogram
+        other: "{0} mikrogram"
+    ton:
+      long:
+        display_name: ton Amerika Serikat
+        other: "{0} ton Amerika Serikat"
+      short:
+        display_name: ton AS
+        other: "{0} tn AS"
+      narrow:
+        display_name: ton
+    stone:
+      long:
+        other: "{0} stone"
+      short:
+        display_name: stone
+    pound:
+      long:
+        other: "{0} pound"
+        per_unit_pattern: "{0} per pound"
+      short:
+        display_name: pound
+      narrow:
+        display_name: lb
+        other: "{0}#"
+    ounce:
+      long:
+        display_name: ounce
+        other: "{0} ounce"
+        per_unit_pattern: "{0} per ounce"
+    ounce-troy:
+      long:
+        display_name: troy ons
+        other: "{0} troy ons"
+      short:
+        display_name: oz troy
+      narrow:
+        display_name: oz t
+    carat:
+      long:
+        other: "{0} karat"
+      short:
+        display_name: karat
+    dalton:
+      long:
+        other: "{0} dalton"
+      short:
+        display_name: dalton
+      narrow:
+        display_name: Da
+    earth-mass:
+      long:
+        other: "{0} massa Bumi"
+      short:
+        display_name: massa Bumi
+      narrow:
+        display_name: M⊕
+    solar-mass:
+      long:
+        other: "{0} massa Matahari"
+      short:
+        display_name: massa Matahari
+      narrow:
+        display_name: M☉
+    gigawatt:
+      long:
+        display_name: gigawatt
+        other: "{0} gigawatt"
+    megawatt:
+      long:
+        display_name: megawatt
+        other: "{0} megawatt"
+    kilowatt:
+      long:
+        display_name: kilowatt
+        other: "{0} kilowatt"
+    watt:
+      long:
+        other: "{0} watt"
+    milliwatt:
+      long:
+        display_name: miliwatt
+        other: "{0} miliwatt"
+    horsepower:
+      long:
+        display_name: daya kuda
+        other: "{0} daya kuda"
+    millimeter-ofhg:
+      long:
+        display_name: milimeter raksa
+        other: "{0} milimeter raksa"
+      short:
+        display_name: mmHg
+        other: "{0} mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: pound per inci persegi
+        other: "{0} pound per inci persegi"
+    inch-ofhg:
+      long:
+        display_name: inci raksa
+        other: "{0} inci raksa"
+      short:
+        display_name: in Hg
+      narrow:
+        display_name: "″ Hg"
+        other: "{0}″ Hg"
+    millibar:
+      long:
+        display_name: milibar
+        other: "{0} milibar"
+      narrow:
+        other: "{0} mb"
+    atmosphere:
+      long:
+        display_name: atmosfer
+        other: "{0} atmosfer"
+    pascal:
+      long:
+        display_name: pascal
+        other: "{0} pascal"
+    hectopascal:
+      long:
+        display_name: hektopascal
+        other: "{0} hektopascal"
+    kilopascal:
+      long:
+        display_name: kilopascal
+        other: "{0} kilopascal"
+    megapascal:
+      long:
+        display_name: megapascal
+        other: "{0} megapascal"
+    kilometer-per-hour:
+      long:
+        display_name: kilometer per jam
+        other: "{0} kilometer per jam"
+      short:
+        display_name: km/jam
+        other: "{0} km/j"
+      narrow:
+        other: "{0}km/j"
+    meter-per-second:
+      long:
+        display_name: meter per detik
+        other: "{0} meter per detik"
+      short:
+        display_name: meter/dtk
+        other: "{0} m/dtk"
+      narrow:
+        display_name: m/dtk
+    mile-per-hour:
+      long:
+        display_name: mil per jam
+        other: "{0} mil per jam"
+      short:
+        other: "{0} mpj"
+      narrow:
+        display_name: mi/j
+    knot:
+      long:
+        display_name: knot
+        other: "{0} knot"
+    beaufort:
+      long:
+        display_name: Beaufort
+        other: Beaufort {0}
+    celsius:
+      long:
+        display_name: derajat Celsius
+        other: "{0} derajat Celsius"
+    fahrenheit:
+      long:
+        display_name: derajat Fahrenheit
+        other: "{0} derajat Fahrenheit"
+      narrow:
+        other: "{0}°"
+    kelvin:
+      long:
+        display_name: kelvin
+        other: "{0} kelvin"
+    pound-force-foot:
+      long:
+        display_name: pound kaki
+        other: "{0} pound kaki"
+    newton-meter:
+      long:
+        display_name: newton meter
+        other: "{0} newton meter"
+    cubic-kilometer:
+      long:
+        display_name: kilometer kubik
+        other: "{0} kilometer kubik"
+    cubic-meter:
+      long:
+        display_name: meter kubik
+        other: "{0} meter kubik"
+        per_unit_pattern: "{0} per meter kubik"
+    cubic-centimeter:
+      long:
+        display_name: sentimeter kubik
+        other: "{0} sentimeter kubik"
+        per_unit_pattern: "{0} per sentimeter kubik"
+    cubic-mile:
+      long:
+        display_name: mil kubik
+        other: "{0} mil kubik"
+    cubic-yard:
+      long:
+        display_name: yard kubik
+        other: "{0} yard kubik"
+      short:
+        display_name: yard³
+      narrow:
+        display_name: yd³
+    cubic-foot:
+      long:
+        display_name: kaki kubik
+        other: "{0} kaki kubik"
+    cubic-inch:
+      long:
+        display_name: inci kubik
+        other: "{0} inci kubik"
+      short:
+        display_name: inci³
+      narrow:
+        display_name: in³
+    megaliter:
+      long:
+        display_name: megaliter
+        other: "{0} megaliter"
+    hectoliter:
+      long:
+        display_name: hektoliter
+        other: "{0} hektoliter"
+    liter:
+      long:
+        other: "{0} liter"
+        per_unit_pattern: "{0} per liter"
+      short:
+        other: "{0} L"
+        per_unit_pattern: "{0}/L"
+    deciliter:
+      long:
+        display_name: desiliter
+        other: "{0} desiliter"
+    centiliter:
+      long:
+        display_name: sentiliter
+        other: "{0} sentiliter"
+    milliliter:
+      long:
+        display_name: mililiter
+        other: "{0} mililiter"
+    pint-metric:
+      long:
+        display_name: metric pint
+        other: "{0} metric pint"
+      narrow:
+        display_name: pt
+    cup-metric:
+      long:
+        display_name: metric cup
+        other: "{0} metric cup"
+    acre-foot:
+      long:
+        display_name: ekar kaki
+        other: "{0} ekar kaki"
+    bushel:
+      long:
+        other: "{0} gantang"
+      short:
+        display_name: gantang
+    gallon:
+      long:
+        display_name: galon
+        other: "{0} galon"
+        per_unit_pattern: "{0} per galon"
+      short:
+        display_name: gal
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        display_name: galon Imp.
+        other: "{0} galon Imp."
+        per_unit_pattern: "{0} per galon Imp."
+      short:
+        display_name: gal Imp.
+      narrow:
+        other: "{0} galIm"
+        per_unit_pattern: "{0}/galIm"
+    quart:
+      long:
+        display_name: quart
+        other: "{0} quart"
+    pint:
+      long:
+        other: "{0} pint"
+      short:
+        display_name: pint
+      narrow:
+        display_name: pt
+    cup:
+      long:
+        other: "{0} cup"
+    fluid-ounce:
+      long:
+        display_name: fluid ounce
+        other: "{0} fluid ounce"
+      short:
+        display_name: fl oz
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: Imp. fluid ounce
+        other: "{0} Imp. fluid ounce"
+    tablespoon:
+      long:
+        display_name: sendok makan
+        other: "{0} sendok makan"
+      short:
+        display_name: sdm
+        other: "{0} sdm"
+    teaspoon:
+      long:
+        display_name: sendok teh
+        other: "{0} sendok teh"
+      short:
+        display_name: sdt
+        other: "{0} sdt"
+    barrel:
+      long:
+        other: "{0} barrel"
+      short:
+        display_name: barrel
+      narrow:
+        display_name: bbl
+    dessert-spoon:
+      long:
+        display_name: sendok dessert
+        other: "{0} sendok dessert"
+      narrow:
+        display_name: dsp
+        other: "{0} dsp"
+    dessert-spoon-imperial:
+      long:
+        display_name: sendok dessert Imp.
+        other: "{0} sendok dessert Imp."
+      narrow:
+        display_name: dsp Imp
+        other: "{0} dsp-Imp"
+    dram:
+      long:
+        display_name: dram
+        other: "{0} dram"
+      short:
+        display_name: dram cairan
+      narrow:
+        display_name: fl.dr.
+        other: "{0} fl.dr."
+    jigger:
+      long:
+        display_name: jigger
+      short:
+        display_name: sloki
+        other: "{0} sloki"
+    quart-imperial:
+      long:
+        display_name: quart Imp.
+        other: "{0} quart Imp."
+      short:
+        display_name: qt Imp.
+      narrow:
+        display_name: qt Imp
+    light-speed:
+      long:
+        display_name: cahaya
+        other: "{0} cahaya"
+      short:
+        display_name: cahaya
+        other: "{0} cahaya"
+      narrow:
+        display_name: cahaya
+        other: "{0} cahaya"
+    portion-per-1e9:
+      long:
+        display_name: bagian per miliar
+        other: "{0} bagian per miliar"
+      short:
+        display_name: bagian/miliar
+    night:
+      long:
+        display_name: malam
+        other: "{0} malam"
+        per_unit_pattern: "{0} per malam"
+      short:
+        display_name: malam
+        other: "{0} malam"
+        per_unit_pattern: "{0}/malam"
+      narrow:
+        display_name: malam
+        other: "{0} malam"
+        per_unit_pattern: "{0}/malam"
+    century:
+      short:
+        display_name: abad
+        other: "{0} abad"
+    therm-us:
+      short:
+        display_name: therm AS
+        other: "{0} therm AS"
+    dot:
+      short:
+        display_name: dot
+        other: "{0} dot"
+    drop:
+      short:
+        display_name: tetes
+        other: "{0} tetes"
+    pinch:
+      short:
+        display_name: jumput
+        other: "{0} jumput"
+    byte:
+      narrow:
+        display_name: B
+        other: "{0} B"
+    grain:
+      narrow:
+        display_name: gr
+        other: "{0} gr"

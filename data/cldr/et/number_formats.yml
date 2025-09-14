@@ -1,6 +1,6 @@
 ---
 locale: et
-generated_at: '2025-09-13T17:36:45Z'
+generated_at: '2025-09-14T06:09:39Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -8,434 +8,91 @@ number_formats:
     group: " "
     minus_sign: "−"
     exponential: "×10^"
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
     accounting: "#,##0.00 ¤;(#,##0.00 ¤)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 tuh
+        other: 0 tuh
+      '10000':
+        one: 00 tuh
+        other: 00 tuh
+      '100000':
+        one: 000 tuh
+        other: 000 tuh
+      '1000000':
+        one: 0 mln
+        other: 0 mln
+      '10000000':
+        one: 00 mln
+        other: 00 mln
+      '100000000':
+        one: 000 mln
+        other: 000 mln
+      '1000000000':
+        one: 0 mld
+        other: 0 mld
+      '10000000000':
+        one: 00 mld
+        other: 00 mld
+      '100000000000':
+        one: 000 mld
+        other: 000 mld
+      '1000000000000':
+        one: 0 trln
+        other: 0 trln
+      '10000000000000':
+        one: 00 trln
+        other: 00 trln
+      '100000000000000':
+        one: 000 trln
+        other: 000 trln
+    long:
+      '1000':
+        one: 0 tuhat
+        other: 0 tuhat
+      '10000':
+        one: 00 tuhat
+        other: 00 tuhat
+      '100000':
+        one: 000 tuhat
+        other: 000 tuhat
+      '1000000':
+        one: 0 miljon
+        other: 0 miljonit
+      '10000000':
+        one: 00 miljonit
+        other: 00 miljonit
+      '100000000':
+        one: 000 miljonit
+        other: 000 miljonit
+      '1000000000':
+        one: 0 miljard
+        other: 0 miljardit
+      '10000000000':
+        one: 00 miljardit
+        other: 00 miljardit
+      '100000000000':
+        one: 000 miljardit
+        other: 000 miljardit
+      '1000000000000':
+        one: 0 triljon
+        other: 0 triljonit
+      '10000000000000':
+        one: 00 triljonit
+        other: 00 triljonit
+      '100000000000000':
+        one: 000 triljonit
+        other: 000 triljonit
   currencies:
-    AFN:
-      display_names:
-        other: Afganistani afgaanit
-        one: Afganistani afgaani
-    AMD:
-      display_names:
-        other: Armeenia drammi
-        one: Armeenia dramm
-    AOA:
-      display_names:
-        other: Angola kvanzat
-        one: Angola kvanza
-    ARS:
-      display_names:
-        other: Argentina peesot
-        one: Argentina peeso
-    AUD:
-      symbol: AU$
-      display_names:
-        other: Austraalia dollarit
-        one: Austraalia dollar
-    AZN:
-      display_names:
-        other: Aserbaidžaani manatit
-        one: Aserbaidžaani manat
-    BAM:
-      display_names:
-        other: Bosnia ja Hertsegoviina konverteeritavat marka
-        one: Bosnia ja Hertsegoviina konverteeritav mark
-    BBD:
-      display_names:
-        other: Barbadose dollarit
-        one: Barbadose dollar
-    BDT:
-      display_names:
-        other: Bangladeshi takat
-        one: Bangladeshi taka
-    BMD:
-      display_names:
-        other: Bermuda dollarit
-        one: Bermuda dollar
-    BND:
-      display_names:
-        other: Brunei dollarit
-        one: Brunei dollar
-    BOB:
-      display_names:
-        other: Boliivia boliviaanot
-        one: Boliivia boliviaano
-    BRL:
-      display_names:
-        other: Brasiilia reaali
-        one: Brasiilia reaal
-    BSD:
-      display_names:
-        other: Bahama dollarit
-        one: Bahama dollar
-    BWP:
-      display_names:
-        other: Botswana pulat
-        one: Botswana pula
-    BZD:
-      display_names:
-        other: Belize’i dollarit
-        one: Belize’i dollar
-    CAD:
-      display_names:
-        other: Kanada dollarit
-        one: Kanada dollar
-    CLP:
-      display_names:
-        other: Tšiili peesot
-        one: Tšiili peeso
-    CNY:
-      display_names:
-        other: Hiina jüaani
-        one: Hiina jüaan
-    COP:
-      display_names:
-        other: Colombia peesot
-        one: Colombia peeso
-    CRC:
-      display_names:
-        other: Costa Rica kolooni
-        one: Costa Rica koloon
-    CUC:
-      display_names:
-        other: Kuuba konverteeritavat peesot
-        one: Kuuba konverteeritav peeso
-    CUP:
-      display_names:
-        other: Kuuba peesot
-        one: Kuuba peeso
-    CZK:
-      display_names:
-        other: Tšehhi krooni
-        one: Tšehhi kroon
-    DKK:
-      display_names:
-        other: Taani krooni
-        one: Taani kroon
-    DOP:
-      display_names:
-        other: Dominikaani peesot
-        one: Dominikaani peeso
-    EGP:
-      display_names:
-        other: Egiptuse naela
-        one: Egiptuse nael
-    ESP:
-      display_names:
-        other: Hispaania peseetat
-        one: Hispaania peseeta
-    EUR:
-      display_names:
-        other: eurot
-        one: euro
-    FJD:
-      display_names:
-        other: Fidži dollarit
-        one: Fidži dollar
-    FKP:
-      display_names:
-        other: Falklandi saarte naela
-        one: Falklandi saarte nael
-    GBP:
-      display_names:
-        other: Suurbritannia naelsterlingit
-        one: Suurbritannia naelsterling
-    GEL:
-      display_names:
-        other: Gruusia lari
-        one: Gruusia lari
-    GHS:
-      display_names:
-        other: Ghana sedit
-        one: Ghana sedi
-    GIP:
-      display_names:
-        other: Gibraltari naela
-        one: Gibraltari nael
-    GNF:
-      display_names:
-        other: Guinea franki
-        one: Guinea frank
-    GTQ:
-      display_names:
-        other: Guatemala ketsaali
-        one: Guatemala ketsaal
-    GYD:
-      display_names:
-        other: Guyana dollarit
-        one: Guyana dollar
-    HKD:
-      display_names:
-        other: Hongkongi dollarit
-        one: Hongkongi dollar
-    HNL:
-      display_names:
-        other: Hondurase lempiirat
-        one: Hondurase lempiira
-    HRK:
-      display_names:
-        other: Horvaatia kuna
-        one: Horvaatia kuna
-    HUF:
-      display_names:
-        other: Ungari forintit
-        one: Ungari forint
-    IDR:
-      display_names:
-        other: Indoneesia ruupiat
-        one: Indoneesia ruupia
-    ILS:
-      display_names:
-        other: Iisraeli uut seeklit
-        one: Iisraeli uus seekel
-    INR:
-      display_names:
-        other: India ruupiat
-        one: India ruupia
-    ISK:
-      display_names:
-        other: Islandi krooni
-        one: Islandi kroon
-    JMD:
-      display_names:
-        other: Jamaica dollarit
-        one: Jamaica dollar
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: Jaapani jeeni
-        one: Jaapani jeen
-    KGS:
-      display_names:
-        other: Kõrgõzstani sommi
-        one: Kõrgõzstani somm
-    KHR:
-      display_names:
-        other: Kambodža riaali
-        one: Kambodža riaal
-    KMF:
-      display_names:
-        other: Komoori franki
-        one: Komoori frank
-    KPW:
-      display_names:
-        other: Põhja-Korea vonni
-        one: Põhja-Korea vonn
-    KRW:
-      display_names:
-        other: Lõuna-Korea vonni
-        one: Lõuna-Korea vonn
-    KYD:
-      display_names:
-        other: Kaimanisaarte dollarit
-        one: Kaimanisaarte dollar
-    KZT:
-      display_names:
-        other: Kasahstani tenget
-        one: Kasahstani tenge
-    LAK:
-      display_names:
-        other: Laose kiipi
-        one: Laose kiip
-    LBP:
-      display_names:
-        other: Liibanoni naela
-        one: Liibanoni nael
-    LKR:
-      display_names:
-        other: Sri Lanka ruupiat
-        one: Sri Lanka ruupia
-    LRD:
-      display_names:
-        other: Libeeria dollarit
-        one: Libeeria dollar
-    LTL:
-      display_names:
-        other: Leedu litti
-        one: Leedu litt
-    LVL:
-      display_names:
-        other: Läti latti
-        one: Läti latt
-    MGA:
-      display_names:
-        other: Madagaskari ariarit
-        one: Madagaskari ariari
-    MMK:
-      display_names:
-        other: Myanmari kjatti
-        one: Myanmari kjatt
-    MNT:
-      display_names:
-        other: Mongoolia tugrikut
-        one: Mongoolia tugrik
-    MUR:
-      display_names:
-        other: Mauritiuse ruupiat
-        one: Mauritiuse ruupia
-    MXN:
-      display_names:
-        other: Mehhiko peesot
-        one: Mehhiko peeso
-    MYR:
-      display_names:
-        other: Malaisia ringgitit
-        one: Malaisia ringgit
-    NAD:
-      display_names:
-        other: Namiibia dollarit
-        one: Namiibia dollar
-    NGN:
-      display_names:
-        other: Nigeeria nairat
-        one: Nigeeria naira
-    NIO:
-      display_names:
-        other: Nicaragua kordobat
-        one: Nicaragua kordoba
-    NOK:
-      display_names:
-        other: Norra krooni
-        one: Norra kroon
-    NPR:
-      display_names:
-        other: Nepali ruupiat
-        one: Nepali ruupia
-    NZD:
-      display_names:
-        other: Uus-Meremaa dollarit
-        one: Uus-Meremaa dollar
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Filipiini peesot
-        one: Filipiini peeso
-    PKR:
-      display_names:
-        other: Pakistani ruupiat
-        one: Pakistani ruupia
-    PLN:
-      display_names:
-        other: Poola zlotti
-        one: Poola zlott
-    PYG:
-      display_names:
-        other: Paraguay guaraniid
-        one: Paraguay guaranii
-    RON:
-      display_names:
-        other: Rumeenia leud
-        one: Rumeenia leu
-    RUB:
-      display_names:
-        other: Venemaa rubla
-        one: Venemaa rubla
-    RWF:
-      display_names:
-        other: Rwanda franki
-        one: Rwanda frank
-    SBD:
-      display_names:
-        other: Saalomoni Saarte dollarit
-        one: Saalomoni Saarte dollar
-    SEK:
-      display_names:
-        other: Rootsi krooni
-        one: Rootsi kroon
-    SGD:
-      display_names:
-        other: Singapuri dollarit
-        one: Singapuri dollar
-    SHP:
-      display_names:
-        other: Saint Helena naela
-        one: Saint Helena nael
-    SRD:
-      display_names:
-        other: Suriname dollarit
-        one: Suriname dollar
-    SSP:
-      display_names:
-        other: Lõuna-Sudaani naela
-        one: Lõuna-Sudaani nael
-    STN:
-      display_names:
-        other: São Tomé ja Príncipe dobrat
-        one: São Tomé ja Príncipe dobra
-    SYP:
-      display_names:
-        other: Süüria naela
-        one: Süüria nael
-    THB:
-      display_names:
-        other: Tai baati
-        one: Tai baat
-    TOP:
-      display_names:
-        other: Tonga pa’angat
-        one: Tonga pa’anga
-    TRY:
-      display_names:
-        other: Türgi liiri
-        one: Türgi liir
-    TTD:
-      display_names:
-        other: Trinidadi ja Tobago dollarit
-        one: Trinidadi ja Tobago dollar
-    TWD:
-      display_names:
-        other: uut Taiwani dollarit
-        one: uus Taiwani dollar
-    UAH:
-      display_names:
-        other: Ukraina grivnat
-        one: Ukraina grivna
-    USD:
-      symbol: "$"
-      display_names:
-        other: USA dollarit
-        one: USA dollar
-    UYU:
-      display_names:
-        other: Uruguay peesot
-        one: Uruguay peeso
-    VEF:
-      display_names:
-        other: Venezuela boliivarit (2008–2018)
-        one: Venezuela boliivar (2008–2018)
-    VND:
-      display_names:
-        other: Vietnami dongi
-        one: Vietnami dong
-    XAF:
-      display_names:
-        other: Kesk-Aafrika CFA franki
-        one: Kesk-Aafrika CFA frank
-    XCD:
-      display_names:
-        other: Ida-Kariibi dollarit
-        one: Ida-Kariibi dollar
-    XOF:
-      display_names:
-        other: Lääne-Aafrika CFA franki
-        one: Lääne-Aafrika CFA frank
-    XPF:
-      display_names:
-        other: CFP franki
-        one: CFP frank
-    XXX:
-      display_names:
-        other: "(määramata rahaühikut)"
-        one: "(määramata rahaühik)"
-    ZAR:
-      display_names:
-        other: Lõuna-Aafrika randi
-        one: Lõuna-Aafrika rand
-    ZMW:
-      display_names:
-        other: Sambia kvatšat
-        one: Sambia kvatša
     ADP:
       display_names:
         other: Andorra peseetat
@@ -448,6 +105,10 @@ number_formats:
       display_names:
         other: Afganistani afgaanit (1927–2002)
         one: Afganistani afgaani (1927–2002)
+    AFN:
+      display_names:
+        other: Afganistani afgaanit
+        one: Afganistani afgaani
     ALK:
       display_names:
         other: Albaania lekki (1946–1965)
@@ -456,10 +117,18 @@ number_formats:
       display_names:
         other: Albaania lekki
         one: Albaania lekk
+    AMD:
+      display_names:
+        other: Armeenia drammi
+        one: Armeenia dramm
     ANG:
       display_names:
         other: Hollandi Antillide kuldnat
         one: Hollandi Antillide kulden
+    AOA:
+      display_names:
+        other: Angola kvanzat
+        one: Angola kvanza
     AOK:
       display_names:
         other: Angola kvanzat (1977–1990)
@@ -484,10 +153,19 @@ number_formats:
       display_names:
         other: Argentina peesot (1983–1985)
         one: Argentina peeso (1983–1985)
+    ARS:
+      display_names:
+        other: Argentina peesot
+        one: Argentina peeso
     ATS:
       display_names:
         other: Austria šillingit
         one: Austria šilling
+    AUD:
+      symbol: AU$
+      display_names:
+        other: Austraalia dollarit
+        one: Austraalia dollar
     AWG:
       display_names:
         other: Aruba kuldnat
@@ -496,14 +174,30 @@ number_formats:
       display_names:
         other: Aserbaidžaani manatit (1993–2006)
         one: Aserbaidžaani manat (1993–2006)
+    AZN:
+      display_names:
+        other: Aserbaidžaani manatit
+        one: Aserbaidžaani manat
     BAD:
       display_names:
         other: Bosnia ja Hertsegoviina dinaari (1992–1994)
         one: Bosnia ja Hertsegoviina dinaar (1992–1994)
+    BAM:
+      display_names:
+        other: Bosnia ja Hertsegoviina konverteeritavat marka
+        one: Bosnia ja Hertsegoviina konverteeritav mark
     BAN:
       display_names:
         other: Bosnia ja Hertsegoviina uut dinaari (1994–1997)
         one: Bosnia ja Hertsegoviina uus dinaar (1994–1997)
+    BBD:
+      display_names:
+        other: Barbadose dollarit
+        one: Barbadose dollar
+    BDT:
+      display_names:
+        other: Bangladeshi takat
+        one: Bangladeshi taka
     BEC:
       display_names:
         other: Belgia konverteeritavat franki
@@ -536,6 +230,18 @@ number_formats:
       display_names:
         other: Burundi franki
         one: Burundi frank
+    BMD:
+      display_names:
+        other: Bermuda dollarit
+        one: Bermuda dollar
+    BND:
+      display_names:
+        other: Brunei dollarit
+        one: Brunei dollar
+    BOB:
+      display_names:
+        other: Boliivia boliviaanot
+        one: Boliivia boliviaano
     BOL:
       display_names:
         other: Boliivia boliviaanot (1863–1963)
@@ -556,6 +262,10 @@ number_formats:
       display_names:
         other: Brasiilia kruseirot (1990–1993)
         one: Brasiilia kruseiro (1990–1993)
+    BRL:
+      display_names:
+        other: Brasiilia reaali
+        one: Brasiilia reaal
     BRR:
       display_names:
         other: Brasiilia kruseirot (1993–1994)
@@ -564,6 +274,10 @@ number_formats:
       display_names:
         other: Brasiilia kruseirot (1942–1967)
         one: Brasiilia kruseiro (1942–1967)
+    BSD:
+      display_names:
+        other: Bahama dollarit
+        one: Bahama dollar
     BTN:
       display_names:
         other: Bhutani ngultrumit
@@ -572,6 +286,10 @@ number_formats:
       display_names:
         other: Birma kjatti
         one: Birma kjatt
+    BWP:
+      display_names:
+        other: Botswana pulat
+        one: Botswana pula
     BYB:
       display_names:
         other: Valgevene uut rubla (1994–1999)
@@ -584,6 +302,14 @@ number_formats:
       display_names:
         other: Valgevene rubla (2000–2016)
         one: Valgevene rubla (2000–2016)
+    BZD:
+      display_names:
+        other: Belize’i dollarit
+        one: Belize’i dollar
+    CAD:
+      display_names:
+        other: Kanada dollarit
+        one: Kanada dollar
     CDF:
       display_names:
         other: Kongo franki
@@ -596,10 +322,26 @@ number_formats:
       display_names:
         other: Tšiili eskuudot
         one: Tšiili eskuudo
+    CLP:
+      display_names:
+        other: Tšiili peesot
+        one: Tšiili peeso
     CNH:
       display_names:
         other: Hiina jüaani (välismaine turg)
         one: Hiina jüaan (välismaine turg)
+    CNY:
+      display_names:
+        other: Hiina jüaani
+        one: Hiina jüaan
+    COP:
+      display_names:
+        other: Colombia peesot
+        one: Colombia peeso
+    CRC:
+      display_names:
+        other: Costa Rica kolooni
+        one: Costa Rica koloon
     CSD:
       display_names:
         other: Serbia dinaari (2002–2006)
@@ -608,6 +350,14 @@ number_formats:
       display_names:
         other: Tšehhoslovakkia kõva krooni
         one: Tšehhoslovakkia kõva kroon
+    CUC:
+      display_names:
+        other: Kuuba konverteeritavat peesot
+        one: Kuuba konverteeritav peeso
+    CUP:
+      display_names:
+        other: Kuuba peesot
+        one: Kuuba peeso
     CVE:
       display_names:
         other: Cabo Verde eskuudot
@@ -616,6 +366,10 @@ number_formats:
       display_names:
         other: Küprose naela
         one: Küprose nael
+    CZK:
+      display_names:
+        other: Tšehhi krooni
+        one: Tšehhi kroon
     DDM:
       display_names:
         other: Ida-Saksa marka
@@ -628,6 +382,14 @@ number_formats:
       display_names:
         other: Djibouti franki
         one: Djibouti frank
+    DKK:
+      display_names:
+        other: Taani krooni
+        one: Taani kroon
+    DOP:
+      display_names:
+        other: Dominikaani peesot
+        one: Dominikaani peeso
     DZD:
       display_names:
         other: Alžeeria dinaari
@@ -641,30 +403,70 @@ number_formats:
       display_names:
         other: Eesti krooni
         one: Eesti kroon
+    EGP:
+      display_names:
+        other: Egiptuse naela
+        one: Egiptuse nael
     ERN:
       display_names:
         other: Eritrea nakfat
         one: Eritrea nakfa
+    ESP:
+      display_names:
+        other: Hispaania peseetat
+        one: Hispaania peseeta
     ETB:
       display_names:
         other: Etioopia birri
         one: Etioopia birr
+    EUR:
+      display_names:
+        other: eurot
+        one: euro
     FIM:
       display_names:
         other: Soome marka
         one: Soome mark
+    FJD:
+      display_names:
+        other: Fidži dollarit
+        one: Fidži dollar
+    FKP:
+      display_names:
+        other: Falklandi saarte naela
+        one: Falklandi saarte nael
     FRF:
       display_names:
         other: Prantsuse franki
         one: Prantsuse frank
+    GBP:
+      display_names:
+        other: Suurbritannia naelsterlingit
+        one: Suurbritannia naelsterling
+    GEL:
+      display_names:
+        other: Gruusia lari
+        one: Gruusia lari
     GHC:
       display_names:
         other: Ghana sedit (1979–2007)
         one: Ghana sedi (1979–2007)
+    GHS:
+      display_names:
+        other: Ghana sedit
+        one: Ghana sedi
+    GIP:
+      display_names:
+        other: Gibraltari naela
+        one: Gibraltari nael
     GMD:
       display_names:
         other: Gambia dalasit
         one: Gambia dalasi
+    GNF:
+      display_names:
+        other: Guinea franki
+        one: Guinea frank
     GNS:
       display_names:
         other: Guinea syli
@@ -673,6 +475,10 @@ number_formats:
       display_names:
         other: Kreeka drahmi
         one: Kreeka drahm
+    GTQ:
+      display_names:
+        other: Guatemala ketsaali
+        one: Guatemala ketsaal
     GWE:
       display_names:
         other: Portugali Guinea eskuudot
@@ -681,14 +487,38 @@ number_formats:
       display_names:
         other: Guinea-Bissau peesot
         one: Guinea-Bissau peeso
+    GYD:
+      display_names:
+        other: Guyana dollarit
+        one: Guyana dollar
+    HKD:
+      display_names:
+        other: Hongkongi dollarit
+        one: Hongkongi dollar
+    HNL:
+      display_names:
+        other: Hondurase lempiirat
+        one: Hondurase lempiira
     HRD:
       display_names:
         other: Horvaatia dinaari
         one: Horvaatia dinaar
+    HRK:
+      display_names:
+        other: Horvaatia kuna
+        one: Horvaatia kuna
     HTG:
       display_names:
         other: Haiti gurdi
         one: Haiti gurd
+    HUF:
+      display_names:
+        other: Ungari forintit
+        one: Ungari forint
+    IDR:
+      display_names:
+        other: Indoneesia ruupiat
+        one: Indoneesia ruupia
     IEP:
       display_names:
         other: Iiri naela
@@ -701,6 +531,14 @@ number_formats:
       display_names:
         other: Iisraeli seekelit (1980–1985)
         one: Iisraeli seekel (1980–1985)
+    ILS:
+      display_names:
+        other: Iisraeli uut seeklit
+        one: Iisraeli uus seekel
+    INR:
+      display_names:
+        other: India ruupiat
+        one: India ruupia
     IQD:
       display_names:
         other: Iraagi dinaari
@@ -713,30 +551,91 @@ number_formats:
       display_names:
         other: Islandi krooni (1918–1981)
         one: Islandi kroon (1918–1981)
+    ISK:
+      display_names:
+        other: Islandi krooni
+        one: Islandi kroon
     ITL:
       display_names:
         other: Itaalia liiri
         one: Itaalia liir
+    JMD:
+      display_names:
+        other: Jamaica dollarit
+        one: Jamaica dollar
     JOD:
       display_names:
         other: Jordaania dinaari
         one: Jordaania dinaar
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: Jaapani jeeni
+        one: Jaapani jeen
     KES:
       display_names:
         other: Keenia šillingit
         one: Keenia šilling
+    KGS:
+      display_names:
+        other: Kõrgõzstani sommi
+        one: Kõrgõzstani somm
+    KHR:
+      display_names:
+        other: Kambodža riaali
+        one: Kambodža riaal
+    KMF:
+      display_names:
+        other: Komoori franki
+        one: Komoori frank
+    KPW:
+      display_names:
+        other: Põhja-Korea vonni
+        one: Põhja-Korea vonn
     KRO:
       display_names:
         other: Lõuna-Korea vonni (1945–1953)
         one: Lõuna-Korea vonn (1945–1953)
+    KRW:
+      display_names:
+        other: Lõuna-Korea vonni
+        one: Lõuna-Korea vonn
     KWD:
       display_names:
         other: Kuveidi dinaari
         one: Kuveidi dinaar
+    KYD:
+      display_names:
+        other: Kaimanisaarte dollarit
+        one: Kaimanisaarte dollar
+    KZT:
+      display_names:
+        other: Kasahstani tenget
+        one: Kasahstani tenge
+    LAK:
+      display_names:
+        other: Laose kiipi
+        one: Laose kiip
+    LBP:
+      display_names:
+        other: Liibanoni naela
+        one: Liibanoni nael
+    LKR:
+      display_names:
+        other: Sri Lanka ruupiat
+        one: Sri Lanka ruupia
+    LRD:
+      display_names:
+        other: Libeeria dollarit
+        one: Libeeria dollar
     LSL:
       display_names:
         other: Lesotho lotit
         one: Lesotho loti
+    LTL:
+      display_names:
+        other: Leedu litti
+        one: Leedu litt
     LUC:
       display_names:
         other: Luksemburgi konverteeritavat franki
@@ -745,6 +644,10 @@ number_formats:
       display_names:
         other: Luksemburgi franki
         one: Luksemburgi frank
+    LVL:
+      display_names:
+        other: Läti latti
+        one: Läti latt
     LVR:
       display_names:
         other: Läti rubla
@@ -769,6 +672,10 @@ number_formats:
       display_names:
         other: Moldova leud
         one: Moldova leu
+    MGA:
+      display_names:
+        other: Madagaskari ariarit
+        one: Madagaskari ariari
     MGF:
       display_names:
         other: Madagaskar franki
@@ -785,6 +692,14 @@ number_formats:
       display_names:
         other: Mali franki
         one: Mali frank
+    MMK:
+      display_names:
+        other: Myanmari kjatti
+        one: Myanmari kjatt
+    MNT:
+      display_names:
+        other: Mongoolia tugrikut
+        one: Mongoolia tugrik
     MOP:
       display_names:
         other: Macau pataakat
@@ -805,6 +720,10 @@ number_formats:
       display_names:
         other: Malta naela
         one: Malta nael
+    MUR:
+      display_names:
+        other: Mauritiuse ruupiat
+        one: Mauritiuse ruupia
     MVP:
       display_names:
         other: Maldiivi ruupiat (1947–1981)
@@ -817,10 +736,18 @@ number_formats:
       display_names:
         other: Malawi kvatšat
         one: Malawi kvatša
+    MXN:
+      display_names:
+        other: Mehhiko peesot
+        one: Mehhiko peeso
     MXP:
       display_names:
         other: Mehhiko peesot (1861–1992)
         one: Mehhiko peeso (1861–1992)
+    MYR:
+      display_names:
+        other: Malaisia ringgitit
+        one: Malaisia ringgit
     MZE:
       display_names:
         other: Mosambiigi eskuudot
@@ -833,14 +760,38 @@ number_formats:
       display_names:
         other: Mosambiigi metikali
         one: Mosambiigi metikal
+    NAD:
+      display_names:
+        other: Namiibia dollarit
+        one: Namiibia dollar
+    NGN:
+      display_names:
+        other: Nigeeria nairat
+        one: Nigeeria naira
     NIC:
       display_names:
         other: Nicaragua kordobat (1988–1991)
         one: Nicaragua kordoba (1988–1991)
+    NIO:
+      display_names:
+        other: Nicaragua kordobat
+        one: Nicaragua kordoba
     NLG:
       display_names:
         other: Hollandi kuldnat
         one: Hollandi kulden
+    NOK:
+      display_names:
+        other: Norra krooni
+        one: Norra kroon
+    NPR:
+      display_names:
+        other: Nepali ruupiat
+        one: Nepali ruupia
+    NZD:
+      display_names:
+        other: Uus-Meremaa dollarit
+        one: Uus-Meremaa dollar
     OMR:
       display_names:
         other: Omaani riaali
@@ -865,6 +816,19 @@ number_formats:
       display_names:
         other: Paapua Uus-Guinea kinat
         one: Paapua Uus-Guinea kina
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Filipiini peesot
+        one: Filipiini peeso
+    PKR:
+      display_names:
+        other: Pakistani ruupiat
+        one: Pakistani ruupia
+    PLN:
+      display_names:
+        other: Poola zlotti
+        one: Poola zlott
     PLZ:
       display_names:
         other: Poola zlotti (1950–1995)
@@ -873,6 +837,10 @@ number_formats:
       display_names:
         other: Portugali eskuudot
         one: Portugali eskuudo
+    PYG:
+      display_names:
+        other: Paraguay guaraniid
+        one: Paraguay guaranii
     QAR:
       display_names:
         other: Katari riaali
@@ -885,18 +853,34 @@ number_formats:
       display_names:
         other: Rumeenia leud (1952–2006)
         one: Rumeenia leu (1952–2006)
+    RON:
+      display_names:
+        other: Rumeenia leud
+        one: Rumeenia leu
     RSD:
       display_names:
         other: Serbia dinaari
         one: Serbia dinaar
+    RUB:
+      display_names:
+        other: Venemaa rubla
+        one: Venemaa rubla
     RUR:
       display_names:
         other: Venemaa rubla (1991–1998)
         one: Venemaa rubla (1991–1998)
+    RWF:
+      display_names:
+        other: Rwanda franki
+        one: Rwanda frank
     SAR:
       display_names:
         other: Saudi Araabia riaali
         one: Saudi Araabia riaal
+    SBD:
+      display_names:
+        other: Saalomoni Saarte dollarit
+        one: Saalomoni Saarte dollar
     SCR:
       display_names:
         other: Seišelli ruupiat
@@ -913,6 +897,18 @@ number_formats:
       display_names:
         other: Sudaani naela (1957–1998)
         one: Sudaani nael (1957–1998)
+    SEK:
+      display_names:
+        other: Rootsi krooni
+        one: Rootsi kroon
+    SGD:
+      display_names:
+        other: Singapuri dollarit
+        one: Singapuri dollar
+    SHP:
+      display_names:
+        other: Saint Helena naela
+        one: Saint Helena nael
     SIT:
       display_names:
         other: Sloveenia tolarit
@@ -933,14 +929,26 @@ number_formats:
       display_names:
         other: Somaalia šillingit
         one: Somaalia šilling
+    SRD:
+      display_names:
+        other: Suriname dollarit
+        one: Suriname dollar
     SRG:
       display_names:
         other: Suriname kuldnat
         one: Suriname kulden
+    SSP:
+      display_names:
+        other: Lõuna-Sudaani naela
+        one: Lõuna-Sudaani nael
     STD:
       display_names:
         other: São Tomé ja Príncipe dobrat (1977–2017)
         one: São Tomé ja Príncipe dobra (1977–2017)
+    STN:
+      display_names:
+        other: São Tomé ja Príncipe dobrat
+        one: São Tomé ja Príncipe dobra
     SUR:
       display_names:
         other: NSVL-i rubla
@@ -949,10 +957,18 @@ number_formats:
       display_names:
         other: El Salvadori kolooni
         one: El Salvadori koloon
+    SYP:
+      display_names:
+        other: Süüria naela
+        one: Süüria nael
     SZL:
       display_names:
         other: Svaasimaa lilangenit
         one: Svaasimaa lilangeni
+    THB:
+      display_names:
+        other: Tai baati
+        one: Tai baat
     TJR:
       display_names:
         other: Tadžikistani rubla
@@ -973,6 +989,10 @@ number_formats:
       display_names:
         other: Tuneesia dinaari
         one: Tuneesia dinaar
+    TOP:
+      display_names:
+        other: Tonga pa’angat
+        one: Tonga pa’anga
     TPE:
       display_names:
         other: Timori eskuudot
@@ -981,10 +1001,26 @@ number_formats:
       display_names:
         other: Türgi liiri (1922–2005)
         one: Türgi liir (1922–2005)
+    TRY:
+      display_names:
+        other: Türgi liiri
+        one: Türgi liir
+    TTD:
+      display_names:
+        other: Trinidadi ja Tobago dollarit
+        one: Trinidadi ja Tobago dollar
+    TWD:
+      display_names:
+        other: uut Taiwani dollarit
+        one: uus Taiwani dollar
     TZS:
       display_names:
         other: Tansaania šillingit
         one: Tansaania šilling
+    UAH:
+      display_names:
+        other: Ukraina grivnat
+        one: Ukraina grivna
     UAK:
       display_names:
         other: Ukraina karbovanetsi
@@ -997,6 +1033,11 @@ number_formats:
       display_names:
         other: Uganda šillingit
         one: Uganda šilling
+    USD:
+      symbol: "$"
+      display_names:
+        other: USA dollarit
+        one: USA dollar
     USN:
       display_names:
         other: USA järgmise päeva dollar
@@ -1009,6 +1050,10 @@ number_formats:
       display_names:
         other: Uruguay peesot (1975–1993)
         one: Uruguay peeso (1975–1993)
+    UYU:
+      display_names:
+        other: Uruguay peesot
+        one: Uruguay peeso
     UZS:
       display_names:
         other: Usbekistani sommi
@@ -1017,10 +1062,18 @@ number_formats:
       display_names:
         other: Venezuela boliivarit (1871–2008)
         one: Venezuela boliivar (1871–2008)
+    VEF:
+      display_names:
+        other: Venezuela boliivarit (2008–2018)
+        one: Venezuela boliivar (2008–2018)
     VES:
       display_names:
         other: Venezuela boliivarit
         one: Venezuela boliivar
+    VND:
+      display_names:
+        other: Vietnami dongi
+        one: Vietnami dong
     VNN:
       display_names:
         other: Vietnami dongi (1978–1985)
@@ -1033,6 +1086,10 @@ number_formats:
       display_names:
         other: Samoa taalat
         one: Samoa taala
+    XAF:
+      display_names:
+        other: Kesk-Aafrika CFA franki
+        one: Kesk-Aafrika CFA frank
     XAG:
       display_names:
         other: troiuntsi hõbedat
@@ -1057,6 +1114,10 @@ number_formats:
       display_names:
         other: Euroopa rahaline arvestusühik (XBD)
         one: Euroopa rahaline arvestusühik (XBD)
+    XCD:
+      display_names:
+        other: Ida-Kariibi dollarit
+        one: Ida-Kariibi dollar
     XDR:
       display_names:
         other: Rahvusvahelise Valuutafondi arvestusühik
@@ -1073,10 +1134,18 @@ number_formats:
       display_names:
         other: Prantsuse UIC-frank
         one: Prantsuse UIC-frank
+    XOF:
+      display_names:
+        other: Lääne-Aafrika CFA franki
+        one: Lääne-Aafrika CFA frank
     XPD:
       display_names:
         other: troiuntsi pallaadiumit
         one: troiunts pallaadiumit
+    XPF:
+      display_names:
+        other: CFP franki
+        one: CFP frank
     XPT:
       display_names:
         other: troiuntsi plaatinat
@@ -1085,6 +1154,10 @@ number_formats:
       display_names:
         other: vääringute testkood
         one: vääringute testkood
+    XXX:
+      display_names:
+        other: "(määramata rahaühikut)"
+        one: "(määramata rahaühik)"
     YDD:
       display_names:
         other: Jeemeni dinaari
@@ -1109,10 +1182,18 @@ number_formats:
       display_names:
         other: Jugoslaavia reformitud dinaari (1992–1993)
         one: Jugoslaavia reformitud dinaar (1992–1993)
+    ZAR:
+      display_names:
+        other: Lõuna-Aafrika randi
+        one: Lõuna-Aafrika rand
     ZMK:
       display_names:
         other: Sambia kvatšat (1968–2012)
         one: Sambia kvatša (1968–2012)
+    ZMW:
+      display_names:
+        other: Sambia kvatšat
+        one: Sambia kvatša
     ZRZ:
       display_names:
         other: Sairi zaire
@@ -1129,3 +1210,1307 @@ number_formats:
       display_names:
         other: Zimbabwe dollarit (2008)
         one: Zimbabwe dollar (2008)
+  units:
+    g-force:
+      long:
+        one: "{0} Maa raskuskiirendus"
+        other: "{0} Maa raskuskiirendust"
+      short:
+        display_name: Maa raskuskiirendus
+    meter-per-square-second:
+      long:
+        display_name: meetrid sekundi ruudu kohta
+        one: "{0} meeter sekundi ruudu kohta"
+        other: "{0} meetrit sekundi ruudu kohta"
+    revolution:
+      long:
+        display_name: täispööre
+        one: "{0} täispööre"
+        other: "{0} täispööret"
+      short:
+        display_name: pööre
+        one: "{0} pööre"
+        other: "{0} pööret"
+    radian:
+      long:
+        one: "{0} radiaan"
+        other: "{0} radiaani"
+      short:
+        display_name: radiaanid
+    degree:
+      long:
+        one: "{0} kraad"
+        other: "{0} kraadi"
+      short:
+        display_name: kraadid
+    arc-minute:
+      long:
+        display_name: kaareminutid
+        one: "{0} kaareminut"
+        other: "{0} kaareminutit"
+      short:
+        display_name: kaareminut
+    arc-second:
+      long:
+        display_name: kaaresekundid
+        one: "{0} kaaresekund"
+        other: "{0} kaaresekundit"
+      short:
+        display_name: "″"
+    square-kilometer:
+      long:
+        display_name: ruutkilomeetrid
+        one: "{0} ruutkilomeeter"
+        other: "{0} ruutkilomeetrit"
+        per_unit_pattern: "{0} ruutkilomeetri kohta"
+    hectare:
+      long:
+        one: "{0} hektar"
+        other: "{0} hektarit"
+      short:
+        display_name: hektarid
+    square-meter:
+      long:
+        display_name: ruutmeetrid
+        one: "{0} ruutmeeter"
+        other: "{0} ruutmeetrit"
+        per_unit_pattern: "{0} ruutmeetri kohta"
+    square-centimeter:
+      long:
+        display_name: ruutsentimeetrid
+        one: "{0} ruutsentimeeter"
+        other: "{0} ruutsentimeetrit"
+        per_unit_pattern: "{0} ruutsentimeetri kohta"
+    square-mile:
+      long:
+        display_name: ruutmiilid
+        one: "{0} ruutmiil"
+        other: "{0} ruutmiili"
+        per_unit_pattern: "{0} ruutmiili kohta"
+    acre:
+      long:
+        one: "{0} aaker"
+        other: "{0} aakrit"
+      short:
+        display_name: aakrid
+      narrow:
+        one: "{0} aaker"
+        other: "{0} aakrit"
+    square-yard:
+      long:
+        one: "{0} ruutjard"
+        other: "{0} ruutjardi"
+      short:
+        display_name: ruutjardid
+    square-foot:
+      long:
+        one: "{0} ruutjalg"
+        other: "{0} ruutjalga"
+      short:
+        display_name: ruutjalad
+    square-inch:
+      long:
+        one: "{0} ruuttoll"
+        other: "{0} ruuttolli"
+        per_unit_pattern: "{0} ruuttolli kohta"
+      short:
+        display_name: ruuttollid
+    karat:
+      long:
+        display_name: karaadid
+        one: "{0} karaat"
+        other: "{0} karaati"
+      short:
+        display_name: karaat
+        one: "{0} ct"
+        other: "{0} ct"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: milligrammid detsiliitri kohta
+        one: "{0} milligramm detsiliitri kohta"
+        other: "{0} milligrammi detsiliitri kohta"
+      short:
+        display_name: mg/dl
+        one: "{0} mg/dl"
+        other: "{0} mg/dl"
+    millimole-per-liter:
+      long:
+        display_name: millimoolid liitri kohta
+        one: "{0} millimool liitri kohta"
+        other: "{0} millimooli liitri kohta"
+      short:
+        display_name: mmol/l
+        one: "{0} mmol/l"
+        other: "{0} mmol/l"
+    permillion:
+      long:
+        display_name: osa miljoni kohta
+        one: "{0} osa miljoni kohta"
+        other: "{0} osa miljoni kohta"
+      short:
+        display_name: osa/miljon
+    percent:
+      long:
+        display_name: protsent
+        one: "{0} protsent"
+        other: "{0} protsenti"
+    permille:
+      long:
+        display_name: promill
+        one: "{0} promill"
+        other: "{0} promilli"
+    permyriad:
+      long:
+        one: "{0} promüriaad"
+        other: "{0} promüriaadi"
+      short:
+        display_name: promüriaad
+    mole:
+      long:
+        display_name: moolid
+        one: "{0} mool"
+        other: "{0} mooli"
+      short:
+        display_name: mool
+      narrow:
+        display_name: mol
+    liter-per-kilometer:
+      long:
+        display_name: liitrid kilomeetri kohta
+        one: "{0} liiter kilomeetri kohta"
+        other: "{0} liitrit kilomeetri kohta"
+      short:
+        display_name: l/km
+        one: "{0} l/km"
+        other: "{0} l/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: liitrid 100 kilomeetri kohta
+        one: "{0} liiter 100 kilomeetri kohta"
+        other: "{0} liitrit 100 kilomeetri kohta"
+      short:
+        display_name: l/100 km
+        one: "{0} l/100 km"
+        other: "{0} l/100 km"
+      narrow:
+        one: "{0} l/100km"
+        other: "{0} l/100km"
+    mile-per-gallon:
+      long:
+        display_name: miilid galloni kohta
+        one: "{0} miil galloni kohta"
+        other: "{0} miili galloni kohta"
+      short:
+        display_name: miil/gallon
+        one: "{0} mpg"
+        other: "{0} mpg"
+      narrow:
+        display_name: mpg
+    mile-per-gallon-imperial:
+      long:
+        display_name: miilid inglise galloni kohta
+        one: "{0} miil inglise galloni kohta"
+        other: "{0} miili inglise galloni kohta"
+      short:
+        display_name: miil / gal imp.
+        one: "{0} mpg imp."
+        other: "{0} mpg imp."
+      narrow:
+        display_name: mpg UK
+        one: "{0} m/gUK"
+        other: "{0} m/gUK"
+    petabyte:
+      long:
+        display_name: petabaidid
+        one: "{0} petabait"
+        other: "{0} petabaiti"
+    terabyte:
+      long:
+        display_name: terabaidid
+        one: "{0} terabait"
+        other: "{0} terabaiti"
+    terabit:
+      long:
+        display_name: terabitid
+        one: "{0} terabitt"
+        other: "{0} terabitti"
+    gigabyte:
+      long:
+        display_name: gigabaidid
+        one: "{0} gigabait"
+        other: "{0} gigabaiti"
+    gigabit:
+      long:
+        display_name: gigabitid
+        one: "{0} gigabitt"
+        other: "{0} gigabitti"
+    megabyte:
+      long:
+        display_name: megabaidid
+        one: "{0} megabait"
+        other: "{0} megabaiti"
+    megabit:
+      long:
+        display_name: megabitid
+        one: "{0} megabitt"
+        other: "{0} megabitti"
+    kilobyte:
+      long:
+        display_name: kilobaidid
+        one: "{0} kilobait"
+        other: "{0} kilobaiti"
+    kilobit:
+      long:
+        display_name: kilobitid
+        one: "{0} kilobitt"
+        other: "{0} kilobitti"
+    byte:
+      long:
+        display_name: baidid
+      short:
+        display_name: bait
+        one: "{0} bait"
+        other: "{0} baiti"
+      narrow:
+        one: "{0} B"
+        other: "{0} B"
+    bit:
+      long:
+        display_name: bitid
+        one: "{0} bitt"
+        other: "{0} bitti"
+      short:
+        display_name: bitt
+        one: "{0} b"
+        other: "{0} b"
+    century:
+      long:
+        display_name: sajandid
+        one: "{0} sajand"
+        other: "{0} sajandit"
+      short:
+        display_name: saj
+        one: "{0} saj"
+        other: "{0} saj"
+    decade:
+      long:
+        display_name: dekaadid
+        one: "{0} dekaad"
+        other: "{0} dekaadi"
+      short:
+        display_name: dek
+        one: "{0} dek"
+        other: "{0} dek"
+    year:
+      long:
+        one: "{0} aasta"
+        other: "{0} aastat"
+        per_unit_pattern: "{0} aastas"
+      short:
+        display_name: aastad
+        one: "{0} a"
+        other: "{0} a"
+        per_unit_pattern: "{0}/a"
+      narrow:
+        display_name: a
+    quarter:
+      long:
+        display_name: kvartalid
+        one: "{0} kvartal"
+        other: "{0} kvartalit"
+      short:
+        display_name: kv
+        one: "{0} kv"
+        other: "{0} kv"
+        per_unit_pattern: "{0}/kv"
+    month:
+      long:
+        per_unit_pattern: "{0} kuus"
+      short:
+        display_name: kuud
+        one: "{0} kuu"
+        other: "{0} kuud"
+        per_unit_pattern: "{0}/k"
+      narrow:
+        one: "{0} k"
+        other: "{0} k"
+    week:
+      long:
+        display_name: nädalad
+        one: "{0} nädal"
+        other: "{0} nädalat"
+        per_unit_pattern: "{0} nädalas"
+      short:
+        display_name: näd
+        one: "{0} näd"
+        other: "{0} näd"
+        per_unit_pattern: "{0}/näd"
+      narrow:
+        display_name: "n"
+        one: "{0} n"
+        other: "{0} n"
+    day:
+      long:
+        display_name: ööpäevad
+        one: "{0} ööpäev"
+        other: "{0} ööpäeva"
+        per_unit_pattern: "{0} ööpäevas"
+      short:
+        display_name: päevad
+        one: "{0} päev"
+        other: "{0} päeva"
+        per_unit_pattern: "{0}/ööp"
+      narrow:
+        display_name: päev
+        one: "{0} p"
+        other: "{0} p"
+    hour:
+      long:
+        display_name: tunnid
+        one: "{0} tund"
+        other: "{0} tundi"
+        per_unit_pattern: "{0} tunnis"
+      short:
+        display_name: t
+        one: "{0} t"
+        other: "{0} t"
+        per_unit_pattern: "{0}/t"
+    minute:
+      long:
+        display_name: minutid
+        one: "{0} minut"
+        other: "{0} minutit"
+        per_unit_pattern: "{0} minutis"
+    second:
+      long:
+        display_name: sekundid
+        one: "{0} sekund"
+        other: "{0} sekundit"
+        per_unit_pattern: "{0} sekundis"
+      short:
+        display_name: sek
+        one: "{0} sek"
+        other: "{0} sek"
+        per_unit_pattern: "{0}/sek"
+      narrow:
+        display_name: s
+        one: "{0} s"
+        other: "{0} s"
+        per_unit_pattern: "{0}/s"
+    millisecond:
+      long:
+        display_name: millisekundid
+        one: "{0} millisekund"
+        other: "{0} millisekundit"
+    microsecond:
+      long:
+        display_name: mikrosekundid
+        one: "{0} mikrosekund"
+        other: "{0} mikrosekundit"
+    nanosecond:
+      long:
+        display_name: nanosekundid
+        one: "{0} nanosekund"
+        other: "{0} nanosekundit"
+    ampere:
+      long:
+        one: "{0} amper"
+        other: "{0} amprit"
+      short:
+        display_name: amprid
+    milliampere:
+      long:
+        one: "{0} milliamper"
+        other: "{0} milliamprit"
+      short:
+        display_name: milliamprid
+    ohm:
+      long:
+        one: "{0} oom"
+        other: "{0} oomi"
+      short:
+        display_name: oomid
+    volt:
+      long:
+        one: "{0} volt"
+        other: "{0} volti"
+      short:
+        display_name: voldid
+    kilocalorie:
+      long:
+        display_name: kilokalorid
+        one: "{0} kilokalor"
+        other: "{0} kilokalorit"
+    calorie:
+      long:
+        display_name: kalorid
+        one: "{0} kalor"
+        other: "{0} kalorit"
+    foodcalorie:
+      long:
+        display_name: kalorid
+        one: "{0} kalor"
+        other: "{0} kalorit"
+      short:
+        display_name: cal
+        one: "{0} cal"
+        other: "{0} cal"
+    kilojoule:
+      long:
+        display_name: kilodžaulid
+        one: "{0} kilodžaul"
+        other: "{0} kilodžauli"
+    joule:
+      long:
+        one: "{0} džaul"
+        other: "{0} džauli"
+      short:
+        display_name: džaulid
+    kilowatt-hour:
+      long:
+        display_name: kilovatt-tunnid
+        one: "{0} kilovatt-tund"
+        other: "{0} kilovatt-tundi"
+      short:
+        display_name: kW-tund
+    electronvolt:
+      long:
+        display_name: elektronvoldid
+        one: "{0} elektronvolt"
+        other: "{0} elektronvolti"
+      short:
+        display_name: elektronvolt
+    british-thermal-unit:
+      long:
+        display_name: Briti soojusühikud
+        one: "{0} Briti soojusühik"
+        other: "{0} Briti soojusühikut"
+      short:
+        display_name: Briti soojusühik
+    therm-us:
+      long:
+        display_name: USA termid
+      short:
+        display_name: USA term
+        one: "{0} USA term"
+        other: "{0} USA termi"
+    pound-force:
+      long:
+        display_name: jõunaelad
+        one: "{0} jõunael"
+        other: "{0} jõunaela"
+      short:
+        display_name: jõunael
+    newton:
+      long:
+        display_name: njuutonid
+        one: "{0} njuuton"
+        other: "{0} njuutonit"
+      short:
+        display_name: njuuton
+      narrow:
+        display_name: "N"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: kilovatt-tunnid 100 kilomeetri kohta
+        one: "{0} kilovatt-tund 100 kilomeetri kohta"
+        other: "{0} kilovatt-tundi 100 kilomeetri kohta"
+      short:
+        display_name: kWh / 100 km
+        one: "{0} kWh / 100 km"
+        other: "{0} kWh / 100 km"
+      narrow:
+        one: "{0}kWh/100km"
+        other: "{0}kWh/100km"
+    gigahertz:
+      long:
+        display_name: gigahertsid
+        one: "{0} gigaherts"
+        other: "{0} gigahertsi"
+    megahertz:
+      long:
+        display_name: megahertsid
+        one: "{0} megaherts"
+        other: "{0} megahertsi"
+    kilohertz:
+      long:
+        display_name: kilohertsid
+        one: "{0} kiloherts"
+        other: "{0} kilohertsi"
+    hertz:
+      long:
+        display_name: hertsid
+        one: "{0} herts"
+        other: "{0} hertsi"
+    em:
+      long:
+        display_name: tüpograafiline emm
+      short:
+        display_name: emm
+        one: "{0} emm"
+        other: "{0} emmi"
+    pixel:
+      long:
+        one: "{0} piksel"
+        other: "{0} pikslit"
+      short:
+        display_name: pikslid
+    megapixel:
+      long:
+        one: "{0} megapiksel"
+        other: "{0} megapikslit"
+      short:
+        display_name: megapikslid
+    pixel-per-centimeter:
+      long:
+        display_name: piksleid sentimeetri kohta
+        one: "{0} piksel sentimeetri kohta"
+        other: "{0} pikslit sentimeetri kohta"
+    pixel-per-inch:
+      long:
+        display_name: piksleid tolli kohta
+        one: "{0} piksel tolli kohta"
+        other: "{0} pikslit tolli kohta"
+    dot-per-centimeter:
+      long:
+        display_name: punkte sentimeetri kohta
+        one: "{0} punkt sentimeetri kohta"
+        other: "{0} punkti sentimeetri kohta"
+      short:
+        one: "{0} dpcm"
+        other: "{0} dpcm"
+    dot-per-inch:
+      long:
+        display_name: punkte tolli kohta
+        one: "{0} punkt tolli kohta"
+        other: "{0} punkti tolli kohta"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+    dot:
+      long:
+        display_name: punktid
+        one: "{0} punkt"
+        other: "{0} punkti"
+      short:
+        display_name: p
+        one: "{0} p"
+        other: "{0} p"
+    earth-radius:
+      long:
+        display_name: Maa raadius
+        one: "{0} Maa raadius"
+        other: "{0} Maa raadiust"
+    kilometer:
+      long:
+        display_name: kilomeetrid
+        one: "{0} kilomeeter"
+        other: "{0} kilomeetrit"
+        per_unit_pattern: "{0} kilomeetri kohta"
+    meter:
+      long:
+        display_name: meetrid
+        one: "{0} meeter"
+        other: "{0} meetrit"
+        per_unit_pattern: "{0} meetri kohta"
+      short:
+        display_name: m
+    decimeter:
+      long:
+        display_name: detsimeetrid
+        one: "{0} detsimeeter"
+        other: "{0} detsimeetrit"
+    centimeter:
+      long:
+        display_name: sentimeetrid
+        one: "{0} sentimeeter"
+        other: "{0} sentimeetrit"
+        per_unit_pattern: "{0} sentimeetri kohta"
+    millimeter:
+      long:
+        display_name: millimeetrid
+        one: "{0} millimeeter"
+        other: "{0} millimeetrit"
+    micrometer:
+      long:
+        display_name: mikromeetrid
+        one: "{0} mikromeeter"
+        other: "{0} mikromeetrit"
+    nanometer:
+      long:
+        display_name: nanomeetrid
+        one: "{0} nanomeeter"
+        other: "{0} nanomeetrit"
+    picometer:
+      long:
+        display_name: pikomeetrid
+        one: "{0} pikomeeter"
+        other: "{0} pikomeetrit"
+    mile:
+      long:
+        display_name: miilid
+        one: "{0} miil"
+        other: "{0} miili"
+      narrow:
+        one: "{0} miil"
+        other: "{0} miili"
+    yard:
+      long:
+        one: "{0} jard"
+        other: "{0} jardi"
+      short:
+        display_name: jardid
+      narrow:
+        one: "{0} jard"
+        other: "{0} jardi"
+    foot:
+      long:
+        display_name: jalad
+        one: "{0} jalg"
+        other: "{0} jalga"
+        per_unit_pattern: "{0} jala kohta"
+      narrow:
+        one: "{0} jalg"
+        other: "{0} jalga"
+    inch:
+      long:
+        one: "{0} toll"
+        other: "{0} tolli"
+        per_unit_pattern: "{0} tolli kohta"
+      short:
+        display_name: tollid
+      narrow:
+        one: "{0} toll"
+        other: "{0} tolli"
+    parsec:
+      long:
+        one: "{0} parsek"
+        other: "{0} parsekit"
+      short:
+        display_name: parsekid
+    light-year:
+      long:
+        one: "{0} valgusaasta"
+        other: "{0} valgusaastat"
+      short:
+        display_name: valgusaastad
+        one: "{0} valgusa."
+        other: "{0} valgusa."
+    astronomical-unit:
+      long:
+        display_name: astronoomilised ühikud
+        one: "{0} astronoomiline ühik"
+        other: "{0} astronoomilist ühikut"
+      short:
+        display_name: aü
+        one: "{0} aü"
+        other: "{0} aü"
+    furlong:
+      long:
+        one: "{0} furlong"
+        other: "{0} furlongi"
+      short:
+        display_name: furlongid
+    fathom:
+      long:
+        one: "{0} süld"
+        other: "{0} sülda"
+      short:
+        display_name: süllad
+    nautical-mile:
+      long:
+        display_name: meremiilid
+        one: "{0} meremiil"
+        other: "{0} meremiili"
+    mile-scandinavian:
+      long:
+        display_name: Skandinaavia miilid
+        one: "{0} Skandinaavia miil"
+        other: "{0} Skandinaavia miili"
+    point:
+      long:
+        one: "{0} tüpograafiline punkt"
+        other: "{0} tüpograafilist punkti"
+      short:
+        display_name: tüpograafilised punktid
+      narrow:
+        display_name: punktid
+    solar-radius:
+      long:
+        one: "{0} Päikese raadiust"
+        other: "{0} Päikese raadiust"
+      short:
+        display_name: Päikese raadiused
+    lux:
+      long:
+        display_name: luks
+        one: "{0} luks"
+        other: "{0} luksi"
+    candela:
+      long:
+        display_name: kandela
+        one: "{0} kandela"
+        other: "{0} kandelat"
+    lumen:
+      long:
+        display_name: luumen
+        one: "{0} luumen"
+        other: "{0} luumenit"
+    solar-luminosity:
+      long:
+        one: "{0} Päikese heledus"
+        other: "{0} Päikese heledust"
+      short:
+        display_name: Päikese heledus
+    tonne:
+      long:
+        display_name: tonnid
+        one: "{0} tonn"
+        other: "{0} tonni"
+    kilogram:
+      long:
+        display_name: kilogrammid
+        one: "{0} kilogramm"
+        other: "{0} kilogrammi"
+        per_unit_pattern: "{0} kilogrammi kohta"
+    gram:
+      long:
+        one: "{0} gramm"
+        other: "{0} grammi"
+        per_unit_pattern: "{0} grammi kohta"
+      short:
+        display_name: grammid
+      narrow:
+        display_name: gramm
+    milligram:
+      long:
+        display_name: milligrammid
+        one: "{0} milligramm"
+        other: "{0} milligrammi"
+    microgram:
+      long:
+        display_name: mikrogrammid
+        one: "{0} mikrogramm"
+        other: "{0} mikrogrammi"
+    ton:
+      long:
+        display_name: lühikesed tonnid
+        one: "{0} lühike tonn"
+        other: "{0} lühikest tonni"
+      short:
+        display_name: lüh t
+        one: "{0} lüh t"
+        other: "{0} lüh t"
+    stone:
+      long:
+        one: "{0} kivi"
+        other: "{0} kivi"
+      short:
+        display_name: kivid
+    pound:
+      long:
+        one: "{0} nael"
+        other: "{0} naela"
+        per_unit_pattern: "{0} naela kohta"
+      short:
+        display_name: naelad
+    ounce:
+      long:
+        display_name: untsid
+        one: "{0} unts"
+        other: "{0} untsi"
+        per_unit_pattern: "{0} untsi kohta"
+    ounce-troy:
+      long:
+        display_name: troiuntsid
+        one: "{0} troiunts"
+        other: "{0} troiuntsi"
+    carat:
+      long:
+        display_name: karaadid
+        one: "{0} karaat"
+        other: "{0} karaati"
+      short:
+        display_name: ct
+        one: "{0} ct"
+        other: "{0} ct"
+    dalton:
+      long:
+        one: "{0} dalton"
+        other: "{0} daltonit"
+      short:
+        display_name: daltonid
+    earth-mass:
+      long:
+        one: "{0} Maa massi"
+        other: "{0} Maa massi"
+      short:
+        display_name: Maa massid
+    solar-mass:
+      long:
+        one: "{0} Päikese massi"
+        other: "{0} Päikese massi"
+      short:
+        display_name: Päikese massid
+    gigawatt:
+      long:
+        display_name: gigavatid
+        one: "{0} gigavatt"
+        other: "{0} gigavatti"
+    megawatt:
+      long:
+        display_name: megavatid
+        one: "{0} megavatt"
+        other: "{0} megavatti"
+    kilowatt:
+      long:
+        display_name: kilovatid
+        one: "{0} kilovatt"
+        other: "{0} kilovatti"
+    watt:
+      long:
+        one: "{0} vatt"
+        other: "{0} vatti"
+      short:
+        display_name: vatid
+    milliwatt:
+      long:
+        display_name: millivatid
+        one: "{0} millivatt"
+        other: "{0} millivatti"
+    horsepower:
+      long:
+        display_name: hobujõud
+        one: "{0} hobujõud"
+        other: "{0} hobujõudu"
+      short:
+        display_name: hj
+        one: "{0} hj"
+        other: "{0} hj"
+    millimeter-ofhg:
+      long:
+        display_name: millimeetrid elavhõbedasammast
+        one: "{0} millimeeter elavhõbedasammast"
+        other: "{0} millimeetrit elavhõbedasammast"
+    pound-force-per-square-inch:
+      long:
+        display_name: naelad ruuttolli kohta
+        one: "{0} nael ruuttolli kohta"
+        other: "{0} naela ruuttolli kohta"
+    inch-ofhg:
+      long:
+        display_name: tollid elavhõbedasammast
+        one: "{0} toll elavhõbedasammast"
+        other: "{0} tolli elavhõbedasammast"
+      short:
+        display_name: in Hg
+        one: "{0} in Hg"
+        other: "{0} in Hg"
+      narrow:
+        display_name: "″ Hg"
+        one: "{0} toll Hg"
+        other: "{0} tolli Hg"
+    bar:
+      long:
+        display_name: baarid
+      short:
+        display_name: baar
+        one: "{0} baar"
+        other: "{0} baari"
+    millibar:
+      long:
+        display_name: millibaarid
+        one: "{0} millibaar"
+        other: "{0} millibaari"
+    atmosphere:
+      long:
+        display_name: atmosfäärid
+        one: "{0} atmosfäär"
+        other: "{0} atmosfääri"
+    pascal:
+      long:
+        display_name: paskalid
+        one: "{0} paskal"
+        other: "{0} paskalit"
+    hectopascal:
+      long:
+        display_name: hektopaskalid
+        one: "{0} hektopaskal"
+        other: "{0} hektopaskalit"
+    kilopascal:
+      long:
+        display_name: kilopaskalid
+        one: "{0} kilopaskal"
+        other: "{0} kilopaskalit"
+    megapascal:
+      long:
+        display_name: megapaskalid
+        one: "{0} megapaskal"
+        other: "{0} megapaskalit"
+    kilometer-per-hour:
+      long:
+        display_name: kilomeetrid tunnis
+        one: "{0} kilomeeter tunnis"
+        other: "{0} kilomeetrit tunnis"
+    meter-per-second:
+      long:
+        display_name: meetrid sekundis
+        one: "{0} meeter sekundis"
+        other: "{0} meetrit sekundis"
+    mile-per-hour:
+      long:
+        display_name: miilid tunnis
+        one: "{0} miil tunnis"
+        other: "{0} miili tunnis"
+    knot:
+      long:
+        display_name: sõlm
+        one: "{0} sõlm"
+        other: "{0} sõlme"
+    beaufort:
+      long:
+        display_name: Beaufort
+        one: Beaufort {0}
+        other: Beaufort {0}
+      narrow:
+        one: B{0}
+        other: B{0}
+    generic:
+      long:
+        one: "{0} kraad"
+        other: "{0} kraadi"
+    celsius:
+      long:
+        display_name: Celsiuse kraadid
+        one: "{0} Celsiuse kraad"
+        other: "{0} Celsiuse kraadi"
+      short:
+        one: "{0} °C"
+        other: "{0} °C"
+    fahrenheit:
+      long:
+        display_name: Fahrenheiti kraadid
+        one: "{0} Fahrenheiti kraad"
+        other: "{0} Fahrenheiti kraadi"
+      short:
+        one: "{0} °F"
+        other: "{0} °F"
+    kelvin:
+      long:
+        display_name: kelvinid
+        one: "{0} kelvin"
+        other: "{0} kelvinit"
+    pound-force-foot:
+      long:
+        display_name: naeljalad
+        one: "{0} naeljalg"
+        other: "{0} naeljalga"
+    newton-meter:
+      long:
+        display_name: njuutonmeetrid
+        one: "{0} njuutonmeeter"
+        other: "{0} njuutonmeetrit"
+      short:
+        display_name: Nm
+        one: "{0} Nm"
+        other: "{0} Nm"
+    cubic-kilometer:
+      long:
+        display_name: kuupkilomeetrid
+        one: "{0} kuupkilomeeter"
+        other: "{0} kuupkilomeetrit"
+    cubic-meter:
+      long:
+        display_name: kuupmeetrid
+        one: "{0} kuupmeeter"
+        other: "{0} kuupmeetrit"
+        per_unit_pattern: "{0} kuupmeetri kohta"
+    cubic-centimeter:
+      long:
+        display_name: kuupsentimeetrid
+        one: "{0} kuupsentimeeter"
+        other: "{0} kuupsentimeetrit"
+        per_unit_pattern: "{0} kuupsentimeetri kohta"
+    cubic-mile:
+      long:
+        one: "{0} kuupmiil"
+        other: "{0} kuupmiili"
+      short:
+        display_name: kuupmiilid
+    cubic-yard:
+      long:
+        one: "{0} kuupjard"
+        other: "{0} kuupjardi"
+      short:
+        display_name: kuupjardid
+    cubic-foot:
+      long:
+        display_name: kuupjalad
+        one: "{0} kuupjalg"
+        other: "{0} kuupjalga"
+    cubic-inch:
+      long:
+        one: "{0} kuuptoll"
+        other: "{0} kuuptolli"
+      short:
+        display_name: kuuptollid
+    megaliter:
+      long:
+        display_name: megaliitrid
+        one: "{0} megaliiter"
+        other: "{0} megaliitrit"
+      short:
+        display_name: Ml
+        one: "{0} Ml"
+        other: "{0} Ml"
+    hectoliter:
+      long:
+        display_name: hektoliitrid
+        one: "{0} hektoliiter"
+        other: "{0} hektoliitrit"
+      short:
+        display_name: hl
+        one: "{0} hl"
+        other: "{0} hl"
+    liter:
+      long:
+        one: "{0} liiter"
+        other: "{0} liitrit"
+        per_unit_pattern: "{0} liitri kohta"
+      short:
+        display_name: liitrid
+      narrow:
+        display_name: liiter
+    deciliter:
+      long:
+        display_name: detsiliitrid
+        one: "{0} detsiliiter"
+        other: "{0} detsiliitrit"
+      short:
+        display_name: dl
+        one: "{0} dl"
+        other: "{0} dl"
+    centiliter:
+      long:
+        display_name: sentiliitrid
+        one: "{0} sentiliiter"
+        other: "{0} sentiliitrit"
+      short:
+        display_name: cl
+        one: "{0} cl"
+        other: "{0} cl"
+    milliliter:
+      long:
+        display_name: milliliitrid
+        one: "{0} milliliiter"
+        other: "{0} milliliitrit"
+      short:
+        display_name: ml
+        one: "{0} ml"
+        other: "{0} ml"
+    pint-metric:
+      long:
+        display_name: meetrilised pindid
+        one: "{0} meetriline pint"
+        other: "{0} meetrilist pinti"
+    cup-metric:
+      long:
+        display_name: meetrilised tassid
+        one: "{0} meetriline tass"
+        other: "{0} meetrilist tassi"
+    acre-foot:
+      long:
+        display_name: aakerjalad
+        one: "{0} aakerjalg"
+        other: "{0} aakerjalga"
+      short:
+        display_name: aakerjalg
+    bushel:
+      long:
+        one: "{0} buššel"
+        other: "{0} buššelit"
+      short:
+        display_name: buššelid
+    gallon:
+      long:
+        display_name: gallonid
+        one: "{0} gallon"
+        other: "{0} gallonit"
+        per_unit_pattern: "{0} galloni kohta"
+      short:
+        display_name: gal
+        one: "{0} gal"
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        display_name: inglise gallonid
+        one: "{0} inglise gallon"
+        other: "{0} inglise gallonit"
+        per_unit_pattern: "{0} inglise galloni kohta"
+      narrow:
+        one: "{0} gal Im"
+        other: "{0} gal Im"
+    quart:
+      long:
+        display_name: kvardid
+        one: "{0} kvart"
+        other: "{0} kvarti"
+      short:
+        display_name: kvart
+    pint:
+      long:
+        one: "{0} pint"
+        other: "{0} pinti"
+      short:
+        display_name: pindid
+    cup:
+      long:
+        display_name: tassid
+        one: "{0} tass"
+        other: "{0} tassi"
+      short:
+        display_name: tass
+    fluid-ounce:
+      long:
+        display_name: vedelikuuntsid
+        one: "{0} vedelikuunts"
+        other: "{0} vedelikuuntsi"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: inglise vedelikuuntsid
+        one: "{0} inglise vedelikuuntsi"
+        other: "{0} inglise vedelikuuntsi"
+      narrow:
+        display_name: Imp fl oz
+        one: "{0} fl oz Im"
+        other: "{0} fl oz Im"
+    tablespoon:
+      long:
+        display_name: supilusikad
+        one: "{0} supilusikas"
+        other: "{0} supilusikat"
+      short:
+        display_name: spl
+        one: "{0} spl"
+        other: "{0} spl"
+    teaspoon:
+      long:
+        display_name: teelusikad
+        one: "{0} teelusikas"
+        other: "{0} teelusikat"
+      short:
+        display_name: tl
+        one: "{0} tl"
+        other: "{0} tl"
+    barrel:
+      long:
+        display_name: barrelid
+        one: "{0} barrel"
+        other: "{0} barrelit"
+      short:
+        display_name: barrel
+    dessert-spoon:
+      long:
+        display_name: dessertlusikas
+        one: "{0} dessertlusikas"
+        other: "{0} dessertlusikat"
+    dessert-spoon-imperial:
+      long:
+        display_name: inglise dessertlusikas
+        one: "{0} inglise dessertlusikas"
+        other: "{0} inglise dessertlusikat"
+      short:
+        display_name: ingl dl
+        one: "{0} ingl dl"
+        other: "{0} ingl dl"
+    dram:
+      long:
+        display_name: drahm
+        one: "{0} drahm"
+        other: "{0} drahmi"
+      short:
+        display_name: drahm vedelikku
+        one: "{0} drahm vedelikku"
+        other: "{0} drahmi vedelikku"
+      narrow:
+        display_name: d. ved.
+        one: "{0} d. ved."
+        other: "{0} d. ved."
+    quart-imperial:
+      long:
+        display_name: inglise kvart
+        one: "{0} inglise kvart"
+        other: "{0} inglise kvarti"
+      short:
+        display_name: ingl kvart
+        one: "{0} ingl kvart"
+        other: "{0} ingl kvarti"
+      narrow:
+        display_name: qt Imp
+        one: "{0} qt Imp."
+        other: "{0} qt Imp."
+    portion-per-1e9:
+      long:
+        display_name: miljardikosa
+        one: "{0} miljardikosa"
+        other: "{0} miljardikosa"
+      short:
+        display_name: osakesed/miljard
+        one: "{0} miljardikosa"
+        other: "{0} miljardikosa"
+    night:
+      long:
+        display_name: ööd
+        one: "{0} öö"
+        other: "{0} ööd"
+        per_unit_pattern: "{0} öö kohta"
+      short:
+        display_name: ööd
+        one: "{0} öö"
+        other: "{0} ööd"
+        per_unit_pattern: "{0}/öö"
+      narrow:
+        display_name: ööd
+        one: "{0} öö"
+        other: "{0} ööd"
+        per_unit_pattern: "{0}/öö"
+    dunam:
+      short:
+        display_name: dunamid
+        one: "{0} dunam"
+        other: "{0} dunami"
+    item:
+      short:
+        display_name: üksus
+        one: "{0} üksus"
+        other: "{0} üksust"
+    grain:
+      short:
+        display_name: graan
+        one: "{0} graan"
+        other: "{0} graani"
+    drop:
+      short:
+        display_name: tilk
+        one: "{0} tilk"
+        other: "{0} tilka"
+    jigger:
+      short:
+        display_name: pits
+        one: "{0} pits"
+        other: "{0} pitsi"
+    pinch:
+      short:
+        display_name: näputäis
+        one: "{0} näputäis"
+        other: "{0} näputäit"
+      narrow:
+        display_name: näp.
+        one: "{0} näp."
+        other: "{0} näp."

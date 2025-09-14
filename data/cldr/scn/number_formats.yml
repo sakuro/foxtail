@@ -1,22 +1,78 @@
 ---
 locale: scn
-generated_at: '2025-09-13T17:40:20Z'
+generated_at: '2025-09-14T06:11:59Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: 
+  scientific_formats:
+    standard: 
+  compact_formats:
+    long:
+      '1000':
+        one: 0 migghiaru
+        other: 0 mila
+      '10000':
+        one: 00 mila
+        other: 00 mila
+      '100000':
+        one: 000 mila
+        other: 000 mila
+      '1000000':
+        one: 0 miliuni
+        other: 0 miliuna
+      '10000000':
+        one: 00 miliuna
+        other: 00 miliuna
+      '100000000':
+        one: 000 miliuna
+        other: 000 miliuna
+      '1000000000':
+        one: 0 miliardu
+        other: 0 miliardi
+      '10000000000':
+        one: 00 miliardi
+        other: 00 miliardi
+      '100000000000':
+        one: 000 miliardi
+        other: 000 miliardi
+      '1000000000000':
+        one: 0 biliuni
+        other: 0 biliuna
+      '10000000000000':
+        one: 00 biliuna
+        other: 00 biliuna
+      '100000000000000':
+        one: 000 biliuna
+        other: 000 biliuna
   currencies:
+    AED:
+      display_names:
+        other: dirham EAJ
+        one: dirham EAJ
     AFN:
       display_names:
         other: afghani afghani
         one: afghani afghanu
+    ALL:
+      display_names:
+        other: lek arbanisi
+        one: lek arbanisi
     AMD:
       display_names:
         other: dram armeni
         one: dram armenu
+    ANG:
+      display_names:
+        other: ciurini di l’Antiḍḍi Ulannisi
+        one: ciurinu di l’Antiḍḍi Ulannisi
     AOA:
       display_names:
         other: kwanza angulisi
@@ -29,6 +85,10 @@ number_formats:
       display_names:
         other: dòllari australiani
         one: dòllaru australianu
+    AWG:
+      display_names:
+        other: ciurini d’Arubba
+        one: ciurinu d’Arubba
     AZN:
       display_names:
         other: manat azzeri
@@ -45,6 +105,18 @@ number_formats:
       display_names:
         other: taka dû Bàngladesh
         one: taka dû Bàngladesh
+    BGN:
+      display_names:
+        other: lev bùrgari
+        one: lev bùrgaru
+    BHD:
+      display_names:
+        other: dìnari dû Bahrain
+        one: dìnaru dû Bahrain
+    BIF:
+      display_names:
+        other: franchi dû Burundi
+        one: francu dû Burundi
     BMD:
       display_names:
         other: dòllari dî Birmuda
@@ -65,10 +137,18 @@ number_formats:
       display_names:
         other: dòllari dî Bahamas
         one: dòllaru dî Bahamas
+    BTN:
+      display_names:
+        other: ngultrum butanisi
+        one: ngultrum butanisi
     BWP:
       display_names:
         other: pula dû Botswana
         one: pula dû Botswana
+    BYN:
+      display_names:
+        other: rubbli belurrussi
+        one: rubblu belurrussu
     BZD:
       display_names:
         other: dòllari dû Bilisi
@@ -77,10 +157,22 @@ number_formats:
       display_names:
         other: dòllari canadisi
         one: dòllaru canadisi
+    CDF:
+      display_names:
+        other: franchi cungulisi
+        one: francu cungulisi
+    CHF:
+      display_names:
+        other: franchi sbìzziri
+        one: francu sbìzziru
     CLP:
       display_names:
         other: pesi cileni
         one: pesu cilenu
+    CNH:
+      display_names:
+        other: yuan cinisi (di fora)
+        one: yuan cinisi (di fora)
     CNY:
       display_names:
         other: yuan cinisi
@@ -101,10 +193,18 @@ number_formats:
       display_names:
         other: pesi cubbani
         one: pesu cubbanu
+    CVE:
+      display_names:
+        other: scudi capuvirdisi
+        one: scudu capuvirdisi
     CZK:
       display_names:
         other: curuni cechi
         one: curuna ceca
+    DJF:
+      display_names:
+        other: franchi di Gibbuti
+        one: francu di Gibbuti
     DKK:
       display_names:
         other: curuni danisi
@@ -113,10 +213,22 @@ number_formats:
       display_names:
         other: pesi duminicani
         one: pesu duminicanu
+    DZD:
+      display_names:
+        other: dìnari argirini
+        one: dìnaru argirinu
     EGP:
       display_names:
         other: stirlini eggizziani
         one: stirlina eggizziana
+    ERN:
+      display_names:
+        other: nafka eritrei
+        one: nafka eritreu
+    ETB:
+      display_names:
+        other: birr etiupi
+        one: birr etiupi
     EUR:
       display_names:
         other: euru
@@ -145,6 +257,10 @@ number_formats:
       display_names:
         other: stirlini di Gibbirterra
         one: stirlina di Gibbirterra
+    GMD:
+      display_names:
+        other: dalasi dû Gammia
+        one: dalasi dû Gammia
     GNF:
       display_names:
         other: franchi dâ Guinìa
@@ -169,6 +285,10 @@ number_formats:
       display_names:
         other: kuni cruati
         one: kuna cruata
+    HTG:
+      display_names:
+        other: gordi d’Haiti
+        one: gordu d’Haiti
     HUF:
       display_names:
         other: ciurini unghirisi
@@ -185,6 +305,14 @@ number_formats:
       display_names:
         other: rupìi inniani
         one: rupìa inniana
+    IQD:
+      display_names:
+        other: dìnari iracheni
+        one: dìnaru irachenu
+    IRR:
+      display_names:
+        other: riali iraniani
+        one: riali iranianu
     ISK:
       display_names:
         other: curuni islannisi
@@ -193,10 +321,18 @@ number_formats:
       display_names:
         other: dòllari giamaicanu
         one: dòllaru giamaicanu
+    JOD:
+      display_names:
+        other: dìnari giurdani
+        one: dìnaru giurdanu
     JPY:
       display_names:
         other: yen giappunisi
         one: yen giappunisi
+    KES:
+      display_names:
+        other: scillini dû Kenya
+        one: scillinu dû Kenya
     KGS:
       display_names:
         other: som dû Kyrgyzistan
@@ -217,6 +353,10 @@ number_formats:
       display_names:
         other: won dâ Curìa di Sciroccu
         one: won dâ Curìa di Sciroccu
+    KWD:
+      display_names:
+        other: dìnari dû Kuwait
+        one: dìnaru dû Kuwait
     KYD:
       display_names:
         other: dòllari di l’Ìsuli Cayman
@@ -241,10 +381,30 @@ number_formats:
       display_names:
         other: dòllari dâ Libberia
         one: dòllaru dâ Libberia
+    LSL:
+      display_names:
+        other: loti dû Lisothu
+        one: loti dû Lisothu
+    LYD:
+      display_names:
+        other: dìnari lìbbichi
+        one: dìnaru lìbbicu
+    MAD:
+      display_names:
+        other: dirham marucchini
+        one: dirham marucchinu
+    MDL:
+      display_names:
+        other: lei murdavi
+        one: leu murdavu
     MGA:
       display_names:
         other: ariary margasci
         one: ariary margasciu
+    MKD:
+      display_names:
+        other: dìnari macèduni
+        one: dìnaru macèduni
     MMK:
       display_names:
         other: kyat dû Myanmar
@@ -253,10 +413,26 @@ number_formats:
       display_names:
         other: tugrik mònguli
         one: tugrik mòngulu
+    MOP:
+      display_names:
+        other: patachi di Macau
+        one: pataca di Macau
+    MRU:
+      display_names:
+        other: ouguiya mauritani
+        one: ouguiya mauritanu
     MUR:
       display_names:
         other: rupìi di Mauritius
         one: rupìa di Mauritius
+    MVR:
+      display_names:
+        other: rufiyaa dî Mardivi
+        one: rufiyaa dî Mardivi
+    MWK:
+      display_names:
+        other: kwacha dû Malawi
+        one: kwacha dû Malawi
     MXN:
       display_names:
         other: pesi missicani
@@ -265,6 +441,10 @@ number_formats:
       display_names:
         other: ringgit malisi
         one: ringgit malisi
+    MZN:
+      display_names:
+        other: mètical dû Muzzammicu
+        one: mètical dû Muzzammicu
     NAD:
       display_names:
         other: dòllari dâ Namibbia
@@ -289,6 +469,22 @@ number_formats:
       display_names:
         other: dòllari dâ Nova Zilannia
         one: dòllaru dâ Nova Zilannia
+    OMR:
+      display_names:
+        other: riali di l’Oman
+        one: riali di l’Oman
+    PAB:
+      display_names:
+        other: barboa di Pànama
+        one: barboa di Pànama
+    PEN:
+      display_names:
+        other: suli piruvianu
+        one: suli piruvianu
+    PGK:
+      display_names:
+        other: kina dâ Papua Nova Guinìa
+        one: kina dâ Papua Nova Guinìa
     PHP:
       display_names:
         other: pesi filippini
@@ -305,10 +501,18 @@ number_formats:
       display_names:
         other: guaranì dû Paraguay
         one: guaranì dû Paraguay
+    QAR:
+      display_names:
+        other: riali dû Qatar
+        one: riali dû Qatar
     RON:
       display_names:
         other: lei rumeni
         one: leu rumenu
+    RSD:
+      display_names:
+        other: dìnari serbi
+        one: dìnaru serbu
     RUB:
       display_names:
         other: rubbli russi
@@ -317,10 +521,22 @@ number_formats:
       display_names:
         other: franchi dû Ruanna
         one: francu dû Ruanna
+    SAR:
+      display_names:
+        other: riali di l’Arabbia Saudita
+        one: riali di l’Arabbia Saudita
     SBD:
       display_names:
         other: dòllari di l’Ìsuli Salumuni
         one: dòllaru di l’Ìsuli Salumuni
+    SCR:
+      display_names:
+        other: rupìi dî Seychelles
+        one: rupìa dî Seychelles
+    SDG:
+      display_names:
+        other: stirlini sudanisi
+        one: stirlina sudanisi
     SEK:
       display_names:
         other: curuni svidisi
@@ -333,6 +549,18 @@ number_formats:
       display_names:
         other: stirlini di Sant’Èlina
         one: stirlina di Sant’Èlina
+    SLE:
+      display_names:
+        other: liuna dâ Sierra Liuni
+        one: liuni dâ Sierra Liuni
+    SLL:
+      display_names:
+        other: liuna dâ Sierra Liuni (1964—2022)
+        one: liuni dâ Sierra Liuni (1964—2022)
+    SOS:
+      display_names:
+        other: scillini sòmali
+        one: scillinu sòmalu
     SRD:
       display_names:
         other: dòllari dû Surinami
@@ -349,10 +577,26 @@ number_formats:
       display_names:
         other: stirlini siriani
         one: stirlina siriana
+    SZL:
+      display_names:
+        other: lilangeni di Eswatini
+        one: lilangeni di Eswatini
     THB:
       display_names:
         other: baht tailannisi
         one: baht tailannisi
+    TJS:
+      display_names:
+        other: somoni dû Tajìkistan
+        one: somoni dû Tajìkistan
+    TMT:
+      display_names:
+        other: manat turkmeni
+        one: manat turkmenu
+    TND:
+      display_names:
+        other: dìnari tunisini
+        one: dìnaru tunisinu
     TOP:
       display_names:
         other: Tongan paʻanga
@@ -369,10 +613,18 @@ number_formats:
       display_names:
         other: novi dòllari taiwanisi
         one: novu dòllaru taiwanisi
+    TZS:
+      display_names:
+        other: scillini dâ Tanzania
+        one: scillinu dâ Tanzania
     UAH:
       display_names:
         other: grivni ucràini
         one: grivnia ucràina
+    UGX:
+      display_names:
+        other: scillini di l’Uganna
+        one: scillinu di l’Uganna
     USD:
       display_names:
         other: dòllari miricani
@@ -381,10 +633,26 @@ number_formats:
       display_names:
         other: pesi di l’Uruguay
         one: pesu di l’Uruguay
+    UZS:
+      display_names:
+        other: som di l’Uzbèkistan
+        one: som di l’Uzbèkistan
+    VES:
+      display_names:
+        other: bulivar dû Vinizzuela
+        one: bulivar dû Vinizzuela
     VND:
       display_names:
         other: dong vietnamisi
         one: dong vietnamisi
+    VUV:
+      display_names:
+        other: vatu di Vanuatu
+        one: vatu di Vanuatu
+    WST:
+      display_names:
+        other: Tala samuani
+        one: Tala samuanu
     XAF:
       display_names:
         other: franchi CFA di l’Àfrica cintrali
@@ -405,6 +673,10 @@ number_formats:
       display_names:
         other: "(munita scanusciuta)"
         one: "(munita scanusciuta)"
+    YER:
+      display_names:
+        other: riali dû Yemen
+        one: riali dû Yemen
     ZAR:
       display_names:
         other: rand di l’Àfrica di Sciroccu
@@ -413,231 +685,3 @@ number_formats:
       display_names:
         other: kwacha dâ Zammia
         one: kwacha dâ Zammia
-    AED:
-      display_names:
-        other: dirham EAJ
-        one: dirham EAJ
-    ALL:
-      display_names:
-        other: lek arbanisi
-        one: lek arbanisi
-    ANG:
-      display_names:
-        other: ciurini di l’Antiḍḍi Ulannisi
-        one: ciurinu di l’Antiḍḍi Ulannisi
-    AWG:
-      display_names:
-        other: ciurini d’Arubba
-        one: ciurinu d’Arubba
-    BGN:
-      display_names:
-        other: lev bùrgari
-        one: lev bùrgaru
-    BHD:
-      display_names:
-        other: dìnari dû Bahrain
-        one: dìnaru dû Bahrain
-    BIF:
-      display_names:
-        other: franchi dû Burundi
-        one: francu dû Burundi
-    BTN:
-      display_names:
-        other: ngultrum butanisi
-        one: ngultrum butanisi
-    BYN:
-      display_names:
-        other: rubbli belurrussi
-        one: rubblu belurrussu
-    CDF:
-      display_names:
-        other: franchi cungulisi
-        one: francu cungulisi
-    CHF:
-      display_names:
-        other: franchi sbìzziri
-        one: francu sbìzziru
-    CNH:
-      display_names:
-        other: yuan cinisi (di fora)
-        one: yuan cinisi (di fora)
-    CVE:
-      display_names:
-        other: scudi capuvirdisi
-        one: scudu capuvirdisi
-    DJF:
-      display_names:
-        other: franchi di Gibbuti
-        one: francu di Gibbuti
-    DZD:
-      display_names:
-        other: dìnari argirini
-        one: dìnaru argirinu
-    ERN:
-      display_names:
-        other: nafka eritrei
-        one: nafka eritreu
-    ETB:
-      display_names:
-        other: birr etiupi
-        one: birr etiupi
-    GMD:
-      display_names:
-        other: dalasi dû Gammia
-        one: dalasi dû Gammia
-    HTG:
-      display_names:
-        other: gordi d’Haiti
-        one: gordu d’Haiti
-    IQD:
-      display_names:
-        other: dìnari iracheni
-        one: dìnaru irachenu
-    IRR:
-      display_names:
-        other: riali iraniani
-        one: riali iranianu
-    JOD:
-      display_names:
-        other: dìnari giurdani
-        one: dìnaru giurdanu
-    KES:
-      display_names:
-        other: scillini dû Kenya
-        one: scillinu dû Kenya
-    KWD:
-      display_names:
-        other: dìnari dû Kuwait
-        one: dìnaru dû Kuwait
-    LSL:
-      display_names:
-        other: loti dû Lisothu
-        one: loti dû Lisothu
-    LYD:
-      display_names:
-        other: dìnari lìbbichi
-        one: dìnaru lìbbicu
-    MAD:
-      display_names:
-        other: dirham marucchini
-        one: dirham marucchinu
-    MDL:
-      display_names:
-        other: lei murdavi
-        one: leu murdavu
-    MKD:
-      display_names:
-        other: dìnari macèduni
-        one: dìnaru macèduni
-    MOP:
-      display_names:
-        other: patachi di Macau
-        one: pataca di Macau
-    MRU:
-      display_names:
-        other: ouguiya mauritani
-        one: ouguiya mauritanu
-    MVR:
-      display_names:
-        other: rufiyaa dî Mardivi
-        one: rufiyaa dî Mardivi
-    MWK:
-      display_names:
-        other: kwacha dû Malawi
-        one: kwacha dû Malawi
-    MZN:
-      display_names:
-        other: mètical dû Muzzammicu
-        one: mètical dû Muzzammicu
-    OMR:
-      display_names:
-        other: riali di l’Oman
-        one: riali di l’Oman
-    PAB:
-      display_names:
-        other: barboa di Pànama
-        one: barboa di Pànama
-    PEN:
-      display_names:
-        other: suli piruvianu
-        one: suli piruvianu
-    PGK:
-      display_names:
-        other: kina dâ Papua Nova Guinìa
-        one: kina dâ Papua Nova Guinìa
-    QAR:
-      display_names:
-        other: riali dû Qatar
-        one: riali dû Qatar
-    RSD:
-      display_names:
-        other: dìnari serbi
-        one: dìnaru serbu
-    SAR:
-      display_names:
-        other: riali di l’Arabbia Saudita
-        one: riali di l’Arabbia Saudita
-    SCR:
-      display_names:
-        other: rupìi dî Seychelles
-        one: rupìa dî Seychelles
-    SDG:
-      display_names:
-        other: stirlini sudanisi
-        one: stirlina sudanisi
-    SLE:
-      display_names:
-        other: liuna dâ Sierra Liuni
-        one: liuni dâ Sierra Liuni
-    SLL:
-      display_names:
-        other: liuna dâ Sierra Liuni (1964—2022)
-        one: liuni dâ Sierra Liuni (1964—2022)
-    SOS:
-      display_names:
-        other: scillini sòmali
-        one: scillinu sòmalu
-    SZL:
-      display_names:
-        other: lilangeni di Eswatini
-        one: lilangeni di Eswatini
-    TJS:
-      display_names:
-        other: somoni dû Tajìkistan
-        one: somoni dû Tajìkistan
-    TMT:
-      display_names:
-        other: manat turkmeni
-        one: manat turkmenu
-    TND:
-      display_names:
-        other: dìnari tunisini
-        one: dìnaru tunisinu
-    TZS:
-      display_names:
-        other: scillini dâ Tanzania
-        one: scillinu dâ Tanzania
-    UGX:
-      display_names:
-        other: scillini di l’Uganna
-        one: scillinu di l’Uganna
-    UZS:
-      display_names:
-        other: som di l’Uzbèkistan
-        one: som di l’Uzbèkistan
-    VES:
-      display_names:
-        other: bulivar dû Vinizzuela
-        one: bulivar dû Vinizzuela
-    VUV:
-      display_names:
-        other: vatu di Vanuatu
-        one: vatu di Vanuatu
-    WST:
-      display_names:
-        other: Tala samuani
-        one: Tala samuanu
-    YER:
-      display_names:
-        other: riali dû Yemen
-        one: riali dû Yemen

@@ -1,22 +1,113 @@
 ---
 locale: or
-generated_at: '2025-09-13T17:39:43Z'
+generated_at: '2025-09-14T06:11:34Z'
 cldr_version: '46'
 number_formats:
   decimal_formats:
     standard: "#,##,##0.###"
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0ହ
+        other: 0ହ
+      '10000':
+        one: 00ହ
+        other: 00ହ
+      '100000':
+        one: 000ହ
+        other: 000ହ
+      '1000000':
+        one: 0ନି
+        other: 0ନି
+      '10000000':
+        one: 00ନି
+        other: 00ନି
+      '100000000':
+        one: 000ନି
+        other: 000ନି
+      '1000000000':
+        one: 0ବି
+        other: 0ବି
+      '10000000000':
+        one: 00ବି
+        other: 00ବି
+      '100000000000':
+        one: 000ବି
+        other: 000ବି
+      '1000000000000':
+        one: 0ଟ୍ରି
+        other: 0ଟ୍ରି
+      '10000000000000':
+        one: 00ଟ୍ରି
+        other: 00ଟ୍ରି
+      '100000000000000':
+        one: 000ଟ୍ରି
+        other: 000ଟ୍ରି
+    long:
+      '1000':
+        one: 0 ହଜାର
+        other: 0 ହଜାର
+      '10000':
+        one: 00 ହଜାର
+        other: 00 ହଜାର
+      '100000':
+        one: 000 ହଜାର
+        other: 000 ହଜାର
+      '1000000':
+        one: 0 ନିୟୁତ
+        other: 0 ନିୟୁତ
+      '10000000':
+        one: 00 ନିୟୁତ
+        other: 00 ନିୟୁତ
+      '100000000':
+        one: 000 ନିୟୁତ
+        other: 000 ନିୟୁତ
+      '1000000000':
+        one: 0 ଶହକୋଟି
+        other: 0 ଶହକୋଟି
+      '10000000000':
+        one: 00 ଶହକୋଟି
+        other: 00 ଶହକୋଟି
+      '100000000000':
+        one: 000 ଶହକୋଟି
+        other: 000 ଶହକୋଟି
+      '1000000000000':
+        one: 0 ଲକ୍ଷକୋଟି
+        other: 0 ଲକ୍ଷକୋଟି
+      '10000000000000':
+        one: 00 ଲକ୍ଷକୋଟି
+        other: 00 ଲକ୍ଷକୋଟି
+      '100000000000000':
+        one: 000 ଲକ୍ଷକୋଟି
+        other: 000 ଲକ୍ଷକୋଟି
   currencies:
+    AED:
+      display_names:
+        other: UAE ଦିରହାମ୍
+        one: UAE ଦିରହାମ୍
     AFN:
       display_names:
         other: ଆଫଗାନ ଆଫଗାନି
         one: ଆଫଗାନ ଆଫଗାନି
+    ALL:
+      display_names:
+        other: ଆଲବାନିୟ ଲେକ୍
+        one: ଆଲବାନିୟ ଲେକ୍
     AMD:
       display_names:
         other: ଅର୍ମେନୀୟ ଡ୍ରାମ୍
         one: ଅର୍ମେନୀୟ ଡ୍ରାମ୍
+    ANG:
+      display_names:
+        other: ନେଦରଲ୍ୟାଣ୍ଡ୍ ଆଣ୍ଟିଲିୟ ଗିଲଡର୍
+        one: ନେଦରଲ୍ୟାଣ୍ଡ୍ ଆଣ୍ଟିଲିୟ ଗିଲଡର୍
     AOA:
       display_names:
         other: ଅଙ୍ଗୋଲୀୟ କୱାନଜା
@@ -29,6 +120,10 @@ number_formats:
       display_names:
         other: ଅଷ୍ଟ୍ରେଲିୟ ଡଲାର୍
         one: ଅଷ୍ଟ୍ରେଲିୟ ଡଲାର୍
+    AWG:
+      display_names:
+        other: ଆରୁବୀୟ ଫ୍ଲୋରିନ୍
+        one: ଆରୁବୀୟ ଫ୍ଲୋରିନ୍
     AZN:
       display_names:
         other: ଆଜେରବାଇଜାନି ମନତ୍
@@ -45,6 +140,18 @@ number_formats:
       display_names:
         other: ବଙ୍ଗଳାଦେଶୀ ଟାକା
         one: ବଙ୍ଗଳାଦେଶୀ ଟାକା
+    BGN:
+      display_names:
+        other: ବୁଲଗେରୀୟ ଲେଭ୍
+        one: ବୁଲଗେରୀୟ ଲେଭ୍
+    BHD:
+      display_names:
+        other: ବାଃରେନି ଦିନାର୍
+        one: ବାଃରେନି ଦିନାର୍
+    BIF:
+      display_names:
+        other: ବୁରୁଣ୍ଡିୟ ଫ୍ରାଙ୍କ୍
+        one: ବୁରୁଣ୍ଡିୟ ଫ୍ରାଙ୍କ୍
     BMD:
       display_names:
         other: ବର୍ମ୍ୟୁଡା ଡଲାର୍
@@ -65,10 +172,19 @@ number_formats:
       display_names:
         other: ବାହାମୀୟ ଡଲାର୍
         one: ବାହାମୀୟ ଡଲାର୍
+    BTN:
+      display_names:
+        other: ଭୁଟାନୀ ଗଲଟ୍ରୁମ୍
+        one: ଭୁଟାନୀ ଗଲଟ୍ରୁମ୍
     BWP:
       display_names:
         other: ବୋତ୍ସୱାନା ପୁଲା
         one: ବୋତ୍ସୱାନା ପୁଲା
+    BYN:
+      symbol: р.
+      display_names:
+        other: ବେଲାରୁସି ରୁବଲ୍
+        one: ବେଲାରୁସି ରୁବଲ୍
     BZD:
       display_names:
         other: ବେଲିଜ୍ ଡଲାର୍
@@ -77,10 +193,22 @@ number_formats:
       display_names:
         other: କାନେଡିୟ ଡଲାର୍
         one: କାନେଡିୟ ଡଲାର୍
+    CDF:
+      display_names:
+        other: କଙ୍ଗୋଲିଜ୍ ଫ୍ରାଙ୍କ୍
+        one: କଙ୍ଗୋଲିଜ୍ ଫ୍ରାଙ୍କ୍
+    CHF:
+      display_names:
+        other: ସୁଇସ୍ ଫ୍ରାଙ୍କ୍
+        one: ସୁଇସ୍ ଫ୍ରାଙ୍କ୍
     CLP:
       display_names:
         other: ଚିଲି ପେସୋ
         one: ଚିଲି ପେସୋ
+    CNH:
+      display_names:
+        other: ଚିନୀ ୟୁଆନ୍ (ଅଫସୋର୍)
+        one: ଚିନୀ ୟୁଆନ୍ (ଉପକୂଳବର୍ତ୍ତୀ)
     CNY:
       display_names:
         other: ଚିନୀ ୟୁଆନ୍
@@ -101,10 +229,18 @@ number_formats:
       display_names:
         other: କ୍ୟୁବାନ୍ ପେସୋ
         one: କ୍ୟୁବାନ୍ ପେସୋ
+    CVE:
+      display_names:
+        other: କେପ୍ ଭେର୍ଦେୟ ଏସ୍କୁଡୋ
+        one: କେପ୍ ଭେର୍ଦେୟ ଏସ୍କୁଡୋ
     CZK:
       display_names:
         other: ଚେକ୍ କୋରୁନା
         one: ଚେକ୍ କୋରୁନା
+    DJF:
+      display_names:
+        other: ଜିବୌଟିୟ ଫ୍ରାଙ୍କ୍
+        one: ଜିବୌଟିୟ ଫ୍ରାଙ୍କ୍
     DKK:
       display_names:
         other: ଡାନିସ୍ କ୍ରୋନ୍
@@ -113,10 +249,22 @@ number_formats:
       display_names:
         other: ଡୋମିନିକୀୟ ପେସୋ
         one: ଡୋମିନିକୀୟ ପେସୋ
+    DZD:
+      display_names:
+        other: ଆଲଜେରୀୟ ଦିନାର୍
+        one: ଆଲଜେରୀୟ ଦିନାର୍
     EGP:
       display_names:
         other: ଇଜିପ୍ଟିୟ ପାଉଣ୍ଡ୍
         one: ଇଜିପ୍ଟିୟ ପାଉଣ୍ଡ୍
+    ERN:
+      display_names:
+        other: ଏରିଟ୍ରେୟ ନାକଫା
+        one: ଏରିଟ୍ରେୟ ନାକଫା
+    ETB:
+      display_names:
+        other: ଇଥିଓପିୟ ବିର୍
+        one: ଇଥିଓପିୟ ବିର୍
     EUR:
       display_names:
         other: ୟୁରୋ
@@ -145,6 +293,10 @@ number_formats:
       display_names:
         other: ଗିବ୍ରାଲଟର୍ ପାଉଣ୍ଡ୍
         one: ଗିବ୍ରାଲଟର୍ ପାଉଣ୍ଡ୍
+    GMD:
+      display_names:
+        other: ଗାମ୍ବିୟ ଡାଲାସି
+        one: ଗାମ୍ବିୟ ଡାଲାସି
     GNF:
       display_names:
         other: ଗୁଇନେୟ ଫ୍ରାଙ୍କ୍
@@ -169,6 +321,10 @@ number_formats:
       display_names:
         other: କ୍ରୋଏସୀୟ କୁନା
         one: କ୍ରୋଏସୀୟ କୁନା
+    HTG:
+      display_names:
+        other: ହାଇତୀୟ ଗୋରଡ୍
+        one: ହାଇତୀୟ ଗୋରଡ୍
     HUF:
       display_names:
         other: ହଙ୍ଗେରିୟ ଫୋରିଣ୍ଟ୍
@@ -185,6 +341,14 @@ number_formats:
       display_names:
         other: ଭାରତୀୟ ଟଙ୍କା
         one: ଭାରତୀୟ ଟଙ୍କା
+    IQD:
+      display_names:
+        other: ଇରାକି ଦିନାର୍
+        one: ଇରାକି ଦିନାର୍
+    IRR:
+      display_names:
+        other: ଇରାନୀ ରିଆଲ୍
+        one: ଇରାନୀ ରିଆଲ୍
     ISK:
       display_names:
         other: ଆଇସଲ୍ୟାଣ୍ଡିକ୍‍ କ୍ରୋନା
@@ -193,11 +357,19 @@ number_formats:
       display_names:
         other: ଜାମାଇକୀୟ ଡଲାର୍
         one: ଜାମାଇକୀୟ ଡଲାର୍
+    JOD:
+      display_names:
+        other: ଜର୍ଡାନିୟ ଦିନାର୍
+        one: ଜର୍ଡାନିୟ ଦିନାର୍
     JPY:
       symbol: "¥"
       display_names:
         other: ଜାପାନୀ ୟେନ୍
         one: ଜାପାନୀ ୟେନ୍
+    KES:
+      display_names:
+        other: କେନିୟ ଶିଲିଂ
+        one: କେନିୟ ଶିଲିଂ
     KGS:
       display_names:
         other: କିର୍ଗିସ୍ତାନୀ ସୋମ୍
@@ -218,6 +390,10 @@ number_formats:
       display_names:
         other: ଦକ୍ଷିଣ କୋରିଆଇ ୱୋନ୍
         one: ଦକ୍ଷିଣ କୋରିଆଇ ୱୋନ୍
+    KWD:
+      display_names:
+        other: କୁୱେତି ଦିନାର୍
+        one: କୁୱେତି ଦିନାର୍
     KYD:
       display_names:
         other: କେମେନ୍ ଦ୍ଵୀପପୁଞ୍ଜ ଡଲାର୍
@@ -242,10 +418,30 @@ number_formats:
       display_names:
         other: ଲିବେରୀୟ ଡଲାର୍
         one: ଲିବେରୀୟ ଡଲାର୍
+    LSL:
+      display_names:
+        other: ଲେସୋଥୋ ଲୋଟିସ୍
+        one: ଲେସୋଥୋ ଲୋଟି
+    LYD:
+      display_names:
+        other: ଲିବ୍ୟ ଦିନାର୍
+        one: ଲିବ୍ୟ ଦିନାର୍
+    MAD:
+      display_names:
+        other: ମୋରୋକୀୟ ଦିର୍ହାମ୍
+        one: ମୋରୋକୀୟ ଦିର୍ହାମ୍
+    MDL:
+      display_names:
+        other: ମୋଲଡୋଭାନ୍ ଲେୟୁ
+        one: ମୋଲଡୋଭାନ୍ ଲେୟୁ
     MGA:
       display_names:
         other: ମାଲାଗାସି ଏରିଆରୀ
         one: ମାଲାଗାସି ଏରିଆରୀ
+    MKD:
+      display_names:
+        other: ମାସେଡୋନୀୟ ଡିନର୍
+        one: ମାସେଡୋନୀୟ ଡିନର୍
     MMK:
       display_names:
         other: ମ୍ୟାନମାର୍ କ୍ୟାତ୍‌
@@ -254,10 +450,30 @@ number_formats:
       display_names:
         other: ମଙ୍ଗୋଲିୟ ତୁଗ୍ରିକ୍
         one: ମଙ୍ଗୋଲିୟ ତୁଗ୍ରିକ୍
+    MOP:
+      display_names:
+        other: ମାକାନେଜ୍ ପାଟାକା
+        one: ମାକାନେଜ୍ ପାଟାକା
+    MRO:
+      display_names:
+        other: ମର୍ଟିନିୟ ଆଗୁଇଅ (1973–2017)
+        one: ମର୍ଟିନିୟ ଆଗୁଇଅ (1973–2017)
+    MRU:
+      display_names:
+        other: ମର୍ଟିନିୟ ଆଗୁଇଅ
+        one: ମର୍ଟିନିୟ ଆଗୁଇଅ
     MUR:
       display_names:
         other: ମୌରିସୀୟ ରୁପି
         one: ମୌରିସୀୟ ରୁପି
+    MVR:
+      display_names:
+        other: ମାଲଡିଭିୟ ରୁଫିୟା
+        one: ମାଲଡିଭିୟ ରୁଫିୟା
+    MWK:
+      display_names:
+        other: ମଲାୱି କ୍ୱାଚା
+        one: ମଲାୱି କ୍ୱାଚା
     MXN:
       display_names:
         other: ମେକ୍ସିକୀୟ ପେସୋ
@@ -266,6 +482,10 @@ number_formats:
       display_names:
         other: ମାଲେସିୟ ରିଙ୍ଗିଟ୍
         one: ମାଲେସିୟ ରିଙ୍ଗିଟ୍
+    MZN:
+      display_names:
+        other: ମୋଜାମ୍ବିକୀୟ ମେଟିକାଲ୍
+        one: ମୋଜାମ୍ବିକୀୟ ମେଟିକାଲ୍
     NAD:
       display_names:
         other: ନାମିବିୟ ଡଲାର୍
@@ -290,6 +510,22 @@ number_formats:
       display_names:
         other: ନ୍ୟୁଜିଲ୍ୟାଣ୍ଡ୍ ଡଲାର୍
         one: ନ୍ୟୁଜିଲ୍ୟାଣ୍ଡ୍ ଡଲାର୍
+    OMR:
+      display_names:
+        other: ଓମାନି ରିଆଲ୍
+        one: ଓମାନି ରିଆଲ୍
+    PAB:
+      display_names:
+        other: ପାନାମାନିୟ ବାଲବୋଆ
+        one: ପାନାମାନିୟ ବାଲବୋଆ
+    PEN:
+      display_names:
+        other: ପେରୁଭୀୟ ସୋଲ୍
+        one: ପେରୁଭୀୟ ସୋଲ୍
+    PGK:
+      display_names:
+        other: ପପୁଆ ନ୍ୟୁ ଗୁଇନିୟ କିନା
+        one: ପପୁଆ ନ୍ୟୁ ଗୁଇନିୟ କିନା
     PHP:
       symbol: PHP
       display_names:
@@ -307,10 +543,18 @@ number_formats:
       display_names:
         other: ପାରାଗୁଆୟାନ୍ ଗୁଆରାନି
         one: ପାରାଗୁଆୟାନ୍ ଗୁଆରାନି
+    QAR:
+      display_names:
+        other: କ୍ଵାତାରି ରିଆଲ୍
+        one: କ୍ଵାତାରି ରିଆଲ୍
     RON:
       display_names:
         other: ରୋମାନିୟ ଲେଉ
         one: ରୋମାନିୟ ଲେଉ
+    RSD:
+      display_names:
+        other: ସର୍ବିଆଇ ଦିନାର
+        one: ସର୍ବିଆଇ ଦିନାର
     RUB:
       display_names:
         other: ରୁଷି ରୁବଲ୍
@@ -319,10 +563,22 @@ number_formats:
       display_names:
         other: ରୁୱାଣ୍ଡା ଫ୍ରାଙ୍କ୍
         one: ରୁୱାଣ୍ଡା ଫ୍ରାଙ୍କ୍
+    SAR:
+      display_names:
+        other: ସୌଦି ରିୟାଲ୍
+        one: ସୌଦି ରିୟାଲ୍
     SBD:
       display_names:
         other: ସୋଲୋମୋନ ଦ୍ଵୀପପୁଞ୍ଜ ଡଲାର୍
         one: ସୋଲୋମୋନ୍ ଦ୍ଵୀପପୁଞ୍ଜ ଡଲାର୍
+    SCR:
+      display_names:
+        other: ସେୟଚେଲୋଇସ୍ ରୁପି
+        one: ସେୟଚେଲୋଇସ୍ ରୁପି
+    SDG:
+      display_names:
+        other: ସୁଦାନୀୟ ପାଉଣ୍ଡ୍
+        one: ସୁଦାନୀଜ ପାଉଣ୍ଡ୍
     SEK:
       display_names:
         other: ସ୍ୱେଡିଶ୍ କ୍ରୋନା
@@ -335,6 +591,18 @@ number_formats:
       display_names:
         other: ସେଣ୍ଟ୍. ହେଲେନା ପାଉଣ୍ଡ୍
         one: ସେଣ୍ଟ୍. ହେଲେନା ପାଉଣ୍ଡ୍
+    SLE:
+      display_names:
+        other: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍
+        one: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍
+    SLL:
+      display_names:
+        other: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍ (1964—2022)
+        one: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍ (1964—2022)
+    SOS:
+      display_names:
+        other: ସୋମାଲି ସିଲିଂ
+        one: ସୋମାଲି ସିଲିଂ
     SRD:
       display_names:
         other: ସୁରିନାମିଜ୍ ଡଲାର୍
@@ -343,6 +611,10 @@ number_formats:
       display_names:
         other: ଦକ୍ଷିଣ ସୁଡାନିଜ୍‍ ପାଉଣ୍ଡ୍
         one: ଦକ୍ଷିଣ ସୁଡାନିଜ୍‍ ପାଉଣ୍ଡ୍
+    STD:
+      display_names:
+        other: ସାଓ ତୋମେ & ପ୍ରିସିପ୍ ଡୋବ୍ରା (1977–2017)
+        one: ସାଓ ତୋମେ & ପ୍ରିସିପ୍ ଡୋବ୍ରା (1977–2017)
     STN:
       display_names:
         other: ସାଓ ତୋମେ & ପ୍ରିସିପ୍ ଡୋବ୍ରା
@@ -351,10 +623,26 @@ number_formats:
       display_names:
         other: ସିରିୟ ପାଉଣ୍ଡ୍
         one: ସିରିୟ ପାଉଣ୍ଡ୍
+    SZL:
+      display_names:
+        other: ସ୍ଵାଜି ଇମାଲଞ୍ଜେନି
+        one: ସ୍ଵାଜି ଲିଲାଞ୍ଜେନି
     THB:
       display_names:
         other: ଥାଇ ଭାଟ୍
         one: ଥାଇ ଭାଟ୍
+    TJS:
+      display_names:
+        other: ତାଜିକିସ୍ତାନୀ ସୋମୋନି
+        one: ତାଜିକିସ୍ତାନୀ ସୋମୋନି
+    TMT:
+      display_names:
+        other: ତୁର୍କମେନିସ୍ତାନୀ ମନତ୍‌
+        one: ତୁର୍କମେନିସ୍ତାନୀ ମନତ୍‌
+    TND:
+      display_names:
+        other: ଟୁନେସିଆଇ ଦିନାର୍
+        one: ଟୁନେସିଆଇ ଦିନାର୍
     TOP:
       display_names:
         other: ତୋଙ୍ଗିୟ ପାଙ୍ଗା
@@ -371,10 +659,18 @@ number_formats:
       display_names:
         other: ନ୍ୟୁ ତାଇୱାନ୍ ଡଲାର୍
         one: ନ୍ୟୁ ତାଇୱାନ୍ ଡଲାର୍
+    TZS:
+      display_names:
+        other: ତାନଜାନୀୟ ଶିଲିଂ
+        one: ତାନଜାନୀୟ ଶିଲିଂ
     UAH:
       display_names:
         other: ୟୁକ୍ରେନୀୟ ହ୍ରାଇଭନିଆ
         one: ୟୁକ୍ରେନୀୟ ହ୍ରାଇଭନିଆ
+    UGX:
+      display_names:
+        other: ଉଗାଣ୍ଡିୟ ଶିଲିଂ
+        one: ଉଗାଣ୍ଡିୟ ଶିଲିଂ
     USD:
       symbol: "$"
       display_names:
@@ -384,14 +680,30 @@ number_formats:
       display_names:
         other: ଉରୁଗୁଇୟାନ୍ ପେସୋ
         one: ଉରୁଗୁଇୟାନ୍ ପେସୋ
+    UZS:
+      display_names:
+        other: ଉଜବେକିସ୍ତାନୀ ସୋମ୍
+        one: ଉଜବେକିସ୍ତାନୀ ସୋମ୍
     VEF:
       display_names:
         other: ଭେନେଜୁଏଲାନ୍ ବୋଲିଭାର୍ (2008–2018)
         one: ଭେନେଜୁଏଲାନ୍ ବୋଲିଭାର୍ (2008–2018)
+    VES:
+      display_names:
+        other: ଭେନେଜୁଏଲାନ୍ ବୋଲିଭାର୍
+        one: ଭେନେଜୁଏଲାନ୍ ବୋଲିଭାର୍
     VND:
       display_names:
         other: ଭୀଏତନାମୀୟ ଡଙ୍ଗ
         one: ଭୀଏତନାମୀୟ ଡଙ୍ଗ
+    VUV:
+      display_names:
+        other: ଭାନୁଆଟୁ ଭାଟୁ
+        one: ଭାନୁଆଟୁ ଭାଟୁ
+    WST:
+      display_names:
+        other: ସାମୋୟିୟ ତାଲା
+        one: ସାମୋୟିୟ ତାଲା
     XAF:
       display_names:
         other: ମଧ୍ୟ ଆଫ୍ରିକୀ CFA ଫ୍ରାଙ୍କ୍
@@ -412,6 +724,10 @@ number_formats:
       display_names:
         other: "(ଅଜଣା ମୁଦ୍ରା)"
         one: "(ମୁଦ୍ରାର ଅଜଣା ଏକକ)"
+    YER:
+      display_names:
+        other: ୟେମେନି ରିଆଲ୍
+        one: ୟେମେନି ରିଆଲ୍
     ZAR:
       display_names:
         other: ଦକ୍ଷିଣ ଆଫ୍ରିକିୟ ରାଣ୍ଡ୍
@@ -420,240 +736,1746 @@ number_formats:
       display_names:
         other: ଜାମ୍ବୀୟ କ୍ୱାଚା
         one: ଜାମ୍ବୀୟ କ୍ୱାଚା
-    AED:
-      display_names:
-        other: UAE ଦିରହାମ୍
-        one: UAE ଦିରହାମ୍
-    ALL:
-      display_names:
-        other: ଆଲବାନିୟ ଲେକ୍
-        one: ଆଲବାନିୟ ଲେକ୍
-    ANG:
-      display_names:
-        other: ନେଦରଲ୍ୟାଣ୍ଡ୍ ଆଣ୍ଟିଲିୟ ଗିଲଡର୍
-        one: ନେଦରଲ୍ୟାଣ୍ଡ୍ ଆଣ୍ଟିଲିୟ ଗିଲଡର୍
-    AWG:
-      display_names:
-        other: ଆରୁବୀୟ ଫ୍ଲୋରିନ୍
-        one: ଆରୁବୀୟ ଫ୍ଲୋରିନ୍
-    BGN:
-      display_names:
-        other: ବୁଲଗେରୀୟ ଲେଭ୍
-        one: ବୁଲଗେରୀୟ ଲେଭ୍
-    BHD:
-      display_names:
-        other: ବାଃରେନି ଦିନାର୍
-        one: ବାଃରେନି ଦିନାର୍
-    BIF:
-      display_names:
-        other: ବୁରୁଣ୍ଡିୟ ଫ୍ରାଙ୍କ୍
-        one: ବୁରୁଣ୍ଡିୟ ଫ୍ରାଙ୍କ୍
-    BTN:
-      display_names:
-        other: ଭୁଟାନୀ ଗଲଟ୍ରୁମ୍
-        one: ଭୁଟାନୀ ଗଲଟ୍ରୁମ୍
-    BYN:
-      symbol: р.
-      display_names:
-        other: ବେଲାରୁସି ରୁବଲ୍
-        one: ବେଲାରୁସି ରୁବଲ୍
-    CDF:
-      display_names:
-        other: କଙ୍ଗୋଲିଜ୍ ଫ୍ରାଙ୍କ୍
-        one: କଙ୍ଗୋଲିଜ୍ ଫ୍ରାଙ୍କ୍
-    CHF:
-      display_names:
-        other: ସୁଇସ୍ ଫ୍ରାଙ୍କ୍
-        one: ସୁଇସ୍ ଫ୍ରାଙ୍କ୍
-    CNH:
-      display_names:
-        other: ଚିନୀ ୟୁଆନ୍ (ଅଫସୋର୍)
-        one: ଚିନୀ ୟୁଆନ୍ (ଉପକୂଳବର୍ତ୍ତୀ)
-    CVE:
-      display_names:
-        other: କେପ୍ ଭେର୍ଦେୟ ଏସ୍କୁଡୋ
-        one: କେପ୍ ଭେର୍ଦେୟ ଏସ୍କୁଡୋ
-    DJF:
-      display_names:
-        other: ଜିବୌଟିୟ ଫ୍ରାଙ୍କ୍
-        one: ଜିବୌଟିୟ ଫ୍ରାଙ୍କ୍
-    DZD:
-      display_names:
-        other: ଆଲଜେରୀୟ ଦିନାର୍
-        one: ଆଲଜେରୀୟ ଦିନାର୍
-    ERN:
-      display_names:
-        other: ଏରିଟ୍ରେୟ ନାକଫା
-        one: ଏରିଟ୍ରେୟ ନାକଫା
-    ETB:
-      display_names:
-        other: ଇଥିଓପିୟ ବିର୍
-        one: ଇଥିଓପିୟ ବିର୍
-    GMD:
-      display_names:
-        other: ଗାମ୍ବିୟ ଡାଲାସି
-        one: ଗାମ୍ବିୟ ଡାଲାସି
-    HTG:
-      display_names:
-        other: ହାଇତୀୟ ଗୋରଡ୍
-        one: ହାଇତୀୟ ଗୋରଡ୍
-    IQD:
-      display_names:
-        other: ଇରାକି ଦିନାର୍
-        one: ଇରାକି ଦିନାର୍
-    IRR:
-      display_names:
-        other: ଇରାନୀ ରିଆଲ୍
-        one: ଇରାନୀ ରିଆଲ୍
-    JOD:
-      display_names:
-        other: ଜର୍ଡାନିୟ ଦିନାର୍
-        one: ଜର୍ଡାନିୟ ଦିନାର୍
-    KES:
-      display_names:
-        other: କେନିୟ ଶିଲିଂ
-        one: କେନିୟ ଶିଲିଂ
-    KWD:
-      display_names:
-        other: କୁୱେତି ଦିନାର୍
-        one: କୁୱେତି ଦିନାର୍
-    LSL:
-      display_names:
-        other: ଲେସୋଥୋ ଲୋଟିସ୍
-        one: ଲେସୋଥୋ ଲୋଟି
-    LYD:
-      display_names:
-        other: ଲିବ୍ୟ ଦିନାର୍
-        one: ଲିବ୍ୟ ଦିନାର୍
-    MAD:
-      display_names:
-        other: ମୋରୋକୀୟ ଦିର୍ହାମ୍
-        one: ମୋରୋକୀୟ ଦିର୍ହାମ୍
-    MDL:
-      display_names:
-        other: ମୋଲଡୋଭାନ୍ ଲେୟୁ
-        one: ମୋଲଡୋଭାନ୍ ଲେୟୁ
-    MKD:
-      display_names:
-        other: ମାସେଡୋନୀୟ ଡିନର୍
-        one: ମାସେଡୋନୀୟ ଡିନର୍
-    MOP:
-      display_names:
-        other: ମାକାନେଜ୍ ପାଟାକା
-        one: ମାକାନେଜ୍ ପାଟାକା
-    MRO:
-      display_names:
-        other: ମର୍ଟିନିୟ ଆଗୁଇଅ (1973–2017)
-        one: ମର୍ଟିନିୟ ଆଗୁଇଅ (1973–2017)
-    MRU:
-      display_names:
-        other: ମର୍ଟିନିୟ ଆଗୁଇଅ
-        one: ମର୍ଟିନିୟ ଆଗୁଇଅ
-    MVR:
-      display_names:
-        other: ମାଲଡିଭିୟ ରୁଫିୟା
-        one: ମାଲଡିଭିୟ ରୁଫିୟା
-    MWK:
-      display_names:
-        other: ମଲାୱି କ୍ୱାଚା
-        one: ମଲାୱି କ୍ୱାଚା
-    MZN:
-      display_names:
-        other: ମୋଜାମ୍ବିକୀୟ ମେଟିକାଲ୍
-        one: ମୋଜାମ୍ବିକୀୟ ମେଟିକାଲ୍
-    OMR:
-      display_names:
-        other: ଓମାନି ରିଆଲ୍
-        one: ଓମାନି ରିଆଲ୍
-    PAB:
-      display_names:
-        other: ପାନାମାନିୟ ବାଲବୋଆ
-        one: ପାନାମାନିୟ ବାଲବୋଆ
-    PEN:
-      display_names:
-        other: ପେରୁଭୀୟ ସୋଲ୍
-        one: ପେରୁଭୀୟ ସୋଲ୍
-    PGK:
-      display_names:
-        other: ପପୁଆ ନ୍ୟୁ ଗୁଇନିୟ କିନା
-        one: ପପୁଆ ନ୍ୟୁ ଗୁଇନିୟ କିନା
-    QAR:
-      display_names:
-        other: କ୍ଵାତାରି ରିଆଲ୍
-        one: କ୍ଵାତାରି ରିଆଲ୍
-    RSD:
-      display_names:
-        other: ସର୍ବିଆଇ ଦିନାର
-        one: ସର୍ବିଆଇ ଦିନାର
-    SAR:
-      display_names:
-        other: ସୌଦି ରିୟାଲ୍
-        one: ସୌଦି ରିୟାଲ୍
-    SCR:
-      display_names:
-        other: ସେୟଚେଲୋଇସ୍ ରୁପି
-        one: ସେୟଚେଲୋଇସ୍ ରୁପି
-    SDG:
-      display_names:
-        other: ସୁଦାନୀୟ ପାଉଣ୍ଡ୍
-        one: ସୁଦାନୀଜ ପାଉଣ୍ଡ୍
-    SLE:
-      display_names:
-        other: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍
-        one: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍
-    SLL:
-      display_names:
-        other: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍ (1964—2022)
-        one: ସିଏରା ଲିଓନୀୟ ଲେଓନ୍ (1964—2022)
-    SOS:
-      display_names:
-        other: ସୋମାଲି ସିଲିଂ
-        one: ସୋମାଲି ସିଲିଂ
-    STD:
-      display_names:
-        other: ସାଓ ତୋମେ & ପ୍ରିସିପ୍ ଡୋବ୍ରା (1977–2017)
-        one: ସାଓ ତୋମେ & ପ୍ରିସିପ୍ ଡୋବ୍ରା (1977–2017)
-    SZL:
-      display_names:
-        other: ସ୍ଵାଜି ଇମାଲଞ୍ଜେନି
-        one: ସ୍ଵାଜି ଲିଲାଞ୍ଜେନି
-    TJS:
-      display_names:
-        other: ତାଜିକିସ୍ତାନୀ ସୋମୋନି
-        one: ତାଜିକିସ୍ତାନୀ ସୋମୋନି
-    TMT:
-      display_names:
-        other: ତୁର୍କମେନିସ୍ତାନୀ ମନତ୍‌
-        one: ତୁର୍କମେନିସ୍ତାନୀ ମନତ୍‌
-    TND:
-      display_names:
-        other: ଟୁନେସିଆଇ ଦିନାର୍
-        one: ଟୁନେସିଆଇ ଦିନାର୍
-    TZS:
-      display_names:
-        other: ତାନଜାନୀୟ ଶିଲିଂ
-        one: ତାନଜାନୀୟ ଶିଲିଂ
-    UGX:
-      display_names:
-        other: ଉଗାଣ୍ଡିୟ ଶିଲିଂ
-        one: ଉଗାଣ୍ଡିୟ ଶିଲିଂ
-    UZS:
-      display_names:
-        other: ଉଜବେକିସ୍ତାନୀ ସୋମ୍
-        one: ଉଜବେକିସ୍ତାନୀ ସୋମ୍
-    VES:
-      display_names:
-        other: ଭେନେଜୁଏଲାନ୍ ବୋଲିଭାର୍
-        one: ଭେନେଜୁଏଲାନ୍ ବୋଲିଭାର୍
-    VUV:
-      display_names:
-        other: ଭାନୁଆଟୁ ଭାଟୁ
-        one: ଭାନୁଆଟୁ ଭାଟୁ
-    WST:
-      display_names:
-        other: ସାମୋୟିୟ ତାଲା
-        one: ସାମୋୟିୟ ତାଲା
-    YER:
-      display_names:
-        other: ୟେମେନି ରିଆଲ୍
-        one: ୟେମେନି ରିଆଲ୍
+  units:
+    g-force:
+      long:
+        display_name: ଜି-ଫୋର୍ସ୍
+        one: "{0} ଜି-ଫୋର୍ସ୍"
+        other: "{0} ଜି-ଫୋର୍ସ୍"
+      short:
+        one: "{0} ଜି"
+        other: "{0} ଜି"
+      narrow:
+        display_name: ଜି-ଫୋର୍ସ୍
+        one: "{0}ମା. ବଳ"
+        other: "{0}ମା. ବଳ"
+    meter-per-square-second:
+      long:
+        display_name: ମିଟର୍ ପ୍ରତି ସେକେଣ୍ଡ୍ ବର୍ଗ
+        one: "{0} ମିଟର୍ ପ୍ରତି ସେକେଣ୍ଡ୍ ବର୍ଗ"
+        other: "{0} ମିଟର୍ ପ୍ରତି ସେକେଣ୍ଡ୍ ବର୍ଗ"
+      short:
+        display_name: ମିଟର୍/ସେ²
+        one: "{0} ମି/ସେ²"
+        other: "{0} ମି/ସେ²"
+    revolution:
+      long:
+        display_name: ପରିକ୍ରମଣ
+        one: "{0} ପରିକ୍ରମଣ"
+        other: "{0} ପରିକ୍ରମଣ"
+      short:
+        display_name: ପରିକ୍ର
+        one: "{0} ପରିକ୍ର"
+        other: "{0} ପରିକ୍ର"
+      narrow:
+        display_name: ଘୂର୍ଣନ
+        one: "{0} ଘୂର୍ଣନ"
+        other: "{0} ଘୂର୍ଣନ"
+    radian:
+      long:
+        one: "{0} ରେଡିଆନ୍"
+        other: "{0} ରେଡିଆନ୍"
+      short:
+        display_name: ରେଡିଆନ୍
+        one: "{0} ରେଡି"
+        other: "{0} ରେଡି"
+      narrow:
+        one: "{0} ରେଡିଆନ୍"
+        other: "{0} ରେଡିଆନ୍"
+    degree:
+      long:
+        one: "{0} ଡିଗ୍ରୀ"
+        other: "{0} ଡିଗ୍ରୀ"
+      short:
+        display_name: ଡିଗ୍ରୀ
+        one: "{0} ଡି"
+        other: "{0} ଡି"
+    arc-minute:
+      long:
+        display_name: ଆର୍କମିନିଟ୍
+        one: "{0}′"
+        other: "{0} ଆର୍କମିନିଟ୍"
+      short:
+        display_name: ଆର୍କମି
+        one: "{0} ଆର୍କମି"
+        other: "{0} ଆର୍କମି"
+      narrow:
+        display_name: ଆର୍କ-ମିନିଟ୍
+        one: "{0} ଆର୍କମି"
+        other: "{0}′"
+    arc-second:
+      long:
+        display_name: ଆର୍କସେକେଣ୍ଡ୍
+        one: "{0} ଆର୍କସେକେଣ୍ଡ୍"
+        other: "{0} ଆର୍କସେକେଣ୍ଡ୍"
+      short:
+        display_name: ଆର୍କସେ
+        one: "{0} ଆର୍କସେ"
+        other: "{0} ଆର୍କସେ"
+    square-kilometer:
+      long:
+        display_name: ବର୍ଗ କିଲୋମିଟର୍
+        one: "{0} ବର୍ଗ କିଲୋମିଟର୍"
+        other: "{0} ବର୍ଗ କିଲୋମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି ବର୍ଗ କିଲୋମିଟର୍"
+      short:
+        display_name: କିମି²
+        one: "{0} କିମି²"
+        other: "{0} କିମି²"
+        per_unit_pattern: "{0}/କିମି²"
+      narrow:
+        display_name: ବର୍ଗକିମି
+        per_unit_pattern: "{0}/ବର୍ଗକିମି"
+    hectare:
+      long:
+        one: "{0} ହେକ୍ଟର୍"
+        other: "{0} ହେକ୍ଟର୍"
+      short:
+        display_name: ହେକ୍ଟର୍
+        one: "{0} ହେ"
+        other: "{0} ହେ"
+    square-meter:
+      long:
+        display_name: ବର୍ଗ ମିଟର୍
+        one: "{0} ବର୍ଗ ମିଟର୍"
+        other: "{0} ବର୍ଗ ମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି ବର୍ଗ ମିଟର୍"
+      short:
+        display_name: ମିଟର୍²
+        one: "{0} ମି²"
+        other: "{0} ମି²"
+        per_unit_pattern: "{0}/ମି²"
+      narrow:
+        display_name: ବର୍ଗମି
+        one: "{0} ବର୍ଗମି"
+        other: "{0} ବର୍ଗମି"
+    square-centimeter:
+      long:
+        display_name: ବର୍ଗ ସେଣ୍ଟିମିଟର୍
+        one: "{0} ବର୍ଗ ସେଣ୍ଟିମିଟର୍"
+        other: "{0} ବର୍ଗ ସେଣ୍ଟିମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି ବର୍ଗ ସେଣ୍ଟିମିଟର୍"
+      short:
+        display_name: ସେମି²
+        one: "{0} ସେମି²"
+        other: "{0} ସେମି²"
+        per_unit_pattern: "{0}/ସେମି²"
+      narrow:
+        display_name: ବର୍ଗସେମି
+        one: "{0} /ବର୍ଗସେମି"
+        other: "{0} /ବର୍ଗସେମି"
+        per_unit_pattern: "{0} /ବର୍ଗସେମି"
+    square-mile:
+      long:
+        per_unit_pattern: "{0} ପ୍ରତି ବର୍ଗ ମାଇଲ୍"
+      short:
+        display_name: ବର୍ଗ ମାଇଲ୍
+        one: "{0} ବର୍ଗ ମାଇଲ୍"
+        other: "{0} ବର୍ଗ ମାଇଲ୍"
+        per_unit_pattern: "{0}/ମାଇଲ୍²"
+      narrow:
+        one: "{0}ବର୍ଗମାଇଲ୍"
+        other: "{0}ବର୍ଗମାଇଲ୍"
+        per_unit_pattern: "{0}/ବର୍ଗମାଇଲ୍"
+    square-yard:
+      long:
+        display_name: ବର୍ଗ ଗଜ
+        one: "{0} ବର୍ଗ ଗଜ"
+        other: "{0} ବର୍ଗ ଗଜ"
+      short:
+        display_name: ୟାର୍ଡ୍²
+        one: "{0} ୟାର୍ଡ୍²"
+        other: "{0} ୟାର୍ଡ୍²"
+      narrow:
+        display_name: ବର୍ଗଗଜ
+        one: "{0} ବର୍ଗଗଜ"
+        other: "{0} ବର୍ଗଗଜ"
+    square-foot:
+      long:
+        one: "{0} ବର୍ଗ ଫୁଟ୍"
+        other: "{0} ବର୍ଗ ଫିଟ୍"
+      short:
+        display_name: ବର୍ଗ ଫିଟ୍
+        one: "{0} ବର୍ଗ ଫିଟ୍"
+        other: "{0} ବର୍ଗ ଫିଟ୍"
+    square-inch:
+      long:
+        display_name: ବର୍ଗ ଇଞ୍ଚ
+        one: "{0} ବର୍ଗ ଇଞ୍ଚ"
+        other: "{0} ବର୍ଗ ଇଞ୍ଚ"
+        per_unit_pattern: "{0} ପ୍ରତି ବର୍ଗ ଇଞ୍ଚ"
+      short:
+        display_name: ଇଞ୍ଚ²
+        one: "{0} ଇଞ୍ଚ²"
+        other: "{0} ଇଞ୍ଚ²"
+        per_unit_pattern: "{0}/ଇଞ୍ଚ²"
+      narrow:
+        display_name: ବର୍ଗଇଞ୍ଚ
+        one: "{0} /ବର୍ଗଇଞ୍ଚ"
+        other: "{0} /ବର୍ଗଇଞ୍ଚ"
+        per_unit_pattern: "{0} /ବର୍ଗଇଞ୍ଚ"
+    karat:
+      long:
+        one: "{0} କ୍ୟାରେଟ୍"
+        other: "{0} କ୍ୟାରେଟ୍"
+      short:
+        display_name: କ୍ୟାରେଟ୍
+      narrow:
+        one: "{0}kt"
+        other: "{0}kt"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: ମିଲିଗ୍ରାମ୍ ପ୍ରତି ଡେସିଲିଟର୍
+        one: "{0} ମିଲିଗ୍ରାମ୍ ପ୍ରତି ଡେସିଲିଟର୍"
+        other: "{0} ମିଲିଗ୍ରାମ୍ ପ୍ରତି ଡେସିଲିଟର୍"
+      short:
+        display_name: ମିଗ୍ରା/ଡେଲି
+        one: "{0} ମିଗ୍ରା/ଡେଲି"
+        other: "{0} ମିଗ୍ରା/ଡେଲି"
+      narrow:
+        display_name: ମି.ଗ୍ରା./ଡେ.ଲି.
+        one: "{0} ମି.ଗ୍ରା./ଡେ.ଲି."
+        other: "{0} ମି.ଗ୍ରା./ଡେ.ଲି."
+    millimole-per-liter:
+      long:
+        display_name: ମିଲିମୋଲ୍ ପ୍ରତି ଲିଟର୍
+        one: "{0} ମିଲିମୋଲ୍ ପ୍ରତି ଲିଟର୍"
+        other: "{0} ମିଲିମୋଲ୍ ପ୍ରତି ଲିଟର୍"
+      short:
+        display_name: ମିଲିମୋଲ୍/ଲିଟର୍
+        one: "{0} ମିଲିମୋଲ୍/ଲି"
+        other: "{0} ମିଲିମୋଲ୍/ଲି"
+      narrow:
+        display_name: ମିଲିମୋଲ୍/ଲି
+        one: "{0}ମିଲିମୋଲ୍/ଲି"
+        other: "{0}ମିଲିମୋଲ୍/ଲି"
+    item:
+      long:
+        display_name: ଆଇଟମ୍‌ଗୁଡିକ
+        one: "{0} ଆଇଟମ୍"
+        other: "{0} ଆଇଟମ୍‌ଗୁଡିକ"
+      short:
+        display_name: ଆଇଟମ୍
+        one: "{0} ଆଇଟମ୍"
+        other: "{0} ଆଇଟମ୍"
+      narrow:
+        one: "{0}ଆଇଟମ୍"
+        other: "{0}ଆଇଟମ୍"
+    permillion:
+      long:
+        display_name: ଅଂଶ ପ୍ରତି ନିୟୁତ
+        one: "{0} ଅଂଶ ପ୍ରତି ନିୟୁତ"
+        other: "{0} ଅଂଶ ପ୍ରତି ନିୟୁତ"
+      short:
+        display_name: ଅଂଶ/ନିୟୁତ
+        one: "{0} ପିପିଏମ୍"
+        other: "{0} ପିପିଏମ୍"
+      narrow:
+        display_name: ପିପିଏମ୍
+        one: "{0}ପିପିଏମ୍"
+        other: "{0}ପିପିଏମ୍"
+    percent:
+      long:
+        one: "{0} ଶତକଡ଼ା"
+        other: "{0} ଶତକଡ଼ା"
+      short:
+        display_name: ଶତକଡ଼ା
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        one: "{0} ପରମିଲ"
+        other: "{0} ପରମିଲ"
+      short:
+        display_name: ପରମିଲ
+      narrow:
+        display_name: "‰"
+    permyriad:
+      long:
+        one: "{0} ପରମାଇରିଆଡ"
+        other: "{0} ପରମାଇରିଆଡ"
+      short:
+        display_name: ପରମାଇରିଆଡ
+      narrow:
+        display_name: "‱"
+    mole:
+      long:
+        display_name: ମୋଲସ
+        one: "{0} ମୋଲ"
+        other: "{0} ମୋଲସ"
+      short:
+        display_name: ମୋଲ
+        one: ମୋଲ
+        other: "{0} ମୋଲ"
+      narrow:
+        one: "{0}ମୋଲ"
+        other: "{0}ମୋଲ"
+    liter-per-kilometer:
+      long:
+        display_name: ଲିଟର୍ ପ୍ରତି କିଲୋମିଟର୍
+        one: "{0} ଲିଟର୍ ପ୍ରତି କିଲୋମିଟର୍"
+        other: "{0} ଲିଟର୍ ପ୍ରତି କିଲୋମିଟର୍"
+      short:
+        display_name: ଲିଟର୍/କିମି
+        one: "{0} ଲି/କିମି"
+        other: "{0} ଲି/କିମି"
+    liter-per-100-kilometer:
+      long:
+        display_name: 100 କିଲୋମିଟର୍ ପ୍ରତି ଲିଟର୍
+        one: 100 କିଲୋମିଟର୍ ପ୍ରତି {0} ଲିଟର୍
+        other: 100 କିଲୋମିଟର୍ ପ୍ରତି {0} ଲିଟର୍
+      short:
+        display_name: ଲି/100 କିମି
+        one: "{0} ଲି/100 କିମି"
+        other: "{0} ଲି/100 କିମି"
+      narrow:
+        display_name: ଲି/100କିମି
+        one: "{0}ଲି/100 କିମି"
+        other: "{0}ଲି/100 କିମି"
+    mile-per-gallon:
+      long:
+        display_name: ମାଇଲ୍ ପ୍ରତି ଗ୍ୟାଲନ୍
+        one: "{0} ମାଇଲ୍ ପ୍ରତି ଗ୍ୟାଲନ୍"
+        other: "{0} ମାଇଲ୍ ପ୍ରତି ଗ୍ୟାଲନ୍"
+      short:
+        display_name: ମାଇଲ୍/ଗ୍ୟା
+        one: "{0} ଏମପିଜି"
+        other: "{0} ଏମପିଜି"
+      narrow:
+        display_name: ମାଇଲ୍/ଗେଲନ୍
+    mile-per-gallon-imperial:
+      long:
+        display_name: ମାଇଲ୍ ପ୍ରତି ଇମ୍ପେରିଆଲ୍ ଗ୍ୟାଲନ୍
+        one: "{0} ମାଇଲ୍ ପ୍ରତି ଇମ୍ପେରିଆଲ୍ ଗ୍ୟାଲନ୍"
+        other: "{0} ମାଇଲ୍ ପ୍ରତି ଇମ୍ପେରିଆଲ୍ ଗ୍ୟାଲନ୍"
+      short:
+        display_name: ମାଇଲ୍/ଇମ୍ପେ. ଗ୍ୟା
+        one: "{0} ଏମପିଜି ଇମ୍ପେ."
+        other: "{0} ଏମପିଜି ଇମ୍ପେ."
+      narrow:
+        display_name: mpg UK
+        one: "{0}m/gUK"
+        other: "{0}m/gUK"
+    petabyte:
+      long:
+        display_name: ପେଟାବାଇଟ୍‌
+      short:
+        display_name: PByte
+    terabyte:
+      long:
+        display_name: ଟେରାବାଇଟ୍
+        one: "{0} ଟେରାବାଇଟ୍"
+        other: "{0} ଟେରାବାଇଟ୍"
+      short:
+        display_name: ଟିବାଇଟ୍
+    terabit:
+      long:
+        display_name: ଟେରାବିଟ୍
+        one: "{0} ଟେରାବିଟ୍"
+        other: "{0} ଟେରାବିଟ୍"
+      short:
+        display_name: ଟିବିଟ୍
+    gigabyte:
+      long:
+        display_name: ଗିଗାବାଇଟ୍
+        one: "{0} ଗିଗାବାଇଟ୍"
+        other: "{0} ଗିଗାବାଇଟ୍"
+      short:
+        display_name: ଜିବାଇଟ୍
+    gigabit:
+      long:
+        display_name: ଗିଗାବିଟ୍
+        one: "{0} ଗିଗାବିଟ୍"
+        other: "{0} ଗିଗାବିଟ୍"
+      short:
+        display_name: ଜିବିଟ୍
+    megabyte:
+      long:
+        display_name: ମେଗାବାଇଟ୍
+        one: "{0} ମେଗାବାଇଟ୍"
+        other: "{0} ମେଗାବାଇଟ୍"
+      short:
+        display_name: ମେବାଇଟ୍
+    megabit:
+      long:
+        display_name: ମେଗାବିଟ୍
+        one: "{0} ମେଗାବିଟ୍"
+        other: "{0} ମେଗାବିଟ୍"
+      short:
+        display_name: ମେବିଟ୍
+    kilobyte:
+      long:
+        display_name: କିଲୋବାଇଟ୍
+        one: "{0} କିଲୋବାଇଟ୍"
+        other: "{0} କିଲୋବାଇଟ୍"
+      short:
+        display_name: କେବାଇଟ୍
+    kilobit:
+      long:
+        display_name: କିଲୋବିଟ୍
+        one: "{0} କିଲୋବିଟ୍"
+        other: "{0} କିଲୋବିଟ୍"
+      short:
+        display_name: କେବିଟ୍
+    century:
+      long:
+        display_name: ଶତାବ୍ଦୀ
+        one: "{0} ଶତାବ୍ଦୀ"
+        other: "{0} ଶତାବ୍ଦୀ"
+      narrow:
+        one: "{0} ଶତକ"
+        other: "{0} ଶତକ"
+    decade:
+      long:
+        one: "{0} ଦଶନ୍ଧି"
+        other: "{0} ଦଶନ୍ଧି"
+      short:
+        one: "{0} ଦଶନ୍ଧି"
+        other: "{0} ଦଶନ୍ଧି"
+      narrow:
+        display_name: ଦଶନ୍ଧି
+        one: "{0} ଦଶନ୍ଧି"
+        other: "{0} ଦଶନ୍ଧି"
+    year:
+      long:
+        per_unit_pattern: "{0} ପ୍ରତି ବର୍ଷ"
+      short:
+        display_name: ବର୍ଷ
+        one: "{0} ବର୍ଷ"
+        other: "{0} ବର୍ଷ"
+        per_unit_pattern: "{0}/ବର୍ଷ"
+      narrow:
+        display_name: yr
+        one: "{0}ବର୍ଷ"
+        other: "{0}ବର୍ଷ"
+    quarter:
+      long:
+        one: "{0} କ୍ୱାର୍ଟର୍"
+        other: "{0} କ୍ୱାର୍ଟର୍ସ"
+      short:
+        display_name: କ୍ୱାର୍ଟର୍ସ
+        one: "{0} କ୍ୱାର୍ଟର୍ସ"
+        other: "{0} କ୍ୱାର୍ଟର୍ସ"
+        per_unit_pattern: "{0}/କ୍ୱାର୍ଟର୍ସ"
+    month:
+      long:
+        per_unit_pattern: ମାସକୁ {0}
+      short:
+        display_name: ମାସ
+        one: "{0} ମାସ"
+        other: "{0} ମାସ"
+        per_unit_pattern: "{0}/ମାସ"
+      narrow:
+        one: "{0}ମାସ"
+        other: "{0}ମାସ"
+    week:
+      long:
+        per_unit_pattern: ସପ୍ତାହକୁ {0}
+      short:
+        display_name: ସପ୍ତାହ
+        one: "{0} ସପ୍ତାହ"
+        other: "{0} ସପ୍ତାହ"
+        per_unit_pattern: "{0}/ସପ୍ତାହ"
+      narrow:
+        one: "{0}ସପ୍"
+        other: "{0} ସପ୍"
+    day:
+      long:
+        per_unit_pattern: ଦିନକୁ {0}
+      short:
+        display_name: ଦିନ
+        one: "{0} ଦିନ"
+        other: "{0} ଦିନ"
+        per_unit_pattern: "{0}/ଦିନ"
+      narrow:
+        one: "{0}ଦିନ"
+        other: "{0}ଦିନ"
+    hour:
+      long:
+        per_unit_pattern: ଘଣ୍ଟା ପ୍ରତି {0}
+      short:
+        display_name: ଘଣ୍ଟା
+        one: "{0} ଘଣ୍ଟା"
+        other: "{0} ଘଣ୍ଟା"
+        per_unit_pattern: "{0}/ଘଣ୍ଟା"
+      narrow:
+        one: "{0}ଘଣ୍ଟା"
+        other: "{0}ଘଣ୍ଟା"
+        per_unit_pattern: "{0}/ଘ."
+    minute:
+      long:
+        one: "{0} ମିନିଟ୍‌"
+        other: "{0} ମିନିଟ୍"
+        per_unit_pattern: ମିନିଟ୍‌ ପ୍ରତି {0}
+      short:
+        display_name: ମିନିଟ୍‌
+        one: "{0} ମିନିଟ୍‌"
+        other: "{0} ମିନିଟ୍‌"
+        per_unit_pattern: "{0}/ମିନିଟ୍‌"
+      narrow:
+        one: "{0}ମିନିଟ୍‌"
+        other: "{0}ମିନିଟ୍‌"
+        per_unit_pattern: "{0}/ମି"
+    second:
+      long:
+        per_unit_pattern: "{0} ପ୍ରତି ସେକେଣ୍ଡ"
+      short:
+        display_name: ସେକେଣ୍ଡ
+        one: "{0} ସେକେଣ୍ଡ"
+        other: "{0} ସେକେଣ୍ଡ"
+        per_unit_pattern: "{0}/ସେକେଣ୍ଡ"
+      narrow:
+        one: "{0}ସେକ୍"
+        other: "{0}ସେକ୍"
+        per_unit_pattern: "{0}/ସେ"
+    millisecond:
+      long:
+        one: "{0} ମିଲିସେକେଣ୍ଡ"
+        other: "{0} ମିଲିସେକେଣ୍ଡ"
+      short:
+        display_name: ମିଲିସେକେଣ୍ଡ
+      narrow:
+        one: "{0}ms"
+        other: "{0} ms"
+    microsecond:
+      long:
+        display_name: ମାଇକ୍ରୋସେକେଣ୍ଡ
+        one: "{0} ମାଇକ୍ରୋସେକେଣ୍ଡ"
+        other: "{0} ମାଇକ୍ରୋସେକେଣ୍ଡ"
+      short:
+        display_name: μସେକେଣ୍ଡ
+    nanosecond:
+      long:
+        display_name: ନାନୋସେକେଣ୍ଡ
+        one: "{0} ନାନୋସେକେଣ୍ଡ"
+        other: "{0} ନାନୋସେକେଣ୍ଡ"
+    ampere:
+      long:
+        display_name: ଆମ୍ପିୟର୍
+        one: "{0} ଆମ୍ପିୟର୍"
+        other: "{0} ଆମ୍ପିୟର୍"
+      short:
+        display_name: ଆମ୍ପପ୍
+        one: "{0} ଏ"
+        other: "{0} ଏ"
+      narrow:
+        display_name: ଏମ୍ପି.
+    milliampere:
+      long:
+        display_name: ମିଲିଆମ୍ପିୟର୍
+        one: "{0} ମିଲିଆମ୍ପିୟର୍"
+        other: "{0} ମିଲିଆମ୍ପିୟର୍"
+      short:
+        display_name: ମିଲିଆମ୍ପ୍
+        one: "{0} ମିଆ"
+        other: "{0} ମିଆ"
+    ohm:
+      long:
+        one: "{0} ଓହମ୍"
+        other: "{0} ଓହମ୍"
+      short:
+        display_name: ଓହମ୍
+      narrow:
+        display_name: ଓମ୍
+    volt:
+      long:
+        one: "{0} ଭୋଲ୍ଟ୍"
+        other: "{0} ଭୋଲ୍ଟ୍"
+      short:
+        display_name: ଭୋଲ୍ଟ୍
+        one: "{0} ଭୋ"
+        other: "{0} ଭୋ"
+    kilocalorie:
+      long:
+        display_name: କିଲୋକ୍ୟାଲୋରୀ
+        one: "{0} କିଲୋକ୍ୟାଲୋରୀ"
+        other: "{0} କିଲୋକ୍ୟାଲୋରୀ"
+      short:
+        display_name: କିଲୋକ୍ୟାଲ୍
+        one: "{0} କିଲୋକ୍ୟାଲ୍"
+        other: "{0} କିଲୋକ୍ୟାଲ୍"
+    calorie:
+      long:
+        display_name: କ୍ୟାଲୋରୀ
+        one: "{0} କ୍ୟାଲୋରୀ"
+        other: "{0} କ୍ୟାଲୋରୀ"
+      short:
+        display_name: କ୍ୟାଲ୍
+        one: "{0} କ୍ୟାଲ୍"
+        other: "{0} କ୍ୟାଲ୍"
+    foodcalorie:
+      long:
+        display_name: କ୍ୟାଲୋରୀ
+        one: "{0} କ୍ୟାଲୋରୀ"
+        other: "{0} କ୍ୟାଲୋରୀ"
+      short:
+        display_name: କ୍ୟାଲ୍
+        one: "{0} କ୍ୟାଲ୍"
+        other: "{0} କ୍ୟାଲ୍"
+    kilojoule:
+      long:
+        one: "{0} କିଲୋଜୁଲ୍"
+        other: "{0} କିଲୋଜୁଲ୍"
+      short:
+        display_name: କିଲୋଜୁଲ୍
+        one: "{0} କିଜୁ"
+        other: "{0} କିଜୁ"
+    joule:
+      long:
+        one: "{0} ଜୁଲ୍"
+        other: "{0} ଜୁଲ୍"
+      short:
+        display_name: ଜୁଲ୍
+        one: "{0} ଜୁ"
+        other: "{0} ଜୁ"
+    kilowatt-hour:
+      long:
+        display_name: କିଲୋୱାଟ୍-ଘଣ୍ଟା
+        one: "{0} କିଲୋୱାଟ୍-ଘଣ୍ଟା"
+        other: "{0} କିଲୋୱାଟ୍-ଘଣ୍ଟା"
+      short:
+        display_name: କିୱା-ଘଣ୍ଟା
+        one: "{0} କିୱାଘ"
+        other: "{0} କିୱାଘ"
+      narrow:
+        one: "{0}kWh"
+        other: "{0} କିୱାଘ"
+    electronvolt:
+      long:
+        one: "{0} ଇଲେକ୍ଟ୍ରୋନ୍‌ ଭୋଲ୍ଟ"
+        other: "{0} ଇଲେକ୍ଟ୍ରୋନ୍‌ ଭୋଲ୍ଟ"
+      short:
+        display_name: ଇଲେକ୍ଟ୍ରୋନ୍‌ ଭୋଲ୍ଟ
+    british-thermal-unit:
+      long:
+        display_name: ବ୍ରିଟିଶ ଥର୍ମାଲ ଏକକ
+        one: "{0} ବ୍ରିଟିଶ ଥର୍ମାଲ ଏକକ"
+        other: "{0} ବ୍ରିଟିଶ ଥର୍ମାଲ ଏକକ"
+      narrow:
+        display_name: BTU
+    pound-force:
+      long:
+        display_name: ପାଉଣ୍ଡସ ଅଫ ଫୋର୍ସ
+        one: "{0} ପାଉଣ୍ଡସ ଅଫ ଫୋର୍ସ"
+        other: "{0} ପାଉଣ୍ଡସ ଅଫ ଫୋର୍ସ"
+      short:
+        display_name: ପାଉଣ୍ଡ-ଫୋର୍ସ
+    newton:
+      long:
+        display_name: ନ୍ୟୁଟନ୍ସ
+        one: "{0} ନ୍ୟୁଟନ"
+        other: "{0} ନ୍ୟୁଟନ୍ସ"
+      short:
+        display_name: ନ୍ୟୁଟନ
+      narrow:
+        display_name: ନ୍ୟୁ.
+        one: "{0} ନ୍ୟୁ."
+        other: "{0} ନ୍ୟୁ."
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: 100 କିଲୋମିଟର୍‌ ପ୍ରତି କିଲୋୱାଟ୍‌-ଘଣ୍ଟା
+        one: "{0} 100 କିଲୋମିଟର୍‌ ପ୍ରତି କିଲୋୱାଟ୍‌-ଘଣ୍ଟା"
+        other: "{0} 100 କିଲୋମିଟର୍‌ ପ୍ରତି କିଲୋୱାଟ୍‌-ଘଣ୍ଟା"
+    gigahertz:
+      long:
+        display_name: ଗିଗାହର୍ଜ୍
+        one: "{0} ଗିଗାହର୍ଜ୍"
+        other: "{0} ଗିଗାହର୍ଜ୍"
+    megahertz:
+      long:
+        display_name: ମେଗାହର୍ଜ୍
+        one: "{0} ମେଗାହର୍ଜ୍"
+        other: "{0} ମେଗାହର୍ଜ୍"
+    kilohertz:
+      long:
+        display_name: କିଲୋହର୍ଜ୍
+        one: "{0} କିଲୋହର୍ଜ୍"
+        other: "{0} କିଲୋହର୍ଜ୍"
+    hertz:
+      long:
+        display_name: ହର୍ଜ୍
+        one: "{0} ହର୍ଜ୍"
+        other: "{0} ହର୍ଜ୍"
+    em:
+      long:
+        display_name: ଟାଇପୋଗ୍ରାଫିକ୍ ems
+    pixel:
+      long:
+        display_name: ପିକ୍ସେଲ
+        one: "{0} ପିକ୍ସେଲ"
+        other: "{0} ପିକ୍ସେଲ୍ସ"
+    megapixel:
+      long:
+        display_name: ମେଗାପିକ୍ସେଲ
+        one: "{0} ମେଗାପିକ୍ସେଲ"
+        other: "{0} ମେଗାପିକ୍ସେଲ୍ସ"
+    pixel-per-centimeter:
+      long:
+        display_name: ପିକ୍ସେଲ ପ୍ରତି ସେଣ୍ଟିମିଟର
+        one: "{0} ପିକ୍ସେଲ ପ୍ରତି ସେଣ୍ଟିମିଟର"
+        other: "{0} ପିକ୍ସେଲ ପ୍ରତି ସେଣ୍ଟିମିଟର"
+    pixel-per-inch:
+      long:
+        display_name: ପ୍ରତି ଇଞ୍ଚରେ ପିକ୍ସେଲ
+        one: "{0} ପ୍ରତି ଇଞ୍ଚରେ ପିକ୍ସେଲ"
+        other: "{0} ପ୍ରତି ଇଞ୍ଚରେ ପିକ୍ସେଲ"
+    dot-per-centimeter:
+      long:
+        display_name: ବିନ୍ଦୁ ପ୍ରତି ସେଣ୍ଟିମିଟର
+        one: "{0} ବିନ୍ଦୁ ପ୍ରତି ସେଣ୍ଟିମିଟର"
+        other: "{0} ବିନ୍ଦୁ ପ୍ରତି ସେଣ୍ଟିମିଟର"
+      short:
+        display_name: dpcm
+        one: "{0} dpcm"
+        other: "{0} dpcm"
+      narrow:
+        display_name: ବିନ୍ଦୁ ପ୍ରତି ସେଣ୍ଟିମିଟର
+        one: "{0}dpcm"
+        other: "{0}dpcm"
+    dot-per-inch:
+      long:
+        display_name: ପ୍ରତି ଇଞ୍ଚରେ ବିନ୍ଦୁ
+        one: "{0} ପ୍ରତି ଇଞ୍ଚରେ ବିନ୍ଦୁ"
+        other: "{0} ପ୍ରତି ଇଞ୍ଚରେ ବିନ୍ଦୁ"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+      narrow:
+        one: "{0}dpi"
+        other: "{0}dpi"
+    dot:
+      long:
+        one: "{0} ବିନ୍ଦୁ"
+        other: "{0} ବି"
+      short:
+        display_name: ବି.
+        one: "{0} ବିନ୍ଦୁ"
+        other: "{0} ବିନ୍ଦୁ"
+      narrow:
+        display_name: ବିନ୍ଦୁ
+    earth-radius:
+      long:
+        display_name: ପୃଥିବୀ ବ୍ୟାସାର୍ଦ୍ଧ
+        one: "{0} ପୃଥିବୀ ବ୍ୟାସାର୍ଦ୍ଧ"
+        other: "{0} ପୃଥିବୀ ବ୍ୟାସାର୍ଦ୍ଧ"
+      narrow:
+        one: "{0} R⊕"
+        other: "{0}R⊕"
+    kilometer:
+      long:
+        display_name: କିଲୋମିଟର୍
+        one: "{0} କିଲୋମିଟର୍"
+        other: "{0} କିଲୋମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି କିଲୋମିଟର୍"
+      short:
+        display_name: କିମି
+        one: "{0} କିମି"
+        other: "{0} କିମି"
+        per_unit_pattern: "{0}/କିମି"
+    meter:
+      long:
+        display_name: ମିଟର୍
+        one: "{0} ମିଟର୍"
+        other: "{0} ମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି ମିଟର୍"
+      short:
+        display_name: ମି
+        one: "{0} ମି"
+        other: "{0} ମି"
+        per_unit_pattern: "{0}/ମି"
+    decimeter:
+      long:
+        display_name: ଡେସିମିଟର୍
+        one: "{0} ଡେସିମିଟର୍"
+        other: "{0} ଡେସିମିଟର୍"
+      short:
+        display_name: ଡେମି
+        one: "{0} ଡେମି"
+        other: "{0} ଡେମି"
+      narrow:
+        display_name: ଡେ. ମି.
+        one: "{0} ଡେ. ମି."
+        other: "{0} ଡେ. ମି."
+    centimeter:
+      long:
+        display_name: ସେଣ୍ଟିମିଟର୍
+        one: "{0} ସେଣ୍ଟିମିଟର୍"
+        other: "{0} ସେଣ୍ଟିମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି ସେଣ୍ଟିମିଟର୍"
+      short:
+        display_name: ସେମି
+        one: "{0} ସେମି"
+        other: "{0} ସେମି"
+        per_unit_pattern: "{0}/ସେମି"
+      narrow:
+        one: "{0} ସେମି"
+        other: "{0}ସେମି"
+        per_unit_pattern: "{0}/ସେ.ମି."
+    millimeter:
+      long:
+        display_name: ମିଲିମିଟର୍
+        one: "{0} ମିଲିମିଟର୍"
+        other: "{0} ମିଲିମିଟର୍"
+      short:
+        display_name: ମିମି
+        one: "{0} ମିମି"
+        other: "{0} ମିମି"
+      narrow:
+        one: "{0}ମିମି"
+        other: "{0}ମିମି"
+    micrometer:
+      long:
+        display_name: ମାଇକ୍ରୋମିଟର୍
+        one: "{0} ମାଇକ୍ରୋମିଟର୍"
+        other: "{0} ମାଇକ୍ରୋମିଟର୍"
+      short:
+        display_name: μମିଟର୍
+        one: "{0} μମି"
+        other: "{0} μମି"
+      narrow:
+        display_name: μm
+        one: "{0}μm"
+        other: "{0}μm"
+    nanometer:
+      long:
+        display_name: ନାନୋମିଟର୍
+        one: "{0} ନାନୋମିଟର୍"
+        other: "{0} ନାନୋମିଟର୍"
+      short:
+        display_name: ନାମି
+        one: "{0} ନାମି"
+        other: "{0} ନାମି"
+      narrow:
+        display_name: nm
+        one: "{0}nm"
+        other: "{0}nm"
+    picometer:
+      long:
+        display_name: ପିକୋମିଟର୍
+        one: "{0} ପିକୋମିଟର୍"
+        other: "{0} ପିକୋମିଟର୍"
+      short:
+        display_name: ପିମି
+        one: "{0} ପିମି"
+        other: "{0} ପିମି"
+      narrow:
+        display_name: pm
+        one: "{0}ପି.ମି."
+        other: "{0}ପି.ମି."
+    mile:
+      long:
+        one: "{0} ମାଇଲ୍"
+        other: "{0} ମାଇଲ୍"
+      short:
+        display_name: ମାଇଲ୍
+        one: "{0} ମା"
+        other: "{0} ମା"
+      narrow:
+        one: "{0}ମାଇଲ"
+        other: "{0}ମାଇଲ"
+    foot:
+      long:
+        one: "{0} ଫୁଟ୍"
+        other: "{0} ଫିଟ୍"
+        per_unit_pattern: "{0} ପ୍ରତି ଫୁଟ୍"
+      short:
+        display_name: ଫିଟ୍
+        one: "{0} ଫିଟ୍"
+        other: "{0} ଫିଟ୍"
+        per_unit_pattern: "{0}/ଫିଟ୍"
+    inch:
+      long:
+        per_unit_pattern: "{0} ପ୍ରତି ଇଞ୍ଚ୍"
+      short:
+        display_name: ଇଞ୍ଚ୍
+        one: "{0} ଇଞ୍ଚ୍"
+        other: "{0} ଇଞ୍ଚ୍"
+        per_unit_pattern: "{0}/ଇଞ୍ଚ୍"
+    parsec:
+      long:
+        one: "{0} ପାରସେକ୍"
+        other: "{0} ପାରସେକ୍"
+      short:
+        display_name: ପାରସେକ୍
+        one: "{0} ପିସି"
+        other: "{0} ପିସି"
+      narrow:
+        display_name: ପାର୍ସେ
+    light-year:
+      long:
+        one: "{0} ଆଲୋକ ବର୍ଷ"
+        other: "{0} ଆଲୋକ ବର୍ଷ"
+      short:
+        display_name: ଆଲୋକ ବର୍ଷ
+        one: "{0} ଆବ"
+        other: "{0} ଆବ"
+    astronomical-unit:
+      long:
+        display_name: ଖଗୋଲୀୟ ଏକକ
+        one: "{0} ଖଗୋଲୀୟ ଏକକ"
+        other: "{0} ଖଗୋଲୀୟ ଏକକ"
+      short:
+        display_name: ଆୟୁ
+        one: "{0} au"
+      narrow:
+        display_name: ଖଗୋ. ଇକା.
+        one: "{0}au"
+        other: "{0}au"
+    furlong:
+      long:
+        one: "{0} ଫର୍ଲଙ୍ଗ୍"
+        other: "{0} ଫର୍ଲଙ୍ଗସ୍"
+      short:
+        display_name: ଫର୍ଲଙ୍ଗସ୍
+        one: "{0} ଫର୍ଲଙ୍ଗ୍"
+      narrow:
+        display_name: ଫର୍ଲଙ୍ଗ୍
+        one: "{0} ଫର୍ଲଙ୍ଗ୍"
+        other: "{0} ଫର୍ଲଙ୍ଗ୍"
+    fathom:
+      long:
+        display_name: ଫାଟୋମସ୍
+        one: "{0} ଫାଟୋମ"
+        other: "{0} ଫାଟୋମସ୍"
+      short:
+        one: "{0} ଫାଟୋମ"
+      narrow:
+        display_name: ଫେଦମ୍
+        one: "{0}fth"
+        other: "{0} fth"
+    nautical-mile:
+      long:
+        display_name: ନଟିକାଲ୍ ମାଇଲ୍
+        one: "{0} ନଟିକାଲ୍ ମାଇଲ୍"
+        other: "{0} ନଟିକାଲ୍ ମାଇଲ୍"
+      short:
+        display_name: ନୌମି
+        one: "{0} nmi"
+      narrow:
+        display_name: nmi
+        one: "{0}nmi"
+        other: "{0}nmi"
+    mile-scandinavian:
+      long:
+        display_name: ମାଇଲ୍-ସ୍କାନଡିନାଭିୟ
+        one: "{0} ମାଇଲ୍-ସ୍କାନଡିନାଭିୟ"
+        other: "{0} ମାଇଲ୍-ସ୍କାନଡିନାଭିୟ"
+      short:
+        display_name: ସମି
+        one: "{0} ସମି"
+        other: "{0} ସମି"
+      narrow:
+        display_name: smi
+        one: "{0}smi"
+        other: "{0}smi"
+    point:
+      long:
+        one: "{0} ପଏଣ୍ଟ୍"
+        other: "{0} ପଏଣ୍ଟ୍"
+      short:
+        display_name: ପଏଣ୍ଟ୍
+        one: "{0} ପ"
+        other: "{0} ପ"
+    solar-radius:
+      long:
+        display_name: ସୋଲାର ବ୍ୟାସାର୍ଦ୍ଧ
+        one: "{0} ସୋଲାର ବ୍ୟାସାର୍ଦ୍ଧ"
+        other: "{0} ସୋଲାର ବ୍ୟାସାର୍ଦ୍ଧ"
+      short:
+        display_name: ସୋଲାର ବ୍ୟାସାର୍ଦ୍ଧ
+      narrow:
+        display_name: R☉
+    candela:
+      long:
+        display_name: candela
+        one: "{0} candela"
+        other: "{0} candela"
+    solar-luminosity:
+      long:
+        one: "{0} ସୋଲର ଲ୍ୟୁମିନୋସିଟି"
+        other: "{0} ସୋଲର ଲ୍ୟୁମିନୋସିଟିସ"
+      short:
+        display_name: ସୋଲର ଲ୍ୟୁମିନୋସିଟିସ
+    tonne:
+      long:
+        display_name: ମେଟ୍ରିକ୍ ଟନ୍
+        one: "{0} ମେଟ୍ରିକ୍ ଟନ୍"
+        other: "{0} ମେଟ୍ରିକ୍ ଟନ୍"
+      short:
+        display_name: ଟ
+        one: "{0} ଟ"
+        other: "{0} ଟ"
+      narrow:
+        display_name: ମେଟ୍ରିକଟନ
+        one: "{0} ମେଟ୍ରିକଟନ"
+        other: "{0} ମେଟ୍ରିକଟନ"
+    kilogram:
+      long:
+        display_name: କିଲୋଗ୍ରାମ୍
+        one: "{0} କିଲୋଗ୍ରାମ୍"
+        other: "{0} କିଲୋଗ୍ରାମ୍"
+        per_unit_pattern: "{0} ପ୍ରତି କିଲୋଗ୍ରାମ୍"
+      short:
+        display_name: କିଗ୍ରା
+        one: "{0} କିଗ୍ରା"
+        other: "{0} କିଗ୍ରା"
+        per_unit_pattern: "{0}/କିଗ୍ରା"
+      narrow:
+        one: "{0}କିଗ୍ରା"
+        other: "{0}କିଗ୍ରା"
+        per_unit_pattern: "{0}/କି. ଗ୍ରା."
+    gram:
+      long:
+        one: "{0} ଗ୍ରାମ୍"
+        other: "{0} ଗ୍ରାମ୍"
+        per_unit_pattern: "{0} ପ୍ରତି ଗ୍ରାମ୍"
+      short:
+        display_name: ଗ୍ରାମ୍
+        one: "{0} ଗ୍ରା"
+        other: "{0} ଗ୍ରା"
+        per_unit_pattern: "{0}/ଗ୍ରା"
+      narrow:
+        one: "{0}ଗ୍ରା"
+        other: "{0}ଗ୍ରା"
+        per_unit_pattern: "{0}/ଗ୍ରା."
+    milligram:
+      long:
+        display_name: ମିଲିଗ୍ରାମ୍
+        one: "{0} ମିଲିଗ୍ରାମ୍"
+        other: "{0} ମିଲିଗ୍ରାମ୍"
+      short:
+        display_name: ମିଗ୍ରା
+        one: "{0} ମିଗ୍ରା"
+        other: "{0} ମିଗ୍ରା"
+      narrow:
+        display_name: ମି. ଗ୍ରା.
+        one: "{0} ମି. ଗ୍ରା."
+        other: "{0} ମି. ଗ୍ରା."
+    microgram:
+      long:
+        display_name: ମାଇକ୍ରୋଗ୍ରାମ୍
+        one: "{0} ମାଇକ୍ରୋଗ୍ରାମ୍"
+        other: "{0} ମାଇକ୍ରୋଗ୍ରାମ୍"
+      narrow:
+        one: "{0} μg"
+        other: "{0} ମା. ଗ୍ରା."
+    ton:
+      long:
+        display_name: ଟନ୍
+      short:
+        one: "{0} ଟନ୍"
+        other: "{0} ଟନ୍"
+      narrow:
+        display_name: ଟନ୍
+    stone:
+      long:
+        one: "{0} ଷ୍ଟୋନ୍"
+        other: "{0} ଷ୍ଟୋନସ୍"
+      short:
+        display_name: ଷ୍ଟୋନସ୍
+        one: "{0} ଷ୍ଟ."
+        other: "{0} ଷ୍ଟ."
+    pound:
+      long:
+        per_unit_pattern: "{0} ପ୍ରତି ପାଉଣ୍ଡ୍"
+      short:
+        display_name: ପାଉଣ୍ଡ୍
+        one: "{0} ପାଉଣ୍ଡ୍"
+        other: "{0} ପାଉଣ୍ଡ୍"
+        per_unit_pattern: "{0}/ପାଉଣ୍ଡ୍"
+    ounce:
+      long:
+        display_name: ଆଉନ୍ସ
+        one: "{0} ଆଉନ୍ସ"
+        other: "{0} ଆଉନ୍ସ"
+        per_unit_pattern: "{0} ପ୍ରତି ଆଉନ୍ସ"
+      short:
+        display_name: ଓଜ୍
+        one: "{0} ଓଜ୍"
+        other: "{0} ଓଜ୍"
+        per_unit_pattern: "{0}/ଓଜ୍"
+      narrow:
+        display_name: ଅନ୍ସ
+        one: "{0}ଅ."
+        other: "{0}ଅ."
+        per_unit_pattern: "{0}/ଅନ୍ସ"
+    ounce-troy:
+      long:
+        display_name: ଟ୍ରୋୟ ଆଉନ୍ସ
+        one: "{0} ଟ୍ରୋୟ ଆଉନ୍ସ"
+        other: "{0} ଟ୍ରୋୟ ଆଉନ୍ସ"
+      short:
+        display_name: ଓଜ୍ ଟ୍ରୋୟ
+        one: "{0} ଓଜ୍ ଟ୍ରୋ"
+        other: "{0} ଓଜ୍ ଟ୍ରୋ"
+      narrow:
+        display_name: ଅନ୍ସ-ଟ୍ରାଇ
+        one: "{0} ଅନ୍ସ-ଟ୍ରାଇ"
+        other: "{0} ଅନ୍ସ-ଟ୍ରାଇ"
+    carat:
+      long:
+        one: "{0} କ୍ୟାରେଟ୍"
+        other: "{0} କ୍ୟାରେଟ୍"
+      short:
+        display_name: କ୍ୟାରେଟ୍
+        one: "{0} ସିଡି"
+        other: "{0} ସିଡି"
+    dalton:
+      long:
+        one: "{0} ଡାଲ୍ଟନ"
+        other: "{0} ଡାଲ୍ଟନ"
+      short:
+        display_name: ଡାଲ୍ଟନ
+        one: "{0} ଡିଏ"
+        other: "{0} ଡିଏ"
+      narrow:
+        display_name: ଡାଲଟନ୍
+        one: "{0} ଡାଲଟନ୍"
+        other: "{0} ଡାଲଟନ୍"
+    earth-mass:
+      long:
+        one: "{0} ଅର୍ଥ ମାସ"
+        other: "{0} ଅର୍ଥ ମାସେସ"
+      short:
+        display_name: ଅର୍ଥ ମାସେସ
+      narrow:
+        display_name: ଅର୍ଥ ମାସ୍
+    solar-mass:
+      long:
+        one: "{0} ସୋଲର ମାସ"
+        other: "{0} ସୋଲର ମାସେସ"
+      short:
+        display_name: ସୋଲର ମାସେସ
+    gigawatt:
+      long:
+        display_name: ଗିଗାୱାଟ୍
+        one: "{0} ଗିଗାୱାଟ୍"
+        other: "{0} ଗିଗାୱାଟ୍"
+      short:
+        display_name: ଗିୱା
+        one: "{0} ଗିୱା"
+        other: "{0} ଗିୱା"
+    megawatt:
+      long:
+        display_name: ମେଗାୱାଟ୍
+        one: "{0} ମେଗାୱାଟ୍"
+        other: "{0} ମେଗାୱାଟ୍"
+      short:
+        display_name: ମେୱା
+        one: "{0} ମେୱା"
+        other: "{0} ମେୱା"
+    kilowatt:
+      long:
+        display_name: କିଲୋୱାଟ୍
+        one: "{0} କିଲୋୱାଟ୍"
+        other: "{0} କିଲୋୱାଟ୍"
+      short:
+        display_name: କିୱା
+        one: "{0} କିୱା"
+        other: "{0} କିୱା"
+    watt:
+      long:
+        one: "{0} ୱାଟ୍"
+        other: "{0} ୱାଟ୍"
+      short:
+        display_name: ୱାଟ୍
+        one: "{0} ୱା"
+        other: "{0} ୱା"
+    milliwatt:
+      long:
+        display_name: ମିଲିୱାଟ୍
+        one: "{0} ମିଲିୱାଟ୍"
+        other: "{0} ମିଲିୱାଟ୍"
+      short:
+        display_name: ମିୱା
+        one: "{0} ମିୱା"
+        other: "{0} ମିୱା"
+    horsepower:
+      long:
+        display_name: ହର୍ସପାୱାର୍
+        one: "{0} ହର୍ସପାୱାର୍"
+        other: "{0} ହର୍ସପାୱାର୍"
+      short:
+        display_name: ଏଚପି
+        one: "{0} ଏଚପି"
+        other: "{0} ଏଚପି"
+      narrow:
+        display_name: ଏଚ୍ପୀ
+        one: "{0}ଏଚ୍ପୀ"
+        other: "{0}ଏଚ୍ପୀ"
+    millimeter-ofhg:
+      long:
+        display_name: ପାରାର ମିଲିମିଟର୍
+        one: ପାରାର {0} ମିଲିମିଟର୍
+        other: ପାରାର {0} ମିଲିମିଟର୍
+      short:
+        display_name: mmHg
+        one: "{0} mmHg"
+        other: "{0} mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: ପାଉଣ୍ଡ୍ ପ୍ରତି ବର୍ଗ ଇଞ୍ଚ
+        one: ପ୍ରତି ବର୍ଗ ଇଞ୍ଚ {0} ପାଉଣ୍ଡ୍
+        other: ପ୍ରତି ବର୍ଗ ଇଞ୍ଚ {0} ପାଉଣ୍ଡ୍
+    inch-ofhg:
+      long:
+        display_name: ପାରାର ଇଞ୍ଜି
+        one: ପାରାର {0} ଇଞ୍ଜି
+        other: ପାରାର {0} ଇଞ୍ଜି
+    millibar:
+      long:
+        display_name: ମିଲିବାର୍
+        one: "{0} ମିଲିବାର୍"
+        other: "{0} ମିଲିବାର୍"
+    atmosphere:
+      long:
+        display_name: ଆଟମୋସ୍ପିଅର
+        one: "{0} ଆଟମୋସ୍ପିଅର"
+        other: "{0} ଆଟମୋସ୍ପିଅର"
+    hectopascal:
+      long:
+        display_name: ହେକ୍ଟୋପାସ୍କେଲ୍
+        one: "{0} ହେକ୍ଟୋପାସ୍କେଲ୍"
+        other: "{0} ହେକ୍ଟୋପାସ୍କେଲ୍"
+    kilopascal:
+      long:
+        display_name: କିଲୋପାସକଲ
+        one: "{0} କିଲୋପାସକଲ"
+        other: "{0} କିଲୋପାସକଲ"
+      narrow:
+        display_name: କି.ପା.
+        one: "{0} କି.ପା."
+        other: "{0} କି.ପା."
+    megapascal:
+      long:
+        display_name: ମେଗାପାସକଲ
+        one: "{0} ମେଗାପାସକଲ"
+        other: "{0} ମେଗାପାସକଲ"
+      narrow:
+        display_name: ମେ.ପା.
+        one: "{0} ମେ.ପା."
+        other: "{0} ମେ.ପା."
+    kilometer-per-hour:
+      long:
+        display_name: କିଲୋମିଟର୍ ପ୍ରତି ଘଣ୍ଟା
+        one: "{0} କିଲୋମିଟର୍ ପ୍ରତି ଘଣ୍ଟା"
+        other: "{0} କିଲୋମିଟର୍ ପ୍ରତି ଘଣ୍ଟା"
+      short:
+        display_name: କିମି/ଘଣ୍ଟା
+        one: "{0} କେପିଏଚ୍"
+        other: "{0} କେପିଏଚ୍"
+      narrow:
+        display_name: କିମି/ଘ
+        one: "{0}କେପିଏଚ୍"
+        other: "{0}କେପିଏଚ୍"
+    meter-per-second:
+      long:
+        display_name: ମିଟର୍ ପ୍ରତି ସେକେଣ୍ଡ୍
+        one: "{0} ମିଟର୍ ପ୍ରତି ସେକେଣ୍ଡ୍"
+        other: "{0} ମିଟର୍ ପ୍ରତି ସେକେଣ୍ଡ୍"
+      short:
+        display_name: ମିଟର୍/ସେ
+        one: "{0} ମି/ସେ"
+        other: "{0} ମି/ସେ"
+      narrow:
+        display_name: ମିଟର/ସେ
+    mile-per-hour:
+      long:
+        display_name: ମାଇଲ୍ ପ୍ରତି ଘଣ୍ଟା
+        one: "{0} ମାଇଲ୍ ପ୍ରତି ଘଣ୍ଟା"
+        other: "{0} ମାଇଲ୍ ପ୍ରତି ଘଣ୍ଟା"
+      short:
+        display_name: ମାଇଲ୍/ଘଣ୍ଟା
+        one: "{0} ଏମପିଏଚ୍"
+        other: "{0} ଏମପିଏଚ୍"
+    celsius:
+      long:
+        display_name: ଡିଗ୍ରୀ ସେଲସିୟସ୍
+        one: "{0} ଡିଗ୍ରୀ ସେଲସିୟସ୍"
+        other: "{0} ଡିଗ୍ରୀ ସେଲସିୟସ୍"
+      short:
+        display_name: ଡି. ସେ
+        one: "{0}°ସେ"
+        other: "{0}°ସେ"
+      narrow:
+        display_name: "°ସେ"
+    fahrenheit:
+      long:
+        display_name: ଡିଗ୍ରୀ ଫାରେନହାଇଟ୍
+        one: "{0} ଡିଗ୍ରୀ ଫାରେନହାଇଟ୍"
+        other: "{0} ଡିଗ୍ରୀ ଫାରେନହାଇଟ୍"
+      short:
+        display_name: ଡି. ଫା
+        one: "{0}°ଫା"
+        other: "{0}°ଫା"
+      narrow:
+        display_name: ଡିଗ୍ରୀଫାରେନ୍ହାଇଟ୍
+    kelvin:
+      long:
+        display_name: କେଲଭିନ୍
+        one: "{0} କେଲଭିନ୍"
+        other: "{0} କେଲଭିନ୍"
+      short:
+        display_name: କେ
+    pound-force-foot:
+      long:
+        display_name: ପାଉଣ୍ଡ-ଫିଟ
+        one: "{0} ପାଉଣ୍ଡ୍-ଫୋର୍ସ୍‌-ଫୁଟ୍‌"
+        other: "{0} ପାଉଣ୍ଡ-ଫିଟ"
+    newton-meter:
+      long:
+        display_name: ନ୍ୟୁଟନ-ମିଟର୍ସ
+        one: "{0} ନ୍ୟୁଟନ-ମିଟର"
+        other: "{0} ନ୍ୟୁଟନ-ମିଟର୍ସ"
+      narrow:
+        display_name: ନ୍ୟୁ.ମି.
+        one: "{0} ନ୍ୟୁ.ମି."
+        other: "{0} ନ୍ୟୁ.ମି."
+    cubic-kilometer:
+      long:
+        display_name: କ୍ୟୁବିକ୍ କିଲୋମିଟର୍
+        one: "{0} କ୍ୟୁବିକ୍ କିଲୋମିଟର୍"
+        other: "{0} କ୍ୟୁବିକ୍ କିଲୋମିଟର୍"
+      short:
+        display_name: କିମି³
+        one: "{0} କିମି³"
+        other: "{0} କିମି³"
+      narrow:
+        one: "{0}ଘନକି.ମି."
+        other: "{0}ଘନକି.ମି."
+    cubic-meter:
+      long:
+        display_name: କ୍ୟୁବିକ୍ ମିଟର୍
+        one: "{0} କ୍ୟୁବିକ୍ ମିଟର୍"
+        other: "{0} କ୍ୟୁବିକ୍ ମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି କ୍ୟୁବିକ୍ ମିଟର୍"
+      short:
+        display_name: ମି³
+        one: "{0} ମି³"
+        other: "{0} ମି³"
+        per_unit_pattern: "{0}/ମି³"
+      narrow:
+        one: "{0}/ ଘନମି"
+        other: "{0}/ ଘନମି"
+    cubic-centimeter:
+      long:
+        display_name: କ୍ୟୁବିକ୍ ସେଣ୍ଟିମିଟର୍
+        one: "{0} କ୍ୟୁବିକ୍ ସେଣ୍ଟିମିଟର୍"
+        other: "{0} କ୍ୟୁବିକ୍ ସେଣ୍ଟିମିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି କ୍ୟୁବିକ୍ ସେଣ୍ଟିମିଟର୍"
+      short:
+        display_name: ସେମି³
+        one: "{0} ସେମି³"
+        other: "{0} ସେମି³"
+        per_unit_pattern: "{0}/ସେମି³"
+      narrow:
+        one: "{0}/ଘନସେମି"
+        other: "{0}/ଘନସେମି"
+    cubic-mile:
+      long:
+        display_name: କ୍ୟୁବିକ୍ ମାଇଲ୍
+        one: "{0} କ୍ୟୁବିକ୍ ମାଇଲ୍"
+        other: "{0} କ୍ୟୁବିକ୍ ମାଇଲ୍"
+      short:
+        display_name: ମା³
+        one: "{0} ମା³"
+        other: "{0} ମା³"
+      narrow:
+        display_name: ଘନମାଇଲ୍
+        one: "{0}ଘନମାଇଲ୍"
+        other: "{0}ଘନମାଇଲ୍"
+    cubic-yard:
+      long:
+        display_name: କ୍ୟୁବିକ୍ ୟାର୍ଡ୍
+        one: "{0} କ୍ୟୁବିକ୍ ୟାର୍ଡ୍"
+        other: "{0} କ୍ୟୁବିକ୍ ୟାର୍ଡ୍"
+      short:
+        display_name: ୟାର୍ଡ୍³
+        one: "{0} yd³"
+      narrow:
+        display_name: yd³
+        one: "{0}yd³"
+        other: "{0}yd³"
+    cubic-foot:
+      long:
+        display_name: କ୍ୟୁବିକ୍ ଫିଟ୍
+        one: "{0} କ୍ୟୁବିକ୍ ଫୁଟ୍"
+        other: "{0} କ୍ୟୁବିକ୍ ଫିଟ୍"
+      short:
+        display_name: ଫିଟ୍³
+        one: "{0} ଫିଟ୍³"
+        other: "{0} ଫିଟ୍³"
+      narrow:
+        display_name: ft³
+        one: "{0}ft³"
+        other: "{0}ft³"
+    cubic-inch:
+      long:
+        display_name: କ୍ୟୁବିକ୍ ଇଞ୍ଚ୍
+        one: "{0} କ୍ୟୁବିକ୍ ଇଞ୍ଚ୍"
+        other: "{0} କ୍ୟୁବିକ୍ ଇଞ୍ଚ୍"
+      short:
+        display_name: ଇଞ୍ଚ୍³
+        one: "{0} ଇଞ୍ଚ୍³"
+        other: "{0} ଇଞ୍ଚ୍³"
+      narrow:
+        display_name: ଘନଇଞ୍ଚ
+        one: "{0} ଘନଇଞ୍ଚ"
+        other: "{0} ଘନଇଞ୍ଚ"
+    megaliter:
+      long:
+        display_name: ମେଗାଲିଟର୍
+        one: "{0} ମେଗାଲିଟର୍"
+        other: "{0} ମେଗାଲିଟର୍"
+      short:
+        display_name: ଏମଏଲ୍
+        one: "{0} ଏମଏଲ୍"
+        other: "{0} ଏମଏଲ୍"
+      narrow:
+        display_name: ML
+        one: "{0}ML"
+        other: "{0}ML"
+    hectoliter:
+      long:
+        display_name: ହେକ୍ଟୋଲିଟର୍
+        one: "{0} ହେକ୍ଟୋଲିଟର୍"
+        other: "{0} ହେକ୍ଟୋଲିଟର୍"
+      short:
+        display_name: ହେଲି
+        one: "{0} ହେଲି"
+        other: "{0} ହେଲି"
+      narrow:
+        one: "{0}hL"
+        other: "{0} ହେଲି"
+    liter:
+      long:
+        one: "{0} ଲିଟର୍"
+        other: "{0} ଲିଟର୍"
+        per_unit_pattern: "{0} ପ୍ରତି ଲିଟର୍"
+      short:
+        display_name: ଲିଟର୍
+        one: "{0} ଲି"
+        other: "{0} ଲି"
+        per_unit_pattern: "{0}/ଲି"
+      narrow:
+        one: "{0}ଲି"
+        other: "{0}ଲି"
+    deciliter:
+      long:
+        display_name: ଡେସିଲିଟର୍
+        one: "{0} ଡେସିଲିଟର୍"
+        other: "{0} ଡେସିଲିଟର୍"
+      short:
+        display_name: ଡେଲି
+        one: "{0} ଡେଲି"
+        other: "{0} ଡେଲି"
+      narrow:
+        display_name: ଡେ. ଲି.
+        one: "{0} ଡେ. ଲି."
+        other: "{0} ଡେ. ଲି."
+    centiliter:
+      long:
+        display_name: ସେଣ୍ଟିଲିଟର୍
+        one: "{0} ସେଣ୍ଟିଲିଟର୍"
+        other: "{0} ସେଣ୍ଟିଲିଟର୍"
+      short:
+        display_name: ସେଲି
+        one: "{0} ସେଲି"
+        other: "{0} ସେଲି"
+      narrow:
+        display_name: ସେ. ଲି.
+        one: "{0} ସେ. ଲି."
+        other: "{0} ସେ. ଲି."
+    milliliter:
+      long:
+        display_name: ମିଲିଲିଟର୍
+        one: "{0} ମିଲିଲିଟର୍"
+        other: "{0} ମିଲିଲିଟର୍"
+      short:
+        display_name: ମିଲି
+        one: "{0} ମିଲି"
+        other: "{0} ମିଲି"
+      narrow:
+        display_name: ମି. ଲି.
+        one: "{0} ମି. ଲି."
+        other: "{0} ମି. ଲି."
+    pint-metric:
+      long:
+        display_name: ମେଟ୍ରିକ୍ ପାଇଣ୍ଟ୍
+        one: "{0} ମେଟ୍ରିକ୍ ପାଇଣ୍ଟ୍"
+        other: "{0} ମେଟ୍ରିକ୍ ପାଇଣ୍ଟ୍"
+      short:
+        display_name: ମେପା
+        one: "{0} mpt"
+      narrow:
+        display_name: pt
+        one: "{0}mpt"
+        other: "{0}mpt"
+    cup-metric:
+      long:
+        display_name: ମେଟ୍ରିକ୍ କପ୍
+        one: "{0} ମେଟ୍ରିକ୍ କପ୍"
+        other: "{0} ମେଟ୍ରିକ୍ କପ୍"
+      short:
+        one: "{0} ମେକ"
+        other: "{0} ମେକ"
+      narrow:
+        display_name: mcup
+        one: "{0}mc"
+        other: "{0}mc"
+    acre-foot:
+      long:
+        display_name: ଏକର-ଫିଟ୍
+        one: "{0} ଏକର-ଫୁଟ"
+        other: "{0} ଏକର-ଫିଟ୍"
+      short:
+        display_name: ଏକର ଫିଟ୍
+        one: "{0} ଏକର-ଫିଟ୍"
+        other: "{0} ଏକର-ଫିଟ୍"
+      narrow:
+        display_name: ଏକରଫୁଟ
+        one: "{0} ଏକରଫୁଟ"
+        other: "{0} ଏକରଫୁଟ"
+    gallon:
+      long:
+        display_name: ଗ୍ୟାଲନ୍
+        one: "{0} ଗ୍ୟାଲନ୍"
+        other: "{0} ଗ୍ୟାଲନ୍"
+        per_unit_pattern: "{0} ପ୍ରତି ଗ୍ୟାଲନ୍"
+      short:
+        display_name: ଗ୍ୟାଲ୍
+        one: "{0} ଗ୍ୟାଲ୍"
+        other: "{0} ଗ୍ୟାଲ୍"
+        per_unit_pattern: "{0}/ଗ୍ୟାଲ୍ ଯୁକ୍ତରାଷ୍ଟ୍ର"
+      narrow:
+        display_name: ଗେଲନ୍
+        one: "{0} ଗେ"
+        other: "{0} ଗେ"
+        per_unit_pattern: "{0}/ ଗେ"
+    gallon-imperial:
+      long:
+        display_name: ଇମ୍ପେରିଆଲ୍ ଗ୍ୟାଲନ୍
+        one: "{0} ଇମ୍ପେରିଆଲ୍ ଗ୍ୟାଲନ୍"
+        other: "{0} ଇମ୍ପେରିଆଲ୍ ଗ୍ୟାଲନ୍"
+        per_unit_pattern: "{0} ପ୍ରତି ଇମ୍ପେରିଆଲ୍ ଗ୍ୟାଲନ୍"
+      short:
+        display_name: ଇମ୍ପେ. ଗ୍ୟା
+        one: "{0} ଇମ୍ପେ. ଗ୍ୟା"
+        other: "{0} ଇମ୍ପେ. ଗ୍ୟା"
+        per_unit_pattern: "{0}/ଇମ୍ପେ. ଗ୍ୟା"
+      narrow:
+        display_name: ଇମ୍ପିଗେଲନ୍
+        one: "{0} ଇମ୍ପିଗେଲନ୍"
+        other: "{0} ଇମ୍ପିଗେଲନ୍"
+        per_unit_pattern: "{0}/ ଇମ୍ପିଗେଲନ୍"
+    cup:
+      long:
+        one: "{0} କପ୍"
+        other: "{0} କପ୍"
+      short:
+        display_name: କପ୍
+        one: "{0} କ"
+        other: "{0} କ"
+      narrow:
+        one: "{0} କପ"
+        other: "{0} କପ"
+    fluid-ounce:
+      long:
+        display_name: ଫ୍ଲୁଇଡ୍ ଆଉନ୍ସ
+        one: "{0} ଫ୍ଲୁଇଡ୍ ଆଉନ୍ସ"
+        other: "{0} ଫ୍ଲୁଇଡ୍ ଆଉନ୍ସ"
+      short:
+        display_name: ଫ୍ଲୁ ଓଜ୍
+        one: "{0} ଫ୍ଲୁ ଓଜ୍"
+        other: "{0} ଫ୍ଲୁ ଓଜ୍"
+      narrow:
+        display_name: fl oz
+    fluid-ounce-imperial:
+      long:
+        display_name: ଇମ୍ପେରିଅଲ ତରଳ ଆଉନ୍ସ
+        one: "{0} ଇମ୍ପ. ତରଳ ଆଉନ୍ସ"
+        other: "{0} ଇମ୍ପ. ତରଳ ଆଉନ୍ସ"
+      short:
+        display_name: ଇମ୍ପ. ଏଫଏଲ ଓଜେ
+    barrel:
+      long:
+        one: "{0} ବାରେଲ"
+        other: "{0} ବାରେଲ"
+      short:
+        display_name: ବାରେଲ
+      narrow:
+        display_name: ବ୍ୟାରେଲ୍
+        one: "{0} ବ୍ୟାରେଲ୍"
+        other: "{0} ବ୍ୟାରେଲ୍"
+    dessert-spoon:
+      long:
+        display_name: ଡିଜଟ୍ ସ୍ପୁନ୍
+        one: "{0} ଡିଜଟ୍ ସ୍ପୁନ୍"
+        other: "{0} ଡିଜଟ୍ ସ୍ପୁନ୍"
+      narrow:
+        display_name: dsp
+        one: "{0}dsp"
+        other: "{0}dsp"
+    light-speed:
+      long:
+        display_name: ଆଲୋକ
+        one: "{0} ଆଲୋକ"
+        other: "{0} ଆଲୋକ"
+      short:
+        display_name: ଆଲୋକ
+        one: "{0} ଆଲୋକ"
+        other: "{0} ଆଲୋକ"
+      narrow:
+        display_name: ଆଲୋକ
+        one: "{0} ଆଲୋକ"
+        other: "{0} ଆଲୋକ"
+    portion-per-1e9:
+      long:
+        display_name: ବିଲିୟନ ପ୍ରତି ଅଂଶଗୁଡିକ
+        one: "{0} ପାର୍ଟ୍ସ ପ୍ରତି ବିଲିୟନ୍"
+        other: "{0} ପାର୍ଟ୍ସ ପ୍ରତି ବିଲିୟନ୍"
+      short:
+        display_name: ପାର୍ଟ୍ସ/ବିଲିୟନ୍
+      narrow:
+        one: "{0}ppb"
+        other: "{0}ppb"
+    night:
+      long:
+        display_name: ରାତି
+        one: "{0} ରାତି"
+        other: "{0} ରାତି"
+        per_unit_pattern: "{0} ପ୍ରତି ରାତି"
+      short:
+        display_name: ରାତି
+        one: "{0} ରାତି"
+        other: "{0} ରାତି"
+        per_unit_pattern: "{0}/ରାତି"
+      narrow:
+        display_name: ରାତି
+        one: "{0} ରାତି"
+        other: "{0} ରାତି"
+        per_unit_pattern: "{0}/ରାତି"
+    acre:
+      short:
+        display_name: ଏକର
+        one: "{0} ଏକର"
+        other: "{0} ଏକର"
+    dunam:
+      short:
+        display_name: ଡୁନାମ
+        one: "{0} ଡୁନାମ"
+        other: "{0} ଡୁନାମ"
+      narrow:
+        display_name: ଡୋନମ୍
+        one: "{0} ଡୋନମ୍"
+        other: "{0} ଡୋନମ୍"
+    byte:
+      short:
+        display_name: ବାଇଟ୍
+        one: "{0} ବାଇଟ୍"
+        other: "{0} ବାଇଟ୍"
+    bit:
+      short:
+        display_name: ବିଟ୍
+        one: "{0} ବିଟ୍"
+        other: "{0} ବିଟ୍"
+    therm-us:
+      short:
+        display_name: ୟୁଏସ୍‌ ଥର୍ମ
+        one: "{0} ୟୁଏସ୍‌ ଥର୍ମ"
+        other: "{0} ୟୁଏସ୍‌ ଥର୍ମ"
+      narrow:
+        display_name: ୟୁଏସ୍ଥର୍ମ
+        one: "{0} ୟୁଏସ୍ଥର୍ମ"
+        other: "{0} ୟୁଏସ୍ଥର୍ମ"
+    yard:
+      short:
+        display_name: ୟାର୍ଡ୍
+        one: "{0} ୟାର୍ଡ୍"
+        other: "{0} ୟାର୍ଡ୍"
+      narrow:
+        display_name: ଗଜ
+        one: "{0}ଗଜ"
+        other: "{0}ଗଜ"
+    lux:
+      short:
+        display_name: ଲକ୍ସ
+        one: "{0} ଲକ୍ସ"
+        other: "{0} ଲକ୍ସ"
+    grain:
+      short:
+        display_name: ଗ୍ରେନ୍
+        one: "{0} ଗ୍ରେନ୍"
+        other: "{0} ଗ୍ରେନ୍"
+    bar:
+      short:
+        display_name: ବାର୍‌
+        one: "{0} ବାର୍‌"
+        other: "{0} ବାର୍‌"
+    pascal:
+      short:
+        display_name: ପା
+        one: "{0} ପା"
+        other: "{0} ପା"
+      narrow:
+        display_name: ପା.
+        one: "{0} ପା."
+        other: "{0} ପା."
+    knot:
+      short:
+        display_name: ନଟ୍
+        one: "{0} ନଟ୍"
+        other: "{0} ନଟ୍"
+      narrow:
+        display_name: ଗଣ୍ଠି
+    quart:
+      short:
+        display_name: କ୍ଵାର୍ଟ୍
+        one: "{0} କ୍ଵାର୍ଟ୍"
+        other: "{0} କ୍ଵାର୍ଟ୍"
+    pint:
+      short:
+        display_name: ପାଇଣ୍ଟ୍
+        one: "{0} ପାଇଣ୍ଟ୍"
+        other: "{0} ପାଇଣ୍ଟ୍"
+    tablespoon:
+      short:
+        display_name: ଖାଇବା ଚାମଚ
+        one: "{0} ଖାଇବା ଚାମଚ"
+        other: "{0} ଖାଇବା ଚାମଚ"
+    teaspoon:
+      short:
+        display_name: ଛୋଟ ଚାମଚ
+        one: "{0} tsp"
+      narrow:
+        display_name: tsp
+        one: "{0}tsp"
+        other: "{0}tsp"
+    dessert-spoon-imperial:
+      short:
+        one: "{0} dsp-Imp."
+        other: "{0} dsp-Imp."
+      narrow:
+        display_name: dsp Imp
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+    beaufort:
+      narrow:
+        one: B{0}
+        other: B{0}
+    drop:
+      narrow:
+        display_name: dr
+        one: "{0}dr"
+        other: "{0}dr"
+    dram:
+      narrow:
+        display_name: fl.dr.
+        one: "{0}fl.dr."
+        other: "{0}fl.dr."
+    pinch:
+      narrow:
+        display_name: ଚିମୁଟ
+        one: "{0} ଚିମୁଟ"
+        other: "{0} ଚିମୁଟ"

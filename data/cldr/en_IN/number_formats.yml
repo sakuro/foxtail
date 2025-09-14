@@ -1,6 +1,6 @@
 ---
 locale: en_IN
-generated_at: '2025-09-13T17:36:05Z'
+generated_at: '2025-09-14T06:09:18Z'
 cldr_version: '46'
 number_formats:
   symbols: {}
@@ -10,230 +10,53 @@ number_formats:
     standard: "#,##,##0%"
   currency_formats:
     standard: "¤#,##,##0.00"
-  scientific_formats:
-    standard: "#E0"
+  compact_formats:
+    short:
+      '1000':
+        one: 0K
+        other: 0K
+      '10000':
+        one: 00K
+        other: 00K
+      '100000':
+        one: 0L
+        other: 0L
+      '1000000':
+        one: 00L
+        other: 00L
+      '10000000':
+        one: 0Cr
+        other: 0Cr
+      '100000000':
+        one: 00Cr
+        other: 00Cr
+      '1000000000':
+        one: 000Cr
+        other: 000Cr
+      '10000000000':
+        one: 0KCr
+        other: 0KCr
+      '100000000000':
+        one: 00KCr
+        other: 00KCr
+      '1000000000000':
+        one: 0LCr
+        other: 0LCr
+      '10000000000000':
+        one: 00LCr
+        other: 00LCr
+      '100000000000000':
+        one: 000LCr
+        other: 000LCr
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
-    ARS:
-      symbol: "$"
-    AUD:
-      symbol: A$
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
-    BZD:
-      symbol: "$"
-    CAD:
-      symbol: CA$
-    CLP:
-      symbol: "$"
-    CNY:
-      symbol: CN¥
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
-    EGP:
-      symbol: E£
-    ESP:
-      symbol: "₧"
-    EUR:
-      symbol: "€"
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
-    GBP:
-      symbol: "£"
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
-    HKD:
-      symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
-    INR:
-      symbol: "₹"
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
-    JPY:
-      symbol: JP¥
     KGS:
-      symbol: "⃀"
       display_names:
         other: Kyrgyzstani soms
         one: Kyrgyzstani som
-    KHR:
-      symbol: "៛"
-    KMF:
-      symbol: CF
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
     KZT:
-      symbol: "₸"
       display_names:
         one: Kazakhstani Tenge
         other: Kazakhstani Tenges
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
-    LRD:
-      symbol: "$"
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
-    MXN:
-      symbol: MX$
-    MYR:
-      symbol: RM
-    NAD:
-      symbol: "$"
-    NGN:
-      symbol: "₦"
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
-    NZD:
-      symbol: NZ$
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
-    RWF:
-      symbol: RF
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
-    SHP:
-      symbol: "£"
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
-    TRY:
-      symbol: "₺"
-    TTD:
-      symbol: "$"
-    TWD:
-      symbol: NT$
-    UAH:
-      symbol: "₴"
-    USD:
-      symbol: "$"
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-      display_names:
-        other: Venezuelan bolívars
-        one: Venezuelan bolívar
-    VND:
-      symbol: "₫"
-    XAF:
-      symbol: FCFA
-    XCD:
-      symbol: EC$
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: F CFA
-    XPF:
-      symbol: CFPF
-    XXX:
-      symbol: "¤"
-    ZAR:
-      symbol: R
-    ZMW:
-      symbol: ZK
     SLE:
       display_names:
         one: Sierra Leonean Leone
@@ -246,14 +69,44 @@ number_formats:
       display_names:
         one: Turkmenistani Manat
         other: Turkmenistani Manat
+    USD:
+      symbol: "$"
     UZS:
       display_names:
         one: Uzbekistani Som
         other: Uzbekistani Som
+    VEF:
+      display_names:
+        other: Venezuelan bolívars
+        one: Venezuelan bolívar
     VES:
       display_names:
         other: VEF
         one: VEF
+  units:
+    earth-radius:
+      long:
+        one: "{0} earth radius"
+        other: "{0} earth radius"
+      category: length
+    tonne:
+      long:
+        display_name: metric tonnes
+      category: mass
+    generic:
+      long:
+        display_name: "°"
+        one: "{0}°"
+        other: "{0}°"
+      category: temperature
+    kilometer-per-hour:
+      short:
+        one: "{0} kph"
+        other: "{0} kph"
+      category: speed
+      narrow:
+        one: "{0}kph"
+        other: "{0}kph"
 currency_fractions:
   ADP:
     digits: 0

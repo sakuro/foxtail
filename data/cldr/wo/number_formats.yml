@@ -1,22 +1,67 @@
 ---
 locale: wo
-generated_at: '2025-09-13T17:41:39Z'
+generated_at: '2025-09-14T06:12:52Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: 
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000000000':
+        other: 0B
+      '10000000000':
+        other: 00B
+      '100000000000':
+        other: 000B
+    long:
+      '1000':
+        other: 0 thousand
+      '10000':
+        other: 00 thousand
+      '100000':
+        other: 000 thousand
+      '1000000':
+        other: 0M
+      '10000000':
+        other: Vote 00M
+      '100000000':
+        other: Vote 000M
+      '1000000000':
+        other: 0B
+      '10000000000':
+        other: 00B
+      '100000000000':
+        other: Vote 000G
   currencies:
+    AED:
+      display_names:
+        other: UAE dirhams
+        one: United Arab Emirates Dirham
     AFN:
       display_names:
         other: Afghan Afghanis
         one: Afghan Afghani
+    ALL:
+      display_names:
+        other: Albanian lekë
+        one: Albanian Lek
     AMD:
       display_names:
         other: Armenian drams
         one: Armenian Dram
+    ANG:
+      display_names:
+        other: Netherlands Antillean guilders
+        one: Netherlands Antillean Guilder
     AOA:
       display_names:
         other: Angolan kwanzas
@@ -29,6 +74,10 @@ number_formats:
       display_names:
         other: Australian dollars
         one: Australian Dollar
+    AWG:
+      display_names:
+        other: Aruban florin
+        one: Aruban Florin
     AZN:
       display_names:
         other: Azerbaijani manats
@@ -45,6 +94,18 @@ number_formats:
       display_names:
         other: Bangladeshi takas
         one: Bangladeshi Taka
+    BGN:
+      display_names:
+        other: Bulgarian leva
+        one: Bulgarian Lev
+    BHD:
+      display_names:
+        other: Bahraini dinars
+        one: Bahraini Dinar
+    BIF:
+      display_names:
+        other: Burundian francs
+        one: Burundian Franc
     BMD:
       display_names:
         other: Bermudan dollars
@@ -65,10 +126,18 @@ number_formats:
       display_names:
         other: Bahamian dollars
         one: Bahamian Dollar
+    BTN:
+      display_names:
+        other: Bhutanese ngultrums
+        one: Bhutanese Ngultrum
     BWP:
       display_names:
         other: Botswanan pulas
         one: Botswanan Pula
+    BYN:
+      display_names:
+        other: Belarusian rubles
+        one: Belarusian Ruble
     BZD:
       display_names:
         other: Belize dollars
@@ -77,11 +146,23 @@ number_formats:
       display_names:
         other: Canadian dollars
         one: Vote CAD
+    CDF:
+      display_names:
+        other: Congolese francs
+        one: Congolese Franc
+    CHF:
+      display_names:
+        other: Swiss francs
+        one: Swiss Franc
     CLP:
       symbol: Vote $
       display_names:
         other: Chilean pesos
         one: Chilean Peso
+    CNH:
+      display_names:
+        other: Chinese yuan (offshore)
+        one: Chinese Yuan (offshore)
     CNY:
       display_names:
         other: Yuan yu Siin
@@ -102,10 +183,18 @@ number_formats:
       display_names:
         other: Cuban pesos
         one: Cuban Peso
+    CVE:
+      display_names:
+        other: Cape Verdean escudos
+        one: Cape Verdean Escudo
     CZK:
       display_names:
         other: Czech korunas
         one: Czech Koruna
+    DJF:
+      display_names:
+        other: Djiboutian francs
+        one: Djiboutian Franc
     DKK:
       display_names:
         other: Danish kroner
@@ -114,11 +203,23 @@ number_formats:
       display_names:
         other: Dominican pesos
         one: Dominican Peso
+    DZD:
+      display_names:
+        other: Algerian dinars
+        one: Algerian Dinar
     EGP:
       symbol: EGPP
       display_names:
         other: Egyptian pounds
         one: Egyptian Pound
+    ERN:
+      display_names:
+        other: Eritrean nakfas
+        one: Eritrean Nakfa
+    ETB:
+      display_names:
+        other: Ethiopian birrs
+        one: Ethiopian Birr
     EUR:
       display_names:
         other: euro
@@ -149,6 +250,10 @@ number_formats:
       display_names:
         other: GIPS
         one: Vote GIP
+    GMD:
+      display_names:
+        other: Gambian dalasis
+        one: Gambian Dalasi
     GNF:
       display_names:
         other: Guinean francs
@@ -175,6 +280,10 @@ number_formats:
       display_names:
         other: Croatian kunas
         one: Croatian Kuna
+    HTG:
+      display_names:
+        other: Haitian gourdes
+        one: Haitian Gourde
     HUF:
       symbol: Vote Ft
       display_names:
@@ -192,6 +301,14 @@ number_formats:
       display_names:
         other: Rupee yu End
         one: Rupee bu End
+    IQD:
+      display_names:
+        other: Iraqi dinars
+        one: Iraqi Dinar
+    IRR:
+      display_names:
+        other: Iranian rials
+        one: Iranian Rial
     ISK:
       display_names:
         other: Icelandic krónur
@@ -200,10 +317,18 @@ number_formats:
       display_names:
         other: Jamaican dollars
         one: Jamaican Dollar
+    JOD:
+      display_names:
+        other: Jordanian dinars
+        one: Jordanian Dinar
     JPY:
       display_names:
         other: Yen yu Sapoŋ
         one: Yen bu Sapoŋ
+    KES:
+      display_names:
+        other: Kenyan shillings
+        one: Kenyan Shilling
     KGS:
       display_names:
         other: Kyrgystani soms
@@ -224,6 +349,10 @@ number_formats:
       display_names:
         other: South Korean won
         one: South Korean Won
+    KWD:
+      display_names:
+        other: Kuwaiti dinars
+        one: Kuwaiti Dinar
     KYD:
       display_names:
         other: Cayman Islands dollars
@@ -248,10 +377,31 @@ number_formats:
       display_names:
         other: Liberian dollars
         one: Liberian Dollar
+    LSL:
+      display_names:
+        other: Lesotho lotis
+        one: Lesotho Loti
+    LYD:
+      display_names:
+        other: Libyan dinars
+        one: Libyan Dinar
+    MAD:
+      display_names:
+        other: Moroccan dirhams
+        one: Moroccan dirhams
+    MDL:
+      symbol: Vote MDL
+      display_names:
+        other: Moldovan lei
+        one: Moldovan Leu
     MGA:
       display_names:
         other: Malagasy ariaries
         one: Malagasy Ariary
+    MKD:
+      display_names:
+        other: Macedonian denari
+        one: Macedonian Denar
     MMK:
       display_names:
         other: Myanmar kyats
@@ -260,10 +410,26 @@ number_formats:
       display_names:
         other: Mongolian tugriks
         one: Mongolian Tugrik
+    MOP:
+      display_names:
+        other: Macanese patacas
+        one: Macanese Pataca
+    MRU:
+      display_names:
+        other: Mauritanian ouguiyas
+        one: Mauritanian Ouguiya
     MUR:
       display_names:
         other: Mauritian rupees
         one: Mauritian Rupee
+    MVR:
+      display_names:
+        other: Maldivian rufiyaas
+        one: Maldivian Rufiyaa
+    MWK:
+      display_names:
+        other: Malawian kwachas
+        one: Malawian Kwacha
     MXN:
       display_names:
         other: Mexican pesos
@@ -272,6 +438,10 @@ number_formats:
       display_names:
         other: Malaysian ringgits
         one: Malaysian Ringgit
+    MZN:
+      display_names:
+        other: Mozambican meticals
+        one: Mozambican Metical
     NAD:
       display_names:
         other: Namibian dollars
@@ -297,6 +467,22 @@ number_formats:
       display_names:
         other: New Zealand dollars
         one: New Zealand Dollar
+    OMR:
+      display_names:
+        other: Omani rials
+        one: Omani Rial
+    PAB:
+      display_names:
+        other: Panamanian balboas
+        one: Panamanian Balboa
+    PEN:
+      display_names:
+        other: Peruvian soles
+        one: Peruvian Sols
+    PGK:
+      display_names:
+        other: Papua New Guinean kina
+        one: Papua New Guinean Kina
     PHP:
       display_names:
         other: Philippine pesos
@@ -313,11 +499,19 @@ number_formats:
       display_names:
         other: Paraguayan guaranis
         one: Paraguayan Guaranis
+    QAR:
+      display_names:
+        other: Qatari riyals
+        one: Qatari Riyal
     RON:
       symbol: Vote lei
       display_names:
         other: Romanian lei
         one: Romanian Leu
+    RSD:
+      display_names:
+        other: Serbian dinars
+        one: Serbian Dinar
     RUB:
       display_names:
         other: Ruble yu Risi
@@ -326,10 +520,22 @@ number_formats:
       display_names:
         other: Rwandan francs
         one: Rwandan Franc
+    SAR:
+      display_names:
+        other: Saudi riyals
+        one: Saudi Riyal
     SBD:
       display_names:
         other: Solomon Islands dollars
         one: Solomon Islands Dollar
+    SCR:
+      display_names:
+        other: Seychellois rupees
+        one: Seychellois Rupee
+    SDG:
+      display_names:
+        other: Sudanese pounds
+        one: Sudanese Pound
     SEK:
       display_names:
         other: Swedish kronor
@@ -342,6 +548,18 @@ number_formats:
       display_names:
         other: St. Helena pounds
         one: St. Helena Pound
+    SLE:
+      display_names:
+        other: Sierra Leonean leones
+        one: Sierra Leonean Leone
+    SLL:
+      display_names:
+        other: Sierra Leonean leones (1964—2022)
+        one: Sierra Leonean Leone (1964—2022)
+    SOS:
+      display_names:
+        other: Somali shillings
+        one: Somali Shilling
     SRD:
       display_names:
         other: Surinamese dollars
@@ -358,10 +576,26 @@ number_formats:
       display_names:
         other: Syrian pounds
         one: Syrian Pound
+    SZL:
+      display_names:
+        other: Swazi emalangeni
+        one: Swazi Lilangeni
     THB:
       display_names:
         other: Thai baht
         one: Thai Baht
+    TJS:
+      display_names:
+        other: Tajikistani somonis
+        one: Tajikistani Somoni
+    TMT:
+      display_names:
+        other: Turkmenistani manat
+        one: Turkmenistani Manat
+    TND:
+      display_names:
+        other: Tunisian dinars
+        one: Tunisian Dinar
     TOP:
       display_names:
         other: Tongan paʻanga
@@ -378,10 +612,18 @@ number_formats:
       display_names:
         other: New Taiwan dollars
         one: New Taiwan Dollar
+    TZS:
+      display_names:
+        other: Tanzanian shillings
+        one: Tanzanian Shilling
     UAH:
       display_names:
         other: Ukrainian hryvnias
         one: UAHS
+    UGX:
+      display_names:
+        other: Ugandan shillings
+        one: Ugandan Shilling
     USD:
       symbol: "$"
       display_names:
@@ -391,10 +633,26 @@ number_formats:
       display_names:
         other: Uruguayan pesos
         one: Uruguayan Peso
+    UZS:
+      display_names:
+        other: Uzbekistani som
+        one: Uzbekistani Som
+    VES:
+      display_names:
+        other: Venezuelan bolívars
+        one: Venezuelan Bolívar
     VND:
       display_names:
         other: Vietnamese dong
         one: Vietnamese Dong
+    VUV:
+      display_names:
+        other: Vanuatu vatus
+        one: Vanuatu Vatu
+    WST:
+      display_names:
+        other: Samoan tala
+        one: Samoan Tala
     XAF:
       display_names:
         other: Central African CFA francs
@@ -415,6 +673,10 @@ number_formats:
       display_names:
         other: "(xaalis buñ xamul)"
         one: Xaalis buñ Xamul
+    YER:
+      display_names:
+        other: Yemeni rials
+        one: Yemeni Rial
     ZAR:
       display_names:
         other: South African rand
@@ -423,232 +685,18 @@ number_formats:
       display_names:
         other: Zambian kwachas
         one: Zambian Kwacha
-    AED:
-      display_names:
-        other: UAE dirhams
-        one: United Arab Emirates Dirham
-    ALL:
-      display_names:
-        other: Albanian lekë
-        one: Albanian Lek
-    ANG:
-      display_names:
-        other: Netherlands Antillean guilders
-        one: Netherlands Antillean Guilder
-    AWG:
-      display_names:
-        other: Aruban florin
-        one: Aruban Florin
-    BGN:
-      display_names:
-        other: Bulgarian leva
-        one: Bulgarian Lev
-    BHD:
-      display_names:
-        other: Bahraini dinars
-        one: Bahraini Dinar
-    BIF:
-      display_names:
-        other: Burundian francs
-        one: Burundian Franc
-    BTN:
-      display_names:
-        other: Bhutanese ngultrums
-        one: Bhutanese Ngultrum
-    BYN:
-      display_names:
-        other: Belarusian rubles
-        one: Belarusian Ruble
-    CDF:
-      display_names:
-        other: Congolese francs
-        one: Congolese Franc
-    CHF:
-      display_names:
-        other: Swiss francs
-        one: Swiss Franc
-    CNH:
-      display_names:
-        other: Chinese yuan (offshore)
-        one: Chinese Yuan (offshore)
-    CVE:
-      display_names:
-        other: Cape Verdean escudos
-        one: Cape Verdean Escudo
-    DJF:
-      display_names:
-        other: Djiboutian francs
-        one: Djiboutian Franc
-    DZD:
-      display_names:
-        other: Algerian dinars
-        one: Algerian Dinar
-    ERN:
-      display_names:
-        other: Eritrean nakfas
-        one: Eritrean Nakfa
-    ETB:
-      display_names:
-        other: Ethiopian birrs
-        one: Ethiopian Birr
-    GMD:
-      display_names:
-        other: Gambian dalasis
-        one: Gambian Dalasi
-    HTG:
-      display_names:
-        other: Haitian gourdes
-        one: Haitian Gourde
-    IQD:
-      display_names:
-        other: Iraqi dinars
-        one: Iraqi Dinar
-    IRR:
-      display_names:
-        other: Iranian rials
-        one: Iranian Rial
-    JOD:
-      display_names:
-        other: Jordanian dinars
-        one: Jordanian Dinar
-    KES:
-      display_names:
-        other: Kenyan shillings
-        one: Kenyan Shilling
-    KWD:
-      display_names:
-        other: Kuwaiti dinars
-        one: Kuwaiti Dinar
-    LSL:
-      display_names:
-        other: Lesotho lotis
-        one: Lesotho Loti
-    LYD:
-      display_names:
-        other: Libyan dinars
-        one: Libyan Dinar
-    MAD:
-      display_names:
-        other: Moroccan dirhams
-        one: Moroccan dirhams
-    MDL:
-      symbol: Vote MDL
-      display_names:
-        other: Moldovan lei
-        one: Moldovan Leu
-    MKD:
-      display_names:
-        other: Macedonian denari
-        one: Macedonian Denar
-    MOP:
-      display_names:
-        other: Macanese patacas
-        one: Macanese Pataca
-    MRU:
-      display_names:
-        other: Mauritanian ouguiyas
-        one: Mauritanian Ouguiya
-    MVR:
-      display_names:
-        other: Maldivian rufiyaas
-        one: Maldivian Rufiyaa
-    MWK:
-      display_names:
-        other: Malawian kwachas
-        one: Malawian Kwacha
-    MZN:
-      display_names:
-        other: Mozambican meticals
-        one: Mozambican Metical
-    OMR:
-      display_names:
-        other: Omani rials
-        one: Omani Rial
-    PAB:
-      display_names:
-        other: Panamanian balboas
-        one: Panamanian Balboa
-    PEN:
-      display_names:
-        other: Peruvian soles
-        one: Peruvian Sols
-    PGK:
-      display_names:
-        other: Papua New Guinean kina
-        one: Papua New Guinean Kina
-    QAR:
-      display_names:
-        other: Qatari riyals
-        one: Qatari Riyal
-    RSD:
-      display_names:
-        other: Serbian dinars
-        one: Serbian Dinar
-    SAR:
-      display_names:
-        other: Saudi riyals
-        one: Saudi Riyal
-    SCR:
-      display_names:
-        other: Seychellois rupees
-        one: Seychellois Rupee
-    SDG:
-      display_names:
-        other: Sudanese pounds
-        one: Sudanese Pound
-    SLE:
-      display_names:
-        other: Sierra Leonean leones
-        one: Sierra Leonean Leone
-    SLL:
-      display_names:
-        other: Sierra Leonean leones (1964—2022)
-        one: Sierra Leonean Leone (1964—2022)
-    SOS:
-      display_names:
-        other: Somali shillings
-        one: Somali Shilling
-    SZL:
-      display_names:
-        other: Swazi emalangeni
-        one: Swazi Lilangeni
-    TJS:
-      display_names:
-        other: Tajikistani somonis
-        one: Tajikistani Somoni
-    TMT:
-      display_names:
-        other: Turkmenistani manat
-        one: Turkmenistani Manat
-    TND:
-      display_names:
-        other: Tunisian dinars
-        one: Tunisian Dinar
-    TZS:
-      display_names:
-        other: Tanzanian shillings
-        one: Tanzanian Shilling
-    UGX:
-      display_names:
-        other: Ugandan shillings
-        one: Ugandan Shilling
-    UZS:
-      display_names:
-        other: Uzbekistani som
-        one: Uzbekistani Som
-    VES:
-      display_names:
-        other: Venezuelan bolívars
-        one: Venezuelan Bolívar
-    VUV:
-      display_names:
-        other: Vanuatu vatus
-        one: Vanuatu Vatu
-    WST:
-      display_names:
-        other: Samoan tala
-        one: Samoan Tala
-    YER:
-      display_names:
-        other: Yemeni rials
-        one: Yemeni Rial
+  units:
+    g-force:
+      long:
+        other: "{0} g-force"
+    beaufort:
+      long:
+        other: Bft {0}
+    fluid-ounce:
+      short:
+        display_name: fl oz
+        other: "{0} fl oz"
+    byte:
+      narrow:
+        display_name: B
+        other: "{0}B"

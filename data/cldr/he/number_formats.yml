@@ -1,38 +1,187 @@
 ---
 locale: he
-generated_at: '2025-09-13T17:37:40Z'
+generated_at: '2025-09-14T06:10:14Z'
 cldr_version: '46'
 number_formats:
   symbols:
     minus_sign: "‎-"
     plus_sign: "‎+"
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "‏#,##0.00 ‏¤;‏-#,##0.00 ‏¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0K‏
+        other: 0K‏
+      '10000':
+        one: 00K‏
+        other: 00K‏
+      '100000':
+        one: 000K‏
+        other: 000K‏
+      '1000000':
+        one: 0M‏
+        other: 0M‏
+      '10000000':
+        one: 00M‏
+        other: 00M‏
+      '100000000':
+        one: 000M‏
+        other: 000M‏
+      '1000000000':
+        one: 0B‏
+        other: 0B‏
+      '10000000000':
+        one: 00B‏
+        other: 00B‏
+      '100000000000':
+        one: 000B‏
+        other: 000B‏
+      '1000000000000':
+        one: 0T‏
+        other: 0T‏
+      '10000000000000':
+        one: 00T‏
+        other: 00T‏
+      '100000000000000':
+        one: 000T‏
+        other: 000T‏
+    long:
+      '1000':
+        one: "‏0 אלף"
+        two: "‏0 אלף"
+        many: "‏0 אלף"
+        other: "‏0 אלף"
+      '10000':
+        one: "‏00 אלף"
+        two: "‏00 אלף"
+        many: "‏00 אלף"
+        other: "‏00 אלף"
+      '100000':
+        one: "‏000 אלף"
+        two: "‏000 אלף"
+        many: "‏000 אלף"
+        other: "‏000 אלף"
+      '1000000':
+        one: "‏0 מיליון"
+        two: "‏0 מיליון"
+        many: "‏0 מיליון"
+        other: "‏0 מיליון"
+      '10000000':
+        one: "‏00 מיליון"
+        two: "‏00 מיליון"
+        many: "‏00 מיליון"
+        other: "‏00 מיליון"
+      '100000000':
+        one: "‏000 מיליון"
+        two: "‏000 מיליון"
+        many: "‏000 מיליון"
+        other: "‏000 מיליון"
+      '1000000000':
+        one: "‏0 מיליארד"
+        two: "‏0 מיליארד"
+        many: "‏0 מיליארד"
+        other: "‏0 מיליארד"
+      '10000000000':
+        one: "‏00 מיליארד"
+        two: "‏00 מיליארד"
+        many: "‏00 מיליארד"
+        other: "‏00 מיליארד"
+      '100000000000':
+        one: "‏000 מיליארד"
+        two: "‏000 מיליארד"
+        many: "‏000 מיליארד"
+        other: "‏000 מיליארד"
+      '1000000000000':
+        one: "‏0 טריליון"
+        two: "‏0 טריליון"
+        many: "‏0 טריליון"
+        other: "‏0 טריליון"
+      '10000000000000':
+        one: "‏00 טריליון"
+        two: "‏00 טריליון"
+        many: "‏00 טריליון"
+        other: "‏00 טריליון"
+      '100000000000000':
+        one: "‏000 טריליון"
+        two: "‏000 טריליון"
+        many: "‏000 טריליון"
+        other: "‏000 טריליון"
   currencies:
+    ADP:
+      display_names:
+        other: פזטה אנדורית
+        one: פזטה אנדורית
+    AED:
+      display_names:
+        other: דירהם של איחוד הנסיכויות הערביות
+        one: דירהם של איחוד הנסיכויות הערביות
     AFN:
       display_names:
         other: אפגני אפגני
         one: אפגני אפגני
+    ALL:
+      display_names:
+        other: לק אלבני
+        one: לק אלבני
     AMD:
       display_names:
         other: דראם ארמני
         one: דראם ארמני
+    ANG:
+      display_names:
+        other: גילדר של האנטילים ההולנדיים
+        one: גילדר של האנטילים ההולנדיים
     AOA:
       display_names:
         other: קואנזה אנגולי
         one: קואנזה אנגולי
+    AON:
+      display_names:
+        other: קואנזה חדש אנגולי (1990–2000)
+        one: קואנזה חדש אנגולי (1990–2000)
+    AOR:
+      display_names:
+        other: קואנזה רג׳וסטדו אנגולי (1995–1999)
+        one: קואנזה רג׳וסטדו אנגולי (1995–1999)
+    ARP:
+      display_names:
+        other: פזו ארגנטינאי (1983–1985)
+        one: פזו ארגנטינאי (1983–1985)
     ARS:
       display_names:
         other: פסו ארגנטינאי
         one: פסו ארגנטינאי
+    ATS:
+      display_names:
+        other: שילינג אוסטרי
+        one: שילינג אוסטרי
     AUD:
       display_names:
         other: דולר אוסטרלי
         one: דולר אוסטרלי
+    AWG:
+      display_names:
+        other: פלורין של ארובה
+        one: פלורין של ארובה
+    AZM:
+      display_names:
+        other: מנאט אזרביג׳אני (1993–2006)
+        one: מנאט אזרביג׳אני (1993–2006)
     AZN:
       display_names:
         other: מאנאט אזרבייג׳ני
         one: מאנאט אזרבייג׳ני
+    BAD:
+      display_names:
+        other: דינר של בוסניה־הרצגובינה
+        one: דינר של בוסניה־הרצגובינה
     BAM:
       display_names:
         other: מארק סחיר של בוסניה והרצגובינה
@@ -45,6 +194,30 @@ number_formats:
       display_names:
         other: טאקה בנגלדשי
         one: טאקה בנגלדשי
+    BEC:
+      display_names:
+        other: פרנק בלגי (בר המרה)
+        one: פרנק בלגי (בר המרה)
+    BEF:
+      display_names:
+        other: פרנק בלגי
+        one: פרנק בלגי
+    BGL:
+      display_names:
+        other: לב בולגרי ישן
+        one: לב בולגרי ישן
+    BGN:
+      display_names:
+        other: לב בולגרי
+        one: לב בולגרי
+    BHD:
+      display_names:
+        other: דינר בחרייני
+        one: דינר בחרייני
+    BIF:
+      display_names:
+        other: פרנק בורונדי
+        one: פרנק בורונדי
     BMD:
       display_names:
         other: דולר ברמודה
@@ -57,6 +230,18 @@ number_formats:
       display_names:
         other: בוליביאנו
         one: בוליביאנו
+    BOP:
+      display_names:
+        other: פזו בוליבי
+        one: פזו בוליבי
+    BRB:
+      display_names:
+        other: קרוזיארו חדש ברזילאי (1967–1986)
+        one: קרוזיארו חדש ברזילאי (1967–1986)
+    BRC:
+      display_names:
+        other: קרוזדו ברזילאי
+        one: קרוזדו ברזילאי
     BRL:
       display_names:
         other: ריאל ברזילאי
@@ -65,10 +250,23 @@ number_formats:
       display_names:
         other: דולר בהאמי
         one: דולר בהאמי
+    BTN:
+      display_names:
+        other: נגולטרום בהוטני
+        one: נגולטרום בהוטני
     BWP:
       display_names:
         other: פולה בוטסואני
         one: פולה בוטסואני
+    BYN:
+      symbol: р
+      display_names:
+        other: רובל בלרוסי
+        one: רובל בלרוסי
+    BYR:
+      display_names:
+        other: רובל בלרוסי (2000–2016)
+        one: רובל בלרוסי (2000–2016)
     BZD:
       display_names:
         other: דולר בליזי
@@ -77,10 +275,22 @@ number_formats:
       display_names:
         other: דולר קנדי
         one: דולר קנדי
+    CDF:
+      display_names:
+        other: פרנק קונגולזי
+        one: פרנק קונגולזי
+    CHF:
+      display_names:
+        other: פרנק שוויצרי
+        one: פרנק שוויצרי
     CLP:
       display_names:
         other: פסו צ׳ילאני
         one: פסו צ׳ילאני
+    CNH:
+      display_names:
+        other: יואן סיני (CNH)
+        one: יואן סיני (CNH)
     CNY:
       symbol: "‎CN¥‎"
       display_names:
@@ -94,6 +304,10 @@ number_formats:
       display_names:
         other: קולון קוסטה־ריקני
         one: קולון קוסטה־ריקני
+    CSD:
+      display_names:
+        other: דינר סרבי ישן
+        one: דינר סרבי ישן
     CUC:
       display_names:
         other: פסו קובני להמרה
@@ -102,10 +316,30 @@ number_formats:
       display_names:
         other: פסו קובני
         one: פסו קובני
+    CVE:
+      display_names:
+        other: אסקודו כף ורדה
+        one: אסקודו כף ורדה
+    CYP:
+      display_names:
+        other: לירה קפריסאית
+        one: לירה קפריסאית
     CZK:
       display_names:
         other: קורונה צ׳כית
         one: קורונה צ׳כית
+    DDM:
+      display_names:
+        other: מרק מזרח גרמני
+        one: מרק מזרח גרמני
+    DEM:
+      display_names:
+        other: מרק גרמני
+        one: מרק גרמני
+    DJF:
+      display_names:
+        other: פרנק ג׳יבוטי
+        one: פרנק ג׳יבוטי
     DKK:
       display_names:
         other: כתר דני
@@ -114,18 +348,50 @@ number_formats:
       display_names:
         other: פסו דומיניקני
         one: פסו דומיניקני
+    DZD:
+      display_names:
+        other: דינר אלג׳ירי
+        one: דינר אלג׳ירי
+    ECS:
+      display_names:
+        other: סוקר אקואדורי
+        one: סוקר אקואדורי
+    EEK:
+      display_names:
+        other: קרון אסטוני
+        one: קרון אסטוני
     EGP:
       display_names:
         other: לירה מצרית
         one: לירה מצרית
+    ERN:
+      display_names:
+        other: נאקפה אריתראי
+        one: נאקפה אריתראי
+    ESA:
+      display_names:
+        other: פזטה [ESA]
+        one: פזטה [ESA]
+    ESB:
+      display_names:
+        other: פזטה [ESB]
+        one: פזטה [ESB]
     ESP:
       display_names:
         other: פסטה ספרדי
         one: פסטה ספרדי
+    ETB:
+      display_names:
+        other: ביר אתיופי
+        one: ביר אתיופי
     EUR:
       display_names:
         other: אירו
         one: אירו
+    FIM:
+      display_names:
+        other: מרק פיני
+        one: מרק פיני
     FJD:
       display_names:
         other: דולר פיג׳י
@@ -134,6 +400,10 @@ number_formats:
       display_names:
         other: לירה של איי פוקלנד
         one: לירה של איי פוקלנד
+    FRF:
+      display_names:
+        other: פרנק צרפתי
+        one: פרנק צרפתי
     GBP:
       display_names:
         other: לירה שטרלינג
@@ -150,14 +420,26 @@ number_formats:
       display_names:
         other: פאונד גיברלטר
         one: פאונד גיברלטר
+    GMD:
+      display_names:
+        other: דלסי גמבי
+        one: דלסי גמבי
     GNF:
       display_names:
         other: פרנק גינאי
         one: פרנק גינאי
+    GRD:
+      display_names:
+        other: דרכמה
+        one: דרכמה
     GTQ:
       display_names:
         other: קצאל גואטמלי
         one: קצאל גואטמלי
+    GWP:
+      display_names:
+        other: פזו גינאי
+        one: פזו גינאי
     GYD:
       display_names:
         other: דולר גיאני
@@ -174,6 +456,10 @@ number_formats:
       display_names:
         other: קונה קרואטי
         one: קונה קרואטי
+    HTG:
+      display_names:
+        other: גורד האיטי
+        one: גורד האיטי
     HUF:
       display_names:
         other: פורינט הונגרי
@@ -183,6 +469,15 @@ number_formats:
         other: רופיות אינדונזיות
         one: רופיה אינדונזית
         two: רופיות אינדונזיות
+    IEP:
+      display_names:
+        other: לירה אירית
+        one: לירה אירית
+    ILP:
+      symbol: ל״י
+      display_names:
+        other: לירה ישראלית
+        one: לירה ישראלית
     ILS:
       display_names:
         other: שקלים חדשים
@@ -192,19 +487,39 @@ number_formats:
       display_names:
         other: רופי הודי
         one: רופי הודי
+    IQD:
+      display_names:
+        other: דינר עיראקי
+        one: דינר עיראקי
+    IRR:
+      display_names:
+        other: ריאל איראני
+        one: ריאל איראני
     ISK:
       display_names:
         other: כתר איסלנדי
         one: כתר איסלנדי
+    ITL:
+      display_names:
+        other: לירה איטלקית
+        one: לירה איטלקית
     JMD:
       display_names:
         other: דולר ג׳מייקני
         one: דולר ג׳מייקני
+    JOD:
+      display_names:
+        other: דינר ירדני
+        one: דינר ירדני
     JPY:
       symbol: "¥"
       display_names:
         other: ין יפני
         one: ין יפני
+    KES:
+      display_names:
+        other: שילינג קנייתי
+        one: שילינג קנייתי
     KGS:
       display_names:
         other: סום קירגיזי
@@ -225,6 +540,10 @@ number_formats:
       display_names:
         other: וון דרום קוריאני
         one: וון דרום קוריאני
+    KWD:
+      display_names:
+        other: דינר כוויתי
+        one: דינר כוויתי
     KYD:
       display_names:
         other: דולר קיימני
@@ -250,418 +569,22 @@ number_formats:
       display_names:
         other: דולר ליברי
         one: דולר ליברי
-    LTL:
-      display_names:
-        other: ליטא ליטאי
-        one: ליטא ליטאי
-    LVL:
-      display_names:
-        other: לט לטבי
-        one: לט לטבי
-    MGA:
-      display_names:
-        other: אריארי מלגשי
-        one: אריארי מלגשי
-    MMK:
-      display_names:
-        other: קיאט מיאנמרי
-        one: קיאט מיאנמרי
-    MNT:
-      display_names:
-        other: טוגרוג מונגולי
-        one: טוגרוג מונגולי
-    MUR:
-      display_names:
-        other: רופי מאוריציני
-        one: רופי מאוריציני
-    MXN:
-      display_names:
-        other: פסו מקסיקני
-        one: פסו מקסיקני
-    MYR:
-      display_names:
-        other: רינגיט מלזי
-        one: רינגיט מלזי
-    NAD:
-      display_names:
-        other: דולר נמיבי
-        one: דולר נמיבי
-    NGN:
-      display_names:
-        other: נאירה ניגרי
-        one: נאירה ניגרי
-    NIO:
-      display_names:
-        other: קורדובה ניקרגואה
-        one: קורדובה ניקרגואה
-    NOK:
-      display_names:
-        other: כתר נורווגי
-        one: כתר נורווגי
-    NPR:
-      display_names:
-        other: רופי נפאלי
-        one: רופי נפאלי
-    NZD:
-      display_names:
-        other: דולר ניו זילנדי
-        one: דולר ניו זילנדי
-    PHP:
-      symbol: PHP
-      display_names:
-        other: פסו פיליפיני
-        one: פסו פיליפיני
-    PKR:
-      display_names:
-        other: רופי פקיסטני
-        one: רופי פקיסטני
-    PLN:
-      display_names:
-        other: זלוטי פולני
-        one: זלוטי פולני
-    PYG:
-      display_names:
-        other: גוארני פרגוואי
-        one: גוארני פרגוואי
-    RON:
-      display_names:
-        other: לאו רומני
-        one: לאו רומני
-    RUB:
-      display_names:
-        other: רובל רוסי
-        one: רובל רוסי
-    RWF:
-      display_names:
-        other: פרנק רואנדי
-        one: פרנק רואנדי
-    SBD:
-      display_names:
-        other: דולר איי שלמה
-        one: דולר איי שלמה
-    SEK:
-      display_names:
-        other: כתר שוודי
-        one: כתר שוודי
-    SGD:
-      display_names:
-        other: דולר סינגפורי
-        one: דולר סינגפורי
-    SHP:
-      display_names:
-        other: פאונד סנט הלני
-        one: פאונד סנט הלני
-    SRD:
-      display_names:
-        other: דולר סורינאמי
-        one: דולר סורינאמי
-    SSP:
-      display_names:
-        other: לירה דרום-סודנית
-        one: לירה דרום-סודנית
-    STN:
-      display_names:
-        other: דוברה של סאו טומה ופרינסיפה
-        one: דוברה של סאו טומה ופרינסיפה
-    SYP:
-      display_names:
-        other: לירות סוריות
-        one: לירה סורית
-        two: לירות סוריות
-    THB:
-      display_names:
-        other: בהט תאילנדי
-        one: בהט תאילנדי
-    TOP:
-      display_names:
-        other: פאנגה טונגי
-        one: פאנגה טונגי
-    TRY:
-      display_names:
-        other: לירות טורקיות
-        one: לירה טורקית חדשה
-        two: לירות טורקיות
-        many: לירות טורקיות
-    TTD:
-      display_names:
-        other: דולר טרינידדי
-        one: דולר טרינידדי
-    TWD:
-      display_names:
-        other: דולר טייוואני חדש
-        one: דולר טייוואני חדש
-    UAH:
-      display_names:
-        other: הריבנה אוקראיני
-        one: הריבנה אוקראיני
-    USD:
-      symbol: "$"
-      display_names:
-        other: דולר אמריקאי
-        one: דולר אמריקאי
-    UYU:
-      display_names:
-        other: פסו אורוגוואי
-        one: פסו אורוגוואי
-    VEF:
-      display_names:
-        other: בוליבר ונצואלי (2008–2018)
-        one: בוליבר ונצואלי (2008–2018)
-    VND:
-      display_names:
-        other: דונג וייטנאמי
-        one: דונג וייטנאמי
-    XAF:
-      display_names:
-        other: פרנק CFA מרכז אפריקני
-        one: פרנק CFA מרכז אפריקני
-    XCD:
-      display_names:
-        other: דולר מזרח קריבי
-        one: דולר מזרח קריבי
-    XOF:
-      display_names:
-        other: פרנק CFA מערב אפריקני
-        one: פרנק CFA מערב אפריקני
-    XPF:
-      display_names:
-        other: פרנק פולינזיה הצרפתית
-        one: פרנק פולינזיה הצרפתית
-    XXX:
-      display_names:
-        other: "(מטבע שאינו ידוע)"
-        one: "(מטבע שאינו ידוע)"
-        two: "(מטבע שאינו ידוע)"
-    ZAR:
-      display_names:
-        other: ראנד דרום אפריקאי
-        one: ראנד דרום אפריקאי
-    ZMW:
-      display_names:
-        other: קוואצ׳ה זמבי
-        one: קוואצ׳ה זמבי
-    ADP:
-      display_names:
-        other: פזטה אנדורית
-        one: פזטה אנדורית
-    AED:
-      display_names:
-        other: דירהם של איחוד הנסיכויות הערביות
-        one: דירהם של איחוד הנסיכויות הערביות
-    ALL:
-      display_names:
-        other: לק אלבני
-        one: לק אלבני
-    ANG:
-      display_names:
-        other: גילדר של האנטילים ההולנדיים
-        one: גילדר של האנטילים ההולנדיים
-    AON:
-      display_names:
-        other: קואנזה חדש אנגולי (1990–2000)
-        one: קואנזה חדש אנגולי (1990–2000)
-    AOR:
-      display_names:
-        other: קואנזה רג׳וסטדו אנגולי (1995–1999)
-        one: קואנזה רג׳וסטדו אנגולי (1995–1999)
-    ARP:
-      display_names:
-        other: פזו ארגנטינאי (1983–1985)
-        one: פזו ארגנטינאי (1983–1985)
-    ATS:
-      display_names:
-        other: שילינג אוסטרי
-        one: שילינג אוסטרי
-    AWG:
-      display_names:
-        other: פלורין של ארובה
-        one: פלורין של ארובה
-    AZM:
-      display_names:
-        other: מנאט אזרביג׳אני (1993–2006)
-        one: מנאט אזרביג׳אני (1993–2006)
-    BAD:
-      display_names:
-        other: דינר של בוסניה־הרצגובינה
-        one: דינר של בוסניה־הרצגובינה
-    BEC:
-      display_names:
-        other: פרנק בלגי (בר המרה)
-        one: פרנק בלגי (בר המרה)
-    BEF:
-      display_names:
-        other: פרנק בלגי
-        one: פרנק בלגי
-    BGL:
-      display_names:
-        other: לב בולגרי ישן
-        one: לב בולגרי ישן
-    BGN:
-      display_names:
-        other: לב בולגרי
-        one: לב בולגרי
-    BHD:
-      display_names:
-        other: דינר בחרייני
-        one: דינר בחרייני
-    BIF:
-      display_names:
-        other: פרנק בורונדי
-        one: פרנק בורונדי
-    BOP:
-      display_names:
-        other: פזו בוליבי
-        one: פזו בוליבי
-    BRB:
-      display_names:
-        other: קרוזיארו חדש ברזילאי (1967–1986)
-        one: קרוזיארו חדש ברזילאי (1967–1986)
-    BRC:
-      display_names:
-        other: קרוזדו ברזילאי
-        one: קרוזדו ברזילאי
-    BTN:
-      display_names:
-        other: נגולטרום בהוטני
-        one: נגולטרום בהוטני
-    BYN:
-      symbol: р
-      display_names:
-        other: רובל בלרוסי
-        one: רובל בלרוסי
-    BYR:
-      display_names:
-        other: רובל בלרוסי (2000–2016)
-        one: רובל בלרוסי (2000–2016)
-    CDF:
-      display_names:
-        other: פרנק קונגולזי
-        one: פרנק קונגולזי
-    CHF:
-      display_names:
-        other: פרנק שוויצרי
-        one: פרנק שוויצרי
-    CNH:
-      display_names:
-        other: יואן סיני (CNH)
-        one: יואן סיני (CNH)
-    CSD:
-      display_names:
-        other: דינר סרבי ישן
-        one: דינר סרבי ישן
-    CVE:
-      display_names:
-        other: אסקודו כף ורדה
-        one: אסקודו כף ורדה
-    CYP:
-      display_names:
-        other: לירה קפריסאית
-        one: לירה קפריסאית
-    DDM:
-      display_names:
-        other: מרק מזרח גרמני
-        one: מרק מזרח גרמני
-    DEM:
-      display_names:
-        other: מרק גרמני
-        one: מרק גרמני
-    DJF:
-      display_names:
-        other: פרנק ג׳יבוטי
-        one: פרנק ג׳יבוטי
-    DZD:
-      display_names:
-        other: דינר אלג׳ירי
-        one: דינר אלג׳ירי
-    ECS:
-      display_names:
-        other: סוקר אקואדורי
-        one: סוקר אקואדורי
-    EEK:
-      display_names:
-        other: קרון אסטוני
-        one: קרון אסטוני
-    ERN:
-      display_names:
-        other: נאקפה אריתראי
-        one: נאקפה אריתראי
-    ESA:
-      display_names:
-        other: פזטה [ESA]
-        one: פזטה [ESA]
-    ESB:
-      display_names:
-        other: פזטה [ESB]
-        one: פזטה [ESB]
-    ETB:
-      display_names:
-        other: ביר אתיופי
-        one: ביר אתיופי
-    FIM:
-      display_names:
-        other: מרק פיני
-        one: מרק פיני
-    FRF:
-      display_names:
-        other: פרנק צרפתי
-        one: פרנק צרפתי
-    GMD:
-      display_names:
-        other: דלסי גמבי
-        one: דלסי גמבי
-    GRD:
-      display_names:
-        other: דרכמה
-        one: דרכמה
-    GWP:
-      display_names:
-        other: פזו גינאי
-        one: פזו גינאי
-    HTG:
-      display_names:
-        other: גורד האיטי
-        one: גורד האיטי
-    IEP:
-      display_names:
-        other: לירה אירית
-        one: לירה אירית
-    ILP:
-      symbol: ל״י
-      display_names:
-        other: לירה ישראלית
-        one: לירה ישראלית
-    IQD:
-      display_names:
-        other: דינר עיראקי
-        one: דינר עיראקי
-    IRR:
-      display_names:
-        other: ריאל איראני
-        one: ריאל איראני
-    ITL:
-      display_names:
-        other: לירה איטלקית
-        one: לירה איטלקית
-    JOD:
-      display_names:
-        other: דינר ירדני
-        one: דינר ירדני
-    KES:
-      display_names:
-        other: שילינג קנייתי
-        one: שילינג קנייתי
-    KWD:
-      display_names:
-        other: דינר כוויתי
-        one: דינר כוויתי
     LSL:
       display_names:
         other: לוטי לסותי
         one: לוטי לסותי
+    LTL:
+      display_names:
+        other: ליטא ליטאי
+        one: ליטא ליטאי
     LUF:
       display_names:
         other: פרנק לוקסמבורגי
         one: פרנק לוקסמבורגי
+    LVL:
+      display_names:
+        other: לט לטבי
+        one: לט לטבי
     LYD:
       display_names:
         other: דינר לובי
@@ -678,6 +601,10 @@ number_formats:
       display_names:
         other: לאו מולדובני
         one: לאו מולדובני
+    MGA:
+      display_names:
+        other: אריארי מלגשי
+        one: אריארי מלגשי
     MGF:
       display_names:
         other: פרנק מדגסקארי
@@ -686,6 +613,14 @@ number_formats:
       display_names:
         other: דינר מקדוני
         one: דינר מקדוני
+    MMK:
+      display_names:
+        other: קיאט מיאנמרי
+        one: קיאט מיאנמרי
+    MNT:
+      display_names:
+        other: טוגרוג מונגולי
+        one: טוגרוג מונגולי
     MOP:
       display_names:
         other: פטקה של מקאו
@@ -702,6 +637,10 @@ number_formats:
       display_names:
         other: לירה מלטית
         one: לירה מלטית
+    MUR:
+      display_names:
+        other: רופי מאוריציני
+        one: רופי מאוריציני
     MVR:
       display_names:
         other: רופיות מלדיביות
@@ -711,6 +650,10 @@ number_formats:
       display_names:
         other: קואצ׳ה מלאווי
         one: קואצ׳ה מלאווי
+    MXN:
+      display_names:
+        other: פסו מקסיקני
+        one: פסו מקסיקני
     MXP:
       display_names:
         other: פסו מקסיקני (1861 – 1992)
@@ -721,6 +664,10 @@ number_formats:
         other: יחידות השקעות מקסיקניות
         one: יחידת השקעות מקסיקנית
         two: יחידות השקעות מקסיקניות
+    MYR:
+      display_names:
+        other: רינגיט מלזי
+        one: רינגיט מלזי
     MZE:
       display_names:
         other: אסקודואים מוזמביקיים
@@ -735,15 +682,39 @@ number_formats:
       display_names:
         other: מטיקל מוזמביני
         one: מטיקל מוזמביני
+    NAD:
+      display_names:
+        other: דולר נמיבי
+        one: דולר נמיבי
+    NGN:
+      display_names:
+        other: נאירה ניגרי
+        one: נאירה ניגרי
     NIC:
       display_names:
         other: קורדובות (1988–1991)
         one: קורדובה (1988–1991)
         two: קורדובות (1988–1991)
+    NIO:
+      display_names:
+        other: קורדובה ניקרגואה
+        one: קורדובה ניקרגואה
     NLG:
       display_names:
         other: גילדן הולנדי
         one: גילדן הולנדי
+    NOK:
+      display_names:
+        other: כתר נורווגי
+        one: כתר נורווגי
+    NPR:
+      display_names:
+        other: רופי נפאלי
+        one: רופי נפאלי
+    NZD:
+      display_names:
+        other: דולר ניו זילנדי
+        one: דולר ניו זילנדי
     OMR:
       display_names:
         other: ריאל עומאני
@@ -760,6 +731,19 @@ number_formats:
       display_names:
         other: קינה של פפואה גינאה החדשה
         one: קינה של פפואה גינאה החדשה
+    PHP:
+      symbol: PHP
+      display_names:
+        other: פסו פיליפיני
+        one: פסו פיליפיני
+    PKR:
+      display_names:
+        other: רופי פקיסטני
+        one: רופי פקיסטני
+    PLN:
+      display_names:
+        other: זלוטי פולני
+        one: זלוטי פולני
     PLZ:
       display_names:
         other: זלוטי (1950 – 1995)
@@ -768,6 +752,10 @@ number_formats:
       display_names:
         other: אסקודו פורטוגלי
         one: אסקודו פורטוגלי
+    PYG:
+      display_names:
+        other: גוארני פרגוואי
+        one: גוארני פרגוואי
     QAR:
       display_names:
         other: ריאל קטארי
@@ -776,18 +764,34 @@ number_formats:
       display_names:
         other: לאו רומני ישן
         one: לאו רומני ישן
+    RON:
+      display_names:
+        other: לאו רומני
+        one: לאו רומני
     RSD:
       display_names:
         other: דינר סרבי
         one: דינר סרבי
+    RUB:
+      display_names:
+        other: רובל רוסי
+        one: רובל רוסי
     RUR:
       display_names:
         other: רובל רוסי (1991 – 1998)
         one: רובל רוסי (1991 – 1998)
+    RWF:
+      display_names:
+        other: פרנק רואנדי
+        one: פרנק רואנדי
     SAR:
       display_names:
         other: ריאל סעודי
         one: ריאל סעודי
+    SBD:
+      display_names:
+        other: דולר איי שלמה
+        one: דולר איי שלמה
     SCR:
       display_names:
         other: רופי סיישלי
@@ -804,6 +808,18 @@ number_formats:
       display_names:
         other: לירה סודנית (1957–1998)
         one: לירה סודנית (1957–1998)
+    SEK:
+      display_names:
+        other: כתר שוודי
+        one: כתר שוודי
+    SGD:
+      display_names:
+        other: דולר סינגפורי
+        one: דולר סינגפורי
+    SHP:
+      display_names:
+        other: פאונד סנט הלני
+        one: פאונד סנט הלני
     SIT:
       display_names:
         other: טולאר סלובני
@@ -824,14 +840,26 @@ number_formats:
       display_names:
         other: שילינג סומלי
         one: שילינג סומלי
+    SRD:
+      display_names:
+        other: דולר סורינאמי
+        one: דולר סורינאמי
     SRG:
       display_names:
         other: גילדר סורינאמי
         one: גילדר סורינאמי
+    SSP:
+      display_names:
+        other: לירה דרום-סודנית
+        one: לירה דרום-סודנית
     STD:
       display_names:
         other: דוברה של סן טומה ופרינסיפה (1977–2017)
         one: דוברה של סן טומה ופרינסיפה (1977–2017)
+    STN:
+      display_names:
+        other: דוברה של סאו טומה ופרינסיפה
+        one: דוברה של סאו טומה ופרינסיפה
     SUR:
       display_names:
         other: רובל סובייטי
@@ -842,10 +870,19 @@ number_formats:
         one: קולון סלבדורי
         two: קולונים סלבדוריים
         many: קולון סלבדורי
+    SYP:
+      display_names:
+        other: לירות סוריות
+        one: לירה סורית
+        two: לירות סוריות
     SZL:
       display_names:
         other: לילנגני סווזילנדי
         one: לילנגני סווזילנדי
+    THB:
+      display_names:
+        other: בהט תאילנדי
+        one: בהט תאילנדי
     TJS:
       display_names:
         other: סומוני טג׳קיסטני
@@ -862,6 +899,10 @@ number_formats:
       display_names:
         other: דינר טוניסאי
         one: דינר טוניסאי
+    TOP:
+      display_names:
+        other: פאנגה טונגי
+        one: פאנגה טונגי
     TPE:
       display_names:
         other: אסקודו טימוראי
@@ -870,10 +911,28 @@ number_formats:
       display_names:
         other: לירה טורקית
         one: לירה טורקית
+    TRY:
+      display_names:
+        other: לירות טורקיות
+        one: לירה טורקית חדשה
+        two: לירות טורקיות
+        many: לירות טורקיות
+    TTD:
+      display_names:
+        other: דולר טרינידדי
+        one: דולר טרינידדי
+    TWD:
+      display_names:
+        other: דולר טייוואני חדש
+        one: דולר טייוואני חדש
     TZS:
       display_names:
         other: שילינג טנזני
         one: שילינג טנזני
+    UAH:
+      display_names:
+        other: הריבנה אוקראיני
+        one: הריבנה אוקראיני
     UGS:
       display_names:
         other: שילינג אוגנדי (1966 – 1987)
@@ -882,6 +941,11 @@ number_formats:
       display_names:
         other: שילינג אוגנדי
         one: שילינג אוגנדי
+    USD:
+      symbol: "$"
+      display_names:
+        other: דולר אמריקאי
+        one: דולר אמריקאי
     USN:
       display_names:
         other: דולר אמריקאי (היום הבא)
@@ -890,6 +954,10 @@ number_formats:
       display_names:
         other: דולר אמריקאי (היום הזה)
         one: דולר אמריקאי (היום הזה)
+    UYU:
+      display_names:
+        other: פסו אורוגוואי
+        one: פסו אורוגוואי
     UZS:
       display_names:
         other: סום אוזבקי
@@ -898,10 +966,18 @@ number_formats:
       display_names:
         other: בוליבר ונצואלי (1871–2008)
         one: בוליבר ונצואלי (1871–2008)
+    VEF:
+      display_names:
+        other: בוליבר ונצואלי (2008–2018)
+        one: בוליבר ונצואלי (2008–2018)
     VES:
       display_names:
         other: בוליבר ונצואלי
         one: בוליבר ונצואלי
+    VND:
+      display_names:
+        other: דונג וייטנאמי
+        one: דונג וייטנאמי
     VUV:
       display_names:
         other: ואטו של ונואטו
@@ -910,6 +986,10 @@ number_formats:
       display_names:
         other: טאלה סמואי
         one: טאלה סמואי
+    XAF:
+      display_names:
+        other: פרנק CFA מרכז אפריקני
+        one: פרנק CFA מרכז אפריקני
     XAG:
       display_names:
         other: כסף
@@ -918,6 +998,10 @@ number_formats:
       display_names:
         other: זהב
         one: זהב
+    XCD:
+      display_names:
+        other: דולר מזרח קריבי
+        one: דולר מזרח קריבי
     XDR:
       display_names:
         other: זכויות משיכה מיוחדות
@@ -926,10 +1010,18 @@ number_formats:
       display_names:
         other: פרנק זהב
         one: פרנק זהב
+    XOF:
+      display_names:
+        other: פרנק CFA מערב אפריקני
+        one: פרנק CFA מערב אפריקני
     XPD:
       display_names:
         other: פלדיום
         one: פלדיום
+    XPF:
+      display_names:
+        other: פרנק פולינזיה הצרפתית
+        one: פרנק פולינזיה הצרפתית
     XPT:
       display_names:
         other: פלטינה
@@ -938,6 +1030,11 @@ number_formats:
       display_names:
         other: סימון למטרות בדיקה
         one: סימון למטרות בדיקה
+    XXX:
+      display_names:
+        other: "(מטבע שאינו ידוע)"
+        one: "(מטבע שאינו ידוע)"
+        two: "(מטבע שאינו ידוע)"
     YDD:
       display_names:
         other: דינר תימני
@@ -958,10 +1055,18 @@ number_formats:
       display_names:
         other: ראנד דרום אפריקאי (כספי)
         one: ראנד דרום אפריקאי (כספי)
+    ZAR:
+      display_names:
+        other: ראנד דרום אפריקאי
+        one: ראנד דרום אפריקאי
     ZMK:
       display_names:
         other: קוואצ׳ה זמבית (1968–2012)
         one: קוואצ׳ה זמבית (1968–2012)
+    ZMW:
+      display_names:
+        other: קוואצ׳ה זמבי
+        one: קוואצ׳ה זמבי
     ZRN:
       display_names:
         other: זאיר חדש
@@ -970,3 +1075,1929 @@ number_formats:
       display_names:
         other: דולר זימבבואי
         one: דולר זימבבואי
+  units:
+    g-force:
+      long:
+        one: כוח ג׳י אחד
+        two: שני כוחות ג׳י
+        many: "{0} כוחות ג׳י"
+        other: "{0} כוחות ג׳י"
+        gender: masculine
+      short:
+        display_name: כוח ג׳י
+    meter-per-square-second:
+      long:
+        display_name: מטר לשנייה בריבוע
+        one: "{0} מטר לשנייה בריבוע"
+        two: "{0} מטר לשנייה בריבוע"
+        many: "{0} מטר לשנייה בריבוע"
+        other: "{0} מטר לשנייה בריבוע"
+        gender: masculine
+    revolution:
+      long:
+        display_name: סיבוב
+        one: סיבוב {0}
+        two: "{0} סיבובים"
+        many: "{0} סיבובים"
+        other: "{0} סיבובים"
+        gender: masculine
+      short:
+        display_name: ס׳
+        one: "{0} ס׳"
+        two: "{0} ס׳"
+        other: "{0} ס׳"
+    radian:
+      long:
+        one: רדיאן אחד
+        two: שני רדיאנים
+        many: "{0} רדיאנים"
+        other: "{0} רדיאנים"
+        gender: masculine
+      short:
+        display_name: רדיאנים
+        one: "{0} π"
+        two: "{0} π"
+        other: "{0} π"
+    degree:
+      long:
+        one: מעלה אחת
+        two: שתי מעלות
+        many: "{0} מעלות"
+        other: "{0} מעלות"
+        gender: feminine
+      short:
+        display_name: מעלות
+    arc-minute:
+      long:
+        display_name: דקות קשת
+        one: "{0} דקת קשת"
+        two: "{0} דקות קשת"
+        many: "{0} דקות קשת"
+        other: "{0} דקות קשת"
+        gender: feminine
+      short:
+        display_name: דק׳ קשת
+        one: "{0} ד׳ קשת"
+        two: "{0} דק׳ קשת"
+        other: "{0} דק׳ קשת"
+      narrow:
+        one: "{0} דקה"
+        two: "{0} דקות"
+        many: "{0} דקות"
+        other: "{0} דקות"
+    arc-second:
+      long:
+        display_name: שניות קשת
+        one: "{0} שניית קשת"
+        two: "{0} שניות קשת"
+        many: "{0} שניות קשת"
+        other: "{0} שניות קשת"
+        gender: feminine
+      short:
+        display_name: שנ׳ קשת
+        one: "{0} שנ׳ קשת"
+        two: "{0} שנ׳ קשת"
+        other: "{0} שנ׳ קשת"
+      narrow:
+        one: "{0} שנ׳"
+        two: "{0} שנ׳"
+        many: "{0} שנ׳"
+        other: "{0} שנ׳"
+    square-kilometer:
+      long:
+        display_name: קילומטר רבוע
+        one: "{0} קילומטר רבוע"
+        two: "{0} קילומטר רבוע"
+        many: "{0} קילומטר רבוע"
+        other: "{0} קילומטר רבוע"
+        gender: masculine
+        per_unit_pattern: "{0} לקילומטר רבוע"
+      short:
+        display_name: קמ״ר
+        one: "{0} קמ״ר"
+        two: "{0} קמ״ר"
+        other: "{0} קמ״ר"
+        per_unit_pattern: "{0}/קמ״ר"
+      narrow:
+        one: "{0} קמ״ר"
+        two: "{0} קמ״ר"
+        other: "{0} קמ״ר"
+    hectare:
+      long:
+        one: "{0} הקטאר"
+        two: "{0} הקטאר"
+        many: "{0} הקטאר"
+        other: "{0} הקטאר"
+        gender: masculine
+      short:
+        display_name: הקטאר
+        one: "{0} ha"
+        two: "{0} ha"
+    square-meter:
+      long:
+        display_name: מטר רבוע
+        one: "{0} מטר רבוע"
+        two: "{0} מטר רבוע"
+        many: "{0} מטר רבוע"
+        other: "{0} מטר רבוע"
+        gender: masculine
+        per_unit_pattern: "{0} למטר רבוע"
+      short:
+        display_name: מ״ר
+        one: "{0} מ״ר"
+        two: "{0} מ״ר"
+        other: "{0} מ״ר"
+        per_unit_pattern: "{0}/מ״ר"
+    square-centimeter:
+      long:
+        display_name: סנטימטר רבוע
+        one: "{0} סנטימטר רבוע"
+        two: "{0} סנטימטר רבוע"
+        many: "{0} סנטימטר רבוע"
+        other: "{0} סנטימטר רבוע"
+        gender: masculine
+        per_unit_pattern: "{0} לסנטימטר רבוע"
+      short:
+        display_name: סמ״ר
+        one: "{0} סמ״ר"
+        two: "{0} סמ״ר"
+        other: "{0} סמ״ר"
+        per_unit_pattern: "{0}/סמ״ר"
+    square-mile:
+      long:
+        one: "{0} מייל רבוע"
+        two: "{0} מייל רבוע"
+        many: "{0} מייל רבוע"
+        other: "{0} מייל רבוע"
+        per_unit_pattern: "{0} למייל רבוע"
+      short:
+        display_name: מייל רבוע
+        one: "{0} sq mi"
+        two: "{0} sq mi"
+        other: "{0} sq mi"
+    acre:
+      long:
+        one: "{0} אקר"
+        two: "{0} אקר"
+        many: "{0} אקר"
+        other: "{0} אקר"
+      short:
+        display_name: אקר
+        one: "{0} אקר"
+        two: "{0} אקר"
+        other: "{0} אקר"
+    square-yard:
+      long:
+        display_name: יארד רבוע
+        one: "{0} יארד רבוע"
+        two: "{0} יארד רבוע"
+        many: "{0} יארד רבוע"
+        other: "{0} יארד רבוע"
+      short:
+        display_name: yards²
+        one: "{0} yd²"
+        two: "{0} yd²"
+    square-foot:
+      long:
+        display_name: רגל רבועה
+        one: "{0} רגל רבועה"
+        two: "{0} רגל רבועה"
+        many: "{0} רגל רבועה"
+        other: "{0} רגל רבועה"
+      short:
+        one: "{0} sq ft"
+        two: "{0} sq ft"
+        other: "{0} sq ft"
+    square-inch:
+      long:
+        display_name: אינץ׳ רבוע
+        one: "{0} אינץ׳ רבוע"
+        two: "{0} אינץ׳ רבוע"
+        many: "{0} אינץ׳ רבוע"
+        other: "{0} אינץ׳ רבוע"
+        per_unit_pattern: "{0} לאינץ׳ רבוע"
+      short:
+        one: "{0} in²"
+        two: "{0} in²"
+    karat:
+      long:
+        display_name: קראט
+        one: "{0} קראט"
+        two: "{0} קראט"
+        many: "{0} קראט"
+        other: "{0} קראט"
+        gender: masculine
+      short:
+        one: "{0} kt"
+        two: "{0} kt"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: מיליגרם/דציליטר
+        one: "{0} מיליגרם/דציליטר"
+        two: "{0} מיליגרם/דציליטר"
+        many: "{0} מיליגרם/דציליטר"
+        other: "{0} מיליגרם/דציליטר"
+        gender: masculine
+      short:
+        one: "{0} mg/dL"
+        two: "{0} mg/dL"
+    millimole-per-liter:
+      long:
+        display_name: מילימול/ליטר
+        one: "{0} מילימול/ליטר"
+        two: "{0} מילימול/ליטר"
+        many: "{0} מילימול/ליטר"
+        other: "{0} מילימול/ליטר"
+        gender: masculine
+    item:
+      long:
+        display_name: פריטים
+        gender: masculine
+      short:
+        display_name: פריט
+        one: "{0} פריט"
+        two: "{0} פריטים"
+        other: "{0} פריטים"
+      narrow:
+        one: "{0} פריט"
+        two: "{0} פר'"
+        many: "{0} פר'"
+        other: "{0} פר'"
+    permillion:
+      long:
+        display_name: חלקים למיליון
+        one: "{0} חלקים למיליון"
+        two: "{0} חלקים למיליון"
+        many: "{0} חלקים למיליון"
+        other: "{0} חלקים למיליון"
+        gender: masculine
+    percent:
+      long:
+        display_name: אחוז
+        one: "{0} אחוז"
+        two: "{0} אחוז"
+        many: "{0} אחוז"
+        other: "{0} אחוז"
+        gender: masculine
+    permille:
+      long:
+        display_name: פרומיל
+        one: "{0} פרומיל"
+        two: "{0} פרומיל"
+        many: "{0} פרומיל"
+        other: "{0} פרומיל"
+        gender: masculine
+    permyriad:
+      long:
+        display_name: רבבית
+        one: "{0} רבבית"
+        two: "{0} רבביות"
+        many: "{0} רבביות"
+        other: "{0} רבביות"
+        gender: feminine
+    mole:
+      long:
+        display_name: מול
+        one: "{0} מול"
+        two: "{0} מול"
+        many: "{0} מול"
+        other: "{0} מול"
+        gender: masculine
+    liter-per-kilometer:
+      long:
+        display_name: ליטרים/קילומטר
+        one: "{0} ליטר/קילומטר"
+        two: "{0} ליטרים/קילומטר"
+        many: "{0} ליטרים/קילומטר"
+        other: "{0} ליטרים/קילומטר"
+        gender: masculine
+      short:
+        display_name: ליטרים/ק״מ
+        one: "{0} ל׳/ק״מ"
+        two: "{0} ל׳/ק״מ"
+        other: "{0} ל׳/ק״מ"
+    liter-per-100-kilometer:
+      long:
+        display_name: ליטר/100 ק״מ
+        one: ליטר/100 ק״מ
+        two: "{0} ליטר/100 ק״מ"
+        many: "{0} ליטר/100 ק״מ"
+        other: "{0} ליטר/100 ק״מ"
+        gender: masculine
+      short:
+        display_name: ל׳/100 ק״מ
+        one: "{0} ל׳/100 ק״מ"
+        two: "{0} ל׳/100 ק״מ"
+        other: "{0} ל׳/100 ק״מ"
+      narrow:
+        display_name: ל׳/100ק״מ
+        one: "{0}ל׳/100ק״מ"
+        two: "{0}ל׳/100ק״מ"
+        many: "{0}ל׳/100ק״מ"
+        other: "{0}ל׳/100ק״מ"
+    mile-per-gallon:
+      long:
+        one: "{0} מייל/גלון"
+        two: "{0} מייל/גלון"
+        many: "{0} מייל/גלון"
+        other: "{0} מייל/גלון"
+      short:
+        display_name: מייל/גלון
+        one: "{0} mpg"
+        two: "{0} mpg"
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: מייל/גלון אימפריאלי
+        one: "{0} מייל/גלון אימפריאלי"
+        two: "{0} מייל/גלון אימפריאלי"
+        many: "{0} מייל/גלון אימפריאלי"
+        other: "{0} מייל/גלון אימפריאלי"
+      short:
+        display_name: miles/gal Imp.
+    petabyte:
+      long:
+        display_name: פטה-בייט
+        one: "{0} פטה-בייט"
+        two: "{0} פטה-בייט"
+        many: "{0} פטה-בייט"
+        other: "{0} פטה-בייט"
+        gender: masculine
+    terabyte:
+      long:
+        display_name: טרה-בייט
+        one: "{0} טרה-בייט"
+        two: "{0} טרה-בייט"
+        many: "{0} טרה-בייט"
+        other: "{0} טרה-בייט"
+        gender: masculine
+    terabit:
+      long:
+        display_name: טרה-ביט
+        one: "{0} טרה-ביט"
+        two: "{0} טרה-ביט"
+        many: "{0} טרה-ביט"
+        other: "{0} טרה-ביט"
+        gender: masculine
+    gigabyte:
+      long:
+        display_name: ג׳יגה-בייט
+        one: "{0} ג׳יגה-בייט"
+        two: "{0} ג׳יגה-בייט"
+        many: "{0} ג׳יגה-בייט"
+        other: "{0} ג׳יגה-בייט"
+        gender: masculine
+    gigabit:
+      long:
+        display_name: ג׳יגה-ביט
+        one: "{0} ג׳יגה-ביט"
+        two: "{0} ג׳יגה-ביט"
+        many: "{0} ג׳יגה-ביט"
+        other: "{0} ג׳יגה-ביט"
+        gender: masculine
+      short:
+        display_name: Gbit
+    megabyte:
+      long:
+        display_name: מגה-בייט
+        one: "{0} מגה-בייט"
+        two: "{0} מגה-בייט"
+        many: "{0} מגה-בייט"
+        other: "{0} מגה-בייט"
+        gender: masculine
+    megabit:
+      long:
+        display_name: מגה-ביט
+        one: "{0} מגה-ביט"
+        two: "{0} מגה-ביט"
+        many: "{0} מגה-ביט"
+        other: "{0} מגה-ביט"
+        gender: masculine
+      short:
+        display_name: Mbit
+    kilobyte:
+      long:
+        display_name: קילו-בייט
+        one: "{0} קילו-בייט"
+        two: "{0} קילו-בייט"
+        many: "{0} קילו-בייט"
+        other: "{0} קילו-בייט"
+        gender: masculine
+    kilobit:
+      long:
+        display_name: קילוביט
+        one: "{0} קילוביט"
+        two: "{0} קילוביט"
+        many: "{0} קילוביט"
+        other: "{0} קילוביט"
+        gender: masculine
+    byte:
+      long:
+        gender: masculine
+      short:
+        display_name: בייט
+        one: "{0} בייט"
+        two: "{0} בייט"
+        other: "{0} בייט"
+    bit:
+      long:
+        gender: masculine
+      short:
+        display_name: ביט
+        one: "{0} ביט"
+        two: "{0} ביט"
+        other: "{0} ביט"
+    century:
+      long:
+        gender: feminine
+      short:
+        display_name: מאות
+        one: "{0} מאה"
+        two: "{0} מאות"
+        other: "{0} מאות"
+    decade:
+      long:
+        display_name: עשורים
+        gender: masculine
+      short:
+        display_name: עשור
+        one: "{0} עשור"
+        two: "{0} עשורים"
+        other: "{0} עשורים"
+    year:
+      long:
+        gender: feminine
+        per_unit_pattern: "{0} לשנה"
+      short:
+        display_name: שנים
+        one: "{0} שנה"
+        two: "{0} שנים"
+        other: "{0} שנים"
+        per_unit_pattern: "{0}/שנה"
+      narrow:
+        display_name: ש׳
+        one: "{0} ש′"
+        two: "{0} ש′"
+        many: "{0} ש′"
+        other: "{0} ש′"
+    quarter:
+      long:
+        one: "{0} רבעון"
+        two: "{0} רבעונים"
+        many: "{0} רבעונים"
+        other: "{0} רבעונים"
+        gender: masculine
+      short:
+        display_name: רבעונים
+    month:
+      long:
+        one: "{0} חודש"
+        two: חודשיים
+        many: "{0} חודשים"
+        other: "{0} חודשים"
+        gender: masculine
+        per_unit_pattern: "{0} לחודש"
+      short:
+        display_name: חודשים
+        one: "{0} ח׳"
+        two: "{0} ח׳"
+        other: "{0} ח׳"
+        per_unit_pattern: "{0}/חודש"
+      narrow:
+        display_name: ח׳
+    week:
+      long:
+        gender: masculine
+      short:
+        display_name: שבועות
+        one: "{0} שבוע"
+        two: שבועיים
+        other: "{0} שבועות"
+        per_unit_pattern: "{0}/שבוע"
+      narrow:
+        display_name: שבוע
+        one: "{0} ש′"
+        two: "{0} ש′"
+        many: "{0} ש′"
+        other: "{0} ש′"
+        per_unit_pattern: "{0}/שב׳"
+    day:
+      long:
+        one: "{0} יום"
+        two: יומיים
+        many: "{0} יום"
+        other: "{0} ימים"
+        gender: masculine
+      short:
+        display_name: ימים
+        one: "{0} יום"
+        two: יומיים
+        other: "{0} ימ׳"
+        per_unit_pattern: "{0}/יום"
+      narrow:
+        display_name: יום
+        one: "{0} י׳"
+        two: "{0} י׳"
+        many: "{0} י׳"
+        other: "{0} י׳"
+    day-person:
+      long:
+        gender: masculine
+    hour:
+      long:
+        display_name: שעות
+        one: "{0} שעה"
+        two: שעתיים
+        many: "{0} שעות"
+        other: "{0} שעות"
+        gender: feminine
+        per_unit_pattern: "{0} לשעה"
+      short:
+        display_name: שע׳
+        one: "{0} שעה"
+        two: שעתיים
+        other: "{0} שע׳"
+        per_unit_pattern: "{0}/שעה"
+      narrow:
+        one: "{0} שע׳"
+        two: "{0} שע׳"
+        other: "{0} שע׳"
+        per_unit_pattern: "{0}/שע׳"
+    minute:
+      long:
+        display_name: דקות
+        one: "{0} דקה"
+        two: שתי דקות
+        many: "{0} דקות"
+        other: "{0} דקות"
+        gender: feminine
+        per_unit_pattern: "{0}/דקה"
+      short:
+        display_name: דק׳
+        one: "{0} דק׳"
+        two: "{0} דק׳"
+        other: "{0} דק׳"
+        per_unit_pattern: "{0}/ד׳"
+    second:
+      long:
+        display_name: שניות
+        one: "{0} שניה"
+        two: שתי שניות
+        many: "{0} שניות"
+        other: "{0} שניות"
+        gender: feminine
+        per_unit_pattern: "{0} לשניה"
+      short:
+        display_name: שנ׳
+        one: "{0} שנ׳"
+        two: "{0} שנ׳"
+        other: "{0} שנ׳"
+        per_unit_pattern: "{0}/שנ׳"
+    millisecond:
+      long:
+        display_name: אלפיות השניה
+        one: "{0} אלפית שנייה"
+        two: "{0} אלפיות שנייה"
+        many: "{0} אלפיות שנייה"
+        other: "{0} אלפיות שנייה"
+        gender: feminine
+    microsecond:
+      long:
+        display_name: מיליוניות שנייה
+        one: "{0} מיליונית שנייה"
+        two: "{0} מיליוניות שנייה"
+        many: "{0} מיליוניות שנייה"
+        other: "{0} מיליוניות שנייה"
+        gender: feminine
+      short:
+        display_name: μsecs
+    nanosecond:
+      long:
+        one: "{0} ננו שנייה"
+        two: "{0} ננו שניות"
+        many: "{0} ננו שניות"
+        other: "{0} ננו שניות"
+        gender: feminine
+      short:
+        display_name: ננו שניות
+      narrow:
+        display_name: ns
+    ampere:
+      long:
+        display_name: אמפר
+        one: "{0} אמפר"
+        two: "{0} אמפר"
+        many: "{0} אמפר"
+        other: "{0} אמפר"
+        gender: masculine
+      short:
+        display_name: amps
+    milliampere:
+      long:
+        display_name: מיליאמפר
+        one: "{0} מיליאמפר"
+        two: "{0} מיליאמפר"
+        many: "{0} מיליאמפר"
+        other: "{0} מיליאמפר"
+        gender: masculine
+    ohm:
+      long:
+        one: "{0} ohm"
+        two: "{0} ohms"
+        many: "{0} ohms"
+        other: "{0} ohms"
+        gender: masculine
+      short:
+        display_name: ohms
+    volt:
+      long:
+        one: "{0} וולט"
+        two: "{0} וולט"
+        many: "{0} וולט"
+        other: "{0} וולט"
+        gender: masculine
+      short:
+        display_name: וולט
+    kilocalorie:
+      long:
+        display_name: קילו קלוריות
+        one: "{0} קילו קלוריה"
+        two: "{0} קילו קלוריות"
+        many: "{0} קילו קלוריות"
+        other: "{0} קילו קלוריות"
+        gender: feminine
+    calorie:
+      long:
+        display_name: קלוריות
+        one: "{0} קלוריה"
+        two: "{0} קלוריות"
+        many: "{0} קלוריות"
+        other: "{0} קלוריות"
+        gender: feminine
+    foodcalorie:
+      long:
+        display_name: קלוריות
+        one: "{0} קלוריה"
+        two: "{0} קלוריות"
+        many: "{0} קלוריות"
+        other: "{0} קלוריות"
+      short:
+        display_name: קלו׳
+        one: "{0} קלו׳"
+        two: "{0} קלו׳"
+        many: "{0} קלו׳"
+        other: "{0} קלו׳"
+      narrow:
+        display_name: קל׳
+    kilojoule:
+      long:
+        one: "{0} קילו ג׳אול"
+        two: "{0} קילו ג׳אול"
+        many: "{0} קילו ג׳אול"
+        other: "{0} קילו ג׳אול"
+        gender: masculine
+      short:
+        display_name: קילו ג׳אול
+    joule:
+      long:
+        one: "{0} ג׳אול"
+        two: "{0} ג׳אול"
+        many: "{0} ג׳אול"
+        other: "{0} ג׳אול"
+        gender: masculine
+      short:
+        display_name: ג׳אול
+    kilowatt-hour:
+      long:
+        display_name: קילוואט־שעה
+        one: "{0} קילוואט־שעה"
+        two: "{0} קילוואט-שעה"
+        many: "{0} קילוואט-שעה"
+        other: "{0} קילוואט-שעה"
+        gender: masculine
+      short:
+        display_name: קוט״ש
+        one: "{0} קוט״ש"
+        two: "{0} קוט״ש"
+        other: "{0} קוט״ש"
+    electronvolt:
+      long:
+        display_name: אלקטרון וולט
+        one: "{0} אלקטרון וולט"
+        two: "{0} אלקטרון וולט"
+        many: "{0} אלקטרון וולט"
+        other: "{0} אלקטרון וולט"
+    british-thermal-unit:
+      long:
+        display_name: יחידות תרמיות בריטיות
+        one: "{0} יחידה תרמית בריטית"
+        two: "{0} יחידות תרמיות בריטיות"
+        many: "{0} יחידות תרמיות בריטיות"
+        other: "{0} יחידות תרמיות בריטיות"
+      short:
+        display_name: BTU
+    therm-us:
+      long:
+        display_name: יחידה תרמית בארה״ב
+    pound-force:
+      long:
+        display_name: ליברת-כוח
+        one: "{0} ליברת-כוח"
+        two: "{0} ליברות-כוח"
+        many: "{0} ליברות-כוח"
+        other: "{0} ליברות-כוח"
+    newton:
+      long:
+        display_name: ניוטון
+        one: "{0} ניוטון"
+        two: "{0} ניוטון"
+        many: "{0} ניוטון"
+        other: "{0} ניוטון"
+        gender: masculine
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: קילוואט/שעה ל-100 קילומטר
+        one: "{0} קילוואט/שעה ל-100 קילומטר"
+        two: "{0} קילוואט/שעה ל-100 קילומטר"
+        many: "{0} קילוואט/שעה ל-100 קילומטר"
+        other: "{0} קילוואט/שעה ל-100 קילומטר"
+        gender: masculine
+      short:
+        display_name: קוט״ש/100 ק״מ
+        one: "{0} קוט״ש/100 ק״מ"
+        two: "{0} קוט״ש/100 ק״מ"
+        many: "{0} קוט״ש/100 ק״מ"
+        other: "{0} קוט״ש/100 ק״מ"
+      narrow:
+        display_name: kWh/100km
+        one: "{0} kWh/100km"
+        two: "{0} kWh/100km"
+        many: "{0} kWh/100km"
+        other: "{0} kWh"
+    gigahertz:
+      long:
+        display_name: ג׳יגה-הרץ
+        one: "{0} ג׳יגה-הרץ"
+        two: "{0} ג׳יגה-הרץ"
+        many: "{0} ג׳יגה-הרץ"
+        other: "{0} ג׳יגה-הרץ"
+        gender: masculine
+    megahertz:
+      long:
+        display_name: מגה-הרץ
+        one: "{0} מגה-הרץ"
+        two: "{0} מגה-הרץ"
+        many: "{0} מגה-הרץ"
+        other: "{0} מגה-הרץ"
+        gender: masculine
+    kilohertz:
+      long:
+        display_name: קילו-הרץ
+        one: "{0} קילו-הרץ"
+        two: "{0} קילו-הרץ"
+        many: "{0} קילו-הרץ"
+        other: "{0} קילו-הרץ"
+        gender: masculine
+    hertz:
+      long:
+        display_name: הרץ
+        one: "{0} הרץ"
+        two: "{0} הרץ"
+        many: "{0} הרץ"
+        other: "{0} הרץ"
+        gender: masculine
+    em:
+      long:
+        display_name: קו מפריד מסוג em
+        one: "{0} em"
+        two: "{0} em"
+        other: "{0} ems"
+        gender: masculine
+      short:
+        one: "{0} em"
+        two: "{0} em"
+    pixel:
+      long:
+        display_name: פיקסלים
+        gender: masculine
+      short:
+        one: "{0} px"
+        two: "{0} px"
+    megapixel:
+      long:
+        display_name: מגה-פיקסל
+        gender: masculine
+      short:
+        one: "{0} MP"
+        two: "{0} MP"
+    pixel-per-centimeter:
+      long:
+        display_name: פיקסלים לסנטימטר
+        gender: masculine
+      short:
+        one: "{0} ppcm"
+        two: "{0} ppcm"
+    pixel-per-inch:
+      long:
+        display_name: פיקסלים לאינץ׳
+        one: "{0} פיקסל לאינץ'"
+        two: "{0} פיקסלים לאינץ'"
+        many: "{0} פיקסלים לאינץ'"
+        other: "{0} פיקסלים לאינץ'"
+      short:
+        one: "{0} ppi"
+        two: "{0} ppi"
+    dot-per-centimeter:
+      long:
+        display_name: נקודות לסנטימטר
+    dot:
+      long:
+        display_name: נקודות קטנות
+      short:
+        display_name: נקודה קטנה
+      narrow:
+        display_name: נקודה
+    earth-radius:
+      long:
+        display_name: רדיוס כדור-הארץ
+        one: "{0} רדיוס כדור-הארץ"
+        two: "{0} רדיוס כדור-הארץ"
+        many: "{0} רדיוס כדור-הארץ"
+        other: "{0} רדיוס כדור-הארץ"
+    kilometer:
+      long:
+        display_name: קילומטרים
+        one: "{0} קילומטר"
+        two: "{0} קילומטרים"
+        many: "{0} קילומטרים"
+        other: "{0} קילומטרים"
+        gender: masculine
+        per_unit_pattern: "{0} לקילומטר"
+      short:
+        display_name: ק״מ
+        one: "{0} ק״מ"
+        two: "{0} ק״מ"
+        other: "{0} ק״מ"
+        per_unit_pattern: "{0}/ק״מ"
+    meter:
+      long:
+        one: "{0} מטר"
+        two: "{0} מטרים"
+        many: "{0} מטרים"
+        other: "{0} מטרים"
+        gender: masculine
+        per_unit_pattern: "{0} למטר"
+      short:
+        display_name: מטרים
+        one: "{0} מ׳"
+        two: "{0} מ׳"
+        other: "{0} מ׳"
+        per_unit_pattern: "{0}/מ׳"
+      narrow:
+        display_name: מטר
+    decimeter:
+      long:
+        display_name: דצימטר
+        one: "{0} דצימטר"
+        two: "{0} דצימטרים"
+        many: "{0} דצימטרים"
+        other: "{0} דצימטרים"
+        gender: masculine
+      short:
+        display_name: ד״מ
+        one: "{0} ד״מ"
+        two: "{0} ד״מ"
+        other: "{0} ד״מ"
+    centimeter:
+      long:
+        display_name: סנטימטרים
+        one: "{0} סנטימטר"
+        two: "{0} סנטימטרים"
+        many: "{0} סנטימטרים"
+        other: "{0} סנטימטרים"
+        gender: masculine
+        per_unit_pattern: "{0} לסנטימטר"
+      short:
+        display_name: ס״מ
+        one: "{0} ס״מ"
+        two: "{0} ס״מ"
+        other: "{0} ס״מ"
+        per_unit_pattern: "{0}/ס״מ"
+    millimeter:
+      long:
+        display_name: מילימטרים
+        one: "{0} מילימטר"
+        two: "{0} מילימטרים"
+        many: "{0} מילימטרים"
+        other: "{0} מילימטרים"
+        gender: masculine
+      short:
+        display_name: מ״מ
+        one: "{0} מ″מ"
+        two: "{0} מ״מ"
+        other: "{0} מ״מ"
+    micrometer:
+      long:
+        display_name: מיקרומטרים
+        one: "{0} מיקרומטר"
+        two: "{0} מיקרומטרים"
+        many: "{0} מיקרומטרים"
+        other: "{0} מיקרומטרים"
+        gender: masculine
+      short:
+        one: "{0} μm"
+        two: "{0} μm"
+    nanometer:
+      long:
+        display_name: ננומטרים
+        one: "{0} ננומטר"
+        two: "{0} ננומטרים"
+        many: "{0} ננומטרים"
+        other: "{0} ננומטרים"
+        gender: masculine
+      short:
+        one: "{0} nm"
+        two: "{0} nm"
+    picometer:
+      long:
+        display_name: פיקומטרים
+        one: "{0} פיקומטר"
+        two: "{0} פיקומטרים"
+        many: "{0} פיקומטרים"
+        other: "{0} פיקומטרים"
+        gender: masculine
+      short:
+        display_name: פ״מ
+        one: "{0} פ“מ"
+        two: "{0} פ״מ"
+        other: '{0} פ"מ'
+    foot:
+      long:
+        one: "{0} רגל"
+        two: "{0} רגל"
+        many: "{0} רגל"
+        other: "{0} רגל"
+        per_unit_pattern: "{0} לרגל"
+      short:
+        display_name: רגל
+        one: "{0} ft"
+        two: "{0} ft"
+        per_unit_pattern: "{0} ‎/ft"
+    inch:
+      long:
+        one: "{0} אינץ׳"
+        two: "{0} אינץ׳"
+        many: "{0} אינץ׳"
+        other: "{0} אינץ׳"
+        per_unit_pattern: "{0} לאינץ׳"
+      short:
+        display_name: אינץ׳
+        one: "{0} in"
+        two: "{0} in"
+        per_unit_pattern: "{0} ‎/in"
+      narrow:
+        display_name: in
+    parsec:
+      long:
+        display_name: פארסק
+        one: "{0} פארסק"
+        two: "{0} פארסק"
+        many: "{0} פארסק"
+        other: "{0} פארסק"
+      short:
+        one: "{0} pc"
+        two: "{0} pc"
+    astronomical-unit:
+      long:
+        display_name: יחידות אסטרונומיות
+        one: "{0} יחידה אסטרונומית"
+        two: "{0} יחידות אסטרונומיות"
+        many: "{0} יחידות אסטרונומיות"
+        other: "{0} יחידות אסטרונומיות"
+      short:
+        one: "{0} au"
+        two: "{0} au"
+    furlong:
+      long:
+        display_name: פורלונג
+        one: "{0} פורלונג"
+        two: "{0} פורלונג"
+        many: "{0} פורלונג"
+        other: "{0} פורלונג"
+    fathom:
+      long:
+        display_name: פתום
+        one: "{0} פתום"
+        two: "{0} פתום"
+        many: "{0} פתום"
+        other: "{0} פתום"
+    nautical-mile:
+      long:
+        display_name: מייל ימי
+        one: "{0} מייל ימי"
+        two: "{0} מייל ימי"
+        many: "{0} מייל ימי"
+        other: "{0} מייל ימי"
+      short:
+        display_name: מ״י
+        one: מ״י אחד
+        two: שני מ״י
+        other: "{0} מ״י"
+    mile-scandinavian:
+      long:
+        display_name: מייל-סקנדינביה
+        one: "{0} מייל-סקנדינביה"
+        two: "{0} מייל-סקנדינביה"
+        many: "{0} מייל-סקנדינביה"
+        other: "{0} מייל-סקנדינביה"
+        gender: masculine
+    point:
+      long:
+        one: "{0} נקודה"
+        two: "{0} נקודות"
+        many: "{0} נקודות"
+        other: "{0} נקודות"
+        gender: feminine
+      short:
+        display_name: נקודות
+        one: "{0} נק׳"
+        two: "{0} נק׳"
+        other: "{0} נק'"
+      narrow:
+        display_name: נק׳
+    solar-radius:
+      long:
+        display_name: רדיוס סולרי
+        one: "{0} רדיוס סולרי"
+        two: "{0} רדיוס סולרי"
+        many: "{0} רדיוס סולרי"
+        other: "{0} רדיוס סולרי"
+      short:
+        one: "{0} R☉‎"
+        two: "{0} R☉‎"
+        other: "{0} R☉‎"
+    lux:
+      long:
+        display_name: לוקס
+        one: "{0} לוקס"
+        two: "{0} לוקס"
+        many: "{0} לוקס"
+        other: "{0} לוקס"
+        gender: masculine
+      short:
+        display_name: lux
+    candela:
+      long:
+        display_name: קנדלה
+        one: "{0} קנדלה"
+        two: "{0} קנדלה"
+        many: "{0} קנדלה"
+        other: "{0} קנדלה"
+        gender: feminine
+    lumen:
+      long:
+        display_name: לומן
+        one: "{0} לומן"
+        two: "{0} לומן"
+        many: "{0} לומן"
+        other: "{0} לומן"
+        gender: masculine
+    solar-luminosity:
+      long:
+        display_name: אנרגיה סולארית ביחידת זמן
+    tonne:
+      long:
+        display_name: טון מטרי
+        one: "{0} טון מטרי"
+        two: "{0} טון מטרי"
+        many: "{0} טון מטרי"
+        other: "{0} טון מטרי"
+        gender: masculine
+      short:
+        display_name: טון מ׳
+        one: "{0} טון מ׳"
+        two: "{0} טון מ׳"
+        other: "{0} טון מ׳"
+      narrow:
+        one: "{0} t"
+        two: "{0} t"
+        many: "{0} t"
+        other: "{0} t"
+    kilogram:
+      long:
+        display_name: קילוגרם
+        one: "{0} קילוגרם"
+        two: "{0} קילוגרם"
+        many: "{0} קילוגרם"
+        other: "{0} קילוגרם"
+        gender: masculine
+        per_unit_pattern: "{0}/קילוגרם"
+      short:
+        display_name: ק״ג
+        one: "{0} ק״ג"
+        two: "{0} ק״ג"
+        other: "{0} ק״ג"
+        per_unit_pattern: "{0}/ק״ג"
+      narrow:
+        one: "{0}kg"
+        two: "{0}kg"
+        many: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        one: "{0} גרם"
+        two: "{0} גרם"
+        many: "{0} גרם"
+        other: "{0} גרם"
+        gender: masculine
+        per_unit_pattern: "{0}/גרם"
+      short:
+        display_name: גרם
+        one: "{0} גר׳"
+        two: "{0} גר׳"
+        other: "{0} גר׳"
+        per_unit_pattern: "{0}/גר׳"
+      narrow:
+        one: "{0}g"
+        two: "{0}g"
+        many: "{0}g"
+        other: "{0}g"
+    milligram:
+      long:
+        display_name: מיליגרם
+        one: "{0} מיליגרם"
+        two: "{0} מיליגרם"
+        many: "{0} מיליגרם"
+        other: "{0} מיליגרם"
+        gender: masculine
+      short:
+        display_name: מ״ג
+        one: "{0} מ״ג"
+        two: "{0} מ״ג"
+        other: "{0} מ״ג"
+    microgram:
+      long:
+        display_name: מיקרוגרם
+        one: "{0} מיקרוגרם"
+        two: "{0} מיקרוגרם"
+        many: "{0} מיקרוגרם"
+        other: "{0} מיקרוגרם"
+        gender: masculine
+      short:
+        display_name: מק״ג
+        one: "{0} מק״ג"
+        two: "{0} מק״ג"
+        other: "{0} מק״ג"
+    ton:
+      long:
+        display_name: טונות
+        one: "{0} טונה"
+        two: "{0} טונות"
+        many: "{0} טונות"
+        other: "{0} טונות"
+      short:
+        display_name: טונה
+        one: "{0} ט׳"
+        two: "{0} ט׳"
+        other: "{0} ט׳"
+    pound:
+      long:
+        one: "{0} פאונד"
+        two: "{0} פאונד"
+        many: "{0} פאונד"
+        other: "{0} פאונד"
+        per_unit_pattern: "{0}/פאונד"
+      short:
+        display_name: פאונד
+        one: "{0} lb"
+        two: "{0} lbs"
+        other: "{0} lbs"
+      narrow:
+        display_name: lb
+    ounce:
+      long:
+        display_name: אונקיות
+        one: "{0} אונקיה"
+        two: "{0} אונקיות"
+        many: "{0} אונקיות"
+        other: "{0} אונקיות"
+        per_unit_pattern: "{0}/אונקיה"
+    ounce-troy:
+      long:
+        display_name: אונקיות טרוי
+        one: "{0} אונקיית טרוי"
+        two: "{0} אונקיות טרוי"
+        many: "{0} אונקיות טרוי"
+        other: "{0} אונקיות טרוי"
+    carat:
+      long:
+        one: "{0} קרט"
+        two: "{0} קרט"
+        many: "{0} קרט"
+        other: "{0} קרט"
+        gender: masculine
+      short:
+        display_name: קרט
+    dalton:
+      long:
+        display_name: דלטון
+        one: "{0} דלטון"
+        two: "{0} דלטון"
+        many: "{0} דלטון"
+        other: "{0} דלטון"
+    earth-mass:
+      long:
+        display_name: מסת כדור הארץ
+        one: "{0} מסת כדור הארץ"
+        two: "{0} מסות כדור הארץ"
+        many: "{0} מסות כדור הארץ"
+        other: "{0} מסות כדור הארץ"
+    solar-mass:
+      long:
+        display_name: מסת השמש
+        one: "{0} מסת השמש"
+        two: "{0} מסות שמש"
+        many: "{0} מסות שמש"
+        other: "{0} מסות שמש"
+    gigawatt:
+      long:
+        display_name: ג׳יגה ואט
+        one: "{0} ג׳יגה ואט"
+        two: "{0} ג׳יגה ואט"
+        many: "{0} ג׳יגה ואט"
+        other: "{0} ג׳יגה ואט"
+        gender: masculine
+    megawatt:
+      long:
+        display_name: מגה ואט
+        one: "{0} מגה ואט"
+        two: "{0} מגה ואט"
+        many: "{0} מגה ואט"
+        other: "{0} מגה ואט"
+        gender: masculine
+    kilowatt:
+      long:
+        display_name: קילוואט
+        one: "{0} קילוואט"
+        two: "{0} קילוואט"
+        many: "{0} קילוואט"
+        other: "{0} קילוואט"
+        gender: masculine
+    watt:
+      long:
+        one: "{0} ואט"
+        two: "{0} ואט"
+        many: "{0} ואט"
+        other: "{0} ואט"
+        gender: masculine
+      short:
+        display_name: ואט
+    milliwatt:
+      long:
+        display_name: מיליוואט
+        one: "{0} מיליוואט"
+        two: "{0} מיליוואט"
+        many: "{0} מיליוואט"
+        other: "{0} מיליוואט"
+        gender: masculine
+    horsepower:
+      long:
+        display_name: כוח סוס
+        one: "{0} כוח סוס"
+        two: "{0} כוח סוס"
+        many: "{0} כוח סוס"
+        other: "{0} כוח סוס"
+      short:
+        display_name: כ״ס
+        one: "{0} כ״ס"
+        two: "{0} כ״ס"
+        other: "{0} כ״ס"
+    millimeter-ofhg:
+      long:
+        display_name: מילימטר כספית
+        one: "{0} מילימטר כספית"
+        two: "{0} מילימטר כספית"
+        many: "{0} מילימטר כספית"
+        other: "{0} מילימטר כספית"
+        gender: masculine
+    pound-force-per-square-inch:
+      long:
+        display_name: פאונד לאינץ׳ רבוע
+        one: פאונד {0} לאינץ׳ רבוע
+        two: "{0} פאונד לאינץ׳ רבוע"
+        many: "{0} פאונד לאינץ׳ רבוע"
+        other: "{0} פאונד לאינץ׳ רבוע"
+    inch-ofhg:
+      long:
+        display_name: אינץ׳ כספית
+        one: "{0} אינץ׳ כספית"
+        two: "{0} אינץ׳ כספית"
+        many: "{0} אינץ׳ כספית"
+        other: "{0} אינץ׳ כספית"
+      short:
+        display_name: in Hg
+    bar:
+      long:
+        gender: masculine
+      short:
+        display_name: בר
+        one: "{0} בר"
+        two: "{0} בר"
+        other: "{0} בר"
+    millibar:
+      long:
+        display_name: מיליבר
+        one: "{0} מיליבר"
+        two: "{0} מיליבר"
+        many: "{0} מיליבר"
+        other: "{0} מיליבר"
+        gender: masculine
+      narrow:
+        display_name: מ״ב
+        one: "{0} מ″ב"
+        two: "{0} מ″ב"
+        many: "{0} מ″ב"
+        other: "{0} מ″ב"
+    atmosphere:
+      long:
+        display_name: אטמוספרות
+        one: "{0} אטמוספרה"
+        two: "{0} אטמוספרה"
+        many: "{0} אטמוספרה"
+        other: "{0} אטמוספרות"
+        gender: feminine
+    pascal:
+      long:
+        display_name: פסקל
+        one: "{0} פסקל"
+        two: "{0} פסקל"
+        many: "{0} פסקל"
+        other: "{0} פסקל"
+        gender: masculine
+    hectopascal:
+      long:
+        display_name: הקטופסקל
+        one: "{0} הקטופסקל"
+        two: "{0} הקטופסקל"
+        many: "{0} הקטופסקל"
+        other: "{0} הקטופסקל"
+        gender: masculine
+    kilopascal:
+      long:
+        display_name: קילו-פסקל
+        one: "{0} קילו-פסקל"
+        two: "{0} קילו-פסקל"
+        many: "{0} קילו-פסקל"
+        other: "{0} קילו-פסקל"
+        gender: masculine
+    megapascal:
+      long:
+        display_name: מגה-פסקל
+        one: "{0} מגה-פסקל"
+        two: "{0} מגה-פסקל"
+        many: "{0} מגה-פסקל"
+        other: "{0} מגה-פסקל"
+        gender: masculine
+    kilometer-per-hour:
+      long:
+        display_name: קילומטר לשעה
+        one: "{0} קילומטר לשעה"
+        two: "{0} קילומטר לשעה"
+        many: "{0} קילומטר לשעה"
+        other: "{0} קילומטר לשעה"
+        gender: masculine
+      short:
+        display_name: קמ״ש
+        one: "{0} קמ״ש"
+        two: "{0} קמ״ש"
+        other: "{0} קמ״ש"
+    meter-per-second:
+      long:
+        display_name: מטר לשנייה
+        one: "{0} מטר לשנייה"
+        two: "{0} מטר לשנייה"
+        many: "{0} מטר לשנייה"
+        other: "{0} מטר לשנייה"
+        gender: masculine
+      short:
+        display_name: מ׳/שנ׳
+        one: "{0} מ׳/שנ׳"
+        two: "{0} מ׳/שנ׳"
+        other: "{0} מ׳/שנ׳"
+    mile-per-hour:
+      long:
+        display_name: מייל לשעה
+        one: "{0} מייל לשעה"
+        two: "{0} מייל לשעה"
+        many: "{0} מייל לשעה"
+        other: "{0} מייל לשעה"
+      short:
+        display_name: mph
+        one: "{0} mph"
+        two: "{0} mph"
+        other: "{0} mph"
+    knot:
+      long:
+        display_name: קשר
+        one: "{0} קשר"
+        two: "{0} קשר"
+        many: "{0} קשר"
+        other: "{0} קשר"
+    beaufort:
+      long:
+        display_name: בופורט
+        one: "{0} בופורט"
+        two: "{0} בופורט"
+        other: "{0} בופורט"
+      narrow:
+        one: "{0} B"
+        two: "{0} B"
+        other: "{0} B"
+    generic:
+      long:
+        display_name: מעלת טמפרטורה
+        gender: feminine
+    celsius:
+      long:
+        display_name: מעלות צלזיוס
+        one: "{0} מעלת צלזיוס"
+        two: "{0} מעלות צלזיוס"
+        many: "{0} מעלות צלזיוס"
+        other: "{0} מעלות צלזיוס"
+        gender: feminine
+    fahrenheit:
+      long:
+        display_name: מעלות פרנהייט
+        one: "{0} מעלת פרנהייט"
+        two: "{0} מעלות פרנהייט"
+        many: "{0} מעלות פרנהייט"
+        other: "{0} מעלות פרנהייט"
+    kelvin:
+      long:
+        display_name: מעלות קלווין
+        one: "{0} קלווין"
+        two: "{0} קלווין"
+        many: "{0} קלווין"
+        other: "{0} קלווין"
+        gender: feminine
+    pound-force-foot:
+      long:
+        display_name: רגל-פאונד
+        one: "{0} רגל-פאונד"
+        two: "{0} רגל-פאונד"
+        many: "{0} רגל-פאונד"
+        other: "{0} רגל-פאונד"
+    newton-meter:
+      long:
+        display_name: ניוטון-מטר
+        one: "{0} ניוטון-מטר"
+        two: "{0} ניוטון-מטר"
+        many: "{0} ניוטון-מטר"
+        other: "{0} ניוטון-מטר"
+        gender: masculine
+    cubic-kilometer:
+      long:
+        display_name: קילומטר מעוקב
+        one: "{0} קילומטר מעוקב"
+        two: "{0} קילומטר מעוקב"
+        many: "{0} קילומטר מעוקב"
+        other: "{0} קילומטר מעוקב"
+        gender: masculine
+      short:
+        display_name: קמ״ק
+        one: "{0} קמ״ק"
+        two: "{0} קמ״ק"
+        other: "{0} קמ״ק"
+    cubic-meter:
+      long:
+        display_name: מטר מעוקב
+        one: "{0} מטר מעוקב"
+        two: "{0} מטר מעוקב"
+        many: "{0} מטר מעוקב"
+        other: "{0} מטר מעוקב"
+        gender: masculine
+        per_unit_pattern: "{0}/מטר מעוקב"
+      short:
+        one: "{0} m³"
+        two: "{0} m³"
+    cubic-centimeter:
+      long:
+        display_name: סנטימטר מעוקב
+        one: "{0} סנטימטר מעוקב"
+        two: "{0} סנטימטר מעוקב"
+        many: "{0} סנטימטר מעוקב"
+        other: "{0} סנטימטר מעוקב"
+        gender: masculine
+        per_unit_pattern: "{0}/סנטימטר מעוקב"
+      short:
+        display_name: סמ״ק
+        one: "{0} סמ״ק"
+        two: "{0} סמ״ק"
+        other: "{0} סמ״ק"
+        per_unit_pattern: "{0}/סמ״ק"
+    cubic-mile:
+      long:
+        display_name: מייל מעוקב
+        one: "{0} מייל מעוקב"
+        two: "{0} מייל מעוקב"
+        many: "{0} מייל מעוקב"
+        other: "{0} מייל מעוקב"
+      short:
+        one: "{0} mi³"
+        two: "{0} mi³"
+    cubic-yard:
+      long:
+        display_name: יארד מעוקב
+        one: "{0} יארד מעוקב"
+        two: "{0} יארד מעוקב"
+        many: "{0} יארד מעוקב"
+        other: "{0} יארד מעוקב"
+      short:
+        one: "{0} yd³"
+        two: "{0} yd³"
+    cubic-foot:
+      long:
+        display_name: רגל מעוקב
+        one: "{0} רגל מעוקב"
+        two: "{0} רגל מעוקב"
+        many: "{0} רגל מעוקב"
+        other: "{0} רגל מעוקב"
+      short:
+        display_name: feet³
+        one: "{0} ft³"
+        two: "{0} ft³"
+    cubic-inch:
+      long:
+        display_name: אינץ׳ מעוקב
+        one: "{0} אינץ׳ מעוקב"
+        two: "{0} אינץ׳ מעוקב"
+        many: "{0} אינץ׳ מעוקב"
+        other: "{0} אינץ׳ מעוקב"
+      short:
+        one: "{0} in³"
+        two: "{0} in³"
+    megaliter:
+      long:
+        display_name: מגה ליטר
+        one: "{0} מגה ליטר"
+        two: "{0} מגה ליטר"
+        many: "{0} מגה ליטר"
+        other: "{0} מגה ליטר"
+        gender: masculine
+      short:
+        one: "{0} ML"
+        two: "{0} ML"
+    hectoliter:
+      long:
+        display_name: הקטוליטר
+        one: "{0} הקטוליטר"
+        two: "{0} הקטוליטר"
+        many: "{0} הקטוליטר"
+        other: "{0} הקטוליטר"
+        gender: masculine
+      short:
+        one: "{0} hL"
+        two: "{0} hL"
+    liter:
+      long:
+        one: "{0} ליטר"
+        two: "{0} ליטר"
+        many: "{0} ליטר"
+        other: "{0} ליטר"
+        gender: masculine
+        per_unit_pattern: "{0}/ליטר"
+      short:
+        display_name: ליטר
+        one: "{0} ל׳"
+        two: "{0} ל׳"
+        other: "{0} ל׳"
+        per_unit_pattern: "{0}/ל׳"
+    deciliter:
+      long:
+        display_name: דציליטר
+        one: "{0} דציליטר"
+        two: "{0} דציליטר"
+        many: "{0} דציליטר"
+        other: "{0} דציליטר"
+        gender: masculine
+      short:
+        display_name: דצ״ל
+        one: "{0} דצ״ל"
+        two: "{0} דצ״ל"
+        other: "{0} דצ״ל"
+    centiliter:
+      long:
+        display_name: סנטיליטר
+        one: "{0} סנטיליטר"
+        two: "{0} סנטיליטר"
+        many: "{0} סנטיליטר"
+        other: "{0} סנטיליטר"
+        gender: masculine
+      short:
+        one: "{0} cL"
+        two: "{0} cL"
+    milliliter:
+      long:
+        display_name: מיליליטר
+        one: "{0} מיליליטר"
+        two: "{0} מיליליטר"
+        many: "{0} מיליליטר"
+        other: "{0} מיליליטר"
+        gender: masculine
+      short:
+        display_name: מ״ל
+        one: "{0} מ״ל"
+        two: "{0} מ״ל"
+        other: "{0} מ״ל"
+    pint-metric:
+      long:
+        display_name: פינט מטרי
+        one: "{0} פינט מטרי"
+        two: "{0} פינט מטרי"
+        many: "{0} פינט מטרי"
+        other: "{0} פינט מטרי"
+        gender: masculine
+      short:
+        one: "{0} mpt"
+        two: "{0} mpt"
+    cup-metric:
+      long:
+        display_name: כוס מידה מטרית
+        one: "{0} כוס מידה מטרית"
+        two: "{0} כ׳ מידה מטרית"
+        many: "{0} כ׳ מידה מטרית"
+        other: "{0} כ׳ מידה מטרית"
+        gender: feminine
+      short:
+        one: "{0} mc"
+        two: "{0} mc"
+    acre-foot:
+      long:
+        display_name: אקר-רגל
+        one: "{0} אקר-רגל"
+        two: "{0} אקר-רגל"
+        many: "{0} אקר-רגל"
+        other: "{0} אקר-רגל"
+      short:
+        one: "{0} ac ft"
+        two: "{0} ac ft"
+    bushel:
+      long:
+        display_name: בושל
+        one: "{0} בושל"
+        two: "{0} בושל"
+        many: "{0} בושל"
+        other: "{0} בושל"
+    gallon:
+      long:
+        one: "{0} גלון"
+        two: "{0} גלונים"
+        many: "{0} גלונים"
+        other: "{0} גלונים"
+        per_unit_pattern: "{0}/גלון"
+      short:
+        display_name: גלון
+        one: "{0} גל׳"
+        two: "{0} גל׳"
+        other: "{0} גל׳"
+        per_unit_pattern: "{0}/גל׳"
+    gallon-imperial:
+      long:
+        display_name: גלון אימפריאלי
+        one: "{0} גלון אימפריאלי"
+        two: "{0} גלון אימפריאלי"
+        many: "{0} גלון אימפריאלי"
+        other: "{0} גלון אימפריאלי"
+        per_unit_pattern: "{0}/גלון אימפריאלי"
+      short:
+        display_name: גלון בריטי
+        one: "{0} גלון בריטי"
+        two: "{0} גלון בריטי"
+        other: "{0} גלון בריטי"
+        per_unit_pattern: "{0}/גלון בריטי"
+      narrow:
+        one: "{0}/galIm"
+        two: "{0}/galIm"
+        many: "{0}/galIm"
+        other: "{0}/galIm"
+        per_unit_pattern: "{0}/galIm"
+    quart:
+      long:
+        display_name: קווארטות
+        one: "{0} קווארטה"
+        two: "{0} קווארטות"
+        many: "{0} קווארטות"
+        other: "{0} קווארטות"
+      short:
+        display_name: qts
+        one: "{0} qt"
+        two: "{0} qt"
+    pint:
+      long:
+        one: "{0} פינט"
+        two: "{0} פינט"
+        many: "{0} פינט"
+        other: "{0} פינט"
+      short:
+        display_name: פינט
+        one: "{0} pt"
+        two: "{0} pt"
+    cup:
+      long:
+        one: "{0} כוס"
+        two: "{0} כוסות"
+        many: "{0} כוסות"
+        other: "{0} כוסות"
+      short:
+        display_name: כוסות
+        one: "{0} כ׳"
+        two: "{0} כ׳"
+        other: "{0} כ׳"
+    fluid-ounce:
+      long:
+        display_name: אונקיות נוזלים
+        one: "{0} אונקיית נוזלים"
+        two: "{0} אונקיות נוזלים"
+        many: "{0} אונקיות נוזלים"
+        other: "{0} אונקיות נוזלים"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        two: "{0} fl oz"
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: אונקיית נוזלים אימפריאלית
+        one: "{0} אונקיית נוזלים אימפריאלית"
+        two: "{0} אונקיית נוזלים אימפריאלית"
+        many: "{0} אונקיית נוזלים אימפריאלית"
+        other: "{0} אונקיית נוזלים אימפריאלית"
+      short:
+        one: "{0} fl oz Imp."
+        two: "{0} fl oz Imp."
+    tablespoon:
+      long:
+        one: "{0} כפ׳"
+        two: "{0} כפות"
+        many: "{0} כפות"
+        other: "{0} כפות"
+      short:
+        display_name: כפות
+        one: "{0} כפ׳"
+        two: "{0} כפ׳"
+        other: "{0} כפ׳"
+    teaspoon:
+      long:
+        display_name: כפיות
+        one: "{0} כפית"
+        two: "{0} כפיות"
+        many: "{0} כפיות"
+        other: "{0} כפיות"
+      short:
+        display_name: כפית
+        one: "{0} כפי׳"
+        two: "{0} כפי׳"
+        other: "{0} כפי׳"
+    barrel:
+      long:
+        display_name: חביות
+        one: "{0} חבית"
+        two: "{0} חביות"
+        many: "{0} חביות"
+        other: "{0} חביות"
+      short:
+        one: "{0} bbl"
+        two: "{0} bbl"
+    dessert-spoon:
+      long:
+        display_name: כפית קינוחים
+        one: "{0} כפית קינוחים"
+        two: "{0} כפיות קינוחים"
+        many: "{0} כפיות קינוחים"
+        other: "{0} כפיות קינוחים"
+    dessert-spoon-imperial:
+      long:
+        display_name: כפית קינוחים בארה״ב
+        one: "{0} כפית קינוחים בארה״ב"
+        two: '{0} כפיות קינוחים בארה"ב'
+        many: '{0} כפיות קינוחים בארה"ב'
+        other: '{0} כפיות קינוחים בארה"ב'
+      narrow:
+        one: "{0}dsp-Imp"
+        two: "{0}dsp-Imp"
+        many: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+    drop:
+      long:
+        display_name: טיפות
+      short:
+        display_name: טיפה
+        one: טיפה
+        two: "{0} טיפות"
+        other: "{0} טיפות"
+    dram:
+      long:
+        display_name: דראם אלכוהול
+        one: "{0} דראם אלכוהול"
+        two: "{0} דראם אלכוהול"
+        many: "{0} דראם אלכוהול"
+        other: "{0} דראם אלכוהול"
+    jigger:
+      long:
+        display_name: ג׳יגר
+        one: "{0} ג׳יגר"
+        two: "{0} ג'יגר"
+        many: "{0} ג'יגר"
+        other: "{0} ג'יגר"
+    pinch:
+      long:
+        one: "{0} פינץ׳"
+        two: "{0} פינץ'"
+        other: "{0} פינץ'"
+      short:
+        display_name: פינץ׳
+        one: "{0} פינץ'"
+        two: "{0} פינץ'"
+        other: "{0} פינץ'"
+    quart-imperial:
+      long:
+        display_name: קווארט אימפריאלי
+        one: "{0} קווארט אימפריאלי"
+        two: "{0} קווארטות אימפריאליות"
+        many: "{0} קווארטות אימפריאליות"
+        other: "{0} קווארטות אימפריאליות"
+    light-speed:
+      long:
+        display_name: אור
+        one: "{0} אור"
+        two: "{0} אור"
+        other: "{0} אור"
+        gender: masculine
+      short:
+        display_name: אור
+        one: "{0} אור"
+        two: "{0} אור"
+        other: "{0} אור"
+    portion-per-1e9:
+      long:
+        display_name: חלקים למיליארד
+        one: "{0} חלקים למיליארד"
+        two: "{0} חלקים למיליארד"
+        other: "{0} חלקים למיליארד"
+        gender: masculine
+    night:
+      long:
+        display_name: לילות
+        one: "{0} לילה"
+        two: "{0} לילות"
+        other: "{0} לילות"
+        gender: masculine
+        per_unit_pattern: "{0}/לילה"
+      short:
+        display_name: לילות
+        one: "{0} לילה"
+        two: "{0} לילות"
+        other: "{0} לילות"
+        per_unit_pattern: "{0}/לילה"
+    dunam:
+      short:
+        display_name: דונם
+        one: "{0} דונם"
+        two: "{0} דונם"
+        other: "{0} דונם"
+    dot-per-inch:
+      short:
+        display_name: dpi
+        one: "{0} ppi"
+        two: "{0} ppi"
+        other: "{0} dpi"
+    mile:
+      short:
+        display_name: מייל
+        one: "{0} מייל"
+        two: "{0} מייל"
+        other: "{0} מייל"
+    yard:
+      short:
+        display_name: יארד
+        one: "{0} יארד"
+        two: "{0} יארד"
+        other: "{0} יארד"
+    light-year:
+      short:
+        display_name: שנות אור
+        one: "{0} שנת אור"
+        two: "{0} שנות אור"
+        other: "{0} שנות אור"
+    stone:
+      short:
+        display_name: סטון
+        one: "{0} סטון"
+        two: "{0} סטון"
+        other: "{0} סטון"
+    grain:
+      short:
+        display_name: גרעין
+        one: "{0} גרעין"
+        two: "{0} גרעינים"
+        other: "{0} גרעינים"

@@ -1,15 +1,19 @@
 ---
 locale: nds
-generated_at: '2025-09-13T17:39:25Z'
+generated_at: '2025-09-14T06:11:24Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
     AUD:
       symbol: AU$
@@ -24,6 +28,10 @@ number_formats:
       display_names:
         other: Kanada-Dollar
         one: Kanaadsch Dollar
+    CHF:
+      display_names:
+        other: Swiezer Franken
+        one: Swiezer Franken
     CNY:
       display_names:
         other: Renminbi
@@ -76,6 +84,10 @@ number_formats:
       display_names:
         other: Russ’sch Ruvel
         one: Russ’sch Ruvel
+    SAR:
+      display_names:
+        other: Saudiaraabsch Rial
+        one: Saudsch Rial
     SEK:
       display_names:
         other: Sweedsch Kronen
@@ -105,11 +117,133 @@ number_formats:
       display_names:
         other: Söödafrikaansch Rand
         one: Söödafrikaansch Rand
-    CHF:
-      display_names:
-        other: Swiezer Franken
-        one: Swiezer Franken
-    SAR:
-      display_names:
-        other: Saudiaraabsch Rial
-        one: Saudsch Rial
+  units:
+    year:
+      long:
+        display_name: Johr
+        other: "{0} Johren"
+      short:
+        display_name: J.
+        other: "{0} J."
+      narrow:
+        display_name: a
+        other: "{0}a"
+    month:
+      long:
+        display_name: Maanden
+        other: "{0} Maanden"
+      short:
+        display_name: Mnd.
+        other: "{0} Mnd."
+      narrow:
+        display_name: M.
+        other: "{0}M."
+    week:
+      long:
+        display_name: Weken
+        other: "{0} Weken"
+      short:
+        display_name: Wk.
+        other: "{0} Wk."
+      narrow:
+        display_name: W.
+        other: "{0}W."
+    day:
+      long:
+        display_name: Daag
+        other: "{0} Daag"
+      short:
+        display_name: Dg.
+        other: "{0} Dg."
+      narrow:
+        display_name: d
+        other: "{0}d"
+    hour:
+      long:
+        display_name: Stünnen
+        other: "{0} Stünnen"
+      short:
+        display_name: Stn.
+        other: "{0} Stn."
+      narrow:
+        display_name: h
+        other: "{0}h"
+    minute:
+      long:
+        display_name: Minuten
+        other: "{0} Minuten"
+      short:
+        display_name: Min.
+        other: "{0} Min."
+      narrow:
+        display_name: min
+        other: "{0}min"
+    second:
+      long:
+        display_name: Sekunnen
+        other: "{0} Sekunnen"
+      short:
+        display_name: Sek.
+        other: "{0} Sek."
+      narrow:
+        display_name: s
+        other: "{0}s"
+    millisecond:
+      long:
+        display_name: Millisekunnen
+        other: "{0} Millisekunnen"
+      narrow:
+        other: "{0}ms"
+    kilometer:
+      long:
+        display_name: Kilometers
+        other: "{0} Kilometer"
+    meter:
+      long:
+        display_name: Meters
+        other: "{0} Meter"
+      short:
+        display_name: m
+    centimeter:
+      long:
+        display_name: Zentimeters
+        other: "{0} Zentimeter"
+    millimeter:
+      long:
+        display_name: Millimeters
+        other: "{0} Millimeter"
+    kilogram:
+      long:
+        display_name: Kilogramm
+        other: "{0} Kilogramm"
+    kilometer-per-hour:
+      long:
+        display_name: Kilometers per Stünn
+        other: "{0} Kilometer per Stünn"
+    celsius:
+      long:
+        display_name: Graad Celsius
+        other: "{0} Graad Celsius"
+      short:
+        display_name: "°Cels."
+        other: "{0}°Cels."
+      narrow:
+        display_name: "°C"
+        other: "{0}°C"
+    liter:
+      long:
+        display_name: Liters
+        other: "{0} Liter"
+      short:
+        display_name: L
+        other: "{0} L"
+      narrow:
+        display_name: l
+        other: "{0}l"
+    gram:
+      short:
+        display_name: Gramm
+        other: "{0} Gramm"
+      narrow:
+        display_name: g
+        other: "{0} g"

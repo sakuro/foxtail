@@ -1,23 +1,116 @@
 ---
 locale: ur
-generated_at: '2025-09-13T17:41:26Z'
+generated_at: '2025-09-14T06:12:43Z'
 cldr_version: '46'
 number_formats:
   symbols:
     minus_sign: "‎-"
     plus_sign: "‎+"
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 ہزار
+        other: 0 ہزار
+      '10000':
+        one: 00 ہزار
+        other: 00 ہزار
+      '100000':
+        one: 0 لاکھ
+        other: 0 لاکھ
+      '1000000':
+        one: 00 لاکھ
+        other: 00 لاکھ
+      '10000000':
+        one: 0 کروڑ
+        other: 0 کروڑ
+      '100000000':
+        one: 00 کروڑ
+        other: 00 کروڑ
+      '1000000000':
+        one: 0 ارب
+        other: 0 ارب
+      '10000000000':
+        one: 00 ارب
+        other: 00 ارب
+      '100000000000':
+        one: 0 کھرب
+        other: 0 کھرب
+      '1000000000000':
+        one: 00 کھرب
+        other: 00 کھرب
+      '10000000000000':
+        one: 00 ٹریلین
+        other: 00 ٹریلین
+      '100000000000000':
+        one: 000 ٹریلین
+        other: 000 ٹریلین
+    long:
+      '1000':
+        one: 0 ہزار
+        other: 0 ہزار
+      '10000':
+        one: 00 ہزار
+        other: 00 ہزار
+      '100000':
+        one: 0 لاکھ
+        other: 0 لاکھ
+      '1000000':
+        one: 00 لاکھ
+        other: 00 لاکھ
+      '10000000':
+        one: 0 کروڑ
+        other: 0 کروڑ
+      '100000000':
+        one: 00 کروڑ
+        other: 00 کروڑ
+      '1000000000':
+        one: 0 ارب
+        other: 0 ارب
+      '10000000000':
+        one: 00 ارب
+        other: 00 ارب
+      '100000000000':
+        one: 0 کھرب
+        other: 0 کھرب
+      '1000000000000':
+        one: 00 کھرب
+        other: 00 کھرب
+      '10000000000000':
+        one: 00 ٹریلین
+        other: 00 ٹریلین
+      '100000000000000':
+        one: 000 ٹریلین
+        other: 000 ٹریلین
   currencies:
+    AED:
+      display_names:
+        other: متحدہ عرب اماراتی درہم
+        one: متحدہ عرب اماراتی درہم
     AFN:
       display_names:
         other: افغان افغانی
         one: افغان افغانی
+    ALL:
+      display_names:
+        other: البانیا کا لیک
+        one: البانیا کا لیک
     AMD:
       display_names:
         other: آرمینیائی ڈرم
         one: آرمینیائی ڈرم
+    ANG:
+      display_names:
+        other: نیدر لینڈز انٹیلیئن گلڈر
+        one: نیدر لینڈز انٹیلیئن گلڈر
     AOA:
       display_names:
         other: انگولا کا کوانزا
@@ -30,6 +123,10 @@ number_formats:
       display_names:
         other: آسٹریلین ڈالر
         one: آسٹریلین ڈالر
+    AWG:
+      display_names:
+        other: اروبن فلورِن
+        one: اروبن فلورِن
     AZN:
       display_names:
         other: آذربائجانی منات
@@ -46,6 +143,18 @@ number_formats:
       display_names:
         other: بنگلہ دیشی ٹکا
         one: بنگلہ دیشی ٹکا
+    BGN:
+      display_names:
+        other: بلغارین لیو
+        one: بلغارین لیو
+    BHD:
+      display_names:
+        other: بحرینی دینار
+        one: بحرینی دینار
+    BIF:
+      display_names:
+        other: برونڈیئن فرانک
+        one: برونڈیئن فرانک
     BMD:
       display_names:
         other: برموڈا ڈالر
@@ -66,10 +175,23 @@ number_formats:
       display_names:
         other: بہامانی ڈالر
         one: بہامانی ڈالر
+    BTN:
+      display_names:
+        other: بھوٹانی گُلٹرم
+        one: بھوٹانی گُلٹرم
     BWP:
       display_names:
         other: بوتسوانا کا پولا
         one: بوتسوانا کا پولا
+    BYN:
+      symbol: р.
+      display_names:
+        other: بیلاروسی روبل
+        one: بیلاروسی روبل
+    BYR:
+      display_names:
+        other: بیلاروسی روبل (۲۰۰۰–۲۰۱۶)
+        one: بیلاروسی روبل (۲۰۰۰–۲۰۱۶)
     BZD:
       display_names:
         other: بیلیز ڈالرز
@@ -78,10 +200,22 @@ number_formats:
       display_names:
         other: کنیڈین ڈالر
         one: کنیڈین ڈالر
+    CDF:
+      display_names:
+        other: کانگولیز فرانک
+        one: کانگولیز فرانک
+    CHF:
+      display_names:
+        other: سوئس فرانکس
+        one: سوئس فرانکس
     CLP:
       display_names:
         other: چلّین پیسہ
         one: چلّین پیسہ
+    CNH:
+      display_names:
+        other: چینی یوآن (آف شور)
+        one: چینی یوآن (آف شور)
     CNY:
       display_names:
         other: چینی یوآن
@@ -102,10 +236,22 @@ number_formats:
       display_names:
         other: کیوبا کا پیسو
         one: کیوبا کا پیسو
+    CVE:
+      display_names:
+        other: کیپ ورڈی کا اسکیوڈو
+        one: کیپ ورڈی کا اسکیوڈو
     CZK:
       display_names:
         other: چیک کروناز
         one: چیک کرونا
+    DEM:
+      display_names:
+        other: ڈچ مارکس
+        one: ڈچ مارکس
+    DJF:
+      display_names:
+        other: جبوتی فرانک
+        one: جبوتی فرانک
     DKK:
       display_names:
         other: ڈنمارک کرون
@@ -114,10 +260,26 @@ number_formats:
       display_names:
         other: ڈومنیکن پیسو
         one: ڈومنیکن پیسو
+    DZD:
+      display_names:
+        other: الجیریائی دینار
+        one: الجیریائی دینار
+    EEK:
+      display_names:
+        other: ایسٹونین کرون
+        one: ایسٹونین کرون
     EGP:
       display_names:
         other: مصری پاؤنڈ
         one: مصری پاؤنڈ
+    ERN:
+      display_names:
+        other: اریٹیریائی ناکفا
+        one: اریٹیریائی ناکفا
+    ETB:
+      display_names:
+        other: ایتھوپیائی بِرّ
+        one: ایتھوپیائی بِرّ
     EUR:
       display_names:
         other: یورو
@@ -130,6 +292,10 @@ number_formats:
       display_names:
         other: فاکلینڈ آئلینڈز پونڈ
         one: فاکلینڈ آئلینڈز پونڈ
+    FRF:
+      display_names:
+        other: فرانسیسی فرانک
+        one: فرانسیسی فرانک
     GBP:
       display_names:
         other: برطانوی پاؤنڈ
@@ -146,6 +312,10 @@ number_formats:
       display_names:
         other: جبل الطارق پونڈ
         one: جبل الطارق پونڈ
+    GMD:
+      display_names:
+        other: گامبیا کا ڈلاسی
+        one: گامبیا کا ڈلاسی
     GNF:
       display_names:
         other: گنی فرانک
@@ -170,6 +340,10 @@ number_formats:
       display_names:
         other: کروشین کونا
         one: کروشین کونا
+    HTG:
+      display_names:
+        other: ہیتی کا گؤرڈی
+        one: ہیتی کا گؤرڈی
     HUF:
       display_names:
         other: ہنگرین فورنٹ
@@ -186,6 +360,14 @@ number_formats:
       display_names:
         other: بھارتی روپے
         one: بھارتی روپیہ
+    IQD:
+      display_names:
+        other: عراقی دینار
+        one: عراقی دینار
+    IRR:
+      display_names:
+        other: ایرانی ریال
+        one: ایرانی ریال
     ISK:
       display_names:
         other: آئس لينڈی کرونوں
@@ -194,10 +376,18 @@ number_formats:
       display_names:
         other: جمائیکن ڈالر
         one: جمائیکن ڈالر
+    JOD:
+      display_names:
+        other: اردنی دینار
+        one: اردنی دینار
     JPY:
       display_names:
         other: جاپانی ین
         one: جاپانی ین
+    KES:
+      display_names:
+        other: کینیائی شلنگ
+        one: کینیائی شلنگ
     KGS:
       display_names:
         other: کرغستانی سوم
@@ -218,6 +408,10 @@ number_formats:
       display_names:
         other: جنوبی کوریائی وون
         one: جنوبی کوریائی وون
+    KWD:
+      display_names:
+        other: کویتی دینار
+        one: کویتی دینار
     KYD:
       display_names:
         other: کیمین آئلینڈز ڈالر
@@ -242,6 +436,10 @@ number_formats:
       display_names:
         other: لائبریائی ڈالر
         one: لائبریائی ڈالر
+    LSL:
+      display_names:
+        other: لیسوتھو لوتی
+        one: لیسوتھو لوتی
     LTL:
       display_names:
         other: لیتھوینیائی لیٹاس
@@ -250,10 +448,26 @@ number_formats:
       display_names:
         other: لاتویائی لیٹس
         one: لاتویائی لیٹس
+    LYD:
+      display_names:
+        other: لیبیائی دینار
+        one: لیبیائی دینار
+    MAD:
+      display_names:
+        other: مراکشی درہم
+        one: مراکشی درہم
+    MDL:
+      display_names:
+        other: مالدووی لیو
+        one: مالدووی لیو
     MGA:
       display_names:
         other: ملاگاسی اریاری
         one: ملاگاسی اریاری
+    MKD:
+      display_names:
+        other: مقدونیائی دینار
+        one: مقدونیائی دینار
     MMK:
       display_names:
         other: میانمار کیاٹ
@@ -262,10 +476,30 @@ number_formats:
       display_names:
         other: منگولیائی ٹگرِ
         one: منگولیائی ٹگرِ
+    MOP:
+      display_names:
+        other: میکانیز پٹاکا
+        one: میکانیز پٹاکا
+    MRO:
+      display_names:
+        other: موریطانیائی اوگوئیا (1973–2017)
+        one: موریطانیائی اوگوئیا (1973–2017)
+    MRU:
+      display_names:
+        other: موریطانیائی اوگوئیا
+        one: موریطانیائی اوگوئیا
     MUR:
       display_names:
         other: ماریشس کا روپیہ
         one: ماریشس کا روپیہ
+    MVR:
+      display_names:
+        other: مالدیپ کا روفیہ
+        one: مالدیپ کا روفیہ
+    MWK:
+      display_names:
+        other: ملاوی کواچا
+        one: ملاوی کواچا
     MXN:
       display_names:
         other: میکسیکی پیسہ
@@ -274,6 +508,10 @@ number_formats:
       display_names:
         other: ملیشیائی رنگِٹ
         one: ملیشیائی رنگِٹ
+    MZN:
+      display_names:
+        other: موزامبیقی میٹیکلز
+        one: موزامبیقی میٹیکل
     NAD:
       display_names:
         other: نامیبیائی ڈالر
@@ -298,6 +536,22 @@ number_formats:
       display_names:
         other: نیوزی لینڈ ڈالر
         one: نیوزی لینڈ ڈالر
+    OMR:
+      display_names:
+        other: عمانی ریال
+        one: عمانی ریال
+    PAB:
+      display_names:
+        other: پنامہ کا بالبوآ
+        one: پنامہ کا بالبوآ
+    PEN:
+      display_names:
+        other: پیروویئن سول
+        one: پیروویئن سول
+    PGK:
+      display_names:
+        other: پاپوآ نیو گنی کا کینا
+        one: پاپوآ نیو گنی کا کینا
     PHP:
       symbol: PHP
       display_names:
@@ -315,10 +569,18 @@ number_formats:
       display_names:
         other: پیراگوئے کا گوآرنی
         one: پیراگوئے کا گوآرنی
+    QAR:
+      display_names:
+        other: قطری ریال
+        one: قطری ریال
     RON:
       display_names:
         other: رومانیائی لی
         one: رومانیائی لیو
+    RSD:
+      display_names:
+        other: سربین دینار
+        one: سربین دینار
     RUB:
       display_names:
         other: روسی روبل
@@ -327,10 +589,22 @@ number_formats:
       display_names:
         other: روانڈا کا فرانک
         one: روانڈا کا فرانک
+    SAR:
+      display_names:
+        other: سعودی ریال
+        one: سعودی ریال
     SBD:
       display_names:
         other: سولومن آئلینڈز ڈالر
         one: سولومن آئلینڈز ڈالر
+    SCR:
+      display_names:
+        other: سشلی کا روپیہ
+        one: سشلی کا روپیہ
+    SDG:
+      display_names:
+        other: سوڈانی پاؤنڈ
+        one: سوڈانی پاؤنڈ
     SEK:
       display_names:
         other: سویڈن کرونر
@@ -343,284 +617,6 @@ number_formats:
       display_names:
         other: سینٹ ہیلینا پاؤنڈ
         one: سینٹ ہیلینا پاؤنڈ
-    SRD:
-      display_names:
-        other: سورینامی ڈالر
-        one: سورینامی ڈالر
-    SSP:
-      display_names:
-        other: جنوبی سوڈانی پاؤنڈز
-        one: جنوبی سوڈانی پاؤنڈ
-    STN:
-      display_names:
-        other: ساؤ ٹومے اور پرنسپے ڈوبرا
-        one: ساؤ ٹومے اور پرنسپے ڈوبرا
-    SYP:
-      display_names:
-        other: شامی پونڈ
-        one: شامی پونڈ
-    THB:
-      display_names:
-        other: تھائی باہت
-        one: تھائی باہت
-    TOP:
-      display_names:
-        other: ٹونگن پانگا
-        one: ٹونگن پانگا
-    TRY:
-      display_names:
-        other: ترکی لیرا
-        one: ترکی لیرا
-    TTD:
-      display_names:
-        other: ترینیداد اور ٹوباگو کا ڈالر
-        one: ترینیداد اور ٹوباگو کا ڈالر
-    TWD:
-      display_names:
-        other: نیو تائیوان ڈالر
-        one: نیو تائیوان ڈالر
-    UAH:
-      display_names:
-        other: یوکرینیائی ہریونیا
-        one: یوکرینیائی ہریونیا
-    USD:
-      symbol: "$"
-      display_names:
-        other: امریکی ڈالر
-        one: امریکی ڈالر
-    UYU:
-      display_names:
-        other: یوروگویان پیسو
-        one: یوروگویان پیسو
-    VEF:
-      display_names:
-        other: وینزویلا بولیور (2008–2018)
-        one: وینزویلا بولیور (2008–2018)
-    VND:
-      display_names:
-        other: ویتنامی ڈانگ
-        one: ویتنامی ڈانگ
-    XAF:
-      display_names:
-        other: وسطی افریقی [CFA] فرانک
-        one: وسطی افریقی [CFA] فرانک
-    XCD:
-      display_names:
-        other: مشرقی کریبیا کا ڈالر
-        one: مشرقی کریبیا کا ڈالر
-    XOF:
-      display_names:
-        other: مغربی افریقی [CFA] فرانک
-        one: مغربی افریقی [CFA] فرانک
-    XPF:
-      display_names:
-        other: CFP فرانکس
-        one: CFP فرانک
-    XXX:
-      display_names:
-        other: "(نامعلوم کرنسی)"
-        one: "(کرنسی کی نامعلوم یونٹ)"
-    ZAR:
-      display_names:
-        other: جنوبی افریقی رانڈ
-        one: جنوبی افریقی رانڈ
-    ZMW:
-      display_names:
-        other: زامبیائی کواچا
-        one: زامبیائی کواچا
-    AED:
-      display_names:
-        other: متحدہ عرب اماراتی درہم
-        one: متحدہ عرب اماراتی درہم
-    ALL:
-      display_names:
-        other: البانیا کا لیک
-        one: البانیا کا لیک
-    ANG:
-      display_names:
-        other: نیدر لینڈز انٹیلیئن گلڈر
-        one: نیدر لینڈز انٹیلیئن گلڈر
-    AWG:
-      display_names:
-        other: اروبن فلورِن
-        one: اروبن فلورِن
-    BGN:
-      display_names:
-        other: بلغارین لیو
-        one: بلغارین لیو
-    BHD:
-      display_names:
-        other: بحرینی دینار
-        one: بحرینی دینار
-    BIF:
-      display_names:
-        other: برونڈیئن فرانک
-        one: برونڈیئن فرانک
-    BTN:
-      display_names:
-        other: بھوٹانی گُلٹرم
-        one: بھوٹانی گُلٹرم
-    BYN:
-      symbol: р.
-      display_names:
-        other: بیلاروسی روبل
-        one: بیلاروسی روبل
-    BYR:
-      display_names:
-        other: بیلاروسی روبل (۲۰۰۰–۲۰۱۶)
-        one: بیلاروسی روبل (۲۰۰۰–۲۰۱۶)
-    CDF:
-      display_names:
-        other: کانگولیز فرانک
-        one: کانگولیز فرانک
-    CHF:
-      display_names:
-        other: سوئس فرانکس
-        one: سوئس فرانکس
-    CNH:
-      display_names:
-        other: چینی یوآن (آف شور)
-        one: چینی یوآن (آف شور)
-    CVE:
-      display_names:
-        other: کیپ ورڈی کا اسکیوڈو
-        one: کیپ ورڈی کا اسکیوڈو
-    DEM:
-      display_names:
-        other: ڈچ مارکس
-        one: ڈچ مارکس
-    DJF:
-      display_names:
-        other: جبوتی فرانک
-        one: جبوتی فرانک
-    DZD:
-      display_names:
-        other: الجیریائی دینار
-        one: الجیریائی دینار
-    EEK:
-      display_names:
-        other: ایسٹونین کرون
-        one: ایسٹونین کرون
-    ERN:
-      display_names:
-        other: اریٹیریائی ناکفا
-        one: اریٹیریائی ناکفا
-    ETB:
-      display_names:
-        other: ایتھوپیائی بِرّ
-        one: ایتھوپیائی بِرّ
-    FRF:
-      display_names:
-        other: فرانسیسی فرانک
-        one: فرانسیسی فرانک
-    GMD:
-      display_names:
-        other: گامبیا کا ڈلاسی
-        one: گامبیا کا ڈلاسی
-    HTG:
-      display_names:
-        other: ہیتی کا گؤرڈی
-        one: ہیتی کا گؤرڈی
-    IQD:
-      display_names:
-        other: عراقی دینار
-        one: عراقی دینار
-    IRR:
-      display_names:
-        other: ایرانی ریال
-        one: ایرانی ریال
-    JOD:
-      display_names:
-        other: اردنی دینار
-        one: اردنی دینار
-    KES:
-      display_names:
-        other: کینیائی شلنگ
-        one: کینیائی شلنگ
-    KWD:
-      display_names:
-        other: کویتی دینار
-        one: کویتی دینار
-    LSL:
-      display_names:
-        other: لیسوتھو لوتی
-        one: لیسوتھو لوتی
-    LYD:
-      display_names:
-        other: لیبیائی دینار
-        one: لیبیائی دینار
-    MAD:
-      display_names:
-        other: مراکشی درہم
-        one: مراکشی درہم
-    MDL:
-      display_names:
-        other: مالدووی لیو
-        one: مالدووی لیو
-    MKD:
-      display_names:
-        other: مقدونیائی دینار
-        one: مقدونیائی دینار
-    MOP:
-      display_names:
-        other: میکانیز پٹاکا
-        one: میکانیز پٹاکا
-    MRO:
-      display_names:
-        other: موریطانیائی اوگوئیا (1973–2017)
-        one: موریطانیائی اوگوئیا (1973–2017)
-    MRU:
-      display_names:
-        other: موریطانیائی اوگوئیا
-        one: موریطانیائی اوگوئیا
-    MVR:
-      display_names:
-        other: مالدیپ کا روفیہ
-        one: مالدیپ کا روفیہ
-    MWK:
-      display_names:
-        other: ملاوی کواچا
-        one: ملاوی کواچا
-    MZN:
-      display_names:
-        other: موزامبیقی میٹیکلز
-        one: موزامبیقی میٹیکل
-    OMR:
-      display_names:
-        other: عمانی ریال
-        one: عمانی ریال
-    PAB:
-      display_names:
-        other: پنامہ کا بالبوآ
-        one: پنامہ کا بالبوآ
-    PEN:
-      display_names:
-        other: پیروویئن سول
-        one: پیروویئن سول
-    PGK:
-      display_names:
-        other: پاپوآ نیو گنی کا کینا
-        one: پاپوآ نیو گنی کا کینا
-    QAR:
-      display_names:
-        other: قطری ریال
-        one: قطری ریال
-    RSD:
-      display_names:
-        other: سربین دینار
-        one: سربین دینار
-    SAR:
-      display_names:
-        other: سعودی ریال
-        one: سعودی ریال
-    SCR:
-      display_names:
-        other: سشلی کا روپیہ
-        one: سشلی کا روپیہ
-    SDG:
-      display_names:
-        other: سوڈانی پاؤنڈ
-        one: سوڈانی پاؤنڈ
     SIT:
       display_names:
         other: سلوانین ٹولر
@@ -641,14 +637,34 @@ number_formats:
       display_names:
         other: صومالی شلنگ
         one: صومالی شلنگ
+    SRD:
+      display_names:
+        other: سورینامی ڈالر
+        one: سورینامی ڈالر
+    SSP:
+      display_names:
+        other: جنوبی سوڈانی پاؤنڈز
+        one: جنوبی سوڈانی پاؤنڈ
     STD:
       display_names:
         other: ساؤ ٹوم اور پرنسپے ڈوبرا (1977–2017)
         one: ساؤ ٹوم اور پرنسپے ڈوبرا (1977–2017)
+    STN:
+      display_names:
+        other: ساؤ ٹومے اور پرنسپے ڈوبرا
+        one: ساؤ ٹومے اور پرنسپے ڈوبرا
+    SYP:
+      display_names:
+        other: شامی پونڈ
+        one: شامی پونڈ
     SZL:
       display_names:
         other: سوازی لیلانجینی
         one: سوازی لیلانجینی
+    THB:
+      display_names:
+        other: تھائی باہت
+        one: تھائی باہت
     TJS:
       display_names:
         other: تاجکستانی سومونی
@@ -661,14 +677,43 @@ number_formats:
       display_names:
         other: تیونیسیائی دینار
         one: تیونیسیائی دینار
+    TOP:
+      display_names:
+        other: ٹونگن پانگا
+        one: ٹونگن پانگا
+    TRY:
+      display_names:
+        other: ترکی لیرا
+        one: ترکی لیرا
+    TTD:
+      display_names:
+        other: ترینیداد اور ٹوباگو کا ڈالر
+        one: ترینیداد اور ٹوباگو کا ڈالر
+    TWD:
+      display_names:
+        other: نیو تائیوان ڈالر
+        one: نیو تائیوان ڈالر
     TZS:
       display_names:
         other: تنزانیائی شلنگ
         one: تنزانیائی شلنگ
+    UAH:
+      display_names:
+        other: یوکرینیائی ہریونیا
+        one: یوکرینیائی ہریونیا
     UGX:
       display_names:
         other: یوگانڈا شلنگ
         one: یوگانڈا شلنگ
+    USD:
+      symbol: "$"
+      display_names:
+        other: امریکی ڈالر
+        one: امریکی ڈالر
+    UYU:
+      display_names:
+        other: یوروگویان پیسو
+        one: یوروگویان پیسو
     UZS:
       display_names:
         other: ازبکستانی سوم
@@ -677,10 +722,18 @@ number_formats:
       display_names:
         other: وینزویلا بولیور (1871–2008)
         one: وینزویلا بولیور (1871–2008)
+    VEF:
+      display_names:
+        other: وینزویلا بولیور (2008–2018)
+        one: وینزویلا بولیور (2008–2018)
     VES:
       display_names:
         other: وینزویلا بولیور
         one: وینزویلا بولیور
+    VND:
+      display_names:
+        other: ویتنامی ڈانگ
+        one: ویتنامی ڈانگ
     VUV:
       display_names:
         other: وینوواتو واتو
@@ -689,11 +742,1541 @@ number_formats:
       display_names:
         other: ساموآ کا ٹالا
         one: ساموآ کا ٹالا
+    XAF:
+      display_names:
+        other: وسطی افریقی [CFA] فرانک
+        one: وسطی افریقی [CFA] فرانک
+    XCD:
+      display_names:
+        other: مشرقی کریبیا کا ڈالر
+        one: مشرقی کریبیا کا ڈالر
+    XOF:
+      display_names:
+        other: مغربی افریقی [CFA] فرانک
+        one: مغربی افریقی [CFA] فرانک
+    XPF:
+      display_names:
+        other: CFP فرانکس
+        one: CFP فرانک
+    XXX:
+      display_names:
+        other: "(نامعلوم کرنسی)"
+        one: "(کرنسی کی نامعلوم یونٹ)"
     YER:
       display_names:
         other: یمنی ریال
         one: یمنی ریال
+    ZAR:
+      display_names:
+        other: جنوبی افریقی رانڈ
+        one: جنوبی افریقی رانڈ
     ZMK:
       display_names:
         other: زامبیائی کواچا (1968–2012)
         one: زامبیائی کواچا (1968–2012)
+    ZMW:
+      display_names:
+        other: زامبیائی کواچا
+        one: زامبیائی کواچا
+  units:
+    g-force:
+      long:
+        one: "{0} جی-فورس"
+        other: "{0} جی-فورس"
+        gender: feminine
+      short:
+        display_name: جی-فورس
+      narrow:
+        one: "{0}g"
+        other: "{0}g"
+    meter-per-square-second:
+      long:
+        display_name: میٹر فی مربع سیکنڈ
+        one: "{0} میٹر فی مربع سیکنڈ"
+        other: "{0} میٹر فی مربع سیکنڈ"
+        gender: masculine
+    revolution:
+      long:
+        display_name: گردش
+        one: "{0} گردش"
+        other: "{0} گردش"
+        gender: feminine
+    radian:
+      long:
+        one: "{0} ریڈین"
+        other: "{0} ریڈینس"
+        gender: feminine
+      short:
+        display_name: ریڈینس
+      narrow:
+        display_name: ریڈین
+    degree:
+      long:
+        gender: masculine
+      short:
+        display_name: ڈگری
+        one: "{0} ڈگری"
+        other: "{0} ڈگری"
+    arc-minute:
+      long:
+        gender: masculine
+      short:
+        display_name: آرک منٹ
+        one: "{0} آرک منٹ"
+        other: "{0} آرک منٹ"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+    arc-second:
+      long:
+        gender: masculine
+      short:
+        display_name: آرک سیکنڈ
+        one: "{0} آرک سیکنڈ"
+        other: "{0} آرک سیکنڈ"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: مربع کلو میٹر
+        one: "{0} مربع کلو میٹر"
+        other: "{0} مربع کلو میٹر"
+        gender: masculine
+        per_unit_pattern: "{0} فی مربع کلو میٹر"
+    hectare:
+      long:
+        gender: masculine
+      short:
+        display_name: ہیکٹر
+        one: "{0} ہیکٹر"
+        other: "{0} ہیکٹر"
+    square-meter:
+      long:
+        one: "{0} مربع میٹر"
+        other: "{0} مربع میٹر"
+        gender: masculine
+        per_unit_pattern: "{0} فی مربع میٹر"
+      short:
+        display_name: مربع میٹر
+    square-centimeter:
+      long:
+        display_name: مربع سینٹی میٹر
+        one: "{0} مربع سینٹی میٹر"
+        other: "{0} مربع سینٹی میٹر"
+        gender: masculine
+        per_unit_pattern: "{0} فی مربع سینٹی میٹر"
+    square-mile:
+      long:
+        one: "{0} مربع میل"
+        other: "{0} مربع میل"
+        per_unit_pattern: "{0} فی مربع میل"
+      short:
+        display_name: مربع میل
+        one: "{0} sq mi"
+        other: "{0} sq mi"
+      narrow:
+        display_name: mi²
+        one: "{0}mi²"
+        other: "{0}mi²"
+    square-yard:
+      long:
+        one: "{0} مربع گز"
+        other: "{0} مربع گز"
+      short:
+        display_name: مربع گز
+      narrow:
+        display_name: yd²
+    square-foot:
+      long:
+        one: "{0} مربع فٹ"
+        other: "{0} مربع فٹ"
+      short:
+        display_name: مربع فٹ
+        one: "{0} sq ft"
+        other: "{0} sq ft"
+      narrow:
+        display_name: ft²
+        one: "{0}ft²"
+        other: "{0}ft²"
+    square-inch:
+      long:
+        one: "{0} مربع انچ"
+        other: "{0} مربع انچ"
+        per_unit_pattern: "{0} فی مربع انچ"
+      short:
+        display_name: مربع انچ
+      narrow:
+        display_name: in²
+    dunam:
+      long:
+        one: "{0} دُنام"
+        other: "{0} دُنامز"
+      short:
+        display_name: دُنامز
+        one: "{0} دُنام"
+        other: "{0} دُنام"
+      narrow:
+        display_name: دُنام
+    karat:
+      long:
+        one: "{0} قیراط"
+        other: "{0} قیراط"
+        gender: masculine
+      short:
+        display_name: قیراط
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: ملی گرام فی ڈیسی لیٹر
+        one: "{0} ملی گرام فی ڈیسی لیٹر"
+        other: "{0} ملی گرام فی ڈیسی لیٹر"
+        gender: masculine
+    millimole-per-liter:
+      long:
+        display_name: ملی مولس فی لیٹر
+        one: "{0} ملی مول فی لیٹر"
+        other: "{0} ملی مول فی لیٹر"
+        gender: masculine
+      short:
+        display_name: ملی مول/لیٹر
+    item:
+      long:
+        display_name: آئٹمز
+        gender: masculine
+      short:
+        display_name: آئٹم
+        one: "{0} آئٹم"
+        other: "{0} آئٹمز"
+    permillion:
+      long:
+        display_name: فی ملین حصے
+        one: "{0} فی ملین حصے"
+        other: "{0} فی ملین حصے"
+        gender: feminine
+      short:
+        display_name: حصے/ملین
+      narrow:
+        display_name: ppm
+    percent:
+      long:
+        one: "{0} فیصد"
+        other: "{0} فیصد"
+        gender: feminine
+      short:
+        display_name: فیصد
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        one: "{0} فی ہزار"
+        other: "{0} فی ہزار"
+        gender: feminine
+      short:
+        display_name: فی ہزار
+      narrow:
+        display_name: "‰"
+    permyriad:
+      long:
+        one: "{0} پرمرئیڈ"
+        other: "{0} پرمرئیڈ"
+        gender: feminine
+      short:
+        display_name: پرمرئیڈ
+      narrow:
+        display_name: "‱"
+    mole:
+      long:
+        display_name: مولز
+        one: "{0} مول"
+        other: "{0} مولز"
+        gender: feminine
+      short:
+        display_name: مول
+        one: "{0} مول"
+        other: "{0} مول"
+    liter-per-kilometer:
+      long:
+        display_name: لیٹر فی کلومیٹر
+        one: "{0} لیٹر فی کلومیٹر"
+        other: "{0} لیٹر فی کلومیٹر"
+        gender: masculine
+    liter-per-100-kilometer:
+      long:
+        display_name: لیٹر فی 100 کلو میٹر
+        one: "{0} لیٹر فی 100 کلو میٹر"
+        other: "{0} لیٹر فی 100 کلو میٹر"
+        gender: masculine
+      short:
+        display_name: لیٹر/100 کلو میٹر
+      narrow:
+        one: "{0}L/100km"
+        other: "{0}L/100km"
+    mile-per-gallon:
+      long:
+        display_name: میل فی گیلن
+        one: "{0} میل فی گیلن"
+        other: "{0} میل فی گیلن"
+      short:
+        display_name: mpg
+        one: "{0} mpg"
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: میل فی امپیریل گیلن
+        one: "{0} میل فی امپیریل گیلن"
+        other: "{0} میل فی امپیریل گیلن"
+      short:
+        display_name: miles/gal Imp.
+      narrow:
+        display_name: mpg UK
+        one: "{0}m/gUK"
+        other: "{0}m/gUK"
+    petabyte:
+      long:
+        display_name: پیٹا بائٹس
+        one: "{0} پیٹا بائٹ"
+        other: "{0} پیٹا بائٹس"
+        gender: feminine
+      short:
+        display_name: پی بائٹ
+        one: "{0} پی بی"
+        other: "{0} پی بی"
+    terabyte:
+      long:
+        display_name: ٹیرابائٹس
+        one: "{0} ٹیرابائٹ"
+        other: "{0} ٹیرابائٹ"
+        gender: feminine
+    terabit:
+      long:
+        display_name: ٹیرابٹس
+        one: "{0} ٹیرابٹ"
+        other: "{0} ٹیرابٹس"
+        gender: feminine
+      short:
+        display_name: Tbit
+    gigabyte:
+      long:
+        display_name: گیگابائٹس
+        one: "{0} گیگابائٹ"
+        other: "{0} گیگابائٹ"
+        gender: feminine
+    gigabit:
+      long:
+        display_name: گیگابٹس
+        one: "{0} گیگابٹ"
+        other: "{0} گیگابٹس"
+        gender: feminine
+      short:
+        display_name: Gbit
+    megabyte:
+      long:
+        display_name: ميگابائٹس
+        one: "{0} میگابائٹ"
+        other: "{0} ميگابائٹس"
+        gender: feminine
+      short:
+        display_name: MByte
+      narrow:
+        display_name: MB
+    megabit:
+      long:
+        display_name: میگابٹس
+        one: "{0} میگابٹ"
+        other: "{0} میگابٹس"
+        gender: feminine
+    kilobyte:
+      long:
+        display_name: کلوبائٹس
+        one: "{0} کلوبائٹ"
+        other: "{0} کلوبائٹس"
+        gender: feminine
+      short:
+        display_name: kByte
+    kilobit:
+      long:
+        display_name: کلوبٹس
+        one: "{0} کلوبٹ"
+        other: "{0} کلوبٹس"
+        gender: feminine
+      short:
+        display_name: kbit
+    byte:
+      long:
+        one: "{0} بائٹ"
+        other: "{0} بائٹس"
+        gender: feminine
+      short:
+        display_name: بائٹ
+      narrow:
+        one: "{0}B"
+        other: "{0}B"
+    bit:
+      long:
+        display_name: بٹس
+        one: "{0} بٹ"
+        other: "{0} بٹس"
+        gender: feminine
+    century:
+      long:
+        display_name: صدیاں
+        gender: feminine
+      short:
+        display_name: صدی
+        one: "{0} صدی"
+        other: "{0} صدیاں"
+    decade:
+      long:
+        display_name: دہائیاں
+        one: "{0} دہائی"
+        other: "{0} دہائیاں"
+        gender: feminine
+      short:
+        display_name: دہائی
+        one: "{0} دہائی"
+        other: "{0} دہائی"
+    year:
+      long:
+        gender: masculine
+        per_unit_pattern: فی سال {0}
+      short:
+        display_name: سال
+        one: "{0} سال"
+        other: "{0} سال"
+      narrow:
+        per_unit_pattern: "{0}/سال"
+    quarter:
+      long:
+        display_name: کوارٹرز
+        gender: masculine
+      short:
+        display_name: کوارٹر
+        one: "{0} کوارٹر"
+        other: "{0} کوارٹرز"
+        per_unit_pattern: "{0}/کوارٹر"
+      narrow:
+        one: "{0}q"
+        other: "{0}q"
+        per_unit_pattern: "{0}/q"
+    month:
+      long:
+        gender: masculine
+        per_unit_pattern: "{0} فی ماہ"
+      short:
+        display_name: مہینے
+        one: "{0} مہینہ"
+        other: "{0} مہینے"
+      narrow:
+        display_name: مہینہ
+        per_unit_pattern: "{0}/مہینہ"
+    week:
+      long:
+        gender: masculine
+      short:
+        display_name: ہفتے
+        one: "{0} ہفتہ"
+        other: "{0} ہفتے"
+        per_unit_pattern: "{0} فی ہفتہ"
+      narrow:
+        display_name: ہفتہ
+        per_unit_pattern: "{0}/ہفتہ"
+    day:
+      long:
+        gender: masculine
+      short:
+        display_name: دن
+        one: "{0} دن"
+        other: "{0} دن"
+        per_unit_pattern: "{0} فی دن"
+    day-person:
+      long:
+        gender: masculine
+    hour:
+      long:
+        gender: masculine
+      short:
+        display_name: گھنٹے
+        one: "{0} گھنٹہ"
+        other: "{0} گھنٹے"
+        per_unit_pattern: "{0} فی گھنٹہ"
+      narrow:
+        display_name: گھنٹہ
+    minute:
+      long:
+        gender: masculine
+      short:
+        display_name: منٹ
+        one: "{0} منٹ"
+        other: "{0} منٹ"
+        per_unit_pattern: "{0} فی منٹ"
+    second:
+      long:
+        gender: masculine
+      short:
+        display_name: سیکنڈ
+        one: "{0} سیکنڈ"
+        other: "{0} سیکنڈ"
+        per_unit_pattern: "{0} فی سیکنڈ"
+    millisecond:
+      long:
+        display_name: ملی سیکنڈز
+        gender: masculine
+      short:
+        display_name: ملی سیکنڈ
+        one: "{0} ملی سیکنڈ"
+        other: "{0} ملی سیکنڈ"
+      narrow:
+        one: "{0} ms"
+        other: "{0} ms"
+    microsecond:
+      long:
+        display_name: مائیکرو سیکنڈز
+        one: "{0} مائیکرو سیکنڈ"
+        other: "{0} مائیکرو سیکنڈز"
+        gender: masculine
+      short:
+        display_name: مائیکرو سیکنڈ
+        one: "{0} مائیکرو سیکنڈ"
+        other: "{0} مائیکرو سیکنڈ"
+      narrow:
+        display_name: μsec
+        one: "{0}μs"
+        other: "{0}μs"
+    nanosecond:
+      long:
+        gender: masculine
+      short:
+        display_name: نینو سیکنڈز
+        one: "{0} نینو سیکنڈ"
+        other: "{0} نینو سیکنڈ"
+    ampere:
+      long:
+        display_name: ایمپیئر
+        one: "{0} ایمپیئر"
+        other: "{0} ایمپیئر"
+        gender: masculine
+      short:
+        display_name: amps
+      narrow:
+        display_name: amp
+    milliampere:
+      long:
+        display_name: ملی ایمپیئر
+        one: "{0} ملی ایمپیئر"
+        other: "{0} ملی ایمپیئر"
+        gender: masculine
+      short:
+        display_name: milliamps
+    ohm:
+      long:
+        one: "{0} اوہم"
+        other: "{0} اوہم"
+        gender: masculine
+      short:
+        display_name: اوہم
+    volt:
+      long:
+        one: "{0} وولٹ"
+        other: "{0} وولٹ"
+        gender: masculine
+      short:
+        display_name: وولٹ
+    kilocalorie:
+      long:
+        display_name: کلو کیلوریز
+        one: "{0} کلو کیلوری"
+        other: "{0} کلو کیلوریز"
+        gender: feminine
+    calorie:
+      long:
+        display_name: کیلوریز
+        one: "{0} کیلوری"
+        other: "{0} کیلوریز"
+        gender: feminine
+    foodcalorie:
+      long:
+        display_name: کیلوریز
+        one: "{0} کیلوری"
+        other: "{0} کیلوریز"
+      short:
+        display_name: Cal
+        one: "{0} Cal"
+        other: "{0} Cal"
+    kilojoule:
+      long:
+        display_name: کلو جول
+        one: "{0} کلو جول"
+        other: "{0} کلو جول"
+        gender: masculine
+    joule:
+      long:
+        display_name: جول
+        one: "{0} جول"
+        other: "{0} جول"
+        gender: feminine
+      narrow:
+        display_name: جول
+    kilowatt-hour:
+      long:
+        display_name: کلو واٹ آور
+        one: "{0} کلو واٹ آور"
+        other: "{0} کلو واٹ آور"
+        gender: masculine
+      short:
+        display_name: kW-hour
+      narrow:
+        display_name: kWh
+    electronvolt:
+      long:
+        display_name: الیکٹرون وولٹس
+        one: "{0} الیکٹرون وولٹ"
+        other: "{0} الیکٹرون وولٹس"
+      short:
+        display_name: الیکٹرون وولٹ
+    british-thermal-unit:
+      long:
+        display_name: برطانوی تھرمل اکائیاں
+        one: "{0} برطانوی تھرمل اکائی"
+        other: "{0} برطانوی تھرمل اکائیاں"
+      short:
+        display_name: BTU
+    therm-us:
+      long:
+        display_name: امریکی تھرمز
+      short:
+        display_name: امریکی تھرم
+        one: "{0} امریکی تھرم"
+        other: "{0} امریکی تھرمز"
+    pound-force:
+      long:
+        display_name: پاؤنڈز قوت
+        one: "{0} پاؤنڈ قوت"
+        other: "{0} پاؤنڈز قوت"
+      short:
+        display_name: پاؤنڈ قوت
+      narrow:
+        display_name: lbf
+    newton:
+      long:
+        display_name: نیوٹنز
+        one: "{0} نیوٹن"
+        other: "{0} نیوٹنز"
+        gender: masculine
+      short:
+        display_name: نیوٹن
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: کلو واٹ گھنٹے فی 100 کلومیٹر
+        one: "{0} کلو واٹ گھنٹہ فی 100 کلومیٹر"
+        other: "{0} کلو واٹ گھنٹے فی 100 کلومیٹر"
+        gender: masculine
+    gigahertz:
+      long:
+        display_name: گیگاہرٹز
+        one: "{0} گیگاہرٹز"
+        other: "{0} گیگاہرٹز"
+        gender: masculine
+    megahertz:
+      long:
+        display_name: میگاہرٹز
+        one: "{0} میگاہرٹز"
+        other: "{0} میگاہرٹز"
+        gender: masculine
+    kilohertz:
+      long:
+        display_name: کلوہرٹز
+        one: "{0} کلوہرٹز"
+        other: "{0} کلوہرٹز"
+        gender: masculine
+    hertz:
+      long:
+        display_name: ہرٹز
+        one: "{0} ہرٹز"
+        other: "{0} ہرٹز"
+        gender: masculine
+    em:
+      long:
+        display_name: ٹائپوگرافک em
+        one: "{0} em"
+        other: "{0} ems"
+        gender: masculine
+    pixel:
+      long:
+        one: "{0} پکسل"
+        other: "{0} پکسلز"
+        gender: masculine
+      short:
+        display_name: پکسلز
+      narrow:
+        display_name: px
+    megapixel:
+      long:
+        one: "{0} میگا پکسل"
+        other: "{0} میگا پکسلز"
+        gender: masculine
+      short:
+        display_name: میگا پکسلز
+      narrow:
+        display_name: MP
+    pixel-per-centimeter:
+      long:
+        display_name: پکسلز فی سینٹی میٹر
+        one: "{0} پکسل فی سینٹی میٹر"
+        other: "{0} پکسلز فی سینٹی میٹر"
+        gender: masculine
+    pixel-per-inch:
+      long:
+        display_name: پکسلز فی انچ
+        one: "{0} پکسل فی انچ"
+        other: "{0} پکسلز فی انچ"
+    dot-per-centimeter:
+      long:
+        display_name: ڈاٹس فی سینٹی میٹر
+        one: "{0} ڈاٹ فی سینٹی میٹر"
+        other: "{0} ڈاٹس فی سینٹی میٹر"
+      short:
+        display_name: dpcm
+        one: "{0} dpcm"
+        other: "{0} dpcm"
+    dot-per-inch:
+      long:
+        display_name: ڈاٹس فی انچ
+        one: "{0} ڈاٹ فی انچ"
+        other: "{0} ڈاٹس فی انچ"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+    earth-radius:
+      long:
+        display_name: زمینی رداس
+        one: "{0} زمینی رداس"
+        other: "{0} زمینی رداس"
+    kilometer:
+      long:
+        gender: masculine
+        per_unit_pattern: "{0} فی کلومیٹر"
+      short:
+        display_name: کلو میٹر
+        one: "{0} کلو میٹر"
+        other: "{0} کلو میٹر"
+        per_unit_pattern: "{0} فی کلو میٹر"
+    meter:
+      long:
+        gender: masculine
+        per_unit_pattern: "{0} فی میٹر"
+      short:
+        display_name: میٹر
+        one: "{0} میٹر"
+        other: "{0} میٹر"
+      narrow:
+        per_unit_pattern: "{0} فی میٹر"
+    decimeter:
+      long:
+        display_name: ڈیسی میٹر
+        one: "{0} ڈیسی میٹر"
+        other: "{0} ڈیسی میٹر"
+        gender: masculine
+      narrow:
+        display_name: ڈیسی میٹر
+    centimeter:
+      long:
+        gender: masculine
+        per_unit_pattern: "{0} فی سینٹی میٹر"
+      short:
+        display_name: سینٹی میٹر
+        one: "{0} سینٹی میٹر"
+        other: "{0} سینٹی میٹر"
+      narrow:
+        one: "{0}cm"
+        other: "{0}cm"
+        per_unit_pattern: "{0} فی سینٹی میٹر"
+    millimeter:
+      long:
+        gender: masculine
+      short:
+        display_name: ملی میٹر
+        one: "{0} ملی میٹر"
+        other: "{0} ملیمیٹر"
+      narrow:
+        one: "{0} ملی میٹر"
+        other: "{0}ملی میٹر"
+    micrometer:
+      long:
+        display_name: مائیکرو میٹر
+        one: "{0} مائیکرو میٹر"
+        other: "{0} مائیکرو میٹر"
+        gender: masculine
+    nanometer:
+      long:
+        display_name: نینو میٹر
+        one: "{0} نینو میٹر"
+        other: "{0} نینو میٹر"
+        gender: masculine
+    picometer:
+      long:
+        gender: masculine
+      short:
+        display_name: پیکو میٹر
+        one: "{0} پیکو میٹر"
+        other: "{0} پیکو میٹر"
+      narrow:
+        display_name: pm
+        one: "{0}pm"
+        other: "{0}pm"
+    foot:
+      long:
+        per_unit_pattern: "{0} فی فوٹ"
+      short:
+        display_name: فیٹ
+        one: "{0} فیٹ"
+        other: "{0} فیٹ"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+        per_unit_pattern: "{0} فی فیٹ"
+    inch:
+      long:
+        one: "{0} انچ"
+        other: "{0} انچ"
+        per_unit_pattern: "{0} فی انچ"
+      short:
+        display_name: انچ
+        one: "{0} انچ"
+      narrow:
+        one: "{0} انچ"
+        other: "{0} انچ"
+        per_unit_pattern: "{0} فی انچ"
+    parsec:
+      long:
+        one: "{0} پارسیک"
+        other: "{0} پارسیک"
+      short:
+        display_name: پارسیک
+    light-year:
+      long:
+        one: "{0} نوری سال"
+        other: "{0} نوری سال"
+      short:
+        display_name: نوری سال
+      narrow:
+        display_name: ly
+        one: "{0}ly"
+        other: "{0}ly"
+    astronomical-unit:
+      long:
+        display_name: ایسٹرونومیکل یونٹس
+        one: "{0} ایسٹرونومیکل یونٹ"
+        other: "{0} ایسٹرونومیکل یونٹس"
+    furlong:
+      long:
+        one: "{0} فرلانگ"
+        other: "{0} فرلانگز"
+      short:
+        display_name: فرلانگز
+        one: "{0} فرلانگ"
+        other: "{0} فرلانگ"
+      narrow:
+        display_name: فرلانگ
+    fathom:
+      long:
+        one: "{0} فیدم"
+        other: "{0} فیدمز"
+      short:
+        display_name: فیدمز
+        one: "{0} فیدم"
+        other: "{0} فیدم"
+      narrow:
+        display_name: فیدم
+    nautical-mile:
+      long:
+        display_name: بحری میل
+        one: "{0} بحری میل"
+        other: "{0} بحری میل"
+    mile-scandinavian:
+      long:
+        display_name: اسکینڈی نیویائی میل
+        one: "{0} اسکینڈی نیویائی میل"
+        other: "{0} اسکینڈی نیویائی میل"
+        gender: masculine
+    point:
+      long:
+        one: "{0} پوائنٹ"
+        other: "{0} پوائنٹس"
+        gender: masculine
+      short:
+        display_name: پوائنٹس
+    solar-radius:
+      long:
+        one: "{0} شمسی رداس"
+        other: "{0} شمسی رداس"
+      short:
+        display_name: شمسی رداس
+      narrow:
+        display_name: R☉
+    lux:
+      long:
+        one: "{0} lux"
+        other: "{0} lux"
+        gender: masculine
+      short:
+        display_name: lux
+    candela:
+      long:
+        display_name: کنڈیلا
+        one: "{0} کنڈیلا"
+        other: "{0} کنڈیلا"
+        gender: masculine
+    lumen:
+      long:
+        display_name: لیومِن
+        one: "{0} لیومِن"
+        other: "{0} لیومِن"
+        gender: feminine
+    solar-luminosity:
+      long:
+        one: "{0} شمسی چمک"
+        other: "{0} شمسی چمک"
+      short:
+        display_name: شمسی چمک
+    tonne:
+      long:
+        display_name: میٹرک ٹن
+        one: "{0} میٹرک ٹن"
+        other: "{0} میٹرک ٹن"
+        gender: masculine
+    kilogram:
+      long:
+        display_name: کلو گرام
+        one: "{0} کلو گرام"
+        other: "{0} کلو گرام"
+        gender: masculine
+        per_unit_pattern: "{0} فی کلو گرام"
+      narrow:
+        one: "{0}kg"
+        other: "{0}kg"
+        per_unit_pattern: "{0} فی کلو گرام"
+    gram:
+      long:
+        one: "{0} گرام"
+        other: "{0} گرام"
+        gender: masculine
+        per_unit_pattern: "{0} فی گرام"
+      short:
+        display_name: گرام
+      narrow:
+        one: "{0} گرام"
+        other: "{0} گرام"
+        per_unit_pattern: "{0} فی گرام"
+    milligram:
+      long:
+        display_name: ملی گرام
+        one: "{0} ملی گرام"
+        other: "{0} ملی گرام"
+        gender: masculine
+    microgram:
+      long:
+        display_name: مائکرو گرام
+        one: "{0} مائکرو گرام"
+        other: "{0} مائکرو گرام"
+        gender: masculine
+    ton:
+      long:
+        one: "{0} ٹن"
+        other: "{0} ٹن"
+      short:
+        display_name: ٹن
+    stone:
+      long:
+        display_name: اسٹونز
+        one: "{0} اسٹون"
+        other: "{0} اسٹونز"
+    pound:
+      long:
+        one: "{0} پونڈ"
+        other: "{0} پونڈ"
+        per_unit_pattern: "{0} فی پونڈ"
+      short:
+        display_name: پونڈ
+      narrow:
+        display_name: lb
+        one: "{0} پونڈ"
+        other: "{0} پونڈ"
+    ounce:
+      long:
+        display_name: اونس
+        one: "{0} اونس"
+        other: "{0} اونس"
+        per_unit_pattern: "{0} فی اونس"
+      narrow:
+        one: "{0} ونس"
+        other: "{0} ونس"
+    ounce-troy:
+      long:
+        display_name: ٹرائے اونس
+        one: "{0} ٹرائے اونس"
+        other: "{0} ٹرائے اونس"
+    carat:
+      long:
+        one: "{0} قیراط"
+        other: "{0} قیراط"
+        gender: masculine
+      short:
+        display_name: قیراط
+    dalton:
+      long:
+        one: "{0} ڈالٹن"
+        other: "{0} ڈالٹنز"
+      short:
+        display_name: ڈالٹنز
+      narrow:
+        display_name: ڈالٹن
+    earth-mass:
+      long:
+        one: "{0} زمینی کمیت"
+        other: "{0} زمینی کمیتیں"
+      short:
+        display_name: زمینی کمیتیں
+      narrow:
+        display_name: زمینی کمیت
+    solar-mass:
+      long:
+        one: "{0} شمسی کمیت"
+        other: "{0} شمسی کمیتیں"
+      short:
+        display_name: شمسی کمیتیں
+      narrow:
+        display_name: شمسی کمیت
+    gigawatt:
+      long:
+        display_name: گیگا واٹ
+        one: "{0} گیگا واٹ"
+        other: "{0} گیگا واٹ"
+        gender: masculine
+    megawatt:
+      long:
+        display_name: میگا واٹ
+        one: "{0} میگا واٹ"
+        other: "{0} میگا واٹ"
+        gender: masculine
+    kilowatt:
+      long:
+        display_name: کلو واٹ
+        gender: masculine
+      short:
+        one: "{0} کلو واٹ"
+        other: "{0} کلو واٹ"
+      narrow:
+        one: "{0}kW"
+        other: "{0}kW"
+    watt:
+      long:
+        gender: feminine
+      short:
+        display_name: واٹ
+        one: "{0} واٹ"
+        other: "{0} واٹ"
+    milliwatt:
+      long:
+        display_name: ملی واٹ
+        one: "{0} ملی واٹ"
+        other: "{0} ملی واٹ"
+        gender: masculine
+    horsepower:
+      long:
+        display_name: ہارس پاور
+        one: "{0} ہارس پاور"
+        other: "{0} ہارس پاور"
+      narrow:
+        one: "{0}hp"
+        other: "{0}hp"
+    millimeter-ofhg:
+      long:
+        display_name: ملی میٹر مرکری
+        one: "{0} ملی میٹر مرکری"
+        other: "{0} ملی میٹر مرکری"
+        gender: masculine
+    pound-force-per-square-inch:
+      long:
+        display_name: پاؤنڈز فی مربع انچ
+        one: "{0} پاؤنڈ فی مربع انچ"
+        other: "{0} پاؤنڈز فی مربع انچ"
+    inch-ofhg:
+      long:
+        display_name: انچ مرکری
+        one: "{0} انچ مرکری"
+        other: "{0} انچ مرکری"
+      narrow:
+        display_name: "″ Hg"
+        one: "{0} انچ مرکری"
+        other: "{0} انچ مرکری"
+    bar:
+      long:
+        display_name: بارز
+        gender: feminine
+      short:
+        display_name: بار
+        one: "{0} بار"
+        other: "{0} بارز"
+    millibar:
+      long:
+        display_name: ملی بار
+        one: "{0} ملی بار"
+        other: "{0} ملی بار"
+        gender: masculine
+      narrow:
+        one: "{0}mb"
+        other: "{0}mb"
+    atmosphere:
+      long:
+        display_name: ماحول
+        one: "{0} ماحول"
+        other: "{0} ماحول"
+        gender: masculine
+    pascal:
+      long:
+        display_name: پاسکل
+        one: "{0} پاسکل"
+        other: "{0} پاسکل"
+        gender: masculine
+    hectopascal:
+      long:
+        display_name: ہیکٹو پاسکل
+        one: "{0} ہیکٹو پاسکل"
+        other: "{0} ہیکٹو پاسکل"
+        gender: masculine
+      narrow:
+        one: "{0}hPa"
+        other: "{0}hPa"
+    kilopascal:
+      long:
+        display_name: کلو پاسکلز
+        one: "{0} کلو پاسکل"
+        other: "{0} کلو پاسکلز"
+        gender: masculine
+    megapascal:
+      long:
+        display_name: میگا پاسکلز
+        one: "{0} میگا پاسکل"
+        other: "{0} میگا پاسکلز"
+        gender: masculine
+    kilometer-per-hour:
+      long:
+        display_name: کلومیٹر فی گھنٹہ
+        one: "{0} کلومیٹر فی گھنٹہ"
+        other: "{0} کلومیٹر فی گھنٹہ"
+        gender: masculine
+      short:
+        display_name: کلومیٹر/گھنٹہ
+        one: "{0} kph"
+        other: "{0} kph"
+      narrow:
+        display_name: km/hr
+        one: "{0}kph"
+        other: "{0}kph"
+    meter-per-second:
+      long:
+        one: "{0} میٹر فی سیکنڈ"
+        other: "{0} میٹر فی سیکنڈ"
+        gender: masculine
+      short:
+        display_name: میٹر فی سیکنڈ
+      narrow:
+        one: "{0}m/s"
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        one: "{0} میل فی گھنٹہ"
+        other: "{0} میل فی گھنٹہ"
+      short:
+        display_name: میل فی گھنٹہ
+        one: "{0} mph"
+        other: "{0} mph"
+      narrow:
+        one: "{0}mph"
+        other: "{0}mph"
+    knot:
+      long:
+        display_name: ناٹس
+        one: "{0} ناٹ"
+        other: "{0} ناٹس"
+    beaufort:
+      long:
+        one: "{0} بیوفورٹ"
+        other: "{0} بیوفورٹ"
+      short:
+        display_name: بیوفورٹ
+    generic:
+      long:
+        gender: masculine
+    celsius:
+      long:
+        one: "{0} ڈگری سیلسیس"
+        other: "{0} ڈگری سیلسیس"
+        gender: feminine
+      short:
+        display_name: ڈگری سیلسیس
+        one: "{0}‎°C"
+        other: "{0}‎°C"
+      narrow:
+        display_name: "⁰C"
+        one: "{0}‎°"
+        other: "{0}‎°"
+    fahrenheit:
+      long:
+        one: "{0} ڈگری فارن ہائیٹ"
+        other: "{0} ڈگری فارن ہائیٹ"
+      short:
+        display_name: ڈگری فارن ہائیٹ
+        one: "{0}‎°F"
+        other: "{0}‎°F"
+      narrow:
+        display_name: "°F"
+    kelvin:
+      long:
+        display_name: کیلون
+        one: "{0} کیلون"
+        other: "{0} کیلون"
+        gender: masculine
+    pound-force-foot:
+      long:
+        display_name: پاؤنڈ فٹ
+        one: "{0} پاؤنڈ فورس فوٹ"
+        other: "{0} پاؤنڈ فٹ"
+    newton-meter:
+      long:
+        display_name: نیوٹن میٹر
+        one: "{0} نیوٹن میٹر"
+        other: "{0} نیوٹن میٹر"
+        gender: masculine
+    cubic-kilometer:
+      long:
+        display_name: کیوبک کلو میٹر
+        one: "{0} کیوبک کلو میٹر"
+        other: "{0} کیوبک کلو میٹر"
+        gender: masculine
+      narrow:
+        one: "{0}km³"
+        other: "{0}km³"
+    cubic-meter:
+      long:
+        display_name: کیوبک میٹر
+        one: "{0} کیوبک میٹر"
+        other: "{0} کیوبک میٹر"
+        gender: masculine
+        per_unit_pattern: "{0} فی کیوبک میٹر"
+    cubic-centimeter:
+      long:
+        one: "{0} کیوبک سینٹی میٹر"
+        other: "{0} کیوبک سینٹی میٹر"
+        gender: masculine
+        per_unit_pattern: "{0} فی کیوبک سینٹی میٹر"
+      short:
+        display_name: کیوبک سینٹی میٹر
+      narrow:
+        display_name: cm³
+    cubic-yard:
+      long:
+        one: "{0} کیوبک گز"
+        other: "{0} کیوبک گز"
+      short:
+        display_name: کیوبک گز
+      narrow:
+        display_name: yd³
+    cubic-foot:
+      long:
+        display_name: کیوبک فیٹ
+        one: "{0} کیوبک فٹ"
+        other: "{0} کیوبک فٹ"
+      short:
+        display_name: کیوبک فٹ
+      narrow:
+        display_name: ft³
+    cubic-inch:
+      long:
+        one: "{0} کیوبک انچ"
+        other: "{0} کیوبک انچ"
+      short:
+        display_name: کیوبک انچ
+      narrow:
+        display_name: in³
+    megaliter:
+      long:
+        display_name: میگا لیٹر
+        one: "{0} میگا لیٹر"
+        other: "{0} میگا لیٹر"
+        gender: masculine
+    hectoliter:
+      long:
+        display_name: ہیکٹو لیٹر
+        one: "{0} ہیکٹو لیٹر"
+        other: "{0} ہیکٹو لیٹر"
+        gender: masculine
+    liter:
+      long:
+        gender: masculine
+      short:
+        display_name: لیٹر
+        one: "{0} لیٹر"
+        other: "{0} لیٹر"
+        per_unit_pattern: "{0} فی لیٹر"
+    deciliter:
+      long:
+        one: "{0} ڈیسی لیٹر"
+        other: "{0} ڈیسی لیٹر"
+        gender: masculine
+      short:
+        display_name: ڈیسی لیٹر
+      narrow:
+        display_name: dL
+    centiliter:
+      long:
+        one: "{0} سینٹی لیٹر"
+        other: "{0} سینٹی لیٹر"
+        gender: masculine
+      short:
+        display_name: سینٹی لیٹر
+      narrow:
+        display_name: cL
+    milliliter:
+      long:
+        display_name: ملی لیٹر
+        one: "{0} ملی لیٹر"
+        other: "{0} ملی لیٹر"
+        gender: masculine
+    pint-metric:
+      long:
+        display_name: میٹرک پائنٹ
+        one: "{0} میٹرک پائنٹ"
+        other: "{0} میٹرک پائنٹ"
+        gender: masculine
+      narrow:
+        display_name: pt
+    cup-metric:
+      long:
+        display_name: میٹرک کپ
+        one: "{0} میٹرک کپ"
+        other: "{0} میٹرک کپ"
+        gender: masculine
+    acre-foot:
+      long:
+        one: "{0} ایکڑ فٹ"
+        other: "{0} ایکڑ فٹ"
+      short:
+        display_name: ایکڑ فٹ
+    bushel:
+      long:
+        one: "{0} بُشل"
+        other: "{0} بُشلز"
+      short:
+        display_name: بُشلز
+        one: "{0} بو"
+        other: "{0} بو"
+      narrow:
+        display_name: بُشل
+    gallon:
+      long:
+        display_name: گیلن
+        one: "{0} گیلن"
+        other: "{0} گیلن"
+        per_unit_pattern: "{0} فی گیلن"
+      short:
+        display_name: gal
+        one: "{0} gal"
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        display_name: امپیریل گیلن
+        one: "{0} امپیریل گیلن"
+        other: "{0} امپیریل گیلن"
+        per_unit_pattern: "{0} فی امپیریل گیلن"
+      narrow:
+        one: "{0}galIm"
+        other: "{0}galIm"
+        per_unit_pattern: "{0}/galIm"
+    quart:
+      long:
+        display_name: کوارٹ
+        one: "{0} کوارٹ"
+        other: "{0} کوارٹ"
+      short:
+        display_name: qts
+      narrow:
+        display_name: qt
+    pint:
+      long:
+        display_name: پائنٹ
+        one: "{0} پائنٹ"
+        other: "{0} پائنٹ"
+    cup:
+      long:
+        one: "{0} کپ"
+        other: "{0} کپ"
+      short:
+        display_name: کپ
+    fluid-ounce:
+      long:
+        display_name: فلوئڈ اونس
+        one: "{0} فلوئڈ اونس"
+        other: "{0} فلوئڈ اونس"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: امپیریل فلوئڈ اونس
+        one: "{0} امپیریئل فلوئڈ اونس"
+        other: "{0} امپیریئل فلوئڈ اونس"
+      narrow:
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        display_name: ٹیبل سپون
+        one: "{0} ٹیبل سپون"
+        other: "{0} ٹیبل سپون"
+    teaspoon:
+      long:
+        display_name: ٹی سپون
+        one: "{0} ٹی سپون"
+        other: "{0} ٹی سپون"
+    barrel:
+      long:
+        display_name: بیرلز
+        one: "{0} بیرل"
+        other: "{0} بیرلز"
+      short:
+        display_name: بیرل
+    dessert-spoon:
+      long:
+        one: "{0} ڈیزرٹ اسپون"
+        other: "{0} ڈیزرٹ اسپون"
+      short:
+        display_name: ڈیزرٹ اسپون
+      narrow:
+        display_name: dsp
+        one: "{0}dsp"
+        other: "{0}dsp"
+    dessert-spoon-imperial:
+      long:
+        display_name: امپیریئل ڈیزرٹ اسپون
+        one: "{0} امپیریئل ڈیزرٹ اسپون"
+        other: "{0} امپیریئل ڈیزرٹ اسپون"
+      narrow:
+        display_name: dsp Imp
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+    dram:
+      long:
+        display_name: ڈرام
+        one: "{0} ڈرام"
+        other: "{0} ڈرام"
+      short:
+        display_name: ڈرام فلوئیڈ
+        one: "{0} ڈرام فلوئیڈ"
+        other: "{0} ڈرام فلوئیڈ"
+      narrow:
+        display_name: fl.dr.
+        one: "{0}fl.dr."
+        other: "{0}fl.dr."
+    quart-imperial:
+      long:
+        display_name: امپیریئل کوارٹ
+        one: "{0} امپیریئل کوارٹ"
+        other: "{0} امپیریئل کوارٹ"
+    light-speed:
+      long:
+        display_name: روشنی
+        one: "{0} روشنی"
+        other: "{0} روشنی"
+        gender: feminine
+      short:
+        display_name: روشنی
+        one: "{0} روشنی"
+        other: "{0} روشنی"
+      narrow:
+        display_name: روشنی
+        one: "{0} روشنی"
+        other: "{0} روشنی"
+    portion-per-1e9:
+      long:
+        display_name: اجزا فی بلین
+        one: "{0} جزو فی بلین"
+        other: "{0} اجزا فی بلین"
+        gender: masculine
+      short:
+        display_name: اجزا/بلین
+      narrow:
+        one: "{0}ppb"
+        other: "{0}ppb"
+    night:
+      long:
+        display_name: راتیں
+        one: "{0} رات"
+        other: "{0} راتیں"
+        gender: feminine
+        per_unit_pattern: "{0} فی رات"
+      short:
+        display_name: راتیں
+        one: "{0} رات"
+        other: "{0} راتیں"
+        per_unit_pattern: "{0}/رات"
+      narrow:
+        display_name: راتیں
+        one: "{0} رات"
+        other: "{0} راتیں"
+        per_unit_pattern: "{0}/رات"
+    acre:
+      short:
+        display_name: ایکڑ
+        one: "{0} ایکڑ"
+        other: "{0} ایکڑ"
+    dot:
+      short:
+        display_name: ڈاٹ
+        one: "{0} ڈاٹ"
+        other: "{0} ڈاٹ"
+    mile:
+      short:
+        display_name: میل
+        one: "{0} میل"
+        other: "{0} میل"
+    yard:
+      short:
+        display_name: گز
+        one: "{0} یارڈ"
+        other: "{0} یارڈ"
+    grain:
+      short:
+        display_name: گرین
+        one: "{0} گرین"
+        other: "{0} گرین"
+      narrow:
+        one: "{0}gr"
+        other: "{0}gr"
+    cubic-mile:
+      short:
+        display_name: کیوبک میل
+        one: "{0} کیوبک میل"
+        other: "{0} کیوبک میل"
+      narrow:
+        display_name: mi³
+        one: "{0}mi³"
+        other: "{0}mi³"
+    drop:
+      short:
+        display_name: قطرہ
+        one: "{0} قطرہ"
+        other: "{0} قطرہ"
+    jigger:
+      short:
+        display_name: جگر
+        one: "{0} جگر"
+        other: "{0} جگر"
+    pinch:
+      short:
+        display_name: چٹکی
+        one: "{0} چٹکی"
+        other: "{0} چٹکی"

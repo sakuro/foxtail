@@ -1,758 +1,104 @@
 ---
 locale: br
-generated_at: '2025-09-13T17:35:06Z'
+generated_at: '2025-09-14T06:08:40Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0k
+        other: 0k
+      '10000':
+        one: 00k
+        other: 00k
+      '100000':
+        one: 000k
+        other: 000k
+    long:
+      '1000':
+        one: 0 miliad
+        two: 0 viliad
+        few: 0 miliad
+        many: 0 a viliadoù
+        other: 0 miliad
+      '10000':
+        one: 00 miliad
+        two: 00 viliad
+        few: 00 miliad
+        many: 00 a viliadoù
+        other: 00 miliad
+      '100000':
+        one: 000 miliad
+        two: 000 viliad
+        few: 000 miliad
+        many: 000 a viliadoù
+        other: 000 miliad
+      '1000000':
+        one: 0 milion
+        two: 0 v/milion
+        few: 0 milion
+        many: 0 a v/milionoù
+        other: 0 milion
+      '10000000':
+        one: 00 milion
+        two: 00 v/milion
+        few: 00 milion
+        many: 00 a v/milionoù
+        other: 00 milion
+      '100000000':
+        one: 000 milion
+        two: 000 v/milion
+        few: 000 milion
+        many: 000 a v/milionoù
+        other: 000 milion
+      '1000000000':
+        one: 0 miliard
+        two: 0 viliard
+        few: 0 miliard
+        many: 0 a viliardoù
+        other: 0 miliard
+      '10000000000':
+        one: 00 miliard
+        two: 00 viliard
+        few: 00 miliard
+        many: 00 a viliardoù
+        other: 00 miliard
+      '100000000000':
+        one: 000 miliard
+        two: 000 viliard
+        few: 000 miliard
+        many: 000 a viliardoù
+        other: 000 miliard
+      '1000000000000':
+        one: 0 bilion
+        two: 0 v/bilion
+        few: 0 bilion
+        many: 0 a v/bilionoù
+        other: 0 bilion
+      '10000000000000':
+        one: 00 bilion
+        two: 00 v/bilion
+        few: 00 bilion
+        many: 00 a v/bilionoù
+        other: 00 bilion
+      '100000000000000':
+        one: 000 bilion
+        two: 000 v/bilion
+        few: 000 bilion
+        many: 000 a v/bilionoù
+        other: 000 bilion
   currencies:
-    AFN:
-      display_names:
-        other: afghani Afghanistan
-        one: afghani Afghanistan
-        two: afghani Afghanistan
-        few: afghani Afghanistan
-        many: a afghanioù Afghanistan
-    AMD:
-      display_names:
-        other: dram Armenia
-        one: dram Armenia
-        two: zram Armenia
-        few: dram Armenia
-        many: a zramoù Armenia
-    AOA:
-      display_names:
-        other: kwanza Angola
-        one: cʼhwanza Angola
-        two: gwanza Angola
-        few: cʼhwanza Angola
-        many: a gwanzaoù Angola
-    ARS:
-      display_names:
-        other: peso Arcʼhantina
-        one: peso Arcʼhantina
-        two: beso Arcʼhantina
-        few: feso Arcʼhantina
-        many: a pesoioù Arcʼhantina
-    AUD:
-      symbol: "$A"
-      display_names:
-        other: dollar Aostralia
-        one: dollar Aostralia
-        two: zollar Aostralia
-        few: dollar Aostralia
-        many: a zollaroù Aostralia
-    AZN:
-      display_names:
-        other: manat Azerbaidjan
-        one: manat Azerbaidjan
-        two: vanat Azerbaidjan
-        few: manat Azerbaidjan
-        many: a vanatoù Azerbaidjan
-    BAM:
-      display_names:
-        other: mark kemmadus Bosnia ha Herzegovina
-        one: mark kemmadus Bosnia ha Herzegovina
-        two: vark kemmadus Bosnia ha Herzegovina
-        few: mark kemmadus Bosnia ha Herzegovina
-        many: a varkoù kemmadus Bosnia ha Herzegovina
-    BBD:
-      display_names:
-        other: dollar Barbados
-        one: dollar Barbados
-        two: zollar Barbados
-        few: dollar Barbados
-        many: a zollaroù Barbados
-    BDT:
-      display_names:
-        other: taka Bangladesh
-        one: taka Bangladesh
-        two: daka Bangladesh
-        few: zaka Bangladesh
-        many: a dakaoù Bangladesh
-    BMD:
-      display_names:
-        other: dollar Bermuda
-        one: dollar Bermuda
-        two: zollar Bermuda
-        few: dollar Bermuda
-        many: a zollaroù Bermuda
-    BND:
-      display_names:
-        other: dollar Brunei
-        one: dollar Brunei
-        two: zollar Brunei
-        few: dollar Brunei
-        many: a zollaroù Brunei
-    BOB:
-      display_names:
-        other: boliviano Bolivia
-        one: boliviano Bolivia
-        two: voliviano Bolivia
-        few: boliviano Bolivia
-        many: a volivianoioù Bolivia
-    BRL:
-      symbol: BRL
-      display_names:
-        other: real Brazil
-        one: real Brazil
-        two: real Brazil
-        few: real Brazil
-        many: a realioù Brazil
-    BSD:
-      display_names:
-        other: dollar Bahamas
-        one: dollar Bahamas
-        two: zollar Bahamas
-        few: dollar Bahamas
-        many: a zollaroù Bahamas
-    BWP:
-      display_names:
-        other: pula Botswana
-        one: pula Botswana
-        two: bula Botswana
-        few: fula Botswana
-        many: a bulaoù Botswana
-    BZD:
-      display_names:
-        other: dollar Belize
-        one: dollar Belize
-        two: zollar Belize
-        few: dollar Belize
-        many: a zollaroù Belize
-    CAD:
-      symbol: "$CA"
-      display_names:
-        other: dollar Kanada
-        one: dollar Kanada
-        two: zollar Kanada
-        few: dollar Kanada
-        many: a zollaroù Kanada
-    CLP:
-      display_names:
-        other: peso Chile
-        one: peso Chile
-        two: beso Chile
-        few: feso Chile
-        many: a besoioù Chile
-    CNY:
-      symbol: CNY
-      display_names:
-        other: yuan Sina
-        one: yuan Sina
-        two: yuan Sina
-        few: yuan Sina
-        many: a yuanoù Sina
-    COP:
-      display_names:
-        other: peso Kolombia
-        one: peso Kolombia
-        two: beso Kolombia
-        few: feso Kolombia
-        many: a besoioù Kolombia
-    CRC:
-      display_names:
-        other: colón Costa Rica
-        one: cʼholón Costa Rica
-        two: golón Costa Rica
-        few: cʼholón Costa Rica
-        many: a golónoù Costa Rica
-    CUC:
-      display_names:
-        other: peso kemmadus Kuba
-        one: peso kemmadus Kuba
-        two: beso gemmadus Kuba
-        few: feso kemmadus Kuba
-        many: a besoioù kemmadus Kuba
-    CUP:
-      display_names:
-        other: peso Kuba
-        one: peso Kuba
-        two: beso Kuba
-        few: feso Kuba
-        many: a besoioù Kuba
-    CZK:
-      display_names:
-        other: kurunenn Tchek
-        one: gurunenn Tchek
-        two: gurunenn Tchek
-        few: cʼhurunenn Tchek
-        many: a gurunennoù Tchek
-    DKK:
-      display_names:
-        other: kurunenn Danmark
-        one: gurunenn Danmark
-        two: gurunenn Danmark
-        few: cʼhurunenn Danmark
-        many: a gurunennoù Danmark
-    DOP:
-      display_names:
-        other: peso Dominikan
-        one: peso Dominikan
-        two: beso Dominikan
-        few: feso Dominikan
-        many: a besoioù Dominikan
-    EGP:
-      symbol: "£ E"
-      display_names:
-        other: lur Egipt
-        one: lur Egipt
-        two: lur Egipt
-        few: lur Egipt
-        many: a lurioù Egipt
-    ESP:
-      display_names:
-        other: peseta Spagn
-        one: beseta Spagn
-        two: beseta Spagn
-        few: feseta Spagn
-        many: a besetaoù Spagn
-    EUR:
-      display_names:
-        other: euro
-        one: euro
-        two: euro
-        few: euro
-        many: a euroioù
-    FJD:
-      display_names:
-        other: dollar Fidji
-        one: dollar Fidji
-        two: zollar Fidji
-        few: dollar Fidji
-        many: a zollaroù Fidji
-    FKP:
-      display_names:
-        other: lur Inizi Falkland
-        one: lur Inizi Falkland
-        two: lur Inizi Falkland
-        few: lur Inizi Falkland
-        many: a lurioù Inizi Falkland
-    GBP:
-      symbol: "£ RU"
-      display_names:
-        other: lur Breizh-Veur
-        one: lur Breizh-Veur
-        two: lur Breizh-Veur
-        few: lur Breizh-Veur
-        many: a lurioù Breizh-Veur
-    GEL:
-      display_names:
-        other: lari Jorjia
-        one: lari Jorjia
-        two: lari Jorjia
-        few: lari Jorjia
-        many: a larioù Jorjia
-    GHS:
-      display_names:
-        other: cedi Ghana
-        one: cedi Ghana
-    GIP:
-      display_names:
-        other: lur Jibraltar
-        one: lur Jibraltar
-        two: lur Jibraltar
-        few: lur Jibraltar
-        many: a lurioù Jibraltar
-    GNF:
-      display_names:
-        other: lur Ginea
-        one: lur Ginea
-        two: lur Ginea
-        few: lur Ginea
-        many: a lurioù Ginea
-    GTQ:
-      display_names:
-        other: quetzal Guatemala
-        one: cʼhuetzal Guatemala
-        two: guetzal Guatemala
-        few: cʼhuetzal Guatemala
-        many: a guetzaloù Guatemala
-    GYD:
-      display_names:
-        other: dollar Guyana
-        one: dollar Guyana
-        two: zollar Guyana
-        few: dollar Guyana
-        many: a zollaroù Guyana
-    HKD:
-      symbol: "$ HK"
-      display_names:
-        other: dollar Hong Kong
-        one: dollar Hong Kong
-        two: zollar Hong Kong
-        few: dollar Hong Kong
-        many: a zollaroù Hong Kong
-    HNL:
-      display_names:
-        other: lempira Honduras
-        one: lempira Honduras
-        two: lempira Honduras
-        few: lempira Honduras
-        many: a lempiraoù Honduras
-    HRK:
-      display_names:
-        other: kuna Kroatia
-        one: cʼhuna Kroatia
-        two: guna Kroatia
-        few: cʼhuna Kroatia
-        many: a gunaoù Kroatia
-    HUF:
-      display_names:
-        other: forint Hungaria
-        one: forint Hungaria
-        two: forint Hungaria
-        few: forint Hungaria
-        many: a forintoù Hungaria
-    IDR:
-      display_names:
-        other: roupi Indonezia
-        one: roupi Indonezia
-        two: roupi Indonezia
-        few: roupi Indonezia
-        many: a roupioù Indonezia
-    ILS:
-      symbol: ILS
-      display_names:
-        other: shekel nevez Israel
-        one: shekel nevez Israel
-    INR:
-      display_names:
-        other: roupi India
-        one: roupi India
-        two: roupi India
-        few: roupi India
-        many: a roupioù India
-    ISK:
-      display_names:
-        other: kurunenn Island
-        one: gurunenn Island
-        two: gurunenn Island
-        few: cʼhurunenn Island
-        many: a gurunennoù Island
-    JMD:
-      display_names:
-        other: dollar Jamaika
-        one: dollar Jamaika
-        two: zollar Jamaika
-        few: dollar Jamaika
-        many: a zollaroù Jamaika
-    JPY:
-      symbol: JPY
-      display_names:
-        other: yen Japan
-        one: yen Japan
-        two: yen Japan
-        few: yen Japan
-        many: a yenoù Japan
-    KGS:
-      display_names:
-        other: som Kyrgyzstan
-        one: som Kyrgyzstan
-        two: som Kyrgyzstan
-        few: som Kyrgyzstan
-        many: a somoù Kyrgyzstan
-    KHR:
-      display_names:
-        other: riel Kambodja
-        one: riel Kambodja
-        two: riel Kambodja
-        few: riel Kambodja
-        many: a rieloù Kambodja
-    KMF:
-      display_names:
-        other: lur Komorez
-        one: lur Komorez
-        two: lur Komorez
-        few: lur Komorez
-        many: a lurioù Komorez
-    KPW:
-      display_names:
-        other: won Korea an Norzh
-        one: won Korea an Norzh
-        two: won Korea an Norzh
-        few: won Korea an Norzh
-        many: a wonoù Korea an Norzh
-    KRW:
-      symbol: KRW
-      display_names:
-        other: won Korea ar Su
-        one: won Korea ar Su
-        two: won Korea ar Su
-        few: won Korea ar Su
-        many: a wonoù Korea ar Su
-    KYD:
-      display_names:
-        other: dollar Inizi Cayman
-        one: dollar Inizi Cayman
-        two: zollar Inizi Cayman
-        few: dollar Inizi Cayman
-        many: a zollaroù Inizi Cayman
-    KZT:
-      display_names:
-        other: tenge Kazakstan
-        one: tenge Kazakstan
-        two: denge Kazakstan
-        few: zenge Kazakstan
-        many: a dengeoù Kazakstan
-    LAK:
-      display_names:
-        other: kip Laos
-        one: cʼhip Laos
-        two: gip Laos
-        few: cʼhip Laos
-        many: a gipoù Laos
-    LBP:
-      symbol: "£L"
-      display_names:
-        other: lur Liban
-        one: lur Liban
-        two: lur Liban
-        few: lur Liban
-        many: a lurioù Liban
-    LKR:
-      display_names:
-        other: roupi Sri Lanka
-        one: roupi Sri Lanka
-        two: roupi Sri Lanka
-        few: roupi Sri Lanka
-        many: a roupioù Sri Lanka
-    LRD:
-      display_names:
-        other: dollar Liberia
-        one: dollar Liberia
-        two: zollar Liberia
-        few: dollar Liberia
-        many: a zollaroù Liberia
-    LTL:
-      display_names:
-        other: litas Lituania
-        one: litas Lituania
-        two: litas Lituania
-        few: litas Lituania
-        many: a litasoù Lituania
-    LVL:
-      display_names:
-        other: lats Latvia
-        one: lats Latvia
-        two: lats Latvia
-        few: lats Latvia
-        many: a latsoù Latvia
-    MGA:
-      display_names:
-        other: ariary Madagaskar
-        one: ariary Madagaskar
-        two: ariary Madagaskar
-        few: ariary Madagaskar
-        many: a ariaryoù Madagaska
-    MMK:
-      display_names:
-        other: kyat Myanmar
-        one: cʼhyat Myanmar
-        two: gyat Myanmar
-        few: cʼhyat Myanmar
-        many: a gyatoù Myanmar
-    MNT:
-      display_names:
-        other: tugrik Mongolia
-        one: tugrik Mongolia
-        two: dugrik Mongolia
-        few: zugrik Mongolia
-        many: a dugrikoù Mongolia
-    MUR:
-      display_names:
-        other: roupi Moris
-        one: roupi Moris
-        two: roupi Moris
-        few: roupi Moris
-        many: a roupioù Moris
-    MXN:
-      display_names:
-        other: peso Mecʼhiko
-        one: peso Mecʼhiko
-        two: beso Mecʼhiko
-        few: feso Mecʼhiko
-        many: a besoioù Mecʼhiko
-    MYR:
-      display_names:
-        other: ringgit Malaysia
-        one: ringgit Malaysia
-        two: ringgit Malaysia
-        few: ringgit Malaysia
-        many: a ringgitoù Malaysia
-    NAD:
-      display_names:
-        other: dollar Namibia
-        one: dollar Namibia
-        two: zollar Namibia
-        few: dollar Namibia
-        many: a zollaroù Namibia
-    NGN:
-      display_names:
-        other: naira Nigeria
-        one: naira Nigeria
-        two: naira Nigeria
-        few: naira Nigeria
-        many: a nairaoù Nigeria
-    NIO:
-      display_names:
-        other: cordoba Nicaragua
-        one: cʼhordoba Nicaragua
-        two: gordoba Nicaragua
-        few: cʼhordoba Nicaragua
-        many: a gordobaoù Nicaragua
-    NOK:
-      display_names:
-        other: kurunenn Norvegia
-        one: gurunenn Norvegia
-        two: gurunenn Norvegia
-        few: cʼhurunenn Norvegia
-        many: a gurunennoù Norvegia
-    NPR:
-      display_names:
-        other: roupi Nepal
-        one: roupi Nepal
-        two: roupi Nepal
-        few: roupi Nepal
-        many: a roupioù Nepal
-    NZD:
-      symbol: "$ ZN"
-      display_names:
-        other: dollar Zeland-Nevez
-        one: dollar Zeland-Nevez
-        two: zollar Zeland-Nevez
-        few: dollar Zeland-Nevez
-        many: a zollaroù Zeland-Nevez
-    PHP:
-      symbol: PHP
-      display_names:
-        other: peso Filipinez
-        one: peso Filipinez
-        two: beso Filipinez
-        few: feso Filipinez
-        many: a besoioù Filipinez
-    PKR:
-      display_names:
-        other: roupi Pakistan
-        one: roupi Pakistan
-        two: roupi Pakistan
-        few: roupi Pakistan
-        many: a roupioù Pakistan
-    PLN:
-      display_names:
-        other: zloty Polonia
-        one: zloty Polonia
-        two: zloty Polonia
-        few: zloty Polonia
-        many: a zlotyoù Polonia
-    PYG:
-      display_names:
-        other: guarani Paraguay
-        one: guarani Paraguay
-        two: uarani Paraguay
-        few: guarani Paraguay
-        many: a uaranioù Paraguay
-    RON:
-      display_names:
-        other: leu Roumania
-        one: leu Roumania
-    RUB:
-      display_names:
-        other: roubl Rusia
-        one: roubl Rusia
-        two: roubl Rusia
-        few: roubl Rusia
-        many: a roubloù Rusia
-    RWF:
-      display_names:
-        other: lur Rwanda
-        one: lur Rwanda
-        two: lur Rwanda
-        few: lur Rwanda
-        many: a lurioù Rwanda
-    SBD:
-      display_names:
-        other: dollar Inizi Salomon
-        one: dollar Inizi Salomon
-        two: zollar Inizi Salomon
-        few: dollar Inizi Salomon
-        many: a zollaroù Inizi Salomon
-    SEK:
-      display_names:
-        other: kurunenn Sveden
-        one: gurunenn Sveden
-        two: gurunenn Sveden
-        few: cʼhurunenn Sveden
-        many: a gurunennoù Sveden
-    SGD:
-      display_names:
-        other: dollar Singapour
-        one: dollar Singapour
-        two: zollar Singapour
-        few: dollar Singapour
-        many: a zollaroù Singapour
-    SHP:
-      display_names:
-        other: lur Saint-Helena
-        one: lur Saint-Helena
-        two: lur Saint-Helena
-        few: lur Saint-Helena
-        many: a lurioù Saint-Helena
-    SRD:
-      display_names:
-        other: dollar Surinam
-        one: dollar Surinam
-        two: zollar Surinam
-        few: dollar Surinam
-        many: a zollaroù Surinam
-    SSP:
-      display_names:
-        other: lur Susoudan
-        one: lur Susoudan
-        two: lur Susoudan
-        few: lur Susoudan
-        many: a lurioù Susoudan
-    STN:
-      display_names:
-        other: dobra São Tomé ha Príncipe
-        one: dobra São Tomé ha Príncipe
-        two: zobra São Tomé ha Príncipe
-        few: dobra São Tomé ha Príncipe
-        many: a zobraoù São Tomé ha Príncipe
-    SYP:
-      display_names:
-        other: lur Siria
-        one: lur Siria
-        two: lur Siria
-        few: lur Siria
-        many: a lurioù Siria
-    THB:
-      display_names:
-        other: baht Thailand
-        one: baht Thailand
-        two: vaht Thailand
-        few: baht Thailand
-        many: a vahtoù Thailand
-    TOP:
-      symbol: "$ T"
-      display_names:
-        other: paʻanga Tonga
-        one: paʻanga Tonga
-        two: baʻanga Tonga
-        few: faʻanga Tonga
-        many: a baʻangaoù Tonga
-    TRY:
-      display_names:
-        other: lur Turkia
-        one: lur Turkia
-        two: lur Turkia
-        few: lur Turkia
-        many: a lurioù Turkia
-    TTD:
-      display_names:
-        other: dollar Trinidad ha Tobago
-        one: dollar Trinidad ha Tobago
-        two: zollar Trinidad ha Tobago
-        few: dollar Trinidad ha Tobago
-        many: a zollaroù Trinidad ha Tobago
-    TWD:
-      symbol: TWD
-      display_names:
-        other: dollar nevez Taiwan
-        one: dollar nevez Taiwan
-        two: zollar nevez Taiwan
-        few: dollar nevez Taiwan
-        many: a zollaroù nevez Taiwan
-    UAH:
-      display_names:
-        other: hryvnia Ukraina
-        one: hryvnia Ukraina
-        two: hryvnia Ukraina
-        few: hryvnia Ukraina
-        many: a hryvniaoù Ukraina
-    USD:
-      symbol: "$ SU"
-      display_names:
-        other: dollar SU
-        one: dollar SU
-        two: zollar SU
-        few: dollar SU
-        many: a zollaroù SU
-    UYU:
-      display_names:
-        other: peso Uruguay
-        one: peso Uruguay
-        two: beso Uruguay
-        few: feso Uruguay
-        many: a besoioù Uruguay
-    VEF:
-      display_names:
-        other: bolivar Venezuela (2008–2018)
-        one: bolivar Venezuela (2008–2018)
-        two: volivar Venezuela (2008–2018)
-        few: bolivar Venezuela (2008–2018)
-        many: a volivaroù Venezuela (2008–2018)
-    VND:
-      symbol: VND
-      display_names:
-        other: dong Viêt Nam
-        one: dong Viêt Nam
-        two: zong Viêt Nam
-        few: dong Viêt Nam
-        many: a zongoù Viêt Nam
-    XAF:
-      display_names:
-        other: lur CFA Kreizafrika
-        one: lur CFA Kreizafrika
-    XCD:
-      symbol: XCD
-      display_names:
-        other: dollar Karib ar reter
-        one: dollar Karib ar reter
-        two: zollar Karib ar reter
-        few: dollar Karib ar reter
-        many: a zollaroù Karib ar reter
-    XOF:
-      display_names:
-        other: lur CFA Afrika ar Cʼhornôg
-        one: lur CFA Afrika ar Cʼhornôg
-        two: lur CFA BCEAO
-        few: lur CFA BCEAO
-        many: a lurioù CFA BCEAO
-    XPF:
-      display_names:
-        other: lur CFP
-        one: lur CFP
-        two: lur CFP
-        few: lur CFP
-        many: a lurioù CFP
-    XXX:
-      symbol: XXX
-      display_names:
-        other: "(moneiz dianav)"
-        one: "(moneiz dianav)"
-        two: "(moneiz dianav)"
-        few: "(moneiz dianav)"
-        many: "(moneiz dianav)"
-    ZAR:
-      display_names:
-        other: rand Suafrika
-        one: rand Suafrika
-        two: rand Suafrika
-        few: rand Suafrika
-        many: a randoù Suafrika
-    ZMW:
-      display_names:
-        other: kwacha Zambia
-        one: cʼhwacha Zambia
-        two: gwacha Zambia
-        few: kwacha Zambia
-        many: a gwachaoù Zambia
     ADP:
       display_names:
         other: peseta Andorra
@@ -774,6 +120,13 @@ number_formats:
         two: afghani Afghanistan (1927–2002)
         few: afghani Afghanistan (1927–2002)
         many: a afghanioù Afghanistan (1927–2002)
+    AFN:
+      display_names:
+        other: afghani Afghanistan
+        one: afghani Afghanistan
+        two: afghani Afghanistan
+        few: afghani Afghanistan
+        many: a afghanioù Afghanistan
     ALK:
       display_names:
         other: lek Albania (1946–1965)
@@ -788,6 +141,13 @@ number_formats:
         two: lek Albania
         few: lek Albania
         many: a lekoù Albania
+    AMD:
+      display_names:
+        other: dram Armenia
+        one: dram Armenia
+        two: zram Armenia
+        few: dram Armenia
+        many: a zramoù Armenia
     ANG:
       display_names:
         other: florin Antilhez nederlandat
@@ -795,6 +155,13 @@ number_formats:
         two: florin Antilhez nederlandat
         few: florin Antilhez nederlandat
         many: a florinoù Antilhez
+    AOA:
+      display_names:
+        other: kwanza Angola
+        one: cʼhwanza Angola
+        two: gwanza Angola
+        few: cʼhwanza Angola
+        many: a gwanzaoù Angola
     AOK:
       display_names:
         other: kwanza Angola (1977–1991)
@@ -823,6 +190,13 @@ number_formats:
         two: beso Arcʼhantina (1983–1985)
         few: feso Arcʼhantina (1983–1985)
         many: a besoioù Arcʼhantina (1983–1985)
+    ARS:
+      display_names:
+        other: peso Arcʼhantina
+        one: peso Arcʼhantina
+        two: beso Arcʼhantina
+        few: feso Arcʼhantina
+        many: a pesoioù Arcʼhantina
     ATS:
       display_names:
         other: schilling Aostria
@@ -830,6 +204,14 @@ number_formats:
         two: schilling Aostria
         few: schilling Aostria
         many: a schillingoù Aostria
+    AUD:
+      symbol: "$A"
+      display_names:
+        other: dollar Aostralia
+        one: dollar Aostralia
+        two: zollar Aostralia
+        few: dollar Aostralia
+        many: a zollaroù Aostralia
     AWG:
       display_names:
         other: florin Aruba
@@ -844,6 +226,13 @@ number_formats:
         two: vanat Azerbaidjan (1993–2006)
         few: manat Azerbaidjan (1993–2006)
         many: a vanatoù Azerbaidjan (1993–2006)
+    AZN:
+      display_names:
+        other: manat Azerbaidjan
+        one: manat Azerbaidjan
+        two: vanat Azerbaidjan
+        few: manat Azerbaidjan
+        many: a vanatoù Azerbaidjan
     BAD:
       display_names:
         other: dinar Bosnia ha Herzegovina (1992–1994)
@@ -851,6 +240,13 @@ number_formats:
         two: zinar Bosnia ha Herzegovina (1992–1994)
         few: dinar Bosnia ha Herzegovina (1992–1994)
         many: a zinaroù Bosnia ha Herzegovina (1992–1994)
+    BAM:
+      display_names:
+        other: mark kemmadus Bosnia ha Herzegovina
+        one: mark kemmadus Bosnia ha Herzegovina
+        two: vark kemmadus Bosnia ha Herzegovina
+        few: mark kemmadus Bosnia ha Herzegovina
+        many: a varkoù kemmadus Bosnia ha Herzegovina
     BAN:
       display_names:
         other: dinar nevez Bosnia ha Herzegovina (1994–1997)
@@ -858,6 +254,20 @@ number_formats:
         two: zinar nevez Bosnia ha Herzegovina (1994–1997)
         few: dinar nevez Bosnia ha Herzegovina (1994–1997)
         many: a zinaroù nevez Bosnia ha Herzegovina (1994–1997)
+    BBD:
+      display_names:
+        other: dollar Barbados
+        one: dollar Barbados
+        two: zollar Barbados
+        few: dollar Barbados
+        many: a zollaroù Barbados
+    BDT:
+      display_names:
+        other: taka Bangladesh
+        one: taka Bangladesh
+        two: daka Bangladesh
+        few: zaka Bangladesh
+        many: a dakaoù Bangladesh
     BEC:
       display_names:
         other: lur Belgia (kemmadus)
@@ -907,6 +317,27 @@ number_formats:
         two: lur Burundi
         few: lur Burundi
         many: a lurioù Burundi
+    BMD:
+      display_names:
+        other: dollar Bermuda
+        one: dollar Bermuda
+        two: zollar Bermuda
+        few: dollar Bermuda
+        many: a zollaroù Bermuda
+    BND:
+      display_names:
+        other: dollar Brunei
+        one: dollar Brunei
+        two: zollar Brunei
+        few: dollar Brunei
+        many: a zollaroù Brunei
+    BOB:
+      display_names:
+        other: boliviano Bolivia
+        one: boliviano Bolivia
+        two: voliviano Bolivia
+        few: boliviano Bolivia
+        many: a volivianoioù Bolivia
     BOL:
       display_names:
         other: boliviano Bolivia (1863–1963)
@@ -921,6 +352,21 @@ number_formats:
         two: beso Bolivia
         few: feso Bolivia
         many: a besoioù Bolivia
+    BRL:
+      symbol: BRL
+      display_names:
+        other: real Brazil
+        one: real Brazil
+        two: real Brazil
+        few: real Brazil
+        many: a realioù Brazil
+    BSD:
+      display_names:
+        other: dollar Bahamas
+        one: dollar Bahamas
+        two: zollar Bahamas
+        few: dollar Bahamas
+        many: a zollaroù Bahamas
     BTN:
       display_names:
         other: ngultrum Bhoutan
@@ -935,6 +381,13 @@ number_formats:
         two: gyat Birmania
         few: cʼhyat Birmania
         many: a gyatoù Birmania
+    BWP:
+      display_names:
+        other: pula Botswana
+        one: pula Botswana
+        two: bula Botswana
+        few: fula Botswana
+        many: a bulaoù Botswana
     BYB:
       display_names:
         other: roubl nevez Belarus (1994–1999)
@@ -957,6 +410,21 @@ number_formats:
         two: roubl Belarus (2000–2016)
         few: roubl Belarus (2000–2016)
         many: a roubloù Belarus (2000–2016)
+    BZD:
+      display_names:
+        other: dollar Belize
+        one: dollar Belize
+        two: zollar Belize
+        few: dollar Belize
+        many: a zollaroù Belize
+    CAD:
+      symbol: "$CA"
+      display_names:
+        other: dollar Kanada
+        one: dollar Kanada
+        two: zollar Kanada
+        few: dollar Kanada
+        many: a zollaroù Kanada
     CDF:
       display_names:
         other: lur Kongo
@@ -999,6 +467,13 @@ number_formats:
         two: unanenn jediñ Chile
         few: unanenn jediñ Chile
         many: a unanennoù jediñ Chile
+    CLP:
+      display_names:
+        other: peso Chile
+        one: peso Chile
+        two: beso Chile
+        few: feso Chile
+        many: a besoioù Chile
     CNH:
       display_names:
         other: yuan Sina (diavaez)
@@ -1013,6 +488,28 @@ number_formats:
         two: zollar Bank poblel Sina
         few: dollar Bank poblel Sina
         many: a zollaroù Bank poblel Sina
+    CNY:
+      symbol: CNY
+      display_names:
+        other: yuan Sina
+        one: yuan Sina
+        two: yuan Sina
+        few: yuan Sina
+        many: a yuanoù Sina
+    COP:
+      display_names:
+        other: peso Kolombia
+        one: peso Kolombia
+        two: beso Kolombia
+        few: feso Kolombia
+        many: a besoioù Kolombia
+    CRC:
+      display_names:
+        other: colón Costa Rica
+        one: cʼholón Costa Rica
+        two: golón Costa Rica
+        few: cʼholón Costa Rica
+        many: a golónoù Costa Rica
     CSD:
       display_names:
         other: dinar Serbia (2002–2006)
@@ -1020,6 +517,20 @@ number_formats:
         two: zinar Serbia (2002–2006)
         few: dinar Serbia (2002–2006)
         many: a zinaroù Serbia (2002–2006)
+    CUC:
+      display_names:
+        other: peso kemmadus Kuba
+        one: peso kemmadus Kuba
+        two: beso gemmadus Kuba
+        few: feso kemmadus Kuba
+        many: a besoioù kemmadus Kuba
+    CUP:
+      display_names:
+        other: peso Kuba
+        one: peso Kuba
+        two: beso Kuba
+        few: feso Kuba
+        many: a besoioù Kuba
     CVE:
       display_names:
         other: escudo Kab Glas
@@ -1034,6 +545,13 @@ number_formats:
         two: lur Kiprenez
         few: lur Kiprenez
         many: a lurioù Kiprenez
+    CZK:
+      display_names:
+        other: kurunenn Tchek
+        one: gurunenn Tchek
+        two: gurunenn Tchek
+        few: cʼhurunenn Tchek
+        many: a gurunennoù Tchek
     DDM:
       display_names:
         other: mark Alamagn ar Reter
@@ -1055,6 +573,20 @@ number_formats:
         two: lur Djibouti
         few: lur Djibouti
         many: a lurioù Djibouti
+    DKK:
+      display_names:
+        other: kurunenn Danmark
+        one: gurunenn Danmark
+        two: gurunenn Danmark
+        few: cʼhurunenn Danmark
+        many: a gurunennoù Danmark
+    DOP:
+      display_names:
+        other: peso Dominikan
+        one: peso Dominikan
+        two: beso Dominikan
+        few: feso Dominikan
+        many: a besoioù Dominikan
     DZD:
       display_names:
         other: dinar Aljeria
@@ -1069,6 +601,14 @@ number_formats:
         two: gurunenn Estonia
         few: cʼhurunenn Estonia
         many: a gurunennoù Estonia
+    EGP:
+      symbol: "£ E"
+      display_names:
+        other: lur Egipt
+        one: lur Egipt
+        two: lur Egipt
+        few: lur Egipt
+        many: a lurioù Egipt
     ERN:
       display_names:
         other: nakfa Eritrea
@@ -1083,6 +623,13 @@ number_formats:
         two: beseta gemmadus Spagn
         few: feseta gemmadus Spagn
         many: a besetaoù kemmadus Spagn
+    ESP:
+      display_names:
+        other: peseta Spagn
+        one: beseta Spagn
+        two: beseta Spagn
+        few: feseta Spagn
+        many: a besetaoù Spagn
     ETB:
       display_names:
         other: birr Etiopia
@@ -1090,6 +637,13 @@ number_formats:
         two: virr Etiopia
         few: birr Etiopia
         many: a virroù Etiopia
+    EUR:
+      display_names:
+        other: euro
+        one: euro
+        two: euro
+        few: euro
+        many: a euroioù
     FIM:
       display_names:
         other: mark Finland
@@ -1097,6 +651,20 @@ number_formats:
         two: vark Finland
         few: mark Finland
         many: a varkoù Finland
+    FJD:
+      display_names:
+        other: dollar Fidji
+        one: dollar Fidji
+        two: zollar Fidji
+        few: dollar Fidji
+        many: a zollaroù Fidji
+    FKP:
+      display_names:
+        other: lur Inizi Falkland
+        one: lur Inizi Falkland
+        two: lur Inizi Falkland
+        few: lur Inizi Falkland
+        many: a lurioù Inizi Falkland
     FRF:
       display_names:
         other: lur gall
@@ -1104,6 +672,32 @@ number_formats:
         two: lur gall
         few: lur gall
         many: a lurioù gall
+    GBP:
+      symbol: "£ RU"
+      display_names:
+        other: lur Breizh-Veur
+        one: lur Breizh-Veur
+        two: lur Breizh-Veur
+        few: lur Breizh-Veur
+        many: a lurioù Breizh-Veur
+    GEL:
+      display_names:
+        other: lari Jorjia
+        one: lari Jorjia
+        two: lari Jorjia
+        few: lari Jorjia
+        many: a larioù Jorjia
+    GHS:
+      display_names:
+        other: cedi Ghana
+        one: cedi Ghana
+    GIP:
+      display_names:
+        other: lur Jibraltar
+        one: lur Jibraltar
+        two: lur Jibraltar
+        few: lur Jibraltar
+        many: a lurioù Jibraltar
     GMD:
       display_names:
         other: dalasi Gambia
@@ -1111,6 +705,13 @@ number_formats:
         two: zalasi Gambia
         few: dalasi Gambia
         many: a zalasioù Gambia
+    GNF:
+      display_names:
+        other: lur Ginea
+        one: lur Ginea
+        two: lur Ginea
+        few: lur Ginea
+        many: a lurioù Ginea
     GNS:
       display_names:
         other: syli Ginea
@@ -1132,6 +733,13 @@ number_formats:
         two: zrakm Gres
         few: drakm Gres
         many: a zrakmoù Gres
+    GTQ:
+      display_names:
+        other: quetzal Guatemala
+        one: cʼhuetzal Guatemala
+        two: guetzal Guatemala
+        few: cʼhuetzal Guatemala
+        many: a guetzaloù Guatemala
     GWP:
       display_names:
         other: peso Ginea-Bissau
@@ -1139,6 +747,28 @@ number_formats:
         two: beso Ginea-Bissau
         few: feso Ginea-Bissau
         many: a besoioù Ginea-Bissau
+    GYD:
+      display_names:
+        other: dollar Guyana
+        one: dollar Guyana
+        two: zollar Guyana
+        few: dollar Guyana
+        many: a zollaroù Guyana
+    HKD:
+      symbol: "$ HK"
+      display_names:
+        other: dollar Hong Kong
+        one: dollar Hong Kong
+        two: zollar Hong Kong
+        few: dollar Hong Kong
+        many: a zollaroù Hong Kong
+    HNL:
+      display_names:
+        other: lempira Honduras
+        one: lempira Honduras
+        two: lempira Honduras
+        few: lempira Honduras
+        many: a lempiraoù Honduras
     HRD:
       display_names:
         other: dinar Kroatia
@@ -1146,6 +776,13 @@ number_formats:
         two: zinar Kroatia
         few: dinar Kroatia
         many: a zinaroù Kroatia
+    HRK:
+      display_names:
+        other: kuna Kroatia
+        one: cʼhuna Kroatia
+        two: guna Kroatia
+        few: cʼhuna Kroatia
+        many: a gunaoù Kroatia
     HTG:
       display_names:
         other: gourde Haiti
@@ -1153,6 +790,20 @@ number_formats:
         two: cʼhourde Haiti
         few: gourde Haiti
         many: a cʼhourdeoù Haiti
+    HUF:
+      display_names:
+        other: forint Hungaria
+        one: forint Hungaria
+        two: forint Hungaria
+        few: forint Hungaria
+        many: a forintoù Hungaria
+    IDR:
+      display_names:
+        other: roupi Indonezia
+        one: roupi Indonezia
+        two: roupi Indonezia
+        few: roupi Indonezia
+        many: a roupioù Indonezia
     IEP:
       display_names:
         other: lur Iwerzhon
@@ -1171,6 +822,18 @@ number_formats:
       display_names:
         other: shekel Israel (1980–1985)
         one: shekel Israel (1980–1985)
+    ILS:
+      symbol: ILS
+      display_names:
+        other: shekel nevez Israel
+        one: shekel nevez Israel
+    INR:
+      display_names:
+        other: roupi India
+        one: roupi India
+        two: roupi India
+        few: roupi India
+        many: a roupioù India
     IQD:
       display_names:
         other: dinar Iraq
@@ -1192,6 +855,13 @@ number_formats:
         two: gurunenn Island (1918–1981)
         few: cʼhurunenn Island (1918–1981)
         many: a gurunennoù Island (1918–1981)
+    ISK:
+      display_names:
+        other: kurunenn Island
+        one: gurunenn Island
+        two: gurunenn Island
+        few: cʼhurunenn Island
+        many: a gurunennoù Island
     ITL:
       display_names:
         other: lur Italia
@@ -1199,6 +869,13 @@ number_formats:
         two: lur Italia
         few: lur Italia
         many: a lurioù Italia
+    JMD:
+      display_names:
+        other: dollar Jamaika
+        one: dollar Jamaika
+        two: zollar Jamaika
+        few: dollar Jamaika
+        many: a zollaroù Jamaika
     JOD:
       display_names:
         other: dinar Jordania
@@ -1206,6 +883,14 @@ number_formats:
         two: zinar Jordania
         few: dinar Jordania
         many: a zinaroù Jordania
+    JPY:
+      symbol: JPY
+      display_names:
+        other: yen Japan
+        one: yen Japan
+        two: yen Japan
+        few: yen Japan
+        many: a yenoù Japan
     KES:
       display_names:
         other: shilling Kenya
@@ -1213,6 +898,34 @@ number_formats:
         two: shilling Kenya
         few: shilling Kenya
         many: a shillingoù Kenya
+    KGS:
+      display_names:
+        other: som Kyrgyzstan
+        one: som Kyrgyzstan
+        two: som Kyrgyzstan
+        few: som Kyrgyzstan
+        many: a somoù Kyrgyzstan
+    KHR:
+      display_names:
+        other: riel Kambodja
+        one: riel Kambodja
+        two: riel Kambodja
+        few: riel Kambodja
+        many: a rieloù Kambodja
+    KMF:
+      display_names:
+        other: lur Komorez
+        one: lur Komorez
+        two: lur Komorez
+        few: lur Komorez
+        many: a lurioù Komorez
+    KPW:
+      display_names:
+        other: won Korea an Norzh
+        one: won Korea an Norzh
+        two: won Korea an Norzh
+        few: won Korea an Norzh
+        many: a wonoù Korea an Norzh
     KRH:
       display_names:
         other: hwan Korea ar Su (1953–1962)
@@ -1227,6 +940,14 @@ number_formats:
         two: won Korea ar Su (1945–1953)
         few: won Korea ar Su (1945–1953)
         many: a wonoù Korea ar Su (1945–1953)
+    KRW:
+      symbol: KRW
+      display_names:
+        other: won Korea ar Su
+        one: won Korea ar Su
+        two: won Korea ar Su
+        few: won Korea ar Su
+        many: a wonoù Korea ar Su
     KWD:
       display_names:
         other: dinar Koweit
@@ -1234,6 +955,49 @@ number_formats:
         two: zinar Koweit
         few: dinar Koweit
         many: a zinaroù Koweit
+    KYD:
+      display_names:
+        other: dollar Inizi Cayman
+        one: dollar Inizi Cayman
+        two: zollar Inizi Cayman
+        few: dollar Inizi Cayman
+        many: a zollaroù Inizi Cayman
+    KZT:
+      display_names:
+        other: tenge Kazakstan
+        one: tenge Kazakstan
+        two: denge Kazakstan
+        few: zenge Kazakstan
+        many: a dengeoù Kazakstan
+    LAK:
+      display_names:
+        other: kip Laos
+        one: cʼhip Laos
+        two: gip Laos
+        few: cʼhip Laos
+        many: a gipoù Laos
+    LBP:
+      symbol: "£L"
+      display_names:
+        other: lur Liban
+        one: lur Liban
+        two: lur Liban
+        few: lur Liban
+        many: a lurioù Liban
+    LKR:
+      display_names:
+        other: roupi Sri Lanka
+        one: roupi Sri Lanka
+        two: roupi Sri Lanka
+        few: roupi Sri Lanka
+        many: a roupioù Sri Lanka
+    LRD:
+      display_names:
+        other: dollar Liberia
+        one: dollar Liberia
+        two: zollar Liberia
+        few: dollar Liberia
+        many: a zollaroù Liberia
     LSL:
       display_names:
         other: loti Lesotho
@@ -1241,6 +1005,13 @@ number_formats:
         two: loti Lesotho
         few: loti Lesotho
         many: a lotioù Lesotho
+    LTL:
+      display_names:
+        other: litas Lituania
+        one: litas Lituania
+        two: litas Lituania
+        few: litas Lituania
+        many: a litasoù Lituania
     LTT:
       display_names:
         other: talonas Lituania
@@ -1262,6 +1033,13 @@ number_formats:
         two: lur Luksembourg
         few: lur Luksembourg
         many: a lurioù Luksembourg
+    LVL:
+      display_names:
+        other: lats Latvia
+        one: lats Latvia
+        two: lats Latvia
+        few: lats Latvia
+        many: a latsoù Latvia
     LVR:
       display_names:
         other: roubl Latvia
@@ -1301,6 +1079,13 @@ number_formats:
       display_names:
         other: leu Moldova
         one: leu Moldova
+    MGA:
+      display_names:
+        other: ariary Madagaskar
+        one: ariary Madagaskar
+        two: ariary Madagaskar
+        few: ariary Madagaskar
+        many: a ariaryoù Madagaska
     MGF:
       display_names:
         other: lur Madagaskar
@@ -1329,6 +1114,20 @@ number_formats:
         two: lur Mali
         few: lur Mali
         many: a lurioù Mali
+    MMK:
+      display_names:
+        other: kyat Myanmar
+        one: cʼhyat Myanmar
+        two: gyat Myanmar
+        few: cʼhyat Myanmar
+        many: a gyatoù Myanmar
+    MNT:
+      display_names:
+        other: tugrik Mongolia
+        one: tugrik Mongolia
+        two: dugrik Mongolia
+        few: zugrik Mongolia
+        many: a dugrikoù Mongolia
     MOP:
       display_names:
         other: pataca Macau
@@ -1364,6 +1163,13 @@ number_formats:
         two: lur Malta
         few: lur Malta
         many: a lurioù Malta
+    MUR:
+      display_names:
+        other: roupi Moris
+        one: roupi Moris
+        two: roupi Moris
+        few: roupi Moris
+        many: a roupioù Moris
     MVP:
       display_names:
         other: roupi Maldivez
@@ -1385,6 +1191,13 @@ number_formats:
         two: gwacha Malawi
         few: kwacha Malawi
         many: a gwachaoù Malawi
+    MXN:
+      display_names:
+        other: peso Mecʼhiko
+        one: peso Mecʼhiko
+        two: beso Mecʼhiko
+        few: feso Mecʼhiko
+        many: a besoioù Mecʼhiko
     MXP:
       display_names:
         other: peso arcʼhant Mecʼhiko (1861–1992)
@@ -1392,6 +1205,13 @@ number_formats:
         two: beso arcʼhant Mecʼhiko (1861–1992)
         few: feso arcʼhant Mecʼhiko (1861–1992)
         many: a besoioù arcʼhant Mecʼhiko (1861–1992)
+    MYR:
+      display_names:
+        other: ringgit Malaysia
+        one: ringgit Malaysia
+        two: ringgit Malaysia
+        few: ringgit Malaysia
+        many: a ringgitoù Malaysia
     MZE:
       display_names:
         other: escudo Mozambik
@@ -1413,6 +1233,20 @@ number_formats:
         two: vetical Mozambik
         few: metical Mozambik
         many: a veticaloù Mozambik
+    NAD:
+      display_names:
+        other: dollar Namibia
+        one: dollar Namibia
+        two: zollar Namibia
+        few: dollar Namibia
+        many: a zollaroù Namibia
+    NGN:
+      display_names:
+        other: naira Nigeria
+        one: naira Nigeria
+        two: naira Nigeria
+        few: naira Nigeria
+        many: a nairaoù Nigeria
     NIC:
       display_names:
         other: cordoba Nicaragua (1988–1991)
@@ -1420,6 +1254,13 @@ number_formats:
         two: gordoba Nicaragua (1988–1991)
         few: cʼhordoba Nicaragua (1988–1991)
         many: a gordobaoù Nicaragua (1988–1991)
+    NIO:
+      display_names:
+        other: cordoba Nicaragua
+        one: cʼhordoba Nicaragua
+        two: gordoba Nicaragua
+        few: cʼhordoba Nicaragua
+        many: a gordobaoù Nicaragua
     NLG:
       display_names:
         other: florin an Izelvroioù
@@ -1427,6 +1268,28 @@ number_formats:
         two: florin an Izelvroioù
         few: florin an Izelvroioù
         many: a florinoù an Izelvroioù
+    NOK:
+      display_names:
+        other: kurunenn Norvegia
+        one: gurunenn Norvegia
+        two: gurunenn Norvegia
+        few: cʼhurunenn Norvegia
+        many: a gurunennoù Norvegia
+    NPR:
+      display_names:
+        other: roupi Nepal
+        one: roupi Nepal
+        two: roupi Nepal
+        few: roupi Nepal
+        many: a roupioù Nepal
+    NZD:
+      symbol: "$ ZN"
+      display_names:
+        other: dollar Zeland-Nevez
+        one: dollar Zeland-Nevez
+        two: zollar Zeland-Nevez
+        few: dollar Zeland-Nevez
+        many: a zollaroù Zeland-Nevez
     OMR:
       display_names:
         other: rial Oman
@@ -1459,6 +1322,28 @@ number_formats:
         two: gina Papoua Ginea-Nevez
         few: cʼhina Papoua Ginea-Nevez
         many: a ginaoù Papoua Ginea-Nevez
+    PHP:
+      symbol: PHP
+      display_names:
+        other: peso Filipinez
+        one: peso Filipinez
+        two: beso Filipinez
+        few: feso Filipinez
+        many: a besoioù Filipinez
+    PKR:
+      display_names:
+        other: roupi Pakistan
+        one: roupi Pakistan
+        two: roupi Pakistan
+        few: roupi Pakistan
+        many: a roupioù Pakistan
+    PLN:
+      display_names:
+        other: zloty Polonia
+        one: zloty Polonia
+        two: zloty Polonia
+        few: zloty Polonia
+        many: a zlotyoù Polonia
     PLZ:
       display_names:
         other: zloty Polonia (1950–1995)
@@ -1473,6 +1358,13 @@ number_formats:
         two: escudo Portugal
         few: escudo Portugal
         many: a escudoioù Portugal
+    PYG:
+      display_names:
+        other: guarani Paraguay
+        one: guarani Paraguay
+        two: uarani Paraguay
+        few: guarani Paraguay
+        many: a uaranioù Paraguay
     QAR:
       display_names:
         other: rial Qatar
@@ -1491,6 +1383,10 @@ number_formats:
       display_names:
         other: leu Roumania (1952–2006)
         one: leu Roumania (1952–2006)
+    RON:
+      display_names:
+        other: leu Roumania
+        one: leu Roumania
     RSD:
       display_names:
         other: dinar Serbia
@@ -1498,6 +1394,13 @@ number_formats:
         two: zinar Serbia
         few: dinar Serbia
         many: a zinaroù Serbia
+    RUB:
+      display_names:
+        other: roubl Rusia
+        one: roubl Rusia
+        two: roubl Rusia
+        few: roubl Rusia
+        many: a roubloù Rusia
     RUR:
       symbol: р.
       display_names:
@@ -1506,6 +1409,13 @@ number_formats:
         two: roubl Rusia (1991–1998)
         few: roubl Rusia (1991–1998)
         many: a roubloù Rusia (1991–1998)
+    RWF:
+      display_names:
+        other: lur Rwanda
+        one: lur Rwanda
+        two: lur Rwanda
+        few: lur Rwanda
+        many: a lurioù Rwanda
     SAR:
       display_names:
         other: riyal Arabia Saoudat
@@ -1513,6 +1423,13 @@ number_formats:
         two: riyal Arabia Saoudat
         few: riyal Arabia Saoudat
         many: a riyaloù Arabia Saoudat
+    SBD:
+      display_names:
+        other: dollar Inizi Salomon
+        one: dollar Inizi Salomon
+        two: zollar Inizi Salomon
+        few: dollar Inizi Salomon
+        many: a zollaroù Inizi Salomon
     SCR:
       display_names:
         other: roupi Sechelez
@@ -1541,6 +1458,27 @@ number_formats:
         two: lur Soudan (1957–1998)
         few: lur Soudan (1957–1998)
         many: a lurioù Soudan (1957–1998)
+    SEK:
+      display_names:
+        other: kurunenn Sveden
+        one: gurunenn Sveden
+        two: gurunenn Sveden
+        few: cʼhurunenn Sveden
+        many: a gurunennoù Sveden
+    SGD:
+      display_names:
+        other: dollar Singapour
+        one: dollar Singapour
+        two: zollar Singapour
+        few: dollar Singapour
+        many: a zollaroù Singapour
+    SHP:
+      display_names:
+        other: lur Saint-Helena
+        one: lur Saint-Helena
+        two: lur Saint-Helena
+        few: lur Saint-Helena
+        many: a lurioù Saint-Helena
     SIT:
       display_names:
         other: tolar Slovenia
@@ -1576,6 +1514,13 @@ number_formats:
         two: shilling Somalia
         few: shilling Somalia
         many: a shillingoù Somalia
+    SRD:
+      display_names:
+        other: dollar Surinam
+        one: dollar Surinam
+        two: zollar Surinam
+        few: dollar Surinam
+        many: a zollaroù Surinam
     SRG:
       display_names:
         other: florin Surinam
@@ -1583,6 +1528,13 @@ number_formats:
         two: florin Surinam
         few: florin Surinam
         many: a florinoù Surinam
+    SSP:
+      display_names:
+        other: lur Susoudan
+        one: lur Susoudan
+        two: lur Susoudan
+        few: lur Susoudan
+        many: a lurioù Susoudan
     STD:
       display_names:
         other: dobra São Tomé ha Príncipe (1977–2017)
@@ -1590,6 +1542,13 @@ number_formats:
         two: zobra São Tomé ha Príncipe (1977–2017)
         few: dobra São Tomé ha Príncipe (1977–2017)
         many: a zobraoù São Tomé ha Príncipe (1977–2017)
+    STN:
+      display_names:
+        other: dobra São Tomé ha Príncipe
+        one: dobra São Tomé ha Príncipe
+        two: zobra São Tomé ha Príncipe
+        few: dobra São Tomé ha Príncipe
+        many: a zobraoù São Tomé ha Príncipe
     SUR:
       display_names:
         other: roubl soviedel
@@ -1604,6 +1563,13 @@ number_formats:
         two: golón Salvador
         few: cʼholón Salvador
         many: a golónoù Salvador
+    SYP:
+      display_names:
+        other: lur Siria
+        one: lur Siria
+        two: lur Siria
+        few: lur Siria
+        many: a lurioù Siria
     SZL:
       display_names:
         other: lilangeni Swaziland
@@ -1611,6 +1577,13 @@ number_formats:
         two: lilangeni Swaziland
         few: lilangeni Swaziland
         many: a lilangenioù Swaziland
+    THB:
+      display_names:
+        other: baht Thailand
+        one: baht Thailand
+        two: vaht Thailand
+        few: baht Thailand
+        many: a vahtoù Thailand
     TJR:
       display_names:
         other: roubl Tadjikistan
@@ -1646,6 +1619,14 @@ number_formats:
         two: zinar Tunizia
         few: dinar Tunizia
         many: a zinaroù Tunizia
+    TOP:
+      symbol: "$ T"
+      display_names:
+        other: paʻanga Tonga
+        one: paʻanga Tonga
+        two: baʻanga Tonga
+        few: faʻanga Tonga
+        many: a baʻangaoù Tonga
     TPE:
       display_names:
         other: escudo Timor
@@ -1660,6 +1641,28 @@ number_formats:
         two: lur Turkia (1922–2005)
         few: lur Turkia (1922–2005)
         many: a lurioù Turkia (1922–2005)
+    TRY:
+      display_names:
+        other: lur Turkia
+        one: lur Turkia
+        two: lur Turkia
+        few: lur Turkia
+        many: a lurioù Turkia
+    TTD:
+      display_names:
+        other: dollar Trinidad ha Tobago
+        one: dollar Trinidad ha Tobago
+        two: zollar Trinidad ha Tobago
+        few: dollar Trinidad ha Tobago
+        many: a zollaroù Trinidad ha Tobago
+    TWD:
+      symbol: TWD
+      display_names:
+        other: dollar nevez Taiwan
+        one: dollar nevez Taiwan
+        two: zollar nevez Taiwan
+        few: dollar nevez Taiwan
+        many: a zollaroù nevez Taiwan
     TZS:
       display_names:
         other: shilling Tanzania
@@ -1667,6 +1670,13 @@ number_formats:
         two: shilling Tanzania
         few: shilling Tanzania
         many: a shillingoù Tanzania
+    UAH:
+      display_names:
+        other: hryvnia Ukraina
+        one: hryvnia Ukraina
+        two: hryvnia Ukraina
+        few: hryvnia Ukraina
+        many: a hryvniaoù Ukraina
     UGS:
       display_names:
         other: shilling Ouganda (1966–1987)
@@ -1681,6 +1691,14 @@ number_formats:
         two: shilling Ouganda
         few: shilling Ouganda
         many: a shillingoù Ouganda
+    USD:
+      symbol: "$ SU"
+      display_names:
+        other: dollar SU
+        one: dollar SU
+        two: zollar SU
+        few: dollar SU
+        many: a zollaroù SU
     UYP:
       display_names:
         other: peso Uruguay (1975–1993)
@@ -1688,6 +1706,13 @@ number_formats:
         two: beso Uruguay (1975–1993)
         few: feso Uruguay (1975–1993)
         many: a besoioù Uruguay (1975–1993)
+    UYU:
+      display_names:
+        other: peso Uruguay
+        one: peso Uruguay
+        two: beso Uruguay
+        few: feso Uruguay
+        many: a besoioù Uruguay
     UZS:
       display_names:
         other: som Ouzbekistan
@@ -1702,6 +1727,13 @@ number_formats:
         two: volivar Venezuela (1871–2008)
         few: bolivar Venezuela (1871–2008)
         many: a volivaroù Venezuela (1871–2008)
+    VEF:
+      display_names:
+        other: bolivar Venezuela (2008–2018)
+        one: bolivar Venezuela (2008–2018)
+        two: volivar Venezuela (2008–2018)
+        few: bolivar Venezuela (2008–2018)
+        many: a volivaroù Venezuela (2008–2018)
     VES:
       display_names:
         other: bolivar Venezuela
@@ -1709,6 +1741,14 @@ number_formats:
         two: volivar Venezuela
         few: bolivar Venezuela
         many: a volivaroù Venezuela
+    VND:
+      symbol: VND
+      display_names:
+        other: dong Viêt Nam
+        one: dong Viêt Nam
+        two: zong Viêt Nam
+        few: dong Viêt Nam
+        many: a zongoù Viêt Nam
     VNN:
       display_names:
         other: dong Viêt Nam (1978–1985)
@@ -1730,6 +1770,10 @@ number_formats:
         two: dala Samoa
         few: zala Samoa
         many: a dalaoù Samoa
+    XAF:
+      display_names:
+        other: lur CFA Kreizafrika
+        one: lur CFA Kreizafrika
     XAG:
       display_names:
         other: oñs troy arcʼhant
@@ -1772,6 +1816,14 @@ number_formats:
         two: unanenn jediñ europat (XBD)
         few: unanenn jediñ europat (XBD)
         many: a unanennoù jediñ europat (XBD)
+    XCD:
+      symbol: XCD
+      display_names:
+        other: dollar Karib ar reter
+        one: dollar Karib ar reter
+        two: zollar Karib ar reter
+        few: dollar Karib ar reter
+        many: a zollaroù Karib ar reter
     XDR:
       display_names:
         other: gwirioù tennañ arbennik
@@ -1797,6 +1849,13 @@ number_formats:
         two: lur Unaniezh etrebroadel an hentoù-houarn
         few: lur Unaniezh etrebroadel an hentoù-houarn
         many: a lurioù Unaniezh etrebroadel an hentoù-houarn
+    XOF:
+      display_names:
+        other: lur CFA Afrika ar Cʼhornôg
+        one: lur CFA Afrika ar Cʼhornôg
+        two: lur CFA BCEAO
+        few: lur CFA BCEAO
+        many: a lurioù CFA BCEAO
     XPD:
       display_names:
         other: oñs troy palladiom
@@ -1804,6 +1863,13 @@ number_formats:
         two: oñs troy palladiom
         few: oñs troy palladiom
         many: oñs troy palladiom
+    XPF:
+      display_names:
+        other: lur CFP
+        one: lur CFP
+        two: lur CFP
+        few: lur CFP
+        many: a lurioù CFP
     XPT:
       display_names:
         other: oñs troy platin
@@ -1825,6 +1891,14 @@ number_formats:
         two: unanenn jediñ BAD
         few: unanenn jediñ BAD
         many: a unanennoù jediñ BAD
+    XXX:
+      symbol: XXX
+      display_names:
+        other: "(moneiz dianav)"
+        one: "(moneiz dianav)"
+        two: "(moneiz dianav)"
+        few: "(moneiz dianav)"
+        many: "(moneiz dianav)"
     YDD:
       display_names:
         other: dinar Yemen
@@ -1860,6 +1934,13 @@ number_formats:
         two: zinar adreizhet Yougoslavia (1992–1993)
         few: dinar adreizhet Yougoslavia (1992–1993)
         many: a zinaroù adreizhet Yougoslavia (1992–1993)
+    ZAR:
+      display_names:
+        other: rand Suafrika
+        one: rand Suafrika
+        two: rand Suafrika
+        few: rand Suafrika
+        many: a randoù Suafrika
     ZMK:
       display_names:
         other: kwacha Zambia (1968–2012)
@@ -1867,6 +1948,13 @@ number_formats:
         two: gwacha Zambia (1968–2012)
         few: kwacha Zambia (1968–2012)
         many: a gwachaoù Zambia (1968–2012)
+    ZMW:
+      display_names:
+        other: kwacha Zambia
+        one: cʼhwacha Zambia
+        two: gwacha Zambia
+        few: kwacha Zambia
+        many: a gwachaoù Zambia
     ZWD:
       display_names:
         other: dollar Zimbabwe (1980–2008)
@@ -1888,3 +1976,2969 @@ number_formats:
         two: zollar Zimbabwe (2008)
         few: dollar Zimbabwe (2008)
         many: a zollaroù Zimbabwe (2008)
+  units:
+    g-force:
+      long:
+        display_name: buanadur g
+        one: "{0} buanadur g"
+        two: "{0} vuanadur g"
+        few: "{0} buanadur g"
+        many: "{0} a vuanadurioù g"
+        other: "{0} buanadur g"
+      short:
+        display_name: G
+      narrow:
+        one: "{0}G"
+        two: "{0}G"
+        few: "{0}G"
+        many: "{0}G"
+        other: "{0}G"
+    meter-per-square-second:
+      long:
+        display_name: metroù dre eilenn garrez
+        one: "{0} metr dre eilenn garrez"
+        two: "{0} vetr dre eilenn garrez"
+        few: "{0} metr dre eilenn garrez"
+        many: "{0} a vetroù dre eilenn garrez"
+        other: "{0} metr dre eilenn garrez"
+      narrow:
+        one: "{0}m/s²"
+        two: "{0}m/s²"
+        few: "{0}m/s²"
+        many: "{0}m/s²"
+        other: "{0}m/s²"
+    revolution:
+      long:
+        display_name: tro
+        one: "{0} dro"
+        two: "{0} dro"
+        few: "{0} zro"
+        many: "{0} a droioù"
+        other: "{0} tro"
+      short:
+        display_name: tr
+        one: "{0} tr"
+        two: "{0} tr"
+        few: "{0} tr"
+        many: "{0} tr"
+        other: "{0} tr"
+      narrow:
+        one: "{0}tr"
+        two: "{0}tr"
+        few: "{0}tr"
+        many: "{0}tr"
+        other: "{0}tr"
+    radian:
+      long:
+        display_name: radianoù
+        one: "{0} radian"
+        two: "{0} radian"
+        few: "{0} radian"
+        many: "{0} a radianoù"
+        other: "{0} radian"
+      narrow:
+        one: "{0}rad"
+        two: "{0}rad"
+        few: "{0}rad"
+        many: "{0}rad"
+        other: "{0}rad"
+    degree:
+      long:
+        display_name: derezioù
+        one: "{0} derez"
+        two: "{0} zerez"
+        few: "{0} derez"
+        many: "{0} a zerezioù"
+        other: "{0} derez"
+      short:
+        one: "{0} deg"
+        two: "{0} deg"
+        few: "{0} deg"
+        many: "{0} deg"
+        other: "{0} deg"
+      narrow:
+        display_name: "°"
+        one: "{0}°"
+        two: "{0}°"
+        few: "{0}°"
+        many: "{0}°"
+        other: "{0}°"
+    square-kilometer:
+      long:
+        display_name: kilometroù karrez
+        one: "{0} c'hilometr karrez"
+        two: "{0} gilometr karrez"
+        few: "{0} c'hilometr karrez"
+        many: "{0} a gilometroù karrez"
+        other: "{0} kilometr karrez"
+        per_unit_pattern: "{0} dre gilometr karrez"
+      narrow:
+        one: "{0}km²"
+        two: "{0}km²"
+        few: "{0}km²"
+        many: "{0}km²"
+        other: "{0}km²"
+    hectare:
+      long:
+        display_name: hektaroù
+        one: "{0} hektar"
+        two: "{0} hektar"
+        few: "{0} hektar"
+        many: "{0} a hektaroù"
+        other: "{0} hektar"
+      short:
+        display_name: ha
+      narrow:
+        one: "{0}ha"
+        two: "{0}ha"
+        few: "{0}ha"
+        many: "{0}ha"
+        other: "{0}ha"
+    square-meter:
+      long:
+        display_name: metroù karrez
+        one: "{0} metr karrez"
+        two: "{0} vetr karrez"
+        few: "{0} metr karrez"
+        many: "{0} a vetroù garrez"
+        other: "{0} metr karrez"
+        per_unit_pattern: "{0} dre vetr karrez"
+      narrow:
+        one: "{0}m²"
+        two: "{0}m²"
+        few: "{0}m²"
+        many: "{0}m²"
+        other: "{0}m²"
+    square-centimeter:
+      long:
+        display_name: santimetroù karrez
+        one: "{0} santimetr karrez"
+        two: "{0} santimetr karrez"
+        few: "{0} santimetr karrez"
+        many: "{0} a santimetroù karrez"
+        other: "{0} santimetr karrez"
+        per_unit_pattern: "{0} dre santimetr karrez"
+      narrow:
+        one: "{0}cm²"
+        two: "{0}cm²"
+        few: "{0}cm²"
+        many: "{0}cm²"
+        other: "{0}cm²"
+    square-mile:
+      long:
+        display_name: miltirioù karrez
+        one: "{0} miltir karrez"
+        two: "{0} viltir karrez"
+        few: "{0} miltir karrez"
+        many: "{0} a viltirioù karrez"
+        other: "{0} miltir karrez"
+        per_unit_pattern: "{0} dre viltir karrez"
+      narrow:
+        one: "{0}mi²"
+        two: "{0}mi²"
+        few: "{0}mi²"
+        many: "{0}mi²"
+        other: "{0}mi²"
+    acre:
+      long:
+        display_name: akroù
+        one: "{0} akr"
+        two: "{0} akr"
+        few: "{0} akr"
+        many: "{0} a akroù"
+        other: "{0} akr"
+      short:
+        display_name: ac
+      narrow:
+        one: "{0}ac"
+        two: "{0}ac"
+        few: "{0}ac"
+        many: "{0}ac"
+        other: "{0}ac"
+    square-yard:
+      long:
+        display_name: yardoù karrez
+        one: "{0} yard karrez"
+        two: "{0} yard karrez"
+        few: "{0} yard karrez"
+        many: "{0} a yardoù karrez"
+        other: "{0} yard karrez"
+      narrow:
+        one: "{0}yd²"
+        two: "{0}yd²"
+        few: "{0}yd²"
+        many: "{0}yd²"
+        other: "{0}yd²"
+    square-foot:
+      long:
+        display_name: troatadoù karrez
+        one: "{0} troatad karrez"
+        two: "{0} droatad karrez"
+        few: "{0} zroatad karrez"
+        many: "{0} a droatadoù karrez"
+        other: "{0} troatad karrez"
+      narrow:
+        one: "{0}ft²"
+        two: "{0}ft²"
+        few: "{0}ft²"
+        many: "{0}ft²"
+        other: "{0}ft²"
+    square-inch:
+      long:
+        display_name: meutadoù karrez
+        one: "{0} meutad karrez"
+        two: "{0} veutad karrez"
+        few: "{0} meutad karrez"
+        many: "{0} a veutadoù karrez"
+        other: "{0} meutad karrez"
+        per_unit_pattern: "{0} dre veutad karrez"
+      narrow:
+        one: "{0}in²"
+        two: "{0}in²"
+        few: "{0}in²"
+        many: "{0}in²"
+        other: "{0}in²"
+    dunam:
+      long:
+        display_name: dounamoù
+        one: "{0} dounam"
+        two: "{0} zounam"
+        few: "{0} dounam"
+        many: "{0} a zounamoù"
+        other: "{0} dounam"
+      short:
+        display_name: dounam
+        one: "{0} dounam"
+        two: "{0} dounam"
+        few: "{0} dounam"
+        many: "{0} dounam"
+        other: "{0} dounam"
+      narrow:
+        one: "{0}dounam"
+        two: "{0}dounam"
+        few: "{0}dounam"
+        many: "{0}dounam"
+        other: "{0}dounam"
+    karat:
+      long:
+        display_name: karatoù
+        one: "{0} c'harat"
+        two: "{0} garat"
+        few: "{0} c'harat"
+        many: "{0} a garatoù"
+        other: "{0} karat"
+      narrow:
+        one: "{0}kt"
+        two: "{0}kt"
+        few: "{0}kt"
+        many: "{0}kt"
+        other: "{0}kt"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: milligramm dre zesilitr
+        one: "{0} milligramm dre zesilitr"
+        two: "{0} villigramm dre zesilitr"
+        few: "{0} milligramm dre zesilitr"
+        many: "{0} a villigrammoù dre zesilitr"
+        other: "{0} milligramm dre zesilitr"
+      short:
+        display_name: mg/dl
+        one: "{0} mg/dl"
+        two: "{0} mg/dl"
+        few: "{0} mg/dl"
+        many: "{0} mg/dl"
+        other: "{0} mg/dl"
+      narrow:
+        one: "{0}mg/dl"
+        two: "{0}mg/dl"
+        few: "{0}mg/dl"
+        many: "{0}mg/dl"
+        other: "{0}mg/dl"
+    millimole-per-liter:
+      long:
+        display_name: millimoloù dre litr
+        one: "{0} millimol dre litr"
+        two: "{0} villimol dre litr"
+        few: "{0} millimol dre litr"
+        many: "{0} a villimoloù dre litr"
+        other: "{0} millimol dre litr"
+      short:
+        display_name: millimol/litr
+        one: "{0} mmol/l"
+        two: "{0} mmol/l"
+        few: "{0} mmol/l"
+        many: "{0} mmol/l"
+        other: "{0} mmol/l"
+      narrow:
+        display_name: mmol/l
+        one: "{0}mmol/l"
+        two: "{0}mmol/l"
+        few: "{0}mmol/l"
+        many: "{0}mmol/l"
+        other: "{0}mmol/l"
+    percent:
+      long:
+        display_name: dre gant
+        one: "{0} dre gant"
+        two: "{0} dre gant"
+        few: "{0} dre gant"
+        many: "{0} dre gant"
+        other: "{0} dre gant"
+      short:
+        one: "{0} %"
+        two: "{0} %"
+        few: "{0} %"
+        many: "{0} %"
+        other: "{0} %"
+      narrow:
+        one: "{0}%"
+        two: "{0}%"
+        few: "{0}%"
+        many: "{0}%"
+        other: "{0}%"
+    permille:
+      long:
+        display_name: dre vil
+        one: "{0} dre vil"
+        two: "{0} dre vil"
+        few: "{0} dre vil"
+        many: "{0} dre vil"
+        other: "{0} dre vil"
+      short:
+        one: "{0} ‰"
+        two: "{0} ‰"
+        few: "{0} ‰"
+        many: "{0} ‰"
+        other: "{0} ‰"
+      narrow:
+        one: "{0}‰"
+        two: "{0}‰"
+        few: "{0}‰"
+        many: "{0}‰"
+        other: "{0}‰"
+    permyriad:
+      long:
+        display_name: dre zek mil
+        one: "{0} dre zek mil"
+        two: "{0} dre zek mil"
+        few: "{0} dre zek mil"
+        many: "{0} dre zek mil"
+        other: "{0} dre zek mil"
+      short:
+        one: "{0} ‱"
+        two: "{0} ‱"
+        few: "{0} ‱"
+        many: "{0} ‱"
+        other: "{0} ‱"
+      narrow:
+        one: "{0}‱"
+        two: "{0}‱"
+        few: "{0}‱"
+        many: "{0}‱"
+        other: "{0}‱"
+    mole:
+      long:
+        display_name: moloù
+        one: "{0} mol"
+        two: "{0} vol"
+        few: "{0} mol"
+        many: "{0} a voloù"
+        other: "{0} mol"
+      narrow:
+        one: "{0}mol"
+        two: "{0}mol"
+        few: "{0}mol"
+        many: "{0}mol"
+        other: "{0}mol"
+    liter-per-kilometer:
+      long:
+        display_name: litroù dre gilometr
+        one: "{0} litr dre gilometr"
+        two: "{0} litr dre gilometr"
+        few: "{0} litr dre gilometr"
+        many: "{0} a litroù dre gilometr"
+        other: "{0} litr dre gilometr"
+      short:
+        display_name: l/km
+        one: "{0} l/km"
+        two: "{0} l/km"
+        few: "{0} l/km"
+        many: "{0} l/km"
+        other: "{0} l/km"
+      narrow:
+        one: "{0}l/km"
+        two: "{0}l/km"
+        few: "{0}l/km"
+        many: "{0}l/km"
+        other: "{0}l/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: litroù dre 100 kilometr
+        one: "{0} litr dre 100 kilometr"
+        two: "{0} litr dre 100 kilometr"
+        few: "{0} litr dre 100 kilometr"
+        many: "{0} a litroù dre 100 kilometr"
+        other: "{0} litr dre 100 kilometr"
+      short:
+        display_name: l/100km
+        one: "{0} l/100km"
+        two: "{0} l/100km"
+        few: "{0} l/100km"
+        many: "{0} l/100km"
+        other: "{0} l/100km"
+      narrow:
+        one: "{0}l/100km"
+        two: "{0}l/100km"
+        few: "{0}l/100km"
+        many: "{0}l/100km"
+        other: "{0}l/100km"
+    mile-per-gallon:
+      long:
+        display_name: miltirioù dre cʼhallon
+        one: "{0} miltir dre c'hallon"
+        two: "{0} viltir dre c'hallon"
+        few: "{0} miltir dre c'hallon"
+        many: "{0} a viltirioù dre c'hallon"
+        other: "{0} miltir dre c'hallon"
+      short:
+        display_name: mi/gal
+        one: "{0} mi/gal"
+        two: "{0} mi/gal"
+        few: "{0} mi/gal"
+        many: "{0} mi/gal"
+        other: "{0} mi/gal"
+      narrow:
+        one: "{0}mi/gal"
+        two: "{0}mi/gal"
+        few: "{0}mi/gal"
+        many: "{0}mi/gal"
+        other: "{0}mi/gal"
+    mile-per-gallon-imperial:
+      long:
+        display_name: miltirioù dre cʼhallon impalaerel
+        one: "{0} miltir dre cʼhallon impalaerel"
+        two: "{0} viltir dre cʼhallon impalaerel"
+        few: "{0} miltir dre cʼhallon impalaerel"
+        many: "{0} a viltirioù dre cʼhallon impalaerel"
+        other: "{0} miltir dre cʼhallon impalaerel"
+      short:
+        display_name: mi/gal imp.
+        one: "{0} mi/gal imp."
+        two: "{0} mi/gal imp."
+        few: "{0} mi/gal imp."
+        many: "{0} mi/gal imp."
+        other: "{0} mi/gal imp."
+      narrow:
+        display_name: mi/gIm
+        one: "{0}mi/gIm"
+        two: "{0}mi/gIm"
+        few: "{0}mi/gIm"
+        many: "{0}mi/gIm"
+        other: "{0}mi/gIm"
+    petabyte:
+      long:
+        display_name: petaoktedoù
+        one: "{0} petaokted"
+        two: "{0} betaokted"
+        few: "{0} fetaokted"
+        many: "{0} a betaoktedoù"
+        other: "{0} petaokted"
+      short:
+        display_name: Po
+        one: "{0} Po"
+        two: "{0} Po"
+        few: "{0} Po"
+        many: "{0} Po"
+        other: "{0} Po"
+      narrow:
+        one: "{0}Po"
+        two: "{0}Po"
+        few: "{0}Po"
+        many: "{0}Po"
+        other: "{0}Po"
+    terabyte:
+      long:
+        display_name: teraoktedoù
+        one: "{0} teraokted"
+        two: "{0} deraokted"
+        few: "{0} zeraokted"
+        many: "{0} a deraoktedoù"
+        other: "{0} teraokted"
+      short:
+        display_name: To
+        one: "{0} To"
+        two: "{0} To"
+        few: "{0} To"
+        many: "{0} To"
+        other: "{0} To"
+      narrow:
+        one: "{0}To"
+        two: "{0}To"
+        few: "{0}To"
+        many: "{0}To"
+        other: "{0}To"
+    terabit:
+      long:
+        display_name: terabitoù
+        one: "{0} terabit"
+        two: "{0} derabit"
+        few: "{0} zerabit"
+        many: "{0} a derabitoù"
+        other: "{0} terabit"
+      short:
+        display_name: Tbit
+        one: "{0} Tbit"
+        two: "{0} Tbit"
+        few: "{0} Tbit"
+        many: "{0} Tbit"
+        other: "{0} Tbit"
+      narrow:
+        one: "{0}Tbit"
+        two: "{0}Tbit"
+        few: "{0}Tbit"
+        many: "{0}Tbit"
+        other: "{0}Tbit"
+    gigabyte:
+      long:
+        display_name: gigaoktedoù
+        one: "{0} gigaokted"
+        two: "{0} c'higaokted"
+        few: "{0} gigaokted"
+        many: "{0} a c'higaoktedoù"
+        other: "{0} gigaokted"
+      short:
+        display_name: Go
+        one: "{0} Go"
+        two: "{0} Go"
+        few: "{0} Go"
+        many: "{0} Go"
+        other: "{0} Go"
+      narrow:
+        one: "{0}Go"
+        two: "{0}Go"
+        few: "{0}Go"
+        many: "{0}Go"
+        other: "{0}Go"
+    gigabit:
+      long:
+        display_name: gigabitoù
+        one: "{0} gigabit"
+        two: "{0} c'higabit"
+        few: "{0} gigabit"
+        many: "{0} a c'higabitoù"
+        other: "{0} gigabit"
+      short:
+        display_name: Gbit
+        one: "{0} Gbit"
+        two: "{0} Gbit"
+        few: "{0} Gbit"
+        many: "{0} Gbit"
+        other: "{0} Gbit"
+      narrow:
+        one: "{0}Gbit"
+        two: "{0}Gbit"
+        few: "{0}Gbit"
+        many: "{0}Gbit"
+        other: "{0}Gbit"
+    megabyte:
+      long:
+        display_name: megaoktedoù
+        one: "{0} megaokted"
+        two: "{0} vegaokted"
+        few: "{0} megaokted"
+        many: "{0} a vegaoktedoù"
+        other: "{0} megaokted"
+      short:
+        display_name: Mo
+        one: "{0} Mo"
+        two: "{0} Mo"
+        few: "{0} Mo"
+        many: "{0} Mo"
+        other: "{0} Mo"
+      narrow:
+        one: "{0}Mo"
+        two: "{0}Mo"
+        few: "{0}Mo"
+        many: "{0}Mo"
+        other: "{0}Mo"
+    megabit:
+      long:
+        display_name: megabitoù
+        one: "{0} megabit"
+        two: "{0} vegabit"
+        few: "{0} megabit"
+        many: "{0} a vegabitoù"
+        other: "{0} megabit"
+      short:
+        display_name: Mbit
+        one: "{0} Mbit"
+        two: "{0} Mbit"
+        few: "{0} Mbit"
+        many: "{0} Mbit"
+        other: "{0} Mbit"
+      narrow:
+        one: "{0}Mbit"
+        two: "{0}Mbit"
+        few: "{0}Mbit"
+        many: "{0}Mbit"
+        other: "{0}Mbit"
+    kilobyte:
+      long:
+        display_name: kilooktedoù
+        one: "{0} c'hilookted"
+        two: "{0} gilookted"
+        few: "{0} c'hilookted"
+        many: "{0} a gilooktedoù"
+        other: "{0} kilookted"
+      short:
+        display_name: ko
+        one: "{0} ko"
+        two: "{0} ko"
+        few: "{0} ko"
+        many: "{0} ko"
+        other: "{0} ko"
+      narrow:
+        one: "{0}ko"
+        two: "{0}ko"
+        few: "{0}ko"
+        many: "{0}ko"
+        other: "{0}ko"
+    kilobit:
+      long:
+        display_name: kilobitoù
+        one: "{0} c'hilobit"
+        two: "{0} gilobit"
+        few: "{0} c'hilobit"
+        many: "{0} a gilobitoù"
+        other: "{0} kilobit"
+      short:
+        display_name: kbit
+        one: "{0} kbit"
+        two: "{0} kbit"
+        few: "{0} kbit"
+        many: "{0} kbit"
+        other: "{0} kbit"
+      narrow:
+        one: "{0}kbit"
+        two: "{0}kbit"
+        few: "{0}kbit"
+        many: "{0}kbit"
+        other: "{0}kbit"
+    byte:
+      long:
+        display_name: oktedoù
+        one: "{0} okted"
+        two: "{0} okted"
+        few: "{0} okted"
+        many: "{0} a oktedoù"
+        other: "{0} okted"
+      short:
+        display_name: o
+        one: "{0} o"
+        two: "{0} o"
+        few: "{0} o"
+        many: "{0} o"
+        other: "{0} o"
+      narrow:
+        one: "{0}o"
+        two: "{0}o"
+        few: "{0}o"
+        many: "{0}o"
+        other: "{0} o"
+    bit:
+      long:
+        display_name: bitoù
+        one: "{0} bit"
+        two: "{0} vit"
+        few: "{0} bit"
+        many: "{0} a vitoù"
+        other: "{0} bit"
+      narrow:
+        one: "{0}bit"
+        two: "{0}bit"
+        few: "{0}bit"
+        many: "{0}bit"
+        other: "{0}bit"
+    century:
+      long:
+        display_name: kantvedoù
+        one: "{0} c'hantved"
+        two: "{0} gantved"
+        few: "{0} c'hantved"
+        many: "{0} a gantvedoù"
+        other: "{0} kantved"
+      short:
+        display_name: kved
+        one: "{0} kved"
+        two: "{0} kved"
+        few: "{0} kved"
+        many: "{0} kved"
+        other: "{0} kved"
+      narrow:
+        one: "{0}kved"
+        two: "{0}kved"
+        few: "{0}kved"
+        many: "{0}kved"
+        other: "{0}kved"
+    decade:
+      long:
+        display_name: dekvloavezhiadoù
+        one: "{0} dekvloavezhiad"
+        two: "{0} zekvloavezhiad"
+        few: "{0} dekvloavezhiad"
+        many: "{0} a zekvloavezhiadoù"
+        other: "{0} dekvloavezhiad"
+      short:
+        display_name: dek
+        one: "{0} dek"
+        two: "{0} dek"
+        few: "{0} dek"
+        many: "{0} dek"
+        other: "{0} dek"
+      narrow:
+        one: "{0}dek"
+        two: "{0}dek"
+        few: "{0}dek"
+        many: "{0}dek"
+        other: "{0}dek"
+    year:
+      long:
+        display_name: bloazioù
+        one: "{0} bloaz"
+        two: "{0} vloaz"
+        few: "{0} bloaz"
+        many: "{0} a vloazioù"
+        other: "{0} vloaz"
+        per_unit_pattern: "{0} dre vloaz"
+      short:
+        display_name: bl.
+        one: "{0} bl."
+        two: "{0} bl."
+        few: "{0} bl."
+        many: "{0} bl."
+        other: "{0} bl."
+        per_unit_pattern: "{0}/bl."
+      narrow:
+        display_name: b
+        one: "{0}b"
+        two: "{0}b"
+        few: "{0}b"
+        many: "{0}b"
+        other: "{0}b"
+        per_unit_pattern: "{0}/b"
+    quarter:
+      long:
+        display_name: trimiziadoù
+        one: "{0} trimiziad"
+        two: "{0} drimiziad"
+        few: "{0} zrimiziad"
+        many: "{0} a drimiziadoù"
+        other: "{0} trimiziad"
+        per_unit_pattern: "{0} dre drimiziad"
+      short:
+        display_name: trim.
+        one: "{0} trim."
+        two: "{0} trim."
+        few: "{0} trim."
+        many: "{0} trim."
+        other: "{0} trim."
+        per_unit_pattern: "{0}/trim."
+      narrow:
+        display_name: t
+        one: "{0}t"
+        two: "{0}t"
+        few: "{0}t"
+        many: "{0}t"
+        other: "{0}t"
+        per_unit_pattern: "{0}/t"
+    month:
+      long:
+        display_name: mizioù
+        one: "{0} miz"
+        two: "{0} viz"
+        few: "{0} miz"
+        many: "{0} a vizioù"
+        other: "{0} miz"
+        per_unit_pattern: "{0} dre viz"
+      short:
+        display_name: m.
+        one: "{0} m."
+        two: "{0} m."
+        few: "{0} m."
+        many: "{0} m."
+        other: "{0} m."
+        per_unit_pattern: "{0}/m."
+      narrow:
+        display_name: m
+        one: "{0}m"
+        two: "{0}m"
+        few: "{0}m"
+        many: "{0}m"
+        other: "{0}m"
+        per_unit_pattern: "{0}/m"
+    week:
+      long:
+        display_name: sizhunioù
+        one: "{0} sizhun"
+        two: "{0} sizhun"
+        few: "{0} sizhun"
+        many: "{0} a sizhunioù"
+        other: "{0} sizhun"
+        per_unit_pattern: "{0} dre sizhun"
+      short:
+        display_name: sizh.
+        one: "{0} sizh."
+        two: "{0} sizh."
+        few: "{0} sizh."
+        many: "{0} sizh."
+        other: "{0} sizh."
+        per_unit_pattern: "{0}/sizh."
+      narrow:
+        one: "{0}sizh."
+        two: "{0}sizh."
+        few: "{0}sizh."
+        many: "{0}sizh."
+        other: "{0}sizh."
+    day:
+      long:
+        display_name: deizioù
+        one: "{0} deiz"
+        two: "{0} zeiz"
+        few: "{0} deiz"
+        many: "{0} a zeizioù"
+        other: "{0} deiz"
+        per_unit_pattern: "{0} dre zeiz"
+      short:
+        display_name: d
+      narrow:
+        one: "{0}d"
+        two: "{0}d"
+        few: "{0}d"
+        many: "{0}d"
+        other: "{0}d"
+    hour:
+      long:
+        display_name: eurioù
+        one: "{0} eur"
+        two: "{0} eur"
+        few: "{0} eur"
+        many: "{0} a eurioù"
+        other: "{0} eur"
+        per_unit_pattern: "{0} dre eur"
+      short:
+        display_name: h
+      narrow:
+        one: "{0}h"
+        two: "{0}h"
+        few: "{0}h"
+        many: "{0}h"
+        other: "{0}h"
+    minute:
+      long:
+        display_name: munutoù
+        one: "{0} munut"
+        two: "{0} vunut"
+        few: "{0} munut"
+        many: "{0} a vunutoù"
+        other: "{0} munut"
+        per_unit_pattern: "{0} dre vunut"
+      narrow:
+        one: "{0}min"
+        two: "{0}min"
+        few: "{0}min"
+        many: "{0}min"
+        other: "{0}min"
+    second:
+      long:
+        display_name: eilennoù
+        one: "{0} eilenn"
+        two: "{0} eilenn"
+        few: "{0} eilenn"
+        many: "{0} a eilennoù"
+        other: "{0} eilenn"
+        per_unit_pattern: "{0} dre eilenn"
+      short:
+        display_name: s
+      narrow:
+        one: "{0}s"
+        two: "{0}s"
+        few: "{0}s"
+        many: "{0}s"
+        other: "{0}s"
+    millisecond:
+      long:
+        display_name: milieilennoù
+        one: "{0} milieilenn"
+        two: "{0} vilieilenn"
+        few: "{0} milieilenn"
+        many: "{0} a vilieilennoù"
+        other: "{0} milieilenn"
+      narrow:
+        one: "{0}ms"
+        two: "{0}ms"
+        few: "{0}ms"
+        many: "{0}ms"
+        other: "{0}ms"
+    microsecond:
+      long:
+        display_name: mikroeilennoù
+        one: "{0} mikroeilenn"
+        two: "{0} vikroeilenn"
+        few: "{0} mikroeilenn"
+        many: "{0} a vikroeilennoù"
+        other: "{0} mikroeilenn"
+      narrow:
+        one: "{0}μs"
+        two: "{0}μs"
+        few: "{0}μs"
+        many: "{0}μs"
+        other: "{0}μs"
+    nanosecond:
+      long:
+        display_name: nanoeilennoù
+        one: "{0} nanoeilenn"
+        two: "{0} nanoeilenn"
+        few: "{0} nanoeilenn"
+        many: "{0} a nanoeilennoù"
+        other: "{0} nanoeilenn"
+      narrow:
+        one: "{0}ns"
+        two: "{0}ns"
+        few: "{0}ns"
+        many: "{0}ns"
+        other: "{0}ns"
+    ampere:
+      long:
+        display_name: amperoù
+        one: "{0} amper"
+        two: "{0} amper"
+        few: "{0} amper"
+        many: "{0} a amperoù"
+        other: "{0} amper"
+      short:
+        display_name: A
+      narrow:
+        one: "{0}A"
+        two: "{0}A"
+        few: "{0}A"
+        many: "{0}A"
+        other: "{0}A"
+    milliampere:
+      long:
+        display_name: miliamperoù
+        one: "{0} miliamper"
+        two: "{0} viliamper"
+        few: "{0} miliamper"
+        many: "{0} a viliamperoù"
+        other: "{0} miliamper"
+      narrow:
+        one: "{0}mA"
+        two: "{0} mA"
+        few: "{0}mA"
+        many: "{0}mA"
+        other: "{0}mA"
+    ohm:
+      long:
+        display_name: ohmoù
+        one: "{0} ohm"
+        two: "{0} ohm"
+        few: "{0} ohm"
+        many: "{0} a ohmoù"
+        other: "{0} ohm"
+      short:
+        display_name: Ω
+      narrow:
+        one: "{0}Ω"
+        two: "{0}Ω"
+        few: "{0}Ω"
+        many: "{0}Ω"
+        other: "{0}Ω"
+    volt:
+      long:
+        display_name: voltoù
+        one: "{0} volt"
+        two: "{0} volt"
+        few: "{0} volt"
+        many: "{0} a voltoù"
+        other: "{0} volt"
+      short:
+        display_name: V
+      narrow:
+        one: "{0}V"
+        two: "{0}V"
+        few: "{0}V"
+        many: "{0}V"
+        other: "{0}V"
+    kilocalorie:
+      long:
+        display_name: kilokaloriennoù
+        one: "{0} gilokalorienn"
+        two: "{0} gilokalorienn"
+        few: "{0} c'hilokalorienn"
+        many: "{0} a gilokaloriennoù"
+        other: "{0} kilokalorienn"
+      narrow:
+        one: "{0}kcal"
+        two: "{0}kcal"
+        few: "{0}kcal"
+        many: "{0}kcal"
+        other: "{0}kcal"
+    calorie:
+      long:
+        display_name: kaloriennoù
+        one: "{0} galorienn"
+        two: "{0} galorienn"
+        few: "{0} c'halorienn"
+        many: "{0} a galoriennoù"
+        other: "{0} kalorienn"
+      narrow:
+        one: "{0}cal"
+        two: "{0}cal"
+        few: "{0}cal"
+        many: "{0}cal"
+        other: "{0}cal"
+    foodcalorie:
+      long:
+        display_name: kaloriennoù bras
+        one: "{0} galorienn vras"
+        two: "{0} galorienn vras"
+        few: "{0} c'halorienn vras"
+        many: "{0} a galoriennoù bras"
+        other: "{0} kalorienn vras"
+      short:
+        display_name: Cal
+        one: "{0} Cal"
+        two: "{0} Cal"
+        few: "{0} Cal"
+        many: "{0} Cal"
+        other: "{0} Cal"
+      narrow:
+        one: "{0}Cal"
+        two: "{0}Cal"
+        few: "{0}Cal"
+        many: "{0}Cal"
+        other: "{0}Cal"
+    kilojoule:
+      long:
+        display_name: kilojouloù
+        one: "{0} c'hilojoul"
+        two: "{0} gilojoul"
+        few: "{0} c'hilojoul"
+        many: "{0} a gilojouloù"
+        other: "{0} kilojoul"
+      narrow:
+        one: "{0}kJ"
+        two: "{0}kJ"
+        few: "{0}kJ"
+        many: "{0}kJ"
+        other: "{0}kJ"
+    joule:
+      long:
+        display_name: jouloù
+        one: "{0} joul"
+        two: "{0} joul"
+        few: "{0} joul"
+        many: "{0} a jouloù"
+        other: "{0} joul"
+      short:
+        display_name: J
+      narrow:
+        one: "{0}J"
+        two: "{0}J"
+        few: "{0}J"
+        many: "{0}J"
+        other: "{0}J"
+    kilowatt-hour:
+      long:
+        display_name: kilowattoù-eurioù
+        one: "{0} c'hilowatt-eur"
+        two: "{0} gilowatt-eur"
+        few: "{0} c'hilowatt-eur"
+        many: "{0} a gilowattoù-eurioù"
+        other: "{0} kilowatt-eur"
+      narrow:
+        one: "{0}kWh"
+        two: "{0}kWh"
+        few: "{0}kWh"
+        many: "{0}kWh"
+        other: "{0}kWh"
+    electronvolt:
+      long:
+        display_name: elektronvoltoù
+        one: "{0} elektronvolt"
+        two: "{0} elektronvolt"
+        few: "{0} elektronvolt"
+        many: "{0} a elektronvoltoù"
+        other: "{0} elektronvolt"
+      narrow:
+        one: "{0}eV"
+        two: "{0}eV"
+        few: "{0}eV"
+        many: "{0}eV"
+        other: "{0}eV"
+    british-thermal-unit:
+      long:
+        display_name: British thermal units
+        one: "{0} British thermal unit"
+        two: "{0} vBritish thermal unit"
+        few: "{0} British thermal unit"
+        many: "{0} British thermal unit"
+        other: "{0} British thermal unit"
+      narrow:
+        one: "{0}Btu"
+        two: "{0}Btu"
+        few: "{0}Btu"
+        many: "{0}Btu"
+        other: "{0}Btu"
+    therm-us:
+      long:
+        display_name: termiennoù SU
+        one: "{0} dermienn"
+        two: "{0} dermienn"
+        few: "{0} zermienn"
+        many: "{0} a dermiennoù"
+        other: "{0} termienn"
+      short:
+        display_name: thm SU
+        one: "{0} thm SU"
+        two: "{0} thm SU"
+        few: "{0} thm SU"
+        many: "{0} thm SU"
+        other: "{0} thm SU"
+      narrow:
+        display_name: thm
+        one: "{0}thm"
+        two: "{0}thm"
+        few: "{0}thm"
+        many: "{0}thm"
+        other: "{0}thm"
+    newton:
+      long:
+        display_name: newtonoù
+        one: "{0} newton"
+        two: "{0} newton"
+        few: "{0} newton"
+        many: "{0} a newtonoù"
+        other: "{0} newton"
+      narrow:
+        one: "{0}N"
+        two: "{0}N"
+        few: "{0}N"
+        many: "{0}N"
+        other: "{0}N"
+    gigahertz:
+      long:
+        display_name: gigahertzoù
+        one: "{0} gigahertz"
+        two: "{0} c'higahertz"
+        few: "{0} gigahertz"
+        many: "{0} a c'higahertzoù"
+        other: "{0} gigahertz"
+      narrow:
+        one: "{0}GHz"
+        two: "{0}GHz"
+        few: "{0}GHz"
+        many: "{0}GHz"
+        other: "{0}GHz"
+    megahertz:
+      long:
+        display_name: megahertzoù
+        one: "{0} megahertz"
+        two: "{0} vegahertz"
+        few: "{0} megahertz"
+        many: "{0} a vegahertzoù"
+        other: "{0} megahertz"
+      narrow:
+        one: "{0}MHz"
+        two: "{0}MHz"
+        few: "{0}MHz"
+        many: "{0}MHz"
+        other: "{0}MHz"
+    kilohertz:
+      long:
+        display_name: kilohertzoù
+        one: "{0} c'hilohertz"
+        two: "{0} gilohertz"
+        few: "{0} c'hilohertz"
+        many: "{0} a gilohertzoù"
+        other: "{0} kilohertz"
+      narrow:
+        one: "{0}kHz"
+        two: "{0}kHz"
+        few: "{0}kHz"
+        many: "{0}kHz"
+        other: "{0}kHz"
+    hertz:
+      long:
+        display_name: hertzoù
+        one: "{0} hertz"
+        two: "{0} hertz"
+        few: "{0} hertz"
+        many: "{0} a hertzoù"
+        other: "{0} hertz"
+      narrow:
+        one: "{0}Hz"
+        two: "{0}Hz"
+        few: "{0}Hz"
+        many: "{0}Hz"
+        other: "{0}Hz"
+    em:
+      long:
+        display_name: esaouenn em
+        one: "{0} esaouenn em"
+        two: "{0} esaouenn em"
+        few: "{0} esaouenn em"
+        many: "{0} a esaouennoù em"
+        other: "{0} esaouenn em"
+      narrow:
+        one: "{0}em"
+        two: "{0}em"
+        few: "{0}em"
+        many: "{0}em"
+        other: "{0}em"
+    pixel:
+      long:
+        display_name: pikselioù
+        one: "{0} piksel"
+        two: "{0} biksel"
+        few: "{0} fiksel"
+        many: "{0} a bikselioù"
+        other: "{0} piksel"
+      narrow:
+        one: "{0}px"
+        two: "{0}px"
+        few: "{0}px"
+        many: "{0}px"
+        other: "{0}px"
+    megapixel:
+      long:
+        display_name: megapikselioù
+        one: "{0} megapiksel"
+        two: "{0} vegapiksel"
+        few: "{0} megapiksel"
+        many: "{0} a vegapikselioù"
+        other: "{0} megapiksel"
+      short:
+        display_name: Mpx
+        one: "{0} Mpx"
+        two: "{0} Mpx"
+        few: "{0} Mpx"
+        many: "{0} Mpx"
+        other: "{0} Mpx"
+      narrow:
+        one: "{0}Mpx"
+        two: "{0}Mpx"
+        few: "{0}Mpx"
+        many: "{0}Mpx"
+        other: "{0}Mpx"
+    pixel-per-centimeter:
+      long:
+        display_name: pikselioù dre santimetr
+        one: "{0} piksel dre santimetr"
+        two: "{0} biksel dre santimetr"
+        few: "{0} fiksel dre santimetr"
+        many: "{0} a bikselioù dre santimetr"
+        other: "{0} piksel dre santimetr"
+      short:
+        display_name: px/cm
+        one: "{0} px/cm"
+        two: "{0} px/cm"
+        few: "{0} px/cm"
+        many: "{0} px/cm"
+        other: "{0} px/cm"
+      narrow:
+        one: "{0}px/cm"
+        two: "{0}px/cm"
+        few: "{0}px/cm"
+        many: "{0}px/cm"
+        other: "{0}px/cm"
+    pixel-per-inch:
+      long:
+        display_name: pikselioù dre veutad
+        one: "{0} piksel dre veutad"
+        two: "{0} biksel dre veutad"
+        few: "{0} fiksel dre veutad"
+        many: "{0} a pikselioù dre veutad"
+        other: "{0} piksel dre veutad"
+      short:
+        display_name: px/in
+        one: "{0} px/in"
+        two: "{0} px/in"
+        few: "{0} px/in"
+        many: "{0} px/in"
+        other: "{0} px/in"
+      narrow:
+        one: "{0}px/in"
+        two: "{0}px/in"
+        few: "{0}px/in"
+        many: "{0}px/in"
+        other: "{0}px/in"
+    dot-per-centimeter:
+      long:
+        display_name: pikoù dre santimetr
+        one: "{0} pik dre santimetr"
+        two: "{0} bik dre santimetr"
+        few: "{0} fik dre santimetr"
+        many: "{0} a bikoù dre santimetr"
+        other: "{0} pik dre santimetr"
+      short:
+        display_name: pdcm
+        one: "{0} pdcm"
+        two: "{0} pdcm"
+        few: "{0} pdcm"
+        many: "{0} pdcm"
+        other: "{0} pdcm"
+      narrow:
+        one: "{0}pdcm"
+        two: "{0}pdcm"
+        few: "{0}pdcm"
+        many: "{0}pdcm"
+        other: "{0}pdcm"
+    dot-per-inch:
+      long:
+        display_name: pikoù dre veutad
+        one: "{0} pik dre veutad"
+        two: "{0} bik dre veutad"
+        few: "{0} fik dre veutad"
+        many: "{0} a bikoù dre veutad"
+        other: "{0} pik dre veutad"
+      short:
+        display_name: pdm
+        one: "{0} pdm"
+        two: "{0} pdm"
+        few: "{0} pdm"
+        many: "{0} pdm"
+        other: "{0} pdm"
+      narrow:
+        one: "{0}pdm"
+        two: "{0}pdm"
+        few: "{0}pdm"
+        many: "{0}pdm"
+        other: "{0}pdm"
+    dot:
+      long:
+        one: "{0} pik"
+        two: "{0} bik"
+        few: "{0} fik"
+        many: "{0} a bikoù"
+        other: "{0} pik"
+      short:
+        display_name: pik
+        one: "{0} pik"
+        two: "{0} pik"
+        few: "{0} pik"
+        many: "{0} pik"
+        other: "{0} pik"
+      narrow:
+        one: "{0}pik"
+        two: "{0}pik"
+        few: "{0}pik"
+        many: "{0}pik"
+        other: "{0}pik"
+    earth-radius:
+      long:
+        display_name: skin douar
+        one: "{0} skin douar"
+        two: "{0} skin douar"
+        few: "{0} skin douar"
+        many: "{0} a skinoù douar"
+        other: "{0} skin douar"
+      narrow:
+        one: "{0}R⊕"
+        two: "{0}R⊕"
+        few: "{0}R⊕"
+        many: "{0}R⊕"
+        other: "{0}R⊕"
+    kilometer:
+      long:
+        display_name: kilometroù
+        one: "{0} c'hilometr"
+        two: "{0} gilometr"
+        few: "{0} c'hilometr"
+        many: "{0} a gilometroù"
+        other: "{0} kilometr"
+        per_unit_pattern: "{0} dre gilometr"
+      narrow:
+        one: "{0}km"
+        two: "{0}km"
+        few: "{0}km"
+        many: "{0}km"
+        other: "{0}km"
+    meter:
+      long:
+        display_name: metroù
+        one: "{0} metr"
+        two: "{0} vetr"
+        few: "{0} metr"
+        many: "{0} a vetroù"
+        other: "{0} metr"
+        per_unit_pattern: "{0} dre vetr"
+      short:
+        display_name: m
+      narrow:
+        one: "{0}m"
+        two: "{0}m"
+        few: "{0}m"
+        many: "{0}m"
+        other: "{0}m"
+    decimeter:
+      long:
+        display_name: desimetroù
+        one: "{0} desimetr"
+        two: "{0} zesimetr"
+        few: "{0} desimetr"
+        many: "{0} a zesimetroù"
+        other: "{0} desimetr"
+      narrow:
+        one: "{0}dm"
+        two: "{0}dm"
+        few: "{0}dm"
+        many: "{0}dm"
+        other: "{0}dm"
+    centimeter:
+      long:
+        display_name: santimetroù
+        one: "{0} santimetr"
+        two: "{0} santimetr"
+        few: "{0} santimetr"
+        many: "{0} a santimetroù"
+        other: "{0} santimetr"
+        per_unit_pattern: "{0} dre santimetr"
+      narrow:
+        one: "{0}cm"
+        two: "{0}cm"
+        few: "{0}cm"
+        many: "{0}cm"
+        other: "{0}cm"
+    millimeter:
+      long:
+        display_name: milimetroù
+        one: "{0} milimetr"
+        two: "{0} vilimetr"
+        few: "{0} milimetr"
+        many: "{0} a vilimetroù"
+        other: "{0} milimetr"
+      narrow:
+        one: "{0}mm"
+        two: "{0}mm"
+        few: "{0}mm"
+        many: "{0}mm"
+        other: "{0}mm"
+    micrometer:
+      long:
+        display_name: mikrometroù
+        one: "{0} mikrometr"
+        two: "{0} vikrometr"
+        few: "{0} mikrometr"
+        many: "{0} a vikrometroù"
+        other: "{0} mikrometr"
+      narrow:
+        one: "{0}μm"
+        two: "{0}μm"
+        few: "{0}μm"
+        many: "{0}μm"
+        other: "{0}μm"
+    nanometer:
+      long:
+        display_name: nanometroù
+        one: "{0} nanometr"
+        two: "{0} nanometr"
+        few: "{0} nanometr"
+        many: "{0} a nanometroù"
+        other: "{0} nanometr"
+      narrow:
+        one: "{0}nm"
+        two: "{0}nm"
+        few: "{0}nm"
+        many: "{0}nm"
+        other: "{0}nm"
+    picometer:
+      long:
+        display_name: pikometroù
+        one: "{0} pikometr"
+        two: "{0} bikometr"
+        few: "{0} fikometr"
+        many: "{0} a bikometroù"
+        other: "{0} pikometr"
+      narrow:
+        one: "{0}pm"
+        two: "{0}pm"
+        few: "{0}pm"
+        many: "{0}pm"
+        other: "{0}pm"
+    mile:
+      long:
+        display_name: miltirioù
+        one: "{0} miltir"
+        two: "{0} viltir"
+        few: "{0} miltir"
+        many: "{0} a viltirioù"
+        other: "{0} miltir"
+      narrow:
+        one: "{0}mi"
+        two: "{0}mi"
+        few: "{0}mi"
+        many: "{0}mi"
+        other: "{0}mi"
+    yard:
+      long:
+        display_name: yardoù
+        one: "{0} yard"
+        two: "{0} yard"
+        few: "{0} yard"
+        many: "{0} a yardoù"
+        other: "{0} yard"
+      narrow:
+        one: "{0}yd"
+        two: "{0}yd"
+        few: "{0}yd"
+        many: "{0}yd"
+        other: "{0}yd"
+    foot:
+      long:
+        display_name: troatadoù
+        one: "{0} troatad"
+        two: "{0} droatad"
+        few: "{0} zroatad"
+        many: "{0} a droatadoù"
+        other: "{0} troatad"
+        per_unit_pattern: "{0} dre droatad"
+      narrow:
+        display_name: "′"
+        one: "{0}′"
+        two: "{0}′"
+        few: "{0}′"
+        many: "{0}′"
+        other: "{0}′"
+        per_unit_pattern: "{0}/′"
+    inch:
+      long:
+        display_name: meutadoù
+        one: "{0} meutad"
+        two: "{0} veutad"
+        few: "{0} meutad"
+        many: "{0} a veutadoù"
+        other: "{0} meutad"
+        per_unit_pattern: "{0} dre veutad"
+      narrow:
+        display_name: "″"
+        one: "{0}″"
+        two: "{0}″"
+        few: "{0}″"
+        many: "{0}″"
+        other: "{0}″"
+        per_unit_pattern: "{0}/″"
+    parsec:
+      long:
+        display_name: parsekoù
+        one: "{0} parsek"
+        two: "{0} barsek"
+        few: "{0} farsek"
+        many: "{0} a barsekoù"
+        other: "{0} parsek"
+      narrow:
+        one: "{0}pc"
+        two: "{0}pc"
+        few: "{0}pc"
+        many: "{0}pc"
+        other: "{0}pc"
+    light-year:
+      long:
+        display_name: bloavezhioù-gouloù
+        one: "{0} bloavezh-gouloù"
+        two: "{0} vloavezh-gouloù"
+        few: "{0} bloavezh-gouloù"
+        many: "{0} a vloavezhioù-gouloù"
+        other: "{0} bloavezh-gouloù"
+      short:
+        display_name: b.g.
+        one: "{0} b.g."
+        two: "{0} b.g."
+        few: "{0} b.g."
+        many: "{0} b.g."
+        other: "{0} b.g."
+      narrow:
+        one: "{0}b.g."
+        two: "{0}b.g."
+        few: "{0}b.g."
+        many: "{0}b.g."
+        other: "{0}b.g."
+    astronomical-unit:
+      long:
+        display_name: unanennoù steredoniel
+        one: "{0} unanenn steredoniel"
+        two: "{0} unanenn steredoniel"
+        few: "{0} unanenn steredoniel"
+        many: "{0} a unanennoù steredoniel"
+        other: "{0} unanenn steredoniel"
+      narrow:
+        one: "{0}au"
+        two: "{0}au"
+        few: "{0}au"
+        many: "{0}au"
+        other: "{0}au"
+    furlong:
+      long:
+        display_name: furlongoù
+        one: "{0} furlong"
+        two: "{0} furlong"
+        few: "{0} furlong"
+        many: "{0} a furlongoù"
+        other: "{0} furlong"
+      narrow:
+        one: "{0}fur"
+        two: "{0}fur"
+        few: "{0}fur"
+        many: "{0}fur"
+        other: "{0}fur"
+    fathom:
+      long:
+        display_name: gourhedadoù
+        one: "{0} gourhedad"
+        two: "{0} c'hourhedad"
+        few: "{0} gourhedad"
+        many: "{0} a c'hourhedadoù"
+        other: "{0} gourhedad"
+      short:
+        display_name: fth
+      narrow:
+        one: "{0}fth"
+        two: "{0}fth"
+        few: "{0}fth"
+        many: "{0}fth"
+        other: "{0}fth"
+    nautical-mile:
+      long:
+        display_name: milmorioù
+        one: "{0} milmor"
+        two: "{0} vilmor"
+        few: "{0} milmor"
+        many: "{0} a vilmorioù"
+        other: "{0} milmor"
+      narrow:
+        one: "{0}nmi"
+        two: "{0}nmi"
+        few: "{0}nmi"
+        many: "{0}nmi"
+        other: "{0}nmi"
+    mile-scandinavian:
+      long:
+        display_name: miltirioù skandinaviat
+        one: "{0} miltir skandinaviat"
+        two: "{0} miltir skandinaviat"
+        few: "{0} miltir skandinaviat"
+        many: "{0} a viltirioù skandinaviat"
+        other: "{0} miltir skandinaviat"
+      narrow:
+        one: "{0}smi"
+        two: "{0}smi"
+        few: "{0}smi"
+        many: "{0}smi"
+        other: "{0}smi"
+    point:
+      long:
+        display_name: poentoù
+        one: "{0} poent"
+        two: "{0} boent"
+        few: "{0} foent"
+        many: "{0} a boentoù"
+        other: "{0} poent"
+      narrow:
+        one: "{0}pt"
+        two: "{0}pt"
+        few: "{0}pt"
+        many: "{0}pt"
+        other: "{0}pt"
+    solar-radius:
+      long:
+        display_name: skinoù heol
+        one: "{0} skin heol"
+        two: "{0} skin heol"
+        few: "{0} skin heol"
+        many: "{0} skin heol"
+        other: "{0} R☉"
+      narrow:
+        one: "{0}R☉"
+        two: "{0}R☉"
+        few: "{0}R☉"
+        many: "{0}R☉"
+        other: "{0}R☉"
+    lux:
+      long:
+        display_name: luksoù
+        one: "{0} luks"
+        two: "{0} luks"
+        few: "{0} luks"
+        many: "{0} a luksoù"
+        other: "{0} luks"
+      narrow:
+        one: "{0}lx"
+        two: "{0}lx"
+        few: "{0}lx"
+        many: "{0}lx"
+        other: "{0}lx"
+    candela:
+      long:
+        display_name: kandelaoù
+        one: "{0} c'handela"
+        two: "{0} gandela"
+        few: "{0} c'handela"
+        many: "{0} a gandelaoù"
+        other: "{0} kandela"
+      narrow:
+        one: "{0}cd"
+        two: "{0}cd"
+        few: "{0}cd"
+        many: "{0}cd"
+        other: "{0}cd"
+    lumen:
+      long:
+        display_name: lumenoù
+        one: "{0} lumen"
+        two: "{0} lumen"
+        few: "{0} lumen"
+        many: "{0} a lumenoù"
+        other: "{0} lumen"
+      narrow:
+        one: "{0}lm"
+        two: "{0}lm"
+        few: "{0}lm"
+        many: "{0}lm"
+        other: "{0}lm"
+    tonne:
+      long:
+        display_name: tonennoù metrek
+        one: "{0} donenn vetrek"
+        two: "{0} donenn vetrek"
+        few: "{0} zonenn metrek"
+        many: "{0} a donennoù metrek"
+        other: "{0} tonenn vetrek"
+      narrow:
+        one: "{0}t"
+        two: "{0}t"
+        few: "{0}t"
+        many: "{0}t"
+        other: "{0}t"
+    kilogram:
+      long:
+        display_name: kilogrammoù
+        one: "{0} c'hilogramm"
+        two: "{0} gilogramm"
+        few: "{0} c'hilogramm"
+        many: "{0} a gilogrammoù"
+        other: "{0} kilogramm"
+        per_unit_pattern: "{0} dre gilogramm"
+      narrow:
+        one: "{0}kg"
+        two: "{0}kg"
+        few: "{0}kg"
+        many: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        display_name: grammoù
+        one: "{0} gramm"
+        two: "{0} c'hramm"
+        few: "{0} gramm"
+        many: "{0} a c'hrammoù"
+        other: "{0} gramm"
+        per_unit_pattern: "{0} dre cʼhramm"
+      short:
+        display_name: g
+      narrow:
+        one: "{0}g"
+        two: "{0}g"
+        few: "{0}g"
+        many: "{0}g"
+        other: "{0}g"
+    milligram:
+      long:
+        display_name: miligrammoù
+        one: "{0} miligramm"
+        two: "{0} viligramm"
+        few: "{0} miligramm"
+        many: "{0} a viligrammoù"
+        other: "{0} miligramm"
+      narrow:
+        one: "{0}mg"
+        two: "{0}mg"
+        few: "{0}mg"
+        many: "{0}mg"
+        other: "{0}mg"
+    microgram:
+      long:
+        display_name: mikrogrammoù
+        one: "{0} mikrogramm"
+        two: "{0} vikrogramm"
+        few: "{0} mikrogramm"
+        many: "{0} a vikrogrammoù"
+        other: "{0} mikrogramm"
+      narrow:
+        one: "{0}μg"
+        two: "{0}μg"
+        few: "{0}μg"
+        many: "{0}μg"
+        other: "{0}μg"
+    ton:
+      long:
+        display_name: tonennoù
+        one: "{0} donenn"
+        two: "{0} donenn"
+        few: "{0} zonenn"
+        many: "{0} a donennoù"
+        other: "{0} tonenn"
+      narrow:
+        one: "{0}tn"
+        two: "{0}tn"
+        few: "{0}tn"
+        many: "{0}tn"
+        other: "{0}tn"
+    stone:
+      long:
+        display_name: stonoù
+        one: "{0} ston"
+        two: "{0} ston"
+        few: "{0} ston"
+        many: "{0} ston"
+        other: "{0} ston"
+      narrow:
+        one: "{0}st"
+        two: "{0}st"
+        few: "{0}st"
+        many: "{0}st"
+        other: "{0}st"
+    pound:
+      long:
+        display_name: lurioù
+        one: "{0} lur"
+        two: "{0} lur"
+        few: "{0} lur"
+        many: "{0} a lurioù"
+        other: "{0} lur"
+        per_unit_pattern: "{0} dre lur"
+      narrow:
+        one: "{0}lb"
+        two: "{0}lb"
+        few: "{0}lb"
+        many: "{0}lb"
+        other: "{0}lb"
+    ounce:
+      long:
+        display_name: oñsoù
+        one: "{0} oñs"
+        two: "{0} oñs"
+        few: "{0} oñs"
+        many: "{0} a oñsoù"
+        other: "{0} oñs"
+        per_unit_pattern: "{0} dre oñs"
+      narrow:
+        one: "{0}oz"
+        two: "{0}oz"
+        few: "{0}oz"
+        many: "{0}oz"
+        other: "{0}oz"
+    ounce-troy:
+      long:
+        display_name: oñsoù troy
+        one: "{0} oñs troy"
+        two: "{0} oñs troy"
+        few: "{0} oñs troy"
+        many: "{0} oñs troy"
+        other: "{0} oñs troy"
+      narrow:
+        display_name: ozt
+        one: "{0}ozt"
+        two: "{0}ozt"
+        few: "{0}ozt"
+        many: "{0}ozt"
+        other: "{0}ozt"
+    carat:
+      long:
+        display_name: karatoù
+        one: "{0} c'harat"
+        two: "{0} garat"
+        few: "{0} c'harat"
+        many: "{0} a garatoù"
+        other: "{0} karat"
+      narrow:
+        one: "{0}CD"
+        two: "{0}CD"
+        few: "{0}CD"
+        many: "{0}CD"
+        other: "{0}CD"
+    dalton:
+      long:
+        display_name: daltonoù
+        one: "{0} dalton"
+        two: "{0} zalton"
+        few: "{0} dalton"
+        many: "{0} a zaltonoù"
+        other: "{0} dalton"
+      narrow:
+        one: "{0}Da"
+        two: "{0}Da"
+        few: "{0}Da"
+        many: "{0} Da"
+        other: "{0}Da"
+    earth-mass:
+      long:
+        display_name: tolzadoù douar
+        one: "{0} tolzad douar"
+        two: "{0} dolzad douar"
+        few: "{0} zolzad douar"
+        many: "{0} a dolzadoù douar"
+        other: "{0} tolzad douar"
+      narrow:
+        one: "{0}M⊕"
+        two: "{0}M⊕"
+        few: "{0}M⊕"
+        many: "{0}M⊕"
+        other: "{0}M⊕"
+    solar-mass:
+      long:
+        display_name: tolzadoù heol
+        one: "{0} tolzad heol"
+        two: "{0} dolzad heol"
+        few: "{0} zolzad heol"
+        many: "{0} a dolzadoù heol"
+        other: "{0} tolzad heol"
+      narrow:
+        one: "{0}M☉"
+        two: "{0}M☉"
+        few: "{0}M☉"
+        many: "{0}M☉"
+        other: "{0}M☉"
+    grain:
+      long:
+        one: "{0} greunad"
+        two: "{0} c'hreunad"
+        few: "{0} greunad"
+        many: "{0} a c'hreunadoù"
+        other: "{0} greunad"
+      short:
+        display_name: gr
+        one: "{0} gr"
+        two: "{0} gr"
+        few: "{0} gr"
+        many: "{0} gr"
+        other: "{0} gr"
+      narrow:
+        one: "{0}gr"
+        two: "{0}gr"
+        few: "{0}gr"
+        many: "{0}gr"
+        other: "{0}gr"
+    gigawatt:
+      long:
+        display_name: gigawattoù
+        one: "{0} gigawatt"
+        two: "{0} c'higawatt"
+        few: "{0} gigawatt"
+        many: "{0} a c'higawattoù"
+        other: "{0} gigawatt"
+      narrow:
+        one: "{0}GW"
+        two: "{0}GW"
+        few: "{0}GW"
+        many: "{0}GW"
+        other: "{0}GW"
+    megawatt:
+      long:
+        display_name: megawattoù
+        one: "{0} megawatt"
+        two: "{0} vegawatt"
+        few: "{0} megawatt"
+        many: "{0} a vegawattoù"
+        other: "{0} megawatt"
+      narrow:
+        one: "{0}MW"
+        two: "{0}MW"
+        few: "{0}MW"
+        many: "{0}MW"
+        other: "{0}MW"
+    kilowatt:
+      long:
+        display_name: kilowattoù
+        one: "{0} c'hilowatt"
+        two: "{0} gilowatt"
+        few: "{0} c'hilowatt"
+        many: "{0} a gilowattoù"
+        other: "{0} kilowatt"
+      narrow:
+        one: "{0}kW"
+        two: "{0}kW"
+        few: "{0}kW"
+        many: "{0}kW"
+        other: "{0}kW"
+    watt:
+      long:
+        display_name: wattoù
+        one: "{0} watt"
+        two: "{0} watt"
+        few: "{0} watt"
+        many: "{0} a wattoù"
+        other: "{0} watt"
+      short:
+        display_name: W
+      narrow:
+        one: "{0}W"
+        two: "{0}W"
+        few: "{0}W"
+        many: "{0}W"
+        other: "{0}W"
+    milliwatt:
+      long:
+        display_name: miliwattoù
+        one: "{0} miliwatt"
+        two: "{0} viliwatt"
+        few: "{0} miliwatt"
+        many: "{0} a viliwattoù"
+        other: "{0} miliwatt"
+      narrow:
+        one: "{0}mW"
+        two: "{0}mW"
+        few: "{0}mW"
+        many: "{0}mW"
+        other: "{0}mW"
+    horsepower:
+      long:
+        display_name: marcʼhadoù nerzh
+        one: "{0} marc'had nerzh"
+        two: "{0} varc'had nerzh"
+        few: "{0} marc'had nerzh"
+        many: "{0} a varc'hadoù nerzh"
+        other: "{0} marc'had nerzh"
+      narrow:
+        one: "{0}hp"
+        two: "{0}hp"
+        few: "{0}hp"
+        many: "{0}hp"
+        other: "{0}hp"
+    millimeter-ofhg:
+      long:
+        display_name: milimetradoù merkur
+        one: "{0} milimetrad merkur"
+        two: "{0} vilimetrad merkur"
+        few: "{0} milimetrad merkur"
+        many: "{0} a vilimetradoù merkur"
+        other: "{0} milimetrad merkur"
+      short:
+        display_name: mmHg
+        one: "{0} mmHg"
+        two: "{0} mmHg"
+        few: "{0} mmHg"
+        many: "{0} mmHg"
+        other: "{0} mmHg"
+      narrow:
+        one: "{0}mmHg"
+        two: "{0}mmHg"
+        few: "{0}mmHg"
+        many: "{0}mmHg"
+        other: "{0}mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: lurioù dre veutad karrez
+        one: "{0} lur dre veutad karrez"
+        two: "{0} lur dre veutad karrez"
+        few: "{0} lur dre veutad karrez"
+        many: "{0} a lurioù dre veutad karrez"
+        other: "{0} lur dre veutad karrez"
+      short:
+        display_name: lb/in²
+        one: "{0} lb/in²"
+        two: "{0} lb/in²"
+        few: "{0} lb/in²"
+        many: "{0} lb/in²"
+        other: "{0} lb/in²"
+      narrow:
+        one: "{0}lb/in²"
+        two: "{0}lb/in²"
+        few: "{0}lb/in²"
+        many: "{0}lb/in²"
+        other: "{0}lb/in²"
+    inch-ofhg:
+      long:
+        display_name: meutadoù merkur
+        one: "{0} meutad merkur"
+        two: "{0} veutad merkur"
+        few: "{0} meutad merkur"
+        many: "{0} a veutadoù merkur"
+        other: "{0} meutad merkur"
+      narrow:
+        display_name: "″Hg"
+        one: "{0}″Hg"
+        two: "{0}″Hg"
+        few: "{0}″Hg"
+        many: "{0}″Hg"
+        other: "{0}″Hg"
+    bar:
+      long:
+        display_name: baroù
+        one: "{0} bar"
+        two: "{0} var"
+        few: "{0} bar"
+        many: "{0} a varoù"
+        other: "{0} bar"
+      narrow:
+        one: "{0}bar"
+        two: "{0}bar"
+        few: "{0}bar"
+        many: "{0}bar"
+        other: "{0}bar"
+    millibar:
+      long:
+        display_name: milibaroù
+        one: "{0} milibar"
+        two: "{0} vilibar"
+        few: "{0} milibar"
+        many: "{0} a vilibaroù"
+        other: "{0} milibar"
+      narrow:
+        one: "{0}mbar"
+        two: "{0}mbar"
+        few: "{0}mbar"
+        many: "{0}mbar"
+        other: "{0}mbar"
+    atmosphere:
+      long:
+        display_name: atmosfer
+        one: "{0} atmosfer"
+        two: "{0} atmosfer"
+        few: "{0} atmosfer"
+        many: "{0} a atmosferoù"
+        other: "{0} atmosfer"
+      narrow:
+        one: "{0}atm"
+        two: "{0}atm"
+        few: "{0}atm"
+        many: "{0}atm"
+        other: "{0}atm"
+    pascal:
+      long:
+        display_name: paskaloù
+        one: "{0} paskal"
+        two: "{0} baskal"
+        few: "{0} faskal"
+        many: "{0} a baskaloù"
+        other: "{0} paskal"
+      narrow:
+        one: "{0}Pa"
+        two: "{0}Pa"
+        few: "{0}Pa"
+        many: "{0}Pa"
+        other: "{0}Pa"
+    hectopascal:
+      long:
+        display_name: hektopaskaloù
+        one: "{0} hektopaskal"
+        two: "{0} hektopaskal"
+        few: "{0} hektopaskal"
+        many: "{0} a hektopaskaloù"
+        other: "{0} hektopaskal"
+      narrow:
+        one: "{0}hPa"
+        two: "{0}hPa"
+        few: "{0}hPa"
+        many: "{0}hPa"
+        other: "{0}hPa"
+    kilopascal:
+      long:
+        display_name: kilopaskaloù
+        one: "{0} c'hilopaskal"
+        two: "{0} gilopaskal"
+        few: "{0} c'hilopaskal"
+        many: "{0} a gilopaskaloù"
+        other: "{0} kilopaskal"
+      narrow:
+        one: "{0}kPa"
+        two: "{0}kPa"
+        few: "{0}kPa"
+        many: "{0}kPa"
+        other: "{0}kPa"
+    megapascal:
+      long:
+        display_name: megapaskaloù
+        one: "{0} megapaskal"
+        two: "{0} vegapaskal"
+        few: "{0} megapaskal"
+        many: "{0} a vegapaskaloù"
+        other: "{0} megapaskal"
+      narrow:
+        one: "{0}MPa"
+        two: "{0}MPa"
+        few: "{0}MPa"
+        many: "{0}MPa"
+        other: "{0}MPa"
+    kilometer-per-hour:
+      long:
+        display_name: kilometroù dre eur
+        one: "{0} c'hilometr dre eur"
+        two: "{0} gilometr dre eur"
+        few: "{0} c'hilometr dre eur"
+        many: "{0} a gilometroù dre eur"
+        other: "{0} kilometr dre eur"
+      narrow:
+        one: "{0}km/h"
+        two: "{0}km/h"
+        few: "{0}km/h"
+        many: "{0}km/h"
+        other: "{0}km/h"
+    meter-per-second:
+      long:
+        display_name: metroù dre eilenn
+        one: "{0} metr dre eilenn"
+        two: "{0} vetr dre eilenn"
+        few: "{0} metr dre eilenn"
+        many: "{0} a vetroù dre eilenn"
+        other: "{0} metr dre eilenn"
+      narrow:
+        one: "{0}m/s"
+        two: "{0}m/s"
+        few: "{0}m/s"
+        many: "{0}m/s"
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        display_name: miltirioù dre eur
+        one: "{0} miltir dre eur"
+        two: "{0} viltir dre eur"
+        few: "{0} miltir dre eur"
+        many: "{0} a viltirioù dre eur"
+        other: "{0} miltir dre eur"
+      narrow:
+        one: "{0}mi/h"
+        two: "{0}mi/h"
+        few: "{0}mi/h"
+        many: "{0}mi/h"
+        other: "{0}mi/h"
+    knot:
+      long:
+        display_name: skoulmoù
+        one: "{0} skoulm"
+        two: "{0} skoulm"
+        few: "{0} skoulm"
+        many: "{0} a skoulmoù"
+        other: "{0} skoulm"
+      short:
+        display_name: nd
+        one: "{0} nd"
+        two: "{0} nd"
+        few: "{0} nd"
+        many: "{0} nd"
+        other: "{0} nd"
+      narrow:
+        one: "{0}nd"
+        two: "{0}nd"
+        few: "{0}nd"
+        many: "{0}nd"
+        other: "{0}nd"
+    generic:
+      long:
+        display_name: derezioù
+        one: "{0} derez"
+        two: "{0} zerez"
+        few: "{0} derez"
+        many: "{0} a zerezioù"
+        other: "{0} derez"
+    celsius:
+      long:
+        display_name: derezioù Celsius
+        one: "{0} derez Celsius"
+        two: "{0} zerez Celsius"
+        few: "{0} derez Celsius"
+        many: "{0} a zerezioù Celsius"
+        other: "{0} derez Celsius"
+    fahrenheit:
+      long:
+        display_name: derezioù Fahrenheit
+        one: "{0} derez Fahrenheit"
+        two: "{0} zerez Fahrenheit"
+        few: "{0} derez Fahrenheit"
+        many: "{0} a zerezioù Fahrenheit"
+        other: "{0} derez Fahrenheit"
+    kelvin:
+      long:
+        display_name: kelvinoù
+        one: "{0} c'helvin"
+        two: "{0} gelvin"
+        few: "{0} c'helvin"
+        many: "{0} a gelvinoù"
+        other: "{0} kelvin"
+      narrow:
+        one: "{0}K"
+        two: "{0}K"
+        few: "{0}K"
+        many: "{0}K"
+        other: "{0}K"
+    newton-meter:
+      long:
+        display_name: newton-metroù
+        one: "{0} newton-metr"
+        two: "{0} newton-metr"
+        few: "{0} newton-metr"
+        many: "{0} a newton-metroù"
+        other: "{0} newton-metr"
+      narrow:
+        one: "{0}N⋅m"
+        two: "{0}N⋅m"
+        few: "{0}N⋅m"
+        many: "{0}N⋅m"
+        other: "{0}N⋅m"
+    cubic-kilometer:
+      long:
+        display_name: kilometroù diñs
+        one: "{0} c'hilometr diñs"
+        two: "{0} gilometr diñs"
+        few: "{0} c'hilometr diñs"
+        many: "{0} a gilometroù diñs"
+        other: "{0} kilometr diñs"
+      narrow:
+        one: "{0}km³"
+        two: "{0}km³"
+        few: "{0}km³"
+        many: "{0}km³"
+        other: "{0}km³"
+    cubic-meter:
+      long:
+        display_name: metroù diñs
+        one: "{0} metr diñs"
+        two: "{0} vetr diñs"
+        few: "{0} metr diñs"
+        many: "{0} a vetroù diñs"
+        other: "{0} metr diñs"
+        per_unit_pattern: "{0} dre vetr diñs"
+      narrow:
+        one: "{0}m³"
+        two: "{0}m³"
+        few: "{0}m³"
+        many: "{0}m³"
+        other: "{0}m³"
+    cubic-centimeter:
+      long:
+        display_name: santimetroù diñs
+        one: "{0} santimetr diñs"
+        two: "{0} santimetr diñs"
+        few: "{0} santimetr diñs"
+        many: "{0} a santimetroù diñs"
+        other: "{0} santimetr diñs"
+        per_unit_pattern: "{0} dre santimetr diñs"
+      narrow:
+        one: "{0}cm³"
+        two: "{0}cm³"
+        few: "{0}cm³"
+        many: "{0}cm³"
+        other: "{0}cm³"
+    cubic-mile:
+      long:
+        display_name: miltirioù diñs
+        one: "{0} miltir diñs"
+        two: "{0} viltir diñs"
+        few: "{0} miltir diñs"
+        many: "{0} a viltirioù diñs"
+        other: "{0} miltir diñs"
+      narrow:
+        one: "{0}mi³"
+        two: "{0}mi³"
+        few: "{0}mi³"
+        many: "{0}mi³"
+        other: "{0}mi³"
+    cubic-yard:
+      long:
+        display_name: yardoù diñs
+        one: "{0} yard diñs"
+        two: "{0} yard diñs"
+        few: "{0} yard diñs"
+        many: "{0} a yardoù diñs"
+        other: "{0} yard diñs"
+      narrow:
+        one: "{0}yd³"
+        two: "{0}yd³"
+        few: "{0}yd³"
+        many: "{0}yd³"
+        other: "{0}yd³"
+    cubic-foot:
+      long:
+        display_name: troatadoù diñs
+        one: "{0} troatad diñs"
+        two: "{0} droatad diñs"
+        few: "{0} zroatad diñs"
+        many: "{0} a droatadoù diñs"
+        other: "{0} troatad diñs"
+      narrow:
+        one: "{0}ft³"
+        two: "{0}ft³"
+        few: "{0}ft³"
+        many: "{0}ft³"
+        other: "{0}ft³"
+    cubic-inch:
+      long:
+        display_name: meutadoù diñs
+        one: "{0} meutad diñs"
+        two: "{0} veutad diñs"
+        few: "{0} meutad diñs"
+        many: "{0} a veutadoù diñs"
+        other: "{0} meutad diñs"
+      narrow:
+        one: "{0}in³"
+        two: "{0}in³"
+        few: "{0}in³"
+        many: "{0}in³"
+        other: "{0}in³"
+    megaliter:
+      long:
+        display_name: megalitroù
+        one: "{0} megalitr"
+        two: "{0} vegalitr"
+        few: "{0} megalitr"
+        many: "{0} a vegalitroù"
+        other: "{0} megalitr"
+      short:
+        display_name: Ml
+        one: "{0} Ml"
+        two: "{0} Ml"
+        few: "{0} Ml"
+        many: "{0} Ml"
+        other: "{0} Ml"
+      narrow:
+        one: "{0}Ml"
+        two: "{0}Ml"
+        few: "{0}Ml"
+        many: "{0}Ml"
+        other: "{0}Ml"
+    hectoliter:
+      long:
+        display_name: hektolitroù
+        one: "{0} hektolitr"
+        two: "{0} hektolitr"
+        few: "{0} hektolitr"
+        many: "{0} a hektolitroù"
+        other: "{0} hektolitr"
+      short:
+        display_name: hl
+        one: "{0} hl"
+        two: "{0} hl"
+        few: "{0} hl"
+        many: "{0} hl"
+        other: "{0} hl"
+      narrow:
+        one: "{0}hl"
+        two: "{0}hl"
+        few: "{0}hl"
+        many: "{0}hl"
+        other: "{0}hl"
+    liter:
+      long:
+        display_name: litroù
+        one: "{0} litr"
+        two: "{0} litr"
+        few: "{0} litr"
+        many: "{0} a litroù"
+        other: "{0} litr"
+        per_unit_pattern: "{0} dre litr"
+      short:
+        display_name: l
+      narrow:
+        one: "{0}l"
+        two: "{0}l"
+        few: "{0}l"
+        many: "{0}l"
+        other: "{0}l"
+    deciliter:
+      long:
+        display_name: desilitroù
+        one: "{0} desilitr"
+        two: "{0} zesilitr"
+        few: "{0} desilitr"
+        many: "{0} a zesilitroù"
+        other: "{0} desilitr"
+      short:
+        display_name: dl
+        one: "{0} dl"
+        two: "{0} dl"
+        few: "{0} dl"
+        many: "{0} dl"
+        other: "{0} dl"
+      narrow:
+        one: "{0}dl"
+        two: "{0}dl"
+        few: "{0}dl"
+        many: "{0}dl"
+        other: "{0}dl"
+    centiliter:
+      long:
+        display_name: santilitroù
+        one: "{0} santilitr"
+        two: "{0} santilitr"
+        few: "{0} santilitr"
+        many: "{0} a santilitroù"
+        other: "{0} santilitr"
+      short:
+        display_name: cl
+        one: "{0} cl"
+        two: "{0} cl"
+        few: "{0} cl"
+        many: "{0} cl"
+        other: "{0} cl"
+      narrow:
+        one: "{0}cl"
+        two: "{0}cl"
+        few: "{0}cl"
+        many: "{0}cl"
+        other: "{0}cl"
+    milliliter:
+      long:
+        display_name: mililitroù
+        one: "{0} mililitr"
+        two: "{0} vililitr"
+        few: "{0} mililitr"
+        many: "{0} a vililitroù"
+        other: "{0} mililitr"
+      short:
+        display_name: ml
+        one: "{0} ml"
+        two: "{0} ml"
+        few: "{0} ml"
+        many: "{0} ml"
+        other: "{0} ml"
+      narrow:
+        one: "{0}ml"
+        two: "{0}ml"
+        few: "{0}ml"
+        many: "{0}ml"
+        other: "{0}ml"
+    pint-metric:
+      long:
+        display_name: pintoù metrek
+        one: "{0} pint metrek"
+        two: "{0} bint metrek"
+        few: "{0} fint metrek"
+        many: "{0} a bintoù metrek"
+        other: "{0} pint metrek"
+      narrow:
+        one: "{0}mpt"
+        two: "{0}mpt"
+        few: "{0}mpt"
+        many: "{0}mpt"
+        other: "{0}mpt"
+    cup-metric:
+      long:
+        display_name: tasadoù metrek
+        one: "{0} tasad metrek"
+        two: "{0} dasad vetrek"
+        few: "{0} zasad metrek"
+        many: "{0} a dasadoù metrek"
+        other: "{0} tasad metrek"
+      short:
+        display_name: tm
+        one: "{0} tm"
+        two: "{0} tm"
+        few: "{0} tm"
+        many: "{0} tm"
+        other: "{0} tm"
+      narrow:
+        one: "{0}tm"
+        two: "{0}tm"
+        few: "{0}tm"
+        many: "{0}tm"
+        other: "{0}tm"
+    acre-foot:
+      long:
+        display_name: akroù-troatadoù
+        one: "{0} akr-troatad"
+        two: "{0} akr-troatad"
+        few: "{0} akr-troatad"
+        many: "{0} akr-troatad"
+        other: "{0} akr-troatad"
+      narrow:
+        display_name: acft
+        one: "{0}acft"
+        two: "{0}acft"
+        few: "{0}acft"
+        many: "{0}acft"
+        other: "{0}acft"
+    bushel:
+      long:
+        display_name: poezelladoù
+        one: "{0} poezellad"
+        two: "{0} boezellad"
+        few: "{0} foezellad"
+        many: "{0} a boezelladoù"
+        other: "{0} poezellad"
+      narrow:
+        one: "{0}bu"
+        two: "{0}bu"
+        few: "{0}bu"
+        many: "{0}bu"
+        other: "{0}bu"
+    gallon:
+      long:
+        display_name: gallonoù
+        one: "{0} gallon"
+        two: "{0} c'hallon"
+        few: "{0} gallon"
+        many: "{0} a c'hallonoù"
+        other: "{0} gallon"
+        per_unit_pattern: "{0} dre cʼhallon"
+      short:
+        display_name: gal
+        one: "{0} gal"
+        two: "{0} gal"
+        few: "{0} gal"
+        many: "{0} gal"
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal"
+      narrow:
+        one: "{0}gal"
+        two: "{0}gal"
+        few: "{0}gal"
+        many: "{0}gal"
+        other: "{0}gal"
+    gallon-imperial:
+      long:
+        display_name: gallonoù impalaerel
+        one: "{0} gallon impalaerel"
+        two: "{0} c'hallon impalaerel"
+        few: "{0} gallon impalaerel"
+        many: "{0} a c'hallonoù impalaerel"
+        other: "{0} gallon impalaerel"
+        per_unit_pattern: "{0} dre cʼhallon impalaerel"
+      short:
+        display_name: gal imp.
+        one: "{0} gal imp."
+        two: "{0} gal imp."
+        few: "{0} gal imp."
+        many: "{0} gal imp."
+        other: "{0} gal imp."
+        per_unit_pattern: "{0}/gal imp."
+      narrow:
+        display_name: galIm
+        one: "{0}galIm"
+        two: "{0}galIm"
+        few: "{0}galIm"
+        many: "{0}galIm"
+        other: "{0}galIm"
+        per_unit_pattern: "{0}/galIm"
+    quart:
+      long:
+        display_name: kardoù
+        one: "{0} c'hard"
+        two: "{0} gard"
+        few: "{0} c'hard"
+        many: "{0} a gardoù"
+        other: "{0} kard"
+      narrow:
+        one: "{0}qt"
+        two: "{0}qt"
+        few: "{0}qt"
+        many: "{0}qt"
+        other: "{0}qt"
+    pint:
+      long:
+        display_name: pintoù
+        one: "{0} pint"
+        two: "{0} bint"
+        few: "{0} fint"
+        many: "{0} a bintoù"
+        other: "{0} pint"
+      narrow:
+        one: "{0}pt"
+        two: "{0}pt"
+        few: "{0}pt"
+        many: "{0}pt"
+        other: "{0}pt"
+    cup:
+      long:
+        display_name: tasadoù
+        one: "{0} tasad"
+        two: "{0} tasad"
+        few: "{0} zasad"
+        many: "{0} a dasadoù"
+        other: "{0} tasad"
+      short:
+        display_name: tas.
+        one: "{0} tas."
+        two: "{0} tas."
+        few: "{0} tas."
+        many: "{0} tas."
+        other: "{0} tas."
+      narrow:
+        one: "{0}tas."
+        two: "{0}tas."
+        few: "{0}tas."
+        many: "{0}tas."
+        other: "{0}tas."
+    fluid-ounce:
+      long:
+        display_name: oñsoù liñvel
+        one: "{0} oñs liñvel"
+        two: "{0} oñs liñvel"
+        few: "{0} oñs liñvel"
+        many: "{0} a oñsoù liñvel"
+        other: "{0} oñs liñvel"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        two: "{0} fl oz"
+        few: "{0} fl oz"
+        many: "{0} fl oz"
+        other: "{0} fl oz"
+      narrow:
+        one: "{0}fl oz"
+        two: "{0}fl oz"
+        few: "{0}fl oz"
+        many: "{0}fl oz"
+        other: "{0}fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: oñsoù liñvel impalaerel
+        one: "{0} oñs liñvel impalaerel"
+        two: "{0} oñs liñvel impalaerel"
+        few: "{0} oñs liñvel impalaerel"
+        many: "{0} a oñsoù liñvel impalaerel"
+        other: "{0} oñs liñvel impalaerel"
+      short:
+        display_name: fl oz imp.
+        one: "{0} fl oz imp."
+        two: "{0} fl oz imp."
+        few: "{0} fl oz imp."
+        many: "{0} fl oz imp."
+        other: "{0} fl oz imp."
+      narrow:
+        display_name: fl oz Im
+        one: "{0}fl oz Im"
+        two: "{0}fl oz Im"
+        few: "{0}fl oz Im"
+        many: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        display_name: loaiadoù-boued
+        one: "{0} loaiad-voued"
+        two: "{0} loaiad-voued"
+        few: "{0} loaiad-voued"
+        many: "{0} a loaiadoù-boued"
+        other: "{0} loaiad-voued"
+      short:
+        display_name: l.-v.
+        one: "{0} l.-v."
+        two: "{0} l.-v."
+        few: "{0} l.-v."
+        many: "{0} l.-v."
+        other: "{0} l.-v."
+      narrow:
+        one: "{0}l.-v."
+        two: "{0}l.-v."
+        few: "{0}l.-v."
+        many: "{0}l.-v."
+        other: "{0}l.-v."
+    teaspoon:
+      long:
+        display_name: loaiadoù-kafe
+        one: "{0} loaiad-gafe"
+        two: "{0} loaiad-gafe"
+        few: "{0} loaiad-gafe"
+        many: "{0} a loaiadoù-kafe"
+        other: "{0} loaiad-gafe"
+      short:
+        display_name: l.-g.
+        one: "{0} l.-g."
+        two: "{0} l.-g."
+        few: "{0} l.-g."
+        many: "{0} l.-g."
+        other: "{0} l.-g."
+      narrow:
+        one: "{0}l.-g."
+        two: "{0}l.-g."
+        few: "{0}l.-g."
+        many: "{0}l.-g."
+        other: "{0}l.-g."
+    barrel:
+      long:
+        display_name: barilhoù
+        one: "{0} barilh"
+        two: "{0} varilh"
+        few: "{0} barilh"
+        many: "{0} a varilhoù"
+        other: "{0} barilh"
+      narrow:
+        one: "{0}bbl"
+        two: "{0}bbl"
+        few: "{0}bbl"
+        many: "{0}bbl"
+        other: "{0}bbl"
+    dessert-spoon:
+      long:
+        display_name: loaiad dibenn-pred
+        one: "{0} loaiad dibenn-pred"
+        two: "{0} loaiad dibenn-pred"
+        few: "{0} loaiad dibenn-pred"
+        many: "{0} a loaiadoù dibenn-pred"
+        other: "{0} loaiad dibenn-pred"
+      short:
+        display_name: l.d.-b.
+        one: "{0} l.d.-b."
+        two: "{0} l.d.-b."
+        few: "{0} l.d.-b."
+        many: "{0} l.d.-b."
+        other: "{0} l.d.-b."
+      narrow:
+        one: "{0}l.d.-b."
+        two: "{0}l.d.-b."
+        few: "{0}l.d.-b."
+        many: "{0}l.d.-b."
+        other: "{0}l.d.-b."
+    dessert-spoon-imperial:
+      long:
+        display_name: loaiad dibenn-pred impalaerel
+        one: "{0} loaiad dibenn-pred impalaerel"
+        two: "{0} loaiad dibenn-pred impalaerel"
+        few: "{0} loaiad dibenn-pred impalaerel"
+        many: "{0} a loaiadoù dibenn-pred impalaerel"
+        other: "{0} loaiad dibenn-pred impalaerel"
+      short:
+        display_name: l.d.-b. imp.
+        one: "{0} l.d.-b. imp."
+        two: "{0} l.d.-b. imp."
+        few: "{0} l.d.-b. imp."
+        many: "{0} l.d.-b. imp."
+        other: "{0} l.d.-b. imp."
+      narrow:
+        display_name: ldb Imp
+        one: "{0}ldb Imp"
+        two: "{0}ldb Imp"
+        few: "{0}ldb Imp"
+        many: "{0}ldb Imp"
+        other: "{0}ldb Imp"
+    drop:
+      long:
+        display_name: takenn
+        one: "{0} dakenn"
+        two: "{0} dakenn"
+        few: "{0} zakenn"
+        many: "{0} a dakennoù"
+        other: "{0} takenn"
+      short:
+        display_name: gt
+        one: "{0} gt"
+        two: "{0} gt"
+        few: "{0} gt"
+        many: "{0} gt"
+        other: "{0} gt"
+      narrow:
+        one: "{0}gt"
+        two: "{0}gt"
+        few: "{0}gt"
+        many: "{0}gt"
+        other: "{0}gt"
+    dram:
+      long:
+        display_name: drakm liñvel
+        one: "{0} drakm liñvel"
+        two: "{0} zrakm liñvel"
+        few: "{0} drakm liñvel"
+        many: "{0} a zrakmoù liñvel"
+        other: "{0} drakm liñvel"
+      short:
+        display_name: fl dr
+        one: "{0} fl dr"
+        two: "{0} fl dr"
+        few: "{0} fl dr"
+        many: "{0} fl dr"
+        other: "{0} fl dr"
+      narrow:
+        one: "{0}fl dr"
+        two: "{0}fl dr"
+        few: "{0}fl dr"
+        many: "{0}fl dr"
+        other: "{0}fl dr"
+    jigger:
+      long:
+        one: "{0} shot"
+        two: "{0} shot"
+        few: "{0} shot"
+        many: "{0} a shotoù"
+        other: "{0} shot"
+      short:
+        display_name: shot
+        one: "{0} shot"
+        two: "{0} shot"
+        few: "{0} shot"
+        many: "{0} shot"
+        other: "{0} shot"
+      narrow:
+        one: "{0}shot"
+        two: "{0}shot"
+        few: "{0}shot"
+        many: "{0}shot"
+        other: "{0}shot"
+    pinch:
+      long:
+        display_name: piñsad
+        one: "{0} piñsad"
+        two: "{0} biñsad"
+        few: "{0} fiñsad"
+        many: "{0} a biñsadoù"
+        other: "{0} piñsad"
+      short:
+        display_name: piñs
+        one: "{0} piñs"
+        two: "{0} piñs"
+        few: "{0} piñs"
+        many: "{0} piñs"
+        other: "{0} piñs"
+      narrow:
+        one: "{0}piñs"
+        two: "{0}piñs"
+        few: "{0}piñs"
+        many: "{0}piñs"
+        other: "{0}piñs"
+    quart-imperial:
+      long:
+        display_name: kardoù impalaerel
+        one: "{0} c'hard impalaerel"
+        two: "{0} gard impalaerel"
+        few: "{0} c'hard impalaerel"
+        many: "{0} a gardoù impalaerel"
+        other: "{0} kard impalaerel"
+      short:
+        display_name: qt Imp.
+      narrow:
+        one: "{0}qt Imp."
+        two: "{0}qt Imp."
+        few: "{0}qt Imp."
+        many: "{0}qt Imp."
+        other: "{0}qt Imp."
+    arc-minute:
+      short:
+        display_name: "′"
+    arc-second:
+      short:
+        display_name: "″"
+    permillion:
+      narrow:
+        one: "{0}ppm"
+        two: "{0}ppm"
+        few: "{0}ppm"
+        many: "{0}ppm"
+        other: "{0}ppm"
+    pound-force:
+      narrow:
+        one: "{0}lbf"
+        two: "{0}lbf"
+        few: "{0}lbf"
+        many: "{0}lbf"
+        other: "{0}lbf"
+    solar-luminosity:
+      narrow:
+        one: "{0}L☉"
+        two: "{0}L☉"
+        few: "{0}L☉"
+        many: "{0}L☉"
+        other: "{0}L☉"
+    pound-force-foot:
+      narrow:
+        one: "{0}lbf⋅ft"
+        two: "{0}lbf⋅ft"
+        few: "{0}lbf⋅ft"
+        many: "{0}lbf⋅ft"
+        other: "{0}lbf⋅ft"

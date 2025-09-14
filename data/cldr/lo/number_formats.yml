@@ -1,439 +1,72 @@
 ---
 locale: lo
-generated_at: '2025-09-13T17:38:49Z'
+generated_at: '2025-09-14T06:11:00Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
     nan: ບໍ່​ແມ່ນ​ໂຕ​ເລກ
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00;¤-#,##0.00"
   scientific_formats:
     standard: "#"
+  compact_formats:
+    short:
+      '1000':
+        other: 0 ພັນ
+      '10000':
+        other: 00 ພັນ
+      '100000':
+        other: 000 ພັນ
+      '1000000':
+        other: 0 ລ້ານ
+      '10000000':
+        other: 00 ລ້ານ
+      '100000000':
+        other: 000 ລ້ານ
+      '1000000000':
+        other: 0 ຕື້
+      '10000000000':
+        other: 00 ຕື້
+      '100000000000':
+        other: 000 ຕື້
+      '1000000000000':
+        other: 0 ລ້ານລ້ານ
+      '10000000000000':
+        other: 00ລລ
+      '100000000000000':
+        other: 000ລລ
+    long:
+      '1000':
+        other: 0 ພັນ
+      '10000':
+        other: 00 ພັນ
+      '100000':
+        other: 0 ແສນ
+      '1000000':
+        other: 0 ລ້ານ
+      '10000000':
+        other: 00 ລ້ານ
+      '100000000':
+        other: 000 ລ້ານ
+      '1000000000':
+        other: 0 ຕື້
+      '10000000000':
+        other: 00 ຕື້
+      '100000000000':
+        other: 000 ຕື້
+      '1000000000000':
+        other: 0 ລ້ານລ້ານ
+      '10000000000000':
+        other: 00 ລ້ານລ້ານ
+      '100000000000000':
+        other: 000 ລ້ານລ້ານ
   currencies:
-    AFN:
-      display_names:
-        other: ອັຟ​ກັນ ອັຟ​ກາ​ນິ
-        one: ອັຟ​ກັນ ອັຟ​ກາ​ນິ
-    AMD:
-      display_names:
-        other: ອາ​ເມ​ນຽນ ແດຣມ
-        one: ອາ​ເມ​ນຽນ ແດຣມ
-    AOA:
-      display_names:
-        other: ແອງ​ໂກ​ລັນ ຄວນ​ຊາ
-        one: ແອງ​ໂກ​ລັນ ຄວນ​ຊາ
-    ARS:
-      display_names:
-        other: ອາ​ເຈນ​ທິ​ນາ ເປ​ໂຊ
-        one: ອາ​ເຈນ​ທິ​ນາ ເປ​ໂຊ
-    AUD:
-      display_names:
-        other: ອອສ​ເຕຣ​ລຽນ ໂດ​ລ່າ
-        one: ອອສ​ເຕຣ​ລຽນ ໂດ​ລ່າ
-    AZN:
-      display_names:
-        other: ອາ​ເຊີ​ໄບ​ຈາ​ນິ ມາ​ນັດ
-        one: ອາ​ເຊີ​ໄບ​ຈາ​ນິ ມາ​ນັດ
-    BAM:
-      display_names:
-        other: ບອ​ສ​ເນຍ-ເຮີ​ເຊ​ໂກວິ​ນາ ຄອນ​ເວີດ​ຕິ​ໂບ ມາກ
-        one: ບອ​ສ​ເນຍ-ເຮີ​ເຊ​ໂກວິ​ນາ ຄອນ​ເວີດ​ຕິ​ໂບ ມາກ
-    BBD:
-      display_names:
-        other: ໂດລ່າ ບາບາດຽນ
-        one: ໂດລ່າ ບາບາດຽນ
-    BDT:
-      display_names:
-        other: ບັງ​ຄລາ​ເທດ ຕາ​ກາ
-        one: ບັງ​ຄລາ​ເທດ ຕາ​ກາ
-    BMD:
-      display_names:
-        other: ໂດ​ລ່າ​ເບີ​ມິວ​ດາ
-        one: ໂດ​ລ່າ​ເບີ​ມິວ​ດາ
-    BND:
-      display_names:
-        other: ບຣູ​ໄນ ໂດ​ລ່າ
-        one: ບຣູ​ໄນ ໂດ​ລ່າ
-    BOB:
-      display_names:
-        other: ໂບ​ລິ​ວຽນ ໂບ​ລິ​ເວຍ​ໂນ
-        one: ໂບ​ລິ​ວຽນ ໂບ​ລິ​ເວຍ​ໂນ
-    BRL:
-      display_names:
-        other: ບຣາ​ຊິ​ລຽນ ຣຽວ
-        one: ບຣາ​ຊິ​ລຽນ ຣຽວ
-    BSD:
-      display_names:
-        other: ໂດລ່າ ບາຮາມຽນ
-        one: ໂດລ່າ ບາຮາມຽນ
-    BWP:
-      display_names:
-        other: ບອດ​ສະ​ວາ​ນານ ພູ​ລາ
-        one: ບອດ​ສະ​ວາ​ນານ ພູ​ລາ
-    BZD:
-      display_names:
-        other: ໂດ​ລ່າ​ເບ​ລີຊ
-        one: ໂດ​ລ່າ​ເບ​ລີຊ
-    CAD:
-      display_names:
-        other: ໂດລ່າແຄນາດາ
-        one: ໂດລ່າແຄນາດາ
-    CLP:
-      display_names:
-        other: ຊິ​ລຽນ ເປ​ໂຊ
-        one: ຊິ​ລຽນ ເປ​ໂຊ
-    CNY:
-      display_names:
-        other: ຈີນ ຢວນ
-        one: ຈີນ ຢວນ
-    COP:
-      display_names:
-        other: ໂຄ​ລົມ​ບຽນ ເປ​ໂຊ
-        one: ໂຄ​ລົມ​ບຽນ ເປ​ໂຊ
-    CRC:
-      display_names:
-        other: ໂຄສຕາ ຣິກັນ ໂຄລອນ
-        one: ໂຄສຕາ ຣິກັນ ໂຄລອນ
-    CUC:
-      display_names:
-        other: ຄິວແບນ ຄອນເວີດຕິໂບ ເປໂຊ
-        one: ຄິວແບນ ຄອນເວີດຕິໂບ ເປໂຊ
-    CUP:
-      display_names:
-        other: ຄິວແບນ ເປໂຊ
-        one: ຄິວແບນ ເປໂຊ
-    CZK:
-      display_names:
-        other: ເຊກ ໂຄ​ຣູ​ນາ
-        one: ເຊກ ໂຄ​ຣູ​ນາ
-    DKK:
-      display_names:
-        other: ແດນ​ນິ​ຊ ໂຄຣນເນີ
-        one: ແດນ​ນິ​ຊ ໂຄຣນ
-    DOP:
-      display_names:
-        other: ໂດ​ມິ​ນິ​ກັນ ເປ​ໂຊ
-        one: ໂດ​ມິ​ນິ​ກັນ ເປ​ໂຊ
-    EGP:
-      display_names:
-        other: ອີ​ຢິບ​ທຽນ ພາວດ໌
-        one: ອີ​ຢິບ​ທຽນ ພາວດ໌
-    ESP:
-      display_names:
-        other: ເປເຊຕາ ສະເປນ
-        one: ເປເຊຕາ ສະເປນ
-    EUR:
-      display_names:
-        other: ຢູ​ໂຣ
-        one: ຢູ​ໂຣ
-    FJD:
-      display_names:
-        other: ຟິ​ຈຽນ ໂດ​ລ່າ
-        one: ຟິ​ຈຽນ ໂດ​ລ່າ
-    FKP:
-      display_names:
-        other: ຟອ​ລ໌ກ​ແລນ ໄອ​ແລນ​ສ໌ ພາວ​ດ໌
-        one: ຟອ​ລ໌ກ​ແລນ ໄອ​ແລນ​ສ໌ ພາວ​ດ໌
-    GBP:
-      display_names:
-        other: ອັງກິດ ປອນ
-        one: ອັງກິດ ປອນ
-    GEL:
-      symbol: ລາຣີ
-      display_names:
-        other: ຈໍ​ຈຽນ ລາ​ຣິ
-        one: ຈໍ​ຈຽນ ລາ​ຣິ
-    GHS:
-      display_names:
-        other: ກາ​ນາ​ອຽນ ເຊ​ດິ
-        one: ກາ​ນາ​ອຽນ ເຊ​ດິ
-    GIP:
-      display_names:
-        other: ກິບ​ຣາ​ທາ ພາ​ວດ໌
-        one: ກິບ​ຣາ​ທາ ພາ​ວດ໌
-    GNF:
-      display_names:
-        other: ກິ​ນຽນ ຟຣັງ
-        one: ກິ​ນຽນ ຟຣັງ
-    GTQ:
-      display_names:
-        other: ເຄັດຊອນ
-        one: ກົວເຕມາລານ ເຄັດຊອນ
-    GYD:
-      display_names:
-        other: ກາຍ​ຢາ​ນີ​ສ ໂດ​ລ່າ
-        one: ກາຍ​ຢາ​ນີ​ສ ໂດ​ລ່າ
-    HKD:
-      display_names:
-        other: ຮອງ​ກົງ ໂດ​ລ່າ
-        one: ຮອງ​ກົງ ໂດ​ລ່າ
-    HNL:
-      display_names:
-        other: ຮອນດູແຣນ ເລມພິຣາ
-        one: ຮອນດູແຣນ ເລມພິຣາ
-    HRK:
-      display_names:
-        other: ໂຄຣ​ເອ​ທຽນ ຄູ​ນາ
-        one: ໂຄຣ​ເອ​ທຽນ ຄູ​ນາ
-    HUF:
-      display_names:
-        other: ຮັງ​ກາ​ຣຽນ ຟໍ​ຣິນ
-        one: ຮັງ​ກາ​ຣຽນ ຟໍ​ຣິນ
-    IDR:
-      display_names:
-        other: ອິນ​ໂດ​ເນ​ຊຽນ ໂດ​ລ່າ
-        one: ອິນ​ໂດ​ເນ​ຊຽນ ໂດ​ລ່າ
-    ILS:
-      display_names:
-        other: ອິສ​ຣາ​ເອວ​ລິ ນິວ ເຊ​ເກວ
-        one: ອິສ​ຣາ​ເອວ​ລິ ນິວ ເຊ​ເກວ
-    INR:
-      display_names:
-        other: ອິນ​ເດຍ ຣູ​ປີ
-        one: ອິນ​ເດຍ ຣູ​ປີ
-    ISK:
-      display_names:
-        other: ໄອ​ສ໌​ແລນ​ດິກ ໂຄຣ​ນາ
-        one: ໄອ​ສ໌​ແລນ​ດິກ ໂຄຣ​ນາ
-    JMD:
-      display_names:
-        other: "​ຈາ​ໄມ​ກັນ ໂດ​ລ່າ"
-        one: "​ຈາ​ໄມ​ກັນ ໂດ​ລ່າ"
-    JPY:
-      display_names:
-        other: ຍີ່​ປຸ່ນ ເຢນ
-        one: ຍີ່​ປຸ່ນ ເຢນ
-    KGS:
-      display_names:
-        other: ຄ​ຣີ​ກິສ​​ຖາ​ນິ ໂຊມ
-        one: ຄ​ຣີ​ກິສ​​ຖາ​ນິ ໂຊມ
-    KHR:
-      display_names:
-        other: ກຳ​ປູ​ເຈຍ ຣຽວ
-        one: ກຳ​ປູ​ເຈຍ ຣຽວ
-    KMF:
-      display_names:
-        other: ໂຄ​ໂມ​ຣຽນ ຟຣັງ
-        one: ໂຄ​ໂມ​ຣຽນ ຟຣັງ
-    KPW:
-      display_names:
-        other: ເກົາ​ຫລີ​ເໜືອ ວອນ
-        one: ເກົາ​ຫລີ​ເໜືອ ວອນ
-    KRW:
-      display_names:
-        other: ເກົາ​ຫລີໃຕ້ ວອນ
-        one: ເກົາ​ຫລີໃຕ້ ວອນ
-    KYD:
-      display_names:
-        other: ເຄ​ແມນ ໄອ​ແລນ ໂດ​ລ່າ
-        one: ເຄ​ແມນ ໄອ​ແລນ ໂດ​ລ່າ
-    KZT:
-      display_names:
-        other: ຄາ​ຊັກ​ສະ​ຖາ​ນິ ເຕັງ​ເຈ
-        one: ຄາ​ຊັກ​ສະ​ຖາ​ນິ ເຕັງ​ເຈ
-    LAK:
-      display_names:
-        other: ລາວ ກີບ
-        one: ລາວ ກີບ
-    LBP:
-      display_names:
-        other: ເລ​ບາ​ນີ​ສ ພາວດ໌
-        one: ເລ​ບາ​ນີ​ສ ພາວດ໌
-    LKR:
-      display_names:
-        other: ສີ​ລັງ​ກາ ຣູ​ປີ
-        one: ສີ​ລັງ​ກາ ຣູ​ປີ
-    LRD:
-      display_names:
-        other: ລິ​ເບີ​ຣຽນ ໂດ​ລ່າ
-        one: ລິ​ເບີ​ຣຽນ ໂດ​ລ່າ
-    LTL:
-      display_names:
-        other: ລິ​ທົວ​ນຽນ ລິ​ທັ​ສ
-        one: ລິ​ທົວ​ນຽນ ລິ​ທັ​ສ
-    LVL:
-      display_names:
-        other: ລັດ​ວຽນ ລັດ​ຕິ
-        one: ລັດ​ວຽນ ລັດ​ສ໌
-    MGA:
-      display_names:
-        other: ມາ​ລາ​ກາ​ຊີ ອາ​ເຣຍ​ຣີ
-        one: ມາ​ລາ​ກາ​ຊີ ອາ​ເຣຍ​ຣີ
-    MMK:
-      display_names:
-        other: ມຽນ​ມາ ຈ໊າດ
-        one: ມຽນ​ມາ ຈ໊າດ
-    MNT:
-      display_names:
-        other: ມອງ​ໂກ​ລຽນ ຕູກຣິກ
-        one: ມອງ​ໂກ​ລຽນ ຕູກຣິກ
-    MUR:
-      display_names:
-        other: ເມົາ​ຣິ​ທຽນ ຣູ​ປີ
-        one: ເມົາ​ຣິ​ທຽນ ຣູ​ປີ
-    MXN:
-      display_names:
-        other: ເມັກຊິກັນ ເປໂຊ
-        one: ເມັກຊິກັນ ເປໂຊ
-    MYR:
-      display_names:
-        other: ມາ​ເລ​ເຊຍ ຣິງ​ກິດ
-        one: ມາ​ເລ​ເຊຍ ຣິງ​ກິດ
-    NAD:
-      display_names:
-        other: ນາ​ມິ​ບຽນ ໂດ​ລ່າ
-        one: ນາ​ມິ​ບຽນ ໂດ​ລ່າ
-    NGN:
-      display_names:
-        other: ໄນ​ຣາ ​ໄນເຈີ​ຣຽນ
-        one: ໄນ​ຣາ ​ໄນເຈີ​ຣຽນ
-    NIO:
-      display_names:
-        other: ນິກາຣາກວນ ໂຄໂດບາ
-        one: ນິກາຣາກວນ ໂຄໂດບາ
-    NOK:
-      display_names:
-        other: ນໍ​ເວ​ຈຽນ ​ໂຄຣນ
-        one: ນໍ​ເວ​ຈຽນ ​ໂຄຣນ
-    NPR:
-      display_names:
-        other: ເນ​ປານ ຣູ​ປີ
-        one: ເນ​ປານ ຣູ​ປີ
-    NZD:
-      display_names:
-        other: ນິວ​ຊີ​ແລນ ໂດ​ລ່າ
-        one: ນິວ​ຊີ​ແລນ ໂດ​ລ່າ
-    PHP:
-      symbol: PHP
-      display_names:
-        other: ຟິ​ລິບ​ປິນ ເປ​ໂຊ
-        one: ຟິ​ລິບ​ປິນ ເປ​ໂຊ
-    PKR:
-      display_names:
-        other: ປາ​ກິ​ສຖານ ຣູ​ປີ
-        one: ປາ​ກິ​ສຖານ ຣູ​ປີ
-    PLN:
-      display_names:
-        other: ໂປ​ລິ​ຊ ຊະ​ລໍ​ຕີ
-        one: ໂປ​ລິ​ຊ ຊະ​ລໍ​ຕີ
-    PYG:
-      display_names:
-        other: ກວາຣານີ ປາຣາກວາຍ
-        one: ກວາຣານີ ປາຣາກວາຍ
-    RON:
-      display_names:
-        other: ໂຣ​ມາ​ນຽນ ເລ​ອູ
-        one: ໂຣ​ມາ​ນຽນ ເລ​ອູ
-    RUB:
-      display_names:
-        other: ຣັສ​ຊຽນ ຣູ​ເບິນ
-        one: ຣັສ​ຊຽນ ຣູ​ເບິນ
-    RWF:
-      display_names:
-        other: ຣະ​ວັນ​ດັນ ຟຣັງ
-        one: ຣະ​ວັນ​ດັນ ຟຣັງ
-    SBD:
-      display_names:
-        other: ໂຊ​ໂລມອນ ໄອ​ແລນ ໂດ​ລ່າ
-        one: ໂຊ​ໂລມອນ ໄອ​ແລນ ໂດ​ລ່າ
-    SEK:
-      display_names:
-        other: ສະ​ວີ​ດິ​ຊ ໂຄຣ​ນາ
-        one: ສະ​ວີ​ດິ​ຊ ໂຄຣ​ນາ
-    SGD:
-      display_names:
-        other: ສິງ​ກະ​ໂປ ໂດ​ລ່າ
-        one: ສິງ​ກະ​ໂປ ໂດ​ລ່າ
-    SHP:
-      display_names:
-        other: ເຊນ ເຮ​ເລ​ນາ ພາວດ໌
-        one: ເຊນ ເຮ​ເລ​ນາ ພາວດ໌
-    SRD:
-      display_names:
-        other: ຊູ​ຣິ​ນາ​ມີ​ສ ໂດ​ລ່າ
-        one: ຊູ​ຣິ​ນາ​ມີ​ສ ໂດ​ລ່າ
-    SSP:
-      display_names:
-        other: ເຊົາ​ທ໌ ຊູ​ດານ​ນີ​ສ ພາວດ໌
-        one: ເຊົາ​ທ໌ ຊູ​ດານ​ນີ​ສ ພາວດ໌
-    STN:
-      display_names:
-        other: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ
-        one: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ
-    SYP:
-      display_names:
-        other: ຊີ​ຣຽນ ພາວດ໌
-        one: ຊີ​ຣຽນ ພາວດ໌
-    THB:
-      display_names:
-        other: ໄທ ບາດ
-        one: ໄທ ບາດ
-    TOP:
-      display_names:
-        other: ຕອງ​ກັນ ປາ​ອັງ​ກາ
-        one: ຕອງ​ກັນ ປາ​ອັງ​ກາ
-    TRY:
-      display_names:
-        other: ເຕີ​ກິ​ຊ ລິ​ຣາ
-        one: ເຕີ​ກິ​ຊ ລິ​ຣາ
-    TTD:
-      display_names:
-        other: ທ​ຣິ​ນິ​ແດດ & ໂທ​ບາ​ໂກ ໂດ​ລ່າ
-        one: ທ​ຣິ​ນິ​ແດດ & ໂທ​ບາ​ໂກ ໂດ​ລ່າ
-    TWD:
-      display_names:
-        other: ນິວ ໄຕ້​ຫວັນ ໂດ​ລ່າ
-        one: ນິວ ໄຕ້​ຫວັນ ໂດ​ລ່າ
-    UAH:
-      display_names:
-        other: ຢູ​ເຄຣ​ນຽນ ຮະ​ຣີບ​ເນຍ
-        one: ຢູ​ເຄຣ​ນຽນ ຮະ​ຣີບ​ເນຍ
-    USD:
-      display_names:
-        other: "​ໂດ​ລ່າ​ສະ​ຫະ​ລັດຯ"
-        one: "​ໂດ​ລ່າ​ສະ​ຫະ​ລັດຯ"
-    UYU:
-      display_names:
-        other: ອູ​ຣຸ​ກົວ​ຢານ ເປ​ໂຊ
-        one: ອູ​ຣຸ​ກົວ​ຢານ ເປ​ໂຊ
-    VEF:
-      display_names:
-        other: ເວເນຊູເອລັນ ໂບລິວາສ໌
-        one: ເວ​ເນ​ຊູ​ເອ​ລັນ ໂບ​ລິ​ວາ (2008–2018)
-    VND:
-      display_names:
-        other: ຫວຽດ​ນາມ ດົງ
-        one: ຫວຽດ​ນາມ ດົງ
-    XAF:
-      display_names:
-        other: ຟຣັງ ເຊຟານ ທະນາຄານລັດອາຟຣິກາກາງ
-        one: ສາທາລະນະລັດອາຟຣິກາກາງ
-    XCD:
-      display_names:
-        other: ອີ​ສ ຄາ​ຣິ​ບຽນ ໂດ​ລ່າ
-        one: ອີ​ສ ຄາ​ຣິ​ບຽນ ໂດ​ລ່າ
-    XOF:
-      display_names:
-        other: ຟັງເຊຟານ ອາຟຣິກາຕາເວັນຕົກ
-        one: ຟັງເຊຟານ ອາຟຣິກາຕາເວັນຕົກ
-    XPF:
-      display_names:
-        other: ຊີ​ເອັບ​ພີ ຟຣັງ
-        one: ຊີ​ເອັບ​ພີ ຟຣັງ
-    XXX:
-      display_names:
-        other: "(ສະກຸນເງິນທີ່ບໍ່ຮູ້ຈັກ)"
-        one: ສະກຸນເງິນທີ່ບໍ່ຮູ້ຈັກ
-    ZAR:
-      display_names:
-        other: ເຊົາທ໌ ອາ​ຟຣິ​ກັນ ແຣນດ໌
-        one: ເຊົາທ໌ ອາ​ຟຣິ​ກັນ ແຣນດ໌
-    ZMW:
-      display_names:
-        other: ແຊມ​ບຽນ ຄວາ​ຊາ
-        one: ແຊມ​ບຽນ ຄວາ​ຊາ
     ADP:
       display_names:
         other: ເປເຊຕາ ອັນໂດລາ
@@ -446,14 +79,26 @@ number_formats:
       display_names:
         other: ອັບການິ ອັບການິສະຖານ (1927–2002)
         one: ອັບການິ ອັບການິສະຖານ (1927–2002)
+    AFN:
+      display_names:
+        other: ອັຟ​ກັນ ອັຟ​ກາ​ນິ
+        one: ອັຟ​ກັນ ອັຟ​ກາ​ນິ
     ALL:
       display_names:
         other: ອັລ​ບາ​ນຽນ ເລກ
         one: ອັລ​ບາ​ນຽນ ເລກ
+    AMD:
+      display_names:
+        other: ອາ​ເມ​ນຽນ ແດຣມ
+        one: ອາ​ເມ​ນຽນ ແດຣມ
     ANG:
       display_names:
         other: ເນ​ເທີ​ແລນ ແອນ​ຕິ​ລຽນ ກິວ​ເດີ
         one: ເນ​ເທີ​ແລນ ແອນ​ຕິ​ລຽນ ກິວ​ເດີ
+    AOA:
+      display_names:
+        other: ແອງ​ໂກ​ລັນ ຄວນ​ຊາ
+        one: ແອງ​ໂກ​ລັນ ຄວນ​ຊາ
     AOK:
       display_names:
         other: ກວານຊາ ແອງໂກລາ (1977–1991)
@@ -482,10 +127,18 @@ number_formats:
       display_names:
         other: ເປໂຊ ອາກຊັງຕິນ (1983–1985)
         one: ເປໂຊ ອາກຊັງຕິນ (1983–1985)
+    ARS:
+      display_names:
+        other: ອາ​ເຈນ​ທິ​ນາ ເປ​ໂຊ
+        one: ອາ​ເຈນ​ທິ​ນາ ເປ​ໂຊ
     ATS:
       display_names:
         other: ຊິລລິງ ອົດສະຕາລີ
         one: ຊິລລິງ ອົດສະຕາລີ
+    AUD:
+      display_names:
+        other: ອອສ​ເຕຣ​ລຽນ ໂດ​ລ່າ
+        one: ອອສ​ເຕຣ​ລຽນ ໂດ​ລ່າ
     AWG:
       display_names:
         other: ອະຣູແບນ ຟລໍຣິນ
@@ -494,14 +147,30 @@ number_formats:
       display_names:
         other: ມານັດ ອາແຊກບາຍຊານ (1993–2006)
         one: ມານັດ ອາແຊກບາຍຊານ (1993–2006)
+    AZN:
+      display_names:
+        other: ອາ​ເຊີ​ໄບ​ຈາ​ນິ ມາ​ນັດ
+        one: ອາ​ເຊີ​ໄບ​ຈາ​ນິ ມາ​ນັດ
     BAD:
       display_names:
         other: ດີນາ ບອສເນຍ ເຮີເຊໂບວາເນຍ (1992–1994)
         one: ດີນາ ບອສເນຍ ເຮີເຊໂບວາເນຍ (1992–1994)
+    BAM:
+      display_names:
+        other: ບອ​ສ​ເນຍ-ເຮີ​ເຊ​ໂກວິ​ນາ ຄອນ​ເວີດ​ຕິ​ໂບ ມາກ
+        one: ບອ​ສ​ເນຍ-ເຮີ​ເຊ​ໂກວິ​ນາ ຄອນ​ເວີດ​ຕິ​ໂບ ມາກ
     BAN:
       display_names:
         other: ດີນາໃໝ່ ບອສເນຍ ເຮີເຊໂບວີນາ(1994–1997)
         one: ດີນາໃໝ່ ບອສເນຍ ເຮີເຊໂບວີນາ(1994–1997)
+    BBD:
+      display_names:
+        other: ໂດລ່າ ບາບາດຽນ
+        one: ໂດລ່າ ບາບາດຽນ
+    BDT:
+      display_names:
+        other: ບັງ​ຄລາ​ເທດ ຕາ​ກາ
+        one: ບັງ​ຄລາ​ເທດ ຕາ​ກາ
     BEC:
       display_names:
         other: ຟຣັງ ບູນກາລີ (ປ່ຽນແປງໄດ້)
@@ -538,6 +207,18 @@ number_formats:
       display_names:
         other: ບຸ​ຣັນ​ດຽນ ຟຣັງ
         one: ບຸ​ຣັນ​ດຽນ ຟຣັງ
+    BMD:
+      display_names:
+        other: ໂດ​ລ່າ​ເບີ​ມິວ​ດາ
+        one: ໂດ​ລ່າ​ເບີ​ມິວ​ດາ
+    BND:
+      display_names:
+        other: ບຣູ​ໄນ ໂດ​ລ່າ
+        one: ບຣູ​ໄນ ໂດ​ລ່າ
+    BOB:
+      display_names:
+        other: ໂບ​ລິ​ວຽນ ໂບ​ລິ​ເວຍ​ໂນ
+        one: ໂບ​ລິ​ວຽນ ໂບ​ລິ​ເວຍ​ໂນ
     BOL:
       display_names:
         other: ໂລລິເວຍໂນ ໂລລິເວຍ (1863–1963)
@@ -562,6 +243,10 @@ number_formats:
       display_names:
         other: ກຣູເຊໂຣ ບາຊິ ກຣູໂຊ ບາຊິວ (1993–1994)
         one: ກຣູເຊໂຣ ບາຊິ ກຣູໂຊ ບາຊິວ (1993–1994)
+    BRL:
+      display_names:
+        other: ບຣາ​ຊິ​ລຽນ ຣຽວ
+        one: ບຣາ​ຊິ​ລຽນ ຣຽວ
     BRN:
       display_names:
         other: ກຣູຊາໂດ ບາຊິວ ໃໝ່ (1989–1990)
@@ -574,6 +259,10 @@ number_formats:
       display_names:
         other: ກຣູເຊໂຣ ບາຊິວ (1942–1967)
         one: ກຣູເຊໂຣ ບາຊິວ (1942–1967)
+    BSD:
+      display_names:
+        other: ໂດລ່າ ບາຮາມຽນ
+        one: ໂດລ່າ ບາຮາມຽນ
     BTN:
       display_names:
         other: ພູ​ຖານ ງຸນດຣັມ
@@ -582,6 +271,10 @@ number_formats:
       display_names:
         other: ຈາດ ພະມ້າ
         one: ຈາດ ພະມ້າ
+    BWP:
+      display_names:
+        other: ບອດ​ສະ​ວາ​ນານ ພູ​ລາ
+        one: ບອດ​ສະ​ວາ​ນານ ພູ​ລາ
     BYB:
       display_names:
         other: ຣູໂບ ເບຣາຣຸສ ໃໝ່(1994–1999)
@@ -595,6 +288,14 @@ number_formats:
       display_names:
         other: ເບ​ລາ​ຣຸ​ສ​ຊຽນ ຣູ​ເບິນ (2000–2016)
         one: ເບ​ລາ​ຣຸ​ສ​ຊຽນ ຣູ​ເບິນ (2000–2016)
+    BZD:
+      display_names:
+        other: ໂດ​ລ່າ​ເບ​ລີຊ
+        one: ໂດ​ລ່າ​ເບ​ລີຊ
+    CAD:
+      display_names:
+        other: ໂດລ່າແຄນາດາ
+        one: ໂດລ່າແຄນາດາ
     CDF:
       display_names:
         other: ຄອງ​ໂກ​ລີສ ຟຣັງ
@@ -619,14 +320,30 @@ number_formats:
       display_names:
         other: ຫົວໜ່ວຍບັນຊີ (UF) ຊິລີ
         one: ຫົວໜ່ວຍບັນຊີ (UF) ຊິລີ
+    CLP:
+      display_names:
+        other: ຊິ​ລຽນ ເປ​ໂຊ
+        one: ຊິ​ລຽນ ເປ​ໂຊ
     CNH:
       display_names:
         other: ຢວນຈີນ (ນອກປະເທດ)
         one: ຢວນຈີນ (ນອກປະເທດ)
+    CNY:
+      display_names:
+        other: ຈີນ ຢວນ
+        one: ຈີນ ຢວນ
+    COP:
+      display_names:
+        other: ໂຄ​ລົມ​ບຽນ ເປ​ໂຊ
+        one: ໂຄ​ລົມ​ບຽນ ເປ​ໂຊ
     COU:
       display_names:
         other: ຫົວໜ່ວຍຄ່າຈິງ ໂຄລັມເບຍ
         one: ຫົວໜ່ວຍຄ່າຈິງ ໂຄລັມເບຍ
+    CRC:
+      display_names:
+        other: ໂຄສຕາ ຣິກັນ ໂຄລອນ
+        one: ໂຄສຕາ ຣິກັນ ໂຄລອນ
     CSD:
       display_names:
         other: ດີນາ ເຊີເບຍ (2002–2006)
@@ -635,6 +352,14 @@ number_formats:
       display_names:
         other: ຮາດໂກຣູນາ ເຊັກໂກສະໂລວັກ
         one: ຮາດໂກຣູນາ ເຊັກໂກສະໂລວັກ
+    CUC:
+      display_names:
+        other: ຄິວແບນ ຄອນເວີດຕິໂບ ເປໂຊ
+        one: ຄິວແບນ ຄອນເວີດຕິໂບ ເປໂຊ
+    CUP:
+      display_names:
+        other: ຄິວແບນ ເປໂຊ
+        one: ຄິວແບນ ເປໂຊ
     CVE:
       display_names:
         other: ເຄບ ເວີດ​ດີນ ເອ​ສ​ຄູ​ໂດ
@@ -643,6 +368,10 @@ number_formats:
       display_names:
         other: ປອນ ໄຊປຣັດ
         one: ປອນ ໄຊປຣັດ
+    CZK:
+      display_names:
+        other: ເຊກ ໂຄ​ຣູ​ນາ
+        one: ເຊກ ໂຄ​ຣູ​ນາ
     DDM:
       display_names:
         other: ມາກ ເຢຍລະມັນ ຕາເວັນອອກ
@@ -655,6 +384,14 @@ number_formats:
       display_names:
         other: "​ດິ​ບູ​ຈຽນ ຟຣັງ"
         one: "​ດິ​ບູ​ຈຽນ ຟຣັງ"
+    DKK:
+      display_names:
+        other: ແດນ​ນິ​ຊ ໂຄຣນເນີ
+        one: ແດນ​ນິ​ຊ ໂຄຣນ
+    DOP:
+      display_names:
+        other: ໂດ​ມິ​ນິ​ກັນ ເປ​ໂຊ
+        one: ໂດ​ມິ​ນິ​ກັນ ເປ​ໂຊ
     DZD:
       display_names:
         other: ອັລ​ເຈີ​ຣຽນ ດິ​ນາ
@@ -671,6 +408,10 @@ number_formats:
       display_names:
         other: ຄຣູນເອສ ໂຕເນຍ
         one: ຄຣູນເອສ ໂຕເນຍ
+    EGP:
+      display_names:
+        other: ອີ​ຢິບ​ທຽນ ພາວດ໌
+        one: ອີ​ຢິບ​ທຽນ ພາວດ໌
     ERN:
       display_names:
         other: ອິ​ຣິ​ທຣຽນ ແນກ​ຟ​າ
@@ -683,30 +424,67 @@ number_formats:
       display_names:
         other: ເປເຊຕາສະເປນ (ປ່ຽນແປງໄດ້)
         one: ເປເຊຕາສະເປນ (ປ່ຽນແປງໄດ້)
+    ESP:
+      display_names:
+        other: ເປເຊຕາ ສະເປນ
+        one: ເປເຊຕາ ສະເປນ
     ETB:
       display_names:
         other: ເອ​ທິ​ໂອ​ປຽນ ເບີ​ຣ໌
         one: ເອ​ທິ​ໂອ​ປຽນ ເບີ​ຣ໌
+    EUR:
+      display_names:
+        other: ຢູ​ໂຣ
+        one: ຢູ​ໂຣ
     FIM:
       display_names:
         other: ມາກກາ ຟິນແລນ
         one: ມາກກາ ຟິນແລນ
+    FJD:
+      display_names:
+        other: ຟິ​ຈຽນ ໂດ​ລ່າ
+        one: ຟິ​ຈຽນ ໂດ​ລ່າ
+    FKP:
+      display_names:
+        other: ຟອ​ລ໌ກ​ແລນ ໄອ​ແລນ​ສ໌ ພາວ​ດ໌
+        one: ຟອ​ລ໌ກ​ແລນ ໄອ​ແລນ​ສ໌ ພາວ​ດ໌
     FRF:
       display_names:
         other: ຟຣັງ ຝຣັ່ງ
         one: ຟຣັງ ຝຣັ່ງ
+    GBP:
+      display_names:
+        other: ອັງກິດ ປອນ
+        one: ອັງກິດ ປອນ
     GEK:
       display_names:
         other: ກູປອນ ລາຣິທ ຈໍເຈຍ
         one: ກູປອນ ລາຣິທ ຈໍເຈຍ
+    GEL:
+      symbol: ລາຣີ
+      display_names:
+        other: ຈໍ​ຈຽນ ລາ​ຣິ
+        one: ຈໍ​ຈຽນ ລາ​ຣິ
     GHC:
       display_names:
         other: ເຊດີ ການາ (1979–2007)
         one: ເຊດີ ການາ (1979–2007)
+    GHS:
+      display_names:
+        other: ກາ​ນາ​ອຽນ ເຊ​ດິ
+        one: ກາ​ນາ​ອຽນ ເຊ​ດິ
+    GIP:
+      display_names:
+        other: ກິບ​ຣາ​ທາ ພາ​ວດ໌
+        one: ກິບ​ຣາ​ທາ ພາ​ວດ໌
     GMD:
       display_names:
         other: "​ແກມ​ບຽນ ດາ​ລາ​ຊິ"
         one: "​ແກມ​ບຽນ ດາ​ລາ​ຊິ"
+    GNF:
+      display_names:
+        other: ກິ​ນຽນ ຟຣັງ
+        one: ກິ​ນຽນ ຟຣັງ
     GNS:
       display_names:
         other: ໄຊລິ ກີນີ
@@ -719,6 +497,10 @@ number_formats:
       display_names:
         other: ດາກຊະມາ ເກຣັກ
         one: ດາກຊະມາ ເກຣັກ
+    GTQ:
+      display_names:
+        other: ເຄັດຊອນ
+        one: ກົວເຕມາລານ ເຄັດຊອນ
     GWE:
       display_names:
         other: ເອສກູໂດ ກີນີໂປຕູເກດ
@@ -727,14 +509,38 @@ number_formats:
       display_names:
         other: ເປໂຊກິນີ-ບິສເຊົາ
         one: ເປໂຊກິນີ-ບິສເຊົາ
+    GYD:
+      display_names:
+        other: ກາຍ​ຢາ​ນີ​ສ ໂດ​ລ່າ
+        one: ກາຍ​ຢາ​ນີ​ສ ໂດ​ລ່າ
+    HKD:
+      display_names:
+        other: ຮອງ​ກົງ ໂດ​ລ່າ
+        one: ຮອງ​ກົງ ໂດ​ລ່າ
+    HNL:
+      display_names:
+        other: ຮອນດູແຣນ ເລມພິຣາ
+        one: ຮອນດູແຣນ ເລມພິຣາ
     HRD:
       display_names:
         other: ດີນາ ໂຄຣເອເຊຍ
         one: ດີນາ ໂຄຣເອເຊຍ
+    HRK:
+      display_names:
+        other: ໂຄຣ​ເອ​ທຽນ ຄູ​ນາ
+        one: ໂຄຣ​ເອ​ທຽນ ຄູ​ນາ
     HTG:
       display_names:
         other: ໄຮ​ຕຽນ ກົວ​ເດ
         one: ໄຮ​ຕຽນ ກົວ​ເດ
+    HUF:
+      display_names:
+        other: ຮັງ​ກາ​ຣຽນ ຟໍ​ຣິນ
+        one: ຮັງ​ກາ​ຣຽນ ຟໍ​ຣິນ
+    IDR:
+      display_names:
+        other: ອິນ​ໂດ​ເນ​ຊຽນ ໂດ​ລ່າ
+        one: ອິນ​ໂດ​ເນ​ຊຽນ ໂດ​ລ່າ
     IEP:
       display_names:
         other: ປອນ ໄອຣິຊ
@@ -743,6 +549,14 @@ number_formats:
       display_names:
         other: ປອນ ອີສະລາເອວ
         one: ປອນ ອີສະລາເອວ
+    ILS:
+      display_names:
+        other: ອິສ​ຣາ​ເອວ​ລິ ນິວ ເຊ​ເກວ
+        one: ອິສ​ຣາ​ເອວ​ລິ ນິວ ເຊ​ເກວ
+    INR:
+      display_names:
+        other: ອິນ​ເດຍ ຣູ​ປີ
+        one: ອິນ​ເດຍ ຣູ​ປີ
     IQD:
       display_names:
         other: ອິ​ຣັກ​ກິ ດິ​ນາ
@@ -751,18 +565,46 @@ number_formats:
       display_names:
         other: ອິ​ຣາ​ນິ ຣຽວ
         one: ອິ​ຣາ​ນິ ຣຽວ
+    ISK:
+      display_names:
+        other: ໄອ​ສ໌​ແລນ​ດິກ ໂຄຣ​ນາ
+        one: ໄອ​ສ໌​ແລນ​ດິກ ໂຄຣ​ນາ
     ITL:
       display_names:
         other: ລິຣາ ອີຕາລີ
         one: ລິຣາ ອີຕາລີ
+    JMD:
+      display_names:
+        other: "​ຈາ​ໄມ​ກັນ ໂດ​ລ່າ"
+        one: "​ຈາ​ໄມ​ກັນ ໂດ​ລ່າ"
     JOD:
       display_names:
         other: ຈໍ​ແດ​ນຽນ ດິ​ນາ
         one: ຈໍ​ແດ​ນຽນ ດິ​ນາ
+    JPY:
+      display_names:
+        other: ຍີ່​ປຸ່ນ ເຢນ
+        one: ຍີ່​ປຸ່ນ ເຢນ
     KES:
       display_names:
         other: ເຄນ​ຢັນ ຊິວ​ລິງ
         one: ເຄນ​ຢັນ ຊິວ​ລິງ
+    KGS:
+      display_names:
+        other: ຄ​ຣີ​ກິສ​​ຖາ​ນິ ໂຊມ
+        one: ຄ​ຣີ​ກິສ​​ຖາ​ນິ ໂຊມ
+    KHR:
+      display_names:
+        other: ກຳ​ປູ​ເຈຍ ຣຽວ
+        one: ກຳ​ປູ​ເຈຍ ຣຽວ
+    KMF:
+      display_names:
+        other: ໂຄ​ໂມ​ຣຽນ ຟຣັງ
+        one: ໂຄ​ໂມ​ຣຽນ ຟຣັງ
+    KPW:
+      display_names:
+        other: ເກົາ​ຫລີ​ເໜືອ ວອນ
+        one: ເກົາ​ຫລີ​ເໜືອ ວອນ
     KRH:
       display_names:
         other: ຮາວານ ເກົາຫຼີເນື້
@@ -771,14 +613,46 @@ number_formats:
       display_names:
         other: ວອນ ເກົາຫຼີໃຕ້ (1945–1953)
         one: ວອນ ເກົາຫຼີໃຕ້ (1945–1953)
+    KRW:
+      display_names:
+        other: ເກົາ​ຫລີໃຕ້ ວອນ
+        one: ເກົາ​ຫລີໃຕ້ ວອນ
     KWD:
       display_names:
         other: ຄູ​ເວ​ຕິ ດິ​ນາ
         one: ຄູ​ເວ​ຕິ ດິ​ນາ
+    KYD:
+      display_names:
+        other: ເຄ​ແມນ ໄອ​ແລນ ໂດ​ລ່າ
+        one: ເຄ​ແມນ ໄອ​ແລນ ໂດ​ລ່າ
+    KZT:
+      display_names:
+        other: ຄາ​ຊັກ​ສະ​ຖາ​ນິ ເຕັງ​ເຈ
+        one: ຄາ​ຊັກ​ສະ​ຖາ​ນິ ເຕັງ​ເຈ
+    LAK:
+      display_names:
+        other: ລາວ ກີບ
+        one: ລາວ ກີບ
+    LBP:
+      display_names:
+        other: ເລ​ບາ​ນີ​ສ ພາວດ໌
+        one: ເລ​ບາ​ນີ​ສ ພາວດ໌
+    LKR:
+      display_names:
+        other: ສີ​ລັງ​ກາ ຣູ​ປີ
+        one: ສີ​ລັງ​ກາ ຣູ​ປີ
+    LRD:
+      display_names:
+        other: ລິ​ເບີ​ຣຽນ ໂດ​ລ່າ
+        one: ລິ​ເບີ​ຣຽນ ໂດ​ລ່າ
     LSL:
       display_names:
         other: ໂລຕິ ເລໂຊໂຕ
         one: ໂລຕິ ເລໂຊໂຕ
+    LTL:
+      display_names:
+        other: ລິ​ທົວ​ນຽນ ລິ​ທັ​ສ
+        one: ລິ​ທົວ​ນຽນ ລິ​ທັ​ສ
     LTT:
       display_names:
         other: ທາໂລນັສ ລິທົວເນຍ
@@ -795,6 +669,10 @@ number_formats:
       display_names:
         other: ຟຣັງ ລຸກຊຳບວກ ການເງິນ
         one: ຟຣັງ ລຸກຊຳບວກ ການເງິນ
+    LVL:
+      display_names:
+        other: ລັດ​ວຽນ ລັດ​ຕິ
+        one: ລັດ​ວຽນ ລັດ​ສ໌
     LVR:
       display_names:
         other: ຣູໂບ ລາວຽນ
@@ -823,6 +701,10 @@ number_formats:
       display_names:
         other: ມອນ​ໂດ​ແວນ ເລ​ອູ
         one: ມອນ​ໂດ​ແວນ ເລ​ອູ
+    MGA:
+      display_names:
+        other: ມາ​ລາ​ກາ​ຊີ ອາ​ເຣຍ​ຣີ
+        one: ມາ​ລາ​ກາ​ຊີ ອາ​ເຣຍ​ຣີ
     MGF:
       display_names:
         other: ຟຣັງ ມາດາກັດສະກາ
@@ -839,6 +721,14 @@ number_formats:
       display_names:
         other: ຟຣັງ ມາລີ
         one: ຟຣັງ ມາລີ
+    MMK:
+      display_names:
+        other: ມຽນ​ມາ ຈ໊າດ
+        one: ມຽນ​ມາ ຈ໊າດ
+    MNT:
+      display_names:
+        other: ມອງ​ໂກ​ລຽນ ຕູກຣິກ
+        one: ມອງ​ໂກ​ລຽນ ຕູກຣິກ
     MOP:
       display_names:
         other: ມາ​ເກົ້າ ປາ​​ຕາ​ກາ
@@ -859,6 +749,10 @@ number_formats:
       display_names:
         other: ປອນ ມອນຕາ
         one: ປອນ ມອນຕາ
+    MUR:
+      display_names:
+        other: ເມົາ​ຣິ​ທຽນ ຣູ​ປີ
+        one: ເມົາ​ຣິ​ທຽນ ຣູ​ປີ
     MVR:
       display_names:
         other: ມັ​ລ​ດິ​ວຽນ ຣູ​ຟິ​ຢາ
@@ -867,6 +761,10 @@ number_formats:
       display_names:
         other: ມາ​ລາ​ວຽນ ຄວາ​ຊາ
         one: ມາ​ລາ​ວຽນ ຄວາ​ຊາ
+    MXN:
+      display_names:
+        other: ເມັກຊິກັນ ເປໂຊ
+        one: ເມັກຊິກັນ ເປໂຊ
     MXP:
       display_names:
         other: ຫົວໜ່ວຍເງິນ ເປໂຊ ແມັກຊິໂກ(1861–1992)
@@ -875,6 +773,10 @@ number_formats:
       display_names:
         other: ຫົວໜ່ວຍການລົງທຶນ ແມັກຊິໂກ
         one: ຫົວໜ່ວຍການລົງທຶນ ແມັກຊິໂກ
+    MYR:
+      display_names:
+        other: ມາ​ເລ​ເຊຍ ຣິງ​ກິດ
+        one: ມາ​ເລ​ເຊຍ ຣິງ​ກິດ
     MZE:
       display_names:
         other: ເອສກູໂດ ໂມຊຳບິກ
@@ -887,14 +789,38 @@ number_formats:
       display_names:
         other: ໂມ​ແຊມ​ບິ​ກັນ ເມ​ທິ​ຄອນ
         one: ໂມ​ແຊມ​ບິ​ກັນ ເມ​ທິ​ຄອນ
+    NAD:
+      display_names:
+        other: ນາ​ມິ​ບຽນ ໂດ​ລ່າ
+        one: ນາ​ມິ​ບຽນ ໂດ​ລ່າ
+    NGN:
+      display_names:
+        other: ໄນ​ຣາ ​ໄນເຈີ​ຣຽນ
+        one: ໄນ​ຣາ ​ໄນເຈີ​ຣຽນ
     NIC:
       display_names:
         other: ຄໍໂດບາ ນິກາຣາກົວ (1988–1991)
         one: ຄໍໂດບາ ນິກາຣາກົວ (1988–1991)
+    NIO:
+      display_names:
+        other: ນິກາຣາກວນ ໂຄໂດບາ
+        one: ນິກາຣາກວນ ໂຄໂດບາ
     NLG:
       display_names:
         other: ກິລເດີ ເນເທີແລນ
         one: ກິລເດີ ເນເທີແລນ
+    NOK:
+      display_names:
+        other: ນໍ​ເວ​ຈຽນ ​ໂຄຣນ
+        one: ນໍ​ເວ​ຈຽນ ​ໂຄຣນ
+    NPR:
+      display_names:
+        other: ເນ​ປານ ຣູ​ປີ
+        one: ເນ​ປານ ຣູ​ປີ
+    NZD:
+      display_names:
+        other: ນິວ​ຊີ​ແລນ ໂດ​ລ່າ
+        one: ນິວ​ຊີ​ແລນ ໂດ​ລ່າ
     OMR:
       display_names:
         other: ໂອ​ມາ​ນິ ຣຽວ
@@ -919,6 +845,19 @@ number_formats:
       display_names:
         other: ປາ​ປົວ ນິວ ກິ​ນຽນ ກິ​ນາ
         one: ປາ​ປົວ ນິວ ກິ​ນຽນ ກິ​ນາ
+    PHP:
+      symbol: PHP
+      display_names:
+        other: ຟິ​ລິບ​ປິນ ເປ​ໂຊ
+        one: ຟິ​ລິບ​ປິນ ເປ​ໂຊ
+    PKR:
+      display_names:
+        other: ປາ​ກິ​ສຖານ ຣູ​ປີ
+        one: ປາ​ກິ​ສຖານ ຣູ​ປີ
+    PLN:
+      display_names:
+        other: ໂປ​ລິ​ຊ ຊະ​ລໍ​ຕີ
+        one: ໂປ​ລິ​ຊ ຊະ​ລໍ​ຕີ
     PLZ:
       display_names:
         other: ຊະລອສຕີ ໂປແລນ (1950–1995)
@@ -927,6 +866,10 @@ number_formats:
       display_names:
         other: ເອສກູໂດ ໂປຕູເກສ
         one: ເອສກູໂດ ໂປຕູເກສ
+    PYG:
+      display_names:
+        other: ກວາຣານີ ປາຣາກວາຍ
+        one: ກວາຣານີ ປາຣາກວາຍ
     QAR:
       display_names:
         other: ຄາ​ຕາ​ຣິ ຣຽວ
@@ -939,18 +882,34 @@ number_formats:
       display_names:
         other: ລິວ ໂຣມາເນຍເກົ່າ
         one: ລິວ ໂຣມາເນຍເກົ່າ
+    RON:
+      display_names:
+        other: ໂຣ​ມາ​ນຽນ ເລ​ອູ
+        one: ໂຣ​ມາ​ນຽນ ເລ​ອູ
     RSD:
       display_names:
         other: ເຊີ​ບຽນ ດິ​ນາ
         one: ເຊີ​ບຽນ ດິ​ນາ
+    RUB:
+      display_names:
+        other: ຣັສ​ຊຽນ ຣູ​ເບິນ
+        one: ຣັສ​ຊຽນ ຣູ​ເບິນ
     RUR:
       display_names:
         other: ຣູໂບ ຣັດເຊຍ (1991–1998)
         one: ຣູໂບ ຣັດເຊຍ (1991–1998)
+    RWF:
+      display_names:
+        other: ຣະ​ວັນ​ດັນ ຟຣັງ
+        one: ຣະ​ວັນ​ດັນ ຟຣັງ
     SAR:
       display_names:
         other: ຊາ​ອູ​ດິ ຣິ​ຢອນ
         one: ຊາ​ອູ​ດິ ຣິ​ຢອນ
+    SBD:
+      display_names:
+        other: ໂຊ​ໂລມອນ ໄອ​ແລນ ໂດ​ລ່າ
+        one: ໂຊ​ໂລມອນ ໄອ​ແລນ ໂດ​ລ່າ
     SCR:
       display_names:
         other: ເຊ​ເຊວ​ລອຍ​ສ໌ ຣູ​ປີ
@@ -967,6 +926,18 @@ number_formats:
       display_names:
         other: ປອນ ຊູດານເກົ່າ
         one: ປອນ ຊູດານເກົ່າ
+    SEK:
+      display_names:
+        other: ສະ​ວີ​ດິ​ຊ ໂຄຣ​ນາ
+        one: ສະ​ວີ​ດິ​ຊ ໂຄຣ​ນາ
+    SGD:
+      display_names:
+        other: ສິງ​ກະ​ໂປ ໂດ​ລ່າ
+        one: ສິງ​ກະ​ໂປ ໂດ​ລ່າ
+    SHP:
+      display_names:
+        other: ເຊນ ເຮ​ເລ​ນາ ພາວດ໌
+        one: ເຊນ ເຮ​ເລ​ນາ ພາວດ໌
     SIT:
       display_names:
         other: ໂຕລາ ສະໂລວິເນຍ
@@ -987,14 +958,26 @@ number_formats:
       display_names:
         other: ໂຊ​ມາ​ລິ ຊິວ​ລິງ
         one: ໂຊ​ມາ​ລິ ຊິວ​ລິງ
+    SRD:
+      display_names:
+        other: ຊູ​ຣິ​ນາ​ມີ​ສ ໂດ​ລ່າ
+        one: ຊູ​ຣິ​ນາ​ມີ​ສ ໂດ​ລ່າ
     SRG:
       display_names:
         other: ກິລເດີ ຊູຣິນາເມ
         one: ກິລເດີ ຊູຣິນາເມ
+    SSP:
+      display_names:
+        other: ເຊົາ​ທ໌ ຊູ​ດານ​ນີ​ສ ພາວດ໌
+        one: ເຊົາ​ທ໌ ຊູ​ດານ​ນີ​ສ ພາວດ໌
     STD:
       display_names:
         other: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ (1977–2017)
         one: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ (1977–2017)
+    STN:
+      display_names:
+        other: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ
+        one: ເຊົາ ໂທ​ເມ ແອນ ພ​ຣິນ​ຊິ​ປີ ໂດບຣາ
     SUR:
       display_names:
         other: ຣູໂບ ໂຊວຽດ
@@ -1003,10 +986,18 @@ number_formats:
       display_names:
         other: ໂກລອງ ເອກາວາດໍ
         one: ໂກລອງ ເອກາວາດໍ
+    SYP:
+      display_names:
+        other: ຊີ​ຣຽນ ພາວດ໌
+        one: ຊີ​ຣຽນ ພາວດ໌
     SZL:
       display_names:
         other: ສະ​ວາ​ຊິ ລິ​ລັນ​ກິ​ນີ
         one: ສະ​ວາ​ຊິ ລິ​ລັນ​ກິ​ນີ
+    THB:
+      display_names:
+        other: ໄທ ບາດ
+        one: ໄທ ບາດ
     TJR:
       display_names:
         other: ຣູໂບ ຕັຈີກິສຖານ
@@ -1027,6 +1018,10 @@ number_formats:
       display_names:
         other: ຕູ​ນິ​ຊຽນ ດິ​ນາ
         one: ຕູ​ນິ​ຊຽນ ດິ​ນາ
+    TOP:
+      display_names:
+        other: ຕອງ​ກັນ ປາ​ອັງ​ກາ
+        one: ຕອງ​ກັນ ປາ​ອັງ​ກາ
     TPE:
       display_names:
         other: ເອສກູໂດ ຕີມໍ
@@ -1035,10 +1030,26 @@ number_formats:
       display_names:
         other: ລີຕາ ຕູຣາກີເກົ່າ
         one: ລີຕາ ຕູຣາກີເກົ່າ
+    TRY:
+      display_names:
+        other: ເຕີ​ກິ​ຊ ລິ​ຣາ
+        one: ເຕີ​ກິ​ຊ ລິ​ຣາ
+    TTD:
+      display_names:
+        other: ທ​ຣິ​ນິ​ແດດ & ໂທ​ບາ​ໂກ ໂດ​ລ່າ
+        one: ທ​ຣິ​ນິ​ແດດ & ໂທ​ບາ​ໂກ ໂດ​ລ່າ
+    TWD:
+      display_names:
+        other: ນິວ ໄຕ້​ຫວັນ ໂດ​ລ່າ
+        one: ນິວ ໄຕ້​ຫວັນ ໂດ​ລ່າ
     TZS:
       display_names:
         other: ທານ​ຊາ​ນຽນ ຊິວ​ລິງ
         one: ທານ​ຊາ​ນຽນ ຊິວ​ລິງ
+    UAH:
+      display_names:
+        other: ຢູ​ເຄຣ​ນຽນ ຮະ​ຣີບ​ເນຍ
+        one: ຢູ​ເຄຣ​ນຽນ ຮະ​ຣີບ​ເນຍ
     UAK:
       display_names:
         other: ຄາໂບວາເນດ ອູແກຣນ
@@ -1051,6 +1062,10 @@ number_formats:
       display_names:
         other: ອູ​ກັນ​ດັນ ຊິວ​ລິງ
         one: ອູ​ກັນ​ດັນ ຊິວ​ລິງ
+    USD:
+      display_names:
+        other: "​ໂດ​ລ່າ​ສະ​ຫະ​ລັດຯ"
+        one: "​ໂດ​ລ່າ​ສະ​ຫະ​ລັດຯ"
     USN:
       display_names:
         other: ດອນລາສະຫະລັດ (ມື້ຖັດໄປ)
@@ -1067,6 +1082,10 @@ number_formats:
       display_names:
         other: ເປໂຊ ອູຣຸກວຍ (1975–1993)
         one: ເປໂຊ ອູຣຸກວຍ (1975–1993)
+    UYU:
+      display_names:
+        other: ອູ​ຣຸ​ກົວ​ຢານ ເປ​ໂຊ
+        one: ອູ​ຣຸ​ກົວ​ຢານ ເປ​ໂຊ
     UZS:
       display_names:
         other: ອຸສເບກິສຖານິ ໂຊມ
@@ -1075,10 +1094,18 @@ number_formats:
       display_names:
         other: ໂບລີວາ ເວເນຊູເອລາ (1871–2008)
         one: ໂບລີວາ ເວເນຊູເອລາ (1871–2008)
+    VEF:
+      display_names:
+        other: ເວເນຊູເອລັນ ໂບລິວາສ໌
+        one: ເວ​ເນ​ຊູ​ເອ​ລັນ ໂບ​ລິ​ວາ (2008–2018)
     VES:
       display_names:
         other: ເວ​ເນ​ຊູ​ເອ​ລັນ ໂບ​ລິ​ວາ
         one: ເວ​ເນ​ຊູ​ເອ​ລັນ ໂບ​ລິ​ວາ
+    VND:
+      display_names:
+        other: ຫວຽດ​ນາມ ດົງ
+        one: ຫວຽດ​ນາມ ດົງ
     VNN:
       display_names:
         other: ດົງ ຫວຽດນາມ (1978–1985)
@@ -1091,6 +1118,10 @@ number_formats:
       display_names:
         other: ຊາ​ໂມນ ທາ​ລາ
         one: ຊາ​ໂມນ ທາ​ລາ
+    XAF:
+      display_names:
+        other: ຟຣັງ ເຊຟານ ທະນາຄານລັດອາຟຣິກາກາງ
+        one: ສາທາລະນະລັດອາຟຣິກາກາງ
     XAG:
       display_names:
         other: ເງິນ
@@ -1115,6 +1146,10 @@ number_formats:
       display_names:
         other: ຫົວໜ່ວຍບັນຊີເອີຣົບ (XBD)
         one: ຫົວໜ່ວຍບັນຊີເອີຣົບ (XBD)
+    XCD:
+      display_names:
+        other: ອີ​ສ ຄາ​ຣິ​ບຽນ ໂດ​ລ່າ
+        one: ອີ​ສ ຄາ​ຣິ​ບຽນ ໂດ​ລ່າ
     XDR:
       display_names:
         other: ສິດທິຖອນເງິນພິເສດ
@@ -1131,10 +1166,18 @@ number_formats:
       display_names:
         other: ຟຣັງ ຢູໄອຊີ ຝຣັ່ງ
         one: ຟຣັງ ຢູໄອຊີ ຝຣັ່ງ
+    XOF:
+      display_names:
+        other: ຟັງເຊຟານ ອາຟຣິກາຕາເວັນຕົກ
+        one: ຟັງເຊຟານ ອາຟຣິກາຕາເວັນຕົກ
     XPD:
       display_names:
         other: ແພເລດຽມ
         one: ແພເລດຽມ
+    XPF:
+      display_names:
+        other: ຊີ​ເອັບ​ພີ ຟຣັງ
+        one: ຊີ​ເອັບ​ພີ ຟຣັງ
     XPT:
       display_names:
         other: ແພລັດຕິນຳ
@@ -1147,6 +1190,10 @@ number_formats:
       display_names:
         other: ລະຫັດທົດສອບສະກຸນເງິນ
         one: ລະຫັດທົດສອບສະກຸນເງິນ
+    XXX:
+      display_names:
+        other: "(ສະກຸນເງິນທີ່ບໍ່ຮູ້ຈັກ)"
+        one: ສະກຸນເງິນທີ່ບໍ່ຮູ້ຈັກ
     YDD:
       display_names:
         other: ດີນາ ເຢເມນ
@@ -1175,10 +1222,18 @@ number_formats:
       display_names:
         other: ແຣນ ອາຟຣິກາໃຕ້ (ການເງິນ)
         one: ແຣນ ອາຟຣິກາໃຕ້ (ການເງິນ)
+    ZAR:
+      display_names:
+        other: ເຊົາທ໌ ອາ​ຟຣິ​ກັນ ແຣນດ໌
+        one: ເຊົາທ໌ ອາ​ຟຣິ​ກັນ ແຣນດ໌
     ZMK:
       display_names:
         other: ຄວາຊາ ຊັມເບຍ (1968–2012)
         one: ຄວາຊາ ຊັມເບຍ (1968–2012)
+    ZMW:
+      display_names:
+        other: ແຊມ​ບຽນ ຄວາ​ຊາ
+        one: ແຊມ​ບຽນ ຄວາ​ຊາ
     ZRN:
       display_names:
         other: ແຊ ຄອງໂກໃໝ່
@@ -1199,3 +1254,815 @@ number_formats:
       display_names:
         other: ດອນລາ ຊິມບັບເວ (2008)
         one: ດອນລາ ຊິມບັບເວ (2008)
+  units:
+    g-force:
+      long:
+        other: "{0} ແຮງຕົກຕາມລຳພັງ"
+      short:
+        display_name: ແຮງຕົກຕາມລຳພັງ
+    meter-per-square-second:
+      long:
+        display_name: ແມັດຕໍ່ວິນາທີກໍາລັງສອງ
+        other: "{0} ແມັດຕໍ່ວິນາທີກໍາລັງສອງ"
+      short:
+        display_name: ແມັດ/ວິນາທີ²
+        other: "{0} ມ/ວນທ²"
+    radian:
+      long:
+        other: "{0} radians"
+      short:
+        display_name: radians
+    arc-minute:
+      long:
+        display_name: arcminutes
+        other: "{0} ນາທີ"
+      short:
+        display_name: arcmins
+        other: "{0} arcmins"
+      narrow:
+        other: "{0}′"
+    arc-second:
+      long:
+        display_name: arcseconds
+        other: "{0} ວິນາທີ"
+      short:
+        display_name: arcsecs
+        other: "{0} arcsecs"
+      narrow:
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: ກິໂລຕາແມັດ
+        other: "{0} ກິໂລຕາແມັດ"
+        per_unit_pattern: "{0} ຕໍ່ຕາກິໂລແມັດກ້ອນ"
+      short:
+        display_name: ກມ²
+        other: "{0} ກມ²"
+    hectare:
+      long:
+        other: "{0} ເຮັກຕາ"
+      short:
+        display_name: ເຮັກຕາ
+        other: "{0} ຮຕ."
+      narrow:
+        other: "{0} ຮຕ"
+    square-meter:
+      long:
+        display_name: ຕາແມັດ
+        other: "{0} ຕາແມັດ"
+        per_unit_pattern: "{0} ຕໍ່ຕາແມັດ"
+      short:
+        display_name: ແມັດ²
+        other: "{0} ມ²"
+        per_unit_pattern: "{0}/ມ²"
+    square-centimeter:
+      long:
+        display_name: ຊັງຕີຕາແມັດ
+        other: "{0} ຊັງຕີຕາແມັດ"
+        per_unit_pattern: "{0} ຕໍ່ຊັງຕີຕາແມັດ"
+      short:
+        display_name: ຊມ²
+        other: "{0} ຊມ²"
+        per_unit_pattern: "{0}/ຊມ²"
+    square-mile:
+      long:
+        display_name: ຕາ​ລາງໄມລ໌
+        other: "{0} ຕາ​ລາງໄມລ໌"
+      short:
+        display_name: sq miles
+      narrow:
+        display_name: mi²
+    square-yard:
+      long:
+        display_name: square yards
+        other: "{0} ຕາລາງຢາດ"
+      short:
+        display_name: yards²
+      narrow:
+        display_name: yd²
+    square-foot:
+      long:
+        display_name: ຕາ​ຟຸດ
+        other: "{0} ຕາ​ຟຸດ"
+      short:
+        display_name: ຟຸດ²
+        other: "{0} ຟຸດ²"
+      narrow:
+        other: "{0} ft²"
+    square-inch:
+      long:
+        display_name: ຕານິ້ວ
+        other: "{0} ຕາລາງນິ້ວ"
+        per_unit_pattern: "{0} ຕໍ່ຕາລາງນິ້ວ"
+      short:
+        display_name: ນິ້ວ²
+    karat:
+      long:
+        other: "{0} ກະຣັດ"
+      short:
+        display_name: ກະຣັດ
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: ມິລິກຣັມຕໍ່ເດຊິລິດ
+    millimole-per-liter:
+      long:
+        display_name: ມິລິໂມລຕໍ່ລິດ
+        other: "{0} ມິລິໂມລຕໍ່ລິດ"
+      short:
+        display_name: ມິລິໂມນ/ລິດ
+    permillion:
+      long:
+        display_name: ພາດຕໍ່ລ້ານ
+        other: "{0} ພາດຕໍ່ລ້ານ"
+      short:
+        display_name: ພາດ/ລ້ານ
+    percent:
+      long:
+        other: "{0} ເປີເຊັນ"
+      short:
+        display_name: ເປີເຊັນ
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        other: "{0} ຕໍ່ພັນ"
+      short:
+        display_name: ຕໍ່ພັນ
+      narrow:
+        display_name: "‰"
+    permyriad:
+      long:
+        display_name: ເປີ​ມີ​ຣຽດ
+        other: "{0} ເປີ​ມີ​ຣຽດ"
+    mole:
+      long:
+        display_name: ໂມ​ລ
+        other: "{0} ໂມ​ລ"
+    liter-per-kilometer:
+      long:
+        other: "{0} ລິດຕໍ່ກິໂລແມັດ"
+      short:
+        display_name: ລ/ກມ
+        other: "{0} ລ/ກມ"
+    liter-per-100-kilometer:
+      long:
+        display_name: ລິດ ຕໍ່ 100 ກິໂລເເມັດ
+        other: "{0} ລິດຕໍ່ 100 ກີໂລແມັດ"
+      short:
+        display_name: ລ/ 100 ກມ
+      narrow:
+        other: "{0} ລ / 100 ກມ"
+    mile-per-gallon:
+      long:
+        display_name: ໄມລ໌ຕໍ່ແກລອນ
+        other: "{0} ໄມລ໌ຕໍ່ແກລອນ"
+      short:
+        display_name: ໄມລ໌/ແກລ
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: ໄມລ໌ຕໍ່ແກລລອນອັງກິດ
+        other: "{0} ໄມລ໌ຕໍ່ແກລລອນອັງກິດ"
+      short:
+        display_name: ໄມລ໌/ແກລລອນອັງກິດ
+      narrow:
+        display_name: mpg UK
+        other: "{0} m/gUK"
+    petabyte:
+      long:
+        display_name: ເພຕາໄບຕ໌
+        other: "{0} ເພຕາໄບຕ໌"
+      short:
+        display_name: PByte
+    century:
+      long:
+        display_name: ສັດຕະວັດ
+        other: "{0} ສັດຕະວັດ"
+      short:
+        display_name: ສຕວ
+        other: "{0} ສຕວ"
+      narrow:
+        display_name: ສຕວ
+        other: "{0} ສຕວ"
+    year:
+      long:
+        per_unit_pattern: "{0} /ປີ"
+      short:
+        display_name: ປີ
+        other: "{0} ປີ"
+        per_unit_pattern: "{0}/ປີ"
+      narrow:
+        other: "{0} ປ"
+    month:
+      long:
+        other: "{0} ເດືອນ"
+      short:
+        display_name: ເດືອນ
+        other: "{0} ດ."
+        per_unit_pattern: "{0}/ເດືອນ"
+    week:
+      long:
+        other: "{0} ອາທິດ"
+        per_unit_pattern: "{0} ຕໍ່ອາທິດ"
+      short:
+        display_name: ອາທິດ
+        other: "{0} ອທ."
+        per_unit_pattern: "{0}/ອາທິດ"
+      narrow:
+        display_name: ອທ.
+    day:
+      long:
+        per_unit_pattern: "{0} ຕໍ່ມື້"
+      short:
+        display_name: ມື້
+        other: "{0} ມື້"
+        per_unit_pattern: "{0}/ມື້"
+      narrow:
+        other: "{0} ມ."
+    hour:
+      long:
+        other: "{0} ຊົ່ວໂມງ"
+        per_unit_pattern: "{0} ຕໍ່ຊົ່ວໂມງ"
+      short:
+        display_name: ຊົ່ວໂມງ
+        other: "{0} ຊມ"
+        per_unit_pattern: "{0}/ຊມ"
+    minute:
+      long:
+        display_name: ນາທີ
+        other: "{0} ນາທີ"
+        per_unit_pattern: "{0} ຕໍ່ນາທີ"
+      short:
+        display_name: ນທ.
+        other: "{0} ນທ"
+        per_unit_pattern: "{0}/ນາທີ"
+    second:
+      long:
+        display_name: ວິນາທີ
+        other: "{0} ວິນາທີ"
+        per_unit_pattern: "{0} ຕໍ່ວິນາທີ"
+      short:
+        display_name: ວິ.
+        other: "{0} ວິ"
+        per_unit_pattern: "{0}/ວິ"
+    millisecond:
+      long:
+        display_name: ມິນລີວິນາທີ
+        other: "{0} ມິນລີວິນາທີ"
+      short:
+        display_name: ມິນລີວິ
+        other: "{0} ມລວ"
+      narrow:
+        display_name: ມລວ
+    microsecond:
+      long:
+        display_name: ໄມ​ໂຄຣ​ວິ​ນາ​ທີ
+        other: "{0} ໄມ​ໂຄຣ​ວິ​ນາ​ທີ"
+      short:
+        display_name: μວິ
+        other: "{0} μວິ"
+    nanosecond:
+      long:
+        display_name: ນາ​ໂນ​ວິ​ນາ​ທີ
+        other: "{0} ນາ​ໂນ​ວິ​ນາ​ທີ"
+      short:
+        display_name: ນາ​ໂນ​ວິ​
+        other: "{0} ນນ​ວິ"
+    calorie:
+      long:
+        display_name: ແຄລໍລີ່
+        other: "{0} ແຄລໍລີ່"
+      short:
+        display_name: ຄລ
+        other: "{0} ຄລ"
+    foodcalorie:
+      long:
+        display_name: ແຄລໍລີ່
+        other: "{0} ແຄລໍລີ່"
+      short:
+        display_name: ຄລ
+        other: "{0} ຄລ"
+      narrow:
+        other: "{0}ຄລ"
+    electronvolt:
+      long:
+        display_name: ເອ​ເລັກ​ຕ​ຣົງ​ໂວນ
+        other: "{0} ເອ​ເລັກ​ຕ​ຣົງ​ໂວນ"
+    british-thermal-unit:
+      long:
+        display_name: ຫົວ​ໜ່ວຍ​ວັດ​ແທກ​ປະ​ລິ​ມານ​ຄວາມ​ຮ້ອນ​ຂ​ອງ​ອັງ​ກິດ
+        other: "{0} ຫົວ​ໜ່ວຍ​ວັດ​ແທກ​ປະ​ລິ​ມານ​ຄວາມ​ຮ້ອນ​ຂ​ອງ​ອັງ​ກິດ"
+    pound-force:
+      long:
+        display_name: ແຮງປ​ອນ
+        other: "{0} ແຮງປ​ອນ"
+    newton:
+      long:
+        display_name: ນິວ​ເຕິນ
+        other: "{0} ນິວ​ເຕິນ"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: ກິໂລວັດໂມງຕໍ່ 100 ກິໂລແມັດ
+        other: "{0} ກິໂລວັດໂມງຕໍ່ 100 ກິໂລແມັດ"
+      narrow:
+        other: "{0}kWh/100km"
+    kilometer:
+      long:
+        display_name: ກິໂລແມັດ
+        other: "{0} ກິໂລແມັດ"
+        per_unit_pattern: "{0} ຕໍ່ກິໂລແມັດ"
+      short:
+        display_name: ກມ
+        other: "{0} ກມ"
+        per_unit_pattern: "{0}/ກມ"
+    meter:
+      long:
+        other: "{0} ແມັດ"
+        per_unit_pattern: "{0} ຕໍ່ແມັດ"
+      short:
+        display_name: ແມັດ
+        other: "{0} ມ"
+        per_unit_pattern: "{0}/ມ"
+    decimeter:
+      long:
+        display_name: ເດຊີແມັດ
+        other: "{0} ເດຊີແມັດ"
+      short:
+        display_name: ດມ
+        other: "{0} ດມ"
+    centimeter:
+      long:
+        display_name: ຊັງຕີແມັດ
+        other: "{0} ຊັງຕີແມັດ"
+        per_unit_pattern: "{0} ຕໍ່ຊັງຕີແມັດ"
+      short:
+        display_name: ຊມ
+        other: "{0} ຊມ"
+        per_unit_pattern: "{0}/ຊັງຕີແມັດ"
+    millimeter:
+      long:
+        display_name: ມິນລິແມັດ
+        other: "{0} ມິນລິແມັດ"
+      short:
+        display_name: ມມ
+        other: "{0} ມມ"
+    micrometer:
+      long:
+        display_name: micrometers
+        other: "{0} micrometers"
+    nanometer:
+      long:
+        display_name: ນາໂນແມັດ
+        other: "{0} ນາໂນແມັດ"
+      short:
+        display_name: ນມ
+        other: "{0} ນມ"
+    picometer:
+      long:
+        display_name: ປິໂກແມັດ
+        other: "{0} ປິໂກແມັດ"
+      short:
+        display_name: ປມ
+        other: "{0} ປມ"
+    mile:
+      long:
+        other: "{0} ໄມລ໌"
+      short:
+        display_name: ໄມລ໌
+        other: "{0} ໄມ"
+    foot:
+      long:
+        other: "{0} ຟຸດ"
+        per_unit_pattern: "{0} ຕໍ່ຟຸດ"
+      short:
+        display_name: ຟຸດ
+        other: "{0} ຟ"
+        per_unit_pattern: "{0}/ຟ"
+    inch:
+      long:
+        other: "{0} ນິ້ວ"
+        per_unit_pattern: "{0} ຕໍ່ນິ້ວ"
+      short:
+        display_name: ນິ້ວ
+        other: "{0} ນິ"
+        per_unit_pattern: "{0}/ນິ"
+    parsec:
+      long:
+        other: "{0} parsecs"
+      short:
+        display_name: parsecs
+    light-year:
+      long:
+        other: "{0} ປີແສງ"
+      short:
+        display_name: ປີແສງ
+        other: "{0} ປສ"
+    astronomical-unit:
+      long:
+        display_name: astronomical units
+        other: "{0} astronomical units"
+    nautical-mile:
+      long:
+        display_name: ໄມລ໌ທະເລ
+        other: "{0} ໄມລ໌ທະເລ"
+    mile-scandinavian:
+      long:
+        display_name: ໄມລ໌ສະກັງດີນາວຽນ
+        other: "{0} ໄມລ໌ສະກັງດີນາວຽນ"
+    point:
+      long:
+        other: "{0} ຈຸດ"
+      short:
+        display_name: ຈຸດ
+    solar-radius:
+      long:
+        display_name: ລັດ​ສະ​ໝີ​ດວງ​ຕາ​ເວັນ
+        other: "{0} ລັດ​ສະ​ໝີ​ດວງ​ຕາ​ເວັນ"
+    lux:
+      long:
+        other: "{0} lux"
+      short:
+        display_name: lux
+    candela:
+      long:
+        display_name: ແຄນເດລາ
+        other: "{0} ແຄນເດລາ"
+    lumen:
+      long:
+        display_name: ລູເມນ
+        other: "{0} ລູເມນ"
+    solar-luminosity:
+      long:
+        display_name: ຄວາມ​ແຈ້ງດວງ​ຕາ​ເວັນ
+        other: "{0} ຄວາມ​ແຈ້ງດວງ​ຕາ​ເວັນ"
+    kilogram:
+      long:
+        other: "{0} ກິໂລກຣາມ"
+      short:
+        display_name: ກິໂລກຣາມ
+        other: "{0} ກິໂລ"
+      narrow:
+        other: "{0} ກລ"
+    gram:
+      long:
+        other: "{0} ກຣາມ"
+      short:
+        display_name: ກຣາມ
+        other: "{0} ກຼ"
+    milligram:
+      long:
+        display_name: ມິນລີກຣາມ
+        other: "{0} ມິນລີກຣາມ"
+      short:
+        display_name: ມກ
+        other: "{0} ມກ"
+    ton:
+      long:
+        display_name: ໂຕນ
+        other: "{0} ໂຕນ"
+      short:
+        display_name: ຕ
+        other: "{0} ຕ"
+    stone:
+      long:
+        display_name: stones
+        other: "{0} stones"
+      narrow:
+        display_name: ສະໂຕນ
+    pound:
+      long:
+        other: "{0} ປອນ"
+        per_unit_pattern: "{0}/ປອນ"
+      short:
+        display_name: ປອນ
+        other: "{0} ປ"
+        per_unit_pattern: "{0}/ປ"
+    ounce:
+      long:
+        other: "{0} ອອນສ"
+        per_unit_pattern: "{0} ຕໍ່ ອອນສ"
+      short:
+        display_name: ອອນສ
+        other: "{0} ອ"
+        per_unit_pattern: "{0}/ອ"
+    dalton:
+      long:
+        display_name: ດໍ​ຕັນ
+        other: "{0} ດໍ​ຕັນ"
+    earth-mass:
+      long:
+        display_name: ມວນ​ສານ​ໜ່ວຍ​ໂລກ
+        other: "{0} ມວນ​ສານ​ໜ່ວຍ​ໂລກ"
+    solar-mass:
+      long:
+        display_name: ມວນ​ສານດວງ​ຕາ​ເວັນ
+        other: "{0} ມວນ​ສານດວງ​ຕາ​ເວັນ"
+    grain:
+      long:
+        display_name: ເກຣນ
+        other: "{0} ເກຣນ"
+      short:
+        display_name: gr
+        other: "{0} gr"
+    kilowatt:
+      long:
+        other: "{0} ກິໂລວັດ"
+      short:
+        display_name: ກິໂລວັດ
+        other: "{0} ກລ. ວັດ"
+      narrow:
+        other: "{0} kW"
+    horsepower:
+      long:
+        other: "{0} ແຮງມ້າ"
+      short:
+        display_name: ແຮງມ້າ
+    millimeter-ofhg:
+      long:
+        display_name: ມິນລີແມັດໃນບາຫຼອດ
+        other: "{0} ມິນລີແມັດໃນບາຫຼອດ"
+    pound-force-per-square-inch:
+      long:
+        display_name: ປອນຕໍ່ຕະລາງນິ້້ວ
+        other: "{0} ປອນຕໍ່ຕະລາງນິ້້ວ"
+    inch-ofhg:
+      long:
+        display_name: ນິ້ວໃນບາຫຼອດ
+        other: "{0} ນິ້ວໃນບາຫຼອດ"
+      short:
+        display_name: in Hg
+        other: "{0} in Hg"
+    millibar:
+      long:
+        display_name: ມິນລິບາ
+        other: "{0} ມິນລິບາ"
+    atmosphere:
+      long:
+        display_name: atmospheres
+        other: "{0} atmospheres"
+    hectopascal:
+      long:
+        display_name: hectopascals
+        other: "{0} hectopascals"
+      short:
+        display_name: hPA
+        other: "{0} hPA"
+    kilopascal:
+      long:
+        display_name: ກິ​ໂລ​ປາ​ສ​ການ
+        other: "{0} ກິ​ໂລ​ປາ​ສ​ການ"
+    megapascal:
+      long:
+        display_name: ເມ​ກາ​ປາ​ສ​ການ
+        other: "{0} ເມ​ກາ​ປາ​ສ​ການ"
+    kilometer-per-hour:
+      long:
+        display_name: ກິໂລແມັດຕໍ່ຊົ່ວໂມງ
+        other: "{0} ກິໂລແມັດຕໍ່ຊົ່ວໂມງ"
+      short:
+        display_name: ກມ/ຊມ
+        other: "{0} ກມ/ຊມ"
+    meter-per-second:
+      long:
+        display_name: ແມັດຕໍ່ວິນາທີ
+        other: "{0} ແມັດຕໍ່ວິນາທີ"
+      short:
+        display_name: ແມັດ/ວິ
+        other: "{0} ມ/ວ"
+      narrow:
+        display_name: ມ/ວ
+    mile-per-hour:
+      long:
+        display_name: ໄມລ໌ຕໍ່ຊົ່ວໂມງ
+        other: "{0} ໄມລ໌ຕໍ່ຊົ່ວໂມງ"
+      short:
+        display_name: ໄມລ໌/ຊົ່ວໂມງ
+        other: "{0} ມ/ຊມ"
+    knot:
+      long:
+        display_name: ນ໋ອດ
+        other: "{0} ນ໋ອດ"
+    beaufort:
+      long:
+        display_name: ໂບຝອດ
+        other: "{0} ໂບຝອດ"
+      short:
+        other: "{0} B"
+    celsius:
+      long:
+        display_name: ອົງສາເຊວຊຽສ
+      short:
+        display_name: ອົງ​ສາ ຊ.
+        other: "{0} ອົງສາ ຊີ."
+      narrow:
+        display_name: "°C"
+        other: "{0}°"
+    fahrenheit:
+      long:
+        display_name: ອົງສາຟາເຣນຮາຍ
+        other: "{0} ອົງສາຟາເຣນຮາຍ"
+      short:
+        display_name: ອົງ​ສາ ຟ.
+        other: "{0} ອົງສາ ຟ."
+      narrow:
+        display_name: "°F"
+        other: "{0}°F"
+    kelvin:
+      long:
+        display_name: ອົງສາເຄວິນ
+        other: "{0} ອົງສາເຄວິນ"
+      short:
+        display_name: ອົງສາ ເຄ.
+        other: "{0}°K"
+    pound-force-foot:
+      long:
+        display_name: ປອນ​-ຟຸດ
+        other: "{0} ປອນ​-ຟຸດ"
+    newton-meter:
+      long:
+        display_name: ນິວ​ເຕິນ​ແມັດ
+        other: "{0} ນິວ​ເຕິນ​ແມັດ"
+    cubic-kilometer:
+      long:
+        display_name: ກິໂລແມັດກ້ອນ
+        other: "{0} ກິໂລແມັດກ້ອນ"
+      short:
+        display_name: ກມ³
+        other: "{0} ກມ³"
+    cubic-meter:
+      long:
+        display_name: ແມັດກ້ອນ
+        other: "{0} ແມັດກ້ອນ"
+        per_unit_pattern: "{0} ຕໍ່ມ³"
+      short:
+        display_name: ມ³
+        other: "{0} ມ³"
+        per_unit_pattern: "{0}/ມ³"
+    cubic-mile:
+      long:
+        display_name: ໄມລ໌ກ້ອນ
+        other: "{0} ໄມລ໌ກ້ອນ"
+    liter:
+      long:
+        other: "{0} ລິດ"
+        per_unit_pattern: "{0} ຕໍ່ລິດ"
+      short:
+        display_name: ລິດ
+        other: "{0} L"
+      narrow:
+        other: "{0}L"
+    pint-metric:
+      long:
+        display_name: metric pints
+        other: "{0} metric pints"
+    cup-metric:
+      long:
+        other: "{0} metric cups"
+    gallon:
+      long:
+        per_unit_pattern: "{0} ຕໍ່ແກລລອນ"
+      short:
+        display_name: ແກລລອນ
+        other: "{0} ແກລລອນ"
+        per_unit_pattern: "{0}/ແກລລອນ"
+    gallon-imperial:
+      long:
+        display_name: ແກລລອນອັງກິດ
+        other: "{0} ແກລລອນອັງກິດ"
+      narrow:
+        other: "{0} galIm"
+    barrel:
+      long:
+        display_name: ບາ​ເຣວ
+        other: "{0} ບາ​ເຣວ"
+    dram:
+      long:
+        display_name: ແດຣມ
+        other: "{0} ແດຣມ"
+      short:
+        display_name: dr fl
+        other: "{0} dr fl"
+      narrow:
+        display_name: fl.dr.
+    light-speed:
+      long:
+        display_name: ແສງ
+        other: "{0} ແສງ"
+      short:
+        display_name: ແສງ
+        other: "{0} ແສງ"
+      narrow:
+        display_name: ແສງ
+        other: "{0} ແສງ"
+    portion-per-1e9:
+      long:
+        display_name: ສ່ວນໃນພັນລ້ານສ່ວນ
+        other: "{0} ສ່ວນໃນພັນລ້ານສ່ວນ"
+      short:
+        display_name: ສ່ວນ/ພັນລ້ານສ່ວນ
+      narrow:
+        display_name: ສ່ວນ/ພັນລ້ານສ່ວນ
+        other: "{0}ppb"
+    night:
+      long:
+        display_name: ຄືນ
+        other: "{0} ຄືນ"
+        per_unit_pattern: "{0}/ຄືນ"
+      short:
+        display_name: ຄືນ
+        other: "{0} ຄືນ"
+        per_unit_pattern: "{0}/ຄືນ"
+      narrow:
+        display_name: ຄືນ
+        other: "{0} ຄືນ"
+        per_unit_pattern: "{0}/ຄືນ"
+    degree:
+      short:
+        display_name: ອົງສາ
+        other: "{0} ອົງສາ"
+      narrow:
+        other: "{0}°"
+    acre:
+      short:
+        display_name: ເອເຄີ
+        other: "{0} ເອເຄີ"
+      narrow:
+        other: "{0} ac"
+    dunam:
+      short:
+        display_name: ດູ​ນຳ
+        other: "{0} ດູ​ນຳ"
+    item:
+      short:
+        display_name: ອັນ
+        other: "{0} ອັນ"
+    decade:
+      short:
+        display_name: ທົດສະວັດ
+        other: "{0} ທົດສະວັດ"
+    quarter:
+      short:
+        display_name: ໄຕມາດ
+        other: "{0} ໄຕມາດ"
+        per_unit_pattern: "{0}/ໄຕມາດ"
+    volt:
+      short:
+        display_name: ໂວລ
+        other: "{0} ໂວລ"
+    kilocalorie:
+      short:
+        display_name: ກິໂລແຄລໍລີ່
+        other: "{0} ກິໂລແຄລໍລີ່"
+    dot-per-centimeter:
+      short:
+        display_name: dpcm
+        other: "{0} dpcm"
+      narrow:
+        other: "{0}dpcm"
+    dot-per-inch:
+      short:
+        display_name: dpi
+        other: "{0} dpi"
+      narrow:
+        other: "{0}dpi"
+    dot:
+      short:
+        display_name: ດັອດ
+        other: "{0} ດັອດ"
+    yard:
+      short:
+        display_name: ຫລາ
+        other: "{0} ຫລາ"
+    fathom:
+      short:
+        display_name: ftm
+        other: "{0} ftm"
+    watt:
+      short:
+        display_name: ວັດ
+        other: "{0} ວັດ"
+    fluid-ounce:
+      short:
+        display_name: fl oz
+        other: "{0} fl oz"
+    drop:
+      short:
+        display_name: ຢອດ
+        other: "{0} ຢອດ"
+    pinch:
+      short:
+        display_name: ຢິບ
+        other: "{0} ຢິບ"
+    joule:
+      narrow:
+        display_name: ຈູນ
+    carat:
+      narrow:
+        display_name: ກະຣັດ
+    fluid-ounce-imperial:
+      narrow:
+        other: "{0} fl oz Im"
+    dessert-spoon-imperial:
+      narrow:
+        display_name: dsp Imp
+        other: "{0}dsp-Imp"

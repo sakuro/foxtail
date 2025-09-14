@@ -1,11 +1,935 @@
 ---
 locale: szl
-generated_at: '2025-09-13T17:41:01Z'
+generated_at: '2025-09-14T06:28:22Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
-    accounting: "¤ #,##0.00"
+  scientific_formats:
+    standard: 
+  units:
+    g-force:
+      long:
+        display_name: stało grawitacyje
+        other: "{0} stałyj grawitacyje"
+      short:
+        display_name: G
+    meter-per-square-second:
+      long:
+        display_name: metry na sekunda do kwadratu
+        other: "{0} metra na sekunda do kwadratu"
+    revolution:
+      long:
+        display_name: ôbrōt
+        other: "{0} ôbrotu"
+      short:
+        display_name: ôbr.
+        other: "{0} ôbr."
+    radian:
+      long:
+        display_name: radiany
+        other: "{0} radiana"
+    degree:
+      long:
+        other: "{0} stopnia"
+      short:
+        display_name: stopnie
+    arc-minute:
+      long:
+        display_name: minuty kōntowe
+        other: "{0} minuty kōntowyj"
+      short:
+        display_name: minuty
+    arc-second:
+      long:
+        display_name: sekundy kōntowe
+        other: "{0} sekundy kōntowyj"
+      short:
+        display_name: sekundy
+    square-kilometer:
+      long:
+        display_name: kilōmetry kwadratowe
+        other: "{0} kilōmetra kwadratowego"
+        per_unit_pattern: "{0} na kilōmeter kwadratowy"
+    hectare:
+      long:
+        display_name: hektary
+        other: "{0} hektara"
+      short:
+        display_name: ha
+    square-meter:
+      long:
+        display_name: metry kwadratowe
+        other: "{0} metra kwadratowego"
+        per_unit_pattern: "{0} na meter kwadratowy"
+    square-centimeter:
+      long:
+        display_name: cyntymetry kwadratowe
+        other: "{0} cyntymetra kwadratowego"
+        per_unit_pattern: "{0} na cyntymeter kwadratowy"
+    square-mile:
+      long:
+        display_name: mile kwadratowe
+        other: "{0} mili kwadratowyj"
+        per_unit_pattern: "{0} na mila kwadratowōm"
+    acre:
+      long:
+        other: "{0} akra"
+      short:
+        display_name: akry
+    square-yard:
+      long:
+        display_name: jardy kwadratowe
+        other: "{0} jarda kwadratowego"
+      short:
+        display_name: jd²
+        other: "{0} jd²"
+    square-foot:
+      long:
+        display_name: stopy kwadratowe
+        other: "{0} stopy kwadratowyj"
+      short:
+        display_name: st²
+        other: "{0} st²"
+    square-inch:
+      long:
+        display_name: cale kwadratowe
+        other: "{0} cala kwadratowego"
+        per_unit_pattern: "{0} na cal kwadratowy"
+      short:
+        display_name: c²
+        other: "{0} c²"
+        per_unit_pattern: "{0}/c²"
+    karat:
+      long:
+        other: "{0} karata"
+      short:
+        display_name: karaty
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: miligramy na decyliter
+        other: "{0} miligrama na decyliter"
+      short:
+        display_name: mg/dl
+        other: "{0} mg/dl"
+    millimole-per-liter:
+      long:
+        display_name: milimole na liter
+        other: "{0} milimola na liter"
+      short:
+        display_name: milimole/liter
+        other: "{0} mmol/l"
+    permillion:
+      long:
+        display_name: czyńści na milijōn
+        other: "{0} czyńści na milijōn"
+      short:
+        display_name: czyńści/miliōn
+        other: "{0} cz/mln"
+    percent:
+      long:
+        other: "{0} procynt"
+      short:
+        display_name: procynt
+    permille:
+      long:
+        other: "{0} prōmila"
+      short:
+        display_name: prōmil
+    permyriad:
+      long:
+        display_name: punkt bazowy
+        other: "{0} punktu bazowego"
+      short:
+        display_name: pōnkt bazowy
+    liter-per-kilometer:
+      long:
+        display_name: litry na kilōmeter
+        other: "{0} litra na kilōmeter"
+      short:
+        display_name: l/km
+        other: "{0} l/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: litry na 100 kilōmetrōw
+        other: "{0} litra na 100 kilōmetrōw"
+      short:
+        display_name: l/100 km
+        other: "{0} l/100 km"
+    mile-per-gallon:
+      long:
+        display_name: mile na galōn
+        other: "{0} mile na galōn"
+      short:
+        display_name: mpg
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: mile na galōn angelski
+        other: "{0} mile na galōn angelski"
+      short:
+        display_name: mile/gal ang.
+        other: "{0} mi/gal ang."
+    petabyte:
+      long:
+        display_name: petabajty
+        other: "{0} petabajta"
+    terabyte:
+      long:
+        display_name: terabajty
+        other: "{0} terabajta"
+    terabit:
+      long:
+        display_name: terabity
+        other: "{0} terabitu"
+    gigabyte:
+      long:
+        display_name: gigabajty
+        other: "{0} gigabajta"
+    gigabit:
+      long:
+        display_name: gigabity
+        other: "{0} gigabitu"
+    megabyte:
+      long:
+        display_name: megabajty
+        other: "{0} megabajta"
+    megabit:
+      long:
+        display_name: megabity
+        other: "{0} megabitu"
+    kilobyte:
+      long:
+        display_name: kilobajty
+        other: "{0} kilobajta"
+    kilobit:
+      long:
+        display_name: kilobity
+        other: "{0} kilobitu"
+    byte:
+      long:
+        other: "{0} bajta"
+      short:
+        display_name: bajty
+        other: "{0} B"
+    bit:
+      long:
+        other: "{0} bitu"
+      short:
+        display_name: bity
+        other: "{0} b"
+    century:
+      long:
+        display_name: stolecie
+        other: "{0} stolecio"
+      short:
+        display_name: st.
+        other: "{0} st."
+    decade:
+      long:
+        display_name: dekady
+        other: "{0} dekady"
+      short:
+        display_name: dek.
+        other: "{0} dek."
+    year:
+      long:
+        per_unit_pattern: "{0} na rok"
+      short:
+        display_name: lata
+        other: "{0} roku"
+        per_unit_pattern: "{0}/rok"
+      narrow:
+        display_name: rok
+        other: "{0} r."
+    quarter:
+      long:
+        display_name: sztwierci roku
+        other: "{0} sztwierci roku"
+        per_unit_pattern: "{0} na sztwierć roku"
+      short:
+        display_name: sztr
+        other: "{0} sztr"
+        per_unit_pattern: "{0}/szt"
+    month:
+      long:
+        other: "{0} miesiōnca"
+        per_unit_pattern: "{0} na miesiōnc"
+      short:
+        display_name: miesiōnce
+        other: "{0} mies."
+        per_unit_pattern: "{0}/mies."
+      narrow:
+        display_name: miesiōnc
+    week:
+      long:
+        other: "{0} tydnia"
+        per_unit_pattern: "{0} na tydziyń"
+      short:
+        display_name: tydnie
+        other: "{0} tyd."
+        per_unit_pattern: "{0}/tydz."
+      narrow:
+        display_name: tydziyń
+    day:
+      long:
+        per_unit_pattern: "{0} na dziyń"
+      short:
+        display_name: dni
+        other: "{0} dnia"
+        per_unit_pattern: "{0}/dziyń"
+      narrow:
+        display_name: dziyń
+        other: "{0} dn."
+        per_unit_pattern: "{0}/d."
+    hour:
+      long:
+        other: "{0} godziny"
+        per_unit_pattern: "{0} na godzina"
+      short:
+        display_name: godziny
+        other: "{0} godz."
+      narrow:
+        display_name: godzina
+        other: "{0} g."
+    minute:
+      long:
+        other: "{0} minuty"
+        per_unit_pattern: "{0} na minuta"
+      short:
+        display_name: minuty
+    second:
+      long:
+        other: "{0} sekundy"
+        per_unit_pattern: "{0} na sekunda"
+      short:
+        display_name: sekundy
+        other: "{0} sek."
+    millisecond:
+      long:
+        other: "{0} milisekundy"
+      short:
+        display_name: milisekundy
+    microsecond:
+      long:
+        display_name: mikrosekundy
+        other: "{0} mikrosekundy"
+    nanosecond:
+      long:
+        display_name: nanosekundy
+        other: "{0} nanosekundy"
+    ampere:
+      long:
+        other: "{0} ampra"
+      short:
+        display_name: ampry
+    milliampere:
+      long:
+        display_name: miliampry
+        other: "{0} miliampra"
+    ohm:
+      long:
+        other: "{0} ōma"
+      short:
+        display_name: ōmy
+    volt:
+      long:
+        other: "{0} wolta"
+      short:
+        display_name: wolty
+    kilocalorie:
+      long:
+        display_name: kilokaloryje
+        other: "{0} kilokaloryje"
+    calorie:
+      long:
+        display_name: kaloryje
+        other: "{0} kaloryje"
+    foodcalorie:
+      long:
+        display_name: kaloryje
+        other: "{0} kaloryje"
+      short:
+        display_name: col
+        other: "{0} col"
+    kilojoule:
+      long:
+        display_name: kilodżule
+        other: "{0} kilodżula"
+    joule:
+      long:
+        display_name: dżule
+        other: "{0} dżula"
+      short:
+        display_name: J
+    kilowatt-hour:
+      long:
+        display_name: kilowatogodziny
+        other: "{0} kilowatogodziny"
+    electronvolt:
+      long:
+        display_name: elektrōnowolty
+        other: "{0} elektrōnowolta"
+      short:
+        display_name: elektrōnowolt
+    british-thermal-unit:
+      long:
+        display_name: brytyjsko jednostka ciepła
+        other: "{0} brytyjskij jednostki ciepła"
+      short:
+        display_name: BTU
+    therm-us:
+      long:
+        display_name: term amerykański
+        other: "{0} terma amerykańskigo"
+      short:
+        display_name: term USA
+        other: "{0} terma USA"
+    pound-force:
+      long:
+        other: "{0} fōnta-siły"
+      short:
+        display_name: fōnt-siła
+    newton:
+      long:
+        display_name: niutōny
+        other: "{0} niutōna"
+      short:
+        display_name: niutōn
+    gigahertz:
+      long:
+        display_name: gigaherce
+        other: "{0} gigaherca"
+    megahertz:
+      long:
+        display_name: megaherce
+        other: "{0} megaherca"
+    kilohertz:
+      long:
+        display_name: kiloherce
+        other: "{0} kiloherca"
+    hertz:
+      long:
+        display_name: herce
+        other: "{0} herca"
+    em:
+      long:
+        display_name: typograficzne ym
+      short:
+        display_name: ym
+        other: "{0} yma"
+    pixel:
+      long:
+        other: "{0} piksela"
+      short:
+        display_name: piksele
+        other: "{0} pks"
+    megapixel:
+      long:
+        other: "{0} megapiksela"
+      short:
+        display_name: megapiksele
+        other: "{0} mp"
+    pixel-per-centimeter:
+      long:
+        display_name: piksele na cyntymeter
+        other: "{0} piksela na cyntymeter"
+      short:
+        display_name: pks/cm
+        other: "{0} pks/cm"
+    pixel-per-inch:
+      long:
+        display_name: piksele na col
+        other: "{0} piksela na col"
+      short:
+        display_name: pks/c
+        other: "{0} pks/c"
+    dot-per-centimeter:
+      long:
+        display_name: pōnkty na cyntymeter
+        other: "{0} pōnkta na cyntymeter"
+      short:
+        display_name: pk/cm
+        other: "{0} pk/cm"
+    dot-per-inch:
+      long:
+        display_name: pōnkty na col
+        other: "{0} pōnkta na col"
+      short:
+        display_name: pk/c
+        other: "{0} pk/c"
+    kilometer:
+      long:
+        display_name: kilōmetry
+        other: "{0} kilōmetra"
+        per_unit_pattern: "{0} na kilōmeter"
+    meter:
+      long:
+        display_name: metry
+        other: "{0} metra"
+        per_unit_pattern: "{0} na meter"
+      short:
+        display_name: m
+    decimeter:
+      long:
+        display_name: decymetry
+        other: "{0} decymetra"
+    centimeter:
+      long:
+        other: "{0} cyntymetra"
+        per_unit_pattern: "{0} na cyntymeter"
+      short:
+        display_name: cyntymetry
+    millimeter:
+      long:
+        display_name: milimetry
+        other: "{0} milimetra"
+    micrometer:
+      long:
+        display_name: mikrōmetry
+        other: "{0} mikrōmetra"
+    nanometer:
+      long:
+        display_name: nanōmetry
+        other: "{0} nanōmetra"
+    picometer:
+      long:
+        display_name: pikōmetry
+        other: "{0} pikōmetra"
+    mile:
+      long:
+        other: "{0} mile"
+      short:
+        display_name: mile
+        other: "{0} mili"
+    yard:
+      long:
+        display_name: jardy
+        other: "{0} jarda"
+    foot:
+      long:
+        other: "{0} stopy"
+        per_unit_pattern: "{0} na stopa"
+      short:
+        display_name: stopy
+    inch:
+      long:
+        display_name: cole
+        other: "{0} cola"
+        per_unit_pattern: "{0} na col"
+      short:
+        display_name: cale
+        other: "{0} cala"
+        per_unit_pattern: "{0}/cal"
+      narrow:
+        other: "{0}″"
+    parsec:
+      long:
+        display_name: parseki
+        other: "{0} parseka"
+    light-year:
+      long:
+        other: "{0} roku świetlnego"
+      short:
+        display_name: lata świetlne
+        other: "{0} lś"
+    astronomical-unit:
+      long:
+        display_name: jednostki astrōnōmiczne
+        other: "{0} jednostki astrōnōmicznyj"
+      short:
+        display_name: j.a.
+        other: "{0} j.a."
+    nautical-mile:
+      long:
+        display_name: mile morske
+        other: "{0} mile morskij"
+      short:
+        display_name: Mm
+        other: "{0} Mm"
+    mile-scandinavian:
+      long:
+        display_name: mila skandynawsko
+        other: "{0} mile skandynawskij"
+    solar-radius:
+      long:
+        other: "{0} prōmiynia Słōńca"
+      short:
+        display_name: prōmiynie Słōńca
+    lux:
+      long:
+        display_name: luksy
+        other: "{0} luksu"
+      short:
+        display_name: lks
+        other: "{0} lks"
+    solar-luminosity:
+      long:
+        other: "{0} jasności Słōńca"
+      short:
+        display_name: jasność Słōńca
+    tonne:
+      long:
+        display_name: tōny
+        other: "{0} tōny"
+    kilogram:
+      long:
+        display_name: kilogramy
+        other: "{0} kilograma"
+        per_unit_pattern: "{0} na kilogram"
+    gram:
+      long:
+        display_name: gramy
+        other: "{0} grama"
+        per_unit_pattern: "{0} na gram"
+      short:
+        display_name: g
+    milligram:
+      long:
+        display_name: miligramy
+        other: "{0} miligrama"
+    microgram:
+      long:
+        display_name: mikrogramy
+        other: "{0} mikrograma"
+    ton:
+      long:
+        display_name: krōtke tōny
+        other: "{0} krōtkij tōny"
+    pound:
+      long:
+        other: "{0} fōnta"
+        per_unit_pattern: "{0} na fōnt"
+      short:
+        display_name: fōnty
+      narrow:
+        display_name: funty
+    ounce:
+      long:
+        display_name: uncyje
+        other: "{0} uncyje"
+        per_unit_pattern: "{0} na uncyjo"
+    ounce-troy:
+      long:
+        display_name: uncyjo trojańsko
+        other: "{0} uncyje trojańskij"
+    carat:
+      long:
+        other: "{0} karata"
+      short:
+        display_name: karaty
+        other: "{0} kt"
+    dalton:
+      long:
+        other: "{0} daltōna"
+      short:
+        display_name: daltōny
+    earth-mass:
+      long:
+        other: "{0} masy Ziymie"
+      short:
+        display_name: masa Ziymie
+    solar-mass:
+      long:
+        other: "{0} masy Słōńca"
+      short:
+        display_name: masa Słōńca
+    gigawatt:
+      long:
+        display_name: gigawaty
+        other: "{0} gigawata"
+    megawatt:
+      long:
+        display_name: megawaty
+        other: "{0} megawata"
+    kilowatt:
+      long:
+        display_name: kilowaty
+        other: "{0} kilowata"
+    watt:
+      long:
+        other: "{0} wata"
+      short:
+        display_name: waty
+    milliwatt:
+      long:
+        display_name: miliwaty
+        other: "{0} miliwata"
+    horsepower:
+      long:
+        display_name: kōnie mechaniczne
+        other: "{0} kōnia mechanicznego"
+      short:
+        display_name: KM
+        other: "{0} KM"
+    millimeter-ofhg:
+      long:
+        display_name: milimetry supa rtyńci
+        other: "{0} milimetra supa rtyńci"
+    pound-force-per-square-inch:
+      long:
+        display_name: fōnty na col kwadratowy
+        other: "{0} fōnta na col kwadratowy"
+    inch-ofhg:
+      long:
+        display_name: cole supa rtyńci
+        other: "{0} cola supa rtyńci"
+    bar:
+      long:
+        display_name: bary
+        other: "{0} bara"
+    millibar:
+      long:
+        display_name: milibary
+        other: "{0} millibara"
+    atmosphere:
+      long:
+        display_name: atmosfery
+        other: "{0} atmosfery"
+    pascal:
+      long:
+        display_name: paskale
+        other: "{0} paskala"
+    hectopascal:
+      long:
+        display_name: hektopaskale
+        other: "{0} hektopaskala"
+    kilopascal:
+      long:
+        display_name: kilopaskale
+        other: "{0} kilopaskala"
+    megapascal:
+      long:
+        display_name: megapaskale
+        other: "{0} megapaskala"
+    kilometer-per-hour:
+      long:
+        display_name: kilōmetry na godzina
+        other: "{0} kilōmetra na godzina"
+    meter-per-second:
+      long:
+        display_name: metry na sekunda
+        other: "{0} metra na sekunda"
+    mile-per-hour:
+      long:
+        display_name: mile na godzina
+        other: "{0} mile na godzina"
+    knot:
+      long:
+        display_name: wynzeł
+        other: "{0} wynzła"
+      short:
+        display_name: w.
+        other: "{0} w."
+    generic:
+      long:
+        display_name: stopnie
+        other: "{0} stopnia"
+    celsius:
+      long:
+        display_name: stopnie Celsjusza
+        other: "{0} stopnia Celsjusza"
+    fahrenheit:
+      long:
+        display_name: stopnie Fahrenheita
+        other: "{0} stopnia Fahrenheita"
+    kelvin:
+      long:
+        display_name: kelwiny
+        other: "{0} kelwina"
+    pound-force-foot:
+      long:
+        display_name: stopofunty
+        other: "{0} stopofunt"
+    newton-meter:
+      long:
+        display_name: niutōnōmetry
+        other: "{0} niutōnōmetra"
+    cubic-kilometer:
+      long:
+        display_name: kilōmetry sześciynne
+        other: "{0} kilōmetra sześciynnego"
+    cubic-meter:
+      long:
+        display_name: metry sześciynne
+        other: "{0} metra sześciynnego"
+        per_unit_pattern: "{0} na meter sześciynny"
+    cubic-centimeter:
+      long:
+        display_name: cyntymetry sześciynne
+        other: "{0} cyntymetra sześciynnego"
+        per_unit_pattern: "{0} na cyntymeter sześciynny"
+    cubic-mile:
+      long:
+        display_name: mile sześciynne
+        other: "{0} mile sześciynnyj"
+    cubic-yard:
+      long:
+        display_name: jardy sześciynne
+        other: "{0} jarda sześciynnego"
+      short:
+        display_name: jd³
+        other: "{0} jd³"
+    cubic-foot:
+      long:
+        display_name: stopy sześciynne
+        other: "{0} stopy sześciynnyj"
+      short:
+        display_name: st³
+        other: "{0} st³"
+    cubic-inch:
+      long:
+        display_name: cale sześciynne
+        other: "{0} cala sześciynnego"
+      short:
+        display_name: c³
+        other: "{0} c³"
+    megaliter:
+      long:
+        display_name: megalitry
+        other: "{0} megalitra"
+      short:
+        display_name: Ml
+        other: "{0} Ml"
+    hectoliter:
+      long:
+        display_name: hektolitry
+        other: "{0} hektolitra"
+      short:
+        display_name: hl
+        other: "{0} hl"
+    liter:
+      long:
+        other: "{0} litra"
+        per_unit_pattern: "{0} na liter"
+      short:
+        display_name: litry
+      narrow:
+        display_name: liter
+    deciliter:
+      long:
+        display_name: decylitry
+        other: "{0} decylitra"
+      short:
+        display_name: dl
+        other: "{0} dl"
+    centiliter:
+      long:
+        display_name: cyntylitry
+        other: "{0} cyntylitra"
+      short:
+        display_name: cl
+        other: "{0} cl"
+    milliliter:
+      long:
+        display_name: mililitry
+        other: "{0} mililitra"
+      short:
+        display_name: ml
+        other: "{0} ml"
+    pint-metric:
+      long:
+        display_name: pōłkworty metryczne
+        other: "{0} pōłkworty metrycznyj"
+      short:
+        display_name: pkwm.
+        other: "{0} pkwm."
+    cup-metric:
+      long:
+        display_name: ćwierćkwarty metryczne
+        other: "{0} ćwierćkwarty metrycznyj"
+      short:
+        display_name: ćwkwm.
+        other: "{0} ćwkwm."
+    acre-foot:
+      long:
+        display_name: akro-stopy
+        other: "{0} akro-stopy"
+      short:
+        display_name: akst.
+        other: "{0} akst."
+    gallon:
+      long:
+        display_name: galōny
+        other: "{0} galōna"
+        per_unit_pattern: "{0} na galōn"
+      short:
+        display_name: gal
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        display_name: galōny angelske
+        other: "{0} galōna angelskigo"
+        per_unit_pattern: "{0} na galōn angelski"
+      short:
+        display_name: gal ang.
+        other: "{0} gal ang."
+        per_unit_pattern: "{0}/gal ang."
+    quart:
+      long:
+        display_name: kworty
+        other: "{0} kworty"
+      short:
+        display_name: kw.
+        other: "{0} kw."
+    pint:
+      long:
+        other: "{0} pōłkworty"
+      short:
+        display_name: pōłkworty
+        other: "{0} pkw."
+    cup:
+      long:
+        other: "{0} ćwierćkworty"
+      short:
+        display_name: ćwierćkworty
+        other: "{0} ćwkw."
+    fluid-ounce:
+      long:
+        display_name: uncyje płynu
+        other: "{0} uncyje płynu"
+      short:
+        display_name: fl oz
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: uncyje płynu imp.
+        other: "{0} uncyje płynu imp."
+      short:
+        display_name: fl oz imp.
+        other: "{0} fl oz imp."
+    tablespoon:
+      long:
+        display_name: łyżki stołowe
+        other: "{0} łyżki stołowyj"
+      short:
+        display_name: ł. stoł.
+        other: "{0} ł. stoł."
+    barrel:
+      long:
+        other: "{0} baryłki"
+      short:
+        display_name: baryłki
+    dunam:
+      short:
+        display_name: dunamy
+        other: "{0} dunama"
+    mole:
+      short:
+        other: "{0} mola"
+    point:
+      short:
+        display_name: punkty
+        other: "{0} pkt."
+    teaspoon:
+      short:
+        display_name: łyżeczki
+        other: "{0} łyżeczki"

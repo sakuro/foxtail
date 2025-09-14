@@ -1,286 +1,39 @@
 ---
 locale: nn
-generated_at: '2025-09-13T17:39:34Z'
+generated_at: '2025-09-14T06:11:28Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##0.###"
   percent_formats:
-    standard: "#,##0%"
+    standard: 
   currency_formats:
     standard: 
-  scientific_formats:
-    standard: "#E0"
+  compact_formats:
+    long:
+      '1000000':
+        other: 0 millionar
+      '10000000':
+        one: 00 millionar
+        other: 00 millionar
+      '100000000':
+        one: 000 millionar
+        other: 000 millionar
+      '1000000000':
+        other: 0 milliardar
+      '10000000000':
+        one: 00 milliardar
+        other: 00 milliardar
+      '100000000000':
+        one: 000 milliardar
+        other: 000 milliardar
+      '1000000000000':
+        other: 0 billionar
+      '10000000000000':
+        one: 00 billionar
+        other: 00 billionar
+      '100000000000000':
+        one: 000 billionar
+        other: 000 billionar
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
-    ARS:
-      symbol: "$"
-    AUD:
-      symbol: A$
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
-    BZD:
-      symbol: "$"
-    CAD:
-      symbol: CA$
-    CLP:
-      symbol: "$"
-    CNY:
-      symbol: CN¥
-    COP:
-      symbol: "$"
-      display_names:
-        other: kolombianske pesos
-        one: kolombiansk peso
-    CRC:
-      symbol: "₡"
-      display_names:
-        other: kostarikanske colón
-        one: kostarikansk colón
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
-    EGP:
-      symbol: E£
-    ESP:
-      symbol: "₧"
-    EUR:
-      symbol: "€"
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
-    GBP:
-      symbol: GBP
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
-    HKD:
-      symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-      display_names:
-        other: ungarske forintar
-        one: ungarske forintar
-    IDR:
-      symbol: Rp
-      display_names:
-        other: indonesiske rupiahar
-        one: indonesisk rupiah
-    ILS:
-      symbol: "₪"
-      display_names:
-        other: nye israelske sheklar
-        one: nye israelske sheklar
-    INR:
-      symbol: "₹"
-      display_names:
-        other: indiske rupiar
-        one: indiske rupiar
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
-    JPY:
-      symbol: JP¥
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
-    KMF:
-      symbol: CF
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
-      display_names:
-        other: srilankiske rupiar
-        one: srilankiske rupiar
-    LRD:
-      symbol: "$"
-    LTL:
-      symbol: Lt
-      display_names:
-        one: litauiske lita
-    LVL:
-      symbol: Ls
-      display_names:
-        other: latviske lat
-        one: latvisk lat
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
-      display_names:
-        other: mauritiske rupiar
-        one: mauritiske rupiar
-    MXN:
-      symbol: MX$
-    MYR:
-      symbol: RM
-    NAD:
-      symbol: "$"
-    NGN:
-      symbol: "₦"
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
-      display_names:
-        other: nepalske rupiar
-        one: nepalske rupiar
-    NZD:
-      symbol: NZ$
-      display_names:
-        other: nyzealandske dollar
-        one: nyzealandsk dollar
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-      display_names:
-        other: pakistanske rupiar
-        one: pakistanske rupiar
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-      display_names:
-        other: paraguayanske guaraní
-        one: paraguayansk guaraní
-    RON:
-      symbol: lei
-      display_names:
-        other: rumenske leuar
-    RUB:
-      symbol: "₽"
-      display_names:
-        other: russiske rublar
-        one: russiske rublar
-    RWF:
-      symbol: RF
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
-    SHP:
-      symbol: "£"
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
-    TRY:
-      symbol: "₺"
-      display_names:
-        other: tyrkiske lira
-        one: tyrkisk lira
-    TTD:
-      symbol: "$"
-    TWD:
-      symbol: "$"
-    UAH:
-      symbol: "₴"
-    USD:
-      symbol: US$
-    UYU:
-      symbol: "$"
-      display_names:
-        one: uruguayansk peso
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
-    XAF:
-      symbol: FCFA
-    XCD:
-      symbol: EC$
-      display_names:
-        other: austkaribiske dollar
-        one: austkaribisk dollar
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: F CFA
-    XPF:
-      symbol: CFPF
-    XXX:
-      symbol: "¤"
-      display_names:
-        other: "(ukjend valuta)"
-        one: "(ukjend valuta)"
-    ZAR:
-      symbol: R
-    ZMW:
-      symbol: ZK
     ADP:
       display_names:
         other: andorranske peseta
@@ -366,10 +119,18 @@ number_formats:
       display_names:
         other: belarusiske rublar (2000–2016)
         one: belarusisk rubel (2000–2016)
+    COP:
+      display_names:
+        other: kolombianske pesos
+        one: kolombiansk peso
     COU:
       display_names:
         other: unidad de valor real
         one: unidad de valor real
+    CRC:
+      display_names:
+        other: kostarikanske colón
+        one: kostarikansk colón
     CSD:
       display_names:
         other: gamle serbiske dinarar
@@ -389,6 +150,8 @@ number_formats:
     EEK:
       display_names:
         other: estiske kroon
+    GBP:
+      symbol: GBP
     GHC:
       display_names:
         one: ghanesiske cedi (1979–2007)
@@ -406,6 +169,22 @@ number_formats:
     HRD:
       display_names:
         other: kroatiske dinarar
+    HUF:
+      display_names:
+        other: ungarske forintar
+        one: ungarske forintar
+    IDR:
+      display_names:
+        other: indonesiske rupiahar
+        one: indonesisk rupiah
+    ILS:
+      display_names:
+        other: nye israelske sheklar
+        one: nye israelske sheklar
+    INR:
+      display_names:
+        other: indiske rupiar
+        one: indiske rupiar
     IQD:
       display_names:
         other: irakiske dinarar
@@ -422,6 +201,13 @@ number_formats:
       display_names:
         other: kuwaitiske dinarar
         one: kuwaitiske dinarar
+    LKR:
+      display_names:
+        other: srilankiske rupiar
+        one: srilankiske rupiar
+    LTL:
+      display_names:
+        one: litauiske lita
     LTT:
       display_names:
         other: litauiske talona
@@ -430,6 +216,10 @@ number_formats:
       display_names:
         other: luxemburgske konvertibel franc
         one: luxemburgske konvertibel franc
+    LVL:
+      display_names:
+        other: latviske lat
+        one: latvisk lat
     LVR:
       display_names:
         other: latviske rublar
@@ -449,6 +239,10 @@ number_formats:
       display_names:
         other: makedonske denarar (1992–1993)
         one: makedonske denarar (1992–1993)
+    MUR:
+      display_names:
+        other: mauritiske rupiar
+        one: mauritiske rupiar
     MVP:
       display_names:
         other: maldiviske rupiar
@@ -464,14 +258,30 @@ number_formats:
       display_names:
         other: nicaraguanske cordoba
         one: nicaraguansk cordoba
+    NPR:
+      display_names:
+        other: nepalske rupiar
+        one: nepalske rupiar
+    NZD:
+      display_names:
+        other: nyzealandske dollar
+        one: nyzealandsk dollar
     OMR:
       display_names:
         other: omanske rial
         one: omanske rial
+    PKR:
+      display_names:
+        other: pakistanske rupiar
+        one: pakistanske rupiar
     PLZ:
       display_names:
         one: polsk zloty (PLZ)
         other: polske zloty (PLZ)
+    PYG:
+      display_names:
+        other: paraguayanske guaraní
+        one: paraguayansk guaraní
     QAR:
       display_names:
         other: qatarske rial
@@ -480,10 +290,18 @@ number_formats:
       display_names:
         other: gamle rumenske lei
         one: gammal rumensk leu
+    RON:
+      symbol: lei
+      display_names:
+        other: rumenske leuar
     RSD:
       display_names:
         other: serbiske dinarar
         one: serbiske dinarar
+    RUB:
+      display_names:
+        other: russiske rublar
+        one: russiske rublar
     RUR:
       display_names:
         other: russiske rublar (1991–1998)
@@ -526,6 +344,12 @@ number_formats:
       display_names:
         other: gamle tyrkiske lire
         one: gammal tyrkisk lire
+    TRY:
+      display_names:
+        other: tyrkiske lira
+        one: tyrkisk lira
+    TWD:
+      symbol: "$"
     USS:
       display_names:
         other: amerikanske dollar (same dag)
@@ -538,6 +362,9 @@ number_formats:
       display_names:
         other: uruguayanske peso (UYP)
         one: uruguayansk peso (UYP)
+    UYU:
+      display_names:
+        one: uruguayansk peso
     UZS:
       display_names:
         other: usbekiske sum
@@ -562,6 +389,10 @@ number_formats:
       display_names:
         other: europeiske kontoeiningar (XBD)
         one: europeisk kontoeining (XBD)
+    XCD:
+      display_names:
+        other: austkaribiske dollar
+        one: austkaribisk dollar
     XDR:
       display_names:
         other: spesielle trekkrettar
@@ -578,6 +409,10 @@ number_formats:
       display_names:
         one: testvalutakode
         other: testvalutakode
+    XXX:
+      display_names:
+        other: "(ukjend valuta)"
+        one: "(ukjend valuta)"
     YDD:
       display_names:
         other: jemenittiske dinarar
@@ -608,6 +443,658 @@ number_formats:
       display_names:
         other: zimbabwisk dollar
         one: zimbabwisk dollar
+  units:
+    g-force:
+      long:
+        other: "{0} g-krefter"
+        other_genitive: "{0} g-krefters"
+        gender: feminine
+      category: acceleration
+    meter-per-square-second:
+      long:
+        one: "{0} meter per sekund²"
+      category: acceleration
+      short:
+        display_name: m/s²
+    revolution:
+      long:
+        display_name: omdreiing
+        one: "{0} omdreiing"
+        one_genitive: "{0} omdreiings"
+        other: "{0} omdreiingar"
+        other_genitive: "{0} omdreiingars"
+        gender: feminine
+      category: angle
+    radian:
+      long:
+        other: "{0} radianar"
+        other_genitive: "{0} radianars"
+      category: angle
+      short:
+        display_name: radianar
+    arc-minute:
+      long:
+        one: "{0} bogeminutt"
+        one_genitive: "{0} bogeminutts"
+        other: "{0} bogeminutt"
+        other_genitive: "{0} bogeminutts"
+      category: angle
+      short:
+        display_name: bogeminutt
+      narrow:
+        display_name: bogemin
+    arc-second:
+      long:
+        display_name: bogesekund
+        one: "{0} bogesekund"
+        one_genitive: "{0} bogesekunds"
+        other: "{0} bogesekund"
+        other_genitive: "{0} bogesekunds"
+      category: angle
+      short:
+        display_name: bogesekund
+      narrow:
+        display_name: bogesek
+    square-mile:
+      long:
+        display_name: engelske kvadratmil
+        one: "{0} engelsk kvadratmil"
+        other: "{0} engelske kvadratmil"
+        gender: feminine
+        per_unit_pattern: "{0} per engelske kvadratmil"
+      category: area
+      short:
+        display_name: engelske mil²
+        one: "{0} mi²"
+        other: "{0} mi²"
+        per_unit_pattern: "{0}/mi²"
+      narrow:
+        per_unit_pattern: "{0}/mile²"
+    square-inch:
+      long:
+        display_name: kvadrattommar
+        other: "{0} kvadrattommar"
+      category: area
+      short:
+        display_name: tommar²
+        other: "{0} tommar²"
+        per_unit_pattern: "{0}/tomme²"
+    millimole-per-liter:
+      long:
+        gender: neuter
+      category: concentr
+      short:
+        display_name: mmol/l
+    item:
+      long:
+        display_name: element
+        one: "{0} element"
+        other: "{0} element"
+        other_genitive: "{0} elements"
+      category: concentr
+    permillion:
+      long:
+        display_name: delar per million
+        other: "{0} delar per million"
+        other_genitive: "{0} delar per millions"
+      category: concentr
+    mile-per-gallon:
+      long:
+        display_name: engelske mil per gallon
+        one: "{0} engelsk mil per gallon"
+        other: "{0} engelske mil per gallon"
+        gender: feminine
+      category: consumption
+      short:
+        display_name: eng. mil/gal
+      narrow:
+        display_name: miles/gal
+    mile-per-gallon-imperial:
+      long:
+        display_name: engelske mil per britiske gallon
+        one: "{0} engelsk mil per britiske gallon"
+        other: "{0} engelske mil per britiske gallon"
+        gender: feminine
+      category: consumption
+      short:
+        display_name: eng. mil/brit. gal
+        one: "{0} mile/brit. gal"
+        other: "{0} mile/brit. gal"
+      narrow:
+        display_name: miles/brit. gal
+    century:
+      long:
+        display_name: hundreår
+        one: "{0} hundreår"
+        one_genitive: "{0} hundreårs"
+        other: "{0} hundreår"
+        other_genitive: "{0} hundreårs"
+      category: duration
+      short:
+        display_name: hå.
+        one: "{0} hå."
+        other: "{0} hå."
+    month:
+      long:
+        one: "{0} månad"
+        one_genitive: "{0} månads"
+        other: "{0} månadar"
+        other_genitive: "{0} månadars"
+        per_unit_pattern: "{0} per månad"
+      category: duration
+      short:
+        display_name: månadar
+      narrow:
+        display_name: månad
+        one: "{0}m"
+        other: "{0}m"
+    week:
+      long:
+        one: "{0} veke"
+        one_genitive: "{0} vekes"
+        other: "{0} veker"
+        other_genitive: "{0} vekers"
+        gender: feminine
+        per_unit_pattern: "{0} per veke"
+      category: duration
+      short:
+        display_name: veker
+        one: "{0} v"
+        other: "{0} v"
+        per_unit_pattern: "{0}/v"
+      narrow:
+        display_name: vk.
+        one: "{0}v"
+        other: "{0}v"
+    hour:
+      long:
+        other: "{0} timar"
+        other_genitive: "{0} timars"
+      category: duration
+      short:
+        display_name: timar
+      narrow:
+        per_unit_pattern: "{0}/h"
+    minute:
+      long:
+        display_name: minutt
+        other: "{0} minutt"
+        other_genitive: "{0} minutts"
+      category: duration
+      short:
+        display_name: minutt
+    second:
+      long:
+        display_name: sekund
+        other: "{0} sekund"
+        other_genitive: "{0} sekunds"
+      category: duration
+      short:
+        display_name: sekund
+        one: "{0} s"
+        other: "{0} s"
+    millisecond:
+      long:
+        display_name: millisekund
+        other: "{0} millisekund"
+        other_genitive: "{0} millisekunds"
+      category: duration
+      short:
+        display_name: millisekund
+    microsecond:
+      long:
+        display_name: mikrosekund
+        other: "{0} mikrosekund"
+        other_genitive: "{0} mikrosekunds"
+      category: duration
+      short:
+        display_name: mikrosekund
+    nanosecond:
+      long:
+        display_name: nanosekund
+        other: "{0} nanosekund"
+        other_genitive: "{0} nanosekunds"
+      category: duration
+    ampere:
+      long:
+        one: "{0} ampere"
+      category: electric
+    kilocalorie:
+      long:
+        display_name: kilokaloriar
+        other: "{0} kilokaloriar"
+      category: energy
+    calorie:
+      long:
+        display_name: kaloriar
+        other: "{0} kaloriar"
+        other_genitive: "{0} kaloriars"
+      category: energy
+    foodcalorie:
+      long:
+        display_name: kaloriar
+        one: "{0} kalori"
+        other: "{0} kaloriar"
+      category: energy
+      short:
+        display_name: cal
+        one: "{0} cal"
+        other: "{0} cal"
+    joule:
+      long:
+        other: "{0} joule"
+      category: energy
+    kilowatt-hour:
+      long:
+        display_name: kilowattimar
+        other: "{0} kilowattimar"
+      category: energy
+    british-thermal-unit:
+      long:
+        display_name: British thermal units
+        one: "{0} British thermal unit"
+        other: "{0} British thermal units"
+      category: energy
+    pound-force:
+      long:
+        one: "{0} poundforce"
+        other: "{0} poundforce"
+      category: force
+      short:
+        display_name: poundforce
+    pixel:
+      long:
+        other: "{0} pikslar"
+        other_genitive: "{0} pikslars"
+      category: graphics
+      short:
+        display_name: pikslar
+    megapixel:
+      long:
+        other: "{0} megapikslar"
+        other_genitive: "{0} megapikslars"
+      category: graphics
+      short:
+        display_name: megapikslar
+    pixel-per-centimeter:
+      long:
+        display_name: pikslar per centimeter
+        other: "{0} pikslar per centimeter"
+        other_genitive: "{0} pikslar per centimeters"
+      category: graphics
+    pixel-per-inch:
+      long:
+        display_name: pikslar per tomme
+        other: "{0} pikslar per tomme"
+      category: graphics
+    dot-per-centimeter:
+      long:
+        display_name: punkt per centimeter
+        other: "{0} punkt per centimeter"
+      category: graphics
+    dot-per-inch:
+      long:
+        display_name: punkt per tomme
+        other: "{0} punkt per tomme"
+      category: graphics
+      short:
+        display_name: ppt
+        one: "{0} ppt"
+        other: "{0} ppt"
+    dot:
+      long:
+        other: "{0} punkt"
+      category: graphics
+    earth-radius:
+      long:
+        other: "{0} jordradius"
+      category: length
+    meter:
+      long:
+        display_name: meter
+      category: length
+      short:
+        display_name: m
+    mile:
+      long:
+        one: "{0} engelsk mil"
+        other: "{0} engelske mil"
+      category: length
+      short:
+        display_name: engelske mil
+        one: "{0} mi"
+        other: "{0} mi"
+    yard:
+      long:
+        one: "{0} engelsk yard"
+        other: "{0} engelske yard"
+      category: length
+      short:
+        display_name: engelske yard
+    astronomical-unit:
+      long:
+        display_name: astronomiske einingar
+        one: "{0} astronomisk eining"
+        other: "{0} astronomiske einingar"
+      category: length
+      short:
+        display_name: au
+        one: "{0} au"
+        other: "{0} au"
+    fathom:
+      long:
+        one: "{0} famn"
+        other: "{0} famner"
+      category: length
+      short:
+        display_name: famner
+    mile-scandinavian:
+      long:
+        gender: feminine
+      category: length
+    point:
+      long:
+        display_name: typografiske punkt
+        other: "{0} typografiske punkt"
+        other_genitive: "{0} typografiske punkts"
+      category: length
+      short:
+        display_name: pt
+    solar-radius:
+      long:
+        display_name: solradius
+        other: "{0} solradius"
+      category: length
+    solar-luminosity:
+      long:
+        one: "{0} solluminositet"
+        other: "{0} solluminositetar"
+      category: light
+      short:
+        display_name: solluminositetar
+    ton:
+      long:
+        one: "{0} amerikansk tonn"
+        other: "{0} amerikanske tonn"
+      category: mass
+    stone:
+      long:
+        display_name: engelske stones
+      category: mass
+      short:
+        display_name: stones
+      narrow:
+        display_name: stone
+    ounce:
+      long:
+        gender: feminine
+      category: mass
+      narrow:
+        one: "{0} unse"
+        other: "{0} unser"
+    earth-mass:
+      long:
+        display_name: jordmassar
+        other: "{0} jordmassar"
+      category: mass
+      short:
+        display_name: jordmassar
+    solar-mass:
+      long:
+        other: "{0} solmassar"
+      category: mass
+      short:
+        display_name: solmassar
+    inch-ofhg:
+      long:
+        display_name: tommar kvikksølv
+        other: "{0} tommar kvikksølv"
+      category: pressure
+      narrow:
+        one: "{0} inHg"
+        other: "{0} inHg"
+    atmosphere:
+      long:
+        display_name: atmosfærar
+        other: "{0} atmosfærar"
+        other_genitive: "{0} atmosfærars"
+      category: pressure
+    mile-per-hour:
+      long:
+        display_name: engelske mil per time
+        gender: feminine
+      category: speed
+      short:
+        display_name: engelske mil/t
+        other: "{0} mile/t"
+    generic:
+      long:
+        display_name: "°"
+        one: "{0}°"
+        other: "{0}°"
+      category: temperature
+    pound-force-foot:
+      long:
+        display_name: pound-feet
+        one: "{0} pound-force-foot"
+        other: "{0} pound-feet"
+      category: torque
+    cubic-mile:
+      long:
+        display_name: engelske kubikkmil
+        other: "{0} engelske kubikkmil"
+        gender: feminine
+      category: volume
+      short:
+        display_name: engelske mil³
+        one: "{0} mi³"
+        other: "{0} mi³"
+    cubic-yard:
+      long:
+        other: "{0} kubikkyard"
+      category: volume
+    cubic-inch:
+      long:
+        display_name: kubikktommar
+        other: "{0} kubikktommar"
+      category: volume
+      short:
+        display_name: tommar³
+        other: "{0} tommar³"
+    cup-metric:
+      long:
+        display_name: metriske koppar
+        other: "{0} metriske koppar"
+        other_genitive: "{0} metriske koppars"
+      category: volume
+      short:
+        display_name: m. koppar
+        other: "{0} m. koppar"
+    bushel:
+      long:
+        other: "{0} bushels"
+      category: volume
+    gallon-imperial:
+      long:
+        per_unit_pattern: "{0} per britiske gallon"
+      category: volume
+    cup:
+      long:
+        other: "{0} koppar"
+      category: volume
+      short:
+        display_name: koppar
+    fluid-ounce:
+      long:
+        gender: feminine
+      category: volume
+      short:
+        display_name: væskeunse
+      narrow:
+        display_name: fl oz
+    fluid-ounce-imperial:
+      long:
+        gender: feminine
+      category: volume
+      short:
+        display_name: britisk væskeunse
+        one: "{0} britisk væskeunse"
+        other: "{0} britiske væskeunser"
+      narrow:
+        one: "{0} imp. fl oz"
+        other: "{0} imp. fl oz"
+    tablespoon:
+      long:
+        display_name: matskeier
+        one: "{0} matskei"
+        other: "{0} matskeier"
+        gender: feminine
+      category: volume
+      short:
+        display_name: ms
+        one: "{0} ms"
+        other: "{0} ms"
+    teaspoon:
+      long:
+        display_name: teskeier
+        one: "{0} teskei"
+        other: "{0} teskeier"
+        gender: feminine
+      category: volume
+    dessert-spoon:
+      long:
+        display_name: dessertskei
+        one: "{0} dessertskei"
+        other: "{0} dessertskeier"
+        gender: feminine
+      category: volume
+      short:
+        display_name: dsskei
+        one: "{0} dsskei"
+        other: "{0} dsskei"
+    dessert-spoon-imperial:
+      long:
+        display_name: britisk dessertskei
+        one: "{0} britisk dessertskei"
+        other: "{0} britisk dessertskei"
+        gender: feminine
+      category: volume
+      short:
+        display_name: brit. dsskei
+        one: "{0} brit. dsskei"
+    drop:
+      long:
+        one: "{0} drope"
+        other: "{0} dropar"
+      category: volume
+      short:
+        display_name: drope
+        one: "{0} drope"
+        other: "{0} drope"
+      narrow:
+        other: "{0} drope"
+    pinch:
+      long:
+        gender: feminine
+      category: volume
+    night:
+      long:
+        gender: feminine
+      category: duration
+    acre:
+      short:
+        one: "{0} acre"
+        other: "{0} acre"
+      category: area
+      narrow:
+        one: "{0} ac"
+        other: "{0} ac"
+    liter-per-kilometer:
+      short:
+        display_name: l/km
+      category: consumption
+    terabit:
+      short:
+        display_name: Tb
+      category: digital
+    gigabit:
+      short:
+        display_name: Gb
+      category: digital
+    megabit:
+      short:
+        display_name: Mb
+      category: digital
+    kilobit:
+      short:
+        display_name: kb
+      category: digital
+    byte:
+      short:
+        one: "{0} byte"
+        other: "{0} byte"
+      category: digital
+    picometer:
+      short:
+        display_name: pikometer
+      category: length
+    foot:
+      short:
+        per_unit_pattern: "{0}/ft"
+      category: length
+    inch:
+      short:
+        display_name: tommar
+        other: "{0} tommar"
+      category: length
+    light-year:
+      short:
+        one: "{0} lysår"
+        other: "{0} lysår"
+      category: length
+    pint:
+      short:
+        one: "{0} pt"
+        other: "{0} pt"
+      category: volume
+    quart-imperial:
+      short:
+        display_name: brit. quart
+        one: "{0} b. quart"
+        other: "{0} b. quart"
+      category: volume
+      narrow:
+        display_name: imp. quart
+    portion-per-1e9:
+      short:
+        display_name: delar/milliard
+      category: concentr
+    liter-per-100-kilometer:
+      narrow:
+        display_name: l/100 km
+      category: consumption
+    celsius:
+      narrow:
+        one: "{0}°"
+        other: "{0}°"
+      category: temperature
+    liter:
+      narrow:
+        display_name: liter
+      category: volume
+    deciliter:
+      narrow:
+        one: "{0} dl"
+      category: volume
+    centiliter:
+      narrow:
+        one: "{0} cl"
+        other: "{0} cl"
+      category: volume
+    milliliter:
+      narrow:
+        one: "{0} ml"
+      category: volume
 currency_fractions:
   ADP:
     digits: 0

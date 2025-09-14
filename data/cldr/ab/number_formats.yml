@@ -1,15 +1,19 @@
 ---
 locale: ab
-generated_at: '2025-09-13T17:34:20Z'
+generated_at: '2025-09-14T06:08:11Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
     BMD:
       display_names:
@@ -27,12 +31,6 @@ number_formats:
       symbol: PHP
     RON:
       symbol: L
-    USD:
-      symbol: "$"
-    XXX:
-      display_names:
-        other: "(еилкаам авалиута)"
-        one: Еилкаам Авалиута
     SLE:
       display_names:
         other: леоне
@@ -41,3 +39,9 @@ number_formats:
       display_names:
         other: леоне (1964—2022)
         one: леоне (1964—2022)
+    USD:
+      symbol: "$"
+    XXX:
+      display_names:
+        other: "(еилкаам авалиута)"
+        one: Еилкаам Авалиута

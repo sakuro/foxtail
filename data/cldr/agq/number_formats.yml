@@ -1,14 +1,24 @@
 ---
 locale: agq
-generated_at: '2025-09-13T17:34:22Z'
+generated_at: '2025-09-14T06:08:13Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Dilàm è Yùnaetɛ Alab Emelɛ̀
+        one: Dilàm è Yùnaetɛ Alab Emelɛ̀
     AOA:
       display_names:
         other: Kwanzà è Àŋgolà
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: Dɔlà e Ùsɨ̀tɛ̀lɛlìa
         one: Dɔlà e Ùsɨ̀tɛ̀lɛlìa
-    BWP:
-      display_names:
-        other: Kpuwlà è Botɨshǔanà
-        one: Kpuwlà è Botɨshǔanà
-    CAD:
-      display_names:
-        other: Dɔlà è Kanadà
-        one: Dɔlà è Kanadà
-    CNY:
-      display_names:
-        other: Yùwân Lèmembi è Chaenî
-        one: Yùwân Lèmembi è Chaenî
-    EGP:
-      display_names:
-        other: Bɔ̀ŋ è Edzì
-        one: Bɔ̀ŋ è Edzì
-    EUR:
-      display_names:
-        other: Yulù
-        one: Yulù
-    GBP:
-      display_names:
-        other: Bɔ̀ŋ è Bèletì
-        one: Bɔ̀ŋ è Bèletì
-    INR:
-      display_names:
-        other: Lukpì è Endìa
-        one: Lukpì è Endìa
-    JPY:
-      display_names:
-        other: Ghɨ̂n Dzàkpànê
-        one: Ghɨ̂n Dzàkpànê
-    KMF:
-      display_names:
-        other: Fàlâŋ è Komolìa
-        one: Fàlâŋ è Komolìa
-    LRD:
-      display_names:
-        other: Dɔlà Làebɛlìa
-        one: Dɔlà Làebɛlìa
-    MGA:
-      display_names:
-        other: Àlǐalè è Màlàgasì
-        one: Àlǐalè è Màlàgasì
-    MUR:
-      display_names:
-        other: Lukpìi è Mùleshòs
-        one: Lukpìi è Mùleshòs
-    NAD:
-      display_names:
-        other: Dɔlà è Nàmibìa
-        one: Dɔlà è Nàmibìa
-    NGN:
-      display_names:
-        other: Naelà è Gɨ̀anyɨ
-        one: Naelà è Gɨ̀anyɨ
-    RWF:
-      display_names:
-        other: Fàlâŋ è Lùwandà
-        one: Fàlâŋ è Lùwandà
-    SHP:
-      display_names:
-        other: Bɔ̀ŋ è Sɛ̀n Èlenà
-        one: Bɔ̀ŋ è Sɛ̀n Èlenà
-    STN:
-      display_names:
-        other: Dɔbàlà è Sàwu Tɔ̀me à Pèlènsipè
-        one: Dɔbàlà è Sàwu Tɔ̀me à Pèlènsipè
-    USD:
-      display_names:
-        other: Dɔlà è US
-        one: Dɔlà è US
-    XAF:
-      display_names:
-        other: CFA Fàlâŋ BEAC
-        one: CFA Fàlâŋ BEAC
-    XOF:
-      display_names:
-        other: CFA Fàlâŋ BCEAO
-        one: CFA Fàlâŋ BCEAO
-    ZAR:
-      display_names:
-        other: Lân è Afɨlekà ghɨ Emàm ghò
-        one: Lân è Afɨlekà ghɨ Emàm ghò
-    ZMW:
-      display_names:
-        other: Kwachà è Zambìa
-        one: Kwachà è Zambìa
-    AED:
-      display_names:
-        other: Dilàm è Yùnaetɛ Alab Emelɛ̀
-        one: Dilàm è Yùnaetɛ Alab Emelɛ̀
     BHD:
       display_names:
         other: Dinà è Balae
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: Fàlâŋ è Bùlundì
         one: Fàlâŋ è Bùlundì
+    BWP:
+      display_names:
+        other: Kpuwlà è Botɨshǔanà
+        one: Kpuwlà è Botɨshǔanà
+    CAD:
+      display_names:
+        other: Dɔlà è Kanadà
+        one: Dɔlà è Kanadà
     CDF:
       display_names:
         other: Fàlâŋ è Kuŋgùlê
@@ -125,6 +51,10 @@ number_formats:
       display_names:
         other: Fàlâŋ è Sues
         one: Fàlâŋ è Sues
+    CNY:
+      display_names:
+        other: Yùwân Lèmembi è Chaenî
+        one: Yùwân Lèmembi è Chaenî
     CVE:
       display_names:
         other: Kàbòvàdianù è Èsùkudò
@@ -137,6 +67,10 @@ number_formats:
       display_names:
         other: Dinà è Àdzɛlìa
         one: Dinà è Àdzɛlìa
+    EGP:
+      display_names:
+        other: Bɔ̀ŋ è Edzì
+        one: Bɔ̀ŋ è Edzì
     ERN:
       display_names:
         other: Nakafa è Èletɨ̀làe
@@ -145,6 +79,14 @@ number_formats:
       display_names:
         other: Bîi è Etyǒkpìa
         one: Bîi è Etyǒkpìa
+    EUR:
+      display_names:
+        other: Yulù
+        one: Yulù
+    GBP:
+      display_names:
+        other: Bɔ̀ŋ è Bèletì
+        one: Bɔ̀ŋ è Bèletì
     GHC:
       display_names:
         other: Sɛ̀di è Gaanà
@@ -157,10 +99,26 @@ number_formats:
       display_names:
         other: Fàlâŋ è Ginè
         one: Fàlâŋ è Ginè
+    INR:
+      display_names:
+        other: Lukpì è Endìa
+        one: Lukpì è Endìa
+    JPY:
+      display_names:
+        other: Ghɨ̂n Dzàkpànê
+        one: Ghɨ̂n Dzàkpànê
     KES:
       display_names:
         other: Shwɨlà tɨ Kenyà
         one: Shwɨlà tɨ Kenyà
+    KMF:
+      display_names:
+        other: Fàlâŋ è Komolìa
+        one: Fàlâŋ è Komolìa
+    LRD:
+      display_names:
+        other: Dɔlà Làebɛlìa
+        one: Dɔlà Làebɛlìa
     LSL:
       display_names:
         other: Lɔtì Lèsutù
@@ -173,6 +131,10 @@ number_formats:
       display_names:
         other: Dilàm è Mòlokò
         one: Dilàm è Mòlokò
+    MGA:
+      display_names:
+        other: Àlǐalè è Màlàgasì
+        one: Àlǐalè è Màlàgasì
     MRO:
       display_names:
         other: Ùgueya è Mùlètenyìa (1973–2017)
@@ -181,6 +143,10 @@ number_formats:
       display_names:
         other: Ùgueya è Mùlètenyìa
         one: Ùgueya è Mùlètenyìa
+    MUR:
+      display_names:
+        other: Lukpìi è Mùleshòs
+        one: Lukpìi è Mùleshòs
     MWK:
       display_names:
         other: Kwachà è Màlawè
@@ -189,6 +155,18 @@ number_formats:
       display_names:
         other: Mètikà è Mùzàmbî
         one: Mètikà è Mùzàmbî
+    NAD:
+      display_names:
+        other: Dɔlà è Nàmibìa
+        one: Dɔlà è Nàmibìa
+    NGN:
+      display_names:
+        other: Naelà è Gɨ̀anyɨ
+        one: Naelà è Gɨ̀anyɨ
+    RWF:
+      display_names:
+        other: Fàlâŋ è Lùwandà
+        one: Fàlâŋ è Lùwandà
     SAR:
       display_names:
         other: Leyà è Sàwudì
@@ -201,6 +179,10 @@ number_formats:
       display_names:
         other: Bɔ̀ŋ è Sùdànê
         one: Bɔ̀ŋ è Sùdànê
+    SHP:
+      display_names:
+        other: Bɔ̀ŋ è Sɛ̀n Èlenà
+        one: Bɔ̀ŋ è Sɛ̀n Èlenà
     SLE:
       display_names:
         other: Lyɔ̂ŋ
@@ -217,6 +199,10 @@ number_formats:
       display_names:
         other: Dɔbàlà è Sàwu Tɔ̀me à Pèlènsipè (1977–2017)
         one: Dɔbàlà è Sàwu Tɔ̀me à Pèlènsipè (1977–2017)
+    STN:
+      display_names:
+        other: Dɔbàlà è Sàwu Tɔ̀me à Pèlènsipè
+        one: Dɔbàlà è Sàwu Tɔ̀me à Pèlènsipè
     SZL:
       display_names:
         other: Lèlàŋgenè
@@ -233,10 +219,30 @@ number_formats:
       display_names:
         other: Shwɨlà è Yùgandà
         one: Shwɨlà è Yùgandà
+    USD:
+      display_names:
+        other: Dɔlà è US
+        one: Dɔlà è US
+    XAF:
+      display_names:
+        other: CFA Fàlâŋ BEAC
+        one: CFA Fàlâŋ BEAC
+    XOF:
+      display_names:
+        other: CFA Fàlâŋ BCEAO
+        one: CFA Fàlâŋ BCEAO
+    ZAR:
+      display_names:
+        other: Lân è Afɨlekà ghɨ Emàm ghò
+        one: Lân è Afɨlekà ghɨ Emàm ghò
     ZMK:
       display_names:
         other: Kwachà è Zambìa (1968–2012)
         one: Kwachà è Zambìa (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwachà è Zambìa
+        one: Kwachà è Zambìa
     ZWD:
       display_names:
         other: Dɔlà è Zìmbagbɛ̀

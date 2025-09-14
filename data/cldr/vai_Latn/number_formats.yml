@@ -1,12 +1,22 @@
 ---
 locale: vai_Latn
-generated_at: '2025-09-13T17:41:30Z'
+generated_at: '2025-09-14T06:12:46Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Yunaitɛ Arabhi Ɛmire Dihami
+        one: Yunaitɛ Arabhi Ɛmire Dihami
     AOA:
       display_names:
         other: Angola Kuwaŋza
@@ -15,98 +25,6 @@ number_formats:
       display_names:
         other: Ɔ́situwa Dala
         one: Ɔ́situwa Dala
-    BWP:
-      display_names:
-        other: Bhosuwana Pula
-        one: Bhosuwana Pula
-    CAD:
-      display_names:
-        other: Kanada Dala
-        one: Kanada Dala
-    CNY:
-      display_names:
-        other: Chaníĩ Yuwaŋ Rɛŋmimbi
-        one: Chaníĩ Yuwaŋ Rɛŋmimbi
-    EGP:
-      display_names:
-        other: Míséla Pɔɔ̃
-        one: Míséla Pɔɔ̃
-    EUR:
-      display_names:
-        other: Yuro
-        one: Yuro
-    GBP:
-      display_names:
-        other: Jengési Pɔɔ̃
-        one: Jengési Pɔɔ̃
-    INR:
-      display_names:
-        other: Índiya Rupi
-        one: Índiya Rupi
-    JPY:
-      display_names:
-        other: Japaniĩ Yɛŋ
-        one: Japaniĩ Yɛŋ
-    KMF:
-      display_names:
-        other: Komoro Furaŋki
-        one: Komoro Furaŋki
-    LRD:
-      display_names:
-        other: Laibhiya Dala
-        one: Laibhiya Dala
-    MGA:
-      display_names:
-        other: Malagasi Ariyari
-        one: Malagasi Ariyari
-    MUR:
-      display_names:
-        other: Mɔreshɔ Rupi
-        one: Mɔreshɔ Rupi
-    NAD:
-      display_names:
-        other: Namibiya Dala
-        one: Namibiya Dala
-    NGN:
-      display_names:
-        other: Naĩjiriya Naĩra
-        one: Naĩjiriya Naĩra
-    RWF:
-      display_names:
-        other: Rawunda Furaŋki
-        one: Rawunda Furaŋki
-    SHP:
-      display_names:
-        other: Siŋ Hɛlina Pɔɔ̃
-        one: Siŋ Hɛlina Pɔɔ̃
-    STN:
-      display_names:
-        other: Sawo Tombe ɓɛ a Gbawo Dobura
-        one: Sawo Tombe ɓɛ a Gbawo Dobura
-    USD:
-      display_names:
-        other: Poo Dala
-        one: Poo Dala
-    XAF:
-      display_names:
-        other: Áfíríka Tɛ Sifa
-        one: Áfíríka Tɛ Sifa
-    XOF:
-      display_names:
-        other: Áfíríka Tele Jíí Sifa
-        one: Áfíríka Tele Jíí Sifa
-    ZAR:
-      display_names:
-        other: Afirika Kɔi Leŋŋɛ lɔ Randi
-        one: Afirika Kɔi Leŋŋɛ lɔ Randi
-    ZMW:
-      display_names:
-        other: Zambiya Kuwacha
-        one: Zambiya Kuwacha
-    AED:
-      display_names:
-        other: Yunaitɛ Arabhi Ɛmire Dihami
-        one: Yunaitɛ Arabhi Ɛmire Dihami
     BHD:
       display_names:
         other: Bharɛŋ Dina
@@ -115,6 +33,14 @@ number_formats:
       display_names:
         other: Bhurundi Furaŋki
         one: Bhurundi Furaŋki
+    BWP:
+      display_names:
+        other: Bhosuwana Pula
+        one: Bhosuwana Pula
+    CAD:
+      display_names:
+        other: Kanada Dala
+        one: Kanada Dala
     CDF:
       display_names:
         other: Kóngo Furaŋki
@@ -123,6 +49,10 @@ number_formats:
       display_names:
         other: Suwesi Furaŋki
         one: Suwesi Furaŋki
+    CNY:
+      display_names:
+        other: Chaníĩ Yuwaŋ Rɛŋmimbi
+        one: Chaníĩ Yuwaŋ Rɛŋmimbi
     CVE:
       display_names:
         other: Ɛsikudo Cabovɛdiyano
@@ -135,6 +65,10 @@ number_formats:
       display_names:
         other: Agiriya Dina
         one: Agiriya Dina
+    EGP:
+      display_names:
+        other: Míséla Pɔɔ̃
+        one: Míséla Pɔɔ̃
     ERN:
       display_names:
         other: Ɛritera Nakifa
@@ -143,6 +77,14 @@ number_formats:
       display_names:
         other: Ítiyopiya Bhii
         one: Ítiyopiya Bhii
+    EUR:
+      display_names:
+        other: Yuro
+        one: Yuro
+    GBP:
+      display_names:
+        other: Jengési Pɔɔ̃
+        one: Jengési Pɔɔ̃
     GHC:
       display_names:
         other: Gana Sidi
@@ -155,10 +97,26 @@ number_formats:
       display_names:
         other: Gini Furaŋki
         one: Gini Furaŋki
+    INR:
+      display_names:
+        other: Índiya Rupi
+        one: Índiya Rupi
+    JPY:
+      display_names:
+        other: Japaniĩ Yɛŋ
+        one: Japaniĩ Yɛŋ
     KES:
       display_names:
         other: Kénya Siyeŋ
         one: Kénya Siyeŋ
+    KMF:
+      display_names:
+        other: Komoro Furaŋki
+        one: Komoro Furaŋki
+    LRD:
+      display_names:
+        other: Laibhiya Dala
+        one: Laibhiya Dala
     LSL:
       display_names:
         other: Lisóto Loti
@@ -171,6 +129,10 @@ number_formats:
       display_names:
         other: Mɔroko Dihami
         one: Mɔroko Dihami
+    MGA:
+      display_names:
+        other: Malagasi Ariyari
+        one: Malagasi Ariyari
     MRO:
       display_names:
         other: Mɔretani Yugiya (1973–2017)
@@ -179,6 +141,10 @@ number_formats:
       display_names:
         other: Mɔretani Yugiya
         one: Mɔretani Yugiya
+    MUR:
+      display_names:
+        other: Mɔreshɔ Rupi
+        one: Mɔreshɔ Rupi
     MWK:
       display_names:
         other: Malawi Kuwacha
@@ -187,6 +153,18 @@ number_formats:
       display_names:
         other: Mozambiki Mɛtikali
         one: Mozambiki Mɛtikali
+    NAD:
+      display_names:
+        other: Namibiya Dala
+        one: Namibiya Dala
+    NGN:
+      display_names:
+        other: Naĩjiriya Naĩra
+        one: Naĩjiriya Naĩra
+    RWF:
+      display_names:
+        other: Rawunda Furaŋki
+        one: Rawunda Furaŋki
     SAR:
       display_names:
         other: Lahabu Sawodi Riya
@@ -195,6 +173,10 @@ number_formats:
       display_names:
         other: Sudaniĩ Pɔɔ̃
         one: Sudaniĩ Pɔɔ̃
+    SHP:
+      display_names:
+        other: Siŋ Hɛlina Pɔɔ̃
+        one: Siŋ Hɛlina Pɔɔ̃
     SLE:
       display_names:
         other: Liyɔɔ̀
@@ -211,6 +193,10 @@ number_formats:
       display_names:
         other: Sawo Tombe ɓɛ a Gbawo Dobura (1977–2017)
         one: Sawo Tombe ɓɛ a Gbawo Dobura (1977–2017)
+    STN:
+      display_names:
+        other: Sawo Tombe ɓɛ a Gbawo Dobura
+        one: Sawo Tombe ɓɛ a Gbawo Dobura
     SZL:
       display_names:
         other: Lilangeni
@@ -227,10 +213,30 @@ number_formats:
       display_names:
         other: Yuganda Siyeŋ
         one: Yuganda Siyeŋ
+    USD:
+      display_names:
+        other: Poo Dala
+        one: Poo Dala
+    XAF:
+      display_names:
+        other: Áfíríka Tɛ Sifa
+        one: Áfíríka Tɛ Sifa
+    XOF:
+      display_names:
+        other: Áfíríka Tele Jíí Sifa
+        one: Áfíríka Tele Jíí Sifa
+    ZAR:
+      display_names:
+        other: Afirika Kɔi Leŋŋɛ lɔ Randi
+        one: Afirika Kɔi Leŋŋɛ lɔ Randi
     ZMK:
       display_names:
         other: Zambiya Kuwacha (1968–2012)
         one: Zambiya Kuwacha (1968–2012)
+    ZMW:
+      display_names:
+        other: Zambiya Kuwacha
+        one: Zambiya Kuwacha
     ZWD:
       display_names:
         other: Zimbhabhuwe Dala

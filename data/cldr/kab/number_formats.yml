@@ -1,470 +1,78 @@
 ---
 locale: kab
-generated_at: '2025-09-13T17:38:08Z'
+generated_at: '2025-09-14T06:10:33Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
     nan: MdM
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0G
+        other: 0G
+      '10000':
+        one: 00G
+        other: 00G
+      '100000':
+        one: 000G
+        other: 000G
+      '1000000000':
+        one: 0L
+        other: 0L
+      '10000000000':
+        one: 00L
+        other: 00L
+      '100000000000':
+        one: 000L
+        other: 000L
+    long:
+      '1000':
+        one: 0 n wagim
+        other: 0 n wagimen
+      '10000':
+        one: 00 n wagimen
+        other: 00 n wagimen
+      '100000':
+        one: 000 n wagimen
+        other: 000 n wagimen
+      '1000000':
+        one: 0 n umilyun
+        other: 0 n imelyunen
+      '10000000':
+        one: 00 n imelyunen
+        other: 00 n imelyunen
+      '100000000':
+        one: 000 n imelyunen
+        other: 000 n imelyunen
+      '1000000000':
+        one: 0 n umelyaṛ
+        other: 0 n imelyaṛen
+      '10000000000':
+        one: 00 n imelyaṛen
+        other: 00 n imelyaṛen
+      '100000000000':
+        one: 000 n imelyaṛen
+        other: 000 n imelyaṛen
+      '1000000000000':
+        one: 0 n utrilyun
+        other: 0 n itrilyunen
+      '10000000000000':
+        one: 00 n itrilyunen
+        other: 00 n itrilyunen
+      '100000000000000':
+        one: 000 n itrilyunen
+        other: 000 n itrilyunen
   currencies:
-    AFN:
-      display_names:
-        other: Ifɣaniyen ifɣanen
-        one: Afɣani Afɣan
-    AMD:
-      display_names:
-        other: Adram Armini
-        one: Idramen Irminiyen
-    AOA:
-      display_names:
-        other: Ikwanzayen n Ungula
-        one: Akwanza n Ungula
-    ARS:
-      symbol: "$AR"
-      display_names:
-        other: Ipisuten n Arjuntin
-        one: Apisu n Arjuntin
-    AUD:
-      symbol: "$AU"
-      display_names:
-        other: Idularen n Ustralya
-        one: Adular n Ustralya
-    AZN:
-      display_names:
-        other: Imanaten Iziriyen
-        one: Amanat Aziri
-    BAM:
-      display_names:
-        other: Imarken yettwaseklaten n Busni
-        one: Amark yettwaseklaten n Busni
-    BBD:
-      display_names:
-        other: Idularen n Barbuda
-        one: Adular n Barbuda
-    BDT:
-      display_names:
-        other: Itakaten n Bangladec
-        one: Ataka n Bangladec
-    BMD:
-      symbol: "$BM"
-      display_names:
-        other: Idularen n Birmud
-        one: Adular n Birmud
-    BND:
-      symbol: "$BN"
-      display_names:
-        other: Idularen n Brunay
-        one: Adular n Brunay
-    BOB:
-      display_names:
-        other: Ibulivyanen n Bulivi
-        one: Abulivyanu n Bulivi
-    BRL:
-      display_names:
-        other: Iriyalen n Brizil
-        one: Ariyal n Brizil
-    BSD:
-      symbol: "$BS"
-      display_names:
-        other: Idularen n Bahamas
-        one: Adular n Bahamas
-    BWP:
-      display_names:
-        other: Ipula n Butswana
-        one: Apula n Butswana
-    BZD:
-      symbol: "$BZ"
-      display_names:
-        other: Idularen n Biliz
-        one: Adular n Biliz
-    CAD:
-      symbol: "$CA"
-      display_names:
-        other: Idularen n Kanada
-        one: Adular n Kanada
-    CLP:
-      symbol: "$CL"
-      display_names:
-        other: Ipisuten n Cili
-        one: Apisu n Cili
-    CNY:
-      symbol: CNY
-      display_names:
-        other: Iyuwanen Icinwaten
-        one: Ayuwan Acinwa
-    COP:
-      symbol: "$CO"
-      display_names:
-        other: Ipisuten n Kulumbi
-        one: Apisu n Kulumbi
-    CRC:
-      display_names:
-        other: Ikulunen n Kusta Rika
-        one: Akulun n Kusta Rika
-    CUC:
-      display_names:
-        other: Ipisuten n Kuba yettwaselkaten
-        one: Apisu n Kuba yettwaselkaten
-    CUP:
-      display_names:
-        other: Ipisuten n Kuba
-        one: Apisu n Kuba
-    CZK:
-      display_names:
-        other: Ikurunen n Čček
-        one: Akurun n Čček
-    DKK:
-      display_names:
-        other: Ikurunen n Danmark
-        one: Akurun n Danmark
-    DOP:
-      display_names:
-        other: Ipisuten n Duminik
-        one: Apisu n Duminik
-    EGP:
-      symbol: "£E"
-      display_names:
-        other: Ipunden n Maser
-        one: Apund n Maser
-    ESP:
-      display_names:
-        other: Ipisetasen n Spanya
-        one: Apisetas n Spanya
-    EUR:
-      display_names:
-        other: URUTEN
-        one: URU
-    FJD:
-      symbol: "$FJ"
-      display_names:
-        other: Idularen n Fiǧi
-        one: Adular n Fiǧi
-    FKP:
-      symbol: "£FK"
-      display_names:
-        other: Ipawnden n tegzrin n Malwin
-        one: Apawnd n tegzrin n Malwin
-    GBP:
-      display_names:
-        other: Apund Aglizi
-        one: Apund aglizi
-    GEL:
-      display_names:
-        other: Ilariyen n Jyurjya
-        one: Alari n Jyurjya
-    GHS:
-      display_names:
-        other: Isidiyen n Ɣana
-        one: Asidi n Ɣana
-    GIP:
-      symbol: "£GI"
-      display_names:
-        other: ipunden n Jibraltar
-        one: Apund n Jibraltar
-    GNF:
-      display_names:
-        other: Ifranken n Ɣinya
-        one: Afrank n Ɣinya
-    GTQ:
-      display_names:
-        other: Iketzalen n Gwatimala
-        one: Aketzal n Gwatimala
-    GYD:
-      display_names:
-        other: Idularen n Guyana
-        one: Adular n Guyana
-    HKD:
-      symbol: HKD
-      display_names:
-        other: Idularen n Hung Kung
-        one: Adular n Hung Kung
-    HNL:
-      display_names:
-        other: Ilampiren n Hunduras
-        one: Alampir n Hunduras
-    HRK:
-      display_names:
-        other: Ikunayen n Kerwasya
-        one: Akuna n Kerwasya
-    HUF:
-      display_names:
-        other: Ifurinten n Hungri
-        one: Afurint n Hungri
-    IDR:
-      display_names:
-        other: Irupiyen n Indunisya
-        one: Arupi n Indunisya
-    ILS:
-      display_names:
-        other: Acikilen amaynut n Izrayil
-        one: Acikil amaynut n Izrayil
-    INR:
-      display_names:
-        other: Irupiyen n Lhend
-        one: Arupi n Lhend
-    ISK:
-      display_names:
-        other: Ikurunen n Island
-        one: Akurun n Island
-    JMD:
-      display_names:
-        other: Idularen n Jamayik
-        one: Adular n Jamayik
-    JPY:
-      symbol: JPY
-      display_names:
-        other: Iynen n Japun
-        one: Iyen n Japun
-    KGS:
-      display_names:
-        other: Isumen n Kirigistan
-        one: Asum n Kirigistan
-    KHR:
-      display_names:
-        other: Iriyilen n Kambuj
-        one: Ariyil n Kambuj
-    KMF:
-      display_names:
-        other: Ifranken n Kumur
-        one: Afrank n Kumur
-    KPW:
-      display_names:
-        other: Iwunen n Kurya n Ugafa
-        one: Awun n Kurya n Ugafa
-    KRW:
-      display_names:
-        other: Iwunen n Kurya n Unẓul
-        one: Awun n Kurya n Unẓul
-    KYD:
-      display_names:
-        other: Idularen n tegzirin Kayman
-        one: Adular n tegzirin Kayman
-    KZT:
-      display_names:
-        other: Itunjen n Kazaxistan
-        one: Atunj n Kazaxistan
-    LAK:
-      display_names:
-        other: Ikipen n Laws
-        one: Akip n Laws
-    LBP:
-      symbol: "£LB"
-      display_names:
-        other: Ipunden n Lubnan
-        one: Apund n Lubnan
-    LKR:
-      display_names:
-        other: Irupiyen n Srilanka
-        one: Arupi n Srilanka
-    LRD:
-      display_names:
-        other: Idularen n Libirya
-        one: Adular n Libirya
-    LTL:
-      display_names:
-        other: Ilitasen n Litwanya
-        one: Alitas n Litwanya
-    LVL:
-      display_names:
-        other: Ilatsen n Letunya
-        one: Alats n Letunya
-    MGA:
-      display_names:
-        other: Iryariyen n Madagaskar
-        one: Aryari n Madagaskar
-    MMK:
-      display_names:
-        other: Ikyaten n Myanmar
-        one: Akyat n Myanmar
-    MNT:
-      display_names:
-        other: Itugriken n Mungulya
-        one: Atugrik n Mungulya
-    MUR:
-      display_names:
-        other: Irupiyen n Muris
-        one: Arupi n Muris
-    MXN:
-      symbol: "$MX"
-      display_names:
-        other: Ipisuten Miksik
-        one: Apisu Miksik
-    MYR:
-      display_names:
-        other: Iringgiten n Malizya
-        one: Aringgit n Malizya
-    NAD:
-      symbol: "$NA"
-      display_names:
-        other: Idularen n Namibya
-        one: Adular n Namibya
-    NGN:
-      display_names:
-        other: Inayrayen n Nijirya
-        one: Anayra n Nijirya
-    NIO:
-      symbol: "$C"
-      display_names:
-        other: Ikurdubayen n Nikaragwa
-        one: Akurduba n Nikaragwa
-    NOK:
-      display_names:
-        other: Ikurunen n Nurvij
-        one: Akurun n Nurvij
-    NPR:
-      display_names:
-        other: Irupiyen n Nipal
-        one: Arupi n Nipal
-    NZD:
-      symbol: "$NZ"
-      display_names:
-        other: Idularen n Ziland Tamaynut
-        one: Adular n Ziland Tamaynut
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Ipisuten n Filipin
-        one: Apisu n Filipin
-    PKR:
-      display_names:
-        other: Irupiyen n Pakistan
-        one: Arupi n Pakistan
-    PLN:
-      display_names:
-        other: Izlutiyen n Puland
-        one: Azluti n Puland
-    PYG:
-      display_names:
-        other: Igaraniyen n Paragway
-        one: Agarani n Paragway
-    RON:
-      symbol: L
-      display_names:
-        other: Aluten n Rumanya
-        one: Alu n Rumanya
-    RUB:
-      display_names:
-        other: Irublen n Rrus
-        one: Arubl n Rrus
-    RWF:
-      display_names:
-        other: Ifranken n Rwanda
-        one: Afrank n Rwanda
-    SBD:
-      symbol: "$SB"
-      display_names:
-        other: Idularen n Tegzirin n Salumun
-        one: Adular n Tegzirin n Salumun
-    SEK:
-      display_names:
-        other: Akurun n Swid
-        one: Akurun n Swid
-    SGD:
-      symbol: "$SG"
-      display_names:
-        other: Idularen n Sangapur
-        one: Adular n Sangapur
-    SHP:
-      display_names:
-        other: Ipunden n Sant Ilina
-        one: Apund n Sant Ilina
-    SRD:
-      symbol: "$SR"
-      display_names:
-        other: Idularen n Surinam
-        one: Adular n Surinam
-    SSP:
-      display_names:
-        other: Ipunden n Sudan n Unẓul
-        one: Apund n Sudan n Unẓul
-    STN:
-      display_names:
-        other: Idubrayen n Saw Tumi d Prinsip
-        one: Adubra n Saw Tumi d Prinsip
-    SYP:
-      display_names:
-        other: Ipunden n Surya
-        one: Apund n Surya
-    THB:
-      display_names:
-        other: Ibahten n Tayland
-        one: Abaht n Tayland
-    TOP:
-      display_names:
-        other: Ipangayen n Tunga
-        one: Apanga n Tunga
-    TRY:
-      symbol: LT
-      display_names:
-        other: Ipunden n Ṭurk
-        one: Apund n Ṭurk
-    TTD:
-      symbol: "$TT"
-      display_names:
-        other: Idularen n Trinidad d Tubagu
-        one: Adular n Trinidad d Tubagu
-    TWD:
-      symbol: TWD
-      display_names:
-        other: Idularen imaynuten n Taywan
-        one: Adular amaynut n Taywan
-    UAH:
-      display_names:
-        other: Ihrivnyaen n Ukran
-        one: Ahrivnya n Ukran
-    USD:
-      symbol: "$"
-      display_names:
-        other: Idularen n Marikan
-        one: Adular n Marikan
-    UYU:
-      symbol: "$UY"
-      display_names:
-        other: Ipisuten n Urugway
-        one: Apisu n Urugway
-    VEF:
-      display_names:
-        other: Ibulivaṛen n Vinizwila (2008–2018)
-        one: Abulivaṛ n Vinizwila (2008–2018)
-    VND:
-      display_names:
-        other: Idungen n Vyitnam
-        one: Adung n Vyitnam
-    XAF:
-      display_names:
-        other: Ifranken n CFA (BEAC)
-        one: Afrank n CFA (BEAC)
-    XCD:
-      symbol: XCD
-      display_names:
-        other: Idularen n Karayib n usammar
-        one: Adular n Karayib n usammar
-    XOF:
-      display_names:
-        other: Ifranken CFA (BCEAO)
-        one: Afrank CFA (BCEAO)
-    XPF:
-      symbol: FCFP
-      display_names:
-        other: Ifranken CFP
-        one: Afrank CFP
-    XXX:
-      symbol: XXX
-      display_names:
-        other: Tadrimt tirussinin
-        one: Tadrimt tarussint
-    ZAR:
-      display_names:
-        other: Iranden n Tefriqt n Unẓul
-        one: Arand n Tefriqt n Unẓul
-    ZMW:
-      symbol: Kw
-      display_names:
-        other: Ikwacayen n Zambya
-        one: Akwaca n Zambya
     ADP:
       display_names:
         other: Ipisetasen Induranen
@@ -477,6 +85,10 @@ number_formats:
       display_names:
         other: Ifɣaniyen (1927–2002)
         one: Afɣani (1927–2002)
+    AFN:
+      display_names:
+        other: Ifɣaniyen ifɣanen
+        one: Afɣani Afɣan
     ALK:
       display_names:
         other: Ilekan Ilbaniyen (1947–1961)
@@ -485,10 +97,18 @@ number_formats:
       display_names:
         other: Ilkan n Albanya
         one: Alek n Albanya
+    AMD:
+      display_names:
+        other: Adram Armini
+        one: Idramen Irminiyen
     ANG:
       display_names:
         other: Ifluranen n Antilles
         one: Afluran n Antilles
+    AOA:
+      display_names:
+        other: Ikwanzayen n Ungula
+        one: Akwanza n Ungula
     AOK:
       display_names:
         other: Ikwanzayen n Angula (1977–1990)
@@ -517,10 +137,20 @@ number_formats:
       display_names:
         other: Ipisuten n Arjuntin (1983–1985)
         one: Apisu n Arjuntin (1983–1985)
+    ARS:
+      symbol: "$AR"
+      display_names:
+        other: Ipisuten n Arjuntin
+        one: Apisu n Arjuntin
     ATS:
       display_names:
         other: Icilingen n Ustriya
         one: Aciling n Ustriya
+    AUD:
+      symbol: "$AU"
+      display_names:
+        other: Idularen n Ustralya
+        one: Adular n Ustralya
     AWG:
       display_names:
         other: Ifluranen n Aruba
@@ -529,10 +159,26 @@ number_formats:
       display_names:
         other: Imanaten Aziri (1993–2006)
         one: Amanat Aziri (1993–2006)
+    AZN:
+      display_names:
+        other: Imanaten Iziriyen
+        one: Amanat Aziri
     BAD:
       display_names:
         other: Idinaren Ibusniyen
         one: Adinar Abusni
+    BAM:
+      display_names:
+        other: Imarken yettwaseklaten n Busni
+        one: Amark yettwaseklaten n Busni
+    BBD:
+      display_names:
+        other: Idularen n Barbuda
+        one: Adular n Barbuda
+    BDT:
+      display_names:
+        other: Itakaten n Bangladec
+        one: Ataka n Bangladec
     BEC:
       display_names:
         other: Ifranken n Biljik (yettwaselkaten)
@@ -562,6 +208,20 @@ number_formats:
       display_names:
         other: Ifranken n Burundi
         one: Afrank n Burundi
+    BMD:
+      symbol: "$BM"
+      display_names:
+        other: Idularen n Birmud
+        one: Adular n Birmud
+    BND:
+      symbol: "$BN"
+      display_names:
+        other: Idularen n Brunay
+        one: Adular n Brunay
+    BOB:
+      display_names:
+        other: Ibulivyanen n Bulivi
+        one: Abulivyanu n Bulivi
     BOL:
       display_names:
         other: Ibulivyanen n Bulivi (1863–1963)
@@ -586,6 +246,10 @@ number_formats:
       display_names:
         other: Ikruziruyen n Brizil (1990–1993)
         one: Akruziru n Brizil (1990–1993)
+    BRL:
+      display_names:
+        other: Iriyalen n Brizil
+        one: Ariyal n Brizil
     BRN:
       display_names:
         other: Ikruzaduyen imaynuten n Brizil (1989–1990)
@@ -598,6 +262,11 @@ number_formats:
       display_names:
         other: Ikruziruyen n Brizil (1942–1967)
         one: Akruziru n Brizil (1942–1967)
+    BSD:
+      symbol: "$BS"
+      display_names:
+        other: Idularen n Bahamas
+        one: Adular n Bahamas
     BTN:
       display_names:
         other: Ingultrumen n Butan
@@ -606,6 +275,10 @@ number_formats:
       display_names:
         other: Ikyaten n Burma
         one: Akyat n Burma
+    BWP:
+      display_names:
+        other: Ipula n Butswana
+        one: Apula n Butswana
     BYB:
       display_names:
         other: Irublen amaynut n Bilarus (1994–1999)
@@ -619,6 +292,16 @@ number_formats:
       display_names:
         other: Irublen n Bilarus (2000–2016)
         one: Arubl n Bilarus (2000–2016)
+    BZD:
+      symbol: "$BZ"
+      display_names:
+        other: Idularen n Biliz
+        one: Adular n Biliz
+    CAD:
+      symbol: "$CA"
+      display_names:
+        other: Idularen n Kanada
+        one: Adular n Kanada
     CDF:
       display_names:
         other: Ifranken n Kungu
@@ -643,14 +326,33 @@ number_formats:
       display_names:
         other: Iferdisen n Usefti n Cili
         one: Aferdis n Usefti n Cili
+    CLP:
+      symbol: "$CL"
+      display_names:
+        other: Ipisuten n Cili
+        one: Apisu n Cili
     CNX:
       display_names:
         other: Idularen n Lbanka Taɣerfant n Tacinwit
         one: Adular n Lbanka Taɣerfant n Tacinwit
+    CNY:
+      symbol: CNY
+      display_names:
+        other: Iyuwanen Icinwaten
+        one: Ayuwan Acinwa
+    COP:
+      symbol: "$CO"
+      display_names:
+        other: Ipisuten n Kulumbi
+        one: Apisu n Kulumbi
     COU:
       display_names:
         other: Iferdisen n wazal ilaw n Kulumbi
         one: Aferdis n wazal ilaw n Kulumbi
+    CRC:
+      display_names:
+        other: Ikulunen n Kusta Rika
+        one: Akulun n Kusta Rika
     CSD:
       display_names:
         other: Idinaren n Ṣirbya-Muntinigru
@@ -659,6 +361,14 @@ number_formats:
       display_names:
         other: Ikurunen iǧehden Ičikusluvaken
         one: Akurun iǧehden Ačikusluvak
+    CUC:
+      display_names:
+        other: Ipisuten n Kuba yettwaselkaten
+        one: Apisu n Kuba yettwaselkaten
+    CUP:
+      display_names:
+        other: Ipisuten n Kuba
+        one: Apisu n Kuba
     CVE:
       display_names:
         other: Iskuduyen n Kapvir
@@ -668,6 +378,10 @@ number_formats:
       display_names:
         other: Ipawnden n Cipr
         one: Apawnd n Cipr
+    CZK:
+      display_names:
+        other: Ikurunen n Čček
+        one: Akurun n Čček
     DDM:
       display_names:
         other: Imarken n Walman n usammar
@@ -680,6 +394,14 @@ number_formats:
       display_names:
         other: Ifranken n Jibuti
         one: Afrank n Jibuti
+    DKK:
+      display_names:
+        other: Ikurunen n Danmark
+        one: Akurun n Danmark
+    DOP:
+      display_names:
+        other: Ipisuten n Duminik
+        one: Apisu n Duminik
     DZD:
       symbol: DA
       display_names:
@@ -697,6 +419,11 @@ number_formats:
       display_names:
         other: Ikurunen n Isṭunya
         one: Akurun n Isṭunya
+    EGP:
+      symbol: "£E"
+      display_names:
+        other: Ipunden n Maser
+        one: Apund n Maser
     ERN:
       display_names:
         other: Inafkayen n Iritirya
@@ -709,31 +436,70 @@ number_formats:
       display_names:
         other: Ipisetasen n Spanya (amiḍan yettwaselkaten)
         one: Apisetas n Spanya (amiḍan yettwaselkaten)
+    ESP:
+      display_names:
+        other: Ipisetasen n Spanya
+        one: Apisetas n Spanya
     ETB:
       display_names:
         other: Ibirren n Ityupya
         one: Abirr n Ityupya
+    EUR:
+      display_names:
+        other: URUTEN
+        one: URU
     FIM:
       display_names:
         other: Imarken n Finland
         one: Amark n Finland
+    FJD:
+      symbol: "$FJ"
+      display_names:
+        other: Idularen n Fiǧi
+        one: Adular n Fiǧi
+    FKP:
+      symbol: "£FK"
+      display_names:
+        other: Ipawnden n tegzrin n Malwin
+        one: Apawnd n tegzrin n Malwin
     FRF:
       symbol: F
       display_names:
         other: Ifranken n Fṛansa
         one: Afrank n Fṛansa
+    GBP:
+      display_names:
+        other: Apund Aglizi
+        one: Apund aglizi
     GEK:
       display_names:
         other: Ikupunen n Larin Jyujya
         one: Akupun n Larin Jyujya
+    GEL:
+      display_names:
+        other: Ilariyen n Jyurjya
+        one: Alari n Jyurjya
     GHC:
       display_names:
         other: Isidiyen n Ɣana (1967–2007)
         one: Asidi n Ɣana (1967–2007)
+    GHS:
+      display_names:
+        other: Isidiyen n Ɣana
+        one: Asidi n Ɣana
+    GIP:
+      symbol: "£GI"
+      display_names:
+        other: ipunden n Jibraltar
+        one: Apund n Jibraltar
     GMD:
       display_names:
         other: Idalasiyen n Gambya
         one: Adalasi n Gambya
+    GNF:
+      display_names:
+        other: Ifranken n Ɣinya
+        one: Afrank n Ɣinya
     GNS:
       display_names:
         other: Iziliyen n Ɣinya
@@ -746,6 +512,10 @@ number_formats:
       display_names:
         other: Idrakmiyen n Grik
         one: Adrakmi n Grik
+    GTQ:
+      display_names:
+        other: Iketzalen n Gwatimala
+        one: Aketzal n Gwatimala
     GWE:
       display_names:
         other: Iskuduyen n Ɣinya tapurtugit
@@ -754,14 +524,39 @@ number_formats:
       display_names:
         other: Ipisuten n Ɣinya-Bisaw
         one: Apisu n Ɣinya-Bisaw
+    GYD:
+      display_names:
+        other: Idularen n Guyana
+        one: Adular n Guyana
+    HKD:
+      symbol: HKD
+      display_names:
+        other: Idularen n Hung Kung
+        one: Adular n Hung Kung
+    HNL:
+      display_names:
+        other: Ilampiren n Hunduras
+        one: Alampir n Hunduras
     HRD:
       display_names:
         other: Idinaren n Kaṛwasya
         one: Adinar n Kaṛwasya
+    HRK:
+      display_names:
+        other: Ikunayen n Kerwasya
+        one: Akuna n Kerwasya
     HTG:
       display_names:
         other: Igurden n Hayti
         one: Agurd n Hayti
+    HUF:
+      display_names:
+        other: Ifurinten n Hungri
+        one: Afurint n Hungri
+    IDR:
+      display_names:
+        other: Irupiyen n Indunisya
+        one: Arupi n Indunisya
     IEP:
       symbol: "£IE"
       display_names:
@@ -776,6 +571,14 @@ number_formats:
       display_names:
         other: Icikilen n Izrayil (1980–1985)
         one: Acikil n Izrayil(1980–1985)
+    ILS:
+      display_names:
+        other: Acikilen amaynut n Izrayil
+        one: Acikil amaynut n Izrayil
+    INR:
+      display_names:
+        other: Irupiyen n Lhend
+        one: Arupi n Lhend
     IQD:
       display_names:
         other: Idinaren n Ɛiraq
@@ -784,19 +587,48 @@ number_formats:
       display_names:
         other: Iriyalen n Iran
         one: Ariyal n Iran
+    ISK:
+      display_names:
+        other: Ikurunen n Island
+        one: Akurun n Island
     ITL:
       symbol: "₤IT"
       display_names:
         other: Iliren n Ṭelyan
         one: Alir n Ṭelyan
+    JMD:
+      display_names:
+        other: Idularen n Jamayik
+        one: Adular n Jamayik
     JOD:
       display_names:
         other: Idinaren n Urdun
         one: Adinar n Urdun
+    JPY:
+      symbol: JPY
+      display_names:
+        other: Iynen n Japun
+        one: Iyen n Japun
     KES:
       display_names:
         other: Icilingen n Kinya
         one: Aciling n Kinya
+    KGS:
+      display_names:
+        other: Isumen n Kirigistan
+        one: Asum n Kirigistan
+    KHR:
+      display_names:
+        other: Iriyilen n Kambuj
+        one: Ariyil n Kambuj
+    KMF:
+      display_names:
+        other: Ifranken n Kumur
+        one: Afrank n Kumur
+    KPW:
+      display_names:
+        other: Iwunen n Kurya n Ugafa
+        one: Awun n Kurya n Ugafa
     KRH:
       display_names:
         other: Ihwanen n Tkirit n unẓul (1953–1962)
@@ -805,15 +637,48 @@ number_formats:
       display_names:
         other: Ihwanen n Tkirit n unẓul (1945–1953)
         one: Ahwan n Tkirit n unẓul (1945–1953)
+    KRW:
+      display_names:
+        other: Iwunen n Kurya n Unẓul
+        one: Awun n Kurya n Unẓul
     KWD:
       display_names:
         other: Idinaren n Kuwayt
         one: Adinarn Kuwayt
+    KYD:
+      display_names:
+        other: Idularen n tegzirin Kayman
+        one: Adular n tegzirin Kayman
+    KZT:
+      display_names:
+        other: Itunjen n Kazaxistan
+        one: Atunj n Kazaxistan
+    LAK:
+      display_names:
+        other: Ikipen n Laws
+        one: Akip n Laws
+    LBP:
+      symbol: "£LB"
+      display_names:
+        other: Ipunden n Lubnan
+        one: Apund n Lubnan
+    LKR:
+      display_names:
+        other: Irupiyen n Srilanka
+        one: Arupi n Srilanka
+    LRD:
+      display_names:
+        other: Idularen n Libirya
+        one: Adular n Libirya
     LSL:
       symbol: lLS
       display_names:
         other: Ilutiyen n Lizuṭu
         one: Aluti n Lizuṭu
+    LTL:
+      display_names:
+        other: Ilitasen n Litwanya
+        one: Alitas n Litwanya
     LTT:
       display_names:
         other: Italonasen n Litwanya
@@ -830,6 +695,10 @@ number_formats:
       display_names:
         other: Ifranken idrimanen n Luksumburg
         one: Afrank adriman n Luksumburg
+    LVL:
+      display_names:
+        other: Ilatsen n Letunya
+        one: Alats n Letunya
     LVR:
       display_names:
         other: Irublen n Litunya
@@ -851,6 +720,10 @@ number_formats:
       display_names:
         other: Iluten n Mulduvi
         one: Alu n Mulduvi
+    MGA:
+      display_names:
+        other: Iryariyen n Madagaskar
+        one: Aryari n Madagaskar
     MGF:
       symbol: Fmg
       display_names:
@@ -864,6 +737,14 @@ number_formats:
       display_names:
         other: Ifranken n Mali
         one: Afrank n Mali
+    MMK:
+      display_names:
+        other: Ikyaten n Myanmar
+        one: Akyat n Myanmar
+    MNT:
+      display_names:
+        other: Itugriken n Mungulya
+        one: Atugrik n Mungulya
     MOP:
       display_names:
         other: Ipatakayen n Makaw
@@ -885,6 +766,10 @@ number_formats:
       display_names:
         other: Ipawnden n Malt
         one: Apawnd n Malt
+    MUR:
+      display_names:
+        other: Irupiyen n Muris
+        one: Arupi n Muris
     MVP:
       display_names:
         other: Trupiyen n Maldiv
@@ -897,6 +782,11 @@ number_formats:
       display_names:
         other: Ikwacayen n Malawi
         one: Akwaca n Malawi
+    MXN:
+      symbol: "$MX"
+      display_names:
+        other: Ipisuten Miksik
+        one: Apisu Miksik
     MXP:
       display_names:
         other: Ipisuten n lfeṭṭa n Miksik (1861–1992)
@@ -905,6 +795,10 @@ number_formats:
       display_names:
         other: Iferdisen n uselket n Miksi (UDI)
         one: Aferdis n uselket n Miksi (UDI)
+    MYR:
+      display_names:
+        other: Iringgiten n Malizya
+        one: Aringgit n Malizya
     MZE:
       display_names:
         other: Iskuduyen n Muzumbik
@@ -917,14 +811,41 @@ number_formats:
       display_names:
         other: Imitikalen n Muzembiq
         one: Amitikal n Muzembiq
+    NAD:
+      symbol: "$NA"
+      display_names:
+        other: Idularen n Namibya
+        one: Adular n Namibya
+    NGN:
+      display_names:
+        other: Inayrayen n Nijirya
+        one: Anayra n Nijirya
     NIC:
       display_names:
         other: Ikurdubayen n Nikaragwa (1912–1988)
         one: Akurduba n Nikaragwa (1912–1988)
+    NIO:
+      symbol: "$C"
+      display_names:
+        other: Ikurdubayen n Nikaragwa
+        one: Akurduba n Nikaragwa
     NLG:
       display_names:
         other: Iflurinen n Huland
         one: Aflurin n Huland
+    NOK:
+      display_names:
+        other: Ikurunen n Nurvij
+        one: Akurun n Nurvij
+    NPR:
+      display_names:
+        other: Irupiyen n Nipal
+        one: Arupi n Nipal
+    NZD:
+      symbol: "$NZ"
+      display_names:
+        other: Idularen n Ziland Tamaynut
+        one: Adular n Ziland Tamaynut
     OMR:
       display_names:
         other: Iriyalen n Ɛuman
@@ -949,6 +870,19 @@ number_formats:
       display_names:
         other: Ikinayen n Papwazi n Ɣinya Tamaynut
         one: Akina n Papwazi n Ɣinya Tamaynut
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Ipisuten n Filipin
+        one: Apisu n Filipin
+    PKR:
+      display_names:
+        other: Irupiyen n Pakistan
+        one: Arupi n Pakistan
+    PLN:
+      display_names:
+        other: Izlutiyen n Puland
+        one: Azluti n Puland
     PLZ:
       display_names:
         other: Izlutiyen n Pulund (1950–1995)
@@ -957,6 +891,10 @@ number_formats:
       display_names:
         other: Iskuduten n Purtugal
         one: Askudu n Purtugal
+    PYG:
+      display_names:
+        other: Igaraniyen n Paragway
+        one: Agarani n Paragway
     QAR:
       display_names:
         other: Iriyalen n Qatar
@@ -970,18 +908,36 @@ number_formats:
       display_names:
         other: Iluten iqbuṛen n Rumanya (1952–2005)
         one: Alu aqbuṛ n Rumanya (1952–2005)
+    RON:
+      symbol: L
+      display_names:
+        other: Aluten n Rumanya
+        one: Alu n Rumanya
     RSD:
       display_names:
         other: Idinaren n Ṣirbya
         one: Adinar n Ṣirbya
+    RUB:
+      display_names:
+        other: Irublen n Rrus
+        one: Arubl n Rrus
     RUR:
       display_names:
         other: Irublen n Rrus (1991–1998)
         one: Arubl n Rrus (1991–1998)
+    RWF:
+      display_names:
+        other: Ifranken n Rwanda
+        one: Afrank n Rwanda
     SAR:
       display_names:
         other: Iriyalen n Saɛudya
         one: Ariyal n Saɛudya
+    SBD:
+      symbol: "$SB"
+      display_names:
+        other: Idularen n Tegzirin n Salumun
+        one: Adular n Tegzirin n Salumun
     SCR:
       display_names:
         other: Irupiyen n Saycal
@@ -998,6 +954,19 @@ number_formats:
       display_names:
         other: Ipawnden n Sudan (1956–2007)
         one: Apawnd n Sudan (1956–2007)
+    SEK:
+      display_names:
+        other: Akurun n Swid
+        one: Akurun n Swid
+    SGD:
+      symbol: "$SG"
+      display_names:
+        other: Idularen n Sangapur
+        one: Adular n Sangapur
+    SHP:
+      display_names:
+        other: Ipunden n Sant Ilina
+        one: Apund n Sant Ilina
     SIT:
       display_names:
         other: Itularen n Sluvinya
@@ -1018,14 +987,27 @@ number_formats:
       display_names:
         other: Icilingen n Ṣumal
         one: Aciling n Ṣumal
+    SRD:
+      symbol: "$SR"
+      display_names:
+        other: Idularen n Surinam
+        one: Adular n Surinam
     SRG:
       display_names:
         other: Iflurinen n Surinam
         one: Aflurin n Surinam
+    SSP:
+      display_names:
+        other: Ipunden n Sudan n Unẓul
+        one: Apund n Sudan n Unẓul
     STD:
       display_names:
         other: Idubrayen n Sint-Toma (1977–2017)
         one: Adubra n Sint-Toma (1977–2017)
+    STN:
+      display_names:
+        other: Idubrayen n Saw Tumi d Prinsip
+        one: Adubra n Saw Tumi d Prinsip
     SUR:
       display_names:
         other: Irublen n Suvyat
@@ -1034,10 +1016,18 @@ number_formats:
       display_names:
         other: Ikulunen n Salvadur
         one: Akulun n Salvadur
+    SYP:
+      display_names:
+        other: Ipunden n Surya
+        one: Apund n Surya
     SZL:
       display_names:
         other: Ililanginiyen n Swazilan
         one: Alilangini n Swazilan
+    THB:
+      display_names:
+        other: Ibahten n Tayland
+        one: Abaht n Tayland
     TJR:
       display_names:
         other: Irublen n Ṭajikistan
@@ -1058,6 +1048,10 @@ number_formats:
       display_names:
         other: Idinaren n Tunes
         one: Adinar n Tunes
+    TOP:
+      display_names:
+        other: Ipangayen n Tunga
+        one: Apanga n Tunga
     TPE:
       display_names:
         other: Iskuduyen n Timur
@@ -1066,10 +1060,29 @@ number_formats:
       display_names:
         other: Ipawnden n Ṭurk (1844–2005)
         one: Apawnd n Ṭurk (1844–2005)
+    TRY:
+      symbol: LT
+      display_names:
+        other: Ipunden n Ṭurk
+        one: Apund n Ṭurk
+    TTD:
+      symbol: "$TT"
+      display_names:
+        other: Idularen n Trinidad d Tubagu
+        one: Adular n Trinidad d Tubagu
+    TWD:
+      symbol: TWD
+      display_names:
+        other: Idularen imaynuten n Taywan
+        one: Adular amaynut n Taywan
     TZS:
       display_names:
         other: Icilingen n Ṭanzanya
         one: Aciling n Ṭanzanya
+    UAH:
+      display_names:
+        other: Ihrivnyaen n Ukran
+        one: Ahrivnya n Ukran
     UAK:
       display_names:
         other: Ikarbuvaniten n Ukrin (1992–1996)
@@ -1082,6 +1095,11 @@ number_formats:
       display_names:
         other: Icilingen n Uganda
         one: Aciling n Uganda
+    USD:
+      symbol: "$"
+      display_names:
+        other: Idularen n Marikan
+        one: Adular n Marikan
     USN:
       display_names:
         other: Idularen n Marikan (azekka–yen)
@@ -1098,6 +1116,11 @@ number_formats:
       display_names:
         other: Ipisuten n Urugway (1975–1993)
         one: Apisu n Urugway (1975–1993)
+    UYU:
+      symbol: "$UY"
+      display_names:
+        other: Ipisuten n Urugway
+        one: Apisu n Urugway
     UZS:
       display_names:
         other: Isumen n Uzbikistan
@@ -1106,10 +1129,18 @@ number_formats:
       display_names:
         other: Ibulivaṛen n Vinizwila (1871–2008)
         one: Abulivaṛ n Vinizwila (1871–2008)
+    VEF:
+      display_names:
+        other: Ibulivaṛen n Vinizwila (2008–2018)
+        one: Abulivaṛ n Vinizwila (2008–2018)
     VES:
       display_names:
         other: Ibulivaren n Vinizwila
         one: Abulivar n Vinizwila
+    VND:
+      display_names:
+        other: Idungen n Vyitnam
+        one: Adung n Vyitnam
     VNN:
       display_names:
         other: Idungen n Vyitnam (1978–1985)
@@ -1123,6 +1154,10 @@ number_formats:
       display_names:
         other: Italayen n Samwa
         one: Atala n Samwa
+    XAF:
+      display_names:
+        other: Ifranken n CFA (BEAC)
+        one: Afrank n CFA (BEAC)
     XAG:
       display_names:
         other: Unsen Ṭruy n lfe
@@ -1147,6 +1182,11 @@ number_formats:
       display_names:
         other: Iferdisen n umiḍan 17 n turfut (UEC–17)
         one: Aferdis n umiḍan 17 n turfut (UEC–17)
+    XCD:
+      symbol: XCD
+      display_names:
+        other: Idularen n Karayib n usammar
+        one: Adular n Karayib n usammar
     XDR:
       symbol: DTS
       display_names:
@@ -1164,10 +1204,19 @@ number_formats:
       display_names:
         other: Ifranken UIC
         one: Afrank UIC
+    XOF:
+      display_names:
+        other: Ifranken CFA (BCEAO)
+        one: Afrank CFA (BCEAO)
     XPD:
       display_names:
         other: Unsen n Ṭrwa n palladium
         one: Uns n Ṭrwa n palladium
+    XPF:
+      symbol: FCFP
+      display_names:
+        other: Ifranken CFP
+        one: Afrank CFP
     XPT:
       display_names:
         other: Unsen n Ṭrwa n Platin
@@ -1188,6 +1237,11 @@ number_formats:
       display_names:
         other: Iferdisen n umiḍan ADB
         one: Aferdis n umiḍan ADB
+    XXX:
+      symbol: XXX
+      display_names:
+        other: Tadrimt tirussinin
+        one: Tadrimt tarussint
     YDD:
       display_names:
         other: Idinaren n Yaman
@@ -1212,10 +1266,19 @@ number_formats:
       display_names:
         other: Iranden n Tefriqt n unzul (idrimanen)
         one: Arand n Tefriqt n unzul (adriman)
+    ZAR:
+      display_names:
+        other: Iranden n Tefriqt n Unẓul
+        one: Arand n Tefriqt n Unẓul
     ZMK:
       display_names:
         other: Ikwacayen n Ẓambya (1968–2012)
         one: Akwaca n Ẓambya (1968–2012)
+    ZMW:
+      symbol: Kw
+      display_names:
+        other: Ikwacayen n Zambya
+        one: Akwaca n Zambya
     ZRN:
       display_names:
         other: Izayiren imaynuten n Zayir
@@ -1236,3 +1299,994 @@ number_formats:
       display_names:
         other: Idularen n zimbabwi (2008)
         one: Adular n zimbabwi (2008)
+  units:
+    meter-per-square-second:
+      long:
+        display_name: mitrat deg tasint tuzmirt-sin
+        one: "{0} n mitra deg tasint tuzmirt-sin"
+        other: "{0} n mitrat deg tasint tuzmirt-sin"
+      short:
+        display_name: mitrat/sec²
+    radian:
+      long:
+        one: "{0} n uradyan"
+        other: "{0} n yiradyanen"
+      short:
+        display_name: iradyanen
+    degree:
+      long:
+        display_name: tafesna
+        one: "{0} n tfesna"
+        other: "{0} n tfesniwin"
+      short:
+        display_name: tifesniwin
+        one: "{0} fsn"
+        other: "{0} fsn"
+    square-kilometer:
+      long:
+        display_name: ikilumitren uzmir-sin
+        one: "{0} n ukilumiter uzmir-sin"
+        other: "{0} n yikilumitren uzmir-sin"
+        per_unit_pattern: "{0} deg ukilumiter uzmir-sin"
+    hectare:
+      long:
+        one: "{0} n uktar"
+        other: "{0} n yiktaren"
+      short:
+        display_name: iktaren
+    square-meter:
+      long:
+        display_name: mitrat uzmir-sin
+        one: "{0} n mitra uzmir-sin"
+        other: "{0} n mitrat uzmir-sin"
+        per_unit_pattern: "{0} deg mitra uzmir-sin"
+    square-centimeter:
+      long:
+        display_name: isantimitren uzmir-sin
+        one: "{0} n usantimiter uzmir-sin"
+        other: "{0} n yisantimitren uzmir-sin"
+        per_unit_pattern: "{0} deg usantimiter uzmir-sin"
+      short:
+        display_name: sm²
+        one: "{0} sm²"
+        other: "{0} sm²"
+        per_unit_pattern: "{0}/sm²"
+    square-mile:
+      long:
+        display_name: imilen uzmir-sin
+        one: "{0} n umil uzmir-sin"
+        other: "{0} n yimilen uzmir-sin"
+        per_unit_pattern: "{0} deg umil uzmir-sin"
+      short:
+        display_name: imlen uz.sin.
+        one: "{0} mi uz.sin."
+        other: "{0} mi uz.sin."
+    acre:
+      long:
+        one: "{0} n ukeṛ"
+        other: "{0} n yikṛen"
+      short:
+        display_name: ikṛen
+        one: "{0} kṛ"
+        other: "{0} kṛ"
+    square-yard:
+      long:
+        display_name: iyarden uzmir-sin
+        one: "{0} n uyard uzmir-sin"
+        other: "{0} n yiyarden uzmir-sin"
+      short:
+        display_name: iyarden²
+    square-foot:
+      long:
+        display_name: iḍarren uzmir-sin
+        one: "{0} n uḍar uzmir-sin"
+        other: "{0} n yiḍarren uzmir-sin"
+      short:
+        display_name: aḍar uz.sin.
+        one: "{0} ḍr zm.sn."
+        other: "{0} ḍr zm.sn."
+    square-inch:
+      long:
+        display_name: idebbuzen uzmir-sin
+        one: "{0} n udebbuz uzmir-sin"
+        other: "{0} n yidebbuzen uzmir-sin"
+        per_unit_pattern: "{0} deg udebbuz uzmir-sin"
+      short:
+        display_name: idebbuzen²
+        one: "{0} db²"
+        other: "{0} db²"
+        per_unit_pattern: "{0}/db²"
+    dunam:
+      long:
+        one: "{0} n udunam"
+        other: "{0} n yidunamen"
+      short:
+        display_name: idunamen
+        one: "{0} n udunam"
+        other: "{0} n udunam"
+      narrow:
+        one: "{0}udunam"
+        other: "{0}udunam"
+    millimole-per-liter:
+      long:
+        display_name: imilimulen deg ulitr
+        one: "{0} n umilimul deg ulitr"
+        other: "{0} n imilimulen deg ulitr"
+    permille:
+      long:
+        display_name: ɣef wagim
+        one: "{0} ɣef wagim"
+        other: "{0} ɣef wagim"
+    terabyte:
+      long:
+        display_name: itiraṭamḍanen
+        one: "{0} atiramḍan"
+        other: "{0} itiramḍanen"
+      short:
+        one: "{0} TAṬ"
+        other: "{0} TAṬ"
+    terabit:
+      long:
+        display_name: itirabiten
+        one: "{0} atirabit"
+        other: "{0} itirabiten"
+      short:
+        display_name: Tbit
+    gigabyte:
+      long:
+        display_name: igigaṭamḍanen
+        one: "{0} n ugigaṭamḍan"
+        other: "{0} n igigaṭamḍanen"
+      short:
+        display_name: GAṬM
+        one: "{0} GAṬ"
+        other: "{0} GAṬ"
+    gigabit:
+      long:
+        display_name: igigabiten
+        one: "{0} agigabit"
+        other: "{0} igigabiten"
+      short:
+        display_name: Gbit
+    megabyte:
+      long:
+        display_name: imigaṭamḍanen
+        one: "{0} amigaṭamdan"
+        other: "{0} imigaṭamḍanen"
+      short:
+        display_name: MAṬ
+        one: "{0} MAṬ"
+        other: "{0} MAṬ"
+    megabit:
+      long:
+        display_name: imigabiten
+        one: "{0} amigabit"
+        other: "{0} imigabiten"
+      short:
+        display_name: Mbit
+    kilobyte:
+      long:
+        display_name: akiluṭamḍan
+        one: "{0} akiluṭamḍan"
+        other: "{0} ikiluṭamḍanen"
+      short:
+        display_name: kAṬ
+        one: "{0} kAṬ"
+        other: "{0} kAṬ"
+    kilobit:
+      long:
+        display_name: ikilubiten
+        one: "{0} akilubit"
+        other: "{0} ikilubiten"
+      short:
+        display_name: kbit
+    byte:
+      long:
+        one: "{0} aṭamdan"
+        other: "{0} iṭamḍanen"
+      short:
+        display_name: aṭamḍan
+        one: "{0} aṭ"
+        other: "{0} Aṭ"
+      narrow:
+        one: "{0}aṭ"
+        other: "{0}Aṭ"
+    century:
+      long:
+        display_name: tasutin
+        one: "{0} n tasut"
+        other: "{0} n tasutin"
+      short:
+        display_name: st
+        one: "{0} st"
+        other: "{0} st"
+    decade:
+      long:
+        display_name: timerwatin
+        one: "{0} n tmerwa"
+        other: "{0} n tmerwatin"
+      short:
+        display_name: mrw
+        one: "{0} mrw"
+        other: "{0} mrw"
+    year:
+      long:
+        one: "{0} n useggas"
+        other: "{0} n yiseggasen"
+        per_unit_pattern: "{0} i useggas"
+      short:
+        display_name: iseggasen
+        one: "{0} sg"
+        other: "{0} sgn"
+        per_unit_pattern: "{0}/g"
+      narrow:
+        display_name: sg
+        one: "{0}g"
+        other: "{0}g"
+    month:
+      long:
+        one: "{0} n wayyur"
+        other: "{0} n wayyuren"
+        per_unit_pattern: "{0} i wayyur"
+      short:
+        display_name: ayyuren
+        one: "{0} yyr"
+        other: "{0} yyrn"
+        per_unit_pattern: "{0}/y"
+      narrow:
+        display_name: ayyur
+        one: "{0}y"
+        other: "{0}y"
+    week:
+      long:
+        one: "{0} n yimalas"
+        other: "{0} n yimalasen"
+        per_unit_pattern: "{0} i yimalas"
+      short:
+        display_name: imalasen
+        one: "{0} ml"
+        other: "{0} mln"
+        per_unit_pattern: "{0}/m"
+      narrow:
+        display_name: ml
+        one: "{0}m"
+        other: "{0}m"
+    day:
+      long:
+        per_unit_pattern: "{0} i wass"
+      short:
+        display_name: ussan
+        one: "{0} n wass"
+        other: "{0} n wussan"
+        per_unit_pattern: "{0}/s"
+      narrow:
+        display_name: ass
+        one: "{0}s"
+        other: "{0}s"
+    hour:
+      long:
+        one: "{0} n usrag"
+        other: "{0} n yisragen"
+        per_unit_pattern: "{0} i usrag"
+      short:
+        display_name: isragen
+        one: "{0} sr"
+        other: "{0} sr"
+        per_unit_pattern: "{0}/r"
+      narrow:
+        display_name: asrag
+        one: "{0}r"
+        other: "{0}r"
+    minute:
+      long:
+        display_name: tisdatin
+        one: "{0} n tesdat"
+        other: "{0} n tesdatin"
+        per_unit_pattern: "{0} i tesdat"
+      short:
+        display_name: tsdn
+        one: "{0} tsd"
+        other: "{0} tsd"
+        per_unit_pattern: "{0}/tsd"
+      narrow:
+        display_name: tsd
+        one: "{0}d"
+        other: "{0}d"
+    second:
+      long:
+        display_name: tisinin
+        one: "{0} n tsint"
+        other: "{0} n tsinin"
+        per_unit_pattern: "{0} i tsint"
+      short:
+        display_name: tisn
+        one: "{0} tsn"
+        other: "{0} tsn"
+        per_unit_pattern: "{0}/n"
+      narrow:
+        display_name: tsn
+        one: "{0}n"
+        other: "{0}n"
+    millisecond:
+      long:
+        display_name: timilisinin
+        one: "{0} n tmilisint"
+        other: "{0} n tmilisinin"
+      short:
+        display_name: timilisn
+        one: "{0} mn"
+        other: "{0} mn"
+      narrow:
+        display_name: mtsn
+    microsecond:
+      long:
+        display_name: timikrusinin
+        one: "{0} n tmikrusint"
+        other: "{0} n tmikrusinin"
+      short:
+        display_name: μtsn
+        one: "{0} μn"
+        other: "{0} μn"
+    nanosecond:
+      long:
+        display_name: tinanusinin
+        one: "{0} n tnanusint"
+        other: "{0} n tnanusinin"
+      short:
+        display_name: nanutsn
+        one: "{0} nn"
+        other: "{0} nn"
+    kilocalorie:
+      long:
+        display_name: Ikilukaluriyen
+        one: "{0} n ukilukaluri"
+        other: "{0} n yikilukaluriyen"
+      short:
+        display_name: kkal
+        one: "{0} kkal"
+        other: "{0} kkal"
+    calorie:
+      long:
+        display_name: ikaluriyen
+        one: "{0} n ukaluri"
+        other: "{0} n yikaluriyen"
+      short:
+        display_name: kal
+        one: "{0} kal"
+        other: "{0} kal"
+    foodcalorie:
+      long:
+        display_name: Ikaluriyen
+        one: "{0} n ukaluri"
+        other: "{0} n yikaluriyen"
+      short:
+        display_name: kal
+        one: "{0} kal"
+        other: "{0} kal"
+    kilojoule:
+      long:
+        display_name: ikilujulen
+        one: "{0} n ukilujul"
+        other: "{0} n yikilujulen"
+      short:
+        display_name: akilujul
+    joule:
+      long:
+        one: "{0} n ujul"
+        other: "{0} n yijulen"
+      short:
+        display_name: ijulen
+    em:
+      long:
+        display_name: azamul ntira em
+        one: "{0} em"
+        other: "{0} ems"
+    pixel:
+      long:
+        one: "{0} n upiksil"
+        other: "{0} n yipiksilen"
+      short:
+        display_name: ipiksilen
+        one: "{0} pks"
+        other: "{0} pks"
+      narrow:
+        display_name: pks
+    megapixel:
+      long:
+        one: "{0} n umigapiksil"
+        other: "{0} n yimigapiksilen"
+      short:
+        display_name: imigapiksilen
+      narrow:
+        display_name: MP
+    pixel-per-centimeter:
+      long:
+        display_name: ipiksilen deg usantimitr
+        one: "{0} n upiksil deg usantimitr"
+        other: "{0} n yipiksilen deg usantimitr"
+      short:
+        display_name: ppsm
+        one: "{0} ppsm"
+        other: "{0} ppsm"
+    pixel-per-inch:
+      long:
+        display_name: ipiksilen deg udebbuz
+        one: "{0} n upiksil deg udebbuz"
+        other: "{0} n yipiksilen deg udebbuz"
+    dot-per-centimeter:
+      long:
+        display_name: tineqqiḍin deg usantimitr
+        one: "{0} n tneqqiḍt deg usantimitr"
+        other: "{0} n tneqqiḍin deg usantimitr"
+      short:
+        display_name: nqsm
+        one: "{0} nqsm"
+        other: "{0} nqsm"
+    dot-per-inch:
+      long:
+        display_name: Tineqqiḍin deg udebbuz
+        one: "{0} n tneqqiḍt deg udebbuz"
+        other: "{0} n tneqqiḍin deg udebbuz"
+      short:
+        display_name: nqd
+        one: "{0} nqd"
+        other: "{0} nqd"
+    dot:
+      long:
+        display_name: taneqqiḍt
+        one: "{0} n tneqqiṭ"
+        other: "{0} n tneqqiṭ"
+      narrow:
+        display_name: taneqqiḍt
+        one: "{0}tneqqiḍt"
+        other: "{0}tneqqiḍt"
+    kilometer:
+      long:
+        display_name: ikilumitren
+        one: "{0} n ukilumiter"
+        other: "{0} n yikilumitren"
+        per_unit_pattern: "{0} i ukilumiter"
+      narrow:
+        one: "{0}km"
+        other: "{0}km"
+    meter:
+      long:
+        display_name: lmitrat
+        one: "{0} n lmitra"
+        other: "{0} n lmitrat"
+        per_unit_pattern: "{0} i lmitra"
+      short:
+        display_name: m
+    decimeter:
+      long:
+        display_name: idisimitren
+        one: "{0} n udisimiter"
+        other: "{0} n yidisimitren"
+    centimeter:
+      long:
+        display_name: isantimitren
+        one: "{0} n usantimiter"
+        other: "{0} n yisantimitren"
+        per_unit_pattern: "{0} i usantimiter"
+      short:
+        display_name: sm
+        one: "{0} sm"
+        other: "{0} sm"
+        per_unit_pattern: "{0}/sm"
+      narrow:
+        one: "{0}sm"
+        other: "{0}sm"
+    millimeter:
+      long:
+        display_name: imilimitren
+        one: "{0} n umilimiter"
+        other: "{0} n yimilimitren"
+      narrow:
+        one: "{0}mm"
+        other: "{0}mm"
+    micrometer:
+      long:
+        display_name: imikrumitren
+        one: "{0} n umikrumiter"
+        other: "{0} n yimikrumitren"
+      short:
+        display_name: μmitr
+    nanometer:
+      long:
+        display_name: inanumitren
+        one: "{0} n unanumiter"
+        other: "{0} n yinanumitren"
+    picometer:
+      long:
+        display_name: ipikumitren
+        one: "{0} n upikumiter"
+        other: "{0} n yipikumitren"
+      narrow:
+        one: "{0}pm"
+        other: "{0}pm"
+    mile:
+      long:
+        one: "{0} n umil"
+        other: "{0} n yimilen"
+      short:
+        display_name: imilen
+      narrow:
+        one: "{0}mi"
+        other: "{0}mi"
+    yard:
+      long:
+        one: "{0} n uyard"
+        other: "{0} n yiyarden"
+      short:
+        display_name: iyarden
+    foot:
+      long:
+        one: "{0} n uḍaṛ"
+        other: "{0} n iḍarren"
+        per_unit_pattern: "{0} deg uḍar"
+      short:
+        display_name: iḍarren
+        one: "{0} ḍr"
+        other: "{0} ḍr"
+        per_unit_pattern: "{0}/ḍr"
+    inch:
+      long:
+        one: "{0} n udebbuz"
+        other: "{0} n yidebbuzen"
+        per_unit_pattern: "{0} i udebbuz"
+      short:
+        display_name: idebbuzen
+        one: "{0} db"
+        other: "{0} db"
+        per_unit_pattern: "{0}/db"
+    parsec:
+      long:
+        one: "{0} n uparsik"
+        other: "{0} n yiparsiken"
+      short:
+        display_name: iparsiken
+        one: "{0} ps"
+        other: "{0} ps"
+      narrow:
+        display_name: aparsik
+        one: "{0}ps"
+        other: "{0}ps"
+    light-year:
+      long:
+        display_name: iseggasen n tafat
+        one: "{0} n useggas n tfat"
+        other: "{0} n yiseggasen n tafat"
+      short:
+        display_name: sgs n tafat
+        one: "{0} gf"
+        other: "{0} gf"
+      narrow:
+        display_name: gf
+    astronomical-unit:
+      long:
+        display_name: iferdisen isnallunen
+        one: "{0} aferdis asnallun"
+        other: "{0} iferdisen isnallunen"
+      short:
+        display_name: fl
+        one: "{0} fl"
+        other: "{0} fl"
+    nautical-mile:
+      long:
+        display_name: imilen iwlalen
+        one: "{0} n umil awlal"
+        other: "{0} n yimilen iwlalen"
+      short:
+        display_name: miw
+        one: "{0} miw"
+        other: "{0} miw"
+    mile-scandinavian:
+      long:
+        display_name: amil askandinavi
+        one: "{0} n umil askandinavi"
+        other: "{0} n yimilen iskandanaviyen"
+      short:
+        display_name: mis
+        one: "{0} mis"
+        other: "{0} mis"
+    point:
+      long:
+        one: "{0} n tneqqiḍt"
+        other: "{0} n tneqqiḍin"
+      short:
+        display_name: tineqqiḍin
+        one: "{0} nq"
+        other: "{0} nq"
+    solar-radius:
+      long:
+        display_name: Aqqar n yiṭij
+    lux:
+      long:
+        display_name: Aluks
+        one: "{0} lks"
+        other: "{0} lks"
+      short:
+        display_name: lks
+        one: "{0} ks"
+        other: "{0} ks"
+    tonne:
+      long:
+        display_name: Iṭunen imitranen
+        one: "{0} n uṭun amitran"
+        other: "{0} n iṭunen imitranen"
+    kilogram:
+      long:
+        display_name: ikilugramen
+        one: "{0} ukilugram"
+        other: "{0} n ikilugramen"
+        per_unit_pattern: "{0} deg ukilugram"
+    gram:
+      long:
+        display_name: igramen
+        one: "{0} n ugram"
+        other: "{0} n igramen"
+        per_unit_pattern: "{0} deg ugram"
+      short:
+        display_name: grmn
+      narrow:
+        display_name: grm
+    milligram:
+      long:
+        display_name: imiligramen
+        one: "{0} n umiligram"
+        other: "{0} n imiligramen"
+    microgram:
+      long:
+        display_name: imikrugramen
+        one: "{0} n umikrugram"
+        other: "{0} n imikrugramen"
+    ton:
+      long:
+        one: "{0} n uṭun"
+        other: "{0} n iṭenen"
+      short:
+        display_name: iṭunen
+    pound:
+      long:
+        one: "{0} n upund"
+        other: "{0} n yipunden"
+        per_unit_pattern: "{0} deg upund"
+      short:
+        display_name: ipunden
+    watt:
+      long:
+        one: "{0} waṭ"
+        other: "{0} waṭ"
+      short:
+        display_name: waṭ
+    hectopascal:
+      long:
+        display_name: ihiktupaskalen
+        one: "{0} n uhiktupaskal"
+        other: "{0} n ihiktupaskalen"
+    kilometer-per-hour:
+      long:
+        display_name: ikilumitren deg usrag
+        one: "{0} n ukilumiter deg usrag"
+        other: "{0} n yikilumitren deg usrag"
+      short:
+        display_name: km/asrag
+        one: "{0} km/sr"
+        other: "{0} km/sr"
+      narrow:
+        display_name: km/sr
+        one: "{0}km/sr"
+        other: "{0}km/sr"
+    meter-per-second:
+      long:
+        display_name: mitrat deg tasint
+        one: "{0} n mitra deg tasint"
+        other: "{0} n mitrat deg tasint"
+      short:
+        display_name: mitrat/tsn
+    mile-per-hour:
+      long:
+        display_name: imilen deg usrag
+        one: "{0} n umil deg usrag"
+        other: "{0} n yimilen deg usrag"
+      short:
+        display_name: imilen/asrag
+        one: "{0} mi/sr"
+        other: "{0} mi/sr"
+    knot:
+      long:
+        display_name: timukrisin
+        one: "{0} n tmukrist"
+        other: "{0} n tmukrisin"
+      short:
+        display_name: krs
+        one: "{0} krs"
+        other: "{0} krs"
+    cubic-kilometer:
+      long:
+        display_name: ikilumitren uzmir-kraḍ
+        one: "{0} n ukilumitr uzmir-kraḍ"
+        other: "{0} n yikilumitren uzmir-kraḍ"
+      narrow:
+        one: "{0}km³"
+        other: "{0}km³"
+    cubic-meter:
+      long:
+        display_name: imitren uzmir-kraḍ
+        one: "{0} umitr uzmir-kraḍ"
+        other: "{0} yimitren uzmir-kraḍ"
+        per_unit_pattern: "{0} i umitr uzmir-kraḍ"
+    cubic-centimeter:
+      long:
+        display_name: isantimitren uzmir-kraḍ
+        one: "{0} usantimitr uzmir-kraḍ"
+        other: "{0} yisantimitren uzmir-kraḍ"
+        per_unit_pattern: "{0} i usantimitr uzmir-kraḍ"
+      short:
+        display_name: sm³
+        one: "{0} sm³"
+        other: "{0} sm³"
+        per_unit_pattern: "{0}/sm³"
+    cubic-mile:
+      long:
+        display_name: imilen uzmir-kraḍ
+        one: "{0} umil uzmir-kraḍ"
+        other: "{0} yimilen uzmir-kraḍ"
+      narrow:
+        one: "{0}mi³"
+        other: "{0}mi³"
+    cubic-yard:
+      long:
+        display_name: iyaṛden uzmir-kraḍ
+        one: "{0} uyaṛd uzmir-kraḍ"
+        other: "{0} yiyaṛden uzmir-kraḍ"
+      short:
+        display_name: iyaṛden³
+      narrow:
+        display_name: yd³
+        one: "{0}yd³"
+        other: "{0}yd³"
+    cubic-foot:
+      long:
+        display_name: iḍarren uzmir-kraḍ
+        one: "{0} uḍar uzmir-kraḍ"
+        other: "{0} yiḍarren uzmir-kraḍ"
+      short:
+        display_name: iḍarren³
+        one: "{0} ḍr³"
+        other: "{0} ḍr³"
+      narrow:
+        display_name: ḍr³
+        one: "{0}ḍr³"
+        other: "{0}ḍr³"
+    cubic-inch:
+      long:
+        display_name: idebbuzen uzmir-kraḍ
+        one: "{0} udebbuz uzmir-kraḍ"
+        other: "{0} yidebbuzen uzmir-kraḍ"
+      short:
+        display_name: idebbuzen³
+        one: "{0} db³"
+        other: "{0} db³"
+      narrow:
+        display_name: db³
+        one: "{0}db³"
+        other: "{0}db³"
+    megaliter:
+      long:
+        display_name: imigalitren
+        one: "{0} umigaliter"
+        other: "{0} yimigalitren"
+      narrow:
+        one: "{0}ML"
+        other: "{0}ML"
+    hectoliter:
+      long:
+        display_name: ihiktulitren
+        one: "{0} n uhiktuliter"
+        other: "{0} n yihiktulitren"
+    liter:
+      long:
+        one: "{0} n litra"
+        other: "{0} n litrat"
+        per_unit_pattern: "{0} deg litra"
+      short:
+        display_name: litrat
+        one: "{0} L"
+        other: "{0} L"
+        per_unit_pattern: "{0}/L"
+      narrow:
+        display_name: litra
+        one: "{0} L"
+        other: "{0}L"
+    deciliter:
+      long:
+        display_name: idisilitren
+        one: "{0} n udisiliter"
+        other: "{0} n yidisiltren"
+    centiliter:
+      long:
+        display_name: isantilitren
+        one: "{0} n usantiliter"
+        other: "{0} n yisantilitren"
+      short:
+        display_name: sL
+        one: "{0} sL"
+        other: "{0} sL"
+    milliliter:
+      long:
+        display_name: imililitren
+        one: "{0} n umililiter"
+        other: "{0} n yimililitren"
+    pint-metric:
+      long:
+        display_name: ipinten imitranen
+        one: "{0} n upint amitran"
+        other: "{0} n yipinten imitranen"
+    cup-metric:
+      long:
+        display_name: ifenjalen imitranen
+        one: "{0} n ufenjal amitran"
+        other: "{0} n yifenjalen imitranen"
+      short:
+        display_name: fnjl
+        one: "{0} fnjl"
+        other: "{0} fnjl"
+    acre-foot:
+      long:
+        display_name: akeṛ-iḍarren
+        one: "{0} n ukeṛ-aḍar"
+        other: "{0} n ukeṛ-iḍarreb"
+      short:
+        display_name: akeṛ ḍr
+        one: "{0} kṛ ḍr"
+        other: "{0} kṛ ḍr"
+    gallon:
+      long:
+        display_name: Igalunen
+        one: "{0} n ugalun"
+        other: "{0} n yigalunen"
+        per_unit_pattern: "{0} deg ugalun"
+      short:
+        display_name: gal
+        one: "{0} gal"
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal MAR"
+    gallon-imperial:
+      long:
+        display_name: Igalunen Imp.
+        one: "{0} n ugalun Imp."
+        other: "{0} n yigalunen Imp."
+        per_unit_pattern: "{0} deg ugalun Imp."
+      short:
+        display_name: gal Imp.
+        one: "{0} gal imp."
+        other: "{0} gal imp."
+        per_unit_pattern: "{0} gal imp."
+      narrow:
+        one: "{0}galIm"
+        other: "{0}galIm"
+    quart:
+      long:
+        display_name: ifkuẓen
+        one: "{0} n ufkuẓ"
+        other: "{0} n yifkuẓen"
+      short:
+        display_name: fkẓ
+        one: "{0} kẓ"
+        other: "{0} kẓ"
+    pint:
+      long:
+        one: "{0} n upint"
+        other: "{0} n yipinten"
+      short:
+        display_name: ipinten
+    cup:
+      long:
+        one: "{0} n ufenjal"
+        other: "{0} n yifenjalen"
+      short:
+        display_name: ifenjalen
+        one: "{0} f"
+        other: "{0} f"
+    tablespoon:
+      long:
+        display_name: tiɣenjawin n wučči
+        one: "{0} n tɣenjawt n wučči"
+        other: "{0} n tɣenjawin n wučči"
+      short:
+        display_name: ɣnjč
+        one: "{0} ɣnjč"
+        other: "{0} ɣnjč"
+    teaspoon:
+      long:
+        display_name: tiɣenjawin n lqahwa
+        one: "{0} n tɣenjawt n lqahwa"
+        other: "{0} n tɣenjawin n lqahwa"
+      short:
+        display_name: ɣnjq
+        one: "{0} ɣnjq"
+        other: "{0} ɣnjq"
+    barrel:
+      long:
+        display_name: tibettiyin
+        one: "{0} n tbettit"
+        other: "{0} n tbettiyin"
+      short:
+        display_name: tabettit
+        one: "{0} btt"
+        other: "{0} btt"
+    drop:
+      long:
+        one: "{0} n tiqqit"
+        other: "{0} n tmiqqwa"
+      short:
+        display_name: tiqqit
+        one: "{0} n tiqqit"
+        other: "{0} n tiqqit"
+    dram:
+      long:
+        display_name: adram
+    quart-imperial:
+      long:
+        display_name: afkuẓ Imp.
+        one: "{0} n ufkuẓ Imp."
+        other: "{0} n ufkuẓ Imp."
+      short:
+        display_name: kẓ Imp
+        one: "{0} kẓ Imp."
+        other: "{0} kẓ Imp."
+    percent:
+      short:
+        one: "{0} %"
+        other: "{0} %"
+    permyriad:
+      short:
+        one: "{0} ‱"
+        other: "{0} ‱"
+    bit:
+      short:
+        display_name: abit
+        one: "{0} abit"
+        other: "{0} ibiten"
+    celsius:
+      short:
+        one: "{0} ℃"
+        other: "{0} ℃"
+      narrow:
+        display_name: "℃"
+        one: "{0}℃"
+        other: "{0}℃"
+    fahrenheit:
+      short:
+        display_name: "℉"
+        one: "{0} ℉"
+        other: "{0} ℉"
+    jigger:
+      short:
+        display_name: ajiger
+        one: "{0} ujiger"
+        other: "{0} ujiger"
+    pinch:
+      short:
+        display_name: apinč
+        one: "{0} upinč"
+        other: "{0} upinč"
+      narrow:
+        display_name: pn
+    mile-per-gallon-imperial:
+      narrow:
+        one: "{0}m/gUK"
+        other: "{0}m/gUK"
+    kilowatt-hour-per-100-kilometer:
+      narrow:
+        one: "{0}kWh/100km"
+        other: "{0}kWh/100km"
+    fluid-ounce-imperial:
+      narrow:
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    dessert-spoon-imperial:
+      narrow:
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"

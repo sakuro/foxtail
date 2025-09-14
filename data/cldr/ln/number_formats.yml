@@ -1,14 +1,28 @@
 ---
 locale: ln
-generated_at: '2025-09-13T17:38:47Z'
+generated_at: '2025-09-14T06:10:58Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Dirihamɛ ya Lémila alabo
+        one: Dirihamɛ ya Lémila alabo
+    ALL:
+      display_names:
+        other: Lek
+        one: Lek
     AOA:
       display_names:
         other: Kwanza ya Angóla
@@ -21,6 +35,10 @@ number_formats:
       display_names:
         other: Dolarɛ ya Ositali
         one: Dolarɛ ya Ositali
+    AWG:
+      display_names:
+        other: Guldeni y’ Aruba
+        one: Guldeni y’ Aruba
     BAM:
       display_names:
         other: Mark ya kobóngwama
@@ -29,6 +47,18 @@ number_formats:
       display_names:
         other: Dolále ya Barbados
         one: Dolále ya Barbados
+    BGN:
+      display_names:
+        other: Leva ya Bulgaria
+        one: Lev ya Bulgaria
+    BHD:
+      display_names:
+        other: Dinarɛ ya Bahrɛnɛ
+        one: Dinarɛ ya Bahrɛnɛ
+    BIF:
+      display_names:
+        other: Falánga ya Burundi
+        one: Falánga ya Burundi
     BOB:
       display_names:
         other: Boliviano
@@ -45,6 +75,14 @@ number_formats:
       display_names:
         other: Pula ya Botswana
         one: Pula ya Botswana
+    BYN:
+      display_names:
+        other: Rubelé ya Bielorusí
+        one: Rubelé ya Bielorusí
+    BYR:
+      display_names:
+        other: Rubelé ya Bielorusí (2000–2016)
+        one: Rubelé ya Bielorusí (2000–2016)
     BZD:
       display_names:
         other: Dolále ya Belíze
@@ -53,6 +91,16 @@ number_formats:
       display_names:
         other: Dolarɛ ya Kanadá
         one: Dolarɛ ya Kanadá
+    CDF:
+      symbol: FC
+      display_names:
+        other: Falánga ya Kongó
+        one: Falánga ya Kongó
+    CHF:
+      symbol: Fr.
+      display_names:
+        other: Falánga ya Swisɛ
+        one: Falánga ya Swisɛ
     CLP:
       display_names:
         other: Peso ya Shili
@@ -73,10 +121,18 @@ number_formats:
       display_names:
         other: Peso ya Kuba
         one: Peso ya Kuba
+    CVE:
+      display_names:
+        other: Esikudo ya Kapevɛrɛ
+        one: Esikudo ya Kapevɛrɛ
     CZK:
       display_names:
         other: Motolé Sheki
         one: Motolé Sheki
+    DJF:
+      display_names:
+        other: Falánga ya Dzibuti
+        one: Falánga ya Dzibuti
     DKK:
       display_names:
         other: Motolé ya Danemark
@@ -85,10 +141,22 @@ number_formats:
       display_names:
         other: Peso Dominikani
         one: Peso Dominikani
+    DZD:
+      display_names:
+        other: Dinarɛ ya Alizeri
+        one: Dinarɛ ya Alizeri
     EGP:
       display_names:
         other: Paunɛ ya Ezípitɛ
         one: Paunɛ ya Ezípitɛ
+    ERN:
+      display_names:
+        other: Nakfa ya Elitlɛ
+        one: Nakfa ya Elitlɛ
+    ETB:
+      display_names:
+        other: Birɛ ya Etsiópi
+        one: Birɛ ya Etsiópi
     EUR:
       display_names:
         other: Ɛlɔ́
@@ -101,6 +169,10 @@ number_formats:
       display_names:
         other: Paunɛ ya Angɛlɛtɛ́lɛ
         one: Paunɛ ya Angɛlɛtɛ́lɛ
+    GHC:
+      display_names:
+        other: Sedi ya Gana
+        one: Sedi ya Gana
     GHS:
       display_names:
         other: Cedi
@@ -109,10 +181,18 @@ number_formats:
       display_names:
         other: Bojito ya Gibraltar
         one: Bojito ya Gibraltar
+    GMD:
+      display_names:
+        other: Dalasi ya Gambi
+        one: Dalasi ya Gambi
     GNF:
       display_names:
         other: Falánga ya Gine
         one: Falánga ya Gine
+    GNS:
+      display_names:
+        other: Falánga ya Ginɛ
+        one: Falánga ya Ginɛ
     GTQ:
       display_names:
         other: Quetzal
@@ -125,6 +205,10 @@ number_formats:
       display_names:
         other: Kuna ya Kroasia
         one: Kuna ya Kroasia
+    HTG:
+      display_names:
+        other: Gurde
+        one: Gurde
     HUF:
       display_names:
         other: Folinte
@@ -145,6 +229,10 @@ number_formats:
       display_names:
         other: Yeni ya Zapɔ
         one: Yeni ya Zapɔ
+    KES:
+      display_names:
+        other: Shilingɛ ya Kenya
+        one: Shilingɛ ya Kenya
     KMF:
       display_names:
         other: Falánga ya Komoro
@@ -157,6 +245,10 @@ number_formats:
       display_names:
         other: Dolarɛ ya Liberya
         one: Dolarɛ ya Liberya
+    LSL:
+      display_names:
+        other: Loti ya Lesóto
+        one: Loti ya Lesóto
     LTL:
       display_names:
         other: Litas ya Litwani
@@ -165,18 +257,50 @@ number_formats:
       display_names:
         other: Lats ya Letoni
         one: Lats ya Letoni
+    LYD:
+      display_names:
+        other: Dinarɛ ya Libí
+        one: Dinarɛ ya Libí
+    MAD:
+      display_names:
+        other: Dirihame ya Marokɛ
+        one: Dirihame ya Marokɛ
     MGA:
       display_names:
         other: Falánga ya Madagasikarɛ
         one: Falánga ya Madagasikarɛ
+    MKD:
+      display_names:
+        other: Denalé
+        one: Denalé
+    MRO:
+      display_names:
+        other: Ugwiya ya Moritani (1973–2017)
+        one: Ugwiya ya Moritani (1973–2017)
+    MRU:
+      display_names:
+        other: Ugwiya ya Moritani
+        one: Ugwiya ya Moritani
     MUR:
       display_names:
         other: Rupi ya Morisi
         one: Rupi ya Morisi
+    MWK:
+      display_names:
+        other: Kwasha ya Malawi
+        one: Kwasha ya Malawi
     MXN:
       display_names:
         other: Peso ya Mexiko
         one: Peso ya Mexiko
+    MZM:
+      display_names:
+        other: Metikali ya Mozambiki
+        one: Metikali ya Mozambiki
+    MZN:
+      display_names:
+        other: Métikal
+        one: Métikal
     NAD:
       display_names:
         other: Dolarɛ ya Namibi
@@ -193,6 +317,18 @@ number_formats:
       display_names:
         other: Dolále ya Zeland ya Sika
         one: Dolále ya Zeland ya Sika
+    PAB:
+      display_names:
+        other: Balboa
+        one: Balboa
+    PEN:
+      display_names:
+        other: Sol Sika
+        one: Sol Sika
+    PGK:
+      display_names:
+        other: Kina
+        one: Kina
     PLN:
       display_names:
         other: Sloty
@@ -205,6 +341,10 @@ number_formats:
       display_names:
         other: Leu Sika
         one: Leu Sika
+    RSD:
+      display_names:
+        other: Dinalé ya Serbia
+        one: Dinalé ya Serbia
     RUB:
       display_names:
         other: Rubelé ya Rusí
@@ -213,10 +353,26 @@ number_formats:
       display_names:
         other: Falánga ya Rwanda
         one: Falánga ya Rwanda
+    SAR:
+      display_names:
+        other: Riyalɛ ya Alabi Sawuditɛ
+        one: Riyalɛ ya Alabi Sawuditɛ
     SBD:
       display_names:
         other: Dolále ya Bisanga Solomoni
         one: Dolále ya Bisanga Solomoni
+    SCR:
+      display_names:
+        other: Rupi ya Sɛshɛlɛ
+        one: Rupi ya Sɛshɛlɛ
+    SDG:
+      display_names:
+        other: Dinarɛ ya Sudá
+        one: Dinarɛ ya Sudá
+    SDP:
+      display_names:
+        other: Paunɛ ya Sudá
+        one: Paunɛ ya Sudá
     SEK:
       display_names:
         other: Motolé ya Swédi
@@ -225,14 +381,38 @@ number_formats:
       display_names:
         other: Paunɛ ya Sántu elena
         one: Paunɛ ya Sántu elena
+    SLE:
+      display_names:
+        other: Leonɛ
+        one: Leonɛ
+    SLL:
+      display_names:
+        other: Leonɛ (1964—2022)
+        one: Leonɛ (1964—2022)
+    SOS:
+      display_names:
+        other: Shilingɛ ya Somali
+        one: Shilingɛ ya Somali
     SSP:
       display_names:
         other: Bojito ya Sudaní ya Súdi
         one: Bojito ya Sudaní ya Súdi
+    STD:
+      display_names:
+        other: Dobra ya Sao Tomé mpé Presipe (1977–2017)
+        one: Dobra ya Sao Tomé mpé Presipe (1977–2017)
     STN:
       display_names:
         other: Dobra ya Sao Tomé mpé Presipe
         one: Dobra ya Sao Tomé mpé Presipe
+    SZL:
+      display_names:
+        other: Lilangeni
+        one: Lilangeni
+    TND:
+      display_names:
+        other: Dinarɛ ya Tinizi
+        one: Dinarɛ ya Tinizi
     TOP:
       display_names:
         other: Pa’Anga
@@ -241,14 +421,30 @@ number_formats:
       display_names:
         other: Dolále ya Trinidad mpé Tobago
         one: Dolále ya Trinidad mpé Tobago
+    TZS:
+      display_names:
+        other: Shilingɛ ya Tanzani
+        one: Shilingɛ ya Tanzani
     UAH:
       display_names:
         other: Griwná
         one: Griwná
+    UGX:
+      display_names:
+        other: Shilingɛ ya Uganda
+        one: Shilingɛ ya Uganda
     USD:
       display_names:
         other: Dolarɛ ya Ameriki
         one: Dolarɛ ya Ameriki
+    VUV:
+      display_names:
+        other: Vatu
+        one: Vatu
+    WST:
+      display_names:
+        other: Tala
+        one: Tala
     XAF:
       display_names:
         other: Falánga CFA BEAC
@@ -270,205 +466,94 @@ number_formats:
       display_names:
         other: Randɛ ya Afríka Súdi
         one: Randɛ ya Afríka Súdi
-    ZMW:
-      display_names:
-        other: Kwasha ya Zambi
-        one: Kwasha ya Zambi
-    AED:
-      display_names:
-        other: Dirihamɛ ya Lémila alabo
-        one: Dirihamɛ ya Lémila alabo
-    ALL:
-      display_names:
-        other: Lek
-        one: Lek
-    AWG:
-      display_names:
-        other: Guldeni y’ Aruba
-        one: Guldeni y’ Aruba
-    BGN:
-      display_names:
-        other: Leva ya Bulgaria
-        one: Lev ya Bulgaria
-    BHD:
-      display_names:
-        other: Dinarɛ ya Bahrɛnɛ
-        one: Dinarɛ ya Bahrɛnɛ
-    BIF:
-      display_names:
-        other: Falánga ya Burundi
-        one: Falánga ya Burundi
-    BYN:
-      display_names:
-        other: Rubelé ya Bielorusí
-        one: Rubelé ya Bielorusí
-    BYR:
-      display_names:
-        other: Rubelé ya Bielorusí (2000–2016)
-        one: Rubelé ya Bielorusí (2000–2016)
-    CDF:
-      symbol: FC
-      display_names:
-        other: Falánga ya Kongó
-        one: Falánga ya Kongó
-    CHF:
-      symbol: Fr.
-      display_names:
-        other: Falánga ya Swisɛ
-        one: Falánga ya Swisɛ
-    CVE:
-      display_names:
-        other: Esikudo ya Kapevɛrɛ
-        one: Esikudo ya Kapevɛrɛ
-    DJF:
-      display_names:
-        other: Falánga ya Dzibuti
-        one: Falánga ya Dzibuti
-    DZD:
-      display_names:
-        other: Dinarɛ ya Alizeri
-        one: Dinarɛ ya Alizeri
-    ERN:
-      display_names:
-        other: Nakfa ya Elitlɛ
-        one: Nakfa ya Elitlɛ
-    ETB:
-      display_names:
-        other: Birɛ ya Etsiópi
-        one: Birɛ ya Etsiópi
-    GHC:
-      display_names:
-        other: Sedi ya Gana
-        one: Sedi ya Gana
-    GMD:
-      display_names:
-        other: Dalasi ya Gambi
-        one: Dalasi ya Gambi
-    GNS:
-      display_names:
-        other: Falánga ya Ginɛ
-        one: Falánga ya Ginɛ
-    HTG:
-      display_names:
-        other: Gurde
-        one: Gurde
-    KES:
-      display_names:
-        other: Shilingɛ ya Kenya
-        one: Shilingɛ ya Kenya
-    LSL:
-      display_names:
-        other: Loti ya Lesóto
-        one: Loti ya Lesóto
-    LYD:
-      display_names:
-        other: Dinarɛ ya Libí
-        one: Dinarɛ ya Libí
-    MAD:
-      display_names:
-        other: Dirihame ya Marokɛ
-        one: Dirihame ya Marokɛ
-    MKD:
-      display_names:
-        other: Denalé
-        one: Denalé
-    MRO:
-      display_names:
-        other: Ugwiya ya Moritani (1973–2017)
-        one: Ugwiya ya Moritani (1973–2017)
-    MRU:
-      display_names:
-        other: Ugwiya ya Moritani
-        one: Ugwiya ya Moritani
-    MWK:
-      display_names:
-        other: Kwasha ya Malawi
-        one: Kwasha ya Malawi
-    MZM:
-      display_names:
-        other: Metikali ya Mozambiki
-        one: Metikali ya Mozambiki
-    MZN:
-      display_names:
-        other: Métikal
-        one: Métikal
-    PAB:
-      display_names:
-        other: Balboa
-        one: Balboa
-    PEN:
-      display_names:
-        other: Sol Sika
-        one: Sol Sika
-    PGK:
-      display_names:
-        other: Kina
-        one: Kina
-    RSD:
-      display_names:
-        other: Dinalé ya Serbia
-        one: Dinalé ya Serbia
-    SAR:
-      display_names:
-        other: Riyalɛ ya Alabi Sawuditɛ
-        one: Riyalɛ ya Alabi Sawuditɛ
-    SCR:
-      display_names:
-        other: Rupi ya Sɛshɛlɛ
-        one: Rupi ya Sɛshɛlɛ
-    SDG:
-      display_names:
-        other: Dinarɛ ya Sudá
-        one: Dinarɛ ya Sudá
-    SDP:
-      display_names:
-        other: Paunɛ ya Sudá
-        one: Paunɛ ya Sudá
-    SLE:
-      display_names:
-        other: Leonɛ
-        one: Leonɛ
-    SLL:
-      display_names:
-        other: Leonɛ (1964—2022)
-        one: Leonɛ (1964—2022)
-    SOS:
-      display_names:
-        other: Shilingɛ ya Somali
-        one: Shilingɛ ya Somali
-    STD:
-      display_names:
-        other: Dobra ya Sao Tomé mpé Presipe (1977–2017)
-        one: Dobra ya Sao Tomé mpé Presipe (1977–2017)
-    SZL:
-      display_names:
-        other: Lilangeni
-        one: Lilangeni
-    TND:
-      display_names:
-        other: Dinarɛ ya Tinizi
-        one: Dinarɛ ya Tinizi
-    TZS:
-      display_names:
-        other: Shilingɛ ya Tanzani
-        one: Shilingɛ ya Tanzani
-    UGX:
-      display_names:
-        other: Shilingɛ ya Uganda
-        one: Shilingɛ ya Uganda
-    VUV:
-      display_names:
-        other: Vatu
-        one: Vatu
-    WST:
-      display_names:
-        other: Tala
-        one: Tala
     ZMK:
       display_names:
         other: Kwasha ya Zambi (1968–2012)
         one: Kwasha ya Zambi (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwasha ya Zambi
+        one: Kwasha ya Zambi
     ZWD:
       display_names:
         other: Dolarɛ ya Zimbabwɛ
         one: Dolarɛ ya Zimbabwɛ
+  units:
+    century:
+      long:
+        display_name: sekúlo
+        one: "{0} sekúlo"
+        other: "{0} sekúlo"
+      short:
+        display_name: sek
+        one: "{0} sek"
+        other: "{0} sek"
+    year:
+      long:
+        one: "{0} mobú"
+        other: "{0} mibú"
+      short:
+        display_name: mibú
+    month:
+      long:
+        one: "{0} sánzá"
+        other: "{0} sánzá"
+      short:
+        display_name: sánzá
+        one: "{0} sán"
+        other: "{0} sán"
+        per_unit_pattern: "{0}/sán"
+    week:
+      long:
+        one: "{0} mpɔ́sɔ"
+        other: "{0} mpɔ́sɔ"
+      short:
+        display_name: mpɔ́sɔ
+        one: "{0} mps"
+        other: "{0} mps"
+        per_unit_pattern: "{0}/mps"
+      narrow:
+        display_name: mps
+    hour:
+      long:
+        one: "{0} ngonga"
+        other: "{0} ngonga"
+      short:
+        display_name: ngonga
+    minute:
+      long:
+        display_name: minúti
+        one: "{0} monúti"
+        other: "{0} minúti"
+        per_unit_pattern: "{0}/monúti"
+    second:
+      long:
+        display_name: sekundí
+        one: "{0} sekundí"
+        other: "{0} sekundí"
+      short:
+        display_name: s
+    millisecond:
+      long:
+        display_name: millisekundí
+        one: "{0} millisekundí"
+        other: "{0} millisekundí"
+    microsecond:
+      long:
+        display_name: mikrosekundí
+        one: "{0} mikrosekundí"
+        other: "{0} mikrosekundí"
+    nanosecond:
+      long:
+        display_name: nanosekundí
+        one: "{0} nanosekundí"
+        other: "{0} nanosekundí"
+    day:
+      short:
+        display_name: mikɔlɔ
+        one: "{0} mokɔlɔ"
+        other: "{0} mikɔlɔ"
+      narrow:
+        display_name: mokɔlɔ
+        one: "{0} d"
+        other: "{0} d"

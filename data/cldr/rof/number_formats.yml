@@ -1,11 +1,21 @@
 ---
 locale: rof
-generated_at: '2025-09-13T17:40:09Z'
+generated_at: '2025-09-14T06:11:51Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: heleri sa Falme za Kiarabu
+        one: heleri sa Falme za Kiarabu
     AOA:
       display_names:
         other: heleri sa Angola
@@ -14,98 +24,6 @@ number_formats:
       display_names:
         other: heleri sa Australia
         one: heleri sa Australia
-    BWP:
-      display_names:
-        other: heleri sa Botswana
-        one: heleri sa Botswana
-    CAD:
-      display_names:
-        other: heleri sa Kanada
-        one: heleri sa Kanada
-    CNY:
-      display_names:
-        other: heleri sa China
-        one: heleri sa China
-    EGP:
-      display_names:
-        other: heleri sa Misri
-        one: heleri sa Misri
-    EUR:
-      display_names:
-        other: yuro
-        one: yuro
-    GBP:
-      display_names:
-        other: heleri sa Uingereza
-        one: heleri sa Uingereza
-    INR:
-      display_names:
-        other: heleri sa India
-        one: heleri sa India
-    JPY:
-      display_names:
-        other: heleri sa Japani
-        one: heleri sa Japani
-    KMF:
-      display_names:
-        other: heleri sa Komoro
-        one: heleri sa Komoro
-    LRD:
-      display_names:
-        other: heleri sa Liberia
-        one: heleri sa Liberia
-    MGA:
-      display_names:
-        other: heleri sa Bukini
-        one: heleri sa Bukini
-    MUR:
-      display_names:
-        other: heleri sa Morisi
-        one: heleri sa Morisi
-    NAD:
-      display_names:
-        other: heleri sa Namibia
-        one: heleri sa Namibia
-    NGN:
-      display_names:
-        other: heleri sa Nijeria
-        one: heleri sa Nijeria
-    RWF:
-      display_names:
-        other: heleri sa Rwanda
-        one: heleri sa Rwanda
-    SHP:
-      display_names:
-        other: heleri sa Santahelena
-        one: heleri sa Santahelena
-    STN:
-      display_names:
-        other: heleri sa Sao Tome na Principe
-        one: heleri sa Sao Tome na Principe
-    USD:
-      display_names:
-        other: heleri sa Marekani
-        one: heleri sa Marekani
-    XAF:
-      display_names:
-        other: heleri sa CFA BEAC
-        one: heleri sa CFA BEAC
-    XOF:
-      display_names:
-        other: heleri sa CFA BCEAO
-        one: heleri sa CFA BCEAO
-    ZAR:
-      display_names:
-        other: heleri sa Afrika Kusini
-        one: heleri sa Afrika Kusini
-    ZMW:
-      display_names:
-        other: heleri sa Zambia
-        one: heleri sa Zambia
-    AED:
-      display_names:
-        other: heleri sa Falme za Kiarabu
-        one: heleri sa Falme za Kiarabu
     BHD:
       display_names:
         other: heleri sa Bahareni
@@ -114,6 +32,14 @@ number_formats:
       display_names:
         other: heleri sa Burundi
         one: heleri sa Burundi
+    BWP:
+      display_names:
+        other: heleri sa Botswana
+        one: heleri sa Botswana
+    CAD:
+      display_names:
+        other: heleri sa Kanada
+        one: heleri sa Kanada
     CDF:
       display_names:
         other: heleri sa Kongo
@@ -122,6 +48,10 @@ number_formats:
       display_names:
         other: heleri sa Uswisi
         one: heleri sa Uswisi
+    CNY:
+      display_names:
+        other: heleri sa China
+        one: heleri sa China
     CVE:
       display_names:
         other: heleri sa Kepuvede
@@ -134,6 +64,10 @@ number_formats:
       display_names:
         other: heleri sa Aljeria
         one: heleri sa Aljeria
+    EGP:
+      display_names:
+        other: heleri sa Misri
+        one: heleri sa Misri
     ERN:
       display_names:
         other: heleri sa Eritrea
@@ -142,6 +76,14 @@ number_formats:
       display_names:
         other: heleri sa Uhabeshi
         one: heleri sa Uhabeshi
+    EUR:
+      display_names:
+        other: yuro
+        one: yuro
+    GBP:
+      display_names:
+        other: heleri sa Uingereza
+        one: heleri sa Uingereza
     GHC:
       display_names:
         other: heleri sa Ghana
@@ -154,10 +96,26 @@ number_formats:
       display_names:
         other: heleri sa Gine
         one: heleri sa Gine
+    INR:
+      display_names:
+        other: heleri sa India
+        one: heleri sa India
+    JPY:
+      display_names:
+        other: heleri sa Japani
+        one: heleri sa Japani
     KES:
       display_names:
         other: heleri sa Kenya
         one: heleri sa Kenya
+    KMF:
+      display_names:
+        other: heleri sa Komoro
+        one: heleri sa Komoro
+    LRD:
+      display_names:
+        other: heleri sa Liberia
+        one: heleri sa Liberia
     LSL:
       display_names:
         other: heleri sa Lesoto
@@ -170,6 +128,10 @@ number_formats:
       display_names:
         other: heleri sa Moroko
         one: heleri sa Moroko
+    MGA:
+      display_names:
+        other: heleri sa Bukini
+        one: heleri sa Bukini
     MRO:
       display_names:
         other: heleri sa Moritania (1973–2017)
@@ -178,6 +140,10 @@ number_formats:
       display_names:
         other: heleri sa Moritania
         one: heleri sa Moritania
+    MUR:
+      display_names:
+        other: heleri sa Morisi
+        one: heleri sa Morisi
     MWK:
       display_names:
         other: heleri sa Malawi
@@ -186,6 +152,18 @@ number_formats:
       display_names:
         other: heleri sa Msumbiji
         one: heleri sa Msumbiji
+    NAD:
+      display_names:
+        other: heleri sa Namibia
+        one: heleri sa Namibia
+    NGN:
+      display_names:
+        other: heleri sa Nijeria
+        one: heleri sa Nijeria
+    RWF:
+      display_names:
+        other: heleri sa Rwanda
+        one: heleri sa Rwanda
     SAR:
       display_names:
         other: heleri sa Saudia
@@ -198,6 +176,10 @@ number_formats:
       display_names:
         other: heleri sa Sudani
         one: heleri sa Sudani
+    SHP:
+      display_names:
+        other: heleri sa Santahelena
+        one: heleri sa Santahelena
     SLE:
       display_names:
         other: leoni
@@ -214,6 +196,10 @@ number_formats:
       display_names:
         other: heleri sa Sao Tome na Principe (1977–2017)
         one: heleri sa Sao Tome na Principe (1977–2017)
+    STN:
+      display_names:
+        other: heleri sa Sao Tome na Principe
+        one: heleri sa Sao Tome na Principe
     SZL:
       display_names:
         other: lilangeni
@@ -231,10 +217,30 @@ number_formats:
       display_names:
         other: heleri sa Uganda
         one: heleri sa Uganda
+    USD:
+      display_names:
+        other: heleri sa Marekani
+        one: heleri sa Marekani
+    XAF:
+      display_names:
+        other: heleri sa CFA BEAC
+        one: heleri sa CFA BEAC
+    XOF:
+      display_names:
+        other: heleri sa CFA BCEAO
+        one: heleri sa CFA BCEAO
+    ZAR:
+      display_names:
+        other: heleri sa Afrika Kusini
+        one: heleri sa Afrika Kusini
     ZMK:
       display_names:
         other: heleri sa Zambia (1968–2012)
         one: heleri sa Zambia (1968–2012)
+    ZMW:
+      display_names:
+        other: heleri sa Zambia
+        one: heleri sa Zambia
     ZWD:
       display_names:
         other: heleri sa Zimbabwe

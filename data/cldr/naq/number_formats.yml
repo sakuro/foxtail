@@ -1,11 +1,21 @@
 ---
 locale: naq
-generated_at: '2025-09-13T17:39:22Z'
+generated_at: '2025-09-14T06:11:21Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: United Arab Emirates Dirham
+        one: United Arab Emirates Dirham
     AOA:
       display_names:
         other: Angolan Kwanzab
@@ -14,98 +24,6 @@ number_formats:
       display_names:
         other: Australian Dollari
         one: Australian Dollari
-    BWP:
-      display_names:
-        other: Botswanan Pulab
-        one: Botswanan Pulab
-    CAD:
-      display_names:
-        other: Canadian Dollari
-        one: Canadian Dollari
-    CNY:
-      display_names:
-        other: Chinese Yuan Renminbi
-        one: Chinese Yuan Renminbi
-    EGP:
-      display_names:
-        other: Egytian Ponds
-        one: Egytian Ponds
-    EUR:
-      display_names:
-        other: Eurob
-        one: Eurob
-    GBP:
-      display_names:
-        other: British Ponds
-        one: British Ponds
-    INR:
-      display_names:
-        other: Indian Rupee
-        one: Indian Rupee
-    JPY:
-      display_names:
-        other: Japanese Yenni
-        one: Japanese Yenni
-    KMF:
-      display_names:
-        other: Comorian Franc
-        one: Comorian Franc
-    LRD:
-      display_names:
-        other: Liberian Dollar
-        one: Liberian Dollar
-    MGA:
-      display_names:
-        other: Malagasy Franc
-        one: Malagasy Franc
-    MUR:
-      display_names:
-        other: Mauritius Rupeeb
-        one: Mauritius Rupeeb
-    NAD:
-      display_names:
-        other: Namibia Dollari
-        one: Namibia Dollari
-    NGN:
-      display_names:
-        other: Nigerian Naira
-        one: Nigerian Naira
-    RWF:
-      display_names:
-        other: Rwanda Franci
-        one: Rwanda Franci
-    SHP:
-      display_names:
-        other: St Helena Ponds
-        one: St Helena Ponds
-    STN:
-      display_names:
-        other: Sao Tome and Principe Dobra
-        one: Sao Tome and Principe Dobra
-    USD:
-      display_names:
-        other: US Dollari
-        one: US Dollari
-    XAF:
-      display_names:
-        other: CFA Franc BEAC
-        one: CFA Franc BEAC
-    XOF:
-      display_names:
-        other: CFA Franc BCEAO
-        one: CFA Franc BCEAO
-    ZAR:
-      display_names:
-        other: South African Randi
-        one: South African Randi
-    ZMW:
-      display_names:
-        other: Zambian Kwachab
-        one: Zambian Kwachab
-    AED:
-      display_names:
-        other: United Arab Emirates Dirham
-        one: United Arab Emirates Dirham
     BHD:
       display_names:
         other: Bahrain Dinar
@@ -114,6 +32,14 @@ number_formats:
       display_names:
         other: Burundi Franc
         one: Burundi Franc
+    BWP:
+      display_names:
+        other: Botswanan Pulab
+        one: Botswanan Pulab
+    CAD:
+      display_names:
+        other: Canadian Dollari
+        one: Canadian Dollari
     CDF:
       display_names:
         other: Congolese Franc
@@ -122,6 +48,10 @@ number_formats:
       display_names:
         other: Swiss Franci
         one: Swiss Franci
+    CNY:
+      display_names:
+        other: Chinese Yuan Renminbi
+        one: Chinese Yuan Renminbi
     CVE:
       display_names:
         other: Escudo Caboverdiano
@@ -134,6 +64,10 @@ number_formats:
       display_names:
         other: Algerian Dinar
         one: Algerian Dinar
+    EGP:
+      display_names:
+        other: Egytian Ponds
+        one: Egytian Ponds
     ERN:
       display_names:
         other: Eritreian Nakfa
@@ -142,6 +76,14 @@ number_formats:
       display_names:
         other: Ethiopian Birr
         one: Ethiopian Birr
+    EUR:
+      display_names:
+        other: Eurob
+        one: Eurob
+    GBP:
+      display_names:
+        other: British Ponds
+        one: British Ponds
     GHC:
       display_names:
         other: Ghana Cedi
@@ -154,10 +96,26 @@ number_formats:
       display_names:
         other: Guinea Franc
         one: Guinea Franc
+    INR:
+      display_names:
+        other: Indian Rupee
+        one: Indian Rupee
+    JPY:
+      display_names:
+        other: Japanese Yenni
+        one: Japanese Yenni
     KES:
       display_names:
         other: Kenyan Shilling
         one: Kenyan Shilling
+    KMF:
+      display_names:
+        other: Comorian Franc
+        one: Comorian Franc
+    LRD:
+      display_names:
+        other: Liberian Dollar
+        one: Liberian Dollar
     LSL:
       display_names:
         other: Lesotho Loti
@@ -170,6 +128,10 @@ number_formats:
       display_names:
         other: Moroccan Dirham
         one: Moroccan Dirham
+    MGA:
+      display_names:
+        other: Malagasy Franc
+        one: Malagasy Franc
     MRO:
       display_names:
         other: Mauritania Ouguiya (1973–2017)
@@ -178,6 +140,10 @@ number_formats:
       display_names:
         other: Mauritania Ouguiya
         one: Mauritania Ouguiya
+    MUR:
+      display_names:
+        other: Mauritius Rupeeb
+        one: Mauritius Rupeeb
     MWK:
       display_names:
         other: Malawian Kwachab
@@ -186,6 +152,18 @@ number_formats:
       display_names:
         other: Mozambique Metical
         one: Mozambique Metical
+    NAD:
+      display_names:
+        other: Namibia Dollari
+        one: Namibia Dollari
+    NGN:
+      display_names:
+        other: Nigerian Naira
+        one: Nigerian Naira
+    RWF:
+      display_names:
+        other: Rwanda Franci
+        one: Rwanda Franci
     SAR:
       display_names:
         other: Saudi Riyal
@@ -202,6 +180,10 @@ number_formats:
       display_names:
         other: Sudanese Ponds
         one: Sudanese Ponds
+    SHP:
+      display_names:
+        other: St Helena Ponds
+        one: St Helena Ponds
     SLE:
       display_names:
         other: Leone
@@ -218,6 +200,10 @@ number_formats:
       display_names:
         other: Sao Tome and Principe Dobra (1977–2017)
         one: Sao Tome and Principe Dobra (1977–2017)
+    STN:
+      display_names:
+        other: Sao Tome and Principe Dobra
+        one: Sao Tome and Principe Dobra
     SZL:
       display_names:
         other: Lilangeni
@@ -234,10 +220,30 @@ number_formats:
       display_names:
         other: Ugandan Shillings
         one: Ugandan Shillings
+    USD:
+      display_names:
+        other: US Dollari
+        one: US Dollari
+    XAF:
+      display_names:
+        other: CFA Franc BEAC
+        one: CFA Franc BEAC
+    XOF:
+      display_names:
+        other: CFA Franc BCEAO
+        one: CFA Franc BCEAO
+    ZAR:
+      display_names:
+        other: South African Randi
+        one: South African Randi
     ZMK:
       display_names:
         other: Zambian Kwachab (1968–2012)
         one: Zambian Kwachab (1968–2012)
+    ZMW:
+      display_names:
+        other: Zambian Kwachab
+        one: Zambian Kwachab
     ZWD:
       display_names:
         other: Zimbabwe Dollari

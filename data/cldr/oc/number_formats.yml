@@ -1,25 +1,41 @@
 ---
 locale: oc
-generated_at: '2025-09-13T17:39:41Z'
+generated_at: '2025-09-14T06:11:32Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00¤"
     accounting: "#,##0.00¤;(#,##0.00¤)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: dírhams des Emirats Arabi Units
+        one: dírham des Emirats Arabi Units
     AFN:
       display_names:
         other: afganis
         one: afgani
+    ALL:
+      display_names:
+        other: leks
+        one: lek
     AMD:
       display_names:
         other: drams
         one: dram
+    ANG:
+      display_names:
+        other: florins atillans
+        one: florin atillans
     AOA:
       display_names:
         other: kuances
@@ -34,6 +50,10 @@ number_formats:
       display_names:
         other: dòlars australians
         one: dòlar australian
+    AWG:
+      display_names:
+        other: florins arubencs
+        one: florin arubenc
     AZN:
       display_names:
         other: manats azerbaiyans
@@ -50,6 +70,18 @@ number_formats:
       display_names:
         other: takas
         one: taka
+    BGN:
+      display_names:
+        other: leves búlgares
+        one: leva búlgara
+    BHD:
+      display_names:
+        other: dinars bareinís
+        one: dinar bareiní
+    BIF:
+      display_names:
+        other: francs burundessi
+        one: franc burundés
     BMD:
       symbol: "$BM"
       display_names:
@@ -72,10 +104,18 @@ number_formats:
       display_names:
         other: dòlars bahamencs
         one: dòlar bahamenc
+    BTN:
+      display_names:
+        other: gultrums
+        one: gultrum
     BWP:
       display_names:
         other: pules
         one: pula
+    BYN:
+      display_names:
+        other: robles bielorrussi
+        one: roble bielorrús
     BZD:
       symbol: "$BZ"
       display_names:
@@ -86,11 +126,23 @@ number_formats:
       display_names:
         other: dòlars canadienses
         one: dòlar canadiense
+    CDF:
+      display_names:
+        other: francs congolencs
+        one: franc congolenc
+    CHF:
+      display_names:
+        other: francs suïssi
+        one: franc suís
     CLP:
       symbol: "$CL"
       display_names:
         other: pesi chilens
         one: peso chilen
+    CNH:
+      display_names:
+        other: yuans chineses (extracontinanetals)
+        one: yuan chinés (extracontinanetal)
     CNY:
       display_names:
         other: yuans chineses
@@ -112,10 +164,18 @@ number_formats:
       display_names:
         other: pesi cubans
         one: peso cuban
+    CVE:
+      display_names:
+        other: escuts de Cab Verd
+        one: escut de Cab Verd
     CZK:
       display_names:
         other: corones cheques
         one: corona checa
+    DJF:
+      display_names:
+        other: francs yibutians
+        one: franc yibutian
     DKK:
       display_names:
         other: corones daneses
@@ -124,11 +184,23 @@ number_formats:
       display_names:
         other: pesi dominicans
         one: pes dominican
+    DZD:
+      display_names:
+        other: dinars argelins
+        one: dinar argelin
     EGP:
       symbol: "£E"
       display_names:
         other: libres egipcies
         one: libra egipcia
+    ERN:
+      display_names:
+        other: nakfes
+        one: nakfa
+    ETB:
+      display_names:
+        other: bires
+        one: bir
     EUR:
       display_names:
         other: euros
@@ -161,6 +233,10 @@ number_formats:
       display_names:
         other: libres gibraltarenques
         one: libra gibraltarenca
+    GMD:
+      display_names:
+        other: dalasis
+        one: dalasi
     GNF:
       display_names:
         other: francs guineans
@@ -186,6 +262,10 @@ number_formats:
       display_names:
         other: kunes
         one: kuna
+    HTG:
+      display_names:
+        other: gordes haitians
+        one: gorde haitian
     HUF:
       display_names:
         other: forintos húngars
@@ -202,6 +282,14 @@ number_formats:
       display_names:
         other: ropias indianas
         one: ropia indiana
+    IQD:
+      display_names:
+        other: dinars iraquís
+        one: dinar iraquí
+    IRR:
+      display_names:
+        other: rials iranís
+        one: rial iraní
     ISK:
       display_names:
         other: corones islandeses
@@ -210,11 +298,19 @@ number_formats:
       display_names:
         other: dòlars jamaicans
         one: dòlar jamaican
+    JOD:
+      display_names:
+        other: dinars jordans
+        one: dinar jordan
     JPY:
       symbol: JPY
       display_names:
         other: yens
         one: yen
+    KES:
+      display_names:
+        other: chelins kenians
+        one: chelin kenian
     KGS:
       display_names:
         other: sòms
@@ -236,6 +332,10 @@ number_formats:
       display_names:
         other: wons sud-coreans
         one: won sud-corean
+    KWD:
+      display_names:
+        other: dinars kuwaitins
+        one: dinar kuwaitin
     KYD:
       display_names:
         other: dòlars d’Illes Caiman
@@ -261,10 +361,30 @@ number_formats:
       display_names:
         other: dòlars liberians
         one: dòlar liberian
+    LSL:
+      display_names:
+        other: lotis lesotensi
+        one: loti lesotenc
+    LYD:
+      display_names:
+        other: dinars libis
+        one: dinar libi
+    MAD:
+      display_names:
+        other: dírhams marroquins
+        one: dírham marroquin
+    MDL:
+      display_names:
+        other: leus moldaus
+        one: leu moldau
     MGA:
       display_names:
         other: ariaris
         one: ariari
+    MKD:
+      display_names:
+        other: dinars macedonis
+        one: dinar macedoni
     MMK:
       display_names:
         other: kiats
@@ -273,10 +393,26 @@ number_formats:
       display_names:
         other: tugriks
         one: tugrik
+    MOP:
+      display_names:
+        other: pataques de Macao
+        one: pataca de Macao
+    MRU:
+      display_names:
+        other: uguiyes
+        one: uguiya
     MUR:
       display_names:
         other: ropies mauricianes
         one: ropia mauriciana
+    MVR:
+      display_names:
+        other: rufiyas
+        one: rufiya
+    MWK:
+      display_names:
+        other: kuaches malauies
+        one: kuacha malauí
     MXN:
       symbol: "$MX"
       display_names:
@@ -286,6 +422,10 @@ number_formats:
       display_names:
         other: ringits
         one: ringit
+    MZN:
+      display_names:
+        other: meticals
+        one: metical
     NAD:
       symbol: "$NA"
       display_names:
@@ -312,6 +452,22 @@ number_formats:
       display_names:
         other: dòlars neozelandeses
         one: dòlar neozelandés
+    OMR:
+      display_names:
+        other: rials omanís
+        one: rial omaní
+    PAB:
+      display_names:
+        other: balboes panamenhs
+        one: balboa panamenh
+    PEN:
+      display_names:
+        other: sòls peruans
+        one: sòl peruan
+    PGK:
+      display_names:
+        other: kinas
+        one: kina
     PHP:
       symbol: PHP
       display_names:
@@ -329,11 +485,19 @@ number_formats:
       display_names:
         other: guaranís paraguayans
         one: guaraní paraguayan
+    QAR:
+      display_names:
+        other: rials catarís
+        one: rial catarí
     RON:
       symbol: L
       display_names:
         other: leus rumans
         one: leu ruman
+    RSD:
+      display_names:
+        other: dinars serbis
+        one: dinar serbi
     RUB:
       display_names:
         other: robles russes
@@ -343,11 +507,23 @@ number_formats:
       display_names:
         other: francs ruandessi
         one: franc ruandés
+    SAR:
+      display_names:
+        other: rials saudís
+        one: rial saudí
     SBD:
       symbol: "$SB"
       display_names:
         other: dòlars salomonencs
         one: dòlar salomonenc
+    SCR:
+      display_names:
+        other: ropies seychellenses
+        one: ropia seychellense
+    SDG:
+      display_names:
+        other: libres sudaneses
+        one: libra sudanesa
     SEK:
       display_names:
         other: corones sueques
@@ -361,6 +537,18 @@ number_formats:
       display_names:
         other: libres de Santa Elena
         one: libra de Santa Elena
+    SLE:
+      display_names:
+        other: leones
+        one: leona
+    SLL:
+      display_names:
+        other: leones (1964—2022)
+        one: leona (1964—2022)
+    SOS:
+      display_names:
+        other: chelins somalís
+        one: chelin somalí
     SRD:
       symbol: "$SR"
       display_names:
@@ -378,10 +566,26 @@ number_formats:
       display_names:
         other: libres siries
         one: libra siria
+    SZL:
+      display_names:
+        other: lilangenis
+        one: lilangeni
     THB:
       display_names:
         other: bats
         one: bat
+    TJS:
+      display_names:
+        other: somonis tayikos
+        one: somoni tayiko
+    TMT:
+      display_names:
+        other: manats turcomans
+        one: manat turcoman
+    TND:
+      display_names:
+        other: dinars tunecins
+        one: dinar tunecin
     TOP:
       symbol: "$T"
       display_names:
@@ -402,10 +606,18 @@ number_formats:
       display_names:
         other: naus dòlars taiwaneses
         one: nau dòlar taiwanés
+    TZS:
+      display_names:
+        other: chelins tanzans
+        one: chelin tanzan
     UAH:
       display_names:
         other: grivnes
         one: grivna
+    UGX:
+      display_names:
+        other: chelins ugandessi
+        one: chelin ugandés
     USD:
       symbol: "$US"
       display_names:
@@ -416,10 +628,27 @@ number_formats:
       display_names:
         other: pesi uruguayans
         one: peso uruguayan
+    UZS:
+      display_names:
+        other: sums
+        one: sum
+    VES:
+      display_names:
+        other: bolívars venezolans
+        one: bolívar venezolan
     VND:
       display_names:
         other: dongs
         one: dong
+    VUV:
+      display_names:
+        other: vatus
+        one: vatu
+    WST:
+      symbol: "$WS"
+      display_names:
+        other: tales
+        one: tala
     XAF:
       display_names:
         other: francs CFA d’Africa central
@@ -442,6 +671,10 @@ number_formats:
       display_names:
         other: "(moneda desconeguda)"
         one: Moneda desconeguda
+    YER:
+      display_names:
+        other: rials yemenís
+        one: rial yemení
     ZAR:
       display_names:
         other: rands
@@ -451,232 +684,459 @@ number_formats:
       display_names:
         other: kuaches zambianes
         one: kuacha zambiana
-    AED:
-      display_names:
-        other: dírhams des Emirats Arabi Units
-        one: dírham des Emirats Arabi Units
-    ALL:
-      display_names:
-        other: leks
-        one: lek
-    ANG:
-      display_names:
-        other: florins atillans
-        one: florin atillans
-    AWG:
-      display_names:
-        other: florins arubencs
-        one: florin arubenc
-    BGN:
-      display_names:
-        other: leves búlgares
-        one: leva búlgara
-    BHD:
-      display_names:
-        other: dinars bareinís
-        one: dinar bareiní
-    BIF:
-      display_names:
-        other: francs burundessi
-        one: franc burundés
-    BTN:
-      display_names:
-        other: gultrums
-        one: gultrum
-    BYN:
-      display_names:
-        other: robles bielorrussi
-        one: roble bielorrús
-    CDF:
-      display_names:
-        other: francs congolencs
-        one: franc congolenc
-    CHF:
-      display_names:
-        other: francs suïssi
-        one: franc suís
-    CNH:
-      display_names:
-        other: yuans chineses (extracontinanetals)
-        one: yuan chinés (extracontinanetal)
-    CVE:
-      display_names:
-        other: escuts de Cab Verd
-        one: escut de Cab Verd
-    DJF:
-      display_names:
-        other: francs yibutians
-        one: franc yibutian
-    DZD:
-      display_names:
-        other: dinars argelins
-        one: dinar argelin
-    ERN:
-      display_names:
-        other: nakfes
-        one: nakfa
-    ETB:
-      display_names:
-        other: bires
-        one: bir
-    GMD:
-      display_names:
-        other: dalasis
-        one: dalasi
-    HTG:
-      display_names:
-        other: gordes haitians
-        one: gorde haitian
-    IQD:
-      display_names:
-        other: dinars iraquís
-        one: dinar iraquí
-    IRR:
-      display_names:
-        other: rials iranís
-        one: rial iraní
-    JOD:
-      display_names:
-        other: dinars jordans
-        one: dinar jordan
-    KES:
-      display_names:
-        other: chelins kenians
-        one: chelin kenian
-    KWD:
-      display_names:
-        other: dinars kuwaitins
-        one: dinar kuwaitin
-    LSL:
-      display_names:
-        other: lotis lesotensi
-        one: loti lesotenc
-    LYD:
-      display_names:
-        other: dinars libis
-        one: dinar libi
-    MAD:
-      display_names:
-        other: dírhams marroquins
-        one: dírham marroquin
-    MDL:
-      display_names:
-        other: leus moldaus
-        one: leu moldau
-    MKD:
-      display_names:
-        other: dinars macedonis
-        one: dinar macedoni
-    MOP:
-      display_names:
-        other: pataques de Macao
-        one: pataca de Macao
-    MRU:
-      display_names:
-        other: uguiyes
-        one: uguiya
-    MVR:
-      display_names:
-        other: rufiyas
-        one: rufiya
-    MWK:
-      display_names:
-        other: kuaches malauies
-        one: kuacha malauí
-    MZN:
-      display_names:
-        other: meticals
-        one: metical
-    OMR:
-      display_names:
-        other: rials omanís
-        one: rial omaní
-    PAB:
-      display_names:
-        other: balboes panamenhs
-        one: balboa panamenh
-    PEN:
-      display_names:
-        other: sòls peruans
-        one: sòl peruan
-    PGK:
-      display_names:
-        other: kinas
-        one: kina
-    QAR:
-      display_names:
-        other: rials catarís
-        one: rial catarí
-    RSD:
-      display_names:
-        other: dinars serbis
-        one: dinar serbi
-    SAR:
-      display_names:
-        other: rials saudís
-        one: rial saudí
-    SCR:
-      display_names:
-        other: ropies seychellenses
-        one: ropia seychellense
-    SDG:
-      display_names:
-        other: libres sudaneses
-        one: libra sudanesa
-    SLE:
-      display_names:
-        other: leones
-        one: leona
-    SLL:
-      display_names:
-        other: leones (1964—2022)
-        one: leona (1964—2022)
-    SOS:
-      display_names:
-        other: chelins somalís
-        one: chelin somalí
-    SZL:
-      display_names:
-        other: lilangenis
-        one: lilangeni
-    TJS:
-      display_names:
-        other: somonis tayikos
-        one: somoni tayiko
-    TMT:
-      display_names:
-        other: manats turcomans
-        one: manat turcoman
-    TND:
-      display_names:
-        other: dinars tunecins
-        one: dinar tunecin
-    TZS:
-      display_names:
-        other: chelins tanzans
-        one: chelin tanzan
-    UGX:
-      display_names:
-        other: chelins ugandessi
-        one: chelin ugandés
-    UZS:
-      display_names:
-        other: sums
-        one: sum
-    VES:
-      display_names:
-        other: bolívars venezolans
-        one: bolívar venezolan
-    VUV:
-      display_names:
-        other: vatus
-        one: vatu
-    WST:
-      symbol: "$WS"
-      display_names:
-        other: tales
-        one: tala
-    YER:
-      display_names:
-        other: rials yemenís
-        one: rial yemení
+  units:
+    g-force:
+      long:
+        display_name: G d’acceleracion
+        other: "{0} G d'acceleracion"
+      short:
+        display_name: G d’acc.
+    meter-per-square-second:
+      long:
+        display_name: mètres per segonda al cairat
+        other: "{0} mètres per segonda al cairat"
+    revolution:
+      long:
+        display_name: revolucion
+        other: "{0} revolucion"
+    radian:
+      long:
+        display_name: radians
+        other: "{0} radians"
+    degree:
+      long:
+        display_name: gra
+        other: "{0} grases"
+      short:
+        display_name: "°"
+    arc-minute:
+      long:
+        display_name: minutas d’arc
+        other: "{0} minutas d’arc"
+    arc-second:
+      long:
+        display_name: segondas d’arc
+        other: "{0} segondas d'arc"
+    square-kilometer:
+      long:
+        display_name: quilomètres cairats
+        other: "{0} quilomètres cairats"
+        per_unit_pattern: "{0} per quilomètre cairat"
+    hectare:
+      long:
+        display_name: ectaras
+        other: "{0} ectaras"
+      short:
+        display_name: ha
+    square-meter:
+      long:
+        display_name: mètres cairats
+        other: "{0} mètres cairats"
+        per_unit_pattern: "{0} per mètres cairats"
+    square-centimeter:
+      long:
+        display_name: centimètres cairats
+        other: "{0} centimètres cairats"
+        per_unit_pattern: "{0} per centimètres cairats"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: miligramas per decilitre
+        other: "{0} miligramas per decilitre"
+    millimole-per-liter:
+      long:
+        display_name: milimòls per litres
+        other: "{0} milimòls per litres"
+    permillion:
+      long:
+        display_name: partidas per milions
+        other: "{0} partidas per milions"
+    percent:
+      long:
+        other: "{0} de cent"
+      short:
+        display_name: de cent
+    permille:
+      long:
+        display_name: de mila
+        other: "{0} de mila"
+    mole:
+      long:
+        display_name: mòls
+        other: "{0} mòls"
+    liter-per-kilometer:
+      long:
+        display_name: litres per quilomètres
+        other: "{0} litres per quilomètres"
+    liter-per-100-kilometer:
+      long:
+        display_name: litres per 100 quilomètres
+        other: "{0} litres per 100 quilomètres"
+    petabyte:
+      long:
+        display_name: petaoctets
+        other: "{0} petaoctets"
+      short:
+        display_name: Po
+        other: "{0} Po"
+    terabyte:
+      long:
+        display_name: teraoctets
+        other: "{0} teraoctets"
+      short:
+        display_name: To
+        other: "{0} To"
+    gigabyte:
+      long:
+        display_name: gigaoctets
+        other: "{0} gigaoctets"
+      short:
+        display_name: Go
+        other: "{0} Go"
+    megabyte:
+      long:
+        display_name: megaoctets
+        other: "{0} megaoctets"
+      short:
+        display_name: Mo
+        other: "{0} Mo"
+    kilobyte:
+      long:
+        display_name: quilooctets
+        other: "{0} quilooctets"
+      short:
+        display_name: ko
+        other: "{0} ko"
+    byte:
+      long:
+        display_name: octets
+        other: "{0} octets"
+      short:
+        display_name: octet
+        other: "{0} octet"
+    century:
+      long:
+        display_name: sègles
+        other: "{0} sègles"
+      short:
+        display_name: s.
+        other: "{0} s."
+    decade:
+      long:
+        display_name: decennia
+        other: "{0} decennia"
+    year:
+      long:
+        other: "{0} annadas"
+        per_unit_pattern: "{0} per annada"
+      short:
+        display_name: annadas
+        other: "{0} ans"
+        per_unit_pattern: "{0}/an."
+      narrow:
+        display_name: an.
+        other: "{0} an."
+    month:
+      long:
+        display_name: meses
+        other: "{0} mes"
+        per_unit_pattern: "{0} per mes"
+      short:
+        display_name: mes
+    week:
+      long:
+        other: "{0} setmanas"
+        per_unit_pattern: "{0} per setmana"
+      short:
+        display_name: setm.
+        other: "{0} setm."
+        per_unit_pattern: "{0}/setm."
+    day:
+      long:
+        other: "{0} jorns"
+      short:
+        display_name: jorns
+        other: "{0} j"
+        per_unit_pattern: "{0}/j"
+      narrow:
+        display_name: jorn
+    hour:
+      long:
+        other: "{0} oras"
+      short:
+        display_name: oras
+      narrow:
+        display_name: ora
+    minute:
+      long:
+        display_name: minutas
+        other: "{0} minutas"
+    second:
+      long:
+        display_name: segondas
+        other: "{0} segondas"
+    ampere:
+      long:
+        display_name: ampèrs
+        other: "{0} ampèrs"
+    milliampere:
+      long:
+        display_name: miliampèrs
+        other: "{0} miliampèrs"
+    volt:
+      long:
+        other: "{0} vòlts"
+      short:
+        display_name: vòlts
+    kilocalorie:
+      long:
+        display_name: quilocalorias
+        other: "{0} quilocalorias"
+    calorie:
+      long:
+        display_name: calorias
+        other: "{0} calorias"
+    foodcalorie:
+      long:
+        display_name: Calorias
+        other: "{0} Calorias"
+    kilojoule:
+      long:
+        display_name: quilojoules
+        other: "{0} quilojoules"
+    joule:
+      long:
+        display_name: joules
+        other: "{0} joules"
+    kilowatt-hour:
+      long:
+        display_name: quilowatt-oras
+        other: "{0} quilowatt-oras"
+    electronvolt:
+      long:
+        display_name: electronvòlts
+        other: "{0} electronvòlts"
+    kilohertz:
+      long:
+        display_name: quilohertz
+        other: "{0} quilohertz"
+    dot-per-centimeter:
+      long:
+        display_name: punts per centimètre
+        other: "{0} punts per centimètre"
+    kilometer:
+      long:
+        display_name: quilomètres
+        other: "{0} quilomètres"
+        per_unit_pattern: "{0} per quilomètre"
+    meter:
+      long:
+        display_name: mètres
+        other: "{0} mètres"
+        per_unit_pattern: "{0} per mètre"
+      short:
+        display_name: mètre
+      narrow:
+        display_name: m
+    decimeter:
+      long:
+        display_name: decimètres
+        other: "{0} decimètres"
+    centimeter:
+      long:
+        display_name: centimètres
+        per_unit_pattern: "{0} per centimètres"
+    millimeter:
+      long:
+        display_name: milimètres
+        other: "{0} milimètres"
+    micrometer:
+      long:
+        display_name: micromètres
+        other: "{0} micromètres"
+    nanometer:
+      long:
+        display_name: nanomètres
+        other: "{0} nanomètres"
+    picometer:
+      long:
+        display_name: picomètres
+        other: "{0} picomètres"
+    point:
+      long:
+        display_name: punts
+        other: "{0} punts"
+    solar-luminosity:
+      long:
+        display_name: luminositats solaras
+        other: "{0} luminositats solaras"
+    tonne:
+      long:
+        display_name: tonas metricas
+        other: "{0} tonas metricas"
+    kilogram:
+      long:
+        display_name: quilogramas
+        other: "{0} quilogramas"
+        per_unit_pattern: "{0} per quilogramas"
+    gram:
+      long:
+        other: "{0} gramas"
+        per_unit_pattern: "{0} per gramas"
+      short:
+        display_name: gramas
+      narrow:
+        display_name: grama
+    milligram:
+      long:
+        display_name: miligramas
+        other: "{0} miligramas"
+    microgram:
+      long:
+        display_name: microgramas
+        other: "{0} microgramas"
+    ton:
+      long:
+        display_name: tonas
+        other: "{0} tonas"
+    earth-mass:
+      long:
+        display_name: massas de Tèrra
+        other: "{0} massas de Tèrra"
+    solar-mass:
+      long:
+        display_name: massas de Solelh
+        other: "{0} massa de Solelh"
+    kilowatt:
+      long:
+        display_name: quilowatts
+        other: "{0} quilowatts"
+    watt:
+      long:
+        display_name: watts
+        other: "{0} watts"
+    horsepower:
+      long:
+        display_name: cavals vapor
+        other: "{0} cavals vapor"
+      short:
+        display_name: cv
+        other: "{0} cv"
+    millimeter-ofhg:
+      long:
+        display_name: milimètres de mercuri
+        other: "{0} milimètres de mercuri"
+    millibar:
+      long:
+        display_name: milibars
+        other: "{0} milibars"
+    atmosphere:
+      long:
+        display_name: atmosfèras
+        other: "{0} atmosfèras"
+    hectopascal:
+      long:
+        display_name: ectopascals
+        other: "{0} ectopascals"
+    kilopascal:
+      long:
+        display_name: quilopascals
+        other: "{0} quilopascals"
+    kilometer-per-hour:
+      long:
+        display_name: quilomètres per ora
+        other: "{0} quilomètres per ora"
+    meter-per-second:
+      long:
+        display_name: mètres per segonda
+        other: "{0} mètres per segonda"
+      short:
+        display_name: mètres/seg.
+    knot:
+      long:
+        display_name: noses
+        other: "{0} noses"
+    celsius:
+      long:
+        display_name: grases Celsius
+        other: "{0} grases Celsius"
+      short:
+        display_name: gr. C
+    fahrenheit:
+      long:
+        display_name: grases Fahrenheit
+        other: "{0} grases Fahrenheit"
+    newton-meter:
+      long:
+        display_name: newton-mètres
+        other: "{0} newton-mètres"
+    cubic-kilometer:
+      long:
+        display_name: quilomètres cubics
+        other: "{0} quilomètres cubics"
+    cubic-meter:
+      long:
+        display_name: mètres cubics
+        other: "{0} mètres cubics"
+        per_unit_pattern: "{0} per mètres cubics"
+    cubic-centimeter:
+      long:
+        display_name: centimètres cubics
+        other: "{0} centimètres cubics"
+        per_unit_pattern: "{0} per centimètres cubics"
+    megaliter:
+      long:
+        display_name: megalitres
+        other: "{0} megalitres"
+    hectoliter:
+      long:
+        display_name: ectolitres
+        other: "{0} ectolitres"
+    liter:
+      long:
+        other: "{0} litres"
+        per_unit_pattern: "{0} per litre"
+      short:
+        display_name: litres
+        other: "{0} L"
+        per_unit_pattern: "{0}/L"
+    deciliter:
+      long:
+        display_name: decilitres
+        other: "{0} decilitres"
+    centiliter:
+      long:
+        display_name: centilitres
+        other: "{0} centilitres"
+    milliliter:
+      long:
+        display_name: mililitres
+        other: "{0} mililitres"
+    dessert-spoon:
+      long:
+        display_name: culhièr de cafè
+        other: "{0} culhièr de cafè"
+      short:
+        display_name: culh. cafè
+        other: "{0} culh. cafè"
+    dessert-spoon-imperial:
+      long:
+        display_name: culhièr de cafè imperial
+      short:
+        display_name: culh. cafè imp.
+        other: "{0} culh. cafè imp."
+    dot:
+      short:
+        display_name: punt
+        other: "{0} punt"
+    grain:
+      short:
+        display_name: gran
+        other: "{0} gran"
+    drop:
+      short:
+        display_name: gota
+        other: "{0} gota"
+    pinch:
+      short:
+        display_name: pecic
+        other: "{0} pecic"

@@ -1,14 +1,24 @@
 ---
 locale: ewo
-generated_at: '2025-09-13T17:36:47Z'
+generated_at: '2025-09-14T06:09:40Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Dirám yá Emirá Aráb Uní
+        one: Dirám yá Emirá Aráb Uní
     AOA:
       display_names:
         other: Kwánəza yá Angolá
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: Dolár yá Osətəralí
         one: Dolár yá Osətəralí
-    BWP:
-      display_names:
-        other: Púlá yá Botswána
-        one: Púlá yá Botswána
-    CAD:
-      display_names:
-        other: Dolár yá Kanáda
-        one: Dolár yá Kanáda
-    CNY:
-      display_names:
-        other: Yuán Renəminəbí yá Tsainís
-        one: Yuán Renəminəbí yá Tsainís
-    EGP:
-      display_names:
-        other: Lívə́lə yá Ehíbətía
-        one: Lívə́lə yá Ehíbətía
-    EUR:
-      display_names:
-        other: əró
-        one: əró
-    GBP:
-      display_names:
-        other: Lívə́lə Sətərəlíŋ
-        one: Lívə́lə Sətərəlíŋ
-    INR:
-      display_names:
-        other: Rupí yá ɛ́ndía
-        one: Rupí yá ɛ́ndía
-    JPY:
-      display_names:
-        other: Yɛ́n yá Hapɔ́n
-        one: Yɛ́n yá Hapɔ́n
-    KMF:
-      display_names:
-        other: Fəláŋ yá Komória
-        one: Fəláŋ yá Komória
-    LRD:
-      display_names:
-        other: Dolár yá Libéria
-        one: Dolár yá Libéria
-    MGA:
-      display_names:
-        other: Ariari yá Maləgás
-        one: Ariari yá Maləgás
-    MUR:
-      display_names:
-        other: Rupí yá Morís
-        one: Rupí yá Morís
-    NAD:
-      display_names:
-        other: Dolár yá Namibí
-        one: Dolár yá Namibí
-    NGN:
-      display_names:
-        other: Náíra yá Nihéria
-        one: Náíra yá Nihéria
-    RWF:
-      display_names:
-        other: Fəláŋ yá Ruwandá
-        one: Fəláŋ yá Ruwandá
-    SHP:
-      display_names:
-        other: Lívələ yá Ǹfúfúb Elɛ́n
-        one: Lívələ yá Ǹfúfúb Elɛ́n
-    STN:
-      display_names:
-        other: Dóbə́ra yá Saó Tomé ai Pəlinəsípe
-        one: Dóbə́ra yá Saó Tomé ai Pəlinəsípe
-    USD:
-      display_names:
-        other: Dolár yá amɛ́rəkə
-        one: Dolár yá amɛ́rəkə
-    XAF:
-      display_names:
-        other: Fəláŋ CFA (BEAC)
-        one: Fəláŋ CFA (BEAC)
-    XOF:
-      display_names:
-        other: Fəláŋ CFA (BCEAO)
-        one: Fəláŋ CFA (BCEAO)
-    ZAR:
-      display_names:
-        other: Ránədə yá Afiríka
-        one: Ránədə yá Afiríka
-    ZMW:
-      display_names:
-        other: Kwatsa yá Zambí
-        one: Kwatsa yá Zambí
-    AED:
-      display_names:
-        other: Dirám yá Emirá Aráb Uní
-        one: Dirám yá Emirá Aráb Uní
     BHD:
       display_names:
         other: Dinár yá Bahərɛ́n
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: Fəláŋ yá Burundí
         one: Fəláŋ yá Burundí
+    BWP:
+      display_names:
+        other: Púlá yá Botswána
+        one: Púlá yá Botswána
+    CAD:
+      display_names:
+        other: Dolár yá Kanáda
+        one: Dolár yá Kanáda
     CDF:
       display_names:
         other: Fəláŋ yá Kongo
@@ -125,6 +51,10 @@ number_formats:
       display_names:
         other: Fəláŋ yá Suís
         one: Fəláŋ yá Suís
+    CNY:
+      display_names:
+        other: Yuán Renəminəbí yá Tsainís
+        one: Yuán Renəminəbí yá Tsainís
     CVE:
       display_names:
         other: Esəkúdo yá Kápə́vɛ́rə
@@ -137,6 +67,10 @@ number_formats:
       display_names:
         other: Dinár yá Alehérí
         one: Dinár yá Alehérí
+    EGP:
+      display_names:
+        other: Lívə́lə yá Ehíbətía
+        one: Lívə́lə yá Ehíbətía
     ERN:
       display_names:
         other: Náfəka yá Eritelé
@@ -145,6 +79,14 @@ number_formats:
       display_names:
         other: Bír yá Etsiópia
         one: Bír yá Etsiópia
+    EUR:
+      display_names:
+        other: əró
+        one: əró
+    GBP:
+      display_names:
+        other: Lívə́lə Sətərəlíŋ
+        one: Lívə́lə Sətərəlíŋ
     GHC:
       display_names:
         other: Tzedí yá Ganá
@@ -157,10 +99,26 @@ number_formats:
       display_names:
         other: Síli yá Giné
         one: Síli yá Giné
+    INR:
+      display_names:
+        other: Rupí yá ɛ́ndía
+        one: Rupí yá ɛ́ndía
+    JPY:
+      display_names:
+        other: Yɛ́n yá Hapɔ́n
+        one: Yɛ́n yá Hapɔ́n
     KES:
       display_names:
         other: Silíŋ yá Keniá
         one: Silíŋ yá Keniá
+    KMF:
+      display_names:
+        other: Fəláŋ yá Komória
+        one: Fəláŋ yá Komória
+    LRD:
+      display_names:
+        other: Dolár yá Libéria
+        one: Dolár yá Libéria
     LSL:
       display_names:
         other: Lotí yá Lesotó
@@ -173,6 +131,10 @@ number_formats:
       display_names:
         other: Dirám yá Maróg
         one: Dirám yá Maróg
+    MGA:
+      display_names:
+        other: Ariari yá Maləgás
+        one: Ariari yá Maləgás
     MRO:
       display_names:
         other: Ugiya yá Moritaní (1973–2017)
@@ -181,6 +143,10 @@ number_formats:
       display_names:
         other: Ugiya yá Moritaní
         one: Ugiya yá Moritaní
+    MUR:
+      display_names:
+        other: Rupí yá Morís
+        one: Rupí yá Morís
     MWK:
       display_names:
         other: Kwatsa yá Malawí
@@ -189,6 +155,18 @@ number_formats:
       display_names:
         other: Metikal yá Mozambíg
         one: Metikal yá Mozambíg
+    NAD:
+      display_names:
+        other: Dolár yá Namibí
+        one: Dolár yá Namibí
+    NGN:
+      display_names:
+        other: Náíra yá Nihéria
+        one: Náíra yá Nihéria
+    RWF:
+      display_names:
+        other: Fəláŋ yá Ruwandá
+        one: Fəláŋ yá Ruwandá
     SAR:
       display_names:
         other: Riál yá Arabí Saudí
@@ -205,6 +183,10 @@ number_formats:
       display_names:
         other: Lívələ yá Sudán (1956–2007)
         one: Lívələ yá Sudán (1956–2007)
+    SHP:
+      display_names:
+        other: Lívələ yá Ǹfúfúb Elɛ́n
+        one: Lívələ yá Ǹfúfúb Elɛ́n
     SLE:
       display_names:
         other: Leóne yá Sierá-leónə
@@ -221,6 +203,10 @@ number_formats:
       display_names:
         other: Dóbə́ra yá Saó Tomé ai Pəlinəsípe (1977–2017)
         one: Dóbə́ra yá Saó Tomé ai Pəlinəsípe (1977–2017)
+    STN:
+      display_names:
+        other: Dóbə́ra yá Saó Tomé ai Pəlinəsípe
+        one: Dóbə́ra yá Saó Tomé ai Pəlinəsípe
     SZL:
       display_names:
         other: Lilangeni yá Swazí
@@ -237,10 +223,30 @@ number_formats:
       display_names:
         other: Silíŋ yá Ugandá (1966–1987)
         one: Silíŋ yá Ugandá (1966–1987)
+    USD:
+      display_names:
+        other: Dolár yá amɛ́rəkə
+        one: Dolár yá amɛ́rəkə
+    XAF:
+      display_names:
+        other: Fəláŋ CFA (BEAC)
+        one: Fəláŋ CFA (BEAC)
+    XOF:
+      display_names:
+        other: Fəláŋ CFA (BCEAO)
+        one: Fəláŋ CFA (BCEAO)
+    ZAR:
+      display_names:
+        other: Ránədə yá Afiríka
+        one: Ránədə yá Afiríka
     ZMK:
       display_names:
         other: Kwatsa yá Zambí (1968–2012)
         one: Kwatsa yá Zambí (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwatsa yá Zambí
+        one: Kwatsa yá Zambí
     ZWD:
       display_names:
         other: Dolár yá Zimbabwé

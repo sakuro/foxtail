@@ -1,26 +1,123 @@
 ---
 locale: la
-generated_at: '2025-09-13T17:38:40Z'
+generated_at: '2025-09-14T06:10:54Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: 
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0M
+        other: 0M
+      '10000':
+        one: 00M
+        other: 00M
+      '100000':
+        one: 000M
+        other: 000M
+      '1000000':
+        one: 0 Mn
+        other: 0 Mn
+      '10000000':
+        one: 00 Mn
+        other: 00 Mn
+      '100000000':
+        one: 000 Mn
+        other: 000 Mn
+      '1000000000':
+        one: 0 Md
+        other: 0 Md
+      '10000000000':
+        one: 00 Md
+        other: 00 Md
+      '100000000000':
+        one: 000 Md
+        other: 000 Md
+      '1000000000000':
+        one: 0 mil Md
+        other: 0 mil Md
+      '10000000000000':
+        one: 00 mil Md
+        other: 00 mil Md
+      '100000000000000':
+        one: 000 mil Md
+        other: 000 mil Md
+    long:
+      '1000':
+        one: 0 mille
+        other: 0 millia
+      '10000':
+        one: 00 millia
+        other: 00 millia
+      '100000':
+        one: 000 millia
+        other: 000 millia
+      '1000000':
+        one: 0 milio
+        other: 0 miliones
+      '10000000':
+        one: 00 miliones
+        other: 00 miliones
+      '100000000':
+        one: 000 miliones
+        other: 000 miliones
+      '1000000000':
+        one: 0 miliardum
+        other: 0 miliarda
+      '10000000000':
+        one: 00 miliarda
+        other: 00 miliarda
+      '100000000000':
+        one: 000 miliarda
+        other: 000 miliarda
+      '1000000000000':
+        one: 0 milies miliardum
+        other: 0 milies miliarda
+      '10000000000000':
+        one: 00 milies miliarda
+        other: 00 milies miliarda
+      '100000000000000':
+        one: 000 milies miliarda
+        other: 000 milies miliarda
   currencies:
+    CHF:
+      display_names:
+        other: Francus Helveticus
+        one: Francus Helveticus
     EUR:
       display_names:
         other: Euro
         one: Euro
+    FIM:
+      display_names:
+        other: Marca Finniae
+        one: Marca Finniae
     GBP:
       display_names:
         other: Libra sterlingorum
         one: Libra sterlingorum
+    GRD:
+      display_names:
+        other: Drachma
+        one: Drachma
     HKD:
       display_names:
         other: Dollarium Hongkongense
         one: Dollarium Hongkongense
+    ITL:
+      display_names:
+        other: Lira Italiana
+        one: Lira Italiana
     JPY:
       display_names:
         other: Yen
@@ -33,26 +130,6 @@ number_formats:
       display_names:
         other: Corona Norvegiae
         one: Corona Norvegiae
-    USD:
-      display_names:
-        other: Dollarium Civitatum Foederatarum
-        one: Dollarium Civitatum Foederatarum
-    CHF:
-      display_names:
-        other: Francus Helveticus
-        one: Francus Helveticus
-    FIM:
-      display_names:
-        other: Marca Finniae
-        one: Marca Finniae
-    GRD:
-      display_names:
-        other: Drachma
-        one: Drachma
-    ITL:
-      display_names:
-        other: Lira Italiana
-        one: Lira Italiana
     PEN:
       display_names:
         other: Nuevo Sol
@@ -61,6 +138,10 @@ number_formats:
       display_names:
         other: Rubelus Russicus
         one: Rubelus Russicus
+    USD:
+      display_names:
+        other: Dollarium Civitatum Foederatarum
+        one: Dollarium Civitatum Foederatarum
     XAG:
       display_names:
         other: Argentum

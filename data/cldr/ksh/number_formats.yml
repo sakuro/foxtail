@@ -1,6 +1,6 @@
 ---
 locale: ksh
-generated_at: '2025-09-13T17:38:34Z'
+generated_at: '2025-09-14T06:10:49Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -8,19 +8,122 @@ number_formats:
     group: " "
     minus_sign: "−"
     exponential: "×10^"
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 tsd
+        other: 0 tsd
+      '10000':
+        one: 00 tsd
+        other: 00 tsd
+      '100000':
+        one: 000 tsd
+        other: 000 tsd
+      '1000000':
+        one: 0 Mio
+        other: 0 Mio
+      '10000000':
+        one: 00 Mio
+        other: 00 Mio
+      '100000000':
+        one: 000 Mio
+        other: 000 Mio
+      '1000000000':
+        one: 0 Mrd
+        other: 0 Mrd
+      '10000000000':
+        one: 00 Mrd
+        other: 00 Mrd
+      '100000000000':
+        one: 000 Mrd
+        other: 000 Mrd
+      '1000000000000':
+        one: 0 Bio
+        other: 0 Bio
+      '10000000000000':
+        one: 00 Bio
+        other: 00 Bio
+      '100000000000000':
+        one: 000 Bio
+        other: 000 Bio
+    long:
+      '1000':
+        zero: 0 Dousend
+        one: 0 Dousend
+        other: 0 Dousend
+      '10000':
+        zero: 00 Dousend
+        one: 00 Dousend
+        other: 00 Dousend
+      '100000':
+        zero: 000 Dousend
+        one: 000 Dousend
+        other: 000 Dousend
+      '1000000':
+        zero: 0 Milljuhne
+        one: 0 Million
+        other: 0 Milljuhne
+      '10000000':
+        zero: 00 Milljuhne
+        one: 00 Milljuhne
+        other: 00 Millionen
+      '100000000':
+        zero: 000 Milljuhne
+        one: 000 Milljuhne
+        other: 000 Millionen
+      '1000000000':
+        zero: 0 Milljard
+        one: 0 Milliarde
+        other: 0 Milljarde
+      '10000000000':
+        zero: 00 Milljarde
+        one: 00 Milljarde
+        other: 00 Milliarden
+      '100000000000':
+        zero: 000 Milljarde
+        one: 000 Milliarde
+        other: 000 Milliarden
+      '1000000000000':
+        zero: 0 Billjuhn
+        one: 0 Billjuhn
+        other: 0 Billjuhn
+      '10000000000000':
+        zero: 00 Billjuhn
+        one: 00 Billion
+        other: 00 Billionen
+      '100000000000000':
+        zero: 000 Billjuhn
+        one: 000 Billion
+        other: 000 Billionen
   currencies:
+    AED:
+      display_names:
+        other: de vereineschte arraabesche Emiraate ier Dirham
+        one: de vereineschte arraabesche Emiraate ier Dirham
     AFN:
       display_names:
         other: Afjahni
         one: Afjahni
+    ALL:
+      display_names:
+        other: albaanesche Lek
+        one: albaanesche Lek
     AMD:
       display_names:
         other: armeenesche Dram
         one: armeenesche Dram
+    ANG:
+      display_names:
+        other: neederlängsch antillesche Jullde
+        one: neederlängsch antillesche Jullde
     AOA:
       display_names:
         other: angjolaanesche Kwansa
@@ -34,6 +137,14 @@ number_formats:
       display_names:
         other: austraalesche Dollaa
         one: austraalesche Dollaa
+    AWG:
+      display_names:
+        other: arubesche Florin
+        one: arubesche Florin
+    AZM:
+      display_names:
+        other: Asserbaidschaani Manat (1993–2006)
+        one: Asserbaidschaani Manat (1993–2006)
     AZN:
       display_names:
         other: Asserbaidschaani Manat
@@ -51,6 +162,18 @@ number_formats:
       display_names:
         other: Taka us Bangladäsch
         one: Taka us Bangladäsch
+    BGN:
+      display_names:
+        other: buljaaresche Lev
+        one: buljaaresche Lev
+    BHD:
+      display_names:
+        other: Bachrainesche Denaa
+        one: Bachrainesche Denaa
+    BIF:
+      display_names:
+        other: burundesche Frang
+        one: burundesche Frang
     BMD:
       display_names:
         other: Bermuuda-Dollaa
@@ -72,10 +195,23 @@ number_formats:
       display_names:
         other: bahama’sche Dollaa
         one: bahama’sche Dollaa
+    BTN:
+      display_names:
+        other: Bhutanesesche Ngultrum
+        one: Bhutanesesche Ngultrum
+        zero: Bhutanesesche Ngultrum
     BWP:
       display_names:
         other: Pula us Bozwaana
         one: Pula us Bozwaana
+    BYN:
+      display_names:
+        other: wiißrußesche Rubel
+        one: wiißrußesche Rubel
+    BYR:
+      display_names:
+        other: wiißrußesche Rubel (2000–2016)
+        one: wiißrußesche Rubel (2000–2016)
     BZD:
       display_names:
         other: Belizjaanesche Dollaa
@@ -85,6 +221,14 @@ number_formats:
       display_names:
         other: kannaadesche Dollaa
         one: kannaadesche Dollaa
+    CDF:
+      display_names:
+        other: kongjoleesesche Frang
+        one: kongjoleesesche Frang
+    CHF:
+      display_names:
+        other: schweijzer Fränkli
+        one: schweijzer Fränkli
     CLP:
       display_names:
         other: schileenesche Peesos
@@ -112,10 +256,18 @@ number_formats:
       display_names:
         other: kubaanesche Peesos
         one: kubaanesche Peesos
+    CVE:
+      display_names:
+        other: kapverdesche Eskuudos
+        one: kapverdesche Eskuudos
     CZK:
       display_names:
         other: tschäschesche Kruhne
         one: tschäschesche Kruhne
+    DJF:
+      display_names:
+        other: Frang uß Dschibuti
+        one: Frang uß Dschibuti
     DKK:
       display_names:
         other: dänesche Kruhne
@@ -125,10 +277,26 @@ number_formats:
         other: dommenikaanesche Peesos
         one: dommenikaanesche Peeso
         zero: dommenikaanesche Peesos
+    DZD:
+      display_names:
+        other: aljeresche Denaa
+        one: aljeresche Denaa
+    EEK:
+      display_names:
+        other: Äßnesche Kruhne
+        one: Äßnesche Kruhne
     EGP:
       display_names:
         other: äjiptesche Pongk
         one: äjiptesche Pongk
+    ERN:
+      display_names:
+        other: Nafka uß Erritreja
+        one: Nafka uß Erritreja
+    ETB:
+      display_names:
+        other: ätejoopesche Birr
+        one: ätejoopesche Birr
     EUR:
       display_names:
         other: Euro
@@ -158,6 +326,10 @@ number_formats:
       display_names:
         other: jibraltaa’sche Pongk
         one: jibraltaa’sche Pongk
+    GMD:
+      display_names:
+        other: jambesche Dalasi
+        one: jambesche Dalasi
     GNF:
       display_names:
         other: Jineea-Franke
@@ -183,6 +355,10 @@ number_formats:
       display_names:
         other: krowaatesche Kuna
         one: krowaatesche Kuna
+    HTG:
+      display_names:
+        other: haiitesche Gourde
+        one: haiitesche Gourde
     HUF:
       display_names:
         other: unjarresche Forint
@@ -199,6 +375,14 @@ number_formats:
       display_names:
         other: indesche Ruupije
         one: indesche Ruupije
+    IQD:
+      display_names:
+        other: iraakesche Denaa
+        one: iraakesche Denaa
+    IRR:
+      display_names:
+        other: persesche Rial
+        one: persesche Rial
     ISK:
       display_names:
         other: ißländesche Kruhne
@@ -207,10 +391,18 @@ number_formats:
       display_names:
         other: jamaikaanesche Dollaa
         one: jamaikaanesche Dollaa
+    JOD:
+      display_names:
+        other: Jordaanesche Dollaa
+        one: Jordaanesche Dollaa
     JPY:
       display_names:
         other: japaanesche Jen
         one: japaanesche Jen
+    KES:
+      display_names:
+        other: Kenjaanesche Schillinge
+        one: Kenjaanesche Schillinge
     KGS:
       display_names:
         other: kirjiisesche Som
@@ -231,6 +423,10 @@ number_formats:
       display_names:
         other: söödkorejaansche Won
         one: söödkorejaansche Won
+    KWD:
+      display_names:
+        other: kuwaitesche Denaa
+        one: kuwaitesche Denaa
     KYD:
       display_names:
         other: Kaimann-Dollaa
@@ -257,6 +453,10 @@ number_formats:
       display_names:
         other: liberijaanesche Dollaa
         one: liberijaanesche Dollaa
+    LSL:
+      display_names:
+        other: lesoothesche Loti
+        one: lesoothesche Loti
     LTL:
       display_names:
         other: littouesche Litas
@@ -265,10 +465,26 @@ number_formats:
       display_names:
         other: lättesche Lats
         one: lättesche Lats
+    LYD:
+      display_names:
+        other: libesche Denaa
+        one: libesche Denaa
+    MAD:
+      display_names:
+        other: marrokaanesche Dirhamm
+        one: marrokaanesche Dirhamm
+    MDL:
+      display_names:
+        other: moldaavesche Leu
+        one: moldaavesche Leu
     MGA:
       display_names:
         other: madajaskesche Ariary
         one: madajaskesche Ariary
+    MKD:
+      display_names:
+        other: mazedoonesche Denaa
+        one: mazedoonesche Denaa
     MMK:
       display_names:
         other: burmeesesche Kyat
@@ -277,10 +493,30 @@ number_formats:
       display_names:
         other: mongjoolesche Tugrik
         one: mongjoolesche Tugrik
+    MOP:
+      display_names:
+        other: makaneesesche Pataca
+        one: makaneesesche Pataca
+    MRO:
+      display_names:
+        other: mauretanesche Ouguiya (1973–2017)
+        one: mauretanesche Ouguiya (1973–2017)
+    MRU:
+      display_names:
+        other: mauretanesche Ouguiya
+        one: mauretanesche Ouguiya
     MUR:
       display_names:
         other: maurizjahnesche Ruupije
         one: maurizjahnesche Ruupije
+    MVR:
+      display_names:
+        other: mallediivesche Rufiyaa
+        one: mallediivesche Rufiyaa
+    MWK:
+      display_names:
+        other: malaawesche Kwache
+        one: malaawesche Kwache
     MXN:
       display_names:
         other: mexekaanesche Peeso
@@ -289,6 +525,14 @@ number_formats:
       display_names:
         other: malaisesche Ringgit
         one: malaisesche Ringgit
+    MZM:
+      display_names:
+        other: mosambikaanesche Metical (1980–2006)
+        one: mosambikaanesche Metical (1980–2006)
+    MZN:
+      display_names:
+        other: mossambikaanesche Metical
+        one: mossambikaanesche Metical
     NAD:
       display_names:
         other: namiibesche Dollaa
@@ -313,287 +557,6 @@ number_formats:
       display_names:
         other: neuseeländesche Dollaa
         one: neuseeländesche Dollaa
-    PHP:
-      display_names:
-        other: fillipiinesche Pesos
-        one: fillipiinesche Pesos
-    PKR:
-      display_names:
-        other: pakestaanesche Ruupije
-        one: pakestaanesche Ruupije
-    PLN:
-      display_names:
-        other: polnesche Złoty
-        one: polnesche Złoty
-    PYG:
-      display_names:
-        other: parajuaanesche Juarani
-        one: parajuaanesche Juarani
-    RON:
-      display_names:
-        other: romäänesche Leu
-        one: romäänesche Leu
-    RUB:
-      display_names:
-        other: russesche Ruubel
-        one: russesche Ruubel
-    RWF:
-      display_names:
-        other: ruandesche Frang
-        one: ruandesche Frang
-    SBD:
-      display_names:
-        other: solomonesche Dollaa
-        one: solomonesche Dollaa
-    SEK:
-      display_names:
-        other: schweedesche Kruhne
-        one: schweedesche Kruhne
-    SGD:
-      display_names:
-        other: singjapurejaanesche Dollaa
-        one: singjapurejaanesche Dollaa
-    SHP:
-      display_names:
-        other: Zint-Hellena-Pongk
-        one: Zint-Hellena-Pongk
-    SRD:
-      display_names:
-        other: sürinameesesche Dollaa
-        one: sürinameesesche Dollaa
-    SSP:
-      display_names:
-        other: södsudaneesesche Pongk
-        one: södsudaneesesche Pongk
-    STN:
-      display_names:
-        other: Dobra vun São Tomé un Príncipe
-        one: Dobra vun São Tomé un Príncipe
-    SYP:
-      display_names:
-        other: süüresche Pund
-        one: süüresche Pund
-    THB:
-      display_names:
-        other: tailändesche Baht
-        one: tailändesche Baht
-    TOP:
-      display_names:
-        other: tongjanes Paʻangache
-        one: tongjanes Paʻangache
-    TRY:
-      display_names:
-        other: törkesche Liire
-        one: törkesche Liire
-    TTD:
-      display_names:
-        other: Dollaa uß Trinidad un Tobääjo
-        one: Dollaa uß Trinidad un Tobääjo
-    TWD:
-      display_names:
-        other: neu taiwaneesesche Dollaa
-        one: neu taiwaneesesche Dollaa
-    UAH:
-      display_names:
-        other: ukraijnesche Hryvnia
-        one: ukraijnesche Hryvnia
-    USD:
-      display_names:
-        other: ammärrikaanesche Dollaa
-        one: ammärrikaanesche Dollaa
-    UYU:
-      display_names:
-        other: urrujuwaische Peeso
-        one: urrujuwaische Peeso
-    VEF:
-      display_names:
-        other: venezuelaanesche Bolívar (2008–2018)
-        one: venezuelaanesche Bolívar (2008–2018)
-    VND:
-      display_names:
-        other: vijätnammeesesche Dong
-        one: vijätnammeesesche Dong
-    XAF:
-      display_names:
-        other: Kmmeruhner Frang
-        one: Kmmeruhner Frang
-    XCD:
-      display_names:
-        other: oß-karribbesche Dollaa
-        one: oß-karribbesche Dollaa
-    XOF:
-      display_names:
-        other: Frang uß de Älfebeinköß
-        one: Frang uß de Älfebeinköß
-    XPF:
-      display_names:
-        other: polineesesche Frang
-        one: polineesesche Frang
-    XXX:
-      display_names:
-        other: onbikannte Währong
-        one: onbikannte Währong
-    ZAR:
-      display_names:
-        other: södaffrekaanesche Rand
-        one: södaffrekaanesche Rand
-    ZMW:
-      display_names:
-        other: sambesche Kwacha
-        one: sambesche Kwacha
-    AED:
-      display_names:
-        other: de vereineschte arraabesche Emiraate ier Dirham
-        one: de vereineschte arraabesche Emiraate ier Dirham
-    ALL:
-      display_names:
-        other: albaanesche Lek
-        one: albaanesche Lek
-    ANG:
-      display_names:
-        other: neederlängsch antillesche Jullde
-        one: neederlängsch antillesche Jullde
-    AWG:
-      display_names:
-        other: arubesche Florin
-        one: arubesche Florin
-    AZM:
-      display_names:
-        other: Asserbaidschaani Manat (1993–2006)
-        one: Asserbaidschaani Manat (1993–2006)
-    BGN:
-      display_names:
-        other: buljaaresche Lev
-        one: buljaaresche Lev
-    BHD:
-      display_names:
-        other: Bachrainesche Denaa
-        one: Bachrainesche Denaa
-    BIF:
-      display_names:
-        other: burundesche Frang
-        one: burundesche Frang
-    BTN:
-      display_names:
-        other: Bhutanesesche Ngultrum
-        one: Bhutanesesche Ngultrum
-        zero: Bhutanesesche Ngultrum
-    BYN:
-      display_names:
-        other: wiißrußesche Rubel
-        one: wiißrußesche Rubel
-    BYR:
-      display_names:
-        other: wiißrußesche Rubel (2000–2016)
-        one: wiißrußesche Rubel (2000–2016)
-    CDF:
-      display_names:
-        other: kongjoleesesche Frang
-        one: kongjoleesesche Frang
-    CHF:
-      display_names:
-        other: schweijzer Fränkli
-        one: schweijzer Fränkli
-    CVE:
-      display_names:
-        other: kapverdesche Eskuudos
-        one: kapverdesche Eskuudos
-    DJF:
-      display_names:
-        other: Frang uß Dschibuti
-        one: Frang uß Dschibuti
-    DZD:
-      display_names:
-        other: aljeresche Denaa
-        one: aljeresche Denaa
-    EEK:
-      display_names:
-        other: Äßnesche Kruhne
-        one: Äßnesche Kruhne
-    ERN:
-      display_names:
-        other: Nafka uß Erritreja
-        one: Nafka uß Erritreja
-    ETB:
-      display_names:
-        other: ätejoopesche Birr
-        one: ätejoopesche Birr
-    GMD:
-      display_names:
-        other: jambesche Dalasi
-        one: jambesche Dalasi
-    HTG:
-      display_names:
-        other: haiitesche Gourde
-        one: haiitesche Gourde
-    IQD:
-      display_names:
-        other: iraakesche Denaa
-        one: iraakesche Denaa
-    IRR:
-      display_names:
-        other: persesche Rial
-        one: persesche Rial
-    JOD:
-      display_names:
-        other: Jordaanesche Dollaa
-        one: Jordaanesche Dollaa
-    KES:
-      display_names:
-        other: Kenjaanesche Schillinge
-        one: Kenjaanesche Schillinge
-    KWD:
-      display_names:
-        other: kuwaitesche Denaa
-        one: kuwaitesche Denaa
-    LSL:
-      display_names:
-        other: lesoothesche Loti
-        one: lesoothesche Loti
-    LYD:
-      display_names:
-        other: libesche Denaa
-        one: libesche Denaa
-    MAD:
-      display_names:
-        other: marrokaanesche Dirhamm
-        one: marrokaanesche Dirhamm
-    MDL:
-      display_names:
-        other: moldaavesche Leu
-        one: moldaavesche Leu
-    MKD:
-      display_names:
-        other: mazedoonesche Denaa
-        one: mazedoonesche Denaa
-    MOP:
-      display_names:
-        other: makaneesesche Pataca
-        one: makaneesesche Pataca
-    MRO:
-      display_names:
-        other: mauretanesche Ouguiya (1973–2017)
-        one: mauretanesche Ouguiya (1973–2017)
-    MRU:
-      display_names:
-        other: mauretanesche Ouguiya
-        one: mauretanesche Ouguiya
-    MVR:
-      display_names:
-        other: mallediivesche Rufiyaa
-        one: mallediivesche Rufiyaa
-    MWK:
-      display_names:
-        other: malaawesche Kwache
-        one: malaawesche Kwache
-    MZM:
-      display_names:
-        other: mosambikaanesche Metical (1980–2006)
-        one: mosambikaanesche Metical (1980–2006)
-    MZN:
-      display_names:
-        other: mossambikaanesche Metical
-        one: mossambikaanesche Metical
     OMR:
       display_names:
         other: ommaanesche Rijal
@@ -610,6 +573,22 @@ number_formats:
       display_names:
         other: papua neujinejaanesche Kina
         one: papua neujinejaanesche Kina
+    PHP:
+      display_names:
+        other: fillipiinesche Pesos
+        one: fillipiinesche Pesos
+    PKR:
+      display_names:
+        other: pakestaanesche Ruupije
+        one: pakestaanesche Ruupije
+    PLN:
+      display_names:
+        other: polnesche Złoty
+        one: polnesche Złoty
+    PYG:
+      display_names:
+        other: parajuaanesche Juarani
+        one: parajuaanesche Juarani
     QAR:
       display_names:
         other: kataaresche Rijal
@@ -618,14 +597,30 @@ number_formats:
       display_names:
         other: romäänesche Leu (1952–2006)
         one: romäänesche Leu (1952–2006)
+    RON:
+      display_names:
+        other: romäänesche Leu
+        one: romäänesche Leu
     RSD:
       display_names:
         other: särbesche Denaare
         one: särbesche Denaare
+    RUB:
+      display_names:
+        other: russesche Ruubel
+        one: russesche Ruubel
+    RWF:
+      display_names:
+        other: ruandesche Frang
+        one: ruandesche Frang
     SAR:
       display_names:
         other: saudesche Rijal
         one: saudesche Rijal
+    SBD:
+      display_names:
+        other: solomonesche Dollaa
+        one: solomonesche Dollaa
     SCR:
       display_names:
         other: seischellesche Ruupije
@@ -634,6 +629,18 @@ number_formats:
       display_names:
         other: sudaneesesche Pongk
         one: sudaneesesche Pongk
+    SEK:
+      display_names:
+        other: schweedesche Kruhne
+        one: schweedesche Kruhne
+    SGD:
+      display_names:
+        other: singjapurejaanesche Dollaa
+        one: singjapurejaanesche Dollaa
+    SHP:
+      display_names:
+        other: Zint-Hellena-Pongk
+        one: Zint-Hellena-Pongk
     SKK:
       display_names:
         other: ßlovaakesche Kruhne
@@ -650,18 +657,38 @@ number_formats:
       display_names:
         other: somaalesche Schillenge
         one: somaalesche Schillenge
+    SRD:
+      display_names:
+        other: sürinameesesche Dollaa
+        one: sürinameesesche Dollaa
+    SSP:
+      display_names:
+        other: södsudaneesesche Pongk
+        one: södsudaneesesche Pongk
     STD:
       display_names:
         other: Dobra vun São Tomé un Príncipe (1977–2017)
         one: Dobra vun São Tomé un Príncipe (1977–2017)
+    STN:
+      display_names:
+        other: Dobra vun São Tomé un Príncipe
+        one: Dobra vun São Tomé un Príncipe
     SVC:
       display_names:
         other: asalvadorejaanesche Cosan
         one: asalvadorejaanesche Cosan
+    SYP:
+      display_names:
+        other: süüresche Pund
+        one: süüresche Pund
     SZL:
       display_names:
         other: swasiländesche Lilangeni
         one: swasiländesche Lilangeni
+    THB:
+      display_names:
+        other: tailändesche Baht
+        one: tailändesche Baht
     TJS:
       display_names:
         other: tadschikißtaanesche Somoni
@@ -678,22 +705,58 @@ number_formats:
       display_names:
         other: tuneesesche Denaa
         one: tuneesesche Denaa
+    TOP:
+      display_names:
+        other: tongjanes Paʻangache
+        one: tongjanes Paʻangache
+    TRY:
+      display_names:
+        other: törkesche Liire
+        one: törkesche Liire
+    TTD:
+      display_names:
+        other: Dollaa uß Trinidad un Tobääjo
+        one: Dollaa uß Trinidad un Tobääjo
+    TWD:
+      display_names:
+        other: neu taiwaneesesche Dollaa
+        one: neu taiwaneesesche Dollaa
     TZS:
       display_names:
         other: tansaanesche Schillenge
         one: tansaanesche Schillenge
+    UAH:
+      display_names:
+        other: ukraijnesche Hryvnia
+        one: ukraijnesche Hryvnia
     UGX:
       display_names:
         other: ujandesche Schillenge
         one: ujandesche Schillenge
+    USD:
+      display_names:
+        other: ammärrikaanesche Dollaa
+        one: ammärrikaanesche Dollaa
+    UYU:
+      display_names:
+        other: urrujuwaische Peeso
+        one: urrujuwaische Peeso
     UZS:
       display_names:
         other: ußbeekesche Som
         one: ußbeekesche Som
+    VEF:
+      display_names:
+        other: venezuelaanesche Bolívar (2008–2018)
+        one: venezuelaanesche Bolívar (2008–2018)
     VES:
       display_names:
         other: venezuelaanesche Bolívar
         one: venezuelaanesche Bolívar
+    VND:
+      display_names:
+        other: vijätnammeesesche Dong
+        one: vijätnammeesesche Dong
     VUV:
       display_names:
         other: vanuatesche Vatu
@@ -702,6 +765,10 @@ number_formats:
       display_names:
         other: samowaanesche Tala
         one: samowaanesche Tala
+    XAF:
+      display_names:
+        other: Kmmeruhner Frang
+        one: Kmmeruhner Frang
     XAG:
       display_names:
         other: Sellver
@@ -710,14 +777,26 @@ number_formats:
       display_names:
         other: Jold
         one: Jold
+    XCD:
+      display_names:
+        other: oß-karribbesche Dollaa
+        one: oß-karribbesche Dollaa
     XFO:
       display_names:
         other: franzüüsesche Joldfranke
         one: franzüüsesche Joldfranke
+    XOF:
+      display_names:
+        other: Frang uß de Älfebeinköß
+        one: Frang uß de Älfebeinköß
     XPD:
       display_names:
         other: Palladijum
         one: Palladijum
+    XPF:
+      display_names:
+        other: polineesesche Frang
+        one: polineesesche Frang
     XPT:
       display_names:
         other: Plaatin
@@ -726,14 +805,26 @@ number_formats:
       display_names:
         other: Währong zum Prööfe
         one: Währong zum Prööfe
+    XXX:
+      display_names:
+        other: onbikannte Währong
+        one: onbikannte Währong
     YER:
       display_names:
         other: jemenitesche Rijal
         one: jemenitesche Rijal
+    ZAR:
+      display_names:
+        other: södaffrekaanesche Rand
+        one: södaffrekaanesche Rand
     ZMK:
       display_names:
         other: sambesche Kwacha (1968–2012)
         one: sambesche Kwacha (1968–2012)
+    ZMW:
+      display_names:
+        other: sambesche Kwacha
+        one: sambesche Kwacha
     ZWD:
       display_names:
         other: simbabwesche Dollaa (1980–2008)
@@ -742,3 +833,436 @@ number_formats:
       display_names:
         other: simbabwesche Dollaa (2009)
         one: simbabwesche Dollaa (2009)
+  units:
+    g-force:
+      long:
+        zero: "{0}-fache Erdbeschleunigung"
+        one: "{0}-fache Erdbeschleunigung"
+        other: "{0}-fache Erdbeschleunigung"
+      short:
+        display_name: "-fache Erdbeschleunigung"
+      narrow:
+        zero: "{0}G"
+        one: "{0}G"
+        other: "{0}G"
+    degree:
+      long:
+        zero: "{0} Graad"
+        one: "{0} Graad"
+        other: "{0} Graad"
+      short:
+        display_name: Graad
+    arc-minute:
+      long:
+        zero: "{0} Winkelmenutte"
+        one: "{0} Winkelmenutte"
+        other: "{0} Winkelmenutte"
+      short:
+        display_name: Winkelmenutte
+    arc-second:
+      long:
+        zero: "{0} Winkelsekunde"
+        one: "{0} Winkelsekunde"
+        other: "{0} Winkelsekunde"
+      short:
+        display_name: Winkelsekunde
+    square-kilometer:
+      long:
+        zero: "{0} Quadratkilometer"
+        one: "{0} Quadratkilometer"
+        other: "{0} Quadratkilometer"
+      short:
+        display_name: Quadratkilometer
+      narrow:
+        zero: "{0}km²"
+        one: "{0}km²"
+        other: "{0}km²"
+    hectare:
+      long:
+        zero: "{0} hektar"
+        one: "{0} hektar"
+        other: "{0} hektar"
+      short:
+        display_name: hektar
+      narrow:
+        zero: "{0}ha"
+        one: "{0}ha"
+        other: "{0}ha"
+    square-meter:
+      long:
+        zero: "{0} Quadratmeter"
+        one: "{0} Quadratmeter"
+        other: "{0} Quadratmeter"
+      short:
+        display_name: Quadratmeter
+      narrow:
+        zero: "{0}m²"
+        one: "{0}m²"
+        other: "{0}m²"
+    square-mile:
+      long:
+        zero: "{0} englischen Quadratmeilen"
+        one: "{0} englische Quadratmeile"
+        other: "{0} englischen Quadratmeilen"
+      short:
+        display_name: englischen Quadratmeilen
+    acre:
+      long:
+        zero: "{0} angloamerikanischen Acre"
+        one: "{0} angloamerikanische Acre"
+        other: "{0} angloamerikanischen Acre"
+      short:
+        display_name: angloamerikanischen Acre
+    square-foot:
+      long:
+        zero: "{0} Quadratvoss"
+        one: "{0} Quadratvoss"
+        other: "{0} Quadratvoss"
+      short:
+        display_name: Quadratvoss
+    year:
+      long:
+        zero: "{0} Johre"
+        one: "{0} Johre"
+        other: "{0} Johre"
+        per_unit_pattern: "{0} pro Johre"
+      short:
+        display_name: Johre
+        zero: "{0} Jr"
+        one: "{0} Jr"
+        other: "{0} Jr"
+        per_unit_pattern: "{0}/Jr"
+    month:
+      long:
+        zero: "{0} Mohnde"
+        one: "{0} Mohnde"
+        other: "{0} Mohnde"
+        per_unit_pattern: "{0} pro Mohnde"
+      short:
+        display_name: Mohnde
+        zero: "{0} Mohn"
+        one: "{0} Mohn"
+        other: "{0} Mohn"
+        per_unit_pattern: "{0}/Mohn"
+    week:
+      long:
+        zero: "{0} Woche"
+        one: "{0} Woche"
+        other: "{0} Woche"
+        per_unit_pattern: "{0} pro Woche"
+      short:
+        display_name: Woche
+    day:
+      long:
+        zero: "{0} Dääsch"
+        one: "{0} Dääsch"
+        other: "{0} Dääsch"
+        per_unit_pattern: "{0} pro Dääsch"
+      short:
+        display_name: Dääsch
+      narrow:
+        zero: "{0}d"
+        one: "{0}d"
+        other: "{0}d"
+    hour:
+      long:
+        zero: "{0} Schtunde"
+        one: "{0} Schtunde"
+        other: "{0} Schtunde"
+      short:
+        display_name: Schtunde
+        per_unit_pattern: "{0} pro Schtunde"
+      narrow:
+        zero: "{0}h"
+        one: "{0}h"
+        other: "{0}h"
+    minute:
+      long:
+        zero: "{0} Menutte"
+        one: "{0} Menutte"
+        other: "{0} Menutte"
+        per_unit_pattern: "{0} pro Menutte"
+      short:
+        display_name: Menutte
+      narrow:
+        zero: "{0}m"
+        one: "{0}m"
+        other: "{0}m"
+    second:
+      long:
+        zero: "{0} Sekunde"
+        one: "{0} Sekunde"
+        other: "{0} Sekunde"
+        per_unit_pattern: "{0} pro Sekunde"
+      short:
+        display_name: Sekunde
+      narrow:
+        zero: "{0}s"
+        one: "{0}s"
+        other: "{0}s"
+    millisecond:
+      long:
+        zero: "{0} Millisekunde"
+        one: "{0} Millisekunde"
+        other: "{0} Millisekunde"
+      short:
+        display_name: Millisekunde
+      narrow:
+        zero: "{0}ms"
+        one: "{0}ms"
+        other: "{0}ms"
+    kilometer:
+      long:
+        zero: "{0} Kilometer"
+        one: "{0} Kilometer"
+        other: "{0} Kilometer"
+        per_unit_pattern: "{0} pro Kilometer"
+      short:
+        display_name: Kilometer
+      narrow:
+        zero: "{0}km"
+        one: "{0}km"
+        other: "{0}km"
+    meter:
+      long:
+        zero: "{0} Meter"
+        one: "{0} Meter"
+        other: "{0} Meter"
+      short:
+        display_name: Meter
+      narrow:
+        zero: "{0}m"
+        one: "{0}m"
+        other: "{0}m"
+    centimeter:
+      long:
+        zero: "{0} Zentimeter"
+        one: "{0} Zentimeter"
+        other: "{0} Zentimeter"
+      short:
+        display_name: Zentimeter
+      narrow:
+        zero: "{0}cm"
+        one: "{0}cm"
+        other: "{0}cm"
+    millimeter:
+      long:
+        zero: "{0} Millimeter"
+        one: "{0} Millimeter"
+        other: "{0} Millimeter"
+      short:
+        display_name: Millimeter
+      narrow:
+        zero: "{0}mm"
+        one: "{0}mm"
+        other: "{0}mm"
+    picometer:
+      long:
+        zero: "{0} Pikometer"
+        one: "{0} Pikometer"
+        other: "{0} Pikometer"
+      short:
+        display_name: Pikometer
+      narrow:
+        zero: "{0}pm"
+        one: "{0}pm"
+        other: "{0}pm"
+    mile:
+      long:
+        zero: "{0} englischen Meilen"
+        one: "{0} englische Meile"
+        other: "{0} englischen Meilen"
+      short:
+        display_name: englischen Meilen
+    kilogram:
+      long:
+        zero: "{0} Kilogramm"
+        one: "{0} Kilogramm"
+        other: "{0} Kilogramm"
+      short:
+        display_name: Kilogramm
+      narrow:
+        zero: "{0}kg"
+        one: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        zero: "{0} Gramm"
+        one: "{0} Gramm"
+        other: "{0} Gramm"
+      short:
+        display_name: Gramm
+      narrow:
+        zero: "{0}g"
+        one: "{0}g"
+        other: "{0}g"
+    kilowatt:
+      long:
+        zero: "{0} Kilowatt"
+        one: "{0} Kilowatt"
+        other: "{0} Kilowatt"
+      short:
+        display_name: Kilowatt
+      narrow:
+        zero: "{0}kW"
+        one: "{0}kW"
+        other: "{0}kW"
+    watt:
+      long:
+        zero: "{0} Watt"
+        one: "{0} Watt"
+        other: "{0} Watt"
+      short:
+        display_name: Watt
+      narrow:
+        zero: "{0}W"
+        one: "{0}W"
+        other: "{0}W"
+    horsepower:
+      long:
+        zero: "{0} Pferdestärken"
+        one: "{0} Pferdestärke"
+        other: "{0} Pferdestärken"
+      short:
+        display_name: Pferdestärken
+        zero: "{0} PS"
+        one: "{0} PS"
+        other: "{0} PS"
+      narrow:
+        zero: "{0}PS"
+        one: "{0}PS"
+        other: "{0}PS"
+    inch-ofhg:
+      long:
+        zero: "{0} Dumm Quecksilbersäule"
+        one: "{0} Dumm Quecksilbersäule"
+        other: "{0} Dumm Quecksilbersäule"
+      short:
+        display_name: Dumm Quecksilbersäule
+    millibar:
+      long:
+        zero: "{0} Millibar"
+        one: "{0} Millibar"
+        other: "{0} Millibar"
+      short:
+        display_name: Millibar
+      narrow:
+        zero: "{0}mbar"
+        one: "{0}mbar"
+        other: "{0}mbar"
+    hectopascal:
+      long:
+        zero: "{0} Hektopascal"
+        one: "{0} Hektopascal"
+        other: "{0} Hektopascal"
+      short:
+        display_name: Hektopascal
+      narrow:
+        zero: "{0}hPa"
+        one: "{0}hPa"
+        other: "{0}hPa"
+    kilometer-per-hour:
+      long:
+        zero: "{0} Kilometer pro Schtunde"
+        one: "{0} Kilometer pro Schtunde"
+        other: "{0} Kilometer pro Schtunde"
+      short:
+        display_name: Kilometer pro Schtunde
+      narrow:
+        zero: "{0}km/h"
+        one: "{0}km/h"
+        other: "{0}km/h"
+    meter-per-second:
+      long:
+        zero: "{0} Meter pro Sekunde"
+        one: "{0} Meter pro Sekunde"
+        other: "{0} Meter pro Sekunde"
+      short:
+        display_name: Meter pro Sekunde
+      narrow:
+        zero: "{0}m/s"
+        one: "{0}m/s"
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        zero: "{0} englischen Meilen pro Schtunde"
+        one: "{0} englische Meile pro Schtunde"
+        other: "{0} englischen Meilen pro Schtunde"
+      short:
+        display_name: englischen Meilen pro Schtunde
+    celsius:
+      long:
+        zero: "{0} Graad Celsius"
+        one: "{0} Graad Celsius"
+        other: "{0} Graad Celsius"
+      short:
+        display_name: Graad Celsius
+      narrow:
+        zero: "{0}°"
+        one: "{0}°"
+        other: "{0}°"
+    fahrenheit:
+      long:
+        zero: "{0} Graad Fahrenheit"
+        one: "{0} Graad Fahrenheit"
+        other: "{0} Graad Fahrenheit"
+      short:
+        display_name: Graad Fahrenheit
+    cubic-kilometer:
+      long:
+        zero: "{0} Kubikkilometer"
+        one: "{0} Kubikkilometer"
+        other: "{0} Kubikkilometer"
+      short:
+        display_name: Kubikkilometer
+      narrow:
+        zero: "{0}km³"
+        one: "{0}km³"
+        other: "{0}km³"
+    cubic-mile:
+      long:
+        zero: "{0} englischen Kubikmeilen"
+        one: "{0} englische Kubikmeile"
+        other: "{0} englischen Kubikmeilen"
+      short:
+        display_name: englischen Kubikmeilen
+    liter:
+      long:
+        zero: "{0} Liter"
+        one: "{0} Liter"
+        other: "{0} Liter"
+      short:
+        display_name: Liter
+      narrow:
+        zero: "{0}L"
+        one: "{0}L"
+        other: "{0}L"
+    century:
+      short:
+        zero: "{0} Jrh"
+        one: "{0} Jrh"
+        other: "{0} Jrh"
+    foot:
+      short:
+        display_name: Voss
+        zero: "{0} Voss"
+        one: "{0} Voss"
+        other: "{0} Voss"
+    inch:
+      short:
+        display_name: Dumm
+        zero: "{0} Dumm"
+        one: "{0} Dumm"
+        other: "{0} Dumm"
+    pound:
+      short:
+        display_name: Pfund
+        zero: "{0} Pfund"
+        one: "{0} Pfund"
+        other: "{0} Pfund"
+    ounce:
+      short:
+        display_name: Unzen
+        zero: "{0} Unzen"
+        one: "{0} Unze"
+        other: "{0} Unzen"

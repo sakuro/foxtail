@@ -1,23 +1,114 @@
 ---
 locale: ce
-generated_at: '2025-09-13T17:35:16Z'
+generated_at: '2025-09-14T06:08:48Z'
 cldr_version: '46'
 number_formats:
   symbols:
     nan: Терхьаш дац
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 эзар
+        other: 0 эзар
+      '10000':
+        one: 00 эзар
+        other: 00 эзар
+      '100000':
+        one: 000 эзар
+        other: 000 эзар
+      '1000000':
+        one: 0 млн
+        other: 0 млн
+      '10000000':
+        one: 00 млн
+        other: 00 млн
+      '100000000':
+        one: 000 млн
+        other: 000 млн
+      '1000000000':
+        one: 0 млрд
+        other: 0 млрд
+      '10000000000':
+        one: 00 млрд
+        other: 00 млрд
+      '100000000000':
+        one: 000 млрд
+        other: 000 млрд
+      '1000000000000':
+        one: 0 трлн
+        other: 0 трлн
+      '10000000000000':
+        one: 00 трлн
+        other: 00 трлн
+      '100000000000000':
+        one: 000 трлн
+        other: 000 трлн
+    long:
+      '1000':
+        one: 0 эзар
+        other: 0 эзар
+      '10000':
+        one: 00 эзар
+        other: 00 эзар
+      '100000':
+        one: 000 эзар
+        other: 000 эзар
+      '1000000':
+        one: 0 миллион
+        other: 0 миллион
+      '10000000':
+        one: 00 миллион
+        other: 00 миллион
+      '100000000':
+        one: 000 миллион
+        other: 000 миллион
+      '1000000000':
+        one: 0 миллиард
+        other: 0 миллиард
+      '10000000000':
+        one: 00 миллиард
+        other: 00 миллиард
+      '100000000000':
+        one: 000 миллиард
+        other: 000 миллиард
+      '1000000000000':
+        one: 0 триллион
+        other: 0 триллион
+      '10000000000000':
+        one: 00 триллион
+        other: 00 триллион
+      '100000000000000':
+        one: 000 триллион
+        other: 000 триллион
   currencies:
+    AED:
+      display_names:
+        other: Дирхамаш ӀЦЭ
+        one: Дирхам ӀЦЭ
     AFN:
       display_names:
         other: ОвхӀан-пачхьалкхан афганиш
         one: ОвхӀан-пачхьалкхан афгани
+    ALL:
+      display_names:
+        other: Албанин лекаш
+        one: Албанин лек
     AMD:
       display_names:
         other: Эрмалойчоьнан драмаш
         one: Эрмалойчоьнан драм
+    ANG:
+      display_names:
+        other: Нидерландин Антилин гульденш
+        one: Нидерландин Антилин гульден
     AOA:
       display_names:
         other: Анголан кванзаш
@@ -30,6 +121,10 @@ number_formats:
       display_names:
         other: Австралин долларш
         one: Австралин доллар
+    AWG:
+      display_names:
+        other: Арубан флоринаш
+        one: Арубан флорин
     AZN:
       display_names:
         other: Азербайджанан манаташ
@@ -46,6 +141,18 @@ number_formats:
       display_names:
         other: Бангладешан такаш
         one: Бангладешан така
+    BGN:
+      display_names:
+        other: Болгарин левш
+        one: Болгарин лев
+    BHD:
+      display_names:
+        other: Бахрейнан динараш
+        one: Бахрейнан динар
+    BIF:
+      display_names:
+        other: Бурундин франкаш
+        one: Бурундин франк
     BMD:
       display_names:
         other: Бермудан долларш
@@ -66,10 +173,23 @@ number_formats:
       display_names:
         other: Багаман долларш
         one: Багаман доллар
+    BTN:
+      display_names:
+        other: Бутанан нгултрумаш
+        one: Бутанан нгултрум
     BWP:
       display_names:
         other: Ботсванан пулаш
         one: Ботсванан пула
+    BYN:
+      symbol: р.
+      display_names:
+        other: Белоруссин соьмаш
+        one: Белоруссин сом
+    BYR:
+      display_names:
+        other: Белоруссин соьмаш (2000–2016)
+        one: Белоруссин сом (2000–2016)
     BZD:
       display_names:
         other: Белизин долларш
@@ -78,6 +198,14 @@ number_formats:
       display_names:
         other: Канадан долларш
         one: Канадан доллар
+    CDF:
+      display_names:
+        other: Конголезин франкаш
+        one: Конголезин франк
+    CHF:
+      display_names:
+        other: Швейцарин франкаш
+        one: Швейцарин франк
     CLP:
       display_names:
         other: Чилин песош
@@ -102,10 +230,18 @@ number_formats:
       display_names:
         other: Кубан песош
         one: Кубан песо
+    CVE:
+      display_names:
+        other: Кабо-Верден эскудош
+        one: Кабо-Верден эскудо
     CZK:
       display_names:
         other: Чехин кронаш
         one: Чехин крона
+    DJF:
+      display_names:
+        other: Джибутин франкаш
+        one: Джибутин франк
     DKK:
       display_names:
         other: Данин кронаш
@@ -114,10 +250,22 @@ number_formats:
       display_names:
         other: Доминикан песош
         one: Доминикан песо
+    DZD:
+      display_names:
+        other: Алжиран динараш
+        one: Алжиран динар
     EGP:
       display_names:
         other: Мисаран фунташ
         one: Мисаран фунт
+    ERN:
+      display_names:
+        other: Эритрейн накфаш
+        one: Эритрейн накфа
+    ETB:
+      display_names:
+        other: Эфиопин быраш
+        one: Эфиопин быр
     EUR:
       display_names:
         other: Еврош
@@ -146,6 +294,10 @@ number_formats:
       display_names:
         other: Гибралтаран фунташ
         one: Гибралтаран фунт
+    GMD:
+      display_names:
+        other: Гамбин даласиш
+        one: Гамбин даласи
     GNF:
       display_names:
         other: Гвинейн франкаш
@@ -170,6 +322,10 @@ number_formats:
       display_names:
         other: Хорватин кунаш
         one: Хорватин куна
+    HTG:
+      display_names:
+        other: Гаитин гурдаш
+        one: Гаитин гурд
     HUF:
       display_names:
         other: Венгрин форинташ
@@ -186,6 +342,14 @@ number_formats:
       display_names:
         other: Индин рупиш
         one: Индин рупи
+    IQD:
+      display_names:
+        other: Ӏиракъан динарш
+        one: Ӏиракъан динар
+    IRR:
+      display_names:
+        other: ГӀажарийчоьнан риалш
+        one: ГӀажарийчоьнан риал
     ISK:
       display_names:
         other: Исландин кронаш
@@ -194,10 +358,18 @@ number_formats:
       display_names:
         other: Ямайн долларш
         one: Ямайн доллар
+    JOD:
+      display_names:
+        other: Урданан динарш
+        one: Урданан динар
     JPY:
       display_names:
         other: Японин иенаш
         one: Японин иена
+    KES:
+      display_names:
+        other: Кенин шиллингаш
+        one: Кенин шиллинг
     KGS:
       display_names:
         other: Киргизин соьмаш
@@ -218,6 +390,10 @@ number_formats:
       display_names:
         other: Къилба Корейн вонаш
         one: Къилба Корейн вона
+    KWD:
+      display_names:
+        other: Кувейтан динарш
+        one: Кувейтан динар
     KYD:
       display_names:
         other: Кайманийн гӀайренийн долларш
@@ -242,10 +418,26 @@ number_formats:
       display_names:
         other: Либерин долларш
         one: Либерин доллар
+    LYD:
+      display_names:
+        other: Ливийский динараш
+        one: Ливийский динар
+    MAD:
+      display_names:
+        other: Мароккон дирхамаш
+        one: Мароккон дирхам
+    MDL:
+      display_names:
+        other: Молдавин лейш
+        one: Молдавин лей
     MGA:
       display_names:
         other: Малагасийн ариариш
         one: Малагасийн ариари
+    MKD:
+      display_names:
+        other: Македонин динараш
+        one: Македонин динар
     MMK:
       display_names:
         other: Мьянман кьяташ
@@ -254,10 +446,30 @@ number_formats:
       display_names:
         other: Монголин тугрикаш
         one: Монголин тугрик
+    MOP:
+      display_names:
+        other: Макаон патакаш
+        one: Макаон патака
+    MRO:
+      display_names:
+        other: Мавританин угиш (1973–2017)
+        one: Мавританин уги (1973–2017)
+    MRU:
+      display_names:
+        other: Мавританин угиш
+        one: Мавританин уги
     MUR:
       display_names:
         other: Маврикин рупиш
         one: Маврикин рупи
+    MVR:
+      display_names:
+        other: Мальдивийн руфиш
+        one: Мальдивийн руфи
+    MWK:
+      display_names:
+        other: Малавин квачаш
+        one: Малавин квача
     MXN:
       display_names:
         other: Мексикан песош
@@ -266,6 +478,10 @@ number_formats:
       display_names:
         other: Малайзин ринггиташ
         one: Малайзин ринггит
+    MZN:
+      display_names:
+        other: Мозамбикан метикалш
+        one: Мозамбикан метикал
     NAD:
       display_names:
         other: Намибин долларш
@@ -290,6 +506,22 @@ number_formats:
       display_names:
         other: Керла Зеландин долларш
         one: Керла Зеландин доллар
+    OMR:
+      display_names:
+        other: Оманан риалш
+        one: Оманан риал
+    PAB:
+      display_names:
+        other: Панаман бальбоаш
+        one: Панаман бальбоа
+    PEN:
+      display_names:
+        other: Перун солаш
+        one: Перун соль
+    PGK:
+      display_names:
+        other: Папуа — Керла Гвинейн кинаш
+        one: Папуа — Керла Гвинейн кина
     PHP:
       symbol: PHP
       display_names:
@@ -307,11 +539,19 @@ number_formats:
       display_names:
         other: Парагвайн гуараниш
         one: Парагвайн гуарани
+    QAR:
+      display_names:
+        other: Катаран риалш
+        one: Катаран риал
     RON:
       symbol: лей
       display_names:
         other: Румынин лейш
         one: Румынин лей
+    RSD:
+      display_names:
+        other: Сербин динараш
+        one: Сербин динар
     RUB:
       display_names:
         other: Российн соьмаш
@@ -320,10 +560,22 @@ number_formats:
       display_names:
         other: Руандан франкаш
         one: Руандан франк
+    SAR:
+      display_names:
+        other: СаӀудийн Ӏаьрбийчоьнан риалш
+        one: СаӀудийн Ӏаьрбийчоьнан риал
     SBD:
       display_names:
         other: Соломонан гӀайренийн долларш
         one: Соломонан гӀайренийн доллар
+    SCR:
+      display_names:
+        other: Сейшелан рупиш
+        one: Сейшелан рупи
+    SDG:
+      display_names:
+        other: Суданан фунташ
+        one: Суданан фунт
     SEK:
       display_names:
         other: Швецин кронаш
@@ -336,6 +588,18 @@ number_formats:
       display_names:
         other: Сийлахьчу Еленин гӀайрен фунташ
         one: Сийлахьчу Еленин гӀайрен фунт
+    SLE:
+      display_names:
+        other: леонеш
+        one: леоне
+    SLL:
+      display_names:
+        other: леонеш (1964—2022)
+        one: леоне (1964—2022)
+    SOS:
+      display_names:
+        other: Сомалин шиллингаш
+        one: Сомалин шиллинг
     SRD:
       display_names:
         other: Суринаман долларш
@@ -344,6 +608,10 @@ number_formats:
       display_names:
         other: Къилба Суданан фунташ
         one: Къилба Суданан фунт
+    STD:
+      display_names:
+        other: Сан-Томен а, Принсипин а добраш (1977–2017)
+        one: Сан-Томен а, Принсипин а добра (1977–2017)
     STN:
       display_names:
         other: Сан-Томен а, Принсипин а добраш
@@ -352,10 +620,26 @@ number_formats:
       display_names:
         other: Шеман фунташ
         one: Шеман фунт
+    SZL:
+      display_names:
+        other: Свазилендан лилангениш
+        one: Свазилендан лилангени
     THB:
       display_names:
         other: Таиландан баташ
         one: Таиландан бат
+    TJS:
+      display_names:
+        other: Таджикистанан сомониш
+        one: Таджикистанан сомони
+    TMT:
+      display_names:
+        other: Туркменин керла манаташ
+        one: Туркменин керла манат
+    TND:
+      display_names:
+        other: Тунисан динараш
+        one: Тунисан динар
     TOP:
       display_names:
         other: Тонганан паангаш
@@ -372,10 +656,18 @@ number_formats:
       display_names:
         other: Тайванан керла долларш
         one: Тайванан керла доллар
+    TZS:
+      display_names:
+        other: Танзанин шиллингаш
+        one: Танзанин шиллинг
     UAH:
       display_names:
         other: Украинан гривнаш
         one: Украинан гривна
+    UGX:
+      display_names:
+        other: Угандан шиллингаш
+        one: Угандан шиллинг
     USD:
       display_names:
         other: АЦШн долларш
@@ -384,14 +676,30 @@ number_formats:
       display_names:
         other: Уругвайн песош
         one: Уругвайн песо
+    UZS:
+      display_names:
+        other: Узбекистанан сомаш
+        one: Узбекистанан сом
     VEF:
       display_names:
         other: Венесуэлан боливарш (2008–2018)
         one: Венесуэлан боливар (2008–2018)
+    VES:
+      display_names:
+        other: Венесуэлан боливарш
+        one: Венесуэлан боливар
     VND:
       display_names:
         other: Вьетнаман донгаш
         one: Вьетнаман донг
+    VUV:
+      display_names:
+        other: Вануатун ватуш
+        one: Вануатун вату
+    WST:
+      display_names:
+        other: Самоанан талаш
+        one: Самоанан тала
     XAF:
       display_names:
         other: Юккъерчу Африкан КФА франкаш
@@ -412,6 +720,10 @@ number_formats:
       display_names:
         other: девзаш доцу я лелаш доцу ахча
         one: девзаш доцу я лелаш доцу ахча
+    YER:
+      display_names:
+        other: Йеменан риалш
+        one: Йеменан риал
     ZAR:
       display_names:
         other: Къилба-Африкин рэндаш
@@ -420,236 +732,170 @@ number_formats:
       display_names:
         other: Замбин квачаш
         one: Замбин квача
-    AED:
-      display_names:
-        other: Дирхамаш ӀЦЭ
-        one: Дирхам ӀЦЭ
-    ALL:
-      display_names:
-        other: Албанин лекаш
-        one: Албанин лек
-    ANG:
-      display_names:
-        other: Нидерландин Антилин гульденш
-        one: Нидерландин Антилин гульден
-    AWG:
-      display_names:
-        other: Арубан флоринаш
-        one: Арубан флорин
-    BGN:
-      display_names:
-        other: Болгарин левш
-        one: Болгарин лев
-    BHD:
-      display_names:
-        other: Бахрейнан динараш
-        one: Бахрейнан динар
-    BIF:
-      display_names:
-        other: Бурундин франкаш
-        one: Бурундин франк
-    BTN:
-      display_names:
-        other: Бутанан нгултрумаш
-        one: Бутанан нгултрум
-    BYN:
-      symbol: р.
-      display_names:
-        other: Белоруссин соьмаш
-        one: Белоруссин сом
-    BYR:
-      display_names:
-        other: Белоруссин соьмаш (2000–2016)
-        one: Белоруссин сом (2000–2016)
-    CDF:
-      display_names:
-        other: Конголезин франкаш
-        one: Конголезин франк
-    CHF:
-      display_names:
-        other: Швейцарин франкаш
-        one: Швейцарин франк
-    CVE:
-      display_names:
-        other: Кабо-Верден эскудош
-        one: Кабо-Верден эскудо
-    DJF:
-      display_names:
-        other: Джибутин франкаш
-        one: Джибутин франк
-    DZD:
-      display_names:
-        other: Алжиран динараш
-        one: Алжиран динар
-    ERN:
-      display_names:
-        other: Эритрейн накфаш
-        one: Эритрейн накфа
-    ETB:
-      display_names:
-        other: Эфиопин быраш
-        one: Эфиопин быр
-    GMD:
-      display_names:
-        other: Гамбин даласиш
-        one: Гамбин даласи
-    HTG:
-      display_names:
-        other: Гаитин гурдаш
-        one: Гаитин гурд
-    IQD:
-      display_names:
-        other: Ӏиракъан динарш
-        one: Ӏиракъан динар
-    IRR:
-      display_names:
-        other: ГӀажарийчоьнан риалш
-        one: ГӀажарийчоьнан риал
-    JOD:
-      display_names:
-        other: Урданан динарш
-        one: Урданан динар
-    KES:
-      display_names:
-        other: Кенин шиллингаш
-        one: Кенин шиллинг
-    KWD:
-      display_names:
-        other: Кувейтан динарш
-        one: Кувейтан динар
-    LYD:
-      display_names:
-        other: Ливийский динараш
-        one: Ливийский динар
-    MAD:
-      display_names:
-        other: Мароккон дирхамаш
-        one: Мароккон дирхам
-    MDL:
-      display_names:
-        other: Молдавин лейш
-        one: Молдавин лей
-    MKD:
-      display_names:
-        other: Македонин динараш
-        one: Македонин динар
-    MOP:
-      display_names:
-        other: Макаон патакаш
-        one: Макаон патака
-    MRO:
-      display_names:
-        other: Мавританин угиш (1973–2017)
-        one: Мавританин уги (1973–2017)
-    MRU:
-      display_names:
-        other: Мавританин угиш
-        one: Мавританин уги
-    MVR:
-      display_names:
-        other: Мальдивийн руфиш
-        one: Мальдивийн руфи
-    MWK:
-      display_names:
-        other: Малавин квачаш
-        one: Малавин квача
-    MZN:
-      display_names:
-        other: Мозамбикан метикалш
-        one: Мозамбикан метикал
-    OMR:
-      display_names:
-        other: Оманан риалш
-        one: Оманан риал
-    PAB:
-      display_names:
-        other: Панаман бальбоаш
-        one: Панаман бальбоа
-    PEN:
-      display_names:
-        other: Перун солаш
-        one: Перун соль
-    PGK:
-      display_names:
-        other: Папуа — Керла Гвинейн кинаш
-        one: Папуа — Керла Гвинейн кина
-    QAR:
-      display_names:
-        other: Катаран риалш
-        one: Катаран риал
-    RSD:
-      display_names:
-        other: Сербин динараш
-        one: Сербин динар
-    SAR:
-      display_names:
-        other: СаӀудийн Ӏаьрбийчоьнан риалш
-        one: СаӀудийн Ӏаьрбийчоьнан риал
-    SCR:
-      display_names:
-        other: Сейшелан рупиш
-        one: Сейшелан рупи
-    SDG:
-      display_names:
-        other: Суданан фунташ
-        one: Суданан фунт
-    SLE:
-      display_names:
-        other: леонеш
-        one: леоне
-    SLL:
-      display_names:
-        other: леонеш (1964—2022)
-        one: леоне (1964—2022)
-    SOS:
-      display_names:
-        other: Сомалин шиллингаш
-        one: Сомалин шиллинг
-    STD:
-      display_names:
-        other: Сан-Томен а, Принсипин а добраш (1977–2017)
-        one: Сан-Томен а, Принсипин а добра (1977–2017)
-    SZL:
-      display_names:
-        other: Свазилендан лилангениш
-        one: Свазилендан лилангени
-    TJS:
-      display_names:
-        other: Таджикистанан сомониш
-        one: Таджикистанан сомони
-    TMT:
-      display_names:
-        other: Туркменин керла манаташ
-        one: Туркменин керла манат
-    TND:
-      display_names:
-        other: Тунисан динараш
-        one: Тунисан динар
-    TZS:
-      display_names:
-        other: Танзанин шиллингаш
-        one: Танзанин шиллинг
-    UGX:
-      display_names:
-        other: Угандан шиллингаш
-        one: Угандан шиллинг
-    UZS:
-      display_names:
-        other: Узбекистанан сомаш
-        one: Узбекистанан сом
-    VES:
-      display_names:
-        other: Венесуэлан боливарш
-        one: Венесуэлан боливар
-    VUV:
-      display_names:
-        other: Вануатун ватуш
-        one: Вануатун вату
-    WST:
-      display_names:
-        other: Самоанан талаш
-        one: Самоанан тала
-    YER:
-      display_names:
-        other: Йеменан риалш
-        one: Йеменан риал
+  units:
+    year:
+      long:
+        display_name: шераш
+        one: "{0} шо"
+        other: "{0} шо"
+        per_unit_pattern: "{0} шарахь"
+      short:
+        display_name: ш.
+        one: "{0} ш."
+        other: "{0} ш."
+        per_unit_pattern: "{0} ш."
+    month:
+      long:
+        display_name: беттанаш
+        one: "{0} бутт"
+        other: "{0} бутт"
+        per_unit_pattern: "{0} баттахь"
+      short:
+        display_name: бут
+        one: "{0} бут."
+        other: "{0} бут."
+      narrow:
+        one: "{0} б."
+        other: "{0} б."
+    week:
+      long:
+        display_name: кӀиранаш
+        one: "{0} кӀира"
+        other: "{0} кӀира"
+        per_unit_pattern: "{0} кӀиранахь"
+      short:
+        display_name: кӀир
+        one: "{0} кӀир."
+        other: "{0} кӀир."
+      narrow:
+        one: "{0} кӀ."
+        other: "{0} кӀ."
+    day:
+      long:
+        one: "{0} де"
+        other: "{0} де"
+        per_unit_pattern: "{0} дийнахь"
+      short:
+        display_name: денош
+        one: д.
+        other: "{0} д."
+      narrow:
+        display_name: д.
+        one: "{0} д."
+        other: "{0} д."
+    hour:
+      long:
+        display_name: сахьташ
+        one: "{0} сахьт"
+        other: "{0} сахьт"
+        per_unit_pattern: "{0} сахьтехь"
+      short:
+        display_name: сахь
+        one: "{0} сахь."
+        other: "{0} сахь."
+        per_unit_pattern: "{0} сахь."
+    minute:
+      long:
+        display_name: миноташ
+        one: "{0} минот"
+        other: "{0} минот"
+        per_unit_pattern: "{0} минотехь"
+      short:
+        display_name: мин
+        one: "{0} мин"
+        other: "{0} мин"
+    second:
+      long:
+        display_name: секундаш
+        one: "{0} секунд"
+        other: "{0} секунд"
+        per_unit_pattern: "{0} секундехь"
+      short:
+        display_name: сек
+        one: "{0} сек"
+        other: "{0} сек"
+      narrow:
+        display_name: с
+        one: "{0} с"
+        other: "{0} с"
+    millisecond:
+      long:
+        display_name: миллисекундаш
+        one: "{0} миллисекунд"
+        other: "{0} миллисекунд"
+      short:
+        display_name: мс
+        one: "{0} мс"
+        other: "{0} мс"
+    microsecond:
+      long:
+        display_name: микросекундаш
+        one: "{0} микросекунд"
+        other: "{0} микросекунд"
+      short:
+        display_name: мкс
+        one: "{0} мкс"
+        other: "{0} мкс"
+    nanosecond:
+      long:
+        display_name: наносекундаш
+        one: "{0} наносекунд"
+        other: "{0} наносекунд"
+      short:
+        display_name: нс
+        one: "{0} нс"
+        other: "{0} нс"
+    kilometer:
+      long:
+        display_name: километраш
+        one: "{0} километр"
+        other: "{0} километр"
+      short:
+        display_name: км
+        one: "{0} км"
+        other: "{0} км"
+    decimeter:
+      long:
+        display_name: дециметраш
+        one: "{0} дециметр"
+        other: "{0} дециметр"
+      short:
+        display_name: дм
+        one: "{0} дм"
+        other: "{0} дм"
+    centimeter:
+      long:
+        display_name: сантиметраш
+        one: "{0} сантиметр"
+        other: "{0} сантиметр"
+        per_unit_pattern: "{0} сантиметрехь"
+      short:
+        display_name: см
+        one: "{0} см"
+        other: "{0} см"
+      narrow:
+        one: "{0} см"
+        other: "{0} cm"
+    inch:
+      long:
+        display_name: дюймаш
+        one: "{0} дюйм"
+        other: "{0} дюйм"
+      short:
+        display_name: дюйм
+        one: "{0} дюйм."
+        other: "{0} дюйм."
+    astronomical-unit:
+      long:
+        display_name: астрономин дакъош
+        one: "{0} астрономин дакъа"
+        other: "{0} астрономин дакъа"
+      short:
+        display_name: а. д.
+        one: "{0} а. д."
+        other: "{0} а. д."
+    foot:
+      short:
+        display_name: футаш
+        one: "{0} фут"
+        other: "{0} фут"

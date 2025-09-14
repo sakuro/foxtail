@@ -1,12 +1,22 @@
 ---
 locale: nd
-generated_at: '2025-09-13T17:39:24Z'
+generated_at: '2025-09-14T06:11:23Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Dola laseArab
+        one: Dola laseArab
     AOA:
       display_names:
         other: Kwanza yase Angola
@@ -15,98 +25,6 @@ number_formats:
       display_names:
         other: Dola yase Australia
         one: Dola yase Australia
-    BWP:
-      display_names:
-        other: Phula yase Botswana
-        one: Phula yase Botswana
-    CAD:
-      display_names:
-        other: Dola yase Khanada
-        one: Dola yase Khanada
-    CNY:
-      display_names:
-        other: Yuan Renminbi yase China
-        one: Yuan Renminbi yase China
-    EGP:
-      display_names:
-        other: Phawundi laseGibhide
-        one: Phawundi laseGibhide
-    EUR:
-      display_names:
-        other: Yuro
-        one: Yuro
-    GBP:
-      display_names:
-        other: Phawundi yase Ngilandi
-        one: Phawundi yase Ngilandi
-    INR:
-      display_names:
-        other: Rupi yase Indiya
-        one: Rupi yase Indiya
-    JPY:
-      display_names:
-        other: Yeni yase Japhani
-        one: Yeni yase Japhani
-    KMF:
-      display_names:
-        other: Fulenki yase Khomoro
-        one: Fulenki yase Khomoro
-    LRD:
-      display_names:
-        other: Dola yase Libheriya
-        one: Dola yase Libheriya
-    MGA:
-      display_names:
-        other: Fulenki yase Malagasi
-        one: Fulenki yase Malagasi
-    MUR:
-      display_names:
-        other: Rupi yase Morishasi
-        one: Rupi yase Morishasi
-    NAD:
-      display_names:
-        other: Dola yase Namibiya
-        one: Dola yase Namibiya
-    NGN:
-      display_names:
-        other: Nayira yase Nijeriya
-        one: Nayira yase Nijeriya
-    RWF:
-      display_names:
-        other: Fulenki yase Ruwanda
-        one: Fulenki yase Ruwanda
-    SHP:
-      display_names:
-        other: Phawundindi laseSt Helena
-        one: Phawundindi laseSt Helena
-    STN:
-      display_names:
-        other: Dobra yase Sao Tome lo Principe
-        one: Dobra yase Sao Tome lo Principe
-    USD:
-      display_names:
-        other: Dola yase Amelika
-        one: Dola yase Amelika
-    XAF:
-      display_names:
-        other: Fulenki CFA BEAC
-        one: Fulenki CFA BEAC
-    XOF:
-      display_names:
-        other: Fulenki CFA BCEAO
-        one: Fulenki CFA BCEAO
-    ZAR:
-      display_names:
-        other: Randi yase Afrika ye Zanzi
-        one: Randi yase Afrika ye Zanzi
-    ZMW:
-      display_names:
-        other: Kwacha yase Zambiya
-        one: Kwacha yase Zambiya
-    AED:
-      display_names:
-        other: Dola laseArab
-        one: Dola laseArab
     BHD:
       display_names:
         other: Dinari yase Bhahareni
@@ -115,6 +33,14 @@ number_formats:
       display_names:
         other: Fulenki yase Bhurundi
         one: Fulenki yase Bhurundi
+    BWP:
+      display_names:
+        other: Phula yase Botswana
+        one: Phula yase Botswana
+    CAD:
+      display_names:
+        other: Dola yase Khanada
+        one: Dola yase Khanada
     CDF:
       display_names:
         other: Fulenki yase Khongo
@@ -123,6 +49,10 @@ number_formats:
       display_names:
         other: Fulenki yase Swisi
         one: Fulenki yase Swisi
+    CNY:
+      display_names:
+        other: Yuan Renminbi yase China
+        one: Yuan Renminbi yase China
     CVE:
       display_names:
         other: Escudo Caboverdiano
@@ -135,6 +65,10 @@ number_formats:
       display_names:
         other: Dinali yase Aljeriya
         one: Dinali yase Aljeriya
+    EGP:
+      display_names:
+        other: Phawundi laseGibhide
+        one: Phawundi laseGibhide
     ERN:
       display_names:
         other: Nakfa yase Eritrea
@@ -143,6 +77,14 @@ number_formats:
       display_names:
         other: Dola laseEthiopia
         one: Dola laseEthiopia
+    EUR:
+      display_names:
+        other: Yuro
+        one: Yuro
+    GBP:
+      display_names:
+        other: Phawundi yase Ngilandi
+        one: Phawundi yase Ngilandi
     GHC:
       display_names:
         other: Sedi yase Ghana
@@ -155,10 +97,26 @@ number_formats:
       display_names:
         other: Fulenki yase Gine
         one: Fulenki yase Gine
+    INR:
+      display_names:
+        other: Rupi yase Indiya
+        one: Rupi yase Indiya
+    JPY:
+      display_names:
+        other: Yeni yase Japhani
+        one: Yeni yase Japhani
     KES:
       display_names:
         other: Shilingi yase Kenya
         one: Shilingi yase Kenya
+    KMF:
+      display_names:
+        other: Fulenki yase Khomoro
+        one: Fulenki yase Khomoro
+    LRD:
+      display_names:
+        other: Dola yase Libheriya
+        one: Dola yase Libheriya
     LSL:
       display_names:
         other: Lothi yase Lesotho
@@ -171,6 +129,10 @@ number_formats:
       display_names:
         other: Dirham yase Morokho
         one: Dirham yase Morokho
+    MGA:
+      display_names:
+        other: Fulenki yase Malagasi
+        one: Fulenki yase Malagasi
     MRO:
       display_names:
         other: Ugwiya yase Moritaniya (1973–2017)
@@ -179,6 +141,10 @@ number_formats:
       display_names:
         other: Ugwiya yase Moritaniya
         one: Ugwiya yase Moritaniya
+    MUR:
+      display_names:
+        other: Rupi yase Morishasi
+        one: Rupi yase Morishasi
     MWK:
       display_names:
         other: Kwacha yase Malawi
@@ -187,6 +153,18 @@ number_formats:
       display_names:
         other: Metikali yase Mozambiki
         one: Metikali yase Mozambiki
+    NAD:
+      display_names:
+        other: Dola yase Namibiya
+        one: Dola yase Namibiya
+    NGN:
+      display_names:
+        other: Nayira yase Nijeriya
+        one: Nayira yase Nijeriya
+    RWF:
+      display_names:
+        other: Fulenki yase Ruwanda
+        one: Fulenki yase Ruwanda
     SAR:
       display_names:
         other: Riyal yase Saudi
@@ -203,6 +181,10 @@ number_formats:
       display_names:
         other: Phawundi yase Sudani
         one: Phawundi yase Sudani
+    SHP:
+      display_names:
+        other: Phawundindi laseSt Helena
+        one: Phawundindi laseSt Helena
     SLE:
       display_names:
         other: Leyoni
@@ -219,6 +201,10 @@ number_formats:
       display_names:
         other: Dobra yase Sao Tome lo Principe (1977–2017)
         one: Dobra yase Sao Tome lo Principe (1977–2017)
+    STN:
+      display_names:
+        other: Dobra yase Sao Tome lo Principe
+        one: Dobra yase Sao Tome lo Principe
     SZL:
       display_names:
         other: Lilangeni
@@ -235,10 +221,30 @@ number_formats:
       display_names:
         other: Shilingi yase Uganda
         one: Shilingi yase Uganda
+    USD:
+      display_names:
+        other: Dola yase Amelika
+        one: Dola yase Amelika
+    XAF:
+      display_names:
+        other: Fulenki CFA BEAC
+        one: Fulenki CFA BEAC
+    XOF:
+      display_names:
+        other: Fulenki CFA BCEAO
+        one: Fulenki CFA BCEAO
+    ZAR:
+      display_names:
+        other: Randi yase Afrika ye Zanzi
+        one: Randi yase Afrika ye Zanzi
     ZMK:
       display_names:
         other: Kwacha yase Zambiya (1968–2012)
         one: Kwacha yase Zambiya (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwacha yase Zambiya
+        one: Kwacha yase Zambiya
     ZWD:
       display_names:
         other: Dola yase Zimbabwe

@@ -1,14 +1,24 @@
 ---
 locale: tzm
-generated_at: '2025-09-13T17:41:23Z'
+generated_at: '2025-09-14T06:12:40Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Derhem Uymarati
+        one: Derhem Uymarati
     AOA:
       display_names:
         other: Kwanza Unguli
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: Ḍular Usṭrali
         one: Ḍular Usṭrali
-    BWP:
-      display_names:
-        other: Pula Ubutswani
-        one: Pula Ubutswani
-    CAD:
-      display_names:
-        other: Ḍular Ukanadi
-        one: Ḍular Ukanadi
-    CNY:
-      display_names:
-        other: Ywan Renminbi Ucinwi
-        one: Ywan Renminbi Ucinwi
-    EGP:
-      display_names:
-        other: Junih Umiṣṛi
-        one: Junih Umiṣṛi
-    EUR:
-      display_names:
-        other: Uṛu
-        one: Uṛu
-    GBP:
-      display_names:
-        other: Junih Ubriṭani
-        one: Junih Ubriṭani
-    INR:
-      display_names:
-        other: Rupi Uḥindi
-        one: Rupi Uḥindi
-    JPY:
-      display_names:
-        other: Yann Ujappuni
-        one: Yann Ujappuni
-    KMF:
-      display_names:
-        other: Frank Uqumuri
-        one: Frank Uqumuri
-    LRD:
-      display_names:
-        other: Ḍular Ulibiri
-        one: Ḍular Ulibiri
-    MGA:
-      display_names:
-        other: Aryari Umalɣaci
-        one: Aryari Umalɣaci
-    MUR:
-      display_names:
-        other: Rupi Umurisi
-        one: Rupi Umurisi
-    NAD:
-      display_names:
-        other: Ḍular Unamibi
-        one: Ḍular Unamibi
-    NGN:
-      display_names:
-        other: Nayra Unijiri
-        one: Nayra Unijiri
-    RWF:
-      display_names:
-        other: Frank Urwandi
-        one: Frank Urwandi
-    SHP:
-      display_names:
-        other: Junih Usantehilini
-        one: Junih Usantehilini
-    STN:
-      display_names:
-        other: Dubra Usawṭumi
-        one: Dubra Usawṭumi
-    USD:
-      display_names:
-        other: Ḍular Umirikani
-        one: Ḍular Umirikani
-    XAF:
-      display_names:
-        other: Frank CFA (BEAC)
-        one: Frank CFA (BEAC)
-    XOF:
-      display_names:
-        other: Frank CFA (BCEAO)
-        one: Frank CFA (BCEAO)
-    ZAR:
-      display_names:
-        other: Rand Ufriki Unzul
-        one: Rand Ufriki Unzul
-    ZMW:
-      display_names:
-        other: Kwača Uzambi
-        one: Kwača Uzambi
-    AED:
-      display_names:
-        other: Derhem Uymarati
-        one: Derhem Uymarati
     BHD:
       display_names:
         other: Ḍinar Ubaḥrayni
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: Frank Uburundi
         one: Frank Uburundi
+    BWP:
+      display_names:
+        other: Pula Ubutswani
+        one: Pula Ubutswani
+    CAD:
+      display_names:
+        other: Ḍular Ukanadi
+        one: Ḍular Ukanadi
     CDF:
       display_names:
         other: Frank Ukunguli
@@ -125,6 +51,10 @@ number_formats:
       display_names:
         other: Frank Uswisri
         one: Frank Uswisri
+    CNY:
+      display_names:
+        other: Ywan Renminbi Ucinwi
+        one: Ywan Renminbi Ucinwi
     CVE:
       display_names:
         other: Iskudu Ukabuvirdyani
@@ -137,6 +67,10 @@ number_formats:
       display_names:
         other: Ḍinar Udzayri
         one: Ḍinar Udzayri
+    EGP:
+      display_names:
+        other: Junih Umiṣṛi
+        one: Junih Umiṣṛi
     ERN:
       display_names:
         other: Nakfa Uyritri
@@ -145,6 +79,14 @@ number_formats:
       display_names:
         other: Birr Uyityuppi
         one: Birr Uyityuppi
+    EUR:
+      display_names:
+        other: Uṛu
+        one: Uṛu
+    GBP:
+      display_names:
+        other: Junih Ubriṭani
+        one: Junih Ubriṭani
     GHC:
       display_names:
         other: Sidi Uɣani
@@ -157,10 +99,26 @@ number_formats:
       display_names:
         other: Frank Uɣini
         one: Frank Uɣini
+    INR:
+      display_names:
+        other: Rupi Uḥindi
+        one: Rupi Uḥindi
+    JPY:
+      display_names:
+        other: Yann Ujappuni
+        one: Yann Ujappuni
     KES:
       display_names:
         other: Cillin Ukini
         one: Cillin Ukini
+    KMF:
+      display_names:
+        other: Frank Uqumuri
+        one: Frank Uqumuri
+    LRD:
+      display_names:
+        other: Ḍular Ulibiri
+        one: Ḍular Ulibiri
     LSL:
       display_names:
         other: Luti Ulusuṭi
@@ -173,6 +131,10 @@ number_formats:
       display_names:
         other: Derhem Umeṛṛuki
         one: Derhem Umeṛṛuki
+    MGA:
+      display_names:
+        other: Aryari Umalɣaci
+        one: Aryari Umalɣaci
     MRO:
       display_names:
         other: Uqiyya Umuritani (1973–2017)
@@ -181,6 +143,10 @@ number_formats:
       display_names:
         other: Uqiyya Umuritani
         one: Uqiyya Umuritani
+    MUR:
+      display_names:
+        other: Rupi Umurisi
+        one: Rupi Umurisi
     MWK:
       display_names:
         other: Kwača Umalawi
@@ -189,6 +155,18 @@ number_formats:
       display_names:
         other: Mitikal Umuzambiqi
         one: Mitikal Umuzambiqi
+    NAD:
+      display_names:
+        other: Ḍular Unamibi
+        one: Ḍular Unamibi
+    NGN:
+      display_names:
+        other: Nayra Unijiri
+        one: Nayra Unijiri
+    RWF:
+      display_names:
+        other: Frank Urwandi
+        one: Frank Urwandi
     SAR:
       display_names:
         other: Ryal Usaεudi
@@ -205,6 +183,10 @@ number_formats:
       display_names:
         other: Junih Usudani (1956–2007)
         one: Junih Usudani (1956–2007)
+    SHP:
+      display_names:
+        other: Junih Usantehilini
+        one: Junih Usantehilini
     SLE:
       display_names:
         other: Lyun Usirralyuni
@@ -221,6 +203,10 @@ number_formats:
       display_names:
         other: Dubra Usawṭumi (1977–2017)
         one: Dubra Usawṭumi (1977–2017)
+    STN:
+      display_names:
+        other: Dubra Usawṭumi
+        one: Dubra Usawṭumi
     SZL:
       display_names:
         other: Lilanjini Uswazi
@@ -237,10 +223,30 @@ number_formats:
       display_names:
         other: Cilin Uɣandi (1966–1987)
         one: Cilin Uɣandi (1966–1987)
+    USD:
+      display_names:
+        other: Ḍular Umirikani
+        one: Ḍular Umirikani
+    XAF:
+      display_names:
+        other: Frank CFA (BEAC)
+        one: Frank CFA (BEAC)
+    XOF:
+      display_names:
+        other: Frank CFA (BCEAO)
+        one: Frank CFA (BCEAO)
+    ZAR:
+      display_names:
+        other: Rand Ufriki Unzul
+        one: Rand Ufriki Unzul
     ZMK:
       display_names:
         other: Kwača Uzambi (1968–2012)
         one: Kwača Uzambi (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwača Uzambi
+        one: Kwača Uzambi
     ZWD:
       display_names:
         other: Ḍular Uzimbabwi

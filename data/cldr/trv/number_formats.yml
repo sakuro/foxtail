@@ -1,9 +1,15 @@
 ---
 locale: trv
-generated_at: '2025-09-13T17:41:18Z'
+generated_at: '2025-09-14T06:12:37Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
+    standard: 
+  scientific_formats:
     standard: 
   currencies:
     AUD:
@@ -38,6 +44,10 @@ number_formats:
       display_names:
         other: pila Nihong
         one: pila Nihong
+    MOP:
+      display_names:
+        other: pila Macao
+        one: pila Macao
     NOK:
       display_names:
         other: pila Nowey
@@ -58,7 +68,25 @@ number_formats:
       display_names:
         other: ini klayi pila ni
         one: ini klayi pila ni
-    MOP:
-      display_names:
-        other: pila Macao
-        one: pila Macao
+  units:
+    year:
+      long:
+        other: "{0} Hnkawas"
+    month:
+      long:
+        other: "{0} Idas"
+    week:
+      long:
+        other: "{0} Jiyax iyax sngayan"
+    day:
+      long:
+        other: "{0} Jiyax"
+    hour:
+      long:
+        other: "{0} Tuki"
+    minute:
+      long:
+        other: "{0} spngan"
+    second:
+      long:
+        other: "{0} Seykn"

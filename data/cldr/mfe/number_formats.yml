@@ -1,13 +1,23 @@
 ---
 locale: mfe
-generated_at: '2025-09-13T17:39:02Z'
+generated_at: '2025-09-14T06:11:07Z'
 cldr_version: '46'
 number_formats:
   symbols:
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: 
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: dirham Emira arab ini
+        one: dirham Emira arab ini
     AOA:
       display_names:
         other: kwanza angole
@@ -16,98 +26,6 @@ number_formats:
       display_names:
         other: dolar ostralien
         one: dolar ostralien
-    BWP:
-      display_names:
-        other: pula ya botswane
-        one: pula ya botswane
-    CAD:
-      display_names:
-        other: dolar kanadien
-        one: dolar kanadien
-    CNY:
-      display_names:
-        other: yuan renminbi sinwa
-        one: yuan renminbi sinwa
-    EGP:
-      display_names:
-        other: liv ezipsien
-        one: liv ezipsien
-    EUR:
-      display_names:
-        other: euro
-        one: euro
-    GBP:
-      display_names:
-        other: liv sterlin
-        one: liv sterlin
-    INR:
-      display_names:
-        other: roupi
-        one: roupi
-    JPY:
-      display_names:
-        other: yen zapone
-        one: yen zapone
-    KMF:
-      display_names:
-        other: fran komorien
-        one: fran komorien
-    LRD:
-      display_names:
-        other: dolar liberien
-        one: dolar liberien
-    MGA:
-      display_names:
-        other: fran malgas
-        one: fran malgas
-    MUR:
-      display_names:
-        other: roupi morisien
-        one: roupi morisien
-    NAD:
-      display_names:
-        other: dolar namibien
-        one: dolar namibien
-    NGN:
-      display_names:
-        other: naira nizerian
-        one: naira nizerian
-    RWF:
-      display_names:
-        other: fran rwande
-        one: fran rwande
-    SHP:
-      display_names:
-        other: liv Sainte-Hélène
-        one: liv Sainte-Hélène
-    STN:
-      display_names:
-        other: dobra santomeen
-        one: dobra santomeen
-    USD:
-      display_names:
-        other: dolar amerikin
-        one: dolar amerikin
-    XAF:
-      display_names:
-        other: fran CFA (BEAC)
-        one: fran CFA (BEAC)
-    XOF:
-      display_names:
-        other: fran CFA (BCEAO)
-        one: fran CFA (BCEAO)
-    ZAR:
-      display_names:
-        other: rand sid-afrikin
-        one: rand sid-afrikin
-    ZMW:
-      display_names:
-        other: kwacha zanbien
-        one: kwacha zanbien
-    AED:
-      display_names:
-        other: dirham Emira arab ini
-        one: dirham Emira arab ini
     BHD:
       display_names:
         other: dinar bahreïn
@@ -116,6 +34,14 @@ number_formats:
       display_names:
         other: fran burunde
         one: fran burunde
+    BWP:
+      display_names:
+        other: pula ya botswane
+        one: pula ya botswane
+    CAD:
+      display_names:
+        other: dolar kanadien
+        one: dolar kanadien
     CDF:
       display_names:
         other: fran kongole
@@ -124,6 +50,10 @@ number_formats:
       display_names:
         other: fran swis
         one: fran swis
+    CNY:
+      display_names:
+        other: yuan renminbi sinwa
+        one: yuan renminbi sinwa
     CVE:
       display_names:
         other: eskudo kapverdien
@@ -136,6 +66,10 @@ number_formats:
       display_names:
         other: dinar alzerien
         one: dinar alzerien
+    EGP:
+      display_names:
+        other: liv ezipsien
+        one: liv ezipsien
     ERN:
       display_names:
         other: nafka erythreen
@@ -144,6 +78,14 @@ number_formats:
       display_names:
         other: birr etiopien
         one: birr etiopien
+    EUR:
+      display_names:
+        other: euro
+        one: euro
+    GBP:
+      display_names:
+        other: liv sterlin
+        one: liv sterlin
     GHC:
       display_names:
         other: sedi ganeen
@@ -156,10 +98,26 @@ number_formats:
       display_names:
         other: fran gineen
         one: fran gineen
+    INR:
+      display_names:
+        other: roupi
+        one: roupi
+    JPY:
+      display_names:
+        other: yen zapone
+        one: yen zapone
     KES:
       display_names:
         other: shiling kenyan
         one: shiling kenyan
+    KMF:
+      display_names:
+        other: fran komorien
+        one: fran komorien
+    LRD:
+      display_names:
+        other: dolar liberien
+        one: dolar liberien
     LSL:
       display_names:
         other: loti lezoto
@@ -172,6 +130,10 @@ number_formats:
       display_names:
         other: dirham marokin
         one: dirham marokin
+    MGA:
+      display_names:
+        other: fran malgas
+        one: fran malgas
     MRO:
       display_names:
         other: ouguiya moritanien (1973–2017)
@@ -180,6 +142,10 @@ number_formats:
       display_names:
         other: ouguiya moritanien
         one: ouguiya moritanien
+    MUR:
+      display_names:
+        other: roupi morisien
+        one: roupi morisien
     MWK:
       display_names:
         other: kwacha malawit
@@ -188,6 +154,18 @@ number_formats:
       display_names:
         other: metikal mozanbikin
         one: metikal mozanbikin
+    NAD:
+      display_names:
+        other: dolar namibien
+        one: dolar namibien
+    NGN:
+      display_names:
+        other: naira nizerian
+        one: naira nizerian
+    RWF:
+      display_names:
+        other: fran rwande
+        one: fran rwande
     SAR:
       display_names:
         other: rial saoudien
@@ -204,6 +182,10 @@ number_formats:
       display_names:
         other: liv soudane
         one: liv soudane
+    SHP:
+      display_names:
+        other: liv Sainte-Hélène
+        one: liv Sainte-Hélène
     SLE:
       display_names:
         other: leonn Sierra-Leone
@@ -220,6 +202,10 @@ number_formats:
       display_names:
         other: dobra santomeen (1977–2017)
         one: dobra santomeen (1977–2017)
+    STN:
+      display_names:
+        other: dobra santomeen
+        one: dobra santomeen
     SZL:
       display_names:
         other: lilangeni swazi
@@ -236,10 +222,30 @@ number_formats:
       display_names:
         other: shiling ougande
         one: shiling ougande
+    USD:
+      display_names:
+        other: dolar amerikin
+        one: dolar amerikin
+    XAF:
+      display_names:
+        other: fran CFA (BEAC)
+        one: fran CFA (BEAC)
+    XOF:
+      display_names:
+        other: fran CFA (BCEAO)
+        one: fran CFA (BCEAO)
+    ZAR:
+      display_names:
+        other: rand sid-afrikin
+        one: rand sid-afrikin
     ZMK:
       display_names:
         other: kwacha zanbien (1968–2012)
         one: kwacha zanbien (1968–2012)
+    ZMW:
+      display_names:
+        other: kwacha zanbien
+        one: kwacha zanbien
     ZWD:
       display_names:
         other: dolar zimbawe

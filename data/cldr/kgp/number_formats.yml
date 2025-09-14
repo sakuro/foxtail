@@ -1,440 +1,95 @@
 ---
 locale: kgp
-generated_at: '2025-09-13T17:38:14Z'
+generated_at: '2025-09-14T06:10:36Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: 
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 mil
+        other: 0 mil
+      '10000':
+        one: 00 mil
+        other: 00 mil
+      '100000':
+        one: 000 mil
+        other: 000 mil
+      '1000000':
+        one: 0 mi
+        other: 0 mi
+      '10000000':
+        one: 00 mi
+        other: 00 mi
+      '100000000':
+        one: 000 mi
+        other: 000 mi
+      '1000000000':
+        one: 0 bi
+        other: 0 bi
+      '10000000000':
+        one: 00 bi
+        other: 00 bi
+      '100000000000':
+        one: 000 bi
+        other: 000 bi
+      '1000000000000':
+        one: 0 tri
+        other: 0 tri
+      '10000000000000':
+        one: 00 tri
+        other: 00 tri
+      '100000000000000':
+        one: 000 tri
+        other: 000 tri
+    long:
+      '1000':
+        one: 0 mil
+        other: 0 mil
+      '10000':
+        one: 00 mil
+        other: 00 mil
+      '100000':
+        one: 000 mil
+        other: 000 mil
+      '1000000':
+        one: 0 milhão
+        other: 0 milhão ag
+      '10000000':
+        one: 00 milhão
+        other: 00 milhão ag
+      '100000000':
+        one: 000 milhão
+        other: 000 milhão ag
+      '1000000000':
+        one: 0 bilhão
+        other: 0 bilhão ag
+      '10000000000':
+        one: 00 bilhão
+        other: 00 bilhão ag
+      '100000000000':
+        one: 000 bilhão
+        other: 000 bilhão ag
+      '1000000000000':
+        one: 0 trilhão
+        other: 0 trilhão ag
+      '10000000000000':
+        one: 00 trilhão
+        other: 00 trilhão ag
+      '100000000000000':
+        one: 000 trilhão
+        other: 000 trilhão ag
   currencies:
-    AFN:
-      display_names:
-        other: Afeganĩ ag afegỹv
-        one: Afeganĩ afegỹv
-    AMD:
-      display_names:
-        other: Arámẽnja Daram ag
-        one: Arámẽnja Daram
-    AOA:
-      display_names:
-        other: Ỹgora Kwanza ag
-        one: Ỹgora Kwanza
-    ARS:
-      display_names:
-        other: Arjẽtinỹ Kufy ag
-        one: Arjẽtinỹ Kufy
-    AUD:
-      symbol: AU$
-      display_names:
-        other: Awotyraria Nórar Si ag
-        one: Awotyraria Nórar Si
-    AZN:
-      display_names:
-        other: Manati aseri ag
-        one: Manati aseri
-    BAM:
-      display_names:
-        other: Mósinĩja Hersegovĩna-mré Mỹrko ag ta ũn há
-        one: Mósinĩja Hersegovĩna-mré Mỹrko ta ũn há
-    BBD:
-      display_names:
-        other: Juvã-mág Nórar ag
-        one: Juvã-mág Nórar
-    BDT:
-      display_names:
-        other: Mágranési Taka ag
-        one: Mágranési Taka
-    BMD:
-      display_names:
-        other: Karsa-ror-ag Nórar ag
-        one: Karsa-ror-ag Nórar
-    BND:
-      display_names:
-        other: Mrunẽj Nórar ag
-        one: Mrunẽj Nórar
-    BOB:
-      display_names:
-        other: Morivija Jãnkamu ag
-        one: Morivija Jãnkamu
-    BRL:
-      display_names:
-        other: Mrasir Rejar ag
-        one: Mrasir Rejar
-    BSD:
-      display_names:
-        other: Mahamỹ Nórar ag
-        one: Mahamỹ Nórar
-    BWP:
-      display_names:
-        other: Monsuvỹnỹ Pura ag
-        one: Monsuvỹnỹ Pura
-    BZD:
-      display_names:
-        other: Merise Nórar ag
-        one: Merise Nórar
-    CAD:
-      display_names:
-        other: Kanỹna Nórar ag
-        one: Kanỹna Nórar
-    CLP:
-      display_names:
-        other: Sire Kufy ag
-        one: Sire Kufy
-    CNY:
-      display_names:
-        other: Sĩnỹ Yvỹn ag
-        one: Sĩnỹ Yvỹn
-    COP:
-      display_names:
-        other: Kolãmja Kufy ag
-        one: Kolãmja Kufy
-    CRC:
-      display_names:
-        other: Kotahika Korãn ag
-        one: Kotahika Korãn
-    CUC:
-      display_names:
-        other: Kuma Kufy ag conv
-        one: Kuma Kufy conv
-    CUP:
-      display_names:
-        other: Kuma Kufy ag
-        one: Kuma Kufy
-    CZK:
-      display_names:
-        other: Séka Rãgre ag
-        one: Séka Rãgre
-    DKK:
-      display_names:
-        other: Ninỹmỹrka Rãgre ag
-        one: Ninỹmỹrka Rãgre
-    DOP:
-      display_names:
-        other: Nomĩnĩka Kufy ag
-        one: Nomĩnĩka Kufy
-    EGP:
-      display_names:
-        other: Ejimto Rimra ag
-        one: Ejimto Rimra
-    ESP:
-      display_names:
-        other: Esipỹnja Kufy-sĩ ag
-        one: Esipỹnja Kufy-sĩ
-    EUR:
-      display_names:
-        other: Evoro ag
-        one: Evoro
-    FJD:
-      symbol: FJC
-      display_names:
-        other: Fiji Nórar ag
-        one: Fiji Nórar
-    FKP:
-      display_names:
-        other: Mỹrvinỹ Rimra ag
-        one: Mỹrvinỹ Rimra
-    GBP:
-      display_names:
-        other: Rimra Eterĩnỹ asg
-        one: Rimra Eterĩnỹ
-    GEL:
-      display_names:
-        other: Jiórja Rari ag
-        one: Jiórja Rari
-    GHS:
-      display_names:
-        other: Gỹnỹ Senhi ag
-        one: Gỹnỹ Senhi
-    GIP:
-      display_names:
-        other: Nhimratar Rimra ag
-        one: Nhimratar Rimra
-    GNF:
-      display_names:
-        other: Ginẽ Vĩpir ag
-        one: Ginẽ Vĩpir
-    GTQ:
-      display_names:
-        other: Guvỹtemỹra Kensav ag
-        one: Guvỹtemỹra Kensav
-    GYD:
-      display_names:
-        other: Gijỹnỹ Nórar ag
-        one: Gijỹnỹ Nórar
-    HKD:
-      display_names:
-        other: Hãg-Kãg Nórar ag
-        one: Hãg-Kãg Nórar
-    HNL:
-      display_names:
-        other: Ãnura Rẽpirá ag
-        one: Ãnura Rẽpirá
-    HRK:
-      display_names:
-        other: Krovasija Kuna ag
-        one: Krovasija Kuna
-    HUF:
-      display_names:
-        other: Ũgrija Kafejsĩ ag
-        one: Ũgrija Kafejsĩ
-    IDR:
-      display_names:
-        other: Ĩnonẽsija Rupija ag
-        one: Ĩnonẽsija Rupija
-    ILS:
-      display_names:
-        other: Isihaé Sekév Tãg ag
-        one: Isihaé Sekév Tãg
-    INR:
-      display_names:
-        other: Ĩnija Rupija ag
-        one: Ĩnija Rupija
-    ISK:
-      display_names:
-        other: Kukryr-ga Rãgre ag
-        one: Kukryr-ga Rãgre
-    JMD:
-      display_names:
-        other: Jamỹjka Nórar ag
-        one: Jamỹjka Nórar
-    JPY:
-      display_names:
-        other: Japã Jenẽ ag
-        one: Japã Jenẽ
-    KGS:
-      display_names:
-        other: Kirgi-Ga Kyr ag
-        one: Kirgi-Ga Kyr
-    KHR:
-      display_names:
-        other: Kỹmósa Hijév ag
-        one: Kỹmósa Hijév
-    KMF:
-      display_names:
-        other: Komor Vĩpir ag
-        one: Komor Vĩpir
-    KPW:
-      display_names:
-        other: Nãrti-Koréja Vãn sag
-        one: Nãrti-Koréja Vãn
-    KRW:
-      display_names:
-        other: Koréja Sur Vãn ag
-        one: Koréja Sur Vãn
-    KYD:
-      display_names:
-        other: Kanhmỹ Vãsogso Nórar ag
-        one: Kanhmỹ Vãsogso Nórar
-    KZT:
-      display_names:
-        other: Kajakinhtỹv Tẽge ag
-        one: Kajakinhtỹv Tẽge
-    LAK:
-      display_names:
-        other: Ravusi Kim ag
-        one: Ravusi Kim
-    LBP:
-      display_names:
-        other: Rimanũ Rimra ag
-        one: Rimanũ Rimra
-    LKR:
-      display_names:
-        other: Sirijỹká Rupija ag
-        one: Sirijỹká Rupija
-    LRD:
-      display_names:
-        other: Rimérijỹ Nórar ag
-        one: Rimérijỹ Nórar
-    LTL:
-      display_names:
-        other: Rituvỹnja Ritasi ag
-        one: Rituvỹnja Ritasi
-    LVL:
-      display_names:
-        other: Rativija Rati ag
-        one: Rativija Rati
-    MGA:
-      display_names:
-        other: Mỹna-Gasikar Ari-ary ag
-        one: Mỹna-Gasikar Ari-ary
-    MMK:
-      display_names:
-        other: Mijẽn-Mỹ Kijate ag
-        one: Mijẽn-Mỹ Kijate
-    MNT:
-      display_names:
-        other: Mãgórija Tugrig ag
-        one: Mãgórija Tugrig
-    MUR:
-      display_names:
-        other: Mãriso Rupija ag
-        one: Mãriso Rupija
-    MXN:
-      display_names:
-        other: Mẽsiku Kufy ag
-        one: Mẽsiku Kufy
-    MYR:
-      display_names:
-        other: Mỹraja Rĩggin ag
-        one: Mỹraja Rĩggin
-    NAD:
-      display_names:
-        other: Nỹmĩmija Nórar ag
-        one: Nỹmĩmija Nórar
-    NGN:
-      display_names:
-        other: Nĩjérija Nỹjra ag
-        one: Nĩjérija Nỹjra
-    NIO:
-      display_names:
-        other: Nĩkaraguva Kórnoma ag
-        one: Nĩkaraguva Kórnoma
-    NOK:
-      display_names:
-        other: Nãrovéga Rãgre ag
-        one: Nãrovéga Rãgre
-    NPR:
-      display_names:
-        other: Nẽpar Rupija ag
-        one: Nẽpar Rupija
-    NZD:
-      display_names:
-        other: Zirỹnija Tãg Nórar ag
-        one: Zirỹnija Tãg Nórar
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Firipinỹ Kufy ag
-        one: Firipinỹ Kufy
-    PKR:
-      display_names:
-        other: Pakinhtỹv Rupiya ag
-        one: Pakinhtỹv Rupiya
-    PLN:
-      display_names:
-        other: Poronĩja Rẽrĩr ag
-        one: Poronĩja Rẽrĩr
-    PYG:
-      display_names:
-        other: Paraguvaj Garnĩ ag
-        one: Paraguvaj Garnĩ
-    RON:
-      symbol: L
-      display_names:
-        other: Romẽnija Rev ag
-        one: Romẽnija Rev
-    RUB:
-      display_names:
-        other: Husija Humro ag
-        one: Husija Humro
-    RWF:
-      display_names:
-        other: Huvỹna Vĩpir ag
-        one: Huvỹna Vĩpir
-    SBD:
-      display_names:
-        other: Saromỹ Vẽsogso Nórar ag
-        one: Saromỹ Vẽsogso Nórar
-    SEK:
-      display_names:
-        other: Suvésija Rãgre ag
-        one: Suvésija Rãgre
-    SGD:
-      display_names:
-        other: Sĩgapur Nórar ag
-        one: Sĩgapur Nórar
-    SHP:
-      display_names:
-        other: Sỹta Herenỹ Rimra ag
-        one: Sỹta Herenỹ Rimra
-    SRD:
-      display_names:
-        other: Surinỹm Nórar ag
-        one: Surinỹm Nórar
-    SSP:
-      display_names:
-        other: Suná-Sur Rimra ag
-        one: Suná-Sur Rimra
-    STN:
-      display_names:
-        other: Sỹtomẽ Prĩsipi-mré Nómra ag
-        one: Sỹtomẽ Prĩsipi-mré Nómra
-    SYP:
-      symbol: S£
-      display_names:
-        other: Sirija Rimra ag
-        one: Sirija Rimra
-    THB:
-      display_names:
-        other: Taj-Ga Mati ag
-        one: Taj-Ga Mati
-    TOP:
-      display_names:
-        other: Tãga Pa’ỹga ag
-        one: Tãga Pa’ỹga
-    TRY:
-      display_names:
-        other: Turkija Rira ag
-        one: Turkija Rira
-    TTD:
-      display_names:
-        other: Tirinĩna Tomago-mré Nórar ag
-        one: Tirinĩna Tomago-mré Nórar
-    TWD:
-      display_names:
-        other: Tajvỹ Nórar Tãg ag
-        one: Tajvỹ Nórar Tãg
-    UAH:
-      display_names:
-        other: Ukrỹnĩja Hyryvinja ag
-        one: Ukrỹnĩja Hyryvinja
-    USD:
-      display_names:
-        other: Nãrti-Amẽrikỹ Nórar ag
-        one: Nãrti-Amẽrikỹ Nórar
-    UYU:
-      display_names:
-        other: Uruguvaj Kufy ag
-        one: Uruguvaj Kufy
-    VEF:
-      display_names:
-        other: Venẽjuvéra Morivar ag (2008–2018)
-        one: Venẽjuvéra Morivar (2008–2018)
-    VND:
-      display_names:
-        other: Vijétinỹm Nãg ag
-        one: Vijétinỹm Nãg
-    XAF:
-      display_names:
-        other: Vĩpir CFA tỹ BEAC ag
-        one: Vĩpir CFA tỹ BEAC
-    XCD:
-      display_names:
-        other: Karime Rãjur Nórar ag
-        one: Karime Rãjur Nórar
-    XOF:
-      symbol: CFA
-      display_names:
-        other: Vĩpir CFA tỹ BCEAO ag
-        one: Vĩpir CFA tỹ BCEAO
-    XPF:
-      display_names:
-        other: Vĩpir CFP ag
-        one: Vĩpir CFP
-    XXX:
-      display_names:
-        other: "(nĩkri ag veja tũ)"
-        one: "(jãnkamu veja tũ)"
-    ZAR:
-      display_names:
-        other: Ran surafrikỹnũ ag
-        one: Ran surafrikỹnũ
-    ZMW:
-      display_names:
-        other: Kuvasa jỹmijanũ ag
-        one: Kuvasa jỹmijanũ
     ADP:
       display_names:
         other: Ỹnoha Kufy-sĩ ag
@@ -447,6 +102,10 @@ number_formats:
       display_names:
         other: Afeganĩtã Afeganĩ ag (AFA)
         one: Afeganĩtã Afeganĩ (AFA)
+    AFN:
+      display_names:
+        other: Afeganĩ ag afegỹv
+        one: Afeganĩ afegỹv
     ALK:
       display_names:
         other: Arámánja Rég ag (1946–1965)
@@ -455,10 +114,18 @@ number_formats:
       display_names:
         other: Arámánja Rég ag
         one: Arámánja Rég
+    AMD:
+      display_names:
+        other: Arámẽnja Daram ag
+        one: Arámẽnja Daram
     ANG:
       display_names:
         other: Ỹtiria Orỹnesa Kafejsĩ ag
         one: Ỹtiria Orỹnesa Kafejsĩ
+    AOA:
+      display_names:
+        other: Ỹgora Kwanza ag
+        one: Ỹgora Kwanza
     AOK:
       display_names:
         other: Ỹgora Kwanza ag (AOK)
@@ -487,10 +154,19 @@ number_formats:
       display_names:
         other: Arjẽtinỹ Kufy ag (1983–1985)
         one: Arjẽtinỹ Kufy (1983–1985)
+    ARS:
+      display_names:
+        other: Arjẽtinỹ Kufy ag
+        one: Arjẽtinỹ Kufy
     ATS:
       display_names:
         other: Agtirija Serĩm ag
         one: Agtirija Serĩm
+    AUD:
+      symbol: AU$
+      display_names:
+        other: Awotyraria Nórar Si ag
+        one: Awotyraria Nórar Si
     AWG:
       display_names:
         other: Aruma Kafejsĩ ag
@@ -499,14 +175,30 @@ number_formats:
       display_names:
         other: Ajermajjáv Manati ag (1993–2006)
         one: Ajermajjáv Manati (1993–2006)
+    AZN:
+      display_names:
+        other: Manati aseri ag
+        one: Manati aseri
     BAD:
       display_names:
         other: Mósinĩja-Hersegovĩna Ninỹ ag
         one: Mósinĩja-Hersegovĩna Ninỹ
+    BAM:
+      display_names:
+        other: Mósinĩja Hersegovĩna-mré Mỹrko ag ta ũn há
+        one: Mósinĩja Hersegovĩna-mré Mỹrko ta ũn há
     BAN:
       display_names:
         other: Mósinĩja-Hersegovĩna Ninỹ Tãg ag
         one: Mósinĩja-Hersegovĩna Ninỹ Tãg
+    BBD:
+      display_names:
+        other: Juvã-mág Nórar ag
+        one: Juvã-mág Nórar
+    BDT:
+      display_names:
+        other: Mágranési Taka ag
+        one: Mágranési Taka
     BEC:
       display_names:
         other: Mérjika Vĩpir ag (conv)
@@ -543,6 +235,18 @@ number_formats:
       display_names:
         other: Murũni Vĩpir ag
         one: Murũni Vĩpir
+    BMD:
+      display_names:
+        other: Karsa-ror-ag Nórar ag
+        one: Karsa-ror-ag Nórar
+    BND:
+      display_names:
+        other: Mrunẽj Nórar ag
+        one: Mrunẽj Nórar
+    BOB:
+      display_names:
+        other: Morivija Jãnkamu ag
+        one: Morivija Jãnkamu
     BOL:
       display_names:
         other: Morivijanũ ag (1863–1963)
@@ -567,6 +271,10 @@ number_formats:
       display_names:
         other: Mrasir Krujeru ag (BRE)
         one: Mrasir Krujeru (BRE)
+    BRL:
+      display_names:
+        other: Mrasir Rejar ag
+        one: Mrasir Rejar
     BRN:
       display_names:
         other: Mrasir Krusanu Tãg ag
@@ -579,6 +287,10 @@ number_formats:
       display_names:
         other: Mrasir Krujeru Si ag
         one: Mrasir Krujeru Si
+    BSD:
+      display_names:
+        other: Mahamỹ Nórar ag
+        one: Mahamỹ Nórar
     BTN:
       display_names:
         other: Butỹ Guturũm ag
@@ -587,6 +299,10 @@ number_formats:
       display_names:
         other: Mirmỹnja Kyate ag
         one: Mirmỹnja Kyate
+    BWP:
+      display_names:
+        other: Monsuvỹnỹ Pura ag
+        one: Monsuvỹnỹ Pura
     BYB:
       display_names:
         other: Miero-Husija Humro Tãg ag (BYB)
@@ -600,6 +316,14 @@ number_formats:
       display_names:
         other: Miero-Husija Humro ag (2000–2016)
         one: Miero-Husija Humro (2000–2016)
+    BZD:
+      display_names:
+        other: Merise Nórar ag
+        one: Merise Nórar
+    CAD:
+      display_names:
+        other: Kanỹna Nórar ag
+        one: Kanỹna Nórar
     CDF:
       display_names:
         other: Kãgu Vĩpir ag
@@ -624,6 +348,10 @@ number_formats:
       display_names:
         other: Sirenũ ag vẽnhkãmur ũ ag
         one: Sirenũ vẽnhkãmur ũ
+    CLP:
+      display_names:
+        other: Sire Kufy ag
+        one: Sire Kufy
     CNH:
       display_names:
         other: Sĩnỹ Yuãn ag (offshore)
@@ -632,10 +360,22 @@ number_formats:
       display_names:
         other: Nórar vẽnhkar mỹ máko mĩ Sĩnỹ tá ag
         one: Nórar vẽnhkar mỹ máko mĩ Sĩnỹ tá
+    CNY:
+      display_names:
+        other: Sĩnỹ Yvỹn ag
+        one: Sĩnỹ Yvỹn
+    COP:
+      display_names:
+        other: Kolãmja Kufy ag
+        one: Kolãmja Kufy
     COU:
       display_names:
         other: Vẽnhkãmun-mun ũ kaja uri ag
         one: Vẽnhkãmun ũ kaja uri
+    CRC:
+      display_names:
+        other: Kotahika Korãn ag
+        one: Kotahika Korãn
     CSD:
       display_names:
         other: Sérvija Ninỹ Si ag
@@ -644,6 +384,14 @@ number_formats:
       display_names:
         other: Sékorovaka Rãgre Tar ag
         one: Coroa forte tchecoslovaca
+    CUC:
+      display_names:
+        other: Kuma Kufy ag conv
+        one: Kuma Kufy conv
+    CUP:
+      display_names:
+        other: Kuma Kufy ag
+        one: Kuma Kufy
     CVE:
       display_names:
         other: Pu-Tánh Vẽjuven ag
@@ -652,6 +400,10 @@ number_formats:
       display_names:
         other: Sipre Rimra ag
         one: Sipre Rimra
+    CZK:
+      display_names:
+        other: Séka Rãgre ag
+        one: Séka Rãgre
     DDM:
       display_names:
         other: Aremỹja Rãjur tá Jãnkamu ag
@@ -664,6 +416,14 @@ number_formats:
       display_names:
         other: Nhimuti Vĩpir ag
         one: Nhimuti Vĩpir
+    DKK:
+      display_names:
+        other: Ninỹmỹrka Rãgre ag
+        one: Ninỹmỹrka Rãgre
+    DOP:
+      display_names:
+        other: Nomĩnĩka Kufy ag
+        one: Nomĩnĩka Kufy
     DZD:
       display_names:
         other: Argerija Ninỹ ag
@@ -680,6 +440,10 @@ number_formats:
       display_names:
         other: Enhtonĩja Rãgre ag
         one: Enhtonĩja Rãgre
+    EGP:
+      display_names:
+        other: Ejimto Rimra ag
+        one: Ejimto Rimra
     ERN:
       display_names:
         other: Eriteréja Nagfa ag
@@ -692,30 +456,67 @@ number_formats:
       display_names:
         other: Esipỹnja Kufy-sĩ ag (kãtá conv)
         one: Esipỹnja Kufy-sĩ (kãtá conv)
+    ESP:
+      display_names:
+        other: Esipỹnja Kufy-sĩ ag
+        one: Esipỹnja Kufy-sĩ
     ETB:
       display_names:
         other: Etiópija Mir ag
         one: Etiópija Mir
+    EUR:
+      display_names:
+        other: Evoro ag
+        one: Evoro
     FIM:
       display_names:
         other: Fĩrỹnija Mỹrka’a
         one: Fĩrỹnija Mỹrka
+    FJD:
+      symbol: FJC
+      display_names:
+        other: Fiji Nórar ag
+        one: Fiji Nórar
+    FKP:
+      display_names:
+        other: Mỹrvinỹ Rimra ag
+        one: Mỹrvinỹ Rimra
     FRF:
       display_names:
         other: Frỹsa Vĩpir ag
         one: Frỹsa Vĩpir
+    GBP:
+      display_names:
+        other: Rimra Eterĩnỹ asg
+        one: Rimra Eterĩnỹ
     GEK:
       display_names:
         other: Jiórja Kupãni Rari ag
         one: Jiórja Kupãni Rari
+    GEL:
+      display_names:
+        other: Jiórja Rari ag
+        one: Jiórja Rari
     GHC:
       display_names:
         other: Gỹnỹ Senhi ag (1979–2007)
         one: Gỹnỹ Senhi (1979–2007)
+    GHS:
+      display_names:
+        other: Gỹnỹ Senhi ag
+        one: Gỹnỹ Senhi
+    GIP:
+      display_names:
+        other: Nhimratar Rimra ag
+        one: Nhimratar Rimra
     GMD:
       display_names:
         other: Gỹmija Narasi ag
         one: Gỹmija Narasi
+    GNF:
+      display_names:
+        other: Ginẽ Vĩpir ag
+        one: Ginẽ Vĩpir
     GNS:
       display_names:
         other: Ginẽ Syri ag
@@ -728,6 +529,10 @@ number_formats:
       display_names:
         other: Grésija Narakymỹ ag
         one: Grésija Narakymỹ
+    GTQ:
+      display_names:
+        other: Guvỹtemỹra Kensav ag
+        one: Guvỹtemỹra Kensav
     GWE:
       display_names:
         other: Fóg tỹ Ginẽ Vẽjuven ag
@@ -736,14 +541,38 @@ number_formats:
       display_names:
         other: Ginẽ-Misav Kufy ag
         one: Ginẽ-Misav Kufy
+    GYD:
+      display_names:
+        other: Gijỹnỹ Nórar ag
+        one: Gijỹnỹ Nórar
+    HKD:
+      display_names:
+        other: Hãg-Kãg Nórar ag
+        one: Hãg-Kãg Nórar
+    HNL:
+      display_names:
+        other: Ãnura Rẽpirá ag
+        one: Ãnura Rẽpirá
     HRD:
       display_names:
         other: Krovasija Ninỹ ag
         one: Krovasija Ninỹ
+    HRK:
+      display_names:
+        other: Krovasija Kuna ag
+        one: Krovasija Kuna
     HTG:
       display_names:
         other: Ajti Runja ag
         one: Ajti Runja
+    HUF:
+      display_names:
+        other: Ũgrija Kafejsĩ ag
+        one: Ũgrija Kafejsĩ
+    IDR:
+      display_names:
+        other: Ĩnonẽsija Rupija ag
+        one: Ĩnonẽsija Rupija
     IEP:
       display_names:
         other: Irỹna Rimra ag
@@ -756,6 +585,14 @@ number_formats:
       display_names:
         other: Isihaé Sekév Si ag
         one: Isihaé Sekév Si
+    ILS:
+      display_names:
+        other: Isihaé Sekév Tãg ag
+        one: Isihaé Sekév Tãg
+    INR:
+      display_names:
+        other: Ĩnija Rupija ag
+        one: Ĩnija Rupija
     IQD:
       display_names:
         other: Iraki Ninỹ ag
@@ -768,18 +605,46 @@ number_formats:
       display_names:
         other: Kukryr-ga Rãgre Si ag
         one: Kukryr-ga Rãgre Si
+    ISK:
+      display_names:
+        other: Kukryr-ga Rãgre ag
+        one: Kukryr-ga Rãgre
     ITL:
       display_names:
         other: Itarija Rira ag
         one: Itarija Rira
+    JMD:
+      display_names:
+        other: Jamỹjka Nórar ag
+        one: Jamỹjka Nórar
     JOD:
       display_names:
         other: Jornánĩja Ninỹ ag
         one: Jornánĩja Ninỹ
+    JPY:
+      display_names:
+        other: Japã Jenẽ ag
+        one: Japã Jenẽ
     KES:
       display_names:
         other: Kẽnja Serĩm ag
         one: Kẽnja Serĩm
+    KGS:
+      display_names:
+        other: Kirgi-Ga Kyr ag
+        one: Kirgi-Ga Kyr
+    KHR:
+      display_names:
+        other: Kỹmósa Hijév ag
+        one: Kỹmósa Hijév
+    KMF:
+      display_names:
+        other: Komor Vĩpir ag
+        one: Komor Vĩpir
+    KPW:
+      display_names:
+        other: Nãrti-Koréja Vãn sag
+        one: Nãrti-Koréja Vãn
     KRH:
       display_names:
         other: Koréja Sur Huvỹ ag
@@ -788,14 +653,46 @@ number_formats:
       display_names:
         other: Koréja Sur Vãn Si ag
         one: Koréja Sur Vãn Si
+    KRW:
+      display_names:
+        other: Koréja Sur Vãn ag
+        one: Koréja Sur Vãn
     KWD:
       display_names:
         other: Kuvajti Ninỹ ag
         one: Kuvajti Ninỹ
+    KYD:
+      display_names:
+        other: Kanhmỹ Vãsogso Nórar ag
+        one: Kanhmỹ Vãsogso Nórar
+    KZT:
+      display_names:
+        other: Kajakinhtỹv Tẽge ag
+        one: Kajakinhtỹv Tẽge
+    LAK:
+      display_names:
+        other: Ravusi Kim ag
+        one: Ravusi Kim
+    LBP:
+      display_names:
+        other: Rimanũ Rimra ag
+        one: Rimanũ Rimra
+    LKR:
+      display_names:
+        other: Sirijỹká Rupija ag
+        one: Sirijỹká Rupija
+    LRD:
+      display_names:
+        other: Rimérijỹ Nórar ag
+        one: Rimérijỹ Nórar
     LSL:
       display_names:
         other: Resotu Roti ag
         one: Resotu Roti
+    LTL:
+      display_names:
+        other: Rituvỹnja Ritasi ag
+        one: Rituvỹnja Ritasi
     LTT:
       display_names:
         other: Rituvỹnja Taronỹ ag
@@ -812,6 +709,10 @@ number_formats:
       display_names:
         other: Rusẽmurgo Vĩpir Jãnkamu ag
         one: Rusẽmurgo Vĩpir Jãnkamu
+    LVL:
+      display_names:
+        other: Rativija Rati ag
+        one: Rativija Rati
     LVR:
       display_names:
         other: Rativija Humro ag
@@ -840,6 +741,10 @@ number_formats:
       display_names:
         other: Mãrnova Revu ag
         one: Mãrnova Revu
+    MGA:
+      display_names:
+        other: Mỹna-Gasikar Ari-ary ag
+        one: Mỹna-Gasikar Ari-ary
     MGF:
       display_names:
         other: Mỹna-Gasikar Vĩpir ag
@@ -856,6 +761,14 @@ number_formats:
       display_names:
         other: Mỹri Vĩpir ag
         one: Mỹri Vĩpir
+    MMK:
+      display_names:
+        other: Mijẽn-Mỹ Kijate ag
+        one: Mijẽn-Mỹ Kijate
+    MNT:
+      display_names:
+        other: Mãgórija Tugrig ag
+        one: Mãgórija Tugrig
     MOP:
       display_names:
         other: Mỹkav Pataka ag
@@ -876,6 +789,10 @@ number_formats:
       display_names:
         other: Mỹrta Rimra ag
         one: Mỹrta Rimra
+    MUR:
+      display_names:
+        other: Mãriso Rupija ag
+        one: Mãriso Rupija
     MVR:
       display_names:
         other: Mỹrniva Rupija ag
@@ -884,6 +801,10 @@ number_formats:
       display_names:
         other: Mỹravi Kuvasa ag
         one: Mỹravi Kuvasa
+    MXN:
+      display_names:
+        other: Mẽsiku Kufy ag
+        one: Mẽsiku Kufy
     MXP:
       display_names:
         other: Mẽsiku Kufy Kupri ag (1861–1992)
@@ -892,6 +813,10 @@ number_formats:
       display_names:
         other: Mẽsiku Pir Rãg ag (UDI)
         one: Mẽsiku Pir Rãg (UDI)
+    MYR:
+      display_names:
+        other: Mỹraja Rĩggin ag
+        one: Mỹraja Rĩggin
     MZE:
       display_names:
         other: Mãsỹmiki Vẽjuven ag
@@ -904,14 +829,38 @@ number_formats:
       display_names:
         other: Mãsỹmiki Mẽtikar ag
         one: Mãsỹmiki Mẽtikar
+    NAD:
+      display_names:
+        other: Nỹmĩmija Nórar ag
+        one: Nỹmĩmija Nórar
+    NGN:
+      display_names:
+        other: Nĩjérija Nỹjra ag
+        one: Nĩjérija Nỹjra
     NIC:
       display_names:
         other: Nĩkaraguva Kórnoma ag (1988–1991)
         one: Nĩkaraguva Kórnoma (1988–1991)
+    NIO:
+      display_names:
+        other: Nĩkaraguva Kórnoma ag
+        one: Nĩkaraguva Kórnoma
     NLG:
       display_names:
         other: Orỹna Kafejsĩ ag
         one: Orỹna Kafejsĩ
+    NOK:
+      display_names:
+        other: Nãrovéga Rãgre ag
+        one: Nãrovéga Rãgre
+    NPR:
+      display_names:
+        other: Nẽpar Rupija ag
+        one: Nẽpar Rupija
+    NZD:
+      display_names:
+        other: Zirỹnija Tãg Nórar ag
+        one: Zirỹnija Tãg Nórar
     OMR:
       display_names:
         other: Omỹ Hijar ag
@@ -936,6 +885,19 @@ number_formats:
       display_names:
         other: Papuva Kinỹ ag
         one: Papuva Kinỹ
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Firipinỹ Kufy ag
+        one: Firipinỹ Kufy
+    PKR:
+      display_names:
+        other: Pakinhtỹv Rupiya ag
+        one: Pakinhtỹv Rupiya
+    PLN:
+      display_names:
+        other: Poronĩja Rẽrĩr ag
+        one: Poronĩja Rẽrĩr
     PLZ:
       display_names:
         other: Poronĩja Rẽrĩr ag (1950–1995)
@@ -945,6 +907,10 @@ number_formats:
       display_names:
         other: Purutuga Vẽjuven ag
         one: Purutuga Vẽjuven
+    PYG:
+      display_names:
+        other: Paraguvaj Garnĩ ag
+        one: Paraguvaj Garnĩ
     QAR:
       display_names:
         other: Katar Hijar ag
@@ -957,18 +923,35 @@ number_formats:
       display_names:
         other: Romẽnija Rev Si ag
         one: Romẽnija Rev Si
+    RON:
+      symbol: L
+      display_names:
+        other: Romẽnija Rev ag
+        one: Romẽnija Rev
     RSD:
       display_names:
         other: Séruvija Ninỹ ag
         one: Séruvija Ninỹ
+    RUB:
+      display_names:
+        other: Husija Humro ag
+        one: Husija Humro
     RUR:
       display_names:
         other: Husija Humro ag (1991–1998)
         one: Husija Humro (1991–1998)
+    RWF:
+      display_names:
+        other: Huvỹna Vĩpir ag
+        one: Huvỹna Vĩpir
     SAR:
       display_names:
         other: Aramija Savnita Hijar ag
         one: Aramija Savnita Hijar
+    SBD:
+      display_names:
+        other: Saromỹ Vẽsogso Nórar ag
+        one: Saromỹ Vẽsogso Nórar
     SCR:
       display_names:
         other: Sejséri Rupija ag
@@ -985,6 +968,18 @@ number_formats:
       display_names:
         other: Suná Rimbra Si ag
         one: Suná Rimbra Si
+    SEK:
+      display_names:
+        other: Suvésija Rãgre ag
+        one: Suvésija Rãgre
+    SGD:
+      display_names:
+        other: Sĩgapur Nórar ag
+        one: Sĩgapur Nórar
+    SHP:
+      display_names:
+        other: Sỹta Herenỹ Rimra ag
+        one: Sỹta Herenỹ Rimra
     SIT:
       display_names:
         other: Enhrovenĩja Tora ag
@@ -1005,14 +1000,26 @@ number_formats:
       display_names:
         other: Somỹrija Serĩm ag
         one: Somỹrija Serĩm
+    SRD:
+      display_names:
+        other: Surinỹm Nórar ag
+        one: Surinỹm Nórar
     SRG:
       display_names:
         other: Surinỹm Kafejsĩ ag
         one: Surinỹm Kafejsĩ
+    SSP:
+      display_names:
+        other: Suná-Sur Rimra ag
+        one: Suná-Sur Rimra
     STD:
       display_names:
         other: Sỹtomẽ Prĩsipi-mré Nómra ag (1977–2017)
         one: Sỹtomẽ Prĩsipi-mré Nómra (1977–2017)
+    STN:
+      display_names:
+        other: Sỹtomẽ Prĩsipi-mré Nómra ag
+        one: Sỹtomẽ Prĩsipi-mré Nómra
     SUR:
       display_names:
         other: Sovijéti Humro ag
@@ -1021,10 +1028,19 @@ number_formats:
       display_names:
         other: Er Sarvanor Korãn ag
         one: Er Sarvanor Korãn
+    SYP:
+      symbol: S£
+      display_names:
+        other: Sirija Rimra ag
+        one: Sirija Rimra
     SZL:
       display_names:
         other: Suvasi-Ga Rirỹgenĩ ag
         one: Suvasi-Ga Rirỹgenĩ
+    THB:
+      display_names:
+        other: Taj-Ga Mati ag
+        one: Taj-Ga Mati
     TJR:
       display_names:
         other: Tanijikinhtỹv Humro ag
@@ -1045,6 +1061,10 @@ number_formats:
       display_names:
         other: Tunĩsija Ninỹ ag
         one: Tunĩsija Ninỹ
+    TOP:
+      display_names:
+        other: Tãga Pa’ỹga ag
+        one: Tãga Pa’ỹga
     TPE:
       display_names:
         other: Timor Vẽjuven ag
@@ -1053,10 +1073,26 @@ number_formats:
       display_names:
         other: Turkija Rira Si ag
         one: Turkija Rira Si
+    TRY:
+      display_names:
+        other: Turkija Rira ag
+        one: Turkija Rira
+    TTD:
+      display_names:
+        other: Tirinĩna Tomago-mré Nórar ag
+        one: Tirinĩna Tomago-mré Nórar
+    TWD:
+      display_names:
+        other: Tajvỹ Nórar Tãg ag
+        one: Tajvỹ Nórar Tãg
     TZS:
       display_names:
         other: Tỹnjỹnĩja Serĩm ag
         one: Tỹnjỹnĩja Serĩm
+    UAH:
+      display_names:
+        other: Ukrỹnĩja Hyryvinja ag
+        one: Ukrỹnĩja Hyryvinja
     UAK:
       display_names:
         other: Ukrỹnĩja Karbovanẽ ag
@@ -1069,6 +1105,10 @@ number_formats:
       display_names:
         other: Ugỹna Serĩm ag
         one: Ugỹna Serĩm
+    USD:
+      display_names:
+        other: Nãrti-Amẽrikỹ Nórar ag
+        one: Nãrti-Amẽrikỹ Nórar
     USN:
       display_names:
         other: Nórar Amẽrikỹn ag (kurã ũ kã)
@@ -1085,6 +1125,10 @@ number_formats:
       display_names:
         other: Uruguvaj Kufy ag (1975–1993)
         one: Uruguvaj Kufy (1975–1993)
+    UYU:
+      display_names:
+        other: Uruguvaj Kufy ag
+        one: Uruguvaj Kufy
     UZS:
       display_names:
         other: Unhmekinhtỹv Kyr ag
@@ -1093,10 +1137,18 @@ number_formats:
       display_names:
         other: Venẽjuvéra Morivar ag (1871–2008)
         one: Venẽjuvéra Morivar (1871–2008)
+    VEF:
+      display_names:
+        other: Venẽjuvéra Morivar ag (2008–2018)
+        one: Venẽjuvéra Morivar (2008–2018)
     VES:
       display_names:
         other: Venẽjuvéra Morivar ag
         one: Venẽjuvéra Morivar
+    VND:
+      display_names:
+        other: Vijétinỹm Nãg ag
+        one: Vijétinỹm Nãg
     VNN:
       display_names:
         other: Vijétinỹm Nãg ag (1978–1985)
@@ -1109,6 +1161,10 @@ number_formats:
       display_names:
         other: Samãva Tara ag
         one: Samãva Tara
+    XAF:
+      display_names:
+        other: Vĩpir CFA tỹ BEAC ag
+        one: Vĩpir CFA tỹ BEAC
     XAG:
       display_names:
         other: Kyfé Kupri
@@ -1133,6 +1189,10 @@ number_formats:
       display_names:
         other: Orópa Nĩkrén-ja ũ-pir ag
         one: Orópa Nĩkrén-ja ũ-pir
+    XCD:
+      display_names:
+        other: Karime Rãjur Nórar ag
+        one: Karime Rãjur Nórar
     XDR:
       display_names:
         other: Kuryj ty Vẽnhkãgán há
@@ -1149,10 +1209,19 @@ number_formats:
       display_names:
         other: Frỹsa UIC Vĩpir ag
         one: Frỹsa UIC Vĩpir
+    XOF:
+      symbol: CFA
+      display_names:
+        other: Vĩpir CFA tỹ BCEAO ag
+        one: Vĩpir CFA tỹ BCEAO
     XPD:
       display_names:
         other: Paranho ag
         one: Paranho
+    XPF:
+      display_names:
+        other: Vĩpir CFP ag
+        one: Vĩpir CFP
     XPT:
       display_names:
         other: Pratinỹ ag
@@ -1165,6 +1234,10 @@ number_formats:
       display_names:
         other: Rá kar tỹ Nĩkri Vẽnh-kãgran-ja
         one: Rá tỹ Nĩkri Vẽnh-kãgran-ja
+    XXX:
+      display_names:
+        other: "(nĩkri ag veja tũ)"
+        one: "(jãnkamu veja tũ)"
     YDD:
       display_names:
         other: Jemẽn Ninỹ ag
@@ -1193,11 +1266,19 @@ number_formats:
       display_names:
         other: Sur-Afrika Ran ag (virhár)
         one: Sur-Afrika Ran (virhár)
+    ZAR:
+      display_names:
+        other: Ran surafrikỹnũ ag
+        one: Ran surafrikỹnũ
     ZMK:
       symbol: SMK
       display_names:
         other: Jỹmija Kuvasa ag (1968–2012)
         one: Jỹmija Kuvasa (1968–2012)
+    ZMW:
+      display_names:
+        other: Kuvasa jỹmijanũ ag
+        one: Kuvasa jỹmijanũ
     ZRN:
       display_names:
         other: Jajre tá Jajre Tãg ag
@@ -1218,3 +1299,1206 @@ number_formats:
       display_names:
         other: Jimamuvé Nórar ag (2008)
         one: Jimamuvé Nórar (2008)
+  units:
+    g-force:
+      long:
+        one: tar g {0}
+        other: tar g {0}
+      short:
+        display_name: tar g
+    meter-per-square-second:
+      long:
+        display_name: sigũnu pénogno ki mẽturo ag
+        one: sigũnu pénogno ki mẽturo {0}
+        other: "{0} mẽturo ag sigũnu pénogno ki"
+      short:
+        display_name: mẽturo/seg²
+    revolution:
+      long:
+        display_name: tĩn
+        one: "{0} tĩn"
+        other: "{0} tĩn 'e"
+    radian:
+      long:
+        one: "{0} radiano"
+        other: "{0} radiano"
+      short:
+        display_name: radiano ag
+    degree:
+      long:
+        one: "{0} grav"
+        other: "{0} grav"
+      short:
+        display_name: grav ag
+    arc-minute:
+      long:
+        display_name: mĩnũtu tỹ nỹj ag
+        one: "{0} mĩnũtu tỹ nỹj"
+        other: "{0} mĩnũtu tỹ nỹj"
+      short:
+        display_name: arcmin ag
+        other: arcmin {0}
+      narrow:
+        one: "{0}'"
+        other: "{0}'"
+    arc-second:
+      long:
+        display_name: sigũnu tỹ nỹj ag
+        one: "{0} sigũnu tỹ nỹj"
+        other: "{0} sigũnu tỹ nỹj"
+      short:
+        display_name: arcseg ag
+        other: "{0} arcseg"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: kiromẽturo pénogno ag
+        one: "{0} kiromẽturo pénogno"
+        other: "{0} kiromẽturo pénogno"
+        per_unit_pattern: "{0} kiromẽturo pénogno ki"
+    hectare:
+      long:
+        one: "{0} hegtar"
+        other: "{0} hegtar"
+      short:
+        display_name: hegtar ag
+    square-meter:
+      long:
+        display_name: mẽturo pénogno ag
+        one: "{0} mẽturo pénogno"
+        other: "{0} mẽturo pénogno ag"
+        per_unit_pattern: "{0} mẽturo pénogno ki"
+      short:
+        display_name: mẽturo² ag
+    square-centimeter:
+      long:
+        display_name: sẽntimẽturo pénogno ag
+        one: "{0} sẽntimẽturo pénogno"
+        other: "{0} sẽntimẽturo pénogno ag"
+        per_unit_pattern: "{0} sẽntimẽturo pénogno ki"
+    square-mile:
+      long:
+        display_name: milha pénogno ag
+        one: "{0} milha pénogno"
+        other: "{0} milha pénogno ag"
+        per_unit_pattern: "{0} milha pénogno ki"
+      short:
+        display_name: milha² ag
+    acre:
+      long:
+        one: "{0} akre"
+        other: "{0} akre ag"
+      short:
+        display_name: akre ag
+      narrow:
+        one: "{0} akre"
+        other: "{0} akre ag"
+    square-yard:
+      long:
+        display_name: jarda pénogno ag
+        one: "{0} jarda pénogno"
+        other: "{0} jarda pénogno ag"
+      short:
+        display_name: jarda² ag
+    square-foot:
+      long:
+        display_name: tipẽn pénogno ag
+        one: "{0} tipẽn pénogno"
+        other: "{0} tipẽn pénogno ag"
+      short:
+        display_name: tipẽn² ag
+    square-inch:
+      long:
+        display_name: poregana pénogno ag
+        one: "{0} poregana pénogno"
+        other: "{0} poregana pénogno ag"
+        per_unit_pattern: "{0} poregana pénogno ki"
+      short:
+        display_name: poregana² ag
+        other: "{0} pol²"
+        per_unit_pattern: pol² ki {0}
+    dunam:
+      long:
+        other: dunam {0}
+      short:
+        display_name: dunam ag
+    karat:
+      long:
+        one: "{0} kirate"
+        other: "{0} kirate ag"
+      short:
+        display_name: kirate ag
+        other: "{0} k"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: mĩrigrỹmỹ ag nesiritru ki
+        one: "{0} mĩrigrỹmỹ nesiritru ki"
+        other: "{0} mĩrigrỹmỹ ag nesiritru ki"
+      short:
+        display_name: mg/dl
+        other: "{0} mg/dl"
+    millimole-per-liter:
+      long:
+        display_name: mĩrimol ag ritru ki
+        one: "{0} mĩrimol ritru ki"
+        other: "{0} mĩrimol ag ritru ki"
+      short:
+        display_name: mĩrimol/ritru
+        other: "{0} mmol/l"
+    permillion:
+      long:
+        display_name: milhão ki kupar ‘e
+        one: "{0} kupar milhão ki"
+        other: "{0} kupar 'e milhão ki"
+      short:
+        display_name: kupar ‘e/milhão ki
+    percent:
+      long:
+        one: "{0} sẽnto ki"
+        other: "{0} sẽnto ki"
+      short:
+        display_name: sẽnto ki
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        one: "{0} mil ki"
+        other: "{0} mil ki"
+      short:
+        display_name: mil ki
+    permyriad:
+      long:
+        one: "{0} pãntu mase"
+        other: "{0} pãntu mase ag"
+      short:
+        display_name: pãntu mase
+    mole:
+      long:
+        display_name: mol ag
+    liter-per-kilometer:
+      long:
+        display_name: ritru ag kiromẽturo ki
+        one: "{0} ritru kiromẽturo ki"
+        other: "{0} ritru ag kiromẽturo ki"
+      short:
+        display_name: ritru ag/km ki
+        other: "{0} l/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: ritru ag kiromẽturo tỹ 100 ki
+        one: "{0} ritru kiromẽturo tỹ 100 ki"
+        other: "{0} ritru ag kiromẽturo tỹ 100 ki"
+      short:
+        display_name: l/100 km ki
+        other: "{0} l/100 km ki"
+    mile-per-gallon:
+      long:
+        display_name: garỹv ki milha ag
+        one: "{0} milha garỹv ki"
+        other: "{0} milha ag garỹv ki"
+      short:
+        display_name: milha ag/garỹv ki
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: garỹv ĩmperijav ki milha ag
+        one: "{0} milha garỹv ĩmperijav ki"
+        other: "{0} milha ag garỹv ĩmperijav ki"
+      short:
+        display_name: milha ag/gar. ĩmp. ki
+        other: "{0} mpg imp."
+    petabyte:
+      long:
+        display_name: petabyte ag
+        one: "{0} petabyte"
+        other: "{0} petabyte ag"
+      short:
+        display_name: PByte
+      narrow:
+        display_name: PB
+    terabyte:
+      long:
+        display_name: terabyte ag
+        one: "{0} terabyte"
+        other: "{0} terabyte ag"
+      short:
+        display_name: TByte
+      narrow:
+        display_name: TB
+    terabit:
+      long:
+        display_name: terabit ag
+        one: "{0} terabit"
+        other: "{0} terabit ag"
+      short:
+        display_name: Tbit
+      narrow:
+        display_name: Tb
+    gigabyte:
+      long:
+        display_name: gigabyte ag
+        one: "{0} gigabyte"
+        other: "{0} gigabyte ag"
+      short:
+        display_name: GByte
+      narrow:
+        display_name: GB
+    gigabit:
+      long:
+        display_name: gigabit ag
+        one: "{0} gigabit"
+        other: "{0} gigabit ag"
+      short:
+        display_name: Gbit
+      narrow:
+        display_name: Gb
+    megabyte:
+      long:
+        display_name: mẽgabyte ag
+        one: "{0} mẽgabyte"
+        other: "{0} mẽgabyte ag"
+      short:
+        display_name: MByte
+      narrow:
+        display_name: MB
+    megabit:
+      long:
+        display_name: mẽgabit ag
+        one: "{0} mẽgabit"
+        other: "{0} mẽgabit ag"
+      short:
+        display_name: Mbit
+      narrow:
+        display_name: Mb
+    kilobyte:
+      long:
+        display_name: kilobyte ag
+        one: "{0} kilobyte"
+        other: "{0} kilobyte ag"
+      short:
+        display_name: kByte
+      narrow:
+        display_name: kB
+    kilobit:
+      long:
+        display_name: kilobit ag
+        one: "{0} kilobit"
+        other: "{0} kilobit ag"
+      short:
+        display_name: kbit
+      narrow:
+        display_name: kb
+    byte:
+      long:
+        display_name: byte ag
+      narrow:
+        display_name: B
+        one: "{0} B"
+        other: "{0} B"
+    bit:
+      long:
+        display_name: bit ag
+        other: "{0} bit ag"
+    century:
+      long:
+        display_name: sékuru ag
+        one: "{0} sékuru"
+        other: "{0} sékuru ag"
+      short:
+        display_name: sék.
+        one: "{0} sék."
+        other: "{0} sék. ag"
+    decade:
+      long:
+        display_name: nékana ag
+        one: "{0} nékana"
+        other: "{0} nékana ag"
+      short:
+        display_name: nék.
+        other: "{0} nék."
+    year:
+      long:
+        per_unit_pattern: "{0} prỹg ki"
+      short:
+        display_name: prỹg ag
+        one: "{0} prỹg"
+        other: "{0} prỹg ag"
+        per_unit_pattern: "{0}/prỹg ki"
+      narrow:
+        display_name: prỹg
+    month:
+      long:
+        one: kysã {0}
+        other: kysã ag {0}
+        per_unit_pattern: kysã {0} ki
+      short:
+        display_name: kysã ag
+        one: "{0} kysã"
+        other: "{0} kysã ag"
+        per_unit_pattern: "{0}/kysã ki"
+      narrow:
+        display_name: kysã
+        per_unit_pattern: "{0}/kysã"
+    week:
+      long:
+        one: "{0} simỹnỹ"
+        other: "{0} simỹnỹ ag"
+        per_unit_pattern: "{0} simỹnỹ ki"
+      short:
+        display_name: simỹnỹ ag
+        other: "{0} sim."
+        per_unit_pattern: "{0}/sim. Ki"
+      narrow:
+        display_name: sim.
+        other: "{0} sim. Ag"
+        per_unit_pattern: "{0}/sim."
+    day:
+      long:
+        one: kurã {0}
+        other: kurã {0}
+        per_unit_pattern: kurã {0} ki
+      short:
+        display_name: kurã ag
+        one: "{0} kurã"
+        other: "{0} kurã ag"
+        per_unit_pattern: "{0}/kurã ki"
+      narrow:
+        display_name: kurã
+        per_unit_pattern: "{0}/kurã"
+    hour:
+      long:
+        one: óra {0}
+        other: óra ag {0}
+        per_unit_pattern: óra {0} ki
+      short:
+        display_name: óra ag
+      narrow:
+        display_name: óra
+    minute:
+      long:
+        display_name: mĩnũtu ag
+        one: mĩnũtu {0}
+        other: mĩnũtu {0}
+        per_unit_pattern: mĩnũtu {0} ki
+      short:
+        display_name: mĩn
+    second:
+      long:
+        display_name: sigũnu ag
+        one: sigũnu {0}
+        other: sigũnu {0}
+        per_unit_pattern: sigũnu {0} ki
+      short:
+        display_name: sig
+        other: "{0} sig"
+        per_unit_pattern: "{0}/s ki"
+      narrow:
+        one: "{0} s"
+        other: "{0} s"
+        per_unit_pattern: "{0}/sig"
+    millisecond:
+      long:
+        one: mĩrisigũnu {0}
+        other: mĩrisigũnu {0}
+      short:
+        display_name: mĩrisigũnu ag
+      narrow:
+        display_name: ms
+    microsecond:
+      long:
+        display_name: mĩkrusigũnu ag
+        one: mĩkrusigũnu {0}
+        other: mĩkrusigũnu {0}
+    nanosecond:
+      long:
+        display_name: nỹnãsigũnu ag
+        one: nỹnãsigũnu {0}
+        other: nỹnãsigũnu {0}
+    ampere:
+      long:
+        display_name: ampere ag
+        one: "{0} ampere"
+        other: "{0} ampere ag"
+      short:
+        display_name: amps
+    milliampere:
+      long:
+        display_name: mĩriampere
+        one: "{0} mĩriampere"
+        other: "{0} mĩriampere ag"
+      short:
+        display_name: mĩriamps
+    ohm:
+      long:
+        display_name: ohm ag
+        one: "{0} ohm"
+        other: "{0} ohm ag"
+      short:
+        display_name: ohms
+    volt:
+      long:
+        display_name: volt ag
+        one: "{0} volt"
+        other: "{0} volt ag"
+      short:
+        display_name: volts
+    kilocalorie:
+      long:
+        display_name: kirokarorija ag
+        one: "{0} kirokarorija"
+        other: "{0} kirokarorija ag"
+    calorie:
+      long:
+        display_name: karorija ag
+        one: "{0} karorija"
+        other: "{0} karorija ag"
+    foodcalorie:
+      long:
+        display_name: Karoria ag
+        one: "{0} Karorija"
+        other: "{0} Karorija ag"
+      short:
+        display_name: cal
+        one: "{0} cal"
+        other: "{0} cal"
+    kilojoule:
+      long:
+        display_name: kirojoule ag
+        one: "{0} kirojoule"
+        other: "{0} kirojoule ag"
+      short:
+        display_name: kirojoule
+    joule:
+      long:
+        one: "{0} joule"
+        other: "{0} joule ag"
+      short:
+        display_name: joule ag
+    kilowatt-hour:
+      long:
+        display_name: kirowatt-óra ag
+        one: "{0} kirowatt-óra"
+        other: "{0} kirowatt-óra ag"
+      short:
+        display_name: kW-óra
+    electronvolt:
+      long:
+        display_name: elétron-volt ag
+        one: "{0} elétron-volt"
+        other: "{0} elétron-volt ag"
+      short:
+        display_name: elétron-volt
+    british-thermal-unit:
+      long:
+        display_name: ũnĩnane térmĩka mritỹnĩka
+        one: "{0} ũnĩnane térmĩka mritỹnĩka"
+        other: "{0} ũnĩnane térmĩka mritỹnĩka ag"
+      short:
+        display_name: BTU
+        other: "{0} BTU"
+    therm-us:
+      long:
+        display_name: ũnĩnane térmĩka nãrte-ỹmẽrikỹnũ ag
+        one: "{0} ũnĩnane térmĩka nãrte-ỹmẽrikỹnũ"
+        other: "{0} ũnĩnane térmĩka nãrte-ỹmẽrikỹnũ ag"
+      short:
+        display_name: thm EUA
+        other: "{0} thm EUA"
+    pound-force:
+      long:
+        display_name: ti tar rimra ag
+        one: "{0} ti tar rimra"
+        other: "{0} ti tar rimra ag"
+      short:
+        display_name: rimra-tar
+    newton:
+      long:
+        display_name: newton ag
+        one: "{0} newton"
+        other: "{0} newton ag"
+      short:
+        display_name: newton
+    gigahertz:
+      long:
+        display_name: gigahertz ag
+        one: "{0} gigahertz"
+        other: "{0} gigahertz ag"
+    megahertz:
+      long:
+        display_name: mẽgahertz ag
+        one: "{0} mẽgahertz"
+        other: "{0} mẽgahertz ag"
+    kilohertz:
+      long:
+        display_name: kilohertz ag
+        one: "{0} kilohertz"
+        other: "{0} kilohertz ag"
+    hertz:
+      long:
+        display_name: hertz ag
+        one: "{0} hertz"
+        other: "{0} hertz ag"
+    em:
+      long:
+        display_name: tipografiko em
+    pixel:
+      long:
+        one: "{0} pixel"
+        other: "{0} pixel ag"
+      short:
+        display_name: pixel ag
+    megapixel:
+      long:
+        display_name: mẽgapixel ag
+        one: "{0} mẽgapixel"
+        other: "{0} mẽgapixel ag"
+      short:
+        display_name: megapixel ag
+    pixel-per-centimeter:
+      long:
+        display_name: sẽntimẽturo ki pixel ag
+        one: "{0} pixel sẽntimẽturo ki"
+        other: "{0} pixel ag sẽntimẽturo ki"
+    pixel-per-inch:
+      long:
+        display_name: poregana ki pixel ag
+        one: "{0} pixel poregana ki"
+        other: "{0} pixel ag poregana ki"
+    dot-per-centimeter:
+      long:
+        display_name: sẽntimẽturo ki pãntu ag
+        one: "{0} pãntu sẽntimẽturo ki"
+        other: "{0} pãntu ag sẽntimẽturo ki"
+    dot-per-inch:
+      long:
+        display_name: poregana ki pãntu ag
+        one: "{0} pãntu poregana ki"
+        other: "{0} pãntu ag poregana ki"
+    kilometer:
+      long:
+        display_name: kiromẽturo ag
+        one: "{0} kiromẽturo"
+        other: "{0} kiromẽturo ag"
+        per_unit_pattern: "{0} kiromẽturo ki"
+    meter:
+      long:
+        display_name: mẽturo ag
+        one: "{0} mẽturo"
+        other: "{0} mẽturo ag"
+        per_unit_pattern: "{0} mẽturo ki"
+      short:
+        display_name: m
+    decimeter:
+      long:
+        display_name: nesimẽturo ag
+        one: "{0} nesimẽturo"
+        other: "{0} nesimẽturo ag"
+    centimeter:
+      long:
+        display_name: sẽntimẽturo ag
+        one: "{0} sẽntimẽturo"
+        other: "{0} sẽntimẽturo ag"
+        per_unit_pattern: "{0} sẽntimẽturo ki"
+    millimeter:
+      long:
+        display_name: mĩrimẽturo ag
+        one: "{0} mĩrimẽturo"
+        other: "{0} mĩrimẽturo ag"
+    micrometer:
+      long:
+        display_name: mĩkromẽturo ag
+        one: "{0} mĩkromẽturo"
+        other: "{0} mĩkromẽturo ag"
+    nanometer:
+      long:
+        display_name: nỹnãmẽturo ag
+        one: "{0} nỹnãmẽturo"
+        other: "{0} nỹnãmẽturo ag"
+    picometer:
+      long:
+        display_name: pikomẽturo ag
+        one: "{0} pikomẽturo"
+        other: "{0} pikomẽturo ag"
+    mile:
+      long:
+        one: "{0} milha"
+        other: "{0} milha ag"
+      short:
+        display_name: milha ag
+      narrow:
+        display_name: mil
+        one: "{0} milha"
+        other: "{0} milha ag"
+    yard:
+      long:
+        one: "{0} jarda"
+        other: "{0} jarda ag"
+      short:
+        display_name: jarda ag
+    foot:
+      long:
+        per_unit_pattern: "{0} tipẽn ki"
+      short:
+        display_name: tipẽn ag
+        one: "{0} tipẽn"
+        other: "{0} tipẽn ag"
+        per_unit_pattern: "{0}/tipẽn ki"
+      narrow:
+        per_unit_pattern: "{0}/tipẽn"
+    inch:
+      long:
+        display_name: poregana ag
+        one: "{0} poregana"
+        other: "{0} poregana ag"
+        per_unit_pattern: "{0} poregana ki"
+      short:
+        display_name: pol.
+        other: "{0} pol."
+        per_unit_pattern: "{0}/pol. ki"
+      narrow:
+        display_name: por.
+        one: "{0}″"
+        other: "{0}″"
+        per_unit_pattern: "{0}/por."
+    parsec:
+      long:
+        one: "{0} parsec"
+        other: "{0} parsec ag"
+      short:
+        display_name: parsec ag
+      narrow:
+        display_name: parsec
+    light-year:
+      long:
+        other: "{0} prỹg-jẽngrẽ ag"
+      short:
+        display_name: prỹg-jẽngrẽ ag
+        other: "{0} prỹg-jẽngrẽ"
+      narrow:
+        one: prỹg-jẽngrẽ {0}
+        other: prỹg-jẽngrẽ {0}
+    astronomical-unit:
+      long:
+        display_name: kanhkã vẽnhkãmur ag
+        one: "{0} kanhkã vẽnhkãmur"
+        other: "{0} kanhkã vẽnhkãmur ag"
+      short:
+        display_name: ua k.v.
+        other: "{0} ua"
+    furlong:
+      long:
+        one: "{0} furlong"
+        other: "{0} furlong ag"
+      short:
+        display_name: furlong ag
+      narrow:
+        display_name: furlong
+    fathom:
+      long:
+        one: "{0} mrasa"
+        other: "{0} mrasa ag"
+      short:
+        display_name: mrasa ag
+        other: "{0} bça. mrs"
+      narrow:
+        display_name: mrasa
+    nautical-mile:
+      long:
+        display_name: milha mỹritimỹ ag
+        one: "{0} milha mỹritimỹ"
+        other: "{0} milha mỹritimỹ ag"
+      short:
+        display_name: mn
+        other: "{0} mn"
+    mile-scandinavian:
+      long:
+        display_name: milha enhkỹninỹva ag
+        one: "{0} milha enhkỹninỹva"
+        other: "{0} milha enhkỹninỹva ag"
+    point:
+      long:
+        one: "{0} pãntu"
+        other: "{0} pãntu ag"
+      short:
+        display_name: pãntu ag
+    solar-radius:
+      long:
+        one: "{0} rã no"
+        other: "{0} rã no ag"
+      short:
+        display_name: rã nogno
+    lux:
+      long:
+        one: "{0} jẽngrẽ"
+        other: "{0} jẽngrẽ ag"
+      short:
+        display_name: jẽngrẽ ag
+    solar-luminosity:
+      long:
+        one: "{0} rã jẽngrẽ"
+        other: "{0} rã jẽngrẽ ag"
+      short:
+        display_name: rã jẽngrẽ ag
+    tonne:
+      long:
+        display_name: tãnẽrada mẽtirika ag
+        one: "{0} tãnẽrada mẽtirika"
+        other: "{0} tãnẽrada mẽtirika ag"
+    kilogram:
+      long:
+        display_name: kirogrỹmỹ ag
+        one: "{0} kirogrỹmỹ"
+        other: "{0} kirogrỹmỹ ag"
+        per_unit_pattern: "{0} kirogrỹmỹ ki"
+      narrow:
+        one: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        one: "{0} grỹmỹ"
+        other: "{0} grỹmỹ ag"
+        per_unit_pattern: "{0} grỹmỹ ki"
+      short:
+        display_name: grỹmỹ ag
+      narrow:
+        display_name: grỹmỹ
+        one: "{0}g"
+        other: "{0}g"
+    milligram:
+      long:
+        display_name: mĩrigrỹmỹ ag
+        one: "{0} mĩrigrỹmỹ"
+        other: "{0} mĩrigrỹmỹ ag"
+    microgram:
+      long:
+        display_name: mĩkrugrỹmỹ ag
+        one: "{0} mĩkrugrỹmỹ"
+        other: "{0} mĩkrugrỹmỹ ag"
+    ton:
+      long:
+        display_name: tãnẽrada ag
+        one: "{0} tãnẽrada"
+        other: "{0} tãnẽrada ag"
+      short:
+        display_name: tãnẽrana
+      narrow:
+        display_name: ton
+    stone:
+      long:
+        one: "{0} pó"
+        other: "{0} pó ag"
+      short:
+        display_name: pó ag
+      narrow:
+        display_name: pó
+    pound:
+      long:
+        one: "{0} rimra"
+        other: "{0} rimra ag"
+        per_unit_pattern: "{0} rimra ki"
+      short:
+        display_name: rimra ag
+    ounce:
+      long:
+        display_name: mĩgfi ag
+        one: "{0} mĩgfi"
+        other: "{0} mĩgfi ag"
+        per_unit_pattern: "{0} mĩgfi ki"
+    ounce-troy:
+      long:
+        display_name: mĩgfi troy ag
+        one: "{0} mĩgfi troy"
+        other: "{0} mĩgfi troy ag"
+      short:
+        display_name: oz troy
+    carat:
+      long:
+        one: "{0} kirate"
+        other: "{0} kirate ag"
+      short:
+        display_name: kirate ag
+        other: "{0} ct"
+      narrow:
+        display_name: kirate
+        one: "{0} ql"
+        other: "{0} ql"
+    dalton:
+      long:
+        one: "{0} dalton"
+        other: "{0} dalton ag"
+      short:
+        display_name: dalton ag
+    earth-mass:
+      long:
+        one: "{0} ga-pãgoj"
+        other: "{0} ga-pãgoj"
+      short:
+        display_name: ga-pãgoj ag
+    solar-mass:
+      long:
+        one: "{0} rã-pãgoj"
+        other: "{0} rã-pãgoj"
+      short:
+        display_name: rã-pãgoj ag
+    gigawatt:
+      long:
+        display_name: gigawatt ag
+        one: "{0} gigawatt"
+        other: "{0} gigawatt ag"
+    megawatt:
+      long:
+        display_name: mẽgawatt ag
+        one: "{0} mẽgawatt"
+        other: "{0} mẽgawatt ag"
+    kilowatt:
+      long:
+        display_name: kirowatt ag
+        one: "{0} kirowatt"
+        other: "{0} kirowatt ag"
+    watt:
+      long:
+        one: "{0} watt"
+        other: "{0} watt ag"
+      short:
+        display_name: watt ag
+    milliwatt:
+      long:
+        display_name: mĩriwatt ag
+        one: "{0} mĩriwatt"
+        other: "{0} mĩriwatt ag"
+    horsepower:
+      long:
+        display_name: kãvãru-jẽnger ag
+        one: "{0} kãvãru-jẽnger"
+        other: "{0} kãvãru-jẽnger ag"
+      short:
+        display_name: cv
+        other: "{0} cv"
+    millimeter-ofhg:
+      long:
+        display_name: mĩrimẽturo tỹ mẽrkuriju ag
+        one: "{0} mĩrimẽturo tỹ mẽrkuriju"
+        other: "{0} mĩrimẽturo ag tỹ mẽrkuriju"
+      short:
+        display_name: mmHg
+        other: "{0} mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: rimra ag poregana pénogno ki
+        one: "{0} rimra poregana pénogno ki"
+        other: "{0} rimra ag poregana pénogno ki"
+    inch-ofhg:
+      long:
+        display_name: poregana tỹ mẽrkuriju ag
+        one: "{0} poregana tỹ mẽrkuriju"
+        other: "{0} poregana ag tỹ mẽrkuriju"
+      narrow:
+        one: "{0}″ Hg"
+        other: "{0}″ Hg"
+    bar:
+      long:
+        display_name: bar ag
+      short:
+        one: "{0} bar"
+        other: "{0} bar ag"
+    millibar:
+      long:
+        display_name: mĩribar ag
+        one: "{0} mĩribar"
+        other: "{0} mĩribar ag"
+      narrow:
+        one: "{0} mb"
+        other: "{0} mb"
+    atmosphere:
+      long:
+        display_name: atmosfera ag
+        one: "{0} atmosfera"
+        other: "{0} atmosfera ag"
+    pascal:
+      long:
+        display_name: pascal ag
+        one: "{0} pascal"
+        other: "{0} pascal ag"
+    hectopascal:
+      long:
+        display_name: hegtopascal ag
+        one: "{0} hegtopascal"
+        other: "{0} hegtopascal"
+    kilopascal:
+      long:
+        display_name: kiropascal ag
+        one: "{0} kiropascal"
+        other: "{0} kiropascal"
+    megapascal:
+      long:
+        display_name: mẽgapascal ag
+        one: "{0} mẽgapascal"
+        other: "{0} mẽgapascal"
+    kilometer-per-hour:
+      long:
+        display_name: kiromẽturo ag óra ki
+        one: "{0} kiromẽturo óra ki"
+        other: "{0} kiromẽturo ag óra ki"
+    meter-per-second:
+      long:
+        display_name: mẽturo ag sigũnu ki
+        one: "{0} mẽturo sigũnu ki"
+        other: "{0} mẽturo ag sigũnu ki"
+      short:
+        display_name: mẽturo ag/seg
+    mile-per-hour:
+      long:
+        display_name: milha ag óra ki
+        one: "{0} milha óra ki"
+        other: "{0} milha ag óra ki"
+      short:
+        display_name: milha ag/óra
+        other: "{0} mph"
+    knot:
+      long:
+        display_name: kagje ag
+      short:
+        display_name: kagje
+        one: "{0} kagje"
+        other: "{0} kagje ag"
+      narrow:
+        other: "{0} kagje"
+    celsius:
+      long:
+        display_name: grav Celsius ag
+        one: "{0} grav Celsius"
+        other: "{0} grav Celsius"
+      short:
+        display_name: grav C ag
+        other: "{0} °C"
+      narrow:
+        display_name: "°C"
+    fahrenheit:
+      long:
+        display_name: grav Fahrenheit ag
+        one: "{0} grav Fahrenheit"
+        other: "{0} grav Fahrenheit ag"
+      short:
+        display_name: grav F ag
+        other: "{0} °F"
+      narrow:
+        display_name: "°F"
+    kelvin:
+      long:
+        display_name: kelvin ag
+        one: "{0} kelvin"
+        other: "{0} kelvin ag"
+    pound-force-foot:
+      long:
+        display_name: tipẽn-ag-rimra
+        one: "{0} tipẽn-rimra"
+        other: "{0} tipẽn-ag-rimra"
+    newton-meter:
+      long:
+        display_name: newton-mẽturo ag
+        one: "{0} newton-mẽturo"
+        other: "{0} newton-mẽturo ag"
+    cubic-kilometer:
+      long:
+        display_name: kiromẽturo kumiko ag
+        one: "{0} kiromẽturo kumiko ag"
+        other: kiromẽturo kumiko {0}
+    cubic-meter:
+      long:
+        display_name: mẽturo kumiko ag
+        one: "{0} mẽturo kumiko"
+        other: "{0} mẽturo kumiko ag"
+        per_unit_pattern: "{0} mẽturo kumiko ki"
+    cubic-centimeter:
+      long:
+        display_name: sẽntimẽturo kumiko ag
+        one: "{0} sẽntimẽturo kumiko"
+        other: "{0} sẽntimẽturo kumiko ag"
+        per_unit_pattern: "{0} sẽntimẽturo kumiko ki"
+    cubic-mile:
+      long:
+        display_name: milha kumika ag
+        one: "{0} milha kumika"
+        other: "{0} milha kumika ag"
+    cubic-yard:
+      long:
+        display_name: jarda kumika ag
+        one: "{0} jarda kumika"
+        other: "{0} jarda kumika ag"
+      short:
+        display_name: jarda³ ag
+    cubic-foot:
+      long:
+        display_name: tipẽn kumiko ag
+        one: "{0} tipẽn kumiko"
+        other: "{0} tipẽn kumiko ag"
+      short:
+        display_name: tipẽn3 ag
+      narrow:
+        display_name: ft³
+    cubic-inch:
+      long:
+        display_name: poregana kumika ag
+        one: "{0} poregana kumika"
+        other: "{0} poregana kumika"
+      short:
+        display_name: poregana³ ag
+        other: "{0} pol³"
+    megaliter:
+      long:
+        display_name: mẽgaritru ag
+        one: "{0} mẽgaritru"
+        other: "{0} mẽgaritru"
+      short:
+        display_name: Ml
+        other: "{0} Ml"
+    hectoliter:
+      long:
+        display_name: hegtoritru ag
+        one: "{0} hegtoritru"
+        other: "{0} hegtoritru ag"
+      short:
+        display_name: hl
+        other: "{0} hl"
+    liter:
+      long:
+        one: "{0} ritru"
+        other: "{0} ritru ag"
+        per_unit_pattern: "{0} ritru ki"
+      short:
+        display_name: ritru ag
+      narrow:
+        display_name: ritru
+        one: "{0}r"
+        other: "{0}r"
+    deciliter:
+      long:
+        display_name: nesirituru ag
+        one: "{0} nesirituru"
+        other: "{0} nesirituru ag"
+      short:
+        display_name: dl
+        other: "{0} dl"
+    centiliter:
+      long:
+        display_name: sẽntiritru ag
+        one: "{0} sẽntiritru"
+        other: "{0} sẽntiritru ag"
+      short:
+        display_name: cl
+        other: "{0} cl"
+    milliliter:
+      long:
+        display_name: mĩriritru ag
+        one: "{0} mĩriritru"
+        other: "{0} mĩriritru ag"
+      short:
+        display_name: ml
+        other: "{0} ml"
+    pint-metric:
+      long:
+        display_name: pint mẽtriko ag
+        one: "{0} pint mẽtriko"
+        other: "{0} pint mẽtriko ag"
+      short:
+        display_name: ptm
+        other: "{0} ptm"
+    cup-metric:
+      long:
+        display_name: sikara mẽtrika ag
+        one: "{0} sikara mẽtrika"
+        other: "{0} sikara mẽtrika ag"
+      short:
+        display_name: xícm
+        other: "{0} xícm"
+    acre-foot:
+      long:
+        display_name: akre-pẽn ag
+        one: "{0} akre-pẽn"
+        other: "{0} akre-pẽn ag"
+      short:
+        display_name: akre-tipẽn ag
+        one: "{0} akre-tipẽn"
+        other: "{0} akre-tipẽn ag"
+    gallon:
+      long:
+        display_name: garỹv ag
+        one: "{0} garỹv"
+        other: "{0} garỹv ag"
+        per_unit_pattern: "{0} garỹv ki"
+      short:
+        display_name: gar
+        other: "{0} gar"
+        per_unit_pattern: "{0}/gar"
+    gallon-imperial:
+      long:
+        display_name: garỹv ĩmperijav ag
+        one: "{0} garỹv ĩmperijav"
+        other: "{0} garỹv ĩmperijav ag"
+        per_unit_pattern: "{0} garỹv ĩmperijav ki"
+      short:
+        display_name: gar. imp.
+        other: "{0} gar. imp."
+        per_unit_pattern: "{0}/gar. imp."
+    quart:
+      long:
+        display_name: kãgrán ag
+        one: "{0} kãgrán"
+        other: "{0} kãgrán ag"
+      short:
+        display_name: qts
+    pint:
+      long:
+        one: "{0} pint"
+        other: "{0} pint ag"
+      short:
+        display_name: pint ag
+    cup:
+      long:
+        one: "{0} sikara"
+        other: "{0} sikara ag"
+      short:
+        display_name: sikara ag
+        other: "{0} sik."
+    fluid-ounce:
+      long:
+        display_name: mĩgfi gungón ag
+        one: "{0} mĩgfi gungón"
+        other: "{0} mĩgfi gungón ag"
+      short:
+        display_name: fl oz
+        other: "{0} fl oz"
+      narrow:
+        display_name: fl. oz.
+        one: "{0} fl. oz."
+        other: "{0} fl. oz."
+    fluid-ounce-imperial:
+      long:
+        display_name: mĩgfi gungón ĩmperijav ag
+        one: "{0} mĩgfi gungón ĩmperijav"
+        other: "{0} mĩgfi gungón ĩmperijav ag"
+    tablespoon:
+      long:
+        display_name: kume kujé ag
+        one: "{0} kume kujé"
+        other: "{0} kume kujé"
+      short:
+        display_name: kume k.
+        other: "{0} kume k."
+    teaspoon:
+      long:
+        display_name: sa kujé ag
+        one: "{0} kujé"
+        other: "{0} kujé ag"
+      short:
+        display_name: sa k.
+        other: "{0} sa k."
+    barrel:
+      long:
+        display_name: marir ag
+        one: "{0} marir"
+        other: "{0} marir ag"
+      short:
+        display_name: marir

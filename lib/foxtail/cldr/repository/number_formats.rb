@@ -71,12 +71,12 @@ module Foxtail
 
         # Get decimal format pattern
         def decimal_pattern(style="standard")
-          @resolver.resolve("number_formats.decimal_formats.#{style}", "number_formats") || default_decimal_pattern
+          @resolver.resolve("number_formats.decimal_formats.#{style}", "number_formats")
         end
 
         # Get percent format pattern
         def percent_pattern(style="standard")
-          @resolver.resolve("number_formats.percent_formats.#{style}", "number_formats") || default_percent_pattern
+          @resolver.resolve("number_formats.percent_formats.#{style}", "number_formats")
         end
 
         # Get currency format pattern
@@ -84,7 +84,7 @@ module Foxtail
           @resolver.resolve(
             "number_formats.currency_formats.#{style}",
             "number_formats"
-          ) || default_currency_pattern(style)
+          )
         end
 
         # Get scientific format pattern
@@ -92,7 +92,7 @@ module Foxtail
           @resolver.resolve(
             "number_formats.scientific_formats.#{style}",
             "number_formats"
-          ) || default_scientific_pattern
+          )
         end
 
         # Get currency symbol for a given currency code
@@ -229,25 +229,6 @@ module Foxtail
         def unit_exists?(unit_name)
           unit_data = @resolver.resolve("number_formats.units.#{unit_name}", "number_formats")
           !unit_data.nil?
-        end
-
-        private def default_decimal_pattern
-          "#,##0.###"
-        end
-
-        private def default_percent_pattern
-          "#,##0%"
-        end
-
-        private def default_currency_pattern(style)
-          case style
-          when "accounting" then "¤#,##0.00;(¤#,##0.00)"
-          else "¤#,##0.00"
-          end
-        end
-
-        private def default_scientific_pattern
-          "#E0"
         end
       end
     end
