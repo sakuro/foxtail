@@ -8,17 +8,19 @@ module Foxtail
       # CLDR locale data resolver
       # Resolves missing data by traversing inheritance chain at runtime
       class Resolver
-        def initialize(locale_id, data_dir: nil)
-          @original_locale_id = locale_id
+        def initialize(locale, data_dir: nil)
+          @locale = locale
+          @locale_id = locale.respond_to?(:to_simple) ? locale.to_simple.to_s : locale.to_s
           @data_dir = data_dir || File.join(__dir__, "..", "..", "..", "..", "data", "cldr")
           @inheritance = Inheritance.instance
           @cache = {}
           @loaded_locales = {}
           @locale_aliases = nil
           @parent_locales = nil
+          @inheritance_chain = nil
 
           # Resolve locale alias to canonical form
-          @locale_id = resolve_canonical_locale(locale_id)
+          @locale_id = resolve_canonical_locale(@locale_id)
         end
 
         # Resolve a data path using inheritance chain
@@ -26,7 +28,7 @@ module Foxtail
         # @param data_type [String] Data type (e.g., "number_formats", "datetime_formats")
         # @return [Object] Resolved value or nil if not found
         def resolve(data_path, data_type)
-          cache_key = "#{@locale_id}:#{data_type}:#{data_path}"
+          cache_key = [@locale_id, data_type, data_path]
           return @cache[cache_key] if @cache.key?(cache_key)
 
           value = resolve_with_inheritance(data_path, data_type)
@@ -75,14 +77,14 @@ module Foxtail
         private def inheritance_chain
           return @inheritance_chain if @inheritance_chain
 
-          @inheritance_chain = @inheritance.resolve_inheritance_chain_with_parents(@locale_id, parent_locales)
-          CLDR.logger.debug "Inheritance chain for #{@original_locale_id} -> #{@locale_id}: #{@inheritance_chain}"
+          @inheritance_chain = @inheritance.resolve_inheritance_chain_with_parents(@locale_id, parent_locale_ids)
+          CLDR.logger.debug "Inheritance chain for #{@locale_id}: #{@inheritance_chain}"
           @inheritance_chain
         end
 
-        private def parent_locales
-          @parent_locales ||= begin
-            @inheritance.load_parent_locales(@data_dir)
+        private def parent_locale_ids
+          @parent_locale_ids ||= begin
+            @inheritance.load_parent_locale_ids(@data_dir)
           rescue ArgumentError => e
             CLDR.logger.warn "#{e.message}. Falling back to algorithmic inheritance."
             {}
@@ -90,7 +92,7 @@ module Foxtail
         end
 
         private def load_locale_data(locale_id, data_type)
-          cache_key = "#{locale_id}:#{data_type}"
+          cache_key = [locale_id, data_type]
           return @loaded_locales[cache_key] if @loaded_locales.key?(cache_key)
 
           file_path = File.join(@data_dir, locale_id, "#{data_type}.yml")

@@ -18,13 +18,13 @@ module Foxtail
         end
 
         # Parse a locale identifier and return the complete inheritance chain
-        # @param locale [String] Locale identifier (e.g., "en_US", "zh_Hans_CN")
+        # @param locale_id [String] Locale identifier (e.g., "en_US", "zh_Hans_CN")
         # @return [Array<String>] Inheritance chain from most specific to root
-        def resolve_inheritance_chain(locale)
-          chain = [locale]
+        def resolve_inheritance_chain(locale_id)
+          chain = [locale_id]
 
           # Handle different locale patterns
-          case locale
+          case locale_id
           when /^([a-z]{2,3})_([A-Z][a-z]{3})_([A-Z]{2})$/
             # language_Script_Territory (e.g., zh_Hans_CN)
             language = $1
@@ -39,16 +39,16 @@ module Foxtail
           end
 
           # Always end with root unless we're already root
-          chain << "root" unless locale == "root"
+          chain << "root" unless locale_id == "root"
 
           chain
         end
 
-        # Load parent locale mappings from extracted YAML data
+        # Load parent locale ID mappings from extracted YAML data
         # @param data_dir [String] Path to extracted CLDR data directory
-        # @return [Hash] Mapping of locale to parent locale
+        # @return [Hash] Mapping of locale ID to parent locale ID
         # @raise [ArgumentError] if parent_locales.yml is not found
-        def load_parent_locales(data_dir)
+        def load_parent_locale_ids(data_dir)
           parent_locales_path = File.join(data_dir, "parent_locales.yml")
 
           unless File.exist?(parent_locales_path)
@@ -58,7 +58,7 @@ module Foxtail
 
           begin
             yaml_data = YAML.load_file(parent_locales_path)
-            parent_locales = yaml_data["parent_locales"] || {}
+            parent_locale_ids = yaml_data["parent_locales"] || {}
 
             # Log only on first load
             unless @parent_locales_logged
@@ -67,11 +67,11 @@ module Foxtail
               rescue
                 parent_locales_path
               end
-              CLDR.logger.debug "Loaded #{parent_locales.size} parent locale mappings from #{relative_path}"
+              CLDR.logger.debug "Loaded #{parent_locale_ids.size} parent locale mappings from #{relative_path}"
               @parent_locales_logged = true
             end
 
-            parent_locales
+            parent_locale_ids
           rescue => e
             raise ArgumentError, "Could not load parent locales from #{parent_locales_path}: #{e.message}"
           end
@@ -129,12 +129,12 @@ module Foxtail
         end
 
         # Resolve inheritance chain using CLDR parent locale data
-        # @param locale [String] Locale identifier
-        # @param parent_locales [Hash] Parent locale mappings from supplemental data
+        # @param locale_id [String] Locale identifier
+        # @param parent_locale_ids [Hash] Parent locale ID mappings from supplemental data
         # @return [Array<String>] Complete inheritance chain
-        def resolve_inheritance_chain_with_parents(locale, parent_locales)
+        def resolve_inheritance_chain_with_parents(locale_id, parent_locale_ids)
           chain = []
-          current = locale
+          current = locale_id
           seen = Set.new
 
           # Follow parent chain to avoid infinite loops
@@ -143,8 +143,8 @@ module Foxtail
             seen.add(current)
 
             # Use explicit parent from supplemental data first
-            if parent_locales[current]
-              current = parent_locales[current]
+            if parent_locale_ids[current]
+              current = parent_locale_ids[current]
             else
               # Fall back to algorithmic parent resolution
               algorithmic_chain = resolve_inheritance_chain(current)
@@ -156,7 +156,7 @@ module Foxtail
           end
 
           # Always end with root unless we started with root
-          chain << "root" unless locale == "root" || chain.include?("root")
+          chain << "root" unless locale_id == "root" || chain.include?("root")
 
           chain
         end

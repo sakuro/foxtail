@@ -20,7 +20,7 @@ module Foxtail
       class DateTimeFormats < Base
         def initialize(locale)
           super
-          @resolver = Resolver.new(@locale.to_simple.to_s)
+          @resolver = Resolver.new(@locale)
 
           # Check data availability during construction
           return if data?

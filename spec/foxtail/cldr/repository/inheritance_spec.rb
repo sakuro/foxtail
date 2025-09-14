@@ -37,7 +37,7 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
     end
   end
 
-  describe "#load_parent_locales" do
+  describe "#load_parent_locale_ids" do
     let(:temp_dir) { Dir.mktmpdir }
     let(:parent_locales_file) { File.join(temp_dir, "parent_locales.yml") }
 
@@ -56,7 +56,7 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
 
       File.write(parent_locales_file, yaml_content.to_yaml)
 
-      parents = inheritance.load_parent_locales(temp_dir)
+      parents = inheritance.load_parent_locale_ids(temp_dir)
 
       expect(parents).to eq({
         "en_AU" => "en_001",
@@ -69,7 +69,7 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
 
     it "raises ArgumentError when parent locales file does not exist" do
       expect {
-        inheritance.load_parent_locales(temp_dir)
+        inheritance.load_parent_locale_ids(temp_dir)
       }.to raise_error(ArgumentError, /Parent locales data not found/)
     end
 
@@ -77,7 +77,7 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
       File.write(parent_locales_file, "invalid: yaml: [")
 
       expect {
-        inheritance.load_parent_locales(temp_dir)
+        inheritance.load_parent_locale_ids(temp_dir)
       }.to raise_error(ArgumentError, /Could not load parent locales/)
     end
   end
