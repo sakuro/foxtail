@@ -40,7 +40,7 @@ class NodeIntlReporter
     report << "| Matches | #{total_matches} | #{match_percentage}% |"
     if conditional_matches > 0
       report << "| - Exact matches | #{exact_matches} | #{total.zero? ? 0.0 : (Float(exact_matches) / total * 100).round(1)}% |"
-      report << "| - Conditional matches[^1] | #{conditional_matches} | #{total.zero? ? 0.0 : (Float(conditional_matches) / total * 100).round(1)}% |"
+      report << "| - Conditional matches | #{conditional_matches} | #{total.zero? ? 0.0 : (Float(conditional_matches) / total * 100).round(1)}% |"
     end
     report << "| Mismatches | #{mismatches} | #{mismatch_percentage}% |"
     report << "| Errors | #{errors} | #{error_percentage}% |"
@@ -48,7 +48,7 @@ class NodeIntlReporter
     report << "*Total test cases: #{total}*"
     if conditional_matches > 0
       report << ""
-      report << "[^1]: Conditional matches: Results that match after normalizing whitespace characters (CLDR uses non-breaking spaces U+00A0, Node.js uses regular spaces U+0020)"
+      report << "**Conditional matches**: Results that match after normalizing whitespace characters (CLDR uses non-breaking spaces U+00A0, Node.js uses regular spaces U+0020)"
     end
     report << ""
 
