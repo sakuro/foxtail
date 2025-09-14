@@ -27,28 +27,37 @@ class NodeIntlTester
   }
 
   def initialize
-    @test_cases = []
+    @number_test_cases = []
+    @datetime_test_cases = []
   end
 
   # Generate comprehensive test cases
   def generate_test_cases
-    @test_cases = []
+    @number_test_cases = []
+    @datetime_test_cases = []
 
-    # All style/notation combinations
+    # Number format test cases
     add_style_notation_combination_tests
 
-    @test_cases
+    # DateTime format test cases
+    add_datetime_format_tests
+
+    {number: @number_test_cases, datetime: @datetime_test_cases}
   end
 
   # Run all generated test cases
   def test_all
-    generate_test_cases
-    run_tests(@test_cases)
+    test_cases = generate_test_cases
+
+    number_results = run_number_tests(test_cases[:number])
+    datetime_results = run_datetime_tests(test_cases[:datetime])
+
+    number_results + datetime_results
   end
 
-  # Run Node.js comparisons for test cases
-  def run_tests(test_cases)
-    # Prepare input for Node.js script
+  # Run Node.js comparisons for number test cases
+  def run_number_tests(test_cases)
+    # Prepare input for Node.js script (old format for backward compatibility)
     input_data = {
       test_cases: test_cases.map do |test_case|
         {
@@ -65,7 +74,29 @@ class NodeIntlTester
     return [] unless node_results
 
     # Run Foxtail formatting and compare results
-    compare_results(test_cases, node_results)
+    compare_number_results(test_cases, node_results["results"] || [])
+  end
+
+  # Run Node.js comparisons for datetime test cases
+  def run_datetime_tests(test_cases)
+    # Prepare input for Node.js script (new format)
+    input_data = {
+      datetime_test_cases: test_cases.map do |test_case|
+        {
+          id: test_case[:id],
+          value: test_case[:value],
+          locale: test_case[:locale],
+          options: test_case[:options]
+        }
+      end
+    }
+
+    # Execute Node.js comparator
+    node_results = execute_node_comparator(input_data)
+    return [] unless node_results
+
+    # Run Foxtail formatting and compare results
+    compare_datetime_results(test_cases, node_results["datetime_results"] || [])
   end
 
   private def add_style_notation_combination_tests
@@ -134,13 +165,63 @@ class NodeIntlTester
             end
             id = id_parts.join("_")
 
-            @test_cases << {
+            @number_test_cases << {
               id:,
               value:,
               locale:,
               options:
             }
           end
+        end
+      end
+    end
+  end
+
+  private def add_datetime_format_tests
+    # Test dates for different scenarios
+    test_dates = [
+      "2023-01-15T10:30:00Z",     # Standard datetime
+      "2023-12-25T00:00:00Z",     # Christmas (year end)
+      "2023-07-04T15:45:30Z",     # Mid-year with seconds
+      "2023-02-14T23:59:59Z",     # Valentine's day, end of day
+      "2024-02-29T12:00:00Z"      # Leap year date
+    ]
+
+    # Test locales
+    locales = %w[en-US ja-JP de-DE fr-FR]
+
+    # Date/Time style combinations
+    styles = [
+      {dateStyle: "full"},
+      {dateStyle: "long"},
+      {dateStyle: "medium"},
+      {dateStyle: "short"},
+      {timeStyle: "full"},
+      {timeStyle: "long"},
+      {timeStyle: "medium"},
+      {timeStyle: "short"},
+      {dateStyle: "medium", timeStyle: "short"},
+      {dateStyle: "short", timeStyle: "medium"},
+      {year: "numeric", month: "long", day: "numeric"},
+      {weekday: "long", year: "numeric", month: "short", day: "numeric"},
+      {hour: "2-digit", minute: "2-digit"},
+      {hour: "numeric", minute: "2-digit", second: "2-digit", hour12: true},
+      {hour: "numeric", minute: "2-digit", second: "2-digit", hour12: false}
+    ]
+
+    test_dates.each do |date_value|
+      locales.each do |locale|
+        styles.each_with_index do |options, style_index|
+          # Generate unique ID
+          date_id = date_value.gsub(/[:-]/, "").tr("T", "_").delete("Z")
+          id = "datetime_#{locale.tr("-", "_")}_#{date_id}_style#{style_index}"
+
+          @datetime_test_cases << {
+            id:,
+            value: date_value,
+            locale:,
+            options:
+          }
         end
       end
     end
@@ -162,8 +243,8 @@ class NodeIntlTester
     nil
   end
 
-  private def compare_results(test_cases, node_results)
-    results_by_id = (node_results["results"] || []).to_h {|r| [r["id"], r] }
+  private def compare_number_results(test_cases, node_results)
+    results_by_id = node_results.to_h {|r| [r["id"], r] }
 
     test_cases.map do |test_case|
       node_result = results_by_id[test_case[:id]]
@@ -191,7 +272,7 @@ class NodeIntlTester
           error: "Node.js error: #{node_result["error"]}"
         )
       else
-        foxtail_result = format_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+        foxtail_result = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
 
         status = if foxtail_result == node_result["result"]
                    :match
@@ -215,8 +296,70 @@ class NodeIntlTester
     end
   end
 
-  private def format_with_foxtail(value, locale, options)
+  private def compare_datetime_results(test_cases, node_results)
+    results_by_id = node_results.to_h {|r| [r["id"], r] }
+
+    test_cases.map do |test_case|
+      node_result = results_by_id[test_case[:id]]
+
+      if node_result.nil?
+        TestResult.new(
+          id: test_case[:id],
+          value: test_case[:value],
+          locale: test_case[:locale],
+          options: test_case[:options],
+          foxtail_result: nil,
+          node_result: nil,
+          status: :error,
+          error: "Node.js result not found"
+        )
+      elsif node_result["error"]
+        TestResult.new(
+          id: test_case[:id],
+          value: test_case[:value],
+          locale: test_case[:locale],
+          options: test_case[:options],
+          foxtail_result: nil,
+          node_result: nil,
+          status: :error,
+          error: "Node.js error: #{node_result["error"]}"
+        )
+      else
+        foxtail_result = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+
+        status = if foxtail_result == node_result["result"]
+                   :match
+                 elsif normalize_whitespace(foxtail_result) == normalize_whitespace(node_result["result"])
+                   :conditional_match
+                 else
+                   :mismatch
+                 end
+
+        TestResult.new(
+          id: test_case[:id],
+          value: test_case[:value],
+          locale: test_case[:locale],
+          options: test_case[:options],
+          foxtail_result:,
+          node_result: node_result["result"],
+          status:,
+          error: nil
+        )
+      end
+    end
+  end
+
+  private def format_number_with_foxtail(value, locale, options)
     formatter = Foxtail::CLDR::Formatter::Number.new
+    locale_tag = Locale::Tag.parse(locale)
+
+    formatter.call(value, locale: locale_tag, **options)
+  rescue => e
+    "ERROR: #{e.message}"
+  end
+
+  private def format_datetime_with_foxtail(value, locale, options)
+    formatter = Foxtail::CLDR::Formatter::DateTime.new
     locale_tag = Locale::Tag.parse(locale)
 
     formatter.call(value, locale: locale_tag, **options)

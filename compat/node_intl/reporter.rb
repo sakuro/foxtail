@@ -18,7 +18,7 @@ class NodeIntlReporter
   # Generate detailed markdown report
   def generate_markdown_report
     report = []
-    report << "# Node.js Intl.NumberFormat Compatibility Report"
+    report << "# Node.js Intl Compatibility Report"
     report << ""
     report << "## Summary"
     report << ""
@@ -125,6 +125,8 @@ class NodeIntlReporter
         "percent"
       when /^scientific_/
         "scientific"
+      when /^datetime_/
+        "datetime"
       else
         "other"
       end
