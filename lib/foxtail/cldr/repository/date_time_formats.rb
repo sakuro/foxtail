@@ -18,16 +18,6 @@ module Foxtail
       #   formats.weekday_name("sun", "abbreviated")  # => "Sun"
       #   formats.date_pattern("medium")    # => "MMM d, y"
       class DateTimeFormats < Base
-        def initialize(locale)
-          super
-          @resolver = Resolver.new(@locale)
-
-          # Check data availability during construction
-          return if data?
-
-          raise DataNotAvailable, "CLDR data not available for locale: #{locale}"
-        end
-
         # Get month name (1-12)
         def month_name(month, width="wide", context="format")
           months = @resolver.resolve("datetime_formats.months.#{context}.#{width}", "datetime_formats")
