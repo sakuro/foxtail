@@ -122,6 +122,7 @@ module Foxtail
 
             pattern
           else
+            # Use decimal pattern for unit, decimal, and default cases
             number_formats.decimal_pattern
           end
         end
@@ -340,6 +341,22 @@ module Foxtail
                       else
                         format_non_digit_token(token, number_formats, decimal_value, options)
                       end
+          end
+
+          # Apply unit pattern for unit style
+          style = options[:style] || "decimal"
+          if style == "unit"
+            unit = options[:unit] || "meter"
+            unit_display = options[:unitDisplay] || "short"
+            unit_pattern = number_formats.unit_pattern(unit, unit_display)
+
+            if unit_pattern
+              # Replace {0} placeholder with the formatted number
+              result = unit_pattern.gsub("{0}", result)
+            else
+              # Fallback: append unit name if no pattern found
+              result += " #{unit}"
+            end
           end
 
           result
@@ -608,6 +625,15 @@ module Foxtail
               return "#{symbol}0"
             when "percent"
               return "0%"
+            when "unit"
+              unit = options[:unit] || "meter"
+              unit_display = options[:unitDisplay] || "short"
+              unit_pattern = number_formats.unit_pattern(unit, unit_display)
+
+              return unit_pattern.gsub("{0}", "0") if unit_pattern
+
+              return "0 #{unit}"
+
             else
               return "0"
             end
@@ -824,6 +850,8 @@ module Foxtail
             percent_pattern = number_formats.percent_pattern
             combine_patterns_using_tokens(base_pattern, percent_pattern)
           else
+            # For units, decimal, and default cases, use base pattern as-is
+            # Unit symbol will be added in format_with_pattern for unit style
             base_pattern
           end
         end
@@ -872,6 +900,16 @@ module Foxtail
           when "percent"
             percent_pattern = number_formats.percent_pattern
             apply_style_pattern_to_compact_result(formatted_number, percent_pattern, "%", number_formats)
+          when "unit"
+            unit = options[:unit] || "meter"
+            unit_display = options[:unitDisplay] || "short"
+            unit_pattern = number_formats.unit_pattern(unit, unit_display)
+
+            if unit_pattern
+              unit_pattern.gsub("{0}", formatted_number)
+            else
+              "#{formatted_number} #{unit}"
+            end
           else
             formatted_number
           end
