@@ -164,6 +164,15 @@ module Foxtail
           @resolver.resolve("number_formats.compact_formats.#{compact_display}", "number_formats") || {}
         end
 
+        # Get default significant digits settings for compact notation
+        # Based on Node.js Intl.NumberFormat defaults for decimal compact notation
+        def compact_decimal_significant_digits
+          {
+            maximum: 2,
+            minimum: 1
+          }
+        end
+
         private def default_decimal_pattern
           "#,##0.###"
         end

@@ -619,9 +619,10 @@ module Foxtail
             original_negative = options[:original_was_negative] || false
 
             if decimal_value.abs < 1 && decimal_value.abs > 0
-              # For small decimal values, use Node.js compact notation defaults:
-              # maximumSignificantDigits: 2, minimumSignificantDigits: 1
-              formatted = "%.2g" % decimal_value.abs
+              # For small decimal values, use Node.js compact notation defaults
+              significant_digits = number_formats.compact_decimal_significant_digits
+              format_spec = "%.#{significant_digits[:maximum]}g"
+              formatted = format_spec % decimal_value.abs
             else
               # For integer values, round first then format
               # Apply rounding to original signed value for correct result
@@ -760,14 +761,46 @@ module Foxtail
         private def combine_pattern_with_style(base_pattern, style, number_formats, options)
           case style
           when "currency"
-            # Add currency symbol to scientific pattern: ¤#E0
-            "¤#{base_pattern}"
+            currency_pattern = number_formats.currency_pattern
+            combine_patterns_using_tokens(base_pattern, currency_pattern)
           when "percent"
-            # Add percent symbol to scientific pattern: #E0%
-            "#{base_pattern}%"
+            percent_pattern = number_formats.percent_pattern
+            combine_patterns_using_tokens(base_pattern, percent_pattern)
           else
             base_pattern
           end
+        end
+
+        private def combine_patterns_using_tokens(number_pattern, style_pattern)
+          parser = Foxtail::CLDR::PatternParser::Number.new
+
+          # Parse both patterns into tokens
+          number_tokens = parser.parse(number_pattern)
+          style_tokens = parser.parse(style_pattern)
+
+          # Find where to insert the number tokens
+          combined_tokens = []
+          number_tokens_inserted = false
+
+          style_tokens.each do |token|
+            case token
+            when Foxtail::CLDR::PatternParser::Number::DigitToken,
+                 Foxtail::CLDR::PatternParser::Number::DecimalToken,
+                 Foxtail::CLDR::PatternParser::Number::GroupToken,
+                 Foxtail::CLDR::PatternParser::Number::ExponentToken
+              # Replace with number pattern tokens (only once)
+              unless number_tokens_inserted
+                combined_tokens.concat(number_tokens)
+                number_tokens_inserted = true
+              end
+            else
+              # Keep non-number tokens
+              combined_tokens << token
+            end
+          end
+
+          # Convert tokens back to pattern string
+          combined_tokens.map(&:to_s).join
         end
 
         # Apply style formatting to compact notation result
@@ -776,14 +809,49 @@ module Foxtail
           when "currency"
             currency_code = options[:currency] || "USD"
             symbol = number_formats.currency_symbol(currency_code)
-            "#{symbol}#{formatted_number}"
+            currency_pattern = number_formats.currency_pattern
+            apply_style_pattern_to_compact_result(formatted_number, currency_pattern, symbol, number_formats)
           when "percent"
-            # For percent style, the number should be multiplied by 100
-            # But in compact notation context, we treat it as already formatted
-            "#{formatted_number}%"
+            percent_pattern = number_formats.percent_pattern
+            apply_style_pattern_to_compact_result(formatted_number, percent_pattern, "%", number_formats)
           else
             formatted_number
           end
+        end
+
+        private def apply_style_pattern_to_compact_result(formatted_number, pattern, style_symbol, number_formats)
+          parser = Foxtail::CLDR::PatternParser::Number.new
+          tokens = parser.parse(pattern)
+
+          result_parts = []
+
+          tokens.each do |token|
+            case token
+            when Foxtail::CLDR::PatternParser::Number::DigitToken,
+                 Foxtail::CLDR::PatternParser::Number::DecimalToken,
+                 Foxtail::CLDR::PatternParser::Number::GroupToken
+              # Replace number tokens with formatted number (only once)
+              if result_parts.empty? || !result_parts.last.is_a?(String) || result_parts.last != formatted_number
+                result_parts << formatted_number
+              end
+            when Foxtail::CLDR::PatternParser::Number::CurrencyToken
+              # Replace currency token with actual symbol
+              result_parts << style_symbol
+            when Foxtail::CLDR::PatternParser::Number::PercentToken
+              # Replace percent token with actual symbol
+              result_parts << style_symbol
+            when Foxtail::CLDR::PatternParser::Number::LiteralToken,
+                 Foxtail::CLDR::PatternParser::Number::QuotedToken
+              # Keep literal tokens (including spaces)
+              if token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+                result_parts << token.literal_text
+              else
+                result_parts << token.to_s
+              end
+            end
+          end
+
+          result_parts.join
         end
       end
     end
