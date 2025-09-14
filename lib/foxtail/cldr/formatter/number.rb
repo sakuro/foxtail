@@ -149,18 +149,17 @@ module Foxtail
           tokens = parser.parse(pattern)
 
           # Split positive and negative patterns if present
-          separator_index = tokens.find_index {|t| t.is_a?(Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken) }
-
           # Always use absolute value for formatting (we handle sign separately)
           format_value = decimal_value.negative? ? decimal_value.abs : decimal_value
 
-          if separator_index
-            positive_tokens = tokens[0...separator_index]
-            negative_tokens = tokens[(separator_index + 1)..]
-            pattern_tokens = decimal_value.negative? ? negative_tokens : positive_tokens
-          else
-            pattern_tokens = tokens
-          end
+          pattern_tokens, has_separator = case tokens
+                                         in [*positive, Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken, *negative]
+                                           # Pattern with both positive and negative forms (e.g., "#,##0.00;(#,##0.00)")
+                                           [decimal_value.negative? ? negative : positive, true]
+                                         in _
+                                           # Pattern with only positive form
+                                           [tokens, false]
+                                         end
 
           # Apply all multiplications here (centralized logic)
           has_percent = pattern_tokens.any?(Foxtail::CLDR::PatternParser::Number::PercentToken)
@@ -176,7 +175,7 @@ module Foxtail
 
           # Build formatted string from tokens
           # Pass original sign information via options
-          original_was_negative = decimal_value.negative? && !separator_index
+          original_was_negative = decimal_value.negative? && !has_separator
           build_formatted_string(
             format_value,
             pattern_tokens,
