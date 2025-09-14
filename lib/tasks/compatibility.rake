@@ -26,7 +26,7 @@ namespace :compatibility do
     puts "📄 Detailed report saved to fluentjs_compatibility_report.md"
   end
 
-  desc "Generate Node.js Intl.NumberFormat compatibility report"
+  desc "Generate Node.js Intl compatibility report (NumberFormat + DateTimeFormat)"
   task :node_intl do
     # Initialize tester and run all tests
     tester = NodeIntlTester.new
