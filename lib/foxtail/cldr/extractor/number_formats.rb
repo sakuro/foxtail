@@ -15,6 +15,7 @@ module Foxtail
               "percent_formats" => {"standard" => formats["percent"]},
               "currency_formats" => extract_currency_formats(xml_doc, formats),
               "scientific_formats" => {"standard" => formats["scientific"]},
+              "compact_formats" => extract_compact_formats(xml_doc),
               "currencies" => merge_locale_and_root_currencies(xml_doc)
             }
           }
@@ -154,6 +155,36 @@ module Foxtail
           currency_formats["accounting"] = accounting_element.text if accounting_element
 
           currency_formats
+        end
+
+        private def extract_compact_formats(xml_doc)
+          compact_formats = {}
+
+          # Extract short compact formats (like "0K", "0万")
+          short_formats = {}
+          xml_doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='latn']/decimalFormatLength[@type='short']/decimalFormat/pattern") do |pattern|
+            type = pattern.attributes["type"]
+            count = pattern.attributes["count"] || "other"
+            next unless type && pattern.text
+
+            short_formats[type] ||= {}
+            short_formats[type][count] = pattern.text
+          end
+          compact_formats["short"] = short_formats unless short_formats.empty?
+
+          # Extract long compact formats (like "0 thousand", "0万")
+          long_formats = {}
+          xml_doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='latn']/decimalFormatLength[@type='long']/decimalFormat/pattern") do |pattern|
+            type = pattern.attributes["type"]
+            count = pattern.attributes["count"] || "other"
+            next unless type && pattern.text
+
+            long_formats[type] ||= {}
+            long_formats[type][count] = pattern.text
+          end
+          compact_formats["long"] = long_formats unless long_formats.empty?
+
+          compact_formats
         end
 
         private def merge_locale_and_root_currencies(xml_doc)

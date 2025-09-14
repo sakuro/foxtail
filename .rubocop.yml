@@ -147,3 +147,4 @@ Layout/LineLength:
   Exclude:
     - 'compat/fluent_js/compatibility_reporter.rb'  # Report formatting strings are clearer as single lines
     - 'compat/fluent_js/ast_comparator.rb'              # Error messages are clearer as single lines
+    - 'lib/foxtail/cldr/formatter/number.rb'           # Pattern matching and CLDR constant names are clearer as single lines

@@ -30,17 +30,8 @@ class NodeIntlTester
   def generate_test_cases
     @test_cases = []
 
-    # Basic decimal formatting
-    add_decimal_tests
-
-    # Currency formatting
-    add_currency_tests
-
-    # Percent formatting
-    add_percent_tests
-
-    # Scientific notation
-    add_scientific_tests
+    # All style/notation combinations
+    add_style_notation_combination_tests
 
     @test_cases
   end
@@ -73,74 +64,62 @@ class NodeIntlTester
     compare_results(test_cases, node_results)
   end
 
-  private def add_decimal_tests
-    values = [0, 1, 12, 123, 1234, 12345, 123_456, 1_234_567, 1.5, 12.34, 123.456, -123.45]
-    locales = %w[en-US ja-JP de-DE fr-FR]
-
-    values.each do |value|
-      locales.each do |locale|
-        @test_cases << {
-          id: "decimal_#{locale.tr("-", "_")}_#{value.to_s.gsub("-", "neg").tr(".", "_")}",
-          value:,
-          locale:,
-          options: {style: "decimal"}
-        }
-      end
-    end
-  end
-
-  private def add_currency_tests
-    values = [0, 1, 12.34, 123.45, 1234.56, -123.45]
-    test_cases = [
-      {locale: "en-US", currency: "USD"},
-      {locale: "ja-JP", currency: "JPY"},
-      {locale: "de-DE", currency: "EUR"},
-      {locale: "fr-FR", currency: "EUR"}
+  private def add_style_notation_combination_tests
+    # Test values for different scenarios
+    test_values = [
+      0,           # Zero
+      1,           # Simple integer
+      123,         # Three-digit number
+      1234.56,     # Number with decimals
+      123_456_789, # Large number
+      0.000123,    # Small number
+      -987.65      # Negative number
     ]
 
-    values.each do |value|
-      test_cases.each do |test_case|
-        locale = test_case[:locale]
-        currency = test_case[:currency]
+    # All valid style values
+    styles = %w[decimal currency percent unit]
 
-        @test_cases << {
-          id: "currency_#{locale.tr("-", "_")}_#{currency}_#{value.to_s.gsub("-", "neg").tr(".", "_")}",
-          value:,
-          locale:,
-          options: {style: "currency", currency:}
-        }
-      end
-    end
-  end
+    # All valid notation values
+    notations = %w[standard scientific engineering compact]
 
-  private def add_percent_tests
-    values = [0, 0.1, 0.12, 0.123, 1, 1.23, -0.45]
+    # Test locales
     locales = %w[en-US ja-JP de-DE fr-FR]
 
-    values.each do |value|
-      locales.each do |locale|
-        @test_cases << {
-          id: "percent_#{locale.tr("-", "_")}_#{value.to_s.gsub("-", "neg").tr(".", "_")}",
-          value:,
-          locale:,
-          options: {style: "percent"}
-        }
-      end
-    end
-  end
+    styles.each do |style|
+      notations.each do |notation|
+        test_values.each do |value|
+          locales.each do |locale|
+            # Build options based on style
+            options = {style:, notation:}
 
-  private def add_scientific_tests
-    values = [0, 1, 123, 0.000001, 123_456_789, 1.23e-10, 1.23e10]
-    locales = %w[en-US ja-JP]
+            # Add required parameters for specific styles
+            case style
+            when "currency"
+              options[:currency] = case locale
+                                   when "ja-JP"
+                                     "JPY"
+                                   when "de-DE", "fr-FR"
+                                     "EUR"
+                                   else
+                                     "USD"
+                                   end
+            when "unit"
+              options[:unit] = "kilometer"
+              options[:unitDisplay] = "short"
+            end
 
-    values.each do |value|
-      locales.each do |locale|
-        @test_cases << {
-          id: "scientific_#{locale.tr("-", "_")}_#{value.to_s.gsub("-", "neg").tr(".", "_").gsub("+", "pos")}",
-          value:,
-          locale:,
-          options: {notation: "scientific"}
-        }
+            # Generate unique ID
+            id_parts = [style, notation, locale.tr("-", "_"), value.to_s.gsub("-", "neg").tr(".", "_")]
+            id = id_parts.join("_")
+
+            @test_cases << {
+              id:,
+              value:,
+              locale:,
+              options:
+            }
+          end
+        end
       end
     end
   end
