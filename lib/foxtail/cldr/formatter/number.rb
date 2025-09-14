@@ -88,12 +88,8 @@ module Foxtail
           # Handle scientific and engineering notation with style consideration
           if notation == "scientific" || notation == "engineering"
             # Apply Node.js Intl.NumberFormat defaults for scientific notation
-            if style == "percent"
-              # For percent style scientific notation, Node.js uses maximumFractionDigits: 0
-              options[:maximumFractionDigits] ||= 0
-            else
-              options[:maximumFractionDigits] ||= 3
-            end
+            # For percent style scientific notation, Node.js uses maximumFractionDigits: 0
+            options[:maximumFractionDigits] ||= (style == "percent" ? 0 : 3)
 
             # Combine scientific pattern with style-specific symbols
             base_pattern = number_formats.scientific_pattern
@@ -154,16 +150,17 @@ module Foxtail
           # Always use absolute value for formatting (we handle sign separately)
           format_value = decimal_value.negative? ? decimal_value.abs : decimal_value
 
-          pattern_tokens, has_separator = case tokens
-                                          in [*positive,
-                                              Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken,
-                                              *negative]
-                                            # Pattern with positive and negative forms (e.g., "#,##0.00;(#,##0.00)")
-                                            [decimal_value.negative? ? negative : positive, true]
-                                          in _
-                                            # Pattern with only positive form
-                                            [tokens, false]
-                                          end
+          pattern_tokens, has_separator =
+            case tokens
+            in [*positive,
+                                               Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken,
+                                               *negative]
+              # Pattern with positive and negative forms (e.g., "#,##0.00;(#,##0.00)")
+              [decimal_value.negative? ? negative : positive, true]
+            in _
+              # Pattern with only positive form
+              [tokens, false]
+            end
 
           # Apply all multiplications here (centralized logic)
           has_percent = pattern_tokens.any?(Foxtail::CLDR::PatternParser::Number::PercentToken)
@@ -616,27 +613,10 @@ module Foxtail
 
           # NOTE: Percent multiplication already applied in format_number method (line 168-170)
 
-          # Handle zero value with style
+          # Handle zero value with style - use proper pattern formatting
           if decimal_value.zero?
-            case style
-            when "currency"
-              currency_code = options[:currency] || "USD"
-              symbol = number_formats.currency_symbol(currency_code)
-              return "#{symbol}0"
-            when "percent"
-              return "0%"
-            when "unit"
-              unit = options[:unit] || "meter"
-              unit_display = options[:unitDisplay] || "short"
-              unit_pattern = number_formats.unit_pattern(unit, unit_display)
-
-              return unit_pattern.gsub("{0}", "0") if unit_pattern
-
-              return "0 #{unit}"
-
-            else
-              return "0"
-            end
+            formatted_number = "0"
+            return apply_style_to_compact_result(formatted_number, style, number_formats, options)
           end
 
           compact_display = options[:compactDisplay] || "short"
@@ -745,7 +725,7 @@ module Foxtail
                                format_compact_single_digit(scaled_value, number_formats)
                              else
                                # Pattern like "00K", "000K" - show integer with appropriate digits
-                               format_compact_multiple_digits(scaled_value, zero_count)
+                               format_compact_multiple_digits(scaled_value, zero_count, number_formats)
                              end
 
           # Replace digit tokens with formatted number
@@ -800,9 +780,24 @@ module Foxtail
         end
 
         # Format scaled value for multi-digit compact patterns (e.g., "00K", "000K")
-        private def format_compact_multiple_digits(scaled_value, _zero_count)
-          # For multi-digit patterns, show integer value
-          scaled_value.round(0).to_s
+        private def format_compact_multiple_digits(scaled_value, _zero_count, number_formats=nil)
+          # For multi-digit patterns, show integer value with locale formatting
+          integer_value = scaled_value.round(0)
+
+          if number_formats && integer_value >= 1000
+            # Apply locale-specific grouping for large numbers
+            format_integer_with_locale_grouping(integer_value.to_s, number_formats)
+          else
+            integer_value.to_s
+          end
+        end
+
+        # Helper method to apply locale grouping to integer strings
+        private def format_integer_with_locale_grouping(integer_str, number_formats)
+          # Split into groups of 3 digits from right to left
+          groups = integer_str.reverse.scan(/.{1,3}/).map(&:reverse)
+          groups.reverse!
+          groups.join(number_formats.group_symbol)
         end
 
         # Find the base divisor for a unit by finding the smallest magnitude with the same unit symbol
@@ -932,40 +927,87 @@ module Foxtail
           formatted.gsub(".", number_formats.decimal_symbol)
         end
 
-        private def apply_style_pattern_to_compact_result(formatted_number, pattern, style_symbol, _number_formats)
+        private def apply_style_pattern_to_compact_result(formatted_number, pattern, style_symbol, number_formats)
           parser = Foxtail::CLDR::PatternParser::Number.new
           tokens = parser.parse(pattern)
 
-          result_parts = []
+          # Check if formatted number is negative and extract clean number
+          is_negative = formatted_number.start_with?(number_formats.minus_sign)
+          clean_number = is_negative ? formatted_number[number_formats.minus_sign.length..] : formatted_number
 
-          tokens.each do |token|
-            case token
-            when Foxtail::CLDR::PatternParser::Number::DigitToken,
-                 Foxtail::CLDR::PatternParser::Number::DecimalToken,
-                 Foxtail::CLDR::PatternParser::Number::GroupToken
-
-              # Replace number tokens with formatted number (only once)
-              if result_parts.empty? || !result_parts.last.is_a?(String) || result_parts.last != formatted_number
-                result_parts << formatted_number
-              end
-            when Foxtail::CLDR::PatternParser::Number::CurrencyToken,
-                 Foxtail::CLDR::PatternParser::Number::PercentToken
-
-              # Replace currency/percent token with actual symbol
-              result_parts << style_symbol
-            when Foxtail::CLDR::PatternParser::Number::LiteralToken,
-                 Foxtail::CLDR::PatternParser::Number::QuotedToken
-
-              # Keep literal tokens (including spaces)
-              result_parts << if token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken)
-                                token.literal_text
-                              else
-                                token.to_s
-                              end
-            end
+          # Apply locale-specific grouping to clean number if it's a large integer
+          # Only apply grouping for percent style in compact notation (Node.js behavior)
+          if style_symbol == "%" && clean_number.match?(/^\d{4,}$/) # 4+ digit integers
+            clean_number = format_integer_with_locale_grouping(clean_number, number_formats)
           end
 
-          result_parts.join
+          # Parse pattern to identify prefix and suffix tokens similar to existing logic
+          pattern_info = analyze_pattern_structure(tokens)
+
+          result = ""
+
+          # Handle negative sign positioning for currency and percent (same logic as lines 239-265)
+          if is_negative
+            # Check if there's a space or other non-currency/percent tokens between symbol and digits
+            has_separator_in_prefix =
+              pattern_info[:prefix_tokens].size > 1 &&
+              pattern_info[:prefix_tokens].any? {|t|
+                !t.is_a?(Foxtail::CLDR::PatternParser::Number::CurrencyToken) &&
+                  !t.is_a?(Foxtail::CLDR::PatternParser::Number::PercentToken)
+              }
+
+            if has_separator_in_prefix
+              # Symbol with separator in prefix: "¤¤¤ #,##0.00"
+              # Pattern: [CurrencyToken("¤¤¤"), LiteralToken(" ")] + digits
+              # Result:  "US dollar -988"
+              #          ^^^^^^^^^^^   ^^^^
+              #          prefix tokens minus+digits
+              pattern_info[:prefix_tokens].each do |token|
+                result += format_compact_non_digit_token(token, style_symbol)
+              end
+              result += number_formats.minus_sign + clean_number
+            else
+              # Symbol without separator in prefix: "¤#,##0.00"
+              # Pattern: [CurrencyToken("¤")] + digits
+              # Result:  "-$988"
+              #          ^ ^^^^
+              #          minus+prefix+digits
+              result += number_formats.minus_sign
+              pattern_info[:prefix_tokens].each do |token|
+                result += format_compact_non_digit_token(token, style_symbol)
+              end
+              result += clean_number
+            end
+          else
+            # Normal positive case - process prefix tokens then number
+            pattern_info[:prefix_tokens].each do |token|
+              result += format_compact_non_digit_token(token, style_symbol)
+            end
+            result += clean_number
+          end
+
+          # Add suffix tokens (this handles German/French patterns where symbols come after digits)
+          pattern_info[:suffix_tokens].each do |token|
+            result += format_compact_non_digit_token(token, style_symbol)
+          end
+
+          result
+        end
+
+        # Helper method to format non-digit tokens for compact results
+        private def format_compact_non_digit_token(token, style_symbol)
+          case token
+          when Foxtail::CLDR::PatternParser::Number::CurrencyToken,
+               Foxtail::CLDR::PatternParser::Number::PercentToken
+
+            style_symbol
+          when Foxtail::CLDR::PatternParser::Number::LiteralToken,
+               Foxtail::CLDR::PatternParser::Number::QuotedToken
+
+            token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken) ? token.literal_text : token.to_s
+          else
+            ""
+          end
         end
 
         # Calculate log10 using BigDecimal arithmetic to maintain precision

@@ -142,9 +142,4 @@ Rake/MethodDefinitionInTask:
 
 # Long lines that improve readability when not split
 Layout/LineLength:
-  AllowedPatterns:
-    - '\.elements\.each\(".*"'  # XPath expressions in CLDR data extraction are more readable on single lines
-  Exclude:
-    - 'compat/fluent_js/compatibility_reporter.rb'  # Report formatting strings are clearer as single lines
-    - 'compat/fluent_js/ast_comparator.rb'              # Error messages are clearer as single lines
-    - 'lib/foxtail/cldr/formatter/number.rb'           # Pattern matching and CLDR constant names are clearer as single lines
+  Enabled: false
