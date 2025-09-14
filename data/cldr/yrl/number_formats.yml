@@ -1,443 +1,95 @@
 ---
 locale: yrl
-generated_at: '2025-09-13T17:41:45Z'
+generated_at: '2025-09-14T06:12:56Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: 
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 miu
+        other: 0 miu
+      '10000':
+        one: 00 miu
+        other: 00 miu
+      '100000':
+        one: 000 miu
+        other: 000 miu
+      '1000000':
+        one: 0 mi
+        other: 0 mi
+      '10000000':
+        one: 00 mi
+        other: 00 mi
+      '100000000':
+        one: 000 mi
+        other: 000 mi
+      '1000000000':
+        one: 0 bi
+        other: 0 bi
+      '10000000000':
+        one: 00 bi
+        other: 00 bi
+      '100000000000':
+        one: 000 bi
+        other: 000 bi
+      '1000000000000':
+        one: 0 tiri
+        other: 0 tiri
+      '10000000000000':
+        one: 00 tiri
+        other: 00 tiri
+      '100000000000000':
+        one: 000 tiri
+        other: 000 tiri
+    long:
+      '1000':
+        one: 0 miu
+        other: 0 miu
+      '10000':
+        one: 00 miu
+        other: 00 miu
+      '100000':
+        one: 000 miu
+        other: 000 miu
+      '1000000':
+        one: 0 miliãu
+        other: 0 miliãu-ita
+      '10000000':
+        one: 00 miliãu
+        other: 00 miliãu-ita
+      '100000000':
+        one: 000 miliãu
+        other: 000 miliãu-ita
+      '1000000000':
+        one: 0 biliãu
+        other: 0 biliãu-ita
+      '10000000000':
+        one: 00 biliãu
+        other: 00 biliãu-ita
+      '100000000000':
+        one: 000 biliãu
+        other: 000 biliãu-ita
+      '1000000000000':
+        one: 0 tiriliãu
+        other: 0 tiriliãu-ita
+      '10000000000000':
+        one: 00 tiriliãu
+        other: 00 tiriliãu-ita
+      '100000000000000':
+        one: 000 tiriliãu
+        other: 000 tiriliãu-ita
   currencies:
-    AFN:
-      display_names:
-        other: Afegani-ita afegawara
-        one: Afegani afegawara
-    AMD:
-      display_names:
-        other: Darã-ita arimeniawara
-        one: Darã arimeniawara
-    AOA:
-      display_names:
-        other: Kuãsa-ita ãgulawara
-        one: Kuãsa ãgulawara
-    ARS:
-      display_names:
-        other: Pusewa-ita argẽtinu-ita
-        one: Pusewa argẽtinu
-    AUD:
-      symbol: AU$
-      display_names:
-        other: Dóra-ita Ausitaraliwara
-        one: Dóra Ausitaraliwara
-    AZN:
-      display_names:
-        other: Manati-ita aseri-ita
-        one: Manati aseri
-    BAM:
-      display_names:
-        other: Marku yumuyerewa-ita Businiya-Eseguwinawara
-        one: Marku yumuyerewa Businiya-Eseguwinawara
-    BBD:
-      display_names:
-        other: Dóra-ita barbaduwara
-        one: Dóra barbaduwara
-    BDT:
-      display_names:
-        other: Taka-ita Bẽgariwara
-        one: Taka Bẽgariwara
-    BMD:
-      display_names:
-        other: Dóra-ita Bemudawara
-        one: Dóra Bemudawara
-    BND:
-      display_names:
-        other: Dóra-ita Buruneiwara
-        one: Dóra Buruneiwara
-    BOB:
-      symbol: BUB
-      display_names:
-        other: Buriwiyanu-ita Buríwia suí
-        one: Buriwiyanu Buriwia suí
-    BRL:
-      display_names:
-        other: Reau-ita Brasiuwara
-        one: Reau Brasiuwara
-    BSD:
-      display_names:
-        other: Dóra-ita Bayamawara
-        one: Dóra Bayamawara
-    BWP:
-      display_names:
-        other: Pura-ita Butisuwanawara
-        one: Pura Butisuwanawara
-    BZD:
-      display_names:
-        other: Dóra-ita Belisiwara
-        one: Dóra Belisiwara
-    CAD:
-      display_names:
-        other: Dóra-ita Kanadáwara
-        one: Dóra Kanadáwara
-    CLP:
-      display_names:
-        other: Pusewa-ita Xiriwara
-        one: Pusewa Xiriwara
-    CNY:
-      display_names:
-        other: Yuwã-ita Xinawara
-        one: Yuwã Xinawara
-    COP:
-      display_names:
-        other: Pusewa-ita Kurũbiyawara
-        one: Peso Kurũbiyawara
-    CRC:
-      display_names:
-        other: Kurũ-ita Kupe-Rikawara
-        one: Kurũ Kupe-Rikawara
-    CUC:
-      display_names:
-        other: Pusewa-ita Kubawara Yumuyerewa
-        one: Pusewa Kubawara Yumuyerewa
-    CUP:
-      display_names:
-        other: Pusewa-ita Kubawara
-        one: Pusewa Kubawara
-    CZK:
-      display_names:
-        other: Kuruwa-ita Xekawara
-        one: Kuruwa Xekawara
-    DKK:
-      display_names:
-        other: Kuruwa-ita Dinamakawara
-        one: Kuruwa Dinamakawara
-    DOP:
-      display_names:
-        other: Pusewa-ita Dominikawara
-        one: Pusewa Dominikawara
-    EGP:
-      display_names:
-        other: Ribara-ita Egituwara
-        one: Ribara Egituwara
-    ESP:
-      display_names:
-        other: Peseta-ita Isipãyawara
-        one: Peseta Isipãyawara
-    EUR:
-      display_names:
-        other: Euru-ita
-        one: Euru
-    FJD:
-      display_names:
-        other: Dóra-ita Fiyiwara
-        one: Dóra Fiyiwara
-    FKP:
-      display_names:
-        other: Ribara-ita Mawinawara
-        one: Ribara Mawinawara
-    GBP:
-      display_names:
-        other: Ribara-ita esiterina
-        one: Ribara esiterina
-    GEL:
-      display_names:
-        other: Rari-ita geugiyanu
-        one: Rari geugiyanu
-    GHS:
-      display_names:
-        other: Sedi ganei-ita
-        one: Sedi ganei
-    GIP:
-      display_names:
-        other: Ribara-ita Gibarautáwara
-        one: Ribara Gibarautáwara
-    GNF:
-      display_names:
-        other: Farãku-ita Ginewara
-        one: Farãku Ginewara
-    GTQ:
-      display_names:
-        other: Ketisau-ita Guatemawara
-        one: Ketisau Guatemawara
-    GYD:
-      display_names:
-        other: Dóra-ita Gianawara
-        one: Dóra Gianawara
-    HKD:
-      display_names:
-        other: Dóra-ita Hũgi-Kũgiwara
-        one: Dóra Hũgi-Kũgiwara
-    HNL:
-      display_names:
-        other: Ribara-ita Ũdurawara
-        one: Ribara Ũdurawara
-    HRK:
-      display_names:
-        other: Kuna-ita Kuruata
-        one: Kuna Kuruata
-    HUF:
-      display_names:
-        other: Fulurĩ-ita Ũgiriyawara
-        one: Fulurĩ Ũgiriyawara
-    IDR:
-      display_names:
-        other: Rupiya-ita Ĩdunesiyawara
-        one: Rupiya Ĩdunesiyawara
-    ILS:
-      display_names:
-        other: Pisusawa Xekeu-ita Isiraelẽsi
-        one: Pisusawa Xekeu Isiraelẽsi
-    INR:
-      display_names:
-        other: Rupiya-ita Ĩdiawara
-        one: Rupiya Ĩdiawara
-    ISK:
-      display_names:
-        other: Kuruwa-ita Isirãdiawara
-        one: Kuruwa Isirãdiawara
-    JMD:
-      display_names:
-        other: Dóra-ita Yamaikawara
-        one: Dóra Yamaikawara
-    JPY:
-      display_names:
-        other: Iyene-ita Nipõwara
-        one: Iyene Nipõwara
-    KGS:
-      display_names:
-        other: Sumu-ita Kirigiretãmawara
-        one: Sumu Kirigiretãmawara
-    KHR:
-      display_names:
-        other: Rieu-ita Kãbuyawara
-        one: Rieu Kãbuyawara
-    KMF:
-      display_names:
-        other: Farãku-ita Kumurewara
-        one: Farãku Kumurewara
-    KPW:
-      display_names:
-        other: Wõ-ita nuti-kureyanu
-        one: Wõ nuti-kureyanu
-    KRW:
-      display_names:
-        other: Wõ-ita su-kureyanu
-        one: Wõ su-kureyanu
-    KYD:
-      display_names:
-        other: Dóra-ita Kaimãwara
-        one: Dóra Kaimãwara
-    KZT:
-      display_names:
-        other: Tẽge-ita Kasakiwara
-        one: Tẽge Kasakiwara
-    LAK:
-      display_names:
-        other: Kipi-ita Rawosiwara
-        one: Kipi Rawosiwara
-    LBP:
-      display_names:
-        other: Ribara-ita Ribanuwara
-        one: Ribara Ribanuwara
-    LKR:
-      display_names:
-        other: Rupiya-ita Sirirãkawara
-        one: Rupiya Sirirãkawara
-    LRD:
-      display_names:
-        other: Dóra-ita Riberiyawara
-        one: Dóra Riberiyawara
-    LTL:
-      display_names:
-        other: Rita-ita Rituwãniwara
-        one: Rita Rituwãniwara
-    LVL:
-      display_names:
-        other: Rati-ita Retuniyawara
-        one: Rati Retuniyawara
-    MGA:
-      display_names:
-        other: Ariyari-ita maugaxi-ita
-        one: Ariyari maugaxi
-    MMK:
-      display_names:
-        other: Kiyati-ita Miayamawara
-        one: Kiyati Miayamawara
-    MNT:
-      display_names:
-        other: Tugiriki-ita Mũguriyawara
-        one: Tugiriki Mũguriyawara
-    MUR:
-      display_names:
-        other: Rupiya-ita Maurisiwara
-        one: Rupiya Maurisiwara
-    MXN:
-      display_names:
-        other: Pesu-ita Mexikuwara
-        one: Pusewa Mexikuwara
-    MYR:
-      display_names:
-        other: Rĩgiti-ita malayu-ita
-        one: Rĩgiti malayu
-    NAD:
-      display_names:
-        other: Dóra-ita Namibiyawara
-        one: Dóra Namibiyawara
-    NGN:
-      display_names:
-        other: Naira-ita Nigeriyawara
-        one: Naira Nigeriyawara
-    NIO:
-      display_names:
-        other: Koduba-ita Nikaraguwara
-        one: Koduba Nikaraguwara
-    NOK:
-      display_names:
-        other: Kuruwa-ita Nuruwegawara
-        one: Kuruwa Nuruwegawara
-    NPR:
-      display_names:
-        other: Rupiya-ita Nepauwara
-        one: Rupiya nNpauwara
-    NZD:
-      display_names:
-        other: Dóra-ita neuserãdewa-ita
-        one: Dóra neuserãdewa
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Pusewa-ita Firipinawara
-        one: Pusewa Firipinawara
-    PKR:
-      display_names:
-        other: Rupiya-ita Pakiretãwara
-        one: Rupiya Pakiretãwara
-    PLN:
-      display_names:
-        other: Ziroti-ita Puruniyawara
-        one: Ziroti Puruniyawara
-    PYG:
-      display_names:
-        other: Guwarani-ita Paraguwaiwara
-        one: Guwarani Paraguwaiwara
-    RON:
-      symbol: L
-      display_names:
-        other: Leu-ita Rumeniyawara
-        one: Leu Rumeniyawara
-    RUB:
-      display_names:
-        other: Ruburu-ita Rusiyawara
-        one: Ruburu Rusiyawara
-    RWF:
-      display_names:
-        other: Farãku-ita Ruãdawara
-        one: Farãku Ruãdawara
-    SBD:
-      display_names:
-        other: Dóra-ita Kapuãma-ita Sarumũ yara
-        one: Dóra Kapuãma-ita Sarumũ yara
-    SEK:
-      display_names:
-        other: Kuruwa-ita Suwésiyawara
-        one: Kuruwa Suwésiyawara
-    SGD:
-      display_names:
-        other: Dóra-ita Sĩgapurawara
-        one: Dóra Sĩgapurawara
-    SHP:
-      display_names:
-        other: Ribara-ita Sãta Herena yara
-        one: Ribara Sãta Herena yara
-    SRD:
-      display_names:
-        other: Dóra-ita Surinãmiyawara
-        one: Dóra Surinãmiyawara
-    SSP:
-      display_names:
-        other: Ribara-ita Su-Sudãniyawara
-        one: Ribara Su-Sudãniyawara
-    STN:
-      display_names:
-        other: Dobara-ita Sãtu Tumé asuí Pirĩsipi yara
-        one: Dobara Sãtu Tumé asuí Pirĩsipi yara
-    SYP:
-      symbol: S£
-      display_names:
-        other: Ribara-ita Síriya
-        one: Ribara Síriya
-    THB:
-      display_names:
-        other: Baht-ita Tairetãmawara
-        one: Baht Tairetãmawara
-    TOP:
-      display_names:
-        other: Pawãga-ita Tũgawara
-        one: Pawãga Tũgawara
-    TRY:
-      display_names:
-        other: Rira-ita turka-ita
-        one: Rira turka
-    TTD:
-      display_names:
-        other: Dóra-ita Tirinidadi asuí Tobagu yara
-        one: Dóra Tirinidadi asuí Tobagu yara
-    TWD:
-      display_names:
-        other: Pisasuwa-ita Dóra-ita Taiwãwara
-        one: Pisasuwa Dóra Taiwãwara
-    UAH:
-      display_names:
-        other: Hiryuwiniya-ita Ukaraniyãwara
-        one: Hiryuwiniya Ukaraniyãwara
-    USD:
-      display_names:
-        other: Dóra-ita Mexikuwara
-        one: Dóra Mexikuwara
-    UYU:
-      display_names:
-        other: Pusewa-ita Uruguwaiwara
-        one: Pusewa Uruguwaiwara
-    VEF:
-      display_names:
-        other: Buriwari-ita Wenesuerawara (2008–2018)
-        one: Buriwari Wenesuerawara (2008–2018)
-    VND:
-      display_names:
-        other: Dong-ita wietinamita-ita
-        one: Dong wietinamita
-    XAF:
-      symbol: FCF
-      display_names:
-        other: Farãku-ita CFC BEAC yara
-        one: Farãku CFC BEAC yara
-    XCD:
-      display_names:
-        other: Dóra-ita Karibi Uriẽtawara yara
-        one: Dóra Karibi Uriẽtawara yara
-    XOF:
-      symbol: CFA
-      display_names:
-        other: Farãku CFA-ita BCEAO yara-ita
-        one: Farãku CFA BCEAO yara
-    XPF:
-      symbol: CFP
-      display_names:
-        other: Farãku CFP-ita
-        one: Farãku CFP
-    XXX:
-      display_names:
-        other: "(moweda-ita ũbawaukua awa-ita)"
-        one: "(yepesawa munetariya ũbawaukua awa)"
-    ZAR:
-      display_names:
-        other: Rãdi-ita Su-Afirikawara
-        one: Rãdi Su-Afirikawara
-    ZMW:
-      symbol: Zk
-      display_names:
-        other: Kuwaxa-ita sãbianu-ita
-        one: Kuwaxa sãbianu
     ADP:
       display_names:
         other: Peseta-ita Ãdurawara
@@ -450,6 +102,10 @@ number_formats:
       display_names:
         other: Afegani-ita Afegãniretãma suí (AFA)
         one: Afegani Afegãniretãma suí (AFA)
+    AFN:
+      display_names:
+        other: Afegani-ita afegawara
+        one: Afegani afegawara
     ALK:
       display_names:
         other: Reki-ita Aubaniawara (1946–1965)
@@ -458,10 +114,18 @@ number_formats:
       display_names:
         other: Reki-ita aubanei
         one: Reki aubanei
+    AMD:
+      display_names:
+        other: Darã-ita arimeniawara
+        one: Darã arimeniawara
     ANG:
       display_names:
         other: Fulurĩ-ita Ãtíria Hurãdawara
         one: Fulurĩ Ãtíria Hurãdawara
+    AOA:
+      display_names:
+        other: Kuãsa-ita ãgulawara
+        one: Kuãsa ãgulawara
     AOK:
       display_names:
         other: Kuãsa-ita ãgulawara (AOK)
@@ -490,10 +154,19 @@ number_formats:
       display_names:
         other: Pusewa-ita argẽtinu-ita (1983–1985)
         one: Pusewa argẽtinu (1983–1985)
+    ARS:
+      display_names:
+        other: Pusewa-ita argẽtinu-ita
+        one: Pusewa argẽtinu
     ATS:
       display_names:
         other: Xirĩ-ita ausitíriaku-ita
         one: Xirĩ ausitíriaku
+    AUD:
+      symbol: AU$
+      display_names:
+        other: Dóra-ita Ausitaraliwara
+        one: Dóra Ausitaraliwara
     AWG:
       display_names:
         other: Fulurĩ-ita Arubawara
@@ -502,14 +175,30 @@ number_formats:
       display_names:
         other: Manati-ita Aseriretãmawara (1993–2006)
         one: Manati Aseriretãmawara (1993–2006)
+    AZN:
+      display_names:
+        other: Manati-ita aseri-ita
+        one: Manati aseri
     BAD:
       display_names:
         other: Dinari-ita Businiya-Eseguwinawara
         one: Dinari Businiya-Eseguwinawara
+    BAM:
+      display_names:
+        other: Marku yumuyerewa-ita Businiya-Eseguwinawara
+        one: Marku yumuyerewa Businiya-Eseguwinawara
     BAN:
       display_names:
         other: Dinari Pisasuwa-ita Businiya-Eseguwinawara
         one: Dinari Pisasuwa Businiya-Eseguwinawara
+    BBD:
+      display_names:
+        other: Dóra-ita barbaduwara
+        one: Dóra barbaduwara
+    BDT:
+      display_names:
+        other: Taka-ita Bẽgariwara
+        one: Taka Bẽgariwara
     BEC:
       display_names:
         other: Farãku-ita Beujikawara (yumuyereuwa-ita)
@@ -546,6 +235,19 @@ number_formats:
       display_names:
         other: Farãku-ita Burũdiwara
         one: Farãku Burũdiwara
+    BMD:
+      display_names:
+        other: Dóra-ita Bemudawara
+        one: Dóra Bemudawara
+    BND:
+      display_names:
+        other: Dóra-ita Buruneiwara
+        one: Dóra Buruneiwara
+    BOB:
+      symbol: BUB
+      display_names:
+        other: Buriwiyanu-ita Buríwia suí
+        one: Buriwiyanu Buriwia suí
     BOL:
       display_names:
         other: Buriwiyanu-ita (1863–1963)
@@ -570,6 +272,10 @@ number_formats:
       display_names:
         other: Kuruseru-ita Brasiuwara (BRE)
         one: Kuruseru Brasiuwara (BRE)
+    BRL:
+      display_names:
+        other: Reau-ita Brasiuwara
+        one: Reau Brasiuwara
     BRN:
       display_names:
         other: Kurusadu-ita Pisasuwa-ita Brasiuwara
@@ -582,6 +288,10 @@ number_formats:
       display_names:
         other: Kuruseiru-ita Brasiuwara kuxiímawara
         one: Kuruseiru Brasiuwara kuxiímawara
+    BSD:
+      display_names:
+        other: Dóra-ita Bayamawara
+        one: Dóra Bayamawara
     BTN:
       display_names:
         other: Ĩguturũ-ita Butãwara
@@ -590,6 +300,10 @@ number_formats:
       display_names:
         other: Kiati-ita Bimãniyawara
         one: Kiati Bimãniyawara
+    BWP:
+      display_names:
+        other: Pura-ita Butisuwanawara
+        one: Pura Butisuwanawara
     BYB:
       display_names:
         other: Ruburu Pisasuwaita Bieru-rusiyawara (BYB)
@@ -603,6 +317,14 @@ number_formats:
       display_names:
         other: Ruburu bieruruso-ita (2000–2016)
         one: Ruburu bieruruso (2000–2016)
+    BZD:
+      display_names:
+        other: Dóra-ita Belisiwara
+        one: Dóra Belisiwara
+    CAD:
+      display_names:
+        other: Dóra-ita Kanadáwara
+        one: Dóra Kanadáwara
     CDF:
       display_names:
         other: Farãku-ita Kũguwara
@@ -627,6 +349,10 @@ number_formats:
       display_names:
         other: Yepesawa-ita Muapiresawa Xiriwara
         one: Yepesawa Muapiresawa Xiriwara
+    CLP:
+      display_names:
+        other: Pusewa-ita Xiriwara
+        one: Pusewa Xiriwara
     CNH:
       display_names:
         other: Yuwã-ita Xinawara (offshore)
@@ -635,10 +361,22 @@ number_formats:
       display_names:
         other: Dóra-ita Bãku Pupulari Xinawara suí
         one: Dóra Bãku Pupulari Xinawara suí
+    CNY:
+      display_names:
+        other: Yuwã-ita Xinawara
+        one: Yuwã Xinawara
+    COP:
+      display_names:
+        other: Pusewa-ita Kurũbiyawara
+        one: Peso Kurũbiyawara
     COU:
       display_names:
         other: Yepesawa-ita Sepisawa Reau suiwara
         one: Yepesawa Sepisawa Reau suiwara
+    CRC:
+      display_names:
+        other: Kurũ-ita Kupe-Rikawara
+        one: Kurũ Kupe-Rikawara
     CSD:
       display_names:
         other: Dinari Kuxiímawara Sewiyawara
@@ -647,6 +385,14 @@ number_formats:
       display_names:
         other: Kuruwa Kirĩbawa-ita Xekusirowaka
         one: Kuruwa Kirĩbawa Xekusirowaka
+    CUC:
+      display_names:
+        other: Pusewa-ita Kubawara Yumuyerewa
+        one: Pusewa Kubawara Yumuyerewa
+    CUP:
+      display_names:
+        other: Pusewa-ita Kubawara
+        one: Pusewa Kubawara
     CVE:
       display_names:
         other: Warakapá-ita Kabu-Suikiriwara
@@ -655,6 +401,10 @@ number_formats:
       display_names:
         other: Ribara-ita Xipiriwara
         one: Ribara Xipiriwara
+    CZK:
+      display_names:
+        other: Kuruwa-ita Xekawara
+        one: Kuruwa Xekawara
     DDM:
       display_names:
         other: Marku-ita Aremãya Uriẽtawara
@@ -667,6 +417,14 @@ number_formats:
       display_names:
         other: Farãku-ita Digibutiwara
         one: Farãku Digibutiwara
+    DKK:
+      display_names:
+        other: Kuruwa-ita Dinamakawara
+        one: Kuruwa Dinamakawara
+    DOP:
+      display_names:
+        other: Pusewa-ita Dominikawara
+        one: Pusewa Dominikawara
     DZD:
       display_names:
         other: Dinari-ita Argeriyawra
@@ -683,6 +441,10 @@ number_formats:
       display_names:
         other: Kuruwa-ita Isituniyawara
         one: Kuruwa Isituniyawara
+    EGP:
+      display_names:
+        other: Ribara-ita Egituwara
+        one: Ribara Egituwara
     ERN:
       display_names:
         other: Nakiwa-ita Eritireyawara
@@ -695,30 +457,66 @@ number_formats:
       display_names:
         other: Peseta-ita Isipãyawara (kãta yumuyerewa)
         one: Peseta Isipãyawara (kãta yumuyerewa)
+    ESP:
+      display_names:
+        other: Peseta-ita Isipãyawara
+        one: Peseta Isipãyawara
     ETB:
       display_names:
         other: Biri-ita Etiupiyawara
         one: Biri Etiupiyawara
+    EUR:
+      display_names:
+        other: Euru-ita
+        one: Euru
     FIM:
       display_names:
         other: Marka-ita Firãdiyawara
         one: Marka Firãdiyawara
+    FJD:
+      display_names:
+        other: Dóra-ita Fiyiwara
+        one: Dóra Fiyiwara
+    FKP:
+      display_names:
+        other: Ribara-ita Mawinawara
+        one: Ribara Mawinawara
     FRF:
       display_names:
         other: Farãku-ita Frãsawara
         one: Farãku Frãsawara
+    GBP:
+      display_names:
+        other: Ribara-ita esiterina
+        one: Ribara esiterina
     GEK:
       display_names:
         other: Kupũ Rari-ita Geugiyawara
         one: Kupũ Rari Geugiyawara
+    GEL:
+      display_names:
+        other: Rari-ita geugiyanu
+        one: Rari geugiyanu
     GHC:
       display_names:
         other: Sedi-ita Ganawara (1979–2007)
         one: Sedi Ganawara (1979–2007)
+    GHS:
+      display_names:
+        other: Sedi ganei-ita
+        one: Sedi ganei
+    GIP:
+      display_names:
+        other: Ribara-ita Gibarautáwara
+        one: Ribara Gibarautáwara
     GMD:
       display_names:
         other: Darasi-ita Gãbiyawara
         one: Darasi Gãbiyawara
+    GNF:
+      display_names:
+        other: Farãku-ita Ginewara
+        one: Farãku Ginewara
     GNS:
       display_names:
         other: Siri-ita Ginewara
@@ -731,6 +529,10 @@ number_formats:
       display_names:
         other: Darakima-ita Geresiyawara
         one: Darakima Geresiyawara
+    GTQ:
+      display_names:
+        other: Ketisau-ita Guatemawara
+        one: Ketisau Guatemawara
     GWE:
       display_names:
         other: Warakapá-ita Giné Purutugesawara
@@ -739,14 +541,38 @@ number_formats:
       display_names:
         other: Pusewa-ita Giné-Bisawara
         one: Pusewa Giné-Bisawara
+    GYD:
+      display_names:
+        other: Dóra-ita Gianawara
+        one: Dóra Gianawara
+    HKD:
+      display_names:
+        other: Dóra-ita Hũgi-Kũgiwara
+        one: Dóra Hũgi-Kũgiwara
+    HNL:
+      display_names:
+        other: Ribara-ita Ũdurawara
+        one: Ribara Ũdurawara
     HRD:
       display_names:
         other: Dinari-ita Kuruwasiyawara
         one: Dinari Kuruwasiyawara
+    HRK:
+      display_names:
+        other: Kuna-ita Kuruata
+        one: Kuna Kuruata
     HTG:
       display_names:
         other: Gourde-ita Aitiwara
         one: Gourde Aitiwara
+    HUF:
+      display_names:
+        other: Fulurĩ-ita Ũgiriyawara
+        one: Fulurĩ Ũgiriyawara
+    IDR:
+      display_names:
+        other: Rupiya-ita Ĩdunesiyawara
+        one: Rupiya Ĩdunesiyawara
     IEP:
       display_names:
         other: Ribara-ita Irãdawara
@@ -759,6 +585,14 @@ number_formats:
       display_names:
         other: Xekeu Kuxiímawara Isirayerita
         one: Xekeu Kuxiímawara Isirayerita
+    ILS:
+      display_names:
+        other: Pisusawa Xekeu-ita Isiraelẽsi
+        one: Pisusawa Xekeu Isiraelẽsi
+    INR:
+      display_names:
+        other: Rupiya-ita Ĩdiawara
+        one: Rupiya Ĩdiawara
     IQD:
       display_names:
         other: Dinari-ita Irakiwara
@@ -771,18 +605,46 @@ number_formats:
       display_names:
         other: Kuruwa Kuxiímawara Isirãdiawara
         one: Kuruwa Kuxiímawara Isirãdiawara
+    ISK:
+      display_names:
+        other: Kuruwa-ita Isirãdiawara
+        one: Kuruwa Isirãdiawara
     ITL:
       display_names:
         other: Rira-ita Itariyawara
         one: Rira Itariyawara
+    JMD:
+      display_names:
+        other: Dóra-ita Yamaikawara
+        one: Dóra Yamaikawara
     JOD:
       display_names:
         other: Dinari-ita Yudâniyawara
         one: Dinari Yudâniyawara
+    JPY:
+      display_names:
+        other: Iyene-ita Nipõwara
+        one: Iyene Nipõwara
     KES:
       display_names:
         other: Xirĩ-ita Kẽniyawara
         one: Xirĩ Kẽniyawara
+    KGS:
+      display_names:
+        other: Sumu-ita Kirigiretãmawara
+        one: Sumu Kirigiretãmawara
+    KHR:
+      display_names:
+        other: Rieu-ita Kãbuyawara
+        one: Rieu Kãbuyawara
+    KMF:
+      display_names:
+        other: Farãku-ita Kumurewara
+        one: Farãku Kumurewara
+    KPW:
+      display_names:
+        other: Wõ-ita nuti-kureyanu
+        one: Wõ nuti-kureyanu
     KRH:
       display_names:
         other: Huwã-ita Kureya-Suwara
@@ -791,14 +653,46 @@ number_formats:
       display_names:
         other: Wõ-ita Kuxiímawara Kureya-Suwara
         one: Wõ Kuxiímawara Kureya-Suwara
+    KRW:
+      display_names:
+        other: Wõ-ita su-kureyanu
+        one: Wõ su-kureyanu
     KWD:
       display_names:
         other: Dinari-ita Kuwaitiwara
         one: Dinari Kuwaitiwara
+    KYD:
+      display_names:
+        other: Dóra-ita Kaimãwara
+        one: Dóra Kaimãwara
+    KZT:
+      display_names:
+        other: Tẽge-ita Kasakiwara
+        one: Tẽge Kasakiwara
+    LAK:
+      display_names:
+        other: Kipi-ita Rawosiwara
+        one: Kipi Rawosiwara
+    LBP:
+      display_names:
+        other: Ribara-ita Ribanuwara
+        one: Ribara Ribanuwara
+    LKR:
+      display_names:
+        other: Rupiya-ita Sirirãkawara
+        one: Rupiya Sirirãkawara
+    LRD:
+      display_names:
+        other: Dóra-ita Riberiyawara
+        one: Dóra Riberiyawara
     LSL:
       display_names:
         other: Ruti-ita Resutuwara
         one: Ruti Resutuwara
+    LTL:
+      display_names:
+        other: Rita-ita Rituwãniwara
+        one: Rita Rituwãniwara
     LTT:
       display_names:
         other: Taruna-ita rituwãnu
@@ -815,6 +709,10 @@ number_formats:
       display_names:
         other: Farãku-ita finãseru Ruxẽbuguwara
         one: Farãku finãseru Ruxẽbuguwara
+    LVL:
+      display_names:
+        other: Rati-ita Retuniyawara
+        one: Rati Retuniyawara
     LVR:
       display_names:
         other: Ruburu-ita Retuniyawara
@@ -843,6 +741,10 @@ number_formats:
       display_names:
         other: Leyu-ita mudawiu-ita
         one: Leyu mudawiu
+    MGA:
+      display_names:
+        other: Ariyari-ita maugaxi-ita
+        one: Ariyari maugaxi
     MGF:
       display_names:
         other: Farãku-ita Madagasikawara
@@ -859,6 +761,14 @@ number_formats:
       display_names:
         other: Farãku-ita Mariwara
         one: Farãku Mariwara
+    MMK:
+      display_names:
+        other: Kiyati-ita Miayamawara
+        one: Kiyati Miayamawara
+    MNT:
+      display_names:
+        other: Tugiriki-ita Mũguriyawara
+        one: Tugiriki Mũguriyawara
     MOP:
       display_names:
         other: Pataka-ita Makauwara
@@ -879,6 +789,10 @@ number_formats:
       display_names:
         other: Ribara-ita mautesa-ita
         one: Ribara mautesa
+    MUR:
+      display_names:
+        other: Rupiya-ita Maurisiwara
+        one: Rupiya Maurisiwara
     MVR:
       display_names:
         other: Rupiya-ita Maudiwawara
@@ -887,6 +801,10 @@ number_formats:
       display_names:
         other: Kuaxa-ita Marawiwara
         one: Kuaxa Marawiwara
+    MXN:
+      display_names:
+        other: Pesu-ita Mexikuwara
+        one: Pusewa Mexikuwara
     MXP:
       display_names:
         other: Pusewa-ita Parata suiwara mexikanu-ita (1861–1992)
@@ -895,6 +813,10 @@ number_formats:
       display_names:
         other: Unidade-ita Mexikuwara Ĩwestiriarama-ita (UDI)
         one: Unidade Ĩwestiriarama Mexikuwara (UDI)
+    MYR:
+      display_names:
+        other: Rĩgiti-ita malayu-ita
+        one: Rĩgiti malayu
     MZE:
       display_names:
         other: Warakapá-ita Musãbikiwara
@@ -907,14 +829,38 @@ number_formats:
       display_names:
         other: Metikau-ita Musãbikiwara
         one: Metikau Musãbikiwara
+    NAD:
+      display_names:
+        other: Dóra-ita Namibiyawara
+        one: Dóra Namibiyawara
+    NGN:
+      display_names:
+        other: Naira-ita Nigeriyawara
+        one: Naira Nigeriyawara
     NIC:
       display_names:
         other: Koduba-ita Nikaraguwara (1988–1991)
         one: Koduba Nikaraguwara (1988–1991)
+    NIO:
+      display_names:
+        other: Koduba-ita Nikaraguwara
+        one: Koduba Nikaraguwara
     NLG:
       display_names:
         other: Fulurĩ-ita Hurãdawara
         one: Fulurĩ Hurãdawara
+    NOK:
+      display_names:
+        other: Kuruwa-ita Nuruwegawara
+        one: Kuruwa Nuruwegawara
+    NPR:
+      display_names:
+        other: Rupiya-ita Nepauwara
+        one: Rupiya nNpauwara
+    NZD:
+      display_names:
+        other: Dóra-ita neuserãdewa-ita
+        one: Dóra neuserãdewa
     OMR:
       display_names:
         other: Riyau-ita Umãwara
@@ -939,6 +885,19 @@ number_formats:
       display_names:
         other: Kina-ita Papuwara
         one: Kina Papuwara
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Pusewa-ita Firipinawara
+        one: Pusewa Firipinawara
+    PKR:
+      display_names:
+        other: Rupiya-ita Pakiretãwara
+        one: Rupiya Pakiretãwara
+    PLN:
+      display_names:
+        other: Ziroti-ita Puruniyawara
+        one: Ziroti Puruniyawara
     PLZ:
       display_names:
         other: Ziroti-ita Puruniyawara (1950–1995)
@@ -948,6 +907,10 @@ number_formats:
       display_names:
         other: Warakapá-ita Purutugawara
         one: Warakapá Purutugawara
+    PYG:
+      display_names:
+        other: Guwarani-ita Paraguwaiwara
+        one: Guwarani Paraguwaiwara
     QAR:
       display_names:
         other: Riyau-ita Katawara
@@ -960,18 +923,35 @@ number_formats:
       display_names:
         other: Leu Kuxiímawara-ita Rumeniyawara
         one: Leu Kuxiímawara Rumeniyawara
+    RON:
+      symbol: L
+      display_names:
+        other: Leu-ita Rumeniyawara
+        one: Leu Rumeniyawara
     RSD:
       display_names:
         other: Dinari-ita Sewiyawara
         one: Dinari Sewiyawara
+    RUB:
+      display_names:
+        other: Ruburu-ita Rusiyawara
+        one: Ruburu Rusiyawara
     RUR:
       display_names:
         other: Ruburu-ita Rusiyawara (1991–1998)
         one: Ruburu Rusiyawara (1991–1998)
+    RWF:
+      display_names:
+        other: Farãku-ita Ruãdawara
+        one: Farãku Ruãdawara
     SAR:
       display_names:
         other: Riyau-ita Sauditawara
         one: Riyau Sauditawara
+    SBD:
+      display_names:
+        other: Dóra-ita Kapuãma-ita Sarumũ yara
+        one: Dóra Kapuãma-ita Sarumũ yara
     SCR:
       symbol: SCRu
       display_names:
@@ -989,6 +969,18 @@ number_formats:
       display_names:
         other: Ribara Kuxiímawara-ita Sudaũwara
         one: Ribara Kuxiímawara Sudaũwara
+    SEK:
+      display_names:
+        other: Kuruwa-ita Suwésiyawara
+        one: Kuruwa Suwésiyawara
+    SGD:
+      display_names:
+        other: Dóra-ita Sĩgapurawara
+        one: Dóra Sĩgapurawara
+    SHP:
+      display_names:
+        other: Ribara-ita Sãta Herena yara
+        one: Ribara Sãta Herena yara
     SIT:
       display_names:
         other: Tora-ita Esiruweniyawara
@@ -1009,14 +1001,26 @@ number_formats:
       display_names:
         other: Xerĩ-ita Sumariyawara
         one: Xerĩ Sumariyawara
+    SRD:
+      display_names:
+        other: Dóra-ita Surinãmiyawara
+        one: Dóra Surinãmiyawara
     SRG:
       display_names:
         other: Fulurĩ-ita Surinami yara
         one: Fulurĩ Surinami yara
+    SSP:
+      display_names:
+        other: Ribara-ita Su-Sudãniyawara
+        one: Ribara Su-Sudãniyawara
     STD:
       display_names:
         other: Dobara-ita Sãtu Tumé asuí Pirĩsipi yara (1977–2017)
         one: Dobara Sãtu Tumé asuí Pirĩsipi yara (1977–2017)
+    STN:
+      display_names:
+        other: Dobara-ita Sãtu Tumé asuí Pirĩsipi yara
+        one: Dobara Sãtu Tumé asuí Pirĩsipi yara
     SUR:
       display_names:
         other: Ruburu-ita S
@@ -1025,10 +1029,19 @@ number_formats:
       display_names:
         other: Kurũ-ita Sauwadú yara
         one: Kurũ Sauwadú yara
+    SYP:
+      symbol: S£
+      display_names:
+        other: Ribara-ita Síriya
+        one: Ribara Síriya
     SZL:
       display_names:
         other: Rirãgeni-ita Suwasiretãmawara
         one: Rirãgeni Suwasiretãmawara
+    THB:
+      display_names:
+        other: Baht-ita Tairetãmawara
+        one: Baht Tairetãmawara
     TJR:
       display_names:
         other: Ruburu-ita Tayikiretãmawara
@@ -1049,6 +1062,10 @@ number_formats:
       display_names:
         other: Dinari-ita Tunisiyawara
         one: Dinari Tunisiyawara
+    TOP:
+      display_names:
+        other: Pawãga-ita Tũgawara
+        one: Pawãga Tũgawara
     TPE:
       display_names:
         other: Warakapá-ita Timuwara
@@ -1057,10 +1074,26 @@ number_formats:
       display_names:
         other: Rira turka kuxiímawara-ita
         one: Rira turka kuxiímawara
+    TRY:
+      display_names:
+        other: Rira-ita turka-ita
+        one: Rira turka
+    TTD:
+      display_names:
+        other: Dóra-ita Tirinidadi asuí Tobagu yara
+        one: Dóra Tirinidadi asuí Tobagu yara
+    TWD:
+      display_names:
+        other: Pisasuwa-ita Dóra-ita Taiwãwara
+        one: Pisasuwa Dóra Taiwãwara
     TZS:
       display_names:
         other: Xerĩ-ita Tãsaniyawara
         one: Xerĩ Tãsaniyawara
+    UAH:
+      display_names:
+        other: Hiryuwiniya-ita Ukaraniyãwara
+        one: Hiryuwiniya Ukaraniyãwara
     UAK:
       display_names:
         other: Kabuwaneti-ita Ukaraniyãwara
@@ -1073,6 +1106,10 @@ number_formats:
       display_names:
         other: Xerĩ-ita Ugãdawara
         one: Xerĩ Ugãdawara
+    USD:
+      display_names:
+        other: Dóra-ita Mexikuwara
+        one: Dóra Mexikuwara
     USN:
       display_names:
         other: Dóra-ita amerikawa-ira (amũ ára)
@@ -1089,6 +1126,10 @@ number_formats:
       display_names:
         other: Pusewa-ita Uruguwaiwara (1975–1993)
         one: Pusewa Uruguwaiwara (1975–1993)
+    UYU:
+      display_names:
+        other: Pusewa-ita Uruguwaiwara
+        one: Pusewa Uruguwaiwara
     UZS:
       display_names:
         other: Sumu-ita Yũbuesara-retãmawara
@@ -1097,11 +1138,19 @@ number_formats:
       display_names:
         other: Buriwari-ita Wenesuerawara (1871–2008)
         one: Buriwari Wenesuerawara (1871–2008)
+    VEF:
+      display_names:
+        other: Buriwari-ita Wenesuerawara (2008–2018)
+        one: Buriwari Wenesuerawara (2008–2018)
     VES:
       symbol: Bs.S
       display_names:
         other: Buriwari-ita Wenesuerawara
         one: Buriwari Wenesuerawara
+    VND:
+      display_names:
+        other: Dong-ita wietinamita-ita
+        one: Dong wietinamita
     VNN:
       display_names:
         other: Dong-ita wietinamita-ita (1978–1985)
@@ -1114,6 +1163,11 @@ number_formats:
       display_names:
         other: Tara-ita Samuwara
         one: Tara Samuwara
+    XAF:
+      symbol: FCF
+      display_names:
+        other: Farãku-ita CFC BEAC yara
+        one: Farãku CFC BEAC yara
     XAG:
       display_names:
         other: Parata-ita
@@ -1138,6 +1192,10 @@ number_formats:
       display_names:
         other: Yepesawa-ita kũta Eurupawara (XBD)
         one: Yepesawa kũta Eurupawara (XBD)
+    XCD:
+      display_names:
+        other: Dóra-ita Karibi Uriẽtawara yara
+        one: Dóra Karibi Uriẽtawara yara
     XDR:
       display_names:
         other: Yupitasukasa-ita Yãkatuwa Musakasawa
@@ -1154,10 +1212,20 @@ number_formats:
       display_names:
         other: Farãku UIC-ita Farãsawara
         one: Farãku UIC Farãsawara
+    XOF:
+      symbol: CFA
+      display_names:
+        other: Farãku CFA-ita BCEAO yara-ita
+        one: Farãku CFA BCEAO yara
     XPD:
       display_names:
         other: Parádiyu-ita
         one: Parádiyu
+    XPF:
+      symbol: CFP
+      display_names:
+        other: Farãku CFP-ita
+        one: Farãku CFP
     XPT:
       display_names:
         other: Paratina-ita
@@ -1170,6 +1238,10 @@ number_formats:
       display_names:
         other: Kudigu-ita Muweda Yusã yara
         one: Kudigu Muweda Yusã yara
+    XXX:
+      display_names:
+        other: "(moweda-ita ũbawaukua awa-ita)"
+        one: "(yepesawa munetariya ũbawaukua awa)"
     YDD:
       display_names:
         other: Dinã-ita Yemẽwara
@@ -1198,10 +1270,19 @@ number_formats:
       display_names:
         other: Rãdi-ita Afirika Su kitiwara (finãseru)
         one: Rãdi Afirika Su kitiwara (finãseru)
+    ZAR:
+      display_names:
+        other: Rãdi-ita Su-Afirikawara
+        one: Rãdi Su-Afirikawara
     ZMK:
       display_names:
         other: Kuwaxa-ita Sãbiawara (1968–2012)
         one: Kuwaxa Sãbiawara (1968–2012)
+    ZMW:
+      symbol: Zk
+      display_names:
+        other: Kuwaxa-ita sãbianu-ita
+        one: Kuwaxa sãbianu
     ZRN:
       display_names:
         other: Saire-ita Pisasuwa Sairewara
@@ -1222,3 +1303,1197 @@ number_formats:
       display_names:
         other: Dóra-ita Sĩbabuwewara (2008)
         one: Dóra Sĩbabuwewara (2008)
+  units:
+    g-force:
+      long:
+        one: "{0} kirĩba g"
+        other: "{0} kirĩba g-ita"
+      short:
+        display_name: kirĩba g
+    meter-per-square-second:
+      long:
+        display_name: meturu segũdu kuadaradu rupi
+        one: "{0} meturu segũdu kuadaradu rupi"
+        other: "{0} meturu-ita segũdu kuadaradu rupi"
+      short:
+        display_name: meturu-itá/seg²
+    revolution:
+      long:
+        display_name: yatimanasawa
+        one: "{0} yatimanasawa"
+        other: "{0} yatimanasawa-ita"
+    radian:
+      long:
+        display_name: radiano-ita
+        one: "{0} radiano"
+        other: "{0} radiano-ita"
+      short:
+        display_name: radiano
+    degree:
+      long:
+        one: "{0} garau"
+        other: "{0} garau-ita"
+      short:
+        display_name: garau
+    arc-minute:
+      long:
+        display_name: mirapara minutu-ita
+        one: "{0} mirapara minutu"
+        other: "{0} mirapara minutu-ita"
+      short:
+        other: "{0} arcmin"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+    arc-second:
+      long:
+        display_name: mirapara segũdu-ita
+        one: "{0} mirapara segũdu"
+        other: "{0} mirapara segũdu-ita"
+      short:
+        display_name: arcseg
+        other: "{0} arcseg"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: apekatusawa kuadaradu-ita
+        one: "{0} apekatusawa kuadaradu"
+        other: "{0} apekatusawa kuadaradu-ita"
+        per_unit_pattern: "{0} apekatusawa kuadaradu rupi"
+    hectare:
+      long:
+        display_name: hectare-ita
+        one: "{0} hectare"
+        other: "{0} hectare-ita"
+    square-meter:
+      long:
+        display_name: meturu kuadaradu-ita
+        one: "{0} meturu kuadaradu"
+        other: "{0} meturu kuadaradu-ita"
+        per_unit_pattern: "{0} meturu kuadaradu rupi"
+      short:
+        display_name: meturu-itá²
+    square-centimeter:
+      long:
+        display_name: sẽtimeturu kuadaradu-ita
+        one: "{0} sẽtimeturu kuadaradu"
+        other: "{0} sẽtimeturu kuadaradu-ita"
+        per_unit_pattern: "{0} sẽtimeturu kuadaradu rupi"
+    square-mile:
+      long:
+        display_name: milha kuadaradu-ita
+        one: "{0} milha kuadaradu"
+        other: "{0} milha kuadaradu-ita"
+        per_unit_pattern: "{0} milha kuadaradu rupi"
+      short:
+        display_name: milha-itá²
+    acre:
+      long:
+        display_name: acre-ita
+        one: "{0} acre"
+        other: "{0} acre-ita"
+      narrow:
+        one: "{0} acre"
+        other: "{0} acre"
+    square-yard:
+      long:
+        display_name: jarda kuadaradu-ita
+        one: "{0} jarda kuadaradu"
+        other: "{0} jarda kuadaradu-ita"
+      short:
+        display_name: jarda-itá²
+    square-foot:
+      long:
+        display_name: pí kuadaradu-ita
+        one: "{0} pí kuadaradu"
+        other: "{0} pí kuadaradu-ita"
+      short:
+        display_name: pí-itá²
+    square-inch:
+      long:
+        display_name: puregada kuadaradu-ita
+        one: "{0} puregada kuadaradu"
+        other: "{0} puregada kuadaradu-ita"
+        per_unit_pattern: "{0} puregada kuadaradu rupi"
+      short:
+        display_name: puregada-itá²
+        other: "{0} pur²"
+        per_unit_pattern: "{0} pur² rupi"
+    dunam:
+      long:
+        display_name: dunan-ita
+        other: "{0} dunan-ita"
+      short:
+        display_name: dunan
+        other: "{0} dunan"
+    karat:
+      long:
+        display_name: kilate-ita
+        one: "{0} kilate"
+        other: "{0} kilate-ita"
+      short:
+        display_name: kirate
+        other: "{0} k"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: mirigrama-ita desiritru rupi
+        one: "{0} mirigrama desiritru rupi"
+        other: "{0} mirigrama-ita desiritru rupi"
+      short:
+        display_name: mg/dl
+        other: "{0} mg/dl"
+    millimole-per-liter:
+      long:
+        display_name: mirimol-ita irerú-pukú rupi
+        one: "{0} mirimol irerú-pukú rupi"
+        other: "{0} mirimol-ita irerú-pukú rupi"
+      short:
+        display_name: mirimol/ritru
+        other: "{0} mmol/l"
+    permillion:
+      long:
+        display_name: pisawera-ita miliãu rupi
+        one: "{0} pisawera miliãu rupi"
+        other: "{0} pisawera-ita miliãu rupi"
+      short:
+        display_name: pisawera miliãu rupi
+    percent:
+      long:
+        one: "{0} sẽtu rupi"
+        other: "{0} sẽtu rupi"
+      short:
+        display_name: sẽtu rupi
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        one: "{0} mil rupi"
+        other: "{0} mil rupi"
+      short:
+        display_name: mil rupi
+    permyriad:
+      long:
+        one: "{0} pitusá-pitasukasá"
+        other: "{0} pitusá-pitasukasá-ita"
+      short:
+        display_name: pitusá-pitasukasá
+    mole:
+      long:
+        display_name: mol-ita
+        other: "{0} mol-ita"
+    liter-per-kilometer:
+      long:
+        display_name: irerú-pukú-ita apekatusawa rupi
+        one: "{0} irerú-pukú-ita apekatusawa rupi"
+        other: "{0} irerú-pukú apekatusawa rupi"
+      short:
+        display_name: ritru-itá/km
+        other: "{0} l/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: irerú-pukú-ita 100 apekatusawa rupi
+        one: "{0} irerú-pukú 100 apekatusawa rupi"
+        other: "{0} irerú-pukú-ita 100 apekatusawa rupi"
+      short:
+        display_name: l/100 km
+        other: "{0} l/100 km"
+    mile-per-gallon:
+      long:
+        display_name: milha-ita karóti rupi
+        one: "{0} milha karóti rupi"
+        other: "{0} milha-ita karóti rupi"
+      short:
+        display_name: milha-itá/gal
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: milha-ita karóti ĩperiawa rupi
+        one: "{0} milha karóti ĩperiawa rupi"
+        other: "{0} milha-ita karóti ĩperiawa rupi"
+      short:
+        display_name: milhas/gal. imp.
+        other: "{0} mpg imp."
+    petabyte:
+      long:
+        display_name: petabyte-ita
+        one: "{0} petabyte"
+        other: "{0} petabyte-ita"
+      short:
+        display_name: PByte
+      narrow:
+        display_name: PB
+    terabyte:
+      long:
+        display_name: terabyte-ita
+        one: "{0} terabyte"
+        other: "{0} terabyte-ita"
+      short:
+        display_name: TByte
+      narrow:
+        display_name: TB
+    terabit:
+      long:
+        display_name: terabit-ita
+        one: "{0} terabit"
+        other: "{0} terabit-ita"
+      short:
+        display_name: Tbit
+      narrow:
+        display_name: Tb
+    gigabyte:
+      long:
+        display_name: gigabyte-ita
+        one: "{0} gigabyte"
+        other: "{0} gigabyte-ita"
+      short:
+        display_name: GByte
+      narrow:
+        display_name: GB
+    gigabit:
+      long:
+        display_name: gigabit-ita
+        one: "{0} gigabit"
+        other: "{0} gigabit-ita"
+      short:
+        display_name: Gbit
+      narrow:
+        display_name: Gb
+    megabyte:
+      long:
+        display_name: megabyte-ita
+        one: "{0} megabyte"
+        other: "{0} megabyte-ita"
+      short:
+        display_name: MByte
+      narrow:
+        display_name: MB
+    megabit:
+      long:
+        display_name: megabit-ita
+        one: "{0} megabit"
+        other: "{0} megabit-ita"
+      short:
+        display_name: Mbit
+      narrow:
+        display_name: Mb
+    kilobyte:
+      long:
+        display_name: kirubyte-ita
+        one: "{0} kirubyte"
+        other: "{0} kirubyte-ita"
+      short:
+        display_name: kByte
+      narrow:
+        display_name: kB
+    kilobit:
+      long:
+        display_name: kirubit-ita
+        one: "{0} kirubit"
+        other: "{0} kirubit-ita"
+      short:
+        display_name: kbit
+      narrow:
+        display_name: kb
+    byte:
+      long:
+        display_name: byte-ita
+        other: "{0} byte-ita"
+      narrow:
+        display_name: B
+        one: "{0} B"
+        other: "{0} B"
+    bit:
+      long:
+        display_name: bit-ita
+        other: "{0} bit-ita"
+    century:
+      long:
+        display_name: sékuru-ita
+        one: "{0} sékuru"
+        other: "{0} sékuru-ita"
+      short:
+        display_name: sék.
+        one: "{0} sék."
+        other: "{0} sék"
+    decade:
+      long:
+        display_name: dékada-ita
+        one: "{0} dékada"
+        other: "{0} dékada-ita"
+      short:
+        display_name: dék.
+        one: "{0} dék."
+        other: "{0} dék"
+    year:
+      long:
+        display_name: akayú-ita
+        other: "{0} akayú-ita"
+        per_unit_pattern: "{0} akayú rupi"
+      short:
+        display_name: akayú
+        other: "{0} akayú"
+        per_unit_pattern: "{0}/akayú"
+    month:
+      long:
+        display_name: yasí-ita
+        other: "{0} yasí-ita"
+        per_unit_pattern: "{0} yasí rupi"
+      short:
+        display_name: yasí
+        other: "{0} yasí"
+        per_unit_pattern: "{0}/yasí"
+    week:
+      long:
+        display_name: sẽmãna-ita
+        one: "{0} sẽmãna"
+        other: "{0} sẽmãna-ita"
+        per_unit_pattern: "{0} sẽmãna rupi"
+      short:
+        display_name: sẽmãna
+        one: "{0} sem."
+        other: "{0} sem"
+        per_unit_pattern: "{0}/sem."
+      narrow:
+        display_name: sem.
+    day:
+      long:
+        display_name: ara-ita
+        other: "{0} ara-ita"
+        per_unit_pattern: "{0} ara rupi"
+      short:
+        display_name: ara
+        other: "{0} ara"
+        per_unit_pattern: "{0}/ara"
+    hour:
+      long:
+        display_name: hura-ita
+        one: "{0} hura"
+        other: "{0} hura-ita"
+        per_unit_pattern: "{0} hura rupi"
+      short:
+        display_name: hura
+    minute:
+      long:
+        display_name: minutu-ita
+        one: "{0} minutu"
+        other: "{0} minutu-ita"
+        per_unit_pattern: "{0} minutu rupi"
+    second:
+      long:
+        display_name: segũdu-ita
+        one: "{0} segũdu"
+        other: "{0} segũdu-ita"
+        per_unit_pattern: "{0} segũdu rupi"
+      short:
+        display_name: seg
+        other: "{0} seg"
+      narrow:
+        one: "{0} s"
+        other: "{0} s"
+        per_unit_pattern: "{0}/seg"
+    millisecond:
+      long:
+        display_name: mirisegũdu-ita
+        one: "{0} mirisegũdu-ita"
+        other: "{0} mirisegũdu rupi"
+      short:
+        display_name: mirisegũdu
+      narrow:
+        display_name: ms
+    microsecond:
+      long:
+        display_name: mikrusegũdu-ita
+        one: "{0} mikrusegũdu"
+        other: "{0} mikrusegũdu-ita"
+    nanosecond:
+      long:
+        display_name: nanusegũdu-ita
+        one: "{0} nanusegũdu"
+        other: "{0} nanusegũdu-ita"
+    ampere:
+      long:
+        display_name: ampere-ita
+        one: "{0} ampere"
+        other: "{0} ampere-ita"
+    milliampere:
+      long:
+        display_name: miriampere-ita
+        one: "{0} miriampere"
+        other: "{0} miriampere-ita"
+      short:
+        display_name: miriamp
+    ohm:
+      long:
+        display_name: ohm-ita
+        one: "{0} ohm"
+        other: "{0} ohm-ita"
+    volt:
+      long:
+        display_name: volt-ita
+        one: "{0} volt"
+        other: "{0} volt-ita"
+    kilocalorie:
+      long:
+        display_name: kirukaruria-ita
+        one: "{0} kirukaruria"
+        other: "{0} kirukaruria-ita"
+    calorie:
+      long:
+        display_name: karuria
+        one: "{0} karuria"
+        other: "{0} karuria-ita"
+    foodcalorie:
+      long:
+        display_name: Karuria
+        one: "{0} Karuria"
+        other: "{0} Karuria-ita"
+      short:
+        display_name: cal
+        one: "{0} cal"
+        other: "{0} cal"
+    kilojoule:
+      long:
+        display_name: kirujoule-ita
+        one: "{0} kirujoule"
+        other: "{0} kirujoule-ita"
+      short:
+        display_name: kirujoule
+    joule:
+      long:
+        display_name: joule-ita
+        one: "{0} joule"
+        other: "{0} joule-ita"
+    kilowatt-hour:
+      long:
+        display_name: kiruwatt-hura-ita
+        one: "{0} kiruwatt-hura"
+        other: "{0} kiruwatt-hura-ita"
+      short:
+        display_name: kW-hura
+    electronvolt:
+      long:
+        display_name: elétron-volt-ita
+        one: "{0} elétron-volt"
+        other: "{0} elétron-volt-ita"
+      short:
+        display_name: elétron-volt
+    british-thermal-unit:
+      long:
+        display_name: yepesawa sakusawa biritãnika-ita
+        one: "{0} yepesawa sakusawa biritãnika"
+        other: "{0} yepesawa sakusawa biritãnika-ita"
+      short:
+        display_name: BTU
+        other: "{0} BTU"
+    therm-us:
+      long:
+        display_name: yepesawa sakusawa EUA-suí-ita
+        one: "{0} yepesawa sakusawa EUA-suí"
+        other: "{0} yepesawa sakusawa EUA-suí-ita"
+      short:
+        display_name: thm EUA
+        other: "{0} thm EUA"
+    pound-force:
+      long:
+        display_name: kirĩba libra-ita
+        one: "{0} kirĩba libra"
+        other: "{0} kirĩba libra-ita"
+      short:
+        display_name: libra-kirĩba
+    newton:
+      long:
+        display_name: newton-ita
+        one: "{0} newton"
+        other: "{0} newton-ita"
+      short:
+        display_name: newton
+    gigahertz:
+      long:
+        display_name: gigahertz-ita
+        one: "{0} gigahertz"
+        other: "{0} gigahertz-ita"
+    megahertz:
+      long:
+        display_name: megahertz-ita
+        one: "{0} megahertz"
+        other: "{0} megahertz-ita"
+    kilohertz:
+      long:
+        display_name: kiruhertz-ita
+        one: "{0} kiruhertz"
+        other: "{0} kiruhertz-ita"
+    hertz:
+      long:
+        display_name: hertz-ita
+        one: "{0} hertz"
+        other: "{0} hertz-ita"
+    em:
+      long:
+        display_name: tipografia em
+    pixel:
+      long:
+        display_name: pikisel-ita
+        one: "{0} pikisel"
+        other: "{0} pikisel-ita"
+      short:
+        display_name: pixel
+    megapixel:
+      long:
+        display_name: megapikisel-ita
+        one: "{0} megapikisel"
+        other: "{0} megapikisel-ita"
+      short:
+        display_name: megapixel
+    pixel-per-centimeter:
+      long:
+        display_name: pikisel-ita sẽtimeturu rupi
+        one: "{0} pikisel sẽtimeturu rupi"
+        other: "{0} pikisel-ita sẽtimeturu rupi"
+    pixel-per-inch:
+      long:
+        display_name: pikisel-ita puregada rupi
+        one: "{0} pikisel puregada rupi"
+        other: "{0} pikisel-ita puregada rupi"
+    dot-per-centimeter:
+      long:
+        display_name: pitusá-ita sẽtimeturu rupi
+        one: "{0} pitusá sẽtimeturu rupi"
+        other: "{0} pitusá-ita sẽtimeturu rupi"
+    dot-per-inch:
+      long:
+        display_name: pitusá-ita puregada rupi
+        one: "{0} pitusá puregada rupi"
+        other: "{0} pitusá-ita puregada rupi"
+    kilometer:
+      long:
+        display_name: apekatusawa-ita
+        one: "{0} apekatusawa"
+        other: "{0} apekatusawa-ita"
+        per_unit_pattern: "{0} apekatusawa rupi"
+    meter:
+      long:
+        display_name: meturu-ita
+        one: "{0} meturu"
+        other: "{0} meturu-ita"
+        per_unit_pattern: "{0} meturu rupi"
+      short:
+        display_name: m
+    decimeter:
+      long:
+        display_name: desimeturu-ita
+        one: "{0} desimeturu"
+        other: "{0} desimeturu-ita"
+    centimeter:
+      long:
+        display_name: sẽtimeturu-ita
+        one: "{0} sẽtimeturu"
+        other: "{0} sẽtimeturu-ita"
+        per_unit_pattern: "{0} sẽtimeturu rupi"
+    millimeter:
+      long:
+        display_name: mirimeturu-ita
+        one: "{0} mirimeturu"
+        other: "{0} mirimeturu-ita"
+    micrometer:
+      long:
+        display_name: mikrumeturu-ita
+        one: "{0} mikrumeturu"
+        other: "{0} mikrumeturu-ita"
+    nanometer:
+      long:
+        display_name: nanumeturu-ita
+        one: "{0} nanumeturu"
+        other: "{0} nanumeturu-ita"
+    picometer:
+      long:
+        display_name: picometuru-ita
+        one: "{0} picometuru"
+        other: "{0} picometuru-ita"
+    mile:
+      long:
+        display_name: milha-ita
+        one: "{0} milha"
+        other: "{0} milha-ita"
+      short:
+        display_name: milha
+      narrow:
+        display_name: mil
+        one: "{0} milha"
+        other: "{0} milha"
+    yard:
+      long:
+        display_name: jarda-ita
+        one: "{0} jarda"
+        other: "{0} jarda-ita"
+      short:
+        display_name: jarda
+    foot:
+      long:
+        display_name: pí-ita
+        other: "{0} pí-ita"
+        per_unit_pattern: "{0} pí rupi"
+      short:
+        display_name: pí-itá
+        other: "{0} pí"
+        per_unit_pattern: "{0}/pí"
+      narrow:
+        display_name: pí-ita
+    inch:
+      long:
+        display_name: puregada-ita
+        one: "{0} puregada"
+        other: "{0} puregada-ita"
+        per_unit_pattern: "{0} puregada rupi"
+      short:
+        display_name: pur.
+        other: "{0} pur."
+        per_unit_pattern: "{0}/pur."
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    parsec:
+      long:
+        display_name: parsec-ita
+        one: "{0} parsec"
+        other: "{0} parsec-ita"
+      short:
+        display_name: parsec
+    light-year:
+      long:
+        display_name: akayú-werawa-ita
+        other: "{0} akayú-werawa-ita"
+      short:
+        display_name: akayú-werawa
+        other: "{0} akayú-werawa"
+    astronomical-unit:
+      long:
+        display_name: yepesawa iwakasara-ita
+        one: "{0} yepesawa iwakasara"
+        other: "{0} yepesawa iwakasara-ita"
+      short:
+        display_name: ua
+        other: "{0} ua"
+    furlong:
+      long:
+        display_name: furlong-ita
+        one: "{0} furlong"
+        other: "{0} furlong-ita"
+      short:
+        display_name: furlong
+    fathom:
+      long:
+        display_name: barasa-ita
+        one: "{0} barasa"
+        other: "{0} barasa-ita"
+      short:
+        display_name: barasa
+        other: "{0} brs."
+      narrow:
+        one: "{0} bsa."
+        other: "{0} bsa."
+    nautical-mile:
+      long:
+        display_name: milha paranãuara-ita
+        one: "{0} milha paranãuara"
+        other: "{0} milha paranãuara-ita"
+      short:
+        display_name: mn
+        other: "{0} mn"
+    mile-scandinavian:
+      long:
+        display_name: milha esikãdinaua-ita
+        one: "{0} milha esikãdinaua"
+        other: "{0} milha esikãdinaua-ita"
+    point:
+      long:
+        display_name: pitusá-ita
+        one: "{0} pitusá"
+        other: "{0} pitusá-ita"
+      short:
+        display_name: pitusá
+    solar-radius:
+      long:
+        display_name: kuarasiawa-ita
+        one: "{0} kuarasiawa"
+        other: "{0} kuarasiawa-ita"
+      short:
+        display_name: kuarasiawa
+    lux:
+      long:
+        one: "{0} lux"
+        other: "{0} lux"
+      short:
+        display_name: lux
+    solar-luminosity:
+      long:
+        display_name: kuarasí muturisawa-ita
+        one: "{0} kuarasí muturisawa"
+        other: "{0} kuarasí muturisawa-ita"
+      short:
+        display_name: kuarasí muturisawa
+    tonne:
+      long:
+        display_name: tonerada metirika-ita
+        one: "{0} tonerada metirika-ita"
+        other: "{0} tonerada metirika-ita"
+    kilogram:
+      long:
+        display_name: pusesawa-ita
+        one: "{0} pusesawa"
+        other: "{0} pusesawa-ita"
+        per_unit_pattern: "{0} pusesawa rupi"
+      narrow:
+        one: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        display_name: grama-ita
+        one: "{0} grama"
+        other: "{0} grama-ita"
+        per_unit_pattern: "{0} grama rupi"
+      short:
+        display_name: grama
+      narrow:
+        one: "{0}g"
+        other: "{0}g"
+    milligram:
+      long:
+        display_name: mirigrama-ita
+        one: "{0} mirigrama"
+        other: "{0} mirigrama-ita"
+    microgram:
+      long:
+        display_name: mikrugrama-ita
+        one: "{0} mikrugrama"
+        other: "{0} mikrugrama-ita"
+    ton:
+      long:
+        display_name: tonerada-ita
+        one: "{0} tonerada"
+        other: "{0} tonerada-ita"
+      short:
+        display_name: tonerada
+      narrow:
+        display_name: ton
+    stone:
+      long:
+        display_name: stone-ita
+        one: "{0} stone"
+        other: "{0} stone-ita"
+      short:
+        display_name: stones
+      narrow:
+        display_name: stone
+    pound:
+      long:
+        display_name: libra-ita
+        one: "{0} libra"
+        other: "{0} libra-ita"
+        per_unit_pattern: "{0} libra rupi"
+      short:
+        display_name: libra
+    ounce:
+      long:
+        display_name: iauareté-ita
+        one: "{0} iauareté"
+        other: "{0} iauareté-ita"
+        per_unit_pattern: "{0} iauareté rupi"
+    ounce-troy:
+      long:
+        display_name: iauareté troy-ita
+        one: "{0} iauareté troy"
+        other: "{0} iauareté troy-ita"
+      short:
+        display_name: oz troy
+    carat:
+      long:
+        display_name: cuirate-ita
+        one: "{0} cuirate"
+        other: "{0} cuirate-ita"
+      short:
+        display_name: cuirate
+        other: "{0} ct"
+      narrow:
+        one: "{0} ql"
+        other: "{0} ql"
+    dalton:
+      long:
+        display_name: dalton-ita
+        one: "{0} dalton"
+        other: "{0} dalton-ita"
+      short:
+        display_name: dalton
+    earth-mass:
+      long:
+        display_name: iwí susuẽga-ita
+        one: "{0} iwí susuẽga"
+        other: "{0} iwí susuẽga-ita"
+      short:
+        display_name: iwí susuẽga
+    solar-mass:
+      long:
+        display_name: kuarasí susuẽga-ita
+        one: "{0} kuarasí susuẽga"
+        other: "{0} kuarasí susuẽga-ita"
+      short:
+        display_name: kuarasí susuẽga
+    gigawatt:
+      long:
+        display_name: gigawatt-ita
+        one: "{0} gigawatt"
+        other: "{0} gigawatt-ita"
+    megawatt:
+      long:
+        display_name: megawatt-ita
+        one: "{0} megawatt"
+        other: "{0} megawatt-ita"
+    kilowatt:
+      long:
+        display_name: kiruwatt-ita
+        one: "{0} kiruwatt"
+        other: "{0} kiruwatt-ita"
+    watt:
+      long:
+        display_name: watt-ita
+        one: "{0} watt"
+        other: "{0} watt-ita"
+    milliwatt:
+      long:
+        display_name: miriwatt-ita
+        one: "{0} miriwatt"
+        other: "{0} miriwatt-ita"
+    horsepower:
+      long:
+        display_name: kawaru-wapú-ita
+        one: "{0} kawaru-wapú"
+        other: "{0} kawaru-wapú-ita"
+      short:
+        display_name: cv
+        other: "{0} cv"
+    millimeter-ofhg:
+      long:
+        display_name: merikuriju mirimeturu-ita
+        one: "{0} merikuriju mirimeturu"
+        other: "{0} merikuriju mirimeturu-ita"
+      short:
+        display_name: mmHg
+        other: "{0} mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: libra-ita puregada kuadaradu rupi
+        one: "{0} libra puregada kuadaradu rupi"
+        other: "{0} libra-ita puregada kuadaradu rupi"
+    inch-ofhg:
+      long:
+        display_name: merikuriju puregada-ita
+        one: "{0} merikuriju puregada"
+        other: "{0} merikuriju puregada-ita"
+      narrow:
+        one: "{0}″ Hg"
+        other: "{0}″ Hg"
+    bar:
+      long:
+        display_name: bar-ita
+        other: "{0} bar-ita"
+    millibar:
+      long:
+        display_name: miribar-ita
+        one: "{0} miribar"
+        other: "{0} miribar-ita"
+      narrow:
+        one: "{0} mb"
+        other: "{0} mb"
+    atmosphere:
+      long:
+        display_name: yãgasawa-ita
+        one: "{0} yãgasawa"
+        other: "{0} yãgasawa-ita"
+    pascal:
+      long:
+        display_name: pascal-ita
+        one: "{0} pascal"
+        other: "{0} pascal-ita"
+    hectopascal:
+      long:
+        display_name: hectopascal-ita
+        one: "{0} hectopascal"
+        other: "{0} hectopascal-ita"
+    kilopascal:
+      long:
+        display_name: kirupascal-ita
+        one: "{0} kirupascal"
+        other: "{0} kirupascal-ita"
+    megapascal:
+      long:
+        display_name: megapascal-ita
+        one: "{0} megapascal"
+        other: "{0} megapascal-ita"
+    kilometer-per-hour:
+      long:
+        display_name: apekatusawa-ita hura rupi
+        one: "{0} apekatusawa hura rupi"
+        other: "{0} apekatusawa-ita hura rupi"
+      narrow:
+        one: "{0}km/h"
+        other: "{0}km/h"
+    meter-per-second:
+      long:
+        display_name: meturu-ita segũdu rupi
+        one: "{0} meturu segũdu rupi"
+        other: "{0} meturu-ita segũdu rupi"
+      short:
+        display_name: meturu/seg
+    mile-per-hour:
+      long:
+        display_name: milha-ita hura rupi
+        one: "{0} milha hura rupi"
+        other: "{0} milha-ita hura rupi"
+      short:
+        display_name: milha-itá/hura
+        other: "{0} mph"
+    knot:
+      long:
+        display_name: kitanga-ita
+        other: "{0} kitanga-ita"
+      short:
+        display_name: kitanga
+        other: "{0} kitanga"
+    celsius:
+      long:
+        display_name: garau Celsius-ita
+        one: "{0} garau Celsius"
+        other: "{0} garau Celsius-ita"
+      short:
+        display_name: garau C
+        other: "{0} °C"
+      narrow:
+        display_name: "°C"
+    fahrenheit:
+      long:
+        display_name: garau Fahrenheit-ita
+        one: "{0} garau Fahrenheit"
+        other: "{0} garau Fahrenheit-ita"
+      short:
+        display_name: garau F
+        other: "{0} °F"
+    kelvin:
+      long:
+        display_name: kelvin-ita
+        one: "{0} kelvin"
+        other: "{0} kelvin-ita"
+    pound-force-foot:
+      long:
+        display_name: pí-libra
+        one: "{0} pí-libra"
+        other: "{0} pí-libra-ita"
+    newton-meter:
+      long:
+        display_name: newton-meturu-ita
+        one: "{0} newton-meturu"
+        other: "{0} newton-meturu-ita"
+    cubic-kilometer:
+      long:
+        display_name: apekatusawa kúbiku-ita
+        one: "{0} apekatusawa kúbiku"
+        other: "{0} apekatusawa kúbiku-ita"
+    cubic-meter:
+      long:
+        display_name: meturu kúbiku-ita
+        one: "{0} meturu kúbiku"
+        other: "{0} meturu kúbiku-ita"
+        per_unit_pattern: "{0} meturu kúbiku rupi"
+    cubic-centimeter:
+      long:
+        display_name: sẽtimeturu kúbiku-ita
+        one: "{0} sẽtimeturu kúbiku"
+        other: "{0} sẽtimeturu kúbiku-ita"
+        per_unit_pattern: "{0} sẽtimeturu kúbiku rupi"
+    cubic-mile:
+      long:
+        display_name: milha kúbika-ita
+        one: "{0} milha kúbika"
+        other: "{0} milha kúbika-ita"
+    cubic-yard:
+      long:
+        display_name: jarda kúbika-ita
+        one: "{0} jarda kúbika"
+        other: "{0} jarda kúbika-ita"
+      short:
+        display_name: jarda-itá³
+    cubic-foot:
+      long:
+        display_name: pí kúbiku-ita
+        one: "{0} pí kúbiku"
+        other: "{0} pí kúbiku-ita"
+      short:
+        display_name: pí-itá³
+      narrow:
+        display_name: ft³
+    cubic-inch:
+      long:
+        display_name: puregada kúbika-ita
+        one: "{0} puregada kúbika"
+        other: "{0} puregada kúbika-ita"
+      short:
+        display_name: puregada-irá³
+        other: "{0} pur³"
+    megaliter:
+      long:
+        display_name: megaritru-ita
+        one: "{0} megaritru"
+        other: "{0} megaritru-ita"
+      short:
+        display_name: Ml
+        other: "{0} Ml"
+    hectoliter:
+      long:
+        display_name: hectoritru-ita
+        one: "{0} hectoritru"
+        other: "{0} hectoritru-ita"
+      short:
+        display_name: hl
+        other: "{0} hl"
+    liter:
+      long:
+        display_name: irerú-pukú-ita
+        one: "{0} irerú-pukú"
+        other: "{0} irerú-pukú-ita"
+        per_unit_pattern: "{0} irerú-pukú rupi"
+      short:
+        display_name: litros
+      narrow:
+        display_name: irerú-pukú
+        one: "{0}l"
+        other: "{0}l"
+    deciliter:
+      long:
+        display_name: desiritru-ita
+        one: "{0} desiritru"
+        other: "{0} desiritru-ita"
+      short:
+        display_name: dl
+        other: "{0} dl"
+    centiliter:
+      long:
+        display_name: sẽtiritru-ita
+        one: "{0} sẽtiritru"
+        other: "{0} sẽtiritru-ita"
+      short:
+        display_name: cl
+        other: "{0} cl"
+    milliliter:
+      long:
+        display_name: miriritru-ita
+        one: "{0} miriritru"
+        other: "{0} miriritru-ita"
+      short:
+        display_name: ml
+        other: "{0} ml"
+    pint-metric:
+      long:
+        display_name: pint métiriku-ita
+        one: "{0} pint métiriku"
+        other: "{0} pint métiriku-ita"
+      short:
+        display_name: ptm
+        other: "{0} ptm"
+    cup-metric:
+      long:
+        display_name: xikara métirika-ita
+        one: "{0} xikara métirika"
+        other: "{0} xikara métirika-ita"
+      short:
+        display_name: xícm
+        other: "{0} xícm"
+    acre-foot:
+      long:
+        display_name: acre-pí-ita
+        other: "{0} acre-pí-ita"
+      short:
+        display_name: acre-pí
+        other: "{0} acre-pí"
+    gallon:
+      long:
+        display_name: karóti-ita
+        one: "{0} karóti"
+        other: "{0} karóti-ita"
+        per_unit_pattern: "{0} karóti rupi"
+      short:
+        display_name: gal
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        display_name: karóti ĩperiawa-ita
+        one: "{0} karóti ĩperiawa"
+        other: "{0} karóti ĩperiawa-ita"
+        per_unit_pattern: "{0} karóti ĩperiawa rupi"
+      short:
+        display_name: gal. imp.
+        other: "{0} gal. imp."
+        per_unit_pattern: "{0}/gal. imp."
+    quart:
+      long:
+        display_name: irundisawa-ita
+        one: "{0} irundisawa"
+        other: "{0} irundisawa-ita"
+      short:
+        display_name: qts
+    pint:
+      long:
+        display_name: pint-ita
+        one: "{0} pint"
+        other: "{0} pint-ita"
+      short:
+        display_name: pint
+    cup:
+      long:
+        display_name: xikara-ita
+        one: "{0} xikara"
+        other: "{0} xikara-ita"
+      short:
+        display_name: xíkara
+        one: "{0} xík."
+        other: "{0} xík"
+    fluid-ounce:
+      long:
+        display_name: iauareté fruida-ita
+        one: "{0} iauareté fruida"
+        other: "{0} iauareté fruida-ita"
+      short:
+        display_name: fl oz
+        other: "{0} fl oz"
+      narrow:
+        display_name: fl. oz.
+        one: "{0} fl. oz."
+        other: "{0} fl. oz."
+    fluid-ounce-imperial:
+      long:
+        display_name: iauareté fruida ĩperiawa-ita
+        one: "{0} iauareté fruida ĩperiawa"
+        other: "{0} iauareté fruida ĩperiawa-ita"
+    tablespoon:
+      long:
+        display_name: kuyera-kaĩbewara-ita
+        one: "{0} kuyera-kaĩbewara"
+        other: "{0} kuyera-kaĩbewara-ita"
+      short:
+        display_name: k. kaĩbewara
+        other: "{0} k. kaĩbewara"
+    teaspoon:
+      long:
+        display_name: kuyera xawara-ita
+        one: "{0} kuyera xawara"
+        other: "{0} kuyera-ita xawara"
+      short:
+        display_name: k. xawara
+        other: "{0} k. xawara"
+    barrel:
+      long:
+        display_name: bariu-ita
+        one: "{0} bariu"
+        other: "{0} bariu-ita"
+      short:
+        display_name: koroti

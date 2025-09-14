@@ -1,445 +1,96 @@
 ---
 locale: ka
-generated_at: '2025-09-13T17:38:05Z'
+generated_at: '2025-09-14T06:10:31Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
     nan: არ არის რიცხვი
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 ათ'.'
+        other: 0 ათ'.'
+      '10000':
+        one: 00 ათ'.'
+        other: 00 ათ'.'
+      '100000':
+        one: 000 ათ'.'
+        other: 000 ათ'.'
+      '1000000':
+        one: 0 მლნ'.'
+        other: 0 მლნ'.'
+      '10000000':
+        one: 00 მლნ'.'
+        other: 00 მლნ'.'
+      '100000000':
+        one: 000 მლნ'.'
+        other: 000 მლნ'.'
+      '1000000000':
+        one: 0 მლრდ'.'
+        other: 0 მლრდ'.'
+      '10000000000':
+        one: 00 მლრდ'.'
+        other: 00 მლრდ'.'
+      '100000000000':
+        one: 000 მლრ'.'
+        other: 000 მლრ'.'
+      '1000000000000':
+        one: 0 ტრლ'.'
+        other: 0 ტრლ'.'
+      '10000000000000':
+        one: 00 ტრლ'.'
+        other: 00 ტრლ'.'
+      '100000000000000':
+        one: 000 ტრლ'.'
+        other: 000 ტრლ'.'
+    long:
+      '1000':
+        one: 0 ათასი
+        other: 0 ათასი
+      '10000':
+        one: 00 ათასი
+        other: 00 ათასი
+      '100000':
+        one: 000 ათასი
+        other: 000 ათასი
+      '1000000':
+        one: 0 მილიონი
+        other: 0 მილიონი
+      '10000000':
+        one: 00 მილიონი
+        other: 00 მილიონი
+      '100000000':
+        one: 000 მილიონი
+        other: 000 მილიონი
+      '1000000000':
+        one: 0 მილიარდი
+        other: 0 მილიარდი
+      '10000000000':
+        one: 00 მილიარდი
+        other: 00 მილიარდი
+      '100000000000':
+        one: 000 მილიარდი
+        other: 000 მილიარდი
+      '1000000000000':
+        one: 0 ტრილიონი
+        other: 0 ტრილიონი
+      '10000000000000':
+        one: 00 ტრილიონი
+        other: 00 ტრილიონი
+      '100000000000000':
+        one: 000 ტრილიონი
+        other: 000 ტრილიონი
   currencies:
-    AFN:
-      display_names:
-        other: ავღანური ავღანი
-        one: ავღანური ავღანი
-    AMD:
-      display_names:
-        other: სომხური დრამი
-        one: სომხური დრამი
-    AOA:
-      display_names:
-        other: ანგოლური კვანზა
-        one: ანგოლური კვანზა
-    ARS:
-      display_names:
-        other: არგენტინული პესო
-        one: არგენტინული პესო
-    AUD:
-      symbol: AUD
-      display_names:
-        other: ავსტრალიური დოლარი
-        one: ავსტრალიური დოლარი
-    AZN:
-      display_names:
-        other: აზერბაიჯანული მანათი
-        one: აზერბაიჯანული მანათი
-    BAM:
-      display_names:
-        other: ბოსნია და ჰერცოგოვინას კონვერტირებადი მარკა
-        one: ბოსნია და ჰერცოგოვინას კონვერტირებადი მარკა
-    BBD:
-      display_names:
-        other: ბარბადოსული დოლარი
-        one: ბარბადოსული დოლარი
-    BDT:
-      display_names:
-        other: ბანგლადეშური ტაკა
-        one: ბანგლადეშური ტაკა
-    BMD:
-      display_names:
-        other: ბერმუდული დოლარი
-        one: ბერმუდული დოლარი
-    BND:
-      display_names:
-        other: ბრუნეული დოლარი
-        one: ბრუნეული დოლარი
-    BOB:
-      display_names:
-        other: ბოლივიური ბოლივიანო
-        one: ბოლივიური ბოლივიანო
-    BRL:
-      display_names:
-        other: ბრაზილიური რეალი
-        one: ბრაზილიური რეალი
-    BSD:
-      display_names:
-        other: ბაჰამური დოლარი
-        one: ბაჰამური დოლარი
-    BWP:
-      display_names:
-        other: ბოცვანური პულა
-        one: ბოცვანური პულა
-    BZD:
-      display_names:
-        other: ბელიზის დოლარი
-        one: ბელიზის დოლარი
-    CAD:
-      display_names:
-        other: კანადური დოლარი
-        one: კანადური დოლარი
-    CLP:
-      display_names:
-        other: ჩილეს პესო
-        one: ჩილეს პესო
-    CNY:
-      symbol: CNY
-      display_names:
-        other: ჩინური უანი
-        one: ჩინური უანი
-    COP:
-      display_names:
-        other: კოლუმბიური პესო
-        one: კოლუმბიური პესო
-    CRC:
-      display_names:
-        other: კოსტა რიკული კოლონი
-        one: კოსტა-რიკული კოლონი
-    CUC:
-      display_names:
-        other: კუბური კონვერტირებადი პესო
-        one: კუბური კონვერტირებადი პესო
-    CUP:
-      display_names:
-        other: კუბური პესო
-        one: კუბური პესო
-    CZK:
-      display_names:
-        other: ჩეხური კრონა
-        one: ჩეხური კრონა
-    DKK:
-      display_names:
-        other: დანიური კრონა
-        one: დანიური კრონა
-    DOP:
-      display_names:
-        other: დომინიკური პესო
-        one: დომინიკური პესო
-    EGP:
-      display_names:
-        other: ეგვიპტური გირვანქა
-        one: ეგვიპტური გირვანქა
-    ESP:
-      display_names:
-        other: ესპანური პესეტა
-        one: ესპანური პესეტა
-    EUR:
-      display_names:
-        other: ევრო
-        one: ევრო
-    FJD:
-      display_names:
-        other: ფიჯის დოლარი
-        one: ფიჯის დოლარი
-    FKP:
-      display_names:
-        other: ფოლკლენდის კუნძულების ფუნტი
-        one: ფოლკლენდის კუნძულების ფუნტი
-    GBP:
-      display_names:
-        other: ბრიტანული გირვანქა სტერლინგი
-        one: ბრიტანული გირვანქა სტერლინგი
-    GEL:
-      display_names:
-        other: ქართული ლარი
-        one: ქართული ლარი
-    GHS:
-      display_names:
-        other: განური სედი
-        one: განური სედი
-    GIP:
-      display_names:
-        other: გიბრალტარული ფუნტი
-        one: გიბრალტარული ფუნტი
-    GNF:
-      display_names:
-        other: გვინეური ფრანკი
-        one: გვინეური ფრანკი
-    GTQ:
-      display_names:
-        other: გვატემალური კეტსალი
-        one: გვატემალური კეტსალი
-    GYD:
-      display_names:
-        other: გაიანური დოლარი
-        one: გაიანური დოლარი
-    HKD:
-      symbol: HKD
-      display_names:
-        other: ჰონკონგის დოლარი
-        one: ჰონკონგის დოლარი
-    HNL:
-      display_names:
-        other: ჰონდურასული ლემპირა
-        one: ჰონდურასული ლემპირა
-    HRK:
-      display_names:
-        other: ხორვატული კუნა
-        one: ხორვატული კუნა
-    HUF:
-      display_names:
-        other: უნგრული ფორინტი
-        one: უნგრული ფორინტი
-    IDR:
-      display_names:
-        other: ინდონეზიური რუპია
-        one: ინდონეზიური რუპია
-    ILS:
-      symbol: ILS
-      display_names:
-        other: ისრაელის ახალი შეკელი
-        one: ისრაელის ახალი შეკელი
-    INR:
-      symbol: INR
-      display_names:
-        other: ინდური რუპია
-        one: ინდური რუპია
-    ISK:
-      display_names:
-        other: ისლანდიური კრონა
-        one: ისლანდიური კრონა
-    JMD:
-      display_names:
-        other: იამაიკური დოლარი
-        one: იამაიკური დოლარი
-    JPY:
-      symbol: JPY
-      display_names:
-        other: იაპონური იენი
-        one: იაპონური იენი
-    KGS:
-      display_names:
-        other: ყირგიზული სომი
-        one: ყირგიზული სომი
-    KHR:
-      display_names:
-        other: კამბოჯური რიელი
-        one: კამბოჯური რიელი
-    KMF:
-      display_names:
-        other: კომორული ფრანკი
-        one: კომორული ფრანკი
-    KPW:
-      display_names:
-        other: ჩრდილოეთ კორეული ვონი
-        one: ჩრდილოეთ კორეული ვონი
-    KRW:
-      symbol: KRW
-      display_names:
-        other: სამხრეთ კორეული ვონი
-        one: სამხრეთ კორეული ვონი
-    KYD:
-      display_names:
-        other: კაიმანის კუნძულების დოლარი
-        one: კაიმანის კუნძულების დოლარი
-    KZT:
-      display_names:
-        other: ყაზახური ტენგე
-        one: ყაზახური ტენგე
-    LAK:
-      display_names:
-        other: ლაოსური კიპი
-        one: ლაოსური კიპი
-    LBP:
-      display_names:
-        other: ლიბანური ფუნტი
-        one: ლიბანური ფუნტი
-    LKR:
-      display_names:
-        other: შრი-ლანკური რუპია
-        one: შრი-ლანკური რუპია
-    LRD:
-      display_names:
-        other: ლიბერიული დოლარი
-        one: ლიბერიული დოლარი
-    LTL:
-      display_names:
-        other: ლიტვური ლიტა
-        one: ლიტვური ლიტა
-    LVL:
-      display_names:
-        other: ლატვიური ლატი
-        one: ლატვიური ლატი
-    MGA:
-      display_names:
-        other: მადაგასკარის არიარი
-        one: მადაგასკარის არიარი
-    MMK:
-      display_names:
-        other: მიანმარის კიატი
-        one: მიანმარის კიატი
-    MNT:
-      display_names:
-        other: მონღოლური ტუგრიკი
-        one: მონღოლური ტუგრიკი
-    MUR:
-      display_names:
-        other: მავრიტანული რუპია
-        one: მავრიტანული რუპია
-    MXN:
-      display_names:
-        other: მექსიკური პესო
-        one: მექსიკური პესო
-    MYR:
-      display_names:
-        other: მალაიზიური რინგიტი
-        one: მალაიზიური რინგიტი
-    NAD:
-      display_names:
-        other: ნამიბიური დოლარი
-        one: ნამიბიური დოლარი
-    NGN:
-      display_names:
-        other: ნიგერიული ნაირა
-        one: ნიგერიული ნაირა
-    NIO:
-      display_names:
-        other: ნიკარაგუას ოქროს კორდობა
-        one: ნიკარაგუას ოქროს კორდობა
-    NOK:
-      display_names:
-        other: ნორვეგიული კრონა
-        one: ნორვეგიული კრონა
-    NPR:
-      display_names:
-        other: ნეპალური რუპია
-        one: ნეპალური რუპია
-    NZD:
-      symbol: NZD
-      display_names:
-        other: ახალი ზელანდიის დოლარი
-        one: ახალი ზელანდიის დოლარი
-    PHP:
-      symbol: PHP
-      display_names:
-        other: ფილიპინური პესო
-        one: ფილიპინური პესო
-    PKR:
-      display_names:
-        other: პაკისტანური რუპია
-        one: პაკისტანური რუპია
-    PLN:
-      display_names:
-        other: პოლონური ზლოტი
-        one: პოლონური ზლოტი
-    PYG:
-      display_names:
-        other: პარაგვაული გუარანი
-        one: პარაგვაული გუარანი
-    RON:
-      display_names:
-        other: რუმინული ლეუ
-        one: რუმინული ლეუ
-    RUB:
-      display_names:
-        other: რუსული რუბლი
-        one: რუსული რუბლი
-    RWF:
-      display_names:
-        other: რუანდული ფრანკი
-        one: რუანდული ფრანკი
-    SBD:
-      display_names:
-        other: სოლომონის კუნძულების დოლარი
-        one: სოლომონის კუნძულების დოლარი
-    SEK:
-      display_names:
-        other: შვედური კრონა
-        one: შვედური კრონა
-    SGD:
-      display_names:
-        other: სინგაპურის დოლარი
-        one: სინგაპურის დოლარი
-    SHP:
-      display_names:
-        other: წმ. ელენეს კუნძულის ფუნტი
-        one: წმ. ელენეს კუნძულის ფუნტი
-    SRD:
-      display_names:
-        other: სურინამული დოლარი
-        one: სურინამული დოლარი
-    SSP:
-      display_names:
-        other: სამხრეთ სუდანური ფუნტი
-        one: სამხრეთ სუდანური ფუნტი
-    STN:
-      display_names:
-        other: სან-ტომე და პრინსიპის დობრა
-        one: სან-ტომე და პრინსიპის დობრა
-    SYP:
-      display_names:
-        other: სირიული გირვანქა
-        one: სირიული გირვანქა
-    THB:
-      display_names:
-        other: ტაილანდური ბატი
-        one: ტაილანდური ბატი
-    TOP:
-      display_names:
-        other: ტონგანური პაანგა
-        one: ტონგანური პაანგა
-    TRY:
-      display_names:
-        other: ახალი თურქული ლირა
-        one: ახალი თურქული ლირა
-    TTD:
-      display_names:
-        other: ტრინიდად და ტობაგოს დოლარი
-        one: ტრინიდად და ტობაგოს დოლარი
-    TWD:
-      display_names:
-        other: ტაივანური ახალი დოლარი
-        one: ტაივანური ახალი დოლარი
-    UAH:
-      display_names:
-        other: უკრაინული გრივნა
-        one: უკრაინული გრივნა
-    USD:
-      display_names:
-        other: აშშ დოლარი
-        one: აშშ დოლარი
-    UYU:
-      display_names:
-        other: ურუგვაის პესო
-        one: ურუგვაის პესო
-    VEF:
-      display_names:
-        other: ვენესუელის ბოლივარი (2008–2018)
-        one: ვენესუელის ბოლივარი (2008–2018)
-    VND:
-      symbol: VND
-      display_names:
-        other: ვიეტნამური დონგი
-        one: ვიეტნამური დონგი
-    XAF:
-      display_names:
-        other: ცენტრალურ აფრიკული CFA ფრანკი
-        one: ცენტრალურ აფრიკული CFA ფრანკი
-    XCD:
-      display_names:
-        other: აღმოსავლეთ კარიბიული დოლარი
-        one: აღმოსავლეთ კარიბიული დოლარი
-    XOF:
-      display_names:
-        other: დასავლეთ აფრიკული CFA ფრანკი
-        one: დასავლეთ აფრიკული CFA ფრანკი
-    XPF:
-      display_names:
-        other: CFP ფრანკი
-        one: CFP ფრანკი
-    XXX:
-      display_names:
-        other: "(უცნობი ვალუტა)"
-        one: "(ვალუტის უცნობი ერთეული)"
-    ZAR:
-      display_names:
-        other: სამხრეთ აფრიკული რანდი
-        one: სამხრეთ აფრიკული რანდი
-    ZMW:
-      display_names:
-        other: ზამბიური კვაჭა
-        one: ზამბიური კვაჭა
     ADP:
       display_names:
         other: ანდორული პესეტა
@@ -452,14 +103,26 @@ number_formats:
       display_names:
         other: ავღანი (1927–2002)
         one: ავღანი (1927–2002)
+    AFN:
+      display_names:
+        other: ავღანური ავღანი
+        one: ავღანური ავღანი
     ALL:
       display_names:
         other: ალბანური ლეკი
         one: ალბანური ლეკი
+    AMD:
+      display_names:
+        other: სომხური დრამი
+        one: სომხური დრამი
     ANG:
       display_names:
         other: ნიდრელანდების ანტილიის გულდენი
         one: ნიდრელანდების ანტილიის გულდენი
+    AOA:
+      display_names:
+        other: ანგოლური კვანზა
+        one: ანგოლური კვანზა
     AOK:
       display_names:
         other: ანგოლური კვანზა (1977–1990)
@@ -480,10 +143,19 @@ number_formats:
       display_names:
         other: არგენტინული პესო (1983–1985)
         one: არგენტინული პესო (1983–1985)
+    ARS:
+      display_names:
+        other: არგენტინული პესო
+        one: არგენტინული პესო
     ATS:
       display_names:
         other: ავსტრიული შილინგი
         one: ავსტრიული შილინგი
+    AUD:
+      symbol: AUD
+      display_names:
+        other: ავსტრალიური დოლარი
+        one: ავსტრალიური დოლარი
     AWG:
       display_names:
         other: არუბანული გულდენი
@@ -492,10 +164,26 @@ number_formats:
       display_names:
         other: აზერბაიჯანული მანათი (1993–2006)
         one: აზერბაიჯანული მანათი (1993–2006)
+    AZN:
+      display_names:
+        other: აზერბაიჯანული მანათი
+        one: აზერბაიჯანული მანათი
     BAD:
       display_names:
         other: ბოსნია-ჰერცოგოვინას დინარი
         one: ბოსნია-ჰერცოგოვინას დინარი
+    BAM:
+      display_names:
+        other: ბოსნია და ჰერცოგოვინას კონვერტირებადი მარკა
+        one: ბოსნია და ჰერცოგოვინას კონვერტირებადი მარკა
+    BBD:
+      display_names:
+        other: ბარბადოსული დოლარი
+        one: ბარბადოსული დოლარი
+    BDT:
+      display_names:
+        other: ბანგლადეშური ტაკა
+        one: ბანგლადეშური ტაკა
     BEC:
       display_names:
         other: ბელგიური ფრანკი (კოვერტირებადი)
@@ -524,6 +212,18 @@ number_formats:
       display_names:
         other: ბურუნდიული ფრანკი
         one: ბურუნდიული ფრანკი
+    BMD:
+      display_names:
+        other: ბერმუდული დოლარი
+        one: ბერმუდული დოლარი
+    BND:
+      display_names:
+        other: ბრუნეული დოლარი
+        one: ბრუნეული დოლარი
+    BOB:
+      display_names:
+        other: ბოლივიური ბოლივიანო
+        one: ბოლივიური ბოლივიანო
     BOP:
       display_names:
         other: ბოლივიური პესო
@@ -540,6 +240,10 @@ number_formats:
       display_names:
         other: ბრაზილიური კრუზეირო (1990–1993)
         one: ბრაზილიური კრუზეირო (1990–1993)
+    BRL:
+      display_names:
+        other: ბრაზილიური რეალი
+        one: ბრაზილიური რეალი
     BRN:
       display_names:
         other: ბრაზილიური კრუზადო ნოვო
@@ -548,10 +252,18 @@ number_formats:
       display_names:
         other: ბრაზილიური კრუზეირო
         one: ბრაზილიური კრუზეირო
+    BSD:
+      display_names:
+        other: ბაჰამური დოლარი
+        one: ბაჰამური დოლარი
     BTN:
       display_names:
         other: ბუტანური ნგულტრუმი
         one: ბუტანური ნგულტრუმი
+    BWP:
+      display_names:
+        other: ბოცვანური პულა
+        one: ბოცვანური პულა
     BYB:
       display_names:
         other: ახალი ბელარუსიული რუბლი (1994–1999)
@@ -565,6 +277,14 @@ number_formats:
       display_names:
         other: ბელორუსული რუბლი (2000–2016)
         one: ბელორუსული რუბლი (2000–2016)
+    BZD:
+      display_names:
+        other: ბელიზის დოლარი
+        one: ბელიზის დოლარი
+    CAD:
+      display_names:
+        other: კანადური დოლარი
+        one: კანადური დოლარი
     CDF:
       display_names:
         other: კონგოს ფრანკი
@@ -573,10 +293,27 @@ number_formats:
       display_names:
         other: შვეიცარიული ფრანკი
         one: შვეიცარიული ფრანკი
+    CLP:
+      display_names:
+        other: ჩილეს პესო
+        one: ჩილეს პესო
     CNH:
       display_names:
         other: ჩინური იუანი (ოფშორი)
         one: ჩინური იუანი (ოფშორი)
+    CNY:
+      symbol: CNY
+      display_names:
+        other: ჩინური უანი
+        one: ჩინური უანი
+    COP:
+      display_names:
+        other: კოლუმბიური პესო
+        one: კოლუმბიური პესო
+    CRC:
+      display_names:
+        other: კოსტა რიკული კოლონი
+        one: კოსტა-რიკული კოლონი
     CSD:
       display_names:
         other: ძველი სერბიული დინარი
@@ -585,6 +322,14 @@ number_formats:
       display_names:
         other: ჩეხოსლოვაკიის მყარი კრონა
         one: ჩეხოსლოვაკიის მყარი კრონა
+    CUC:
+      display_names:
+        other: კუბური კონვერტირებადი პესო
+        one: კუბური კონვერტირებადი პესო
+    CUP:
+      display_names:
+        other: კუბური პესო
+        one: კუბური პესო
     CVE:
       display_names:
         other: კაბო-ვერდეს ესკუდო
@@ -593,6 +338,10 @@ number_formats:
       display_names:
         other: კვიპროსის გირვანქა
         one: კვიპროსის გირვანქა
+    CZK:
+      display_names:
+        other: ჩეხური კრონა
+        one: ჩეხური კრონა
     DDM:
       display_names:
         other: აღმოსავლეთ გერმანული მარკა
@@ -605,6 +354,14 @@ number_formats:
       display_names:
         other: ჯიბუტის ფრანკი
         one: ჯიბუტის ფრანკი
+    DKK:
+      display_names:
+        other: დანიური კრონა
+        one: დანიური კრონა
+    DOP:
+      display_names:
+        other: დომინიკური პესო
+        one: დომინიკური პესო
     DZD:
       display_names:
         other: ალჟირული დინარი
@@ -613,50 +370,129 @@ number_formats:
       display_names:
         other: ესტონური კრუნა
         one: ესტონური კრუნა
+    EGP:
+      display_names:
+        other: ეგვიპტური გირვანქა
+        one: ეგვიპტური გირვანქა
     ERN:
       display_names:
         other: ერიტრეის ნაკფა
         one: ერიტრეის ნაკფა
+    ESP:
+      display_names:
+        other: ესპანური პესეტა
+        one: ესპანური პესეტა
     ETB:
       display_names:
         other: ეთიოპიური ბირი
         one: ეთიოპიური ბირი
+    EUR:
+      display_names:
+        other: ევრო
+        one: ევრო
     FIM:
       display_names:
         other: ფინური მარკა
         one: ფინური მარკა
+    FJD:
+      display_names:
+        other: ფიჯის დოლარი
+        one: ფიჯის დოლარი
+    FKP:
+      display_names:
+        other: ფოლკლენდის კუნძულების ფუნტი
+        one: ფოლკლენდის კუნძულების ფუნტი
     FRF:
       display_names:
         other: ფრანგული ფრანკი
         one: ფრანგული ფრანკი
+    GBP:
+      display_names:
+        other: ბრიტანული გირვანქა სტერლინგი
+        one: ბრიტანული გირვანქა სტერლინგი
     GEK:
       display_names:
         other: ქართული კუპონი ლარით
         one: ქართული კუპონი ლარით
+    GEL:
+      display_names:
+        other: ქართული ლარი
+        one: ქართული ლარი
+    GHS:
+      display_names:
+        other: განური სედი
+        one: განური სედი
+    GIP:
+      display_names:
+        other: გიბრალტარული ფუნტი
+        one: გიბრალტარული ფუნტი
     GMD:
       display_names:
         other: გამბიური დალასი
         one: გამბიური დალასი
+    GNF:
+      display_names:
+        other: გვინეური ფრანკი
+        one: გვინეური ფრანკი
     GRD:
       display_names:
         other: ბერძნული დრაჰმა
         one: ბერძნული დრაჰმა
+    GTQ:
+      display_names:
+        other: გვატემალური კეტსალი
+        one: გვატემალური კეტსალი
     GWE:
       display_names:
         other: პორტუგალიური გინეა ესკუდო
         one: პორტუგალიური გინეა ესკუდო
+    GYD:
+      display_names:
+        other: გაიანური დოლარი
+        one: გაიანური დოლარი
+    HKD:
+      symbol: HKD
+      display_names:
+        other: ჰონკონგის დოლარი
+        one: ჰონკონგის დოლარი
+    HNL:
+      display_names:
+        other: ჰონდურასული ლემპირა
+        one: ჰონდურასული ლემპირა
     HRD:
       display_names:
         other: ხორვატიული დინარი
         one: ხორვატიული დინარი
+    HRK:
+      display_names:
+        other: ხორვატული კუნა
+        one: ხორვატული კუნა
     HTG:
       display_names:
         other: ჰაიტური გურდი
         one: ჰაიტური გურდი
+    HUF:
+      display_names:
+        other: უნგრული ფორინტი
+        one: უნგრული ფორინტი
+    IDR:
+      display_names:
+        other: ინდონეზიური რუპია
+        one: ინდონეზიური რუპია
     IEP:
       display_names:
         other: ირლანდიური გირვანქა
         one: ირლანდიური გირვანქა
+    ILS:
+      symbol: ILS
+      display_names:
+        other: ისრაელის ახალი შეკელი
+        one: ისრაელის ახალი შეკელი
+    INR:
+      symbol: INR
+      display_names:
+        other: ინდური რუპია
+        one: ინდური რუპია
     IQD:
       display_names:
         other: ერაყული დინარი
@@ -665,26 +501,88 @@ number_formats:
       display_names:
         other: ირანული რიალი
         one: ირანული რიალი
+    ISK:
+      display_names:
+        other: ისლანდიური კრონა
+        one: ისლანდიური კრონა
     ITL:
       display_names:
         other: იტალიური ლირა
         one: იტალიური ლირა
+    JMD:
+      display_names:
+        other: იამაიკური დოლარი
+        one: იამაიკური დოლარი
     JOD:
       display_names:
         other: იორდანიული დოლარი
         one: იორდანიული დოლარი
+    JPY:
+      symbol: JPY
+      display_names:
+        other: იაპონური იენი
+        one: იაპონური იენი
     KES:
       display_names:
         other: კენიური შილინგი
         one: კენიური შილინგი
+    KGS:
+      display_names:
+        other: ყირგიზული სომი
+        one: ყირგიზული სომი
+    KHR:
+      display_names:
+        other: კამბოჯური რიელი
+        one: კამბოჯური რიელი
+    KMF:
+      display_names:
+        other: კომორული ფრანკი
+        one: კომორული ფრანკი
+    KPW:
+      display_names:
+        other: ჩრდილოეთ კორეული ვონი
+        one: ჩრდილოეთ კორეული ვონი
+    KRW:
+      symbol: KRW
+      display_names:
+        other: სამხრეთ კორეული ვონი
+        one: სამხრეთ კორეული ვონი
     KWD:
       display_names:
         other: ქუვეითური დინარი
         one: ქუვეითური დინარი
+    KYD:
+      display_names:
+        other: კაიმანის კუნძულების დოლარი
+        one: კაიმანის კუნძულების დოლარი
+    KZT:
+      display_names:
+        other: ყაზახური ტენგე
+        one: ყაზახური ტენგე
+    LAK:
+      display_names:
+        other: ლაოსური კიპი
+        one: ლაოსური კიპი
+    LBP:
+      display_names:
+        other: ლიბანური ფუნტი
+        one: ლიბანური ფუნტი
+    LKR:
+      display_names:
+        other: შრი-ლანკური რუპია
+        one: შრი-ლანკური რუპია
+    LRD:
+      display_names:
+        other: ლიბერიული დოლარი
+        one: ლიბერიული დოლარი
     LSL:
       display_names:
         other: ლესოთოს ლოტი
         one: ლესოთოს ლოტი
+    LTL:
+      display_names:
+        other: ლიტვური ლიტა
+        one: ლიტვური ლიტა
     LTT:
       display_names:
         other: ლიტვური ტალონი
@@ -701,6 +599,10 @@ number_formats:
       display_names:
         other: ლუქსემბურგის ფინანსური ფრანკი
         one: ლუქსემბურგის ფინანსური ფრანკი
+    LVL:
+      display_names:
+        other: ლატვიური ლატი
+        one: ლატვიური ლატი
     LVR:
       display_names:
         other: ლატვიური რუბლი
@@ -721,6 +623,10 @@ number_formats:
       display_names:
         other: მოლდოვური ლეუ
         one: მოლდოვური ლეუ
+    MGA:
+      display_names:
+        other: მადაგასკარის არიარი
+        one: მადაგასკარის არიარი
     MGF:
       display_names:
         other: მადაგასკარის ფრანკი
@@ -733,6 +639,14 @@ number_formats:
       display_names:
         other: მალის ფრანკი
         one: მალის ფრანკი
+    MMK:
+      display_names:
+        other: მიანმარის კიატი
+        one: მიანმარის კიატი
+    MNT:
+      display_names:
+        other: მონღოლური ტუგრიკი
+        one: მონღოლური ტუგრიკი
     MOP:
       display_names:
         other: მაკაუს პატაკა
@@ -753,6 +667,10 @@ number_formats:
       display_names:
         other: მალტის გირვანქა
         one: მალტის გირვანქა
+    MUR:
+      display_names:
+        other: მავრიტანული რუპია
+        one: მავრიტანული რუპია
     MVR:
       display_names:
         other: მალდივური რუფია
@@ -761,10 +679,18 @@ number_formats:
       display_names:
         other: მალავიური კვაჩა
         one: მალავიური კვაჩა
+    MXN:
+      display_names:
+        other: მექსიკური პესო
+        one: მექსიკური პესო
     MXP:
       display_names:
         other: მექსიკური ვერცხლის პესო (1861–1992)
         one: მექსიკური ვერცხლის პესო (1861–1992)
+    MYR:
+      display_names:
+        other: მალაიზიური რინგიტი
+        one: მალაიზიური რინგიტი
     MZE:
       display_names:
         other: მოზამბიკური ესკუდო
@@ -777,14 +703,39 @@ number_formats:
       display_names:
         other: მოზამბიკური მეტიკალი
         one: მოზამბიკური მეტიკალი
+    NAD:
+      display_names:
+        other: ნამიბიური დოლარი
+        one: ნამიბიური დოლარი
+    NGN:
+      display_names:
+        other: ნიგერიული ნაირა
+        one: ნიგერიული ნაირა
     NIC:
       display_names:
         other: ნიკარაგუას კორდობა
         one: ნიკარაგუას კორდობა
+    NIO:
+      display_names:
+        other: ნიკარაგუას ოქროს კორდობა
+        one: ნიკარაგუას ოქროს კორდობა
     NLG:
       display_names:
         other: ჰოლანდიური გულდენი
         one: ჰოლანდიური გულდენი
+    NOK:
+      display_names:
+        other: ნორვეგიული კრონა
+        one: ნორვეგიული კრონა
+    NPR:
+      display_names:
+        other: ნეპალური რუპია
+        one: ნეპალური რუპია
+    NZD:
+      symbol: NZD
+      display_names:
+        other: ახალი ზელანდიის დოლარი
+        one: ახალი ზელანდიის დოლარი
     OMR:
       display_names:
         other: ომანის რიალი
@@ -809,6 +760,19 @@ number_formats:
       display_names:
         other: პაპუა-ახალი გვინეის კინა
         one: პაპუა-ახალი გვინეის კინა
+    PHP:
+      symbol: PHP
+      display_names:
+        other: ფილიპინური პესო
+        one: ფილიპინური პესო
+    PKR:
+      display_names:
+        other: პაკისტანური რუპია
+        one: პაკისტანური რუპია
+    PLN:
+      display_names:
+        other: პოლონური ზლოტი
+        one: პოლონური ზლოტი
     PLZ:
       display_names:
         other: პოლონური ზლოტი (1950–1995)
@@ -817,6 +781,10 @@ number_formats:
       display_names:
         other: პორტუგალიური ესკუდო
         one: პორტუგალიური ესკუდო
+    PYG:
+      display_names:
+        other: პარაგვაული გუარანი
+        one: პარაგვაული გუარანი
     QAR:
       display_names:
         other: კატარის რიალი
@@ -829,18 +797,34 @@ number_formats:
       display_names:
         other: ძველი რუმინული ლეუ
         one: ძველი რუმინული ლეუ
+    RON:
+      display_names:
+        other: რუმინული ლეუ
+        one: რუმინული ლეუ
     RSD:
       display_names:
         other: სერბული დინარი
         one: სერბული დინარი
+    RUB:
+      display_names:
+        other: რუსული რუბლი
+        one: რუსული რუბლი
     RUR:
       display_names:
         other: რუსული რუბლი (1991–1998)
         one: რუსული რუბლი (1991–1998)
+    RWF:
+      display_names:
+        other: რუანდული ფრანკი
+        one: რუანდული ფრანკი
     SAR:
       display_names:
         other: საუდის არაბეთის რიალი
         one: საუდის არაბეთის რიალი
+    SBD:
+      display_names:
+        other: სოლომონის კუნძულების დოლარი
+        one: სოლომონის კუნძულების დოლარი
     SCR:
       display_names:
         other: სეიშელური რუპია
@@ -857,6 +841,18 @@ number_formats:
       display_names:
         other: სუდანის გირვანქა
         one: სუდანის გირვანქა
+    SEK:
+      display_names:
+        other: შვედური კრონა
+        one: შვედური კრონა
+    SGD:
+      display_names:
+        other: სინგაპურის დოლარი
+        one: სინგაპურის დოლარი
+    SHP:
+      display_names:
+        other: წმ. ელენეს კუნძულის ფუნტი
+        one: წმ. ელენეს კუნძულის ფუნტი
     SLE:
       display_names:
         other: სიერა-ლეონეს ლეონე
@@ -869,22 +865,42 @@ number_formats:
       display_names:
         other: სომალური შილინგი
         one: სომალური შილინგი
+    SRD:
+      display_names:
+        other: სურინამული დოლარი
+        one: სურინამული დოლარი
     SRG:
       display_names:
         other: სურინამის გულდენი
         one: სურინამის გულდენი
+    SSP:
+      display_names:
+        other: სამხრეთ სუდანური ფუნტი
+        one: სამხრეთ სუდანური ფუნტი
     STD:
       display_names:
         other: სან-ტომე და პრინსიპის დობრა (1977–2017)
         one: სან-ტომე და პრინსიპის დობრა (1977–2017)
+    STN:
+      display_names:
+        other: სან-ტომე და პრინსიპის დობრა
+        one: სან-ტომე და პრინსიპის დობრა
     SUR:
       display_names:
         other: საბჭოთა რუბლი
         one: საბჭოთა რუბლი
+    SYP:
+      display_names:
+        other: სირიული გირვანქა
+        one: სირიული გირვანქა
     SZL:
       display_names:
         other: სვაზილენდის ლილანგენი
         one: სვაზილენდის ლილანგენი
+    THB:
+      display_names:
+        other: ტაილანდური ბატი
+        one: ტაილანდური ბატი
     TJR:
       display_names:
         other: ტაჯიკური რუბლი
@@ -905,14 +921,34 @@ number_formats:
       display_names:
         other: ტუნისის დინარი
         one: ტუნისის დინარი
+    TOP:
+      display_names:
+        other: ტონგანური პაანგა
+        one: ტონგანური პაანგა
     TRL:
       display_names:
         other: თურქული ლირა
         one: თურქული ლირა
+    TRY:
+      display_names:
+        other: ახალი თურქული ლირა
+        one: ახალი თურქული ლირა
+    TTD:
+      display_names:
+        other: ტრინიდად და ტობაგოს დოლარი
+        one: ტრინიდად და ტობაგოს დოლარი
+    TWD:
+      display_names:
+        other: ტაივანური ახალი დოლარი
+        one: ტაივანური ახალი დოლარი
     TZS:
       display_names:
         other: ტანზანიური შილინგი
         one: ტანზანიური შილინგი
+    UAH:
+      display_names:
+        other: უკრაინული გრივნა
+        one: უკრაინული გრივნა
     UAK:
       display_names:
         other: უკრაინული კარბოვანეცი
@@ -925,6 +961,10 @@ number_formats:
       display_names:
         other: უგანდური შილინგი
         one: უგანდური შილინგი
+    USD:
+      display_names:
+        other: აშშ დოლარი
+        one: აშშ დოლარი
     USN:
       display_names:
         other: აშშ დოლარი (შემდეგი დღე)
@@ -937,6 +977,10 @@ number_formats:
       display_names:
         other: ურუგვაის პესო (1975–1993)
         one: ურუგვაის პესო (1975–1993)
+    UYU:
+      display_names:
+        other: ურუგვაის პესო
+        one: ურუგვაის პესო
     UZS:
       display_names:
         other: უზბეკური სუმი
@@ -945,10 +989,19 @@ number_formats:
       display_names:
         other: ვენესუელის ბოლივარი (1871–2008)
         one: ვენესუელის ბოლივარი (1871–2008)
+    VEF:
+      display_names:
+        other: ვენესუელის ბოლივარი (2008–2018)
+        one: ვენესუელის ბოლივარი (2008–2018)
     VES:
       display_names:
         other: ვენესუელის ბოლივარი
         one: ვენესუელის ბოლივარი
+    VND:
+      symbol: VND
+      display_names:
+        other: ვიეტნამური დონგი
+        one: ვიეტნამური დონგი
     VUV:
       display_names:
         other: ვანატუს ვატუ
@@ -957,6 +1010,10 @@ number_formats:
       display_names:
         other: სამოური ტალა
         one: სამოური ტალა
+    XAF:
+      display_names:
+        other: ცენტრალურ აფრიკული CFA ფრანკი
+        one: ცენტრალურ აფრიკული CFA ფრანკი
     XAG:
       display_names:
         other: ვერცხლი
@@ -969,6 +1026,10 @@ number_formats:
       display_names:
         other: ევროპული ფულადი ერთეული
         one: ევროპული ფულადი ერთეული
+    XCD:
+      display_names:
+        other: აღმოსავლეთ კარიბიული დოლარი
+        one: აღმოსავლეთ კარიბიული დოლარი
     XEU:
       display_names:
         other: ევროპული სავალუტო ერთეული
@@ -977,6 +1038,18 @@ number_formats:
       display_names:
         other: ფრანგული ოქროს ფრანკი
         one: ფრანგული ოქროს ფრანკი
+    XOF:
+      display_names:
+        other: დასავლეთ აფრიკული CFA ფრანკი
+        one: დასავლეთ აფრიკული CFA ფრანკი
+    XPF:
+      display_names:
+        other: CFP ფრანკი
+        one: CFP ფრანკი
+    XXX:
+      display_names:
+        other: "(უცნობი ვალუტა)"
+        one: "(ვალუტის უცნობი ერთეული)"
     YDD:
       display_names:
         other: იემენის დინარი
@@ -997,10 +1070,18 @@ number_formats:
       display_names:
         other: იუგოსლავიური კონვერტირებადი დინარი
         one: იუგოსლავიური კონვერტირებადი დინარი
+    ZAR:
+      display_names:
+        other: სამხრეთ აფრიკული რანდი
+        one: სამხრეთ აფრიკული რანდი
     ZMK:
       display_names:
         other: ზამბიური კვაჭა (1968–2012)
         one: ზამბიური კვაჭა (1968–2012)
+    ZMW:
+      display_names:
+        other: ზამბიური კვაჭა
+        one: ზამბიური კვაჭა
     ZRN:
       display_names:
         other: ზაირის ახალი ზაირი
@@ -1013,3 +1094,1558 @@ number_formats:
       display_names:
         other: ზიმბაბვეს დოლარი
         one: ზიმბაბვეს დოლარი
+  units:
+    g-force:
+      long:
+        display_name: ინერციის ძალა
+        one: "{0} ინერციის ძალა"
+        other: "{0} ინერციის ძალა"
+      short:
+        display_name: ინ. ძ.
+        one: "{0} ინ. ძ."
+        other: "{0} ინ. ძ."
+    meter-per-square-second:
+      long:
+        display_name: მეტრი კვადრატულ წამში
+      short:
+        display_name: მ/წმ²
+        one: "{0} მ/წმ²"
+        other: "{0} მ/წმ²"
+    revolution:
+      long:
+        display_name: ბრუნვა
+        one: "{0} ბრუნვა"
+        other: "{0} ბრუნვა"
+      short:
+        display_name: ბრნ.
+        one: "{0} ბრნ."
+        other: "{0} ბრნ."
+    radian:
+      long:
+        one: "{0} რადიანი"
+        other: "{0} რადიანი"
+      short:
+        display_name: რადიანი
+        one: "{0} რად."
+        other: "{0} რად."
+    degree:
+      long:
+        one: "{0} გრადუსი"
+        other: "{0} გრადუსი"
+      short:
+        display_name: გრადუსი
+    square-kilometer:
+      long:
+        display_name: კვადრატული კილომეტრი
+        one: "{0} კვადრატული კილომეტრი"
+        other: "{0} კვადრატული კილომეტრი"
+        per_unit_pattern: "{0} კვადრატულ კილომეტრში"
+      short:
+        display_name: კმ²
+        one: "{0} კმ²"
+        other: "{0} კმ²"
+        per_unit_pattern: "{0}/კმ²"
+    hectare:
+      long:
+        display_name: ჰექტარი
+        one: "{0} ჰექტარი"
+        other: "{0} ჰექტარი"
+      short:
+        display_name: ჰა
+        one: "{0} ჰა"
+        other: "{0} ჰა"
+    square-meter:
+      long:
+        display_name: კვადრატული მეტრი
+        one: "{0} კვადრატული მეტრი"
+        other: "{0} კვადრატული მეტრი"
+        per_unit_pattern: "{0} კვადრატულ მეტრში"
+      short:
+        display_name: მ²
+        one: "{0} მ²"
+        other: "{0} მ²"
+        per_unit_pattern: "{0}/მ²"
+    square-centimeter:
+      long:
+        display_name: კვადრატული სანტიმეტრი
+        one: "{0} კვადრატული სანტიმეტრი"
+        other: "{0} კვადრატული სანტიმეტრი"
+        per_unit_pattern: "{0} კვადრატულ სანტიმეტრში"
+      short:
+        display_name: სმ²
+        one: "{0} სმ²"
+        other: "{0} სმ²"
+        per_unit_pattern: "{0}/სმ²"
+    square-mile:
+      long:
+        display_name: კვადრატული მილი
+        one: "{0} კვადრატული მილი"
+        other: "{0} კვადრატული მილი"
+        per_unit_pattern: "{0} კვადრატულ მილში"
+      short:
+        display_name: მილი²
+        one: "{0} მილი²"
+        other: "{0} მილი²"
+        per_unit_pattern: "{0}/მილი²"
+    square-yard:
+      long:
+        display_name: კვადრატული იარდი
+        one: "{0} კვადრატული იარდი"
+        other: "{0} კვადრატული იარდი"
+      short:
+        display_name: იარდი²
+        one: "{0} იარდი²"
+        other: "{0} იარდი²"
+    square-foot:
+      long:
+        display_name: კვადრატული ფუტი
+        one: "{0} კვადრატული ფუტი"
+        other: "{0} კვადრატული ფუტი"
+      short:
+        display_name: ფუტი²
+        one: "{0} ფტ²"
+        other: "{0} ფტ²"
+    square-inch:
+      long:
+        display_name: კვადრატული დუიმი
+        one: "{0} კვადრატული დუიმი"
+        other: "{0} კვადრატული დუიმი"
+        per_unit_pattern: "{0} კვადრატულ დუიმში"
+      short:
+        display_name: დუიმი²
+        one: "{0} დუიმი²"
+        other: "{0} დუიმი²"
+        per_unit_pattern: "{0}/დუიმი²"
+    karat:
+      long:
+        one: "{0} კარატი"
+        other: "{0} კარატი"
+      short:
+        display_name: კარატი
+        one: "{0} კარ."
+        other: "{0} კარ."
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: მილიგრამი დეცილიტრზე
+        one: "{0} მილიგრამი დეცილიტრზე"
+        other: "{0} მილიგრამი დეცილიტრზე"
+      short:
+        display_name: მგ/დლ
+        one: "{0} მგ/დლ"
+        other: "{0} მგ/დლ"
+    millimole-per-liter:
+      long:
+        display_name: მილიმოლი ლიტრზე
+        one: "{0} მილიმოლი ლიტრზე"
+        other: "{0} მილიმოლი ლიტრზე"
+      short:
+        display_name: მმოლ/ლ
+        one: "{0} მმოლ/ლ"
+        other: "{0} მმოლ/ლ"
+    item:
+      long:
+        one: "{0} ერთეული"
+        other: "{0} ერთეული"
+      short:
+        display_name: ერთეული
+        one: "{0} ერთე."
+        other: "{0} ერთე."
+    permillion:
+      long:
+        display_name: ნაწილი მილიონზე
+        one: "{0} ნაწილი მილიონზე"
+        other: "{0} ნაწილი მილიონზე"
+      short:
+        display_name: ნაწილი/მილიონზე
+    percent:
+      long:
+        display_name: პროცენტი
+        one: "{0} პროცენტი"
+        other: "{0} პროცენტი"
+    permille:
+      long:
+        display_name: პრომილე
+        one: "{0} პრომილე"
+        other: "{0} პრომილე"
+    liter-per-kilometer:
+      long:
+        display_name: ლიტრი კილომეტრზე
+        one: "{0} ლიტრი კილომეტრზე"
+        other: "{0} ლიტრი კილომეტრზე"
+      short:
+        display_name: ლიტრი/კმ
+        one: "{0} ლ/კმ"
+        other: "{0} ლ/კმ"
+    liter-per-100-kilometer:
+      long:
+        display_name: ლიტრი 100 კილომეტრში
+        one: "{0} ლიტრი 100 კილომეტრში"
+        other: "{0} ლიტრი 100 კილომეტრში"
+      short:
+        display_name: ლ/100კმ
+        one: "{0} ლ/100კმ"
+        other: "{0} ლ/100კმ"
+      narrow:
+        one: "{0}ლ/100კმ"
+        other: "{0}ლ/100კმ"
+    mile-per-gallon:
+      long:
+        display_name: მილი გალონზე
+        one: "{0} მილი გალონზე"
+        other: "{0} მილი გალონზე"
+      short:
+        display_name: მილი/გალ.
+        one: "{0} მილი/გალ."
+        other: "{0} მილი/გალ."
+    mile-per-gallon-imperial:
+      long:
+        display_name: იმპ. გალონი მილზე
+        one: "{0} იმპ. გალონი მილზე"
+        other: "{0} იმპ. გალონი მილზე"
+      short:
+        display_name: მილი/იმპ. გალონზე
+        one: "{0} მილი/იმპ. გალონზე"
+        other: "{0} მილი/იმპ. გალონზე"
+    petabyte:
+      long:
+        one: "{0} პბაიტი"
+        other: "{0} პეტაბაიტი"
+      short:
+        display_name: პბაიტი
+        one: "{0} პბაიტი"
+        other: "{0} პბაიტი"
+    terabyte:
+      long:
+        display_name: ტერაბაიტი
+        one: "{0} ტერაბაიტი"
+        other: "{0} ტერაბაიტი"
+      short:
+        display_name: ტბაიტი
+        one: "{0} ტბაიტი"
+        other: "{0} ტბაიტი"
+    terabit:
+      long:
+        display_name: ტერაბიტი
+        one: "{0} ტერაბიტი"
+        other: "{0} ტერაბიტი"
+      short:
+        display_name: ტბიტი
+        one: "{0} ტბიტი"
+        other: "{0} ტბიტი"
+    gigabyte:
+      long:
+        display_name: გიგაბაიტი
+        one: "{0} გიგაბაიტი"
+        other: "{0} გიგაბაიტი"
+    gigabit:
+      long:
+        display_name: გიგაბიტი
+        one: "{0} გიგაბიტი"
+        other: "{0} გიგაბიტი"
+      short:
+        display_name: გბიტი
+        one: "{0} გბიტი"
+        other: "{0} გბიტი"
+    megabyte:
+      long:
+        display_name: მეგაბაიტი
+        one: "{0} მეგაბაიტი"
+        other: "{0} მეგაბაიტი"
+    megabit:
+      long:
+        display_name: მეგაბიტი
+        one: "{0} მეგაბიტი"
+        other: "{0} მეგაბიტი"
+      short:
+        display_name: მბიტი
+        one: "{0} მბიტი"
+        other: "{0} მბიტი"
+    kilobyte:
+      long:
+        one: "{0} კილობაიტი"
+        other: "{0} კილობაიტი"
+      short:
+        display_name: კილობაიტი
+        one: "{0} კბაიტი"
+        other: "{0} კბაიტი"
+    kilobit:
+      long:
+        display_name: კილობიტი
+        one: "{0} კილობიტი"
+        other: "{0} კილობიტი"
+      short:
+        display_name: კბიტი
+        one: "{0} კბიტი"
+        other: "{0} კბიტი"
+    century:
+      long:
+        display_name: საუკუნე
+        one: "{0} საუკუნე"
+        other: "{0} საუკუნე"
+      short:
+        display_name: ს.
+        one: "{0} ს."
+        other: "{0} ს."
+    year:
+      long:
+        display_name: წელი
+        one: "{0} წელი"
+        other: "{0} წელი"
+        per_unit_pattern: "{0} წელში"
+      short:
+        display_name: წ
+        one: "{0} წ"
+        other: "{0} წ"
+        per_unit_pattern: "{0}/წ"
+    quarter:
+      long:
+        display_name: კვარტალი
+        one: "{0} კვარტალი"
+        other: "{0} კვარტალი"
+        per_unit_pattern: "{0}/კვარტალში"
+      short:
+        display_name: კვარტ
+        one: "{0} კვარტ"
+        other: "{0} კვარტ"
+        per_unit_pattern: "{0}/კვარტ"
+    month:
+      long:
+        per_unit_pattern: "{0} თვეში"
+      short:
+        display_name: თვე
+        one: "{0} თვე"
+        other: "{0} თვე"
+        per_unit_pattern: "{0}/თვე"
+      narrow:
+        per_unit_pattern: "{0}/თ."
+    week:
+      long:
+        display_name: კვირა
+        one: "{0} კვირა"
+        other: "{0} კვირა"
+        per_unit_pattern: "{0} კვირაში"
+      short:
+        display_name: კვრ
+        one: "{0} კვრ"
+        other: "{0} კვრ"
+        per_unit_pattern: "{0}/კვრ"
+    day:
+      long:
+        per_unit_pattern: "{0} დღეში"
+      short:
+        display_name: დღე
+        one: "{0} დღე"
+        other: "{0} დღე"
+        per_unit_pattern: "{0}/დღე"
+    hour:
+      long:
+        display_name: საათი
+        one: "{0} საათი"
+        other: "{0} საათი"
+        per_unit_pattern: "{0} საათში"
+      short:
+        display_name: სთ
+        one: "{0} სთ"
+        other: "{0} სთ"
+        per_unit_pattern: "{0}/სთ"
+      narrow:
+        display_name: საათი
+        one: "{0}სთ"
+        other: "{0}სთ"
+    minute:
+      long:
+        display_name: წუთი
+        one: "{0} წუთი"
+        other: "{0} წუთი"
+        per_unit_pattern: "{0} წუთში"
+      short:
+        display_name: წთ
+        one: "{0} წთ"
+        other: "{0} წთ"
+        per_unit_pattern: "{0}/წთ"
+      narrow:
+        one: "{0}წთ"
+        other: "{0}წთ"
+    second:
+      long:
+        display_name: წამი
+        one: "{0} წამი"
+        other: "{0} წამი"
+        per_unit_pattern: "{0} წამში"
+      short:
+        display_name: წმ
+        one: "{0} წმ"
+        other: "{0} წმ"
+        per_unit_pattern: "{0}/წმ"
+      narrow:
+        one: "{0}წმ"
+        other: "{0}წმ"
+    millisecond:
+      long:
+        display_name: მილიწამი
+        one: "{0} მილიწამი"
+        other: "{0} მილიწამი"
+      short:
+        display_name: მწმ
+        one: "{0} მწმ"
+        other: "{0} მწმ"
+    microsecond:
+      long:
+        display_name: მიკროწამი
+        one: "{0} მიკროწამი"
+        other: "{0} მიკროწამი"
+      short:
+        display_name: მკწმ
+        one: "{0} მკწმ"
+        other: "{0} მკწმ"
+    nanosecond:
+      long:
+        display_name: ნანოწამი
+        one: "{0} ნანოწამი"
+        other: "{0} ნანოწამი"
+      short:
+        display_name: ნწმ
+        one: "{0} ნწმ"
+        other: "{0} ნწმ"
+    ampere:
+      long:
+        display_name: ამპერი
+      short:
+        display_name: ამპ
+        one: "{0} ა"
+        other: "{0} ა"
+    milliampere:
+      long:
+        display_name: მილიამპერი
+        one: "{0} მილიამპერი"
+        other: "{0} მილიამპერი"
+      short:
+        display_name: მილიამპ.
+        one: "{0} მამპ."
+        other: "{0} მამპ."
+    ohm:
+      long:
+        one: "{0} ომი"
+        other: "{0} ომი"
+      short:
+        display_name: ომი
+        one: "{0} ომ"
+        other: "{0} ომ"
+    volt:
+      long:
+        one: "{0} ვოლტი"
+        other: "{0} ვოლტი"
+      short:
+        display_name: ვოლტი
+        one: "{0} ვ"
+        other: "{0} ვ"
+    kilocalorie:
+      long:
+        display_name: კილოკალორია
+        one: "{0} კილოკალორია"
+        other: "{0} კილოკალორია"
+      short:
+        display_name: კკალ
+        one: "{0} კკალ"
+        other: "{0} კკალ"
+    calorie:
+      long:
+        display_name: კალორია
+        one: "{0} კალორია"
+        other: "{0} კალორია"
+      short:
+        display_name: კალ
+        one: "{0} კალ"
+        other: "{0} კალ"
+    foodcalorie:
+      long:
+        display_name: კალორია
+        one: "{0} კალორია"
+        other: "{0} კალორია"
+      short:
+        display_name: კალ
+        one: "{0} კალ"
+        other: "{0} კალ"
+    kilojoule:
+      long:
+        display_name: კილოჯოული
+        one: "{0} კილოჯოული"
+        other: "{0} კილოჯოული"
+      short:
+        display_name: კჯ
+        one: "{0} კჯ"
+        other: "{0} კჯ"
+    joule:
+      long:
+        one: "{0} ჯოული"
+        other: "{0} ჯოული"
+      short:
+        display_name: ჯოული
+        one: "{0} ჯ"
+        other: "{0} ჯ"
+    kilowatt-hour:
+      long:
+        display_name: კილოვატ-საათი
+        one: "{0} კილოვატ-საათი"
+        other: "{0} კილოვატ-საათი"
+      short:
+        display_name: კვტსთ
+        one: "{0} კვტსთ"
+        other: "{0} კვტსთ"
+    electronvolt:
+      long:
+        display_name: ელექტრონვოლტი
+        one: "{0} ელექტრონვოლტი"
+        other: "{0} ელექტრონვოლტი"
+      short:
+        display_name: ევ
+        one: "{0} ევ"
+        other: "{0} ევ"
+    british-thermal-unit:
+      long:
+        display_name: ბრიტანული სითბური ერთეული
+        one: "{0} ბრიტანული სითბური ერთეული"
+        other: "{0} ბრიტანული სითბური ერთეული"
+      short:
+        display_name: ბსე
+        one: "{0} ბსე"
+        other: "{0} ბსე"
+    gigahertz:
+      long:
+        display_name: გიგაჰერცი
+        one: "{0} გიგაჰერცი"
+        other: "{0} გიგაჰერცი"
+      short:
+        display_name: გჰც.
+        one: "{0} გჰც."
+        other: "{0} გჰც."
+    megahertz:
+      long:
+        display_name: მეგაჰერცი
+        one: "{0} მეგაჰერცი"
+        other: "{0} მეგაჰერცი"
+      short:
+        display_name: მჰც
+        one: "{0} მჰც"
+        other: "{0} მჰც"
+    kilohertz:
+      long:
+        display_name: კილოჰერცი
+        one: "{0} კილოჰერცი"
+        other: "{0} კილოჰერცი"
+      short:
+        display_name: კჰც.
+        one: "{0} კჰც."
+        other: "{0} კჰც."
+    hertz:
+      long:
+        display_name: ჰერცი
+        one: "{0} ჰერცი"
+        other: "{0} ჰერცი"
+      short:
+        display_name: ჰც.
+        one: "{0} ჰც."
+        other: "{0} ჰც."
+    em:
+      long:
+        display_name: ტიპოგრაფიული ემი
+      short:
+        display_name: ემი
+        one: "{0} ემი"
+        other: "{0} ემი"
+    pixel:
+      long:
+        display_name: პიქსელი
+        one: "{0} პიქსელი"
+        other: "{0} პიქსელი"
+      short:
+        display_name: პქს
+        one: "{0} პქს"
+        other: "{0} პქს"
+    megapixel:
+      long:
+        display_name: მეგაპიქსელი
+        one: "{0} მეგაპიქსელი"
+        other: "{0} მეგაპიქსელი"
+      short:
+        display_name: მპქს
+        one: "{0} მპქს"
+        other: "{0} მპქს"
+    pixel-per-centimeter:
+      long:
+        display_name: პიქსელი სანტიმეტრზე
+        one: "{0} პიქსელი სანტიმეტრზე"
+        other: "{0} პიქსელი სანტიმეტრზე"
+      short:
+        display_name: პქს/სმ-ზე
+        one: "{0} პქს/სმ-ზე"
+        other: "{0} პქს/სმ-ზე"
+    pixel-per-inch:
+      long:
+        display_name: პიქსელი დუიმზე
+        one: "{0} პიქსელი დუიმზე"
+        other: "{0} პიქსელი დუიმზე"
+      short:
+        display_name: პიქს/დუიმზე
+        one: "{0} პიქს/დუიმზე"
+        other: "{0} პიქს/დუიმზე"
+    dot-per-centimeter:
+      long:
+        display_name: წერტილი სანტიმეტრზე
+        one: "{0} წერტილი სანტიმეტრზე"
+        other: "{0} წერტილი სანტიმეტრზე"
+      short:
+        display_name: წერტ/სმ-ზე
+        one: "{0} წერტ/სმ-ზე"
+        other: "{0} წერტ/სმ-ზე"
+    dot-per-inch:
+      long:
+        display_name: წერტილი დუიმზე
+        one: "{0} წერტილი დუიმზე"
+        other: "{0} წერტილი დუიმზე"
+      short:
+        display_name: წერტ/დუიმზე
+        one: "{0} წერტ/დუიმზე"
+        other: "{0} წერტ/დუიმზე"
+    dot:
+      long:
+        display_name: წერტილი
+        one: "{0} წერტილი"
+        other: "{0} წერტილი"
+      short:
+        display_name: წერტ.
+        one: "{0} წერტ."
+        other: "{0} წერტ."
+    earth-radius:
+      long:
+        display_name: დედამიწის რადიუსი
+        one: "{0} დედამიწის რადიუსი"
+        other: "{0} დედამიწის რადიუსი"
+      short:
+        display_name: "⊕ რადიუსი"
+        one: "{0} ⊕ რადიუსი"
+        other: "{0} ⊕ რადიუსი"
+    kilometer:
+      long:
+        display_name: კილომეტრი
+        one: "{0} კილომეტრი"
+        other: "{0} კილომეტრი"
+        per_unit_pattern: "{0} კილომეტრში"
+      short:
+        display_name: კმ
+        one: "{0} კმ"
+        other: "{0} კმ"
+        per_unit_pattern: "{0}/კმ"
+    meter:
+      long:
+        display_name: მეტრი
+        one: "{0} მეტრი"
+        other: "{0} მეტრი"
+        per_unit_pattern: "{0} მეტრში"
+      short:
+        display_name: მ
+        one: "{0} მ"
+        other: "{0} მ"
+        per_unit_pattern: "{0}/მ"
+      narrow:
+        one: "{0}მ"
+        other: "{0}მ"
+    decimeter:
+      long:
+        display_name: დეციმეტრი
+        one: "{0} დეციმეტრი"
+        other: "{0} დეციმეტრი"
+      short:
+        display_name: დმ
+        one: "{0} დმ"
+        other: "{0} დმ"
+    centimeter:
+      long:
+        display_name: სანტიმეტრი
+        one: "{0} სანტიმეტრი"
+        other: "{0} სანტიმეტრი"
+        per_unit_pattern: "{0} სანტიმეტრში"
+      short:
+        display_name: სმ
+        one: "{0} სმ"
+        other: "{0} სმ"
+        per_unit_pattern: "{0}/სმ"
+    millimeter:
+      long:
+        display_name: მილიმეტრი
+        one: "{0} მილიმეტრი"
+        other: "{0} მილიმეტრი"
+      short:
+        display_name: მმ
+        one: "{0} მმ"
+        other: "{0} მმ"
+    micrometer:
+      long:
+        display_name: მიკრომეტრი
+        one: "{0} მიკრომეტრი"
+        other: "{0} მიკრომეტრი"
+      short:
+        display_name: მკმ
+        one: "{0} მკმ"
+        other: "{0} მკმ"
+    nanometer:
+      long:
+        display_name: ნანომეტრი
+        one: "{0} ნანომეტრი"
+        other: "{0} ნანომეტრი"
+      short:
+        display_name: ნმ
+        one: "{0} ნმ"
+        other: "{0} ნმ"
+    picometer:
+      long:
+        display_name: პიკომეტრი
+        one: "{0} პიკომეტრი"
+        other: "{0} პიკომეტრი"
+      short:
+        display_name: პმ
+        one: "{0} პმ"
+        other: "{0} პმ"
+    foot:
+      long:
+        display_name: ფუტი
+        one: "{0} ფუტი"
+        other: "{0} ფუტი"
+        per_unit_pattern: "{0} ფუტში"
+      short:
+        display_name: ფტ
+        one: "{0} ფტ"
+        other: "{0} ფტ"
+        per_unit_pattern: "{0}/ფტ"
+    inch:
+      long:
+        per_unit_pattern: "{0} დუიმში"
+      short:
+        display_name: დუიმი
+        one: "{0} დუიმი"
+        other: "{0} დუიმი"
+        per_unit_pattern: "{0}/დუიმი"
+      narrow:
+        one: "{0} დმ"
+        other: "{0} დმ"
+    parsec:
+      long:
+        display_name: პარსეკი
+        one: "{0} პარსეკი"
+        other: "{0} პარსეკი"
+      short:
+        display_name: პს
+        one: "{0} პს"
+        other: "{0} პს"
+    light-year:
+      long:
+        display_name: სინათლის წელი
+        one: "{0} სინათლის წელი"
+        other: "{0} სინათლის წელი"
+      short:
+        display_name: სწ
+        one: "{0} სწ"
+        other: "{0} სწ"
+    astronomical-unit:
+      long:
+        display_name: ასტრონომიული ერთეული
+        one: "{0} ასტრონომიული ერთეული"
+        other: "{0} ასტრონომიული ერთეული"
+      short:
+        display_name: ა.ე.
+        one: "{0} ა.ე."
+        other: "{0} ა.ე."
+    nautical-mile:
+      long:
+        one: "{0} საზღვაო მილი"
+        other: "{0} საზღვაო მილი"
+      short:
+        display_name: საზღვაო მილი
+        one: "{0} საზღვ. მილი"
+        other: "{0} საზღვ. მილი"
+    mile-scandinavian:
+      long:
+        display_name: სკანდინავიური მილი
+        one: "{0} სკანდინავიური მილი"
+        other: "{0} სკანდინავიური მილი"
+      short:
+        display_name: სკანდ. მილი
+        one: "{0} სკანდ. მილი"
+        other: "{0} სკანდ. მილი"
+    point:
+      long:
+        display_name: პუნქტი
+        one: "{0} პუნქტი"
+        other: "{0} პუნქტი"
+      short:
+        display_name: პნქტ.
+        one: "{0} პნქტ."
+        other: "{0} პქნტ."
+    solar-radius:
+      long:
+        display_name: მზის რადიუსი
+        one: "{0} მზის რადიუსი"
+        other: "{0} მზის რადიუსი"
+      short:
+        display_name: "☉ რადიუსი"
+        one: "{0} ☉ რადიუსი"
+        other: "{0} ☉ რადიუსი"
+    candela:
+      long:
+        display_name: კანდელა
+        one: "{0} კანდელა"
+        other: "{0} კანდელა"
+      short:
+        display_name: კდ
+        one: "{0} კდ"
+        other: "{0} კდ"
+    lumen:
+      long:
+        display_name: ლუმენი
+        one: "{0} ლუმენი"
+        other: "{0} ლუმენი"
+      short:
+        display_name: ლმ
+        one: "{0} ლმ"
+        other: "{0} ლმ"
+    solar-luminosity:
+      long:
+        display_name: მზის სხივიერობა
+        one: "{0} მზის სხივიერობა"
+        other: "{0} მზის სხივიერობა"
+      short:
+        display_name: "☉ სხივიერობა"
+        one: "{0} ☉ სხივიერობა"
+        other: "{0} ☉ სხივიერობა"
+    tonne:
+      long:
+        display_name: მეტრული ტონა
+        one: "{0} მეტრული ტონა"
+        other: "{0} მეტრული ტონა"
+      short:
+        display_name: მტ
+        one: "{0} მტ"
+        other: "{0} მტ"
+    kilogram:
+      long:
+        one: "{0} კილოგრამი"
+        other: "{0} კილოგრამი"
+        per_unit_pattern: "{0} კილოგრამში"
+      short:
+        display_name: კილოგრამი
+        one: "{0} კგ"
+        other: "{0} კგ"
+        per_unit_pattern: "{0}/კგ"
+      narrow:
+        display_name: კგ
+        one: "{0}კგ"
+        other: "{0}კგ"
+    gram:
+      long:
+        one: "{0} გრამი"
+        other: "{0} გრამი"
+        per_unit_pattern: "{0} გრამში"
+      short:
+        display_name: გრამი
+        one: "{0} გ"
+        other: "{0} გ"
+        per_unit_pattern: "{0}/გ"
+      narrow:
+        one: "{0}გ"
+        other: "{0}გ"
+    milligram:
+      long:
+        display_name: მილიგრამი
+        one: "{0} მილიგრამი"
+        other: "{0} მილიგრამი"
+      short:
+        display_name: მგ
+        one: "{0} მგ"
+        other: "{0} მგ"
+      narrow:
+        one: "{0}მგ"
+        other: "{0}მგ"
+    microgram:
+      long:
+        display_name: მიკროგრამი
+        one: მიკროგრამი
+        other: "{0} მიკროგრამი"
+      short:
+        display_name: მკგ
+        one: "{0} მკგ"
+        other: "{0} მკგ"
+      narrow:
+        one: "{0}მკგ"
+        other: "{0}მკგ"
+    ton:
+      long:
+        one: "{0} ტონა"
+        other: "{0} ტ"
+      short:
+        display_name: ტონა
+        one: "{0} ტ"
+        other: "{0} ტ"
+      narrow:
+        one: "{0}ტ"
+        other: "{0}ტ"
+    pound:
+      long:
+        one: "{0} ფუნტი"
+        other: "{0} ფუნტი"
+        per_unit_pattern: "{0} ფუნტში"
+      short:
+        display_name: ფუნტი
+        one: "{0} ფნტ"
+        other: "{0} ფნტ"
+        per_unit_pattern: "{0}/ფნტ"
+    ounce:
+      long:
+        one: "{0} უნცია"
+        other: "{0} უნცია"
+        per_unit_pattern: "{0} უნციაში"
+      short:
+        display_name: უნცია
+        one: "{0} უნც"
+        other: "{0} უნც"
+        per_unit_pattern: "{0}/უნც"
+    ounce-troy:
+      long:
+        one: "{0} ტრუას უნცია"
+        other: "{0} ტრუას უნცია"
+      short:
+        display_name: ტრუას უნცია
+        one: "{0} ტრ. უნც."
+        other: "{0} ტრ. უნც."
+    carat:
+      long:
+        one: "{0} კარატი"
+        other: "{0} კარატი"
+      short:
+        display_name: კარატი
+        one: "{0} კარ."
+        other: "{0} კარ."
+    dalton:
+      long:
+        one: "{0} დალტონი"
+        other: "{0} დალტონი"
+      short:
+        display_name: დალტონი
+        one: "{0} დალტ."
+        other: "{0} დალტ."
+    earth-mass:
+      long:
+        display_name: დედამიწის მასა
+        one: "{0} დედამიწის მასა"
+        other: "{0} დედამიწის მასა"
+    solar-mass:
+      long:
+        display_name: მზის მასა
+        one: "{0} მზის მასა"
+        other: "{0} მზის მასა"
+    gigawatt:
+      long:
+        display_name: გიგავატი
+        one: "{0} გიგავატი"
+        other: "{0} გიგავატი"
+      short:
+        display_name: გვტ
+        one: "{0} გვტ"
+        other: "{0} გვტ"
+    megawatt:
+      long:
+        display_name: მეგავატი
+        one: "{0} მეგავატი"
+        other: "{0} მეგავატი"
+      short:
+        display_name: მგვტ
+        one: "{0} მგვტ"
+        other: "{0} მგვტ"
+    kilowatt:
+      long:
+        display_name: კილოვატი
+        one: "{0} კილოვატი"
+        other: "{0} კილოვატი"
+      short:
+        display_name: კვტ
+        one: "{0} კვტ"
+        other: "{0} კვტ"
+    watt:
+      long:
+        display_name: ვატი
+        one: "{0} ვატი"
+        other: "{0} ვატი"
+      short:
+        display_name: ვტ
+        one: "{0} ვტ"
+        other: "{0} ვტ"
+    milliwatt:
+      long:
+        display_name: მილივატი
+        one: "{0} მილივატი"
+        other: "{0} მილივატი"
+      short:
+        display_name: მლვტ
+        one: "{0} მლვტ"
+        other: "{0} მლვტ"
+    horsepower:
+      long:
+        display_name: ცხენის ძალა
+        one: "{0} ცხენის ძალა"
+        other: "{0} ცხენის ძალა"
+      short:
+        display_name: ცხ. ძ.
+        one: "{0} ცხ. ძ."
+        other: "{0} ცხ. ძ."
+      narrow:
+        one: "{0}ცხ.ძ."
+        other: "{0}ცხ.ძ."
+    millimeter-ofhg:
+      long:
+        display_name: მილიმეტრი ვერცხლისწყლის სვეტისა
+        one: "{0} მილიმეტრი ვერცხლისწყლის სვეტისა"
+        other: "{0} მილიმეტრი ვერცხლისწყლის სვეტისა"
+      short:
+        display_name: მმ ვწყ. სვ.
+        one: "{0} მმ ვწყ. სვ."
+        other: "{0} მმ ვწყ. სვ."
+    pound-force-per-square-inch:
+      long:
+        display_name: ფუნტი კვადრატულ დუიმზე
+        one: "{0} ფუნტი კვადრატულ დუიმზე"
+        other: "{0} ფუნტი კვადრატულ დუიმზე"
+      short:
+        display_name: ფნტ. კვ. დმ.
+        one: "{0} ფნტ. კვ. დმ."
+        other: "{0} ფნტ. კვ. დმ."
+    inch-ofhg:
+      long:
+        display_name: ვერცხლისწყლის დუიმი
+        one: "{0} ვერცხლისწყლის დუიმი"
+        other: "{0} ვერცხლისწყლის დუიმი"
+      short:
+        display_name: ვრც. დმ.
+        one: "{0} ვრც. დმ."
+        other: "{0} ვრც. დმ."
+    millibar:
+      long:
+        display_name: მილიბარი
+        one: "{0} მილიბარი"
+        other: "{0} მილიბარი"
+      short:
+        display_name: მბარი
+        one: "{0} მბარი"
+        other: "{0} მბარი"
+      narrow:
+        one: "{0} მბრ"
+        other: "{0} მბრ"
+    atmosphere:
+      long:
+        display_name: ატმოსფეროები
+        one: "{0} ატმოსფერო"
+        other: "{0} ატმოსფერო"
+      short:
+        display_name: ატმ.
+        one: "{0} ატმ."
+        other: "{0} ატმ."
+    pascal:
+      long:
+        display_name: პასკალი
+        one: "{0} პასკალი"
+        other: "{0} პასკალი"
+      short:
+        display_name: პა
+        one: "{0} პა"
+        other: "{0} პა"
+    hectopascal:
+      long:
+        display_name: ჰექტოპასკალი
+        one: "{0} ჰექტოპასკალი"
+        other: "{0} ჰექტოპასკალი"
+      short:
+        display_name: ჰპა
+        one: "{0} ჰპა"
+        other: "{0} ჰპა"
+    kilopascal:
+      long:
+        display_name: კილოპასკალი
+        one: "{0} კილოპასკალი"
+        other: "{0} კილოპასკალი"
+      short:
+        display_name: კპა
+        one: "{0} კპა"
+        other: "{0} კპა"
+    megapascal:
+      long:
+        display_name: მეგაპასკალი
+        one: მეგაპასკალი
+        other: "{0} მეგაპასკალი"
+      short:
+        display_name: მპა
+        one: "{0} მპა"
+        other: "{0} მპა"
+    kilometer-per-hour:
+      long:
+        display_name: კილომეტრი საათში
+        one: "{0} კილომეტრი საათში"
+        other: "{0} კილომეტრი საათში"
+      short:
+        display_name: კმ/სთ
+        one: "{0} კმ/სთ"
+        other: "{0} კმ/სთ"
+    meter-per-second:
+      long:
+        display_name: მეტრი წამში
+        one: "{0} მეტრი წამში"
+        other: "{0} მეტრი წამში"
+      short:
+        display_name: მ/წმ
+        one: "{0} მ/წმ"
+        other: "{0} მ/წმ"
+    mile-per-hour:
+      long:
+        display_name: მილი საათში
+        one: "{0} მილი საათში"
+        other: "{0} მილი საათში"
+      short:
+        display_name: მილი/სთ
+        one: "{0} მილი/სთ"
+        other: "{0} მილი/სთ"
+    knot:
+      long:
+        display_name: კვანძი
+        one: "{0} კვანძი"
+        other: "{0} კვანძი"
+      short:
+        display_name: კვძ.
+        one: "{0} კვძ."
+        other: "{0} კვძ."
+    beaufort:
+      long:
+        display_name: ბოფორტი
+        one: ბოფორტი {0}
+        other: ბოფორტი {0}
+    celsius:
+      long:
+        display_name: გრადუსი ცელსიუსით
+        one: "{0} გრადუსი ცელსიუსით"
+        other: "{0} გრადუსი ცელსიუსით"
+    fahrenheit:
+      long:
+        display_name: გრადუსი ფარენჰეიტით
+        one: "{0} გრადუსი ფარენჰეიტით"
+        other: "{0} გრადუსი ფარენჰეიტით"
+    kelvin:
+      long:
+        display_name: კელვინის გრადუსი
+        one: "{0} კელვინი"
+        other: "{0} კელვინის გრადუსი"
+    newton-meter:
+      long:
+        display_name: ნიუტონ-მეტრი
+        one: "{0} ნიუტონ-მეტრი"
+        other: "{0} ნიუტონ-მეტრი"
+      short:
+        display_name: ნიუტ. მ
+        one: "{0} ნიუტ. მ"
+        other: "{0} ნიუტ. მ"
+    cubic-kilometer:
+      long:
+        one: "{0} კუბური კილომეტრი"
+        other: "{0} კუბური კილომეტრი"
+      short:
+        display_name: კუბური კილომეტრი
+        one: "{0} კმ³"
+        other: "{0} კმ³"
+    cubic-meter:
+      long:
+        display_name: კუბური მეტრი
+        one: "{0} კუბური მეტრი"
+        other: "{0} კუბური მეტრი"
+        per_unit_pattern: "{0} კუბურ მეტრში"
+      short:
+        display_name: მ³
+        one: "{0} მ³"
+        other: "{0} მ³"
+        per_unit_pattern: "{0}/მ³"
+    cubic-centimeter:
+      long:
+        display_name: კუბური სანტიმენტრი
+        one: "{0} კუბური სანტიმენტრი"
+        other: "{0} კუბური სანტიმენტრი"
+        per_unit_pattern: "{0} კუბურ სანტიმეტრში"
+      short:
+        display_name: სმ³
+        one: "{0} სმ³"
+        other: "{0} სმ³"
+        per_unit_pattern: "{0}/სმ³"
+    cubic-mile:
+      long:
+        one: "{0} კუბური მილი"
+        other: "{0} კუბური მილი"
+      short:
+        display_name: კუბური მილი
+        one: "{0} მილი³"
+        other: "{0} მილი³"
+    cubic-yard:
+      long:
+        display_name: კუბური იარდი
+        one: "{0} კუბური იარდი"
+        other: "{0} კუბური იარდი"
+      short:
+        display_name: იარდი³
+        one: "{0} იარდი³"
+        other: "{0} იარდი³"
+    cubic-foot:
+      long:
+        display_name: კუბური ფუტი
+        one: "{0} კუბური ფუტი"
+        other: "{0} კუბური ფუტი"
+      short:
+        display_name: ფუტი³
+        one: "{0} ფტ³"
+        other: "{0} ფტ³"
+    cubic-inch:
+      long:
+        display_name: კუბური დუიმი
+        one: "{0} კუბური დუიმი"
+        other: "{0} კუბური დუიმი"
+      short:
+        display_name: დუიმი³
+        one: "{0} დუიმი³"
+        other: "{0} დუიმი³"
+    megaliter:
+      long:
+        display_name: მეგალიტრი
+        one: "{0} მეგალიტრი"
+        other: "{0} მეგალიტრი"
+      short:
+        display_name: მეგალ.
+        one: "{0} მეგალ."
+        other: "{0} მეგალ."
+    hectoliter:
+      long:
+        display_name: ჰექტოლიტრი
+        one: "{0} ჰექტოლიტრი"
+        other: "{0} ჰექტოლიტრი"
+      short:
+        display_name: ჰლ
+        one: "{0} ჰლ"
+        other: "{0} ჰლ"
+    liter:
+      long:
+        one: "{0} ლიტრი"
+        other: "{0} ლიტრი"
+        per_unit_pattern: "{0} ლიტრში"
+      short:
+        display_name: ლიტრი
+        one: "{0} ლ"
+        other: "{0} ლ"
+        per_unit_pattern: "{0}/ლ"
+      narrow:
+        one: "{0}ლ"
+        other: "{0}ლ"
+    deciliter:
+      long:
+        display_name: დეცილიტრი
+        one: "{0} დეცილიტრი"
+        other: "{0} დეცილიტრი"
+      short:
+        display_name: დლ
+        one: "{0} დლ"
+        other: "{0} დლ"
+    centiliter:
+      long:
+        display_name: სანტილიტრი
+        one: "{0} სანტილიტრი"
+        other: "{0} სანტილიტრი"
+      short:
+        display_name: სლ
+        one: "{0} სლ"
+        other: "{0} სლ"
+    milliliter:
+      long:
+        display_name: მილილიტრი
+        one: "{0} მილილიტრი"
+        other: "{0} მილილიტრი"
+      short:
+        display_name: მილილ.
+        one: "{0} მილილ."
+        other: "{0} მილილ."
+    pint-metric:
+      long:
+        display_name: მეტრული პინტა
+        one: "{0} მეტრული პინტა"
+        other: "{0} მეტრული პინტა"
+      short:
+        display_name: მეტრ. პინტა
+        one: "{0} მეტრ. პინტა"
+        other: "{0} მეტრ. პინტა"
+    cup-metric:
+      long:
+        display_name: მეტრული ჭიქა
+        one: "{0} მეტრული ჭიქა"
+        other: "{0} მეტრული ჭიქა"
+      short:
+        display_name: მეტრ. ჭიქა
+        one: "{0} მეტრ. ჭიქა"
+        other: "{0} მეტრ. ჭიქა"
+    acre-foot:
+      long:
+        display_name: აკრი-ფუტი
+        one: "{0} აკრი-ფუტი"
+        other: "{0} აკრი-ფუტი"
+      short:
+        display_name: აკრ.ფტ.
+        one: "{0} აკრ.ფტ."
+        other: "{0} აკრ.ფტ."
+    gallon:
+      long:
+        per_unit_pattern: "{0} გალონში"
+      short:
+        display_name: გალონი
+        one: "{0} გალონი"
+        other: "{0} გალონი"
+        per_unit_pattern: "{0}/გალონი"
+    gallon-imperial:
+      long:
+        display_name: იმპ. გალონი
+        one: "{0} იმპ. გალონი"
+        other: "{0} იმპ. გალონი"
+      short:
+        display_name: იმპ. გალ.
+        one: "{0} იმპ. გალ."
+        other: "{0} იმპ. გალ."
+        per_unit_pattern: "{0}/იმპ. გალ."
+    fluid-ounce:
+      long:
+        display_name: თხევადი უნცია
+        one: "{0} თხევადი უნცია"
+        other: "{0} თხევადი უნცია"
+      short:
+        display_name: თხ. უნცია
+        one: "{0} თხ. უნცია"
+        other: "{0} თხ. უნცია"
+    fluid-ounce-imperial:
+      long:
+        display_name: ბრიტ. თხევადი უნცია
+        one: "{0} ბრიტ. თხევადი უნცია"
+        other: "{0} ბრიტ. თხევადი უნცია"
+      short:
+        display_name: ბრიტ. თხევ. უნც.
+        one: "{0} ბრიტ. თხევ. უნც."
+        other: "{0} ბრიტ. თხევ. უნც."
+    tablespoon:
+      long:
+        display_name: სუფრის კოვზი
+        one: "{0} სუფრის კოვზი"
+        other: "{0} სუფრის კოვზი"
+      short:
+        display_name: ს. კოვზი
+        one: "{0} ს. კოვზი"
+        other: "{0} ს. კოვზი"
+    teaspoon:
+      long:
+        display_name: ჩაის კოვზი
+        one: "{0} ჩაის კოვზი"
+        other: "{0} ჩაის კოვზი"
+      short:
+        display_name: ჩ. კოვზი
+        one: "{0} ჩ. კოვზი"
+        other: "{0} ჩ. კოვზი"
+    barrel:
+      long:
+        one: "{0} ბარელი"
+        other: "{0} ბარელი"
+      short:
+        display_name: ბარელი
+        one: "{0} ბარ."
+        other: "{0} ბარ."
+    dessert-spoon-imperial:
+      long:
+        one: "{0} ბრიტ. დესერტის კოვზი"
+        other: "{0} ბრიტ. დესერტის კოვზი"
+      short:
+        display_name: ბრიტ. დესერტის კოვზი
+        one: "{0} ბრიტ. დეს. კოვზი"
+        other: "{0} ბრიტ. დეს. კოვზი"
+    dram:
+      long:
+        display_name: ბრიტანული თხევადი დრაქმა
+        one: "{0} ბრიტანული თხევადი დრაქმა"
+        other: "{0} ბრიტანული თხევადი დრაქმა"
+      short:
+        display_name: ბრიტ. თხევადი დრაქმა
+        one: "{0} ბრიტ. თხევ. დრაქმა"
+        other: "{0} ბრიტ. თხევ. დრაქმა"
+    quart-imperial:
+      long:
+        display_name: ბრიტანული კვარტი
+        one: "{0} ბრიტანული კვარტი"
+        other: "{0} ბრიტანული კვარტი"
+      short:
+        display_name: ბრიტ. კვარტი
+        one: "{0} ბრიტ. კვარტი"
+        other: "{0} ბრიტ. კვარტი"
+    portion-per-1e9:
+      long:
+        display_name: ნაწილი მილიარდზე
+        one: "{0} ნაწილი მილიარდზე"
+        other: "{0} ნაწილი მილიარდზე"
+      short:
+        display_name: ნაწილი/მილიარდზე
+        one: "{0} ნ/მ"
+        other: "{0} ნ/მ"
+      narrow:
+        display_name: ნ/მ
+    night:
+      long:
+        display_name: ღამე
+        one: "{0} ღამე"
+        other: "{0} ღამე"
+        per_unit_pattern: "{0}/ღამე"
+      short:
+        display_name: ღამე
+        one: "{0} ღამე"
+        other: "{0} ღამე"
+        per_unit_pattern: "{0}/ღამე"
+      narrow:
+        display_name: ღამე
+        one: "{0} ღამე"
+        other: "{0} ღამე"
+        per_unit_pattern: "{0}/ღამე"
+    arc-minute:
+      short:
+        display_name: მინუტი
+        one: "{0} მინუტი"
+        other: "{0} მინუტი"
+      narrow:
+        one: "{0} წთ"
+        other: "{0} წთ"
+    arc-second:
+      short:
+        display_name: სეკუნდი
+        one: "{0} სეკუნდი"
+        other: "{0} სეკუნდი"
+      narrow:
+        one: "{0} წმ"
+        other: "{0} წმ"
+    acre:
+      short:
+        display_name: აკრი
+        one: "{0} აკრი"
+        other: "{0} აკრი"
+    dunam:
+      short:
+        display_name: დუნამი
+        one: "{0} დუნამი"
+        other: "{0} დუნამი"
+    byte:
+      short:
+        display_name: ბაიტი
+        one: "{0} ბაიტი"
+        other: "{0} ბაიტი"
+    bit:
+      short:
+        display_name: ბიტი
+        one: "{0} ბიტი"
+        other: "{0} ბიტი"
+    decade:
+      short:
+        display_name: დეკადა
+        one: "{0} დეკადა"
+        other: "{0} დეკადა"
+    therm-us:
+      short:
+        display_name: აშშ თერმი
+        one: "{0} აშშ თერმი"
+        other: "{0} აშშ თერმი"
+    kilowatt-hour-per-100-kilometer:
+      short:
+        display_name: კვტსთ/100კმ
+        one: "{0} კვტსთ/100კმ"
+        other: "{0} კვტსთ/100კმ"
+    mile:
+      short:
+        display_name: მილი
+        one: "{0} მილი"
+        other: "{0} მილი"
+    yard:
+      short:
+        display_name: იარდი
+        one: "{0} იარდი"
+        other: "{0} იარდი"
+    furlong:
+      short:
+        display_name: ფურლონგი
+        one: "{0} ფურლონგი"
+        other: "{0} ფურლონგი"
+    fathom:
+      short:
+        display_name: ფატომი
+        one: "{0} ფატომი"
+        other: "{0} ფატომი"
+    lux:
+      short:
+        display_name: ლუქსი
+        one: "{0} ლუქსი"
+        other: "{0} ლუქსი"
+    stone:
+      short:
+        display_name: სტოუნი
+        one: "{0} სტოუნი"
+        other: "{0} სტოუნი"
+    grain:
+      short:
+        display_name: გრანი
+        one: "{0} გრანი"
+        other: "{0} გრანი"
+    bar:
+      short:
+        display_name: ბარი
+        one: "{0} ბარი"
+        other: "{0} ბარი"
+    pound-force-foot:
+      short:
+        display_name: ფუნტი-ფუტი
+        one: "{0} ფუნტი-ფუტი"
+        other: "{0} ფუნტი-ფუტი"
+    bushel:
+      short:
+        display_name: ბუშელი
+        one: "{0} ბუშელი"
+        other: "{0} ბუშელი"
+    quart:
+      short:
+        display_name: კვარტა
+        one: "{0} კვარტა"
+        other: "{0} კვარტა"
+    pint:
+      short:
+        display_name: პინტა
+        one: "{0} პინტა"
+        other: "{0} პინტა"
+    cup:
+      short:
+        display_name: ჭიქა
+        one: "{0} ჭიქა"
+        other: "{0} ჭიქა"
+    dessert-spoon:
+      short:
+        display_name: დესერტის კოვზი
+        one: "{0} დესერტის კოვზი"
+        other: "{0} დესერტის კოვზი"
+    drop:
+      short:
+        display_name: წვეთი
+        one: "{0} წვეთი"
+        other: "{0} წვეთი"
+    jigger:
+      short:
+        display_name: ჯიგერი
+        one: "{0} ჯიგერი"
+        other: "{0} ჯიგერი"
+    pinch:
+      short:
+        display_name: მწიკვი
+        one: "{0} მწიკვი"
+        other: "{0} მწიკვი"

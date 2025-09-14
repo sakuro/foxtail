@@ -1,26 +1,99 @@
 ---
 locale: my
-generated_at: '2025-09-13T17:39:19Z'
+generated_at: '2025-09-14T06:27:18Z'
 cldr_version: '46'
 number_formats:
   symbols:
     nan: ဂဏန်းမဟုတ်သော
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
-    accounting: "¤ #,##0.00"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        other: 0 ထောင်
+      '10000':
+        other: 0 သောင်း
+      '100000':
+        other: 0 သိန်း
+      '1000000':
+        other: 0 သန်း
+      '10000000':
+        other: 0 ကုဋေ
+      '100000000':
+        other: 00 ကုဋေ
+      '1000000000':
+        other: 000 ဋေ
+      '10000000000':
+        other: ဋေ 0 ထ
+      '100000000000':
+        other: ဋေ 0 သ
+      '1000000000000':
+        other: ဋေ 0 သိန်း
+      '10000000000000':
+        other: ဋေ 0 သန်း
+      '100000000000000':
+        other: 0 ကောဋိ
+    long:
+      '1000':
+        other: 0 ထောင်
+      '10000':
+        other: 0 သောင်း
+      '100000':
+        other: 0 သိန်း
+      '1000000':
+        other: 0 သန်း
+      '10000000':
+        other: 0 ကုဋေ
+      '100000000':
+        other: 00 ကုဋေ
+      '1000000000':
+        other: 000 ကုဋေ
+      '10000000000':
+        other: 0000 ကုဋေ
+      '100000000000':
+        other: ကုဋေ 0 သောင်း
+      '1000000000000':
+        other: ကုဋေ 0 သိန်း
+      '10000000000000':
+        other: ကုဋေ 0 သန်း
+      '100000000000000':
+        other: 0 ကောဋိ
   currencies:
+    AED:
+      display_names:
+        other: အာရပ်စော်ဘွားများ ပြည်ထောင်စု ဒါဟမ်း
+        one: အာရပ်စော်ဘွားများ ပြည်ထောင်စု ဒါဟမ်း
     AFN:
       display_names:
         other: အာဖဂန် အာဖဂါနီ
         one: အာဖဂန် အာဖဂါနီ
+    ALL:
+      display_names:
+        other: အယ်ဘေးနီးယား လီခ်
+        one: အယ်ဘေးနီးယား လီခ်
     AMD:
       display_names:
         other: အာမေးနီးယား ဒရမ်
         one: အာမေးနီးယား ဒရမ်
+    ANG:
+      symbol: NAf
+      display_names:
+        other: နယ်သာလန် အန်တီလန် ဂင်းဒါး
+        one: နယ်သာလန် အန်တီလန် ဂင်းဒါး
     AOA:
       display_names:
         other: အန်ဂိုလာ ကွမ်ဇာ
         one: အန်ဂိုလာ ကွမ်ဇာ
+    ARP:
+      display_names:
+        other: အာဂျင်တီးနား ပီဆို (၁၉၈၃–၁၉၈၅)
+        one: အာဂျင်တီးနား ပီဆို (၁၉၈၃–၁၉၈၅)
     ARS:
       display_names:
         other: အာဂျင်တီးနား ပီဆို
@@ -29,6 +102,11 @@ number_formats:
       display_names:
         other: ဩစတြေးလျ ဒေါ်လာ
         one: ဩစတြေးလျ ဒေါ်လာ
+    AWG:
+      symbol: Afl
+      display_names:
+        other: အရူးဗာ ဖလိုရင်း
+        one: အရူးဗာ ဖလိုရင်း
     AZN:
       display_names:
         other: အဇာဘိုင်ဂျန် မာနတ်
@@ -46,6 +124,22 @@ number_formats:
       display_names:
         other: ဘင်္ဂလားဒေ့ရှ် တာကာ
         one: ဘင်္ဂလားဒေ့ရှ် တာကာ
+    BEF:
+      display_names:
+        other: ဘယ်လ်ဂျီယမ် ဖရန့်
+        one: ဘယ်လ်ဂျီယမ် ဖရန့်
+    BGN:
+      display_names:
+        other: ဘူလ်ဂေးရီးယား လက်ဖ်
+        one: ဘူလ်ဂေးရီးယား လက်ဖ်
+    BHD:
+      display_names:
+        other: ဘာရိန်း ဒီနား
+        one: ဘာရိန်း ဒီနား
+    BIF:
+      display_names:
+        other: ဘူရွန်ဒီ ဖရန့်
+        one: ဘူရွန်ဒီ ဖရန့်
     BMD:
       display_names:
         other: ဘာမြူဒါ ဒေါ်လာ
@@ -58,6 +152,10 @@ number_formats:
       display_names:
         other: ဘိုလီးဗီးယား ဘိုလီးဗီယားနို
         one: ဘိုလီးဗီးယား ဘိုလီးဗီယားနို
+    BOP:
+      display_names:
+        other: ဘိုလီးဘီးယား ပီဆို
+        one: ဘိုလီးဘီးယား ပီဆို
     BRL:
       display_names:
         other: ဘရာဇီး ရီးယဲ
@@ -67,10 +165,31 @@ number_formats:
       display_names:
         other: ဘဟားမား ဒေါ်လာ
         one: ဘဟားမား ဒေါ်လာ
+    BTN:
+      display_names:
+        other: ဘူတန် အံဂါလ်ထရန်
+        one: ဘူတန် အံဂါလ်ထရန်
+    BUK:
+      display_names:
+        other: ဗမာ ကျပ်
+        one: ဗမာ ကျပ်
     BWP:
       display_names:
         other: ဘော့ဆွာနာ ပုလ
         one: ဘော့ဆွာနာ ပုလ
+    BYB:
+      display_names:
+        other: ဘီလာရုစ် ရူဘယ်အသစ် (၁၉၉၄–၁၉၉၉)
+        one: ဘီလာရုစ် ရူဘယ်အသစ် (၁၉၉၄–၁၉၉၉)
+    BYN:
+      symbol: р.
+      display_names:
+        other: ဘီလာရုစ် ရူဘယ်
+        one: ဘီလာရုစ် ရူဘယ်
+    BYR:
+      display_names:
+        other: ဘီလာရုဇ် ရူဘယ် (၂၀၀၀–၂၀၁၆)
+        one: ဘီလာရုဇ် ရူဘယ် (၂၀၀၀–၂၀၁၆)
     BZD:
       display_names:
         other: ဘလိဇ် ဒေါ်လာ
@@ -79,10 +198,22 @@ number_formats:
       display_names:
         other: ကနေဒါ ဒေါ်လာ
         one: ကနေဒါ ဒေါ်လာ
+    CDF:
+      display_names:
+        other: ကွန်ဂို ဖရန့်
+        one: ကွန်ဂို ဖရန့်
+    CHF:
+      display_names:
+        other: ဆွစ် ဖရန့်
+        one: ဆွစ် ဖရန့်
     CLP:
       display_names:
         other: ချီလီ ပီဆို
         one: ချီလီ ပီဆို
+    CNH:
+      display_names:
+        other: တရုတ် ယွမ် (ဟောင်ကောင်)
+        one: တရုတ် ယွမ် (ဟောင်ကောင်)
     CNY:
       display_names:
         other: တရုတ် ယွမ်
@@ -103,10 +234,26 @@ number_formats:
       display_names:
         other: ကျူးဘား ပီဆို
         one: ကျူးဘား ပီဆို
+    CVE:
+      display_names:
+        other: ကိတ်ပ်ဗာဒီ အက်စ်ခူဒို
+        one: ကိတ်ပ်ဗာဒီ အက်စ်ခူဒို
+    CYP:
+      display_names:
+        other: ဆိုက်ပရက်စ် ပေါင်
+        one: ဆိုက်ပရက်စ် ပေါင်
     CZK:
       display_names:
         other: ချက် ခိုရိုနာ
         one: ချက် ခိုရိုနာ
+    DEM:
+      display_names:
+        other: ဂျာမဏီ မတ်
+        one: ဂျာမဏီ မတ်
+    DJF:
+      display_names:
+        other: ဂျီဘူတီ ဖရန့်
+        one: ဂျီဘူတီ ဖရန့်
     DKK:
       display_names:
         other: ဒိန်းမတ် ခရိုဏာ
@@ -115,14 +262,26 @@ number_formats:
       display_names:
         other: ဒိုမီနီကန် ပီဆို
         one: ဒိုမီနီကန် ပီဆို
+    DZD:
+      display_names:
+        other: အယ်လ်ဂျီးရီးယား ဒီနာ
+        one: အယ်လ်ဂျီးရီးယား ဒီနာ
     EGP:
       display_names:
         other: အီဂျစ် ပေါင်
         one: အီဂျစ် ပေါင်
+    ERN:
+      display_names:
+        other: အီရီထရီးယား နာ့ခ်ဖာ
+        one: အီရီထရီးယား နာ့ခ်ဖာ
     ESP:
       display_names:
         other: စပိန် ပယ်စေးတာ
         one: စပိန် ပယ်စေးတာ
+    ETB:
+      display_names:
+        other: အီသီယိုးပီးယား ဘီးယာ
+        one: အီသီယိုးပီးယား ဘီးယာ
     EUR:
       display_names:
         other: ယူရို
@@ -135,6 +294,10 @@ number_formats:
       display_names:
         other: ဖော့ကလန်ကျွန်းစု ပေါင်
         one: ဖော့ကလန်ကျွန်းစု ပေါင်
+    FRF:
+      display_names:
+        other: ပြင်သစ် ဖရန့်
+        one: ပြင်သစ် ဖရန့်
     GBP:
       display_names:
         other: ဗြိတိသျှ ပေါင်
@@ -151,6 +314,10 @@ number_formats:
       display_names:
         other: ဂျီဘရော်လ်တာ ပေါင်
         one: ဂျီဘရော်လ်တာ ပေါင်
+    GMD:
+      display_names:
+        other: ဂမ်ဘီယာ ဒါလာစီ
+        one: ဂမ်ဘီယာ ဒါလာစီ
     GNF:
       display_names:
         other: ဂီနီရာ ဖရန့်
@@ -175,6 +342,11 @@ number_formats:
       display_names:
         other: ခရိုအေးရှား ခူးနာ
         one: ခရိုအေးရှား ခူးနာ
+    HTG:
+      symbol: G
+      display_names:
+        other: ဟေတီဂူးအော်ဒ်
+        one: ဟေတီဂူးအော်ဒ်
     HUF:
       display_names:
         other: ဟန်ဂေရီယံ ဖော်ရင့်တ်
@@ -183,6 +355,10 @@ number_formats:
       display_names:
         other: အင်ဒိုနီးရှား ရူပီးယား
         one: အင်ဒိုနီးရှား ရူပီးယား
+    ILP:
+      display_names:
+        other: အစ္စရေး ပေါင်
+        one: အစ္စရေး ပေါင်
     ILS:
       display_names:
         other: အစ္စရေး ရှဲကလ်အသစ်
@@ -191,6 +367,14 @@ number_formats:
       display_names:
         other: အိန္ဒိယ ရူပီး
         one: အိန္ဒိယ ရူပီး
+    IQD:
+      display_names:
+        other: အီရတ် ဒီနာ
+        one: အီရတ် ဒီနာ
+    IRR:
+      display_names:
+        other: အီရန် ရီအော်လ်
+        one: အီရန် ရီအော်လ်
     ISK:
       display_names:
         other: အိုက်စလန် ခရိုဏာ
@@ -199,10 +383,18 @@ number_formats:
       display_names:
         other: ဂျမေကာ ဒေါ်လာ
         one: ဂျမေကာ ဒေါ်လာ
+    JOD:
+      display_names:
+        other: ဂျော်ဒန် ဒီနာ
+        one: ဂျော်ဒန် ဒီနာ
     JPY:
       display_names:
         other: ဂျပန် ယန်း
         one: ဂျပန် ယန်း
+    KES:
+      display_names:
+        other: ကင်ညာ သျှီလင်
+        one: ကင်ညာ သျှီလင်
     KGS:
       display_names:
         other: ကာဂျစ္စတန် ဆော်မ်
@@ -223,6 +415,10 @@ number_formats:
       display_names:
         other: တောင်ကိုရီးယား ဝမ်
         one: တောင်ကိုရီးယား ဝမ်
+    KWD:
+      display_names:
+        other: ကူဝိတ် ဒီနာ
+        one: ကူဝိတ် ဒီနာ
     KYD:
       display_names:
         other: ကေမန် ကျွန်းစု ဒေါ်လာ
@@ -247,6 +443,10 @@ number_formats:
       display_names:
         other: လိုက်ဘေးရီးယား ဒေါ်လာ
         one: လိုက်ဘေးရီးယား ဒေါ်လာ
+    LSL:
+      display_names:
+        other: လီဆိုသို လိုတီစ်
+        one: လီဆိုသို လိုတီ
     LTL:
       display_names:
         other: လစ်သူယေးနီးယားလီတားစ်
@@ -255,10 +455,26 @@ number_formats:
       display_names:
         other: လတ်ဗီးယားလတ်
         one: လတ်ဗီးယားလတ်
+    LYD:
+      display_names:
+        other: လစ်ဗျား ဒိုင်နာ
+        one: လစ်ဗျား ဒိုင်နာ
+    MAD:
+      display_names:
+        other: မိုရိုကို ဒရမ်
+        one: မိုရိုကို ဒရမ်
+    MDL:
+      display_names:
+        other: မောလ်ဒိုဗာ လယ်အို
+        one: မောလ်ဒိုဗာ လယ်အို
     MGA:
       display_names:
         other: မာလာဂါစီ အရီရရီ
         one: မာလာဂါစီ အရီရရီ
+    MKD:
+      display_names:
+        other: မက်ဆီဒိုးနီးယား ဒီနာ
+        one: မက်ဆီဒိုးနီးယား ဒီနာ
     MMK:
       display_names:
         other: မြန်မာ ကျပ်
@@ -267,10 +483,30 @@ number_formats:
       display_names:
         other: မွန်ဂိုးလီးယား ထူးဂရခ်
         one: မွန်ဂိုးလီးယား ထူးဂရခ်
+    MOP:
+      display_names:
+        other: မကာအို ပါတားကား
+        one: မကာအို ပါတားကား
+    MRO:
+      display_names:
+        other: မော်ရီတေးနီးယား အူဂီးယာ (၁၉၇၃–၂၀၁၇)
+        one: မော်ရီတေးနီးယား အူဂီးယာ (၁၉၇၃–၂၀၁၇)
+    MRU:
+      display_names:
+        other: မော်ရီတေးနီးယန်း အူဂီးယာ
+        one: မော်ရီတေးနီးယန်း အူဂီးယာ
     MUR:
       display_names:
         other: မောရစ်ရှ ရူပီး
         one: မောရစ်ရှ ရူပီး
+    MVR:
+      display_names:
+        other: မော်လ်ဒိုက် ရူးဖီရာ
+        one: မော်လ်ဒိုက် ရူးဖီရာ
+    MWK:
+      display_names:
+        other: မာလာဝီ ခွါးချာ
+        one: မာလာဝီ ခွါးချာ
     MXN:
       display_names:
         other: မက်ကဆီကို ပီဆို
@@ -279,6 +515,10 @@ number_formats:
       display_names:
         other: မလေးရှား ရင်းဂစ်
         one: မလေးရှား ရင်းဂစ်
+    MZN:
+      display_names:
+        other: မိုဇမ်ဘစ် မက်တီခယ်လ်
+        one: မိုဇမ်ဘစ် မက်တီခယ်လ်
     NAD:
       display_names:
         other: နမီးဘီးယား ဒေါ်လာ
@@ -303,319 +543,6 @@ number_formats:
       display_names:
         other: နယူးဇီလန် ဒေါ်လာ
         one: နယူးဇီလန် ဒေါ်လာ
-    PHP:
-      display_names:
-        other: ဖိလစ်ပိုင် ပီဆို
-        one: ဖိလစ်ပိုင် ပီဆို
-    PKR:
-      display_names:
-        other: ပါကစ္စတန် ရူပီး
-        one: ပါကစ္စတန် ရူပီး
-    PLN:
-      display_names:
-        other: ပိုလန် ဇလော့တီ
-        one: ပိုလန် ဇလော့တီ
-    PYG:
-      display_names:
-        other: ပါရာဂွေး ဂွါးအ်နီး
-        one: ပါရာဂွေး ဂွါးအ်နီး
-    RON:
-      display_names:
-        other: ရိုမေးနီးယား လယ်အို
-        one: ရိုမေးနီးယား လယ်အို
-    RUB:
-      display_names:
-        other: ရုရှ ရူဘယ်
-        one: ရုရှ ရူဘယ်
-    RWF:
-      display_names:
-        other: ရဝန်ဒါ ဖရန့်
-        one: ရဝန်ဒါ ဖရန့်
-    SBD:
-      display_names:
-        other: ဆော်လမွန်ကျွန်းစု ဒေါ်လာ
-        one: ဆော်လမွန်ကျွန်းစု ဒေါ်လာ
-    SEK:
-      display_names:
-        other: ဆွီဒင် ခရိုဏာ
-        one: ဆွီဒင် ခရိုဏာ
-    SGD:
-      display_names:
-        other: စင်္ကာပူ ဒေါ်လာ
-        one: စင်္ကာပူ ဒေါ်လာ
-    SHP:
-      display_names:
-        other: စိန့်ဟယ်လယ်နာ ပေါင်
-        one: စိန့်ဟယ်လယ်နာ ပေါင်
-    SRD:
-      display_names:
-        other: ဆူရီနမ်း ဒေါ်လာ
-        one: ဆူရီနမ်း ဒေါ်လာ
-    SSP:
-      display_names:
-        other: တောင်ဆူဒန် ပေါင်
-        one: တောင်ဆူဒန် ပေါင်
-    STN:
-      display_names:
-        other: ဆောင်တူမေးနှင့် ပရင်စီပီ ဒိုဘရာစ် (၂၀၁၈)
-        one: ဆောင်တူမေးနှင့် ပရင်စီပီ ဒိုဘရာ (၂၀၁၈)
-    SYP:
-      display_names:
-        other: ဆီးရီးယား ပေါင်
-        one: ဆီးရီးယား ပေါင်
-    THB:
-      display_names:
-        other: ထိုင်း ဘတ်
-        one: ထိုင်း ဘတ်
-    TOP:
-      display_names:
-        other: တွန်ဂါ ဗန်ဂါ
-        one: တွန်ဂါ ဗန်ဂါ
-    TRY:
-      display_names:
-        other: တူရကီ လိုင်ရာ
-        one: တူရကီ လိုင်ရာ
-    TTD:
-      symbol: TT$
-      display_names:
-        other: ထရီနီဒတ်နှင့် တိုဘက်ဂို ဒေါ်လာ
-        one: ထရီနီဒတ်နှင့် တိုဘက်ဂို ဒေါ်လာ
-    TWD:
-      display_names:
-        other: ထိုင်ဝမ် ဒေါ်လာအသစ်
-        one: ထိုင်ဝမ် ဒေါ်လာအသစ်
-    UAH:
-      display_names:
-        other: ယူကရိန်း ဟီရီဗင်းညား
-        one: ယူကရိန်း ဟီရီဗင်းညား
-    USD:
-      display_names:
-        other: အမေရိကန် ဒေါ်လာ
-        one: အမေရိကန် ဒေါ်လာ
-    UYU:
-      display_names:
-        other: ဥရုဂွေး ပီဆို
-        one: ဥရုဂွေး ပီဆို
-    VEF:
-      display_names:
-        other: ဗင်နီဇွဲလား ဘိုလီဗာ (၂၀၀၈–၂၀၁၈)
-        one: ဗင်နီဇွဲလား ဘိုလီဗာ (၂၀၀၈–၂၀၁၈)
-    VND:
-      display_names:
-        other: ဗီယက်နမ် ဒေါင်
-        one: ဗီယက်နမ် ဒေါင်
-    XAF:
-      display_names:
-        other: ကင်မရွန်း ဖရန့်
-        one: ကင်မရွန်း ဖရန့်
-    XCD:
-      display_names:
-        other: အရှေ့ကာရစ်ဘီယံ ဒေါ်လာ
-        one: အရှေ့ကာရစ်ဘီယံ ဒေါ်လာ
-    XOF:
-      display_names:
-        other: အနောက် အာဖရိက [CFA] ဖရန့်
-        one: အနောက် အာဖရိက [CFA ]ဖရန့်
-    XPF:
-      display_names:
-        other: "[CFP] ဖရန့်"
-        one: "[CFP] ဖရန့်"
-    XXX:
-      display_names:
-        other: "(မသိသို့မဟုတ်မရှိသောငွေကြေး)"
-        one: မသိသို့မဟုတ်မရှိသောငွေကြေး
-    ZAR:
-      display_names:
-        other: တောင်အာဖရိက ရန်း
-        one: တောင်အာဖရိက ရန်း
-    ZMW:
-      display_names:
-        other: ဇင်ဘာဘွေ ခွါးချာ
-        one: ဇင်ဘာဘွေ ခွါးချာ
-    AED:
-      display_names:
-        other: အာရပ်စော်ဘွားများ ပြည်ထောင်စု ဒါဟမ်း
-        one: အာရပ်စော်ဘွားများ ပြည်ထောင်စု ဒါဟမ်း
-    ALL:
-      display_names:
-        other: အယ်ဘေးနီးယား လီခ်
-        one: အယ်ဘေးနီးယား လီခ်
-    ANG:
-      symbol: NAf
-      display_names:
-        other: နယ်သာလန် အန်တီလန် ဂင်းဒါး
-        one: နယ်သာလန် အန်တီလန် ဂင်းဒါး
-    ARP:
-      display_names:
-        other: အာဂျင်တီးနား ပီဆို (၁၉၈၃–၁၉၈၅)
-        one: အာဂျင်တီးနား ပီဆို (၁၉၈၃–၁၉၈၅)
-    AWG:
-      symbol: Afl
-      display_names:
-        other: အရူးဗာ ဖလိုရင်း
-        one: အရူးဗာ ဖလိုရင်း
-    BEF:
-      display_names:
-        other: ဘယ်လ်ဂျီယမ် ဖရန့်
-        one: ဘယ်လ်ဂျီယမ် ဖရန့်
-    BGN:
-      display_names:
-        other: ဘူလ်ဂေးရီးယား လက်ဖ်
-        one: ဘူလ်ဂေးရီးယား လက်ဖ်
-    BHD:
-      display_names:
-        other: ဘာရိန်း ဒီနား
-        one: ဘာရိန်း ဒီနား
-    BIF:
-      display_names:
-        other: ဘူရွန်ဒီ ဖရန့်
-        one: ဘူရွန်ဒီ ဖရန့်
-    BOP:
-      display_names:
-        other: ဘိုလီးဘီးယား ပီဆို
-        one: ဘိုလီးဘီးယား ပီဆို
-    BTN:
-      display_names:
-        other: ဘူတန် အံဂါလ်ထရန်
-        one: ဘူတန် အံဂါလ်ထရန်
-    BUK:
-      display_names:
-        other: ဗမာ ကျပ်
-        one: ဗမာ ကျပ်
-    BYB:
-      display_names:
-        other: ဘီလာရုစ် ရူဘယ်အသစ် (၁၉၉၄–၁၉၉၉)
-        one: ဘီလာရုစ် ရူဘယ်အသစ် (၁၉၉၄–၁၉၉၉)
-    BYN:
-      symbol: р.
-      display_names:
-        other: ဘီလာရုစ် ရူဘယ်
-        one: ဘီလာရုစ် ရူဘယ်
-    BYR:
-      display_names:
-        other: ဘီလာရုဇ် ရူဘယ် (၂၀၀၀–၂၀၁၆)
-        one: ဘီလာရုဇ် ရူဘယ် (၂၀၀၀–၂၀၁၆)
-    CDF:
-      display_names:
-        other: ကွန်ဂို ဖရန့်
-        one: ကွန်ဂို ဖရန့်
-    CHF:
-      display_names:
-        other: ဆွစ် ဖရန့်
-        one: ဆွစ် ဖရန့်
-    CNH:
-      display_names:
-        other: တရုတ် ယွမ် (ဟောင်ကောင်)
-        one: တရုတ် ယွမ် (ဟောင်ကောင်)
-    CVE:
-      display_names:
-        other: ကိတ်ပ်ဗာဒီ အက်စ်ခူဒို
-        one: ကိတ်ပ်ဗာဒီ အက်စ်ခူဒို
-    CYP:
-      display_names:
-        other: ဆိုက်ပရက်စ် ပေါင်
-        one: ဆိုက်ပရက်စ် ပေါင်
-    DEM:
-      display_names:
-        other: ဂျာမဏီ မတ်
-        one: ဂျာမဏီ မတ်
-    DJF:
-      display_names:
-        other: ဂျီဘူတီ ဖရန့်
-        one: ဂျီဘူတီ ဖရန့်
-    DZD:
-      display_names:
-        other: အယ်လ်ဂျီးရီးယား ဒီနာ
-        one: အယ်လ်ဂျီးရီးယား ဒီနာ
-    ERN:
-      display_names:
-        other: အီရီထရီးယား နာ့ခ်ဖာ
-        one: အီရီထရီးယား နာ့ခ်ဖာ
-    ETB:
-      display_names:
-        other: အီသီယိုးပီးယား ဘီးယာ
-        one: အီသီယိုးပီးယား ဘီးယာ
-    FRF:
-      display_names:
-        other: ပြင်သစ် ဖရန့်
-        one: ပြင်သစ် ဖရန့်
-    GMD:
-      display_names:
-        other: ဂမ်ဘီယာ ဒါလာစီ
-        one: ဂမ်ဘီယာ ဒါလာစီ
-    HTG:
-      symbol: G
-      display_names:
-        other: ဟေတီဂူးအော်ဒ်
-        one: ဟေတီဂူးအော်ဒ်
-    ILP:
-      display_names:
-        other: အစ္စရေး ပေါင်
-        one: အစ္စရေး ပေါင်
-    IQD:
-      display_names:
-        other: အီရတ် ဒီနာ
-        one: အီရတ် ဒီနာ
-    IRR:
-      display_names:
-        other: အီရန် ရီအော်လ်
-        one: အီရန် ရီအော်လ်
-    JOD:
-      display_names:
-        other: ဂျော်ဒန် ဒီနာ
-        one: ဂျော်ဒန် ဒီနာ
-    KES:
-      display_names:
-        other: ကင်ညာ သျှီလင်
-        one: ကင်ညာ သျှီလင်
-    KWD:
-      display_names:
-        other: ကူဝိတ် ဒီနာ
-        one: ကူဝိတ် ဒီနာ
-    LSL:
-      display_names:
-        other: လီဆိုသို လိုတီစ်
-        one: လီဆိုသို လိုတီ
-    LYD:
-      display_names:
-        other: လစ်ဗျား ဒိုင်နာ
-        one: လစ်ဗျား ဒိုင်နာ
-    MAD:
-      display_names:
-        other: မိုရိုကို ဒရမ်
-        one: မိုရိုကို ဒရမ်
-    MDL:
-      display_names:
-        other: မောလ်ဒိုဗာ လယ်အို
-        one: မောလ်ဒိုဗာ လယ်အို
-    MKD:
-      display_names:
-        other: မက်ဆီဒိုးနီးယား ဒီနာ
-        one: မက်ဆီဒိုးနီးယား ဒီနာ
-    MOP:
-      display_names:
-        other: မကာအို ပါတားကား
-        one: မကာအို ပါတားကား
-    MRO:
-      display_names:
-        other: မော်ရီတေးနီးယား အူဂီးယာ (၁၉၇၃–၂၀၁၇)
-        one: မော်ရီတေးနီးယား အူဂီးယာ (၁၉၇၃–၂၀၁၇)
-    MRU:
-      display_names:
-        other: မော်ရီတေးနီးယန်း အူဂီးယာ
-        one: မော်ရီတေးနီးယန်း အူဂီးယာ
-    MVR:
-      display_names:
-        other: မော်လ်ဒိုက် ရူးဖီရာ
-        one: မော်လ်ဒိုက် ရူးဖီရာ
-    MWK:
-      display_names:
-        other: မာလာဝီ ခွါးချာ
-        one: မာလာဝီ ခွါးချာ
-    MZN:
-      display_names:
-        other: မိုဇမ်ဘစ် မက်တီခယ်လ်
-        one: မိုဇမ်ဘစ် မက်တီခယ်လ်
     OMR:
       display_names:
         other: အိုမန်နီ ရီရယ်
@@ -633,22 +560,54 @@ number_formats:
       display_names:
         other: ပါပူအာ နယူးဂီနီ ခီးနာ
         one: ပါပူအာ နယူးဂီနီ ခီးနာ
+    PHP:
+      display_names:
+        other: ဖိလစ်ပိုင် ပီဆို
+        one: ဖိလစ်ပိုင် ပီဆို
+    PKR:
+      display_names:
+        other: ပါကစ္စတန် ရူပီး
+        one: ပါကစ္စတန် ရူပီး
+    PLN:
+      display_names:
+        other: ပိုလန် ဇလော့တီ
+        one: ပိုလန် ဇလော့တီ
+    PYG:
+      display_names:
+        other: ပါရာဂွေး ဂွါးအ်နီး
+        one: ပါရာဂွေး ဂွါးအ်နီး
     QAR:
       display_names:
         other: ကာတာရီ ရီရယ်
         one: ကာတာရီ ရီရယ်
+    RON:
+      display_names:
+        other: ရိုမေးနီးယား လယ်အို
+        one: ရိုမေးနီးယား လယ်အို
     RSD:
       display_names:
         other: ဆားဘီးယား ဒယ်နား
         one: ဆားဘီးယား ဒယ်နား
+    RUB:
+      display_names:
+        other: ရုရှ ရူဘယ်
+        one: ရုရှ ရူဘယ်
     RUR:
       display_names:
         other: ရုရှ ရူဘယ် (၁၉၉၁–၁၉၉၈)
         one: ရုရှ ရူဘယ် (၁၉၉၁–၁၉၉၈)
+    RWF:
+      display_names:
+        other: ရဝန်ဒါ ဖရန့်
+        one: ရဝန်ဒါ ဖရန့်
     SAR:
       display_names:
         other: ဆော်ဒီအာရေးဗီးယား ရီယော်လ်
         one: ဆော်ဒီအာရေးဗီးယား ရီယော်လ်
+    SBD:
+      display_names:
+        other: ဆော်လမွန်ကျွန်းစု ဒေါ်လာ
+        one: ဆော်လမွန်ကျွန်းစု ဒေါ်လာ
     SCR:
       display_names:
         other: ဆေးရှဲ ရူပီး
@@ -661,6 +620,18 @@ number_formats:
       display_names:
         other: ဆူဒန် ပေါင်အဟောင်း
         one: ဆူဒန် ပေါင်အဟောင်း
+    SEK:
+      display_names:
+        other: ဆွီဒင် ခရိုဏာ
+        one: ဆွီဒင် ခရိုဏာ
+    SGD:
+      display_names:
+        other: စင်္ကာပူ ဒေါ်လာ
+        one: စင်္ကာပူ ဒေါ်လာ
+    SHP:
+      display_names:
+        other: စိန့်ဟယ်လယ်နာ ပေါင်
+        one: စိန့်ဟယ်လယ်နာ ပေါင်
     SLE:
       display_names:
         other: ဆီယာရာလီယွန်း လီအိုနီ
@@ -673,18 +644,38 @@ number_formats:
       display_names:
         other: ဆိုမာလီ သျှီလင်
         one: ဆိုမာလီ သျှီလင်
+    SRD:
+      display_names:
+        other: ဆူရီနမ်း ဒေါ်လာ
+        one: ဆူရီနမ်း ဒေါ်လာ
+    SSP:
+      display_names:
+        other: တောင်ဆူဒန် ပေါင်
+        one: တောင်ဆူဒန် ပေါင်
     STD:
       display_names:
         other: ဆောင်တူမေးနှင့် ပရင်စီပီ ဒိုဘရာ
         one: ဆောင်တူမေးနှင့် ပရင်စီပီ ဒိုဘရာ
+    STN:
+      display_names:
+        other: ဆောင်တူမေးနှင့် ပရင်စီပီ ဒိုဘရာစ် (၂၀၁၈)
+        one: ဆောင်တူမေးနှင့် ပရင်စီပီ ဒိုဘရာ (၂၀၁၈)
     SUR:
       display_names:
         other: ဆိုဗီယက် ရူဗယ်
         one: ဆိုဗီယက် ရူဗယ်
+    SYP:
+      display_names:
+        other: ဆီးရီးယား ပေါင်
+        one: ဆီးရီးယား ပေါင်
     SZL:
       display_names:
         other: ဆွာဇီလန် လီလန်းဂီနီ
         one: ဆွာဇီလန် လီလန်းဂီနီ
+    THB:
+      display_names:
+        other: ထိုင်း ဘတ်
+        one: ထိုင်း ဘတ်
     TJS:
       display_names:
         other: တာဂျစ်ကစ္စတန် ဆိုမိုနီ
@@ -697,18 +688,43 @@ number_formats:
       display_names:
         other: တူနီးရှား ဒိုင်နာ
         one: တူနီးရှား ဒိုင်နာ
+    TOP:
+      display_names:
+        other: တွန်ဂါ ဗန်ဂါ
+        one: တွန်ဂါ ဗန်ဂါ
     TRL:
       display_names:
         other: ရှေးဟောင်းတူရကီ လိုင်ရာ
         one: ရှေးဟောင်းတူရကီ လိုင်ရာ
+    TRY:
+      display_names:
+        other: တူရကီ လိုင်ရာ
+        one: တူရကီ လိုင်ရာ
+    TTD:
+      symbol: TT$
+      display_names:
+        other: ထရီနီဒတ်နှင့် တိုဘက်ဂို ဒေါ်လာ
+        one: ထရီနီဒတ်နှင့် တိုဘက်ဂို ဒေါ်လာ
+    TWD:
+      display_names:
+        other: ထိုင်ဝမ် ဒေါ်လာအသစ်
+        one: ထိုင်ဝမ် ဒေါ်လာအသစ်
     TZS:
       display_names:
         other: တန်ဇန်းနီးယား သျှီလင်
         one: တန်ဇန်းနီးယား သျှီလင်
+    UAH:
+      display_names:
+        other: ယူကရိန်း ဟီရီဗင်းညား
+        one: ယူကရိန်း ဟီရီဗင်းညား
     UGX:
       display_names:
         other: ယူဂန္ဒာ သျှီလင်
         one: ယူဂန္ဒာ သျှီလင်
+    USD:
+      display_names:
+        other: အမေရိကန် ဒေါ်လာ
+        one: အမေရိကန် ဒေါ်လာ
     USN:
       display_names:
         other: အမေရိကန် ဒေါ်လာ (နောက်နေ့)
@@ -717,14 +733,26 @@ number_formats:
       display_names:
         other: အမေရိကန် ဒေါ်လာ (တနေ့တည်း)
         one: အမေရိကန် ဒေါ်လာ (တနေ့တည်း)
+    UYU:
+      display_names:
+        other: ဥရုဂွေး ပီဆို
+        one: ဥရုဂွေး ပီဆို
     UZS:
       display_names:
         other: ဥဇဘက်ကစ္စတန် ဆော်မ်
         one: ဥဇဘက်ကစ္စတန် ဆော်မ်
+    VEF:
+      display_names:
+        other: ဗင်နီဇွဲလား ဘိုလီဗာ (၂၀၀၈–၂၀၁၈)
+        one: ဗင်နီဇွဲလား ဘိုလီဗာ (၂၀၀၈–၂၀၁၈)
     VES:
       display_names:
         other: ဗင်နီဇွဲလန်း ဘိုလီဗာ
         one: ဗင်နီဇွဲလန်း ဘိုလီဗာ
+    VND:
+      display_names:
+        other: ဗီယက်နမ် ဒေါင်
+        one: ဗီယက်နမ် ဒေါင်
     VUV:
       display_names:
         other: ဗနွားတူ ဗားထူ
@@ -733,6 +761,10 @@ number_formats:
       display_names:
         other: ဆမိုအား ထားလာ
         one: ဆမိုအား ထားလာ
+    XAF:
+      display_names:
+        other: ကင်မရွန်း ဖရန့်
+        one: ကင်မရွန်း ဖရန့်
     XAG:
       display_names:
         other: ငွေ
@@ -745,10 +777,22 @@ number_formats:
       display_names:
         other: ဥရောပငွေကြေးစံနစ်
         one: ဥရောပငွေကြေးစံနစ်
+    XCD:
+      display_names:
+        other: အရှေ့ကာရစ်ဘီယံ ဒေါ်လာ
+        one: အရှေ့ကာရစ်ဘီယံ ဒေါ်လာ
     XDR:
       display_names:
         other: အထူးထုတ်ယူခွင့်
         one: အထူးထုတ်ယူခွင့်
+    XOF:
+      display_names:
+        other: အနောက် အာဖရိက [CFA] ဖရန့်
+        one: အနောက် အာဖရိက [CFA ]ဖရန့်
+    XPF:
+      display_names:
+        other: "[CFP] ဖရန့်"
+        one: "[CFP] ဖရန့်"
     XPT:
       display_names:
         other: ပလက်တီနမ်
@@ -757,11 +801,1036 @@ number_formats:
       display_names:
         other: စမ်းသပ် ငွေကြေး ကုဒ်
         one: စမ်းသပ် ငွေကြေး ကုဒ်
+    XXX:
+      display_names:
+        other: "(မသိသို့မဟုတ်မရှိသောငွေကြေး)"
+        one: မသိသို့မဟုတ်မရှိသောငွေကြေး
     YER:
       display_names:
         other: ယီမင်နီ ရီရယ်
         one: ယီမင်နီ ရီရယ်
+    ZAR:
+      display_names:
+        other: တောင်အာဖရိက ရန်း
+        one: တောင်အာဖရိက ရန်း
+    ZMW:
+      display_names:
+        other: ဇင်ဘာဘွေ ခွါးချာ
+        one: ဇင်ဘာဘွေ ခွါးချာ
     ZWD:
       display_names:
         other: ဇင်ဘာဘွေ ဒေါ်လာ
         one: ဇင်ဘာဘွေ ဒေါ်လာ
+  units:
+    g-force:
+      long:
+        other: "{0} ဆွဲငင်အား"
+      short:
+        display_name: ဆွဲငင်အား
+    meter-per-square-second:
+      long:
+        other: "{0} မီတာ/စက္ကန့်နှစ်ထပ်ကိန်း"
+      short:
+        display_name: မီတာ/စက္ကန့်နှစ်ထပ်ကိန်း
+    revolution:
+      long:
+        display_name: လည်ပတ်ခြင်း
+        other: "{0} လည်ပတ်ခြင်း"
+    radian:
+      long:
+        other: "{0} ရေဒီယဲန်း"
+      short:
+        display_name: ရေဒီယဲန်း
+    degree:
+      long:
+        other: "{0} ဒီဂရီ"
+      short:
+        display_name: ဒီဂရီ
+        other: "{0} deg"
+      narrow:
+        other: "{0}°"
+    arc-minute:
+      long:
+        other: "{0} မိနစ်"
+      short:
+        display_name: မိနစ်
+    arc-second:
+      long:
+        other: "{0} စက္ကန့်"
+      short:
+        display_name: စက္ကန့်
+    square-kilometer:
+      long:
+        other: "{0} စတုရန်းကီလိုမီတာ"
+        per_unit_pattern: တစ်စတုရန်းကီလိုမီတာလျှင် {0}
+      short:
+        display_name: စတုရန်းကီလိုမီတာ
+    hectare:
+      long:
+        other: "{0} ဟက်တာ"
+      short:
+        display_name: ဟက်တာ
+    square-meter:
+      long:
+        other: "{0} စတုရန်းမီတာ"
+        per_unit_pattern: တစ်စတုရန်းမီတာလျှင် {0}
+      short:
+        display_name: စတုရန်းမီတာ
+    square-centimeter:
+      long:
+        other: "{0} စတုရန်းစင်တီမီတာ"
+        per_unit_pattern: တစ်စတုရန်းစင်တီမီတာလျှင် {0}
+      narrow:
+        display_name: cm²
+    square-mile:
+      long:
+        other: "{0} စတုရန်းမိုင်"
+        per_unit_pattern: တစ်စတုရန်းမိုင်လျှင် {0}
+      short:
+        display_name: စတုရန်းမိုင်
+    acre:
+      long:
+        other: "{0} ဧက"
+      short:
+        display_name: ဧက
+    square-yard:
+      long:
+        other: "{0} စတုရန်းကိုက်"
+      short:
+        display_name: စတုရန်းကိုက်
+    square-foot:
+      long:
+        other: "{0} စတုရန်းပေ"
+      short:
+        display_name: စတုရန်းပေ
+    square-inch:
+      long:
+        other: "{0} စတုရန်းလက်မ"
+        per_unit_pattern: တစ်စတုရန်းလက်မလျှင် {0}
+      short:
+        display_name: စတုရန်းလက်မ
+    karat:
+      long:
+        other: "{0} ကာရက်"
+      short:
+        display_name: ကာရက်
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: တစ်ဒက်စီလီတာရှိ မီလီဂရမ်
+        other: တစ်ဒက်စီလီတာရှိ {0} မီလီဂရမ်
+    millimole-per-liter:
+      long:
+        display_name: တစ်လီတာရှိ မီလီမိုးလ်
+        other: တစ်လီတာရှိ {0} မီလီမိုးလ်
+    permillion:
+      long:
+        other: တစ်သန်းပုံ {0} ပုံ
+      short:
+        display_name: တစ်သန်းပုံ တစ်ပုံ
+    percent:
+      long:
+        display_name: ရာခိုင်နှုန်း
+        other: "{0} ရာခိုင်နှုန်း"
+    permille:
+      long:
+        display_name: ထောင်လီစိတ်
+        other: "{0} ထောင်လီစိတ်"
+    permyriad:
+      long:
+        other: "{0} ပါမီရိတ်"
+      short:
+        display_name: ပါမီရိတ်
+    liter-per-kilometer:
+      long:
+        display_name: တစ်ကီလိုမီတာရှိ လီတာ
+        other: တစ်ကီလိုမီတာရှိ {0} လီတာ
+      short:
+        display_name: လီတာ/ကီလိုမီတာ
+      narrow:
+        display_name: L/km
+    liter-per-100-kilometer:
+      long:
+        other: တစ်ရာကီလိုမီတာရှိ {0} လီတာ
+      short:
+        display_name: တစ်ရာကီလိုမီတာရှိ လီတာ
+        other: "{0} L/100 km"
+      narrow:
+        display_name: L/100km
+        other: "{0} L/100km"
+    mile-per-gallon:
+      long:
+        display_name: တစ်ဂါလံ မိုင်နှုန်း
+        other: တစ်ဂါလံလျှင် {0} မိုင်
+      short:
+        display_name: မိုင်/ဂါလန်
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: ယူကေတစ်ဂါလံ မိုင်နှုန်း
+        other: ယူကေတစ်ဂါလံလျှင် {0} မိုင်
+      narrow:
+        other: "{0}m/gUK"
+    petabyte:
+      long:
+        other: "{0} ပက်တာဘိုက်"
+      short:
+        display_name: ပက်တာဘိုက်
+    terabyte:
+      long:
+        other: "{0} တယ်ရာဘိုက်"
+      short:
+        display_name: တယ်ရာဘိုက်
+    terabit:
+      long:
+        other: "{0} တယ်ရာဘစ်"
+      short:
+        display_name: တယ်ရာဘစ်
+    gigabyte:
+      long:
+        other: "{0} ဂစ်ဂါဘိုက်"
+      short:
+        display_name: ဂစ်ဂါဘိုက်
+    gigabit:
+      long:
+        other: "{0} ဂစ်ဂါဘစ်"
+      short:
+        display_name: ဂစ်ဂါဘစ်
+      narrow:
+        display_name: Gb
+    megabyte:
+      long:
+        other: "{0} မီဂါဘိုက်"
+      short:
+        display_name: မီဂါဘိုက်
+    megabit:
+      long:
+        other: "{0} မီဂါဘစ်"
+      short:
+        display_name: မီဂါဘစ်
+    kilobyte:
+      long:
+        other: "{0} ကီလိုဘိုက်"
+      short:
+        display_name: ကီလိုဘိုက်
+    kilobit:
+      long:
+        other: "{0} ကီလိုဘစ်"
+      short:
+        display_name: ကီလိုဘစ်
+    byte:
+      long:
+        other: "{0} ဘိုက်"
+      short:
+        display_name: ဘိုက်
+      narrow:
+        display_name: B
+        other: "{0}B"
+    bit:
+      long:
+        other: "{0} ဘစ်"
+      short:
+        display_name: ဘစ်
+    century:
+      long:
+        display_name: ရာစုနှစ်
+        other: "{0} ရာစုနှစ်"
+      short:
+        display_name: ရာစု
+        other: "{0} ရာစု"
+    decade:
+      long:
+        display_name: ဆယ်စုနှစ်
+        other: "{0} ဆယ်စုနှစ်"
+      short:
+        display_name: ဆယ်စု
+        other: "{0} ဆယ်စု"
+    year:
+      long:
+        per_unit_pattern: တစ်နှစ်လျှင် {0}
+      short:
+        display_name: နှစ်
+        other: "{0} နှစ်"
+        per_unit_pattern: "{0}/ နှစ်"
+    quarter:
+      long:
+        display_name: ကွာတား
+        other: "{0} ကွာတား"
+        per_unit_pattern: "{0}/ကွာတား"
+    month:
+      long:
+        per_unit_pattern: တစ်လလျှင် {0}
+      short:
+        display_name: လ
+        other: "{0} လ"
+        per_unit_pattern: "{0}/ လ"
+    week:
+      long:
+        per_unit_pattern: တစ်ပတ်လျှင် {0}
+      short:
+        display_name: ပတ်
+        other: "{0} ပတ်"
+        per_unit_pattern: "{0}/ ပတ်"
+    day:
+      long:
+        per_unit_pattern: တစ်ရက်လျှင် {0}
+      short:
+        display_name: ရက်
+        other: "{0} ရက်"
+        per_unit_pattern: "{0}/ ရက်"
+    hour:
+      long:
+        per_unit_pattern: တစ်နာရီလျှင် {0}
+      short:
+        display_name: နာရီ
+        other: "{0} နာရီ"
+        per_unit_pattern: "{0}/ နာရီ"
+    minute:
+      long:
+        per_unit_pattern: တစ်မိနစ်လျှင် {0}
+      short:
+        display_name: မိနစ်
+        other: "{0} မိနစ်"
+        per_unit_pattern: "{0}/ မိနစ်"
+    second:
+      long:
+        other: "{0} စက္ကန့်"
+        per_unit_pattern: တစ်စက္ကန့်လျှင် {0}
+      short:
+        display_name: စက္ကန့်
+        other: "{0} sec"
+      narrow:
+        other: "{0} s"
+    microsecond:
+      long:
+        other: "{0} မိုက်ခရိုစက္ကန့်"
+      short:
+        display_name: မိုက်ခရိုစက္ကန့်
+    nanosecond:
+      long:
+        other: "{0} နာနိုစက္ကန့်"
+      short:
+        display_name: နာနိုစက္ကန့်
+    ampere:
+      long:
+        other: "{0} အမ်ပီယာ"
+      short:
+        display_name: အမ်ပီယာ
+      narrow:
+        display_name: amp
+    milliampere:
+      long:
+        display_name: မီလီအမ်ပီယာ
+        other: "{0} မီလီအမ်ပီယာ"
+    ohm:
+      long:
+        other: "{0} အုမ်း"
+      short:
+        display_name: အုမ်း
+    volt:
+      long:
+        other: "{0} ဗို့"
+      short:
+        display_name: ဗို့
+    kilocalorie:
+      long:
+        other: "{0} ကီလိုကယ်လိုရီ"
+      short:
+        display_name: ကီလိုကယ်လိုရီ
+    calorie:
+      long:
+        other: "{0} ကယ်လိုရီ"
+      short:
+        display_name: ကယ်လိုရီ
+    foodcalorie:
+      long:
+        other: "{0} ကယ်လိုရီ"
+      short:
+        display_name: ကယ်လိုရီ
+        other: "{0} Cal"
+    kilojoule:
+      long:
+        other: "{0} ကီလိုဂျူးလ်"
+      short:
+        display_name: ကီလိုဂျူးလ်
+    joule:
+      long:
+        other: "{0} ဂျူးလ်"
+      short:
+        display_name: ဂျူးလ်
+    kilowatt-hour:
+      long:
+        other: "{0} ကီလိုဝပ်-နာရီ"
+      short:
+        display_name: ကီလိုဝပ်-နာရီ
+    electronvolt:
+      long:
+        other: "{0} အီလက်ထရွန်ဗို့"
+      short:
+        display_name: အီလက်ထရွန်ဗို့
+    british-thermal-unit:
+      long:
+        display_name: ဗြိတိသျှ သာမယ်လ်ယူနစ်
+        other: "{0} ဗြိတိသျှ သာမယ်လ်ယူနစ်"
+      short:
+        display_name: BTU
+    therm-us:
+      long:
+        other: "{0} ယူအက်စ် သာမယ်လ်"
+      short:
+        display_name: ယူအက်စ် သာမယ်လ်
+        other: "{0} ယူအက်စ်သာမယ်လ်"
+      narrow:
+        other: "{0}US therms"
+    newton:
+      long:
+        other: "{0} နယူတန်"
+      short:
+        display_name: နယူတန်
+      narrow:
+        display_name: "N"
+    gigahertz:
+      long:
+        other: "{0} ဂီဂါဟတ်ဇ်"
+      short:
+        display_name: ဂီဂါဟတ်ဇ်
+      narrow:
+        display_name: GHz
+    megahertz:
+      long:
+        other: "{0} မီဂါဟတ်ဇ်"
+      short:
+        display_name: မီဂါဟတ်ဇ်
+    kilohertz:
+      long:
+        display_name: ကီလိုဟတ်ဇ်
+        other: "{0} ကီလိုဟတ်ဇ်"
+    hertz:
+      long:
+        display_name: ဟတ်ဇ်
+        other: "{0} ဟတ်ဇ်"
+    em:
+      long:
+        display_name: ပုံနှိပ်စာလုံး အရွယ်အစား
+        other: "{0} ems"
+    pixel:
+      long:
+        other: "{0} ပစ်ဆယ်"
+      short:
+        display_name: ပစ်ဆယ်
+    megapixel:
+      long:
+        other: "{0} မီဂါပစ်ဆယ်"
+      short:
+        display_name: မီဂါပစ်ဆယ်
+    pixel-per-centimeter:
+      long:
+        display_name: တစ်စင်တီမီတာပါ ပစ်ဆယ်
+        other: တစ်စင်တီမီတာလျှင် {0} ပစ်ဆယ်
+    pixel-per-inch:
+      long:
+        display_name: တစ်လက်မပါ ပစ်ဆယ်
+        other: တစ်လက်မလျှင် {0} ပစ်ဆယ်
+    dot-per-centimeter:
+      long:
+        display_name: တစ်စင်တီမီတာပါ အစက်
+        other: တစ်စင်တီမီတာလျှင် {0} စက်
+      short:
+        display_name: dpcm
+        other: "{0} dpcm"
+    dot-per-inch:
+      long:
+        display_name: တစ်လက်မပါ အစက်
+        other: တစ်လက်မလျှင် {0} စက်
+      short:
+        display_name: dpi
+        other: "{0} dpi"
+    dot:
+      long:
+        other: အစက် {0} စက်
+      short:
+        display_name: အစက်
+      narrow:
+        other: "{0}စက်"
+    earth-radius:
+      long:
+        display_name: ကမ္ဘာ့ အချင်းဝက်
+      short:
+        display_name: ကမ္ဘာ့အချင်းဝက်
+        other: "{0} ကမ္ဘာ့အချင်းဝက်"
+      narrow:
+        display_name: R⊕
+        other: "{0}R⊕"
+    kilometer:
+      long:
+        display_name: ကီလိုမီတာ
+        other: "{0} ကီလိုမီတာ"
+        per_unit_pattern: တစ်ကီလိုမီတာလျှင် {0}
+      narrow:
+        other: "{0}km"
+    meter:
+      long:
+        display_name: မီတာ
+        other: "{0} မီတာ"
+        per_unit_pattern: တစ်မီတာလျှင် {0}
+      short:
+        display_name: m
+    decimeter:
+      long:
+        display_name: ဒက်စီမီတာ
+        other: "{0} ဒက်စီမီတာ"
+    centimeter:
+      long:
+        display_name: စင်တီမီတာ
+        other: "{0} စင်တီမီတာ"
+        per_unit_pattern: တစ်စင်တီမီလာလျှင် {0}
+    millimeter:
+      long:
+        display_name: မီလီမီတာ
+        other: "{0} မီလီမီတာ"
+    micrometer:
+      long:
+        display_name: မိုက်ခရိုမီတာ
+        other: "{0} မိုက်ခရိုမီတာ"
+      short:
+        display_name: μ မီတာ
+      narrow:
+        display_name: μm
+    nanometer:
+      long:
+        display_name: နာနိုမီတာ
+        other: "{0} နာနိုမီတာ"
+    picometer:
+      long:
+        display_name: ပီကိုမီတာ
+        other: "{0} ပီကိုမီတာ"
+    mile:
+      long:
+        other: "{0} မိုင်"
+      short:
+        display_name: မိုင်
+      narrow:
+        display_name: mi
+    foot:
+      long:
+        other: "{0} ပေ"
+        per_unit_pattern: တစ်ပေလျှင် {0}
+      short:
+        display_name: ပေ
+      narrow:
+        display_name: ft
+        other: "{0}′"
+    inch:
+      long:
+        per_unit_pattern: တစ်လက်မလျှင် {0}
+      short:
+        display_name: လက်မ
+        other: "{0} လက်မ"
+      narrow:
+        display_name: in
+        other: "{0}″"
+    parsec:
+      long:
+        other: "{0} ပါစက်ခ်"
+      short:
+        display_name: ပါစက်ခ်
+    astronomical-unit:
+      long:
+        display_name: နက္ခတဗေဒ ယူနစ်
+        other: "{0} နက္ခတဗေဒ ယူနစ်"
+    furlong:
+      long:
+        other: "{0} ဖာလုံ"
+      short:
+        display_name: ဖာလုံ
+    fathom:
+      long:
+        other: "{0} ဖန်တမ်"
+      short:
+        display_name: ဖန်တမ်
+    nautical-mile:
+      long:
+        display_name: ရေမိုင်
+        other: "{0} ရေမိုင်"
+    mile-scandinavian:
+      long:
+        display_name: စကင်ဒီနေဗီးယန်း မိုင်
+        other: "{0} စကင်ဒီနေဗီးယန်း မိုင်"
+    point:
+      long:
+        other: "{0} ပွိုင့်"
+      short:
+        display_name: ပွိုင့်
+      narrow:
+        display_name: pts
+    solar-radius:
+      long:
+        other: "{0} ဆိုလာ ရာဒီ"
+      short:
+        display_name: ဆိုလာ ရာဒီ
+      narrow:
+        display_name: R☉
+    lux:
+      long:
+        other: "{0} လတ်ခ်"
+      short:
+        display_name: လတ်ခ်
+    candela:
+      long:
+        display_name: ကန်ဒဲလာ
+        other: "{0} ကန်ဒဲလာ"
+    solar-luminosity:
+      long:
+        display_name: ဆိုလာ လူမီနိုစီတီးစ်
+        other: "{0} ဆိုလာ လူမီနိုစီးတီးစ်"
+      short:
+        display_name: ဆိုလာ လူမီနိုစီးတီးစ်
+      narrow:
+        display_name: L☉
+    tonne:
+      long:
+        other: "{0} မက်ထရစ်တန်"
+      short:
+        display_name: မက်ထရစ်တန်
+    kilogram:
+      long:
+        other: "{0} ကီလိုဂရမ်"
+        per_unit_pattern: တစ်ကီလိုဂရမ်လျှင် {0}
+      short:
+        display_name: ကီလိုဂရမ်
+    gram:
+      long:
+        other: "{0} ဂရမ်"
+        per_unit_pattern: တစ်ဂရမ်လျှင် {0}
+      short:
+        display_name: ဂရမ်
+    milligram:
+      long:
+        other: "{0} မီလီဂရမ်"
+      short:
+        display_name: မီလီဂရမ်
+    microgram:
+      long:
+        display_name: မိုက်ခရို ဂရမ်
+        other: "{0} မိုက်ခရို ဂရမ်"
+    ton:
+      long:
+        other: "{0} တန်"
+      short:
+        display_name: တန်
+    pound:
+      long:
+        other: "{0} ပေါင်"
+        per_unit_pattern: တစ်ပေါင်လျှင် {0}
+      short:
+        display_name: ပေါင်
+    ounce:
+      long:
+        other: "{0} အောင်စ"
+        per_unit_pattern: တစ်အောင်စလျှင် {0}
+      short:
+        display_name: အောင်စ
+    ounce-troy:
+      long:
+        other: "{0} ထရိုအောင်စ"
+      short:
+        display_name: ထရိုအောင်စ
+    carat:
+      long:
+        other: "{0} ကာရက်"
+      short:
+        display_name: ကာရက်
+    dalton:
+      long:
+        other: "{0} ဒဲလ်တန်စ်"
+      short:
+        display_name: ဒဲလ်တန်စ်
+    earth-mass:
+      long:
+        other: "{0} ကမ္ဘာ့ဒြပ်ထု"
+      short:
+        display_name: ကမ္ဘာ့ဒြပ်ထု
+    solar-mass:
+      long:
+        other: "{0} နေရောင်ခြည် ဒြပ်ထု"
+      short:
+        display_name: နေရောင်ခြည် ဒြပ်ထု
+    gigawatt:
+      long:
+        other: "{0} ဂစ်ဂါဝပ်"
+      short:
+        display_name: ဂစ်ဂါဝပ်
+    megawatt:
+      long:
+        other: "{0} မီဂါဝပ်"
+      short:
+        display_name: မီဂါဝပ်
+    kilowatt:
+      long:
+        other: "{0} ကီလိုဝပ်"
+      short:
+        display_name: ကီလိုဝပ်
+    watt:
+      long:
+        other: "{0} ဝပ်"
+      short:
+        display_name: ဝပ်
+    milliwatt:
+      long:
+        other: "{0} မီလီဝပ်"
+      short:
+        display_name: မီလီဝပ်
+    horsepower:
+      long:
+        display_name: မြင်းကောင်ရေအား
+        other: "{0} မြင်းကောင်ရေအား"
+    millimeter-ofhg:
+      long:
+        display_name: ပြဒါးမီလီမီတာ
+        other: "{0} ပြဒါးမီလီမီတာ"
+    pound-force-per-square-inch:
+      long:
+        other: တစ်စတုရန်းလက်မလျှင် {0} ပေါင်
+      short:
+        display_name: ပေါင်/စတုရန်းလက်မ
+      narrow:
+        display_name: psi
+    inch-ofhg:
+      long:
+        display_name: ပြဒါးလက်မ
+        other: "{0} ပြဒါးလက်မ"
+      narrow:
+        display_name: "″ Hg"
+    millibar:
+      long:
+        other: "{0} မီလီဘား"
+      short:
+        display_name: မီလီဘား
+      narrow:
+        display_name: mbar
+    atmosphere:
+      long:
+        display_name: ကမ္ဘာ့လေထု
+        other: "{0} ကမ္ဘာ့လေထု"
+    hectopascal:
+      long:
+        display_name: ဟက်တိုပါစကယ်
+        other: "{0} ဟက်တိုပါစကယ်"
+    kilopascal:
+      long:
+        display_name: ကီလိုပါစကယ်
+        other: "{0} ကီလိုပါစကယ်"
+    megapascal:
+      long:
+        display_name: မီဂါပါစကယ်
+        other: "{0} မီဂါပါစကယ်"
+    kilometer-per-hour:
+      long:
+        other: တစ်နာရီလျှင် {0} ကီလိုမီတာ
+      short:
+        display_name: ကီလိုမီတာ/နာရီ
+    meter-per-second:
+      long:
+        other: တစ်စက္ကန့်လျှင် {0} မီတာ
+      short:
+        display_name: မီတာ/စက္ကန့်
+    mile-per-hour:
+      long:
+        other: တစ်နာရီလျှင် {0} မိုင်
+      short:
+        display_name: မိုင်/နာရီ
+    knot:
+      long:
+        display_name: နော့တီကယ်မိုင်
+        other: "{0} နော့တီကယ်မိုင်"
+    beaufort:
+      long:
+        display_name: ဗျူးဖို့တ်
+        other: ဗျူးဖို့တ် {0}
+    celsius:
+      long:
+        display_name: ဒီဂရီ စင်တီဂရိတ်
+        other: "{0} ဒီဂရီ စင်တီဂရိတ်"
+    fahrenheit:
+      long:
+        display_name: ဒီဂရီ ဖာရင်ဟိုက်
+        other: "{0} ဒီဂရီ ဖာရင်ဟိုက်"
+    kelvin:
+      long:
+        display_name: ကယ်လ်ဗင်
+        other: "{0} ကယ်လ်ဗင်"
+    newton-meter:
+      long:
+        display_name: နယူတန်−မီတာ
+        other: "{0} နယူတန်−မီတာ"
+      short:
+        display_name: N.m
+        other: "{0} N.m"
+    cubic-kilometer:
+      long:
+        other: "{0} ကုဗကီလိုမီတာ"
+      short:
+        display_name: ကုဗကီလိုမီတာ
+    cubic-meter:
+      long:
+        other: "{0} ကုဗမီတာ"
+        per_unit_pattern: တစ်ကုဗမီတာလျှင် {0}
+      short:
+        display_name: ကုဗမီတာ
+    cubic-centimeter:
+      long:
+        other: "{0} ကုဗစင်တီမီတာ"
+        per_unit_pattern: တစ်ကုဗစင်တီမီတာလျှင် {0}
+      short:
+        display_name: ကုဗစင်တီမီတာ
+      narrow:
+        display_name: cm³
+    cubic-mile:
+      long:
+        display_name: ကုဗမိုင်
+        other: "{0} ကုဗမိုင်"
+    cubic-yard:
+      long:
+        other: "{0} ကုဗကိုက်"
+      short:
+        display_name: ကုဗကိုက်
+      narrow:
+        display_name: yd³
+    cubic-foot:
+      long:
+        other: "{0} ကုဗပေ"
+      short:
+        display_name: ကုဗပေ
+      narrow:
+        display_name: ft³
+    cubic-inch:
+      long:
+        other: "{0} ကုဗလက်မ"
+      short:
+        display_name: ကုဗလက်မ
+      narrow:
+        display_name: in³
+    megaliter:
+      long:
+        display_name: မီဂါလီတာ
+        other: "{0} မီဂါလီတာ"
+    hectoliter:
+      long:
+        display_name: ဟက်တိုလီတာ
+        other: "{0} ဟက်တိုမီတာ"
+    liter:
+      long:
+        per_unit_pattern: တစ်လီတာလျှင် {0}
+      short:
+        display_name: လီတာ
+        other: "{0} လီတာ"
+      narrow:
+        other: "{0}L"
+        per_unit_pattern: "{0}/လီတာ"
+    deciliter:
+      long:
+        other: "{0} ဒက်စီလီတာ"
+      short:
+        display_name: ဒက်စီလီတာ
+    centiliter:
+      long:
+        other: "{0} စင်တီလီတာ"
+      short:
+        display_name: စင်တီလီတာ
+    milliliter:
+      long:
+        other: "{0} မီလီလီတာ"
+      short:
+        display_name: မီလီလီတာ
+    pint-metric:
+      long:
+        display_name: မထ္ထရစ် ပိုင့်
+        other: "{0} မထ္ထရစ် ပိုင့်"
+      short:
+        display_name: မထ္ထရစ်ပိုင့်
+    cup-metric:
+      long:
+        display_name: မထ္ထရစ် ခွက်
+        other: "{0} မထ္ထရစ် ခွက်"
+      short:
+        display_name: မထ္ထရစ်ခွက်
+    acre-foot:
+      long:
+        other: "{0} ဧက-ပေ"
+      short:
+        display_name: ဧက-ပေ
+    gallon:
+      long:
+        per_unit_pattern: တစ်ဂါလံလျှင် {0}
+      short:
+        display_name: ဂါလံ
+        other: "{0} ဂါလံ"
+    gallon-imperial:
+      long:
+        per_unit_pattern: တစ် ယူကေ ဂါလံလျှင် {0}
+      short:
+        display_name: ယူကေ ဂါလံ
+        other: "{0} ယူကေ ဂါလံ"
+      narrow:
+        other: ယူကေ ဂါလံ {0} ဂါလံ
+        per_unit_pattern: "{0}/ယူကေ ဂါလံ"
+    quart:
+      long:
+        other: "{0} ကွတ်"
+      short:
+        display_name: ကွတ်
+    pint:
+      long:
+        other: "{0} ပိုင့်"
+      short:
+        display_name: ပိုင့်
+    cup:
+      long:
+        other: "{0} ခွက်"
+      short:
+        display_name: ခွက်
+    fluid-ounce:
+      long:
+        other: "{0} အရည်အောင်စ"
+      short:
+        display_name: အရည်အောင်စ
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        other: "{0} Imp. fl oz"
+      narrow:
+        display_name: ဗြိတိသျှသုံး အရည်အောင်စ
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        other: စားပွဲဇွန်း {0} ဇွန်း
+      short:
+        display_name: စားပွဲဇွန်း
+    teaspoon:
+      long:
+        other: လက်ဖက်ရည်ဇွန်း {0} ဇွန်း
+      short:
+        display_name: လက်ဖက်ရည်ဇွန်း
+    barrel:
+      long:
+        display_name: ဘယ်ရလ်စ်
+        other: "{0} ဘယ်ရလ်စ်"
+      short:
+        display_name: ဘယ်ရလ်
+      narrow:
+        display_name: စည်
+    dessert-spoon-imperial:
+      long:
+        other: ဗြိတိသျှသုံး အချိုပွဲဇွန်း {0} ဇွန်း
+      short:
+        display_name: ဗြိတိသျှသုံး အချိုပွဲဇွန်း
+        other: ဗြိတိသျှသုံးအချိုပွဲဇွန်း {0} ဇွန်း
+    light-speed:
+      long:
+        display_name: အလင်း
+        other: "{0} အလင်း"
+      short:
+        display_name: အလင်း
+        other: "{0} အလင်း"
+      narrow:
+        display_name: အလင်း
+        other: "{0}အလင်း"
+    portion-per-1e9:
+      long:
+        display_name: သန်းတစ်ထောင်ပုံ တစ်ပုံ
+        other: သန်းတစ်ထောင်ပုံ {0} ပုံ
+      short:
+        display_name: သန်းတစ်ထောင်ပုံ တစ်ပုံ
+      narrow:
+        other: "{0}ppb"
+    night:
+      long:
+        display_name: ည
+        other: "{0} ည"
+        per_unit_pattern: "{0}/ည"
+      short:
+        display_name: ည
+        other: "{0} ည"
+        per_unit_pattern: "{0}/ည"
+      narrow:
+        display_name: ည
+        other: "{0} ည"
+        per_unit_pattern: "{0}/ည"
+    dunam:
+      short:
+        display_name: dunams
+    millisecond:
+      short:
+        display_name: မီလီစက္ကန့်
+        other: "{0} မီလီစက္ကန့်"
+      narrow:
+        other: "{0} ms"
+    yard:
+      short:
+        display_name: ကိုက်
+        other: "{0} ကိုက်"
+      narrow:
+        display_name: yd
+        other: "{0} yd"
+    light-year:
+      short:
+        display_name: အလင်းနှစ်
+        other: "{0} အလင်းနှစ်"
+      narrow:
+        display_name: ly
+        other: "{0} ly"
+    lumen:
+      short:
+        display_name: လူမန်
+        other: "{0} လူမန်"
+      narrow:
+        display_name: lm
+        other: "{0}lm"
+    stone:
+      short:
+        display_name: စတုန်
+        other: "{0} စတုန်"
+    grain:
+      short:
+        display_name: ဂရိန်
+        other: "{0} ဂရိန်"
+    bar:
+      short:
+        display_name: ဘား
+        other: "{0} ဘား"
+    pound-force-foot:
+      short:
+        display_name: lbf.ft
+        other: "{0} lbf.ft"
+    bushel:
+      short:
+        display_name: ၈ ဂါလံဝင်ပုံး
+        other: ၈ ဂါလံဝင်ပုံး {0} ပုံး
+    dessert-spoon:
+      short:
+        display_name: အချိုပွဲဇွန်း
+        other: အချိုပွဲဇွန်း {0} ဇွန်း
+    drop:
+      short:
+        display_name: တစ်စက်
+        other: "{0} စက်"
+      narrow:
+        display_name: စက်
+    dram:
+      short:
+        display_name: ဒရမ်
+        other: "{0} ဒရမ်"
+    jigger:
+      short:
+        display_name: ပက်
+        other: "{0} ပက်"
+    pinch:
+      short:
+        display_name: တစ်ဆိတ်
+        other: "{0} ဆိတ်"
+    quart-imperial:
+      short:
+        display_name: ဗြိတိသျှသုံး ကွတ်
+        other: ဗြိတိသျှသုံး {0} ကွတ်
+    kilowatt-hour-per-100-kilometer:
+      narrow:
+        other: "{0}kWh/100km"

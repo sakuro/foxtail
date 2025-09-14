@@ -1,14 +1,24 @@
 ---
 locale: ksf
-generated_at: '2025-09-13T17:38:33Z'
+generated_at: '2025-09-14T06:10:48Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: mɔni mǝ á bǝlɔŋ bǝ kaksa bɛ táatáaŋzǝn
+        one: mɔni mǝ á bǝlɔŋ bǝ kaksa bɛ táatáaŋzǝn
     AOA:
       display_names:
         other: mɔni mǝ á angóla
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: mɔni mǝ á ɔstralí
         one: mɔni mǝ á ɔstralí
-    BWP:
-      display_names:
-        other: mɔni mǝ á botswana
-        one: mɔni mǝ á botswana
-    CAD:
-      display_names:
-        other: mɔni mǝ á kanada
-        one: mɔni mǝ á kanada
-    CNY:
-      display_names:
-        other: mɔni mǝ á cín
-        one: mɔni mǝ á cín
-    EGP:
-      display_names:
-        other: mɔni mǝ á ɛjípt
-        one: mɔni mǝ á ɛjípt
-    EUR:
-      display_names:
-        other: mɔni mǝ á pɛrɛsǝ́
-        one: mɔni mǝ á pɛrɛsǝ́
-    GBP:
-      display_names:
-        other: mɔni mǝ á ingɛrís
-        one: mɔni mǝ á ingɛrís
-    INR:
-      display_names:
-        other: mɔni mǝ á indí
-        one: mɔni mǝ á indí
-    JPY:
-      display_names:
-        other: mɔni mǝ á japɔ́ŋ
-        one: mɔni mǝ á japɔ́ŋ
-    KMF:
-      display_names:
-        other: mɔni mǝ á komɔr
-        one: mɔni mǝ á komɔr
-    LRD:
-      display_names:
-        other: mɔni mǝ á libɛrya
-        one: mɔni mǝ á libɛrya
-    MGA:
-      display_names:
-        other: mɔni mǝ á madagaska
-        one: mɔni mǝ á madagaska
-    MUR:
-      display_names:
-        other: mɔni mǝ á mwarís
-        one: mɔni mǝ á mwarís
-    NAD:
-      display_names:
-        other: mɔni mǝ á namibí
-        one: mɔni mǝ á namibí
-    NGN:
-      display_names:
-        other: mɔni mǝ á nijɛ́rya
-        one: mɔni mǝ á nijɛ́rya
-    RWF:
-      display_names:
-        other: mɔni mǝ á rwanda
-        one: mɔni mǝ á rwanda
-    SHP:
-      display_names:
-        other: mɔni mǝ á sɛntɛ́len
-        one: mɔni mǝ á sɛntɛ́len
-    STN:
-      display_names:
-        other: mɔni mǝ á saotomɛ́ ri priŋsib
-        one: mɔni mǝ á saotomɛ́ ri priŋsib
-    USD:
-      display_names:
-        other: mɔni mǝ á amɛrika
-        one: mɔni mǝ á amɛrika
-    XAF:
-      display_names:
-        other: fráŋ
-        one: fráŋ
-    XOF:
-      display_names:
-        other: mɔni mǝ á afríka aná wɛs
-        one: mɔni mǝ á afríka aná wɛs
-    ZAR:
-      display_names:
-        other: mɔni mǝ á afrik anǝ a sud
-        one: mɔni mǝ á afrik anǝ a sud
-    ZMW:
-      display_names:
-        other: mɔni mǝ á zambí
-        one: mɔni mǝ á zambí
-    AED:
-      display_names:
-        other: mɔni mǝ á bǝlɔŋ bǝ kaksa bɛ táatáaŋzǝn
-        one: mɔni mǝ á bǝlɔŋ bǝ kaksa bɛ táatáaŋzǝn
     BHD:
       display_names:
         other: mɔni mǝ á barǝ́n
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: mɔni mǝ á burundí
         one: mɔni mǝ á burundí
+    BWP:
+      display_names:
+        other: mɔni mǝ á botswana
+        one: mɔni mǝ á botswana
+    CAD:
+      display_names:
+        other: mɔni mǝ á kanada
+        one: mɔni mǝ á kanada
     CDF:
       display_names:
         other: mɔni mǝ á kɔngó
@@ -125,6 +51,10 @@ number_formats:
       display_names:
         other: mɔni mǝ á swís
         one: mɔni mǝ á swís
+    CNY:
+      display_names:
+        other: mɔni mǝ á cín
+        one: mɔni mǝ á cín
     CVE:
       display_names:
         other: mɔni mǝ á kapvɛr
@@ -137,6 +67,10 @@ number_formats:
       display_names:
         other: mɔni mǝ á aljɛrí
         one: mɔni mǝ á aljɛrí
+    EGP:
+      display_names:
+        other: mɔni mǝ á ɛjípt
+        one: mɔni mǝ á ɛjípt
     ERN:
       display_names:
         other: mɔni mǝ á ɛritrɛ́
@@ -145,6 +79,14 @@ number_formats:
       display_names:
         other: mɔni mǝ á ɛtyɔpí
         one: mɔni mǝ á ɛtyɔpí
+    EUR:
+      display_names:
+        other: mɔni mǝ á pɛrɛsǝ́
+        one: mɔni mǝ á pɛrɛsǝ́
+    GBP:
+      display_names:
+        other: mɔni mǝ á ingɛrís
+        one: mɔni mǝ á ingɛrís
     GHC:
       display_names:
         other: mɔni mǝ á gána
@@ -157,10 +99,26 @@ number_formats:
       display_names:
         other: mɔni mǝ á ginɛ́
         one: mɔni mǝ á ginɛ́
+    INR:
+      display_names:
+        other: mɔni mǝ á indí
+        one: mɔni mǝ á indí
+    JPY:
+      display_names:
+        other: mɔni mǝ á japɔ́ŋ
+        one: mɔni mǝ á japɔ́ŋ
     KES:
       display_names:
         other: mɔni mǝ á kɛnya
         one: mɔni mǝ á kɛnya
+    KMF:
+      display_names:
+        other: mɔni mǝ á komɔr
+        one: mɔni mǝ á komɔr
+    LRD:
+      display_names:
+        other: mɔni mǝ á libɛrya
+        one: mɔni mǝ á libɛrya
     LSL:
       display_names:
         other: mɔni mǝ á lǝsóto
@@ -173,6 +131,10 @@ number_formats:
       display_names:
         other: mɔni mǝ á marɔk
         one: mɔni mǝ á marɔk
+    MGA:
+      display_names:
+        other: mɔni mǝ á madagaska
+        one: mɔni mǝ á madagaska
     MRO:
       display_names:
         other: mɔni mǝ á mwaritaní (1973–2017)
@@ -181,6 +143,10 @@ number_formats:
       display_names:
         other: mɔni mǝ á mwaritaní
         one: mɔni mǝ á mwaritaní
+    MUR:
+      display_names:
+        other: mɔni mǝ á mwarís
+        one: mɔni mǝ á mwarís
     MWK:
       display_names:
         other: mɔni mǝ á malawi
@@ -189,6 +155,18 @@ number_formats:
       display_names:
         other: mɔni mǝ á mosambík
         one: mɔni mǝ á mosambík
+    NAD:
+      display_names:
+        other: mɔni mǝ á namibí
+        one: mɔni mǝ á namibí
+    NGN:
+      display_names:
+        other: mɔni mǝ á nijɛ́rya
+        one: mɔni mǝ á nijɛ́rya
+    RWF:
+      display_names:
+        other: mɔni mǝ á rwanda
+        one: mɔni mǝ á rwanda
     SAR:
       display_names:
         other: mɔni mǝ á arabí saodí
@@ -201,6 +179,10 @@ number_formats:
       display_names:
         other: mɔni mǝ á sudan
         one: mɔni mǝ á sudan
+    SHP:
+      display_names:
+        other: mɔni mǝ á sɛntɛ́len
+        one: mɔni mǝ á sɛntɛ́len
     SLE:
       display_names:
         other: mɔni mǝ á syɛraleon
@@ -217,6 +199,10 @@ number_formats:
       display_names:
         other: mɔni mǝ á saotomɛ́ ri priŋsib (1977–2017)
         one: mɔni mǝ á saotomɛ́ ri priŋsib (1977–2017)
+    STN:
+      display_names:
+        other: mɔni mǝ á saotomɛ́ ri priŋsib
+        one: mɔni mǝ á saotomɛ́ ri priŋsib
     SZL:
       display_names:
         other: mɔni mǝ á swazilan
@@ -233,10 +219,30 @@ number_formats:
       display_names:
         other: mɔni mǝ á uganda
         one: mɔni mǝ á uganda
+    USD:
+      display_names:
+        other: mɔni mǝ á amɛrika
+        one: mɔni mǝ á amɛrika
+    XAF:
+      display_names:
+        other: fráŋ
+        one: fráŋ
+    XOF:
+      display_names:
+        other: mɔni mǝ á afríka aná wɛs
+        one: mɔni mǝ á afríka aná wɛs
+    ZAR:
+      display_names:
+        other: mɔni mǝ á afrik anǝ a sud
+        one: mɔni mǝ á afrik anǝ a sud
     ZMK:
       display_names:
         other: mɔni mǝ á zambí (1968–2012)
         one: mɔni mǝ á zambí (1968–2012)
+    ZMW:
+      display_names:
+        other: mɔni mǝ á zambí
+        one: mɔni mǝ á zambí
     ZWD:
       display_names:
         other: mɔni mǝ á zimbabwɛ́

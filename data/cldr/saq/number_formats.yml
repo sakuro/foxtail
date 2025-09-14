@@ -1,12 +1,22 @@
 ---
 locale: saq
-generated_at: '2025-09-13T17:40:16Z'
+generated_at: '2025-09-14T06:11:56Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Njilingi eel Falme za Kiarabu
+        one: Njilingi eel Falme za Kiarabu
     AOA:
       display_names:
         other: Njilingi eel Angola
@@ -15,98 +25,6 @@ number_formats:
       display_names:
         other: Njilingi eel Australia
         one: Njilingi eel Australia
-    BWP:
-      display_names:
-        other: Njilingi eel Botswana
-        one: Njilingi eel Botswana
-    CAD:
-      display_names:
-        other: Njilingi eel Kanada
-        one: Njilingi eel Kanada
-    CNY:
-      display_names:
-        other: Njilingi eel China
-        one: Njilingi eel China
-    EGP:
-      display_names:
-        other: Njilingi eel Misri
-        one: Njilingi eel Misri
-    EUR:
-      display_names:
-        other: Yuro
-        one: Yuro
-    GBP:
-      display_names:
-        other: Njilingi eel Uingereza
-        one: Njilingi eel Uingereza
-    INR:
-      display_names:
-        other: Njilingi eel India
-        one: Njilingi eel India
-    JPY:
-      display_names:
-        other: Njilingi eel Kijapani
-        one: Njilingi eel Kijapani
-    KMF:
-      display_names:
-        other: Njilingi eel Komoro
-        one: Njilingi eel Komoro
-    LRD:
-      display_names:
-        other: Dola eel Liberia
-        one: Dola eel Liberia
-    MGA:
-      display_names:
-        other: Njilingi eel Bukini
-        one: Njilingi eel Bukini
-    MUR:
-      display_names:
-        other: Njilingi eel Morisi
-        one: Njilingi eel Morisi
-    NAD:
-      display_names:
-        other: Njilingi eel Namibia
-        one: Njilingi eel Namibia
-    NGN:
-      display_names:
-        other: Njilingi eel Nijeria
-        one: Njilingi eel Nijeria
-    RWF:
-      display_names:
-        other: Njilingi eel Rwanda
-        one: Njilingi eel Rwanda
-    SHP:
-      display_names:
-        other: Paunt eel Santahelena
-        one: Paunt eel Santahelena
-    STN:
-      display_names:
-        other: Njilingi eel Sao Tome na Principe
-        one: Njilingi eel Sao Tome na Principe
-    USD:
-      display_names:
-        other: Dola eel Marekani
-        one: Dola eel Marekani
-    XAF:
-      display_names:
-        other: Njilingi eel CFA BEAC
-        one: Njilingi eel CFA BEAC
-    XOF:
-      display_names:
-        other: Njilingi eel CFA BCEAO
-        one: Njilingi eel CFA BCEAO
-    ZAR:
-      display_names:
-        other: Njilingi eel Afrika Kusini
-        one: Njilingi eel Afrika Kusini
-    ZMW:
-      display_names:
-        other: Njilingi eel Zambia
-        one: Njilingi eel Zambia
-    AED:
-      display_names:
-        other: Njilingi eel Falme za Kiarabu
-        one: Njilingi eel Falme za Kiarabu
     BHD:
       display_names:
         other: Njilingi eel Bahareni
@@ -115,6 +33,14 @@ number_formats:
       display_names:
         other: Njilingi eel Burundi
         one: Njilingi eel Burundi
+    BWP:
+      display_names:
+        other: Njilingi eel Botswana
+        one: Njilingi eel Botswana
+    CAD:
+      display_names:
+        other: Njilingi eel Kanada
+        one: Njilingi eel Kanada
     CDF:
       display_names:
         other: Njilingi eel Kongo
@@ -123,6 +49,10 @@ number_formats:
       display_names:
         other: Njilingi eel Uswisi
         one: Njilingi eel Uswisi
+    CNY:
+      display_names:
+        other: Njilingi eel China
+        one: Njilingi eel China
     CVE:
       display_names:
         other: Njilingi eel Kepuvede
@@ -135,6 +65,10 @@ number_formats:
       display_names:
         other: Njilingi eel Aljeria
         one: Njilingi eel Aljeria
+    EGP:
+      display_names:
+        other: Njilingi eel Misri
+        one: Njilingi eel Misri
     ERN:
       display_names:
         other: Njilingi eel Eritrea
@@ -143,6 +77,14 @@ number_formats:
       display_names:
         other: Njilingi eel Uhabeshi
         one: Njilingi eel Uhabeshi
+    EUR:
+      display_names:
+        other: Yuro
+        one: Yuro
+    GBP:
+      display_names:
+        other: Njilingi eel Uingereza
+        one: Njilingi eel Uingereza
     GHC:
       display_names:
         other: Njilingi eel Ghana
@@ -155,11 +97,27 @@ number_formats:
       display_names:
         other: Njilingi eel Gine
         one: Njilingi eel Gine
+    INR:
+      display_names:
+        other: Njilingi eel India
+        one: Njilingi eel India
+    JPY:
+      display_names:
+        other: Njilingi eel Kijapani
+        one: Njilingi eel Kijapani
     KES:
       symbol: Ksh
       display_names:
         other: Njilingi eel Kenya
         one: Njilingi eel Kenya
+    KMF:
+      display_names:
+        other: Njilingi eel Komoro
+        one: Njilingi eel Komoro
+    LRD:
+      display_names:
+        other: Dola eel Liberia
+        one: Dola eel Liberia
     LSL:
       display_names:
         other: Njilingi eel Lesoto
@@ -172,6 +130,10 @@ number_formats:
       display_names:
         other: Njilingi eel Moroko
         one: Njilingi eel Moroko
+    MGA:
+      display_names:
+        other: Njilingi eel Bukini
+        one: Njilingi eel Bukini
     MRO:
       display_names:
         other: Njilingi eel Moritania (1973–2017)
@@ -180,6 +142,10 @@ number_formats:
       display_names:
         other: Njilingi eel Moritania
         one: Njilingi eel Moritania
+    MUR:
+      display_names:
+        other: Njilingi eel Morisi
+        one: Njilingi eel Morisi
     MWK:
       display_names:
         other: Njilingi eel Malawi
@@ -188,6 +154,18 @@ number_formats:
       display_names:
         other: Njilingi eel Msumbiji
         one: Njilingi eel Msumbiji
+    NAD:
+      display_names:
+        other: Njilingi eel Namibia
+        one: Njilingi eel Namibia
+    NGN:
+      display_names:
+        other: Njilingi eel Nijeria
+        one: Njilingi eel Nijeria
+    RWF:
+      display_names:
+        other: Njilingi eel Rwanda
+        one: Njilingi eel Rwanda
     SAR:
       display_names:
         other: Njilingi eel Saudia
@@ -200,6 +178,10 @@ number_formats:
       display_names:
         other: Paunt eel Sudani
         one: Paunt eel Sudani
+    SHP:
+      display_names:
+        other: Paunt eel Santahelena
+        one: Paunt eel Santahelena
     SLE:
       display_names:
         other: Leoni
@@ -216,6 +198,10 @@ number_formats:
       display_names:
         other: Njilingi eel Sao Tome na Principe (1977–2017)
         one: Njilingi eel Sao Tome na Principe (1977–2017)
+    STN:
+      display_names:
+        other: Njilingi eel Sao Tome na Principe
+        one: Njilingi eel Sao Tome na Principe
     SZL:
       display_names:
         other: Lilangeni
@@ -232,10 +218,30 @@ number_formats:
       display_names:
         other: Njilingi eel Uganda
         one: Njilingi eel Uganda
+    USD:
+      display_names:
+        other: Dola eel Marekani
+        one: Dola eel Marekani
+    XAF:
+      display_names:
+        other: Njilingi eel CFA BEAC
+        one: Njilingi eel CFA BEAC
+    XOF:
+      display_names:
+        other: Njilingi eel CFA BCEAO
+        one: Njilingi eel CFA BCEAO
+    ZAR:
+      display_names:
+        other: Njilingi eel Afrika Kusini
+        one: Njilingi eel Afrika Kusini
     ZMK:
       display_names:
         other: Njilingi eel Zambia (1968–2012)
         one: Njilingi eel Zambia (1968–2012)
+    ZMW:
+      display_names:
+        other: Njilingi eel Zambia
+        one: Njilingi eel Zambia
     ZWD:
       display_names:
         other: Dola eel Zimbabwe

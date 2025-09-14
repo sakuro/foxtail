@@ -1,16 +1,24 @@
 ---
 locale: bas
-generated_at: '2025-09-13T17:34:47Z'
+generated_at: '2025-09-14T06:08:29Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Dirhàm èmìrâ
+        one: Dirhàm èmìrâ
     AOA:
       display_names:
         other: Kwànza àŋgolà
@@ -19,98 +27,6 @@ number_formats:
       display_names:
         other: Dɔ̀lâr òstralìà
         one: Dɔ̀lâr òstralìà
-    BWP:
-      display_names:
-        other: Pùla Bòtswanà
-        one: Pùla Bòtswanà
-    CAD:
-      display_names:
-        other: Dɔ̀lâr kànadà
-        one: Dɔ̀lâr kànadà
-    CNY:
-      display_names:
-        other: Yùan kinà
-        one: Yùan kinà
-    EGP:
-      display_names:
-        other: Paùnd ègîptò
-        one: Paùnd ègîptò
-    EUR:
-      display_names:
-        other: Èrô
-        one: Èrô
-    GBP:
-      display_names:
-        other: Stɛrlìŋ ŋgìsì
-        one: Stɛrlìŋ ŋgìsì
-    INR:
-      display_names:
-        other: Rùpi īndìà
-        one: Rùpi īndìà
-    JPY:
-      display_names:
-        other: Yɛ̂n yàpân
-        one: Yɛ̂n yàpân
-    KMF:
-      display_names:
-        other: Frǎŋ kòmorà
-        one: Frǎŋ kòmorà
-    LRD:
-      display_names:
-        other: Dɔ̀lâr lìberìà
-        one: Dɔ̀lâr lìberìà
-    MGA:
-      display_names:
-        other: Frǎŋ màlàgasì
-        one: Frǎŋ màlàgasì
-    MUR:
-      display_names:
-        other: Rupìɛ̀ mòrîs
-        one: Rupìɛ̀ mòrîs
-    NAD:
-      display_names:
-        other: Dɔ̀lâr nàmibìà
-        one: Dɔ̀lâr nàmibìà
-    NGN:
-      display_names:
-        other: Nayrà nìgerìà
-        one: Nayrà nìgerìà
-    RWF:
-      display_names:
-        other: Frǎŋ Rùandà
-        one: Frǎŋ Rùandà
-    SHP:
-      display_names:
-        other: Paùnd hèlenà
-        one: Paùnd hèlenà
-    STN:
-      display_names:
-        other: Dobrà sàotòme
-        one: Dobrà sàotòme
-    USD:
-      display_names:
-        other: Dɔla àmerkà
-        one: Dɔla àmerkà
-    XAF:
-      display_names:
-        other: Frǎŋ CFA (BEAC)
-        one: Frǎŋ CFA (BEAC)
-    XOF:
-      display_names:
-        other: Frǎŋ CFA (BCEAO)
-        one: Frǎŋ CFA (BCEAO)
-    ZAR:
-      display_names:
-        other: Rân àfrǐkàsɔ̀
-        one: Rân àfrǐkàsɔ̀
-    ZMW:
-      display_names:
-        other: Kwàca sàmbià
-        one: Kwàca sàmbià
-    AED:
-      display_names:
-        other: Dirhàm èmìrâ
-        one: Dirhàm èmìrâ
     BHD:
       display_names:
         other: Dinâr Bàraìn
@@ -119,6 +35,14 @@ number_formats:
       display_names:
         other: Frǎŋ bùrundì
         one: Frǎŋ bùrundì
+    BWP:
+      display_names:
+        other: Pùla Bòtswanà
+        one: Pùla Bòtswanà
+    CAD:
+      display_names:
+        other: Dɔ̀lâr kànadà
+        one: Dɔ̀lâr kànadà
     CDF:
       display_names:
         other: Frǎŋ kòŋgo
@@ -127,6 +51,10 @@ number_formats:
       display_names:
         other: Frǎŋ sùwîs
         one: Frǎŋ sùwîs
+    CNY:
+      display_names:
+        other: Yùan kinà
+        one: Yùan kinà
     CVE:
       display_names:
         other: Èskudò kabwe᷆r
@@ -139,6 +67,10 @@ number_formats:
       display_names:
         other: Dìnâr àlgerìà
         one: Dìnâr àlgerìà
+    EGP:
+      display_names:
+        other: Paùnd ègîptò
+        one: Paùnd ègîptò
     ERN:
       display_names:
         other: Nafkà èrìtrěà
@@ -147,6 +79,14 @@ number_formats:
       display_names:
         other: Bîr ètìopìà
         one: Bîr ètìopìà
+    EUR:
+      display_names:
+        other: Èrô
+        one: Èrô
+    GBP:
+      display_names:
+        other: Stɛrlìŋ ŋgìsì
+        one: Stɛrlìŋ ŋgìsì
     GHC:
       display_names:
         other: Sèdi gānà
@@ -159,10 +99,26 @@ number_formats:
       display_names:
         other: Frǎŋ gìnê
         one: Frǎŋ gìnê
+    INR:
+      display_names:
+        other: Rùpi īndìà
+        one: Rùpi īndìà
+    JPY:
+      display_names:
+        other: Yɛ̂n yàpân
+        one: Yɛ̂n yàpân
     KES:
       display_names:
         other: Silîŋ kenìà
         one: Silîŋ kenìà
+    KMF:
+      display_names:
+        other: Frǎŋ kòmorà
+        one: Frǎŋ kòmorà
+    LRD:
+      display_names:
+        other: Dɔ̀lâr lìberìà
+        one: Dɔ̀lâr lìberìà
     LSL:
       display_names:
         other: Lotì lèsòtò
@@ -175,6 +131,10 @@ number_formats:
       display_names:
         other: Dìrham màrôk
         one: Dìrham màrôk
+    MGA:
+      display_names:
+        other: Frǎŋ màlàgasì
+        one: Frǎŋ màlàgasì
     MRO:
       display_names:
         other: Ùgwiya mòrìtanìa (1973–2017)
@@ -183,6 +143,10 @@ number_formats:
       display_names:
         other: Ùgwiya mòrìtanìa
         one: Ùgwiya mòrìtanìa
+    MUR:
+      display_names:
+        other: Rupìɛ̀ mòrîs
+        one: Rupìɛ̀ mòrîs
     MWK:
       display_names:
         other: Kwaca màlawì
@@ -191,6 +155,18 @@ number_formats:
       display_names:
         other: Mètìkal mòsàmbîk
         one: Mètìkal mòsàmbîk
+    NAD:
+      display_names:
+        other: Dɔ̀lâr nàmibìà
+        one: Dɔ̀lâr nàmibìà
+    NGN:
+      display_names:
+        other: Nayrà nìgerìà
+        one: Nayrà nìgerìà
+    RWF:
+      display_names:
+        other: Frǎŋ Rùandà
+        one: Frǎŋ Rùandà
     SAR:
       display_names:
         other: Rìal sàudì
@@ -207,6 +183,10 @@ number_formats:
       display_names:
         other: Paùnd sùdân
         one: Paùnd sùdân
+    SHP:
+      display_names:
+        other: Paùnd hèlenà
+        one: Paùnd hèlenà
     SLE:
       display_names:
         other: Lèonɛ̀
@@ -223,6 +203,10 @@ number_formats:
       display_names:
         other: Dobrà sàotòme (1977–2017)
         one: Dobrà sàotòme (1977–2017)
+    STN:
+      display_names:
+        other: Dobrà sàotòme
+        one: Dobrà sàotòme
     SZL:
       display_names:
         other: Lìlàŋgeni swàzì
@@ -239,10 +223,30 @@ number_formats:
       display_names:
         other: Silîŋ ùgàndà
         one: Silîŋ ùgàndà
+    USD:
+      display_names:
+        other: Dɔla àmerkà
+        one: Dɔla àmerkà
+    XAF:
+      display_names:
+        other: Frǎŋ CFA (BEAC)
+        one: Frǎŋ CFA (BEAC)
+    XOF:
+      display_names:
+        other: Frǎŋ CFA (BCEAO)
+        one: Frǎŋ CFA (BCEAO)
+    ZAR:
+      display_names:
+        other: Rân àfrǐkàsɔ̀
+        one: Rân àfrǐkàsɔ̀
     ZMK:
       display_names:
         other: Kwàca sàmbià (1968–2012)
         one: Kwàca sàmbià (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwàca sàmbià
+        one: Kwàca sàmbià
     ZWD:
       display_names:
         other: Dɔ̀lâr sìmbàbwê

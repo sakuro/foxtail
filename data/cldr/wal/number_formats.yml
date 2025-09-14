@@ -1,12 +1,18 @@
 ---
 locale: wal
-generated_at: '2025-09-13T17:41:37Z'
+generated_at: '2025-09-14T06:12:51Z'
 cldr_version: '46'
 number_formats:
   symbols:
     group: "’"
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: 
   currencies:
     BRL:
       display_names:
@@ -16,6 +22,11 @@ number_formats:
       display_names:
         other: የቻይና ዩአን ረንሚንቢ
         one: የቻይና ዩአን ረንሚንቢ
+    ETB:
+      symbol: Br
+      display_names:
+        other: የኢትዮጵያ ብር
+        one: የኢትዮጵያ ብር
     EUR:
       display_names:
         other: አውሮ
@@ -40,8 +51,3 @@ number_formats:
       display_names:
         other: የአሜሪካን ዶላር
         one: የአሜሪካን ዶላር
-    ETB:
-      symbol: Br
-      display_names:
-        other: የኢትዮጵያ ብር
-        one: የኢትዮጵያ ብር

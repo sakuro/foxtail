@@ -1,20 +1,76 @@
 ---
 locale: ak
-generated_at: '2025-09-13T17:34:23Z'
+generated_at: '2025-09-14T06:08:13Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    long:
+      '1000':
+        one: apem 0
+        other: apem 0
+      '10000':
+        one: mpem 00
+        other: mpem 00
+      '100000':
+        one: mpem 000
+        other: mpem 000
+      '1000000':
+        one: ɔpepem 0
+        other: ɔpepem 0
+      '10000000':
+        one: ɔpepem 00
+        other: ɔpepem 00
+      '100000000':
+        one: ɔpepem 000
+        other: ɔpepem 000
+      '1000000000':
+        one: ɔpepepem 0
+        other: ɔpepepem 0
+      '10000000000':
+        one: ɔpepepem 00
+        other: ɔpepepem 00
+      '100000000000':
+        one: ɔpepepem 000
+        other: ɔpepepem 000
+      '1000000000000':
+        one: ɔpepepepem 0
+        other: ɔpepepepem 0
+      '10000000000000':
+        one: ɔpepepepem 00
+        other: ɔpepepepem 00
+      '100000000000000':
+        one: ɔpepepepem 000
+        other: ɔpepepepem 000
   currencies:
+    AED:
+      display_names:
+        other: Ɛmirete Arab Nkabɔmu Deram
+        one: Ɛmirete Arab Nkabɔmu Deram
     AFN:
       display_names:
         other: Afghanfoɔ Afghani
         one: Afghanfoɔ Afghani
+    ALL:
+      display_names:
+        other: Albania lekë
+        one: Albania lek
     AMD:
       display_names:
         other: Amɛnia dram
         one: Amɛnia dram
+    ANG:
+      display_names:
+        other: Nɛdɛlande Antɛlia guuda
+        one: Nɛdɛlande Antɛlia guuda
     AOA:
       display_names:
         other: Angola Kwanza
@@ -27,6 +83,10 @@ number_formats:
       display_names:
         other: Ɔstrelia Dɔla
         one: Ɔstrelia Dɔla
+    AWG:
+      display_names:
+        other: Aruba flɔrin
+        one: Aruba flɔrin
     AZN:
       display_names:
         other: Azɛbagyan manat
@@ -43,6 +103,18 @@ number_formats:
       display_names:
         other: Bangladehye taka
         one: Bangladehye taka
+    BGN:
+      display_names:
+        other: Bɔɔgaria lɛva
+        one: Bɔɔgaria lɛv
+    BHD:
+      display_names:
+        other: Baren Dina
+        one: Baren Dina
+    BIF:
+      display_names:
+        other: Burundi Frank
+        one: Burundi Frank
     BMD:
       display_names:
         other: Bɛɛmuda dɔla
@@ -63,10 +135,18 @@ number_formats:
       display_names:
         other: Bahama dɔla
         one: Bahama dɔla
+    BTN:
+      display_names:
+        other: Butanfoɔ ngutrum
+        one: Butanfoɔ ngutrum
     BWP:
       display_names:
         other: Botswana Pula
         one: Botswana Pula
+    BYN:
+      display_names:
+        other: Bɛlaruhyia ruble
+        one: Bɛlaruhyia ruble
     BZD:
       display_names:
         other: Belize Dɔla
@@ -75,10 +155,22 @@ number_formats:
       display_names:
         other: Kanada Dɔla
         one: Kanada Dɔla
+    CDF:
+      display_names:
+        other: Kongo Frank
+        one: Kongo Frank
+    CHF:
+      display_names:
+        other: Swiss francs
+        one: Swiss franc
     CLP:
       display_names:
         other: Kyili Peso
         one: Kyili Peso
+    CNH:
+      display_names:
+        other: kyaena yuan (offshore)
+        one: kyaena yuan (offshore)
     CNY:
       display_names:
         other: kyaena yuan
@@ -99,10 +191,18 @@ number_formats:
       display_names:
         other: Kuba peso
         one: Kuba peso
+    CVE:
+      display_names:
+        other: Ɛskudo
+        one: Ɛskudo
     CZK:
       display_names:
         other: Kyɛk koruna
         one: Kyɛk koruna
+    DJF:
+      display_names:
+        other: Gyebuti Frank
+        one: Gyebuti Frank
     DKK:
       display_names:
         other: Danefoɔ krone
@@ -111,10 +211,22 @@ number_formats:
       display_names:
         other: Dɔmenika peso
         one: Dɔmenika peso
+    DZD:
+      display_names:
+        other: Ɔlgyeria Dina
+        one: Ɔlgyeria Dina
     EGP:
       display_names:
         other: Egypt Pɔn
         one: Egypt Pɔn
+    ERN:
+      display_names:
+        other: Ɛretereya Nakfa
+        one: Ɛretereya Nakfa
+    ETB:
+      display_names:
+        other: Itiopia Bir
+        one: Itiopia Bir
     EUR:
       display_names:
         other: Iro
@@ -135,6 +247,10 @@ number_formats:
       display_names:
         other: Gyɔɔgyia lari
         one: Gyɔɔgyia lari
+    GHC:
+      display_names:
+        other: Ghana Sidi (1979–2007)
+        one: Ghana Sidi (1979–2007)
     GHS:
       display_names:
         other: Ghana Sidi
@@ -143,10 +259,18 @@ number_formats:
       display_names:
         other: Gyebrotaa pɔn
         one: Gyebrotaa pɔn
+    GMD:
+      display_names:
+        other: Gambia Dalasi
+        one: Gambia Dalasi
     GNF:
       display_names:
         other: Gini franke
         one: Gini franke
+    GNS:
+      display_names:
+        other: Gini Frank
+        one: Gini Frank
     GTQ:
       display_names:
         other: Guatemala kwɛtsaa
@@ -167,6 +291,10 @@ number_formats:
       display_names:
         other: Krohyia kunas
         one: Krohyia kuna
+    HTG:
+      display_names:
+        other: Haiti gɔɔde
+        one: Haiti gɔɔde
     HUF:
       display_names:
         other: Hangari fɔrint
@@ -183,6 +311,15 @@ number_formats:
       display_names:
         other: India Rupi
         one: India Rupi
+    IQD:
+      symbol: Irak dinaa
+      display_names:
+        other: Irak dinaa
+        one: Irak dinaa
+    IRR:
+      display_names:
+        other: Yiranfoɔ rial
+        one: Yiranfoɔ rial
     ISK:
       display_names:
         other: Icelandfoɔ krónur
@@ -191,10 +328,18 @@ number_formats:
       display_names:
         other: Gyameka dɔla
         one: Gyameka dɔla
+    JOD:
+      display_names:
+        other: Gyɔɔdan dinaa
+        one: Gyɔɔdan dinaa
     JPY:
       display_names:
         other: Gyapan Yɛn
         one: Gyapan Yɛn
+    KES:
+      display_names:
+        other: Kenya Hyelen
+        one: Kenya Hyelen
     KGS:
       display_names:
         other: Kagyɛstan som
@@ -215,6 +360,10 @@ number_formats:
       display_names:
         other: Korea Anaafoɔ won
         one: Korea Anaafoɔ won
+    KWD:
+      display_names:
+        other: Kuwait dinaa
+        one: Kuwait dinaa
     KYD:
       display_names:
         other: Kayemanfo Aelande dɔla
@@ -239,10 +388,30 @@ number_formats:
       display_names:
         other: Laeberia Dɔla
         one: Laeberia Dɔla
+    LSL:
+      display_names:
+        other: Lesoto Loti
+        one: Lesoto Loti
+    LYD:
+      display_names:
+        other: Libya Dina
+        one: Libya Dina
+    MAD:
+      display_names:
+        other: Moroko Diram
+        one: Moroko Diram
+    MDL:
+      display_names:
+        other: Moldova lei
+        one: Moldova leu
     MGA:
       display_names:
         other: Madagasi Frank
         one: Madagasi Frank
+    MKD:
+      display_names:
+        other: Masidonia denari
+        one: Masidonia denaa
     MMK:
       display_names:
         other: Mayamaa kyat
@@ -251,10 +420,30 @@ number_formats:
       display_names:
         other: Mongoliafoɔ tugrike
         one: Mongoliafoɔ tugrike
+    MOP:
+      display_names:
+        other: Makaw pataka
+        one: Makaw pataka
+    MRO:
+      display_names:
+        other: Mɔretenia Ouguiya (1973–2017)
+        one: Mɔretenia Ouguiya (1973–2017)
+    MRU:
+      display_names:
+        other: Mɔretenia Ouguiya
+        one: Mɔretenia Ouguiya
     MUR:
       display_names:
         other: Mɔrehyeɔs Rupi
         one: Mɔrehyeɔs Rupi
+    MVR:
+      display_names:
+        other: Maldivefoɔ rufiyaa
+        one: Maldivefoɔ rufiyaa
+    MWK:
+      display_names:
+        other: Malawi Kwakya
+        one: Malawi Kwakya
     MXN:
       display_names:
         other: Mɛksiko pɛso
@@ -263,6 +452,14 @@ number_formats:
       display_names:
         other: Malaahyia ringgit
         one: Malaahyia ringgit
+    MZM:
+      display_names:
+        other: Mozambik Metical
+        one: Mozambik Metical
+    MZN:
+      display_names:
+        other: Mozambik mɛtikaa
+        one: Mozambik mɛtikaa
     NAD:
       display_names:
         other: Namibia Dɔla
@@ -287,6 +484,22 @@ number_formats:
       display_names:
         other: New Zealand Dɔla
         one: New Zealand Dɔla
+    OMR:
+      display_names:
+        other: Oman rial
+        one: Oman rial
+    PAB:
+      display_names:
+        other: Panama baaboa
+        one: Panama baaboa
+    PEN:
+      display_names:
+        other: Pɛruvia sol
+        one: Pɛruvia sol
+    PGK:
+      display_names:
+        other: Papua New Gini kina
+        one: Papua New Gini kina
     PHP:
       display_names:
         other: Filipine peso
@@ -303,10 +516,18 @@ number_formats:
       display_names:
         other: Paragayana guarani
         one: Paragayana guarani
+    QAR:
+      display_names:
+        other: Kata riyaa
+        one: Kata riyaa
     RON:
       display_names:
         other: Romania lei
         one: Romania leu
+    RSD:
+      display_names:
+        other: Sɛɛbia dinaa
+        one: Sɛɛbia dinaa
     RUB:
       display_names:
         other: Rɔhyia rubuu
@@ -315,10 +536,26 @@ number_formats:
       display_names:
         other: Rewanda Frank
         one: Rewanda Frank
+    SAR:
+      display_names:
+        other: Saudi Riyal
+        one: Saudi Riyal
     SBD:
       display_names:
         other: Solomon Aeland Dɔla
         one: Solomon Aeland Dɔla
+    SCR:
+      display_names:
+        other: Seyhyɛls Rupi
+        one: Seyhyɛls Rupi
+    SDG:
+      display_names:
+        other: Sudan Dina
+        one: Sudan Dina
+    SDP:
+      display_names:
+        other: Sudan Pɔn
+        one: Sudan Pɔn
     SEK:
       display_names:
         other: Sweden kronor
@@ -331,6 +568,18 @@ number_formats:
       display_names:
         other: St Helena Pɔn
         one: St Helena Pɔn
+    SLE:
+      display_names:
+        other: Leone
+        one: Leone
+    SLL:
+      display_names:
+        other: Leone (1964—2022)
+        one: Leone (1964—2022)
+    SOS:
+      display_names:
+        other: Somailia Hyelen
+        one: Somailia Hyelen
     SRD:
       display_names:
         other: Suriname dɔla
@@ -339,6 +588,10 @@ number_formats:
       display_names:
         other: Sudan Anaafoɔ Pɔn
         one: Sudan Anaafoɔ Pɔn
+    STD:
+      display_names:
+        other: Sao Tome ne Principe Dobra (1977–2017)
+        one: Sao Tome ne Principe Dobra (1977–2017)
     STN:
       display_names:
         other: Sao Tome ne Principe Dobra
@@ -347,10 +600,26 @@ number_formats:
       display_names:
         other: Siria pɔn
         one: Siria pɔn
+    SZL:
+      display_names:
+        other: Lilangeni
+        one: Lilangeni
     THB:
       display_names:
         other: Tai bat
         one: Tai bat
+    TJS:
+      display_names:
+        other: Tagyikistan somoni
+        one: Tagyikistan somoni
+    TMT:
+      display_names:
+        other: Tɛkmɛstan manat
+        one: Tɛkmɛstan manat
+    TND:
+      display_names:
+        other: Tunisia Dina
+        one: Tunisia Dina
     TOP:
       display_names:
         other: Tonga paʻanga
@@ -367,10 +636,18 @@ number_formats:
       display_names:
         other: Taewanfoɔ dɔla foforɔ
         one: Taelanfoɔ dɔla foforɔ
+    TZS:
+      display_names:
+        other: Tanzania Hyelen
+        one: Tanzania Hyelen
     UAH:
       display_names:
         other: Yukren hryvnia
         one: Yukren hryvnia
+    UGX:
+      display_names:
+        other: Uganda Hyelen
+        one: Uganda Hyelen
     USD:
       display_names:
         other: Amɛrika Dɔla
@@ -379,10 +656,26 @@ number_formats:
       display_names:
         other: Yurugueɛ peso
         one: Yurugueɛ peso
+    UZS:
+      display_names:
+        other: Yusbɛkistan som
+        one: Yusbɛkistan som
+    VES:
+      display_names:
+        other: Venezuelan bolívars
+        one: Venezuelan bolívar
     VND:
       display_names:
         other: Viɛtnamfoɔ dɔn
         one: Viɛtnamfoɔ dɔn
+    VUV:
+      display_names:
+        other: Vanuatu vatu
+        one: Vanuatu vatu
+    WST:
+      display_names:
+        other: Samoa tala
+        one: Samoa tala
     XAF:
       display_names:
         other: Afrika Mfinimfini Sefa
@@ -404,272 +697,868 @@ number_formats:
       display_names:
         other: "(sika a yɛnnim)"
         one: "(sika a yɛnnim)"
-    ZAR:
-      display_names:
-        other: Afrika Anaafo Rand
-        one: Afrika Anaafo Rand
-    ZMW:
-      display_names:
-        other: Zambia Kwakya
-        one: Zambia Kwakya
-    AED:
-      display_names:
-        other: Ɛmirete Arab Nkabɔmu Deram
-        one: Ɛmirete Arab Nkabɔmu Deram
-    ALL:
-      display_names:
-        other: Albania lekë
-        one: Albania lek
-    ANG:
-      display_names:
-        other: Nɛdɛlande Antɛlia guuda
-        one: Nɛdɛlande Antɛlia guuda
-    AWG:
-      display_names:
-        other: Aruba flɔrin
-        one: Aruba flɔrin
-    BGN:
-      display_names:
-        other: Bɔɔgaria lɛva
-        one: Bɔɔgaria lɛv
-    BHD:
-      display_names:
-        other: Baren Dina
-        one: Baren Dina
-    BIF:
-      display_names:
-        other: Burundi Frank
-        one: Burundi Frank
-    BTN:
-      display_names:
-        other: Butanfoɔ ngutrum
-        one: Butanfoɔ ngutrum
-    BYN:
-      display_names:
-        other: Bɛlaruhyia ruble
-        one: Bɛlaruhyia ruble
-    CDF:
-      display_names:
-        other: Kongo Frank
-        one: Kongo Frank
-    CHF:
-      display_names:
-        other: Swiss francs
-        one: Swiss franc
-    CNH:
-      display_names:
-        other: kyaena yuan (offshore)
-        one: kyaena yuan (offshore)
-    CVE:
-      display_names:
-        other: Ɛskudo
-        one: Ɛskudo
-    DJF:
-      display_names:
-        other: Gyebuti Frank
-        one: Gyebuti Frank
-    DZD:
-      display_names:
-        other: Ɔlgyeria Dina
-        one: Ɔlgyeria Dina
-    ERN:
-      display_names:
-        other: Ɛretereya Nakfa
-        one: Ɛretereya Nakfa
-    ETB:
-      display_names:
-        other: Itiopia Bir
-        one: Itiopia Bir
-    GHC:
-      display_names:
-        other: Ghana Sidi (1979–2007)
-        one: Ghana Sidi (1979–2007)
-    GMD:
-      display_names:
-        other: Gambia Dalasi
-        one: Gambia Dalasi
-    GNS:
-      display_names:
-        other: Gini Frank
-        one: Gini Frank
-    HTG:
-      display_names:
-        other: Haiti gɔɔde
-        one: Haiti gɔɔde
-    IQD:
-      symbol: Irak dinaa
-      display_names:
-        other: Irak dinaa
-        one: Irak dinaa
-    IRR:
-      display_names:
-        other: Yiranfoɔ rial
-        one: Yiranfoɔ rial
-    JOD:
-      display_names:
-        other: Gyɔɔdan dinaa
-        one: Gyɔɔdan dinaa
-    KES:
-      display_names:
-        other: Kenya Hyelen
-        one: Kenya Hyelen
-    KWD:
-      display_names:
-        other: Kuwait dinaa
-        one: Kuwait dinaa
-    LSL:
-      display_names:
-        other: Lesoto Loti
-        one: Lesoto Loti
-    LYD:
-      display_names:
-        other: Libya Dina
-        one: Libya Dina
-    MAD:
-      display_names:
-        other: Moroko Diram
-        one: Moroko Diram
-    MDL:
-      display_names:
-        other: Moldova lei
-        one: Moldova leu
-    MKD:
-      display_names:
-        other: Masidonia denari
-        one: Masidonia denaa
-    MOP:
-      display_names:
-        other: Makaw pataka
-        one: Makaw pataka
-    MRO:
-      display_names:
-        other: Mɔretenia Ouguiya (1973–2017)
-        one: Mɔretenia Ouguiya (1973–2017)
-    MRU:
-      display_names:
-        other: Mɔretenia Ouguiya
-        one: Mɔretenia Ouguiya
-    MVR:
-      display_names:
-        other: Maldivefoɔ rufiyaa
-        one: Maldivefoɔ rufiyaa
-    MWK:
-      display_names:
-        other: Malawi Kwakya
-        one: Malawi Kwakya
-    MZM:
-      display_names:
-        other: Mozambik Metical
-        one: Mozambik Metical
-    MZN:
-      display_names:
-        other: Mozambik mɛtikaa
-        one: Mozambik mɛtikaa
-    OMR:
-      display_names:
-        other: Oman rial
-        one: Oman rial
-    PAB:
-      display_names:
-        other: Panama baaboa
-        one: Panama baaboa
-    PEN:
-      display_names:
-        other: Pɛruvia sol
-        one: Pɛruvia sol
-    PGK:
-      display_names:
-        other: Papua New Gini kina
-        one: Papua New Gini kina
-    QAR:
-      display_names:
-        other: Kata riyaa
-        one: Kata riyaa
-    RSD:
-      display_names:
-        other: Sɛɛbia dinaa
-        one: Sɛɛbia dinaa
-    SAR:
-      display_names:
-        other: Saudi Riyal
-        one: Saudi Riyal
-    SCR:
-      display_names:
-        other: Seyhyɛls Rupi
-        one: Seyhyɛls Rupi
-    SDG:
-      display_names:
-        other: Sudan Dina
-        one: Sudan Dina
-    SDP:
-      display_names:
-        other: Sudan Pɔn
-        one: Sudan Pɔn
-    SLE:
-      display_names:
-        other: Leone
-        one: Leone
-    SLL:
-      display_names:
-        other: Leone (1964—2022)
-        one: Leone (1964—2022)
-    SOS:
-      display_names:
-        other: Somailia Hyelen
-        one: Somailia Hyelen
-    STD:
-      display_names:
-        other: Sao Tome ne Principe Dobra (1977–2017)
-        one: Sao Tome ne Principe Dobra (1977–2017)
-    SZL:
-      display_names:
-        other: Lilangeni
-        one: Lilangeni
-    TJS:
-      display_names:
-        other: Tagyikistan somoni
-        one: Tagyikistan somoni
-    TMT:
-      display_names:
-        other: Tɛkmɛstan manat
-        one: Tɛkmɛstan manat
-    TND:
-      display_names:
-        other: Tunisia Dina
-        one: Tunisia Dina
-    TZS:
-      display_names:
-        other: Tanzania Hyelen
-        one: Tanzania Hyelen
-    UGX:
-      display_names:
-        other: Uganda Hyelen
-        one: Uganda Hyelen
-    UZS:
-      display_names:
-        other: Yusbɛkistan som
-        one: Yusbɛkistan som
-    VES:
-      display_names:
-        other: Venezuelan bolívars
-        one: Venezuelan bolívar
-    VUV:
-      display_names:
-        other: Vanuatu vatu
-        one: Vanuatu vatu
-    WST:
-      display_names:
-        other: Samoa tala
-        one: Samoa tala
     YER:
       display_names:
         other: Yɛmɛn rial
         one: Yɛmɛn rial
+    ZAR:
+      display_names:
+        other: Afrika Anaafo Rand
+        one: Afrika Anaafo Rand
     ZMK:
       display_names:
         other: Zambia Kwacha (1968–2012)
         one: Zambia Kwacha (1968–2012)
+    ZMW:
+      display_names:
+        other: Zambia Kwakya
+        one: Zambia Kwakya
     ZWD:
       display_names:
         other: Zimbabwe Dɔla
         one: Zimbabwe Dɔla
+  units:
+    g-force:
+      long:
+        one: "{0} g-force"
+        other: "{0} g-force"
+    revolution:
+      long:
+        display_name: ntwaho
+        one: ntwaho {0}
+        other: ntwaho {0}
+    radian:
+      long:
+        display_name: radian
+        one: "{0} radian"
+        other: "{0} radian"
+      short:
+        display_name: radian
+      narrow:
+        display_name: radian
+    degree:
+      long:
+        display_name: digrii
+        one: digrii {0}
+        other: digrii {0}
+      short:
+        display_name: digrii
+      narrow:
+        display_name: digrii
+    arc-minute:
+      long:
+        display_name: aakesima
+        one: aakesima {0}
+        other: aakesima {0}
+      short:
+        display_name: aakesima
+      narrow:
+        display_name: aakesima
+    arc-second:
+      long:
+        display_name: aakesɛkɛnse
+        one: "{0} aakesɛkɛnse"
+        other: "{0} aakesɛkɛnse"
+      short:
+        display_name: aakesɛkɛnse
+        one: "{0} aakesɛkɛnse"
+        other: "{0} aakesɛkɛnse"
+      narrow:
+        display_name: aakesɛkɛnse
+    acre:
+      long:
+        display_name: Eka
+        one: "{0} eka"
+        other: "{0} eka"
+      short:
+        display_name: Eka
+      narrow:
+        display_name: Eka
+    karat:
+      long:
+        display_name: karat
+        one: "{0} karat"
+        other: "{0} karat"
+      short:
+        display_name: karat
+      narrow:
+        display_name: karat
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: miligrame dɛsilita biara
+        one: miligrame dɛsilita biara {0}
+        other: miligrame dɛsilita biara {0}
+    millimole-per-liter:
+      long:
+        display_name: milimole lita biara
+        one: milimole lita biara {0}
+        other: milimole lita biara {0}
+      short:
+        display_name: milimol/lita
+      narrow:
+        display_name: milimol/lita
+    item:
+      long:
+        display_name: adeɛ
+        one: adeɛ {0}
+        other: adeɛ {0}
+      short:
+        display_name: adeɛ
+        one: adeɛ {0}
+        other: adeɛ {0}
+      narrow:
+        display_name: adeɛ
+        one: adeɛ {0}
+        other: adeɛ {0}
+    permillion:
+      long:
+        display_name: paat ɔpepem biara
+        one: paat ɔpepem biara {0}
+        other: paat ɔpepem biara {0}
+      short:
+        display_name: paat ɔpepem biara
+      narrow:
+        display_name: paat ɔpepem biara
+    percent:
+      long:
+        display_name: ɔha nkyɛmu
+        one: ɔha nkyɛmu {0}
+        other: ɔha nkyɛmu {0}
+      short:
+        display_name: ɔha nkyɛmu
+      narrow:
+        display_name: ɔha nkyɛmu
+    permille:
+      long:
+        display_name: pɛmile
+        one: pɛɛmile {0}
+        other: pɛɛmile {0}
+      short:
+        display_name: pɛɛmile
+    permyriad:
+      long:
+        display_name: pɛɛmiride
+        one: pɛɛmiride {0}
+        other: pɛɛmiride {0}
+      short:
+        display_name: pɛɛmiride
+      narrow:
+        display_name: pɛɛmiride
+    mole:
+      long:
+        display_name: mole
+        one: "{0} mole"
+        other: "{0} mole"
+      short:
+        display_name: mole
+    liter-per-kilometer:
+      long:
+        display_name: lita kilomita biara
+        one: lita kilomita biara {0}
+        other: lita kilomita biara {0}
+      short:
+        display_name: lita kilomita biara
+      narrow:
+        display_name: lita kilomita biara
+    liter-per-100-kilometer:
+      long:
+        display_name: lita kilomita 100 biara
+        one: lita kilomita 100 biara {0}
+        other: lita kilomita 100 biara {0}
+    mile-per-gallon:
+      long:
+        display_name: mile galɔn biara
+        one: mile galɔn biara {0}
+        other: mile galɔn biara {0}
+      short:
+        display_name: mile galɔn biara
+      narrow:
+        display_name: mile galɔn biara
+    mile-per-gallon-imperial:
+      long:
+        display_name: mile Imp. galɔn biara
+        one: mile Imp. galɔn biara {0}
+        other: mile Imp. galɔn biara {0}
+      short:
+        display_name: mile Imp. galɔn biara
+      narrow:
+        display_name: mpg UK
+    petabyte:
+      long:
+        display_name: petabytes
+        one: "{0} petabyte"
+        other: "{0} petabyte"
+      short:
+        display_name: PByte
+      narrow:
+        display_name: PByte
+    terabyte:
+      long:
+        display_name: terabyte
+        one: "{0} terabyte"
+        other: "{0} terabyte"
+      short:
+        display_name: TByte
+    terabit:
+      long:
+        display_name: terabit
+        one: "{0} terabit"
+        other: "{0} terabit"
+      short:
+        display_name: Tbit
+    gigabyte:
+      long:
+        display_name: gigabyte
+        one: "{0} gigabyte"
+        other: "{0} gigabyte"
+      short:
+        display_name: GByte
+    gigabit:
+      long:
+        display_name: gigabit
+        one: "{0} Gb"
+        other: "{0} gigabit"
+      short:
+        display_name: Gbit
+    megabyte:
+      long:
+        display_name: megabyte
+        one: "{0} megabyte"
+        other: "{0} megabyte"
+      short:
+        display_name: MByte
+    megabit:
+      long:
+        display_name: megabit
+        one: "{0} megabit"
+        other: "{0} megabit"
+      short:
+        display_name: Mbit
+    kilobyte:
+      long:
+        display_name: kilobyte
+        one: "{0} kilobyte"
+        other: "{0} kilobyte"
+      short:
+        display_name: kByte
+    kilobit:
+      long:
+        display_name: kilobit
+        one: "{0} kilobit"
+        other: "{0} kilobits"
+      short:
+        display_name: kbit
+    century:
+      long:
+        display_name: mfeha
+        one: afeha{0}
+        other: mfeha{0}
+    decade:
+      long:
+        display_name: mfenhyia du
+        one: mfenhyia du {0}
+        other: "{0} dec"
+    year:
+      long:
+        display_name: mfeɛ
+        one: mfeɛ {0}
+        other: mfeɛ {0}
+        per_unit_pattern: mfeɛ biara {0}
+      short:
+        display_name: mfeɛ
+      narrow:
+        display_name: mfeɛ
+    quarter:
+      long:
+        display_name: kɔta
+        one: kɔta {0}
+        other: "{0} q"
+    month:
+      long:
+        display_name: bosome
+        one: Bosome {0}
+        other: Bosome {0}
+        per_unit_pattern: bosome biara {0}
+      short:
+        display_name: bosome
+      narrow:
+        display_name: bosome
+    week:
+      long:
+        display_name: nnawɔtwe
+        one: nnawɔtwe {0}
+        other: nnawɔtwe {0}
+        per_unit_pattern: nnawɔtwe biara {0}
+      short:
+        display_name: nnawɔtwe
+      narrow:
+        display_name: nnawɔtwe
+    day:
+      long:
+        display_name: nna
+        one: da {0}
+        other: nna {0}
+      short:
+        display_name: nna
+        one: da {0}
+        other: nna {0}
+      narrow:
+        display_name: da
+        one: da {0}
+        other: nna {0}
+    hour:
+      long:
+        display_name: dɔnhwere
+        one: dɔnhwere {0}
+        other: dɔnhwere {0}
+      short:
+        display_name: dɔnhwere
+      narrow:
+        display_name: dɔnhwere
+    minute:
+      long:
+        display_name: sima
+        one: sima {0}
+        other: sima {0}
+    second:
+      long:
+        display_name: sima sini
+        one: sima sini {0}
+        other: sima sini {0}
+        per_unit_pattern: sima sini biara {0}
+    millisecond:
+      long:
+        display_name: millisɛkɛns
+        one: "{0} millisɛkɛn"
+        other: "{0} millisɛkɛns"
+    microsecond:
+      long:
+        display_name: μsecs
+        one: "{0} mikrosɛkɛn"
+        other: "{0} mikrosɛkɛns"
+      short:
+        display_name: μsecs
+      narrow:
+        display_name: μsec
+    nanosecond:
+      long:
+        display_name: nanosɛkɛns
+        one: "{0} nanosɛkɛn"
+        other: "{0} nanosɛkɛns"
+      short:
+        display_name: nanosɛkɛns
+    pound-force:
+      long:
+        display_name: fɔs mu pɔn
+        one: fɔs mu pɔn {0}
+        other: fɔs mu pɔn {0}
+      short:
+        display_name: fɔs mu pɔn
+      narrow:
+        display_name: fɔs mu pɔn
+    newton:
+      long:
+        display_name: newton
+        one: "{0} newton"
+        other: "{0} newton"
+      short:
+        display_name: newton
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: kilowat-nnɔnhwere 100 kilomita biara
+        one: kilowat-nnɔnhwere 100 kilomita biara {0}
+        other: kilowat-nnɔnhwere 100 kilomita biara {0}
+    em:
+      long:
+        display_name: taipografik ems
+    pixel:
+      long:
+        display_name: pixels
+        one: "{0} pixel"
+        other: "{0} pixels"
+      short:
+        display_name: pixels
+    megapixel:
+      long:
+        one: "{0} megapixel"
+        other: "{0} megapixels"
+    pixel-per-centimeter:
+      long:
+        display_name: pixels sɛntimita biara
+        one: pixels sɛntimita biara {0}
+        other: pixels sɛntimita biara{0}
+    pixel-per-inch:
+      long:
+        display_name: pixels inkye biara
+        one: pixels inkye biara{0}
+        other: pixels inkye biara{0}
+    earth-radius:
+      long:
+        display_name: asaase radiɔs
+        one: asaase radiɔs {0}
+        other: asaase radiɔs{0}
+      short:
+        display_name: asaase radiɔs
+      narrow:
+        display_name: asaase radiɔs
+    kilometer:
+      long:
+        display_name: kilomita
+        one: kilomita {0}
+        other: kilomita {0}
+        per_unit_pattern: kilomita biara{0}
+    meter:
+      long:
+        display_name: mita
+        one: mita {0}
+        other: mita {0}
+        per_unit_pattern: mita biara {0}
+      short:
+        display_name: m
+      narrow:
+        display_name: m
+    decimeter:
+      long:
+        display_name: dɛsimita
+        one: dɛsimita {0}
+        other: dɛsimita {0}
+    centimeter:
+      long:
+        display_name: sɛntimita
+        one: sɛntimita {0}
+        other: sɛntimita {0}
+        per_unit_pattern: sɛntimita biara {0}
+    millimeter:
+      long:
+        display_name: milimita
+        one: milimita {0}
+        other: milimita {0}
+    micrometer:
+      long:
+        display_name: mikromita
+        one: mikromita {0}
+        other: mikromita {0}
+    nanometer:
+      long:
+        display_name: nanomita
+        one: nanomita {0}
+        other: nanomita {0}
+    picometer:
+      long:
+        display_name: pikomita
+        one: pikomita {0}
+        other: pikomita {0}
+    mile:
+      long:
+        display_name: kwansini
+        one: kwansini {0}
+        other: kwansini {0}
+      short:
+        display_name: kwansini
+    yard:
+      long:
+        display_name: yaase
+        one: yaase {0}
+        other: yaase {0}
+      short:
+        display_name: yaase
+      narrow:
+        display_name: yaase
+    foot:
+      long:
+        display_name: ananmɔn
+        one: ananmɔn {0}
+        other: "{0} ft"
+        per_unit_pattern: ananmɔn biara {0}
+      short:
+        display_name: ananmɔn
+      narrow:
+        display_name: ananmɔn
+        one: "{0}′"
+        other: "{0}′"
+    inch:
+      long:
+        display_name: inkyisi
+        one: inkyisi {0}
+        other: inkyisi {0}
+        per_unit_pattern: inkyisi biara {0}
+      short:
+        display_name: inkyisi
+      narrow:
+        display_name: inkyisi
+        one: "{0}″"
+        other: "{0}″"
+    parsec:
+      long:
+        display_name: paasɛk
+        one: paasɛk {0}
+        other: paasɛk {0}
+      short:
+        display_name: paasɛk
+      narrow:
+        display_name: paasɛk
+    light-year:
+      long:
+        display_name: kanea mfeɛ
+        one: kanea mfeɛ {0}
+        other: kanea mfeɛ {0}
+      short:
+        display_name: kanea mfeɛ
+      narrow:
+        display_name: kanea mfeɛ
+    astronomical-unit:
+      long:
+        display_name: astrɔnɔmikaa winit
+        one: astrɔnɔmikaa winit {0}
+        other: astrɔnɔmikaa winit {0}
+    furlong:
+      long:
+        display_name: fɛɛlɔɔne
+        one: fɛɛlɔɔne {0}
+        other: fɛɛlɔɔne {0}
+      short:
+        display_name: fɛɛlɔɔne
+      narrow:
+        display_name: fɛɛlɔɔne
+    fathom:
+      long:
+        display_name: fatɔmse
+        one: fatɔmse {0}
+        other: fatɔmse {0}
+      short:
+        display_name: fatɔmse
+      narrow:
+        display_name: fatɔmse
+    nautical-mile:
+      long:
+        display_name: nɔtikaa ananmɔn
+        one: nɔtikaa ananmɔn {0}
+        other: nɔtikaa ananmɔn {0}
+    mile-scandinavian:
+      long:
+        display_name: miaase-skandinavian
+        one: miaase-skandinavian {0}
+        other: miaase-skandinavian {0}
+    point:
+      long:
+        display_name: pɔnse
+        one: pɔnse {0}
+        other: pɔnse {0}
+      short:
+        display_name: pɔnse
+      narrow:
+        display_name: pts
+    solar-radius:
+      long:
+        display_name: sola radii
+        one: sola radii {0}
+        other: sola radii {0}
+      short:
+        display_name: sola radii
+      narrow:
+        display_name: sola radii
+    lux:
+      long:
+        display_name: lux
+        one: "{0} lux"
+        other: "{0} lux"
+      short:
+        display_name: lux
+      narrow:
+        display_name: lux
+    candela:
+      long:
+        display_name: kandela
+        one: "{0} kandela"
+        other: "{0} kandela"
+      short:
+        display_name: kandela
+    lumen:
+      long:
+        display_name: lumen
+      short:
+        display_name: lumen
+    solar-luminosity:
+      long:
+        display_name: sola luminɔsitise
+        one: sola luminɔsitise {0}
+        other: sola luminɔsitise {0}
+      short:
+        display_name: sola luminɔsitise
+      narrow:
+        display_name: sola luminɔsitise
+    tonne:
+      long:
+        display_name: mɛtreke tons
+        one: mɛtreke tons {0}
+        other: mɛtreke tons {0}
+    kilogram:
+      long:
+        display_name: kilograme
+        one: kilograme {0}
+        other: kilograme {0}
+        per_unit_pattern: kilograme biara {0}
+    gram:
+      long:
+        display_name: grame
+        one: grame {0}
+        other: "{0} g"
+        per_unit_pattern: grame biara {0}
+      short:
+        display_name: grame
+      narrow:
+        display_name: grame
+    milligram:
+      long:
+        display_name: miligrame
+        one: miligrame {0}
+        other: miligrame {0}
+    microgram:
+      long:
+        display_name: mikrograme
+        one: mikrograme {0}
+        other: mikrograme {0}
+    ton:
+      long:
+        one: "{0} ton"
+        other: "{0} tons"
+    pound:
+      long:
+        display_name: pɔns
+        one: pɔns {0}
+        other: pɔns {0}
+        per_unit_pattern: pɔns biara {0}
+      short:
+        display_name: pɔns
+      narrow:
+        display_name: pɔns
+    ounce:
+      long:
+        display_name: awnse
+        one: awnse {0}
+        other: awnse {0}
+        per_unit_pattern: awnse biara {0}
+    ounce-troy:
+      long:
+        display_name: troy awnse
+        one: troy awnse {0}
+        other: troy awnse {0}
+      short:
+        display_name: oz troy
+      narrow:
+        display_name: oz troy
+    carat:
+      long:
+        display_name: karat
+        one: karat {0}
+        other: karat {0}
+      short:
+        display_name: karat
+      narrow:
+        display_name: karat
+    dalton:
+      long:
+        display_name: daatin
+        one: daatin {0}
+        other: daatin {0}
+      short:
+        display_name: daatin
+      narrow:
+        display_name: daatin
+    earth-mass:
+      long:
+        display_name: Asaase mass
+        one: Asaase mass {0}
+        other: Asaase mass {0}
+      short:
+        display_name: Asaase mass
+      narrow:
+        display_name: Asaase mass
+    solar-mass:
+      long:
+        display_name: sola mass
+        one: sola mass {0}
+        other: sola mass {0}
+      short:
+        display_name: sola mass
+      narrow:
+        display_name: sola mass
+    knot:
+      long:
+        display_name: Pɔ
+        one: Pɔ {0}
+        other: Pɔ {0}
+    pound-force-foot:
+      long:
+        display_name: pɔn-fɔs-ananmɔn
+        one: pɔn-fɔs-ananmɔn {0}
+        other: pɔn-fɔs-ananmɔn {0}
+    newton-meter:
+      long:
+        display_name: Newton-mita
+        one: "{0} newton-mita"
+        other: "{0} newton-mita"
+    liter:
+      long:
+        display_name: lita
+        one: "{0} l"
+        other: "{0} lita"
+      short:
+        display_name: lita
+      narrow:
+        display_name: lita
+    pint:
+      long:
+        display_name: pints
+      short:
+        display_name: pints
+    cup:
+      long:
+        display_name: kuruwa
+        one: kuruwa {0}
+        other: kuruwa {0}
+      short:
+        display_name: kuruwa
+      narrow:
+        display_name: kuruwa
+    tablespoon:
+      long:
+        display_name: Atere kɛseɛ
+        one: Atere kɛseɛ {0}
+        other: Atere kɛseɛ {0}
+    teaspoon:
+      long:
+        display_name: atere fa
+        one: atere fa {0}
+        other: atere fa {0}
+    barrel:
+      long:
+        display_name: bare
+        one: bare {0}
+        other: bare {0}
+      short:
+        display_name: bare
+    dessert-spoon:
+      long:
+        display_name: atere
+        one: atere {0}
+        other: atere {0}
+      short:
+        display_name: atere
+        one: "{0} dsp"
+        other: "{0} dsp"
+      narrow:
+        display_name: dsp
+        one: "{0}dsp"
+        other: "{0}dsp"
+    drop:
+      long:
+        display_name: koko
+        one: ko {0}
+        other: koko {0}
+      short:
+        display_name: koko
+        one: ko {0}
+        other: ko {0}
+      narrow:
+        display_name: dr
+        one: ko {0}
+        other: ko {0}
+    dram:
+      long:
+        display_name: drɔm
+        one: drɔm fl {0}
+        other: drɔm fl {0}
+      short:
+        display_name: drɔm
+        one: drɔm {0}
+        other: drɔm {0}
+      narrow:
+        display_name: fl.dr.
+        one: drɔm fl {0}
+        other: drɔm fl {0}
+    jigger:
+      long:
+        display_name: gyega
+        one: gyega {0}
+        other: gyega {0}
+      short:
+        display_name: gyega
+        one: gyega {0}
+        other: gyega {0}
+      narrow:
+        display_name: gyega
+        one: gyega {0}
+        other: gyega {0}
+    light-speed:
+      long:
+        display_name: kanea
+        one: kanea {0}
+        other: kanea {0}
+      short:
+        display_name: kanea
+        one: kanea {0}
+        other: kanea {0}
+      narrow:
+        display_name: kanea
+        one: kanea {0}
+        other: kanea {0}
+    portion-per-1e9:
+      long:
+        display_name: paat ɔpepepem biara
+        one: paat ɔpepepem biara {0}
+        other: paat ɔpepepem biara {0}
+      short:
+        display_name: paat ɔpepepem biara
+      narrow:
+        display_name: paat ɔpepepem biara
+    night:
+      long:
+        display_name: anadwo
+        one: "{0} anadwo"
+        other: anadwo{0}
+        per_unit_pattern: anadwo biara{0}
+      short:
+        display_name: anadwo
+        one: anadwo{0}
+        other: anadwo{0}
+        per_unit_pattern: "{0}/anadwo"
+      narrow:
+        display_name: anadwo
+        one: anadwo{0}
+        other: anadwo{0}
+        per_unit_pattern: "{0}/anadwo"
+    grain:
+      short:
+        one: "{0} gr"
+        other: "{0} gr"
+      narrow:
+        display_name: gr
+        one: "{0}gr"
+        other: "{0}gr"
+    mile-per-hour:
+      short:
+        one: "{0} mph"
+        other: "{0} mph"
+      narrow:
+        one: "{0} mph"
+        other: "{0} mph"
+    pinch:
+      short:
+        one: "{0} pn"
+        other: "{0} pn"
+      narrow:
+        display_name: pn
+        one: "{0} pn"
+        other: "{0} pn"
+    byte:
+      narrow:
+        display_name: B
+        one: "{0}B"
+        other: "{0}B"
+    pint-metric:
+      narrow:
+        display_name: pt
+    gallon:
+      narrow:
+        per_unit_pattern: "{0}/gal"

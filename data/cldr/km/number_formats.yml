@@ -1,20 +1,89 @@
 ---
 locale: km
-generated_at: '2025-09-13T17:38:23Z'
+generated_at: '2025-09-14T06:10:42Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00¤"
     accounting: "#,##0.00¤;(#,##0.00¤)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        other: 0ពាន់
+      '10000':
+        other: 00 ពាន់
+      '100000':
+        other: 000 ពាន់
+      '1000000':
+        other: 0 លាន
+      '10000000':
+        other: 00 លាន
+      '100000000':
+        other: 000 លាន
+      '1000000000':
+        other: 0 ប៊ីលាន
+      '10000000000':
+        other: 00 ប៊ីលាន
+      '100000000000':
+        other: 000 ប៊ីលាន
+      '1000000000000':
+        other: 0 ទ្រីលាន
+      '10000000000000':
+        other: 00 ទ្រីលាន
+      '100000000000000':
+        other: 000 ទ្រីលាន
+    long:
+      '1000':
+        other: 0 ពាន់
+      '10000':
+        other: 00 ពាន់
+      '100000':
+        other: 000ពាន់
+      '1000000':
+        other: 0 លាន
+      '10000000':
+        other: 00 លាន
+      '100000000':
+        other: 000 លាន
+      '1000000000':
+        other: 0 ប៊ីលាន
+      '10000000000':
+        other: 00 ប៊ីលាន
+      '100000000000':
+        other: 000 ប៊ីលាន
+      '1000000000000':
+        other: 0 ទ្រីលាន
+      '10000000000000':
+        other: 00 ទ្រីលាន
+      '100000000000000':
+        other: 000 ទ្រីលាន
   currencies:
+    AED:
+      display_names:
+        other: ឌៀរហាំ​អារ៉ាប់រួម
+        one: ឌៀរហាំ​អារ៉ាប់រួម
     AFN:
       display_names:
         other: អាហ្វហ្គានី​អាហ្វហ្គានីស្ថាន
         one: អាហ្វហ្គានី​អាហ្វហ្គានីស្ថាន
+    ALL:
+      display_names:
+        other: លិក​អាល់បានី
+        one: លិក​អាល់បានី
     AMD:
       display_names:
         other: ដ្រាំ​អាមេនី
         one: ដ្រាំ​អាមេនី
+    ANG:
+      display_names:
+        other: ហ្គីឌិន​ហុល្លង់​អង់ទីលៀន
+        one: ហ្គីឌិន​ហុល្លង់​អង់ទីលៀន
     AOA:
       display_names:
         other: ក្វាន់ហ្សា​អង់ហ្គោឡា
@@ -27,6 +96,10 @@ number_formats:
       display_names:
         other: ដុល្លារ​អូស្ត្រាលី
         one: ដុល្លារ​អូស្ត្រាលី
+    AWG:
+      display_names:
+        other: ហ្វ្រ័ររិញ​អារ៉ូបា
+        one: ហ្វ្រ័ររិញ​អារ៉ូបា
     AZN:
       display_names:
         other: ម៉ាណាត​អាស៊ែបៃហ្សង់
@@ -43,6 +116,18 @@ number_formats:
       display_names:
         other: តាកា​បង់ក្លាដែស
         one: តាកា​បង់ក្លាដែស
+    BGN:
+      display_names:
+        other: លីវ​ប៊ុលហ្គារី
+        one: លីវ​ប៊ុលហ្គារី
+    BHD:
+      display_names:
+        other: ឌីណា​បារ៉ែន
+        one: ឌីណា​បារ៉ែន
+    BIF:
+      display_names:
+        other: ហ្វ្រង់​ប៊ូរុនឌី
+        one: ហ្វ្រង់​ប៊ូរុនឌី
     BMD:
       display_names:
         other: ដុល្លារ​ប៊ឺមុយដា
@@ -63,10 +148,23 @@ number_formats:
       display_names:
         other: ដុល្លារ​បាហាម៉ា
         one: ដុល្លារ​បាហាម៉ា
+    BTN:
+      display_names:
+        other: ញូលត្រឹម​ប៊ូតាន
+        one: ញូលត្រឹម​ប៊ូតាន
     BWP:
       display_names:
         other: ពូឡា​បុតស្វាណា
         one: ពូឡា​បុតស្វាណា
+    BYN:
+      symbol: р.
+      display_names:
+        other: រ៉ូបល​បេឡារុស
+        one: រ៉ូបល​បេឡារុស
+    BYR:
+      display_names:
+        other: រ៉ូបល​បេឡារុស (2000–2016)
+        one: រ៉ូបល​បេឡារុស (2000–2016)
     BZD:
       display_names:
         other: ដុល្លារ​បេលី
@@ -75,10 +173,22 @@ number_formats:
       display_names:
         other: ដុល្លារ​កាណាដា
         one: ដុល្លារ​កាណាដា
+    CDF:
+      display_names:
+        other: ហ្វ្រង់​កុងហ្គោ
+        one: ហ្វ្រង់​កុងហ្គោ
+    CHF:
+      display_names:
+        other: ហ្វ្រង់ស្វីស
+        one: ហ្វ្រង់ស្វីស
     CLP:
       display_names:
         other: ប៉េសូឈីលី
         one: ប៉េសូឈីលី
+    CNH:
+      display_names:
+        other: យ័នចិន (ក្រៅប្រទេស)
+        one: យ័នចិន (ក្រៅប្រទេស)
     CNY:
       display_names:
         other: យ័នចិន
@@ -99,10 +209,18 @@ number_formats:
       display_names:
         other: ប៉េសូគុយបា
         one: ប៉េសូគុយបា
+    CVE:
+      display_names:
+        other: អ៊ីស្កូឌូ​កាប់វែរ
+        one: អ៊ីស្កូឌូ​កាប់វែរ
     CZK:
       display_names:
         other: កូរុណា​សាធារណៈ​ឆេក
         one: កូរុណា​សាធារណៈ​ឆេក
+    DJF:
+      display_names:
+        other: ហ្វ្រង់​ជីប៊ូទី
+        one: ហ្វ្រង់​ជីប៊ូទី
     DKK:
       display_names:
         other: ក្រូណេ​ដាណាម៉ាក់
@@ -111,10 +229,22 @@ number_formats:
       display_names:
         other: ប៉េសូដូមីនីក
         one: ប៉េសូដូមីនីក
+    DZD:
+      display_names:
+        other: ឌីណា​អាល់ស៊េរី
+        one: ឌីណា​អាល់ស៊េរី
     EGP:
       display_names:
         other: ផោនអេហ្ស៊ីប
         one: ផោនអេហ្ស៊ីប
+    ERN:
+      display_names:
+        other: ណាក់ហ្វាអេរីទ្រា
+        one: ណាក់ហ្វាអេរីទ្រា
+    ETB:
+      display_names:
+        other: ប៊័រ​អេត្យូពី
+        one: ប៊័រ​អេត្យូពី
     EUR:
       display_names:
         other: អឺរ៉ូ
@@ -143,6 +273,10 @@ number_formats:
       display_names:
         other: ផោន​ហ្ស៊ីប្រាល់តា
         one: ផោន​ហ្ស៊ីប្រាល់តា
+    GMD:
+      display_names:
+        other: ដាឡាស៊ី​ហ្គាំប៊ី
+        one: ដាឡាស៊ី​ហ្គាំប៊ី
     GNF:
       display_names:
         other: ហ្វ្រង់ ហ្គីណេ
@@ -167,6 +301,10 @@ number_formats:
       display_names:
         other: គូណា​ក្រូអាត
         one: គូណា​ក្រូអាត
+    HTG:
+      display_names:
+        other: គោឌី​ហៃទី
+        one: គោឌី​ហៃទី
     HUF:
       display_names:
         other: ហ្វូរីន​ហុងគ្រី
@@ -183,6 +321,14 @@ number_formats:
       display_names:
         other: រូពីឥណ្ឌា
         one: រូពីឥណ្ឌា
+    IQD:
+      display_names:
+        other: ឌីណា​អ៊ីរ៉ាក់
+        one: ឌីណា​អ៊ីរ៉ាក់
+    IRR:
+      display_names:
+        other: រៀល អ៊ីរ៉ង់
+        one: រៀល​អ៊ីរ៉ង់
     ISK:
       display_names:
         other: ក្រូណា​អ៊ីស្លង់
@@ -191,10 +337,18 @@ number_formats:
       display_names:
         other: ដុល្លារ​ហ្សាម៉ាអ៊ីក
         one: ដុល្លារ​ហ្សាម៉ាអ៊ីក
+    JOD:
+      display_names:
+        other: ឌីណា​ហ្ស៊កដានី
+        one: ឌីណា​ហ្ស៊កដានី
     JPY:
       display_names:
         other: យេន​ជប៉ុន
         one: យេន​ជប៉ុន
+    KES:
+      display_names:
+        other: ស៊ីលិញ​កេនយ៉ា
+        one: ស៊ីលិញ​កេនយ៉ា
     KGS:
       display_names:
         other: សុម​កៀហ្ស៊ីស៊ីស្ថាន
@@ -215,6 +369,10 @@ number_formats:
       display_names:
         other: វ៉ុនកូរ៉េខាងត្បូង
         one: វ៉ុនកូរ៉េខាងត្បូង
+    KWD:
+      display_names:
+        other: ឌីណា​គុយវ៉ែត
+        one: ឌីណា​គុយវ៉ែត
     KYD:
       display_names:
         other: ដុល្លារ​កោះ​កៃម៉ែន
@@ -239,6 +397,11 @@ number_formats:
       display_names:
         other: ដុល្លារ​លីប៊ី
         one: ដុល្លារ​លីប៊ី
+    LSL:
+      symbol: ឡូទី
+      display_names:
+        other: ឡូទីឡេសូតូ
+        one: ឡូទីឡេសូតូ
     LTL:
       display_names:
         other: លីតា​លីទុយអានី
@@ -247,10 +410,26 @@ number_formats:
       display_names:
         other: ឡាត់​ឡេតូនី
         one: ឡាត់​ឡេតូនី
+    LYD:
+      display_names:
+        other: ឌីណា​លីប៊ី
+        one: ឌីណា​លីប៊ី
+    MAD:
+      display_names:
+        other: ឌៀរហាំ​ម៉ារ៉ុក
+        one: ឌៀរហាំ​ម៉ារ៉ុក
+    MDL:
+      display_names:
+        other: លូ​ម៉ុលដាវី
+        one: លូ​ម៉ុលដាវី
     MGA:
       display_names:
         other: អារៀរី​ម៉ាឡាហ្គាស៊ី
         one: អារៀរី​ម៉ាឡាហ្គាស៊ី
+    MKD:
+      display_names:
+        other: ឌីណាម៉ាសេដូនី
+        one: ឌីណាម៉ាសេដូនី
     MMK:
       display_names:
         other: គីយ៉ាត​ភូមា
@@ -259,10 +438,30 @@ number_formats:
       display_names:
         other: ទូរីក​ម៉ុងហ្គោលី
         one: ទូរីក​ម៉ុងហ្គោលី
+    MOP:
+      display_names:
+        other: ប៉ាតាកា​ម៉ាកាវ
+        one: ប៉ាតាកា​ម៉ាកាវ
+    MRO:
+      display_names:
+        other: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី (1973–2017)
+        one: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី (1973–2017)
+    MRU:
+      display_names:
+        other: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី
+        one: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី
     MUR:
       display_names:
         other: រូពីម៉ូរីតានី
         one: រូពីម៉ូរីតានី
+    MVR:
+      display_names:
+        other: រ៉ូហ្វីយ៉ា​ម៉ាល់ឌីវ
+        one: រ៉ូហ្វីយ៉ា​ម៉ាល់ឌីវ
+    MWK:
+      display_names:
+        other: ក្វាចា​ម៉ាឡាវី
+        one: ក្វាចា​ម៉ាឡាវី
     MXN:
       display_names:
         other: ប៉េសូម៉ិកសិក
@@ -271,6 +470,10 @@ number_formats:
       display_names:
         other: រីងហ្គីត​ម៉ាឡេស៊ី
         one: រីងហ្គីត​ម៉ាឡេស៊ី
+    MZN:
+      display_names:
+        other: មីទីខល​ម៉ូសំប៊ិក
+        one: មីទីខល​ម៉ូសំប៊ិក
     NAD:
       display_names:
         other: ដុល្លារ​ណាមីប៊ី
@@ -295,6 +498,22 @@ number_formats:
       display_names:
         other: ដុល្លារ​នូវែលសេឡង់
         one: ដុល្លារ​នូវែលសេឡង់
+    OMR:
+      display_names:
+        other: រៀល​រូម៉ានី
+        one: រៀល​រូម៉ានី
+    PAB:
+      display_names:
+        other: បាល់ប៉ៅ​ប៉ាណាម៉ា
+        one: បាល់ប៉ៅ​ប៉ាណាម៉ា
+    PEN:
+      display_names:
+        other: ញូវ៉ូសូល ប៉េរូ
+        one: ញូវ៉ូសូល​ប៉េរូ
+    PGK:
+      display_names:
+        other: គីណាប៉ាពួញូហ្គីណេ
+        one: គីណាប៉ាពួញូហ្គីណេ
     PHP:
       symbol: PHP
       display_names:
@@ -312,10 +531,18 @@ number_formats:
       display_names:
         other: ហ្គូរីនី​ប៉ារ៉ាហ្គាយ
         one: ហ្គូរីនី​ប៉ារ៉ាហ្គាយ
+    QAR:
+      display_names:
+        other: រីយ៉ាលកាតា
+        one: រីយ៉ាលកាតា
     RON:
       display_names:
         other: លូ​រូម៉ានី
         one: លូ​រូម៉ានី
+    RSD:
+      display_names:
+        other: ឌីណាស៊ែប
+        one: ឌីណាស៊ែប
     RUB:
       display_names:
         other: រ៉ូបល​រុស្ស៊ី
@@ -324,10 +551,22 @@ number_formats:
       display_names:
         other: ហ្វ្រង់​រវ៉ាន់ដា
         one: ហ្វ្រង់​រវ៉ាន់ដា
+    SAR:
+      display_names:
+        other: រីយ៉ាល​អារ៉ាប៊ីសាអូឌីត
+        one: រីយ៉ាល​អារ៉ាប៊ីសាអូឌីត
     SBD:
       display_names:
         other: ដុល្លារ​កោះ​សូឡូម៉ុង
         one: ដុល្លារ​កោះ​សូឡូម៉ុង
+    SCR:
+      display_names:
+        other: រូពី​សីស្ហែល
+        one: រូពី​សីស្ហែល
+    SDG:
+      display_names:
+        other: ផោន​ស៊ូដង់
+        one: ផោន​ស៊ូដង់
     SEK:
       display_names:
         other: ក្រូណា​ស៊ុយអែត
@@ -340,6 +579,18 @@ number_formats:
       display_names:
         other: ផោន​សាំងហេឡេណា
         one: ផោន​សាំងហេឡេណា
+    SLE:
+      display_names:
+        other: លីអ៊ុន​សៀរ៉ាឡេអូន
+        one: លីអ៊ុន​សៀរ៉ាឡេអូន
+    SLL:
+      display_names:
+        other: លីអ៊ុន​សៀរ៉ាឡេអូន (1964—2022)
+        one: លីអ៊ុន​សៀរ៉ាឡេអូន (1964—2022)
+    SOS:
+      display_names:
+        other: ស៊ីលិញ​សូម៉ាលី
+        one: ស៊ីលិញ​សូម៉ាលី
     SRD:
       display_names:
         other: ដុល្លារ​សូរីណាម
@@ -348,6 +599,10 @@ number_formats:
       display_names:
         other: ផោន​ស៊ូដង់​ខាង​ត្បូង
         one: ផោន​ស៊ូដង់​ខាង​ត្បូង
+    STD:
+      display_names:
+        other: ឌូប្រា​សៅតូម៉េ និងប្រាំងស៊ីប (1977–2017)
+        one: ឌូប្រា​សៅតូម៉េ និងប្រាំងស៊ីប (1977–2017)
     STN:
       display_names:
         other: ឌូប្រា​សៅតូម៉េ និងប្រាំងស៊ីប
@@ -356,10 +611,26 @@ number_formats:
       display_names:
         other: ផោន​ស៊ីរី
         one: ផោន​ស៊ីរី
+    SZL:
+      display_names:
+        other: លីឡាងហ្គីនី​ស្វាស៊ីឡង់
+        one: លីឡាងហ្គីនី​ស្វាស៊ីឡង់
     THB:
       display_names:
         other: បាត​ថៃ
         one: បាត​ថៃ
+    TJS:
+      display_names:
+        other: សូមុនី​តាហ្ស៊ីគីស្ថាន
+        one: សូមុនី​តាហ្ស៊ីគីស្ថាន
+    TMT:
+      display_names:
+        other: ម៉ាណាត​តួកម៉េនីស្ថាន
+        one: ម៉ាណាត​តួកម៉េនីស្ថាន
+    TND:
+      display_names:
+        other: ឌីណាទុយនេស៊ី
+        one: ឌីណាទុយនេស៊ី
     TOP:
       display_names:
         other: ប៉ាអង់កា​តុងហ្គា
@@ -376,10 +647,18 @@ number_formats:
       display_names:
         other: ដុល្លារ​តៃវ៉ាន់
         one: ដុល្លារ​តៃវ៉ាន់
+    TZS:
+      display_names:
+        other: ស៊ីលិញ​តង់សានី
+        one: ស៊ីលិញ​តង់សានី
     UAH:
       display_names:
         other: ហ៊ូនីយ៉ា​អ៊ុយក្រែន
         one: ហ៊ូនីយ៉ា​អ៊ុយក្រែន
+    UGX:
+      display_names:
+        other: ស៊ីលិញ​អ៊ូហ្គង់ដា
+        one: ស៊ីលិញ​អ៊ូហ្គង់ដា
     USD:
       symbol: "$"
       display_names:
@@ -389,14 +668,30 @@ number_formats:
       display_names:
         other: ប៉េសូអ៊ុយរូហ្គាយ
         one: ប៉េសូអ៊ុយរូហ្គាយ
+    UZS:
+      display_names:
+        other: សុមអ៊ូបេគីស្ថាន
+        one: សុមអ៊ូបេគីស្ថាន
     VEF:
       display_names:
         other: ប៊ូលីវ៉ា​វ៉េណេស៊ុយអេឡា (2008–2018)
         one: ប៊ូលីវ៉ា​វ៉េណេស៊ុយអេឡា (2008–2018)
+    VES:
+      display_names:
+        other: ប៊ូលីវ៉ា​វ៉េណេស៊ុយអេឡា
+        one: ប៊ូលីវ៉ា​វ៉េណេស៊ុយអេឡា
     VND:
       display_names:
         other: ដុង​វៀតណាម
         one: ដុង​វៀតណាម
+    VUV:
+      display_names:
+        other: វ៉ាទូវ៉ានូអាទូ
+        one: វ៉ាទូវ៉ានូអាទូ
+    WST:
+      display_names:
+        other: តាឡា​សាម័រ
+        one: តាឡា​សាម័រ
     XAF:
       display_names:
         other: ហ្វ្រង់ CFA អាហ្វ្រិកកណ្តាល
@@ -417,257 +712,933 @@ number_formats:
       display_names:
         other: "(រូបិយប័ណ្ណ​មិនស្គាល់)"
         one: រូបិយប័ណ្ណ​មិនស្គាល់
-    ZAR:
-      display_names:
-        other: រ៉ង់អាហ្វ្រិកខាងត្បូង
-        one: រ៉ង់អាហ្វ្រិកខាងត្បូង
-    ZMW:
-      display_names:
-        other: ក្វាចាហ្សំប៊ី
-        one: ក្វាចាហ្សំប៊ី
-    AED:
-      display_names:
-        other: ឌៀរហាំ​អារ៉ាប់រួម
-        one: ឌៀរហាំ​អារ៉ាប់រួម
-    ALL:
-      display_names:
-        other: លិក​អាល់បានី
-        one: លិក​អាល់បានី
-    ANG:
-      display_names:
-        other: ហ្គីឌិន​ហុល្លង់​អង់ទីលៀន
-        one: ហ្គីឌិន​ហុល្លង់​អង់ទីលៀន
-    AWG:
-      display_names:
-        other: ហ្វ្រ័ររិញ​អារ៉ូបា
-        one: ហ្វ្រ័ររិញ​អារ៉ូបា
-    BGN:
-      display_names:
-        other: លីវ​ប៊ុលហ្គារី
-        one: លីវ​ប៊ុលហ្គារី
-    BHD:
-      display_names:
-        other: ឌីណា​បារ៉ែន
-        one: ឌីណា​បារ៉ែន
-    BIF:
-      display_names:
-        other: ហ្វ្រង់​ប៊ូរុនឌី
-        one: ហ្វ្រង់​ប៊ូរុនឌី
-    BTN:
-      display_names:
-        other: ញូលត្រឹម​ប៊ូតាន
-        one: ញូលត្រឹម​ប៊ូតាន
-    BYN:
-      symbol: р.
-      display_names:
-        other: រ៉ូបល​បេឡារុស
-        one: រ៉ូបល​បេឡារុស
-    BYR:
-      display_names:
-        other: រ៉ូបល​បេឡារុស (2000–2016)
-        one: រ៉ូបល​បេឡារុស (2000–2016)
-    CDF:
-      display_names:
-        other: ហ្វ្រង់​កុងហ្គោ
-        one: ហ្វ្រង់​កុងហ្គោ
-    CHF:
-      display_names:
-        other: ហ្វ្រង់ស្វីស
-        one: ហ្វ្រង់ស្វីស
-    CNH:
-      display_names:
-        other: យ័នចិន (ក្រៅប្រទេស)
-        one: យ័នចិន (ក្រៅប្រទេស)
-    CVE:
-      display_names:
-        other: អ៊ីស្កូឌូ​កាប់វែរ
-        one: អ៊ីស្កូឌូ​កាប់វែរ
-    DJF:
-      display_names:
-        other: ហ្វ្រង់​ជីប៊ូទី
-        one: ហ្វ្រង់​ជីប៊ូទី
-    DZD:
-      display_names:
-        other: ឌីណា​អាល់ស៊េរី
-        one: ឌីណា​អាល់ស៊េរី
-    ERN:
-      display_names:
-        other: ណាក់ហ្វាអេរីទ្រា
-        one: ណាក់ហ្វាអេរីទ្រា
-    ETB:
-      display_names:
-        other: ប៊័រ​អេត្យូពី
-        one: ប៊័រ​អេត្យូពី
-    GMD:
-      display_names:
-        other: ដាឡាស៊ី​ហ្គាំប៊ី
-        one: ដាឡាស៊ី​ហ្គាំប៊ី
-    HTG:
-      display_names:
-        other: គោឌី​ហៃទី
-        one: គោឌី​ហៃទី
-    IQD:
-      display_names:
-        other: ឌីណា​អ៊ីរ៉ាក់
-        one: ឌីណា​អ៊ីរ៉ាក់
-    IRR:
-      display_names:
-        other: រៀល អ៊ីរ៉ង់
-        one: រៀល​អ៊ីរ៉ង់
-    JOD:
-      display_names:
-        other: ឌីណា​ហ្ស៊កដានី
-        one: ឌីណា​ហ្ស៊កដានី
-    KES:
-      display_names:
-        other: ស៊ីលិញ​កេនយ៉ា
-        one: ស៊ីលិញ​កេនយ៉ា
-    KWD:
-      display_names:
-        other: ឌីណា​គុយវ៉ែត
-        one: ឌីណា​គុយវ៉ែត
-    LSL:
-      symbol: ឡូទី
-      display_names:
-        other: ឡូទីឡេសូតូ
-        one: ឡូទីឡេសូតូ
-    LYD:
-      display_names:
-        other: ឌីណា​លីប៊ី
-        one: ឌីណា​លីប៊ី
-    MAD:
-      display_names:
-        other: ឌៀរហាំ​ម៉ារ៉ុក
-        one: ឌៀរហាំ​ម៉ារ៉ុក
-    MDL:
-      display_names:
-        other: លូ​ម៉ុលដាវី
-        one: លូ​ម៉ុលដាវី
-    MKD:
-      display_names:
-        other: ឌីណាម៉ាសេដូនី
-        one: ឌីណាម៉ាសេដូនី
-    MOP:
-      display_names:
-        other: ប៉ាតាកា​ម៉ាកាវ
-        one: ប៉ាតាកា​ម៉ាកាវ
-    MRO:
-      display_names:
-        other: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី (1973–2017)
-        one: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី (1973–2017)
-    MRU:
-      display_names:
-        other: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី
-        one: អ៊ូហ្គីយ៉ា​ម៉ូរីតានី
-    MVR:
-      display_names:
-        other: រ៉ូហ្វីយ៉ា​ម៉ាល់ឌីវ
-        one: រ៉ូហ្វីយ៉ា​ម៉ាល់ឌីវ
-    MWK:
-      display_names:
-        other: ក្វាចា​ម៉ាឡាវី
-        one: ក្វាចា​ម៉ាឡាវី
-    MZN:
-      display_names:
-        other: មីទីខល​ម៉ូសំប៊ិក
-        one: មីទីខល​ម៉ូសំប៊ិក
-    OMR:
-      display_names:
-        other: រៀល​រូម៉ានី
-        one: រៀល​រូម៉ានី
-    PAB:
-      display_names:
-        other: បាល់ប៉ៅ​ប៉ាណាម៉ា
-        one: បាល់ប៉ៅ​ប៉ាណាម៉ា
-    PEN:
-      display_names:
-        other: ញូវ៉ូសូល ប៉េរូ
-        one: ញូវ៉ូសូល​ប៉េរូ
-    PGK:
-      display_names:
-        other: គីណាប៉ាពួញូហ្គីណេ
-        one: គីណាប៉ាពួញូហ្គីណេ
-    QAR:
-      display_names:
-        other: រីយ៉ាលកាតា
-        one: រីយ៉ាលកាតា
-    RSD:
-      display_names:
-        other: ឌីណាស៊ែប
-        one: ឌីណាស៊ែប
-    SAR:
-      display_names:
-        other: រីយ៉ាល​អារ៉ាប៊ីសាអូឌីត
-        one: រីយ៉ាល​អារ៉ាប៊ីសាអូឌីត
-    SCR:
-      display_names:
-        other: រូពី​សីស្ហែល
-        one: រូពី​សីស្ហែល
-    SDG:
-      display_names:
-        other: ផោន​ស៊ូដង់
-        one: ផោន​ស៊ូដង់
-    SLE:
-      display_names:
-        other: លីអ៊ុន​សៀរ៉ាឡេអូន
-        one: លីអ៊ុន​សៀរ៉ាឡេអូន
-    SLL:
-      display_names:
-        other: លីអ៊ុន​សៀរ៉ាឡេអូន (1964—2022)
-        one: លីអ៊ុន​សៀរ៉ាឡេអូន (1964—2022)
-    SOS:
-      display_names:
-        other: ស៊ីលិញ​សូម៉ាលី
-        one: ស៊ីលិញ​សូម៉ាលី
-    STD:
-      display_names:
-        other: ឌូប្រា​សៅតូម៉េ និងប្រាំងស៊ីប (1977–2017)
-        one: ឌូប្រា​សៅតូម៉េ និងប្រាំងស៊ីប (1977–2017)
-    SZL:
-      display_names:
-        other: លីឡាងហ្គីនី​ស្វាស៊ីឡង់
-        one: លីឡាងហ្គីនី​ស្វាស៊ីឡង់
-    TJS:
-      display_names:
-        other: សូមុនី​តាហ្ស៊ីគីស្ថាន
-        one: សូមុនី​តាហ្ស៊ីគីស្ថាន
-    TMT:
-      display_names:
-        other: ម៉ាណាត​តួកម៉េនីស្ថាន
-        one: ម៉ាណាត​តួកម៉េនីស្ថាន
-    TND:
-      display_names:
-        other: ឌីណាទុយនេស៊ី
-        one: ឌីណាទុយនេស៊ី
-    TZS:
-      display_names:
-        other: ស៊ីលិញ​តង់សានី
-        one: ស៊ីលិញ​តង់សានី
-    UGX:
-      display_names:
-        other: ស៊ីលិញ​អ៊ូហ្គង់ដា
-        one: ស៊ីលិញ​អ៊ូហ្គង់ដា
-    UZS:
-      display_names:
-        other: សុមអ៊ូបេគីស្ថាន
-        one: សុមអ៊ូបេគីស្ថាន
-    VES:
-      display_names:
-        other: ប៊ូលីវ៉ា​វ៉េណេស៊ុយអេឡា
-        one: ប៊ូលីវ៉ា​វ៉េណេស៊ុយអេឡា
-    VUV:
-      display_names:
-        other: វ៉ាទូវ៉ានូអាទូ
-        one: វ៉ាទូវ៉ានូអាទូ
-    WST:
-      display_names:
-        other: តាឡា​សាម័រ
-        one: តាឡា​សាម័រ
     YER:
       display_names:
         other: រៀល​យេម៉ែន
         one: រៀល​យេម៉ែន
+    ZAR:
+      display_names:
+        other: រ៉ង់អាហ្វ្រិកខាងត្បូង
+        one: រ៉ង់អាហ្វ្រិកខាងត្បូង
     ZMK:
       display_names:
         other: ក្វាចា សំប៊ី (1968–2012)
         one: ក្វាចា សំប៊ី (1968–2012)
+    ZMW:
+      display_names:
+        other: ក្វាចាហ្សំប៊ី
+        one: ក្វាចាហ្សំប៊ី
+  units:
+    g-force:
+      long:
+        other: "{0} កម្លាំង​ទំនាញ"
+      short:
+        display_name: កម្លាំង​ទំនាញ
+      narrow:
+        other: "{0} ក.ទ."
+    meter-per-square-second:
+      long:
+        display_name: ម៉ែត្រ​ក្នុង​មួយ​វិនាទី​ការ៉េ
+        other: "{0} ម៉ែត្រ​ក្នុង​មួយ​វិនាទី​ការ៉េ"
+      short:
+        display_name: ម៉ែត្រ​/​វិនាទី​ការ៉េ
+    revolution:
+      long:
+        display_name: រង្វិលជុំ
+        other: "{0} រង្វិលជុំ"
+    radian:
+      long:
+        other: "{0} រ៉ាដ្យង់"
+      short:
+        display_name: រ៉ាដ្យង់
+    degree:
+      long:
+        other: "{0} ដឺក្រេ"
+      short:
+        display_name: ដឺក្រេ
+    square-kilometer:
+      long:
+        display_name: គីឡូម៉ែត្រ​ការ៉េ
+        other: "{0} គីឡូម៉ែត្រ​ការ៉េ"
+        per_unit_pattern: "{0} ក្នុងមួយគីឡូម៉ែត្រ​ការ៉េ"
+      narrow:
+        other: "{0} គ.ម²."
+    hectare:
+      long:
+        other: "{0} ហិកតា"
+      short:
+        display_name: ហិកតា
+      narrow:
+        other: "{0} ហ."
+    square-meter:
+      long:
+        display_name: ម៉ែត្រ​ការ៉េ
+        other: "{0} ម៉ែត្រ​ការ៉េ"
+        per_unit_pattern: "{0} ក្នុងមួយម៉ែត្រការ៉េ"
+      narrow:
+        other: "{0} ម²."
+    square-centimeter:
+      long:
+        display_name: សង់ទីម៉ែត្រការ៉េ
+        other: "{0} សង់ទីម៉ែត្រការ៉េ"
+        per_unit_pattern: "{0} ក្នុងមួយសង់ទីម៉ែត្រការ៉េ"
+    square-mile:
+      long:
+        display_name: ម៉ាយការ៉េ
+        other: "{0} ម៉ាយការ៉េ"
+        per_unit_pattern: "{0} ក្នុងមួយម៉ាយការ៉េ"
+      narrow:
+        other: "{0} ម៉²."
+    acre:
+      long:
+        other: "{0} អា"
+      short:
+        display_name: អា
+      narrow:
+        other: "{0} អា"
+    square-yard:
+      long:
+        display_name: យ៉ាត​ការ៉េ
+        other: "{0} យ៉ាត​ការ៉េ"
+    square-foot:
+      long:
+        display_name: ហ្វីត​ការ៉េ
+        other: "{0} ហ្វីត​ការ៉េ"
+      narrow:
+        other: "{0} ហ្វ²."
+    square-inch:
+      long:
+        other: "{0} អ៊ីញការ៉េ"
+        per_unit_pattern: "{0} ក្នុងមួយអ៊ីញការ៉េ"
+      short:
+        display_name: អ៊ីញការ៉េ
+    karat:
+      long:
+        other: "{0} ការ៉ាត់"
+      short:
+        display_name: ការ៉ាត់
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: មិល្លីក្រាមក្នុងមួយដេស៊ីលីត្រ
+        other: "{0} មិល្លីក្រាមក្នុងមួយដេស៊ីលីត្រ"
+    millimole-per-liter:
+      long:
+        display_name: មិល្លីម៉ូលក្នុងមួយលីត្រ
+        other: "{0} មិល្លីម៉ូលក្នុងមួយលីត្រ"
+      short:
+        display_name: មិល្លីម៉ូល/លីត្រ
+        other: "{0} ម.ម៉ូល/លី"
+      narrow:
+        display_name: ម.ម៉ូល/លី
+    permillion:
+      long:
+        display_name: ផ្នែកក្នុងមួយលាន
+        other: "{0} ផ្នែកក្នុងមួយលាន"
+    percent:
+      long:
+        other: "{0} ភាគរយ"
+      short:
+        display_name: ភាគរយ
+      narrow:
+        display_name: "%"
+    liter-per-kilometer:
+      long:
+        display_name: លីត្រ​ក្នុង​មួយ​គីឡូម៉ែត្រ
+        other: "{0} លីត្រ​ក្នុង​មួយ​គីឡូម៉ែត្រ"
+      short:
+        display_name: លីត្រ/គម
+        other: "{0} លី/គម"
+      narrow:
+        display_name: លី/គម
+    liter-per-100-kilometer:
+      long:
+        display_name: លីត្រក្នុង 100 គីឡូម៉ែត្រ
+        other: "{0} លីត្រក្នុង 100 គីឡូម៉ែត្រ"
+      narrow:
+        other: "{0}L/100km"
+    mile-per-gallon:
+      long:
+        display_name: ម៉ាយក្នុង​មួយ​ហ្គាឡុង
+        other: "{0} ម៉ាយក្នុង​មួយ​ហ្គាឡុង"
+      short:
+        display_name: ម៉ាយ​/​ហ្គាឡុង
+        other: "{0} mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: ម៉ាយក្នុងមួយអ៊ីមភៀរៀលហ្គាឡុង
+        other: "{0} ម៉ាយក្នុងមួយអ៊ីមភៀរៀលហ្គាឡុង"
+      short:
+        display_name: ម៉ាយ/gal Imp.
+    petabyte:
+      long:
+        display_name: ប៉េតាបៃ
+        other: "{0} ប៉េតាបៃ"
+    terabyte:
+      long:
+        display_name: តេរ៉ាបៃ
+        other: "{0} តេរ៉ាបៃ"
+    terabit:
+      long:
+        display_name: តេរ៉ាប៊ីត
+        other: "{0} តេរ៉ាប៊ីត"
+    gigabyte:
+      long:
+        display_name: ជីកាបៃ
+        other: "{0} ជីកាបៃ"
+    gigabit:
+      long:
+        display_name: ជីកាប៊ីត
+        other: "{0} ជីកាប៊ីត"
+    megabyte:
+      long:
+        display_name: មេកាបៃ
+        other: "{0} មេកាបៃ"
+    megabit:
+      long:
+        display_name: មេកាប៊ីត
+        other: "{0} មេកាប៊ីត"
+    kilobyte:
+      long:
+        display_name: គីឡូបៃ
+        other: "{0} គីឡូបៃ"
+    kilobit:
+      long:
+        display_name: គីឡូប៊ីត
+        other: "{0} គីឡូប៊ីត"
+    byte:
+      long:
+        display_name: បៃ
+        other: "{0} បៃ"
+    bit:
+      long:
+        display_name: ប៊ីត
+        other: "{0} ប៊ីត"
+    century:
+      long:
+        display_name: សតវត្ស
+        other: "{0} សតវត្ស"
+      short:
+        display_name: ស.វ
+        other: "{0} ស.វ"
+    year:
+      long:
+        per_unit_pattern: "{0} ក្នុងមួយឆ្នាំ"
+      short:
+        display_name: ឆ្នាំ
+        other: "{0} ឆ្នាំ"
+        per_unit_pattern: "{0}/ឆ្នាំ"
+    month:
+      long:
+        per_unit_pattern: "{0} ក្នុងមួយខែ"
+      short:
+        display_name: ខែ
+        other: "{0} ខែ"
+        per_unit_pattern: "{0}/ខែ"
+    week:
+      long:
+        per_unit_pattern: "{0} ក្នុងមួយសប្តាហ៍"
+      short:
+        display_name: សប្ដាហ៍
+        other: "{0} សប្ដាហ៍"
+        per_unit_pattern: "{0}/សប្តាហ៍"
+    day:
+      long:
+        per_unit_pattern: "{0} ក្នុងមួយថ្ងៃ"
+      short:
+        display_name: ថ្ងៃ
+        other: "{0} ថ្ងៃ"
+        per_unit_pattern: "{0}/ថ្ងៃ"
+    hour:
+      long:
+        per_unit_pattern: "{0} ក្នុង​មួយ​ម៉ោង"
+      short:
+        display_name: ម៉ោង
+        other: "{0} ម៉ោង"
+        per_unit_pattern: "{0}/ម៉ោង"
+    minute:
+      long:
+        other: "{0} នាទី"
+        per_unit_pattern: "{0} ក្នុងមួយនាទី"
+      short:
+        display_name: នាទី
+        other: "{0} នាទី"
+        per_unit_pattern: "{0}/នាទី"
+    second:
+      long:
+        per_unit_pattern: "{0} ក្នុង​មួយ​វិនាទី"
+      short:
+        display_name: វិនាទី
+        other: "{0} វិនាទី"
+        per_unit_pattern: "{0}/វិនាទី"
+    millisecond:
+      long:
+        other: "{0} មីលី​វិនាទី"
+      short:
+        display_name: មិល្លី​វិនាទី
+        other: "{0} ម.វិ"
+    microsecond:
+      long:
+        other: "{0} មីក្រូ​វិនាទី"
+      short:
+        display_name: មីក្រូ​វិនាទី
+    nanosecond:
+      long:
+        other: "{0} ណាណូវិនាទី"
+      short:
+        display_name: ណាណូវិនាទី
+    ampere:
+      long:
+        other: "{0} អំពែរ"
+      short:
+        display_name: អំពែរ
+    milliampere:
+      long:
+        other: "{0} មិល្លីអំពែរ"
+      short:
+        display_name: មិល្លីអំពែរ
+    ohm:
+      long:
+        other: "{0} អូម"
+      short:
+        display_name: អូម
+    volt:
+      long:
+        other: "{0} វ៉ុល"
+      short:
+        display_name: វ៉ុល
+    kilocalorie:
+      long:
+        display_name: គីឡូកាឡូរី
+        other: "{0} គីឡូកាឡូរី"
+    calorie:
+      long:
+        display_name: កាឡូរី
+        other: "{0} កាឡូរី"
+    foodcalorie:
+      long:
+        display_name: កាឡូរី
+        other: "{0} កាឡូរី"
+      short:
+        display_name: Cal
+        other: "{0} Cal"
+    kilojoule:
+      long:
+        other: "{0} គីឡូស៊ូល"
+      short:
+        display_name: គីឡូស៊ូល
+    joule:
+      long:
+        other: "{0} ស៊ូល"
+      short:
+        display_name: ស៊ូល
+    kilowatt-hour:
+      long:
+        display_name: គីឡូវ៉ាត់​ម៉ោង
+        other: "{0} គីឡូវ៉ាត់​ម៉ោង"
+    electronvolt:
+      long:
+        display_name: អេឡិចត្រូវ៉ុល
+        other: "{0} អេឡិចត្រូវ៉ុល"
+    british-thermal-unit:
+      long:
+        display_name: ឯកតាកម្ដៅអង់គ្លេស
+        other: "{0} ឯកតាកម្ដៅអង់គ្លេស"
+      short:
+        display_name: BTU
+    therm-us:
+      long:
+        display_name: ឯកតាកម្ដៅអាមេរិក
+        other: "{0} ឯកតាកម្ដៅអាមេរិក"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: គីឡូវ៉ាត់ម៉ោងក្នុង 100 គីឡូម៉ែត្រ
+        other: "{0} គីឡូវ៉ាត់ម៉ោងក្នុង 100 គីឡូម៉ែត្រ"
+    gigahertz:
+      long:
+        display_name: ជីកាហឺត
+        other: "{0} ជីកាហឺត"
+    megahertz:
+      long:
+        display_name: មេហ្គា​ហឺត
+        other: "{0} មេហ្គា​ហឺត"
+    kilohertz:
+      long:
+        display_name: គីឡូហឺត
+        other: "{0} គីឡូហឺត"
+    hertz:
+      long:
+        display_name: ហឺត
+        other: "{0} ហឺត"
+    pixel:
+      long:
+        display_name: ភិចស៊ែល
+        other: "{0} ភិចស៊ែល"
+    megapixel:
+      long:
+        display_name: មេហ្កាភិចស៊ែល
+        other: "{0} មេហ្កាភិចស៊ែល"
+    pixel-per-centimeter:
+      long:
+        display_name: ភិចស៊ែលក្នុង១សង់ទីម៉ែត្រ
+        other: "{0} ភិចស៊ែលក្នុង១សង់ទីម៉ែត្រ"
+    pixel-per-inch:
+      long:
+        display_name: ភិចស៊ែលក្នុង១អ៊ីញ
+        other: "{0} ភិចស៊ែលក្នុង១អ៊ីញ"
+    dot-per-centimeter:
+      long:
+        display_name: ចំណុចក្នុង១សង់ទីម៉ែត្រ
+        other: "{0} ចំណុចក្នុង១សង់ទីម៉ែត្រ"
+    dot-per-inch:
+      long:
+        display_name: ចំណុចក្នុង១អ៊ីញ
+        other: "{0} ចំណុចក្នុង១អ៊ីញ"
+    dot:
+      long:
+        other: "{0}ចំណុច"
+      short:
+        display_name: ចំណុច
+        other: "{0} ចំណុច"
+    earth-radius:
+      long:
+        display_name: កាំផែនដី
+        other: "{0} កាំផែនដី"
+    kilometer:
+      long:
+        display_name: គីឡូម៉ែត្រ
+        other: "{0} គីឡូម៉ែត្រ"
+        per_unit_pattern: "{0} ក្នុងមួយគីឡូម៉ែត្រ"
+      short:
+        display_name: គម
+        other: "{0} គម"
+        per_unit_pattern: "{0}/គម"
+    meter:
+      long:
+        other: "{0} ម៉ែត្រ"
+        per_unit_pattern: "{0} ក្នុងមួយម៉ែត្រ"
+      short:
+        display_name: ម៉ែត្រ
+        other: "{0} ម"
+        per_unit_pattern: "{0}/ម"
+    decimeter:
+      long:
+        display_name: ដេស៊ីម៉ែត្រ
+        other: "{0} ដេស៊ីម៉ែត្រ"
+      short:
+        display_name: ដម
+        other: "{0} ដម"
+    centimeter:
+      long:
+        display_name: សង់ទីម៉ែត្រ
+        other: "{0} សង់ទីម៉ែត្រ"
+        per_unit_pattern: "{0} ក្នុងមួយសង់ទីម៉ែត្រ"
+      short:
+        display_name: សម
+        other: "{0} សម"
+        per_unit_pattern: "{0}/សម"
+    micrometer:
+      long:
+        other: "{0} មីក្រូ​ម៉ែត្រ"
+      short:
+        display_name: មីក្រូ​ម៉ែត្រ
+    nanometer:
+      long:
+        display_name: ណាណូម៉ែត្រ
+        other: "{0} ណាណូម៉ែត្រ"
+    picometer:
+      long:
+        display_name: ពីកូម៉ែត្រ
+        other: "{0} ពីកូម៉ែត្រ"
+      narrow:
+        other: "{0} ព.ម."
+    mile:
+      long:
+        other: "{0} ម៉ាយ"
+      short:
+        display_name: ម៉ាយ
+      narrow:
+        other: "{0} ម៉."
+    yard:
+      long:
+        other: "{0} យ៉ាត"
+      short:
+        display_name: យ៉ាត
+      narrow:
+        other: "{0} យ៉."
+    foot:
+      long:
+        other: "{0} ហ្វីត"
+        per_unit_pattern: "{0} ក្នុងមួយហ្វីត"
+      short:
+        display_name: ហ្វីត
+      narrow:
+        other: "{0}′"
+    inch:
+      long:
+        other: "{0} អ៊ីញ"
+        per_unit_pattern: "{0} ក្នុងមួយអ៊ីញ"
+      short:
+        display_name: អ៊ីញ
+      narrow:
+        other: "{0}″"
+    parsec:
+      long:
+        other: "{0} ផាសិក"
+      short:
+        display_name: ផាសិក
+    light-year:
+      long:
+        other: "{0} ឆ្នាំ​ពន្លឺ"
+      short:
+        display_name: ឆ្នាំ​ពន្លឺ
+      narrow:
+        other: "{0} ឆ្នាំ​ពន្លឺ"
+    astronomical-unit:
+      long:
+        display_name: ឯកតាតារាសាស្ត្រ
+        other: "{0} ឯកតាតារាសាស្ត្រ"
+    furlong:
+      long:
+        other: "{0} ហ្វឺឡង"
+      short:
+        display_name: ហ្វឺឡង
+        other: "{0} ហ្វឺ"
+    fathom:
+      long:
+        other: "{0} ហ្វាតឹម"
+      short:
+        display_name: ហ្វាតឹម
+    nautical-mile:
+      long:
+        display_name: ណូទិកម៉ាយ
+        other: "{0} ណូទិកម៉ាយ"
+    mile-scandinavian:
+      long:
+        display_name: ម៉ាយស្កង់ឌីណាវ
+        other: "{0} ម៉ាយស្កង់ឌីណាវ"
+    lux:
+      long:
+        other: "{0} lux"
+      short:
+        display_name: lux
+    candela:
+      long:
+        display_name: កានដេឡា
+        other: "{0} កានដេឡា"
+    lumen:
+      long:
+        display_name: លូមែន
+        other: "{0} លូមែន"
+    tonne:
+      long:
+        display_name: តោនម៉ែត្រ
+        other: "{0} តោនម៉ែត្រ"
+    kilogram:
+      long:
+        display_name: គីឡូក្រាម
+        other: "{0} គីឡូក្រាម"
+        per_unit_pattern: "{0} ក្នុងមួយគីឡូក្រាម"
+      narrow:
+        other: "{0}kg"
+    gram:
+      long:
+        other: "{0} ក្រាម"
+        per_unit_pattern: "{0} ក្នុងមួយក្រាម"
+      short:
+        display_name: ក្រាម
+      narrow:
+        other: "{0}g"
+    milligram:
+      long:
+        display_name: មិល្លីក្រាម
+        other: "{0} មិល្លីក្រាម"
+    microgram:
+      long:
+        display_name: មីក្រូក្រាម
+        other: "{0} មីក្រូក្រាម"
+    ton:
+      long:
+        other: "{0} តោនអាមេរិក"
+      short:
+        display_name: តោនអាមេរិក
+    stone:
+      long:
+        other: "{0} ស្តូន"
+      short:
+        display_name: ស្តូន
+    pound:
+      long:
+        other: "{0} ផោន"
+        per_unit_pattern: "{0} ក្នុងមួយផោន"
+      short:
+        display_name: ផោន
+      narrow:
+        other: "{0}#"
+    ounce:
+      long:
+        display_name: អោន
+        other: "{0} អោន"
+        per_unit_pattern: "{0} ក្នុងមួយអោន"
+      narrow:
+        other: "{0} អ."
+    ounce-troy:
+      long:
+        display_name: ត្រយ​អោន
+        other: "{0} ត្រយ​អោន"
+      short:
+        display_name: oz troy
+    carat:
+      long:
+        other: "{0} ការ៉ាត់"
+      short:
+        display_name: ការ៉ាត់
+    gigawatt:
+      long:
+        display_name: ជីកាវ៉ាត់
+        other: "{0} ជីកាវ៉ាត់"
+    megawatt:
+      long:
+        display_name: មេកាវ៉ាត់
+        other: "{0} មេកាវ៉ាត់"
+    kilowatt:
+      long:
+        display_name: គីឡូវ៉ាត់
+        other: "{0} គីឡូវ៉ាត់"
+      narrow:
+        other: "{0} គ.វ."
+    watt:
+      long:
+        other: "{0} វ៉ាត់"
+      short:
+        display_name: វ៉ាត់
+      narrow:
+        other: "{0} វ."
+    milliwatt:
+      long:
+        display_name: មិល្លីវ៉ាត់
+        other: "{0} មិល្លីវ៉ាត់"
+    horsepower:
+      long:
+        display_name: សេះ
+        other: "{0} សេះ"
+      narrow:
+        other: "{0} សេះ"
+    millimeter-ofhg:
+      long:
+        display_name: មិល្លីម៉ែត្រនៃ​បារត
+        other: "{0} មិល្លីម៉ែត្រនៃ​បារត"
+      narrow:
+        display_name: mmHg
+        other: "{0}mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: ផោន​ក្នុង​មួយ​អ៊ីញ​ការ៉េ
+        other: "{0} ផោន​ក្នុង​មួយ​អ៊ីញ​ការ៉េ"
+    inch-ofhg:
+      long:
+        display_name: អ៊ីញនៃបារត
+        other: "{0} អ៊ីញនៃបារត"
+      narrow:
+        display_name: "″ Hg"
+        other: '{0}" Hg'
+    millibar:
+      long:
+        display_name: មិល្លីបារ
+        other: "{0} មិល្លីបារ"
+      narrow:
+        other: "{0}mb"
+    atmosphere:
+      long:
+        display_name: បរិយាកាស
+        other: បរិយាកាស {0}
+    pascal:
+      long:
+        display_name: ប៉ាស្កាល់
+        other: "{0} ប៉ាស្កាល់"
+    hectopascal:
+      long:
+        display_name: ហិចតូប៉ាស្កាល់
+        other: "{0} ហិចតូប៉ាស្កាល់"
+    kilopascal:
+      long:
+        display_name: គីឡូប៉ាស្កាល់
+        other: "{0} គីឡូប៉ាស្កាល់"
+    megapascal:
+      long:
+        display_name: មេហ្កាប៉ាស្កាល់
+        other: "{0} មេហ្កាប៉ាស្កាល់"
+    kilometer-per-hour:
+      long:
+        display_name: គីឡូម៉ែត្រ​ក្នុង​មួយ​ម៉ោង
+        other: "{0} គីឡូម៉ែត្រ​ក្នុង​មួយ​ម៉ោង"
+      short:
+        other: "{0} kph"
+    meter-per-second:
+      long:
+        display_name: ម៉ែត្រ​ក្នុង​មួយ​វិនាទី
+        other: "{0} ម៉ែត្រ​ក្នុង​មួយ​វិនាទី"
+      short:
+        display_name: ម៉ែត្រ​/​វិនាទី
+      narrow:
+        other: "{0} ម./វិ."
+    mile-per-hour:
+      long:
+        display_name: ម៉ាយ​ក្នុង​មួយ​ម៉ោង
+        other: "{0} ម៉ាយក្នុងមួយម៉ោង"
+      short:
+        display_name: ម៉ាយ​/​ម៉ោង
+        other: "{0} mph"
+      narrow:
+        other: "{0} ម៉./ម៉"
+    knot:
+      long:
+        display_name: ណត់
+        other: "{0} ណត់"
+    celsius:
+      long:
+        other: "{0} អង្សាសេ"
+      short:
+        display_name: អង្សាសេ
+      narrow:
+        display_name: "°C"
+    fahrenheit:
+      long:
+        display_name: អង្សា​ហ្វារិនហៃ
+        other: "{0} អង្សា​ហ្វារិនហៃ"
+    kelvin:
+      long:
+        display_name: អង្សា​ខែលវិន
+        other: "{0} អង្សា​ខែលវិន"
+    cubic-kilometer:
+      long:
+        display_name: គីឡូម៉ែត្រ​គូប
+        other: "{0} គីឡូម៉ែត្រ​គូប"
+      narrow:
+        other: "{0} គ.ម³."
+    cubic-meter:
+      long:
+        display_name: ម៉ែត្រគូប
+        other: "{0} ម៉ែត្រគូប"
+        per_unit_pattern: "{0} ក្នុងមួយម៉ែត្រគូប"
+    cubic-centimeter:
+      long:
+        display_name: សង់ទីម៉ែត្រគូប
+        other: "{0} សង់ទីម៉ែត្រគូប"
+        per_unit_pattern: "{0} ក្នុងមួយសង់ទីម៉ែត្រគូប"
+    cubic-mile:
+      long:
+        display_name: ម៉ាយគូប
+        other: "{0} ម៉ាយគូប"
+      narrow:
+        other: "{0} ម៉³."
+    cubic-yard:
+      long:
+        other: "{0} យ៉ាតគូប"
+      short:
+        display_name: យ៉ាតគូប
+    cubic-foot:
+      long:
+        other: "{0} ហ្វីត​គូប"
+      short:
+        display_name: ហ្វីត​គូប
+    cubic-inch:
+      long:
+        other: "{0} អ៊ីញគូប"
+      short:
+        display_name: អ៊ីញគូប
+    megaliter:
+      long:
+        display_name: មេកាលីត្រ
+        other: "{0} មេកាលីត្រ"
+    hectoliter:
+      long:
+        display_name: ហិកតូលីត្រ
+        other: "{0} ហិកតូលីត្រ"
+    liter:
+      long:
+        other: "{0} លីត្រ"
+        per_unit_pattern: "{0} ក្នុងមួយលីត្រ"
+      short:
+        display_name: លីត្រ
+        other: "{0} L"
+      narrow:
+        other: "{0}L"
+    deciliter:
+      long:
+        display_name: ដេស៊ីលីត្រ
+        other: "{0} ដេស៊ីលីត្រ"
+    centiliter:
+      long:
+        display_name: សង់ទីលីត្រ
+        other: "{0} សង់ទីលីត្រ"
+    milliliter:
+      long:
+        display_name: មិល្លីលីត្រ
+        other: "{0} មិល្លីលីត្រ"
+    pint-metric:
+      long:
+        display_name: រង្វាស់ភីន
+        other: "{0} រង្វាស់ភីន"
+    cup-metric:
+      long:
+        display_name: រង្វាស់ពែង
+        other: "{0} រង្វាស់ពែង"
+    acre-foot:
+      long:
+        other: "{0} អាហ្វីត"
+      short:
+        display_name: អាហ្វីត
+    bushel:
+      long:
+        other: "{0} ប៊ូសែល"
+      short:
+        display_name: ប៊ូសែល
+    gallon:
+      long:
+        display_name: ហ្គាឡុង
+        other: "{0} ហ្គាឡុង"
+        per_unit_pattern: "{0} ក្នុងមួយហ្គាឡុង"
+      short:
+        display_name: gal
+        other: "{0} gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        display_name: អ៊ីមភៀរៀលហ្គាឡុង
+        other: "{0} អ៊ីមភៀរៀលហ្គាឡុង"
+        per_unit_pattern: "{0}/អ៊ីមភៀរៀលហ្គាឡុង"
+    quart:
+      long:
+        display_name: ក្វាត
+        other: "{0} ក្វាត"
+      short:
+        display_name: qts
+    pint:
+      long:
+        other: "{0} ភីន"
+      short:
+        display_name: ភីន
+    cup:
+      long:
+        other: "{0} ពែង"
+      short:
+        display_name: ពែង
+    fluid-ounce:
+      long:
+        display_name: អោន​វត្ថុ​រាវ
+        other: "{0} អោន​វត្ថុ​រាវ"
+      short:
+        display_name: fl oz
+        other: "{0} fl oz"
+    tablespoon:
+      long:
+        display_name: ស្លាបព្រា​បាយ
+        other: "{0} ស្លាបព្រា​បាយ"
+    teaspoon:
+      long:
+        display_name: ស្លាបព្រា​កាហ្វេ
+        other: "{0} ស្លាបព្រា​កាហ្វេ"
+    dessert-spoon:
+      long:
+        display_name: ស្លាបព្រាបង្អែម
+        other: "{0} ស្លាបព្រាបង្អែម"
+    dram:
+      long:
+        display_name: ត្រាម
+        other: "{0} ត្រាម"
+      short:
+        display_name: ត្រាមរាវ
+        other: "{0} ត្រាមរាវ"
+    light-speed:
+      long:
+        display_name: ពន្លឺ
+        other: "{0} ពន្លឺ"
+      short:
+        display_name: ពន្លឺ
+        other: "{0} ពន្លឺ"
+      narrow:
+        display_name: ពន្លឺ
+        other: "{0} ពន្លឺ"
+    portion-per-1e9:
+      long:
+        display_name: ផ្នែកក្នុងមួយប៊ីលាន
+        other: "{0} ផ្នែកក្នុងមួយប៊ីលាន"
+      short:
+        display_name: ផ្នែក/ប៊ីលាន
+      narrow:
+        other: "{0}ppb"
+    night:
+      long:
+        display_name: យប់
+        other: "{0} យប់"
+        per_unit_pattern: "{0} ក្នុងមួយយប់"
+      short:
+        display_name: យប់
+        other: "{0} យប់"
+        per_unit_pattern: "{0}/យប់"
+      narrow:
+        display_name: យប់
+        other: "{0} យប់"
+        per_unit_pattern: "{0}/យប់"
+    arc-minute:
+      short:
+        display_name: អាកនាទី
+        other: "{0} អាកនាទី"
+      narrow:
+        other: "{0}′"
+    arc-second:
+      short:
+        display_name: អាកវិនាទី
+        other: "{0} អាកវិនាទី"
+      narrow:
+        other: "{0}″"
+    dunam:
+      short:
+        display_name: ឌូណាម
+        other: "{0} ឌូណាម"
+    item:
+      short:
+        display_name: របស់
+        other: "{0} របស់"
+    decade:
+      short:
+        display_name: ទសវត្សរ៍
+        other: "{0} ទសវត្សរ៍"
+    quarter:
+      short:
+        display_name: ត្រីមាស
+        other: "{0} ត្រីមាស"
+        per_unit_pattern: "{0}/ត្រី"
+      narrow:
+        other: "{0} ត្រី"
+    millimeter:
+      short:
+        display_name: មិល្លីម៉ែត្រ
+        other: "{0} មិល្លីម៉ែត្រ"
+      narrow:
+        display_name: មម
+        other: "{0} មម"
+    grain:
+      short:
+        display_name: គ្រាប់
+        other: "{0} គ្រាប់"
+    drop:
+      short:
+        display_name: តំណក់
+        other: "{0} តំណក់"
+    jigger:
+      short:
+        display_name: ជីកហ្គឺរ
+        other: "{0} ជីកហ្គឺរ"
+    pinch:
+      short:
+        display_name: ច្បិច
+        other: "{0} ច្បិច"
+    mole:
+      narrow:
+        display_name: ម៉ូល
+        other: "{0} ម៉ូល"
+    bar:
+      narrow:
+        display_name: បារ
+        other: "{0} បារ"

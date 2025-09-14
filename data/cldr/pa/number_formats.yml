@@ -1,6 +1,6 @@
 ---
 locale: pa
-generated_at: '2025-09-13T17:39:46Z'
+generated_at: '2025-09-14T06:27:34Z'
 cldr_version: '46'
 number_formats:
   decimal_formats:
@@ -9,22 +9,124 @@ number_formats:
     standard: "#,##,##0%"
   currency_formats:
     standard: "¤#,##,##0.00"
-    accounting: "¤ #,##0.00"
   scientific_formats:
     standard: "[#E0]"
+  compact_formats:
+    short:
+      '1000':
+        one: 0 ਹਜ਼ਾਰ
+        other: 0 ਹਜ਼ਾਰ
+      '10000':
+        one: 00 ਹਜ਼ਾਰ
+        other: 00 ਹਜ਼ਾਰ
+      '100000':
+        one: 0 ਲੱਖ
+        other: 0 ਲੱਖ
+      '1000000':
+        one: 00 ਲੱਖ
+        other: 00 ਲੱਖ
+      '10000000':
+        one: 0 ਕਰੋੜ
+        other: 0 ਕਰੋੜ
+      '100000000':
+        one: 00 ਕਰੋੜ
+        other: 00 ਕਰੋੜ
+      '1000000000':
+        one: 0 ਅਰਬ
+        other: 0 ਅਰਬ
+      '10000000000':
+        one: 00 ਅਰਬ
+        other: 00 ਅਰਬ
+      '100000000000':
+        one: 0 ਖਰਬ
+        other: 0 ਖਰਬ
+      '1000000000000':
+        one: 00 ਖਰਬ
+        other: 00 ਖਰਬ
+      '10000000000000':
+        one: 0 ਨੀਲ
+        other: 0 ਨੀਲ
+      '100000000000000':
+        one: 00 ਨੀਲ
+        other: 00 ਨੀਲ
+    long:
+      '1000':
+        one: 0 ਹਜ਼ਾਰ
+        other: 0 ਹਜ਼ਾਰ
+      '10000':
+        one: 00 ਹਜ਼ਾਰ
+        other: 00 ਹਜ਼ਾਰ
+      '100000':
+        one: 0 ਲੱਖ
+        other: 0 ਲੱਖ
+      '1000000':
+        one: 00 ਲੱਖ
+        other: 00 ਲੱਖ
+      '10000000':
+        one: 0 ਕਰੋੜ
+        other: 0 ਕਰੋੜ
+      '100000000':
+        one: 00 ਕਰੋੜ
+        other: 00 ਕਰੋੜ
+      '1000000000':
+        one: 0 ਅਰਬ
+        other: 0 ਅਰਬ
+      '10000000000':
+        one: 00 ਅਰਬ
+        other: 00 ਅਰਬ
+      '100000000000':
+        one: 0 ਖਰਬ
+        other: 0 ਖਰਬ
+      '1000000000000':
+        one: 00 ਖਰਬ
+        other: 00 ਖਰਬ
+      '10000000000000':
+        one: 0 ਨੀਲ
+        other: 0 ਨੀਲ
+      '100000000000000':
+        one: 00 ਨੀਲ
+        other: 00 ਨੀਲ
   currencies:
+    AED:
+      display_names:
+        other: ਸੰਯੁਕਤ ਅਰਬ ਅਮੀਰਾਤ ਦਿਰਹਾਮ
+        one: ਸੰਯੁਕਤ ਅਰਬ ਅਮੀਰਾਤ ਦਿਰਹਾਮ
     AFN:
       display_names:
         other: ਅਫ਼ਗਾਨ ਅਫ਼ਗਾਨੀ
         one: ਅਫ਼ਗਾਨ ਅਫ਼ਗਾਨੀ
+    ALL:
+      display_names:
+        other: ਅਲਬਾਨੀਆਈ ਲੇਕ
+        one: ਅਲਬਾਨੀਆਈ ਲੇਕ
     AMD:
       display_names:
         other: ਅਰਮੀਨੀਆਈ ਦਰਾਮ
         one: ਅਰਮੀਨੀਆਈ ਦਰਾਮ
+    ANG:
+      display_names:
+        other: ਨੀਦਰਲੈਂਡਸ ਐਂਟੀਲੀਅਨ ਗਿਲਡਰ
+        one: ਨੀਦਰਲੈਂਡਸ ਐਂਟੀਲੀਅਨ ਗਿਲਡਰ
     AOA:
       display_names:
         other: ਅੰਗੋਲਾ ਕਵਾਂਜਾ
         one: ਅੰਗੋਲਾ ਕਵਾਂਜਾ
+    ARA:
+      display_names:
+        other: ਅਰਜਨਟੀਨੀ ਅਸਟਰਾਲ
+        one: ਅਰਜਨਟੀਨੀ ਅਸਟਰਾਲ
+    ARL:
+      display_names:
+        other: ਅਰਜਨਟੀਨੀ ਪੇਸੋ ਲੇ (1970–1983)
+        one: ਅਰਜਨਟੀਨੀ ਪੇਸੋ ਲੇ (1970–1983)
+    ARM:
+      display_names:
+        other: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1881–1970)
+        one: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1881–1970)
+    ARP:
+      display_names:
+        other: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1983–1985)
+        one: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1983–1985)
     ARS:
       display_names:
         other: ਅਰਜਨਟੀਨੀ ਪੇਸੋ
@@ -33,6 +135,10 @@ number_formats:
       display_names:
         other: ਆਸਟ੍ਰੇਲੀਆਈ ਡਾਲਰ
         one: ਆਸਟ੍ਰੇਲੀਆਈ ਡਾਲਰ
+    AWG:
+      display_names:
+        other: ਅਰੂਬਨ ਫਲੋਰਿਨ
+        one: ਅਰੂਬਨ ਫਲੋਰਿਨ
     AZN:
       display_names:
         other: ਅਜ਼ਰਬਾਈਜਾਨ ਮਾਨਤ
@@ -49,6 +155,18 @@ number_formats:
       display_names:
         other: ਬੰਗਲਾਦੇਸ਼ੀ ਟਕਾ
         one: ਬੰਗਲਾਦੇਸ਼ੀ ਟਕਾ
+    BGN:
+      display_names:
+        other: ਬੁਲਗਾਰੀਆਈ ਲੇਵ
+        one: ਬੁਲਗਾਰੀਆਈ ਲੇਵ
+    BHD:
+      display_names:
+        other: ਬਹਿਰੀਨੀ ਦਿਨਾਰ
+        one: ਬਹਿਰੀਨੀ ਦਿਨਾਰ
+    BIF:
+      display_names:
+        other: ਬੁਰੁੰਡੀਆਈ ਫ੍ਰੈਂਕ
+        one: ਬੁਰੁੰਡੀਆਈ ਫ੍ਰੈਂਕ
     BMD:
       display_names:
         other: ਬਰਮੂਡਾ ਡਾਲਰ
@@ -61,18 +179,67 @@ number_formats:
       display_names:
         other: ਬੋਲੀਵੀਅਨ ਬੋਲੀਵੀਅਨੋ
         one: ਬੋਲੀਵੀਅਨ ਬੋਲੀਵੀਅਨੋ
+    BOL:
+      display_names:
+        other: ਬੋਲੀਵੀਆਈ ਬੋਲੀਵੀਅਨੋ (1863–1963)
+        one: ਬੋਲੀਵੀਆਈ ਬੋਲੀਵੀਅਨੋ (1863–1963)
+    BOP:
+      display_names:
+        other: ਬੋਲੀਵੀਆਈ ਪੇਸੋ
+        one: ਬੋਲੀਵੀਆਈ ਪੇਸੋ
+    BOV:
+      display_names:
+        other: ਬੋਲੀਵੀਆਈ ਮਵਡੋਲ
+        one: ਬੋਲੀਵੀਆਈ ਮਵਡੋਲ
+    BRB:
+      display_names:
+        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਿਰੋਸ (1967–1986)
+        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਿਰੋਸ (1967–1986)
+    BRC:
+      display_names:
+        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਾਡੂ (1986–1989)
+        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਾਡੂ (1986–1989)
+    BRE:
+      display_names:
+        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1990–1993)
+        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1990–1993)
     BRL:
       display_names:
         other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਰੀਅਲ
         one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਰੀਅਲ
+    BRN:
+      display_names:
+        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਾਡੂ (1989–1990)
+        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਾਡੂ (1989–1990)
+    BRR:
+      display_names:
+        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1993–1994)
+        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1993–1994)
+    BRZ:
+      display_names:
+        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1942–1967)
+        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1942–1967)
     BSD:
       display_names:
         other: ਬਾਹਾਮੀਅਨ ਡਾਲਰ
         one: ਬਾਹਾਮੀਅਨ ਡਾਲਰ
+    BTN:
+      display_names:
+        other: ਭੂਟਾਨੀ ਐਂਗਲਟ੍ਰਮ
+        one: ਭੂਟਾਨੀ ਐਂਗਲਟ੍ਰਮ
     BWP:
       display_names:
         other: ਬੋਟਸਵਾਨਾ ਪੁਲਾ
         one: ਬੋਟਸਵਾਨਾ ਪੁਲਾ
+    BYN:
+      symbol: р.
+      display_names:
+        other: ਬੇਲਾਰੂਸੀ ਰੂਬਲ
+        one: ਬੇਲਾਰੂਸੀ ਰੂਬਲ
+    BYR:
+      display_names:
+        other: ਬੇਲਾਰੂਸੀ ਰੂਬਲ (2000–2016)
+        one: ਬੇਲਾਰੂਸੀ ਰੂਬਲ (2000–2016)
     BZD:
       display_names:
         other: ਬੇਲੀਜ਼ ਡਾਲਰ
@@ -81,10 +248,22 @@ number_formats:
       display_names:
         other: ਕੇਨੇਡਿਆਈ ਡਾਲਰ
         one: ਕੇਨੇਡਿਆਈ ਡਾਲਰ
+    CDF:
+      display_names:
+        other: ਕਾਂਗੋਲੀਜ਼ ਫ੍ਰੈਂਕ
+        one: ਕਾਂਗੋਲੀਜ਼ ਫ੍ਰੈਂਕ
+    CHF:
+      display_names:
+        other: ਸਵਿਸ ਫ੍ਰੈਂਕ
+        one: ਸਵਿਸ ਫ੍ਰੈਂਕ
     CLP:
       display_names:
         other: ਚਿਲੀ ਪੇਸੋ
         one: ਚਿਲੀ ਪੇਸੋ
+    CNH:
+      display_names:
+        other: ਚੀਨੀ ਯੁਆਨ (ਔਫ਼ਸ਼ੋਰ)
+        one: ਚੀਨੀ ਯੁਆਨ (ਔਫ਼ਸ਼ੋਰ)
     CNY:
       display_names:
         other: ਚੀਨੀ ਯੁਆਨ
@@ -105,10 +284,22 @@ number_formats:
       display_names:
         other: ਕਿਊਬਨ ਪੇਸੋ
         one: ਕਿਊਬਨ ਪੇਸੋ
+    CVE:
+      display_names:
+        other: ਕੇਪ ਵਰਡੀਅਨ ਸਕੂਡੋ
+        one: ਕੇਪ ਵਰਡੀਅਨ ਸਕੂਡੋ
     CZK:
       display_names:
         other: ਚੈਕ ਗਣਰਾਜ ਕੋਰੁਨਾ
         one: ਚੈਕ ਗਣਰਾਜ ਕੋਰੁਨਾ
+    DEM:
+      display_names:
+        other: ਜਰਮਨ ਮਾਰਕ
+        one: ਜਰਮਨ ਮਾਰਕ
+    DJF:
+      display_names:
+        other: ਜ਼ੀਬੂਤੀਅਨ ਫ੍ਰੈਂਕ
+        one: ਜ਼ੀਬੂਤੀਅਨ ਫ੍ਰੈਂਕ
     DKK:
       display_names:
         other: ਡੈਨਿਸ਼ ਕਰੌਨ
@@ -117,10 +308,22 @@ number_formats:
       display_names:
         other: ਡੌਮਿਨਿਕਨ ਪੇਸੋ
         one: ਡੌਮਿਨਿਕਨ ਪੇਸੋ
+    DZD:
+      display_names:
+        other: ਅਲਜੀਰਿਆਈ ਦਿਨਾਰ
+        one: ਅਲਜੀਰਿਆਈ ਦਿਨਾਰ
     EGP:
       display_names:
         other: ਮਿਸਰੀ ਪੌਂਡ
         one: ਮਿਸਰੀ ਪੌਂਡ
+    ERN:
+      display_names:
+        other: ਇਰੀਟ੍ਰਿਆਈ ਨਾਫ਼ਾ
+        one: ਇਰੀਟ੍ਰਿਆਈ ਨਾਫ਼ਾ
+    ETB:
+      display_names:
+        other: ਇਥੋਪੀਆਈ ਬਿਰ
+        one: ਇਥੋਪੀਆਈ ਬਿਰ
     EUR:
       display_names:
         other: ਯੂਰੋ
@@ -149,6 +352,10 @@ number_formats:
       display_names:
         other: ਜਿਬਰਾਲਟਰ ਪੌਂਡ
         one: ਜਿਬਰਾਲਟਰ ਪੌਂਡ
+    GMD:
+      display_names:
+        other: ਗੈਂਬੀਆਈ ਦਲਾਸੀ
+        one: ਗੈਂਬੀਆਈ ਦਲਾਸੀ
     GNF:
       display_names:
         other: ਗਿਨੀ ਫ੍ਰੈਂਕ
@@ -173,6 +380,10 @@ number_formats:
       display_names:
         other: ਕਰੋਏਸ਼ੀਆਈ ਕੁਨਾ
         one: ਕਰੋਏਸ਼ੀਆਈ ਕੁਨਾ
+    HTG:
+      display_names:
+        other: ਹੈਤੀ ਗੌਰਡੇ
+        one: ਹੈਤੀ ਗੌਰਡੇ
     HUF:
       display_names:
         other: ਹੰਗਰੀ ਫੋਰਿੰਟ
@@ -181,6 +392,14 @@ number_formats:
       display_names:
         other: ਇੰਡੋਨੇਸ਼ੀਆਈ ਰੁਪਿਆਹ
         one: ਇੰਡੋਨੇਸ਼ੀਆਈ ਰੁਪਿਆਹ
+    IEP:
+      display_names:
+        other: ਆਇਰਿਸ਼ ਪੌਂਡ
+        one: ਆਇਰਿਸ਼ ਪੌਂਡ
+    ILP:
+      display_names:
+        other: ਇਜ਼ਰਾਈਲੀ ਪੌਂਡ
+        one: ਇਜ਼ਰਾਈਲੀ ਪੌਂਡ
     ILS:
       display_names:
         other: ਇਜ਼ਰਾਈਲੀ ਨਵੀਂ ਸ਼ੇਕੇਲ
@@ -189,6 +408,14 @@ number_formats:
       display_names:
         other: ਭਾਰਤੀ ਰੁਪਏ
         one: ਭਾਰਤੀ ਰੁਪਇਆ
+    IQD:
+      display_names:
+        other: ਇਰਾਕੀ ਦਿਨਾਰ
+        one: ਇਰਾਕੀ ਦਿਨਾਰ
+    IRR:
+      display_names:
+        other: ਈਰਾਨੀ ਰਿਆਲ
+        one: ਈਰਾਨੀ ਰਿਆਲ
     ISK:
       display_names:
         other: ਆਈਸਲੈਂਡੀ ਕਰੋਨਾ
@@ -197,10 +424,18 @@ number_formats:
       display_names:
         other: ਜਮਾਇਕਨ ਡਾਲਰ
         one: ਜਮਾਇਕਨ ਡਾਲਰ
+    JOD:
+      display_names:
+        other: ਜਾਰਡਨ ਦਿਨਾਰ
+        one: ਜਾਰਡਨ ਦਿਨਾਰ
     JPY:
       display_names:
         other: ਜਪਾਨੀ ਯੇਨ
         one: ਜਪਾਨੀ ਯੇਨ
+    KES:
+      display_names:
+        other: ਕੀਨੀਆਈ ਸ਼ਿਲਿੰਗ
+        one: ਕੀਨੀਆਈ ਸ਼ਿਲਿੰਗ
     KGS:
       display_names:
         other: ਕਿਰਗਿਸਤਾਨੀ ਸੋਮ
@@ -221,6 +456,10 @@ number_formats:
       display_names:
         other: ਦੱਖਣੀ ਕੋਰੀਆਈ ਵੋਨ
         one: ਦੱਖਣੀ ਕੋਰੀਆਈ ਵੋਨ
+    KWD:
+      display_names:
+        other: ਕੁਵੈਤੀ ਦਿਨਾਰ
+        one: ਕੁਵੈਤੀ ਦਿਨਾਰ
     KYD:
       display_names:
         other: ਕੇਮੈਨ ਆਈਲੈਂਡਸ ਡਾਲਰ
@@ -245,6 +484,10 @@ number_formats:
       display_names:
         other: ਲਾਈਬੀਰੀਆਈ ਡਾਲਰ
         one: ਲਾਈਬੀਰੀਆਈ ਡਾਲਰ
+    LSL:
+      display_names:
+        other: ਲੇਸੋਥੋ ਲੋਟੀ
+        one: ਲੇਸੋਥੋ ਲੋਟੀ
     LTL:
       display_names:
         other: ਲਿਥੁਆਨੀਆਈ ਲਿਤਾਸ
@@ -253,10 +496,26 @@ number_formats:
       display_names:
         other: ਲਾਟਵਿਆਈ ਲਾਟਸ
         one: ਲਾਟਵਿਆਈ ਲਾਟਸ
+    LYD:
+      display_names:
+        other: ਲੀਬੀਆਈ ਦਿਨਾਰ
+        one: ਲੀਬੀਆਈ ਦਿਨਾਰ
+    MAD:
+      display_names:
+        other: ਮੋਰੱਕਨ ਦਿਰਹਾਮ
+        one: ਮੋਰੱਕਨ ਦਿਰਹਾਮ
+    MDL:
+      display_names:
+        other: ਮੋਲਡੋਵਨ ਲੇਉ
+        one: ਮੋਲਡੋਵਨ ਲੇਉ
     MGA:
       display_names:
         other: ਮਾਲਾਗਾਸੀ ਅਰਾਇਰੀ
         one: ਮਾਲਾਗਾਸੀ ਅਰਾਇਰੀ
+    MKD:
+      display_names:
+        other: ਮੈਕਡੋਨੀਆਈ ਡੇਨਾਰ
+        one: ਮੈਕਡੋਨੀਆਈ ਡੇਨਾਰ
     MMK:
       display_names:
         other: ਮਿਆਂਮਾਰ ਕਿਆਤ
@@ -265,10 +524,30 @@ number_formats:
       display_names:
         other: ਮੰਗੋਲੀਆਈ ਤੁਗਰਿਕ
         one: ਮੰਗੋਲੀਆਈ ਤੁਗਰਿਕ
+    MOP:
+      display_names:
+        other: ਮੇਕਾਨੀ ਪਟਾਕਾ
+        one: ਮੇਕਾਨੀ ਪਟਾਕਾ
+    MRO:
+      display_names:
+        other: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ (1973–2017)
+        one: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ (1973–2017)
+    MRU:
+      display_names:
+        other: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ
+        one: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ
     MUR:
       display_names:
         other: ਮੌਰਿਸ਼ੀਆਈ ਰੁਪਏ
         one: ਮੌਰਿਸ਼ੀਆਈ ਰੁਪਇਆ
+    MVR:
+      display_names:
+        other: ਮਾਲਦੀਵੀ ਰੁਫੀਆ
+        one: ਮਾਲਦੀਵੀ ਰੁਫੀਆ
+    MWK:
+      display_names:
+        other: ਮਾਲਾਵੀਆਈ ਕਵਾਚਾ
+        one: ਮਾਲਾਵੀਆਈ ਕਵਾਚਾ
     MXN:
       display_names:
         other: ਮੈਕਸੀਕਨ ਪੇਸੋ
@@ -277,6 +556,10 @@ number_formats:
       display_names:
         other: ਮਲੇਸ਼ੀਆਈ ਰਿੰਗਿਟ
         one: ਮਲੇਸ਼ੀਆਈ ਰਿੰਗਿਟ
+    MZN:
+      display_names:
+        other: ਮੋਜ਼ਾਮਬੀਕਨ ਮੈਟੀਕਲ
+        one: ਮੋਜ਼ਾਮਬੀਕਨ ਮੈਟੀਕਲ
     NAD:
       display_names:
         other: ਨਾਮੀਬੀਆਈ ਡਾਲਰ
@@ -301,6 +584,22 @@ number_formats:
       display_names:
         other: ਨਿਊਜ਼ੀਲੈਂਡ ਡਾਲਰ
         one: ਨਿਊਜ਼ੀਲੈਂਡ ਡਾਲਰ
+    OMR:
+      display_names:
+        other: ਓਮਾਨੀ ਰਿਆਲ
+        one: ਓਮਾਨੀ ਰਿਆਲ
+    PAB:
+      display_names:
+        other: ਪਨਾਮੇਨੀਅਨ ਬਾਲਬੋਆ
+        one: ਪਨਾਮੇਨੀਅਨ ਬਾਲਬੋਆ
+    PEN:
+      display_names:
+        other: ਪੇਰੂਵੀਅਨ ਸੋਲ
+        one: ਪੇਰੂਵੀਅਨ ਸੋਲ
+    PGK:
+      display_names:
+        other: ਪਾਪੂਆ ਨਿਊ ਗਿਨੀਆਈ ਕੀਨਾ
+        one: ਪਾਪੂਆ ਨਿਊ ਗਿਨੀਆਈ ਕੀਨਾ
     PHP:
       symbol: PHP
       display_names:
@@ -318,10 +617,18 @@ number_formats:
       display_names:
         other: ਪੈਰਾਗੁਵਾਇਨ ਗੁਆਰਾਨੀ
         one: ਪੈਰਾਗੁਵਾਇਨ ਗੁਆਰਾਨੀ
+    QAR:
+      display_names:
+        other: ਕਤਰੀ ਰਿਆਲ
+        one: ਕਤਰੀ ਰਿਆਲ
     RON:
       display_names:
         other: ਰੋਮਾਨੀਆਈ ਲੇਉ
         one: ਰੋਮਾਨੀਆਈ ਲੇਉ
+    RSD:
+      display_names:
+        other: ਸਰਬੀਆਈ ਦਿਨਾਰ
+        one: ਸਰਬੀਆਈ ਦਿਨਾਰ
     RUB:
       display_names:
         other: ਰੂਸੀ ਰੂਬਲ
@@ -330,10 +637,22 @@ number_formats:
       display_names:
         other: ਰਵਾਂਡਨ ਫ੍ਰੈਂਕ
         one: ਰਵਾਂਡਨ ਫ੍ਰੈਂਕ
+    SAR:
+      display_names:
+        other: ਸਾਊਦੀ ਰਿਆਲ
+        one: ਸਾਊਦੀ ਰਿਆਲ
     SBD:
       display_names:
         other: ਸੋਲੋਮਨ ਆਈਲੈਂਡਸ ਡਾਲਰ
         one: ਸੋਲੋਮਨ ਆਈਲੈਂਡਸ ਡਾਲਰ
+    SCR:
+      display_names:
+        other: ਸੇਸ਼ਲਸ ਰੁਪਏ
+        one: ਸੇਸ਼ਲਸ ਰੁਪਇਆ
+    SDG:
+      display_names:
+        other: ਸੂਡਾਨੀ ਪੌਂਡ
+        one: ਸੂਡਾਨੀ ਪੌਂਡ
     SEK:
       display_names:
         other: ਸਵੀਡਿਸ਼ ਕਰੋਨਾ
@@ -346,6 +665,18 @@ number_formats:
       display_names:
         other: ਸੇਂਟ ਹੇਲੇਨਾ ਪੌਂਡ
         one: ਸੇਂਟ ਹੇਲੇਨਾ ਪੌਂਡ
+    SLE:
+      display_names:
+        other: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ
+        one: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ
+    SLL:
+      display_names:
+        other: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ (1964—2022)
+        one: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ (1964—2022)
+    SOS:
+      display_names:
+        other: ਸੋਮਾਲੀ ਸ਼ਿਲਿੰਗ
+        one: ਸੋਮਾਲੀ ਸ਼ਿਲਿੰਗ
     SRD:
       display_names:
         other: ਸੂਰੀਨਾਮੀ ਡਾਲਰ
@@ -354,18 +685,42 @@ number_formats:
       display_names:
         other: ਦੱਖਣੀ ਸੂਡਾਨੀ ਪੌਂਡ
         one: ਦੱਖਣੀ ਸੂਡਾਨੀ ਪੌਂਡ
+    STD:
+      display_names:
+        other: ਸਾਉ ਟੋਮੀ ਐਂਡ ਪ੍ਰਿੰਸਪੀ ਡੋਬਰਾ (1977–2017)
+        one: ਸਾਉ ਟੋਮੀ ਐਂਡ ਪ੍ਰਿੰਸਪੀ ਡੋਬਰਾ (1977–2017)
     STN:
       display_names:
         other: ਸਾਉ ਟੋਮੀ ਐਂਡ ਪ੍ਰਿੰਸਪੀ ਡੋਬਰਾ
         one: ਸਾਉ ਟੋਮੀ ਐਂਡ ਪ੍ਰਿੰਸਪੀ ਡੋਬਰਾ
+    SUR:
+      display_names:
+        other: ਸੋਵੀਅਤ ਰੂਬਲ
+        one: ਸੋਵੀਅਤ ਰੂਬਲ
     SYP:
       display_names:
         other: ਸੀਰੀਆਈ ਪੌਂਡ
         one: ਸੀਰੀਆਈ ਪੌਂਡ
+    SZL:
+      display_names:
+        other: ਸਵਾਜ਼ੀ ਲਾਇਲੈਂਗਨੀ
+        one: ਸਵਾਜ਼ੀ ਲਾਇਲੈਂਗਨੀ
     THB:
       display_names:
         other: ਥਾਈ ਬਾਹਤ
         one: ਥਾਈ ਬਾਹਤ
+    TJS:
+      display_names:
+        other: ਤਾਜਿਕਿਸਤਾਨੀ ਸੋਮੋਨੀ
+        one: ਤਾਜਿਕਿਸਤਾਨੀ ਸੋਮੋਨੀ
+    TMT:
+      display_names:
+        other: ਤੁਰਕਮੇਨਿਸਤਾਨੀ ਮਾਨਤ
+        one: ਤੁਰਕਮੇਨਿਸਤਾਨੀ ਮਾਨਤ
+    TND:
+      display_names:
+        other: ਟਿਉਨੀਸ਼ੀਆਈ ਦਿਨਾਰ
+        one: ਟਿਉਨੀਸ਼ੀਆਈ ਦਿਨਾਰ
     TOP:
       display_names:
         other: ਟੌਂਗਨ ਪੈਂਗਾ
@@ -382,34 +737,86 @@ number_formats:
       display_names:
         other: ਨਵਾਂ ਤਾਇਵਾਨ ਡਾਲਰ
         one: ਨਵਾਂ ਤਾਇਵਾਨ ਡਾਲਰ
+    TZS:
+      display_names:
+        other: ਤਨਜ਼ਾਨੀਆਈ ਸ਼ਿਲਿੰਗ
+        one: ਤਨਜ਼ਾਨੀਆਈ ਸ਼ਿਲਿੰਗ
     UAH:
       display_names:
         other: ਯੂਕਰੇਨੀਆਈ ਰਿਵਨਿਆ
         one: ਯੂਕਰੇਨੀਆਈ ਰਿਵਨਿਆ
+    UGX:
+      display_names:
+        other: ਯੂਗਾਂਡੀਆਈ ਸ਼ਿਲਿੰਗ
+        one: ਯੂਗਾਂਡੀਆਈ ਸ਼ਿਲਿੰਗ
     USD:
       display_names:
         other: ਯੂ.ਐਸ. ਡਾਲਰ
         one: ਯੂ.ਐਸ. ਡਾਲਰ
+    UYP:
+      display_names:
+        other: ਉਰੂਗੁਵਾਇਨ ਪੇਸੋ (1975–1993)
+        one: ਉਰੂਗੁਵਾਇਨ ਪੇਸੋ (1975–1993)
     UYU:
       display_names:
         other: ਉਰੂਗੁਵਾਇਨ ਪੇਸੋ
         one: ਉਰੂਗੁਵਾਇਨ ਪੇਸੋ
+    UZS:
+      display_names:
+        other: ਉਜ਼ਬੇਕਿਸਤਾਨ ਸੋਮ
+        one: ਉਜ਼ਬੇਕਿਸਤਾਨ ਸੋਮ
+    VEB:
+      display_names:
+        other: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ (1871–2008)
+        one: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ (1871–2008)
     VEF:
       display_names:
         other: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ (2008–2018)
         one: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ (2008–2018)
+    VES:
+      display_names:
+        other: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ
+        one: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ
     VND:
       display_names:
         other: ਵੀਅਤਨਾਮੀ ਡੋਂਗ
         one: ਵੀਅਤਨਾਮੀ ਡੋਂਗ
+    VNN:
+      display_names:
+        other: ਵੀਅਤਨਾਮੀ ਡੋਂਗ (1978–1985)
+        one: ਵੀਅਤਨਾਮੀ ਡੋਂਗ (1978–1985)
+    VUV:
+      display_names:
+        other: ਵਾਨੂਆਟੂ ਵਾਟੂ
+        one: ਵਾਨੂਆਟੂ ਵਾਟੂ
+    WST:
+      display_names:
+        other: ਸਾਮੋਆਈ ਤਾਲਾ
+        one: ਸਾਮੋਆਈ ਤਾਲਾ
     XAF:
       display_names:
         other: ਕੇਂਦਰੀ ਅਫ਼ਰੀਕੀ [CFA] ਫ੍ਰੈਂਕ
         one: ਕੇਂਦਰੀ ਅਫ਼ਰੀਕੀ [CFA] ਫ੍ਰੈਂਕ
+    XAG:
+      display_names:
+        other: ਚਾਂਦੀ ਦਾ ਟਰੌਏ ਔਂਸ
+        one: ਚਾਂਦੀ ਦਾ ਟਰੌਏ ਔਂਸ
+    XAU:
+      display_names:
+        other: ਸੋਨੇ ਦਾ ਟਰੌਏ ਔਂਸ
+        one: ਸੋਨੇ ਦਾ ਟਰੌਏ ਔਂਸ
+    XBB:
+      display_names:
+        other: ਯੂਰਪੀ ਵਿੱਤੀ ਇਕਾਈ
+        one: ਯੂਰਪੀ ਵਿੱਤੀ ਇਕਾਈ
     XCD:
       display_names:
         other: ਪੂਰਬੀ ਕੈਰੇਬੀਅਨ ਡਾਲਰ
         one: ਪੂਰਬੀ ਕੈਰੇਬੀਅਨ ਡਾਲਰ
+    XEU:
+      display_names:
+        other: ਯੂਰਪੀ ਮੁਦਰਾ ਇਕਾਈ
+        one: ਯੂਰਪੀਅਨ ਮੁਦਰਾ ਇਕਾਈ
     XOF:
       display_names:
         other: ਪੱਛਮੀ ਅਫ਼ਰੀਕੀ (CFA) ਫ੍ਰੈਂਕ
@@ -423,6 +830,10 @@ number_formats:
       display_names:
         other: "(ਅਗਿਆਤ ਮੁਦਰਾ)"
         one: "(ਮੁਦਰਾ ਦੀ ਅਗਿਆਤ ਇਕਾਈ)"
+    YER:
+      display_names:
+        other: ਯਮਨੀ ਰਿਆਲ
+        one: ਯਮਨੀ ਰਿਆਲ
     ZAR:
       display_names:
         other: ਦੱਖਣੀ ਅਫਰੀਕੀ ਰੈਂਡ
@@ -431,340 +842,1930 @@ number_formats:
       display_names:
         other: ਜ਼ਾਮਬੀਆਈ ਕਵਾਚਾ
         one: ਜ਼ਾਮਬੀਆਈ ਕਵਾਚਾ
-    AED:
-      display_names:
-        other: ਸੰਯੁਕਤ ਅਰਬ ਅਮੀਰਾਤ ਦਿਰਹਾਮ
-        one: ਸੰਯੁਕਤ ਅਰਬ ਅਮੀਰਾਤ ਦਿਰਹਾਮ
-    ALL:
-      display_names:
-        other: ਅਲਬਾਨੀਆਈ ਲੇਕ
-        one: ਅਲਬਾਨੀਆਈ ਲੇਕ
-    ANG:
-      display_names:
-        other: ਨੀਦਰਲੈਂਡਸ ਐਂਟੀਲੀਅਨ ਗਿਲਡਰ
-        one: ਨੀਦਰਲੈਂਡਸ ਐਂਟੀਲੀਅਨ ਗਿਲਡਰ
-    ARA:
-      display_names:
-        other: ਅਰਜਨਟੀਨੀ ਅਸਟਰਾਲ
-        one: ਅਰਜਨਟੀਨੀ ਅਸਟਰਾਲ
-    ARL:
-      display_names:
-        other: ਅਰਜਨਟੀਨੀ ਪੇਸੋ ਲੇ (1970–1983)
-        one: ਅਰਜਨਟੀਨੀ ਪੇਸੋ ਲੇ (1970–1983)
-    ARM:
-      display_names:
-        other: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1881–1970)
-        one: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1881–1970)
-    ARP:
-      display_names:
-        other: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1983–1985)
-        one: ਅਰਜਨਟੀਨੀ ਪੇਸੋ (1983–1985)
-    AWG:
-      display_names:
-        other: ਅਰੂਬਨ ਫਲੋਰਿਨ
-        one: ਅਰੂਬਨ ਫਲੋਰਿਨ
-    BGN:
-      display_names:
-        other: ਬੁਲਗਾਰੀਆਈ ਲੇਵ
-        one: ਬੁਲਗਾਰੀਆਈ ਲੇਵ
-    BHD:
-      display_names:
-        other: ਬਹਿਰੀਨੀ ਦਿਨਾਰ
-        one: ਬਹਿਰੀਨੀ ਦਿਨਾਰ
-    BIF:
-      display_names:
-        other: ਬੁਰੁੰਡੀਆਈ ਫ੍ਰੈਂਕ
-        one: ਬੁਰੁੰਡੀਆਈ ਫ੍ਰੈਂਕ
-    BOL:
-      display_names:
-        other: ਬੋਲੀਵੀਆਈ ਬੋਲੀਵੀਅਨੋ (1863–1963)
-        one: ਬੋਲੀਵੀਆਈ ਬੋਲੀਵੀਅਨੋ (1863–1963)
-    BOP:
-      display_names:
-        other: ਬੋਲੀਵੀਆਈ ਪੇਸੋ
-        one: ਬੋਲੀਵੀਆਈ ਪੇਸੋ
-    BOV:
-      display_names:
-        other: ਬੋਲੀਵੀਆਈ ਮਵਡੋਲ
-        one: ਬੋਲੀਵੀਆਈ ਮਵਡੋਲ
-    BRB:
-      display_names:
-        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਿਰੋਸ (1967–1986)
-        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਿਰੋਸ (1967–1986)
-    BRC:
-      display_names:
-        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਾਡੂ (1986–1989)
-        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਾਡੂ (1986–1989)
-    BRE:
-      display_names:
-        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1990–1993)
-        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1990–1993)
-    BRN:
-      display_names:
-        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਾਡੂ (1989–1990)
-        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਨਿਊ ਕਰੁਜ਼ਾਡੂ (1989–1990)
-    BRR:
-      display_names:
-        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1993–1994)
-        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1993–1994)
-    BRZ:
-      display_names:
-        other: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1942–1967)
-        one: ਬ੍ਰਾਜ਼ੀਲੀਆਈ ਕਰੁਜ਼ਿਰੋਸ (1942–1967)
-    BTN:
-      display_names:
-        other: ਭੂਟਾਨੀ ਐਂਗਲਟ੍ਰਮ
-        one: ਭੂਟਾਨੀ ਐਂਗਲਟ੍ਰਮ
-    BYN:
-      symbol: р.
-      display_names:
-        other: ਬੇਲਾਰੂਸੀ ਰੂਬਲ
-        one: ਬੇਲਾਰੂਸੀ ਰੂਬਲ
-    BYR:
-      display_names:
-        other: ਬੇਲਾਰੂਸੀ ਰੂਬਲ (2000–2016)
-        one: ਬੇਲਾਰੂਸੀ ਰੂਬਲ (2000–2016)
-    CDF:
-      display_names:
-        other: ਕਾਂਗੋਲੀਜ਼ ਫ੍ਰੈਂਕ
-        one: ਕਾਂਗੋਲੀਜ਼ ਫ੍ਰੈਂਕ
-    CHF:
-      display_names:
-        other: ਸਵਿਸ ਫ੍ਰੈਂਕ
-        one: ਸਵਿਸ ਫ੍ਰੈਂਕ
-    CNH:
-      display_names:
-        other: ਚੀਨੀ ਯੁਆਨ (ਔਫ਼ਸ਼ੋਰ)
-        one: ਚੀਨੀ ਯੁਆਨ (ਔਫ਼ਸ਼ੋਰ)
-    CVE:
-      display_names:
-        other: ਕੇਪ ਵਰਡੀਅਨ ਸਕੂਡੋ
-        one: ਕੇਪ ਵਰਡੀਅਨ ਸਕੂਡੋ
-    DEM:
-      display_names:
-        other: ਜਰਮਨ ਮਾਰਕ
-        one: ਜਰਮਨ ਮਾਰਕ
-    DJF:
-      display_names:
-        other: ਜ਼ੀਬੂਤੀਅਨ ਫ੍ਰੈਂਕ
-        one: ਜ਼ੀਬੂਤੀਅਨ ਫ੍ਰੈਂਕ
-    DZD:
-      display_names:
-        other: ਅਲਜੀਰਿਆਈ ਦਿਨਾਰ
-        one: ਅਲਜੀਰਿਆਈ ਦਿਨਾਰ
-    ERN:
-      display_names:
-        other: ਇਰੀਟ੍ਰਿਆਈ ਨਾਫ਼ਾ
-        one: ਇਰੀਟ੍ਰਿਆਈ ਨਾਫ਼ਾ
-    ETB:
-      display_names:
-        other: ਇਥੋਪੀਆਈ ਬਿਰ
-        one: ਇਥੋਪੀਆਈ ਬਿਰ
-    GMD:
-      display_names:
-        other: ਗੈਂਬੀਆਈ ਦਲਾਸੀ
-        one: ਗੈਂਬੀਆਈ ਦਲਾਸੀ
-    HTG:
-      display_names:
-        other: ਹੈਤੀ ਗੌਰਡੇ
-        one: ਹੈਤੀ ਗੌਰਡੇ
-    IEP:
-      display_names:
-        other: ਆਇਰਿਸ਼ ਪੌਂਡ
-        one: ਆਇਰਿਸ਼ ਪੌਂਡ
-    ILP:
-      display_names:
-        other: ਇਜ਼ਰਾਈਲੀ ਪੌਂਡ
-        one: ਇਜ਼ਰਾਈਲੀ ਪੌਂਡ
-    IQD:
-      display_names:
-        other: ਇਰਾਕੀ ਦਿਨਾਰ
-        one: ਇਰਾਕੀ ਦਿਨਾਰ
-    IRR:
-      display_names:
-        other: ਈਰਾਨੀ ਰਿਆਲ
-        one: ਈਰਾਨੀ ਰਿਆਲ
-    JOD:
-      display_names:
-        other: ਜਾਰਡਨ ਦਿਨਾਰ
-        one: ਜਾਰਡਨ ਦਿਨਾਰ
-    KES:
-      display_names:
-        other: ਕੀਨੀਆਈ ਸ਼ਿਲਿੰਗ
-        one: ਕੀਨੀਆਈ ਸ਼ਿਲਿੰਗ
-    KWD:
-      display_names:
-        other: ਕੁਵੈਤੀ ਦਿਨਾਰ
-        one: ਕੁਵੈਤੀ ਦਿਨਾਰ
-    LSL:
-      display_names:
-        other: ਲੇਸੋਥੋ ਲੋਟੀ
-        one: ਲੇਸੋਥੋ ਲੋਟੀ
-    LYD:
-      display_names:
-        other: ਲੀਬੀਆਈ ਦਿਨਾਰ
-        one: ਲੀਬੀਆਈ ਦਿਨਾਰ
-    MAD:
-      display_names:
-        other: ਮੋਰੱਕਨ ਦਿਰਹਾਮ
-        one: ਮੋਰੱਕਨ ਦਿਰਹਾਮ
-    MDL:
-      display_names:
-        other: ਮੋਲਡੋਵਨ ਲੇਉ
-        one: ਮੋਲਡੋਵਨ ਲੇਉ
-    MKD:
-      display_names:
-        other: ਮੈਕਡੋਨੀਆਈ ਡੇਨਾਰ
-        one: ਮੈਕਡੋਨੀਆਈ ਡੇਨਾਰ
-    MOP:
-      display_names:
-        other: ਮੇਕਾਨੀ ਪਟਾਕਾ
-        one: ਮੇਕਾਨੀ ਪਟਾਕਾ
-    MRO:
-      display_names:
-        other: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ (1973–2017)
-        one: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ (1973–2017)
-    MRU:
-      display_names:
-        other: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ
-        one: ਮੋਰਿਟਾਨੀਆਈ ਊਗੀਆ
-    MVR:
-      display_names:
-        other: ਮਾਲਦੀਵੀ ਰੁਫੀਆ
-        one: ਮਾਲਦੀਵੀ ਰੁਫੀਆ
-    MWK:
-      display_names:
-        other: ਮਾਲਾਵੀਆਈ ਕਵਾਚਾ
-        one: ਮਾਲਾਵੀਆਈ ਕਵਾਚਾ
-    MZN:
-      display_names:
-        other: ਮੋਜ਼ਾਮਬੀਕਨ ਮੈਟੀਕਲ
-        one: ਮੋਜ਼ਾਮਬੀਕਨ ਮੈਟੀਕਲ
-    OMR:
-      display_names:
-        other: ਓਮਾਨੀ ਰਿਆਲ
-        one: ਓਮਾਨੀ ਰਿਆਲ
-    PAB:
-      display_names:
-        other: ਪਨਾਮੇਨੀਅਨ ਬਾਲਬੋਆ
-        one: ਪਨਾਮੇਨੀਅਨ ਬਾਲਬੋਆ
-    PEN:
-      display_names:
-        other: ਪੇਰੂਵੀਅਨ ਸੋਲ
-        one: ਪੇਰੂਵੀਅਨ ਸੋਲ
-    PGK:
-      display_names:
-        other: ਪਾਪੂਆ ਨਿਊ ਗਿਨੀਆਈ ਕੀਨਾ
-        one: ਪਾਪੂਆ ਨਿਊ ਗਿਨੀਆਈ ਕੀਨਾ
-    QAR:
-      display_names:
-        other: ਕਤਰੀ ਰਿਆਲ
-        one: ਕਤਰੀ ਰਿਆਲ
-    RSD:
-      display_names:
-        other: ਸਰਬੀਆਈ ਦਿਨਾਰ
-        one: ਸਰਬੀਆਈ ਦਿਨਾਰ
-    SAR:
-      display_names:
-        other: ਸਾਊਦੀ ਰਿਆਲ
-        one: ਸਾਊਦੀ ਰਿਆਲ
-    SCR:
-      display_names:
-        other: ਸੇਸ਼ਲਸ ਰੁਪਏ
-        one: ਸੇਸ਼ਲਸ ਰੁਪਇਆ
-    SDG:
-      display_names:
-        other: ਸੂਡਾਨੀ ਪੌਂਡ
-        one: ਸੂਡਾਨੀ ਪੌਂਡ
-    SLE:
-      display_names:
-        other: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ
-        one: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ
-    SLL:
-      display_names:
-        other: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ (1964—2022)
-        one: ਸਿਏਰਾ ਲਿਓਨੀਅਨ ਲਿਓਨ (1964—2022)
-    SOS:
-      display_names:
-        other: ਸੋਮਾਲੀ ਸ਼ਿਲਿੰਗ
-        one: ਸੋਮਾਲੀ ਸ਼ਿਲਿੰਗ
-    STD:
-      display_names:
-        other: ਸਾਉ ਟੋਮੀ ਐਂਡ ਪ੍ਰਿੰਸਪੀ ਡੋਬਰਾ (1977–2017)
-        one: ਸਾਉ ਟੋਮੀ ਐਂਡ ਪ੍ਰਿੰਸਪੀ ਡੋਬਰਾ (1977–2017)
-    SUR:
-      display_names:
-        other: ਸੋਵੀਅਤ ਰੂਬਲ
-        one: ਸੋਵੀਅਤ ਰੂਬਲ
-    SZL:
-      display_names:
-        other: ਸਵਾਜ਼ੀ ਲਾਇਲੈਂਗਨੀ
-        one: ਸਵਾਜ਼ੀ ਲਾਇਲੈਂਗਨੀ
-    TJS:
-      display_names:
-        other: ਤਾਜਿਕਿਸਤਾਨੀ ਸੋਮੋਨੀ
-        one: ਤਾਜਿਕਿਸਤਾਨੀ ਸੋਮੋਨੀ
-    TMT:
-      display_names:
-        other: ਤੁਰਕਮੇਨਿਸਤਾਨੀ ਮਾਨਤ
-        one: ਤੁਰਕਮੇਨਿਸਤਾਨੀ ਮਾਨਤ
-    TND:
-      display_names:
-        other: ਟਿਉਨੀਸ਼ੀਆਈ ਦਿਨਾਰ
-        one: ਟਿਉਨੀਸ਼ੀਆਈ ਦਿਨਾਰ
-    TZS:
-      display_names:
-        other: ਤਨਜ਼ਾਨੀਆਈ ਸ਼ਿਲਿੰਗ
-        one: ਤਨਜ਼ਾਨੀਆਈ ਸ਼ਿਲਿੰਗ
-    UGX:
-      display_names:
-        other: ਯੂਗਾਂਡੀਆਈ ਸ਼ਿਲਿੰਗ
-        one: ਯੂਗਾਂਡੀਆਈ ਸ਼ਿਲਿੰਗ
-    UYP:
-      display_names:
-        other: ਉਰੂਗੁਵਾਇਨ ਪੇਸੋ (1975–1993)
-        one: ਉਰੂਗੁਵਾਇਨ ਪੇਸੋ (1975–1993)
-    UZS:
-      display_names:
-        other: ਉਜ਼ਬੇਕਿਸਤਾਨ ਸੋਮ
-        one: ਉਜ਼ਬੇਕਿਸਤਾਨ ਸੋਮ
-    VEB:
-      display_names:
-        other: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ (1871–2008)
-        one: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ (1871–2008)
-    VES:
-      display_names:
-        other: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ
-        one: ਵੇਨੇਜ਼ੂਏਲਨ ਬੋਲੀਵਰ
-    VNN:
-      display_names:
-        other: ਵੀਅਤਨਾਮੀ ਡੋਂਗ (1978–1985)
-        one: ਵੀਅਤਨਾਮੀ ਡੋਂਗ (1978–1985)
-    VUV:
-      display_names:
-        other: ਵਾਨੂਆਟੂ ਵਾਟੂ
-        one: ਵਾਨੂਆਟੂ ਵਾਟੂ
-    WST:
-      display_names:
-        other: ਸਾਮੋਆਈ ਤਾਲਾ
-        one: ਸਾਮੋਆਈ ਤਾਲਾ
-    XAG:
-      display_names:
-        other: ਚਾਂਦੀ ਦਾ ਟਰੌਏ ਔਂਸ
-        one: ਚਾਂਦੀ ਦਾ ਟਰੌਏ ਔਂਸ
-    XAU:
-      display_names:
-        other: ਸੋਨੇ ਦਾ ਟਰੌਏ ਔਂਸ
-        one: ਸੋਨੇ ਦਾ ਟਰੌਏ ਔਂਸ
-    XBB:
-      display_names:
-        other: ਯੂਰਪੀ ਵਿੱਤੀ ਇਕਾਈ
-        one: ਯੂਰਪੀ ਵਿੱਤੀ ਇਕਾਈ
-    XEU:
-      display_names:
-        other: ਯੂਰਪੀ ਮੁਦਰਾ ਇਕਾਈ
-        one: ਯੂਰਪੀਅਨ ਮੁਦਰਾ ਇਕਾਈ
-    YER:
-      display_names:
-        other: ਯਮਨੀ ਰਿਆਲ
-        one: ਯਮਨੀ ਰਿਆਲ
+  units:
+    g-force:
+      long:
+        one: "{0} ਗੁਰੂਤਾਕਰਸ਼ਣ ਬਲ"
+        one_oblique: "{0} ਗੁਰੂਤਾਕਰਸ਼ਣ ਬਲ"
+        other: "{0} ਗੁਰੂਤਾਕਰਸ਼ਣ ਬਲ"
+        other_oblique: "{0} ਗੁਰੂਤਾਕਰਸ਼ਣ ਬਲ"
+        gender: masculine
+      short:
+        display_name: ਗੁਰੂਤਾਕਰਸ਼ਣ ਬਲ
+      narrow:
+        one: "{0}G"
+        other: "{0}Gs"
+    meter-per-square-second:
+      long:
+        display_name: ਮੀਟਰ ਪ੍ਰਤੀ ਵਰਗ ਸਕਿੰਟ
+        one: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਵਰਗ ਸਕਿੰਟ"
+        one_oblique: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਵਰਗ ਸਕਿੰਟ"
+        other: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਵਰਗ ਸਕਿੰਟ"
+        other_oblique: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਵਰਗ ਸਕਿੰਟ"
+        gender: masculine
+      short:
+        display_name: ਮੀਟਰ/ਸਕਿੰਟ²
+        one: "{0} ਮੀ/ਸ²"
+        other: "{0} ਮੀ/ਸ²"
+      narrow:
+        one: "{0}ਮੀ/ਸ²"
+        other: "{0}ਮੀ/ਸ²"
+    revolution:
+      long:
+        gender: feminine
+      short:
+        display_name: ਪਰਿਕਰਮਾ
+        one: "{0} ਪਰਿਕਰਮਾ"
+        other: "{0} ਪਰਿਕਰਮਾ"
+    radian:
+      long:
+        one: "{0} ਰੇਡੀਅਨ"
+        one_oblique: "{0} ਰੇਡੀਅਨ"
+        other: "{0} ਰੇਡੀਅਨ"
+        other_oblique: "{0} ਰੇਡੀਅਨ"
+        gender: masculine
+      short:
+        display_name: ਰੇਡੀਅਨ
+        one: "{0} ਰੇਡੀ."
+        other: "{0} ਰੇਡੀ."
+    degree:
+      long:
+        one: "{0} ਡਿਗਰੀ"
+        one_oblique: "{0} ਡਿਗਰੀ"
+        other: "{0} ਡਿਗਰੀ"
+        other_oblique: "{0} ਡਿਗਰੀ"
+        gender: feminine
+      short:
+        display_name: ਡਿਗਰੀ
+        one: "{0} ਡਿ."
+        other: "{0} ਡਿ."
+      narrow:
+        display_name: ਡਿ.
+        one: "{0}°"
+        other: "{0}°"
+    arc-minute:
+      long:
+        gender: masculine
+      short:
+        display_name: ਚਾਪ-ਮਿੰਟ
+        one: "{0} ਚਾਪ-ਮਿੰਟ"
+        other: "{0} ਚਾਪ-ਮਿੰਟ"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+    arc-second:
+      long:
+        gender: masculine
+      short:
+        display_name: ਚਾਪ-ਸਕਿੰਟ
+        one: "{0} ਚਾਪ-ਸਕਿੰਟ"
+        other: "{0} ਚਾਪ-ਸਕਿੰਟ"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: ਵਰਗ ਕਿਲੋਮੀਟਰ
+        one: "{0} ਵਰਗ ਕਿਲੋਮੀਟਰ"
+        one_oblique: "{0} ਵਰਗ ਕਿਲੋਮੀਟਰ"
+        other: "{0} ਵਰਗ ਕਿਲੋਮੀਟਰ"
+        other_oblique: "{0} ਵਰਗ ਕਿਲੋਮੀਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਵਰਗ ਕਿਲੋਮੀਟਰ"
+      short:
+        display_name: ਕਿਮੀ²
+        one: "{0} ਕਿਮੀ²"
+        other: "{0} ਕਿਮੀ²"
+        per_unit_pattern: "{0}/ਕਿਮੀ²"
+    hectare:
+      long:
+        one: "{0} ਹੈਕਟੇਅਰ"
+        one_oblique: "{0} ਹੈਕਟੇਅਰ"
+        other: "{0} ਹੈਕਟੇਅਰ"
+        other_oblique: "{0} ਹੈਕਟੇਅਰ"
+        gender: masculine
+      short:
+        display_name: ਹੈਕਟੇਅਰ
+        one: "{0} ਹੈਕਟ."
+        other: "{0} ਹੈਕਟ."
+    square-meter:
+      long:
+        display_name: ਵਰਗ ਮੀਟਰ
+        one: "{0} ਵਰਗ ਮੀਟਰ"
+        one_oblique: "{0} ਵਰਗ ਮੀਟਰ"
+        other: "{0} ਵਰਗ ਮੀਟਰ"
+        other_oblique: "{0} ਵਰਗ ਮੀਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਵਰਗ ਮੀਟਰ"
+      short:
+        display_name: ਮੀਟਰ²
+        one: "{0} ਮੀ²"
+        other: "{0} ਮੀ²"
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਮੀ²"
+    square-centimeter:
+      long:
+        display_name: ਵਰਗ ਸੈਂਟੀਮੀਟਰ
+        one: "{0} ਵਰਗ ਸੈਂਟੀਮੀਟਰ"
+        one_oblique: "{0} ਵਰਗ ਸੈਂਟੀਮੀਟਰ"
+        other: "{0} ਵਰਗ ਸੈਂਟੀਮੀਟਰ"
+        other_oblique: "{0} ਵਰਗ ਸੈਂਟੀਮੀਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਵਰਗ ਸੈਂਟੀਮੀਟਰ"
+      short:
+        display_name: ਸੈਮੀ²
+        one: "{0} ਸੈਮੀ²"
+        other: "{0} ਸੈਮੀ²"
+        per_unit_pattern: "{0}/ਸੈਮੀ²"
+      narrow:
+        one: "{0}ਸੈਮੀ²"
+        other: "{0}ਸੈਮੀ²"
+    square-mile:
+      long:
+        one: "{0} ਵਰਗ ਮੀਲ"
+        other: "{0} ਵਰਗ ਮੀਲ"
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਵਰਗ ਮੀਲ"
+      short:
+        display_name: ਵਰਗ ਮੀਲ
+        one: "{0} ਵ. ਮੀਲ"
+        other: "{0} ਵ. ਮੀਲ"
+        per_unit_pattern: "{0}/ਮੀਲ²"
+      narrow:
+        one: "{0}ਮੀਲ²"
+        other: "{0}ਮੀਲ²"
+    square-yard:
+      long:
+        display_name: ਵਰਗ ਗਜ਼
+        one: "{0} ਵਰਗ ਗਜ਼"
+        other: "{0} ਵਰਗ ਗਜ਼"
+      short:
+        display_name: ਗਜ਼²
+        one: "{0} ਗਜ਼²"
+        other: "{0} ਗਜ਼²"
+    square-foot:
+      long:
+        display_name: ਵਰਗ ਫੁੱਟ
+        one: "{0} ਵਰਗ ਫੁੱਟ"
+        other: "{0} ਵਰਗ ਫੁੱਟ"
+      short:
+        display_name: ਵ. ਫੁੱਟ
+        one: "{0} ਵ. ਫੁੱਟ"
+        other: "{0} ਵ. ਫੁੱਟ"
+      narrow:
+        one: "{0}ਫੁੱਟ²"
+        other: "{0}ਫੁੱਟ²"
+    square-inch:
+      long:
+        display_name: ਵਰਗ ਇੰਚ
+        one: "{0} ਵਰਗ ਇੰਚ"
+        other: "{0} ਵਰਗ ਇੰਚ"
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਵਰਗ ਇੰਚ"
+      short:
+        display_name: ਇੰਚ²
+        one: "{0} ਇੰਚ²"
+        other: "{0} ਇੰਚ²"
+        per_unit_pattern: "{0}/ਇੰਚ²"
+      narrow:
+        one: "{0}ਇੰਚ²"
+        other: "{0}ਇੰਚ²"
+    karat:
+      long:
+        gender: masculine
+      short:
+        display_name: ਕੇਰਟ
+        one: "{0} ਕੇਰਟ"
+        other: "{0} ਕੇਰਟ"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: ਮਿਲੀਗ੍ਰਾਮ ਪ੍ਰਤੀ ਡੈਸੀਲਿਟਰ
+        one: "{0} ਮਿਲੀਗ੍ਰਾਮ ਪ੍ਰਤੀ ਡੈਸੀਲਿਟਰ"
+        one_oblique: "{0} ਮਿਲੀਗ੍ਰਾਮ ਪ੍ਰਤੀ ਡੈਸੀਲਿਟਰ"
+        other: "{0} ਮਿਲੀਗ੍ਰਾਮ ਪ੍ਰਤੀ ਡੈਸੀਲਿਟਰ"
+        other_oblique: "{0} ਮਿਲੀਗ੍ਰਾਮ ਪ੍ਰਤੀ ਡੈਸੀਲਿਟਰ"
+        gender: masculine
+      short:
+        display_name: ਮਿ.ਗ੍ਰਾ./ਡੈ.ਲਿ.
+        one: "{0}ਮਿਗ੍ਰਾ/ਡੈ.ਲਿ"
+        other: "{0}ਮਿਗ੍ਰਾ/ਡੈ.ਲਿ"
+      narrow:
+        one: "{0}mg/dL"
+        other: "{0}mg/dL"
+    millimole-per-liter:
+      long:
+        display_name: ਮਿਲੀਮੋਲ ਪ੍ਰਤੀ ਲਿਟਰ
+        one: "{0} ਮਿਲੀਮੋਲ ਪ੍ਰਤੀ ਲਿਟਰ"
+        one_oblique: "{0} ਮਿਲੀਮੋਲ ਪ੍ਰਤੀ ਲਿਟਰ"
+        other: "{0} ਮਿਲੀਮੋਲ ਪ੍ਰਤੀ ਲਿਟਰ"
+        other_oblique: "{0} ਮਿਲੀਮੋਲ ਪ੍ਰਤੀ ਲਿਟਰ"
+        gender: masculine
+      short:
+        display_name: ਮਿਲੀਮੋਲ/ਲਿਟਰ
+        one: "{0} ਮਿ.ਮੋ./ਲਿ."
+        other: "{0} ਮਿ.ਮੋ./ਲਿ."
+    item:
+      long:
+        display_name: ਆਈਟਮਾਂ
+        gender: feminine
+      short:
+        display_name: ਆਈਟਮ
+        one: "{0} ਆਈਟਮ"
+        other: "{0} ਆਈਟਮਾਂ"
+      narrow:
+        one: "{0}ਆਈਟਮ"
+        other: "{0}ਆਈਟਮ"
+    permillion:
+      long:
+        display_name: ਹਿੱਸੇ ਪ੍ਰਤੀ ਮਿਲੀਅਨ
+        one: "{0} ਹਿੱਸਾ ਪ੍ਰਤੀ ਮਿਲੀਅਨ"
+        one_oblique: "{0} ਹਿੱਸਾ ਪ੍ਰਤੀ ਮਿਲੀਅਨ"
+        other: "{0} ਹਿੱਸੇ ਪ੍ਰਤੀ ਮਿਲੀਅਨ"
+        other_oblique: "{0} ਹਿੱਸੇ ਪ੍ਰਤੀ ਮਿਲੀਅਨ"
+        gender: masculine
+      short:
+        display_name: ਹਿੱਸੇ/ਮਿਲੀਅਨ
+    percent:
+      long:
+        one: "{0} ਪ੍ਰਤੀਸ਼ਤ"
+        one_oblique: "{0} ਪ੍ਰਤੀਸ਼ਤ"
+        other: "{0} ਪ੍ਰਤੀਸ਼ਤ"
+        other_oblique: "{0} ਪ੍ਰਤੀਸ਼ਤ"
+        gender: masculine
+      short:
+        display_name: ਪ੍ਰਤੀਸ਼ਤ
+    permille:
+      long:
+        one: "{0} ਪਰਮਾਈਲ"
+        one_oblique: "{0} ਪਰਮਾਈਲ"
+        other: "{0} ਪਰਮਾਈਲ"
+        other_oblique: "{0} ਪਰਮਾਈਲ"
+        gender: masculine
+      short:
+        display_name: ਪਰਮਾਈਲ
+    permyriad:
+      long:
+        one: "{0} ਪ੍ਰਤੀ ਦਸ ਹਜ਼ਾਰ"
+        one_oblique: "{0} ਪ੍ਰਤੀ ਦਸ ਹਜ਼ਾਰ"
+        other: "{0} ਪ੍ਰਤੀ ਦਸ ਹਜ਼ਾਰ"
+        other_oblique: "{0} ਪ੍ਰਤੀ ਦਸ ਹਜ਼ਾਰ"
+        gender: masculine
+      short:
+        display_name: ਪ੍ਰਤੀ ਦਸ ਹਜ਼ਾਰ
+      narrow:
+        display_name: "‱"
+    mole:
+      long:
+        gender: masculine
+      short:
+        display_name: ਮੋਲ
+        one: "{0} ਮੋਲ"
+        other: "{0} ਮੋਲ"
+    liter-per-kilometer:
+      long:
+        display_name: ਲਿਟਰ ਪ੍ਰਤੀ ਕਿਲੋਮੀਟਰ
+        one: "{0} ਲਿਟਰ ਪ੍ਰਤੀ ਕਿਲੋਮੀਟਰ"
+        one_oblique: "{0} ਲਿਟਰ ਪ੍ਰਤੀ ਕਿਲੋਮੀਟਰ"
+        other: "{0} ਲਿਟਰ ਪ੍ਰਤੀ ਕਿਲੋਮੀਟਰ"
+        other_oblique: "{0} ਲਿਟਰ ਪ੍ਰਤੀ ਕਿਲੋਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਲਿਟਰ/ਕਿ.ਮੀ.
+        one: "{0} ਲਿ./ਕਿ.ਮੀ."
+        other: "{0} ਲਿ./ਕਿ.ਮੀ."
+      narrow:
+        one: "{0}ਲਿ./ਕਿ.ਮੀ."
+        other: "{0}ਲਿ./ਕਿ.ਮੀ."
+    liter-per-100-kilometer:
+      long:
+        display_name: ਲਿਟਰ ਪ੍ਰਤੀ 100 ਕਿਲੋਮੀਟਰ
+        one: "{0} ਲਿਟਰ ਪ੍ਰਤੀ 100 ਕਿਲੋਮੀਟਰ"
+        one_oblique: "{0} ਲਿਟਰ ਪ੍ਰਤੀ 100 ਕਿਲੋਮੀਟਰ"
+        other: "{0} ਲਿਟਰ ਪ੍ਰਤੀ 100 ਕਿਲੋਮੀਟਰ"
+        other_oblique: "{0} ਲਿਟਰ ਪ੍ਰਤੀ 100 ਕਿਲੋਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਲਿ./100ਕਿ.ਮੀ.
+        one: "{0}ਲਿ/100 ਕਿਮੀ"
+        other: "{0}ਲਿ/100 ਕਿਮੀ"
+    mile-per-gallon:
+      long:
+        display_name: ਮੀਲ ਪ੍ਰਤੀ ਗੈਲਨ
+        one: "{0} ਮੀਲ ਪ੍ਰਤੀ ਗੈਲਨ"
+        other: "{0} ਮੀਲ ਪ੍ਰਤੀ ਗੈਲਨ"
+      short:
+        display_name: ਮੀਲ/ਗੈਲਨ
+        one: "{0} ਮੀ.ਪ੍ਰ.ਗੈ."
+        other: "{0} ਮੀ.ਪ੍ਰ.ਗੈ."
+    mile-per-gallon-imperial:
+      long:
+        display_name: ਮੀਲ ਪ੍ਰਤੀ ਇੰਪ. ਗੈਲਨ
+        one: "{0} ਮੀਲ ਪ੍ਰਤੀ ਇੰਪ. ਗੈਲਨ"
+        other: "{0} ਮੀਲ ਪ੍ਰਤੀ ਇੰਪ. ਗੈਲਨ"
+      short:
+        display_name: ਮੀਲ/ਗੈਲਨ ਇੰਪ.
+        one: "{0} mpg ਇੰਪ."
+        other: "{0} mpg ਇੰਪ."
+      narrow:
+        one: "{0}m/gUK"
+        other: "{0}m/gUK"
+    petabyte:
+      long:
+        one: "{0} ਪੈਟਾਬਾਇਟ"
+        one_oblique: "{0} ਪੈਟਾਬਾਇਟ"
+        other: "{0} ਪੈਟਾਬਾਇਟ"
+        other_oblique: "{0} ਪੈਟਾਬਾਇਟ"
+        gender: feminine
+      short:
+        display_name: ਪੈਟਾਬਾਇਟ
+    terabyte:
+      long:
+        one: "{0} ਟੈਰਾਬਾਇਟ"
+        one_oblique: "{0} ਟੈਰਾਬਾਇਟ"
+        other: "{0} ਟੈਰਾਬਾਇਟ"
+        other_oblique: "{0} ਟੈਰਾਬਾਇਟ"
+        gender: feminine
+      short:
+        display_name: ਟੈਰਾਬਾਇਟ
+    terabit:
+      long:
+        one: "{0} ਟੇਰਾਬਿਟ"
+        one_oblique: "{0} ਟੇਰਾਬਿਟ"
+        other: "{0} ਟੇਰਾਬਿਟ"
+        other_oblique: "{0} ਟੇਰਾਬਿਟ"
+        gender: feminine
+      short:
+        display_name: ਟੇਰਾਬਿਟ
+    gigabyte:
+      long:
+        one: "{0} ਗੀਗਾਬਾਇਟ"
+        one_oblique: "{0} ਗੀਗਾਬਾਇਟ"
+        other: "{0} ਗੀਗਾਬਾਇਟ"
+        other_oblique: "{0} ਗੀਗਾਬਾਇਟ"
+        gender: feminine
+      short:
+        display_name: ਗੀਗਾਬਾਇਟ
+    gigabit:
+      long:
+        display_name: ਗੀਗਾਬਿਟ
+        one: "{0} ਗੀਗਾਬਿਟ"
+        one_oblique: "{0} ਗੀਗਾਬਿਟ"
+        other: "{0} ਗੀਗਾਬਿਟ"
+        other_oblique: "{0} ਗੀਗਾਬਿਟ"
+        gender: feminine
+      short:
+        display_name: Gbit
+      narrow:
+        display_name: Gb
+    megabyte:
+      long:
+        one: "{0} ਮੈਗਾਬਾਇਟ"
+        one_oblique: "{0} ਮੈਗਾਬਾਇਟ"
+        other: "{0} ਮੈਗਾਬਾਇਟ"
+        other_oblique: "{0} ਮੈਗਾਬਾਇਟ"
+        gender: feminine
+      short:
+        display_name: ਮੈਗਾਬਾਇਟ
+    megabit:
+      long:
+        one: "{0} ਮੈਗਾਬਿਟ"
+        one_oblique: "{0} ਮੈਗਾਬਿਟ"
+        other: "{0} ਮੈਗਾਬਿਟ"
+        other_oblique: "{0} ਮੈਗਾਬਿਟ"
+        gender: feminine
+      short:
+        display_name: ਮੈਗਾਬਿਟ
+    kilobyte:
+      long:
+        one: "{0} ਕਿਲੋਬਾਇਟ"
+        one_oblique: "{0} ਕਿਲੋਬਾਇਟ"
+        other: "{0} ਕਿਲੋਬਾਇਟ"
+        other_oblique: "{0} ਕਿਲੋਬਾਇਟ"
+        gender: feminine
+      short:
+        display_name: ਕਿਲੋਬਾਇਟ
+    kilobit:
+      long:
+        one: "{0} ਕਿਲੋਬਿਟ"
+        one_oblique: "{0} ਕਿਲੋਬਿਟ"
+        other: "{0} ਕਿਲੋਬਿਟ"
+        other_oblique: "{0} ਕਿਲੋਬਿਟ"
+        gender: feminine
+      short:
+        display_name: ਕਿਲੋਬਿਟ
+    byte:
+      long:
+        gender: feminine
+      short:
+        display_name: ਬਾਇਟ
+        one: "{0} ਬਾਇਟ"
+        other: "{0} ਬਾਇਟ"
+      narrow:
+        one: "{0}ਬਾਇਟ"
+        other: "{0}ਬਾਇਟ"
+    bit:
+      long:
+        gender: feminine
+      short:
+        display_name: ਬਿਟ
+        one: "{0} ਬਿਟ"
+        other: "{0} ਬਿਟ"
+      narrow:
+        one: "{0}ਬਿਟ"
+        other: "{0}ਬਿਟ"
+    century:
+      long:
+        display_name: ਸਦੀਆਂ
+        one: "{0} ਸਦੀ"
+        one_oblique: "{0} ਸਦੀ"
+        other: "{0} ਸਦੀਆਂ"
+        other_oblique: "{0} ਸਦੀਆਂ"
+        gender: feminine
+      short:
+        display_name: ਸਦੀ
+        one: "{0} ਸਦੀ"
+        other: "{0} ਸਦੀ"
+    decade:
+      long:
+        display_name: ਦਹਾਕੇ
+        one: "{0} ਦਹਾਕਾ"
+        one_oblique: "{0} ਦਹਾਕੇ"
+        other: "{0} ਦਹਾਕੇ"
+        other_oblique: "{0} ਦਹਾਕਿਆਂ"
+        gender: masculine
+      short:
+        display_name: ਦਹਾ
+        one: "{0} ਦਹਾ"
+        other: "{0} ਦਹਾ"
+      narrow:
+        one: "{0} ਦਹਾਕਾ"
+        other: "{0} ਦਹਾਕੇ"
+    year:
+      long:
+        one: "{0} ਸਾਲ"
+        one_oblique: "{0} ਸਾਲ"
+        other: "{0} ਸਾਲ"
+        other_oblique: "{0} ਸਾਲਾਂ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਸਾਲ"
+      short:
+        display_name: ਸਾਲ
+        one: "{0} ਸਾਲ"
+        other: "{0} ਸਾਲ"
+        per_unit_pattern: "{0}/ਸਾਲ"
+    quarter:
+      long:
+        display_name: ਤਿਮਾਹੀਆਂ
+        gender: feminine
+      short:
+        display_name: ਤਿਮਾਹੀ
+        one: "{0} ਤਿਮਾਹੀ"
+        other: "{0} ਤਿਮਾਹੀਆਂ"
+        per_unit_pattern: "{0}/ਤਿਮਾਹੀ"
+    month:
+      long:
+        one: "{0} ਮਹੀਨਾ"
+        one_oblique: "{0} ਮਹੀਨੇ"
+        other: "{0} ਮਹੀਨੇ"
+        other_oblique: "{0} ਮਹੀਨਿਆਂ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਮਹੀਨਾ"
+      short:
+        display_name: ਮਹੀਨੇ
+        one: "{0} ਮਹੀਨਾ"
+        other: "{0} ਮਹੀਨੇ"
+        per_unit_pattern: "{0}/ਮਹੀਨਾ"
+      narrow:
+        display_name: ਮਹੀਨਾ
+        per_unit_pattern: "{0}/ਮ"
+    week:
+      long:
+        one: "{0} ਹਫ਼ਤਾ"
+        one_oblique: "{0} ਹਫ਼ਤੇ"
+        other: "{0} ਹਫ਼ਤੇ"
+        other_oblique: "{0} ਹਫ਼ਤਿਆਂ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਹਫ਼ਤਾ"
+      short:
+        display_name: ਹਫ਼ਤੇ
+        one: "{0} ਹਫ਼ਤਾ"
+        other: "{0} ਹਫ਼ਤੇ"
+        per_unit_pattern: "{0}/ਹਫ਼ਤਾ"
+      narrow:
+        display_name: ਹਫ਼ਤਾ
+        per_unit_pattern: "{0}/ਹ"
+    day:
+      long:
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਦਿਨ"
+      short:
+        display_name: ਦਿਨ
+        one: "{0} ਦਿਨ"
+        other: "{0} ਦਿਨ"
+        per_unit_pattern: "{0}/ਦਿਨ"
+      narrow:
+        per_unit_pattern: "{0}/ਦਿ"
+    hour:
+      long:
+        one: "{0} ਘੰਟਾ"
+        one_oblique: "{0} ਘੰਟੇ"
+        other: "{0} ਘੰਟੇ"
+        other_oblique: "{0} ਘੰਟਿਆਂ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਘੰਟਾ"
+      short:
+        display_name: ਘੰਟੇ
+        one: "{0} ਘੰਟਾ"
+        other: "{0} ਘੰਟੇ"
+        per_unit_pattern: "{0} ਪ੍ਰ.ਘੰ."
+      narrow:
+        display_name: ਘੰਟਾ
+        per_unit_pattern: "{0}/ਘੰ"
+    minute:
+      long:
+        one: "{0} ਮਿੰਟ"
+        one_oblique: "{0} ਮਿੰਟ"
+        other: "{0} ਮਿੰਟ"
+        other_oblique: "{0} ਮਿੰਟਾਂ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਮਿੰਟ"
+      short:
+        display_name: ਮਿੰਟ
+        one: "{0} ਮਿੰਟ"
+        other: "{0} ਮਿੰਟ"
+        per_unit_pattern: "{0}/ਮਿੰਟ"
+    second:
+      long:
+        one: "{0} ਸਕਿੰਟ"
+        one_oblique: "{0} ਸਕਿੰਟ"
+        other: "{0} ਸਕਿੰਟ"
+        other_oblique: "{0} ਸਕਿੰਟਾਂ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਸਕਿੰਟ"
+      short:
+        display_name: ਸਕਿੰਟ
+        one: "{0} ਸਕਿੰਟ"
+        other: "{0} ਸਕਿੰਟ"
+        per_unit_pattern: "{0} ਪ੍ਰ.ਸ."
+      narrow:
+        per_unit_pattern: "{0}/ਸਕਿੰ"
+    millisecond:
+      long:
+        gender: masculine
+      short:
+        display_name: ਮਿਲੀਸਕਿੰਟ
+        one: "{0} ਮਿਲੀਸਕਿੰਟ"
+        other: "{0} ਮਿਲੀਸਕਿੰਟ"
+      narrow:
+        one: "{0} ਮਿ.ਸ."
+        other: "{0} ਮਿ.ਸ."
+    microsecond:
+      long:
+        one: "{0} ਮਾਈਕਰੋਸਕਿੰਟ"
+        one_oblique: "{0} ਮਾਈਕਰੋਸਕਿੰਟ"
+        other: "{0} ਮਾਈਕਰੋਸਕਿੰਟ"
+        other_oblique: "{0} ਮਾਈਕਰੋਸਕਿੰਟ"
+        gender: masculine
+      short:
+        display_name: ਮਾਈਕਰੋਸਕਿੰਟ
+    nanosecond:
+      long:
+        one: "{0} ਨੈਨੋਸਕਿੰਟ"
+        one_oblique: "{0} ਨੈਨੋਸਕਿੰਟ"
+        other: "{0} ਨੈਨੋਸਕਿੰਟ"
+        other_oblique: "{0} ਨੈਨੋਸਕਿੰਟ"
+        gender: masculine
+      short:
+        display_name: ਨੈਨੋਸਕਿੰਟ
+    ampere:
+      long:
+        one: "{0} ਐਮਪੀਅਰ"
+        one_oblique: "{0} ਐਮਪੀਅਰ"
+        other: "{0} ਐਮਪੀਅਰ"
+        other_oblique: "{0} ਐਮਪੀਅਰ"
+        gender: masculine
+      short:
+        display_name: ਐਮਪੀਅਰ
+      narrow:
+        one: "{0}A"
+        other: "{0}A"
+    milliampere:
+      long:
+        one: "{0} ਮਿਲੀਐਮਪੀਅਰ"
+        one_oblique: "{0} ਮਿਲੀਐਮਪੀਅਰ"
+        other: "{0} ਮਿਲੀਐਮਪੀਅਰ"
+        other_oblique: "{0} ਮਿਲੀਐਮਪੀਅਰ"
+        gender: masculine
+      short:
+        display_name: ਮਿਲੀਐਮਪੀਅਰ
+      narrow:
+        one: "{0}mA"
+        other: "{0}mA"
+    ohm:
+      long:
+        one: "{0} ਓਹਮ"
+        one_oblique: "{0} ਓਹਮ"
+        other: "{0} ਓਹਮ"
+        other_oblique: "{0} ਓਹਮ"
+        gender: masculine
+      short:
+        display_name: ਓਹਮ
+      narrow:
+        one: "{0}Ω"
+        other: "{0}Ω"
+    volt:
+      long:
+        one: "{0} ਵੋਲਟ"
+        one_oblique: "{0} ਵੋਲਟ"
+        other: "{0} ਵੋਲਟ"
+        other_oblique: "{0} ਵੋਲਟ"
+        gender: masculine
+      short:
+        display_name: ਵੋਲਟ
+      narrow:
+        one: "{0}V"
+        other: "{0}V"
+    kilocalorie:
+      long:
+        display_name: ਕਿਲੋਕੈਲੋਰੀਆਂ
+        one: "{0} ਕਿਲੋਕੈਲੋਰੀ"
+        one_oblique: "{0} ਕਿਲੋਕੈਲੋਰੀ"
+        other: "{0} ਕਿਲੋਕੈਲੋਰੀਆਂ"
+        other_oblique: "{0} ਕਿਲੋਕੈਲੋਰੀਆਂ"
+        gender: feminine
+      short:
+        display_name: ਕਿ.ਕੈਲੋਰੀ
+        one: "{0} ਕਿ.ਕੈਲੋਰੀ"
+        other: "{0} ਕਿ.ਕੈਲੋਰੀਆਂ"
+      narrow:
+        one: "{0}ਕਿ.ਕੈਲੋਰੀਆਂ"
+        other: "{0}ਕਿ.ਕੈਲੋਰੀਆਂ"
+    calorie:
+      long:
+        display_name: ਕੈਲੋਰੀਆਂ
+        gender: feminine
+      short:
+        display_name: ਕੈਲੋਰੀ
+        one: "{0} ਕੈਲੋਰੀ"
+        other: "{0} ਕੈਲੋਰੀਆਂ"
+    foodcalorie:
+      long:
+        display_name: ਕੈਲੋਰੀਆਂ
+      short:
+        display_name: ਕੈਲੋਰੀ
+        one: "{0} ਕੈਲੋਰੀ"
+        other: "{0} ਕੈਲੋਰੀਆਂ"
+    kilojoule:
+      long:
+        one: "{0} ਕਿਲੋਜੂਲ"
+        one_oblique: "{0} ਕਿਲੋਜੂਲ"
+        other: "{0} ਕਿਲੋਜੂਲ"
+        other_oblique: "{0} ਕਿਲੋਜੂਲ"
+        gender: masculine
+      short:
+        display_name: ਕਿਲੋਜੂਲ
+        one: "{0} ਕਿ.ਜੂਲ"
+        other: "{0} ਕਿ.ਜੂਲ"
+    joule:
+      long:
+        one: "{0} ਜੂਲ"
+        one_oblique: "{0} ਜੂਲ"
+        other: "{0} ਜੂਲ"
+        other_oblique: "{0} ਜੂਲ"
+        gender: masculine
+      short:
+        display_name: ਜੂਲ
+    kilowatt-hour:
+      long:
+        display_name: ਕਿਲੋਵਾਟ-ਘੰਟੇ
+        one: "{0} ਕਿਲੋਵਾਟ ਘੰਟਾ"
+        one_oblique: "{0} ਕਿਲੋਵਾਟ ਘੰਟਾ"
+        other: "{0} ਕਿਲੋਵਾਟ ਘੰਟੇ"
+        other_oblique: "{0} ਕਿਲੋਵਾਟ ਘੰਟੇ"
+        gender: masculine
+      short:
+        display_name: ਕਿ.ਵਾ.ਘੰ.
+        one: "{0} ਕਿ.ਵਾ.ਘੰ."
+        other: "{0} ਕਿ.ਵਾ.ਘੰ."
+    electronvolt:
+      long:
+        one: "{0} ਇਲੈਕਟ੍ਰਾਨਵੋਲਟ"
+        other: "{0} ਇਲੈਕਟ੍ਰਾਨਵੋਲਟ"
+      short:
+        display_name: ਇਲੈਕਟ੍ਰਾਨਵੋਲਟ
+    british-thermal-unit:
+      long:
+        display_name: ਬਰਤਾਨਵੀ ਤਾਪ ਇਕਾਈ
+        one: "{0} ਬਰਤਾਨਵੀ ਤਾਪ ਇਕਾਈ"
+        other: "{0} ਬਰਤਾਨਵੀ ਤਾਪ ਇਕਾਈ"
+      short:
+        display_name: BTU
+    therm-us:
+      long:
+        display_name: US therms
+      short:
+        one: "{0} ਯੂ.ਐਸ. ਥੈਰਮ"
+        other: "{0} ਯੂ.ਐਸ. ਥੈਰਮ"
+      narrow:
+        display_name: ਯੂ.ਐਸ. ਥੈਰਮ
+    pound-force:
+      long:
+        display_name: ਪੌਂਡ ਬਲ
+        one: "{0} ਪੌਂਡ ਬਲ"
+        other: "{0} ਪੌਂਡ ਬਲ"
+      short:
+        display_name: ਪੌਂਡ-ਬਲ
+    newton:
+      long:
+        one: "{0} ਨਿਊਟਨ"
+        one_oblique: "{0} ਨਿਊਟਨ"
+        other: "{0} ਨਿਊਟਨ"
+        other_oblique: "{0} ਨਿਊਟਨ"
+        gender: masculine
+      short:
+        display_name: ਨਿਊਟਨ
+        one: "{0} ਨਿ"
+        other: "{0} ਨਿ"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: ਕਿੱਲੋਵਾਟ-ਘੰਟਾ ਪ੍ਰਤੀ 100 ਕਿੱਲੋਮੀਟਰ
+        one: "{0} ਕਿੱਲੋਵਾਟ-ਘੰਟਾ ਪ੍ਰਤੀ 100 ਕਿੱਲੋਮੀਟਰ"
+        one_oblique: "{0} ਕਿੱਲੋਵਾਟ-ਘੰਟਾ ਪ੍ਰਤੀ 100 ਕਿੱਲੋਮੀਟਰ"
+        other: "{0} ਕਿੱਲੋਵਾਟ-ਘੰਟਾ ਪ੍ਰਤੀ 100 ਕਿੱਲੋਮੀਟਰ"
+        other_oblique: "{0} ਕਿੱਲੋਵਾਟ-ਘੰਟਾ ਪ੍ਰਤੀ 100 ਕਿੱਲੋਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਕਿ.ਵ.ਘੰ./100ਕਿ.ਮੀ.
+        one: "{0} ਕਿ.ਵ.ਘੰ./100ਕਿ.ਮੀ."
+        other: "{0} ਕਿ.ਵ.ਘੰ./100ਕਿ.ਮੀ."
+      narrow:
+        one: "{0}ਕਿ.ਵ.ਘੰ./100ਕਿ.ਮੀ."
+        other: "{0}ਕਿ.ਵ.ਘੰ./100ਕਿ.ਮੀ."
+    gigahertz:
+      long:
+        display_name: ਗੀਗਾਹਰਟਜ਼
+        one: "{0} ਗੀਗਾਹਰਟਜ਼"
+        one_oblique: "{0} ਗੀਗਾਹਰਟਜ਼"
+        other: "{0} ਗੀਗਾਹਰਟਜ਼"
+        other_oblique: "{0} ਗੀਗਾਹਰਟਜ਼"
+        gender: masculine
+      narrow:
+        one: "{0}GHz"
+        other: "{0}GHz"
+    megahertz:
+      long:
+        display_name: ਮੈਗਾਹਰਟਜ਼
+        one: "{0} ਮੈਗਾਹਰਟਜ਼"
+        one_oblique: "{0} ਮੈਗਾਹਰਟਜ਼"
+        other: "{0} ਮੈਗਾਹਰਟਜ਼"
+        other_oblique: "{0} ਮੈਗਾਹਰਟਜ਼"
+        gender: masculine
+      narrow:
+        one: "{0}MHz"
+        other: "{0}MHz"
+    kilohertz:
+      long:
+        display_name: ਕਿਲੋਹਰਟਜ਼
+        one: "{0} ਕਿਲੋਹਰਟਜ਼"
+        one_oblique: "{0} ਕਿਲੋਹਰਟਜ਼"
+        other: "{0} ਕਿਲੋਹਰਟਜ਼"
+        other_oblique: "{0} ਕਿਲੋਹਰਟਜ਼"
+        gender: masculine
+      narrow:
+        one: "{0}kHz"
+        other: "{0}kHz"
+    hertz:
+      long:
+        display_name: ਹਰਟਜ਼
+        one: "{0} ਹਰਟਜ਼"
+        one_oblique: "{0} ਹਰਟਜ਼"
+        other: "{0} ਹਰਟਜ਼"
+        other_oblique: "{0} ਹਰਟਜ਼"
+        gender: masculine
+      narrow:
+        one: "{0}Hz"
+        other: "{0}Hz"
+    em:
+      long:
+        display_name: ਟਾਈਪੋਗ੍ਰਾਫ਼ਿਕ ਐਮ
+        one: "{0} ਟਾਈਪੋਗ੍ਰਾਫ਼ਿਕ ਐਮ"
+        one_oblique: "{0} ਟਾਈਪੋਗ੍ਰਾਫ਼ਿਕ ਐਮ"
+        other: "{0} ਟਾਈਪੋਗ੍ਰਾਫ਼ਿਕ ਐਮ"
+        other_oblique: "{0} ਟਾਈਪੋਗ੍ਰਾਫ਼ਿਕ ਐਮ"
+        gender: masculine
+      narrow:
+        one: "{0}em"
+        other: "{0}em"
+    pixel:
+      long:
+        display_name: ਪਿਕਸਲ
+        one: "{0} ਪਿਕਸਲ"
+        one_oblique: "{0} ਪਿਕਸਲ"
+        other: "{0} ਪਿਕਸਲ"
+        other_oblique: "{0} ਪਿਕਸਲ"
+        gender: masculine
+      narrow:
+        one: "{0}px"
+        other: "{0}px"
+    megapixel:
+      long:
+        display_name: ਮੈਗਾਪਿਕਸਲ
+        one: "{0} ਮੈਗਾਪਿਕਸਲ"
+        one_oblique: "{0} ਮੈਗਾਪਿਕਸਲ"
+        other: "{0} ਮੈਗਾਪਿਕਸਲ"
+        other_oblique: "{0} ਮੈਗਾਪਿਕਸਲ"
+        gender: masculine
+      narrow:
+        one: "{0}MP"
+        other: "{0}MP"
+    pixel-per-centimeter:
+      long:
+        display_name: ਪਿਕਸਲ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ
+        one: "{0} ਪਿਕਸਲ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ"
+        one_oblique: "{0} ਪਿਕਸਲ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ"
+        other: "{0} ਪਿਕਸਲ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ"
+        other_oblique: "{0} ਪਿਕਸਲ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ"
+        gender: masculine
+      narrow:
+        one: "{0}ppcm"
+        other: "{0}ppcm"
+    pixel-per-inch:
+      long:
+        display_name: ਪਿਕਸਲ ਪ੍ਰਤੀ ਇੰਚ
+        one: "{0} ਪਿਕਸਲ ਪ੍ਰਤੀ ਇੰਚ"
+        other: "{0} ਪਿਕਸਲ ਪ੍ਰਤੀ ਇੰਚ"
+    dot-per-centimeter:
+      long:
+        display_name: ਡਾਟਸ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ
+        one: "{0} ਡਾਟ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ"
+        other: "{0} ਡਾਟਸ ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ"
+      short:
+        display_name: dpcm
+        one: "{0} dpcm"
+        other: "{0} dpcm"
+      narrow:
+        one: "{0}dpcm"
+        other: "{0} dpcm"
+    dot-per-inch:
+      long:
+        display_name: ਡਾਟਸ ਪ੍ਰਤੀ ਇੰਚ
+        one: "{0} ਡਾਟ ਪ੍ਰਤੀ ਇੰਚ"
+        other: "{0} ਡਾਟਸ ਪ੍ਰਤੀ ਇੰਚ"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+      narrow:
+        one: "{0}dpi"
+        other: "{0}dpi"
+    earth-radius:
+      long:
+        display_name: ਧਰਤੀ ਦਾ ਘੇਰਾ
+        one: "{0} ਧਰਤੀ ਦਾ ਘੇਰਾ"
+        other: "{0} ਧਰਤੀ ਦਾ ਘੇਰਾ"
+    kilometer:
+      long:
+        display_name: ਕਿਲੋਮੀਟਰ
+        one: "{0} ਕਿਲੋਮੀਟਰ"
+        one_oblique: "{0} ਕਿਲੋਮੀਟਰ"
+        other: "{0} ਕਿਲੋਮੀਟਰ"
+        other_oblique: "{0} ਕਿਲੋਮੀਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਕਿਲੋਮੀਟਰ"
+      short:
+        display_name: ਕਿ.ਮੀ.
+        one: "{0} ਕਿ.ਮੀ."
+        other: "{0} ਕਿ.ਮੀ."
+        per_unit_pattern: "{0}/ਕਿ.ਮੀ."
+    meter:
+      long:
+        one: "{0} ਮੀਟਰ"
+        one_oblique: "{0} ਮੀਟਰ"
+        other: "{0} ਮੀਟਰ"
+        other_oblique: "{0} ਮੀਟਰਾਂ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਮੀਟਰ"
+      short:
+        display_name: ਮੀਟਰ
+        one: "{0} ਮੀ."
+        other: "{0} ਮੀ."
+        per_unit_pattern: "{0}/ਮੀ."
+    decimeter:
+      long:
+        display_name: ਡੈਸੀਮੀਟਰ
+        one: "{0} ਡੈਸੀਮੀਟਰ"
+        one_oblique: "{0} ਡੈਸੀਮੀਟਰ"
+        other: "{0} ਡੈਸੀਮੀਟਰ"
+        other_oblique: "{0} ਡੈਸੀਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਡੈ.ਮੀ.
+        one: "{0} ਡੈ.ਮੀ."
+        other: "{0} ਡੈ.ਮੀ."
+    centimeter:
+      long:
+        display_name: ਸੈਂਟੀਮੀਟਰ
+        one: "{0} ਸੈਂਟੀਮੀਟਰ"
+        one_oblique: "{0} ਸੈਂਟੀਮੀਟਰ"
+        other: "{0} ਸੈਂਟੀਮੀਟਰ"
+        other_oblique: "{0} ਸੈਂਟੀਮੀਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਸੈਂਟੀਮੀਟਰ"
+      short:
+        display_name: ਸੈਂ.ਮੀ.
+        one: "{0} ਸੈਂ.ਮੀ."
+        other: "{0} ਸੈਂ.ਮੀ."
+        per_unit_pattern: "{0}/ਸੈਂ.ਮੀ."
+      narrow:
+        one: "{0}ਸੈਂ.ਮੀ."
+        other: "{0}ਸੈਂ.ਮੀ."
+    millimeter:
+      long:
+        display_name: ਮਿਲੀਮੀਟਰ
+        one: "{0} ਮਿਲੀਮੀਟਰ"
+        one_oblique: "{0} ਮਿਲੀਮੀਟਰ"
+        other: "{0} ਮਿਲੀਮੀਟਰ"
+        other_oblique: "{0} ਮਿਲੀਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਮਿ.ਮੀ.
+        one: "{0} ਮਿ.ਮੀ."
+        other: "{0} ਮਿ.ਮੀ."
+    micrometer:
+      long:
+        one: "{0} ਮਾਈਕਰੋਮੀਟਰ"
+        one_oblique: "{0} ਮਾਈਕਰੋਮੀਟਰ"
+        other: "{0} ਮਾਈਕਰੋਮੀਟਰ"
+        other_oblique: "{0} ਮਾਈਕਰੋਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਮਾਈਕਰੋਮੀਟਰ
+    nanometer:
+      long:
+        display_name: ਨੈਨੋਮੀਟਰ
+        one: "{0} ਨੈਨੋਮੀਟਰ"
+        one_oblique: "{0} ਨੈਨੋਮੀਟਰ"
+        other: "{0} ਨੈਨੋਮੀਟਰ"
+        other_oblique: "{0} ਨੈਨੋਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਨੈ.ਮੀ.
+        one: "{0} ਨੈ.ਮੀ."
+        other: "{0} ਨੈ.ਮੀ."
+    picometer:
+      long:
+        display_name: ਪਿਕੋਮੀਟਰ
+        gender: masculine
+      short:
+        display_name: ਪਿ.ਮੀ.
+        one: "{0} ਪਿਕੋਮੀਟਰ"
+        other: "{0} ਪਿਕੋਮੀਟਰ"
+      narrow:
+        one: "{0} ਪਿ.ਮੀ."
+        other: "{0} ਪਿ.ਮੀ."
+    foot:
+      long:
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਫੁੱਟ"
+      short:
+        display_name: ਫੁੱਟ
+        one: "{0} ਫੁੱਟ"
+        other: "{0} ਫੁੱਟ"
+        per_unit_pattern: "{0}/ਫੁੱਟ"
+      narrow:
+        one: "{0}'"
+        other: "{0}'"
+    inch:
+      long:
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਇੰਚ"
+      short:
+        display_name: ਇੰਚ
+        one: "{0} ਇੰਚ"
+        other: "{0} ਇੰਚ"
+        per_unit_pattern: "{0}/ਇੰਚ"
+      narrow:
+        one: '{0}"'
+        other: '{0}"'
+    light-year:
+      long:
+        one: "{0} ਪ੍ਰਕਾਸ਼ ਸਾਲ"
+        other: "{0} ਪ੍ਰਕਾਸ਼ ਸਾਲ"
+      short:
+        display_name: ਪ੍ਰਕਾਸ਼ ਸਾਲ
+        one: "{0} ਪ੍ਰ.ਸ."
+        other: "{0} ਪ੍ਰ.ਸ."
+    astronomical-unit:
+      long:
+        display_name: ਖਗੋਲੀ ਇਕਾਈਆਂ
+        one: "{0} ਖਗੋਲੀ ਇਕਾਈ"
+        other: "{0} ਖਗੋਲੀ ਇਕਾਈਆਂ"
+    nautical-mile:
+      long:
+        display_name: ਨੋਟੀਕਲ ਮੀਲ
+        one: "{0} ਨੋਟੀਕਲ ਮੀਲ"
+        other: "{0} ਨੋਟੀਕਲ ਮੀਲ"
+      short:
+        display_name: ਨੋ.ਮੀਲ
+        one: "{0} ਨੋ.ਮੀਲ"
+        other: "{0} ਨੋ.ਮੀਲ"
+    mile-scandinavian:
+      long:
+        display_name: ਮੀਲ-ਸਕੈਂਡਿਨੇਵਿਆਈ
+        one: "{0} ਮੀਲ-ਸਕੈਂਡਿਨੇਵਿਆਈ"
+        one_oblique: "{0} ਮੀਲ-ਸਕੈਂਡਿਨੇਵਿਆਈ"
+        other: "{0} ਮੀਲ-ਸਕੈਂਡਿਨੇਵਿਆਈ"
+        other_oblique: "{0} ਮੀਲ-ਸਕੈਂਡਿਨੇਵਿਆਈ"
+        gender: masculine
+      short:
+        display_name: ਸਕੈਂਡ. ਮੀਲ
+        one: "{0} ਸਕੈਂਡ. ਮੀਲ"
+        other: "{0} ਸਕੈਂਡ. ਮੀਲ"
+    point:
+      long:
+        one: "{0} ਪੁਆਇੰਟ"
+        one_oblique: "{0} ਪੁਆਇੰਟ"
+        other: "{0} ਪੁਆਇੰਟ"
+        other_oblique: "{0} ਪੁਆਇੰਟ"
+        gender: masculine
+      short:
+        display_name: ਪੁਆਇੰਟ
+    solar-radius:
+      long:
+        one: "{0} ਸੋਲਰ ਰੇਡੀਅਸ"
+        other: "{0} ਸੋਲਰ ਰੇਡੀਅਸ"
+      short:
+        display_name: ਸੋਲਰ ਰੇਡੀਅਸ
+      narrow:
+        display_name: R☉
+    lux:
+      long:
+        gender: masculine
+      short:
+        display_name: ਲਕਸ
+        one: "{0} ਲਕਸ"
+        other: "{0} ਲਕਸ"
+    candela:
+      long:
+        display_name: ਕੈਂਡੇਲਾ
+        one: "{0} ਕੈਂਡੇਲਾ"
+        one_oblique: "{0} ਕੈਂਡੇਲਾ"
+        other: "{0} ਕੈਂਡੇਲਾ"
+        other_oblique: "{0} ਕੈਂਡੇਲਾ"
+        gender: masculine
+    lumen:
+      long:
+        gender: masculine
+      short:
+        display_name: ਲੁਮੇਨ
+        one: "{0} ਲੁਮੇਨ"
+        other: "{0} ਲੁਮੇਨ"
+    solar-luminosity:
+      long:
+        one: "{0} ਸੋਲਰ ਲੂਮਨਾਸਿਟੀ"
+        other: "{0} ਸੋਲਰ ਲੂਮਨਾਸਿਟੀ"
+      short:
+        display_name: ਸੋਲਰ ਲੂਮਨਾਸਿਟੀ
+    tonne:
+      long:
+        display_name: ਮੀਟਰਿਕ ਟਨ
+        one: "{0} ਮੀਟਰਿਕ ਟਨ"
+        one_oblique: "{0} ਮੀਟਰਿਕ ਟਨ"
+        other: "{0} ਮੀਟਰਿਕ ਟਨ"
+        other_oblique: "{0} ਮੀਟਰਿਕ ਟਨ"
+        gender: masculine
+    kilogram:
+      long:
+        display_name: ਕਿਲੋਗ੍ਰਾਮ
+        one: "{0} ਕਿਲੋਗ੍ਰਾਮ"
+        one_oblique: "{0} ਕਿਲੋਗ੍ਰਾਮ"
+        other: "{0} ਕਿਲੋਗ੍ਰਾਮ"
+        other_oblique: "{0} ਕਿਲੋਗ੍ਰਾਮ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਕਿਲੋਗ੍ਰਾਮ"
+      short:
+        display_name: ਕਿ.ਗ੍ਰਾ.
+        one: "{0} ਕਿ.ਗ੍ਰਾ."
+        other: "{0} ਕਿ.ਗ੍ਰਾ."
+        per_unit_pattern: "{0}/ਕਿ.ਗ੍ਰਾ."
+      narrow:
+        display_name: ਕਿ ਗ੍ਰਾ
+    gram:
+      long:
+        one: "{0} ਗ੍ਰਾਮ"
+        one_oblique: "{0} ਗ੍ਰਾਮ"
+        other: "{0} ਗ੍ਰਾਮ"
+        other_oblique: "{0} ਗ੍ਰਾਮ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਗ੍ਰਾਮ"
+      short:
+        display_name: ਗ੍ਰਾਮ
+        one: "{0} ਗ੍ਰਾ."
+        other: "{0} ਗ੍ਰਾ."
+        per_unit_pattern: "{0}/ਗ੍ਰਾ."
+    milligram:
+      long:
+        display_name: ਮਿਲੀਗ੍ਰਾਮ
+        one: "{0} ਮਿਲੀਗ੍ਰਾਮ"
+        one_oblique: "{0} ਮਿਲੀਗ੍ਰਾਮ"
+        other: "{0} ਮਿਲੀਗ੍ਰਾਮ"
+        other_oblique: "{0} ਮਿਲੀਗ੍ਰਾਮ"
+        gender: masculine
+      short:
+        display_name: ਮਿ.ਗ੍ਰਾ.
+        one: "{0} ਮਿ.ਗ੍ਰਾ."
+        other: "{0} ਮਿ.ਗ੍ਰਾ."
+    microgram:
+      long:
+        display_name: ਮਾਈਕਰੋਗ੍ਰਾਮ
+        one: "{0} ਮਾਈਕਰੋਗ੍ਰਾਮ"
+        one_oblique: "{0} ਮਾਈਕਰੋਗ੍ਰਾਮ"
+        other: "{0} ਮਾਈਕਰੋਗ੍ਰਾਮ"
+        other_oblique: "{0} ਮਾਈਕਰੋਗ੍ਰਾਮ"
+        gender: masculine
+    pound:
+      long:
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਪੌਂਡ"
+      short:
+        display_name: ਪੌਂਡ
+        one: "{0} ਪੌਂਡ"
+        other: "{0} ਪੌਂਡ"
+        per_unit_pattern: "{0}/ਪੌਂਡ"
+      narrow:
+        one: "{0}#"
+        other: "{0}#"
+    ounce:
+      long:
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਔਂਸ"
+      short:
+        display_name: ਔਂਸ
+        one: "{0} ਔਂਸ"
+        other: "{0} ਔਂਸ"
+        per_unit_pattern: "{0}/ਔਂਸ"
+    ounce-troy:
+      long:
+        display_name: ਟਰੌਏ ਔਂਸ
+        one: "{0} ਟਰੌਏ ਔਂਸ"
+        other: "{0} ਟਰੌਏ ਔਂਸ"
+      short:
+        display_name: ਔਂਸ ਟਰੌਏ
+        one: "{0} ਔਂਸ ਟ."
+        other: "{0} ਔਂਸ ਟ."
+    carat:
+      long:
+        gender: masculine
+      short:
+        display_name: ਕੈਰਟ
+        one: "{0} ਕੈਰਟ"
+        other: "{0} ਕੈਰਟ"
+    dalton:
+      long:
+        one: "{0} ਡਾਲਟਨ"
+        other: "{0} ਡਾਲਟਨ"
+      short:
+        display_name: ਡਾਲਟਨ
+        one: "{0} ਡਾ"
+        other: "{0} ਡਾ"
+    earth-mass:
+      long:
+        one: "{0} ਅਰਥ ਮਾਸ"
+        other: "{0} ਅਰਥ ਮਾਸ"
+      short:
+        display_name: ਅਰਥ ਮਾਸ
+    solar-mass:
+      long:
+        one: "{0} ਸੋਲਰ ਮਾਸ"
+        other: "{0} ਸੋਲਰ ਮਾਸ"
+      short:
+        display_name: ਸੋਲਰ ਮਾਸ
+    gigawatt:
+      long:
+        display_name: ਗੀਗਾਵਾਟ
+        one: "{0} ਗੀਗਾਵਾਟ"
+        one_oblique: "{0} ਗੀਗਾਵਾਟ"
+        other: "{0} ਗੀਗਾਵਾਟ"
+        other_oblique: "{0} ਗੀਗਾਵਾਟ"
+        gender: masculine
+      short:
+        display_name: ਗੀ.ਵਾਟ
+        one: "{0} ਗੀ.ਵਾਟ"
+        other: "{0} ਗੀ.ਵਾਟ"
+    megawatt:
+      long:
+        display_name: ਮੈਗਾਵਾਟ
+        one: "{0} ਮੈਗਾਵਾਟ"
+        one_oblique: "{0} ਮੈਗਾਵਾਟ"
+        other: "{0} ਮੈਗਾਵਾਟ"
+        other_oblique: "{0} ਮੈਗਾਵਾਟ"
+        gender: masculine
+      short:
+        display_name: ਮੈ.ਵਾਟ
+        one: "{0} ਮੈ.ਵਾਟ"
+        other: "{0} ਮੈ.ਵਾਟ"
+    kilowatt:
+      long:
+        display_name: ਕਿਲੋਵਾਟ
+        one: "{0} ਕਿਲੋਵਾਟ"
+        one_oblique: "{0} ਕਿਲੋਵਾਟ"
+        other: "{0} ਕਿਲੋਵਾਟ"
+        other_oblique: "{0} ਕਿਲੋਵਾਟ"
+        gender: masculine
+      short:
+        display_name: ਕਿ.ਵਾਟ
+        one: "{0} ਕਿ. ਵਾਟ"
+        other: "{0} ਕਿ. ਵਾਟ"
+    watt:
+      long:
+        gender: feminine
+      short:
+        display_name: ਵਾਟ
+        one: "{0} ਵਾਟ"
+        other: "{0} ਵਾਟ"
+    milliwatt:
+      long:
+        display_name: ਮਿਲੀਵਾਟ
+        one: "{0} ਮਿਲੀਵਾਟ"
+        one_oblique: "{0} ਮਿਲੀਵਾਟ"
+        other: "{0} ਮਿਲੀਵਾਟ"
+        other_oblique: "{0} ਮਿਲੀਵਾਟ"
+        gender: masculine
+      short:
+        display_name: ਮਿ.ਵਾਟ
+        one: "{0} ਮਿ.ਵਾਟ"
+        other: "{0} ਮਿ.ਵਾਟ"
+    horsepower:
+      long:
+        display_name: ਹੌਰਸਪਾਵਰ
+      short:
+        one: "{0} ਹੌਰਸਪਾਵਰ"
+        other: "{0} ਹੌਰਸਪਾਵਰ"
+      narrow:
+        one: "{0}hp"
+        other: "{0} hp"
+    millimeter-ofhg:
+      long:
+        display_name: ਮਿਲੀਮੀਟਰ ਪਾਰਾ
+        one: "{0} ਮਿਲੀਮੀਟਰ ਪਾਰਾ"
+        one_oblique: "{0} ਮਿਲੀਮੀਟਰ ਪਾਰਾ"
+        other: "{0} ਮਿਲੀਮੀਟਰ ਪਾਰਾ"
+        other_oblique: "{0} ਮਿਲੀਮੀਟਰ ਪਾਰਾ"
+        gender: masculine
+      short:
+        display_name: ਮਿ.ਮੀ. ਪਾਰਾ
+        one: "{0} ਮਿ.ਮੀ. ਪਾਰਾ"
+        other: "{0} ਮਿ.ਮੀ. ਪਾਰਾ"
+    pound-force-per-square-inch:
+      long:
+        display_name: ਪੌਂਡ ਪ੍ਰਤੀ ਵਰਗ ਇੰਚ
+        one: "{0} ਪੌਂਡ ਪ੍ਰਤੀ ਵਰਗ ਇੰਚ"
+        other: "{0} ਪੌਂਡ ਪ੍ਰਤੀ ਵਰਗ ਇੰਚ"
+      short:
+        display_name: ਪੌਂ.ਵ.ਇੰਚ
+        one: "{0} ਪੌਂ.ਵ.ਇੰਚ"
+        other: "{0} ਪੌਂ.ਵ.ਇੰਚ"
+    bar:
+      long:
+        gender: masculine
+      short:
+        display_name: ਬਾਰ
+        one: "{0} ਬਾਰ"
+        other: "{0} ਬਾਰ"
+    millibar:
+      long:
+        gender: masculine
+      short:
+        display_name: ਮਿਲੀਬਾਰ
+        one: "{0} ਮਿਲੀਬਾਰ"
+        other: "{0} ਮਿਲੀਬਾਰ"
+      narrow:
+        display_name: ਮਿ.ਬਾਰ
+        one: "{0} ਮਿ.ਬਾ."
+        other: "{0} ਮਿ.ਬਾ."
+    atmosphere:
+      long:
+        display_name: ਵਾਯੂਮੰਡਲ
+        one: "{0} ਵਾਯੂਮੰਡਲ"
+        one_oblique: "{0} ਵਾਯੂਮੰਡਲ"
+        other: "{0} ਵਾਯੂਮੰਡਲ"
+        other_oblique: "{0} ਵਾਯੂਮੰਡਲ"
+        gender: masculine
+      short:
+        display_name: ਵਾ. ਮੰ.
+        one: "{0} ਵਾ. ਮੰ."
+        other: "{0} ਵਾ. ਮੰ."
+    pascal:
+      long:
+        display_name: ਪੈਸਕਲ
+        one: "{0} ਪੈਸਕਲ"
+        one_oblique: "{0} ਪੈਸਕਲ"
+        other: "{0} ਪੈਸਕਲ"
+        other_oblique: "{0} ਪੈਸਕਲ"
+        gender: masculine
+    hectopascal:
+      long:
+        display_name: ਹੈਕਟੋਪਾਸਕਲ
+        one: "{0} ਹੈਕਟੋਪਾਸਕਲ"
+        one_oblique: "{0} ਹੈਕਟੋਪਾਸਕਲ"
+        other: "{0} ਹੈਕਟੋਪਾਸਕਲ"
+        other_oblique: "{0} ਹੈਕਟੋਪਾਸਕਲ"
+        gender: masculine
+      short:
+        display_name: ਹੈ.ਪਾ.
+        one: "{0} ਹੈ.ਪਾ."
+        other: "{0} ਹੈ.ਪਾ."
+    kilopascal:
+      long:
+        display_name: ਕਿੱਲੋਪਾਸਕਲ
+        one: "{0} ਕਿੱਲੋਪਾਸਕਲ"
+        one_oblique: "{0} ਕਿੱਲੋਪਾਸਕਲ"
+        other: "{0} ਕਿੱਲੋਪਾਸਕਲ"
+        other_oblique: "{0} ਕਿੱਲੋਪਾਸਕਲ"
+        gender: masculine
+      short:
+        display_name: ਕਿ.ਪਾ
+        one: "{0} ਕਿ.ਪਾ"
+        other: "{0} ਕਿ.ਪਾ"
+    megapascal:
+      long:
+        display_name: ਮੈਗਾਪਾਸਕਲ
+        one: "{0} ਮੈਗਾਪਾਸਕਲ"
+        one_oblique: "{0} ਮੈਗਾਪਾਸਕਲ"
+        other: "{0} ਮੈਗਾਪਾਸਕਲ"
+        other_oblique: "{0} ਮੈਗਾਪਾਸਕਲ"
+        gender: masculine
+      short:
+        display_name: ਮੈ.ਪਾ
+        one: "{0} ਮੈ.ਪਾ"
+        other: "{0} ਮੈ.ਪਾ"
+    kilometer-per-hour:
+      long:
+        display_name: ਕਿਲੋਮੀਟਰ ਪ੍ਰਤੀ ਘੰਟਾ
+        one: "{0} ਕਿਲੋਮੀਟਰ ਪ੍ਰਤੀ ਘੰਟਾ"
+        one_oblique: "{0} ਕਿਲੋਮੀਟਰ ਪ੍ਰਤੀ ਘੰਟਾ"
+        other: "{0} ਕਿਲੋਮੀਟਰ ਪ੍ਰਤੀ ਘੰਟਾ"
+        other_oblique: "{0} ਕਿਲੋਮੀਟਰ ਪ੍ਰਤੀ ਘੰਟਾ"
+        gender: masculine
+      short:
+        display_name: ਕਿ.ਮੀ./ਘੰਟਾ
+        one: "{0} ਕਿ.ਮੀ./ਘੰ."
+        other: "{0} ਕਿ.ਮੀ./ਘੰ."
+      narrow:
+        one: "{0} ਕਿ.ਮੀ./ਘੰ."
+        other: "{0} ਕਿ.ਮੀ./ਘੰ."
+    meter-per-second:
+      long:
+        display_name: ਮੀਟਰ ਪ੍ਰਤੀ ਸਕਿੰਟ
+        one: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਸਕਿੰਟ"
+        one_oblique: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਸਕਿੰਟ"
+        other: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਸਕਿੰਟ"
+        other_oblique: "{0} ਮੀਟਰ ਪ੍ਰਤੀ ਸਕਿੰਟ"
+        gender: masculine
+      short:
+        display_name: ਮੀਟਰ/ਸਕਿੰਟ
+        one: "{0} ਮੀ./ਸ."
+        other: "{0} ਮੀ./ਸ."
+      narrow:
+        one: "{0}ਮੀ/ਸ"
+        other: "{0}ਮੀ/ਸ"
+    mile-per-hour:
+      long:
+        display_name: ਮੀਲ ਪ੍ਰਤੀ ਘੰਟਾ
+        one: "{0} ਮੀਲ ਪ੍ਰਤੀ ਘੰਟਾ"
+        other: "{0} ਮੀਲ ਪ੍ਰਤੀ ਘੰਟਾ"
+      short:
+        display_name: ਮੀਲ/ਘੰਟਾ
+        one: "{0} ਮੀਲ/ਘੰ."
+        other: "{0} ਮੀਲ/ਘੰ."
+      narrow:
+        one: "{0} ਮੀਲ/ਘੰ."
+        other: "{0} ਮੀਲ/ਘੰ."
+    knot:
+      long:
+        display_name: ਨੌਟ
+        one: "{0} ਨੌਟ"
+        other: "{0} ਨੌਟ"
+    beaufort:
+      long:
+        display_name: ਬਿਊਫੋਰਟ
+        one: ਬਿਊਫੋਰਟ {0}
+        other: ਬਿਊਫੋਰਟ {0}
+    generic:
+      long:
+        one: "{0} ਡਿਗਰੀ"
+        one_oblique: "{0} ਡਿਗਰੀ"
+        other: "{0} ਡਿਗਰੀ"
+        other_oblique: "{0} ਡਿਗਰੀ"
+        gender: feminine
+    celsius:
+      long:
+        display_name: ਡਿਗਰੀ ਸੈਲਸੀਅਸ
+        one: "{0} ਡਿਗਰੀ ਸੈਲਸੀਅਸ"
+        one_oblique: "{0} ਡਿਗਰੀ ਸੈਲਸੀਅਸ"
+        other: "{0} ਡਿਗਰੀ ਸੈਲਸੀਅਸ"
+        other_oblique: "{0} ਡਿਗਰੀ ਸੈਲਸੀਅਸ"
+        gender: masculine
+      short:
+        display_name: ਡਿ. ਸੈਲਸੀਅਸ
+      narrow:
+        display_name: "°C"
+    fahrenheit:
+      long:
+        display_name: ਡਿਗਰੀ ਫਾਰੇਨਹਾਈਟ
+        one: "{0} ਡਿਗਰੀ ਫਾਰੇਨਹਾਈਟ"
+        other: "{0} ਡਿਗਰੀ ਫਾਰੇਨਹਾਈਟ"
+      short:
+        display_name: ਡਿ. ਫਾ.
+      narrow:
+        display_name: "°F"
+        one: "{0}°"
+        other: "{0}°"
+    kelvin:
+      long:
+        display_name: ਕੈਲਵਿਨ
+        one: "{0} ਕੈਲਵਿਨ"
+        one_oblique: "{0} ਕੈਲਵਿਨ"
+        other: "{0} ਕੈਲਵਿਨ"
+        other_oblique: "{0} ਕੈਲਵਿਨ"
+        gender: masculine
+      narrow:
+        one: "{0}°K"
+        other: "{0}°K"
+    pound-force-foot:
+      long:
+        display_name: ਪੌਂਡ-ਫੁੱਟ
+        one: "{0} ਪੌਂਡ-ਬਲ-ਫੁੱਟ"
+        other: "{0} ਪੌਂਡ-ਫੁੱਟ"
+    newton-meter:
+      long:
+        display_name: ਨਿਊਟਨ-ਮੀਟਰ
+        one: "{0} ਨਿਊਟਨ-ਮੀਟਰ"
+        one_oblique: "{0} ਨਿਊਟਨ-ਮੀਟਰ"
+        other: "{0} ਨਿਊਟਨ-ਮੀਟਰ"
+        other_oblique: "{0} ਨਿਊਟਨ-ਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਨਿ⋅ਮੀ
+        one: "{0} ਨਿ⋅ਮੀ"
+        other: "{0} ਨਿ⋅ਮੀ"
+      narrow:
+        display_name: N⋅m
+        one: "{0}N⋅m"
+        other: "{0}N⋅m"
+    cubic-kilometer:
+      long:
+        display_name: ਘਣ ਕਿਲੋਮੀਟਰ
+        one: "{0} ਘਣ ਕਿਲੋਮੀਟਰ"
+        one_oblique: "{0} ਘਣ ਕਿਲੋਮੀਟਰ"
+        other: "{0} ਘਣ ਕਿਲੋਮੀਟਰ"
+        other_oblique: "{0} ਘਣ ਕਿਲੋਮੀਟਰ"
+        gender: masculine
+      short:
+        display_name: ਕਿਮੀ³
+        one: "{0} ਕਿਮੀ³"
+        other: "{0} ਕਿਮੀ³"
+      narrow:
+        one: "{0}ਕਿਮੀ³"
+        other: "{0}ਕਿਮੀ³"
+    cubic-meter:
+      long:
+        display_name: ਘਣ ਮੀਟਰ
+        one: "{0} ਘਣ ਮੀਟਰ"
+        one_oblique: "{0} ਘਣ ਮੀਟਰ"
+        other: "{0} ਘਣ ਮੀਟਰ"
+        other_oblique: "{0} ਘਣ ਮੀਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਘਣ ਮੀਟਰ"
+      short:
+        display_name: ਮੀ³
+        one: "{0} ਮੀ³"
+        other: "{0} ਮੀ³"
+        per_unit_pattern: "{0}/ਮੀ³"
+      narrow:
+        one: "{0}ਮੀ³"
+        other: "{0}ਮੀ³"
+    cubic-centimeter:
+      long:
+        display_name: ਘਣ ਸੈਂਟੀਮੀਟਰ
+        one: "{0} ਘਣ ਸੈਂਟੀਮੀਟਰ"
+        one_oblique: "{0} ਘਣ ਸੈਂਟੀਮੀਟਰ"
+        other: "{0} ਘਣ ਸੈਂਟੀਮੀਟਰ"
+        other_oblique: "{0} ਘਣ ਸੈਂਟੀਮੀਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਘਣ ਸੈਂਟੀਮੀਟਰ"
+      short:
+        display_name: ਸੈਮੀ³
+        one: "{0} ਸੈਮੀ³"
+        other: "{0} ਸੈਮੀ³"
+        per_unit_pattern: "{0}/ਸੈਮੀ³"
+      narrow:
+        one: "{0}ਸੈਮੀ³"
+        other: "{0}ਸੈਮੀ³"
+    cubic-mile:
+      long:
+        display_name: ਘਣ ਮੀਲ
+        one: "{0} ਘਣ ਮੀਲ"
+        other: "{0} ਘਣ ਮੀਲ"
+      short:
+        display_name: ਮੀਲ³
+        one: "{0} ਮੀਲ³"
+        other: "{0} ਮੀਲ³"
+      narrow:
+        one: "{0}ਮੀਲ³"
+        other: "{0}ਮੀਲ³"
+    cubic-yard:
+      long:
+        display_name: ਘਣ ਗਜ਼
+        one: "{0} ਘਣ ਗਜ਼"
+        other: "{0} ਘਣ ਗਜ਼"
+      short:
+        display_name: ਗਜ਼³
+        one: "{0} ਗਜ਼³"
+        other: "{0} ਗਜ਼³"
+      narrow:
+        one: "{0}ਗਜ਼³"
+        other: "{0}ਗਜ਼³"
+    cubic-foot:
+      long:
+        display_name: ਘਣ ਫੁੱਟ
+        one: "{0} ਘਣ ਫੁੱਟ"
+        other: "{0} ਘਣ ਫੁੱਟ"
+      short:
+        display_name: ਫੁੱਟ³
+        one: "{0} ਫੁੱਟ³"
+        other: "{0} ਫੁੱਟ³"
+      narrow:
+        one: "{0}ਫੁੱਟ³"
+        other: "{0}ਫੁੱਟ³"
+    cubic-inch:
+      long:
+        display_name: ਘਣ ਇੰਚ
+        one: "{0} ਘਣ ਇੰਚ"
+        other: "{0} ਘਣ ਇੰਚ"
+      short:
+        display_name: ਇੰਚ³
+        one: "{0} ਇੰਚ³"
+        other: "{0} ਇੰਚ³"
+      narrow:
+        one: "{0}ਇੰਚ³"
+        other: "{0}ਇੰਚ³"
+    megaliter:
+      long:
+        display_name: ਮੈਗਾਲਿਟਰ
+        one: "{0} ਮੈਗਾਲਿਟਰ"
+        one_oblique: "{0} ਮੈਗਾਲਿਟਰ"
+        other: "{0} ਮੈਗਾਲਿਟਰ"
+        other_oblique: "{0} ਮੈਗਾਲਿਟਰ"
+        gender: masculine
+      short:
+        display_name: ਮੈ.ਲਿ.
+        one: "{0} ਮੈ.ਲਿ."
+        other: "{0} ਮੈ.ਲਿ."
+    hectoliter:
+      long:
+        display_name: ਹੈਕਟੋਲਿਟਰ
+        one: "{0} ਹੈਕਟੋਲਿਟਰ"
+        one_oblique: "{0} ਹੈਕਟੋਲਿਟਰ"
+        other: "{0} ਹੈਕਟੋਲਿਟਰ"
+        other_oblique: "{0} ਹੈਕਟੋਲਿਟਰ"
+        gender: masculine
+      short:
+        display_name: ਹੈ.ਲਿ.
+        one: "{0} ਹੈ.ਲਿ."
+        other: "{0} ਹੈ.ਲਿ."
+    liter:
+      long:
+        one: "{0} ਲਿਟਰ"
+        one_oblique: "{0} ਲਿਟਰ"
+        other: "{0} ਲਿਟਰ"
+        other_oblique: "{0} ਲਿਟਰ"
+        gender: masculine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਲਿਟਰ"
+      short:
+        display_name: ਲਿਟਰ
+        one: "{0} ਲਿ."
+        other: "{0} ਲਿ."
+        per_unit_pattern: "{0}/ਲਿ."
+    deciliter:
+      long:
+        display_name: ਡੈਸੀਲਿਟਰ
+        one: "{0} ਡੈਸੀਲਿਟਰ"
+        one_oblique: "{0} ਡੈਸੀਲਿਟਰ"
+        other: "{0} ਡੈਸੀਲਿਟਰ"
+        other_oblique: "{0} ਡੈਸੀਲਿਟਰ"
+        gender: masculine
+      short:
+        display_name: ਡੈ.ਲਿ.
+        one: "{0} ਡੈ.ਲਿ."
+        other: "{0} ਡੈ.ਲਿ."
+    centiliter:
+      long:
+        display_name: ਸੈਂਟੀਲਿਟਰ
+        one: "{0} ਸੈਂਟੀਲਿਟਰ"
+        one_oblique: "{0} ਸੈਂਟੀਲਿਟਰ"
+        other: "{0} ਸੈਂਟੀਲਿਟਰ"
+        other_oblique: "{0} ਸੈਂਟੀਲਿਟਰ"
+        gender: masculine
+      short:
+        display_name: ਸੈਂ.ਲਿ.
+        one: "{0} ਸੈਂ.ਲਿ."
+        other: "{0} ਸੈਂ.ਲਿ."
+    milliliter:
+      long:
+        display_name: ਮਿਲੀਲਿਟਰ
+        one: "{0} ਮਿਲੀਲਿਟਰ"
+        one_oblique: "{0} ਮਿਲੀਲਿਟਰ"
+        other: "{0} ਮਿਲੀਲਿਟਰ"
+        other_oblique: "{0} ਮਿਲੀਲਿਟਰ"
+        gender: masculine
+      short:
+        display_name: ਮਿ.ਲਿ.
+        one: "{0} ਮਿ.ਲਿ."
+        other: "{0} ਮਿ.ਲਿ."
+    pint-metric:
+      long:
+        display_name: ਮੀਟਰਿਕ ਪਿੰਟ
+        one: "{0} ਮੀਟਰਿਕ ਪਿੰਟ"
+        one_oblique: "{0} ਮੀਟਰਿਕ ਪਿੰਟ"
+        other: "{0} ਮੀਟਰਿਕ ਪਿੰਟ"
+        other_oblique: "{0} ਮੀਟਰਿਕ ਪਿੰਟ"
+        gender: masculine
+      short:
+        display_name: ਮੀ ਪਿੰਟ
+        one: "{0} ਮੀ ਪਿੰਟ"
+        other: "{0} ਮੀ ਪਿੰਟ"
+    cup-metric:
+      long:
+        display_name: ਮੀਟਰਿਕ ਕੱਪ
+        one: "{0} ਮੀਟਰਿਕ ਕੱਪ"
+        one_oblique: "{0} ਮੀਟਰਿਕ ਕੱਪ"
+        other: "{0} ਮੀਟਰਿਕ ਕੱਪ"
+        other_oblique: "{0} ਮੀਟਰਿਕ ਕੱਪ"
+        gender: masculine
+      short:
+        display_name: ਮੀ ਕੱਪ
+        one: "{0} ਮੀ ਕੱਪ"
+        other: "{0} ਮੀ ਕੱਪ"
+    gallon:
+      long:
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਗੈਲਨ"
+      short:
+        display_name: ਗੈਲਨ
+        one: "{0} ਗੈਲਨ"
+        other: "{0} ਗੈਲਨ"
+        per_unit_pattern: "{0}/ਗੈਲਨ"
+      narrow:
+        one: "{0}ਗੈਲਨ"
+        other: "{0}ਗੈਲਨ"
+    gallon-imperial:
+      long:
+        one: "{0} ਇੰਪ. ਗੈਲਨ"
+        other: "{0} ਇੰਪ. ਗੈਲਨ"
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਇੰਪ. ਗੈਲਨ"
+      short:
+        display_name: ਇੰਪ. ਗੈਲਨ
+        one: "{0} ਗੈਲਨ ਇੰਪ."
+        other: "{0} ਗੈਲਨ ਇੰਪ."
+        per_unit_pattern: "{0}/ਗੈਲਨ ਇੰਪ."
+    fluid-ounce:
+      long:
+        display_name: ਤਰਲ ਔਂਸ
+        one: "{0} ਤਰਲ ਔਂਸ"
+        other: "{0} ਤਰਲ ਔਂਸ"
+      short:
+        display_name: ਤ. ਔਂਸ
+        one: "{0} ਤ. ਔਂਸ"
+        other: "{0} ਤ. ਔਂਸ"
+    fluid-ounce-imperial:
+      long:
+        display_name: ਇੰਪੀਰੀਅਲ ਫਲੁਡ ਔਂਸ
+        one: "{0} ਇੰਪੀਰੀਅਲ ਫਲੁਡ ਔਂਸ"
+        other: "{0} ਇੰਪੀਰੀਅਲ ਫਲੁਡ ਔਂਸ"
+      short:
+        display_name: ਇੰਪ. ਫਲੂ. ਔ.
+        one: "{0} ਫਲੂ. ਔ. ਇੰਪ."
+        other: "{0} ਫਲੂ. ਔ. ਇੰਪ."
+      narrow:
+        one: "{0} ਫ.ਔ.ਇ."
+        other: "{0} ਫ.ਔ.ਇ."
+    dessert-spoon-imperial:
+      long:
+        one: "{0} ਇੰਪੀਰੀਅਲ ਡੈਜ਼ਰਟ ਸਪੂਨ"
+        other: "{0} ਇੰਪੀਰੀਅਲ ਡੈਜ਼ਰਟ ਸਪੂਨ"
+      short:
+        display_name: ਇੰਪੀਰੀਅਲ ਡੈਜ਼ਰਟ ਸਪੂਨ
+        one: "{0} ਇੰਪ. ਡੈ. ਸ."
+        other: "{0} ਇੰਪ. ਡੈ. ਸ."
+    dram:
+      long:
+        display_name: ਚੁਸਕੀ
+        one: "{0} ਚੁਸਕੀ"
+        other: "{0} ਚੁਸਕੀ"
+      short:
+        display_name: ਚੁਸਕੀ ਭਰ
+        one: "{0} ਚੁਸਕੀ ਭਰ"
+        other: "{0} ਚੁਸਕੀ ਭਰ"
+    quart-imperial:
+      long:
+        one: "{0} ਇੰਪੀਰੀਅਲ ਚੁਥਾਈ ਗੈਲਨ"
+        other: "{0} ਇੰਪੀਰੀਅਲ ਚੁਥਾਈ ਗੈਲਨ"
+      short:
+        display_name: ਇੰਪੀਰੀਅਲ ਚੁਥਾਈ ਗੈਲਨ
+        one: "{0} ਇੰਪ. ਚੁ. ਗੈ."
+        other: "{0} ਇੰਪ. ਚੁ. ਗੈ."
+      narrow:
+        one: "{0} ਇ.ਚੁ.ਗੈ."
+        other: "{0} ਇ.ਚੁ.ਗੈ."
+    light-speed:
+      long:
+        display_name: ਪ੍ਰਕਾਸ਼
+        one: "{0} ਪ੍ਰਕਾਸ਼"
+        one_oblique: "{0} ਪ੍ਰਕਾਸ਼"
+        other: "{0} ਪ੍ਰਕਾਸ਼"
+        other_oblique: "{0} ਪ੍ਰਕਾਸ਼"
+        gender: masculine
+      short:
+        display_name: ਪ੍ਰਕਾਸ਼
+        one: "{0} ਪ੍ਰਕਾਸ਼"
+        other: "{0} ਪ੍ਰਕਾਸ਼"
+      narrow:
+        display_name: ਪ੍ਰਕਾਸ਼
+        one: "{0} ਪ੍ਰਕਾਸ਼"
+        other: "{0} ਪ੍ਰਕਾਸ਼"
+    portion-per-1e9:
+      long:
+        display_name: ਹਿੱਸਾ ਪ੍ਰਤੀ ਅਰਬ
+        one: "{0} ਹਿੱਸਾ ਪ੍ਰਤੀ ਅਰਬ"
+        one_oblique: "{0} ਹਿੱਸਾ ਪ੍ਰਤੀ ਅਰਬ"
+        other: "{0} ਹਿੱਸਾ ਪ੍ਰਤੀ ਅਰਬ"
+        other_oblique: "{0} ਹਿੱਸਾ ਪ੍ਰਤੀ ਅਰਬ"
+        gender: masculine
+      short:
+        display_name: ਹਿੱਸਾ/ਅਰਬ
+    night:
+      long:
+        display_name: ਰਾਤਾਂ
+        one: "{0} ਰਾਤ"
+        one_oblique: "{0} ਰਾਤ"
+        other: "{0} ਰਾਤਾਂ"
+        other_oblique: "{0} ਰਾਤਾਂ"
+        gender: feminine
+        per_unit_pattern: "{0} ਪ੍ਰਤੀ ਰਾਤ"
+      short:
+        display_name: ਰਾਤਾਂ
+        one: "{0} ਰਾਤ"
+        other: "{0} ਰਾਤਾਂ"
+        per_unit_pattern: "{0}/ਰਾਤ"
+      narrow:
+        display_name: ਰਾਤਾਂ
+        one: "{0} ਰਾਤ"
+        other: "{0} ਰਾਤਾਂ"
+        per_unit_pattern: "{0}/ਰਾਤ"
+    acre:
+      short:
+        display_name: ਏਕੜ
+        one: "{0} ਏਕੜ"
+        other: "{0} ਏਕੜ"
+      narrow:
+        one: "{0}ਏਕੜ"
+        other: "{0}ਏਕੜ"
+    dunam:
+      short:
+        display_name: ਦੁਨਮ
+        one: "{0} ਦੁਨਮ"
+        other: "{0} ਦੁਨਮ"
+    dot:
+      short:
+        display_name: ਡਾਟਸ
+        one: "{0} ਡਾਟ"
+        other: "{0} ਡਾਟਸ"
+      narrow:
+        display_name: ਡਾਟ
+        one: "{0}ਡਾਟ"
+        other: "{0}ਡਾਟ"
+    mile:
+      short:
+        display_name: ਮੀਲ
+        one: "{0} ਮੀਲ"
+        other: "{0} ਮੀਲ"
+    yard:
+      short:
+        display_name: ਗਜ਼
+        one: "{0} ਗਜ਼"
+        other: "{0} ਗਜ਼"
+    parsec:
+      short:
+        display_name: ਪਾਸੈੱਕ
+        one: "{0} ਪਾਸੈੱਕ"
+        other: "{0} ਪਾਸੈੱਕ"
+    furlong:
+      short:
+        display_name: ਫਰਲਾਂਗ
+        one: "{0} ਫਰਲਾਂਗ"
+        other: "{0} ਫਰਲਾਂਗ"
+    fathom:
+      short:
+        display_name: ਫ਼ੈਦਮ
+        one: "{0} ਫ਼ੈਦਮ"
+        other: "{0} ਫ਼ੈਦਮ"
+    ton:
+      short:
+        display_name: ਅਮਰੀਕੀ ਟਨ
+        one: "{0} ਅਮਰੀਕੀ ਟਨ"
+        other: "{0} ਅਮਰੀਕੀ ਟਨ"
+      narrow:
+        one: "{0}ਟਨ"
+        other: "{0}ਟਨ"
+    stone:
+      short:
+        display_name: ਸਟੋਨ
+        one: "{0} ਸਟੋਨ"
+        other: "{0} ਸਟੋਨ"
+      narrow:
+        one: "{0}ਸਟੋਨ"
+        other: "{0}ਸਟੋਨ"
+    grain:
+      short:
+        display_name: ਗ੍ਰੇਨ
+        one: "{0} ਗ੍ਰੇਨ"
+        other: "{0} ਗ੍ਰੇਨ"
+    inch-ofhg:
+      short:
+        display_name: ਇੰਚ ਪਾਰਾ
+        one: "{0} ਇੰਚ ਪਾਰਾ"
+        other: "{0} ਇੰਚ ਪਾਰਾ"
+      narrow:
+        one: '{0}" ਪਾਰਾ'
+        other: '{0}" ਪਾਰਾ'
+    acre-foot:
+      short:
+        display_name: ਏਕੜ ਫੁੱਟ
+        one: "{0} ਏਕੜ ਫੁੱਟ"
+        other: "{0} ਏਕੜ ਫੁੱਟ"
+      narrow:
+        one: "{0} ਏ.ਫੁ."
+        other: "{0} ਏ.ਫੁ."
+    bushel:
+      short:
+        display_name: ਬੁਸ਼ਲ
+        one: "{0} ਬੁਸ਼ਲ"
+        other: "{0} ਬੁਸ਼ਲ"
+      narrow:
+        one: "{0}ਬੁਸ਼ਲ"
+        other: "{0}ਬੁਸ਼ਲ"
+    quart:
+      short:
+        display_name: ਕੁਆਟ
+        one: "{0} ਕੁਆਟ"
+        other: "{0} ਕੁਆਟ"
+      narrow:
+        one: "{0}ਕੁਆਟ"
+        other: "{0}ਕੁਆਟ"
+    pint:
+      short:
+        display_name: ਪਿੰਟ
+        one: "{0} ਪਿੰਟ"
+        other: "{0} ਪਿੰਟ"
+      narrow:
+        one: "{0}ਪਿੰਟ"
+        other: "{0}ਪਿੰਟ"
+    cup:
+      short:
+        display_name: ਕੱਪ
+        one: "{0} ਕੱਪ"
+        other: "{0} ਕੱਪ"
+      narrow:
+        one: "{0}ਕੱਪ"
+        other: "{0}ਕੱਪ"
+    tablespoon:
+      short:
+        display_name: ਟੇਬਲ ਸਪੂਨ
+        one: "{0} ਟੇਬਲ ਸਪੂਨ"
+        other: "{0} ਟੇਬਲ ਸਪੂਨ"
+      narrow:
+        one: "{0} ਟੇ. ਸ."
+        other: "{0} ਟੇ. ਸ."
+    teaspoon:
+      short:
+        display_name: ਟੀ ਸਪੂਨ
+        one: "{0} ਟੀ ਸਪੂਨ"
+        other: "{0} ਟੀ ਸਪੂਨ"
+    barrel:
+      short:
+        display_name: ਬੈਰਲ
+        one: "{0} ਬੈਰਲ"
+        other: "{0} ਬੈਰਲ"
+    dessert-spoon:
+      short:
+        display_name: ਡੈਜ਼ਰਟ ਸਪੂਨ
+        one: "{0} ਡੈਜ਼ਰਟ ਸਪੂਨ"
+        other: "{0} ਡੈਜ਼ਰਟ ਸਪੂਨ"
+    drop:
+      short:
+        display_name: ਬੂੰਦ
+        one: "{0} ਬੂੰਦ"
+        other: "{0} ਬੂੰਦ"
+    jigger:
+      short:
+        display_name: ਚੱਕਾ
+        one: "{0} ਚੱਕਾ"
+        other: "{0} ਚੱਕਾ"
+    pinch:
+      short:
+        display_name: ਚੁਟਕੀ
+        one: "{0} ਚੁਟਕੀ"
+        other: "{0} ਚੁਟਕੀ"

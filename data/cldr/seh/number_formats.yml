@@ -1,14 +1,24 @@
 ---
 locale: seh
-generated_at: '2025-09-13T17:40:26Z'
+generated_at: '2025-09-14T06:12:02Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Dirém dos Emirados Árabes Unidos
+        one: Dirém dos Emirados Árabes Unidos
     AOA:
       display_names:
         other: Cuanza angolano
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: Dólar australiano
         one: Dólar australiano
-    BWP:
-      display_names:
-        other: Pula botsuanesa
-        one: Pula botsuanesa
-    CAD:
-      display_names:
-        other: Dólar canadense
-        one: Dólar canadense
-    CNY:
-      display_names:
-        other: Yuan Renminbi chinês
-        one: Yuan Renminbi chinês
-    EGP:
-      display_names:
-        other: Libra egípcia
-        one: Libra egípcia
-    EUR:
-      display_names:
-        other: Euro
-        one: Euro
-    GBP:
-      display_names:
-        other: Libra britânica
-        one: Libra britânica
-    INR:
-      display_names:
-        other: Rúpia indiana
-        one: Rúpia indiana
-    JPY:
-      display_names:
-        other: Iene japonês
-        one: Iene japonês
-    KMF:
-      display_names:
-        other: Franco de Comores
-        one: Franco de Comores
-    LRD:
-      display_names:
-        other: Dólar liberiano
-        one: Dólar liberiano
-    MGA:
-      display_names:
-        other: Franco de Madagascar
-        one: Franco de Madagascar
-    MUR:
-      display_names:
-        other: Rupia de Maurício
-        one: Rupia de Maurício
-    NAD:
-      display_names:
-        other: Dólar da Namíbia
-        one: Dólar da Namíbia
-    NGN:
-      display_names:
-        other: Naira nigeriana
-        one: Naira nigeriana
-    RWF:
-      display_names:
-        other: Franco ruandês
-        one: Franco ruandês
-    SHP:
-      display_names:
-        other: Libra de Santa Helena
-        one: Libra de Santa Helena
-    STN:
-      display_names:
-        other: Dobra de São Tomé e Príncipe
-        one: Dobra de São Tomé e Príncipe
-    USD:
-      display_names:
-        other: Dólar norte-americano
-        one: Dólar norte-americano
-    XAF:
-      display_names:
-        other: Franco CFA BEAC
-        one: Franco CFA BEAC
-    XOF:
-      display_names:
-        other: Franco CFA BCEAO
-        one: Franco CFA BCEAO
-    ZAR:
-      display_names:
-        other: Rand sul-africano
-        one: Rand sul-africano
-    ZMW:
-      display_names:
-        other: Cuacha zambiano
-        one: Cuacha zambiano
-    AED:
-      display_names:
-        other: Dirém dos Emirados Árabes Unidos
-        one: Dirém dos Emirados Árabes Unidos
     BHD:
       display_names:
         other: Dinar bareinita
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: Franco do Burundi
         one: Franco do Burundi
+    BWP:
+      display_names:
+        other: Pula botsuanesa
+        one: Pula botsuanesa
+    CAD:
+      display_names:
+        other: Dólar canadense
+        one: Dólar canadense
     CDF:
       display_names:
         other: Franco congolês
@@ -125,6 +51,10 @@ number_formats:
       display_names:
         other: Franco suíço
         one: Franco suíço
+    CNY:
+      display_names:
+        other: Yuan Renminbi chinês
+        one: Yuan Renminbi chinês
     CVE:
       display_names:
         other: Escudo cabo-verdiano
@@ -137,6 +67,10 @@ number_formats:
       display_names:
         other: Dinar argelino
         one: Dinar argelino
+    EGP:
+      display_names:
+        other: Libra egípcia
+        one: Libra egípcia
     ERN:
       display_names:
         other: Nakfa da Eritréia
@@ -145,6 +79,14 @@ number_formats:
       display_names:
         other: Birr etíope
         one: Birr etíope
+    EUR:
+      display_names:
+        other: Euro
+        one: Euro
+    GBP:
+      display_names:
+        other: Libra britânica
+        one: Libra britânica
     GHC:
       display_names:
         other: Cedi de Gana (1979–2007)
@@ -157,10 +99,26 @@ number_formats:
       display_names:
         other: Syli da Guiné
         one: Syli da Guiné
+    INR:
+      display_names:
+        other: Rúpia indiana
+        one: Rúpia indiana
+    JPY:
+      display_names:
+        other: Iene japonês
+        one: Iene japonês
     KES:
       display_names:
         other: Xelim queniano
         one: Xelim queniano
+    KMF:
+      display_names:
+        other: Franco de Comores
+        one: Franco de Comores
+    LRD:
+      display_names:
+        other: Dólar liberiano
+        one: Dólar liberiano
     LSL:
       display_names:
         other: Loti do Lesoto
@@ -173,6 +131,10 @@ number_formats:
       display_names:
         other: Dirém marroquino
         one: Dirém marroquino
+    MGA:
+      display_names:
+        other: Franco de Madagascar
+        one: Franco de Madagascar
     MRO:
       display_names:
         other: Ouguiya da Mauritânia (1973–2017)
@@ -181,6 +143,10 @@ number_formats:
       display_names:
         other: Ouguiya da Mauritânia
         one: Ouguiya da Mauritânia
+    MUR:
+      display_names:
+        other: Rupia de Maurício
+        one: Rupia de Maurício
     MWK:
       display_names:
         other: Cuacha do Maláui
@@ -194,6 +160,18 @@ number_formats:
       display_names:
         other: Metical de Moçambique
         one: Metical de Moçambique
+    NAD:
+      display_names:
+        other: Dólar da Namíbia
+        one: Dólar da Namíbia
+    NGN:
+      display_names:
+        other: Naira nigeriana
+        one: Naira nigeriana
+    RWF:
+      display_names:
+        other: Franco ruandês
+        one: Franco ruandês
     SAR:
       display_names:
         other: Rial saudita
@@ -210,6 +188,10 @@ number_formats:
       display_names:
         other: Libra sudanesa antiga
         one: Libra sudanesa antiga
+    SHP:
+      display_names:
+        other: Libra de Santa Helena
+        one: Libra de Santa Helena
     SLE:
       display_names:
         other: Leone de Serra Leoa
@@ -226,6 +208,10 @@ number_formats:
       display_names:
         other: Dobra de São Tomé e Príncipe (1977–2017)
         one: Dobra de São Tomé e Príncipe (1977–2017)
+    STN:
+      display_names:
+        other: Dobra de São Tomé e Príncipe
+        one: Dobra de São Tomé e Príncipe
     SZL:
       display_names:
         other: Lilangeni da Suazilândia
@@ -242,10 +228,30 @@ number_formats:
       display_names:
         other: Xelim ugandense (1966–1987)
         one: Xelim ugandense (1966–1987)
+    USD:
+      display_names:
+        other: Dólar norte-americano
+        one: Dólar norte-americano
+    XAF:
+      display_names:
+        other: Franco CFA BEAC
+        one: Franco CFA BEAC
+    XOF:
+      display_names:
+        other: Franco CFA BCEAO
+        one: Franco CFA BCEAO
+    ZAR:
+      display_names:
+        other: Rand sul-africano
+        one: Rand sul-africano
     ZMK:
       display_names:
         other: Cuacha zambiano (1968–2012)
         one: Cuacha zambiano (1968–2012)
+    ZMW:
+      display_names:
+        other: Cuacha zambiano
+        one: Cuacha zambiano
     ZWD:
       display_names:
         other: Dólar do Zimbábue

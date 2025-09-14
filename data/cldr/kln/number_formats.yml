@@ -1,12 +1,22 @@
 ---
 locale: kln
-generated_at: '2025-09-13T17:38:23Z'
+generated_at: '2025-09-14T06:10:41Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Rabisiekab Kibagegeitab arabuk
+        one: Rabisiekab Kibagegeitab arabuk
     AOA:
       display_names:
         other: Rabisiekab Angolan
@@ -15,98 +25,6 @@ number_formats:
       display_names:
         other: Dolaitab Australian
         one: Dolaitab Australian
-    BWP:
-      display_names:
-        other: Rabisiekab Botswana
-        one: Rabisiekab Botswana
-    CAD:
-      display_names:
-        other: Dolaitab Kanada
-        one: Dolaitab Kanada
-    CNY:
-      display_names:
-        other: Rabisiekab China
-        one: Rabisiekab China
-    EGP:
-      display_names:
-        other: Pauditab Misri
-        one: Pauditab Misri
-    EUR:
-      display_names:
-        other: Yuroit
-        one: Yuroit
-    GBP:
-      display_names:
-        other: pounditab Uingereza
-        one: pounditab Uingereza
-    INR:
-      display_names:
-        other: Rabisiekab India
-        one: Rabisiekab India
-    JPY:
-      display_names:
-        other: Rabisiekab Japan
-        one: Rabisiekab Japan
-    KMF:
-      display_names:
-        other: Rabisiekab Komoro
-        one: Rabisiekab Komoro
-    LRD:
-      display_names:
-        other: Dolaitab Liberia
-        one: Dolaitab Liberia
-    MGA:
-      display_names:
-        other: Rabisiekab Malagasy
-        one: Rabisiekab Malagasy
-    MUR:
-      display_names:
-        other: Rabisiekab Mauritius
-        one: Rabisiekab Mauritius
-    NAD:
-      display_names:
-        other: Dolaitab Namibia
-        one: Dolaitab Namibia
-    NGN:
-      display_names:
-        other: Rabisiekab Nigeria
-        one: Rabisiekab Nigeria
-    RWF:
-      display_names:
-        other: Rabisiekab Rwanda
-        one: Rabisiekab Rwanda
-    SHP:
-      display_names:
-        other: Pouditab helena ne tilil
-        one: Pouditab helena ne tilil
-    STN:
-      display_names:
-        other: Rabisiekab Sao Tome ak Principe
-        one: Rabisiekab Sao Tome ak Principe
-    USD:
-      display_names:
-        other: Dolaitab ya Amareka
-        one: Dolaitab ya Amareka
-    XAF:
-      display_names:
-        other: Rabisiekab CFA BEAC
-        one: Rabisiekab CFA BEAC
-    XOF:
-      display_names:
-        other: Rabisiekab CFA BCEAO
-        one: Rabisiekab CFA BCEAO
-    ZAR:
-      display_names:
-        other: Randitab Afrika nebo murot tai
-        one: Randitab Afrika nebo murot tai
-    ZMW:
-      display_names:
-        other: Kwachaitab Zambia
-        one: Kwachaitab Zambia
-    AED:
-      display_names:
-        other: Rabisiekab Kibagegeitab arabuk
-        one: Rabisiekab Kibagegeitab arabuk
     BHD:
       display_names:
         other: Rabisiekab Bahrain
@@ -115,6 +33,14 @@ number_formats:
       display_names:
         other: Rabisiekab Burundi
         one: Rabisiekab Burundi
+    BWP:
+      display_names:
+        other: Rabisiekab Botswana
+        one: Rabisiekab Botswana
+    CAD:
+      display_names:
+        other: Dolaitab Kanada
+        one: Dolaitab Kanada
     CDF:
       display_names:
         other: Rabisiekab Congo
@@ -123,6 +49,10 @@ number_formats:
       display_names:
         other: Rabisiekab Swiss
         one: Rabisiekab Swiss
+    CNY:
+      display_names:
+        other: Rabisiekab China
+        one: Rabisiekab China
     CVE:
       display_names:
         other: Rabisiekab Kepuvede
@@ -135,6 +65,10 @@ number_formats:
       display_names:
         other: Rabisiekab Algerian
         one: Rabisiekab Algerian
+    EGP:
+      display_names:
+        other: Pauditab Misri
+        one: Pauditab Misri
     ERN:
       display_names:
         other: Rabisiekab Eritrea
@@ -143,6 +77,14 @@ number_formats:
       display_names:
         other: Rabisiekab Ethiopia
         one: Rabisiekab Ethiopia
+    EUR:
+      display_names:
+        other: Yuroit
+        one: Yuroit
+    GBP:
+      display_names:
+        other: pounditab Uingereza
+        one: pounditab Uingereza
     GHC:
       display_names:
         other: Rabisiekab Ghana
@@ -155,11 +97,27 @@ number_formats:
       display_names:
         other: Rabisiekab Guinea
         one: Rabisiekab Guinea
+    INR:
+      display_names:
+        other: Rabisiekab India
+        one: Rabisiekab India
+    JPY:
+      display_names:
+        other: Rabisiekab Japan
+        one: Rabisiekab Japan
     KES:
       symbol: Ksh
       display_names:
         other: Silingitab ya Kenya
         one: Silingitab ya Kenya
+    KMF:
+      display_names:
+        other: Rabisiekab Komoro
+        one: Rabisiekab Komoro
+    LRD:
+      display_names:
+        other: Dolaitab Liberia
+        one: Dolaitab Liberia
     LSL:
       display_names:
         other: Rabisiekab Lesoto
@@ -172,6 +130,10 @@ number_formats:
       display_names:
         other: Rabisiekab Moroccan
         one: Rabisiekab Moroccan
+    MGA:
+      display_names:
+        other: Rabisiekab Malagasy
+        one: Rabisiekab Malagasy
     MRO:
       display_names:
         other: Rabisiekab Mauritania (1973–2017)
@@ -180,6 +142,10 @@ number_formats:
       display_names:
         other: Rabisiekab Mauritania
         one: Rabisiekab Mauritania
+    MUR:
+      display_names:
+        other: Rabisiekab Mauritius
+        one: Rabisiekab Mauritius
     MWK:
       display_names:
         other: Rabisiekaby Malawi
@@ -188,6 +154,18 @@ number_formats:
       display_names:
         other: Rabisiekab Msumbiji
         one: Rabisiekab Msumbiji
+    NAD:
+      display_names:
+        other: Dolaitab Namibia
+        one: Dolaitab Namibia
+    NGN:
+      display_names:
+        other: Rabisiekab Nigeria
+        one: Rabisiekab Nigeria
+    RWF:
+      display_names:
+        other: Rabisiekab Rwanda
+        one: Rabisiekab Rwanda
     SAR:
       display_names:
         other: Rabisiekab Saudia
@@ -200,6 +178,10 @@ number_formats:
       display_names:
         other: Pouditab Sudan
         one: Pouditab Sudan
+    SHP:
+      display_names:
+        other: Pouditab helena ne tilil
+        one: Pouditab helena ne tilil
     SLE:
       display_names:
         other: Leonit
@@ -216,6 +198,10 @@ number_formats:
       display_names:
         other: Rabisiekab Sao Tome ak Principe (1977–2017)
         one: Rabisiekab Sao Tome ak Principe (1977–2017)
+    STN:
+      display_names:
+        other: Rabisiekab Sao Tome ak Principe
+        one: Rabisiekab Sao Tome ak Principe
     SZL:
       display_names:
         other: Lilangenit
@@ -232,10 +218,30 @@ number_formats:
       display_names:
         other: Silingitab Uganda
         one: Silingitab Uganda
+    USD:
+      display_names:
+        other: Dolaitab ya Amareka
+        one: Dolaitab ya Amareka
+    XAF:
+      display_names:
+        other: Rabisiekab CFA BEAC
+        one: Rabisiekab CFA BEAC
+    XOF:
+      display_names:
+        other: Rabisiekab CFA BCEAO
+        one: Rabisiekab CFA BCEAO
+    ZAR:
+      display_names:
+        other: Randitab Afrika nebo murot tai
+        one: Randitab Afrika nebo murot tai
     ZMK:
       display_names:
         other: Kwachaitab Zambia (1968–2012)
         one: Kwachaitab Zambia (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwachaitab Zambia
+        one: Kwachaitab Zambia
     ZWD:
       display_names:
         other: Dolaitab ya Zimbabwe

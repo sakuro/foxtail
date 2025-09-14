@@ -1,13 +1,23 @@
 ---
 locale: ses
-generated_at: '2025-09-13T17:40:26Z'
+generated_at: '2025-09-14T06:12:03Z'
 cldr_version: '46'
 number_formats:
   symbols:
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Laaraw Immaara Margantey Dirham
+        one: Laaraw Immaara Margantey Dirham
     AOA:
       display_names:
         other: Angoola Kwanza
@@ -16,98 +26,6 @@ number_formats:
       display_names:
         other: Ostraali Dollar
         one: Ostraali Dollar
-    BWP:
-      display_names:
-        other: Botswaana Pund
-        one: Botswaana Pund
-    CAD:
-      display_names:
-        other: Kanaada Dollar
-        one: Kanaada Dollar
-    CNY:
-      display_names:
-        other: Sinwa Yuan Renminbi
-        one: Sinwa Yuan Renminbi
-    EGP:
-      display_names:
-        other: Misra Pund
-        one: Misra Pund
-    EUR:
-      display_names:
-        other: Eero
-        one: Eero
-    GBP:
-      display_names:
-        other: Britin Pund
-        one: Britin Pund
-    INR:
-      display_names:
-        other: Indu Rupii
-        one: Indu Rupii
-    JPY:
-      display_names:
-        other: Jaapoŋ Yen
-        one: Jaapoŋ Yen
-    KMF:
-      display_names:
-        other: Komoor Fraŋ
-        one: Komoor Fraŋ
-    LRD:
-      display_names:
-        other: Liberia Dollar
-        one: Liberia Dollar
-    MGA:
-      display_names:
-        other: Malgaaši Fraŋ
-        one: Malgaaši Fraŋ
-    MUR:
-      display_names:
-        other: Mooris Rupii
-        one: Mooris Rupii
-    NAD:
-      display_names:
-        other: Naamibi Dollar
-        one: Naamibi Dollar
-    NGN:
-      display_names:
-        other: Naajiriya Neera
-        one: Naajiriya Neera
-    RWF:
-      display_names:
-        other: Rwanda Fraŋ
-        one: Rwanda Fraŋ
-    SHP:
-      display_names:
-        other: Seŋ Helena Fraŋ
-        one: Seŋ Helena Fraŋ
-    STN:
-      display_names:
-        other: Sao Tome nda Prinsipe Dobra
-        one: Sao Tome nda Prinsipe Dobra
-    USD:
-      display_names:
-        other: Ameriki Dollar
-        one: Ameriki Dollar
-    XAF:
-      display_names:
-        other: CFA Fraŋ (BEAC)
-        one: CFA Fraŋ (BEAC)
-    XOF:
-      display_names:
-        other: CFA Fraŋ (BCEAO)
-        one: CFA Fraŋ (BCEAO)
-    ZAR:
-      display_names:
-        other: Hawasa Afriki Rand
-        one: Hawasa Afriki Rand
-    ZMW:
-      display_names:
-        other: Zambi Kwaca
-        one: Zambi Kwaca
-    AED:
-      display_names:
-        other: Laaraw Immaara Margantey Dirham
-        one: Laaraw Immaara Margantey Dirham
     BHD:
       display_names:
         other: Bahareen Dinar
@@ -116,6 +34,14 @@ number_formats:
       display_names:
         other: Burundi Fraŋ
         one: Burundi Fraŋ
+    BWP:
+      display_names:
+        other: Botswaana Pund
+        one: Botswaana Pund
+    CAD:
+      display_names:
+        other: Kanaada Dollar
+        one: Kanaada Dollar
     CDF:
       display_names:
         other: Kongo Fraŋ
@@ -124,6 +50,10 @@ number_formats:
       display_names:
         other: Swisu Fraŋ
         one: Swisu Fraŋ
+    CNY:
+      display_names:
+        other: Sinwa Yuan Renminbi
+        one: Sinwa Yuan Renminbi
     CVE:
       display_names:
         other: Kapuver Escudo
@@ -136,6 +66,10 @@ number_formats:
       display_names:
         other: Alžeeri Dinar
         one: Alžeeri Dinar
+    EGP:
+      display_names:
+        other: Misra Pund
+        one: Misra Pund
     ERN:
       display_names:
         other: Eritree Nafka
@@ -144,6 +78,14 @@ number_formats:
       display_names:
         other: Ecioopi Birr
         one: Ecioopi Birr
+    EUR:
+      display_names:
+        other: Eero
+        one: Eero
+    GBP:
+      display_names:
+        other: Britin Pund
+        one: Britin Pund
     GHC:
       display_names:
         other: Gaana Šiidi
@@ -156,10 +98,26 @@ number_formats:
       display_names:
         other: Ginee Fraŋ
         one: Ginee Fraŋ
+    INR:
+      display_names:
+        other: Indu Rupii
+        one: Indu Rupii
+    JPY:
+      display_names:
+        other: Jaapoŋ Yen
+        one: Jaapoŋ Yen
     KES:
       display_names:
         other: Keeniya Šiiliŋ
         one: Keeniya Šiiliŋ
+    KMF:
+      display_names:
+        other: Komoor Fraŋ
+        one: Komoor Fraŋ
+    LRD:
+      display_names:
+        other: Liberia Dollar
+        one: Liberia Dollar
     LSL:
       display_names:
         other: Leezoto Loti
@@ -172,6 +130,10 @@ number_formats:
       display_names:
         other: Maarok Dirham
         one: Maarok Dirham
+    MGA:
+      display_names:
+        other: Malgaaši Fraŋ
+        one: Malgaaši Fraŋ
     MRO:
       display_names:
         other: Mooritaani Ugiya (1973–2017)
@@ -180,6 +142,10 @@ number_formats:
       display_names:
         other: Mooritaani Ugiya
         one: Mooritaani Ugiya
+    MUR:
+      display_names:
+        other: Mooris Rupii
+        one: Mooris Rupii
     MWK:
       display_names:
         other: Malaawi Kwaca
@@ -188,6 +154,18 @@ number_formats:
       display_names:
         other: Mozambik Metikal
         one: Mozambik Metikal
+    NAD:
+      display_names:
+        other: Naamibi Dollar
+        one: Naamibi Dollar
+    NGN:
+      display_names:
+        other: Naajiriya Neera
+        one: Naajiriya Neera
+    RWF:
+      display_names:
+        other: Rwanda Fraŋ
+        one: Rwanda Fraŋ
     SAR:
       display_names:
         other: Saudiya Riyal
@@ -204,6 +182,10 @@ number_formats:
       display_names:
         other: Suudaŋ Pund
         one: Suudaŋ Pund
+    SHP:
+      display_names:
+        other: Seŋ Helena Fraŋ
+        one: Seŋ Helena Fraŋ
     SLE:
       display_names:
         other: Leeon
@@ -220,6 +202,10 @@ number_formats:
       display_names:
         other: Sao Tome nda Prinsipe Dobra (1977–2017)
         one: Sao Tome nda Prinsipe Dobra (1977–2017)
+    STN:
+      display_names:
+        other: Sao Tome nda Prinsipe Dobra
+        one: Sao Tome nda Prinsipe Dobra
     SZL:
       display_names:
         other: Lilangeni
@@ -236,10 +222,30 @@ number_formats:
       display_names:
         other: Uganda Šiiliŋ
         one: Uganda Šiiliŋ
+    USD:
+      display_names:
+        other: Ameriki Dollar
+        one: Ameriki Dollar
+    XAF:
+      display_names:
+        other: CFA Fraŋ (BEAC)
+        one: CFA Fraŋ (BEAC)
+    XOF:
+      display_names:
+        other: CFA Fraŋ (BCEAO)
+        one: CFA Fraŋ (BCEAO)
+    ZAR:
+      display_names:
+        other: Hawasa Afriki Rand
+        one: Hawasa Afriki Rand
     ZMK:
       display_names:
         other: Zambi Kwaca (1968–2012)
         one: Zambi Kwaca (1968–2012)
+    ZMW:
+      display_names:
+        other: Zambi Kwaca
+        one: Zambi Kwaca
     ZWD:
       display_names:
         other: Zimbabwe Dollar

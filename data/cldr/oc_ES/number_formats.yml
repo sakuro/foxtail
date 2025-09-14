@@ -1,38 +1,25 @@
 ---
 locale: oc_ES
-generated_at: '2025-09-13T17:39:41Z'
+generated_at: '2025-09-14T06:11:33Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: "."
     group: ","
-  decimal_formats:
-    standard: "#,##0.###"
   percent_formats:
-    standard: "#,##0%"
+    standard: 
   currency_formats:
     accounting: "#,##0.00¤"
-  scientific_formats:
-    standard: "#E0"
+  compact_formats: {}
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
+    ANG:
+      display_names:
+        other: florin atillan
+        one: florin atillan
     ARS:
       symbol: ARS
     AUD:
       symbol: AUD
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
     BMD:
       symbol: BMD
       display_names:
@@ -40,47 +27,30 @@ number_formats:
         one: dòlars bermudense
     BND:
       symbol: BND
-    BOB:
-      symbol: Bs
     BRL:
       symbol: BRL
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
     BZD:
       symbol: BZD
     CAD:
       symbol: CAD
     CLP:
       symbol: CLP
+    CNH:
+      display_names:
+        other: yuans chinessi (extracontinanetaus)
+        one: yuan chinés (extracontinanetau)
     CNY:
       symbol: CNY
       display_names:
         other: yuans chinessi
     COP:
       symbol: COP
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
     DOP:
-      symbol: "$"
       display_names:
         other: peso dominican
         one: peso dominican
     EGP:
       symbol: EGP
-    ESP:
-      symbol: "₧"
-    EUR:
-      symbol: "€"
     FJD:
       symbol: FJD
     FKP:
@@ -89,30 +59,15 @@ number_formats:
       symbol: GBP
       display_names:
         other: liures esterlines
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
     GIP:
       symbol: GIP
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
+    GMD:
+      display_names:
+        other: calasi
+        one: calasi
     HKD:
-      symbol: HK$
       display_names:
         other: dòlars hongkonessi
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
     ILS:
       symbol: ILS
     INR:
@@ -120,99 +75,41 @@ number_formats:
       display_names:
         other: ropies indies
         one: ropia inidia
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
-    JPY:
-      symbol: JP¥
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
     KMF:
       symbol: CF
-    KPW:
-      symbol: "₩"
     KRW:
       symbol: KRW
     KYD:
-      symbol: "$"
       display_names:
         other: dòlars des Isles Caiman
         one: dòlar des Isles Caiman
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
     LBP:
       symbol: LBP
-    LKR:
-      symbol: Rs
-    LRD:
-      symbol: "$"
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
+    MVR:
+      display_names:
+        other: rufiyes
     MXN:
       symbol: MXN
-    MYR:
-      symbol: RM
     NAD:
       symbol: NAD
-    NGN:
-      symbol: "₦"
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
     NZD:
       symbol: NZD
       display_names:
         other: dòlars neozelandessi
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
+    PGK:
+      display_names:
+        other: kines
     RUB:
-      symbol: "₽"
       display_names:
         other: robles russi
     RWF:
       symbol: RF
     SBD:
       symbol: SBD
-    SEK:
-      symbol: kr
     SGD:
       symbol: SDG
-    SHP:
-      symbol: "£"
     SRD:
       symbol: SRD
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-    SYP:
-      symbol: "£"
     THB:
       symbol: "฿"
     TOP:
@@ -222,11 +119,8 @@ number_formats:
     TTD:
       symbol: TTD
     TWD:
-      symbol: NT$
       display_names:
         other: naus dòlars taiwanessi
-    UAH:
-      symbol: "₴"
     USD:
       symbol: US$
       display_names:
@@ -234,58 +128,28 @@ number_formats:
         one: dòlar estadounidenc
     UYU:
       symbol: UYU
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
+    WST:
+      symbol: WST
     XAF:
       symbol: XAF
       display_names:
         other: francs CFA d’Africa centrau
         one: franc CFA d’Africa centrau
     XCD:
-      symbol: EC$
       display_names:
         other: dòlars deth Caribe Occidentau
         one: dòlar deth Caribe Occidentau
-    XCG:
-      symbol: Cg.
     XOF:
       symbol: XOF
       display_names:
         other: francs CFA d’Africa occidentau
         one: franc CFA d’Africa occidentau
-    XPF:
-      symbol: CFPF
     XXX:
-      symbol: "¤"
       display_names:
         other: "(moneda desconeishuda)"
         one: moneda desconeishuda
-    ZAR:
-      symbol: R
     ZMW:
       symbol: ZK
-    ANG:
-      display_names:
-        other: florin atillan
-        one: florin atillan
-    CNH:
-      display_names:
-        other: yuans chinessi (extracontinanetaus)
-        one: yuan chinés (extracontinanetau)
-    GMD:
-      display_names:
-        other: calasi
-        one: calasi
-    MVR:
-      display_names:
-        other: rufiyes
-    PGK:
-      display_names:
-        other: kines
-    WST:
-      symbol: WST
 currency_fractions:
   ADP:
     digits: 0

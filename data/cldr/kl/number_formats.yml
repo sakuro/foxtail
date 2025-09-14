@@ -1,6 +1,6 @@
 ---
 locale: kl
-generated_at: '2025-09-13T17:38:22Z'
+generated_at: '2025-09-14T06:10:40Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -8,10 +8,89 @@ number_formats:
     group: "."
     minus_sign: "−"
     exponential: "×10^"
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "¤#,##0.00;¤-#,##0.00"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 td
+        other: 0 td
+      '10000':
+        one: 00 td
+        other: 00 td
+      '100000':
+        one: 000 td
+        other: 000 td
+      '1000000':
+        one: 0 mn
+        other: 0 mn
+      '10000000':
+        one: 00 mn
+        other: 00 mn
+      '100000000':
+        one: 000 mn
+        other: 000 mn
+      '1000000000':
+        one: 0 md
+        other: 0 md
+      '10000000000':
+        one: 00 md
+        other: 00 md
+      '100000000000':
+        one: 000 md
+        other: 000 md
+      '1000000000000':
+        one: 0 bn
+        other: 0 bn
+      '10000000000000':
+        one: 00 bn
+        other: 00 bn
+      '100000000000000':
+        one: 000 bn
+        other: 000 bn
+    long:
+      '1000':
+        one: 0 tusind
+        other: 0 tusind
+      '10000':
+        one: 00 tusind
+        other: 00 tusind
+      '100000':
+        one: 000 tusind
+        other: 000 tusind
+      '1000000':
+        one: 0 million
+        other: 0 millioner
+      '10000000':
+        one: 00 million
+        other: 00 millioner
+      '100000000':
+        one: 000 million
+        other: 000 millioner
+      '1000000000':
+        one: 0 milliard
+        other: 0 milliarder
+      '10000000000':
+        one: 00 milliard
+        other: 00 milliarder
+      '100000000000':
+        one: 000 milliard
+        other: 000 milliarder
+      '1000000000000':
+        one: 0 billion
+        other: 0 billioner
+      '10000000000000':
+        one: 00 billion
+        other: 00 billioner
+      '100000000000000':
+        one: 000 billion
+        other: 000 billioner
   currencies:
     DKK:
       symbol: kr.
@@ -32,3 +111,578 @@ number_formats:
       display_names:
         other: svenskit koruuni
         one: svenskit koruuni
+  units:
+    g-force:
+      long:
+        one: "{0} nutsuinera nunarsuaq"
+        other: "{0} nutsuinera nunarsuaq"
+      short:
+        display_name: Jordgravitationer
+      narrow:
+        one: "{0}G"
+        other: "{0}G"
+    meter-per-square-second:
+      long:
+        display_name: meteri per kvadratsekundi
+        one: "{0} meteri per kvadratsekundi"
+        other: "{0} meteri per kvadratsekundi"
+    revolution:
+      long:
+        display_name: kaajaluitsoq
+        one: "{0} kaajaluitsoq"
+        other: "{0} kaajaluitsoq"
+      short:
+        display_name: kaaj
+        one: "{0} kaaj"
+        other: "{0} kaaj"
+      narrow:
+        one: "{0}kaaj"
+        other: "{0}kaaj"
+    radian:
+      long:
+        display_name: radiani
+        one: "{0} radiani"
+        other: "{0} radiani"
+      narrow:
+        one: "{0}rad"
+        other: "{0}rad"
+    degree:
+      long:
+        one: "{0} gradi"
+        other: "{0} gradi"
+      short:
+        display_name: gradi
+    arc-minute:
+      long:
+        one: "{0} bueminutsi"
+        other: "{0} bueminutsi"
+      short:
+        display_name: bueminutsi
+    arc-second:
+      long:
+        one: "{0} buesekundi"
+        other: "{0} buesekundi"
+      short:
+        display_name: buesekundi
+    square-kilometer:
+      long:
+        one: "{0} kvadratkilometeri"
+        other: "{0} kvadratkilometeri"
+        per_unit_pattern: "{0} per kvadratkilometeri"
+      short:
+        display_name: kvadratkilometeri
+      narrow:
+        one: "{0}km²"
+        other: "{0}km²"
+    hectare:
+      long:
+        one: "{0} hektari"
+        other: "{0} hektari"
+      short:
+        display_name: hektari
+      narrow:
+        one: "{0}ha"
+        other: "{0}ha"
+    square-meter:
+      long:
+        one: "{0} kvadratmeteri"
+        other: "{0} kvadratmeteri"
+        per_unit_pattern: "{0} per kvadratmeteri"
+      short:
+        display_name: kvadratmeteri
+      narrow:
+        one: "{0}m²"
+        other: "{0}m²"
+    square-centimeter:
+      long:
+        display_name: kvadratsentimeteri
+        one: "{0} kvadratsentimeteri"
+        other: "{0} kvadratsentimeteri"
+        per_unit_pattern: "{0} per kvadratsentimeteri"
+      narrow:
+        one: "{0}cm²"
+        other: "{0}cm²"
+    square-mile:
+      long:
+        one: "{0} engelsk kvadratmil"
+        other: "{0} engelske kvadratmil"
+      short:
+        display_name: engelske kvadratmil
+    acre:
+      long:
+        one: "{0} amerikanskt tønde land"
+        other: "{0} amerikanske tønde land"
+      short:
+        display_name: amerikanske tønde land
+    square-foot:
+      long:
+        one: "{0} kvadratfod"
+        other: "{0} kvadratfod"
+      short:
+        display_name: kvadratfod
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: milligrammi per desiliteri
+        one: "{0} milligrammi per desiliteri"
+        other: "{0} milligrammi per desiliteri"
+      narrow:
+        one: "{0}mg/dL"
+        other: "{0}mg/dL"
+    millimole-per-liter:
+      long:
+        display_name: millimoli per literi
+        one: "{0} millimoli per literi"
+        other: "{0} millimoli per literi"
+      narrow:
+        one: "{0}mmol/L"
+        other: "{0}mmol/L"
+    permillion:
+      long:
+        one: "{0} millioni ilaa"
+        other: "{0} millioni ilaa"
+      short:
+        display_name: millioni ilaa
+      narrow:
+        one: "{0}ppm"
+        other: "{0}ppm"
+    liter-per-kilometer:
+      long:
+        display_name: literi per kilometeri
+        one: "{0} literi per kilometeri"
+        other: "{0} literi per kilometeri"
+      narrow:
+        one: "{0}L/km"
+        other: "{0}L/km"
+    year:
+      long:
+        per_unit_pattern: "{0} per ukioq"
+      short:
+        display_name: ukioq
+        one: "{0} ukioq"
+        other: "{0} ukioq"
+        per_unit_pattern: "{0}/ukioq"
+      narrow:
+        one: "{0}uk"
+        other: "{0}uk"
+    month:
+      long:
+        one: "{0} qaammat"
+        other: "{0} qaammat"
+        per_unit_pattern: "{0} per qaammat"
+      short:
+        display_name: qaammat
+        one: "{0} mån"
+        other: "{0} mån"
+        per_unit_pattern: "{0}/mån"
+      narrow:
+        one: "{0}mån"
+        other: "{0}mån"
+    week:
+      long:
+        one: "{0} sapaatip-akunnera"
+        other: "{0} sapaatip-akunnera"
+      short:
+        display_name: sapaatip-akunnera
+        one: "{0} u"
+        other: "{0} u"
+      narrow:
+        one: "{0}u"
+        other: "{0}u"
+    day:
+      long:
+        one: "{0} ulloq unnuarlu"
+        other: "{0} ulloq unnuarlu"
+      short:
+        display_name: ulloq unnuarlu
+      narrow:
+        one: "{0}d"
+        other: "{0}d"
+    hour:
+      long:
+        one: "{0} nalunaaquttap-akunnera"
+        other: "{0} nalunaaquttap-akunnera"
+      short:
+        display_name: nalunaaquttap-akunnera
+      narrow:
+        one: "{0}h"
+        other: "{0}h"
+    minute:
+      long:
+        one: "{0} minutsi"
+        other: "{0} minutsi"
+      short:
+        display_name: minutsi
+      narrow:
+        one: "{0}min"
+        other: "{0}min"
+    second:
+      long:
+        one: "{0} sekundi"
+        other: "{0} sekundi"
+      short:
+        display_name: sekundi
+      narrow:
+        one: "{0}s"
+        other: "{0}s"
+    millisecond:
+      long:
+        one: "{0} millisekundi"
+        other: "{0} millisekundi"
+      short:
+        display_name: millisekundi
+      narrow:
+        one: "{0}ms"
+        other: "{0}ms"
+    microsecond:
+      long:
+        display_name: mikrosekundi
+        one: "{0} mikrosekundi"
+        other: "{0} mikrosekundi"
+      narrow:
+        one: "{0}μs"
+        other: "{0}μs"
+    nanosecond:
+      long:
+        display_name: nanosekundi
+        one: "{0} nanosekundi"
+        other: "{0} nanosekundi"
+    kilometer:
+      long:
+        one: "{0} kilometeri"
+        other: "{0} kilometeri"
+        per_unit_pattern: "{0} per kilometeri"
+      short:
+        display_name: kilometeri
+      narrow:
+        one: "{0}km"
+        other: "{0}km"
+    meter:
+      long:
+        one: "{0} meteri"
+        other: "{0} meteri"
+        per_unit_pattern: "{0} per meteri"
+      short:
+        display_name: meteri
+      narrow:
+        one: "{0}m"
+        other: "{0}m"
+    decimeter:
+      long:
+        display_name: decimeteri
+        one: "{0} decimeteri"
+        other: "{0} decimeteri"
+      narrow:
+        one: "{0}dm"
+        other: "{0}dm"
+    centimeter:
+      long:
+        one: "{0} centimeteri"
+        other: "{0} centimeteri"
+        per_unit_pattern: "{0} per centimeteri"
+      short:
+        display_name: centimeteri
+      narrow:
+        one: "{0}cm"
+        other: "{0}cm"
+    millimeter:
+      long:
+        one: "{0} millimeteri"
+        other: "{0} millimeteri"
+      short:
+        display_name: millimeteri
+      narrow:
+        one: "{0}mm"
+        other: "{0}mm"
+    micrometer:
+      long:
+        display_name: mikrometeri
+        one: "{0} mikrometeri"
+        other: "{0} mikrometeri"
+      narrow:
+        one: "{0}μm"
+        other: "{0}μm"
+    nanometer:
+      long:
+        display_name: nanometeri
+        one: "{0} nanometeri"
+        other: "{0} nanometeri"
+      narrow:
+        one: "{0}nm"
+        other: "{0}nm"
+    picometer:
+      long:
+        one: "{0} pikometeri"
+        other: "{0} pikometeri"
+      short:
+        display_name: pikometeri
+      narrow:
+        one: "{0}pm"
+        other: "{0}pm"
+    mile:
+      long:
+        one: "{0} engelsk mil"
+        other: "{0} engelske mil"
+      short:
+        display_name: engelske mil
+    yard:
+      long:
+        one: "{0} engelsk yard"
+        other: "{0} engelske yard"
+      short:
+        display_name: engelske yard
+    foot:
+      long:
+        per_unit_pattern: "{0} per fod"
+      short:
+        display_name: fod
+        one: "{0} fod"
+        other: "{0} fod"
+        per_unit_pattern: "{0}/fod"
+    inch:
+      long:
+        per_unit_pattern: "{0} per tomme"
+      short:
+        display_name: tommer
+        one: "{0} tomme"
+        other: "{0} tommer"
+        per_unit_pattern: "{0}/tomme"
+    lux:
+      long:
+        one: "{0} luksi"
+        other: "{0} luksi"
+      short:
+        display_name: luksi
+      narrow:
+        display_name: lux
+    tonne:
+      long:
+        one: "{0} tonni"
+        other: "{0} tonni"
+      short:
+        display_name: tonni
+      narrow:
+        one: "{0}t"
+        other: "{0}t"
+    kilogram:
+      long:
+        one: "{0} kilogrammi"
+        other: "{0} kilogrammi"
+        per_unit_pattern: "{0} per kilogrammi"
+      short:
+        display_name: kilogrammi
+      narrow:
+        one: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        one: "{0} grammi"
+        other: "{0} grammi"
+        per_unit_pattern: "{0} per grammi"
+      short:
+        display_name: grammi
+      narrow:
+        one: "{0}g"
+        other: "{0}g"
+    kilowatt:
+      long:
+        one: "{0} kilowatti"
+        other: "{0} kilowatti"
+      short:
+        display_name: kilowatti
+      narrow:
+        one: "{0}kW"
+        other: "{0}kW"
+    watt:
+      long:
+        one: "{0} watti"
+        other: "{0} watti"
+      short:
+        display_name: watti
+      narrow:
+        one: "{0}W"
+        other: "{0}W"
+    horsepower:
+      long:
+        one: "{0} hestekraft"
+        other: "{0} hestekrafter"
+      short:
+        display_name: hestekrafter
+        one: "{0} hk"
+        other: "{0} hk"
+      narrow:
+        one: "{0}hk"
+        other: "{0}hk"
+    inch-ofhg:
+      long:
+        one: "{0} tomme kviksølv"
+        other: "{0} tommer kviksølv"
+      short:
+        display_name: tommer kviksølv
+    millibar:
+      long:
+        one: "{0} millibari"
+        other: "{0} millibari"
+      short:
+        display_name: millibari
+      narrow:
+        one: "{0}mbar"
+        other: "{0}mbar"
+    hectopascal:
+      long:
+        one: "{0} hektopascali"
+        other: "{0} hektopascali"
+      short:
+        display_name: hektopascali
+      narrow:
+        one: "{0}hPa"
+        other: "{0}hPa"
+    kilometer-per-hour:
+      long:
+        one: "{0} kilometeri per nalunaaquttap-akunnera"
+        other: "{0} kilometeri per nalunaaquttap-akunnera"
+      short:
+        display_name: kilometeri per nalunaaquttap-akunnera
+      narrow:
+        one: "{0}km/h"
+        other: "{0}km/h"
+    meter-per-second:
+      long:
+        one: "{0} meteri per sekundi"
+        other: "{0} meteri per sekundi"
+      short:
+        display_name: meteri per sekundi
+      narrow:
+        one: "{0}m/s"
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        one: "{0} engelsk mil per nalunaaquttap-akunnera"
+        other: "{0} engelske mil per nalunaaquttap-akunnera"
+      short:
+        display_name: engelske mil per nalunaaquttap-akunnera
+    celsius:
+      long:
+        one: "{0} gradi Celsius"
+        other: "{0} gradi Celsius"
+      short:
+        display_name: gradi Celsius
+    fahrenheit:
+      long:
+        one: "{0} gradi Fahrenheit"
+        other: "{0} gradi Fahrenheit"
+      short:
+        display_name: gradi Fahrenheit
+    cubic-kilometer:
+      long:
+        one: "{0} kubikkilometeri"
+        other: "{0} kubikkilometeri"
+      short:
+        display_name: kubikkilometeri
+      narrow:
+        one: "{0}km³"
+        other: "{0}km³"
+    cubic-mile:
+      long:
+        one: "{0} engelsk kubikmil"
+        other: "{0} engelske kubikmil"
+      short:
+        display_name: engelske kubikmil
+    megaliter:
+      long:
+        one: "{0} megaliteri"
+        other: "{0} megaliteri"
+      short:
+        display_name: megaliteri
+    hectoliter:
+      long:
+        display_name: hectoliteri
+        one: "{0} hectoliteri"
+        other: "{0} hectoliteri"
+    liter:
+      long:
+        one: "{0} literi"
+        other: "{0} literi"
+        per_unit_pattern: "{0} per literi"
+      short:
+        display_name: literi
+        one: "{0} L"
+        other: "{0} L"
+        per_unit_pattern: "{0}/L"
+      narrow:
+        one: "{0}L"
+        other: "{0}L"
+    deciliter:
+      long:
+        display_name: desiliteri
+        one: "{0} desiliteri"
+        other: "{0} desiliteri"
+      narrow:
+        one: "{0}dL"
+        other: "{0}dL"
+    centiliter:
+      long:
+        display_name: sentiliteri
+        one: "{0} sentiliteri"
+        other: "{0} sentiliteri"
+      narrow:
+        one: "{0}cL"
+        other: "{0}cL"
+    milliliter:
+      long:
+        display_name: milliliteri
+        one: "{0} milliliteri"
+        other: "{0} milliliteri"
+    tablespoon:
+      long:
+        display_name: alussaatip imai
+        one: "{0} alussaatip imai"
+        other: "{0} alussaatip imai"
+      short:
+        display_name: ssk
+        one: "{0} ssk"
+        other: "{0} ssk"
+    teaspoon:
+      long:
+        display_name: alussaateeqqap imai
+        one: "{0} alussaateeqqap imai"
+        other: "{0} alussaateeqqap imai"
+      short:
+        display_name: tsk
+        one: "{0} tsk"
+        other: "{0} tsk"
+    light-year:
+      short:
+        display_name: lysukioq
+        one: "{0} lysåri"
+        other: "{0} lysåri"
+      narrow:
+        one: "{0} lå"
+        other: "{0} lå"
+    nautical-mile:
+      short:
+        display_name: sømili
+        one: "{0} sømili"
+        other: "{0} sømili"
+    mile-scandinavian:
+      short:
+        display_name: svenskeq mili
+        one: "{0} svenskeq mili"
+        other: "{0} svenskeq mili"
+      narrow:
+        display_name: sv. mili
+        one: "{0} sv.mili"
+        other: "{0} sv.mili"
+    pound:
+      short:
+        display_name: skålpund
+        one: "{0} skålpund"
+        other: "{0} skålpund"
+    ounce:
+      short:
+        display_name: unser
+        one: "{0} unse"
+        other: "{0} unser"
+    liter-per-100-kilometer:
+      narrow:
+        one: "{0}L/100km"
+        other: "{0}L/100km"

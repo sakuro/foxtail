@@ -1,15 +1,25 @@
 ---
 locale: mua
-generated_at: '2025-09-13T17:39:18Z'
+generated_at: '2025-09-14T06:11:19Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Solai Arabiya
+        one: Solai Arabiya
     AOA:
       display_names:
         other: solai Angola
@@ -18,98 +28,6 @@ number_formats:
       display_names:
         other: solai Australya
         one: solai Australya
-    BWP:
-      display_names:
-        other: solai Botswana
-        one: solai Botswana
-    CAD:
-      display_names:
-        other: solai Kanada
-        one: solai Kanada
-    CNY:
-      display_names:
-        other: solai Syiŋ
-        one: solai Syiŋ
-    EGP:
-      display_names:
-        other: solai Egypt
-        one: solai Egypt
-    EUR:
-      display_names:
-        other: solai Euro
-        one: solai Euro
-    GBP:
-      display_names:
-        other: solai Britaniya
-        one: solai Britaniya
-    INR:
-      display_names:
-        other: solai India
-        one: solai India
-    JPY:
-      display_names:
-        other: solai Japoŋ
-        one: solai Japoŋ
-    KMF:
-      display_names:
-        other: solai Komorya
-        one: solai Komorya
-    LRD:
-      display_names:
-        other: solai Liberiya
-        one: solai Liberiya
-    MGA:
-      display_names:
-        other: Solai Malagasya
-        one: Solai Malagasya
-    MUR:
-      display_names:
-        other: Solai Mauricǝ
-        one: Solai Mauricǝ
-    NAD:
-      display_names:
-        other: Solai Namibiya
-        one: Solai Namibiya
-    NGN:
-      display_names:
-        other: Solai Nigeriya
-        one: Solai Nigeriya
-    RWF:
-      display_names:
-        other: Solai Rwanda
-        one: Solai Rwanda
-    SHP:
-      display_names:
-        other: Solai Helena
-        one: Solai Helena
-    STN:
-      display_names:
-        other: Solai Sao Tome
-        one: Solai Sao Tome
-    USD:
-      display_names:
-        other: Solai Amerika
-        one: Solai Amerika
-    XAF:
-      display_names:
-        other: solai BEAC
-        one: solai BEAC
-    XOF:
-      display_names:
-        other: solai BCEAO
-        one: solai BCEAO
-    ZAR:
-      display_names:
-        other: Solai Africa nekǝsǝŋ
-        one: Solai Africa nekǝsǝŋ
-    ZMW:
-      display_names:
-        other: Solai Zambiya
-        one: Solai Zambiya
-    AED:
-      display_names:
-        other: Solai Arabiya
-        one: Solai Arabiya
     BHD:
       display_names:
         other: solai Barenya
@@ -118,6 +36,14 @@ number_formats:
       display_names:
         other: solai Burundi
         one: solai Burundi
+    BWP:
+      display_names:
+        other: solai Botswana
+        one: solai Botswana
+    CAD:
+      display_names:
+        other: solai Kanada
+        one: solai Kanada
     CDF:
       display_names:
         other: solai Kongo
@@ -126,6 +52,10 @@ number_formats:
       display_names:
         other: Solai Swiss
         one: Solai Swiss
+    CNY:
+      display_names:
+        other: solai Syiŋ
+        one: solai Syiŋ
     CVE:
       display_names:
         other: solai Kapverdiya
@@ -138,6 +68,10 @@ number_formats:
       display_names:
         other: solai Algerya
         one: solai Algerya
+    EGP:
+      display_names:
+        other: solai Egypt
+        one: solai Egypt
     ERN:
       display_names:
         other: solai Eritre
@@ -146,6 +80,14 @@ number_formats:
       display_names:
         other: solai Etiopia
         one: solai Etiopia
+    EUR:
+      display_names:
+        other: solai Euro
+        one: solai Euro
+    GBP:
+      display_names:
+        other: solai Britaniya
+        one: solai Britaniya
     GHC:
       display_names:
         other: solai Gana
@@ -158,10 +100,26 @@ number_formats:
       display_names:
         other: solai Guine
         one: solai Guine
+    INR:
+      display_names:
+        other: solai India
+        one: solai India
+    JPY:
+      display_names:
+        other: solai Japoŋ
+        one: solai Japoŋ
     KES:
       display_names:
         other: solai Kenia
         one: solai Kenia
+    KMF:
+      display_names:
+        other: solai Komorya
+        one: solai Komorya
+    LRD:
+      display_names:
+        other: solai Liberiya
+        one: solai Liberiya
     LSL:
       display_names:
         other: solai Lesotho
@@ -174,6 +132,10 @@ number_formats:
       display_names:
         other: Solai Marok
         one: Solai Marok
+    MGA:
+      display_names:
+        other: Solai Malagasya
+        one: Solai Malagasya
     MRO:
       display_names:
         other: Solai Mauritaniya (1973–2017)
@@ -182,6 +144,10 @@ number_formats:
       display_names:
         other: Solai Mauritaniya
         one: Solai Mauritaniya
+    MUR:
+      display_names:
+        other: Solai Mauricǝ
+        one: Solai Mauricǝ
     MWK:
       display_names:
         other: Solai Malawi
@@ -190,6 +156,18 @@ number_formats:
       display_names:
         other: Solai Mozambika
         one: Solai Mozambika
+    NAD:
+      display_names:
+        other: Solai Namibiya
+        one: Solai Namibiya
+    NGN:
+      display_names:
+        other: Solai Nigeriya
+        one: Solai Nigeriya
+    RWF:
+      display_names:
+        other: Solai Rwanda
+        one: Solai Rwanda
     SAR:
       display_names:
         other: Solai Saudiya
@@ -206,6 +184,10 @@ number_formats:
       display_names:
         other: Solai Sudaŋ ma dii ne livre
         one: Solai Sudaŋ ma dii ne livre
+    SHP:
+      display_names:
+        other: Solai Helena
+        one: Solai Helena
     SLE:
       display_names:
         other: solai Sierra leonǝ
@@ -222,6 +204,10 @@ number_formats:
       display_names:
         other: Solai Sao Tome (1977–2017)
         one: Solai Sao Tome (1977–2017)
+    STN:
+      display_names:
+        other: Solai Sao Tome
+        one: Solai Sao Tome
     SZL:
       display_names:
         other: solai Swaziland
@@ -238,10 +224,30 @@ number_formats:
       display_names:
         other: Solai Uganda
         one: Solai Uganda
+    USD:
+      display_names:
+        other: Solai Amerika
+        one: Solai Amerika
+    XAF:
+      display_names:
+        other: solai BEAC
+        one: solai BEAC
+    XOF:
+      display_names:
+        other: solai BCEAO
+        one: solai BCEAO
+    ZAR:
+      display_names:
+        other: Solai Africa nekǝsǝŋ
+        one: Solai Africa nekǝsǝŋ
     ZMK:
       display_names:
         other: Solai Zambiya (1968–2012)
         one: Solai Zambiya (1968–2012)
+    ZMW:
+      display_names:
+        other: Solai Zambiya
+        one: Solai Zambiya
     ZWD:
       display_names:
         other: Solai Zimbabwe

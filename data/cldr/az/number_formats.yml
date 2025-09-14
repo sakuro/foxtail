@@ -1,438 +1,87 @@
 ---
 locale: az
-generated_at: '2025-09-13T17:34:41Z'
+generated_at: '2025-09-14T06:08:26Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
     accounting: "#,##0.00;(#,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000000':
+        one: 0 mln
+        other: 0 mln
+      '10000000':
+        one: 00 mln
+        other: 00 mln
+      '100000000':
+        one: 000 mln
+        other: 000 mln
+      '1000000000':
+        one: 0 mlrd
+        other: 0 mlrd
+      '10000000000':
+        one: 00 mlrd
+        other: 00 mlrd
+      '100000000000':
+        one: 000 mlrd
+        other: 000 mlrd
+      '1000000000000':
+        one: 0 trln
+        other: 0 trln
+      '10000000000000':
+        one: 00 trln
+        other: 00 trln
+      '100000000000000':
+        one: 000 trln
+        other: 000 trln
+    long:
+      '1000':
+        one: 0 min
+        other: 0 min
+      '10000':
+        one: 00 min
+        other: 00 min
+      '100000':
+        one: 000 min
+        other: 000 min
+      '1000000':
+        one: 0 milyon
+        other: 0 milyon
+      '10000000':
+        one: 00 milyon
+        other: 00 milyon
+      '100000000':
+        one: 000 milyon
+        other: 000 milyon
+      '1000000000':
+        one: 0 milyard
+        other: 0 milyard
+      '10000000000':
+        one: 00 milyard
+        other: 00 milyard
+      '100000000000':
+        one: 000 milyard
+        other: 000 milyard
+      '1000000000000':
+        one: 0 trilyon
+        other: 0 trilyon
+      '10000000000000':
+        one: 00 trilyon
+        other: 00 trilyon
+      '100000000000000':
+        one: 000 trilyon
+        other: 000 trilyon
   currencies:
-    AFN:
-      display_names:
-        other: Əfqanıstan əfqanisi
-        one: Əfqanıstan əfqanisi
-    AMD:
-      display_names:
-        other: Ermənistan dramı
-        one: Ermənistan dramı
-    AOA:
-      display_names:
-        other: Anqola kvanzası
-        one: Anqola kvanzası
-    ARS:
-      display_names:
-        other: Argentina pesosu
-        one: Argentina pesosu
-    AUD:
-      display_names:
-        other: Avstraliya dolları
-        one: Avstraliya dolları
-    AZN:
-      display_names:
-        other: Azərbaycan manatı
-        one: Azərbaycan manatı
-    BAM:
-      display_names:
-        other: Bosniya-Herseqovina markası
-        one: Bosniya-Herseqovina markası
-    BBD:
-      display_names:
-        other: Barbados dolları
-        one: Barbados dolları
-    BDT:
-      display_names:
-        other: Banqladeş takası
-        one: Banqladeş takası
-    BMD:
-      display_names:
-        other: Bermuda dolları
-        one: Bermuda dolları
-    BND:
-      display_names:
-        other: Bruney dolları
-        one: Bruney dolları
-    BOB:
-      display_names:
-        other: Boliviya bolivianosu
-        one: Boliviya bolivianosu
-    BRL:
-      display_names:
-        other: Braziliya realı
-        one: Braziliya realı
-    BSD:
-      display_names:
-        other: Baham dolları
-        one: Baham dolları
-    BWP:
-      display_names:
-        other: Botsvana pulası
-        one: Botsvana pulası
-    BZD:
-      display_names:
-        other: Beliz dolları
-        one: Beliz dolları
-    CAD:
-      display_names:
-        other: Kanada dolları
-        one: Kanada dolları
-    CLP:
-      display_names:
-        other: Çili pesosu
-        one: Çili pesosu
-    CNY:
-      display_names:
-        other: Çin yuanı
-        one: Çin yuanı
-    COP:
-      display_names:
-        other: Kolombiya pesosu
-        one: Kolombiya pesosu
-    CRC:
-      display_names:
-        other: Kosta Rika kolonu
-        one: Kosta Rika kolonu
-    CUC:
-      display_names:
-        other: Kuba çevrilən pesosu
-        one: Kuba çevrilən pesosu
-    CUP:
-      display_names:
-        other: Kuba pesosu
-        one: Kuba pesosu
-    CZK:
-      display_names:
-        other: Çexiya korunası
-        one: Çexiya korunası
-    DKK:
-      display_names:
-        other: Danimarka kronu
-        one: Danimarka kronu
-    DOP:
-      display_names:
-        other: Dominika pesosu
-        one: Dominika pesosu
-    EGP:
-      display_names:
-        other: Misir funtu
-        one: Misir funtu
-    ESP:
-      display_names:
-        other: İspan pesetası
-        one: İspan pesetası
-    EUR:
-      display_names:
-        other: Avro
-        one: Avro
-    FJD:
-      display_names:
-        other: Fici dolları
-        one: Fici dolları
-    FKP:
-      display_names:
-        other: Folklend Adaları funtu
-        one: Folklend Adaları funtu
-    GBP:
-      display_names:
-        other: Britaniya funtu
-        one: Britaniya funtu
-    GEL:
-      display_names:
-        other: Gürcüstan larisi
-        one: Gürcüstan larisi
-    GHS:
-      display_names:
-        other: Qana sedisi
-        one: Qana sedisi
-    GIP:
-      display_names:
-        other: Cəbəli-Tariq funtu
-        one: Cəbəli-Tariq funtu
-    GNF:
-      display_names:
-        other: Qvineya frankı
-        one: Qvineya frankı
-    GTQ:
-      display_names:
-        other: Qvatemala küetzalı
-        one: Qvatemala küetzalı
-    GYD:
-      display_names:
-        other: Qayana dolları
-        one: Qayana dolları
-    HKD:
-      display_names:
-        other: Honq Konq dolları
-        one: Honq Konq dolları
-    HNL:
-      display_names:
-        other: Honduras lempirası
-        one: Honduras lempirası
-    HRK:
-      display_names:
-        other: Xorvatiya kunası
-        one: Xorvatiya kunası
-    HUF:
-      display_names:
-        other: Macarıstan forinti
-        one: Macarıstan forinti
-    IDR:
-      display_names:
-        other: İndoneziya rupisi
-        one: İndoneziya rupisi
-    ILS:
-      display_names:
-        other: İsrail yeni şekeli
-        one: İsrail yeni şekeli
-    INR:
-      display_names:
-        other: Hindistan rupisi
-        one: Hindistan rupisi
-    ISK:
-      display_names:
-        other: İslandiya kronu
-        one: İslandiya kronu
-    JMD:
-      display_names:
-        other: Yamayka dolları
-        one: Yamayka dolları
-    JPY:
-      display_names:
-        other: Yaponiya yeni
-        one: Yaponiya yeni
-    KGS:
-      display_names:
-        other: Qırğızıstan somu
-        one: Qırğızıstan somu
-    KHR:
-      display_names:
-        other: Kamboca rieli
-        one: Kamboca rieli
-    KMF:
-      display_names:
-        other: Komor frankı
-        one: Komor frankı
-    KPW:
-      display_names:
-        other: Şimali Koreya vonu
-        one: Şimali Koreya vonu
-    KRW:
-      display_names:
-        other: Cənubi Koreya vonu
-        one: Cənubi Koreya vonu
-    KYD:
-      display_names:
-        other: Kayman Adaları dolları
-        one: Kayman Adaları dolları
-    KZT:
-      display_names:
-        other: Qazaxıstan tengesi
-        one: Qazaxıstan tengesi
-    LAK:
-      display_names:
-        other: Laos kipi
-        one: Laos kipi
-    LBP:
-      display_names:
-        other: Livan funtu
-        one: Livan funtu
-    LKR:
-      display_names:
-        other: Şri Lanka rupisi
-        one: Şri Lanka rupisi
-    LRD:
-      display_names:
-        other: Liberiya dolları
-        one: Liberiya dolları
-    LTL:
-      display_names:
-        other: Litva liti
-        one: Litva liti
-    LVL:
-      display_names:
-        other: Latviya latı
-        one: Latviya latı
-    MGA:
-      display_names:
-        other: Madaqaskar ariarisi
-        one: Madaqaskar ariarisi
-    MMK:
-      display_names:
-        other: Myanmar kiyatı
-        one: Myanmar kiyatı
-    MNT:
-      display_names:
-        other: Monqoliya tuqriki
-        one: Monqoliya tuqriki
-    MUR:
-      display_names:
-        other: Mavriki rupisi
-        one: Mavriki rupisi
-    MXN:
-      display_names:
-        other: Meksika pesosu
-        one: Meksika pesosu
-    MYR:
-      display_names:
-        other: Malayziya ringiti
-        one: Malayziya ringiti
-    NAD:
-      display_names:
-        other: Namibiya dolları
-        one: Namibiya dolları
-    NGN:
-      display_names:
-        other: Nigeriya nairası
-        one: Nigeriya nairası
-    NIO:
-      display_names:
-        other: Nikaraqua kordobası
-        one: Nikaraqua kordobası
-    NOK:
-      display_names:
-        other: Norveç kronu
-        one: Norveç kronu
-    NPR:
-      display_names:
-        other: Nepal rupisi
-        one: Nepal rupisi
-    NZD:
-      display_names:
-        other: Yeni Zelandiya dolları
-        one: Yeni Zelandiya dolları
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Filippin pesosu
-        one: Filippin pesosu
-    PKR:
-      display_names:
-        other: Pakistan rupisi
-        one: Pakistan rupisi
-    PLN:
-      display_names:
-        other: Polşa zlotısı
-        one: Polşa zlotısı
-    PYG:
-      display_names:
-        other: Paraqvay quaranisi
-        one: Paraqvay quaranisi
-    RON:
-      symbol: ley
-      display_names:
-        other: Rumıniya leyi
-        one: Rumıniya leyi
-    RUB:
-      display_names:
-        other: Rusiya rublu
-        one: Rusiya rublu
-    RWF:
-      display_names:
-        other: Ruanda frankı
-        one: Ruanda frankı
-    SBD:
-      display_names:
-        other: Solomon Adaları dolları
-        one: Solomon Adaları dolları
-    SEK:
-      display_names:
-        other: İsveç kronu
-        one: İsveç kronu
-    SGD:
-      display_names:
-        other: Sinqapur dolları
-        one: Sinqapur dolları
-    SHP:
-      display_names:
-        other: Müqəddəs Yelena funtu
-        one: Müqəddəs Yelena funtu
-    SRD:
-      display_names:
-        other: Surinam dolları
-        one: Surinam dolları
-    SSP:
-      display_names:
-        other: Cənubi Sudan funtu
-        one: Cənubi Sudan funtu
-    STN:
-      display_names:
-        other: San Tom və Prinsip dobrası
-        one: San Tom və Prinsip dobrası
-    SYP:
-      symbol: S£
-      display_names:
-        other: Suriya funtu
-        one: Suriya funtu
-    THB:
-      display_names:
-        other: Tayland batı
-        one: Tayland batı
-    TOP:
-      display_names:
-        other: Tonqa panqası
-        one: Tonqa panqası
-    TRY:
-      display_names:
-        other: Türkiyə lirəsi
-        one: Türkiyə lirəsi
-    TTD:
-      display_names:
-        other: Trinidad və Tobaqo dolları
-        one: Trinidad və Tobaqo dolları
-    TWD:
-      display_names:
-        other: Tayvan yeni dolları
-        one: Tayvan yeni dolları
-    UAH:
-      display_names:
-        other: Ukrayna qrivnası
-        one: Ukrayna qrivnası
-    USD:
-      display_names:
-        other: ABŞ dolları
-        one: ABŞ dolları
-    UYU:
-      display_names:
-        other: Uruqvay pesosu
-        one: Uruqvay pesosu
-    VEF:
-      display_names:
-        other: Venesuela bolivarı (2008–2018)
-        one: Venesuela bolivarı (2008–2018)
-    VND:
-      display_names:
-        other: Vyetnam donqu
-        one: Vyetnam donqu
-    XAF:
-      display_names:
-        other: Kamerun frankı
-        one: Kamerun frankı
-    XCD:
-      display_names:
-        other: Şərqi Karib dolları
-        one: Şərqi Karib dolları
-    XOF:
-      display_names:
-        other: Fil Dişi Sahili frankı
-        one: Fil Dişi Sahili frankı
-    XPF:
-      display_names:
-        other: Fransız Polineziyası frankı
-        one: Fransız Polineziyası frankı
-    XXX:
-      display_names:
-        other: "(naməlum valyuta)"
-        one: "(naməlum valyuta vahidi)"
-    ZAR:
-      display_names:
-        other: Cənubi Afrika randı
-        one: Cənubi Afrika randı
-    ZMW:
-      display_names:
-        other: Zambiya kvaçası
-        one: Zambiya kvaçası
     ADP:
       display_names:
         other: Andora pesetası
@@ -445,6 +94,10 @@ number_formats:
       display_names:
         other: Əfqanıstan əfqanisi (1927–2002)
         one: Əfqanıstan əfqanisi (1927–2002)
+    AFN:
+      display_names:
+        other: Əfqanıstan əfqanisi
+        one: Əfqanıstan əfqanisi
     ALK:
       display_names:
         other: Albaniya leki (1946–1965)
@@ -453,10 +106,18 @@ number_formats:
       display_names:
         other: Albaniya leki
         one: Albaniya leki
+    AMD:
+      display_names:
+        other: Ermənistan dramı
+        one: Ermənistan dramı
     ANG:
       display_names:
         other: Niderland Antilya gilderi
         one: Niderland Antilyası gilderi
+    AOA:
+      display_names:
+        other: Anqola kvanzası
+        one: Anqola kvanzası
     AOK:
       display_names:
         other: Anqola kvanzasi (1977–1990)
@@ -477,10 +138,18 @@ number_formats:
       display_names:
         other: Argentina pesosu (1983–1985)
         one: Argentina pesosu (1983–1985)
+    ARS:
+      display_names:
+        other: Argentina pesosu
+        one: Argentina pesosu
     ATS:
       display_names:
         other: Avstriya şillinqi
         one: Avstriya şillinqi
+    AUD:
+      display_names:
+        other: Avstraliya dolları
+        one: Avstraliya dolları
     AWG:
       display_names:
         other: Aruba florini
@@ -489,10 +158,26 @@ number_formats:
       display_names:
         other: Azərbaycan manatı (1993–2006)
         one: Azərbaycan manatı (1993–2006)
+    AZN:
+      display_names:
+        other: Azərbaycan manatı
+        one: Azərbaycan manatı
     BAD:
       display_names:
         other: Bosniya-Herseqovina dinarı
         one: Bosniya-Herseqovina dinarı
+    BAM:
+      display_names:
+        other: Bosniya-Herseqovina markası
+        one: Bosniya-Herseqovina markası
+    BBD:
+      display_names:
+        other: Barbados dolları
+        one: Barbados dolları
+    BDT:
+      display_names:
+        other: Banqladeş takası
+        one: Banqladeş takası
     BEC:
       display_names:
         other: Belçika frankı (deyşirik)
@@ -521,6 +206,18 @@ number_formats:
       display_names:
         other: Burundi frankı
         one: Burundi frankı
+    BMD:
+      display_names:
+        other: Bermuda dolları
+        one: Bermuda dolları
+    BND:
+      display_names:
+        other: Bruney dolları
+        one: Bruney dolları
+    BOB:
+      display_names:
+        other: Boliviya bolivianosu
+        one: Boliviya bolivianosu
     BOP:
       display_names:
         other: Boliviya pesosu
@@ -541,6 +238,10 @@ number_formats:
       display_names:
         other: Braziliya kruzeyrosu (1990–1993)
         one: Braziliya kruzeyrosu (1990–1993)
+    BRL:
+      display_names:
+        other: Braziliya realı
+        one: Braziliya realı
     BRN:
       display_names:
         other: Braziliya kruzado novası
@@ -549,6 +250,10 @@ number_formats:
       display_names:
         other: Braziliya kruzeyrosu
         one: Braziliya kruzeyrosu
+    BSD:
+      display_names:
+        other: Baham dolları
+        one: Baham dolları
     BTN:
       display_names:
         other: Butan nqultrumu
@@ -557,6 +262,10 @@ number_formats:
       display_names:
         other: Burmis kyatı
         one: Burmis kyatı
+    BWP:
+      display_names:
+        other: Botsvana pulası
+        one: Botsvana pulası
     BYB:
       display_names:
         other: Belarus yeni rublu (1994–1999)
@@ -570,6 +279,14 @@ number_formats:
       display_names:
         other: Belarus rublu (2000–2016)
         one: Belarus rublu (2000–2016)
+    BZD:
+      display_names:
+        other: Beliz dolları
+        one: Beliz dolları
+    CAD:
+      display_names:
+        other: Kanada dolları
+        one: Kanada dolları
     CDF:
       display_names:
         other: Konqo frankı
@@ -586,10 +303,26 @@ number_formats:
       display_names:
         other: WIR frankası
         one: WIR frankası
+    CLP:
+      display_names:
+        other: Çili pesosu
+        one: Çili pesosu
     CNH:
       display_names:
         other: Çin yuanı (ofşor)
         one: Çin yuanı (ofşor)
+    CNY:
+      display_names:
+        other: Çin yuanı
+        one: Çin yuanı
+    COP:
+      display_names:
+        other: Kolombiya pesosu
+        one: Kolombiya pesosu
+    CRC:
+      display_names:
+        other: Kosta Rika kolonu
+        one: Kosta Rika kolonu
     CSD:
       display_names:
         other: Serbiya dinarı (2002–2006)
@@ -598,6 +331,14 @@ number_formats:
       display_names:
         other: Çexoslavakiya korunası
         one: Çexoslavakiya korunası
+    CUC:
+      display_names:
+        other: Kuba çevrilən pesosu
+        one: Kuba çevrilən pesosu
+    CUP:
+      display_names:
+        other: Kuba pesosu
+        one: Kuba pesosu
     CVE:
       display_names:
         other: Kape Verde eskudosu
@@ -606,6 +347,10 @@ number_formats:
       display_names:
         other: Kipr paundu
         one: Kipr paundu
+    CZK:
+      display_names:
+        other: Çexiya korunası
+        one: Çexiya korunası
     DDM:
       display_names:
         other: Şərq Almaniya ostmarkı
@@ -618,6 +363,14 @@ number_formats:
       display_names:
         other: Cibuti frankı
         one: Cibuti frankı
+    DKK:
+      display_names:
+        other: Danimarka kronu
+        one: Danimarka kronu
+    DOP:
+      display_names:
+        other: Dominika pesosu
+        one: Dominika pesosu
     DZD:
       display_names:
         other: Əlcəzair dinarı
@@ -630,6 +383,10 @@ number_formats:
       display_names:
         other: Estoniya krunu
         one: Estoniya krunu
+    EGP:
+      display_names:
+        other: Misir funtu
+        one: Misir funtu
     ERN:
       display_names:
         other: Eritreya nakfası
@@ -642,30 +399,66 @@ number_formats:
       display_names:
         other: İspan pesetası (dəyşirik)
         one: İspan pesetası (dəyşirik)
+    ESP:
+      display_names:
+        other: İspan pesetası
+        one: İspan pesetası
     ETB:
       display_names:
         other: Efiopiya bırrı
         one: Efiopiya bırrı
+    EUR:
+      display_names:
+        other: Avro
+        one: Avro
     FIM:
       display_names:
         other: Fin markası
         one: Fin markası
+    FJD:
+      display_names:
+        other: Fici dolları
+        one: Fici dolları
+    FKP:
+      display_names:
+        other: Folklend Adaları funtu
+        one: Folklend Adaları funtu
     FRF:
       display_names:
         other: Fransız markası
         one: Fransız markası
+    GBP:
+      display_names:
+        other: Britaniya funtu
+        one: Britaniya funtu
     GEK:
       display_names:
         other: Gürcüstan kupon lariti
         one: Gürcüstan kupon lariti
+    GEL:
+      display_names:
+        other: Gürcüstan larisi
+        one: Gürcüstan larisi
     GHC:
       display_names:
         other: Qana sedisi (1979–2007)
         one: Qana sedisi (1979–2007)
+    GHS:
+      display_names:
+        other: Qana sedisi
+        one: Qana sedisi
+    GIP:
+      display_names:
+        other: Cəbəli-Tariq funtu
+        one: Cəbəli-Tariq funtu
     GMD:
       display_names:
         other: Qambiya dalasisi
         one: Qambiya dalasisi
+    GNF:
+      display_names:
+        other: Qvineya frankı
+        one: Qvineya frankı
     GNS:
       display_names:
         other: Qvineya sulisi
@@ -678,6 +471,10 @@ number_formats:
       display_names:
         other: Yunan draxması
         one: Yunan draxması
+    GTQ:
+      display_names:
+        other: Qvatemala küetzalı
+        one: Qvatemala küetzalı
     GWE:
       display_names:
         other: Portugal Qvineya eskudosu
@@ -686,14 +483,38 @@ number_formats:
       display_names:
         other: Qvineya-Bisau pesosu
         one: Qvineya-Bisau pesosu
+    GYD:
+      display_names:
+        other: Qayana dolları
+        one: Qayana dolları
+    HKD:
+      display_names:
+        other: Honq Konq dolları
+        one: Honq Konq dolları
+    HNL:
+      display_names:
+        other: Honduras lempirası
+        one: Honduras lempirası
     HRD:
       display_names:
         other: Xorvatiya dinarı
         one: Xorvatiya dinarı
+    HRK:
+      display_names:
+        other: Xorvatiya kunası
+        one: Xorvatiya kunası
     HTG:
       display_names:
         other: Haiti qourdu
         one: Haiti qourdu
+    HUF:
+      display_names:
+        other: Macarıstan forinti
+        one: Macarıstan forinti
+    IDR:
+      display_names:
+        other: İndoneziya rupisi
+        one: İndoneziya rupisi
     IEP:
       display_names:
         other: İrlandiya paundu
@@ -706,6 +527,14 @@ number_formats:
       display_names:
         other: İsrail şekeli (1980–1985)
         one: İsrail şekeli (1980–1985)
+    ILS:
+      display_names:
+        other: İsrail yeni şekeli
+        one: İsrail yeni şekeli
+    INR:
+      display_names:
+        other: Hindistan rupisi
+        one: Hindistan rupisi
     IQD:
       display_names:
         other: İraq dinarı
@@ -718,26 +547,86 @@ number_formats:
       display_names:
         other: İslandiya kronu (1918–1981)
         one: İslandiya kronu (1918–1981)
+    ISK:
+      display_names:
+        other: İslandiya kronu
+        one: İslandiya kronu
     ITL:
       display_names:
         other: İtaliya lirası
         one: İtaliya lirası
+    JMD:
+      display_names:
+        other: Yamayka dolları
+        one: Yamayka dolları
     JOD:
       display_names:
         other: İordaniya dinarı
         one: İordaniya dinarı
+    JPY:
+      display_names:
+        other: Yaponiya yeni
+        one: Yaponiya yeni
     KES:
       display_names:
         other: Keniya şillinqi
         one: Keniya şillinqi
+    KGS:
+      display_names:
+        other: Qırğızıstan somu
+        one: Qırğızıstan somu
+    KHR:
+      display_names:
+        other: Kamboca rieli
+        one: Kamboca rieli
+    KMF:
+      display_names:
+        other: Komor frankı
+        one: Komor frankı
+    KPW:
+      display_names:
+        other: Şimali Koreya vonu
+        one: Şimali Koreya vonu
+    KRW:
+      display_names:
+        other: Cənubi Koreya vonu
+        one: Cənubi Koreya vonu
     KWD:
       display_names:
         other: Küveyt dinarı
         one: Küveyt dinarı
+    KYD:
+      display_names:
+        other: Kayman Adaları dolları
+        one: Kayman Adaları dolları
+    KZT:
+      display_names:
+        other: Qazaxıstan tengesi
+        one: Qazaxıstan tengesi
+    LAK:
+      display_names:
+        other: Laos kipi
+        one: Laos kipi
+    LBP:
+      display_names:
+        other: Livan funtu
+        one: Livan funtu
+    LKR:
+      display_names:
+        other: Şri Lanka rupisi
+        one: Şri Lanka rupisi
+    LRD:
+      display_names:
+        other: Liberiya dolları
+        one: Liberiya dolları
     LSL:
       display_names:
         other: Lesoto lotisi
         one: Lesoto lotisi
+    LTL:
+      display_names:
+        other: Litva liti
+        one: Litva liti
     LTT:
       display_names:
         other: Litva talonası
@@ -754,6 +643,10 @@ number_formats:
       display_names:
         other: Luksemburq finans frankası
         one: Luksemburq finans frankası
+    LVL:
+      display_names:
+        other: Latviya latı
+        one: Latviya latı
     LVR:
       display_names:
         other: Latviya rublu
@@ -774,6 +667,10 @@ number_formats:
       display_names:
         other: Moldova leyi
         one: Moldova leyi
+    MGA:
+      display_names:
+        other: Madaqaskar ariarisi
+        one: Madaqaskar ariarisi
     MGF:
       display_names:
         other: Madaqaskar frankası
@@ -790,6 +687,14 @@ number_formats:
       display_names:
         other: Mali frankı
         one: Mali frankı
+    MMK:
+      display_names:
+        other: Myanmar kiyatı
+        one: Myanmar kiyatı
+    MNT:
+      display_names:
+        other: Monqoliya tuqriki
+        one: Monqoliya tuqriki
     MOP:
       display_names:
         other: Makao patakası
@@ -806,6 +711,10 @@ number_formats:
       display_names:
         other: Maltiz paundu
         one: Maltiz paundu
+    MUR:
+      display_names:
+        other: Mavriki rupisi
+        one: Mavriki rupisi
     MVR:
       display_names:
         other: Maldiv rufiyası
@@ -814,10 +723,18 @@ number_formats:
       display_names:
         other: Malavi kvaçası
         one: Malavi kvaçası
+    MXN:
+      display_names:
+        other: Meksika pesosu
+        one: Meksika pesosu
     MXP:
       display_names:
         other: Meksika gümüş pesosu
         one: Meksika gümüş pesosu
+    MYR:
+      display_names:
+        other: Malayziya ringiti
+        one: Malayziya ringiti
     MZE:
       display_names:
         other: Mozambik eskudosu
@@ -830,14 +747,38 @@ number_formats:
       display_names:
         other: Mozambik metikalı
         one: Mozambik metikalı
+    NAD:
+      display_names:
+        other: Namibiya dolları
+        one: Namibiya dolları
+    NGN:
+      display_names:
+        other: Nigeriya nairası
+        one: Nigeriya nairası
     NIC:
       display_names:
         other: Nikaraqua kordobu
         one: Nikaraqua kordobu
+    NIO:
+      display_names:
+        other: Nikaraqua kordobası
+        one: Nikaraqua kordobası
     NLG:
       display_names:
         other: Hollandiya gilderi
         one: Hollandiya gilderi
+    NOK:
+      display_names:
+        other: Norveç kronu
+        one: Norveç kronu
+    NPR:
+      display_names:
+        other: Nepal rupisi
+        one: Nepal rupisi
+    NZD:
+      display_names:
+        other: Yeni Zelandiya dolları
+        one: Yeni Zelandiya dolları
     OMR:
       display_names:
         other: Oman rialı
@@ -862,6 +803,19 @@ number_formats:
       display_names:
         other: Papua Yeni Qvineya kinası
         one: Papua Yeni Qvineya kinası
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Filippin pesosu
+        one: Filippin pesosu
+    PKR:
+      display_names:
+        other: Pakistan rupisi
+        one: Pakistan rupisi
+    PLN:
+      display_names:
+        other: Polşa zlotısı
+        one: Polşa zlotısı
     PLZ:
       display_names:
         other: Polşa zlotısı (1950–1995)
@@ -870,6 +824,10 @@ number_formats:
       display_names:
         other: Portuqal eskudosu
         one: Portuqal eskudosu
+    PYG:
+      display_names:
+        other: Paraqvay quaranisi
+        one: Paraqvay quaranisi
     QAR:
       display_names:
         other: Qatar rialı
@@ -882,18 +840,35 @@ number_formats:
       display_names:
         other: Rumıniya leyi (1952–2006)
         one: Rumıniya leyi (1952–2006)
+    RON:
+      symbol: ley
+      display_names:
+        other: Rumıniya leyi
+        one: Rumıniya leyi
     RSD:
       display_names:
         other: Serbiya dinarı
         one: Serbiya dinarı
+    RUB:
+      display_names:
+        other: Rusiya rublu
+        one: Rusiya rublu
     RUR:
       display_names:
         other: Rusiya rublu (1991–1998)
         one: Rusiya rublu (1991–1998)
+    RWF:
+      display_names:
+        other: Ruanda frankı
+        one: Ruanda frankı
     SAR:
       display_names:
         other: Səudiyyə riyalı
         one: Səudiyyə riyalı
+    SBD:
+      display_names:
+        other: Solomon Adaları dolları
+        one: Solomon Adaları dolları
     SCR:
       display_names:
         other: Seyşel rupisi
@@ -902,6 +877,18 @@ number_formats:
       display_names:
         other: Sudan funtu
         one: Sudan funtu
+    SEK:
+      display_names:
+        other: İsveç kronu
+        one: İsveç kronu
+    SGD:
+      display_names:
+        other: Sinqapur dolları
+        one: Sinqapur dolları
+    SHP:
+      display_names:
+        other: Müqəddəs Yelena funtu
+        one: Müqəddəs Yelena funtu
     SIT:
       display_names:
         other: Sloveniya toları
@@ -922,10 +909,22 @@ number_formats:
       display_names:
         other: Somali şillinqi
         one: Somali şillinqi
+    SRD:
+      display_names:
+        other: Surinam dolları
+        one: Surinam dolları
+    SSP:
+      display_names:
+        other: Cənubi Sudan funtu
+        one: Cənubi Sudan funtu
     STD:
       display_names:
         other: San Tom və Prinsip dobrası (1977–2017)
         one: San Tom və Prinsip dobrası (1977–2017)
+    STN:
+      display_names:
+        other: San Tom və Prinsip dobrası
+        one: San Tom və Prinsip dobrası
     SUR:
       display_names:
         other: Sovet rublu
@@ -934,10 +933,19 @@ number_formats:
       display_names:
         other: El Salvador kolonu
         one: El Salvador kolonu
+    SYP:
+      symbol: S£
+      display_names:
+        other: Suriya funtu
+        one: Suriya funtu
     SZL:
       display_names:
         other: Svazilend emalangenini
         one: Svazilend lilangenini
+    THB:
+      display_names:
+        other: Tayland batı
+        one: Tayland batı
     TJR:
       display_names:
         other: Tacikistan rublu
@@ -958,6 +966,10 @@ number_formats:
       display_names:
         other: Tunis dinarı
         one: Tunis dinarı
+    TOP:
+      display_names:
+        other: Tonqa panqası
+        one: Tonqa panqası
     TPE:
       display_names:
         other: Timor eskudu
@@ -966,10 +978,26 @@ number_formats:
       display_names:
         other: Türkiyə lirəsi (1922–2005)
         one: Türkiyə lirəsi (1922–2005)
+    TRY:
+      display_names:
+        other: Türkiyə lirəsi
+        one: Türkiyə lirəsi
+    TTD:
+      display_names:
+        other: Trinidad və Tobaqo dolları
+        one: Trinidad və Tobaqo dolları
+    TWD:
+      display_names:
+        other: Tayvan yeni dolları
+        one: Tayvan yeni dolları
     TZS:
       display_names:
         other: Tanzaniya şillinqi
         one: Tanzaniya şillinqi
+    UAH:
+      display_names:
+        other: Ukrayna qrivnası
+        one: Ukrayna qrivnası
     UAK:
       display_names:
         other: Ukrayna karbovenesası
@@ -982,6 +1010,10 @@ number_formats:
       display_names:
         other: Uqanda şillinqi
         one: Uqanda şillinqi
+    USD:
+      display_names:
+        other: ABŞ dolları
+        one: ABŞ dolları
     USN:
       display_names:
         other: ABŞ dolları (yeni gün)
@@ -998,6 +1030,10 @@ number_formats:
       display_names:
         other: Uruqvay pesosu (1975–1993)
         one: Uruqvay pesosu (1975–1993)
+    UYU:
+      display_names:
+        other: Uruqvay pesosu
+        one: Uruqvay pesosu
     UZS:
       display_names:
         other: Özbəkistan somu
@@ -1006,10 +1042,18 @@ number_formats:
       display_names:
         other: Venesuela bolivarı (1871–2008)
         one: Venesuela bolivarı (1871–2008)
+    VEF:
+      display_names:
+        other: Venesuela bolivarı (2008–2018)
+        one: Venesuela bolivarı (2008–2018)
     VES:
       display_names:
         other: Venesuela bolivarı
         one: Venesuela bolivarı
+    VND:
+      display_names:
+        other: Vyetnam donqu
+        one: Vyetnam donqu
     VNN:
       display_names:
         other: Vyetnam donqu (1978–1985)
@@ -1022,6 +1066,10 @@ number_formats:
       display_names:
         other: Samoa talası
         one: Samoa talası
+    XAF:
+      display_names:
+        other: Kamerun frankı
+        one: Kamerun frankı
     XAG:
       display_names:
         other: gümüş
@@ -1030,6 +1078,10 @@ number_formats:
       display_names:
         other: qızıl
         one: qızıl
+    XCD:
+      display_names:
+        other: Şərqi Karib dolları
+        one: Şərqi Karib dolları
     XFO:
       display_names:
         other: Fransız gızıl frankı
@@ -1038,14 +1090,26 @@ number_formats:
       display_names:
         other: Fransız UİC frankı
         one: Fransız UİC frankı
+    XOF:
+      display_names:
+        other: Fil Dişi Sahili frankı
+        one: Fil Dişi Sahili frankı
     XPD:
       display_names:
         other: Palladium
         one: Palladium
+    XPF:
+      display_names:
+        other: Fransız Polineziyası frankı
+        one: Fransız Polineziyası frankı
     XPT:
       display_names:
         other: platinum
         one: platinum
+    XXX:
+      display_names:
+        other: "(naməlum valyuta)"
+        one: "(naməlum valyuta vahidi)"
     YDD:
       display_names:
         other: Yəmən dinarı
@@ -1070,10 +1134,18 @@ number_formats:
       display_names:
         other: Cənubi Afrika randı (finans)
         one: Cənubi Afrika randı (finans)
+    ZAR:
+      display_names:
+        other: Cənubi Afrika randı
+        one: Cənubi Afrika randı
     ZMK:
       display_names:
         other: Zambiya kvaçası (1968–2012)
         one: Zambiya kvaçası (1968–2012)
+    ZMW:
+      display_names:
+        other: Zambiya kvaçası
+        one: Zambiya kvaçası
     ZRN:
       display_names:
         other: Zair yeni zairi (1993–1998)
@@ -1094,3 +1166,1326 @@ number_formats:
       display_names:
         other: Zimbabve dolları (2008)
         one: Zimbabve dolları (2008)
+  units:
+    g-force:
+      long:
+        one: "{0} g qüvvəsi"
+        other: "{0} g qüvvəsi"
+      short:
+        display_name: g qüvvəsi
+    meter-per-square-second:
+      long:
+        display_name: metr kvadrat saniyə
+        one: "{0} metr kvadrat saniyə"
+        other: "{0} metr kvadrat saniyə"
+      short:
+        display_name: metr/s²
+      narrow:
+        display_name: m/s²
+    revolution:
+      long:
+        display_name: dövrə
+        one: "{0} dövrə"
+        other: "{0} dövrə"
+      short:
+        display_name: döv
+        one: "{0} döv"
+        other: "{0} döv"
+    radian:
+      long:
+        display_name: radian
+        one: "{0} radian"
+        other: "{0} radian"
+    degree:
+      long:
+        one: "{0} dərəcə"
+        other: "{0} dərəcə"
+      short:
+        display_name: dərəcə
+        one: "{0} dər"
+        other: "{0} dər"
+    arc-minute:
+      long:
+        one: "{0} dəqiqə"
+        other: "{0} dəqiqə"
+      short:
+        display_name: dəqiqə
+        one: "{0}dəq"
+        other: "{0}dəq"
+      narrow:
+        one: "{0}′"
+        other: "{0}dəq"
+    arc-second:
+      long:
+        one: "{0} saniyə"
+        other: "{0} saniyə"
+      short:
+        display_name: saniyə
+        one: "{0}san"
+        other: "{0}san"
+    square-kilometer:
+      long:
+        one: "{0} kvadrat kilometr"
+        other: "{0} kvadrat kilometr"
+      short:
+        display_name: kvadrat kilometr
+        one: "{0} kv km"
+        other: "{0} kv km"
+      narrow:
+        display_name: km²
+        one: "{0} km²"
+        other: "{0} km²"
+    hectare:
+      long:
+        one: "{0} hektar"
+        other: "{0} hektar"
+      short:
+        display_name: hektar
+    square-meter:
+      long:
+        one: "{0} kvadrat metr"
+        other: "{0} kvadrat metr"
+      short:
+        display_name: kvadrat metr
+        one: "{0} kv m"
+        other: "{0} kv m"
+      narrow:
+        display_name: metr²
+        one: "{0} m²"
+        other: "{0} m²"
+    square-centimeter:
+      long:
+        display_name: kvadrat santimetr
+        one: "{0} kvadrat santimetr"
+        other: "{0} kvadrat santimetr"
+      short:
+        display_name: sm²
+        one: "{0} sm²"
+        other: "{0} sm²"
+        per_unit_pattern: "{0}/sm²"
+    square-mile:
+      long:
+        one: "{0} kvadrat mil"
+        other: "{0} kvadrat mil"
+      short:
+        display_name: kvadrat mil
+        one: "{0} kv mil"
+        other: "{0} kv mil"
+      narrow:
+        display_name: mil²
+        one: "{0} mil²"
+        other: "{0} mil²"
+        per_unit_pattern: "{0}/mil²"
+    acre:
+      long:
+        one: "{0} akr"
+        other: "{0} akr"
+      short:
+        display_name: akr
+        one: "{0} ak"
+        other: "{0} ak"
+    square-foot:
+      long:
+        one: "{0} kvadrat fut"
+        other: "{0} kvadrat fut"
+      short:
+        display_name: kvadrat fut
+        one: "{0} kv ft"
+        other: "{0} kv ft"
+      narrow:
+        display_name: ft²
+        one: "{0} ft²"
+        other: "{0} ft²"
+    square-inch:
+      long:
+        display_name: kvadrat düym
+        one: "{0} kvadrat düym"
+        other: "{0} kvadrat düym"
+    karat:
+      long:
+        display_name: karat
+        one: "{0} karat"
+        other: "{0} karat"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: milliqram/desilitr
+        one: "{0} milliqram/desilitr"
+        other: "{0} mg/dL"
+    millimole-per-liter:
+      long:
+        one: "{0} millimol/litr"
+        other: "{0} millimol/litr"
+      short:
+        display_name: millimol/litr
+        one: "{0} mmol/l"
+        other: "{0} mmol/l"
+    permillion:
+      long:
+        display_name: milyonda hissəcik
+        one: "{0} milyonda hissəcik"
+        other: "{0} milyonda hissəcik"
+      short:
+        display_name: hissəcik/milyon
+        one: "{0} hs/mln"
+        other: "{0} hs/mln"
+      narrow:
+        one: "{0} hs/mln"
+        other: "{0}ppm"
+    percent:
+      long:
+        one: "{0} faiz"
+        other: "{0} faiz"
+      short:
+        display_name: faiz
+      narrow:
+        display_name: "%"
+    permille:
+      long:
+        one: "{0} promil"
+        other: "{0} promil"
+      short:
+        display_name: promil
+      narrow:
+        display_name: "‰"
+    permyriad:
+      long:
+        one: "{0} permiriada"
+        other: "{0} permiriada"
+      short:
+        display_name: permiriada
+      narrow:
+        display_name: "‱"
+    liter-per-kilometer:
+      long:
+        display_name: litr/kilometr
+        one: "{0} litr/kilometr"
+        other: "{0} litr/kilometr"
+      short:
+        display_name: l/km
+        one: "{0} l/km"
+        other: "{0} l/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: 100 kilometrə litr
+        one: 100 kilometrə {0} litr
+        other: 100 kilometrə {0} litr
+      short:
+        display_name: l/100km
+        one: "{0} l/100km"
+        other: "{0} l/100km"
+    mile-per-gallon:
+      long:
+        display_name: qallona mil
+        one: qallona {0} mil
+        other: qallona {0} mil
+      short:
+        display_name: mil/qal
+        one: "{0} mil/qal"
+        other: "{0} mil/qal"
+    mile-per-gallon-imperial:
+      long:
+        display_name: imp. qallona mil
+        one: imp. qallona {0} mil
+        other: imp. qallona {0} mil
+      short:
+        display_name: mil/imp. qal
+        one: "{0} m/q imp"
+        other: "{0} m/q imp"
+      narrow:
+        one: "{0} mil/imq"
+        other: "{0} mil/imq"
+    petabyte:
+      long:
+        display_name: petabayt
+        one: "{0} petabayt"
+        other: "{0} petabayt"
+      short:
+        display_name: PBayt
+    terabyte:
+      long:
+        display_name: terabayt
+        one: "{0} terabayt"
+        other: "{0} terabayt"
+    terabit:
+      long:
+        display_name: terabit
+        one: "{0} terabit"
+        other: "{0} terabit"
+    gigabyte:
+      long:
+        display_name: giqabayt
+        one: "{0} giqabayt"
+        other: "{0} giqabayt"
+    gigabit:
+      long:
+        display_name: giqabit
+        one: "{0} giqabit"
+        other: "{0} giqabit"
+    megabyte:
+      long:
+        display_name: meqabayt
+        one: "{0} meqabayt"
+        other: "{0} meqabayt"
+    megabit:
+      long:
+        display_name: meqabit
+        one: "{0} meqabit"
+        other: "{0} meqabit"
+    kilobyte:
+      long:
+        display_name: kilobayt
+        one: "{0} kilobayt"
+        other: "{0} kilobayt"
+    kilobit:
+      long:
+        display_name: kilobit
+        one: "{0} kilobit"
+        other: "{0} kilobit"
+    decade:
+      long:
+        display_name: dekada
+        one: "{0} dekada"
+        other: "{0} dek"
+      short:
+        display_name: dek
+        one: "{0} dek"
+        other: "{0} dek"
+    week:
+      long:
+        one: "{0} həftə"
+        other: "{0} həftə"
+        per_unit_pattern: "{0}/həftə"
+      short:
+        display_name: həftə
+        one: "{0} hft"
+        other: "{0} hft"
+        per_unit_pattern: "{0}/hft"
+      narrow:
+        display_name: hft
+    minute:
+      long:
+        one: "{0} dəqiqə"
+        other: "{0} dəqiqə"
+        per_unit_pattern: "{0}/dəqiqə"
+      short:
+        display_name: dəqiqə
+        one: "{0} dəq"
+        other: "{0} dəq"
+        per_unit_pattern: "{0}/dəq"
+      narrow:
+        display_name: dəq
+    second:
+      long:
+        one: "{0} saniyə"
+        other: "{0} saniyə"
+        per_unit_pattern: "{0}/saniyə"
+      short:
+        display_name: saniyə
+        one: "{0} san"
+        other: "{0} san"
+        per_unit_pattern: "{0}/san"
+      narrow:
+        display_name: san
+    millisecond:
+      long:
+        one: "{0} millisaniyə"
+        other: "{0} millisaniyə"
+      short:
+        display_name: millisaniyə
+        one: "{0} msan"
+        other: "{0} msan"
+      narrow:
+        display_name: msan
+    microsecond:
+      long:
+        display_name: mikrosaniyə
+        one: "{0} mikrosaniyə"
+        other: "{0} mikrosaniyə"
+      short:
+        display_name: μsan
+        one: "{0} μsan"
+        other: "{0} μsan"
+    nanosecond:
+      long:
+        display_name: nanosaniyə
+        one: "{0} nanosaniyə"
+        other: "{0} nanosaniyə"
+      short:
+        display_name: nsan
+        one: "{0} nsan"
+        other: "{0} nsan"
+    ampere:
+      long:
+        display_name: amper
+        one: "{0} amper"
+        other: "{0} amper"
+    milliampere:
+      long:
+        display_name: milliamper
+        one: "{0} milliamper"
+        other: "{0} milliamper"
+    ohm:
+      long:
+        one: "{0} om"
+        other: "{0} om"
+      short:
+        display_name: om
+    volt:
+      long:
+        one: "{0} volt"
+        other: "{0} volt"
+    kilocalorie:
+      long:
+        display_name: kilokalori
+        one: "{0} kilokalori"
+        other: "{0} kilokalori"
+      short:
+        display_name: kkal
+        one: "{0} kkal"
+        other: "{0} kkal"
+    calorie:
+      long:
+        display_name: kalori
+        one: "{0} kalori"
+        other: "{0} kalori"
+      short:
+        display_name: kal
+        one: "{0} kal"
+        other: "{0} kal"
+    foodcalorie:
+      long:
+        display_name: Kalori
+        one: "{0} Kalori"
+        other: "{0} Kalori"
+      short:
+        display_name: Kal
+        one: "{0} Kal"
+        other: "{0} Kal"
+    kilojoule:
+      long:
+        display_name: kilocoul
+        one: "{0} kilocoul"
+        other: "{0} kilocoul"
+      short:
+        display_name: kc
+        one: "{0} kc"
+        other: "{0} kc"
+    joule:
+      long:
+        one: "{0} coul"
+        other: "{0} coul"
+      short:
+        display_name: coul
+        one: "{0} c"
+        other: "{0} c"
+    kilowatt-hour:
+      long:
+        display_name: kilovatt-saat
+        one: "{0} kilovatt-saat"
+        other: "{0} kilovatt-saat"
+      narrow:
+        display_name: kVt/saat
+        one: "{0} kVt/saat"
+        other: "{0} kVt/saat"
+    electronvolt:
+      long:
+        one: "{0} elektronvolt"
+        other: "{0} elektronvolt"
+      short:
+        display_name: elektronvolt
+      narrow:
+        display_name: eV
+    british-thermal-unit:
+      long:
+        display_name: Britaniya termal vahidi
+        one: "{0} Britaniya terman vahidi"
+        other: "{0} Britaniya terman vahidi"
+      short:
+        display_name: BTV
+        one: "{0} Btv"
+        other: "{0} Btv"
+    therm-us:
+      long:
+        display_name: ABŞ termal vahidi
+        one: "{0} ABŞ termal vahidi"
+        other: "{0} ABŞ termal vahidi"
+      short:
+        display_name: ABŞ tv
+        one: "{0} ABŞ tv"
+        other: "{0} ABŞ tv"
+    pound-force:
+      long:
+        one: "{0} güc funtu"
+        other: "{0} güc funtu"
+      short:
+        display_name: güc funtu
+    newton:
+      long:
+        one: "{0} nyuton"
+        other: "{0} nyuton"
+      short:
+        display_name: nyuton
+      narrow:
+        display_name: "N"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        one: "{0} kVtst/100km"
+        other: "{0} kVtst/100km"
+      short:
+        display_name: kVtst/100km
+        one: "{0} kWh/100km"
+        other: "{0} kVtst/100km"
+      narrow:
+        one: "{0} kVts/100km"
+        other: "{0} kVts/100km"
+    gigahertz:
+      long:
+        display_name: giqahers
+        one: "{0} giqahers"
+        other: "{0} giqahers"
+    megahertz:
+      long:
+        display_name: meqahers
+        one: "{0} meqahers"
+        other: "{0} meqahers"
+    kilohertz:
+      long:
+        display_name: kilohers
+        one: "{0} kilohers"
+        other: "{0} kilohers"
+    hertz:
+      long:
+        display_name: hers
+        one: "{0} hers"
+        other: "{0} hers"
+    em:
+      long:
+        display_name: tipoqraf emi
+    pixel:
+      long:
+        one: "{0} piksel"
+        other: "{0} piksel"
+      short:
+        display_name: piksel
+    megapixel:
+      long:
+        one: "{0} meqapiksel"
+        other: "{0} meqapiksel"
+      short:
+        display_name: meqapiksel
+    pixel-per-centimeter:
+      long:
+        display_name: piksel / santimetr
+        one: "{0} piksel / santimetr"
+        other: "{0} piksel / santimetr"
+      narrow:
+        display_name: p/sm
+        one: "{0} p/sm"
+        other: "{0} p/sm"
+    pixel-per-inch:
+      long:
+        display_name: piksel / düym
+        one: "{0} piksel / düym"
+        other: "{0} piksel / düym"
+      narrow:
+        display_name: p/i
+        one: "{0} p/i"
+        other: "{0} p/i"
+    dot-per-centimeter:
+      long:
+        display_name: nöqtə / santimetr
+        one: "{0} nöqtə / santimetr"
+        other: "{0} nöqtə / santimetr"
+      short:
+        display_name: nöq / sm
+        one: "{0} nöq/sm"
+        other: "{0} nöq/sm"
+    dot-per-inch:
+      long:
+        display_name: nöqtə / düym
+        one: "{0} nöqtə / düym"
+        other: "{0} nöqtə / düym"
+      short:
+        display_name: nöq/düym
+        one: "{0} nöq/düym"
+        other: "{0} nöq/düym"
+    earth-radius:
+      long:
+        one: "{0} yer radiusu"
+        other: "{0} yer radiusu"
+      short:
+        display_name: yer radiusu
+      narrow:
+        display_name: R⊕
+    kilometer:
+      long:
+        one: "{0} kilometr"
+        other: "{0} kilometr"
+      short:
+        display_name: kilometr
+    meter:
+      long:
+        one: "{0} metr"
+        other: "{0} metr"
+      short:
+        display_name: metr
+    centimeter:
+      long:
+        display_name: santimetr
+        one: "{0} santimetr"
+        other: "{0} santimetr"
+      short:
+        display_name: sm
+        one: "{0} sm"
+        other: "{0} sm"
+        per_unit_pattern: "{0}/sm"
+    millimeter:
+      long:
+        one: "{0} millimetr"
+        other: "{0} millimetr"
+      short:
+        display_name: millimetr
+    picometer:
+      long:
+        one: "{0} pikometr"
+        other: "{0} pikometr"
+      short:
+        display_name: pikometr
+      narrow:
+        display_name: pm
+    yard:
+      long:
+        one: "{0} yard"
+        other: "{0} yard"
+      short:
+        display_name: yard
+      narrow:
+        display_name: yd
+    foot:
+      long:
+        one: "{0} fut"
+        other: "{0} fut"
+      short:
+        display_name: fut
+      narrow:
+        display_name: ft
+    inch:
+      long:
+        one: "{0} düym"
+        other: "{0} düym"
+      short:
+        display_name: düym
+    light-year:
+      long:
+        one: "{0} işıq ili"
+        other: "{0} işıq ili"
+      short:
+        display_name: işıq ili
+        one: "{0} ii"
+        other: "{0} ii"
+      narrow:
+        display_name: ii
+    astronomical-unit:
+      long:
+        display_name: astronomik vahid
+        one: "{0} astronomik vahid"
+        other: "{0} astronomik vahid"
+      short:
+        display_name: av
+        one: "{0} av"
+        other: "{0} av"
+    fathom:
+      long:
+        one: "{0} fatom"
+        other: "{0} fatom"
+      short:
+        display_name: fatom
+    solar-radius:
+      long:
+        display_name: Günəş radiusu
+        one: "{0} günəş radiusu"
+        other: "{0} günəş radiusu"
+      short:
+        display_name: günəş radiusu
+      narrow:
+        display_name: R☉
+    lux:
+      long:
+        display_name: lüks
+        one: "{0} lüks"
+        other: "{0} lüks"
+    candela:
+      long:
+        display_name: kandela
+        one: "{0} kandela"
+        other: "{0} kandela"
+      short:
+        display_name: kd
+        one: "{0} kd"
+        other: "{0} kd"
+    lumen:
+      long:
+        display_name: lümen
+        one: "{0} lümen"
+        other: "{0} lümen"
+    solar-luminosity:
+      long:
+        one: "{0} gün işığı"
+        other: "{0} gün işığı"
+      short:
+        display_name: gün işığı
+    tonne:
+      long:
+        display_name: metrik ton
+        one: "{0} metrik ton"
+        other: "{0} metrik ton"
+    kilogram:
+      long:
+        one: "{0} kiloqram"
+        other: "{0} kiloqram"
+      short:
+        display_name: kiloqram
+        one: "{0} kq"
+        other: "{0} kq"
+        per_unit_pattern: "{0}/kq"
+    gram:
+      long:
+        one: "{0} qram"
+        other: "{0} qram"
+      short:
+        display_name: qram
+        one: "{0} q"
+        other: "{0} q"
+        per_unit_pattern: "{0}/q"
+    milligram:
+      long:
+        display_name: milliqram
+        one: "{0} milliqram"
+        other: "{0} milliqram"
+      short:
+        display_name: mq
+        one: "{0} mq"
+        other: "{0} mq"
+    microgram:
+      long:
+        display_name: mikroqram
+        one: "{0} mikroqram"
+        other: "{0} mikroqram"
+      short:
+        display_name: μq
+        one: "{0} μq"
+        other: "{0} μq"
+    ton:
+      long:
+        display_name: ton
+        one: "{0} ton"
+        other: "{0} ton"
+    pound:
+      long:
+        one: "{0} funt"
+        other: "{0} funt"
+      short:
+        display_name: funt
+    ounce:
+      long:
+        one: "{0} unsiya"
+        other: "{0} unsiya"
+      short:
+        display_name: unsiya
+    ounce-troy:
+      long:
+        display_name: troy unsiyası
+        one: "{0} troy unsiyası"
+        other: "{0} troy unsiyası"
+    carat:
+      long:
+        display_name: karat
+        one: "{0} karat"
+        other: "{0} karat"
+      narrow:
+        display_name: karat
+    dalton:
+      long:
+        one: "{0} dalton"
+        other: "{0} dalton"
+      short:
+        display_name: dalton
+      narrow:
+        display_name: Da
+    earth-mass:
+      long:
+        one: "{0} yer kütləsi"
+        other: "{0} yer kütləsi"
+      short:
+        display_name: yer kütləsi
+      narrow:
+        display_name: M⊕
+    solar-mass:
+      long:
+        one: "{0} günəş kütləsi"
+        other: "{0} günəş kütləsi"
+      short:
+        display_name: günəş kütləsi
+      narrow:
+        display_name: M☉
+    gigawatt:
+      long:
+        display_name: giqavatt
+        one: "{0} giqavatt"
+        other: "{0} giqavatt"
+      narrow:
+        display_name: GVt
+        one: "{0} GVt"
+        other: "{0} GVt"
+    megawatt:
+      long:
+        display_name: meqavatt
+        one: "{0} meqavatt"
+        other: "{0} meqavatt"
+      narrow:
+        display_name: MVt
+        one: "{0} MVt"
+        other: "{0} MVt"
+    kilowatt:
+      long:
+        one: "{0} kilovatt"
+        other: "{0} kilovatt"
+      short:
+        display_name: kilovatt
+      narrow:
+        display_name: kVt
+        one: "{0} kVt"
+        other: "{0} kVt"
+    watt:
+      long:
+        one: "{0} vatt"
+        other: "{0} vatt"
+      short:
+        display_name: vatt
+      narrow:
+        display_name: Vt
+        one: "{0} Vt"
+        other: "{0} Vt"
+    milliwatt:
+      long:
+        display_name: millivatt
+        one: "{0} millivatt"
+        other: "{0} millivatt"
+      narrow:
+        display_name: mVt
+        one: "{0} mVt"
+        other: "{0} mVt"
+    horsepower:
+      long:
+        one: "{0} at gücü"
+        other: "{0} at gücü"
+      short:
+        display_name: at gücü
+      narrow:
+        display_name: ag
+        one: "{0} ag"
+        other: "{0} ag"
+    millimeter-ofhg:
+      long:
+        display_name: millimetr civə sütunu
+        one: "{0} millimetr civə sütunu"
+        other: "{0} millimetr civə sütunu"
+    pound-force-per-square-inch:
+      long:
+        display_name: funt/kvadrat düym
+        one: "{0} funt/kvadrat düym"
+        other: "{0} funt/kvadrat düym"
+    millibar:
+      long:
+        one: "{0} millibar"
+        other: "{0} millibar"
+      short:
+        display_name: millibar
+      narrow:
+        one: "{0} mb"
+        other: "{0} mb"
+    atmosphere:
+      long:
+        display_name: atmosfer
+        one: "{0} atmosfer"
+        other: "{0} atmosfer"
+    pascal:
+      long:
+        display_name: paskal
+        one: "{0} paskal"
+        other: "{0} paskal"
+    hectopascal:
+      long:
+        one: "{0} hektopaskal"
+        other: "{0} hektopaskal"
+      short:
+        display_name: hektopaskal
+    kilopascal:
+      long:
+        display_name: kilopaskal
+        one: "{0} kilopaskal"
+        other: "{0} kilopaskal"
+    megapascal:
+      long:
+        display_name: meqapaskal
+        one: "{0} meqapaskal"
+        other: "{0} meqapaskal"
+    kilometer-per-hour:
+      long:
+        one: "{0} kilometr/saat"
+        other: "{0} kilometr/saat"
+      short:
+        display_name: kilometr/saat
+        one: "{0} km/saat"
+        other: "{0} km/saat"
+    meter-per-second:
+      long:
+        one: "{0} metr/saniyə"
+        other: "{0} metr/saniyə"
+      short:
+        display_name: metr/saniyə
+      narrow:
+        display_name: m/s
+    beaufort:
+      long:
+        one: Bofor {0}
+        other: Bofor {0}
+      short:
+        display_name: Bofor
+    celsius:
+      long:
+        one: "{0} dərəcə Selsi"
+        other: "{0} dərəcə Selsi"
+      short:
+        display_name: dərəcə Selsi
+      narrow:
+        display_name: "°C"
+        one: "{0}°"
+        other: "{0}°"
+    fahrenheit:
+      long:
+        one: "{0} dərəcə Farengeyt"
+        other: "{0} dərəcə Farengeyt"
+      short:
+        display_name: dərəcə Farengeyt
+      narrow:
+        display_name: "°F"
+    kelvin:
+      long:
+        display_name: dərəcə Kelvin
+        one: "{0} dərəcə Kelvin"
+        other: "{0} dərəcə Kelvin"
+    pound-force-foot:
+      long:
+        display_name: funt-fut
+        one: "{0} funt-fut"
+        other: "{0} funt-fut"
+    newton-meter:
+      long:
+        display_name: nyuton-metr
+        one: "{0} nyuton-metr"
+        other: "{0} nyuton-metr"
+    cubic-kilometer:
+      long:
+        display_name: kub kilometr
+        one: "{0} kub kilometr"
+        other: "{0} kub kilometr"
+    cubic-meter:
+      long:
+        display_name: kub metr
+        one: "{0} kub metr"
+        other: "{0} kub metr"
+    cubic-centimeter:
+      long:
+        display_name: kub santimetr
+        one: "{0} kub santimetr"
+        other: "{0} kub santimetr"
+      short:
+        display_name: sm³
+        one: "{0} sm³"
+        other: "{0} sm³"
+        per_unit_pattern: "{0}/sm³"
+    cubic-mile:
+      long:
+        one: "{0} kub mil"
+        other: "{0} kub mil"
+      short:
+        display_name: kub mil
+        one: "{0} mil³"
+        other: "{0} mil³"
+      narrow:
+        display_name: mil³
+    cubic-yard:
+      long:
+        display_name: kub yard
+        one: "{0} kub yard"
+        other: "{0} kub yard"
+    cubic-foot:
+      long:
+        display_name: kub fut
+        one: "{0} kub fut"
+        other: "{0} kub fut"
+    cubic-inch:
+      long:
+        display_name: kub düym
+        one: "{0} kub düym"
+        other: "{0} kub düym"
+    megaliter:
+      long:
+        display_name: meqalitr
+        one: "{0} meqalitr"
+        other: "{0} meqalitr"
+      narrow:
+        display_name: Ml
+        one: "{0} Ml"
+        other: "{0} Ml"
+    hectoliter:
+      long:
+        display_name: hektolitr
+        one: "{0} hektolitr"
+        other: "{0} hektolitr"
+      narrow:
+        display_name: hl
+        one: "{0} hl"
+        other: "{0} hl"
+    liter:
+      long:
+        one: "{0} litr"
+        other: "{0} litr"
+      short:
+        display_name: litr
+    deciliter:
+      long:
+        display_name: desilitr
+        one: "{0} desilitr"
+        other: "{0} desilitr"
+      narrow:
+        display_name: dl
+        one: "{0} dl"
+        other: "{0} dl"
+    centiliter:
+      long:
+        display_name: santilitr
+        one: "{0} santilitr"
+        other: "{0} santilitr"
+      short:
+        display_name: sL
+        one: "{0} sL"
+        other: "{0} sL"
+      narrow:
+        display_name: sl
+        one: "{0} sl"
+        other: "{0} sl"
+    milliliter:
+      long:
+        display_name: millilitr
+        one: "{0} millilitr"
+        other: "{0} millilitr"
+      narrow:
+        display_name: ml
+        one: "{0} ml"
+        other: "{0} ml"
+    acre-foot:
+      long:
+        display_name: akr-fut
+        one: "{0} akr-fut"
+        other: "{0} akr-fut"
+      narrow:
+        display_name: ak-ft
+        one: "{0} ak-ft"
+        other: "{0} ak-ft"
+    gallon:
+      long:
+        display_name: qallon
+        one: "{0} qallon"
+        other: "{0} qallon"
+      short:
+        display_name: qal
+        one: "{0} qal"
+        other: "{0} qal"
+        per_unit_pattern: "{0}/qal"
+    gallon-imperial:
+      long:
+        display_name: İmp. qallon
+        one: "{0} imp. qallon"
+        other: "{0} imp. qallon"
+        per_unit_pattern: "{0}/imp. qallon"
+      short:
+        display_name: İmp. qal
+        one: "{0} imp. qal"
+        other: "{0} imp. qal"
+        per_unit_pattern: "{0}/imp. qal"
+      narrow:
+        one: "{0} imp.qal"
+        other: "{0} imp.qal"
+    quart:
+      long:
+        display_name: kvart
+        one: "{0} kvart"
+        other: "{0} kvart"
+    pint:
+      long:
+        display_name: pint
+        one: "{0} pint"
+        other: "{0} pint"
+    cup:
+      long:
+        display_name: stəkan
+        one: "{0} stəkan"
+        other: "{0} stəkan"
+      short:
+        display_name: st
+        one: "{0} st"
+        other: "{0} st"
+    fluid-ounce:
+      long:
+        display_name: maye unsiyası
+        one: "{0} maye unsiyası"
+        other: "{0} maye unsiyası"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: İmp. maye unsiyası
+      short:
+        display_name: İmp. fl oz
+        one: "{0} fl oz İmp."
+        other: "{0} fl oz İmp."
+      narrow:
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        display_name: xörək qaşığı
+        one: "{0} xörək qaşığı"
+        other: "{0} xörək qaşığı"
+      short:
+        display_name: xrqş
+        one: "{0} xrqş"
+        other: "{0} xrqş"
+    teaspoon:
+      long:
+        display_name: çay qaşığı
+        one: "{0} çay qaşığı"
+        other: "{0} çay qaşığı"
+      short:
+        display_name: çyqş
+        one: "{0} çyqş"
+        other: "{0} çyqş"
+    barrel:
+      long:
+        display_name: barrel
+    dessert-spoon:
+      long:
+        display_name: dessert qaşığı
+        one: "{0} dessert qaşığı"
+        other: "{0} dessert qaşığı"
+      short:
+        display_name: des.qaş.
+        one: "{0} des.qaş."
+        other: "{0} des.qaş."
+      narrow:
+        display_name: dsp
+        one: "{0} dsp"
+        other: "{0} dsp"
+    dessert-spoon-imperial:
+      long:
+        display_name: İmp. dessert qaşığı
+        one: "{0} İmp. dessert qaşığı"
+        other: "{0} İmp. dessert qaşığı"
+      short:
+        display_name: des.qaş. İmp.
+        one: "{0} des.qaş. İmp"
+        other: "{0} des.qaş. İmp."
+      narrow:
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+    quart-imperial:
+      long:
+        display_name: İmp. kvarta
+        one: "{0} İmp. kvarta"
+        other: "{0} İmp. kvarta"
+      short:
+        display_name: kvarta İmp.
+        one: "{0} kvarta İmp."
+        other: "{0} kvarta İmp."
+      narrow:
+        one: "{0}qt-Imp."
+        other: "{0}qt-Imp."
+    light-speed:
+      long:
+        display_name: işıq
+        one: "{0} işıq"
+        other: "{0} işıq"
+      short:
+        display_name: işıq
+        one: "{0} işıq"
+        other: "{0} işıq"
+      narrow:
+        display_name: işıq
+        one: "{0}işıq"
+        other: "{0}işıq"
+    portion-per-1e9:
+      long:
+        display_name: bir milyarda düşən hissə sayı
+        one: bir milyarda düşən {0} hissə
+        other: bir milyarda düşən {0} hissə
+      short:
+        display_name: hissə/milyard
+    night:
+      long:
+        display_name: gecə
+        one: "{0} gecə"
+        other: "{0} gecə"
+        per_unit_pattern: "{0}/gecə"
+      short:
+        display_name: gecə
+        one: "{0} gecə"
+        other: "{0} gecə"
+        per_unit_pattern: "{0}/gecə"
+      narrow:
+        display_name: gecə
+        one: "{0}gecə"
+        other: "{0}gecə"
+        per_unit_pattern: "{0}/gecə"
+    dunam:
+      short:
+        display_name: dönüm
+        one: "{0} dönüm"
+        other: "{0} dönüm"
+    item:
+      short:
+        display_name: element
+        one: "{0} element"
+        other: "{0} element"
+    byte:
+      short:
+        display_name: bayt
+        one: "{0} bayt"
+        other: "{0} bayt"
+    century:
+      short:
+        display_name: əsr
+        one: "{0} əsr"
+        other: "{0} əsr"
+    year:
+      short:
+        display_name: il
+        one: "{0} il"
+        other: "{0} il"
+        per_unit_pattern: "{0}/il"
+    quarter:
+      short:
+        display_name: rüb
+        one: "{0} r"
+        other: "{0} r"
+        per_unit_pattern: "{0}/r"
+    month:
+      short:
+        display_name: ay
+        one: "{0} ay"
+        other: "{0} ay"
+        per_unit_pattern: "{0}/ay"
+    day:
+      short:
+        display_name: gün
+        one: "{0} gün"
+        other: "{0} gün"
+        per_unit_pattern: "{0}/gün"
+    hour:
+      short:
+        display_name: saat
+        one: "{0} saat"
+        other: "{0} saat"
+        per_unit_pattern: "{0}/saat"
+    dot:
+      short:
+        display_name: nöqtələr
+        one: "{0} nöqtə"
+        other: "{0} nöqtə"
+      narrow:
+        display_name: nöqtə
+    mile:
+      short:
+        display_name: mil
+        one: "{0} mil"
+        other: "{0} mil"
+    furlong:
+      short:
+        display_name: farlonq
+        one: "{0} farlonq"
+        other: "{0} farlonq"
+      narrow:
+        one: "{0} far"
+        other: "{0} far"
+    point:
+      short:
+        display_name: xal
+        one: "{0} xal"
+        other: "{0} xal"
+    stone:
+      short:
+        display_name: stone
+        one: "{0} stone"
+        other: "{0} stone"
+      narrow:
+        display_name: stoun
+        one: "{0} stoun"
+        other: "{0} stoun"
+    grain:
+      short:
+        display_name: qranul
+        one: "{0} qranul"
+        other: "{0} qranul"
+    inch-ofhg:
+      short:
+        display_name: civə düymü
+        one: "{0} civə düymü"
+        other: "{0} civə düymü"
+      narrow:
+        one: "{0} inHg"
+        other: "{0} inHg"
+    mile-per-hour:
+      short:
+        display_name: mil/saat
+        one: "{0} mil/saat"
+        other: "{0} mil/saat"
+    bushel:
+      short:
+        display_name: buşel
+        one: "{0} buşel"
+        other: "{0} buşel"
+    drop:
+      short:
+        display_name: damcı
+        one: "{0} damcı"
+        other: "{0} damcı"
+      narrow:
+        display_name: dc
+        one: "{0} dc"
+        other: "{0} dc"
+    dram:
+      short:
+        display_name: dram
+        one: "{0} dram"
+        other: "{0} dram"
+    pinch:
+      short:
+        display_name: çimdik
+        one: "{0} çimdik"
+        other: "{0} çimdik"
+    parsec:
+      narrow:
+        display_name: ps
+        one: "{0} ps"
+        other: "{0} ps"
+    pint-metric:
+      narrow:
+        display_name: pt
+    cup-metric:
+      narrow:
+        display_name: mfincan
+        one: "{0} mf"
+        other: "{0} mf"

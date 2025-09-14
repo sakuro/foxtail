@@ -1,12 +1,22 @@
 ---
 locale: mas
-generated_at: '2025-09-13T17:38:59Z'
+generated_at: '2025-09-14T06:11:06Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Iropiyianí ɔ́ɔ̄ lmarabu
+        one: Iropiyianí ɔ́ɔ̄ lmarabu
     AOA:
       display_names:
         other: Iropiyianí e Angola
@@ -15,98 +25,6 @@ number_formats:
       display_names:
         other: Iropiyianí e Austria
         one: Iropiyianí e Austria
-    BWP:
-      display_names:
-        other: Iropiyianí e Botswana
-        one: Iropiyianí e Botswana
-    CAD:
-      display_names:
-        other: Iropiyianí e Kanada
-        one: Iropiyianí e Kanada
-    CNY:
-      display_names:
-        other: Iropiyianí e China
-        one: Iropiyianí e China
-    EGP:
-      display_names:
-        other: Iropiyianí e Misri
-        one: Iropiyianí e Misri
-    EUR:
-      display_names:
-        other: Iropiyianí e yuro
-        one: Iropiyianí e yuro
-    GBP:
-      display_names:
-        other: Iropiyianí e Nkɨ́resa
-        one: Iropiyianí e Nkɨ́resa
-    INR:
-      display_names:
-        other: Iropiyianí e India
-        one: Iropiyianí e India
-    JPY:
-      display_names:
-        other: Iropiyianí e Japani
-        one: Iropiyianí e Japani
-    KMF:
-      display_names:
-        other: Iropiyianí e Komoro
-        one: Iropiyianí e Komoro
-    LRD:
-      display_names:
-        other: Iropiyianí e Liberia
-        one: Iropiyianí e Liberia
-    MGA:
-      display_names:
-        other: Iropiyianí e Bukini
-        one: Iropiyianí e Bukini
-    MUR:
-      display_names:
-        other: Iropiyianí e Morisi
-        one: Iropiyianí e Morisi
-    NAD:
-      display_names:
-        other: Iropiyianí e Namibia
-        one: Iropiyianí e Namibia
-    NGN:
-      display_names:
-        other: Iropiyianí e Nijeria
-        one: Iropiyianí e Nijeria
-    RWF:
-      display_names:
-        other: Iropiyianí e Rwanda
-        one: Iropiyianí e Rwanda
-    SHP:
-      display_names:
-        other: Iropiyianí e Santahelena
-        one: Iropiyianí e Santahelena
-    STN:
-      display_names:
-        other: Iropiyianí e Saotome
-        one: Iropiyianí e Saotome
-    USD:
-      display_names:
-        other: Iropiyianí ɔ́ɔ̄ lamarekani
-        one: Iropiyianí ɔ́ɔ̄ lamarekani
-    XAF:
-      display_names:
-        other: Iropiyianí e CFA BEAC
-        one: Iropiyianí e CFA BEAC
-    XOF:
-      display_names:
-        other: Iropiyianí e CFA BCEAO
-        one: Iropiyianí e CFA BCEAO
-    ZAR:
-      display_names:
-        other: Iropiyianí e Afrika Kusini
-        one: Iropiyianí e Afrika Kusini
-    ZMW:
-      display_names:
-        other: Iropiyianí e Sambia
-        one: Iropiyianí e Sambia
-    AED:
-      display_names:
-        other: Iropiyianí ɔ́ɔ̄ lmarabu
-        one: Iropiyianí ɔ́ɔ̄ lmarabu
     BHD:
       display_names:
         other: Iropiyianí e Bahareini
@@ -115,6 +33,14 @@ number_formats:
       display_names:
         other: Iropiyianí e Burundi
         one: Iropiyianí e Burundi
+    BWP:
+      display_names:
+        other: Iropiyianí e Botswana
+        one: Iropiyianí e Botswana
+    CAD:
+      display_names:
+        other: Iropiyianí e Kanada
+        one: Iropiyianí e Kanada
     CDF:
       display_names:
         other: Iropiyianí e Kongo
@@ -123,6 +49,10 @@ number_formats:
       display_names:
         other: Iropiyianí e Uswisi
         one: Iropiyianí e Uswisi
+    CNY:
+      display_names:
+        other: Iropiyianí e China
+        one: Iropiyianí e China
     CVE:
       display_names:
         other: Iropiyianí e Kepuvede
@@ -135,6 +65,10 @@ number_formats:
       display_names:
         other: Iropiyianí e Algeria
         one: Iropiyianí e Algeria
+    EGP:
+      display_names:
+        other: Iropiyianí e Misri
+        one: Iropiyianí e Misri
     ERN:
       display_names:
         other: Iropiyianí e Eritrea
@@ -143,6 +77,14 @@ number_formats:
       display_names:
         other: Iropiyianí e Uhabeshi
         one: Iropiyianí e Uhabeshi
+    EUR:
+      display_names:
+        other: Iropiyianí e yuro
+        one: Iropiyianí e yuro
+    GBP:
+      display_names:
+        other: Iropiyianí e Nkɨ́resa
+        one: Iropiyianí e Nkɨ́resa
     GHC:
       display_names:
         other: Iropiyianí e Ghana
@@ -155,11 +97,27 @@ number_formats:
       display_names:
         other: Iropiyianí e Gine
         one: Iropiyianí e Gine
+    INR:
+      display_names:
+        other: Iropiyianí e India
+        one: Iropiyianí e India
+    JPY:
+      display_names:
+        other: Iropiyianí e Japani
+        one: Iropiyianí e Japani
     KES:
       symbol: Ksh
       display_names:
         other: Iropiyianí e Kenya
         one: Iropiyianí e Kenya
+    KMF:
+      display_names:
+        other: Iropiyianí e Komoro
+        one: Iropiyianí e Komoro
+    LRD:
+      display_names:
+        other: Iropiyianí e Liberia
+        one: Iropiyianí e Liberia
     LSL:
       display_names:
         other: Iropiyianí e Lesoto
@@ -172,6 +130,10 @@ number_formats:
       display_names:
         other: Iropiyianí e Moroko
         one: Iropiyianí e Moroko
+    MGA:
+      display_names:
+        other: Iropiyianí e Bukini
+        one: Iropiyianí e Bukini
     MRO:
       display_names:
         other: Iropiyianí e Moritania (1973–2017)
@@ -180,6 +142,10 @@ number_formats:
       display_names:
         other: Iropiyianí e Moritania
         one: Iropiyianí e Moritania
+    MUR:
+      display_names:
+        other: Iropiyianí e Morisi
+        one: Iropiyianí e Morisi
     MWK:
       display_names:
         other: Iropiyianí e Malawi
@@ -188,6 +154,18 @@ number_formats:
       display_names:
         other: Iropiyianí e Msumbiji
         one: Iropiyianí e Msumbiji
+    NAD:
+      display_names:
+        other: Iropiyianí e Namibia
+        one: Iropiyianí e Namibia
+    NGN:
+      display_names:
+        other: Iropiyianí e Nijeria
+        one: Iropiyianí e Nijeria
+    RWF:
+      display_names:
+        other: Iropiyianí e Rwanda
+        one: Iropiyianí e Rwanda
     SAR:
       display_names:
         other: Iropiyianí e Saudi
@@ -200,6 +178,10 @@ number_formats:
       display_names:
         other: Iropiyianí e Sudani
         one: Iropiyianí e Sudani
+    SHP:
+      display_names:
+        other: Iropiyianí e Santahelena
+        one: Iropiyianí e Santahelena
     SLE:
       display_names:
         other: Iropiyianí e leoni
@@ -216,6 +198,10 @@ number_formats:
       display_names:
         other: Iropiyianí e Saotome (1977–2017)
         one: Iropiyianí e Saotome (1977–2017)
+    STN:
+      display_names:
+        other: Iropiyianí e Saotome
+        one: Iropiyianí e Saotome
     SZL:
       display_names:
         other: Iropiyianí e lilangeni
@@ -232,10 +218,30 @@ number_formats:
       display_names:
         other: Iropiyianí e Uganda
         one: Iropiyianí e Uganda
+    USD:
+      display_names:
+        other: Iropiyianí ɔ́ɔ̄ lamarekani
+        one: Iropiyianí ɔ́ɔ̄ lamarekani
+    XAF:
+      display_names:
+        other: Iropiyianí e CFA BEAC
+        one: Iropiyianí e CFA BEAC
+    XOF:
+      display_names:
+        other: Iropiyianí e CFA BCEAO
+        one: Iropiyianí e CFA BCEAO
+    ZAR:
+      display_names:
+        other: Iropiyianí e Afrika Kusini
+        one: Iropiyianí e Afrika Kusini
     ZMK:
       display_names:
         other: Iropiyianí e Sambia (1968–2012)
         one: Iropiyianí e Sambia (1968–2012)
+    ZMW:
+      display_names:
+        other: Iropiyianí e Sambia
+        one: Iropiyianí e Sambia
     ZWD:
       display_names:
         other: Iropiyianí e Simbabwe

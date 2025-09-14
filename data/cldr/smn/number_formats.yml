@@ -1,29 +1,95 @@
 ---
 locale: smn
-generated_at: '2025-09-13T17:40:40Z'
+generated_at: '2025-09-14T06:12:11Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
     nan: epiloho
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    long:
+      '1000':
+        one: 0 tuhháát
+        two: 0 tuhháát
+        other: 0 tuhháát
+      '10000':
+        one: 00 tuhháát
+        two: 00 tuhháát
+        other: 00 tuhháát
+      '100000':
+        one: 000 tuhháát
+        two: 000 tuhháát
+        other: 000 tuhháát
+      '1000000':
+        one: 0 miljovn
+        two: 0 miljovn
+        other: 0 miljovn
+      '10000000':
+        one: 00 miljovn
+        two: 00 miljovn
+        other: 00 miljovn
+      '100000000':
+        one: 000 miljovn
+        two: 000 miljovn
+        other: 000 miljovn
+      '1000000000':
+        one: 0 miljard
+        two: 0 miljard
+        other: 0 miljard
+      '10000000000':
+        one: 00 miljard
+        two: 00 miljard
+        other: 00 miljard
+      '100000000000':
+        one: 000 miljard
+        two: 000 miljard
+        other: 000 miljard
+      '1000000000000':
+        one: 0 biljovn
+        two: 0 biljovn
+        other: 0 biljovn
+      '10000000000000':
+        one: 00 biljovn
+        two: 00 biljovn
+        other: 00 biljovn
+      '100000000000000':
+        one: 000 biljovn
+        two: 000 biljovn
+        other: 000 biljovn
   currencies:
     DKK:
       display_names:
         other: Tanska ruvnâ
         one: Tanska ruvnâ
+    EEK:
+      display_names:
+        other: Eesti ruvnâ
+        one: Eesti ruvnâ
     EUR:
       display_names:
         other: euro
         one: euro
+    FIM:
+      display_names:
+        other: Suomâ märkki
+        one: Suomâ märkki
     ISK:
       display_names:
         other: Island ruvnâ
         one: Island ruvnâ
+    LVR:
+      display_names:
+        other: Latvia ruble
+        one: Latvia ruble
     NOK:
       display_names:
         other: Taažâ ruvnâ
@@ -32,15 +98,34 @@ number_formats:
       display_names:
         other: Ruotâ ruvnâ
         one: Ruotâ ruvnâ
-    EEK:
-      display_names:
-        other: Eesti ruvnâ
-        one: Eesti ruvnâ
-    FIM:
-      display_names:
-        other: Suomâ märkki
-        one: Suomâ märkki
-    LVR:
-      display_names:
-        other: Latvia ruble
-        one: Latvia ruble
+  units:
+    year:
+      long:
+        display_name: iveh
+    month:
+      long:
+        display_name: mánuppajeh
+    week:
+      long:
+        display_name: ohoh
+    day:
+      long:
+        display_name: peeivih
+    hour:
+      long:
+        display_name: tiijmeh
+    minute:
+      long:
+        display_name: minutteh
+    second:
+      long:
+        display_name: sekunteh
+    millisecond:
+      long:
+        display_name: millisekunteh
+    microsecond:
+      long:
+        display_name: mikrosekunteh
+    nanosecond:
+      long:
+        display_name: nanosekunteh

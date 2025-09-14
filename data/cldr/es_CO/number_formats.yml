@@ -1,232 +1,81 @@
 ---
 locale: es_CO
-generated_at: '2025-09-13T17:36:34Z'
+generated_at: '2025-09-14T06:09:34Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
-  decimal_formats:
-    standard: "#,##0.###"
   percent_formats:
-    standard: "#,##0%"
+    standard: 
   currency_formats:
     standard: "¤ #,##0.00"
-  scientific_formats:
-    standard: "#E0"
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
-    ARS:
-      symbol: "$"
-    AUD:
-      symbol: A$
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
-    BZD:
-      symbol: "$"
-    CAD:
-      symbol: CA$
-    CLP:
-      symbol: "$"
-    CNY:
-      symbol: CN¥
     COP:
       symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
-    EGP:
-      symbol: E£
-    ESP:
-      symbol: "₧"
-    EUR:
-      symbol: "€"
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
-    GBP:
-      symbol: "£"
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
-    HKD:
-      symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
-    INR:
-      symbol: "₹"
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
-    JPY:
-      symbol: JP¥
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
-    KMF:
-      symbol: CF
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
-    LRD:
-      symbol: "$"
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
-    MXN:
-      symbol: MX$
-    MYR:
-      symbol: RM
-    NAD:
-      symbol: "$"
-    NGN:
-      symbol: "₦"
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
-    NZD:
-      symbol: NZ$
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
-    RWF:
-      symbol: RF
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
-    SHP:
-      symbol: "£"
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
-    TRY:
-      symbol: "₺"
-    TTD:
-      symbol: "$"
-    TWD:
-      symbol: NT$
-    UAH:
-      symbol: "₴"
     USD:
       symbol: US$
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
-    XAF:
-      symbol: FCFA
-    XCD:
-      symbol: EC$
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: F CFA
-    XPF:
-      symbol: CFPF
-    XXX:
-      symbol: "¤"
-    ZAR:
-      symbol: R
-    ZMW:
-      symbol: ZK
+  units:
+    month:
+      long:
+        per_unit_pattern: "{0}/mes"
+      category: duration
+      short:
+        display_name: mes
+        one: "{0} mes"
+        other: "{0} meses"
+        per_unit_pattern: "{0}/mes"
+      narrow:
+        display_name: mes
+        one: "{0} mes"
+        other: "{0} meses"
+    week:
+      long:
+        per_unit_pattern: "{0}/sem."
+      category: duration
+      narrow:
+        one: "{0} sem."
+        other: "{0} sems."
+    year:
+      short:
+        display_name: a.
+        other: "{0} a."
+        per_unit_pattern: "{0}/año"
+      category: duration
+      narrow:
+        one: "{0} a."
+        other: "{0} a."
+    day:
+      short:
+        display_name: días
+        one: "{0} día"
+        other: "{0} días"
+        per_unit_pattern: "{0}/día"
+      category: duration
+      narrow:
+        display_name: día
+        one: "{0} día"
+        other: "{0} días"
+    hour:
+      narrow:
+        one: "{0} h"
+        other: "{0} h"
+      category: duration
+    minute:
+      narrow:
+        one: "{0} min"
+        other: "{0} min"
+      category: duration
+    second:
+      narrow:
+        one: "{0} s"
+        other: "{0} s"
+      category: duration
+    millisecond:
+      narrow:
+        one: "{0} ms"
+        other: "{0} ms"
+      category: duration
 currency_fractions:
   ADP:
     digits: 0

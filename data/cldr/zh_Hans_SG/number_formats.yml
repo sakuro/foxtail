@@ -1,16 +1,78 @@
 ---
 locale: zh_Hans_SG
-generated_at: '2025-09-13T17:41:56Z'
+generated_at: '2025-09-14T06:13:03Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
+  scientific_formats:
+    standard: 
+  compact_formats: {}
   currencies:
-    NIO:
-      display_names:
-        other: 尼加拉瓜科多巴
     ANG:
       display_names:
         other: 荷兰安的列斯盾
+    CNY:
+      symbol: CN¥
+    NIO:
+      display_names:
+        other: 尼加拉瓜科多巴
+    SGD:
+      symbol: "$"
     XAG:
       display_names:
         other: 白银
         one: 白银
+  units:
+    karat:
+      long:
+        display_name: 开
+        other: "{0}开"
+      category: concentr
+      short:
+        display_name: 开
+        other: "{0}开"
+      narrow:
+        other: "{0}开"
+    second:
+      long:
+        other: "{0}秒"
+      category: duration
+    kelvin:
+      long:
+        display_name: 开氏度
+        other: "{0}开氏度"
+      category: temperature
+      short:
+        display_name: 开氏度
+        other: "{0}°K"
+    g-force:
+      short:
+        other: "{0}G力"
+      category: acceleration
+    picometer:
+      narrow:
+        other: "{0}皮米"
+      category: length
+    mile:
+      narrow:
+        other: "{0}英里"
+      category: length
+    yard:
+      narrow:
+        other: "{0}码"
+      category: length
+    foot:
+      narrow:
+        other: "{0}英尺"
+      category: length
+    inch:
+      narrow:
+        other: "{0}英寸"
+      category: length
+    light-year:
+      narrow:
+        other: "{0}光年"
+      category: length

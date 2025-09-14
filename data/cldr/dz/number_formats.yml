@@ -1,6 +1,6 @@
 ---
 locale: dz
-generated_at: '2025-09-13T17:35:40Z'
+generated_at: '2025-09-14T06:09:04Z'
 cldr_version: '46'
 number_formats:
   decimal_formats:
@@ -9,7 +9,39 @@ number_formats:
     standard: "#,##,##0 %"
   currency_formats:
     standard: "¤#,##,##0.00"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    long:
+      '1000':
+        other: སྟོང་ཕྲག 0
+      '10000':
+        other: ཁྲི་ཕྲག 0
+      '100000':
+        other: འབུམ་ཕྲག 0
+      '1000000':
+        other: ས་ཡ་ 0
+      '10000000':
+        other: བྱེ་བ་ 0
+      '100000000':
+        other: དུང་ཕྱུར་ 0
+      '1000000000':
+        other: དུང་ཕྱུར་ 00
+      '10000000000':
+        other: དུང་ཕྱུར་བརྒྱ་ 0
+      '100000000000':
+        other: དུང་ཕྱུར་སྟོང 0
+      '1000000000000':
+        other: དུང་ཕྱུར་ཁྲི་ 0
+      '10000000000000':
+        other: དུང་ཕྱུར་འབུམ་ 0
+      '100000000000000':
+        other: དུང་ཕྱུར་ས་ཡ་ 0
   currencies:
+    AED:
+      display_names:
+        other: ཡུ་ནཱའི་ཊེཌ་ ཨ་རབ་ ཨེ་མེ་རེཊས་ཀྱི་དངུལ་ ཌིར་ཧཱམ
+        one: ཡུ་ནཱའི་ཊེཌ་ ཨ་རབ་ ཨེ་མེ་རེཊས་ཀྱི་དངུལ་ ཌིར་ཧཱམ
     AFN:
       display_names:
         other: ཨཕ་གཱན་གྱི་དངུལ་ ཨཕ་ག་ནི
@@ -31,10 +63,19 @@ number_formats:
       display_names:
         other: བྲ་ཛིལ་གྱི་དངུལ་ རེ་ཡལ
         one: བྲ་ཛིལ་གྱི་དངུལ་ རེ་ཡལ
+    BTN:
+      symbol: Nu.
+      display_names:
+        other: དངུལ་ཀྲམ
+        one: དངུལ་ཀྲམ
     CAD:
       display_names:
         other: ཀེ་ན་ཌ་གི་དངུལ་ ཌོ་ལར
         one: ཀེ་ན་ཌ་གི་དངུལ་ ཌོ་ལར
+    CHF:
+      display_names:
+        other: སུ་ཡིས་ཀྱི་དངུལ་ ཕྲངཀ
+        one: སུ་ཡིས་ཀྱི་དངུལ་ ཕྲངཀ
     CLP:
       display_names:
         other: ཅི་ལི་གི་དངུལ་ པེ་སོ
@@ -55,6 +96,10 @@ number_formats:
       display_names:
         other: ཌེན་མཱཀ་གི་དངུལ་ ཀྲོན
         one: ཌེན་མཱཀ་གི་དངུལ་ ཀྲོན
+    DZD:
+      display_names:
+        other: ཨཱལ་ཇི་རི་ཡ་གི་དངུལ་ ཌའི་ནར
+        one: ཨཱལ་ཇི་རི་ཡ་གི་དངུལ་ ཌའི་ནར
     EGP:
       display_names:
         other: ཨི་ཇིབཊ་གི་དངུལ་ པ་འུནཌ
@@ -84,6 +129,14 @@ number_formats:
       display_names:
         other: རྒྱ་གར་གྱི་དངུལ་ རུ་པི
         one: རྒྱ་གར་གྱི་དངུལ་ རུ་པི
+    IQD:
+      display_names:
+        other: ཨི་རཱཀ་གི་དངུལ་ ཌི་ན
+        one: ཨི་རཱཀ་གི་དངུལ་ ཌི་ན
+    IRR:
+      display_names:
+        other: ཨི་རཱན་གྱི་དངུལ་ རི་ཨཱལ
+        one: ཨི་རཱན་གྱི་དངུལ་ རི་ཨཱལ
     ISK:
       display_names:
         other: ཨཱཡིས་ལེནཌ་གི་དངུལ་ ཀྲོ་ན
@@ -92,10 +145,18 @@ number_formats:
       display_names:
         other: ཇཱ་མཻ་ཀ་གི་དངུལ་ ཌོ་ལར
         one: ཇཱ་མཻ་ཀ་གི་དངུལ་ ཌོ་ལར
+    JOD:
+      display_names:
+        other: ཇོར་ཌན་གྱི་དངུལ་ ཌི་ན
+        one: ཇོར་ཌན་གྱི་དངུལ་ ཌི་ན
     JPY:
       display_names:
         other: ཇཱ་པཱན་གྱི་དངུལ་ ཡེན
         one: ཇཱ་པཱན་གྱི་དངུལ་ ཡེན
+    KES:
+      display_names:
+        other: ཀེན་ཡ་གི་དངུལ་ ཤི་ལིང
+        one: ཀེན་ཡ་གི་དངུལ་ ཤི་ལིང
     KHR:
       display_names:
         other: ཀེམ་བྷོ་ཌི་ཡ་གི་དངུལ་ རི་ཨཱལ
@@ -109,6 +170,10 @@ number_formats:
       display_names:
         other: སཱའུཐ་ ཀོ་རི་ཡ་གི་དངུལ་ ཝོན
         one: སཱའུཐ་ ཀོ་རི་ཡ་གི་དངུལ་ ཝོན
+    KWD:
+      display_names:
+        other: ཀུ་ཝེཊ་གི་དངུལ་ ཌི་ན
+        one: ཀུ་ཝེཊ་གི་དངུལ་ ཌི་ན
     KZT:
       display_names:
         other: ཀ་ཛགས་ཏཱན་གྱི་དངུལ་ ཏེང་གེ
@@ -129,6 +194,14 @@ number_formats:
       display_names:
         other: ལཱའི་བེ་རི་ཡ་གི་དངུལ་ ཌོ་ལར
         one: ལཱའི་བེ་རི་ཡ་གི་དངུལ་ ཌོ་ལར
+    LYD:
+      display_names:
+        other: ལི་བི་ཡ་གི་དངུལ་ ཌི་ན
+        one: ལི་བི་ཡ་གི་དངུལ་ ཌི་ན
+    MAD:
+      display_names:
+        other: མོ་རོ་ཀོ་གི་དངུལ་ ཌིར་ཧཱམ
+        one: མོ་རོ་ཀོ་གི་དངུལ་ ཌིར་ཧཱམ
     MMK:
       display_names:
         other: མི་ཡཱན་མར་གྱི་དངུལ་ ཅཱཏ
@@ -137,6 +210,10 @@ number_formats:
       display_names:
         other: སོག་པོའི་དངུལ་ ཏུ་གྲིཀ
         one: སོག་པོའི་དངུལ་ ཏུ་གྲིཀ
+    MVR:
+      display_names:
+        other: མཱལ་དིབས་ཀྱི་དངུལ་ རུ་ཕི་ཡ
+        one: མཱལ་དིབས་ཀྱི་དངུལ་ རུ་ཕི་ཡ
     MXN:
       display_names:
         other: མེཀ་སི་ཀོ་གི་དངུལ་ པེ་སོ
@@ -157,6 +234,18 @@ number_formats:
       display_names:
         other: ནིའུ་ཛི་ལེནཌ་གི་དངུལ་ ཌོ་ལར
         one: ནིའུ་ཛི་ལེནཌ་གི་དངུལ་ ཌོ་ལར
+    OMR:
+      display_names:
+        other: ཨོ་མཱན་གྱི་དངུལ་ རི་ཨཱལ
+        one: ཨོ་མཱན་གྱི་དངུལ་ རི་ཨཱལ
+    PAB:
+      display_names:
+        other: པ་ན་མ་གི་དངུལ་ བཱལ་བོ་ཝ
+        one: པ་ན་མ་གི་དངུལ་ བཱལ་བོ་ཝ
+    PEN:
+      display_names:
+        other: པ་རུ་གི་དངུལ་ ནུ་བོ་ སཱོལ
+        one: པ་རུ་གི་དངུལ་ ནུ་བོ་ སཱོལ
     PHP:
       display_names:
         other: ཕི་ལི་པིནས་གྱི་དངུལ་ པེ་སོ
@@ -169,10 +258,22 @@ number_formats:
       display_names:
         other: པོ་ལེནཌ་ཀྱི་དངུལ ཛ྄ལོ་ཊི
         one: པོ་ལེནཌ་ཀྱི་དངུལ ཛ྄ལོ་ཊི
+    QAR:
+      display_names:
+        other: ཀ་ཊར་གྱི་དངུལ་ རི་ཨཱལ
+        one: ཀ་ཊར་གྱི་དངུལ་ རི་ཨཱལ
     RUB:
       display_names:
         other: ཨུ་རུ་སུ་གི་དངུལ་ རུ་བཱལ
         one: ཨུ་རུ་སུ་གི་དངུལ་ རུ་བཱལ
+    SAR:
+      display_names:
+        other: སཱཝ་དིའི་དངུལ་ རི་ཡཱལ
+        one: སཱཝ་དིའི་དངུལ་ རི་ཡཱལ
+    SCR:
+      display_names:
+        other: སེ་ཤཱལས་ཀྱི་དངུལ་ རུ་པི
+        one: སེ་ཤཱལས་ཀྱི་དངུལ་ རུ་པི
     SEK:
       display_names:
         other: སུའི་ཌེན་གྱི་དངུལ་ ཀྲོ་ན
@@ -190,6 +291,10 @@ number_formats:
       display_names:
         other: ཐཱའི་ལེནཌ་གི་དངུལ་ བཱཏ
         one: ཐཱའི་ལེནཌ་གི་དངུལ་ བཱཏ
+    TJS:
+      display_names:
+        other: ཏ་ཇི་ཀིས་ཏཱན་གྱི་དངུལ་ སོ་མོ་ནི
+        one: ཏ་ཇི་ཀིས་ཏཱན་གྱི་དངུལ་ སོ་མོ་ནི
     TRY:
       display_names:
         other: ཊཱར་ཀི་གི་དངུལ་ ལི་ར
@@ -198,6 +303,14 @@ number_formats:
       display_names:
         other: ཊཱའི་ཝཱན་གི་དངུལ ཌོ་ལར
         one: ཊཱའི་ཝཱན་གི་དངུལ ཌོ་ལར
+    TZS:
+      display_names:
+        other: ཊཱན་ཛཱ་ནི་ཡ་གི་དངུལ་ ཤི་ལིང
+        one: ཊཱན་ཛཱ་ནི་ཡ་གི་དངུལ་ ཤི་ལིང
+    UGX:
+      display_names:
+        other: ཡུ་གྷེན་ཌ་གི་དངུལ་ ཤི་ལིང
+        one: ཡུ་གྷེན་ཌ་གི་དངུལ་ ཤི་ལིང
     USD:
       display_names:
         other: ཡུ་ཨེས་ ཌོ་ལར
@@ -206,10 +319,18 @@ number_formats:
       display_names:
         other: ཡུ་རུ་གུ་ཝའི་གི་དངུལ་ པེ་སོ
         one: ཡུ་རུ་གུ་ཝའི་གི་དངུལ་ པེ་སོ
+    UZS:
+      display_names:
+        other: ཨུས་བེ་ཀིས་ཏཱན་གྱི་དངུལ་ སོམ
+        one: ཨུས་བེ་ཀིས་ཏཱན་གྱི་དངུལ་ སོམ
     VEF:
       display_names:
         other: བེ་ནི་ཛུ་ཝེ་ལ་གི་དངུལ་ བོ་ལི་བར (2008–2018)
         one: བེ་ནི་ཛུ་ཝེ་ལ་གི་དངུལ་ བོ་ལི་བར (2008–2018)
+    VES:
+      display_names:
+        other: བེ་ནི་ཛུ་ཝེ་ལ་གི་དངུལ་ བོ་ལི་བར
+        one: བེ་ནི་ཛུ་ཝེ་ལ་གི་དངུལ་ བོ་ལི་བར
     VND:
       display_names:
         other: བེཊ་ནཱམ་གྱི་དངུལ་ ཌོང
@@ -224,96 +345,39 @@ number_formats:
       display_names:
         other: སཱའུཐ་ ཨཕ་རི་ཀ་གི་དངུལ་ རཱནད
         one: སཱའུཐ་ ཨཕ་རི་ཀ་གི་དངུལ་ རཱནད
-    AED:
-      display_names:
-        other: ཡུ་ནཱའི་ཊེཌ་ ཨ་རབ་ ཨེ་མེ་རེཊས་ཀྱི་དངུལ་ ཌིར་ཧཱམ
-        one: ཡུ་ནཱའི་ཊེཌ་ ཨ་རབ་ ཨེ་མེ་རེཊས་ཀྱི་དངུལ་ ཌིར་ཧཱམ
-    BTN:
-      symbol: Nu.
-      display_names:
-        other: དངུལ་ཀྲམ
-        one: དངུལ་ཀྲམ
-    CHF:
-      display_names:
-        other: སུ་ཡིས་ཀྱི་དངུལ་ ཕྲངཀ
-        one: སུ་ཡིས་ཀྱི་དངུལ་ ཕྲངཀ
-    DZD:
-      display_names:
-        other: ཨཱལ་ཇི་རི་ཡ་གི་དངུལ་ ཌའི་ནར
-        one: ཨཱལ་ཇི་རི་ཡ་གི་དངུལ་ ཌའི་ནར
-    IQD:
-      display_names:
-        other: ཨི་རཱཀ་གི་དངུལ་ ཌི་ན
-        one: ཨི་རཱཀ་གི་དངུལ་ ཌི་ན
-    IRR:
-      display_names:
-        other: ཨི་རཱན་གྱི་དངུལ་ རི་ཨཱལ
-        one: ཨི་རཱན་གྱི་དངུལ་ རི་ཨཱལ
-    JOD:
-      display_names:
-        other: ཇོར་ཌན་གྱི་དངུལ་ ཌི་ན
-        one: ཇོར་ཌན་གྱི་དངུལ་ ཌི་ན
-    KES:
-      display_names:
-        other: ཀེན་ཡ་གི་དངུལ་ ཤི་ལིང
-        one: ཀེན་ཡ་གི་དངུལ་ ཤི་ལིང
-    KWD:
-      display_names:
-        other: ཀུ་ཝེཊ་གི་དངུལ་ ཌི་ན
-        one: ཀུ་ཝེཊ་གི་དངུལ་ ཌི་ན
-    LYD:
-      display_names:
-        other: ལི་བི་ཡ་གི་དངུལ་ ཌི་ན
-        one: ལི་བི་ཡ་གི་དངུལ་ ཌི་ན
-    MAD:
-      display_names:
-        other: མོ་རོ་ཀོ་གི་དངུལ་ ཌིར་ཧཱམ
-        one: མོ་རོ་ཀོ་གི་དངུལ་ ཌིར་ཧཱམ
-    MVR:
-      display_names:
-        other: མཱལ་དིབས་ཀྱི་དངུལ་ རུ་ཕི་ཡ
-        one: མཱལ་དིབས་ཀྱི་དངུལ་ རུ་ཕི་ཡ
-    OMR:
-      display_names:
-        other: ཨོ་མཱན་གྱི་དངུལ་ རི་ཨཱལ
-        one: ཨོ་མཱན་གྱི་དངུལ་ རི་ཨཱལ
-    PAB:
-      display_names:
-        other: པ་ན་མ་གི་དངུལ་ བཱལ་བོ་ཝ
-        one: པ་ན་མ་གི་དངུལ་ བཱལ་བོ་ཝ
-    PEN:
-      display_names:
-        other: པ་རུ་གི་དངུལ་ ནུ་བོ་ སཱོལ
-        one: པ་རུ་གི་དངུལ་ ནུ་བོ་ སཱོལ
-    QAR:
-      display_names:
-        other: ཀ་ཊར་གྱི་དངུལ་ རི་ཨཱལ
-        one: ཀ་ཊར་གྱི་དངུལ་ རི་ཨཱལ
-    SAR:
-      display_names:
-        other: སཱཝ་དིའི་དངུལ་ རི་ཡཱལ
-        one: སཱཝ་དིའི་དངུལ་ རི་ཡཱལ
-    SCR:
-      display_names:
-        other: སེ་ཤཱལས་ཀྱི་དངུལ་ རུ་པི
-        one: སེ་ཤཱལས་ཀྱི་དངུལ་ རུ་པི
-    TJS:
-      display_names:
-        other: ཏ་ཇི་ཀིས་ཏཱན་གྱི་དངུལ་ སོ་མོ་ནི
-        one: ཏ་ཇི་ཀིས་ཏཱན་གྱི་དངུལ་ སོ་མོ་ནི
-    TZS:
-      display_names:
-        other: ཊཱན་ཛཱ་ནི་ཡ་གི་དངུལ་ ཤི་ལིང
-        one: ཊཱན་ཛཱ་ནི་ཡ་གི་དངུལ་ ཤི་ལིང
-    UGX:
-      display_names:
-        other: ཡུ་གྷེན་ཌ་གི་དངུལ་ ཤི་ལིང
-        one: ཡུ་གྷེན་ཌ་གི་དངུལ་ ཤི་ལིང
-    UZS:
-      display_names:
-        other: ཨུས་བེ་ཀིས་ཏཱན་གྱི་དངུལ་ སོམ
-        one: ཨུས་བེ་ཀིས་ཏཱན་གྱི་དངུལ་ སོམ
-    VES:
-      display_names:
-        other: བེ་ནི་ཛུ་ཝེ་ལ་གི་དངུལ་ བོ་ལི་བར
-        one: བེ་ནི་ཛུ་ཝེ་ལ་གི་དངུལ་ བོ་ལི་བར
+  units:
+    year:
+      long:
+        other: ལོ་འཁོར་ {0}
+      short:
+        display_name: ལོ་འཁོར་
+    month:
+      long:
+        other: ཟླཝ་ {0}
+      short:
+        display_name: ཟླཝ་
+    week:
+      long:
+        other: བངུན་ཕྲག་ {0}
+      short:
+        display_name: བངུན་ཕྲག་
+    day:
+      long:
+        other: ཉིན་ཞག་ {0}
+      short:
+        display_name: ཉིན་ཞག་
+    hour:
+      long:
+        other: ཆུ་ཚོད་ {0}
+      short:
+        display_name: ཆུ་ཚོད་
+    minute:
+      long:
+        other: སྐར་མ་ {0}
+      short:
+        display_name: སྐར་མ་
+    second:
+      long:
+        other: སྐར་ཆ་ {0}
+      short:
+        display_name: སྐར་ཆ་

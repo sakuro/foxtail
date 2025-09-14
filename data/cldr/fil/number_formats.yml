@@ -1,20 +1,86 @@
 ---
 locale: fil
-generated_at: '2025-09-13T17:37:01Z'
+generated_at: '2025-09-14T06:09:49Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000000000':
+        one: 0B
+        other: 0B
+      '10000000000':
+        one: 00B
+        other: 00B
+      '100000000000':
+        one: 000B
+        other: 000B
+    long:
+      '1000':
+        one: 0 libo
+        other: 0 na libo
+      '10000':
+        one: 00 libo
+        other: 00 na libo
+      '100000':
+        one: 000 libo
+        other: 000 na libo
+      '1000000':
+        one: 0 milyon
+        other: 0 na milyon
+      '10000000':
+        one: 00 milyon
+        other: 00 na milyon
+      '100000000':
+        one: 000 milyon
+        other: 000 na milyon
+      '1000000000':
+        one: 0 bilyon
+        other: 0 na bilyon
+      '10000000000':
+        one: 00 bilyon
+        other: 00 na bilyon
+      '100000000000':
+        one: 000 bilyon
+        other: 000 na bilyon
+      '1000000000000':
+        one: 0 trilyon
+        other: 0 na trilyon
+      '10000000000000':
+        one: 00 trilyon
+        other: 00 na trilyon
+      '100000000000000':
+        one: 000 trilyon
+        other: 000 na trilyon
   currencies:
+    AED:
+      display_names:
+        other: UAE dirhams
+        one: dirham ng UAE
     AFN:
       display_names:
         other: Afghan Afghanis
         one: Afghan Afghani
+    ALL:
+      display_names:
+        other: leke ng Albania
+        one: lek ng Albania
     AMD:
       display_names:
         other: Armenian drams
         one: Armenian dram
+    ANG:
+      display_names:
+        other: Antillean guilders ng Netherlands
+        one: Antillean guilder ng Netherlands
     AOA:
       display_names:
         other: Angolan kwanzas
@@ -27,6 +93,10 @@ number_formats:
       display_names:
         other: dolyares ng Australya
         one: dolyar ng Australya
+    AWG:
+      display_names:
+        other: florin ng Aruba
+        one: florin ng Aruba
     AZN:
       display_names:
         other: Azerbaijani manats
@@ -43,6 +113,18 @@ number_formats:
       display_names:
         other: Bangladeshi takas
         one: Bangladeshi taka
+    BGN:
+      display_names:
+        other: Bulgarian leva
+        one: Bulgarian lev
+    BHD:
+      display_names:
+        other: Bahraini dinars
+        one: Bahraini dinar
+    BIF:
+      display_names:
+        other: Burundian francs
+        one: Burundian franc
     BMD:
       display_names:
         other: dolyares ng Bermuda
@@ -63,10 +145,23 @@ number_formats:
       display_names:
         other: dolyares ng Bahamas
         one: dolyar ng Bahamas
+    BTN:
+      display_names:
+        other: Bhutanese ngultrums
+        one: Bhutanese ngultrum
     BWP:
       display_names:
         other: Botswanan pulas
         one: Botswanan pula
+    BYN:
+      symbol: р.
+      display_names:
+        other: rubles ng Belarus
+        one: ruble ng Belarus
+    BYR:
+      display_names:
+        other: Belarusian rubles (2000–2016)
+        one: Belarusian ruble (2000–2016)
     BZD:
       display_names:
         other: dolyares ng Belize
@@ -75,10 +170,22 @@ number_formats:
       display_names:
         other: Dolyares ng Canada
         one: dolyar ng Canada
+    CDF:
+      display_names:
+        other: Congolese francs
+        one: Congolese franc
+    CHF:
+      display_names:
+        other: Swiss francs
+        one: Swiss franc
     CLP:
       display_names:
         other: piso ng Chile
         one: piso ng Chile
+    CNH:
+      display_names:
+        other: Chinese yuan (offshore)
+        one: Chinese yuan (offshore)
     CNY:
       display_names:
         other: Chinese yuan
@@ -99,10 +206,22 @@ number_formats:
       display_names:
         other: piso ng Cuba
         one: piso ng Cuba
+    CVE:
+      display_names:
+        other: Cape Verdean escudos
+        one: Cape Verdean escudo
     CZK:
       display_names:
         other: korunas ng Czech Republic
         one: koruna ng Czech Republic
+    DEM:
+      display_names:
+        other: Deutsche Marks
+        one: Deutsche Marks
+    DJF:
+      display_names:
+        other: Djiboutian francs
+        one: Djiboutian franc
     DKK:
       display_names:
         other: Danish kroner
@@ -111,10 +230,26 @@ number_formats:
       display_names:
         other: piso ng Dominican
         one: Piso ng Dominican
+    DZD:
+      display_names:
+        other: Algerian dinars
+        one: dinar ng Algeria
+    EEK:
+      display_names:
+        other: Estonian Kroon
+        one: Estonian Kroon
     EGP:
       display_names:
         other: Egyptian pounds
         one: pound ng Egypt
+    ERN:
+      display_names:
+        other: Eritrean nakfas
+        one: Eritrean nakfa
+    ETB:
+      display_names:
+        other: Ethiopian birrs
+        one: Ethiopian birr
     EUR:
       display_names:
         other: euros
@@ -127,6 +262,10 @@ number_formats:
       display_names:
         other: pounds ng Falkland Islands
         one: pound ng Falkland Islands
+    FRF:
+      display_names:
+        other: French Franc
+        one: French Franc
     GBP:
       display_names:
         other: British pounds
@@ -143,6 +282,10 @@ number_formats:
       display_names:
         other: pounds ng Gilbraltar
         one: pound ng Gibraltar
+    GMD:
+      display_names:
+        other: Gambian dalasis
+        one: Gambian dalasi
     GNF:
       display_names:
         other: Guinean francs
@@ -167,6 +310,10 @@ number_formats:
       display_names:
         other: kunas ng Croatia
         one: kuna ng Croatia
+    HTG:
+      display_names:
+        other: gourdes ng Haiti
+        one: gourde ng Haiti
     HUF:
       display_names:
         other: forints ng Hungary
@@ -183,6 +330,14 @@ number_formats:
       display_names:
         other: Indian rupees
         one: Indian rupee
+    IQD:
+      display_names:
+        other: Iraqi dinars
+        one: Iraqi dinar
+    IRR:
+      display_names:
+        other: Iranian rials
+        one: Iranian rial
     ISK:
       display_names:
         other: Icelandic krónur
@@ -191,11 +346,19 @@ number_formats:
       display_names:
         other: dolyares ng Jamaica
         one: dolyar ng Jamaica
+    JOD:
+      display_names:
+        other: Jordanian dinars
+        one: Jordanian dinar
     JPY:
       symbol: "¥"
       display_names:
         other: Japanese yen
         one: Japanese yen
+    KES:
+      display_names:
+        other: Kenyan shillings
+        one: Kenyan shilling
     KGS:
       display_names:
         other: Kyrgystani soms
@@ -216,6 +379,10 @@ number_formats:
       display_names:
         other: won ng Timog Korea
         one: won ng Timog Korea
+    KWD:
+      display_names:
+        other: Kuwaiti dinars
+        one: Kuwaiti dinar
     KYD:
       display_names:
         other: dolyares ng Cayman Islands
@@ -240,6 +407,10 @@ number_formats:
       display_names:
         other: dolyares ng Liberia
         one: dolyar ng Liberia
+    LSL:
+      display_names:
+        other: Lesotho lotis
+        one: Lesotho loti
     LTL:
       display_names:
         other: Lithuanian litai
@@ -248,10 +419,26 @@ number_formats:
       display_names:
         other: Latvian lati
         one: Latvian lats
+    LYD:
+      display_names:
+        other: mga dinar ng Libya
+        one: dinar ng Libya
+    MAD:
+      display_names:
+        other: Moroccan dirhams
+        one: Moroccan dirham
+    MDL:
+      display_names:
+        other: lei ng Moldova
+        one: leu ng Moldova
     MGA:
       display_names:
         other: Malagasy Ariaries
         one: Malagasy Ariary
+    MKD:
+      display_names:
+        other: denari ng North Macedonia
+        one: denar ng North Macedonia
     MMK:
       display_names:
         other: Myanmar kyats
@@ -260,10 +447,30 @@ number_formats:
       display_names:
         other: Mongolian tugriks
         one: Mongolian tugrik
+    MOP:
+      display_names:
+        other: Macanese patacas
+        one: Macanese pataca
+    MRO:
+      display_names:
+        other: Mauritanian ouguiyas (1973–2017)
+        one: Mauritanian ouguiya (1973–2017)
+    MRU:
+      display_names:
+        other: Mauritanian ouguiyas
+        one: Mauritanian ouguiya
     MUR:
       display_names:
         other: Mauritian rupees
         one: Mauritian rupee
+    MVR:
+      display_names:
+        other: Maldivian rufiyaas
+        one: Maldivian rufiyaa
+    MWK:
+      display_names:
+        other: Malawian Kwachas
+        one: Malawian Kwacha
     MXN:
       display_names:
         other: piso ng Mexico
@@ -272,6 +479,10 @@ number_formats:
       display_names:
         other: Malaysian ringgits
         one: Malaysian ringgit
+    MZN:
+      display_names:
+        other: Mozambican meticals
+        one: Mozambican metical
     NAD:
       display_names:
         other: dolyares ng Namibia
@@ -296,292 +507,6 @@ number_formats:
       display_names:
         other: dolyares ng New Zealand
         one: dolyares ng New Zealand
-    PHP:
-      display_names:
-        other: piso ng Pilipinas
-        one: piso ng Pilipinas
-    PKR:
-      display_names:
-        other: Pakistani rupees
-        one: Pakistani rupee
-    PLN:
-      display_names:
-        other: zlotys ng Poland
-        one: zloty ng Poland
-    PYG:
-      display_names:
-        other: Paraguayan guaranis
-        one: Paraguayan guarani
-    RON:
-      display_names:
-        other: lei ng Romania
-        one: leu ng Romania
-    RUB:
-      display_names:
-        other: Russian rubles
-        one: ruble ng Russia
-    RWF:
-      display_names:
-        other: Rwandan francs
-        one: Rwandan franc
-    SBD:
-      display_names:
-        other: dolyar ng Solomon Islands
-        one: dolyar ng Solomon Islands
-    SEK:
-      display_names:
-        other: Swedish kronor
-        one: Swedish krona
-    SGD:
-      display_names:
-        other: dolyares ng Singapore
-        one: dolyar ng Singapore
-    SHP:
-      display_names:
-        other: Saint Helena pounds
-        one: Saint Helena pound
-    SRD:
-      display_names:
-        other: dolyares ng Suriname
-        one: dolyar ng Suriname
-    SSP:
-      display_names:
-        other: pounds ng Timog Sudan
-        one: Pound ng Timog Sudan
-    STN:
-      display_names:
-        other: São Tomé & Príncipe dobras
-        one: São Tomé & Príncipe dobra
-    SYP:
-      display_names:
-        other: Syrian pounds
-        one: Syrian pound
-    THB:
-      display_names:
-        other: Thai baht
-        one: Thai baht
-    TOP:
-      display_names:
-        other: Tongan paʻanga
-        one: Tongan paʻanga
-    TRY:
-      display_names:
-        other: Turkish Lira
-        one: Turkish lira
-    TTD:
-      display_names:
-        other: dolyares ng Trinidad and Tobago
-        one: dolyar ng Trinidad and Tobago
-    TWD:
-      display_names:
-        other: dolyares ng New Taiwan
-        one: dolyar ng New Taiwan
-    UAH:
-      display_names:
-        other: hryvnias ng Ukraine
-        one: hryvnia ng Ukraine
-    USD:
-      symbol: "$"
-      display_names:
-        other: dolyares ng US
-        one: dolyar ng US
-    UYU:
-      display_names:
-        other: piso ng Uruguay
-        one: piso ng Uruguay
-    VEF:
-      display_names:
-        other: bolívars ng Venezuela (2008–2018)
-        one: bolívar ng Venezuela (2008–2018)
-    VND:
-      display_names:
-        other: Vietnamese dong
-        one: Vietnamese dong
-    XAF:
-      display_names:
-        other: CFA francs BEAC
-        one: CFA franc BEAC
-    XCD:
-      display_names:
-        other: dolyares ng Silangang Caribbean
-        one: dolyar ng Silangang Caribbean
-    XOF:
-      display_names:
-        other: CFA francs ng Kanlurang Africa
-        one: CFA franc ng Kanlurang Africa
-    XPF:
-      display_names:
-        other: CFP francs
-        one: CFP franc
-    XXX:
-      display_names:
-        other: "(hindi kilalang pera)"
-        one: "(hindi kilalang unit ng currency)"
-    ZAR:
-      display_names:
-        other: rand ng Timog Africa
-        one: rand ng Timog Africa
-    ZMW:
-      display_names:
-        other: Zambian kwachas
-        one: Zambian kwacha
-    AED:
-      display_names:
-        other: UAE dirhams
-        one: dirham ng UAE
-    ALL:
-      display_names:
-        other: leke ng Albania
-        one: lek ng Albania
-    ANG:
-      display_names:
-        other: Antillean guilders ng Netherlands
-        one: Antillean guilder ng Netherlands
-    AWG:
-      display_names:
-        other: florin ng Aruba
-        one: florin ng Aruba
-    BGN:
-      display_names:
-        other: Bulgarian leva
-        one: Bulgarian lev
-    BHD:
-      display_names:
-        other: Bahraini dinars
-        one: Bahraini dinar
-    BIF:
-      display_names:
-        other: Burundian francs
-        one: Burundian franc
-    BTN:
-      display_names:
-        other: Bhutanese ngultrums
-        one: Bhutanese ngultrum
-    BYN:
-      symbol: р.
-      display_names:
-        other: rubles ng Belarus
-        one: ruble ng Belarus
-    BYR:
-      display_names:
-        other: Belarusian rubles (2000–2016)
-        one: Belarusian ruble (2000–2016)
-    CDF:
-      display_names:
-        other: Congolese francs
-        one: Congolese franc
-    CHF:
-      display_names:
-        other: Swiss francs
-        one: Swiss franc
-    CNH:
-      display_names:
-        other: Chinese yuan (offshore)
-        one: Chinese yuan (offshore)
-    CVE:
-      display_names:
-        other: Cape Verdean escudos
-        one: Cape Verdean escudo
-    DEM:
-      display_names:
-        other: Deutsche Marks
-        one: Deutsche Marks
-    DJF:
-      display_names:
-        other: Djiboutian francs
-        one: Djiboutian franc
-    DZD:
-      display_names:
-        other: Algerian dinars
-        one: dinar ng Algeria
-    EEK:
-      display_names:
-        other: Estonian Kroon
-        one: Estonian Kroon
-    ERN:
-      display_names:
-        other: Eritrean nakfas
-        one: Eritrean nakfa
-    ETB:
-      display_names:
-        other: Ethiopian birrs
-        one: Ethiopian birr
-    FRF:
-      display_names:
-        other: French Franc
-        one: French Franc
-    GMD:
-      display_names:
-        other: Gambian dalasis
-        one: Gambian dalasi
-    HTG:
-      display_names:
-        other: gourdes ng Haiti
-        one: gourde ng Haiti
-    IQD:
-      display_names:
-        other: Iraqi dinars
-        one: Iraqi dinar
-    IRR:
-      display_names:
-        other: Iranian rials
-        one: Iranian rial
-    JOD:
-      display_names:
-        other: Jordanian dinars
-        one: Jordanian dinar
-    KES:
-      display_names:
-        other: Kenyan shillings
-        one: Kenyan shilling
-    KWD:
-      display_names:
-        other: Kuwaiti dinars
-        one: Kuwaiti dinar
-    LSL:
-      display_names:
-        other: Lesotho lotis
-        one: Lesotho loti
-    LYD:
-      display_names:
-        other: mga dinar ng Libya
-        one: dinar ng Libya
-    MAD:
-      display_names:
-        other: Moroccan dirhams
-        one: Moroccan dirham
-    MDL:
-      display_names:
-        other: lei ng Moldova
-        one: leu ng Moldova
-    MKD:
-      display_names:
-        other: denari ng North Macedonia
-        one: denar ng North Macedonia
-    MOP:
-      display_names:
-        other: Macanese patacas
-        one: Macanese pataca
-    MRO:
-      display_names:
-        other: Mauritanian ouguiyas (1973–2017)
-        one: Mauritanian ouguiya (1973–2017)
-    MRU:
-      display_names:
-        other: Mauritanian ouguiyas
-        one: Mauritanian ouguiya
-    MVR:
-      display_names:
-        other: Maldivian rufiyaas
-        one: Maldivian rufiyaa
-    MWK:
-      display_names:
-        other: Malawian Kwachas
-        one: Malawian Kwacha
-    MZN:
-      display_names:
-        other: Mozambican meticals
-        one: Mozambican metical
     OMR:
       display_names:
         other: Omani rials
@@ -598,18 +523,50 @@ number_formats:
       display_names:
         other: Papua New Guinean kina
         one: Papua New Guinean kina
+    PHP:
+      display_names:
+        other: piso ng Pilipinas
+        one: piso ng Pilipinas
+    PKR:
+      display_names:
+        other: Pakistani rupees
+        one: Pakistani rupee
+    PLN:
+      display_names:
+        other: zlotys ng Poland
+        one: zloty ng Poland
+    PYG:
+      display_names:
+        other: Paraguayan guaranis
+        one: Paraguayan guarani
     QAR:
       display_names:
         other: Qatari rials
         one: Qatari rial
+    RON:
+      display_names:
+        other: lei ng Romania
+        one: leu ng Romania
     RSD:
       display_names:
         other: Serbian dinars
         one: dinar ng Serbia
+    RUB:
+      display_names:
+        other: Russian rubles
+        one: ruble ng Russia
+    RWF:
+      display_names:
+        other: Rwandan francs
+        one: Rwandan franc
     SAR:
       display_names:
         other: Saudi riyals
         one: Saudi riyal
+    SBD:
+      display_names:
+        other: dolyar ng Solomon Islands
+        one: dolyar ng Solomon Islands
     SCR:
       display_names:
         other: Seychellois rupees
@@ -618,6 +575,18 @@ number_formats:
       display_names:
         other: pounds ng Sudan
         one: pound ng Sudan
+    SEK:
+      display_names:
+        other: Swedish kronor
+        one: Swedish krona
+    SGD:
+      display_names:
+        other: dolyares ng Singapore
+        one: dolyar ng Singapore
+    SHP:
+      display_names:
+        other: Saint Helena pounds
+        one: Saint Helena pound
     SIT:
       display_names:
         other: Slovenian Tolar
@@ -638,14 +607,34 @@ number_formats:
       display_names:
         other: Somali shillings
         one: Somali shilling
+    SRD:
+      display_names:
+        other: dolyares ng Suriname
+        one: dolyar ng Suriname
+    SSP:
+      display_names:
+        other: pounds ng Timog Sudan
+        one: Pound ng Timog Sudan
     STD:
       display_names:
         other: São Tomé & Príncipe dobras (1977–2017)
         one: São Tomé & Príncipe dobra (1977–2017)
+    STN:
+      display_names:
+        other: São Tomé & Príncipe dobras
+        one: São Tomé & Príncipe dobra
+    SYP:
+      display_names:
+        other: Syrian pounds
+        one: Syrian pound
     SZL:
       display_names:
         other: Swazi emalangeni
         one: Swazi lilangeni
+    THB:
+      display_names:
+        other: Thai baht
+        one: Thai baht
     TJS:
       display_names:
         other: Tajikistani somonis
@@ -658,14 +647,43 @@ number_formats:
       display_names:
         other: Tunisian dinars
         one: Tunisian dinar
+    TOP:
+      display_names:
+        other: Tongan paʻanga
+        one: Tongan paʻanga
+    TRY:
+      display_names:
+        other: Turkish Lira
+        one: Turkish lira
+    TTD:
+      display_names:
+        other: dolyares ng Trinidad and Tobago
+        one: dolyar ng Trinidad and Tobago
+    TWD:
+      display_names:
+        other: dolyares ng New Taiwan
+        one: dolyar ng New Taiwan
     TZS:
       display_names:
         other: Tanzanian shillings
         one: Tanzanian shilling
+    UAH:
+      display_names:
+        other: hryvnias ng Ukraine
+        one: hryvnia ng Ukraine
     UGX:
       display_names:
         other: Ugandan shillings
         one: Ugandan shilling
+    USD:
+      symbol: "$"
+      display_names:
+        other: dolyares ng US
+        one: dolyar ng US
+    UYU:
+      display_names:
+        other: piso ng Uruguay
+        one: piso ng Uruguay
     UZS:
       display_names:
         other: Uzbekistan som
@@ -674,10 +692,18 @@ number_formats:
       display_names:
         other: Venezuelan Bolívar (1871–2008)
         one: Venezuelan Bolívar (1871–2008)
+    VEF:
+      display_names:
+        other: bolívars ng Venezuela (2008–2018)
+        one: bolívar ng Venezuela (2008–2018)
     VES:
       display_names:
         other: bolívars ng Venezuela
         one: bolívar ng Venezuela
+    VND:
+      display_names:
+        other: Vietnamese dong
+        one: Vietnamese dong
     VUV:
       display_names:
         other: Vanuatu vatus
@@ -686,11 +712,1545 @@ number_formats:
       display_names:
         other: Samoan tala
         one: Samoan tala
+    XAF:
+      display_names:
+        other: CFA francs BEAC
+        one: CFA franc BEAC
+    XCD:
+      display_names:
+        other: dolyares ng Silangang Caribbean
+        one: dolyar ng Silangang Caribbean
+    XOF:
+      display_names:
+        other: CFA francs ng Kanlurang Africa
+        one: CFA franc ng Kanlurang Africa
+    XPF:
+      display_names:
+        other: CFP francs
+        one: CFP franc
+    XXX:
+      display_names:
+        other: "(hindi kilalang pera)"
+        one: "(hindi kilalang unit ng currency)"
     YER:
       display_names:
         other: Yemeni rials
         one: Yemeni rial
+    ZAR:
+      display_names:
+        other: rand ng Timog Africa
+        one: rand ng Timog Africa
     ZMK:
       display_names:
         other: Zambian Kwacha (1968–2012)
         one: Zambian Kwacha (1968–2012)
+    ZMW:
+      display_names:
+        other: Zambian kwachas
+        one: Zambian kwacha
+  units:
+    g-force:
+      long:
+        one: "{0} g-force"
+        other: "{0} g-force"
+      narrow:
+        one: "{0}G"
+        other: "{0}G"
+    meter-per-square-second:
+      long:
+        display_name: metro kada segundo kwadrado
+        one: "{0} metro kada segundo kwadrado"
+        other: "{0} na metro kada segundo kwadrado"
+      short:
+        display_name: metro/segundo²
+      narrow:
+        display_name: m/s²
+        one: "{0}m/s²"
+        other: "{0}m/s²"
+    revolution:
+      long:
+        display_name: pag-ikot
+        one: "{0} pag-ikot"
+        other: "{0} na pag-ikot"
+      short:
+        one: "{0} rev"
+        other: "{0} na rev"
+    radian:
+      long:
+        one: "{0} radian"
+        other: "{0} na radian"
+      short:
+        display_name: radians
+      narrow:
+        one: "{0}rad"
+        other: "{0}rad"
+    degree:
+      long:
+        one: "{0} degree"
+        other: "{0} na degree"
+      short:
+        display_name: degrees
+        one: "{0} deg"
+        other: "{0} na deg"
+      narrow:
+        display_name: deg
+    arc-minute:
+      long:
+        display_name: arcminutes
+        one: "{0} arcminute"
+        other: "{0} na arcminute"
+      short:
+        display_name: arcmins
+        one: "{0} arcmin"
+        other: "{0} na arcmin"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+    arc-second:
+      long:
+        display_name: arcseconds
+        one: "{0} arcsecond"
+        other: "{0} na arcsecond"
+      short:
+        display_name: arcsecs
+        one: "{0} arcsec"
+        other: "{0} na arcsec"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+    square-kilometer:
+      long:
+        display_name: kilometro kwadrado
+        one: "{0} kilometro kwadrado"
+        other: "{0} na kilometro kwadrado"
+      narrow:
+        one: "{0}km²"
+        other: "{0}km²"
+    hectare:
+      long:
+        display_name: ektarya
+        one: "{0} hektarya"
+        other: "{0} na hektarya"
+      short:
+        display_name: hektarya
+      narrow:
+        one: "{0}ha"
+        other: "{0}ha"
+    square-meter:
+      long:
+        display_name: metro kwadrado
+        one: "{0} metro kwadrado"
+        other: "{0} na metro kwadrado"
+        per_unit_pattern: "{0} kada metro kwadrado"
+      short:
+        display_name: metro²
+        per_unit_pattern: "{0} kada m²"
+    square-centimeter:
+      long:
+        display_name: sentimetro kwadrado
+        one: "{0} sentimetro kwadrado"
+        other: "{0} na sentimetro kwadrado"
+        per_unit_pattern: "{0} kada sentimetro kwadrado"
+      short:
+        per_unit_pattern: "{0} kada cm²"
+      narrow:
+        per_unit_pattern: "{0}/cm²"
+    square-mile:
+      long:
+        display_name: milya kwadrado
+        one: "{0} milya kwadrado"
+        other: "{0} na milya kwadrado"
+      short:
+        display_name: sq mile
+        one: "{0} sq mi"
+        other: "{0} sq mi"
+      narrow:
+        display_name: mi²
+        one: "{0}mi²"
+        other: "{0}mi²"
+    acre:
+      long:
+        one: "{0} acre"
+        other: "{0} acres"
+      short:
+        display_name: acres
+      narrow:
+        display_name: ektarya
+        one: "{0}ac"
+        other: "{0}ac"
+    square-yard:
+      long:
+        display_name: yardang parisukat
+        one: "{0} yardang parisukat"
+        other: "{0} na yardang parisukat"
+      short:
+        display_name: yarda²
+      narrow:
+        display_name: yd²
+    square-foot:
+      long:
+        display_name: talampakan parisukat
+        one: "{0} talampakan parisukat"
+        other: "{0} na talampakan parisukat"
+      short:
+        display_name: sq feet
+        one: "{0} sq ft"
+        other: "{0} sq ft"
+      narrow:
+        display_name: ft²
+        one: "{0}ft²"
+        other: "{0}ft²"
+    square-inch:
+      long:
+        display_name: pulgada kwadrado
+        one: "{0} pulgada kwadrado"
+        other: "{0} na pulgada kwadrado"
+        per_unit_pattern: "{0} kada pulgada kwadrado"
+      short:
+        display_name: pulgada²
+        per_unit_pattern: "{0} kada in²"
+      narrow:
+        display_name: in²
+        per_unit_pattern: "{0}/in²"
+    karat:
+      long:
+        one: "{0} karat"
+        other: "{0} na karat"
+      short:
+        display_name: karat
+    milligram-ofglucose-per-deciliter:
+      long:
+        one: "{0} milligram per deciliter"
+        other: "{0} milligrams per deciliter"
+    millimole-per-liter:
+      long:
+        one: "{0} millimole per liter"
+        other: "{0} millimoles per liter"
+    item:
+      long:
+        display_name: mga item
+        one: "{0} item"
+        other: "{0} na item"
+      narrow:
+        one: "{0} item"
+        other: "{0}item"
+    permillion:
+      long:
+        display_name: parts per million
+        one: "{0} part per million"
+        other: "{0} parts per million"
+      short:
+        display_name: parts/million
+      narrow:
+        display_name: ppm
+    percent:
+      long:
+        display_name: porsyento
+        one: "{0} porsyento"
+        other: "{0} na porsyento"
+    permille:
+      long:
+        display_name: permille
+        one: "{0} permille"
+        other: "{0} na permille"
+    permyriad:
+      long:
+        one: "{0} permyriad"
+        other: "{0} permyriad"
+      short:
+        display_name: permyriad
+      narrow:
+        display_name: "‱"
+    mole:
+      long:
+        one: "{0} mole"
+        other: "{0} mole"
+      short:
+        display_name: mole
+      narrow:
+        display_name: mol
+    liter-per-kilometer:
+      long:
+        display_name: litro kada kilometro
+        one: "{0} litro kada kilometro"
+        other: "{0} litro kada kilometro"
+      short:
+        display_name: litro/km
+      narrow:
+        display_name: L/km
+    liter-per-100-kilometer:
+      long:
+        display_name: litro kada 100 kilometro
+        one: "{0} litro kada 100 kilometro"
+        other: "{0} na litro kada 100 kilometer"
+      short:
+        one: "{0} na L/100km"
+        other: "{0} na L/100km"
+      narrow:
+        one: "{0}L/100km"
+        other: "{0}L/100km"
+    mile-per-gallon:
+      long:
+        display_name: milya kada galon
+        one: "{0} milya kada galon"
+        other: "{0} na milya kada galon"
+      short:
+        display_name: milya/gal
+        one: "{0} mpg"
+        other: "{0} na mpg"
+      narrow:
+        display_name: mpg
+        one: "{0} mpg"
+        other: "{0}mpg"
+    mile-per-gallon-imperial:
+      long:
+        display_name: milya kada Imp.gallon
+        one: "{0} milya kada Imp.galon"
+        other: "{0} milya kada Imp. galon"
+      short:
+        display_name: milya/gal Imp.
+      narrow:
+        display_name: mpg UK
+        one: "{0}mpg"
+        other: "{0}mpg"
+    petabyte:
+      long:
+        display_name: petabytes
+        one: "{0} petabyte"
+        other: "{0} petabytes"
+      short:
+        display_name: PByte
+    terabyte:
+      long:
+        display_name: terabytes
+        one: "{0} terabyte"
+        other: "{0} na terabyte"
+      short:
+        display_name: TByte
+    terabit:
+      long:
+        display_name: terabits
+        one: "{0} terabit"
+        other: "{0} na terabit"
+      short:
+        display_name: Tbit
+    gigabyte:
+      long:
+        display_name: gigabytes
+        one: "{0} gigabyte"
+        other: "{0} na gigabyte"
+      short:
+        display_name: GByte
+      narrow:
+        display_name: GB
+    gigabit:
+      long:
+        display_name: gigabits
+        one: "{0} gigabit"
+        other: "{0} na gigabit"
+      short:
+        display_name: Gbit
+      narrow:
+        display_name: Gb
+    megabyte:
+      long:
+        display_name: megabytes
+        one: "{0} megabyte"
+        other: "{0} na megabyte"
+      short:
+        display_name: MByte
+    megabit:
+      long:
+        display_name: megabits
+        one: "{0} megabit"
+        other: "{0} na megabit"
+      short:
+        display_name: Mbit
+    kilobyte:
+      long:
+        display_name: kilobytes
+        one: "{0} kilobyte"
+        other: "{0} na kilobyte"
+      short:
+        display_name: kByte
+      narrow:
+        display_name: kB
+    kilobit:
+      long:
+        display_name: kilobits
+        one: "{0} kilobit"
+        other: "{0} na kilobit"
+      short:
+        display_name: kbit
+      narrow:
+        display_name: kb
+    byte:
+      long:
+        display_name: bytes
+        one: "{0} byte"
+        other: "{0} na byte"
+      narrow:
+        display_name: B
+        one: "{0} B"
+        other: "{0} B"
+    bit:
+      long:
+        display_name: bits
+        one: "{0} bit"
+        other: "{0} na bit"
+    century:
+      long:
+        display_name: mga siglo
+      short:
+        display_name: siglo
+        one: "{0} siglo"
+        other: "{0} siglo"
+    decade:
+      long:
+        display_name: dekada
+        one: "{0} dekada"
+        other: "{0} dekada"
+    year:
+      long:
+        display_name: mga taon
+        one: "{0} taon"
+        other: "{0} na taon"
+        per_unit_pattern: "{0} kada taon"
+      short:
+        display_name: taon
+        one: "{0} taon"
+        other: "{0} taon"
+        per_unit_pattern: "{0}/taon"
+      narrow:
+        one: "{0}taon"
+        other: "{0}taon"
+    quarter:
+      long:
+        display_name: mga quarter
+        one: "{0} qtr"
+        other: "{0} quarter"
+      short:
+        one: "{0} qtr"
+        other: "{0} qtrs"
+    month:
+      long:
+        display_name: mga buwan
+        per_unit_pattern: "{0} kada buwan"
+      short:
+        display_name: buwan
+        one: "{0} buwan"
+        other: "{0} buwan"
+        per_unit_pattern: "{0}/buwan"
+      narrow:
+        one: "{0}buwan"
+        other: "{0} buwan"
+    week:
+      long:
+        display_name: mga linggo
+        per_unit_pattern: "{0} kada linggo"
+      short:
+        display_name: linggo
+        one: "{0} linggo"
+        other: "{0} na linggo"
+        per_unit_pattern: "{0}/linggo"
+      narrow:
+        one: "{0}linggo"
+        other: "{0}linggo"
+    day:
+      long:
+        one: "{0} araw"
+        other: "{0} na araw"
+        per_unit_pattern: "{0} kada araw"
+      short:
+        display_name: araw
+        one: "{0} araw"
+        other: "{0} araw"
+        per_unit_pattern: "{0}/araw"
+      narrow:
+        one: "{0} araw"
+        other: "{0} na araw"
+    hour:
+      long:
+        display_name: mga oras
+      short:
+        display_name: oras
+        one: "{0} oras"
+        other: "{0} na oras"
+        per_unit_pattern: "{0} kada oras"
+      narrow:
+        one: "{0} oras"
+        other: "{0} oras"
+        per_unit_pattern: "{0}/oras"
+    minute:
+      long:
+        display_name: mga minuto
+        one: "{0} minuto"
+        other: "{0} na minuto"
+        per_unit_pattern: "{0} kada minuto"
+      short:
+        display_name: min.
+        one: "{0} min."
+        other: "{0} min."
+      narrow:
+        one: "{0}m"
+        other: "{0}m"
+    second:
+      long:
+        display_name: mga segundo
+        one: "{0} segundo"
+        other: "{0} na segundo"
+        per_unit_pattern: "{0} kada segundo"
+      short:
+        display_name: seg.
+        one: "{0} seg."
+        other: "{0} seg."
+      narrow:
+        one: "{0}s"
+        other: "{0}s"
+    millisecond:
+      long:
+        display_name: milisegundo
+        one: "{0} milisegundo"
+        other: "{0} milisegundo"
+      short:
+        display_name: miliseg
+      narrow:
+        display_name: mseg
+        one: "{0}ms"
+        other: "{0}ms"
+    microsecond:
+      long:
+        display_name: mikrosegundo
+        one: "{0} mikrosegundo"
+        other: "{0} mikrosegundo"
+      short:
+        display_name: μseg
+    nanosecond:
+      long:
+        display_name: nanosegundo
+        one: "{0} nanosegundo"
+        other: "{0} nanosegundo"
+      short:
+        display_name: nanoseg
+    ampere:
+      long:
+        display_name: amperes
+        one: "{0} ampere"
+        other: "{0} na ampere"
+    milliampere:
+      long:
+        display_name: milliamperes
+        one: "{0} milliampere"
+        other: "{0} na milliampere"
+      short:
+        display_name: milliamps
+      narrow:
+        display_name: mA
+    ohm:
+      long:
+        one: "{0} ohm"
+        other: "{0} na ohm"
+      short:
+        display_name: ohms
+    volt:
+      long:
+        one: "{0} volt"
+        other: "{0} na volt"
+      short:
+        display_name: volts
+    kilocalorie:
+      long:
+        display_name: kilocalories
+        one: "{0} kilocalorie"
+        other: "{0} na kilocalorie"
+    calorie:
+      long:
+        display_name: calories
+        one: "{0} calorie"
+        other: "{0} na calories"
+    foodcalorie:
+      long:
+        display_name: Mga calorie
+        one: "{0} Calorie"
+        other: "{0} Calorie"
+      short:
+        display_name: Cal
+        one: "{0} Cal"
+        other: "{0} Cal"
+    kilojoule:
+      long:
+        display_name: kilojoules
+        one: "{0} kilojoule"
+        other: "{0} na kilojoule"
+      short:
+        display_name: kilojoule
+    joule:
+      long:
+        one: "{0} joule"
+        other: "{0} na joules"
+      short:
+        display_name: joules
+    kilowatt-hour:
+      long:
+        display_name: kilowatt-hours
+        one: "{0} kilowatt hour"
+        other: "{0} na kilowatt-hour"
+      short:
+        display_name: kW-hour
+      narrow:
+        display_name: kWh
+    electronvolt:
+      long:
+        one: "{0} electronvolt"
+        other: "{0} electronvolt"
+      short:
+        display_name: electronvolt
+      narrow:
+        display_name: eV
+    british-thermal-unit:
+      long:
+        display_name: British thermal unit
+        one: "{0} British thermal unit"
+        other: "{0} British thermal unit"
+      short:
+        display_name: BTU
+    pound-force:
+      long:
+        display_name: pound of force
+        one: "{0} pound of force"
+        other: "{0} pound of force"
+      short:
+        display_name: pound-force
+      narrow:
+        display_name: lbf
+    newton:
+      long:
+        one: "{0} newton"
+        other: "{0} newton"
+      short:
+        display_name: newton
+      narrow:
+        display_name: "N"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: kilowatt-hour bawat 100 kilometro
+        one: "{0} kilowatt-hour bawat 100 kilometro"
+        other: "{0} kilowatt-hours bawat 100 kilometro"
+      narrow:
+        one: "{0}kWh/100km"
+        other: "{0}kWh/100km"
+    gigahertz:
+      long:
+        display_name: gigahertz
+        one: "{0} gigahertz"
+        other: "{0} na gigahertz"
+    megahertz:
+      long:
+        display_name: megahertz
+        one: "{0} na megahertz"
+        other: "{0} megahertz"
+    kilohertz:
+      long:
+        display_name: kilohertz
+        one: "{0} kilohertz"
+        other: "{0} na kilohertz"
+    hertz:
+      long:
+        display_name: hertz
+        one: "{0} hertz"
+        other: "{0} na hertz"
+    em:
+      long:
+        display_name: tipograpikang em
+    pixel:
+      long:
+        one: "{0} pixel"
+        other: "{0} pixel"
+      short:
+        display_name: mga pixel
+      narrow:
+        display_name: px
+    megapixel:
+      long:
+        display_name: megapixels
+        one: "{0} megapixel"
+        other: "{0} megapixels"
+      short:
+        display_name: megapixel
+    pixel-per-centimeter:
+      long:
+        display_name: mga pixel bawat sentimetro
+        one: "{0} pixel bawat sentimetro"
+        other: "{0} pixel bawat sentimetro"
+    pixel-per-inch:
+      long:
+        display_name: mga pixel bawat pulgada
+        one: "{0} pixel bawat pulgada"
+        other: "{0} pixel bawat pulgada"
+    dot-per-centimeter:
+      long:
+        display_name: tuldok bawat sentimetro
+        one: "{0} tuldok bawat sentimetro"
+        other: "{0} tuldok bawat sentimetro"
+      short:
+        display_name: dpcm
+        one: "{0} dpcm"
+        other: "{0} dpcm"
+    dot-per-inch:
+      long:
+        display_name: tuldok bawat pulgada
+        one: "{0} tuldok bawat pulgada"
+        other: "{0} tuldok bawat pulgada"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+    earth-radius:
+      long:
+        display_name: earth radius
+        one: "{0} earth radius"
+        other: "{0} na earth radius"
+      short:
+        one: "{0} na R⊕"
+        other: "{0} na R⊕"
+    kilometer:
+      long:
+        display_name: kilometro
+        one: "{0} kilometro"
+        other: "{0} na kilometro"
+        per_unit_pattern: "{0} kada kilometro"
+      narrow:
+        one: "{0}km"
+        other: "{0}km"
+    meter:
+      long:
+        one: "{0} metro"
+        other: "{0} na metro"
+        per_unit_pattern: "{0} kada metro"
+      short:
+        display_name: metro
+      narrow:
+        one: "{0}m"
+        other: "{0}m"
+    decimeter:
+      long:
+        display_name: decimetro
+        one: "{0} decimetro"
+        other: "{0} na decimetro"
+    centimeter:
+      long:
+        display_name: sentimetro
+        one: "{0} sentimetro"
+        other: "{0} sentimetro"
+        per_unit_pattern: "{0} kada sentimetro"
+      narrow:
+        one: "{0}cm"
+        other: "{0}cm"
+    millimeter:
+      long:
+        display_name: milimetro
+        one: "{0} milimetro"
+        other: "{0} na milimetro"
+      narrow:
+        one: "{0}mm"
+        other: "{0}mm"
+    micrometer:
+      long:
+        display_name: micrometro
+        one: "{0} micrometro"
+        other: "{0} micrometro"
+      short:
+        display_name: μmetro
+    nanometer:
+      long:
+        display_name: nanometro
+        one: "{0} nanometro"
+        other: "{0} nanometro"
+    picometer:
+      long:
+        display_name: picometer
+        one: "{0} picometer"
+        other: "{0} picometer"
+      short:
+        one: "{0} pm"
+        other: "{0} na pm"
+      narrow:
+        one: "{0}pm"
+        other: "{0}pm"
+    mile:
+      long:
+        one: "{0} milya"
+        other: "{0} na milya"
+      short:
+        display_name: milya
+      narrow:
+        display_name: mi
+        one: "{0}mi"
+        other: "{0}mi"
+    yard:
+      long:
+        one: "{0} yarda"
+        other: "{0} na yarda"
+      short:
+        display_name: yarda
+        one: "{0} yd"
+        other: "{0} na yd"
+      narrow:
+        display_name: yd
+        one: "{0}yd"
+        other: "{0}yd"
+    foot:
+      long:
+        one: "{0} talampakan"
+        other: "{0} na talampakan"
+        per_unit_pattern: "{0} kada talampakan"
+      short:
+        display_name: talampakan
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+    inch:
+      long:
+        one: "{0} pulgada"
+        other: "{0} na pulgada"
+        per_unit_pattern: "{0} kada pulgada"
+      short:
+        display_name: pulgada
+      narrow:
+        display_name: in
+        one: "{0}″"
+        other: "{0}″"
+    parsec:
+      long:
+        one: "{0} parsec"
+        other: "{0} parsecs"
+      short:
+        display_name: parsecs
+        one: "{0} pc"
+        other: "{0} na pc"
+      narrow:
+        one: "{0}pc"
+        other: "{0}pc"
+    light-year:
+      long:
+        display_name: light year
+        one: "{0} light year"
+        other: "{0} na light year"
+      short:
+        display_name: light yrs
+        one: "{0} ly"
+        other: "{0} na ly"
+      narrow:
+        display_name: ly
+        one: "{0}ly"
+        other: "{0}ly"
+    astronomical-unit:
+      long:
+        display_name: astronomical units
+        one: "{0} astronomical unit"
+        other: "{0} na astronomical units"
+      narrow:
+        one: "{0}au"
+        other: "{0}au"
+    furlong:
+      long:
+        one: "{0} furlong"
+        other: "{0} na furlong"
+      short:
+        display_name: furlongs
+      narrow:
+        display_name: furlong
+        one: "{0}fur"
+        other: "{0}fur"
+    fathom:
+      long:
+        one: "{0} fathom"
+        other: "{0} na fathom"
+      short:
+        display_name: fathoms
+      narrow:
+        display_name: fathom
+        one: "{0}fth"
+        other: "{0}fth"
+    nautical-mile:
+      long:
+        display_name: nautical miles
+        one: "{0} nautical mile"
+        other: "{0} nautical miles"
+      short:
+        one: "{0} nmi"
+        other: "{0} na nmi"
+      narrow:
+        one: "{0}nmi"
+        other: "{0}nmi"
+    mile-scandinavian:
+      long:
+        display_name: milya-scandinavian
+        one: "{0} milya-scandinavian"
+        other: "{0} na milya-scandinavian"
+      narrow:
+        one: "{0}smi"
+        other: "{0}smi"
+    point:
+      long:
+        one: "{0} puntos"
+        other: "{0} puntos"
+      short:
+        display_name: puntos
+      narrow:
+        display_name: pts
+        one: "{0}pt"
+        other: "{0}pt"
+    solar-radius:
+      long:
+        one: "{0} solar radius"
+        other: "{0} solar radii"
+      short:
+        display_name: solar radii
+      narrow:
+        display_name: R☉
+    lux:
+      long:
+        one: "{0} lux"
+        other: "{0} na lux"
+      short:
+        display_name: lux
+    candela:
+      long:
+        display_name: candela
+        one: "{0} candela"
+        other: "{0} candela"
+    lumen:
+      long:
+        display_name: lumen
+        one: "{0} lumen"
+        other: "{0} lumen"
+    solar-luminosity:
+      long:
+        one: "{0} solar luminosity"
+        other: "{0} solar luminosity"
+      short:
+        display_name: solar luminosity
+    tonne:
+      long:
+        display_name: mga metriko tonelada
+        one: "{0} metriko tonelada"
+        other: "{0} metriko tonelada"
+      narrow:
+        one: "{0}t"
+        other: "{0}t"
+    kilogram:
+      long:
+        display_name: kilo
+        one: "{0} kilo"
+        other: "{0} kilo"
+        per_unit_pattern: "{0} kada kilo"
+      narrow:
+        one: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        one: "{0} gramo"
+        other: "{0} na gramo"
+        per_unit_pattern: "{0} kada gramo"
+      short:
+        display_name: gramo
+      narrow:
+        one: "{0}g"
+        other: "{0}g"
+    milligram:
+      long:
+        display_name: milligrams
+        one: "{0} milligram"
+        other: "{0} milligrams"
+      narrow:
+        one: "{0}mg"
+        other: "{0}mg"
+    microgram:
+      long:
+        display_name: micrograms
+        one: "{0} microgram"
+        other: "{0} micrograms"
+      narrow:
+        one: "{0}μg"
+        other: "{0}μg"
+    ton:
+      long:
+        one: "{0} tonelada"
+        other: "{0} tonelada"
+      short:
+        display_name: tonelada
+      narrow:
+        display_name: ton
+        one: "{0}tn"
+        other: "{0}tn"
+    stone:
+      long:
+        one: "{0} stone"
+        other: "{0} stones"
+      short:
+        display_name: stones
+      narrow:
+        display_name: stone
+        one: "{0}st"
+        other: "{0}st"
+    pound:
+      long:
+        one: "{0} libra"
+        other: "{0} na libra"
+        per_unit_pattern: "{0} kada libra"
+      short:
+        display_name: libra
+        one: "{0} lb"
+        other: "{0} lbs"
+      narrow:
+        one: "{0}#"
+        other: "{0}#"
+    ounce:
+      long:
+        display_name: onsa
+        one: "{0} onsa"
+        other: "{0} na onsa"
+        per_unit_pattern: "{0} kada onsa"
+      narrow:
+        one: "{0}oz"
+        other: "{0}oz"
+    ounce-troy:
+      long:
+        display_name: troy na onsa
+        one: "{0} troy na onsa"
+        other: "{0} na troy na onsa"
+      short:
+        display_name: oz troy
+      narrow:
+        one: "{0}oz t"
+        other: "{0}oz t"
+    carat:
+      long:
+        one: "{0} karat"
+        other: "{0} karat"
+      short:
+        display_name: karat
+        one: "{0} KD"
+        other: "{0} KD"
+      narrow:
+        one: "{0}CD"
+        other: "{0}CD"
+    dalton:
+      long:
+        one: "{0} dalton"
+        other: "{0} dalton"
+      short:
+        display_name: dalton
+      narrow:
+        display_name: Da
+    earth-mass:
+      long:
+        one: "{0} Earth mass"
+        other: "{0} Earth mass"
+      short:
+        display_name: Earth mass
+      narrow:
+        display_name: M⊕
+    solar-mass:
+      long:
+        one: "{0} solar mass"
+        other: "{0} solar mass"
+      short:
+        display_name: solar mass
+      narrow:
+        display_name: M☉
+    gigawatt:
+      long:
+        display_name: gigawatts
+        one: "{0} gigawatt"
+        other: "{0} na gigawatt"
+    megawatt:
+      long:
+        display_name: megawatts
+        one: "{0} megawatt"
+        other: "{0} na megawatt"
+    kilowatt:
+      long:
+        display_name: kilowatts
+        one: "{0} kilowatt"
+        other: "{0} kilowatts"
+      narrow:
+        one: "{0}kW"
+        other: "{0}kW"
+    watt:
+      long:
+        one: "{0} watt"
+        other: "{0} na watt"
+      short:
+        display_name: watts
+      narrow:
+        display_name: watt
+        one: "{0}W"
+        other: "{0}W"
+    milliwatt:
+      long:
+        display_name: milliwatts
+        one: "{0} milliwatt"
+        other: "{0} na milliwatt"
+    horsepower:
+      long:
+        display_name: horsepower
+        one: "{0} horsepower"
+        other: "{0} horsepower"
+      narrow:
+        one: "{0}hp"
+        other: "{0}hp"
+    millimeter-ofhg:
+      long:
+        display_name: milimetro ng asoge
+        one: "{0} milimetro ng asoge"
+        other: "{0} na milimetro ng asoge"
+      narrow:
+        display_name: mmHg
+        one: "{0}mmHg"
+        other: "{0}mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: libra kada pulgadang parisukat
+        one: "{0} libra kada pulgadang parisukat"
+        other: "{0} na libra kada pulgadang parisukat"
+      narrow:
+        one: "{0}psi"
+        other: "{0}psi"
+    inch-ofhg:
+      long:
+        display_name: pulgada ng asoge
+        one: "{0} pulgada ng asoge"
+        other: "{0} na pulgada ng asoge"
+      short:
+        display_name: in Hg
+      narrow:
+        display_name: "″ Hg"
+        one: '{0}" Hg'
+        other: '{0}" Hg'
+    millibar:
+      long:
+        display_name: millibar
+        one: "{0} millibar"
+        other: "{0} na millibar"
+      short:
+        one: "{0} mb"
+        other: "{0} mb"
+      narrow:
+        one: "{0}mb"
+        other: "{0}mb"
+    atmosphere:
+      long:
+        display_name: atmospheres
+        one: "{0} atmosphere"
+        other: "{0} atmospheres"
+    pascal:
+      long:
+        display_name: pascal
+        one: "{0} pascal"
+        other: "{0} pascals"
+    hectopascal:
+      long:
+        display_name: hectopascals
+        one: "{0} hectopascal"
+        other: "{0} na hectopascal"
+      narrow:
+        one: "{0}hPa"
+        other: "{0}hPa"
+    kilopascal:
+      long:
+        display_name: kilopascal
+        one: "{0} kilopascal"
+        other: "{0} kilopascal"
+    megapascal:
+      long:
+        display_name: megapascal
+        one: "{0} megapascal"
+        other: "{0} megapascal"
+    kilometer-per-hour:
+      long:
+        display_name: kilometro kada oras
+        one: "{0} kilometro kada oras"
+        other: "{0} na kilometro kada oras"
+      short:
+        display_name: km/hr
+        one: "{0} kph"
+        other: "{0} kph"
+      narrow:
+        one: "{0}kph"
+        other: "{0}kph"
+    meter-per-second:
+      long:
+        display_name: metro kada segundo
+        one: "{0} metro kada segundo"
+        other: "{0} metro kada segundo"
+      short:
+        display_name: metro/seg
+      narrow:
+        one: "{0}m/s"
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        display_name: milya kada oras
+        one: "{0} milya kada oras"
+        other: "{0} milya kada oras"
+      short:
+        display_name: milya/oras
+        one: "{0} mph"
+        other: "{0} mph"
+      narrow:
+        display_name: mi/hr
+        one: "{0}mph"
+        other: "{0}mph"
+    knot:
+      long:
+        display_name: knot
+        one: "{0} knot"
+        other: "{0} na knot"
+      narrow:
+        one: "{0}kn"
+        other: "{0}kn"
+    beaufort:
+      long:
+        display_name: Beaufort
+        one: Beaufort {0}
+        other: Beaufort {0}
+    celsius:
+      long:
+        display_name: degrees Celsius
+        one: "{0} degree Celsius"
+        other: "{0} degrees Celsius"
+      short:
+        display_name: deg. C
+      narrow:
+        display_name: "⁰C"
+    fahrenheit:
+      long:
+        display_name: degrees Fahrenheit
+        one: "{0} degree Fahrenheit"
+        other: "{0} degrees Fahrenheit"
+      short:
+        display_name: deg. F
+      narrow:
+        display_name: "°F"
+    kelvin:
+      long:
+        display_name: degrees kelvin
+        one: "{0} degree kelvin"
+        other: "{0} degrees kelvin"
+      short:
+        display_name: deg. K
+        one: "{0}°K"
+        other: "{0}°K"
+      narrow:
+        display_name: K
+        one: "{0}K"
+        other: "{0}K"
+    pound-force-foot:
+      long:
+        display_name: pound-force-feet
+        one: "{0} pound-force-foot"
+        other: "{0} pound-feet"
+    newton-meter:
+      long:
+        display_name: newton-meter
+        one: "{0} newton-meter"
+        other: "{0} newton-meter"
+    cubic-kilometer:
+      long:
+        display_name: kubiko kilometro
+        one: "{0} kubiko kilometro"
+        other: "{0} kubiko kilometro"
+      narrow:
+        one: "{0}km³"
+        other: "{0}km³"
+    cubic-meter:
+      long:
+        display_name: kubiko metro
+        one: "{0} kubiko metro"
+        other: "{0} na metro kubiko"
+        per_unit_pattern: "{0} kada metro kubiko"
+    cubic-centimeter:
+      long:
+        display_name: kubiko sentimetro
+        one: "{0} kubiko sentimetro"
+        other: "{0} na sentimetro kubiko"
+        per_unit_pattern: "{0} kada sentimetro kubiko"
+    cubic-mile:
+      long:
+        display_name: kubiko milya
+        one: "{0} kubiko milya"
+        other: "{0} kubiko milya"
+      narrow:
+        one: "{0}mi³"
+        other: "{0}mi³"
+    cubic-yard:
+      long:
+        display_name: kubiko yarda
+        one: "{0} kubiko yarda"
+        other: "{0} kubiko yarda"
+      short:
+        display_name: yarda³
+      narrow:
+        display_name: yd³
+    cubic-foot:
+      long:
+        display_name: kubiko talampakan
+        one: "{0} kubiko talampakan"
+        other: "{0} kubiko talampakan"
+      short:
+        display_name: talampakan³
+      narrow:
+        display_name: ft³
+    cubic-inch:
+      long:
+        display_name: kubiko pulgada
+        one: "{0} kubiko pulgada"
+        other: "{0} kubiko pulgada"
+      short:
+        display_name: pulgada³
+      narrow:
+        display_name: in³
+    megaliter:
+      long:
+        display_name: megalitro
+        one: "{0} megalitro"
+        other: "{0} megalitro"
+    hectoliter:
+      long:
+        display_name: hektolitro
+        one: "{0} hektolitro"
+        other: "{0} hektolitro"
+    liter:
+      long:
+        one: "{0} litro"
+        other: "{0} na litro"
+        per_unit_pattern: "{0} kada litro"
+      short:
+        display_name: litro
+        one: "{0} L"
+        other: "{0} L"
+      narrow:
+        one: "{0}L"
+        other: "{0}L"
+        per_unit_pattern: "{0}/L"
+    deciliter:
+      long:
+        display_name: decilitro
+        one: "{0} decilitro"
+        other: "{0} na decilitro"
+    centiliter:
+      long:
+        display_name: sentilitro
+        one: "{0} sentilitro"
+        other: "{0} sentilitro"
+    milliliter:
+      long:
+        display_name: mililitro
+        one: "{0} mililitro"
+        other: "{0} mililitro"
+    pint-metric:
+      long:
+        display_name: metric pints
+        one: "{0} metric pint"
+        other: "{0} na metric pint"
+      short:
+        one: "{0} na mpt"
+        other: "{0} na mpt"
+      narrow:
+        display_name: pt
+        one: "{0} mpt"
+        other: "{0} mpt"
+    cup-metric:
+      long:
+        display_name: metric cups
+        one: "{0} metric cup"
+        other: "{0} na metric cup"
+      short:
+        one: "{0} mc"
+        other: "{0} na mc"
+    acre-foot:
+      long:
+        display_name: acre-feet
+        one: "{0} acre-foot"
+        other: "{0} acre-feet"
+      short:
+        display_name: acre ft
+    bushel:
+      long:
+        one: "{0} bushel"
+        other: "{0} mga bushel"
+      short:
+        display_name: mga bushel
+      narrow:
+        display_name: bushel
+    gallon:
+      long:
+        display_name: galon
+        one: "{0} galon"
+        other: "{0} na galon"
+        per_unit_pattern: "{0} kada galon"
+      short:
+        display_name: gal
+        one: "{0} gal"
+        other: "{0} na gal"
+        per_unit_pattern: "{0}/gal"
+    gallon-imperial:
+      long:
+        per_unit_pattern: "{0} kada Imp. galon"
+    quart:
+      long:
+        display_name: quarts
+        one: "{0} quart"
+        other: "{0} na quarts"
+      short:
+        display_name: qts
+    pint:
+      long:
+        one: "{0} pint"
+        other: "{0} pints"
+      short:
+        display_name: pints
+    cup:
+      long:
+        one: "{0} tasa"
+        other: "{0} na tasa"
+      short:
+        display_name: tasa
+    fluid-ounce:
+      long:
+        display_name: fluid ounces
+        one: "{0} fluid ounce"
+        other: "{0} na fluid ounce"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        other: "{0} fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: Imp. fluid ounce
+        one: "{0} Imp. fluid ounce"
+        other: "{0} Imp. fluid ounce"
+      narrow:
+        display_name: Imp fl oz
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    tablespoon:
+      long:
+        display_name: kutsara
+        one: "{0} kutsara"
+        other: "{0} kutsara"
+      narrow:
+        display_name: kutsara
+        one: "{0} kutsara"
+        other: "{0} kutsara"
+    teaspoon:
+      long:
+        display_name: kutsarita
+        one: "{0} kutsarita"
+        other: "{0} kutsarita"
+      narrow:
+        display_name: kutsarita
+        one: "{0} kutsarita"
+        other: "{0} kutsarita"
+    barrel:
+      long:
+        one: "{0} bariles"
+        other: "{0} bariles"
+      short:
+        display_name: bariles
+      narrow:
+        display_name: bbl
+    dessert-spoon:
+      long:
+        display_name: kutsarang panghimagas
+        one: "{0} kutsarang panghimagas"
+        other: "{0} kutsarang panghimagas"
+      narrow:
+        display_name: kutsaritang panghimagas
+        one: "{0} dsp"
+        other: "{0} dsp"
+    dessert-spoon-imperial:
+      long:
+        display_name: Imp. na kutsarang panghimagas
+        one: "{0} Imp. na kutsarang panghimagas"
+        other: "{0} Imp. na kutsarang panghimagas"
+      narrow:
+        display_name: dsp lmp
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+    dram:
+      long:
+        display_name: dram
+        one: "{0} dram"
+        other: "{0} dram"
+      narrow:
+        display_name: fl.dr.
+        one: "{0}fl.dr."
+        other: "{0}fl.dr."
+    quart-imperial:
+      long:
+        display_name: Imp. na kuwart
+        one: "{0} Imp. na kuwart"
+        other: "{0} Imp. na kuwart"
+      short:
+        display_name: Imp na kuwart
+      narrow:
+        display_name: qt Imp
+        one: "{0} qt Imp."
+        other: "{0}qt-Imp."
+    portion-per-1e9:
+      long:
+        display_name: parts per billion
+        one: "{0} part per billion"
+        other: "{0} parts per billion"
+      short:
+        display_name: parts/billion
+      narrow:
+        one: "{0}ppb"
+        other: "{0}ppb"
+    night:
+      long:
+        display_name: mga gabi
+        one: "{0} gabi"
+        other: "{0} gabi"
+        per_unit_pattern: "{0} kada gabi"
+      short:
+        display_name: mga gabi
+        one: "{0} gabi"
+        other: "{0} gabi"
+        per_unit_pattern: "{0}/gabi"
+      narrow:
+        display_name: mga gabi
+        one: "{0}gabi"
+        other: "{0}gabi"
+        per_unit_pattern: "{0}/gabi"
+    dot:
+      short:
+        display_name: mga tuldok
+        one: "{0} tuldok"
+        other: "{0} tuldok"
+      narrow:
+        display_name: tuldok
+    grain:
+      short:
+        display_name: butil
+        one: "{0} butil"
+        other: "{0} butil"
+    drop:
+      short:
+        display_name: patak
+        one: "{0} patak"
+        other: "{0} patak"
+    pinch:
+      short:
+        display_name: karampot
+        one: "{0} kurot"
+        other: "{0} kurot"
+      narrow:
+        display_name: kurot
+    jigger:
+      narrow:
+        one: "{0} jigger"
+        other: "{0}jigger"

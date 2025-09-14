@@ -1,233 +1,109 @@
 ---
 locale: ps_PK
-generated_at: '2025-09-13T17:39:53Z'
+generated_at: '2025-09-14T06:11:42Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
     standard: 
-  scientific_formats:
-    standard: "#E0"
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
-    ARS:
-      symbol: "$"
-    AUD:
-      symbol: A$
-    AZN:
-      symbol: "₼"
-    BAM:
-      symbol: KM
-    BBD:
-      symbol: "$"
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
-    BZD:
-      symbol: "$"
-    CAD:
-      symbol: CA$
-    CLP:
-      symbol: "$"
-    CNY:
-      symbol: CN¥
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
-    EGP:
-      symbol: E£
-    ESP:
-      symbol: "₧"
-    EUR:
-      symbol: "€"
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
-    GBP:
-      symbol: "£"
-    GEL:
-      symbol: "₾"
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
-    HKD:
-      symbol: HK$
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
-    INR:
-      symbol: "₹"
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
-    JPY:
-      symbol: JP¥
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
-    KMF:
-      symbol: CF
-    KPW:
-      symbol: "₩"
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-    KZT:
-      symbol: "₸"
-    LAK:
-      symbol: "₭"
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
-    LRD:
-      symbol: "$"
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
-    MXN:
-      symbol: MX$
-    MYR:
-      symbol: RM
-    NAD:
-      symbol: "$"
-    NGN:
-      symbol: "₦"
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
-    NZD:
-      symbol: NZ$
-    PHP:
-      symbol: "₱"
     PKR:
       symbol: Rs
       display_names:
         other: پاکستانۍ کلدارے
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
-    RWF:
-      symbol: RF
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
-    SHP:
-      symbol: "£"
-    SRD:
-      symbol: "$"
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
-    TRY:
-      symbol: "₺"
-    TTD:
-      symbol: "$"
-    TWD:
-      symbol: NT$
-    UAH:
-      symbol: "₴"
-    USD:
-      symbol: US$
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
-    XAF:
-      symbol: FCFA
-    XCD:
-      symbol: EC$
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: F CFA
-    XPF:
-      symbol: CFPF
     XXX:
-      symbol: "¤"
       display_names:
         other: "(نامعلومه مروجه پېسے)"
-    ZAR:
-      symbol: R
-    ZMW:
-      symbol: ZK
+  units:
+    g-force:
+      long:
+        one: "{0} د جاذبے قوه"
+        other: "{0} د جاذبے قوه"
+      category: acceleration
+      short:
+        display_name: د جاذبے قوه
+    degree:
+      long:
+        one: "{0} درجے"
+        other: "{0} درجے"
+      category: angle
+      short:
+        display_name: درجے
+      narrow:
+        display_name: درجے
+    arc-second:
+      long:
+        display_name: آرک ثانيے
+        other: "{0} آرک ثانيے"
+      category: angle
+    hectare:
+      long:
+        other: "{0} هيکترے"
+      category: area
+      short:
+        display_name: هيکترے
+    month:
+      long:
+        other: "{0} مياشتے"
+      category: duration
+      short:
+        display_name: مياشتے
+    week:
+      long:
+        per_unit_pattern: "{0} په هره اونۍ کے"
+      category: duration
+    day:
+      long:
+        per_unit_pattern: "{0} په هره ورځ کے"
+      category: duration
+      short:
+        display_name: ورځے
+        other: "{0} ورځے"
+    inch:
+      long:
+        other: "{0} انچے"
+      category: length
+      short:
+        display_name: انچے
+    astronomical-unit:
+      long:
+        display_name: فلکي احدے
+        other: "{0} فلکي احدے"
+      category: length
+    millimeter-ofhg:
+      long:
+        display_name: د پارے ملي مترز
+        one: "{0} د پارے ملي متر"
+        other: "{0} د پارے ملي مترز"
+      category: pressure
+    inch-ofhg:
+      long:
+        display_name: د پارے انچے
+        one: "{0} د پارے انچ"
+        other: "{0} د پارے انچے"
+      category: pressure
+    celsius:
+      long:
+        display_name: درجے سيلسيس
+        one: "{0} درجے سيلسيس"
+        other: "{0} درجے سيلسيس"
+      category: temperature
+    fahrenheit:
+      long:
+        display_name: درجے فارنهايټ
+        one: "{0} درجے فارنهايټ"
+        other: "{0} درجے فارنهايټ"
+      category: temperature
+    cup:
+      long:
+        other: "{0} پيالے"
+      category: volume
+      short:
+        display_name: پيالے
+    teaspoon:
+      long:
+        display_name: د ميز کاچوغے
+        other: "{0} د ميز کاچوغے"
+      category: volume
 currency_fractions:
   ADP:
     digits: 0

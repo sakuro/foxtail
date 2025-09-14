@@ -1,24 +1,91 @@
 ---
 locale: tt
-generated_at: '2025-09-13T17:41:20Z'
+generated_at: '2025-09-14T06:12:38Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        other: 0 мең
+      '10000':
+        other: 00 мең
+      '100000':
+        other: 000 мең
+      '1000000':
+        other: 0 млн
+      '10000000':
+        other: 00 млн
+      '100000000':
+        other: 000 млн
+      '1000000000':
+        other: 0 млрд
+      '10000000000':
+        other: 00 млрд
+      '100000000000':
+        other: 000млрд
+      '1000000000000':
+        other: 0 трлн
+      '10000000000000':
+        other: 00 трлн
+      '100000000000000':
+        other: 000 трлн
+    long:
+      '1000':
+        other: 0 мең
+      '10000':
+        other: 00 мең
+      '100000':
+        other: 000 мең
+      '1000000':
+        other: 0 миллион
+      '10000000':
+        other: 00 миллион
+      '100000000':
+        other: 000 миллион
+      '1000000000':
+        other: 0 миллиард
+      '10000000000':
+        other: 00 миллиард
+      '100000000000':
+        other: 000 миллиард
+      '1000000000000':
+        other: 0 триллион
+      '10000000000000':
+        other: 00 триллион
+      '100000000000000':
+        other: 000 триллион
   currencies:
+    AED:
+      display_names:
+        other: Берләшкән Гарәп Әмирлекләре дирхамнары
+        one: Берләшкән Гарәп Әмирлекләре дирхамы
     AFN:
       display_names:
         other: Әфган әфганлары
         one: Әфган әфганы
+    ALL:
+      display_names:
+        other: Албания леке
+        one: Албания Леке
     AMD:
       display_names:
         other: Армения драмнары
         one: Армения драмы
+    ANG:
+      display_names:
+        other: Нидерланд Антиль утраулары гульденнары
+        one: Нидерланд Антиль утраулары гульдены
     AOA:
       display_names:
         other: Ангола кванзалары
@@ -31,6 +98,10 @@ number_formats:
       display_names:
         other: Австралия долларлары
         one: Австралия доллары
+    AWG:
+      display_names:
+        other: Арубан флорины
+        one: Арубан Флорины
     AZN:
       display_names:
         other: Әзербайҗан манатлары
@@ -47,6 +118,18 @@ number_formats:
       display_names:
         other: Бангладеш такалары
         one: Бангладеш такасы
+    BGN:
+      display_names:
+        other: Болгар левы
+        one: Болгар Левы
+    BHD:
+      display_names:
+        other: Бахрейн динарлары
+        one: Бахрейн динары
+    BIF:
+      display_names:
+        other: Бурунди франклары
+        one: Бурунди франкы
     BMD:
       display_names:
         other: Бермуд долларлары
@@ -67,10 +150,18 @@ number_formats:
       display_names:
         other: Багам долларлары
         one: Багам доллары
+    BTN:
+      display_names:
+        other: Бутан нгултрумнары
+        one: Бутан нгултрумы
     BWP:
       display_names:
         other: Ботсвана пулалары
         one: Ботсвана пуласы
+    BYN:
+      display_names:
+        other: Беларус сумнары
+        one: Беларус сумы
     BZD:
       display_names:
         other: Белиз долларлары
@@ -79,10 +170,22 @@ number_formats:
       display_names:
         other: Канада долларлары
         one: Канада доллары
+    CDF:
+      display_names:
+        other: Конголез франклары
+        one: Конголез франкы
+    CHF:
+      display_names:
+        other: Швейцария франклары
+        one: Швейцария франкы
     CLP:
       display_names:
         other: Чили песолары
         one: Чили песосы
+    CNH:
+      display_names:
+        other: Кытай юане (оффшор)
+        one: Кытай Юане (оффшор)
     CNY:
       display_names:
         other: юань
@@ -103,10 +206,18 @@ number_formats:
       display_names:
         other: Куба песолары
         one: Куба песосы
+    CVE:
+      display_names:
+        other: Кабо-Верде эскудолары
+        one: Кабо-Верде эскудосы
     CZK:
       display_names:
         other: Чех кроналары
         one: Чех кронасы
+    DJF:
+      display_names:
+        other: Җибути франклары
+        one: Җибути франкы
     DKK:
       display_names:
         other: Дания кронасы
@@ -115,10 +226,22 @@ number_formats:
       display_names:
         other: Доминикана пеослары
         one: Доминикана песосы
+    DZD:
+      display_names:
+        other: Алжир динарлары
+        one: Алжир динары
     EGP:
       display_names:
         other: Мисыр фунтлары
         one: Мисыр фунты
+    ERN:
+      display_names:
+        other: Эритрея накфалары
+        one: Эритрея накфасы
+    ETB:
+      display_names:
+        other: Эфиопия бырлары
+        one: Эфиопия быры
     EUR:
       display_names:
         other: евро
@@ -147,6 +270,10 @@ number_formats:
       display_names:
         other: Гибралтар фунтлары
         one: Гибралтар фунты
+    GMD:
+      display_names:
+        other: Гамбия даласилары
+        one: Гамбия даласие
     GNF:
       display_names:
         other: Гвинея франклары
@@ -171,6 +298,10 @@ number_formats:
       display_names:
         other: Хорватия куннары
         one: Хорватия кунасы
+    HTG:
+      display_names:
+        other: Гаити гурдлары
+        one: Гаити гурды
     HUF:
       display_names:
         other: Венгрия форинтлары
@@ -187,6 +318,14 @@ number_formats:
       display_names:
         other: Индия рупиясе
         one: Индия рупиясе
+    IQD:
+      display_names:
+        other: Ирак динарлары
+        one: Ирак динары
+    IRR:
+      display_names:
+        other: Иран риаллары
+        one: Иран риалы
     ISK:
       display_names:
         other: Исландия кронасы
@@ -195,10 +334,18 @@ number_formats:
       display_names:
         other: Ямайка долларлары
         one: Ямайка доллары
+    JOD:
+      display_names:
+        other: Иордания динарлары
+        one: Иордания динары
     JPY:
       display_names:
         other: иена
         one: япон иенасы
+    KES:
+      display_names:
+        other: Кения шиллинглары
+        one: Кения шиллингы
     KGS:
       display_names:
         other: Кыргызстан сомнары
@@ -219,6 +366,10 @@ number_formats:
       display_names:
         other: Көньяк Корея вонасы
         one: Көньяк Корея Вонасы
+    KWD:
+      display_names:
+        other: Кувейт динарлары
+        one: Кувейт динары
     KYD:
       display_names:
         other: Кайман утраулары долларлары
@@ -243,10 +394,30 @@ number_formats:
       display_names:
         other: Либерия долларлары
         one: Либерия доллары
+    LSL:
+      display_names:
+        other: Лесото лотислары
+        one: Лесото лотисы
+    LYD:
+      display_names:
+        other: Ливия динарлары
+        one: Ливия динары
+    MAD:
+      display_names:
+        other: Марокко дирхамнары
+        one: Марокко дирхамы
+    MDL:
+      display_names:
+        other: Молдавия лее
+        one: Молдавия Лее
     MGA:
       display_names:
         other: Малагаси ариарияләре
         one: Малагаси ариариясе
+    MKD:
+      display_names:
+        other: Македония денарлары
+        one: Македония денары
     MMK:
       display_names:
         other: Мьянма кьятлары
@@ -255,10 +426,26 @@ number_formats:
       display_names:
         other: Монголия тугриклары
         one: Монголия тугрикы
+    MOP:
+      display_names:
+        other: Макао патаклары
+        one: Макао патакы
+    MRU:
+      display_names:
+        other: Мавритан угиялары
+        one: Мавритан угиясы
     MUR:
       display_names:
         other: Маврикий рупиялары
         one: Маврикий рупие
+    MVR:
+      display_names:
+        other: Мальдив руфияләре
+        one: Мальдив руфиясе
+    MWK:
+      display_names:
+        other: Малавия квачилары
+        one: Малавия квачие
     MXN:
       display_names:
         other: Мексика песолары
@@ -267,6 +454,10 @@ number_formats:
       display_names:
         other: Малайзия ринггитлары
         one: Малайзия ринггиты
+    MZN:
+      display_names:
+        other: Мозамбик метикаллары
+        one: Мозамбик метикалы
     NAD:
       display_names:
         other: Намибия долларлары
@@ -291,6 +482,22 @@ number_formats:
       display_names:
         other: Яңа Зеландия долларлары
         one: Яңа Зеландия доллары
+    OMR:
+      display_names:
+        other: Оман риаллары
+        one: Оман риалы
+    PAB:
+      display_names:
+        other: Панама бальбоалары
+        one: Панама бальбоасы
+    PEN:
+      display_names:
+        other: Перу соллары
+        one: Перу солы
+    PGK:
+      display_names:
+        other: Папуа Яңа Гвинея кинасы
+        one: Папуа Яңа Гвинея Кинасы
     PHP:
       display_names:
         other: Филиппин песолары
@@ -307,22 +514,44 @@ number_formats:
       display_names:
         other: Парагвай гуаранилары
         one: Парагвай гуаранисы
+    QAR:
+      display_names:
+        other: Катар риаллары
+        one: Катар риалы
     RON:
       display_names:
         other: Румыния лее
         one: Румыния Лее
+    RSD:
+      display_names:
+        other: Сербия динарлары
+        one: Сербия динары
     RUB:
       display_names:
         other: сум
         one: Россия сумы
+    RUR:
+      symbol: р.
     RWF:
       display_names:
         other: Руанда франклары
         one: Руанда франкы
+    SAR:
+      display_names:
+        other: Согуд Гарәбстаны риаллары
+        one: Согуд Гарәбстаны риалы
     SBD:
       display_names:
         other: Соломон утраулары долларлары
         one: Соломон утраулары доллары
+    SCR:
+      display_names:
+        other: Сейшел утраулары рупиялары
+        one: Сейшел утраулары рупиясы
+    SDG:
+      display_names:
+        other: Судан фунтлары
+        one: Судан фунты
     SEK:
       display_names:
         other: Швеция кронасы
@@ -335,6 +564,18 @@ number_formats:
       display_names:
         other: Изге Елена утравы фунтлары
         one: Изге Елена утравы фунты
+    SLE:
+      display_names:
+        other: Сьерра-Леоне леоннары
+        one: Сьерра-Леон леоны
+    SLL:
+      display_names:
+        other: Сьерра-Леоне леоннары (1964—2022)
+        one: Сьерра-Леоне леоны (1964—2022)
+    SOS:
+      display_names:
+        other: Сомали шиллинглары
+        one: Сомали шиллингы
     SRD:
       display_names:
         other: Суринам долларлары
@@ -351,10 +592,26 @@ number_formats:
       display_names:
         other: Сурия фунтлары
         one: Сурия фунты
+    SZL:
+      display_names:
+        other: Свази эмалангенилары
+        one: Свази эмалангенисы
     THB:
       display_names:
         other: Тайвань баты
         one: Тайвань Баты
+    TJS:
+      display_names:
+        other: Таҗикстан сомонилары
+        one: Таҗикстан сомонисы
+    TMT:
+      display_names:
+        other: Төркмәнстан манаты
+        one: Төркмәнстан Манаты
+    TND:
+      display_names:
+        other: Тунис динарлары
+        one: Тунис динары
     TOP:
       display_names:
         other: Тонга паангасы
@@ -371,10 +628,18 @@ number_formats:
       display_names:
         other: Яңа Тайвань долларлары
         one: Яңа Тайвань доллары
+    TZS:
+      display_names:
+        other: Танзания шиллинглары
+        one: Танзания шиллингы
     UAH:
       display_names:
         other: Украина гривналары
         one: Украина гривнасы
+    UGX:
+      display_names:
+        other: Уганда шиллинглары
+        one: Уганда шиллингы
     USD:
       symbol: "$"
       display_names:
@@ -384,10 +649,26 @@ number_formats:
       display_names:
         other: Уругвай песолары
         one: Уругвай песосы
+    UZS:
+      display_names:
+        other: Үзбәкстан сомы
+        one: Үзбәкстан Сомы
+    VES:
+      display_names:
+        other: Венесуэла боливарлары
+        one: Венесуэла боливары
     VND:
       display_names:
         other: Вьетнам донгы
         one: Вьетнам Донгы
+    VUV:
+      display_names:
+        other: Вануату ватлары
+        one: Вануату ваты
+    WST:
+      display_names:
+        other: Самоа таласы
+        one: Самоа Таласы
     XAF:
       display_names:
         other: Үзәк африка франклары КФА
@@ -408,6 +689,10 @@ number_formats:
       display_names:
         other: "(билгесез валюта)"
         one: билгесез валюта
+    YER:
+      display_names:
+        other: Йәмән риаллары
+        one: Йәмән риалы
     ZAR:
       display_names:
         other: Көньяк Африка рэнды
@@ -416,233 +701,3 @@ number_formats:
       display_names:
         other: Замбия квачалары
         one: Замбия квачасы
-    AED:
-      display_names:
-        other: Берләшкән Гарәп Әмирлекләре дирхамнары
-        one: Берләшкән Гарәп Әмирлекләре дирхамы
-    ALL:
-      display_names:
-        other: Албания леке
-        one: Албания Леке
-    ANG:
-      display_names:
-        other: Нидерланд Антиль утраулары гульденнары
-        one: Нидерланд Антиль утраулары гульдены
-    AWG:
-      display_names:
-        other: Арубан флорины
-        one: Арубан Флорины
-    BGN:
-      display_names:
-        other: Болгар левы
-        one: Болгар Левы
-    BHD:
-      display_names:
-        other: Бахрейн динарлары
-        one: Бахрейн динары
-    BIF:
-      display_names:
-        other: Бурунди франклары
-        one: Бурунди франкы
-    BTN:
-      display_names:
-        other: Бутан нгултрумнары
-        one: Бутан нгултрумы
-    BYN:
-      display_names:
-        other: Беларус сумнары
-        one: Беларус сумы
-    CDF:
-      display_names:
-        other: Конголез франклары
-        one: Конголез франкы
-    CHF:
-      display_names:
-        other: Швейцария франклары
-        one: Швейцария франкы
-    CNH:
-      display_names:
-        other: Кытай юане (оффшор)
-        one: Кытай Юане (оффшор)
-    CVE:
-      display_names:
-        other: Кабо-Верде эскудолары
-        one: Кабо-Верде эскудосы
-    DJF:
-      display_names:
-        other: Җибути франклары
-        one: Җибути франкы
-    DZD:
-      display_names:
-        other: Алжир динарлары
-        one: Алжир динары
-    ERN:
-      display_names:
-        other: Эритрея накфалары
-        one: Эритрея накфасы
-    ETB:
-      display_names:
-        other: Эфиопия бырлары
-        one: Эфиопия быры
-    GMD:
-      display_names:
-        other: Гамбия даласилары
-        one: Гамбия даласие
-    HTG:
-      display_names:
-        other: Гаити гурдлары
-        one: Гаити гурды
-    IQD:
-      display_names:
-        other: Ирак динарлары
-        one: Ирак динары
-    IRR:
-      display_names:
-        other: Иран риаллары
-        one: Иран риалы
-    JOD:
-      display_names:
-        other: Иордания динарлары
-        one: Иордания динары
-    KES:
-      display_names:
-        other: Кения шиллинглары
-        one: Кения шиллингы
-    KWD:
-      display_names:
-        other: Кувейт динарлары
-        one: Кувейт динары
-    LSL:
-      display_names:
-        other: Лесото лотислары
-        one: Лесото лотисы
-    LYD:
-      display_names:
-        other: Ливия динарлары
-        one: Ливия динары
-    MAD:
-      display_names:
-        other: Марокко дирхамнары
-        one: Марокко дирхамы
-    MDL:
-      display_names:
-        other: Молдавия лее
-        one: Молдавия Лее
-    MKD:
-      display_names:
-        other: Македония денарлары
-        one: Македония денары
-    MOP:
-      display_names:
-        other: Макао патаклары
-        one: Макао патакы
-    MRU:
-      display_names:
-        other: Мавритан угиялары
-        one: Мавритан угиясы
-    MVR:
-      display_names:
-        other: Мальдив руфияләре
-        one: Мальдив руфиясе
-    MWK:
-      display_names:
-        other: Малавия квачилары
-        one: Малавия квачие
-    MZN:
-      display_names:
-        other: Мозамбик метикаллары
-        one: Мозамбик метикалы
-    OMR:
-      display_names:
-        other: Оман риаллары
-        one: Оман риалы
-    PAB:
-      display_names:
-        other: Панама бальбоалары
-        one: Панама бальбоасы
-    PEN:
-      display_names:
-        other: Перу соллары
-        one: Перу солы
-    PGK:
-      display_names:
-        other: Папуа Яңа Гвинея кинасы
-        one: Папуа Яңа Гвинея Кинасы
-    QAR:
-      display_names:
-        other: Катар риаллары
-        one: Катар риалы
-    RSD:
-      display_names:
-        other: Сербия динарлары
-        one: Сербия динары
-    RUR:
-      symbol: р.
-    SAR:
-      display_names:
-        other: Согуд Гарәбстаны риаллары
-        one: Согуд Гарәбстаны риалы
-    SCR:
-      display_names:
-        other: Сейшел утраулары рупиялары
-        one: Сейшел утраулары рупиясы
-    SDG:
-      display_names:
-        other: Судан фунтлары
-        one: Судан фунты
-    SLE:
-      display_names:
-        other: Сьерра-Леоне леоннары
-        one: Сьерра-Леон леоны
-    SLL:
-      display_names:
-        other: Сьерра-Леоне леоннары (1964—2022)
-        one: Сьерра-Леоне леоны (1964—2022)
-    SOS:
-      display_names:
-        other: Сомали шиллинглары
-        one: Сомали шиллингы
-    SZL:
-      display_names:
-        other: Свази эмалангенилары
-        one: Свази эмалангенисы
-    TJS:
-      display_names:
-        other: Таҗикстан сомонилары
-        one: Таҗикстан сомонисы
-    TMT:
-      display_names:
-        other: Төркмәнстан манаты
-        one: Төркмәнстан Манаты
-    TND:
-      display_names:
-        other: Тунис динарлары
-        one: Тунис динары
-    TZS:
-      display_names:
-        other: Танзания шиллинглары
-        one: Танзания шиллингы
-    UGX:
-      display_names:
-        other: Уганда шиллинглары
-        one: Уганда шиллингы
-    UZS:
-      display_names:
-        other: Үзбәкстан сомы
-        one: Үзбәкстан Сомы
-    VES:
-      display_names:
-        other: Венесуэла боливарлары
-        one: Венесуэла боливары
-    VUV:
-      display_names:
-        other: Вануату ватлары
-        one: Вануату ваты
-    WST:
-      display_names:
-        other: Самоа таласы
-        one: Самоа Таласы
-    YER:
-      display_names:
-        other: Йәмән риаллары
-        one: Йәмән риалы

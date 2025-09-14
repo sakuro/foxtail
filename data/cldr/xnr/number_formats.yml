@@ -1,6 +1,6 @@
 ---
 locale: xnr
-generated_at: '2025-09-13T17:41:40Z'
+generated_at: '2025-09-14T06:12:53Z'
 cldr_version: '46'
 number_formats:
   decimal_formats:
@@ -10,15 +10,80 @@ number_formats:
   currency_formats:
     standard: "¤#,##,##0.00"
     accounting: "#,##,##0.00"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        other: 0 हजार
+      '10000':
+        other: 00 हजार
+      '100000':
+        other: 0 लख
+      '1000000':
+        other: 00 लख
+      '10000000':
+        other: 0 क॰
+      '100000000':
+        other: 00 क॰
+      '1000000000':
+        other: 0 अ॰
+      '10000000000':
+        other: 00 अ॰
+      '100000000000':
+        other: 0 ख॰
+      '1000000000000':
+        other: 00 ख॰
+      '10000000000000':
+        other: 0 नील
+      '100000000000000':
+        other: 00 नील
+    long:
+      '1000':
+        other: 0 हजार
+      '10000':
+        other: 00 हजार
+      '100000':
+        other: 0 लख
+      '1000000':
+        other: 00 लख
+      '10000000':
+        other: 0 करोड़
+      '100000000':
+        other: 00 करोड़
+      '1000000000':
+        other: 0 अरब
+      '10000000000':
+        other: 00 अरब
+      '100000000000':
+        other: 0 खरब
+      '1000000000000':
+        other: 00 खरब
+      '10000000000000':
+        other: 000 खरब
+      '100000000000000':
+        other: 0000 खरब
   currencies:
+    AED:
+      display_names:
+        other: कट्ठा अरब अमीरात दे दिराम
+        one: कट्ठा अरब अमीरात दा दिराम
     AFN:
       display_names:
         other: अफ़गान दे अफ़गानी
         one: अफ़गान दा अफ़गानी
+    ALL:
+      display_names:
+        other: अल्बानिया दा लेक
+        one: अल्बानिया दा लेक
     AMD:
       display_names:
         other: आर्मेनिया दे द्राम
         one: आर्मेनिया दा द्राम
+    ANG:
+      display_names:
+        other: नीदरलैंड एंटीलिया दे गिल्डर
+        one: नीदरलैंड एंटिलिया दा गिल्डर
     AOA:
       display_names:
         other: अंगोला दे क्वांज़ा
@@ -31,6 +96,10 @@ number_formats:
       display_names:
         other: अस्ट्रेलिया दे डॉलर
         one: अस्ट्रेलिया दा डॉलर
+    AWG:
+      display_names:
+        other: अरूबा दा फ़्लोरिन
+        one: अरूबा दा फ़्लोरिन
     AZN:
       display_names:
         other: अज़रबैजान दे मैनेट
@@ -47,6 +116,18 @@ number_formats:
       display_names:
         other: बांग्लादेशे दे टका
         one: बांग्लादेशे दा टका
+    BGN:
+      display_names:
+        other: बुल्गारिया दा लेव
+        one: बुल्गारिया दा लेव
+    BHD:
+      display_names:
+        other: बहरेने दे दिनार
+        one: बहरेने दा दिनार
+    BIF:
+      display_names:
+        other: बुरूंडी दे फ़्रैंक
+        one: बुरूंडी दा फ़्रैंक
     BMD:
       display_names:
         other: बरमूडा दे डॉलर
@@ -67,10 +148,18 @@ number_formats:
       display_names:
         other: बहामा दे डॉलर
         one: बहामा दा डॉलर
+    BTN:
+      display_names:
+        other: भूटाने दे नंगलट्रम
+        one: भूटाने दा नंगलट्रम
     BWP:
       display_names:
         other: बोत्सवानिया दे पुला
         one: बोत्सवानियाई दा पुला
+    BYN:
+      display_names:
+        other: बेलारूस दे रूबल
+        one: बेलारूस दा रूबल
     BZD:
       display_names:
         other: बेलीज़ दे डॉलर
@@ -79,10 +168,22 @@ number_formats:
       display_names:
         other: कनेडा दे डॉलर
         one: कनेडा दा डॉलर
+    CDF:
+      display_names:
+        other: कोंगोली फ़्रैंक
+        one: कोंगोली फ़्रैंक
+    CHF:
+      display_names:
+        other: स्विस फ़्रैंक
+        one: स्विस फ़्रैंक
     CLP:
       display_names:
         other: चिली पेसो
         one: चिली पेसो
+    CNH:
+      display_names:
+        other: चीनी युआन (ऑफ़शोर)
+        one: चीनी युआन (ऑफ़शोर)
     CNY:
       display_names:
         other: चीनी युआन
@@ -103,10 +204,18 @@ number_formats:
       display_names:
         other: क्यूबा दे पेसो
         one: क्यूबा दा पेसो
+    CVE:
+      display_names:
+        other: केप वर्ड एस्कूडो
+        one: केप वर्ड एस्कूडो
     CZK:
       display_names:
         other: चेक गणराज्य कोरुना
         one: चेक गणराज्य कोरुना
+    DJF:
+      display_names:
+        other: जिबूती दे फ़्रैंक
+        one: जिबूती दा फ़्रैंक
     DKK:
       display_names:
         other: डैनिश क्रोन
@@ -115,10 +224,22 @@ number_formats:
       display_names:
         other: डैनमार्के दे पेसो
         one: डैनमार्के दा पेसो
+    DZD:
+      display_names:
+        other: अल्जीरिया दे दिनार
+        one: अल्जीरिया दा दिनार
     EGP:
       display_names:
         other: मिस्र दे पाउंड
         one: मिस्र दा पाउंड
+    ERN:
+      display_names:
+        other: इरीट्रिया दे नाक्फ़ा
+        one: इरीट्रिया दा नाक्फ़ा
+    ETB:
+      display_names:
+        other: इथियोपिया दे बिर
+        one: इथियोपिया दा बिर
     EUR:
       display_names:
         other: यूरो
@@ -147,6 +268,10 @@ number_formats:
       display_names:
         other: जिब्राल्टरे दे पाउंड
         one: जिब्राल्टरे दा पाउंड
+    GMD:
+      display_names:
+        other: गैंबिया दे डलासी
+        one: गैंबिया दा डलासी
     GNF:
       display_names:
         other: गिनीया दे फ़्रैंक
@@ -171,6 +296,10 @@ number_formats:
       display_names:
         other: क्रोएशिया दे कुना
         one: क्रोएशिया दा कुना
+    HTG:
+      display_names:
+        other: हैतियाई दे गर्ड
+        one: हैतिया दा गर्ड
     HUF:
       display_names:
         other: हंगेरिया दे फ़ोरिंट
@@ -187,6 +316,14 @@ number_formats:
       display_names:
         other: भारते दे रुपए
         one: भारते दा रुपया
+    IQD:
+      display_names:
+        other: इराके दे दिनार
+        one: इराके दिनार
+    IRR:
+      display_names:
+        other: ईराने दे रियाल
+        one: ईराने दा रियाल
     ISK:
       display_names:
         other: आइसलैंडे दे क्रोना
@@ -195,10 +332,18 @@ number_formats:
       display_names:
         other: जमैके दे डॉलर
         one: जमैका दा डॉलर
+    JOD:
+      display_names:
+        other: जॉर्डनिया दे दिनार
+        one: जॉर्डनिया दा दिनार
     JPY:
       display_names:
         other: जपाने दे येन
         one: जपाने दा येन
+    KES:
+      display_names:
+        other: केन्या दे शिलिंग
+        one: केन्या दा शिलिंग
     KGS:
       display_names:
         other: किर्गिस्ताने दे सोम
@@ -219,6 +364,10 @@ number_formats:
       display_names:
         other: दखण कोरिया दे वॉन
         one: दखण कोरिया दा वॉन
+    KWD:
+      display_names:
+        other: कुवैते दे दिनार
+        one: कुवैते दा दिनार
     KYD:
       display_names:
         other: कैमेन टापुआं दे झुंडे दे डॉलर
@@ -243,10 +392,26 @@ number_formats:
       display_names:
         other: लाइबेरिया दे डॉलर
         one: लाइबेरिया दा डॉलर
+    LYD:
+      display_names:
+        other: लीबिया दे दिनार
+        one: लीबिया दा दिनार
+    MAD:
+      display_names:
+        other: मोरक्को दे दिरहम
+        one: मोरक्को दा दिरहम
+    MDL:
+      display_names:
+        other: मोल्डोवा दे लियू
+        one: मोल्डोवा दा लियू
     MGA:
       display_names:
         other: मालागासे दे आरियरी
         one: मालागासे दा आरियरी
+    MKD:
+      display_names:
+        other: मैसीडोनिया दे दिनार
+        one: मैसीडोनिया दा दिनार
     MMK:
       display_names:
         other: म्यांमार दे क्याट
@@ -255,10 +420,26 @@ number_formats:
       display_names:
         other: मंगोलिया दे टगरिक
         one: मंगोलिया दा टगरिक
+    MOP:
+      display_names:
+        other: मेकानी दे पाटाके
+        one: मेकानी दा पाटाका
+    MRU:
+      display_names:
+        other: मॉरीटेनिया दे ओगुइया
+        one: मॉरीटेनिया दा ओगुइया
     MUR:
       display_names:
         other: मारिशियश दे रुपया
         one: मारिशियश दा रुपया
+    MVR:
+      display_names:
+        other: मालदीवी दे रुफ़िया
+        one: मालदीवी दा रुफ़िया
+    MWK:
+      display_names:
+        other: मालावियन दे क्वाचा
+        one: मालावियन दा क्वाचा
     MXN:
       display_names:
         other: मैक्सिकन दे पेसो
@@ -267,6 +448,10 @@ number_formats:
       display_names:
         other: मलेशियाई दे रिंगित
         one: मलेशियाई दा रिंगित
+    MZN:
+      display_names:
+        other: मोज़ाम्बिकन दे मेटिकल
+        one: मोज़ाम्बिकन दा मेटिकल
     NAD:
       display_names:
         other: नामीबियाई दे डॉलर
@@ -291,6 +476,22 @@ number_formats:
       display_names:
         other: न्यूज़ीलैंड दे डॉलर
         one: न्यूज़ीलैंड दा डॉलर
+    OMR:
+      display_names:
+        other: ओमानी दे रियाल
+        one: ओमानी दा रियाल
+    PAB:
+      display_names:
+        other: पनामेनियन दे बैल्बोआ
+        one: पनामेनियन दा बैल्बोआ
+    PEN:
+      display_names:
+        other: पेरूवियन दे सोल
+        one: पेरूवियन दा सोल
+    PGK:
+      display_names:
+        other: पापुआ नोआ गिनीयन किना
+        one: पापुआ नोआ गिनीयन किना
     PHP:
       display_names:
         other: फ़िलिपीनी दे पेसो
@@ -307,10 +508,18 @@ number_formats:
       display_names:
         other: पैराग्वियन दे गुआरानी
         one: पैराग्वियन दा गुआरानी
+    QAR:
+      display_names:
+        other: क़तरी दे रियाल
+        one: क़तरी दा रियाल
     RON:
       display_names:
         other: रोमानिया दे ल्यू
         one: रोमानिया दा ल्यू
+    RSD:
+      display_names:
+        other: सर्बिया दे दिनार
+        one: सर्बिया दा दिनार
     RUB:
       display_names:
         other: रूसे दे रूबल
@@ -319,10 +528,22 @@ number_formats:
       display_names:
         other: रवांडा दे फ़्रैंक
         one: रवांडा दा फ़्रैंक
+    SAR:
+      display_names:
+        other: सउदी दे रियाल
+        one: सउदी दा रियाल
     SBD:
       display_names:
         other: सोलोमन टापुआं दे झुंडे दे डॉलर
         one: सोलोमन टापुआं दे झुंडे दा डॉलर
+    SCR:
+      display_names:
+        other: सेशेल्सिया दे रुपए
+        one: सेशेल्सिया दा रुपया
+    SDG:
+      display_names:
+        other: सूडाने दे पाउंड
+        one: सूडाने दा पाउंड
     SEK:
       display_names:
         other: स्वीडेने दे क्रोना
@@ -335,6 +556,18 @@ number_formats:
       display_names:
         other: सेंट हेलेना दे पाउंड
         one: सेंट हेलेना दा पाउंड
+    SLE:
+      display_names:
+        other: सिएरा लियोनिया दे लियोन
+        one: सिएरा लियोनिया दा लियोन
+    SLL:
+      display_names:
+        other: सिएरा लियोनिया दे लियोन (1964—2022)
+        one: सिएरा लियोनिया दा लियोन (1964—2022)
+    SOS:
+      display_names:
+        other: सोमाले दे शिलिंग
+        one: सोमाले दा शिलिंग
     SRD:
       display_names:
         other: सूरीनामे दे डॉलर
@@ -351,10 +584,26 @@ number_formats:
       display_names:
         other: सीरिया दे पाउंड
         one: सीरिया दा पाउंड
+    SZL:
+      display_names:
+        other: स्वाज़ी लिलांजेनी
+        one: स्वाज़ी लिलांजेनी
     THB:
       display_names:
         other: थाई बहत
         one: थाई बहत
+    TJS:
+      display_names:
+        other: ताजिकिस्ताने दे सोमोनी
+        one: ताजिकिस्ताने दा सोमोनी
+    TMT:
+      display_names:
+        other: तुर्कमेनिस्ताने दे मैनत
+        one: तुर्कमेनिस्ताने दा मैनत
+    TND:
+      display_names:
+        other: ट्यूनीशिया दे दिनार
+        one: ट्यूनीशिया दा दिनार
     TOP:
       display_names:
         other: टोंगे दे पांगा
@@ -371,10 +620,18 @@ number_formats:
       display_names:
         other: नोए ताईवानी डॉलर
         one: नोआ ताईवानी डॉलर
+    TZS:
+      display_names:
+        other: तंज़ानिया दे शिलिंग
+        one: तंज़ानिया दा शिलिंग
     UAH:
       display_names:
         other: यूक्रेनिया दे रिव्निया
         one: यूक्रेनिया दा रिव्निया
+    UGX:
+      display_names:
+        other: युगांडा दे शिलिंग
+        one: युगांडा दा शिलिंग
     USD:
       display_names:
         other: यूएस दे डॉलर
@@ -383,10 +640,26 @@ number_formats:
       display_names:
         other: उरुग्विया दे पेसो
         one: उरुग्विया दा पेसो
+    UZS:
+      display_names:
+        other: उज़्बेकिस्ताने दे सोम
+        one: उज़्बेकिस्ताने दा सोम
+    VES:
+      display_names:
+        other: वेनेज़ुएला दे बोलिवर
+        one: वेनेज़ुएला दा बोलिवर
     VND:
       display_names:
         other: वियतनामे दे डोंग
         one: वियतनामे दा डोंग
+    VUV:
+      display_names:
+        other: वनुआतू दे वातू
+        one: वनुआतू दा वातू
+    WST:
+      display_names:
+        other: समोआ दे ताला
+        one: समोआ दा ताला
     XAF:
       display_names:
         other: केंद्रीय अफ़्रीका दे CFA फ़्रैंक
@@ -407,6 +680,10 @@ number_formats:
       display_names:
         other: "(अणजाण मुद्रा)"
         one: अणजाण मुद्रा
+    YER:
+      display_names:
+        other: यमने दे रियाल
+        one: यमने दा रियाल
     ZAR:
       display_names:
         other: दखण अफ़्रीका दे रैंड
@@ -415,227 +692,3 @@ number_formats:
       display_names:
         other: ज़ाम्बिया दे क्वाचा
         one: ज़ाम्बिया दा क्वाचा
-    AED:
-      display_names:
-        other: कट्ठा अरब अमीरात दे दिराम
-        one: कट्ठा अरब अमीरात दा दिराम
-    ALL:
-      display_names:
-        other: अल्बानिया दा लेक
-        one: अल्बानिया दा लेक
-    ANG:
-      display_names:
-        other: नीदरलैंड एंटीलिया दे गिल्डर
-        one: नीदरलैंड एंटिलिया दा गिल्डर
-    AWG:
-      display_names:
-        other: अरूबा दा फ़्लोरिन
-        one: अरूबा दा फ़्लोरिन
-    BGN:
-      display_names:
-        other: बुल्गारिया दा लेव
-        one: बुल्गारिया दा लेव
-    BHD:
-      display_names:
-        other: बहरेने दे दिनार
-        one: बहरेने दा दिनार
-    BIF:
-      display_names:
-        other: बुरूंडी दे फ़्रैंक
-        one: बुरूंडी दा फ़्रैंक
-    BTN:
-      display_names:
-        other: भूटाने दे नंगलट्रम
-        one: भूटाने दा नंगलट्रम
-    BYN:
-      display_names:
-        other: बेलारूस दे रूबल
-        one: बेलारूस दा रूबल
-    CDF:
-      display_names:
-        other: कोंगोली फ़्रैंक
-        one: कोंगोली फ़्रैंक
-    CHF:
-      display_names:
-        other: स्विस फ़्रैंक
-        one: स्विस फ़्रैंक
-    CNH:
-      display_names:
-        other: चीनी युआन (ऑफ़शोर)
-        one: चीनी युआन (ऑफ़शोर)
-    CVE:
-      display_names:
-        other: केप वर्ड एस्कूडो
-        one: केप वर्ड एस्कूडो
-    DJF:
-      display_names:
-        other: जिबूती दे फ़्रैंक
-        one: जिबूती दा फ़्रैंक
-    DZD:
-      display_names:
-        other: अल्जीरिया दे दिनार
-        one: अल्जीरिया दा दिनार
-    ERN:
-      display_names:
-        other: इरीट्रिया दे नाक्फ़ा
-        one: इरीट्रिया दा नाक्फ़ा
-    ETB:
-      display_names:
-        other: इथियोपिया दे बिर
-        one: इथियोपिया दा बिर
-    GMD:
-      display_names:
-        other: गैंबिया दे डलासी
-        one: गैंबिया दा डलासी
-    HTG:
-      display_names:
-        other: हैतियाई दे गर्ड
-        one: हैतिया दा गर्ड
-    IQD:
-      display_names:
-        other: इराके दे दिनार
-        one: इराके दिनार
-    IRR:
-      display_names:
-        other: ईराने दे रियाल
-        one: ईराने दा रियाल
-    JOD:
-      display_names:
-        other: जॉर्डनिया दे दिनार
-        one: जॉर्डनिया दा दिनार
-    KES:
-      display_names:
-        other: केन्या दे शिलिंग
-        one: केन्या दा शिलिंग
-    KWD:
-      display_names:
-        other: कुवैते दे दिनार
-        one: कुवैते दा दिनार
-    LYD:
-      display_names:
-        other: लीबिया दे दिनार
-        one: लीबिया दा दिनार
-    MAD:
-      display_names:
-        other: मोरक्को दे दिरहम
-        one: मोरक्को दा दिरहम
-    MDL:
-      display_names:
-        other: मोल्डोवा दे लियू
-        one: मोल्डोवा दा लियू
-    MKD:
-      display_names:
-        other: मैसीडोनिया दे दिनार
-        one: मैसीडोनिया दा दिनार
-    MOP:
-      display_names:
-        other: मेकानी दे पाटाके
-        one: मेकानी दा पाटाका
-    MRU:
-      display_names:
-        other: मॉरीटेनिया दे ओगुइया
-        one: मॉरीटेनिया दा ओगुइया
-    MVR:
-      display_names:
-        other: मालदीवी दे रुफ़िया
-        one: मालदीवी दा रुफ़िया
-    MWK:
-      display_names:
-        other: मालावियन दे क्वाचा
-        one: मालावियन दा क्वाचा
-    MZN:
-      display_names:
-        other: मोज़ाम्बिकन दे मेटिकल
-        one: मोज़ाम्बिकन दा मेटिकल
-    OMR:
-      display_names:
-        other: ओमानी दे रियाल
-        one: ओमानी दा रियाल
-    PAB:
-      display_names:
-        other: पनामेनियन दे बैल्बोआ
-        one: पनामेनियन दा बैल्बोआ
-    PEN:
-      display_names:
-        other: पेरूवियन दे सोल
-        one: पेरूवियन दा सोल
-    PGK:
-      display_names:
-        other: पापुआ नोआ गिनीयन किना
-        one: पापुआ नोआ गिनीयन किना
-    QAR:
-      display_names:
-        other: क़तरी दे रियाल
-        one: क़तरी दा रियाल
-    RSD:
-      display_names:
-        other: सर्बिया दे दिनार
-        one: सर्बिया दा दिनार
-    SAR:
-      display_names:
-        other: सउदी दे रियाल
-        one: सउदी दा रियाल
-    SCR:
-      display_names:
-        other: सेशेल्सिया दे रुपए
-        one: सेशेल्सिया दा रुपया
-    SDG:
-      display_names:
-        other: सूडाने दे पाउंड
-        one: सूडाने दा पाउंड
-    SLE:
-      display_names:
-        other: सिएरा लियोनिया दे लियोन
-        one: सिएरा लियोनिया दा लियोन
-    SLL:
-      display_names:
-        other: सिएरा लियोनिया दे लियोन (1964—2022)
-        one: सिएरा लियोनिया दा लियोन (1964—2022)
-    SOS:
-      display_names:
-        other: सोमाले दे शिलिंग
-        one: सोमाले दा शिलिंग
-    SZL:
-      display_names:
-        other: स्वाज़ी लिलांजेनी
-        one: स्वाज़ी लिलांजेनी
-    TJS:
-      display_names:
-        other: ताजिकिस्ताने दे सोमोनी
-        one: ताजिकिस्ताने दा सोमोनी
-    TMT:
-      display_names:
-        other: तुर्कमेनिस्ताने दे मैनत
-        one: तुर्कमेनिस्ताने दा मैनत
-    TND:
-      display_names:
-        other: ट्यूनीशिया दे दिनार
-        one: ट्यूनीशिया दा दिनार
-    TZS:
-      display_names:
-        other: तंज़ानिया दे शिलिंग
-        one: तंज़ानिया दा शिलिंग
-    UGX:
-      display_names:
-        other: युगांडा दे शिलिंग
-        one: युगांडा दा शिलिंग
-    UZS:
-      display_names:
-        other: उज़्बेकिस्ताने दे सोम
-        one: उज़्बेकिस्ताने दा सोम
-    VES:
-      display_names:
-        other: वेनेज़ुएला दे बोलिवर
-        one: वेनेज़ुएला दा बोलिवर
-    VUV:
-      display_names:
-        other: वनुआतू दे वातू
-        one: वनुआतू दा वातू
-    WST:
-      display_names:
-        other: समोआ दे ताला
-        one: समोआ दा ताला
-    YER:
-      display_names:
-        other: यमने दे रियाल
-        one: यमने दा रियाल

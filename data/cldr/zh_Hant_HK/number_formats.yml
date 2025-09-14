@@ -1,353 +1,65 @@
 ---
 locale: zh_Hant_HK
-generated_at: '2025-09-13T17:41:57Z'
+generated_at: '2025-09-14T06:13:03Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
   currency_formats:
     standard: 
-  scientific_formats:
-    standard: "#E0"
+  compact_formats:
+    short:
+      '1000':
+        other: 0K
+      '10000':
+        other: 00K
+      '100000':
+        other: 000K
+      '1000000':
+        other: 0M
+      '10000000':
+        other: 00M
+      '100000000':
+        other: 000M
+      '1000000000':
+        other: 0B
+      '10000000000':
+        other: 00B
+      '100000000000':
+        other: 000B
+      '1000000000000':
+        other: 0T
+      '10000000000000':
+        other: 00T
+      '100000000000000':
+        other: 000T
   currencies:
-    AFN:
-      symbol: "؋"
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
-    ARS:
-      symbol: "$"
-    AUD:
-      symbol: A$
-      display_names:
-        other: 澳元
-        one: 澳元
-    AZN:
-      symbol: "₼"
-      display_names:
-        other: 亞塞拜疆馬納特
-        one: 亞塞拜疆馬納特
-    BAM:
-      symbol: KM
-      display_names:
-        other: 波斯尼亞-赫塞哥維納可轉換馬克
-        one: 波斯尼亞-赫塞哥維納可轉換馬克
-    BBD:
-      symbol: "$"
-      display_names:
-        other: 巴巴多斯元
-        one: 巴巴多斯元
-    BDT:
-      symbol: "৳"
-    BMD:
-      symbol: "$"
-      display_names:
-        other: 百慕達元
-        one: 百慕達元
-    BND:
-      symbol: "$"
-    BOB:
-      symbol: Bs
-    BRL:
-      symbol: R$
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
-      display_names:
-        other: 博茨瓦納普拉
-        one: 博茨瓦納普拉
-    BZD:
-      symbol: "$"
-      display_names:
-        other: 伯利茲元
-        one: 伯利茲元
-    CAD:
-      symbol: CA$
-      display_names:
-        other: 加拿大元
-        one: 加拿大元
-    CLP:
-      symbol: "$"
-    CNY:
-      symbol: CN¥
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-      display_names:
-        other: 哥斯達黎加科郎
-        one: 哥斯達黎加科郎
-    CUC:
-      symbol: "$"
-    CUP:
-      symbol: "$"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
-      display_names:
-        other: 多米尼加披索
-        one: 多米尼加披索
-    EGP:
-      symbol: E£
-    ESP:
-      symbol: "₧"
-    EUR:
-      symbol: "€"
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
-    GBP:
-      symbol: "£"
-    GEL:
-      symbol: "₾"
-      display_names:
-        other: 格魯吉亞拉里
-        one: 格魯吉亞拉里
-    GHS:
-      symbol: GH₵
-      display_names:
-        other: 加納塞地
-        one: 加納塞地
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-      display_names:
-        other: 危地馬拉格查爾
-        one: 危地馬拉格查爾
-    GYD:
-      symbol: "$"
-    HKD:
-      symbol: HK$
-      display_names:
-        other: 港元
-        one: 港元
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-      display_names:
-        other: 克羅地亞庫納
-        one: 克羅地亞庫納
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
-    ILS:
-      symbol: "₪"
-    INR:
-      symbol: "₹"
-    ISK:
-      symbol: kr
-    JMD:
-      symbol: "$"
-    JPY:
-      symbol: JP¥
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
-      display_names:
-        other: 柬埔寨里爾
-        one: 柬埔寨里爾
-    KMF:
-      symbol: CF
-    KPW:
-      symbol: "₩"
-      display_names:
-        other: 北韓圜
-        one: 北韓圜
-    KRW:
-      symbol: "₩"
-    KYD:
-      symbol: "$"
-      display_names:
-        other: 開曼群島美元
-    KZT:
-      symbol: "₸"
-      display_names:
-        other: 哈薩克坦吉
-        one: 哈薩克坦吉
-    LAK:
-      symbol: "₭"
-      display_names:
-        other: 老撾基普
-        one: 老撾基普
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
-    LRD:
-      symbol: "$"
-      display_names:
-        other: 利比利亞元
-        one: 利比利亞元
-    LTL:
-      symbol: Lt
-      display_names:
-        other: 立陶宛里塔
-    LVL:
-      symbol: Ls
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
-      display_names:
-        other: 毛里裘斯盧布
-        one: 毛里裘斯盧布
-    MXN:
-      symbol: MX$
-    MYR:
-      symbol: RM
-    NAD:
-      symbol: "$"
-    NGN:
-      symbol: "₦"
-      display_names:
-        other: 尼日利亞奈拉
-        one: 尼日利亞奈拉
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
-    NZD:
-      symbol: NZ$
-      display_names:
-        other: 紐西蘭元
-        one: 紐西蘭元
-    PHP:
-      symbol: "₱"
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: "₲"
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
-    RWF:
-      symbol: RF
-      display_names:
-        other: 盧旺達法郎
-        one: 盧旺達法郎
-    SBD:
-      symbol: "$"
-      display_names:
-        other: 所羅門群島元
-        one: 所羅門群島元
-    SEK:
-      symbol: kr
-    SGD:
-      symbol: "$"
-      display_names:
-        other: 新加坡元
-        one: 新加坡元
-    SHP:
-      symbol: "£"
-    SRD:
-      symbol: "$"
-      display_names:
-        other: 蘇里南元
-        one: 蘇里南元
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-      display_names:
-        other: 聖多美和普林西比多布拉
-        one: 聖多美和普林西比多布拉
-    SYP:
-      symbol: "£"
-      display_names:
-        other: 敍利亞鎊
-        one: 敍利亞鎊
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
-      display_names:
-        other: 湯加潘加
-        one: 湯加潘加
-    TRY:
-      symbol: "₺"
-    TTD:
-      symbol: "$"
-      display_names:
-        other: 千里達和多巴哥元
-        one: 千里達和多巴哥元
-    TWD:
-      symbol: NT$
-    UAH:
-      symbol: "₴"
-    USD:
-      symbol: US$
-    UYU:
-      symbol: "$"
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: "₫"
-    XAF:
-      symbol: FCFA
-      display_names:
-        other: 中非法郎
-        one: 中非法郎
-    XCD:
-      symbol: EC$
-      display_names:
-        other: 東加勒比元
-        one: 東加勒比元
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: F CFA
-      display_names:
-        other: 西非法郎
-        one: 多哥非洲共同體法郎
-    XPF:
-      symbol: CFPF
-      display_names:
-        other: 太平洋法郎
-        one: 太平洋法郎
-    XXX:
-      symbol: "¤"
-    ZAR:
-      symbol: R
-    ZMW:
-      symbol: ZK
-      display_names:
-        other: 贊比亞克瓦查
-        one: 贊比亞克瓦查
     AED:
       display_names:
         other: 阿拉伯聯合酋長國迪爾汗
         one: 阿拉伯聯合酋長國迪爾汗
+    AUD:
+      display_names:
+        other: 澳元
+        one: 澳元
     AWG:
       display_names:
         other: 阿魯巴盾
         one: 阿魯巴盾
+    AZN:
+      display_names:
+        other: 亞塞拜疆馬納特
+        one: 亞塞拜疆馬納特
     BAD:
       display_names:
         other: 波斯尼亞-赫塞哥維納第納爾
         one: 波斯尼亞-赫塞哥維納第納爾
+    BAM:
+      display_names:
+        other: 波斯尼亞-赫塞哥維納可轉換馬克
+        one: 波斯尼亞-赫塞哥維納可轉換馬克
+    BBD:
+      display_names:
+        other: 巴巴多斯元
+        one: 巴巴多斯元
     BEC:
       display_names:
         other: 比利時法郎（可兌換）
@@ -356,6 +68,26 @@ number_formats:
       display_names:
         other: 布隆迪法郎
         one: 布隆迪法郎
+    BMD:
+      display_names:
+        other: 百慕達元
+        one: 百慕達元
+    BWP:
+      display_names:
+        other: 博茨瓦納普拉
+        one: 博茨瓦納普拉
+    BZD:
+      display_names:
+        other: 伯利茲元
+        one: 伯利茲元
+    CAD:
+      display_names:
+        other: 加拿大元
+        one: 加拿大元
+    CRC:
+      display_names:
+        other: 哥斯達黎加科郎
+        one: 哥斯達黎加科郎
     CVE:
       display_names:
         other: 佛得角埃斯庫多
@@ -364,14 +96,38 @@ number_formats:
       display_names:
         other: 吉布提法郎
         one: 吉布提法郎
+    DOP:
+      display_names:
+        other: 多米尼加披索
+        one: 多米尼加披索
     ETB:
       display_names:
         other: 埃塞俄比亞比爾
         one: 埃塞俄比亞比爾
+    GEL:
+      display_names:
+        other: 格魯吉亞拉里
+        one: 格魯吉亞拉里
+    GHS:
+      display_names:
+        other: 加納塞地
+        one: 加納塞地
     GMD:
       display_names:
         other: 岡比亞達拉西
         one: 岡比亞達拉西
+    GTQ:
+      display_names:
+        other: 危地馬拉格查爾
+        one: 危地馬拉格查爾
+    HKD:
+      display_names:
+        other: 港元
+        one: 港元
+    HRK:
+      display_names:
+        other: 克羅地亞庫納
+        one: 克羅地亞庫納
     ITL:
       display_names:
         other: 意大利里拉
@@ -380,6 +136,34 @@ number_formats:
       display_names:
         other: 肯雅先令
         one: 肯雅先令
+    KHR:
+      display_names:
+        other: 柬埔寨里爾
+        one: 柬埔寨里爾
+    KPW:
+      display_names:
+        other: 北韓圜
+        one: 北韓圜
+    KRW:
+      symbol: "₩"
+    KYD:
+      display_names:
+        other: 開曼群島美元
+    KZT:
+      display_names:
+        other: 哈薩克坦吉
+        one: 哈薩克坦吉
+    LAK:
+      display_names:
+        other: 老撾基普
+        one: 老撾基普
+    LRD:
+      display_names:
+        other: 利比利亞元
+        one: 利比利亞元
+    LTL:
+      display_names:
+        other: 立陶宛里塔
     MDL:
       display_names:
         other: 摩爾多瓦列伊
@@ -392,6 +176,10 @@ number_formats:
       display_names:
         other: 毛里塔尼亞烏吉亞
         one: 毛里塔尼亞烏吉亞
+    MUR:
+      display_names:
+        other: 毛里裘斯盧布
+        one: 毛里裘斯盧布
     MVR:
       display_names:
         other: 馬爾代夫盧非亞
@@ -400,6 +188,14 @@ number_formats:
       display_names:
         other: 莫桑比克梅蒂卡爾
         one: 莫桑比克梅蒂卡爾
+    NGN:
+      display_names:
+        other: 尼日利亞奈拉
+        one: 尼日利亞奈拉
+    NZD:
+      display_names:
+        other: 紐西蘭元
+        one: 紐西蘭元
     OMR:
       display_names:
         other: 阿曼里奧
@@ -416,14 +212,26 @@ number_formats:
       display_names:
         other: 塞爾維亞第納爾
         one: 塞爾維亞第納爾
+    RWF:
+      display_names:
+        other: 盧旺達法郎
+        one: 盧旺達法郎
     SAR:
       display_names:
         other: 沙特阿拉伯里亞爾
         one: 沙特阿拉伯里亞爾
+    SBD:
+      display_names:
+        other: 所羅門群島元
+        one: 所羅門群島元
     SCR:
       display_names:
         other: 塞舌爾盧比
         one: 塞舌爾盧比
+    SGD:
+      display_names:
+        other: 新加坡元
+        one: 新加坡元
     SLE:
       display_names:
         other: 塞拉利昂利昂
@@ -436,14 +244,36 @@ number_formats:
       display_names:
         other: 索馬里先令
         one: 索馬里先令
+    SRD:
+      display_names:
+        other: 蘇里南元
+        one: 蘇里南元
     STD:
       display_names:
         other: 聖多美和普林西比多布拉 (1977–2017)
         one: 聖多美和普林西比多布拉 (1977–2017)
+    STN:
+      display_names:
+        other: 聖多美和普林西比多布拉
+        one: 聖多美和普林西比多布拉
+    SYP:
+      display_names:
+        other: 敍利亞鎊
+        one: 敍利亞鎊
     SZL:
       display_names:
         other: 斯威士蘭里朗吉尼
         one: 斯威士蘭里朗吉尼
+    TOP:
+      display_names:
+        other: 湯加潘加
+        one: 湯加潘加
+    TTD:
+      display_names:
+        other: 千里達和多巴哥元
+        one: 千里達和多巴哥元
+    TWD:
+      symbol: NT$
     TZS:
       display_names:
         other: 坦桑尼亞先令
@@ -452,10 +282,598 @@ number_formats:
       display_names:
         other: 瓦努阿圖瓦圖
         one: 瓦努阿圖瓦圖
+    XAF:
+      display_names:
+        other: 中非法郎
+        one: 中非法郎
+    XCD:
+      display_names:
+        other: 東加勒比元
+        one: 東加勒比元
+    XOF:
+      display_names:
+        other: 西非法郎
+        one: 多哥非洲共同體法郎
+    XPF:
+      display_names:
+        other: 太平洋法郎
+        one: 太平洋法郎
     YER:
       display_names:
         other: 也門里雅
         one: 也門里雅
+    ZMW:
+      display_names:
+        other: 贊比亞克瓦查
+        one: 贊比亞克瓦查
+  units:
+    meter-per-square-second:
+      long:
+        display_name: 米/平方秒
+        other: "{0} 米/平方秒"
+      category: acceleration
+      short:
+        display_name: 米每平方秒
+        other: "{0} 米每平方秒"
+    square-kilometer:
+      long:
+        per_unit_pattern: "{0} 每平方公里"
+      category: area
+      short:
+        per_unit_pattern: "{0} 每平方公里"
+    square-meter:
+      long:
+        per_unit_pattern: "{0} 每平方米"
+      category: area
+      short:
+        display_name: 平方米
+        other: "{0} 平方米"
+        per_unit_pattern: "{0} 每平方米"
+    square-centimeter:
+      long:
+        per_unit_pattern: "{0} 每平方厘米"
+      category: area
+      short:
+        display_name: 平方厘米
+        other: "{0} 平方厘米"
+        per_unit_pattern: "{0} 每平方厘米"
+    square-mile:
+      long:
+        per_unit_pattern: "{0} 每平方英里"
+      category: area
+      short:
+        per_unit_pattern: "{0} 每平方英里"
+      narrow:
+        other: "{0}mi²"
+    square-inch:
+      long:
+        per_unit_pattern: "{0} 每平方吋"
+      category: area
+      short:
+        display_name: 平方吋
+        other: "{0} 平方吋"
+        per_unit_pattern: "{0} 每平方吋"
+    millimole-per-liter:
+      long:
+        display_name: 每公升毫摩爾
+        other: 每公升 {0} 毫摩爾
+      category: concentr
+      short:
+        display_name: 毫摩爾/公升
+        other: "{0} 毫摩爾/公升"
+    liter-per-kilometer:
+      long:
+        display_name: 公升/公里
+        other: "{0} 公升/公里"
+      category: consumption
+      short:
+        other: "{0} 升每公里"
+    liter-per-100-kilometer:
+      long:
+        display_name: 公升/100公里
+      category: consumption
+      narrow:
+        other: "{0}L/100km"
+    mile-per-gallon:
+      long:
+        display_name: 英里/加侖
+        other: "{0} 英里/加侖"
+      category: consumption
+      short:
+        other: "{0} 英里每加侖"
+    byte:
+      long:
+        display_name: 位元組
+        other: "{0} 位元組"
+      category: digital
+    bit:
+      long:
+        display_name: 位元
+        other: "{0} 個位元"
+      category: digital
+    century:
+      long:
+        other: "{0} 世紀"
+      category: duration
+      narrow:
+        other: "{0}世紀"
+    year:
+      long:
+        per_unit_pattern: "{0} 每年"
+      category: duration
+      short:
+        per_unit_pattern: "{0} 每年"
+      narrow:
+        other: "{0}年"
+    month:
+      long:
+        per_unit_pattern: "{0} 每個月"
+      category: duration
+      short:
+        display_name: 個月
+        per_unit_pattern: "{0} 每月"
+      narrow:
+        other: "{0}個月"
+    week:
+      long:
+        per_unit_pattern: "{0} 每星期"
+      category: duration
+      short:
+        display_name: 星期
+        other: "{0} 星期"
+        per_unit_pattern: "{0} 每週"
+      narrow:
+        other: "{0}週"
+        per_unit_pattern: "{0} 每星期"
+    day:
+      long:
+        per_unit_pattern: "{0} 每日"
+      category: duration
+      short:
+        display_name: 日
+        other: "{0} 日"
+        per_unit_pattern: "{0} 每日"
+      narrow:
+        other: "{0}日"
+    hour:
+      long:
+        per_unit_pattern: "{0} 每小時"
+      category: duration
+      short:
+        per_unit_pattern: "{0} 每小時"
+      narrow:
+        other: "{0}小時"
+    minute:
+      long:
+        per_unit_pattern: "{0} 每分鐘"
+      category: duration
+      short:
+        per_unit_pattern: "{0} 每分鐘"
+      narrow:
+        display_name: 分
+        other: "{0}分"
+    second:
+      long:
+        per_unit_pattern: "{0}每秒"
+      category: duration
+      short:
+        per_unit_pattern: "{0}每秒"
+      narrow:
+        other: "{0}秒"
+    kilocalorie:
+      long:
+        display_name: 千卡
+        other: "{0} 千卡"
+      category: energy
+    foodcalorie:
+      long:
+        other: "{0} 卡路里"
+      category: energy
+      short:
+        display_name: 千卡
+        other: "{0} 千卡"
+      narrow:
+        other: "{0}千卡"
+    kilojoule:
+      long:
+        other: "{0} 千焦"
+      category: energy
+      short:
+        display_name: 千焦
+      narrow:
+        other: "{0}千焦"
+    british-thermal-unit:
+      long:
+        display_name: 英制熱量單位
+        other: "{0} 英制熱量單位"
+      category: energy
+    kilowatt-hour-per-100-kilometer:
+      long:
+        other: "{0}每百公里千瓦小時"
+      category: force
+    kilometer:
+      long:
+        per_unit_pattern: "{0} 每公里"
+      category: length
+      short:
+        per_unit_pattern: "{0} 每公里"
+    meter:
+      long:
+        per_unit_pattern: "{0} 每米"
+      category: length
+      short:
+        display_name: 米
+        other: "{0} 米"
+        per_unit_pattern: "{0} 每米"
+      narrow:
+        other: "{0}米"
+    centimeter:
+      long:
+        per_unit_pattern: "{0} 每厘米"
+      category: length
+      short:
+        display_name: 厘米
+        other: "{0} 厘米"
+        per_unit_pattern: "{0} 每厘米"
+      narrow:
+        other: "{0}厘米"
+    foot:
+      long:
+        other: "{0} 呎"
+        per_unit_pattern: "{0} 每呎"
+      category: length
+      short:
+        display_name: 呎
+        per_unit_pattern: "{0} 每呎"
+    inch:
+      long:
+        other: "{0} 吋"
+        per_unit_pattern: "{0} 每吋"
+      category: length
+      short:
+        display_name: 吋
+        per_unit_pattern: "{0} 每吋"
+    kilogram:
+      long:
+        per_unit_pattern: "{0} 每公斤"
+      category: mass
+      short:
+        per_unit_pattern: "{0} 每公斤"
+    gram:
+      long:
+        per_unit_pattern: "{0} 每克"
+      category: mass
+      short:
+        per_unit_pattern: "{0} 每克"
+    pound:
+      long:
+        per_unit_pattern: "{0} 每磅"
+      category: mass
+      short:
+        per_unit_pattern: "{0} 每磅"
+    ounce:
+      long:
+        per_unit_pattern: "{0} 每安士"
+      category: mass
+      short:
+        display_name: 安士
+        other: "{0} 安士"
+        per_unit_pattern: "{0} 每安士"
+      narrow:
+        other: "{0} 安士"
+    dalton:
+      long:
+        display_name: 道爾頓
+        other: "{0} 道爾頓"
+      category: mass
+    grain:
+      long:
+        other: "{0}格令"
+      category: mass
+      short:
+        display_name: 格令
+        other: "{0} 格令"
+      narrow:
+        other: "{0}格令"
+    megawatt:
+      long:
+        display_name: 兆瓦
+        other: "{0} 兆瓦"
+      category: power
+      short:
+        display_name: 兆瓦
+        other: "{0} 兆瓦"
+    kilowatt:
+      long:
+        display_name: 千瓦
+        other: "{0} 千瓦"
+      category: power
+    milliwatt:
+      long:
+        display_name: 毫瓦
+        other: "{0} 毫瓦"
+      category: power
+    horsepower:
+      long:
+        display_name: 匹
+        other: "{0} 匹"
+      category: power
+    pound-force-per-square-inch:
+      long:
+        display_name: 磅/平方吋
+        other: "{0} 磅/平方吋"
+      category: pressure
+      short:
+        display_name: 磅每平方吋
+        other: "{0} 磅每平方吋"
+    hectopascal:
+      long:
+        display_name: 百帕斯卡
+        other: "{0} 百帕斯卡"
+      category: pressure
+    megapascal:
+      long:
+        display_name: 兆帕斯卡
+        other: "{0} 兆帕斯卡"
+      category: pressure
+    kilometer-per-hour:
+      long:
+        display_name: 公里每小時
+      category: speed
+      short:
+        display_name: 公里每小時
+        other: "{0} 公里每小時"
+      narrow:
+        other: "{0}kph"
+    meter-per-second:
+      long:
+        display_name: 米/秒
+        other: "{0} 米/秒"
+      category: speed
+      short:
+        display_name: 米每秒
+        other: "{0} 米/秒"
+      narrow:
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        display_name: 英里每小時
+      category: speed
+      short:
+        display_name: 英里每小時
+        other: "{0} 英里每小時"
+      narrow:
+        other: "{0}mph"
+    celsius:
+      long:
+        display_name: 攝氏度
+      category: temperature
+      short:
+        display_name: "°C"
+    fahrenheit:
+      long:
+        display_name: 華氏度
+      category: temperature
+      short:
+        display_name: "°F"
+    kelvin:
+      long:
+        display_name: 開爾文
+        other: "{0} 開爾文"
+      category: temperature
+    pound-force-foot:
+      long:
+        display_name: 磅尺
+        other: "{0} 磅尺"
+      category: torque
+    cubic-meter:
+      long:
+        per_unit_pattern: "{0} 每立方米"
+      category: volume
+      short:
+        display_name: 立方米
+        other: "{0} 立方米"
+        per_unit_pattern: "{0} 每立方米"
+    cubic-centimeter:
+      long:
+        per_unit_pattern: "{0} 每立方厘米"
+      category: volume
+      short:
+        display_name: 立方厘米
+        other: "{0} 立方厘米"
+        per_unit_pattern: "{0} 每立方厘米"
+    liter:
+      long:
+        per_unit_pattern: "{0} 每公升"
+      category: volume
+      short:
+        display_name: 升
+        per_unit_pattern: "{0} 每升"
+      narrow:
+        per_unit_pattern: "{0} 每升"
+    gallon:
+      long:
+        per_unit_pattern: "{0} 每加侖"
+      category: volume
+      short:
+        per_unit_pattern: "{0} 每加侖"
+      narrow:
+        per_unit_pattern: "{0} 每加侖"
+    g-force:
+      short:
+        other: "{0} G"
+      category: acceleration
+    revolution:
+      short:
+        display_name: 周
+        other: "{0} 周"
+      category: angle
+      narrow:
+        other: "{0} 周"
+    degree:
+      short:
+        display_name: 度
+      category: angle
+    square-foot:
+      short:
+        display_name: 平方呎
+        other: "{0} 平方呎"
+      category: area
+      narrow:
+        other: "{0}ft²"
+    nanosecond:
+      short:
+        display_name: 納秒
+        other: "{0} 納秒"
+      category: duration
+    joule:
+      short:
+        other: "{0} 焦耳"
+      category: energy
+    decimeter:
+      short:
+        display_name: 分米
+        other: "{0} 分米"
+      category: length
+    millimeter:
+      short:
+        display_name: 毫米
+        other: "{0} 毫米"
+      category: length
+      narrow:
+        other: "{0}毫米"
+    nanometer:
+      short:
+        display_name: 納米
+        other: "{0} 納米"
+      category: length
+    mile:
+      short:
+        display_name: 哩
+        other: "{0} 哩"
+      category: length
+      narrow:
+        other: "{0}哩"
+    nautical-mile:
+      short:
+        display_name: 浬
+        other: "{0} 浬"
+      category: length
+    point:
+      short:
+        other: "{0} pt"
+      category: length
+      narrow:
+        other: "{0} pt"
+    candela:
+      short:
+        display_name: 坎德拉
+        other: "{0} 坎德拉"
+      category: light
+      narrow:
+        other: "{0}坎德拉"
+    ounce-troy:
+      short:
+        display_name: 金衡安士
+        other: "{0} 金衡安士"
+      category: mass
+    watt:
+      short:
+        display_name: 瓦
+      category: power
+    inch-ofhg:
+      short:
+        display_name: 吋汞柱
+        other: "{0} 吋汞柱"
+      category: pressure
+      narrow:
+        other: "{0}″ Hg"
+    beaufort:
+      short:
+        display_name: 蒲福氏風級
+        other: 蒲福氏風級 {0} 級
+      category: speed
+      narrow:
+        other: 蒲福氏風級 {0} 級
+    cubic-foot:
+      short:
+        display_name: 立方呎
+        other: "{0} 立方呎"
+      category: volume
+    cubic-inch:
+      short:
+        display_name: 立方吋
+        other: "{0} 立方吋"
+      category: volume
+    centiliter:
+      short:
+        display_name: 厘升
+        other: "{0} 厘升"
+      category: volume
+    cup-metric:
+      short:
+        other: "{0} 公制量杯"
+      category: volume
+      narrow:
+        other: "{0} 量杯"
+    acre-foot:
+      short:
+        display_name: 英畝呎
+        other: "{0} 英畝呎"
+      category: volume
+    cup:
+      short:
+        other: "{0} 量杯"
+      category: volume
+    fluid-ounce:
+      short:
+        display_name: 液安士
+        other: "{0} 液安士"
+      category: volume
+    fluid-ounce-imperial:
+      short:
+        display_name: 英制液安士
+        other: "{0} 英制液安士"
+      category: volume
+      narrow:
+        other: "{0}英液安士"
+    item:
+      narrow:
+        other: "{0} 個項目"
+      category: concentr
+    permillion:
+      narrow:
+        other: "{0} ppm"
+      category: concentr
+    decade:
+      narrow:
+        display_name: 10年
+        other: "{0}0年"
+      category: duration
+    quarter:
+      narrow:
+        other: "{0}刻"
+      category: duration
+    millisecond:
+      narrow:
+        other: "{0}毫秒"
+      category: duration
+    cubic-mile:
+      narrow:
+        other: "{0}mi³"
+      category: volume
+    dessert-spoon-imperial:
+      narrow:
+        other: "{0}英制甜品匙"
+      category: volume
+    light-speed:
+      narrow:
+        other: "{0}夜"
+      category: speed
+    portion-per-1e9:
+      narrow:
+        display_name: 濃度/十億
+      category: concentr
 currency_fractions:
   ADP:
     digits: 0

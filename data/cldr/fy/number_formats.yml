@@ -1,441 +1,87 @@
 ---
 locale: fy
-generated_at: '2025-09-13T17:37:25Z'
+generated_at: '2025-09-14T06:10:03Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤ #,##0.00;¤ #,##0.00-"
     accounting: "¤ #,##0.00;(¤ #,##0.00)"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000000':
+        one: 0 mln'.'
+        other: 0 mln'.'
+      '10000000':
+        one: 00 mln'.'
+        other: 00 mln'.'
+      '100000000':
+        one: 000 mln'.'
+        other: 000 mln'.'
+      '1000000000':
+        one: 0 mld'.'
+        other: 0 mld'.'
+      '10000000000':
+        one: 00 mld'.'
+        other: 00 mld'.'
+      '100000000000':
+        one: 000 mld'.'
+        other: 000 mld'.'
+      '1000000000000':
+        one: 0 bln'.'
+        other: 0 bln'.'
+      '10000000000000':
+        one: 00 bln'.'
+        other: 00 bln'.'
+      '100000000000000':
+        one: 000 bln'.'
+        other: 000 bln'.'
+    long:
+      '1000':
+        one: 0 tûzen
+        other: 0 tûzen
+      '10000':
+        one: 00 tûzen
+        other: 00 tûzen
+      '100000':
+        one: 000 tûzen
+        other: 000 tûzen
+      '1000000':
+        one: 0 miljoen
+        other: 0 miljoen
+      '10000000':
+        one: 00 miljoen
+        other: 00 miljoen
+      '100000000':
+        one: 000 miljoen
+        other: 000 miljoen
+      '1000000000':
+        one: 0 miljard
+        other: 0 miljard
+      '10000000000':
+        one: 00 miljard
+        other: 00 miljard
+      '100000000000':
+        one: 000 miljard
+        other: 000 miljard
+      '1000000000000':
+        one: 0 biljoen
+        other: 0 biljoen
+      '10000000000000':
+        one: 00 biljoen
+        other: 00 biljoen
+      '100000000000000':
+        one: 000 biljoen
+        other: 000 biljoen
   currencies:
-    AFN:
-      display_names:
-        other: Afghaanske afghani
-        one: Afghaanske afghani
-    AMD:
-      display_names:
-        other: Armeense dram
-        one: Armeense dram
-    AOA:
-      display_names:
-        other: Angolese kwanza
-        one: Angolese kwanza
-    ARS:
-      display_names:
-        other: Argentynske peso
-        one: Argentynske peso
-    AUD:
-      symbol: AU$
-      display_names:
-        other: Australyske dollar
-        one: Australyske dollar
-    AZN:
-      display_names:
-        other: Azerbeidzjaanske manat
-        one: Azerbeidzjaanske manat
-    BAM:
-      display_names:
-        other: Bosnyske convertibele mark
-        one: Bosnyske convertibele mark
-    BBD:
-      display_names:
-        other: Barbadaanske dollar
-        one: Barbadaanske dollar
-    BDT:
-      display_names:
-        other: Bengalese taka
-        one: Bengalese taka
-    BMD:
-      display_names:
-        other: Bermuda-dollar
-        one: Bermuda-dollar
-    BND:
-      display_names:
-        other: Bruneise dollar
-        one: Bruneise dollar
-    BOB:
-      display_names:
-        other: Boliviaanske boliviano
-        one: Boliviaanske boliviano
-    BRL:
-      display_names:
-        other: Braziliaanske real
-        one: Braziliaanske real
-    BSD:
-      display_names:
-        other: Bahamaanske dollar
-        one: Bahamaanske dollar
-    BWP:
-      display_names:
-        other: Botswaanske pula
-        one: Botswaanske pula
-    BZD:
-      display_names:
-        other: Belizaanske dollar
-        one: Belizaanske dollar
-    CAD:
-      symbol: C$
-      display_names:
-        other: Canadese dollar
-        one: Canadese dollar
-    CLP:
-      display_names:
-        other: Sileenske peso
-        one: Sileenske peso
-    CNY:
-      display_names:
-        other: Sineeske renminbi
-        one: Sineeske renminbi
-    COP:
-      display_names:
-        other: Kolombiaanske peso
-        one: Kolombiaanske peso
-    CRC:
-      display_names:
-        other: Costaricaanske colón
-        one: Costaricaanske colón
-    CUC:
-      display_names:
-        other: Kubaanske convertibele peso
-        one: Kubaanske convertibele peso
-    CUP:
-      display_names:
-        other: Kubaanske peso
-        one: Kubaanske peso
-    CZK:
-      display_names:
-        other: Tsjechyske kronen
-        one: Tsjechyske kroon
-    DKK:
-      display_names:
-        other: Deenske kronen
-        one: Deenske kroon
-    DOP:
-      display_names:
-        other: Dominikaanske peso
-        one: Dominikaanske peso
-    EGP:
-      display_names:
-        other: Egyptysk pûn
-        one: Egyptysk pûn
-    ESP:
-      display_names:
-        other: Spaanske peseta
-        one: Spaanske peseta
-    EUR:
-      display_names:
-        other: euro
-        one: euro
-    FJD:
-      symbol: FJ$
-      display_names:
-        other: Fiji-dollar
-        one: Fiji-dollar
-    FKP:
-      display_names:
-        other: Falklâneilânske pûn
-        one: Falklâneilânske pûn
-    GBP:
-      display_names:
-        other: Brits pûn
-        one: Brits pûn
-    GEL:
-      display_names:
-        other: Georgyske lari
-        one: Georgyske lari
-    GHS:
-      display_names:
-        other: Ghanese cedi
-        one: Ghanese cedi
-    GIP:
-      display_names:
-        other: Gibraltarees pûn
-        one: Gibraltarees pûn
-    GNF:
-      display_names:
-        other: Guinese franc
-        one: Guinese franc
-    GTQ:
-      display_names:
-        other: Guatemalteekse quetzal
-        one: Guatemalteekse quetzal
-    GYD:
-      display_names:
-        other: Guyaanske dollar
-        one: Guyaanske dollar
-    HKD:
-      display_names:
-        other: Hongkongske dollar
-        one: Hongkongske dollar
-    HNL:
-      display_names:
-        other: Hondurese lempira
-        one: Hondurese lempira
-    HRK:
-      display_names:
-        other: Kroatyske kuna
-        one: Kroatyske kuna
-    HUF:
-      display_names:
-        other: Hongaarse forint
-        one: Hongaarse forint
-    IDR:
-      display_names:
-        other: Indonesyske roepia
-        one: Indonesyske roepia
-    ILS:
-      display_names:
-        other: Israëlyske nieuwe shekel
-        one: Israëlyske nieuwe shekel
-    INR:
-      display_names:
-        other: Indiase roepie
-        one: Indiase roepie
-    ISK:
-      display_names:
-        other: Yslânske kronen
-        one: Yslânske kroon
-    JMD:
-      display_names:
-        other: Jamaikaanske dollar
-        one: Jamaikaanske dollar
-    JPY:
-      display_names:
-        other: Japanse yen
-        one: Japanse yen
-    KGS:
-      display_names:
-        other: Kirgizyske som
-        one: Kirgizyske som
-    KHR:
-      display_names:
-        other: Kambodjaanske riel
-        one: Kambodjaanske riel
-    KMF:
-      display_names:
-        other: Komorese frank
-        one: Komorese frank
-    KPW:
-      display_names:
-        other: Noard-Koreaanske won
-        one: Noard-Koreaanske won
-    KRW:
-      display_names:
-        other: Sûd-Koreaanske won
-        one: Sûd-Koreaanske won
-    KYD:
-      display_names:
-        other: Caymaneilânske dollar
-        one: Caymaneilânske dollar
-    KZT:
-      display_names:
-        other: Kazachstaanske tenge
-        one: Kazachstaanske tenge
-    LAK:
-      display_names:
-        other: Laotiaanske kip
-        one: Laotiaanske kip
-    LBP:
-      display_names:
-        other: Libaneeske pûn
-        one: Libaneeske pûn
-    LKR:
-      display_names:
-        other: Sri Lankaanske roepie
-        one: Sri Lankaanske roepie
-    LRD:
-      display_names:
-        other: Liberiaanske dollar
-        one: Liberiaanske dollar
-    LTL:
-      display_names:
-        other: Litouwse litas
-        one: Litouwse litas
-    LVL:
-      display_names:
-        other: Letse lats
-        one: Letse lats
-    MGA:
-      display_names:
-        other: Malagassyske ariary
-        one: Malagassyske ariary
-    MMK:
-      display_names:
-        other: Myanmarese kyat
-        one: Myanmarese kyat
-    MNT:
-      display_names:
-        other: Mongoalske tugrik
-        one: Mongoalske tugrik
-    MUR:
-      display_names:
-        other: Mauritiaanske roepie
-        one: Mauritiaanske roepie
-    MXN:
-      display_names:
-        other: Meksikaanske peso
-        one: Meksikaanske peso
-    MYR:
-      display_names:
-        other: Maleisyske ringgit
-        one: Maleisyske ringgit
-    NAD:
-      display_names:
-        other: Namibyske dollar
-        one: Namibyske dollar
-    NGN:
-      display_names:
-        other: Nigeriaanske naira
-        one: Nigeriaanske naira
-    NIO:
-      display_names:
-        other: Nicaraguaanske córdoba
-        one: Nicaraguaanske córdoba
-    NOK:
-      display_names:
-        other: Noarske kronen
-        one: Noarske kroon
-    NPR:
-      display_names:
-        other: Nepalese roepie
-        one: Nepalese roepie
-    NZD:
-      display_names:
-        other: Nij-Seelânske dollar
-        one: Nij-Seelânske dollar
-    PHP:
-      display_names:
-        other: Filipynske peso
-        one: Filipynske peso
-    PKR:
-      display_names:
-        other: Pakistaanske roepie
-        one: Pakistaanske roepie
-    PLN:
-      display_names:
-        other: Poalske zloty
-        one: Poalske zloty
-    PYG:
-      display_names:
-        other: Paraguayaanske guarani
-        one: Paraguayaanske guarani
-    RON:
-      display_names:
-        other: Roemeenske leu
-        one: Roemeenske leu
-    RUB:
-      display_names:
-        other: Russyske roebel
-        one: Russyske roebel
-    RWF:
-      display_names:
-        other: Rwandese frank
-        one: Rwandese frank
-    SBD:
-      symbol: SI$
-      display_names:
-        other: Salomon-dollar
-        one: Salomon-dollar
-    SEK:
-      display_names:
-        other: Sweedske kronen
-        one: Sweedske kroon
-    SGD:
-      display_names:
-        other: Singaporese dollar
-        one: Singaporese dollar
-    SHP:
-      display_names:
-        other: Sint-Heleenske pûn
-        one: Sint-Heleenske pûn
-    SRD:
-      display_names:
-        other: Surinaamske dollar
-        one: Surinaamske dollar
-    SSP:
-      display_names:
-        other: Sûd-Soedaneeske pûn
-        one: Sûd-Soedaneeske pûn
-    STN:
-      display_names:
-        other: Santomese dobra
-        one: Santomese dobra
-    SYP:
-      display_names:
-        other: Syrysk pûn
-        one: Syrysk pûn
-    THB:
-      display_names:
-        other: Thaise baht
-        one: Thaise baht
-    TOP:
-      display_names:
-        other: Tongaanske paʻanga
-        one: Tongaanske paʻanga
-    TRY:
-      display_names:
-        other: Turkse lira
-        one: Turkse lira
-    TTD:
-      display_names:
-        other: Trinidad en Tobago-dollar
-        one: Trinidad en Tobago-dollar
-    TWD:
-      display_names:
-        other: Nije Taiwanese dollar
-        one: Nije Taiwanese dollar
-    UAH:
-      display_names:
-        other: Oekraïense hryvnia
-        one: Oekraïense hryvnia
-    USD:
-      display_names:
-        other: Amerikaanske dollar
-        one: Amerikaanske dollar
-    UYU:
-      display_names:
-        other: Uruguayaanske peso
-        one: Uruguayaanske peso
-    VEF:
-      display_names:
-        other: Fenezolaanske bolivar (2008–2018)
-        one: Fenezolaanske bolivar (2008–2018)
-    VND:
-      display_names:
-        other: Fietnameeske dong
-        one: Fietnameeske dong
-    XAF:
-      display_names:
-        other: CFA-frank
-        one: CFA-frank
-    XCD:
-      display_names:
-        other: East-Karibyske dollar
-        one: East-Karibyske dollar
-    XOF:
-      display_names:
-        other: CFA-franc BCEAO
-        one: CFA-franc BCEAO
-    XPF:
-      symbol: XPF
-      display_names:
-        other: CFP-frank
-        one: CFP-franc
-    XXX:
-      symbol: XXX
-      display_names:
-        other: Unbekende muntienheid
-        one: Unbekende muntienheid
-    ZAR:
-      display_names:
-        other: Sûd-Afrikaanske rand
-        one: Sûd-Afrikaanske rand
-    ZMW:
-      display_names:
-        other: Sambiaanske kwacha
-        one: Sambiaanske kwacha
     ADP:
       display_names:
         other: Andorrese peseta
@@ -448,14 +94,26 @@ number_formats:
       display_names:
         other: Afghani (AFA)
         one: Afghani (AFA)
+    AFN:
+      display_names:
+        other: Afghaanske afghani
+        one: Afghaanske afghani
     ALL:
       display_names:
         other: Albanese lek
         one: Albanese lek
+    AMD:
+      display_names:
+        other: Armeense dram
+        one: Armeense dram
     ANG:
       display_names:
         other: Nederlânsk-Antilliaanske gûne
         one: Nederlânsk-Antilliaanske gûne
+    AOA:
+      display_names:
+        other: Angolese kwanza
+        one: Angolese kwanza
     AOK:
       display_names:
         other: Angolese kwanza (1977–1990)
@@ -484,10 +142,19 @@ number_formats:
       display_names:
         other: Argentynske peso (1983–1985)
         one: Argentynske peso (1983–1985)
+    ARS:
+      display_names:
+        other: Argentynske peso
+        one: Argentynske peso
     ATS:
       display_names:
         other: Eastenrykse schilling
         one: Eastenrykse schilling
+    AUD:
+      symbol: AU$
+      display_names:
+        other: Australyske dollar
+        one: Australyske dollar
     AWG:
       display_names:
         other: Arubaanske gulden
@@ -496,14 +163,30 @@ number_formats:
       display_names:
         other: Azerbeidzjaanske manat (1993–2006)
         one: Azerbeidzjaanske manat (1993–2006)
+    AZN:
+      display_names:
+        other: Azerbeidzjaanske manat
+        one: Azerbeidzjaanske manat
     BAD:
       display_names:
         other: Bosnyske dinar
         one: Bosnyske dinar
+    BAM:
+      display_names:
+        other: Bosnyske convertibele mark
+        one: Bosnyske convertibele mark
     BAN:
       display_names:
         other: Nije Bosnyske dinar (1994–1997)
         one: Nije Bosnyske dinar (1994–1997)
+    BBD:
+      display_names:
+        other: Barbadaanske dollar
+        one: Barbadaanske dollar
+    BDT:
+      display_names:
+        other: Bengalese taka
+        one: Bengalese taka
     BEC:
       display_names:
         other: Belgyske frank (convertibel)
@@ -540,6 +223,18 @@ number_formats:
       display_names:
         other: Burundese frank
         one: Burundese frank
+    BMD:
+      display_names:
+        other: Bermuda-dollar
+        one: Bermuda-dollar
+    BND:
+      display_names:
+        other: Bruneise dollar
+        one: Bruneise dollar
+    BOB:
+      display_names:
+        other: Boliviaanske boliviano
+        one: Boliviaanske boliviano
     BOL:
       display_names:
         other: Boliviaanske boliviano (1863–1963)
@@ -564,6 +259,10 @@ number_formats:
       display_names:
         other: Braziliaanske cruzeiro (1990–1993)
         one: Braziliaanske cruzeiro (1990–1993)
+    BRL:
+      display_names:
+        other: Braziliaanske real
+        one: Braziliaanske real
     BRN:
       display_names:
         other: Braziliaanske cruzado novo
@@ -576,6 +275,10 @@ number_formats:
       display_names:
         other: Braziliaanske cruzeiro (1942–1967)
         one: Braziliaanske cruzeiro (1942–1967)
+    BSD:
+      display_names:
+        other: Bahamaanske dollar
+        one: Bahamaanske dollar
     BTN:
       display_names:
         other: Bhutaanske ngultrum
@@ -584,6 +287,10 @@ number_formats:
       display_names:
         other: Birmese kyat
         one: Birmese kyat
+    BWP:
+      display_names:
+        other: Botswaanske pula
+        one: Botswaanske pula
     BYB:
       display_names:
         other: Wit-Russyske nieuwe roebel (1994–1999)
@@ -596,6 +303,15 @@ number_formats:
       display_names:
         other: Wit-Russyske roebel (2000–2016)
         one: Wit-Russyske roebel (2000–2016)
+    BZD:
+      display_names:
+        other: Belizaanske dollar
+        one: Belizaanske dollar
+    CAD:
+      symbol: C$
+      display_names:
+        other: Canadese dollar
+        one: Canadese dollar
     CDF:
       display_names:
         other: Congolese frank
@@ -620,14 +336,30 @@ number_formats:
       display_names:
         other: Sileenske unidades de fomento
         one: Sileenske unidades de fomento
+    CLP:
+      display_names:
+        other: Sileenske peso
+        one: Sileenske peso
     CNH:
       display_names:
         other: Sineeske yuan (offshore)
         one: Sineeske yuan (offshore)
+    CNY:
+      display_names:
+        other: Sineeske renminbi
+        one: Sineeske renminbi
+    COP:
+      display_names:
+        other: Kolombiaanske peso
+        one: Kolombiaanske peso
     COU:
       display_names:
         other: Unidad de Valor Real
         one: Unidad de Valor Real
+    CRC:
+      display_names:
+        other: Costaricaanske colón
+        one: Costaricaanske colón
     CSD:
       display_names:
         other: Alde Servyske dinar
@@ -636,6 +368,14 @@ number_formats:
       display_names:
         other: Tsjechoslowaakse harde koruna
         one: Tsjechoslowaakse harde koruna
+    CUC:
+      display_names:
+        other: Kubaanske convertibele peso
+        one: Kubaanske convertibele peso
+    CUP:
+      display_names:
+        other: Kubaanske peso
+        one: Kubaanske peso
     CVE:
       display_names:
         other: Kaapverdyske escudo
@@ -644,6 +384,10 @@ number_formats:
       display_names:
         other: Cyprysk pûn
         one: Cyprysk pûn
+    CZK:
+      display_names:
+        other: Tsjechyske kronen
+        one: Tsjechyske kroon
     DDM:
       display_names:
         other: East-Dútske ostmark
@@ -656,6 +400,14 @@ number_formats:
       display_names:
         other: Djiboutiaanske frank
         one: Djiboutiaanske frank
+    DKK:
+      display_names:
+        other: Deenske kronen
+        one: Deenske kroon
+    DOP:
+      display_names:
+        other: Dominikaanske peso
+        one: Dominikaanske peso
     DZD:
       display_names:
         other: Algerynske dinar
@@ -672,6 +424,10 @@ number_formats:
       display_names:
         other: Estlânske kroon
         one: Estlânske kroon
+    EGP:
+      display_names:
+        other: Egyptysk pûn
+        one: Egyptysk pûn
     ERN:
       display_names:
         other: Eritrese nakfa
@@ -684,30 +440,67 @@ number_formats:
       display_names:
         other: Spaanske peseta (convertibele account)
         one: Spaanske peseta (convertibele account)
+    ESP:
+      display_names:
+        other: Spaanske peseta
+        one: Spaanske peseta
     ETB:
       display_names:
         other: Ethiopyske birr
         one: Ethiopyske birr
+    EUR:
+      display_names:
+        other: euro
+        one: euro
     FIM:
       display_names:
         other: Finse markka
         one: Finse markka
+    FJD:
+      symbol: FJ$
+      display_names:
+        other: Fiji-dollar
+        one: Fiji-dollar
+    FKP:
+      display_names:
+        other: Falklâneilânske pûn
+        one: Falklâneilânske pûn
     FRF:
       display_names:
         other: Franske franc
         one: Franske franc
+    GBP:
+      display_names:
+        other: Brits pûn
+        one: Brits pûn
     GEK:
       display_names:
         other: Georgyske kupon larit
         one: Georgyske kupon larit
+    GEL:
+      display_names:
+        other: Georgyske lari
+        one: Georgyske lari
     GHC:
       display_names:
         other: Ghanese cedi (1979–2007)
         one: Ghanese cedi (1979–2007)
+    GHS:
+      display_names:
+        other: Ghanese cedi
+        one: Ghanese cedi
+    GIP:
+      display_names:
+        other: Gibraltarees pûn
+        one: Gibraltarees pûn
     GMD:
       display_names:
         other: Gambiaanske dalasi
         one: Gambiaanske dalasi
+    GNF:
+      display_names:
+        other: Guinese franc
+        one: Guinese franc
     GNS:
       display_names:
         other: Guinese syli
@@ -720,6 +513,10 @@ number_formats:
       display_names:
         other: Grykse drachme
         one: Grykse drachme
+    GTQ:
+      display_names:
+        other: Guatemalteekse quetzal
+        one: Guatemalteekse quetzal
     GWE:
       display_names:
         other: Portugees-Guinese escudo
@@ -728,14 +525,38 @@ number_formats:
       display_names:
         other: Guinee-Bissause peso
         one: Guinee-Bissause peso
+    GYD:
+      display_names:
+        other: Guyaanske dollar
+        one: Guyaanske dollar
+    HKD:
+      display_names:
+        other: Hongkongske dollar
+        one: Hongkongske dollar
+    HNL:
+      display_names:
+        other: Hondurese lempira
+        one: Hondurese lempira
     HRD:
       display_names:
         other: Kroatyske dinar
         one: Kroatyske dinar
+    HRK:
+      display_names:
+        other: Kroatyske kuna
+        one: Kroatyske kuna
     HTG:
       display_names:
         other: Haïtiaanske gourde
         one: Haïtiaanske gourde
+    HUF:
+      display_names:
+        other: Hongaarse forint
+        one: Hongaarse forint
+    IDR:
+      display_names:
+        other: Indonesyske roepia
+        one: Indonesyske roepia
     IEP:
       display_names:
         other: Ierske pûn
@@ -744,6 +565,14 @@ number_formats:
       display_names:
         other: Israëlysk pûn
         one: Israëlysk pûn
+    ILS:
+      display_names:
+        other: Israëlyske nieuwe shekel
+        one: Israëlyske nieuwe shekel
+    INR:
+      display_names:
+        other: Indiase roepie
+        one: Indiase roepie
     IQD:
       display_names:
         other: Iraakse dinar
@@ -752,18 +581,46 @@ number_formats:
       display_names:
         other: Iraanske rial
         one: Iraanske rial
+    ISK:
+      display_names:
+        other: Yslânske kronen
+        one: Yslânske kroon
     ITL:
       display_names:
         other: Italiaanske lire
         one: Italiaanske lire
+    JMD:
+      display_names:
+        other: Jamaikaanske dollar
+        one: Jamaikaanske dollar
     JOD:
       display_names:
         other: Jordaanske dinar
         one: Jordaanske dinar
+    JPY:
+      display_names:
+        other: Japanse yen
+        one: Japanse yen
     KES:
       display_names:
         other: Keniaanske shilling
         one: Keniaanske shilling
+    KGS:
+      display_names:
+        other: Kirgizyske som
+        one: Kirgizyske som
+    KHR:
+      display_names:
+        other: Kambodjaanske riel
+        one: Kambodjaanske riel
+    KMF:
+      display_names:
+        other: Komorese frank
+        one: Komorese frank
+    KPW:
+      display_names:
+        other: Noard-Koreaanske won
+        one: Noard-Koreaanske won
     KRH:
       display_names:
         other: Sûd-Koreaanske hwan (1953–1962)
@@ -772,14 +629,46 @@ number_formats:
       display_names:
         other: Alde Sûd-Koreaanske won (1945–1953)
         one: Alde Sûd-Koreaanske won (1945–1953)
+    KRW:
+      display_names:
+        other: Sûd-Koreaanske won
+        one: Sûd-Koreaanske won
     KWD:
       display_names:
         other: Koeweitse dinar
         one: Koeweitse dinar
+    KYD:
+      display_names:
+        other: Caymaneilânske dollar
+        one: Caymaneilânske dollar
+    KZT:
+      display_names:
+        other: Kazachstaanske tenge
+        one: Kazachstaanske tenge
+    LAK:
+      display_names:
+        other: Laotiaanske kip
+        one: Laotiaanske kip
+    LBP:
+      display_names:
+        other: Libaneeske pûn
+        one: Libaneeske pûn
+    LKR:
+      display_names:
+        other: Sri Lankaanske roepie
+        one: Sri Lankaanske roepie
+    LRD:
+      display_names:
+        other: Liberiaanske dollar
+        one: Liberiaanske dollar
     LSL:
       display_names:
         other: Lesothaanske loti
         one: Lesothaanske loti
+    LTL:
+      display_names:
+        other: Litouwse litas
+        one: Litouwse litas
     LTT:
       display_names:
         other: Litouwse talonas
@@ -796,6 +685,10 @@ number_formats:
       display_names:
         other: Lúksemboargske finansjele franc
         one: Lúksemboargske finansjele franc
+    LVL:
+      display_names:
+        other: Letse lats
+        one: Letse lats
     LVR:
       display_names:
         other: Letse roebel
@@ -824,6 +717,10 @@ number_formats:
       display_names:
         other: Moldavyske leu
         one: Moldavyske leu
+    MGA:
+      display_names:
+        other: Malagassyske ariary
+        one: Malagassyske ariary
     MGF:
       display_names:
         other: Malagassyske franc
@@ -840,6 +737,14 @@ number_formats:
       display_names:
         other: Malinese franc
         one: Malinese franc
+    MMK:
+      display_names:
+        other: Myanmarese kyat
+        one: Myanmarese kyat
+    MNT:
+      display_names:
+        other: Mongoalske tugrik
+        one: Mongoalske tugrik
     MOP:
       display_names:
         other: Macause pataca
@@ -860,6 +765,10 @@ number_formats:
       display_names:
         other: Maltees pûn
         one: Maltees pûn
+    MUR:
+      display_names:
+        other: Mauritiaanske roepie
+        one: Mauritiaanske roepie
     MVR:
       display_names:
         other: Maldivyske rufiyaa
@@ -868,6 +777,10 @@ number_formats:
       display_names:
         other: Malawyske kwacha
         one: Malawyske kwacha
+    MXN:
+      display_names:
+        other: Meksikaanske peso
+        one: Meksikaanske peso
     MXP:
       display_names:
         other: Meksikaanske sulveren peso (1861–1992)
@@ -876,6 +789,10 @@ number_formats:
       display_names:
         other: Meksikaanske unidad de inversion (UDI)
         one: Meksikaanske unidad de inversion (UDI)
+    MYR:
+      display_names:
+        other: Maleisyske ringgit
+        one: Maleisyske ringgit
     MZE:
       display_names:
         other: Mozambikaanske escudo
@@ -888,14 +805,38 @@ number_formats:
       display_names:
         other: Mozambikaanske metical
         one: Mozambikaanske metical
+    NAD:
+      display_names:
+        other: Namibyske dollar
+        one: Namibyske dollar
+    NGN:
+      display_names:
+        other: Nigeriaanske naira
+        one: Nigeriaanske naira
     NIC:
       display_names:
         other: Nicaraguaanske córdoba (1988–1991)
         one: Nicaraguaanske córdoba (1988–1991)
+    NIO:
+      display_names:
+        other: Nicaraguaanske córdoba
+        one: Nicaraguaanske córdoba
     NLG:
       display_names:
         other: Nederlânske gûne
         one: Nederlânske gûne
+    NOK:
+      display_names:
+        other: Noarske kronen
+        one: Noarske kroon
+    NPR:
+      display_names:
+        other: Nepalese roepie
+        one: Nepalese roepie
+    NZD:
+      display_names:
+        other: Nij-Seelânske dollar
+        one: Nij-Seelânske dollar
     OMR:
       display_names:
         other: Omaanske rial
@@ -920,6 +861,18 @@ number_formats:
       display_names:
         other: Papuaanske kina
         one: Papuaanske kina
+    PHP:
+      display_names:
+        other: Filipynske peso
+        one: Filipynske peso
+    PKR:
+      display_names:
+        other: Pakistaanske roepie
+        one: Pakistaanske roepie
+    PLN:
+      display_names:
+        other: Poalske zloty
+        one: Poalske zloty
     PLZ:
       display_names:
         other: Poalske zloty (1950–1995)
@@ -928,6 +881,10 @@ number_formats:
       display_names:
         other: Portugeeske escudo
         one: Portugeeske escudo
+    PYG:
+      display_names:
+        other: Paraguayaanske guarani
+        one: Paraguayaanske guarani
     QAR:
       display_names:
         other: Katarese rial
@@ -940,18 +897,35 @@ number_formats:
       display_names:
         other: Alde Roemeenske leu
         one: Alde Roemeenske leu
+    RON:
+      display_names:
+        other: Roemeenske leu
+        one: Roemeenske leu
     RSD:
       display_names:
         other: Servyske dinar
         one: Servyske dinar
+    RUB:
+      display_names:
+        other: Russyske roebel
+        one: Russyske roebel
     RUR:
       display_names:
         other: Russyske roebel (1991–1998)
         one: Russyske roebel (1991–1998)
+    RWF:
+      display_names:
+        other: Rwandese frank
+        one: Rwandese frank
     SAR:
       display_names:
         other: Saoedi-Arabyske riyal
         one: Saoedi-Arabyske riyal
+    SBD:
+      symbol: SI$
+      display_names:
+        other: Salomon-dollar
+        one: Salomon-dollar
     SCR:
       display_names:
         other: Seychelse roepie
@@ -968,6 +942,18 @@ number_formats:
       display_names:
         other: Soedaneeske pûn (1957–1998)
         one: Soedaneeske pûn (1957–1998)
+    SEK:
+      display_names:
+        other: Sweedske kronen
+        one: Sweedske kroon
+    SGD:
+      display_names:
+        other: Singaporese dollar
+        one: Singaporese dollar
+    SHP:
+      display_names:
+        other: Sint-Heleenske pûn
+        one: Sint-Heleenske pûn
     SIT:
       display_names:
         other: Sloveenske tolar
@@ -988,14 +974,26 @@ number_formats:
       display_names:
         other: Somalyske shilling
         one: Somalyske shilling
+    SRD:
+      display_names:
+        other: Surinaamske dollar
+        one: Surinaamske dollar
     SRG:
       display_names:
         other: Surinaamske gulden
         one: Surinaamske gulden
+    SSP:
+      display_names:
+        other: Sûd-Soedaneeske pûn
+        one: Sûd-Soedaneeske pûn
     STD:
       display_names:
         other: Santomese dobra (1977–2017)
         one: Santomese dobra (1977–2017)
+    STN:
+      display_names:
+        other: Santomese dobra
+        one: Santomese dobra
     SUR:
       display_names:
         other: Sovjet-roebel
@@ -1004,10 +1002,18 @@ number_formats:
       display_names:
         other: Salvadoraanske colón
         one: Salvadoraanske colón
+    SYP:
+      display_names:
+        other: Syrysk pûn
+        one: Syrysk pûn
     SZL:
       display_names:
         other: Swazyske lilangeni
         one: Swazyske lilangeni
+    THB:
+      display_names:
+        other: Thaise baht
+        one: Thaise baht
     TJR:
       display_names:
         other: Tadzjikistaanske roebel
@@ -1028,6 +1034,10 @@ number_formats:
       display_names:
         other: Tunesyske dinar
         one: Tunesyske dinar
+    TOP:
+      display_names:
+        other: Tongaanske paʻanga
+        one: Tongaanske paʻanga
     TPE:
       display_names:
         other: Timorese escudo
@@ -1036,10 +1046,26 @@ number_formats:
       display_names:
         other: Alde Turkse lira
         one: Alde Turkse lira
+    TRY:
+      display_names:
+        other: Turkse lira
+        one: Turkse lira
+    TTD:
+      display_names:
+        other: Trinidad en Tobago-dollar
+        one: Trinidad en Tobago-dollar
+    TWD:
+      display_names:
+        other: Nije Taiwanese dollar
+        one: Nije Taiwanese dollar
     TZS:
       display_names:
         other: Tanzaniaanske shilling
         one: Tanzaniaanske shilling
+    UAH:
+      display_names:
+        other: Oekraïense hryvnia
+        one: Oekraïense hryvnia
     UAK:
       display_names:
         other: Oekraïense karbovanetz
@@ -1052,6 +1078,10 @@ number_formats:
       display_names:
         other: Oegandese shilling
         one: Oegandese shilling
+    USD:
+      display_names:
+        other: Amerikaanske dollar
+        one: Amerikaanske dollar
     USN:
       display_names:
         other: Amerikaanske dollar (folgjende dei)
@@ -1068,6 +1098,10 @@ number_formats:
       display_names:
         other: Uruguayaanske peso (1975–1993)
         one: Uruguayaanske peso (1975–1993)
+    UYU:
+      display_names:
+        other: Uruguayaanske peso
+        one: Uruguayaanske peso
     UZS:
       display_names:
         other: Oezbekistaanske sum
@@ -1076,10 +1110,18 @@ number_formats:
       display_names:
         other: Fenezolaanske bolivar (1871–2008)
         one: Fenezolaanske bolivar (1871–2008)
+    VEF:
+      display_names:
+        other: Fenezolaanske bolivar (2008–2018)
+        one: Fenezolaanske bolivar (2008–2018)
     VES:
       display_names:
         other: Fenezolaanske bolivar
         one: Fenezolaanske bolivar
+    VND:
+      display_names:
+        other: Fietnameeske dong
+        one: Fietnameeske dong
     VNN:
       display_names:
         other: Alde Fietnameeske dong (1978–1985)
@@ -1092,6 +1134,10 @@ number_formats:
       display_names:
         other: Samoaanske tala
         one: Samoaanske tala
+    XAF:
+      display_names:
+        other: CFA-frank
+        one: CFA-frank
     XAG:
       display_names:
         other: Troy ounces sulver
@@ -1116,6 +1162,10 @@ number_formats:
       display_names:
         other: Europeeske rekkenienheid (XBD)
         one: Europeeske rekkenienheid (XBD)
+    XCD:
+      display_names:
+        other: East-Karibyske dollar
+        one: East-Karibyske dollar
     XDR:
       display_names:
         other: Special Drawing Rights
@@ -1132,10 +1182,19 @@ number_formats:
       display_names:
         other: Franse UIC-franc
         one: Franse UIC-franc
+    XOF:
+      display_names:
+        other: CFA-franc BCEAO
+        one: CFA-franc BCEAO
     XPD:
       display_names:
         other: Troy ounces palladium
         one: Troy ounce palladium
+    XPF:
+      symbol: XPF
+      display_names:
+        other: CFP-frank
+        one: CFP-franc
     XPT:
       display_names:
         other: Troy ounces platina
@@ -1156,6 +1215,11 @@ number_formats:
       display_names:
         other: ADB-rekkenienheid
         one: ADB-rekkenienheid
+    XXX:
+      symbol: XXX
+      display_names:
+        other: Unbekende muntienheid
+        one: Unbekende muntienheid
     YDD:
       display_names:
         other: Jemenityske dinar
@@ -1184,10 +1248,18 @@ number_formats:
       display_names:
         other: Sûd-Afrikaanske rand (finansjeel)
         one: Sûd-Afrikaanske rand (finansjeel)
+    ZAR:
+      display_names:
+        other: Sûd-Afrikaanske rand
+        one: Sûd-Afrikaanske rand
     ZMK:
       display_names:
         other: Sambiaanske kwacha (1968–2012)
         one: Sambiaanske kwacha (1968–2012)
+    ZMW:
+      display_names:
+        other: Sambiaanske kwacha
+        one: Sambiaanske kwacha
     ZRN:
       display_names:
         other: Saïreeske nije Saïre
@@ -1208,3 +1280,297 @@ number_formats:
       display_names:
         other: Simbabwaanske dollar (2008)
         one: Simbabwaanske dollar (2008)
+  units:
+    g-force:
+      long:
+        one: "{0} G-kracht"
+        other: "{0} G-krachten"
+      short:
+        display_name: G-krachten
+    degree:
+      long:
+        one: "{0} booggraad"
+        other: "{0} booggraden"
+      short:
+        display_name: booggraden
+    arc-minute:
+      long:
+        one: "{0} boogminút"
+        other: "{0} boogminuten"
+      short:
+        display_name: boogminuten
+    arc-second:
+      long:
+        one: "{0} boogsekonde"
+        other: "{0} boogsekonden"
+      short:
+        display_name: boogsekonden
+    square-kilometer:
+      long:
+        one: "{0} fjouwerkante kilometer"
+        other: "{0} fjouwerkante kilometer"
+      short:
+        display_name: fjouwerkante kilometer
+    hectare:
+      long:
+        one: "{0} hektare"
+        other: "{0} hektare"
+      short:
+        display_name: hektare
+    square-meter:
+      long:
+        one: "{0} fjouwerkante meter"
+        other: "{0} fjouwerkante meter"
+      short:
+        display_name: fjouwerkante meter
+    square-mile:
+      long:
+        one: "{0} fjouwerkante myl"
+        other: "{0} fjouwerkante myl"
+      short:
+        display_name: fjouwerkante myl
+    square-foot:
+      long:
+        one: "{0} fjouwerkante foet"
+        other: "{0} fjouwerkante foet"
+      short:
+        display_name: fjouwerkante foet
+    year:
+      long:
+        one: "{0} jier"
+        other: "{0} jier"
+      short:
+        display_name: jier
+        one: "{0} jr"
+        other: "{0} jr"
+    month:
+      long:
+        one: "{0} moanne"
+        other: "{0} moanneen"
+      short:
+        display_name: moanneen
+        one: "{0} mn"
+        other: "{0} mn"
+      narrow:
+        one: "{0} m"
+        other: "{0} m"
+    week:
+      long:
+        one: "{0} wike"
+        other: "{0} wiken"
+      short:
+        display_name: wiken
+        one: "{0} wk"
+        other: "{0} wkn"
+      narrow:
+        one: "{0} w"
+        other: "{0} w"
+    minute:
+      long:
+        one: "{0} minút"
+        other: "{0} minuten"
+      short:
+        display_name: minuten
+      narrow:
+        one: "{0} m"
+        other: "{0} m"
+    second:
+      long:
+        one: "{0} sekonde"
+        other: "{0} sekonden"
+      short:
+        display_name: sekonden
+        one: "{0} sek."
+        other: "{0} sek."
+      narrow:
+        one: "{0} s"
+        other: "{0} s"
+    millisecond:
+      long:
+        one: "{0} millisekonde"
+        other: "{0} millisekonden"
+      short:
+        display_name: millisekonden
+    kilometer:
+      long:
+        one: "{0} kilometer"
+        other: "{0} kilometer"
+      short:
+        display_name: kilometer
+    meter:
+      long:
+        one: "{0} meter"
+        other: "{0} meter"
+    centimeter:
+      long:
+        one: "{0} sentimeter"
+        other: "{0} sentimeter"
+      short:
+        display_name: sentimeter
+        one: "{0} sm"
+        other: "{0} sm"
+      narrow:
+        one: "{0} cm"
+        other: "{0} cm"
+    millimeter:
+      long:
+        one: "{0} millimeter"
+        other: "{0} millimeter"
+      short:
+        display_name: millimeter
+    picometer:
+      long:
+        one: "{0} pikometer"
+        other: "{0} pikometer"
+      short:
+        display_name: pikometer
+    mile:
+      long:
+        one: "{0} myl"
+        other: "{0} myl"
+      short:
+        display_name: myl
+    yard:
+      long:
+        one: "{0} yard"
+        other: "{0} yards"
+      short:
+        display_name: yards
+    foot:
+      long:
+        one: "{0} foet"
+        other: "{0} foet"
+      short:
+        display_name: foet
+    inch:
+      long:
+        one: "{0} tomme"
+        other: "{0} tommen"
+      short:
+        display_name: tommen
+        one: "{0} tm"
+        other: "{0} tm"
+      narrow:
+        one: '{0}"'
+        other: '{0}"'
+    light-year:
+      long:
+        one: "{0} ljochtjier"
+        other: "{0} ljochtjier"
+      short:
+        display_name: ljochtjier
+        one: "{0} lj"
+        other: "{0} lj"
+    kilogram:
+      long:
+        one: "{0} kilogram"
+        other: "{0} kilogram"
+      short:
+        display_name: kilogram
+    gram:
+      long:
+        one: "{0} gram"
+        other: "{0} gram"
+    kilowatt:
+      long:
+        one: "{0} kilowatt"
+        other: "{0} kilowatt"
+      short:
+        display_name: kilowatt
+    watt:
+      long:
+        one: "{0} watt"
+        other: "{0} watt"
+    horsepower:
+      long:
+        one: "{0} hynstekrêft"
+        other: "{0} hynstekrêften"
+      short:
+        display_name: hynstekrêften
+        one: "{0} pk"
+        other: "{0} pk"
+    millibar:
+      long:
+        one: "{0} millibar"
+        other: "{0} millibar"
+      short:
+        display_name: millibar
+    hectopascal:
+      long:
+        one: "{0} hektopaskal"
+        other: "{0} hektopaskal"
+      short:
+        display_name: hektopaskal
+    kilometer-per-hour:
+      long:
+        one: "{0} kilometer de oere"
+        other: "{0} kilometer de oere"
+      short:
+        display_name: kilometer de oere
+    meter-per-second:
+      long:
+        one: "{0} meter de sekonde"
+        other: "{0} meter de sekonde"
+      short:
+        display_name: meter de sekonde
+    mile-per-hour:
+      long:
+        one: "{0} myl de oere"
+        other: "{0} myl de oere"
+      short:
+        display_name: myl de oere
+    celsius:
+      long:
+        one: "{0} graad Celsius"
+        other: "{0} graden Celsius"
+      short:
+        display_name: graden Celsius
+      narrow:
+        one: "{0}°"
+        other: "{0}°"
+    fahrenheit:
+      long:
+        one: "{0} graad Fahrenheit"
+        other: "{0} graden Fahrenheit"
+      short:
+        display_name: graden Fahrenheit
+    cubic-kilometer:
+      long:
+        one: "{0} kubike kilometer"
+        other: "{0} kubike kilometer"
+      short:
+        display_name: kubike kilometer
+    cubic-mile:
+      long:
+        one: "{0} kubike myl"
+        other: "{0} kubike myl"
+      short:
+        display_name: kubike myl
+    liter:
+      long:
+        one: "{0} liter"
+        other: "{0} liter"
+    acre:
+      short:
+        display_name: ares
+        one: "{0} are"
+        other: "{0} ares"
+      narrow:
+        one: "{0} acre"
+        other: "{0} acres"
+    day:
+      short:
+        display_name: deien
+        one: "{0} dei"
+        other: "{0} deien"
+      narrow:
+        one: "{0} d"
+        other: "{0} d"
+    hour:
+      short:
+        display_name: oere
+        one: "{0} oere"
+        other: "{0} oere"
+      narrow:
+        one: "{0} u"
+        other: "{0} u"

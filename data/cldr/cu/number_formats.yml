@@ -1,20 +1,33 @@
 ---
 locale: cu
-generated_at: '2025-09-13T17:35:25Z'
+generated_at: '2025-09-14T06:08:54Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
     BRL:
       display_names:
         other: бразі́льскагѡ реа́ла
         one: бразі́льскїй реа́лъ
+    BYN:
+      symbol: р.
+      display_names:
+        other: бѣлорꙋ́сскагѡ рꙋблѧ̀
+        one: бѣлорꙋ́сскїй рꙋ́бль
+    BYR:
+      display_names:
+        other: бѣлорꙋ́сскагѡ рꙋблѧ̀ (2000–2016)
+        one: бѣлорꙋ́сскїй рꙋ́бль (2000–2016)
     CNY:
       display_names:
         other: хи́нскагѡ ю҆а́нѧ
@@ -60,12 +73,3 @@ number_formats:
       display_names:
         other: невѣ́домагѡ пла́тнагѡ сре́дства
         one: невѣ́домое пла́тное сре́дство
-    BYN:
-      symbol: р.
-      display_names:
-        other: бѣлорꙋ́сскагѡ рꙋблѧ̀
-        one: бѣлорꙋ́сскїй рꙋ́бль
-    BYR:
-      display_names:
-        other: бѣлорꙋ́сскагѡ рꙋблѧ̀ (2000–2016)
-        one: бѣлорꙋ́сскїй рꙋ́бль (2000–2016)

@@ -1,13 +1,19 @@
 ---
 locale: su
-generated_at: '2025-09-13T17:40:55Z'
+generated_at: '2025-09-14T06:12:20Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
+  scientific_formats:
+    standard: 
   currencies:
     BRL:
       display_names:
@@ -51,3 +57,16 @@ number_formats:
       display_names:
         other: "(mata uang teu dikenal)"
         one: Mata Uang Teu Dikenal
+  units:
+    mile-per-gallon-imperial:
+      narrow:
+        other: "{0}m/gUK"
+    gallon-imperial:
+      narrow:
+        other: "{0}galIm"
+    fluid-ounce-imperial:
+      narrow:
+        other: "{0}fl oz Im"
+    dessert-spoon-imperial:
+      narrow:
+        other: "{0}dsp-Imp"

@@ -1,15 +1,45 @@
 ---
 locale: rif
-generated_at: '2025-09-13T17:40:03Z'
+generated_at: '2025-09-14T06:11:48Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: 0%
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    long:
+      '1000':
+        other: 0 alaf
+      '10000':
+        other: 00 alaf
+      '100000':
+        other: 000 alaf
+      '1000000':
+        other: 0 melyun
+      '10000000':
+        other: 00 melyun
+      '100000000':
+        other: 000 melyun
+      '1000000000':
+        other: 0 melyar
+      '10000000000':
+        other: 00 melyar
+      '100000000000':
+        other: 000 melyar
+      '1000000000000':
+        other: 0 trilyun
+      '10000000000000':
+        other: 00 trilyun
+      '100000000000000':
+        other: 000 trilyun
   currencies:
     BMD:
       display_names:
@@ -31,6 +61,10 @@ number_formats:
       display_names:
         other: kruna n ddanmark
         one: Danish Krone
+    DZD:
+      display_names:
+        other: ddinar n ddzayer
+        one: Algerian Dinar
     EUR:
       display_names:
         other: uru
@@ -47,6 +81,14 @@ number_formats:
       display_names:
         other: lempiras n hondura
         one: Honduran Lempira
+    LYD:
+      display_names:
+        other: ddinar n libya
+        one: Libyan Dinar
+    MAD:
+      display_names:
+        other: derhem
+        one: Moroccan Dirham
     MXN:
       display_names:
         other: pisus n miksiku
@@ -59,6 +101,10 @@ number_formats:
       display_names:
         other: kruna n sswid
         one: Swedish Krona
+    TND:
+      display_names:
+        other: ddinar n tunes
+        one: Tunisian Dinar
     USD:
       display_names:
         other: ddular
@@ -67,19 +113,3 @@ number_formats:
       display_names:
         other: ttmneyat
         one: ttmenyat
-    DZD:
-      display_names:
-        other: ddinar n ddzayer
-        one: Algerian Dinar
-    LYD:
-      display_names:
-        other: ddinar n libya
-        one: Libyan Dinar
-    MAD:
-      display_names:
-        other: derhem
-        one: Moroccan Dirham
-    TND:
-      display_names:
-        other: ddinar n tunes
-        one: Tunisian Dinar

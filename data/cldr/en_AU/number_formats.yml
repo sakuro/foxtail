@@ -1,121 +1,60 @@
 ---
 locale: en_AU
-generated_at: '2025-09-13T17:35:48Z'
+generated_at: '2025-09-14T06:09:10Z'
 cldr_version: '46'
 number_formats:
   symbols:
     exponential: e
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
-  scientific_formats:
-    standard: "#E0"
+  compact_formats: {}
   currencies:
     AFN:
-      symbol: "؋"
       display_names:
         one: Afghan Afghani
         other: Afghan Afghanis
-    AMD:
-      symbol: "֏"
-    AOA:
-      symbol: Kz
-    ARS:
-      symbol: "$"
     AUD:
       symbol: "$"
-    AZN:
-      symbol: "₼"
     BAM:
-      symbol: KM
       display_names:
         other: Bosnia-Herzegovina convertible marka
         one: Bosnia-Herzegovina convertible marka
     BBD:
-      symbol: "$"
       display_names:
         other: Barbados dollars
         one: Barbados dollar
     BDT:
       symbol: Tk
     BMD:
-      symbol: "$"
       display_names:
         other: Bermuda dollars
         one: Bermuda dollar
-    BND:
-      symbol: "$"
     BOB:
-      symbol: Bs
       display_names:
         other: Bolivian boliviano
         one: Bolivian boliviano
     BRL:
       symbol: BRL
-    BSD:
-      symbol: "$"
-    BWP:
-      symbol: P
-    BZD:
-      symbol: "$"
     CAD:
       symbol: CAD
-    CLP:
-      symbol: "$"
     CNY:
       symbol: CNY
-    COP:
-      symbol: "$"
-    CRC:
-      symbol: "₡"
-    CUC:
-      symbol: "$"
     CUP:
       symbol: "₱"
-    CZK:
-      symbol: Kč
-    DKK:
-      symbol: kr
-    DOP:
-      symbol: "$"
     EGP:
       symbol: "£"
-    ESP:
-      symbol: "₧"
+    ETB:
+      display_names:
+        one: Ethiopian birr
+        other: Ethiopian birrs
     EUR:
       symbol: EUR
-    FJD:
-      symbol: "$"
-    FKP:
-      symbol: "£"
     GBP:
       symbol: GBP
     GEL:
-      symbol: "₾"
       display_names:
         one: Georgian lari
         other: Georgian lari
-    GHS:
-      symbol: GH₵
-    GIP:
-      symbol: "£"
-    GNF:
-      symbol: FG
-    GTQ:
-      symbol: Q
-    GYD:
-      symbol: "$"
     HKD:
       symbol: HKD
-    HNL:
-      symbol: L
-    HRK:
-      symbol: kn
-    HUF:
-      symbol: Ft
-    IDR:
-      symbol: Rp
     ILS:
       symbol: ILS
       display_names:
@@ -125,148 +64,18 @@ number_formats:
       symbol: INR
     ISK:
       symbol: Kr
-    JMD:
-      symbol: "$"
     JPY:
       symbol: JPY
-    KGS:
-      symbol: "⃀"
-    KHR:
-      symbol: "៛"
-    KMF:
-      symbol: CF
-    KPW:
-      symbol: "₩"
     KRW:
       symbol: KRW
-    KYD:
-      symbol: "$"
     KZT:
-      symbol: "₸"
       display_names:
         one: Kazakhstani tenge
         other: Kazakhstani tenge
     LAK:
-      symbol: "₭"
       display_names:
         one: Laotian kip
         other: Laotian kip
-    LBP:
-      symbol: L£
-    LKR:
-      symbol: Rs
-    LRD:
-      symbol: "$"
-    LTL:
-      symbol: Lt
-    LVL:
-      symbol: Ls
-    MGA:
-      symbol: Ar
-    MMK:
-      symbol: K
-    MNT:
-      symbol: "₮"
-    MUR:
-      symbol: Rs
-    MXN:
-      symbol: MXN
-    MYR:
-      symbol: RM
-    NAD:
-      symbol: "$"
-    NGN:
-      symbol: "₦"
-    NIO:
-      symbol: C$
-    NOK:
-      symbol: kr
-    NPR:
-      symbol: Rs
-    NZD:
-      symbol: NZD
-    PHP:
-      symbol: PHP
-    PKR:
-      symbol: Rs
-    PLN:
-      symbol: zł
-    PYG:
-      symbol: Gs
-    RON:
-      symbol: lei
-    RUB:
-      symbol: "₽"
-    RWF:
-      symbol: RF
-    SBD:
-      symbol: "$"
-    SEK:
-      symbol: Kr
-    SGD:
-      symbol: "$"
-    SHP:
-      symbol: "£"
-    SRD:
-      symbol: "$"
-      display_names:
-        other: Suriname dollars
-        one: Suriname dollar
-    SSP:
-      symbol: "£"
-    STN:
-      symbol: Db
-    SYP:
-      symbol: "£"
-    THB:
-      symbol: "฿"
-    TOP:
-      symbol: T$
-    TRY:
-      symbol: "₺"
-      display_names:
-        one: Turkish lira
-        other: Turkish lire
-    TTD:
-      symbol: "$"
-    TWD:
-      symbol: TWD
-    UAH:
-      symbol: "₴"
-    USD:
-      symbol: USD
-    UYU:
-      symbol: "$U"
-      display_names:
-        other: Peso Uruguayo
-        one: Peso Uruguayo
-    VEF:
-      symbol: Bs
-    VND:
-      symbol: VND
-      display_names:
-        one: Vietnamese dong
-        other: Vietnamese dongs
-    XAF:
-      symbol: XAF
-    XCD:
-      symbol: XCD
-    XCG:
-      symbol: Cg.
-    XOF:
-      symbol: XOF
-    XPF:
-      symbol: CFP
-    XXX:
-      symbol: "¤"
-    ZAR:
-      symbol: R
-    ZMW:
-      symbol: ZK
-    ETB:
-      display_names:
-        one: Ethiopian birr
-        other: Ethiopian birrs
     LSL:
       display_names:
         one: Lesotho loti
@@ -279,20 +88,47 @@ number_formats:
       display_names:
         one: Maldivian rufiyaa
         other: Maldivian rufiyaas
+    MXN:
+      symbol: MXN
+    NZD:
+      symbol: NZD
     PGK:
       display_names:
         one: Papua New Guinean kina
         other: Papua New Guinean kinas
+    PHP:
+      symbol: PHP
+    PYG:
+      symbol: Gs
     QAR:
       display_names:
         one: Qatari riyal
         other: Quatari riyals
     SCR:
       symbol: Rs
+    SEK:
+      symbol: Kr
     SLL:
       display_names:
         other: Sierra Leonean leones (1964–2022)
         one: Sierra Leonean leone (1964–2022)
+    SRD:
+      display_names:
+        other: Suriname dollars
+        one: Suriname dollar
+    TRY:
+      display_names:
+        one: Turkish lira
+        other: Turkish lire
+    TWD:
+      symbol: TWD
+    USD:
+      symbol: USD
+    UYU:
+      symbol: "$U"
+      display_names:
+        other: Peso Uruguayo
+        one: Peso Uruguayo
     UZS:
       display_names:
         one: Uzbekistani som
@@ -301,6 +137,11 @@ number_formats:
       display_names:
         other: Venezuelan bolívar
         one: Venezuelan bolívar
+    VND:
+      symbol: VND
+      display_names:
+        one: Vietnamese dong
+        other: Vietnamese dongs
     VUV:
       display_names:
         one: Vanuatu vatu
@@ -309,6 +150,295 @@ number_formats:
       display_names:
         one: Samoan tala
         other: Samoan talas
+    XAF:
+      symbol: XAF
+    XCD:
+      symbol: XCD
+    XOF:
+      symbol: XOF
+    XPF:
+      symbol: CFP
+  units:
+    permille:
+      long:
+        display_name: per mill
+        one: "{0} per mill"
+        other: "{0} per mill"
+      category: concentr
+      short:
+        display_name: per mill
+    kilowatt-hour:
+      long:
+        display_name: kilowatt hours
+        one: "{0} kilowatt hour"
+        other: "{0} kilowatt hours"
+      category: energy
+      short:
+        display_name: kWh
+    kilometer:
+      long:
+        display_name: kilometre
+      category: length
+    pound-force-per-square-inch:
+      long:
+        display_name: pounds per square inch
+        one: "{0} pound per square inch"
+        other: "{0} pounds per square inch"
+      category: pressure
+    generic:
+      long:
+        one: "{0} degree"
+        other: "{0} degrees"
+      category: temperature
+      short:
+        display_name: deg.
+    fluid-ounce-imperial:
+      long:
+        display_name: Imp. fluid ounces
+        one: "{0} Imp. fluid ounce"
+        other: "{0} Imp. fluid ounces"
+      category: volume
+      short:
+        display_name: Imp. fl oz
+        one: "{0} fl oz Imp."
+        other: "{0} fl oz Imp."
+      narrow:
+        display_name: Imp fl oz
+        one: "{0}fl oz Im"
+        other: "{0}fl oz Im"
+    arc-minute:
+      short:
+        display_name: arcmin.
+        one: "{0} arcmin."
+        other: "{0} arcmin."
+      category: angle
+    arc-second:
+      short:
+        display_name: arcsec.
+        one: "{0} arcsec."
+        other: "{0} arcsec."
+      category: angle
+    milligram-ofglucose-per-deciliter:
+      short:
+        display_name: mg/dL
+        one: "{0} mg/dL"
+        other: "{0} mg/dL"
+      category: concentr
+      narrow:
+        display_name: mg/dL
+        one: "{0}mg/dL"
+        other: "{0}mg/dL"
+    millimole-per-liter:
+      short:
+        one: "{0} mmol/L"
+        other: "{0} mmol/L"
+      category: concentr
+      narrow:
+        display_name: mmol/L
+        one: "{0}mmol/L"
+        other: "{0}mmol/L"
+    liter-per-kilometer:
+      short:
+        one: "{0} L/km"
+        other: "{0} L/km"
+      category: consumption
+      narrow:
+        display_name: L/km
+        one: "{0}L/km"
+        other: "{0}L/km"
+    liter-per-100-kilometer:
+      short:
+        display_name: L/100 km
+        one: "{0} L/100 km"
+        other: "{0} L/100 km"
+      category: consumption
+      narrow:
+        display_name: L/100km
+        one: "{0}L/100km"
+        other: "{0}L/100km"
+    mile-per-gallon:
+      short:
+        display_name: miles/gal. US
+        one: "{0} m.p.g. US"
+        other: "{0} m.p.g. US"
+      category: consumption
+    mile-per-gallon-imperial:
+      short:
+        display_name: miles/gal.
+        one: "{0} m.p.g."
+        other: "{0} m.p.g."
+      category: consumption
+    century:
+      short:
+        display_name: C
+        one: "{0} C"
+        other: "{0} C"
+      category: duration
+      narrow:
+        display_name: C
+        one: "{0}C"
+        other: "{0}C"
+    kilocalorie:
+      short:
+        display_name: Cal
+        one: "{0} Cal"
+        other: "{0} Cal"
+      category: energy
+    astronomical-unit:
+      short:
+        display_name: AU
+        one: "{0} AU"
+        other: "{0} AU"
+      category: length
+    carat:
+      short:
+        one: "{0} CM"
+        other: "{0} CM"
+      category: mass
+    millimeter-ofhg:
+      short:
+        display_name: mm Hg
+        one: "{0} mm Hg"
+        other: "{0} mm Hg"
+      category: pressure
+    inch-ofhg:
+      short:
+        display_name: in Hg
+      category: pressure
+    millibar:
+      short:
+        display_name: mb
+        one: "{0} mb"
+        other: "{0} mb"
+      category: pressure
+    meter-per-second:
+      short:
+        display_name: metres/sec.
+        one: "{0} m/s."
+        other: "{0} m/s."
+      category: speed
+    celsius:
+      short:
+        display_name: deg C
+      category: temperature
+    fahrenheit:
+      short:
+        display_name: deg F
+      category: temperature
+    megaliter:
+      short:
+        display_name: ML
+        one: "{0} ML"
+        other: "{0} ML"
+      category: volume
+      narrow:
+        display_name: ML
+        one: "{0}ML"
+        other: "{0}ML"
+    hectoliter:
+      short:
+        display_name: hL
+        one: "{0} hL"
+        other: "{0} hL"
+      category: volume
+      narrow:
+        display_name: hL
+        one: "{0}hL"
+        other: "{0}hL"
+    liter:
+      short:
+        one: "{0} L"
+        other: "{0} L"
+        per_unit_pattern: "{0}/L"
+      category: volume
+      narrow:
+        one: "{0}L"
+        other: "{0}L"
+        per_unit_pattern: "{0}/L"
+    deciliter:
+      short:
+        display_name: dL
+        one: "{0} dL"
+        other: "{0} dL"
+      category: volume
+      narrow:
+        display_name: dL
+        one: "{0}dL"
+        other: "{0}dL"
+    centiliter:
+      short:
+        display_name: cL
+        one: "{0} cL"
+        other: "{0} cL"
+      category: volume
+      narrow:
+        display_name: cL
+        one: "{0}cL"
+        other: "{0}cL"
+    milliliter:
+      short:
+        display_name: mL
+        one: "{0} mL"
+        other: "{0} mL"
+      category: volume
+      narrow:
+        display_name: mL
+        one: "{0}mL"
+        other: "{0}mL"
+    bushel:
+      short:
+        one: "{0} bus."
+        other: "{0} bus."
+      category: volume
+      narrow:
+        one: "{0} bus."
+        other: "{0} bus."
+    gallon:
+      short:
+        display_name: gal US
+        one: "{0} gal US"
+        other: "{0} gal US"
+        per_unit_pattern: "{0}/gal US"
+      category: volume
+      narrow:
+        display_name: gal US
+        one: "{0} gal US"
+        other: "{0} gal US"
+    gallon-imperial:
+      short:
+        display_name: gal.
+        one: "{0} gal."
+        other: "{0} gal."
+        per_unit_pattern: "{0}/gal."
+      category: volume
+      narrow:
+        display_name: gal.
+        one: "{0}gal."
+        other: "{0}gal."
+        per_unit_pattern: "{0}/gal."
+    kilometer-per-hour:
+      narrow:
+        one: "{0} km/h"
+        other: "{0} km/h"
+      category: speed
+    quart:
+      narrow:
+        display_name: qt US
+        one: "{0}qt US"
+        other: "{0}qt US"
+      category: volume
+    dessert-spoon:
+      narrow:
+        display_name: dsp US
+        one: "{0}dsp US"
+        other: "{0}dsp US"
+      category: volume
+    dessert-spoon-imperial:
+      narrow:
+        display_name: dsp Imp
+        one: "{0}dsp-Imp"
+        other: "{0}dsp-Imp"
+      category: volume
 currency_fractions:
   ADP:
     digits: 0

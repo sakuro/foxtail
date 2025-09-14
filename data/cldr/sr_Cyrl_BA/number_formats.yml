@@ -1,14 +1,26 @@
 ---
 locale: sr_Cyrl_BA
-generated_at: '2025-09-13T17:40:48Z'
+generated_at: '2025-09-14T06:12:16Z'
 cldr_version: '46'
 number_formats:
   symbols: {}
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
+  scientific_formats:
+    standard: 
+  compact_formats: {}
   currencies:
     BAM:
       display_names:
         other: Босанскохерцеговачка конвертибилна марка
         one: Босанскохерцеговачка конвертибилна марка
+    BYN:
+      display_names:
+        other: бјелоруских рубљи
+        one: бјелоруска рубља
+        few: бјелоруске рубље
     KPW:
       display_names:
         other: сјевернокорејских вона
@@ -19,8 +31,232 @@ number_formats:
         other: никарагванских златних кордоба
         one: никарагванска златна кордоба
         few: никарагванске златне кордобе
-    BYN:
-      display_names:
-        other: бјелоруских рубљи
-        one: бјелоруска рубља
-        few: бјелоруске рубље
+  units:
+    g-force:
+      long:
+        one: "{0} ге сила"
+        few: "{0} G"
+        other: "{0} ге сила"
+      category: acceleration
+    century:
+      long:
+        display_name: вијекови
+        one: "{0} вијек"
+        one_genitive: "{0} вијека"
+        one_instrumental: "{0} вијеком"
+        few: "{0} вијека"
+        few_genitive: "{0} вијека"
+        few_instrumental: "{0} вијека"
+        other: "{0} вијекова"
+        other_genitive: "{0} вијекова"
+        other_instrumental: "{0} вијекова"
+      category: duration
+    month:
+      long:
+        one: "{0} мјесец"
+        one_genitive: "{0} мјесеца"
+        one_instrumental: "{0} мјесецом"
+        few: "{0} мјесеца"
+        few_genitive: "{0} мјесеца"
+        few_instrumental: "{0} мјесеца"
+        other: "{0} мјесеци"
+        other_genitive: "{0} мјесеци"
+        other_instrumental: "{0} мјесеци"
+        per_unit_pattern: "{0} мјесечно"
+      category: duration
+      short:
+        display_name: мјесеци
+        one: "{0} мјес."
+        few: "{0} мјес."
+        other: "{0} мјес."
+      narrow:
+        one: "{0} м"
+        few: "{0} мјес."
+        other: "{0} м"
+    week:
+      long:
+        display_name: недјеље
+        one: "{0} недјеља"
+        one_accusative: "{0} недјељу"
+        one_genitive: "{0} недјеље"
+        one_instrumental: "{0} недјељом"
+        few: "{0} недјеље"
+        few_accusative: "{0} недјеље"
+        few_genitive: "{0} недјеље"
+        few_instrumental: "{0} недјеље"
+        other: "{0} недјеља"
+        other_accusative: "{0} недјеља"
+        other_genitive: "{0} недјеља"
+        other_instrumental: "{0} недјеља"
+        per_unit_pattern: "{0} недјељно"
+      category: duration
+      narrow:
+        one: "{0} нед."
+        few: "{0} н"
+        other: "{0} н"
+    milliampere:
+      long:
+        one: "{0} милиампер"
+        few: "{0} mA"
+        other: "{0} милиампера"
+      category: electric
+    kilojoule:
+      long:
+        one: "{0} килоџул"
+        few: "{0} kJ"
+        other: "{0} килоџула"
+      category: energy
+    hertz:
+      long:
+        one: "{0} херц"
+        few: "{0} Hz"
+        other: "{0} херца"
+      category: frequency
+    light-year:
+      long:
+        display_name: свјетлосне године
+        one: "{0} свјетлосна година"
+        few: "{0} свјетлосне године"
+        other: "{0} свјетлосних година"
+      category: length
+      short:
+        display_name: свјетлосне год.
+    grain:
+      long:
+        one: "{0} гран"
+        few: "{0} грана"
+        other: "{0} гранова"
+      category: mass
+      short:
+        display_name: гран
+        one: "{0} гран"
+        few: "{0} грана"
+        other: "{0} гранова"
+    inch-ofhg:
+      long:
+        one: "{0} инч живиног стуба"
+        few: "{0} inHg"
+        other: "{0} инча живиног стуба"
+      category: pressure
+    millibar:
+      long:
+        one: "{0} милибар"
+        few: "{0} mbar"
+        other: "{0} милибара"
+      category: pressure
+    beaufort:
+      long:
+        display_name: Bft
+        one: B {0}
+        few: B {0}
+        other: B {0}
+      category: speed
+      short:
+        one: B {0}
+        few: B {0}
+        other: Б {0}
+      narrow:
+        display_name: Bft
+        one: B {0}
+        few: B {0}
+        other: B {0}
+    acre-foot:
+      long:
+        one: "{0} ac ft"
+        few: "{0} акер стопе"
+        other: "{0} акер стопа"
+      category: volume
+    gallon-imperial:
+      long:
+        one: "{0} имп. галон"
+        few: "{0} gal Imp."
+        other: "{0} имп. галона"
+      category: volume
+      narrow:
+        one: "{0}/gal Imp"
+        few: "{0} gal Imp."
+        other: "{0}/gal Imp"
+    light-speed:
+      long:
+        display_name: свјетло
+        one: "{0} свјетло"
+        one_accusative: "{0} свјетло"
+        one_genitive: "{0} свјетла"
+        one_instrumental: "{0} свјетлом"
+        few: "{0} свјетла"
+        few_accusative: "{0} свјетла"
+        few_genitive: "{0} свјетла"
+        few_instrumental: "{0} свјетла"
+        other: "{0} свјетла"
+        other_accusative: "{0} свјетла"
+        other_genitive: "{0} свјетала"
+        other_instrumental: "{0} свјетала"
+      category: speed
+      short:
+        display_name: свјетло
+        one: "{0} свјетло"
+        few: "{0} свјетла"
+        other: "{0} свјетала"
+      narrow:
+        display_name: свјетло
+        one: "{0} свјетло"
+        few: "{0} свјетла"
+        other: "{0} свјетала"
+    portion-per-1e9:
+      long:
+        display_name: дијелови на милијарду
+        one: "{0} дио на милијарду"
+        one_accusative: "{0} дио на милијарду"
+        one_genitive: "{0} дијела на милијарду"
+        one_instrumental: "{0} дијелом на милијарду"
+        few: "{0} дијела на милијарду"
+        few_accusative: "{0} дијела на милијарду"
+        few_genitive: "{0} дијела на милијарду"
+        few_instrumental: "{0} дијела на милијарду"
+        other: "{0} дијелова на милијарду"
+        other_accusative: "{0} дијелова на милијарду"
+        other_genitive: "{0} дијелова на милијарду"
+        other_instrumental: "{0} дијелова на милијарду"
+      category: concentr
+      short:
+        display_name: дијелови/милијарда
+      narrow:
+        display_name: дијелови/милијарда
+    year:
+      narrow:
+        one: "{0} г"
+        few: "{0} год."
+        other: "{0} г"
+      category: duration
+    second:
+      narrow:
+        one: "{0} сек"
+        few: "{0} с"
+        other: "{0} с"
+      category: duration
+    horsepower:
+      narrow:
+        one: "{0} кс"
+        few: "{0} hp"
+        other: "{0} кс"
+      category: power
+    barrel:
+      narrow:
+        one: "{0}bbl"
+        few: "{0} bbl"
+        other: "{0}bbl"
+      category: volume
+    dessert-spoon:
+      narrow:
+        display_name: д. каш.
+        one: "{0} д. каш."
+        few: "{0} д. каш."
+        other: "{0} д. каш."
+      category: volume
+    dessert-spoon-imperial:
+      narrow:
+        display_name: и. д. к.
+        one: "{0} и. д. к."
+        few: "{0} и. д. к."
+        other: "{0} и. д. к."
+      category: volume

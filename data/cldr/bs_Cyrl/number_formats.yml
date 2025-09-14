@@ -1,544 +1,107 @@
 ---
 locale: bs_Cyrl
-generated_at: '2025-09-13T17:35:08Z'
+generated_at: '2025-09-14T06:08:43Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: '0'
+        other: '0'
+      '10000':
+        one: 00 хиљ
+        other: 00 хиљ
+      '100000':
+        one: 000 хиљ
+        other: 000 хиљ
+      '1000000':
+        one: 0 мил
+        other: 0 мил
+      '10000000':
+        one: 00 мил
+        other: 00 мил
+      '100000000':
+        one: 000 мил
+        other: 000 мил
+      '1000000000':
+        one: 0 млрд
+        other: 0 млрд
+      '10000000000':
+        one: 00 млрд
+        other: 00 млрд
+      '100000000000':
+        one: 000 млрд
+        other: 000 млрд
+      '1000000000000':
+        one: 0 бил
+        other: 0 бил
+      '10000000000000':
+        one: 00 бил
+        other: 00 бил
+      '100000000000000':
+        one: 000 бил
+        other: 000 бил
+    long:
+      '1000':
+        one: '0'
+        few: '0'
+        other: '0'
+      '10000':
+        one: 00 хиљ
+        few: 00 хиљ
+        other: 00 хиљ
+      '100000':
+        one: 000 хиљ
+        few: 000 хиљ
+        other: 000 хиљ
+      '1000000':
+        one: 0 мил
+        few: 0 мил
+        other: 0 мил
+      '10000000':
+        one: 00 мил
+        few: 00 мил
+        other: 00 мил
+      '100000000':
+        one: 000 мил
+        few: 000 мил
+        other: 000 мил
+      '1000000000':
+        one: 0 млрд
+        few: 0 млрд
+        other: 0 млрд
+      '10000000000':
+        one: 00 млрд
+        few: 00 млрд
+        other: 00 млрд
+      '100000000000':
+        one: 000 млрд
+        few: 000 млрд
+        other: 000 млрд
+      '1000000000000':
+        one: 0 бил
+        few: 0 бил
+        other: 0 бил
+      '10000000000000':
+        one: 00 бил
+        few: 00 бил
+        other: 00 бил
+      '100000000000000':
+        one: 000 бил
+        few: 000 бил
+        other: 000 бил
   currencies:
-    AFN:
-      display_names:
-        other: афганистанских афганија
-        one: афганистански афгани
-        few: афганистанска афганија
-    AMD:
-      display_names:
-        other: арменских драма
-        one: арменски драм
-        few: арменска драма
-    AOA:
-      display_names:
-        other: анголских кванзи
-        one: анголска кванза
-        few: анголске кванзе
-    ARS:
-      display_names:
-        other: аргентинских пезоса
-        one: аргентински пезос
-        few: аргентинска пезоса
-    AUD:
-      display_names:
-        other: аустралијских долара
-        one: аустралијски долар
-        few: аустралијска долара
-    AZN:
-      display_names:
-        other: азербејџанских маната
-        one: азербејџански манат
-        few: азербејџанска маната
-    BAM:
-      symbol: КМ
-      display_names:
-        other: босанско-херцеговачких конвертибилних марака
-        one: босанско-херцеговачка конвертибилна марка
-        few: босанско-херцеговачке конвертибилне марке
-    BBD:
-      display_names:
-        other: барбадоских долара
-        one: барбадоски долар
-        few: барбадоска долара
-    BDT:
-      display_names:
-        other: бангладешких така
-        one: бангладешка така
-        few: бангладешке таке
-    BMD:
-      display_names:
-        other: бермудских долара
-        one: бермудски долар
-        few: бермудска долара
-    BND:
-      display_names:
-        other: брунејских долара
-        one: брунејски долар
-        few: брунејска долара
-    BOB:
-      display_names:
-        other: боливијских боливиана
-        one: боливијски боливиано
-        few: боливијска боливиана
-    BRL:
-      display_names:
-        other: бразилских реала
-        one: бразилски реал
-        few: бразилска реала
-    BSD:
-      display_names:
-        other: бахамских долара
-        one: бахамски долар
-        few: бахамска долара
-    BWP:
-      display_names:
-        other: боцванских пула
-        one: боцванска пула
-        few: боцванске пуле
-    BZD:
-      display_names:
-        other: белизеанских долара
-        one: белизеански долар
-        few: белизеанска долара
-    CAD:
-      display_names:
-        other: канадских долара
-        one: канадски долар
-        few: канадска долара
-    CLP:
-      display_names:
-        other: чилеанских пезоса
-        one: чилеански пезос
-        few: чилеанска пезоса
-    CNY:
-      display_names:
-        other: кинеских јуана
-        one: кинески јуан
-        few: кинеска јуана
-    COP:
-      display_names:
-        other: колумбијских пезоса
-        one: колумбијски пезос
-        few: колумбијска пезоса
-    CRC:
-      display_names:
-        other: костариканских колона
-        one: костарикански колон
-        few: костариканска колона
-    CUC:
-      display_names:
-        other: кубанских конвертибилних пезоса
-        one: кубански конвертибилни пезос
-        few: кубанска конвертибилна пезоса
-    CUP:
-      display_names:
-        other: кубанских пезоса
-        one: кубански пезос
-        few: кубанска пезоса
-    CZK:
-      symbol: Кч
-      display_names:
-        other: чешких круна
-        one: чешка круна
-        few: чешке круне
-    DKK:
-      display_names:
-        other: данских круна
-        one: данска круна
-        few: данске круне
-    DOP:
-      display_names:
-        other: доминиканских пезоса
-        one: доминикански пезос
-        few: доминиканска пезоса
-    EGP:
-      display_names:
-        other: египатских фунти
-        one: египатска фунта
-        few: египатске фунте
-    ESP:
-      display_names:
-        other: шпанске пезете
-        one: шпанска пезета
-        few: шпанска пезета
-    EUR:
-      display_names:
-        other: евра
-        one: евро
-        few: евра
-    FJD:
-      display_names:
-        other: фиџи долара
-        one: фиџи долар
-        few: фиџи долара
-    FKP:
-      display_names:
-        other: фолкландских фунти
-        one: фолкландска фунта
-        few: фолкландске фунте
-    GBP:
-      display_names:
-        other: британских фунти
-        one: британска фунта
-        few: британске фунте
-    GEL:
-      display_names:
-        other: грузијских ларија
-        one: грузијски лари
-        few: грузијска ларија
-    GHS:
-      display_names:
-        other: ганских цедиа
-        one: гански цеди
-        few: гански цедиа
-    GIP:
-      display_names:
-        other: гибралтарских фунти
-        one: гибралтарска фунта
-        few: гибралтарске фунте
-    GNF:
-      display_names:
-        other: гвинејских франака
-        one: гвинејски франак
-        few: гвинејска франка
-    GTQ:
-      display_names:
-        other: гватемалских квецала
-        one: гватемалски квецал
-        few: гватемалска квецала
-    GYD:
-      display_names:
-        other: гвајанских долара
-        one: гвајански долар
-        few: гвајанска долара
-    HKD:
-      display_names:
-        other: хонгконшких долара
-        one: хонгконшки долар
-        few: хонгконшка долара
-    HNL:
-      display_names:
-        other: хондурашких лемпира
-        one: хондурашки лемпир
-        few: хондурашка лемпира
-    HRK:
-      display_names:
-        other: хрватских куна
-        one: хрватска куна
-        few: хрватске куне
-    HUF:
-      display_names:
-        other: мађарских форинти
-        one: мађарска форинта
-        few: мађарске форинте
-    IDR:
-      display_names:
-        other: индонежанских рупија
-        one: индонежанска рупија
-        few: индонежанске рупије
-    ILS:
-      display_names:
-        other: израелских нових шекела
-        one: израелски нови шекел
-        few: израелска нова шекела
-    INR:
-      display_names:
-        other: индијских рупија
-        one: индијска рупија
-        few: индијске рупије
-    ISK:
-      display_names:
-        other: исландских круна
-        one: исландска круна
-        few: исландске круне
-    JMD:
-      display_names:
-        other: јамајских долара
-        one: јамајски долар
-        few: јамајска долара
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: јапанских јена
-        one: јапански јен
-        few: јапанска јена
-    KGS:
-      display_names:
-        other: киргистанских сома
-        one: киргистански сом
-        few: киргистанска сома
-    KHR:
-      display_names:
-        other: камбоџанских ријела
-        one: камбоџански ријел
-        few: камбоџанска ријела
-    KMF:
-      display_names:
-        other: коморских франака
-        one: коморски франак
-        few: коморска франка
-    KPW:
-      display_names:
-        other: севернокорејских вона
-        one: севернокорејски вон
-        few: севернокорејска вона
-    KRW:
-      display_names:
-        other: јужнокорејских вона
-        one: јужнокорејски вон
-        few: јужнокорејска вона
-    KYD:
-      display_names:
-        other: кајманских долара
-        one: кајмански долар
-        few: кајманска долара
-    KZT:
-      display_names:
-        other: казахстанских тенга
-        one: казахстански тенге
-        few: казахстанска тенга
-    LAK:
-      display_names:
-        other: лаоских кипа
-        one: лаоски кип
-        few: лаоска кипа
-    LBP:
-      display_names:
-        other: либанских фунти
-        one: либанска фунта
-        few: либанске фунте
-    LKR:
-      display_names:
-        other: шриланканских рупија
-        one: шриланканска рупија
-        few: шриланканске рупије
-    LRD:
-      display_names:
-        other: либеријских долара
-        one: либеријски долар
-        few: либеријска долара
-    LTL:
-      display_names:
-        other: литванских литаса
-        one: литвански литас
-        few: литванска литаса
-    LVL:
-      display_names:
-        other: латвијских лата
-        one: латвијски лат
-        few: латвијска лата
-    MGA:
-      display_names:
-        other: мадагаскарских аријарија
-        one: мадагаскарски аријари
-        few: мадагаскарска аријарија
-    MMK:
-      display_names:
-        other: мијанмарских кјата
-        one: мијанмарски кјат
-        few: мијанмарска кјата
-    MNT:
-      display_names:
-        other: монголских тугрика
-        one: монголски тугрик
-        few: монголска тугрика
-    MUR:
-      display_names:
-        other: маурицијских рупија
-        one: маурицијска рупија
-        few: маурицијске рупије
-    MXN:
-      display_names:
-        other: мексичких пезоса
-        one: мексички пезос
-        few: мексичка пезоса
-    MYR:
-      display_names:
-        other: малезијских рингита
-        one: малезијски рингит
-        few: малезијска рингита
-    NAD:
-      display_names:
-        other: намибијских долара
-        one: намибијски долар
-        few: намибијска долара
-    NGN:
-      display_names:
-        other: нигеријских наира
-        one: нигеријска наира
-        few: нигеријске наире
-    NIO:
-      display_names:
-        other: никарагванских златних кордоба
-        one: никарагванска златна кордоба
-        few: никарагванске златне кордобе
-    NOK:
-      display_names:
-        other: норвешких круна
-        one: норвешка круна
-        few: норвешке круне
-    NPR:
-      display_names:
-        other: непалских рупија
-        one: непалска рупија
-        few: непалске рупије
-    NZD:
-      display_names:
-        other: новозеландских долара
-        one: новозеландски долар
-        few: новозеландска долара
-    PHP:
-      display_names:
-        other: филипинских пезоса
-        one: филипински пезос
-        few: филипинска пезоса
-    PKR:
-      display_names:
-        other: пакистанских рупија
-        one: пакистанска рупија
-        few: пакистанске рупије
-    PLN:
-      symbol: зл
-      display_names:
-        other: пољских злота
-        one: пољски злот
-        few: пољска злота
-    PYG:
-      display_names:
-        other: парагвајских гваранија
-        one: парагвајски гварани
-        few: парагвајска гваранија
-    RON:
-      display_names:
-        other: румунских леја
-        one: румунски леј
-        few: румунска леја
-    RUB:
-      display_names:
-        other: руских рубљи
-        one: руска рубља
-        few: руске рубље
-    RWF:
-      display_names:
-        other: руандских франака
-        one: руандски франак
-        few: руандска франка
-    SBD:
-      display_names:
-        other: соломонских долара
-        one: соломонски долар
-        few: соломонска долара
-    SEK:
-      display_names:
-        other: шведских круна
-        one: шведска круна
-        few: шведске круне
-    SGD:
-      display_names:
-        other: сингапурских долара
-        one: сингапурски долар
-        few: сингапурска долара
-    SHP:
-      display_names:
-        other: Света Јелена фунти
-        one: Света Јелена фунта
-        few: Света Јелена фунте
-    SRD:
-      display_names:
-        other: суринамских долара
-        one: суринамски долар
-        few: суринамска долара
-    SSP:
-      display_names:
-        other: јужносуданских фунти
-        one: јужносуданска фунта
-        few: јужносуданске фунте
-    STN:
-      display_names:
-        other: сао томе и принципе добри
-        one: сао томе и принципе добра
-        few: сао томе и принципе добра
-    SYP:
-      display_names:
-        other: сиријских фунти
-        one: сиријска фунта
-        few: сиријске фунте
-    THB:
-      display_names:
-        other: тајских бахта
-        one: тајски бахт
-        few: тајска бахта
-    TOP:
-      display_names:
-        other: тонгоанских панги
-        one: тонгоанска панга
-        few: тонгоанске панге
-    TRY:
-      symbol: Тл
-      display_names:
-        other: турских лира
-        one: турска лира
-        few: турске лире
-    TTD:
-      display_names:
-        other: тринидад-тобагошких долара
-        one: тринидад-тобагошки долар
-        few: тринидад-тобагошка долара
-    TWD:
-      display_names:
-        other: нових тајванских долара
-        one: нови тајвански долар
-        few: нова тајванска долара
-    UAH:
-      display_names:
-        other: украјинских хривњи
-        one: украјинска хривња
-        few: украјинске хривње
-    USD:
-      display_names:
-        other: америчких долара
-        one: амерички долар
-        few: америчка долара
-    UYU:
-      display_names:
-        other: уругвајских пезоса
-        one: уругвајски пезос
-        few: уругвајска пезоса
-    VEF:
-      display_names:
-        other: венецуеланских боливара (2008–2018)
-        one: венецуелански боливар (2008–2018)
-        few: венецуеланска боливара (2008–2018)
-    VND:
-      display_names:
-        other: вијетнамских донга
-        one: вијетнамски донг
-        few: вијетнамска донга
-    XAF:
-      display_names:
-        other: CFA франака BEAC
-        one: CFA франак BEAC
-        few: CFA франка BEAC
-    XCD:
-      display_names:
-        other: источно-карибских долара
-        one: источно-карибски долар
-        few: источно-карибска долара
-    XOF:
-      display_names:
-        other: CFA франака BCEAO
-        one: CFA франак BCEAO
-        few: CFA франка BCEAO
-    XPF:
-      display_names:
-        other: CFP франака
-        one: CFP франак
-        few: CFP франка
-    XXX:
-      display_names:
-        other: непознатих или неважећих валута
-        one: непозната или неважећа валута
-        few: непознате или неважеће валуте
-    ZAR:
-      display_names:
-        other: јужноафричких ранда
-        one: јужноафрички ранд
-        few: јужноафричка ранда
-    ZMW:
-      display_names:
-        other: замбијских квача
-        one: замбијска квача
-        few: замбијске кваче
     ADP:
       display_names:
         other: андорске пезете
@@ -554,6 +117,11 @@ number_formats:
         other: авганистанских авгана (1927–2002)
         one: авганистански авган (1927–2002)
         few: авганистанска авгана (1927–2002)
+    AFN:
+      display_names:
+        other: афганистанских афганија
+        one: афганистански афгани
+        few: афганистанска афганија
     ALK:
       display_names:
         one: стари албански лек
@@ -564,11 +132,21 @@ number_formats:
         other: албанских лека
         one: албански лек
         few: албанска лека
+    AMD:
+      display_names:
+        other: арменских драма
+        one: арменски драм
+        few: арменска драма
     ANG:
       display_names:
         other: холандско-антилских гилдера
         one: холандско-антилски гилдер
         few: холандско-антилска гилдера
+    AOA:
+      display_names:
+        other: анголских кванзи
+        one: анголска кванза
+        few: анголске кванзе
     AOK:
       display_names:
         other: анголијских кванзи (1977–1990)
@@ -604,11 +182,21 @@ number_formats:
         other: аргентинских пезоса (1983–1985)
         one: аргентински пезо (1983–1985)
         few: аргентинска пезоса (1983–1985)
+    ARS:
+      display_names:
+        other: аргентинских пезоса
+        one: аргентински пезос
+        few: аргентинска пезоса
     ATS:
       display_names:
         other: аустријских шилинга
         one: аустријски шилинг
         few: аустријска шилинга
+    AUD:
+      display_names:
+        other: аустралијских долара
+        one: аустралијски долар
+        few: аустралијска долара
     AWG:
       display_names:
         other: арубанских флорина
@@ -619,16 +207,37 @@ number_formats:
         other: азербејџанских маната (1993–2006)
         one: азербејџански манат (1993–2006)
         few: азербејџанска маната (1993–2006)
+    AZN:
+      display_names:
+        other: азербејџанских маната
+        one: азербејџански манат
+        few: азербејџанска маната
     BAD:
       display_names:
         other: босанско-херцеговачких динара
         one: босанско-херцеговачки динар
         few: босанско-херцеговачка динара
+    BAM:
+      symbol: КМ
+      display_names:
+        other: босанско-херцеговачких конвертибилних марака
+        one: босанско-херцеговачка конвертибилна марка
+        few: босанско-херцеговачке конвертибилне марке
     BAN:
       display_names:
         one: босанско-херцеговачки нови динар
         few: босанско-херцеговачка нова динара
         other: босанско-херцеговачких нових динара
+    BBD:
+      display_names:
+        other: барбадоских долара
+        one: барбадоски долар
+        few: барбадоска долара
+    BDT:
+      display_names:
+        other: бангладешких така
+        one: бангладешка така
+        few: бангладешке таке
     BEC:
       display_names:
         other: белгијских франака (конвертибилних)
@@ -674,6 +283,21 @@ number_formats:
         other: бурундских франака
         one: бурундски франак
         few: бурундска франка
+    BMD:
+      display_names:
+        other: бермудских долара
+        one: бермудски долар
+        few: бермудска долара
+    BND:
+      display_names:
+        other: брунејских долара
+        one: брунејски долар
+        few: брунејска долара
+    BOB:
+      display_names:
+        other: боливијских боливиана
+        one: боливијски боливиано
+        few: боливијска боливиана
     BOL:
       display_names:
         one: стари боливијски боливијано
@@ -704,6 +328,11 @@ number_formats:
         other: бразилских крузеира (1990–1993)
         one: бразилски крузеиро (1990–1993)
         few: бразилска крузеира (1990–1993)
+    BRL:
+      display_names:
+        other: бразилских реала
+        one: бразилски реал
+        few: бразилска реала
     BRN:
       display_names:
         other: бразилских нових крузада
@@ -719,6 +348,11 @@ number_formats:
         one: стари бразилски крузеиро
         few: стара бразилска крузеира
         other: старих бразилских крузеира
+    BSD:
+      display_names:
+        other: бахамских долара
+        one: бахамски долар
+        few: бахамска долара
     BTN:
       display_names:
         other: бутанских нгултрума
@@ -729,6 +363,11 @@ number_formats:
         other: бурманских кјата
         one: бурмански кјат
         few: бурманска кјата
+    BWP:
+      display_names:
+        other: боцванских пула
+        one: боцванска пула
+        few: боцванске пуле
     BYB:
       display_names:
         other: белоруских нових рубљи
@@ -744,6 +383,16 @@ number_formats:
         other: белоруске рубље (2000–2016)
         one: белоруска рубља (2000–2016)
         few: белоруске рубље (2000–2016)
+    BZD:
+      display_names:
+        other: белизеанских долара
+        one: белизеански долар
+        few: белизеанска долара
+    CAD:
+      display_names:
+        other: канадских долара
+        one: канадски долар
+        few: канадска долара
     CDF:
       display_names:
         other: конгоанских франака
@@ -774,6 +423,11 @@ number_formats:
         other: чилеански унидадеси де фоменто
         one: чилеански унидадес де фоменто
         few: чилеанска унидадес де фомента
+    CLP:
+      display_names:
+        other: чилеанских пезоса
+        one: чилеански пезос
+        few: чилеанска пезоса
     CNH:
       display_names:
         other: кинеских јуана (острвских)
@@ -784,11 +438,26 @@ number_formats:
         one: долар кинеске народне банке
         few: долара кинеске народне банке
         other: долара кинеске народне банке
+    CNY:
+      display_names:
+        other: кинеских јуана
+        one: кинески јуан
+        few: кинеска јуана
+    COP:
+      display_names:
+        other: колумбијских пезоса
+        one: колумбијски пезос
+        few: колумбијска пезоса
     COU:
       display_names:
         other: унидад де валоршких реала
         one: унидад де валоршки реал
         few: нидад де валор реала
+    CRC:
+      display_names:
+        other: костариканских колона
+        one: костарикански колон
+        few: костариканска колона
     CSD:
       display_names:
         other: старих српских динара
@@ -799,6 +468,16 @@ number_formats:
         other: чехословачких тврдих круна
         one: чехословачка тврда круна
         few: чехословачке тврде круне
+    CUC:
+      display_names:
+        other: кубанских конвертибилних пезоса
+        one: кубански конвертибилни пезос
+        few: кубанска конвертибилна пезоса
+    CUP:
+      display_names:
+        other: кубанских пезоса
+        one: кубански пезос
+        few: кубанска пезоса
     CVE:
       display_names:
         other: зеленортских ескуда
@@ -809,6 +488,12 @@ number_formats:
         other: кипарских фунти
         one: кипарска фунта
         few: кипарске фунте
+    CZK:
+      symbol: Кч
+      display_names:
+        other: чешких круна
+        one: чешка круна
+        few: чешке круне
     DDM:
       display_names:
         other: источно-немачких марака
@@ -824,6 +509,16 @@ number_formats:
         other: џибутских франака
         one: џибутски франак
         few: џибутска франка
+    DKK:
+      display_names:
+        other: данских круна
+        one: данска круна
+        few: данске круне
+    DOP:
+      display_names:
+        other: доминиканских пезоса
+        one: доминикански пезос
+        few: доминиканска пезоса
     DZD:
       display_names:
         other: алжирских динара
@@ -844,6 +539,11 @@ number_formats:
         other: естонских круна
         one: естонска круна
         few: естонске круне
+    EGP:
+      display_names:
+        other: египатских фунти
+        one: египатска фунта
+        few: египатске фунте
     ERN:
       display_names:
         other: еритрејских накфи
@@ -859,36 +559,81 @@ number_formats:
         other: шпанских пезета (конвертибилан рачун)
         one: шпанска пезета (конвертибилан рачун)
         few: шпанске пезете (конвертибилан рачун)
+    ESP:
+      display_names:
+        other: шпанске пезете
+        one: шпанска пезета
+        few: шпанска пезета
     ETB:
       display_names:
         other: етиопијских бира
         one: етиопијски бир
         few: етиопијска бира
+    EUR:
+      display_names:
+        other: евра
+        one: евро
+        few: евра
     FIM:
       display_names:
         other: финских марака
         one: финска марка
         few: финске марке
+    FJD:
+      display_names:
+        other: фиџи долара
+        one: фиџи долар
+        few: фиџи долара
+    FKP:
+      display_names:
+        other: фолкландских фунти
+        one: фолкландска фунта
+        few: фолкландске фунте
     FRF:
       display_names:
         other: француских франака
         one: француски франак
         few: француска франка
+    GBP:
+      display_names:
+        other: британских фунти
+        one: британска фунта
+        few: британске фунте
     GEK:
       display_names:
         other: грузијских купон ларита
         one: грузијски купон ларит
         few: грузијска купон ларита
+    GEL:
+      display_names:
+        other: грузијских ларија
+        one: грузијски лари
+        few: грузијска ларија
     GHC:
       display_names:
         other: ганских цеда (1979–2007)
         one: гански цед (1979–2007)
         few: ганска цеда (1979–2007)
+    GHS:
+      display_names:
+        other: ганских цедиа
+        one: гански цеди
+        few: гански цедиа
+    GIP:
+      display_names:
+        other: гибралтарских фунти
+        one: гибралтарска фунта
+        few: гибралтарске фунте
     GMD:
       display_names:
         other: гамбијских даласа
         one: гамбијски даласи
         few: гамбијска даласа
+    GNF:
+      display_names:
+        other: гвинејских франака
+        one: гвинејски франак
+        few: гвинејска франка
     GNS:
       display_names:
         other: гвинејских сила
@@ -904,6 +649,11 @@ number_formats:
         other: грчких драхми
         one: грчка драхма
         few: грчке драхме
+    GTQ:
+      display_names:
+        other: гватемалских квецала
+        one: гватемалски квецал
+        few: гватемалска квецала
     GWE:
       display_names:
         other: португалско-гвинејских ескуда
@@ -914,16 +664,46 @@ number_formats:
         other: гвинеја-бисаошких пезоса
         one: гвинеја-бисаошки пезо
         few: гвинеја-бисаошка пезоса
+    GYD:
+      display_names:
+        other: гвајанских долара
+        one: гвајански долар
+        few: гвајанска долара
+    HKD:
+      display_names:
+        other: хонгконшких долара
+        one: хонгконшки долар
+        few: хонгконшка долара
+    HNL:
+      display_names:
+        other: хондурашких лемпира
+        one: хондурашки лемпир
+        few: хондурашка лемпира
     HRD:
       display_names:
         other: хрватских динара
         one: хрватски динар
         few: хрватска динара
+    HRK:
+      display_names:
+        other: хрватских куна
+        one: хрватска куна
+        few: хрватске куне
     HTG:
       display_names:
         other: хаићанских гурда
         one: хаићански гурд
         few: хаићанска гурда
+    HUF:
+      display_names:
+        other: мађарских форинти
+        one: мађарска форинта
+        few: мађарске форинте
+    IDR:
+      display_names:
+        other: индонежанских рупија
+        one: индонежанска рупија
+        few: индонежанске рупије
     IEP:
       display_names:
         other: ирских фунти
@@ -938,6 +718,16 @@ number_formats:
       display_names:
         other: стари израелски шекели
         one: стари израелски шекели
+    ILS:
+      display_names:
+        other: израелских нових шекела
+        one: израелски нови шекел
+        few: израелска нова шекела
+    INR:
+      display_names:
+        other: индијских рупија
+        one: индијска рупија
+        few: индијске рупије
     IQD:
       display_names:
         other: ирачких динара
@@ -952,21 +742,57 @@ number_formats:
       display_names:
         other: стара исландска круна
         one: стара исландска круна
+    ISK:
+      display_names:
+        other: исландских круна
+        one: исландска круна
+        few: исландске круне
     ITL:
       display_names:
         other: италијанске лире
         one: италијанска лира
         few: италијанске лире
+    JMD:
+      display_names:
+        other: јамајских долара
+        one: јамајски долар
+        few: јамајска долара
     JOD:
       display_names:
         other: јорданских динара
         one: јордански динар
         few: јорданска динара
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: јапанских јена
+        one: јапански јен
+        few: јапанска јена
     KES:
       display_names:
         other: кенијских шилинга
         one: кенијски шилинг
         few: кенијска шилинга
+    KGS:
+      display_names:
+        other: киргистанских сома
+        one: киргистански сом
+        few: киргистанска сома
+    KHR:
+      display_names:
+        other: камбоџанских ријела
+        one: камбоџански ријел
+        few: камбоџанска ријела
+    KMF:
+      display_names:
+        other: коморских франака
+        one: коморски франак
+        few: коморска франка
+    KPW:
+      display_names:
+        other: севернокорејских вона
+        one: севернокорејски вон
+        few: севернокорејска вона
     KRH:
       display_names:
         one: јужнокорејски хван
@@ -977,16 +803,56 @@ number_formats:
         one: стари јужнокорејски вон
         few: стара јужнокорејска вона
         other: старих јужнокорејских вона
+    KRW:
+      display_names:
+        other: јужнокорејских вона
+        one: јужнокорејски вон
+        few: јужнокорејска вона
     KWD:
       display_names:
         other: кувајтских динара
         one: кувајтски динар
         few: кувајтска динара
+    KYD:
+      display_names:
+        other: кајманских долара
+        one: кајмански долар
+        few: кајманска долара
+    KZT:
+      display_names:
+        other: казахстанских тенга
+        one: казахстански тенге
+        few: казахстанска тенга
+    LAK:
+      display_names:
+        other: лаоских кипа
+        one: лаоски кип
+        few: лаоска кипа
+    LBP:
+      display_names:
+        other: либанских фунти
+        one: либанска фунта
+        few: либанске фунте
+    LKR:
+      display_names:
+        other: шриланканских рупија
+        one: шриланканска рупија
+        few: шриланканске рупије
+    LRD:
+      display_names:
+        other: либеријских долара
+        one: либеријски долар
+        few: либеријска долара
     LSL:
       display_names:
         other: лесотских лотиса
         one: лесотски лотис
         few: лесотска лотиса
+    LTL:
+      display_names:
+        other: литванских литаса
+        one: литвански литас
+        few: литванска литаса
     LTT:
       display_names:
         other: литванских талонаса
@@ -1007,6 +873,11 @@ number_formats:
         other: луксембуршких финансијских франака
         one: луксембуршки финансијски франак
         few: луксембуршка финансијска франка
+    LVL:
+      display_names:
+        other: латвијских лата
+        one: латвијски лат
+        few: латвијска лата
     LVR:
       display_names:
         other: латвијских рубљи
@@ -1042,6 +913,11 @@ number_formats:
         other: молдавских леја
         one: молдавски леј
         few: молдавска леја
+    MGA:
+      display_names:
+        other: мадагаскарских аријарија
+        one: мадагаскарски аријари
+        few: мадагаскарска аријарија
     MGF:
       display_names:
         other: малагашајски франци
@@ -1062,6 +938,16 @@ number_formats:
         other: малијских франака
         one: малијски франак
         few: малијска франка
+    MMK:
+      display_names:
+        other: мијанмарских кјата
+        one: мијанмарски кјат
+        few: мијанмарска кјата
+    MNT:
+      display_names:
+        other: монголских тугрика
+        one: монголски тугрик
+        few: монголска тугрика
     MOP:
       display_names:
         other: макаоских патака
@@ -1087,6 +973,11 @@ number_formats:
         other: малтешких фунти
         one: малтешка фунта
         few: малтешке фунте
+    MUR:
+      display_names:
+        other: маурицијских рупија
+        one: маурицијска рупија
+        few: маурицијске рупије
     MVR:
       display_names:
         other: малдивских руфија
@@ -1097,6 +988,11 @@ number_formats:
         other: малавијских квача
         one: малавијска квача
         few: малавијске кваче
+    MXN:
+      display_names:
+        other: мексичких пезоса
+        one: мексички пезос
+        few: мексичка пезоса
     MXP:
       display_names:
         other: мексичких сребрних пезоса
@@ -1107,6 +1003,11 @@ number_formats:
         other: мексичких унидадс де инверзиона
         one: мексички унидадс де инверзион
         few: мексичка унидадс де инверзиона
+    MYR:
+      display_names:
+        other: малезијских рингита
+        one: малезијски рингит
+        few: малезијска рингита
     MZE:
       display_names:
         other: мозамбијских ескуда
@@ -1122,16 +1023,46 @@ number_formats:
         other: мозамбијских метикала
         one: мозамбијски метикал
         few: мозамбијска метикала
+    NAD:
+      display_names:
+        other: намибијских долара
+        one: намибијски долар
+        few: намибијска долара
+    NGN:
+      display_names:
+        other: нигеријских наира
+        one: нигеријска наира
+        few: нигеријске наире
     NIC:
       display_names:
         other: никарагванских кордоба
         one: никарагванска кордоба
         few: никарагванске кордобе
+    NIO:
+      display_names:
+        other: никарагванских златних кордоба
+        one: никарагванска златна кордоба
+        few: никарагванске златне кордобе
     NLG:
       display_names:
         other: холандских гулдена
         one: холандски гулден
         few: холандска гулдена
+    NOK:
+      display_names:
+        other: норвешких круна
+        one: норвешка круна
+        few: норвешке круне
+    NPR:
+      display_names:
+        other: непалских рупија
+        one: непалска рупија
+        few: непалске рупије
+    NZD:
+      display_names:
+        other: новозеландских долара
+        one: новозеландски долар
+        few: новозеландска долара
     OMR:
       display_names:
         other: оманских ријала
@@ -1162,6 +1093,22 @@ number_formats:
         other: папуанских кина
         one: папуанска кина
         few: папуанске кине
+    PHP:
+      display_names:
+        other: филипинских пезоса
+        one: филипински пезос
+        few: филипинска пезоса
+    PKR:
+      display_names:
+        other: пакистанских рупија
+        one: пакистанска рупија
+        few: пакистанске рупије
+    PLN:
+      symbol: зл
+      display_names:
+        other: пољских злота
+        one: пољски злот
+        few: пољска злота
     PLZ:
       display_names:
         other: пољских злота (1950–1995)
@@ -1172,6 +1119,11 @@ number_formats:
         other: португалских ескуда
         one: португалски ескудо
         few: португалска ескуда
+    PYG:
+      display_names:
+        other: парагвајских гваранија
+        one: парагвајски гварани
+        few: парагвајска гваранија
     QAR:
       display_names:
         other: катарских ријала
@@ -1187,22 +1139,42 @@ number_formats:
         other: старих румунских леија
         one: стари румунски леиј
         few: стара румунска леија
+    RON:
+      display_names:
+        other: румунских леја
+        one: румунски леј
+        few: румунска леја
     RSD:
       symbol: дин.
       display_names:
         other: српских динара
         one: српски динар
         few: српска динара
+    RUB:
+      display_names:
+        other: руских рубљи
+        one: руска рубља
+        few: руске рубље
     RUR:
       display_names:
         other: руских рубљи (1991–1998)
         one: руска рубља (1991–1998)
         few: руске рубље (1991–1998)
+    RWF:
+      display_names:
+        other: руандских франака
+        one: руандски франак
+        few: руандска франка
     SAR:
       display_names:
         other: саудијских ријала
         one: саудијски ријал
         few: саудијска ријала
+    SBD:
+      display_names:
+        other: соломонских долара
+        one: соломонски долар
+        few: соломонска долара
     SCR:
       display_names:
         other: сејшелских рупија
@@ -1223,6 +1195,21 @@ number_formats:
         other: старих суданских фунти
         one: стара суданска фунта
         few: старе суданске фунте
+    SEK:
+      display_names:
+        other: шведских круна
+        one: шведска круна
+        few: шведске круне
+    SGD:
+      display_names:
+        other: сингапурских долара
+        one: сингапурски долар
+        few: сингапурска долара
+    SHP:
+      display_names:
+        other: Света Јелена фунти
+        one: Света Јелена фунта
+        few: Света Јелена фунте
     SIT:
       display_names:
         other: словеначких толара
@@ -1248,16 +1235,31 @@ number_formats:
         other: сомалијских шилинга
         one: сомалијски шилинг
         few: сомалијска шилинга
+    SRD:
+      display_names:
+        other: суринамских долара
+        one: суринамски долар
+        few: суринамска долара
     SRG:
       display_names:
         other: суринамских гилдера
         one: суринамски гилдер
         few: суринамска гилдера
+    SSP:
+      display_names:
+        other: јужносуданских фунти
+        one: јужносуданска фунта
+        few: јужносуданске фунте
     STD:
       display_names:
         other: сао томе и принципе добри (1977–2017)
         one: сао томе и принципе добар (1977–2017)
         few: сао томе и принципе добра (1977–2017)
+    STN:
+      display_names:
+        other: сао томе и принципе добри
+        one: сао томе и принципе добра
+        few: сао томе и принципе добра
     SUR:
       display_names:
         other: совјетских рубљи
@@ -1268,11 +1270,21 @@ number_formats:
         other: салвадорских колона
         one: салвадорски колон
         few: салвадорска колона
+    SYP:
+      display_names:
+        other: сиријских фунти
+        one: сиријска фунта
+        few: сиријске фунте
     SZL:
       display_names:
         other: свазилендских лилангенија
         one: свазилендски лилангени
         few: свазилендска лилангенија
+    THB:
+      display_names:
+        other: тајских бахта
+        one: тајски бахт
+        few: тајска бахта
     TJR:
       display_names:
         other: таџихистанских рубљи
@@ -1298,6 +1310,11 @@ number_formats:
         other: туниских динара
         one: туниски динар
         few: туниска динара
+    TOP:
+      display_names:
+        other: тонгоанских панги
+        one: тонгоанска панга
+        few: тонгоанске панге
     TPE:
       display_names:
         other: тиморшких ескуда
@@ -1308,11 +1325,32 @@ number_formats:
         other: стара турска лира
         one: стара турска лира
         few: старе турске лире
+    TRY:
+      symbol: Тл
+      display_names:
+        other: турских лира
+        one: турска лира
+        few: турске лире
+    TTD:
+      display_names:
+        other: тринидад-тобагошких долара
+        one: тринидад-тобагошки долар
+        few: тринидад-тобагошка долара
+    TWD:
+      display_names:
+        other: нових тајванских долара
+        one: нови тајвански долар
+        few: нова тајванска долара
     TZS:
       display_names:
         other: танзанијских шилинга
         one: танзанијски шилинг
         few: танзанијска шилинга
+    UAH:
+      display_names:
+        other: украјинских хривњи
+        one: украјинска хривња
+        few: украјинске хривње
     UAK:
       display_names:
         other: украјинских карбованцива
@@ -1328,6 +1366,11 @@ number_formats:
         other: угандских шилинга
         one: угандски шилинг
         few: угандска шилинга
+    USD:
+      display_names:
+        other: америчких долара
+        one: амерички долар
+        few: америчка долара
     USN:
       display_names:
         other: САД долара (следећи дан)
@@ -1348,6 +1391,11 @@ number_formats:
         other: уругвајских пезоса (1975–1993)
         one: уругвајски пезо (1975–1993)
         few: уругвајска пезоса (1975–1993)
+    UYU:
+      display_names:
+        other: уругвајских пезоса
+        one: уругвајски пезос
+        few: уругвајска пезоса
     UZS:
       display_names:
         other: узбекистанских сома
@@ -1358,11 +1406,21 @@ number_formats:
         other: венецуеланских боливара (1871–2008)
         one: венецуелански боливар (1871–2008)
         few: венецуеланска боливара (1871–2008)
+    VEF:
+      display_names:
+        other: венецуеланских боливара (2008–2018)
+        one: венецуелански боливар (2008–2018)
+        few: венецуеланска боливара (2008–2018)
     VES:
       display_names:
         other: венецуеланских боливара
         one: венецуелански боливар
         few: венецуеланска боливара
+    VND:
+      display_names:
+        other: вијетнамских донга
+        one: вијетнамски донг
+        few: вијетнамска донга
     VNN:
       display_names:
         one: стари вијетнамски донг
@@ -1378,6 +1436,11 @@ number_formats:
         other: самоанских тала
         one: самоанска тала
         few: самоанске тале
+    XAF:
+      display_names:
+        other: CFA франака BEAC
+        one: CFA франак BEAC
+        few: CFA франка BEAC
     XAG:
       display_names:
         other: сребра
@@ -1408,6 +1471,11 @@ number_formats:
         other: европских јединица рачуна (XBD)
         one: европска јединица рачуна (XBD)
         few: европске јединице рачуна (XBD)
+    XCD:
+      display_names:
+        other: источно-карибских долара
+        one: источно-карибски долар
+        few: источно-карибска долара
     XDR:
       display_names:
         other: посебних цртаћих права
@@ -1428,11 +1496,21 @@ number_formats:
         other: француских UIC-франака
         one: француски UIC-франак
         few: француска UIC-франка
+    XOF:
+      display_names:
+        other: CFA франака BCEAO
+        one: CFA франак BCEAO
+        few: CFA франка BCEAO
     XPD:
       display_names:
         other: паладијума
         one: паладијум
         few: паладијума
+    XPF:
+      display_names:
+        other: CFP франака
+        one: CFP франак
+        few: CFP франка
     XPT:
       display_names:
         other: платина
@@ -1448,6 +1526,11 @@ number_formats:
         other: кодова тестиране валуте
         one: код тестиране валуте
         few: кода тестиране валуте
+    XXX:
+      display_names:
+        other: непознатих или неважећих валута
+        one: непозната или неважећа валута
+        few: непознате или неважеће валуте
     YDD:
       display_names:
         other: јеменских долара
@@ -1483,11 +1566,21 @@ number_formats:
         other: јужноафричких ранда (финансијских)
         one: јужноафрички ранд (финансијски)
         few: јужноафричка ранда (финансијска)
+    ZAR:
+      display_names:
+        other: јужноафричких ранда
+        one: јужноафрички ранд
+        few: јужноафричка ранда
     ZMK:
       display_names:
         other: замбијске кваче (1968–2012)
         one: замбијска квача (1968–2012)
         few: замбијске кваче (1968–2012)
+    ZMW:
+      display_names:
+        other: замбијских квача
+        one: замбијска квача
+        few: замбијске кваче
     ZRN:
       display_names:
         other: заирских нових заира
@@ -1512,3 +1605,292 @@ number_formats:
         other: зимбабвејских долара (2008)
         one: зимбабвејски долар (2008)
         few: зимбабвејска долара (2008)
+  units:
+    square-kilometer:
+      long:
+        display_name: квадратни километри
+        one: "{0} квадратни километар"
+        few: "{0} квадратна километра"
+        other: "{0} квадратних километара"
+        per_unit_pattern: "{0} по квадратном километру"
+    hectare:
+      long:
+        one: "{0} хектар"
+        few: "{0} хектара"
+        other: "{0} хектара"
+      short:
+        display_name: хектари
+    square-meter:
+      long:
+        display_name: квадратни метри
+        one: "{0} квадратни метар"
+        few: "{0} квадратна метра"
+        other: "{0} квадратних метара"
+        per_unit_pattern: "{0} по квадратном метру"
+    square-centimeter:
+      long:
+        display_name: квадратни центиметри
+        one: "{0} квадратни центиметар"
+        few: "{0} квадратна центиметра"
+        other: "{0} квадратних центиметара"
+        per_unit_pattern: "{0} по квадратном центиметру"
+    square-mile:
+      long:
+        display_name: квадратне миље
+        one: "{0} квадратна миља"
+        few: "{0} квадратне миље"
+        other: "{0} квадратних миља"
+        per_unit_pattern: "{0} по квадратној миљи"
+    acre:
+      long:
+        one: "{0} акра"
+        few: "{0} акре"
+        other: "{0} акри"
+      short:
+        display_name: акре
+    square-yard:
+      long:
+        display_name: квадратни јарди
+        one: "{0} квадратни јард"
+        few: "{0} квадратна јарда"
+        other: "{0} квадратних јарди"
+    square-foot:
+      long:
+        display_name: квадратне стопе
+    square-inch:
+      long:
+        display_name: квадратни инчи
+    century:
+      long:
+        display_name: вијекови
+        one: "{0} вијек"
+        few: "{0} вијека"
+        other: "{0} вијекова"
+      short:
+        display_name: в.
+        one: "{0} в."
+        few: "{0} в."
+        other: "{0} в."
+    decade:
+      long:
+        display_name: деценије
+        one: "{0} деценија"
+        few: "{0} деценије"
+        other: "{0} деценија"
+      short:
+        display_name: дец
+        one: "{0} дец."
+        few: "{0} дец."
+        other: "{0} дец."
+    year:
+      long:
+        one: "{0} година"
+        few: "{0} године"
+        other: "{0} година"
+        per_unit_pattern: "{0} годишње"
+      short:
+        display_name: година
+        one: "{0} год"
+        few: "{0} год"
+        other: "{0} год"
+        per_unit_pattern: "{0} годиш."
+    month:
+      long:
+        display_name: мјесец
+        one: "{0} мјесец"
+        few: "{0} мјесеца"
+        other: "{0} мјесеци"
+        per_unit_pattern: "{0} мјесечно"
+      short:
+        display_name: мјесеци
+        one: "{0} мјес."
+        few: "{0} мјес."
+        other: "{0} мјес."
+        per_unit_pattern: "{0} мјесеч."
+      narrow:
+        display_name: мјесец
+    week:
+      long:
+        one: "{0} седмица"
+        few: "{0} седмице"
+        other: "{0} седмица"
+        per_unit_pattern: "{0} седмично"
+      short:
+        display_name: седмице
+        one: "{0} сед."
+        few: "{0} сед."
+        other: "{0} сед."
+        per_unit_pattern: "{0} седм."
+      narrow:
+        display_name: седмица
+    day:
+      long:
+        one: "{0} дан"
+        few: "{0} дана"
+        other: "{0} дана"
+        per_unit_pattern: "{0} дневно"
+      short:
+        display_name: дани
+        one: "{0} дан"
+        few: "{0} дана"
+        other: "{0} дан"
+        per_unit_pattern: "{0} днев."
+    minute:
+      long:
+        display_name: минути
+        one: "{0} минут"
+        few: "{0} минута"
+        other: "{0} минута"
+        per_unit_pattern: "{0} у минуту"
+      short:
+        display_name: минут
+        one: "{0} мин."
+        few: "{0} мин."
+        other: "{0} мин."
+        per_unit_pattern: "{0} у мин."
+    second:
+      long:
+        one: "{0} секунда"
+        few: "{0} секунде"
+        other: "{0} секунди"
+        per_unit_pattern: "{0} у секунди"
+      short:
+        display_name: секунде
+        one: "{0} сек."
+        few: "{0} сек."
+        other: "{0} сек."
+        per_unit_pattern: "{0} у сек."
+    millisecond:
+      long:
+        display_name: милисекунде
+        one: "{0} милисекунда"
+        few: "{0} милисекунде"
+        other: "{0} милисекунди"
+      short:
+        display_name: мс
+        one: "{0} мс"
+        few: "{0} мс"
+        other: "{0} мс"
+    microsecond:
+      long:
+        display_name: микросекунде
+        one: "{0} микросекунда"
+        few: "{0} микросекунде"
+        other: "{0} микросекунди"
+    nanosecond:
+      long:
+        display_name: наносекунде
+        one: "{0} наносекунда"
+        few: "{0} наносекунде"
+        other: "{0} наносекунди"
+    pixel:
+      long:
+        display_name: пиксели
+    megapixel:
+      long:
+        display_name: мегапиксели
+    dot-per-centimeter:
+      long:
+        display_name: тачке по центиметру
+    dot-per-inch:
+      long:
+        display_name: тачке по инчу
+    kilometer:
+      long:
+        display_name: километри
+        one: "{0} километар"
+        few: "{0} километра"
+        other: "{0} километара"
+        per_unit_pattern: "{0} по километру"
+    meter:
+      long:
+        display_name: метри
+        one: "{0} метар"
+        few: "{0} метра"
+        other: "{0} метара"
+        per_unit_pattern: "{0} по метру"
+      short:
+        display_name: m
+    decimeter:
+      long:
+        display_name: дециметри
+        one: "{0} дециметар"
+        few: "{0} дециметра"
+        other: "{0} дециметара"
+    centimeter:
+      long:
+        display_name: центриметри
+        one: "{0} центиметар"
+        few: "{0} центиметра"
+        other: "{0} центиметара"
+        per_unit_pattern: "{0} по центиметру"
+    millimeter:
+      long:
+        display_name: милиметри
+        one: "{0} милиметар"
+        few: "{0} милиметра"
+        other: "{0} милиметара"
+    micrometer:
+      long:
+        display_name: микрометри
+        one: "{0} микрометар"
+        few: "{0} микрометра"
+        other: "{0} микрометара"
+    nanometer:
+      long:
+        display_name: нанометри
+        one: "{0} нанометар"
+        few: "{0} нанометра"
+        other: "{0} нанометара"
+    mile:
+      long:
+        display_name: миље
+        one: "{0} миља"
+        few: "{0} миље"
+        other: "{0} миља"
+    yard:
+      long:
+        display_name: јарди
+        one: "{0} јард"
+        few: "{0} јарда"
+        other: "{0} јарди"
+    light-year:
+      long:
+        display_name: свјетлосне године
+        one: "{0} свјетлосна година"
+        few: "{0} свјетлосне године"
+        other: "{0} свјетлосних година"
+    astronomical-unit:
+      long:
+        display_name: астрономске јединице
+        one: "{0} астрономска јединица"
+        few: "{0} астрономске јединице"
+        other: "{0} астрономских јединица"
+    nautical-mile:
+      long:
+        display_name: наутичке миље
+        one: "{0} наутичка миља"
+        few: "{0} наутичке миље"
+        other: "{0} наутичких миља"
+    point:
+      long:
+        display_name: тачке
+        one: "{0} тачка"
+        few: "{0} тачке"
+        other: "{0} тачака"
+    cubic-meter:
+      long:
+        display_name: кубни метри
+    cubic-centimeter:
+      long:
+        display_name: кубни центиметри
+    liter:
+      long:
+        display_name: литри
+    hour:
+      short:
+        display_name: сати
+        one: "{0} сат"
+        few: "{0} сата"
+        other: "{0} сати"
+        per_unit_pattern: "{0} по сату"

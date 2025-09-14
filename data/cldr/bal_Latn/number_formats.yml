@@ -1,21 +1,80 @@
 ---
 locale: bal_Latn
-generated_at: '2025-09-13T17:34:46Z'
+generated_at: '2025-09-14T06:08:29Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: 
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0H
+        other: 0H
+      '10000':
+        one: 00H
+        other: 00H
+      '100000':
+        one: 000H
+        other: 000H
+      '1000000000':
+        one: 0Kr
+        other: 0Kr
+      '10000000000':
+        one: 00Kr
+        other: 00Kr
+      '100000000000':
+        one: 000Kr
+        other: 000Kr
+    long:
+      '1000':
+        one: 0H
+        other: 0H
+      '10000':
+        one: 00H
+        other: 00H
+      '100000':
+        one: 000H
+        other: 000H
+      '1000000000':
+        one: 0Kr
+        other: 0Kr
+      '10000000000':
+        one: 00Kr
+        other: 00Kr
+      '100000000000':
+        one: 000Kr
+        other: 000Kr
   currencies:
+    AED:
+      display_names:
+        other: Emáráti darham
+        one: Emáráti darham
     AFN:
       symbol: AWGA
       display_names:
         other: Awgáni Awgáni
         one: Awgáni Awgáni
+    ALL:
+      symbol: ALBL
+      display_names:
+        other: Albániái lek
+        one: Albániái lek
     AMD:
       symbol: ARMD
       display_names:
         other: Árminiái dram
         one: Árminiái dram
+    ANG:
+      symbol: NLAG
+      display_names:
+        other: Nedarlándi Antilli gelder
+        one: Nedarlándi Antilli gelder
     AOA:
       symbol: ANGK
       display_names:
@@ -30,6 +89,11 @@ number_formats:
       display_names:
         other: Ástráliái dhálar
         one: Ástráliái dhálar
+    AWG:
+      symbol: ARBF
+      display_names:
+        other: Arubi flórin
+        one: Arubi flórin
     AZN:
       symbol: AZRM
       display_names:
@@ -50,6 +114,20 @@ number_formats:
       display_names:
         other: Bangaladéshi thakká
         one: Bangaladéshi thakká
+    BGN:
+      symbol: BLGL
+      display_names:
+        other: Bulgáriái lew
+        one: Bulgáriái lew
+    BHD:
+      display_names:
+        other: Bahreni dinár
+        one: Bahreni dinár
+    BIF:
+      symbol: BRDF
+      display_names:
+        other: Burundi fránk
+        one: Burundi fránk
     BMD:
       symbol: BRMD
       display_names:
@@ -74,11 +152,21 @@ number_formats:
       display_names:
         other: Bahami dhálar
         one: Bahami dhálar
+    BTN:
+      symbol: BTNN
+      display_names:
+        other: Butháni ngultrum
+        one: Butháni ngultrum
     BWP:
       symbol: BTSP
       display_names:
         other: Botswánái pulá
         one: Botswánái pulá
+    BYN:
+      symbol: BLRR
+      display_names:
+        other: Bélárusi rubel
+        one: Bélárusi rubel
     BZD:
       symbol: BLZD
       display_names:
@@ -89,10 +177,25 @@ number_formats:
       display_names:
         other: Kaynadhái dhálar
         one: Kaynadhái dhálar
+    CDF:
+      symbol: KNGF
+      display_names:
+        other: Kángói fránk
+        one: Kángói fránk
+    CHF:
+      symbol: SWZF
+      display_names:
+        other: Swizi fránk
+        one: Swizi fránk
     CLP:
       display_names:
         other: Chilayi paysó
         one: Chilayi paysó
+    CNH:
+      symbol: CNYÁ
+      display_names:
+        other: Chini yuán (Ápshór)
+        one: Chini yuán (Ápshór)
     CNY:
       symbol: CHNY
       display_names:
@@ -118,11 +221,21 @@ number_formats:
       display_names:
         other: Kyubái paysó
         one: Kyubái paysó
+    CVE:
+      symbol: KWRE
+      display_names:
+        other: Kayp Werdi eskudó
+        one: Kayp Werdi eskudó
     CZK:
       symbol: CHKK
       display_names:
         other: Chek koruná
         one: Chek koruná
+    DJF:
+      symbol: DJBF
+      display_names:
+        other: Djebuti fránk
+        one: Djebuti fránk
     DKK:
       symbol: DNMK
       display_names:
@@ -133,11 +246,26 @@ number_formats:
       display_names:
         other: Dominiki paysó
         one: Dominiki paysó
+    DZD:
+      symbol: ALJD
+      display_names:
+        other: Aljiriái dinár
+        one: Aljiriái dinár
     EGP:
       symbol: MSRP
       display_names:
         other: Mesri pawndh
         one: Mesri pawndh
+    ERN:
+      symbol: ERTN
+      display_names:
+        other: Eritiriái nakfá
+        one: Eritiriái nakfá
+    ETB:
+      symbol: ETPB
+      display_names:
+        other: Etiupiái birr
+        one: Etiupiái birr
     EUR:
       display_names:
         other: Yuró
@@ -170,6 +298,11 @@ number_formats:
       display_names:
         other: Gibraltar pawndh
         one: Gibraltar pawndh
+    GMD:
+      symbol: GMBD
+      display_names:
+        other: Gambiái dalasi
+        one: Gambiái dalasi
     GNF:
       symbol: GWNF
       display_names:
@@ -199,6 +332,11 @@ number_formats:
       display_names:
         other: Króáshiái kuná
         one: Króáshiái kuná
+    HTG:
+      symbol: HTNG
+      display_names:
+        other: Haiti gurde
+        one: Haiti gurde
     HUF:
       symbol: HGRF
       display_names:
@@ -218,6 +356,15 @@ number_formats:
       display_names:
         other: Hendostáni Rupi
         one: Hendostáni Rupi
+    IQD:
+      display_names:
+        other: Eráki dinár
+        one: Eráki dinár
+    IRR:
+      symbol: ERNR
+      display_names:
+        other: Éráni Ryál
+        one: Éráni Ryál
     ISK:
       symbol: ISLK
       display_names:
@@ -228,11 +375,20 @@ number_formats:
       display_names:
         other: Jamáiki dhálar
         one: Jamáiki dhálar
+    JOD:
+      display_names:
+        other: Ordoni dinár
+        one: Ordoni dinár
     JPY:
       symbol: "¥"
       display_names:
         other: Jápáni Yen
         one: Jápáni Yen
+    KES:
+      symbol: KINS
+      display_names:
+        other: Kinyái shilling
+        one: Kinyái shilling
     KGS:
       symbol: KGSS
       display_names:
@@ -258,6 +414,10 @@ number_formats:
       display_names:
         other: Zerbári Kóriái won
         one: Zerbári Kóriái won
+    KWD:
+      display_names:
+        other: Kwayti dinár
+        one: Kwayti dinár
     KYD:
       symbol: KMID
       display_names:
@@ -288,11 +448,36 @@ number_formats:
       display_names:
         other: Láibiriái dhálar
         one: Láibiriái dhálar
+    LSL:
+      symbol: LSTL
+      display_names:
+        other: Lesótó lóti
+        one: Lesótó lóti
+    LYD:
+      symbol: LBYD
+      display_names:
+        other: Libyái dinár
+        one: Libyái dinár
+    MAD:
+      symbol: MRKD
+      display_names:
+        other: Mórokói darham
+        one: Mórokói darham
+    MDL:
+      symbol: MLDL
+      display_names:
+        other: Moldówi leu
+        one: Moldówi leu
     MGA:
       symbol: MLGA
       display_names:
         other: Malagasi ariári
         one: Malagasi ariári
+    MKD:
+      symbol: MKDD
+      display_names:
+        other: Makduniái dinár
+        one: Makduniái dinár
     MMK:
       symbol: MNMK
       display_names:
@@ -303,11 +488,31 @@ number_formats:
       display_names:
         other: Mongóliái tugrik
         one: Mongóliái tugrik
+    MOP:
+      symbol: MKNP
+      display_names:
+        other: Makani pataká
+        one: Makani pataká
+    MRU:
+      symbol: MRTU
+      display_names:
+        other: Mauritániái ugwiyá
+        one: Mauritániái ugwiyá
     MUR:
       symbol: MURR
       display_names:
         other: Muritániái rupi
         one: Muritániái rupi
+    MVR:
+      symbol: MLDR
+      display_names:
+        other: Máldipi rupiyá
+        one: Máldipi rupiyá
+    MWK:
+      symbol: MLWK
+      display_names:
+        other: Malawi kwachá
+        one: Malawi kwachá
     MXN:
       symbol: MKS$
       display_names:
@@ -318,6 +523,11 @@ number_formats:
       display_names:
         other: Malishiái ringgit
         one: Malishiái ringgit
+    MZN:
+      symbol: MZBM
+      display_names:
+        other: Mózambiki metikal
+        one: Mózambiki metikal
     NAD:
       symbol: NMBD
       display_names:
@@ -347,6 +557,24 @@ number_formats:
       display_names:
         other: Nyu Zilánd dhálar
         one: Nyu Zilánd dhálar
+    OMR:
+      display_names:
+        other: Ománi riál
+        one: Ománi riál
+    PAB:
+      symbol: PNMB
+      display_names:
+        other: Panamániái balbóá
+        one: Panamániái balbóá
+    PEN:
+      symbol: PRSL
+      display_names:
+        other: Péruwi sól
+        one: Péruwi sól
+    PGK:
+      display_names:
+        other: Pápuá Nyu Gwini kiná
+        one: Pápuá Nyu Gwini kiná
     PHP:
       symbol: PLPP
       display_names:
@@ -367,11 +595,20 @@ number_formats:
       display_names:
         other: Payráguyái gwarani
         one: Payráguyái gwarani
+    QAR:
+      display_names:
+        other: Gatari riál
+        one: Gatari riál
     RON:
       symbol: RMNL
       display_names:
         other: Rumániái leu
         one: Rumániái leu
+    RSD:
+      symbol: SRBD
+      display_names:
+        other: Sarbiái dinár
+        one: Sarbiái dinár
     RUB:
       symbol: RUSR
       display_names:
@@ -382,10 +619,24 @@ number_formats:
       display_names:
         other: Rwándái fránk
         one: Rwándái fránk
+    SAR:
+      display_names:
+        other: Saudi riál
+        one: Saudi riál
     SBD:
       display_names:
         other: Solomán Islánd dhálar
         one: Solomán Islánd dhálar
+    SCR:
+      symbol: SCLR
+      display_names:
+        other: Seychelli rupi
+        one: Seychelli rupi
+    SDG:
+      symbol: SDNP
+      display_names:
+        other: Sudáni pawndh
+        one: Sudáni pawndh
     SEK:
       symbol: SWDK
       display_names:
@@ -401,6 +652,21 @@ number_formats:
       display_names:
         other: St. Helénái pawndh
         one: St. Helénái pawndh
+    SLE:
+      symbol: SLNL
+      display_names:
+        other: Siérá Leóni león
+        one: Siérá Leóni león
+    SLL:
+      symbol: SRLL
+      display_names:
+        other: Siérá Leóni león (1964—2022)
+        one: Siérá Leóni león (1964—2022)
+    SOS:
+      symbol: SÓMS
+      display_names:
+        other: Sómáli shilling
+        one: Sómáli shilling
     SRD:
       symbol: SRND
       display_names:
@@ -421,11 +687,29 @@ number_formats:
       display_names:
         other: Suriái pawndh
         one: Suriái pawndh
+    SZL:
+      symbol: SWZL
+      display_names:
+        other: Swázi lilangeni
+        one: Swázi lilangeni
     THB:
       symbol: TÁIB
       display_names:
         other: Tái baht
         one: Tái baht
+    TJS:
+      display_names:
+        other: Tájekestáni somoni
+        one: Tájekestáni somoni
+    TMT:
+      display_names:
+        other: Torkmánestáni manat
+        one: Torkmánestáni manat
+    TND:
+      symbol: TNSD
+      display_names:
+        other: Tunisi dinár
+        one: Tunisi dinár
     TOP:
       display_names:
         other: Tongan pángá
@@ -445,11 +729,21 @@ number_formats:
       display_names:
         other: Nyu Táiwán dhálar
         one: Nyu Táiwán dhálar
+    TZS:
+      symbol: TNZS
+      display_names:
+        other: Tanzániái shilling
+        one: Tanzániái shilling
     UAH:
       symbol: YKNH
       display_names:
         other: Yukrayni hriwniá
         one: Yukrayni hriwniá
+    UGX:
+      symbol: YUGS
+      display_names:
+        other: Yugandhái shilling
+        one: Yugandhái shilling
     USD:
       symbol: "$"
       display_names:
@@ -460,11 +754,29 @@ number_formats:
       display_names:
         other: Yurógóyái paysó
         one: Yurógóyái paysó
+    UZS:
+      symbol: OZBS
+      display_names:
+        other: Ozbekestáni som
+        one: Ozbekestáni som
+    VES:
+      symbol: WNZB
+      display_names:
+        other: Wénezwélái boliwar
+        one: Wénezwélái boliwar
     VND:
       symbol: WTND
       display_names:
         other: Wietnámi dong
         one: Wietnámi dong
+    VUV:
+      display_names:
+        other: Wanuátu wátu
+        one: Wanuátu wátu
+    WST:
+      display_names:
+        other: Samóan talá
+        one: Samóan talá
     XAF:
       symbol: DARF
       display_names:
@@ -489,6 +801,10 @@ number_formats:
       display_names:
         other: Nazántagén Zarr
         one: Nazántagén Zarr
+    YER:
+      display_names:
+        other: Yamani riál
+        one: Yamani riál
     ZAR:
       symbol: ZAPR
       display_names:
@@ -499,274 +815,346 @@ number_formats:
       display_names:
         other: Zambiái kwachá
         one: Zambiái kwachá
-    AED:
-      display_names:
-        other: Emáráti darham
-        one: Emáráti darham
-    ALL:
-      symbol: ALBL
-      display_names:
-        other: Albániái lek
-        one: Albániái lek
-    ANG:
-      symbol: NLAG
-      display_names:
-        other: Nedarlándi Antilli gelder
-        one: Nedarlándi Antilli gelder
-    AWG:
-      symbol: ARBF
-      display_names:
-        other: Arubi flórin
-        one: Arubi flórin
-    BGN:
-      symbol: BLGL
-      display_names:
-        other: Bulgáriái lew
-        one: Bulgáriái lew
-    BHD:
-      display_names:
-        other: Bahreni dinár
-        one: Bahreni dinár
-    BIF:
-      symbol: BRDF
-      display_names:
-        other: Burundi fránk
-        one: Burundi fránk
-    BTN:
-      symbol: BTNN
-      display_names:
-        other: Butháni ngultrum
-        one: Butháni ngultrum
-    BYN:
-      symbol: BLRR
-      display_names:
-        other: Bélárusi rubel
-        one: Bélárusi rubel
-    CDF:
-      symbol: KNGF
-      display_names:
-        other: Kángói fránk
-        one: Kángói fránk
-    CHF:
-      symbol: SWZF
-      display_names:
-        other: Swizi fránk
-        one: Swizi fránk
-    CNH:
-      symbol: CNYÁ
-      display_names:
-        other: Chini yuán (Ápshór)
-        one: Chini yuán (Ápshór)
-    CVE:
-      symbol: KWRE
-      display_names:
-        other: Kayp Werdi eskudó
-        one: Kayp Werdi eskudó
-    DJF:
-      symbol: DJBF
-      display_names:
-        other: Djebuti fránk
-        one: Djebuti fránk
-    DZD:
-      symbol: ALJD
-      display_names:
-        other: Aljiriái dinár
-        one: Aljiriái dinár
-    ERN:
-      symbol: ERTN
-      display_names:
-        other: Eritiriái nakfá
-        one: Eritiriái nakfá
-    ETB:
-      symbol: ETPB
-      display_names:
-        other: Etiupiái birr
-        one: Etiupiái birr
-    GMD:
-      symbol: GMBD
-      display_names:
-        other: Gambiái dalasi
-        one: Gambiái dalasi
-    HTG:
-      symbol: HTNG
-      display_names:
-        other: Haiti gurde
-        one: Haiti gurde
-    IQD:
-      display_names:
-        other: Eráki dinár
-        one: Eráki dinár
-    IRR:
-      symbol: ERNR
-      display_names:
-        other: Éráni Ryál
-        one: Éráni Ryál
-    JOD:
-      display_names:
-        other: Ordoni dinár
-        one: Ordoni dinár
-    KES:
-      symbol: KINS
-      display_names:
-        other: Kinyái shilling
-        one: Kinyái shilling
-    KWD:
-      display_names:
-        other: Kwayti dinár
-        one: Kwayti dinár
-    LSL:
-      symbol: LSTL
-      display_names:
-        other: Lesótó lóti
-        one: Lesótó lóti
-    LYD:
-      symbol: LBYD
-      display_names:
-        other: Libyái dinár
-        one: Libyái dinár
-    MAD:
-      symbol: MRKD
-      display_names:
-        other: Mórokói darham
-        one: Mórokói darham
-    MDL:
-      symbol: MLDL
-      display_names:
-        other: Moldówi leu
-        one: Moldówi leu
-    MKD:
-      symbol: MKDD
-      display_names:
-        other: Makduniái dinár
-        one: Makduniái dinár
-    MOP:
-      symbol: MKNP
-      display_names:
-        other: Makani pataká
-        one: Makani pataká
-    MRU:
-      symbol: MRTU
-      display_names:
-        other: Mauritániái ugwiyá
-        one: Mauritániái ugwiyá
-    MVR:
-      symbol: MLDR
-      display_names:
-        other: Máldipi rupiyá
-        one: Máldipi rupiyá
-    MWK:
-      symbol: MLWK
-      display_names:
-        other: Malawi kwachá
-        one: Malawi kwachá
-    MZN:
-      symbol: MZBM
-      display_names:
-        other: Mózambiki metikal
-        one: Mózambiki metikal
-    OMR:
-      display_names:
-        other: Ománi riál
-        one: Ománi riál
-    PAB:
-      symbol: PNMB
-      display_names:
-        other: Panamániái balbóá
-        one: Panamániái balbóá
-    PEN:
-      symbol: PRSL
-      display_names:
-        other: Péruwi sól
-        one: Péruwi sól
-    PGK:
-      display_names:
-        other: Pápuá Nyu Gwini kiná
-        one: Pápuá Nyu Gwini kiná
-    QAR:
-      display_names:
-        other: Gatari riál
-        one: Gatari riál
-    RSD:
-      symbol: SRBD
-      display_names:
-        other: Sarbiái dinár
-        one: Sarbiái dinár
-    SAR:
-      display_names:
-        other: Saudi riál
-        one: Saudi riál
-    SCR:
-      symbol: SCLR
-      display_names:
-        other: Seychelli rupi
-        one: Seychelli rupi
-    SDG:
-      symbol: SDNP
-      display_names:
-        other: Sudáni pawndh
-        one: Sudáni pawndh
-    SLE:
-      symbol: SLNL
-      display_names:
-        other: Siérá Leóni león
-        one: Siérá Leóni león
-    SLL:
-      symbol: SRLL
-      display_names:
-        other: Siérá Leóni león (1964—2022)
-        one: Siérá Leóni león (1964—2022)
-    SOS:
-      symbol: SÓMS
-      display_names:
-        other: Sómáli shilling
-        one: Sómáli shilling
-    SZL:
-      symbol: SWZL
-      display_names:
-        other: Swázi lilangeni
-        one: Swázi lilangeni
-    TJS:
-      display_names:
-        other: Tájekestáni somoni
-        one: Tájekestáni somoni
-    TMT:
-      display_names:
-        other: Torkmánestáni manat
-        one: Torkmánestáni manat
-    TND:
-      symbol: TNSD
-      display_names:
-        other: Tunisi dinár
-        one: Tunisi dinár
-    TZS:
-      symbol: TNZS
-      display_names:
-        other: Tanzániái shilling
-        one: Tanzániái shilling
-    UGX:
-      symbol: YUGS
-      display_names:
-        other: Yugandhái shilling
-        one: Yugandhái shilling
-    UZS:
-      symbol: OZBS
-      display_names:
-        other: Ozbekestáni som
-        one: Ozbekestáni som
-    VES:
-      symbol: WNZB
-      display_names:
-        other: Wénezwélái boliwar
-        one: Wénezwélái boliwar
-    VUV:
-      display_names:
-        other: Wanuátu wátu
-        one: Wanuátu wátu
-    WST:
-      display_names:
-        other: Samóan talá
-        one: Samóan talá
-    YER:
-      display_names:
-        other: Yamani riál
-        one: Yamani riál
+  units:
+    century:
+      long:
+        display_name: karn
+        one: "{0} karn"
+        other: "{0} karn"
+      short:
+        display_name: k
+        one: "{0} k"
+        other: "{0} k"
+      narrow:
+        display_name: k
+        one: "{0} k"
+        other: "{0} k"
+    decade:
+      long:
+        display_name: Dahekk
+        one: "{0} Dahekk"
+        other: "{0} Dahekk"
+      short:
+        display_name: Dah
+        one: "{0} Dah"
+        other: "{0} Dah"
+      narrow:
+        display_name: Dah
+        one: "{0} Dah"
+        other: "{0} Dah"
+    year:
+      long:
+        display_name: sál
+        one: "{0} sál"
+        other: "{0} sál"
+        per_unit_pattern: "{0}/sálé"
+      short:
+        display_name: sál
+        one: "{0} sál"
+        other: "{0} sál"
+        per_unit_pattern: "{0}/sál"
+      narrow:
+        display_name: sl
+        one: "{0} sál"
+        other: "{0} sál"
+        per_unit_pattern: "{0}/sál"
+    quarter:
+      long:
+        display_name: chárek
+        one: "{0} chárek"
+        other: "{0} chárek"
+        per_unit_pattern: "{0}/chárek"
+      short:
+        display_name: chárek
+        one: "{0} chárek"
+        other: "{0} chárek"
+        per_unit_pattern: "{0}/chárek"
+      narrow:
+        display_name: chárek
+        one: "{0} chárek"
+        other: "{0} chárek"
+        per_unit_pattern: "{0}/chárek"
+    month:
+      long:
+        display_name: máh
+        one: "{0} máh"
+        other: "{0} máh"
+        per_unit_pattern: "{0}/máhé"
+      short:
+        display_name: máh
+        one: "{0} máh"
+        other: "{0} máh"
+        per_unit_pattern: "{0}/máhé"
+      narrow:
+        display_name: máh
+        one: "{0} máh"
+        other: "{0} máh"
+        per_unit_pattern: "{0}/máhé"
+    week:
+      long:
+        display_name: haptag
+        one: "{0} haptag"
+        other: "{0} haptag"
+        per_unit_pattern: "{0}/haptagé"
+      short:
+        display_name: haptag
+        one: "{0} haptag"
+        other: "{0} haptag"
+        per_unit_pattern: "{0}/haptagé"
+      narrow:
+        display_name: haptag
+        one: "{0} haptag"
+        other: "{0} haptag"
+        per_unit_pattern: "{0}/haptagé"
+    day:
+      long:
+        display_name: róch
+        one: "{0} róch"
+        other: "{0} róch"
+        per_unit_pattern: "{0}/róché"
+      short:
+        display_name: róch
+        one: "{0} róch"
+        other: "{0} róch"
+        per_unit_pattern: "{0}/róché"
+      narrow:
+        display_name: róch
+        one: "{0} róch"
+        other: "{0} róch"
+        per_unit_pattern: "{0}/róché"
+    hour:
+      long:
+        display_name: sáhat
+        one: "{0} sáhat"
+        other: "{0} sáhat"
+        per_unit_pattern: "{0}/sáhaté"
+      short:
+        display_name: st
+        one: "{0} sáhat"
+        other: "{0} sáhat"
+        per_unit_pattern: "{0}/sáhaté"
+      narrow:
+        display_name: sáhat
+        one: "{0} sáhat"
+        other: "{0} sáhat"
+        per_unit_pattern: "{0}/sáhaté"
+    minute:
+      long:
+        display_name: meletth
+        one: "{0} meletth"
+        other: "{0} meletth"
+        per_unit_pattern: "{0}/meletth"
+      short:
+        display_name: meletth
+        one: "{0} meletth"
+        other: "{0} meletth"
+        per_unit_pattern: "{0}/meletth"
+      narrow:
+        display_name: meletth
+        one: "{0} meletth"
+        other: "{0} meletth"
+        per_unit_pattern: "{0}/meletth"
+    second:
+      long:
+        display_name: sekendh
+        one: "{0} sekendh"
+        other: "{0} sekendh"
+        per_unit_pattern: "{0}/sekendhé"
+      short:
+        display_name: sekendh
+        one: "{0} sekendh"
+        other: "{0} sekendh"
+        per_unit_pattern: "{0}/sekendhé"
+      narrow:
+        display_name: sekendh
+        one: "{0} sekendh"
+        other: "{0} sekendh"
+        per_unit_pattern: "{0}/sekendhé"
+    millisecond:
+      long:
+        display_name: milisekendh
+        one: "{0} milisekendh"
+        other: "{0} milisekendh"
+      short:
+        one: "{0} milisekendh"
+        other: "{0} milisekendh"
+      narrow:
+        display_name: milisekendh
+        one: "{0} milisekendh"
+        other: "{0} milisekendh"
+    microsecond:
+      long:
+        display_name: máikrósekendh
+        one: "{0} máikrósekendh"
+        other: "{0} máikrósekendh"
+      short:
+        one: "{0} máikrósekendh"
+        other: "{0} máikrósekendh"
+      narrow:
+        display_name: máikrósekendh
+        one: "{0} máikrósekendh"
+        other: "{0} máikrósekendh"
+    nanosecond:
+      long:
+        display_name: nénósekendh
+        one: "{0} nénósekendh"
+        other: "{0} nénósekendh"
+      short:
+        display_name: nénósekendh
+        one: "{0} nénósekendh"
+        other: "{0} nénósekendh"
+      narrow:
+        display_name: nénósekendh
+        one: "{0} nénósekendh"
+        other: "{0} nénósekendh"
+    pixel:
+      long:
+        display_name: pks
+        one: "{0} pks"
+        other: "{0} pks"
+      short:
+        display_name: pks
+        one: "{0} pks"
+        other: "{0} pks"
+      narrow:
+        display_name: pks
+        one: "{0} pks"
+        other: "{0} pks"
+    pixel-per-centimeter:
+      long:
+        display_name: ppsm
+        one: "{0} ppsm"
+        other: "{0} ppsm"
+      short:
+        display_name: ppsm
+        one: "{0} ppsm"
+        other: "{0} ppsm"
+      narrow:
+        display_name: ppsm
+        one: "{0} ppsm"
+        other: "{0} ppsm"
+    kilometer:
+      long:
+        display_name: kilómitar
+        per_unit_pattern: "{0}/kilómitaré"
+      short:
+        per_unit_pattern: "{0}/kmé"
+      narrow:
+        per_unit_pattern: "{0}/kmé"
+    meter:
+      long:
+        display_name: mitar
+        one: "{0} mitar"
+        other: "{0} mitar"
+        per_unit_pattern: "{0}/mitaré"
+      short:
+        display_name: mitar
+        one: "{0} mitar"
+        other: "{0} mitar"
+        per_unit_pattern: "{0}/mitaré"
+      narrow:
+        display_name: mitar
+        one: "{0} mitar"
+        other: "{0} mitar"
+        per_unit_pattern: "{0}/mitaré"
+    decimeter:
+      long:
+        display_name: désimitar
+        one: "{0} désimitar"
+        other: "{0} désimitar"
+      short:
+        one: "{0} désimitar"
+        other: "{0} désimitar"
+      narrow:
+        one: "{0} désimitar"
+        other: "{0} désimitar"
+    centimeter:
+      long:
+        display_name: santimitar
+        one: "{0} santimitar"
+        other: "{0} santimitar"
+        per_unit_pattern: "{0}/santimitaré"
+      short:
+        display_name: sm
+        one: "{0} santimitar"
+        other: "{0} sm"
+        per_unit_pattern: "{0}/smé"
+      narrow:
+        display_name: santimitar
+        one: "{0} santimitar"
+        other: "{0} santimitar"
+        per_unit_pattern: "{0}/santimitar"
+    millimeter:
+      long:
+        display_name: milimitar
+    micrometer:
+      long:
+        display_name: máikrómitar
+        one: "{0} máikrómitar"
+        other: "{0} máikrómitar"
+      narrow:
+        display_name: máikrómitar
+        one: "{0} máikrómitar"
+        other: "{0} máikrómitar"
+    nanometer:
+      long:
+        display_name: nénómitar
+        one: "{0} nénómitar"
+        other: "{0} nénómitar"
+      narrow:
+        display_name: nénómitar
+        one: "{0} nénómitar"
+        other: "{0} nénómitar"
+    picometer:
+      long:
+        display_name: pikómitar
+        one: "{0} pikómitar"
+        other: "{0} pikómitar"
+      short:
+        one: "{0} pikómitar"
+        other: "{0} pikómitar"
+      narrow:
+        display_name: pikómitar
+        one: "{0} pikómitar"
+        other: "{0} pikómitar"
+    mile-scandinavian:
+      long:
+        display_name: Skándi-mil
+        one: "{0} Skándi-mil"
+        other: "{0} Skándi-mil"
+      short:
+        one: "{0} Skándi-mil"
+        other: "{0} Skándi-mil"
+      narrow:
+        display_name: Skándi-mil
+        one: "{0} Skándi-mil"
+        other: "{0} Skándi-mil"
+    point:
+      long:
+        display_name: noktah
+        one: "{0} noktah"
+        other: "{0} noktah"
+      short:
+        display_name: nk
+        one: "{0} nk"
+        other: "{0} noktah"
+      narrow:
+        display_name: noktah
+        one: "{0} noktah"
+        other: "{0} noktah"
+    night:
+      long:
+        display_name: shap
+        one: "{0} shap"
+        other: "{0} shap"
+        per_unit_pattern: "{0}/shapé"
+      short:
+        display_name: shap
+        one: "{0} shap"
+        other: "{0} shap"
+        per_unit_pattern: "{0}/shapé"
+      narrow:
+        display_name: shap
+        one: "{0} shap"
+        other: "{0} shap"
+        per_unit_pattern: "{0}/shapé"

@@ -1,12 +1,22 @@
 ---
 locale: teo
-generated_at: '2025-09-13T17:41:05Z'
+generated_at: '2025-09-14T06:12:28Z'
 cldr_version: '46'
 number_formats:
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "¤#,##0.00"
     accounting: "¤#,##0.00;(¤#,##0.00)"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Ango’otol lok’ Falme za Kiarabu
+        one: Ango’otol lok’ Falme za Kiarabu
     AOA:
       display_names:
         other: Ango’otol lok’ Angola
@@ -15,98 +25,6 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Australia
         one: Ango’otol lok’ Australia
-    BWP:
-      display_names:
-        other: Ango’otol lok’ Botswana
-        one: Ango’otol lok’ Botswana
-    CAD:
-      display_names:
-        other: Edola lok’Kanada
-        one: Edola lok’Kanada
-    CNY:
-      display_names:
-        other: Ango’otol lok’ China
-        one: Ango’otol lok’ China
-    EGP:
-      display_names:
-        other: Epaunt lok’ Misri
-        one: Epaunt lok’ Misri
-    EUR:
-      display_names:
-        other: Yuro
-        one: Yuro
-    GBP:
-      display_names:
-        other: Epaunt lok’ Uingereza
-        one: Epaunt lok’ Uingereza
-    INR:
-      display_names:
-        other: Ango’otol lok’ India
-        one: Ango’otol lok’ India
-    JPY:
-      display_names:
-        other: Ango’otol lok’ Kijapani
-        one: Ango’otol lok’ Kijapani
-    KMF:
-      display_names:
-        other: Ango’otol lok’ Komoro
-        one: Ango’otol lok’ Komoro
-    LRD:
-      display_names:
-        other: edola lok’ Liberia
-        one: edola lok’ Liberia
-    MGA:
-      display_names:
-        other: Ango’otol lok’ Bukini
-        one: Ango’otol lok’ Bukini
-    MUR:
-      display_names:
-        other: Ango’otol lok’ Morisi
-        one: Ango’otol lok’ Morisi
-    NAD:
-      display_names:
-        other: Ango’otol lok’ Namibia
-        one: Ango’otol lok’ Namibia
-    NGN:
-      display_names:
-        other: Ango’otol lok’ Nijeria
-        one: Ango’otol lok’ Nijeria
-    RWF:
-      display_names:
-        other: Ango’otol lok’ Rwanda
-        one: Ango’otol lok’ Rwanda
-    SHP:
-      display_names:
-        other: Ango’otol lok’ Santahelena
-        one: Ango’otol lok’ Santahelena
-    STN:
-      display_names:
-        other: Ango’otol lok’ Sao Tome na Principe
-        one: Ango’otol lok’ Sao Tome na Principe
-    USD:
-      display_names:
-        other: edola lok’ Amareka
-        one: edola lok’ Amareka
-    XAF:
-      display_names:
-        other: Ango’otol lok’ CFA BEAC
-        one: Ango’otol lok’ CFA BEAC
-    XOF:
-      display_names:
-        other: Ango’otol lok’ CFA BCEAO
-        one: Ango’otol lok’ CFA BCEAO
-    ZAR:
-      display_names:
-        other: Ango’otol lok’ Afrika Kusini
-        one: Ango’otol lok’ Afrika Kusini
-    ZMW:
-      display_names:
-        other: Ango’otol lok’ Zambia
-        one: Ango’otol lok’ Zambia
-    AED:
-      display_names:
-        other: Ango’otol lok’ Falme za Kiarabu
-        one: Ango’otol lok’ Falme za Kiarabu
     BHD:
       display_names:
         other: Ango’otol lok’ Bahareni
@@ -115,6 +33,14 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Burundi
         one: Ango’otol lok’ Burundi
+    BWP:
+      display_names:
+        other: Ango’otol lok’ Botswana
+        one: Ango’otol lok’ Botswana
+    CAD:
+      display_names:
+        other: Edola lok’Kanada
+        one: Edola lok’Kanada
     CDF:
       display_names:
         other: Ango’otol lok’ Kongo
@@ -123,6 +49,10 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Uswisi
         one: Ango’otol lok’ Uswisi
+    CNY:
+      display_names:
+        other: Ango’otol lok’ China
+        one: Ango’otol lok’ China
     CVE:
       display_names:
         other: Ango’otol lok’ Kepuvede
@@ -135,6 +65,10 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Aljeria
         one: Ango’otol lok’ Aljeria
+    EGP:
+      display_names:
+        other: Epaunt lok’ Misri
+        one: Epaunt lok’ Misri
     ERN:
       display_names:
         other: Ango’otol lok’ Eritrea
@@ -143,6 +77,14 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Uhabeshi
         one: Ango’otol lok’ Uhabeshi
+    EUR:
+      display_names:
+        other: Yuro
+        one: Yuro
+    GBP:
+      display_names:
+        other: Epaunt lok’ Uingereza
+        one: Epaunt lok’ Uingereza
     GHC:
       display_names:
         other: Sedi ya Ghana
@@ -155,10 +97,26 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Gine
         one: Ango’otol lok’ Gine
+    INR:
+      display_names:
+        other: Ango’otol lok’ India
+        one: Ango’otol lok’ India
+    JPY:
+      display_names:
+        other: Ango’otol lok’ Kijapani
+        one: Ango’otol lok’ Kijapani
     KES:
       display_names:
         other: Ango’otol lok’ Kenya
         one: Ango’otol lok’ Kenya
+    KMF:
+      display_names:
+        other: Ango’otol lok’ Komoro
+        one: Ango’otol lok’ Komoro
+    LRD:
+      display_names:
+        other: edola lok’ Liberia
+        one: edola lok’ Liberia
     LSL:
       display_names:
         other: Ango’otol lok’ Lesoto
@@ -171,6 +129,10 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Moroko
         one: Ango’otol lok’ Moroko
+    MGA:
+      display_names:
+        other: Ango’otol lok’ Bukini
+        one: Ango’otol lok’ Bukini
     MRO:
       display_names:
         other: Ango’otol lok’ Moritania (1973–2017)
@@ -179,6 +141,10 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Moritania
         one: Ango’otol lok’ Moritania
+    MUR:
+      display_names:
+        other: Ango’otol lok’ Morisi
+        one: Ango’otol lok’ Morisi
     MWK:
       display_names:
         other: Ango’otol lok’ Malawi
@@ -187,6 +153,18 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Msumbiji
         one: Ango’otol lok’ Msumbiji
+    NAD:
+      display_names:
+        other: Ango’otol lok’ Namibia
+        one: Ango’otol lok’ Namibia
+    NGN:
+      display_names:
+        other: Ango’otol lok’ Nijeria
+        one: Ango’otol lok’ Nijeria
+    RWF:
+      display_names:
+        other: Ango’otol lok’ Rwanda
+        one: Ango’otol lok’ Rwanda
     SAR:
       display_names:
         other: Ango’otol lok’ Saudia
@@ -199,6 +177,10 @@ number_formats:
       display_names:
         other: Epaunt Lok’ Sudan
         one: Epaunt Lok’ Sudan
+    SHP:
+      display_names:
+        other: Ango’otol lok’ Santahelena
+        one: Ango’otol lok’ Santahelena
     SLE:
       display_names:
         other: Leoni
@@ -215,6 +197,10 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Sao Tome na Principe (1977–2017)
         one: Ango’otol lok’ Sao Tome na Principe (1977–2017)
+    STN:
+      display_names:
+        other: Ango’otol lok’ Sao Tome na Principe
+        one: Ango’otol lok’ Sao Tome na Principe
     SZL:
       display_names:
         other: Lilangeni
@@ -232,10 +218,30 @@ number_formats:
       display_names:
         other: Ango’otol lok’ Uganda
         one: Ango’otol lok’ Uganda
+    USD:
+      display_names:
+        other: edola lok’ Amareka
+        one: edola lok’ Amareka
+    XAF:
+      display_names:
+        other: Ango’otol lok’ CFA BEAC
+        one: Ango’otol lok’ CFA BEAC
+    XOF:
+      display_names:
+        other: Ango’otol lok’ CFA BCEAO
+        one: Ango’otol lok’ CFA BCEAO
+    ZAR:
+      display_names:
+        other: Ango’otol lok’ Afrika Kusini
+        one: Ango’otol lok’ Afrika Kusini
     ZMK:
       display_names:
         other: Ango’otol lok’ Zambia (1968–2012)
         one: Ango’otol lok’ Zambia (1968–2012)
+    ZMW:
+      display_names:
+        other: Ango’otol lok’ Zambia
+        one: Ango’otol lok’ Zambia
     ZWD:
       display_names:
         other: Edola lok’Zimbabwe

@@ -1,6 +1,6 @@
 ---
 locale: fi
-generated_at: '2025-09-13T17:37:00Z'
+generated_at: '2025-09-14T06:09:49Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -8,526 +8,90 @@ number_formats:
     group: " "
     minus_sign: "−"
     nan: epäluku
+  decimal_formats:
+    standard: 
   percent_formats:
     standard: "#,##0 %"
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
+  compact_formats:
+    short:
+      '1000':
+        one: 0 t'.'
+        other: 0 t'.'
+      '10000':
+        one: 00 t'.'
+        other: 00 t'.'
+      '100000':
+        one: 000 t'.'
+        other: 000 t'.'
+      '1000000':
+        one: 0 milj'.'
+        other: 0 milj'.'
+      '10000000':
+        one: 00 milj'.'
+        other: 00 milj'.'
+      '100000000':
+        one: 000 milj'.'
+        other: 000 milj'.'
+      '1000000000':
+        one: 0 mrd'.'
+        other: 0 mrd'.'
+      '10000000000':
+        one: 00 mrd'.'
+        other: 00 mrd'.'
+      '100000000000':
+        one: 000 mrd'.'
+        other: 000 mrd'.'
+      '1000000000000':
+        one: 0 bilj'.'
+        other: 0 bilj'.'
+      '10000000000000':
+        one: 00 bilj'.'
+        other: 00 bilj'.'
+      '100000000000000':
+        one: 000 bilj'.'
+        other: 000 bilj'.'
+    long:
+      '1000':
+        one: 0 tuhat
+        other: 0 tuhatta
+      '10000':
+        one: 00 tuhatta
+        other: 00 tuhatta
+      '100000':
+        one: 000 tuhatta
+        other: 000 tuhatta
+      '1000000':
+        one: 0 miljoona
+        other: 0 miljoonaa
+      '10000000':
+        one: 00 miljoonaa
+        other: 00 miljoonaa
+      '100000000':
+        one: 000 miljoonaa
+        other: 000 miljoonaa
+      '1000000000':
+        one: 0 miljardi
+        other: 0 miljardia
+      '10000000000':
+        one: 00 miljardia
+        other: 00 miljardia
+      '100000000000':
+        one: 000 miljardia
+        other: 000 miljardia
+      '1000000000000':
+        one: 0 biljoona
+        other: 0 biljoonaa
+      '10000000000000':
+        one: 00 biljoonaa
+        other: 00 biljoonaa
+      '100000000000000':
+        one: 000 biljoonaa
+        other: 000 biljoonaa
   currencies:
-    AFN:
-      display_names:
-        other: Afganistanin afgaania
-        one: Afganistanin afgaani
-    AMD:
-      display_names:
-        other: Armenian dramia
-        one: Armenian dram
-    AOA:
-      symbol: AOA
-      display_names:
-        other: Angolan kwanzaa
-        one: Angolan kwanza
-    ARS:
-      symbol: ARS
-      display_names:
-        other: Argentiinan pesoa
-        one: Argentiinan peso
-    AUD:
-      symbol: AUD
-      display_names:
-        other: Australian dollaria
-        one: Australian dollari
-    AZN:
-      display_names:
-        other: Azerbaidžanin manatia
-        one: Azerbaidžanin manat
-    BAM:
-      symbol: BAM
-      display_names:
-        other: Bosnia-Hertsegovinan vaihdettavaa markkaa
-        one: Bosnia-Hertsegovinan vaihdettava markka
-    BBD:
-      symbol: BBD
-      display_names:
-        other: Barbadosin dollaria
-        one: Barbadosin dollari
-    BDT:
-      symbol: BDT
-      display_names:
-        other: Bangladeshin takaa
-        one: Bangladeshin taka
-    BMD:
-      symbol: BMD
-      display_names:
-        other: Bermudan dollaria
-        one: Bermudan dollari
-    BND:
-      symbol: BND
-      display_names:
-        other: Brunein dollaria
-        one: Brunein dollari
-    BOB:
-      symbol: BOB
-      display_names:
-        other: Bolivian bolivianoa
-        one: Bolivian boliviano
-    BRL:
-      symbol: BRL
-      display_names:
-        other: Brasilian realia
-        one: Brasilian real
-    BSD:
-      symbol: BSD
-      display_names:
-        other: Bahaman dollaria
-        one: Bahaman dollari
-    BWP:
-      symbol: BWP
-      display_names:
-        other: Botswanan pulaa
-        one: Botswanan pula
-    BZD:
-      symbol: BZD
-      display_names:
-        other: Belizen dollaria
-        one: Belizen dollari
-    CAD:
-      symbol: CAD
-      display_names:
-        other: Kanadan dollaria
-        one: Kanadan dollari
-    CLP:
-      symbol: CLP
-      display_names:
-        other: Chilen pesoa
-        one: Chilen peso
-    CNY:
-      symbol: CNY
-      display_names:
-        other: Kiinan juania
-        one: Kiinan juan
-    COP:
-      symbol: COP
-      display_names:
-        other: Kolumbian pesoa
-        one: Kolumbian peso
-    CRC:
-      symbol: CRC
-      display_names:
-        other: Costa Rican colónia
-        one: Costa Rican colón
-    CUC:
-      symbol: CUC
-      display_names:
-        other: Kuuban vaihdettavaa pesoa
-        one: Kuuban vaihdettava peso
-    CUP:
-      symbol: CUP
-      display_names:
-        other: Kuuban pesoa
-        one: Kuuban peso
-    CZK:
-      symbol: CZK
-      display_names:
-        other: Tšekin korunaa
-        one: Tšekin koruna
-    DKK:
-      symbol: DKK
-      display_names:
-        other: Tanskan kruunua
-        one: Tanskan kruunu
-    DOP:
-      symbol: DOP
-      display_names:
-        other: Dominikaanisen tasavallan pesoa
-        one: Dominikaanisen tasavallan peso
-    EGP:
-      symbol: EGP
-      display_names:
-        other: Egyptin puntaa
-        one: Egyptin punta
-    ESP:
-      symbol: ESP
-      display_names:
-        other: Espanjan pesetaa
-        one: Espanjan peseta
-    EUR:
-      display_names:
-        other: euroa
-        one: euro
-    FJD:
-      symbol: FJD
-      display_names:
-        other: Fidžin dollaria
-        one: Fidžin dollari
-    FKP:
-      symbol: FKP
-      display_names:
-        other: Falklandinsaarten puntaa
-        one: Falklandinsaarten punta
-    GBP:
-      display_names:
-        other: Englannin puntaa
-        one: Englannin punta
-    GEL:
-      symbol: GEL
-      display_names:
-        other: Georgian laria
-        one: Georgian lari
-    GHS:
-      display_names:
-        other: Ghanan cediä
-        one: Ghanan cedi
-    GIP:
-      symbol: GIP
-      display_names:
-        other: Gibraltarin puntaa
-        one: Gibraltarin punta
-    GNF:
-      symbol: GNF
-      display_names:
-        other: Guinean frangia
-        one: Guinean frangi
-    GTQ:
-      symbol: GTQ
-      display_names:
-        other: Guatemalan quetzalia
-        one: Guatemalan quetzal
-    GYD:
-      symbol: GYD
-      display_names:
-        other: Guyanan dollaria
-        one: Guyanan dollari
-    HKD:
-      symbol: HKD
-      display_names:
-        other: Hongkongin dollaria
-        one: Hongkongin dollari
-    HNL:
-      symbol: HNL
-      display_names:
-        other: Hondurasin lempiraa
-        one: Hondurasin lempira
-    HRK:
-      symbol: HRK
-      display_names:
-        other: Kroatian kunaa
-        one: Kroatian kuna
-    HUF:
-      symbol: HUF
-      display_names:
-        other: Unkarin forinttia
-        one: Unkarin forintti
-    IDR:
-      symbol: IDR
-      display_names:
-        other: Indonesian rupiaa
-        one: Indonesian rupia
-    ILS:
-      symbol: ILS
-      display_names:
-        other: Israelin uutta sekeliä
-        one: Israelin uusi sekeli
-    INR:
-      symbol: INR
-      display_names:
-        other: Intian rupiaa
-        one: Intian rupia
-    ISK:
-      symbol: ISK
-      display_names:
-        other: Islannin kruunua
-        one: Islannin kruunu
-    JMD:
-      symbol: JMD
-      display_names:
-        other: Jamaikan dollaria
-        one: Jamaikan dollari
-    JPY:
-      symbol: "¥"
-      display_names:
-        other: Japanin jeniä
-        one: Japanin jeni
-    KGS:
-      display_names:
-        other: Kirgisian somia
-        one: Kirgisian som
-    KHR:
-      symbol: KHR
-      display_names:
-        other: Kambodžan rieliä
-        one: Kambodžan riel
-    KMF:
-      symbol: KMF
-      display_names:
-        other: Komorien frangia
-        one: Komorien frangi
-    KPW:
-      symbol: KPW
-      display_names:
-        other: Pohjois-Korean wonia
-        one: Pohjois-Korean won
-    KRW:
-      symbol: KRW
-      display_names:
-        other: Etelä-Korean wonia
-        one: Etelä-Korean won
-    KYD:
-      symbol: KYD
-      display_names:
-        other: Caymansaarten dollaria
-        one: Caymansaarten dollari
-    KZT:
-      symbol: KZT
-      display_names:
-        other: Kazakstanin tengeä
-        one: Kazakstanin tenge
-    LAK:
-      symbol: LAK
-      display_names:
-        other: Laosin kipiä
-        one: Laosin kip
-    LBP:
-      symbol: LBP
-      display_names:
-        other: Libanonin puntaa
-        one: Libanonin punta
-    LKR:
-      symbol: LKR
-      display_names:
-        other: Sri Lankan rupiaa
-        one: Sri Lankan rupia
-    LRD:
-      symbol: LRD
-      display_names:
-        other: Liberian dollaria
-        one: Liberian dollari
-    LTL:
-      symbol: LTL
-      display_names:
-        other: Liettuan litiä
-        one: Liettuan liti
-    LVL:
-      symbol: LVL
-      display_names:
-        other: Latvian latia
-        one: Latvian lati
-    MGA:
-      symbol: MGA
-      display_names:
-        other: Madagaskarin ariarya
-        one: Madagaskarin ariary
-    MMK:
-      symbol: MMK
-      display_names:
-        other: Myanmarin kyatia
-        one: Myanmarin kyat
-    MNT:
-      symbol: MNT
-      display_names:
-        other: Mongolian tugrikia
-        one: Mongolian tugrik
-    MUR:
-      symbol: MUR
-      display_names:
-        other: Mauritiuksen rupiaa
-        one: Mauritiuksen rupia
-    MXN:
-      symbol: MXN
-      display_names:
-        other: Meksikon pesoa
-        one: Meksikon peso
-    MYR:
-      symbol: MYR
-      display_names:
-        other: Malesian ringgitiä
-        one: Malesian ringgit
-    NAD:
-      symbol: NAD
-      display_names:
-        other: Namibian dollaria
-        one: Namibian dollari
-    NGN:
-      symbol: NGN
-      display_names:
-        other: Nigerian nairaa
-        one: Nigerian naira
-    NIO:
-      symbol: NIO
-      display_names:
-        other: Nicaraguan córdobaa
-        one: Nicaraguan córdoba
-    NOK:
-      symbol: NOK
-      display_names:
-        other: Norjan kruunua
-        one: Norjan kruunu
-    NPR:
-      symbol: NPR
-      display_names:
-        other: Nepalin rupiaa
-        one: Nepalin rupia
-    NZD:
-      symbol: NZD
-      display_names:
-        other: Uuden-Seelannin dollaria
-        one: Uuden-Seelannin dollari
-    PHP:
-      symbol: PHP
-      display_names:
-        other: Filippiinien pesoa
-        one: Filippiinien peso
-    PKR:
-      symbol: PKR
-      display_names:
-        other: Pakistanin rupiaa
-        one: Pakistanin rupia
-    PLN:
-      symbol: PLN
-      display_names:
-        other: Puolan złotya
-        one: Puolan złoty
-    PYG:
-      symbol: PYG
-      display_names:
-        other: Paraguayn guarania
-        one: Paraguayn guarani
-    RON:
-      symbol: RON
-      display_names:
-        other: Romanian leuta
-        one: Romanian leu
-    RUB:
-      display_names:
-        other: Venäjän ruplaa
-        one: Venäjän rupla
-    RWF:
-      symbol: RWF
-      display_names:
-        other: Ruandan frangia
-        one: Ruandan frangi
-    SBD:
-      symbol: SBD
-      display_names:
-        other: Salomonsaarten dollaria
-        one: Salomonsaarten dollari
-    SEK:
-      symbol: SEK
-      display_names:
-        other: Ruotsin kruunua
-        one: Ruotsin kruunu
-    SGD:
-      symbol: SGD
-      display_names:
-        other: Singaporen dollaria
-        one: Singaporen dollari
-    SHP:
-      symbol: SHP
-      display_names:
-        other: Saint Helenan puntaa
-        one: Saint Helenan punta
-    SRD:
-      symbol: SRD
-      display_names:
-        other: Surinamen dollaria
-        one: Surinamen dollari
-    SSP:
-      symbol: SSP
-      display_names:
-        other: Etelä-Sudanin puntaa
-        one: Etelä-Sudanin punta
-    STN:
-      symbol: STD
-      display_names:
-        other: São Tomén ja Príncipen dobraa
-        one: São Tomén ja Príncipen dobra
-    SYP:
-      symbol: SYP
-      display_names:
-        other: Syyrian puntaa
-        one: Syyrian punta
-    THB:
-      symbol: THB
-      display_names:
-        other: Thaimaan bahtia
-        one: Thaimaan baht
-    TOP:
-      symbol: TOP
-      display_names:
-        other: Tongan pa’angaa
-        one: Tongan pa’anga
-    TRY:
-      symbol: TRY
-      display_names:
-        other: Turkin liiraa
-        one: Turkin liira
-    TTD:
-      symbol: TTD
-      display_names:
-        other: Trinidadin ja Tobagon dollaria
-        one: Trinidadin ja Tobagon dollari
-    TWD:
-      symbol: TWD
-      display_names:
-        other: Taiwanin uutta dollaria
-        one: Taiwanin uusi dollari
-    UAH:
-      symbol: UAH
-      display_names:
-        other: Ukrainan hryvniaa
-        one: Ukrainan hryvnia
-    USD:
-      symbol: "$"
-      display_names:
-        other: Yhdysvaltain dollaria
-        one: Yhdysvaltain dollari
-    UYU:
-      symbol: UYU
-      display_names:
-        other: Uruguayn pesoa
-        one: Uruguayn peso
-    VEF:
-      symbol: VEF
-      display_names:
-        other: Venezuelan bolívaria (2008–2018)
-        one: Venezuelan bolívar (2008–2018)
-    VND:
-      symbol: VND
-      display_names:
-        other: Vietnamin dongia
-        one: Vietnamin dong
-    XAF:
-      display_names:
-        other: CFA-frangia BEAC
-        one: CFA-frangi BEAC
-    XCD:
-      symbol: XCD
-      display_names:
-        other: Itä-Karibian dollaria
-        one: Itä-Karibian dollari
-    XOF:
-      display_names:
-        other: CFA-frangia BCEAO
-        one: CFA-frangi BCEAO
-    XPF:
-      symbol: XPF
-      display_names:
-        other: CFP-frangia
-        one: CFP-frangi
-    XXX:
-      symbol: XXX
-      display_names:
-        other: tuntematonta rahayksikköä
-        one: tuntematon rahayksikkö
-    ZAR:
-      symbol: ZAR
-      display_names:
-        other: Etelä-Afrikan randia
-        one: Etelä-Afrikan randi
-    ZMW:
-      symbol: ZMW
-      display_names:
-        other: Sambian kwachaa
-        one: Sambian kwacha
     ADP:
       display_names:
         other: Andorran pesetaa
@@ -540,6 +104,10 @@ number_formats:
       display_names:
         other: Afganistanin afgaania (1927–2002)
         one: Afganistanin afgaani (1927–2002)
+    AFN:
+      display_names:
+        other: Afganistanin afgaania
+        one: Afganistanin afgaani
     ALK:
       display_names:
         other: Albanian lekiä (1946–1965)
@@ -548,10 +116,19 @@ number_formats:
       display_names:
         other: Albanian lekiä
         one: Albanian lek
+    AMD:
+      display_names:
+        other: Armenian dramia
+        one: Armenian dram
     ANG:
       display_names:
         other: Alankomaiden Antillien guldenia
         one: Alankomaiden Antillien guldeni
+    AOA:
+      symbol: AOA
+      display_names:
+        other: Angolan kwanzaa
+        one: Angolan kwanza
     AOK:
       display_names:
         other: Angolan kwanzaa (1977–1990)
@@ -580,10 +157,20 @@ number_formats:
       display_names:
         other: Argentiinan pesoa (1983–1985)
         one: Argentiinan peso (1983–1985)
+    ARS:
+      symbol: ARS
+      display_names:
+        other: Argentiinan pesoa
+        one: Argentiinan peso
     ATS:
       display_names:
         other: Itävallan šillinkiä
         one: Itävallan šillinki
+    AUD:
+      symbol: AUD
+      display_names:
+        other: Australian dollaria
+        one: Australian dollari
     AWG:
       display_names:
         other: Aruban floriinia
@@ -592,14 +179,33 @@ number_formats:
       display_names:
         other: Azerbaidžanin manatia (1993–2006)
         one: Azerbaidžanin manat (1993–2006)
+    AZN:
+      display_names:
+        other: Azerbaidžanin manatia
+        one: Azerbaidžanin manat
     BAD:
       display_names:
         other: Bosnia-Hertsegovinan dinaaria (1992–1994)
         one: Bosnia-Hertsegovinan dinaari (1992–1994)
+    BAM:
+      symbol: BAM
+      display_names:
+        other: Bosnia-Hertsegovinan vaihdettavaa markkaa
+        one: Bosnia-Hertsegovinan vaihdettava markka
     BAN:
       display_names:
         other: Bosnia-Hertsegovinan uutta dinaaria (1994–1997)
         one: Bosnia-Hertsegovinan uusi dinaari (1994–1997)
+    BBD:
+      symbol: BBD
+      display_names:
+        other: Barbadosin dollaria
+        one: Barbadosin dollari
+    BDT:
+      symbol: BDT
+      display_names:
+        other: Bangladeshin takaa
+        one: Bangladeshin taka
     BEC:
       display_names:
         other: Belgian vaihdettavaa frangia
@@ -636,6 +242,21 @@ number_formats:
       display_names:
         other: Burundin frangia
         one: Burundin frangi
+    BMD:
+      symbol: BMD
+      display_names:
+        other: Bermudan dollaria
+        one: Bermudan dollari
+    BND:
+      symbol: BND
+      display_names:
+        other: Brunein dollaria
+        one: Brunein dollari
+    BOB:
+      symbol: BOB
+      display_names:
+        other: Bolivian bolivianoa
+        one: Bolivian boliviano
     BOL:
       display_names:
         other: Bolivian bolivianoa (1863–1963)
@@ -660,6 +281,11 @@ number_formats:
       display_names:
         other: Brasilian cruzeiroa (1990–1993)
         one: Brasilian cruzeiro (1990–1993)
+    BRL:
+      symbol: BRL
+      display_names:
+        other: Brasilian realia
+        one: Brasilian real
     BRN:
       display_names:
         other: Brasilian uutta cruzadoa (1989–1990)
@@ -672,6 +298,11 @@ number_formats:
       display_names:
         other: Brasilian cruzeiroa (1942–1967)
         one: Brasilian cruzeiro (1942–1967)
+    BSD:
+      symbol: BSD
+      display_names:
+        other: Bahaman dollaria
+        one: Bahaman dollari
     BTN:
       display_names:
         other: Bhutanin ngultrumia
@@ -680,6 +311,11 @@ number_formats:
       display_names:
         other: Burman kyatia
         one: Burman kyat
+    BWP:
+      symbol: BWP
+      display_names:
+        other: Botswanan pulaa
+        one: Botswanan pula
     BYB:
       display_names:
         other: Valko-Venäjän uutta ruplaa (1994–1999)
@@ -692,6 +328,16 @@ number_formats:
       display_names:
         other: Valko-Venäjän ruplaa (2000–2016)
         one: Valko-Venäjän rupla (2000–2016)
+    BZD:
+      symbol: BZD
+      display_names:
+        other: Belizen dollaria
+        one: Belizen dollari
+    CAD:
+      symbol: CAD
+      display_names:
+        other: Kanadan dollaria
+        one: Kanadan dollari
     CDF:
       display_names:
         other: Kongon frangia
@@ -716,6 +362,11 @@ number_formats:
       display_names:
         other: Chilen unidades de fomentoa
         one: Chilen unidades de fomento
+    CLP:
+      symbol: CLP
+      display_names:
+        other: Chilen pesoa
+        one: Chilen peso
     CNH:
       display_names:
         other: Kiinan juania (offshore)
@@ -724,10 +375,25 @@ number_formats:
       display_names:
         other: Kiinan kansanpankin dollaria
         one: Kiinan kansanpankin dollari
+    CNY:
+      symbol: CNY
+      display_names:
+        other: Kiinan juania
+        one: Kiinan juan
+    COP:
+      symbol: COP
+      display_names:
+        other: Kolumbian pesoa
+        one: Kolumbian peso
     COU:
       display_names:
         other: Kolumbian unidad de valor realia
         one: Kolumbian unidad de valor real
+    CRC:
+      symbol: CRC
+      display_names:
+        other: Costa Rican colónia
+        one: Costa Rican colón
     CSD:
       display_names:
         other: Serbian dinaaria (2002–2006)
@@ -736,6 +402,16 @@ number_formats:
       display_names:
         other: Tšekkoslovakian kovaa korunaa
         one: Tšekkoslovakian kova koruna
+    CUC:
+      symbol: CUC
+      display_names:
+        other: Kuuban vaihdettavaa pesoa
+        one: Kuuban vaihdettava peso
+    CUP:
+      symbol: CUP
+      display_names:
+        other: Kuuban pesoa
+        one: Kuuban peso
     CVE:
       display_names:
         other: Kap Verden escudoa
@@ -744,6 +420,11 @@ number_formats:
       display_names:
         other: Kyproksen puntaa
         one: Kyproksen punta
+    CZK:
+      symbol: CZK
+      display_names:
+        other: Tšekin korunaa
+        one: Tšekin koruna
     DDM:
       display_names:
         other: Itä-Saksan markkaa
@@ -756,6 +437,16 @@ number_formats:
       display_names:
         other: Djiboutin frangia
         one: Djiboutin frangi
+    DKK:
+      symbol: DKK
+      display_names:
+        other: Tanskan kruunua
+        one: Tanskan kruunu
+    DOP:
+      symbol: DOP
+      display_names:
+        other: Dominikaanisen tasavallan pesoa
+        one: Dominikaanisen tasavallan peso
     DZD:
       display_names:
         other: Algerian dinaaria
@@ -772,6 +463,11 @@ number_formats:
       display_names:
         other: Viron kruunua
         one: Viron kruunu
+    EGP:
+      symbol: EGP
+      display_names:
+        other: Egyptin puntaa
+        one: Egyptin punta
     ERN:
       display_names:
         other: Eritrean nakfaa
@@ -784,31 +480,73 @@ number_formats:
       display_names:
         other: Espanjan pesetaa (vaihdettava tili)
         one: Espanjan peseta (vaihdettava tili)
+    ESP:
+      symbol: ESP
+      display_names:
+        other: Espanjan pesetaa
+        one: Espanjan peseta
     ETB:
       display_names:
         other: Etiopian birriä
         one: Etiopian birr
+    EUR:
+      display_names:
+        other: euroa
+        one: euro
     FIM:
       symbol: mk
       display_names:
         other: Suomen markkaa
         one: Suomen markka
+    FJD:
+      symbol: FJD
+      display_names:
+        other: Fidžin dollaria
+        one: Fidžin dollari
+    FKP:
+      symbol: FKP
+      display_names:
+        other: Falklandinsaarten puntaa
+        one: Falklandinsaarten punta
     FRF:
       display_names:
         other: Ranskan frangia
         one: Ranskan frangi
+    GBP:
+      display_names:
+        other: Englannin puntaa
+        one: Englannin punta
     GEK:
       display_names:
         other: Georgian kuponkilaria
         one: Georgian kuponkilari
+    GEL:
+      symbol: GEL
+      display_names:
+        other: Georgian laria
+        one: Georgian lari
     GHC:
       display_names:
         other: Ghanan cediä (1979–2007)
         one: Ghanan cedi (1979–2007)
+    GHS:
+      display_names:
+        other: Ghanan cediä
+        one: Ghanan cedi
+    GIP:
+      symbol: GIP
+      display_names:
+        other: Gibraltarin puntaa
+        one: Gibraltarin punta
     GMD:
       display_names:
         other: Gambian dalasia
         one: Gambian dalasi
+    GNF:
+      symbol: GNF
+      display_names:
+        other: Guinean frangia
+        one: Guinean frangi
     GNS:
       display_names:
         other: Guinean syliä
@@ -821,6 +559,11 @@ number_formats:
       display_names:
         other: Kreikan drakmaa
         one: Kreikan drakma
+    GTQ:
+      symbol: GTQ
+      display_names:
+        other: Guatemalan quetzalia
+        one: Guatemalan quetzal
     GWE:
       display_names:
         other: Portugalin Guinean escudoa
@@ -829,14 +572,44 @@ number_formats:
       display_names:
         other: Guinea-Bissaun pesoa
         one: Guinea-Bissaun peso
+    GYD:
+      symbol: GYD
+      display_names:
+        other: Guyanan dollaria
+        one: Guyanan dollari
+    HKD:
+      symbol: HKD
+      display_names:
+        other: Hongkongin dollaria
+        one: Hongkongin dollari
+    HNL:
+      symbol: HNL
+      display_names:
+        other: Hondurasin lempiraa
+        one: Hondurasin lempira
     HRD:
       display_names:
         other: Kroatian dinaaria
         one: Kroatian dinaari
+    HRK:
+      symbol: HRK
+      display_names:
+        other: Kroatian kunaa
+        one: Kroatian kuna
     HTG:
       display_names:
         other: Haitin gourdea
         one: Haitin gourde
+    HUF:
+      symbol: HUF
+      display_names:
+        other: Unkarin forinttia
+        one: Unkarin forintti
+    IDR:
+      symbol: IDR
+      display_names:
+        other: Indonesian rupiaa
+        one: Indonesian rupia
     IEP:
       display_names:
         other: Irlannin puntaa
@@ -849,6 +622,16 @@ number_formats:
       display_names:
         other: Israelin sekeliä (1980–1985)
         one: Israelin sekeli (1980–1985)
+    ILS:
+      symbol: ILS
+      display_names:
+        other: Israelin uutta sekeliä
+        one: Israelin uusi sekeli
+    INR:
+      symbol: INR
+      display_names:
+        other: Intian rupiaa
+        one: Intian rupia
     IQD:
       display_names:
         other: Irakin dinaaria
@@ -861,18 +644,52 @@ number_formats:
       display_names:
         other: Islannin kruunua (1918–1981)
         one: Islannin kruunu (1918–1981)
+    ISK:
+      symbol: ISK
+      display_names:
+        other: Islannin kruunua
+        one: Islannin kruunu
     ITL:
       display_names:
         other: Italian liiraa
         one: Italian liira
+    JMD:
+      symbol: JMD
+      display_names:
+        other: Jamaikan dollaria
+        one: Jamaikan dollari
     JOD:
       display_names:
         other: Jordanian dinaaria
         one: Jordanian dinaari
+    JPY:
+      symbol: "¥"
+      display_names:
+        other: Japanin jeniä
+        one: Japanin jeni
     KES:
       display_names:
         other: Kenian šillinkiä
         one: Kenian šillinki
+    KGS:
+      display_names:
+        other: Kirgisian somia
+        one: Kirgisian som
+    KHR:
+      symbol: KHR
+      display_names:
+        other: Kambodžan rieliä
+        one: Kambodžan riel
+    KMF:
+      symbol: KMF
+      display_names:
+        other: Komorien frangia
+        one: Komorien frangi
+    KPW:
+      symbol: KPW
+      display_names:
+        other: Pohjois-Korean wonia
+        one: Pohjois-Korean won
     KRH:
       display_names:
         other: Etelä-Korean hwania (1953–1962)
@@ -881,14 +698,54 @@ number_formats:
       display_names:
         other: Etelä-Korean wonia (1945–1953)
         one: Etelä-Korean won (1945–1953)
+    KRW:
+      symbol: KRW
+      display_names:
+        other: Etelä-Korean wonia
+        one: Etelä-Korean won
     KWD:
       display_names:
         other: Kuwaitin dinaaria
         one: Kuwaitin dinaari
+    KYD:
+      symbol: KYD
+      display_names:
+        other: Caymansaarten dollaria
+        one: Caymansaarten dollari
+    KZT:
+      symbol: KZT
+      display_names:
+        other: Kazakstanin tengeä
+        one: Kazakstanin tenge
+    LAK:
+      symbol: LAK
+      display_names:
+        other: Laosin kipiä
+        one: Laosin kip
+    LBP:
+      symbol: LBP
+      display_names:
+        other: Libanonin puntaa
+        one: Libanonin punta
+    LKR:
+      symbol: LKR
+      display_names:
+        other: Sri Lankan rupiaa
+        one: Sri Lankan rupia
+    LRD:
+      symbol: LRD
+      display_names:
+        other: Liberian dollaria
+        one: Liberian dollari
     LSL:
       display_names:
         other: Lesothon lotia
         one: Lesothon loti
+    LTL:
+      symbol: LTL
+      display_names:
+        other: Liettuan litiä
+        one: Liettuan liti
     LTT:
       display_names:
         other: Liettuan talonasia
@@ -905,6 +762,11 @@ number_formats:
       display_names:
         other: Luxemburgin rahoitusfrangia
         one: Luxemburgin rahoitusfrangi
+    LVL:
+      symbol: LVL
+      display_names:
+        other: Latvian latia
+        one: Latvian lati
     LVR:
       display_names:
         other: Latvian ruplaa
@@ -933,6 +795,11 @@ number_formats:
       display_names:
         other: Moldovan leuta
         one: Moldovan leu
+    MGA:
+      symbol: MGA
+      display_names:
+        other: Madagaskarin ariarya
+        one: Madagaskarin ariary
     MGF:
       display_names:
         other: Madagaskarin frangia
@@ -949,6 +816,16 @@ number_formats:
       display_names:
         other: Malin frangia
         one: Malin frangi
+    MMK:
+      symbol: MMK
+      display_names:
+        other: Myanmarin kyatia
+        one: Myanmarin kyat
+    MNT:
+      symbol: MNT
+      display_names:
+        other: Mongolian tugrikia
+        one: Mongolian tugrik
     MOP:
       display_names:
         other: Macaon patacaa
@@ -969,6 +846,11 @@ number_formats:
       display_names:
         other: Maltan puntaa
         one: Maltan punta
+    MUR:
+      symbol: MUR
+      display_names:
+        other: Mauritiuksen rupiaa
+        one: Mauritiuksen rupia
     MVP:
       display_names:
         other: Malediivien rupiaa (1947–1981)
@@ -981,6 +863,11 @@ number_formats:
       display_names:
         other: Malawin kwachaa
         one: Malawin kwacha
+    MXN:
+      symbol: MXN
+      display_names:
+        other: Meksikon pesoa
+        one: Meksikon peso
     MXP:
       display_names:
         other: Meksikon hopeapesoa (1861–1992)
@@ -989,6 +876,11 @@ number_formats:
       display_names:
         other: Meksikon UDI’ta
         one: Meksikon UDI
+    MYR:
+      symbol: MYR
+      display_names:
+        other: Malesian ringgitiä
+        one: Malesian ringgit
     MZE:
       display_names:
         other: Mosambikin escudoa
@@ -1001,14 +893,44 @@ number_formats:
       display_names:
         other: Mosambikin meticalia
         one: Mosambikin metical
+    NAD:
+      symbol: NAD
+      display_names:
+        other: Namibian dollaria
+        one: Namibian dollari
+    NGN:
+      symbol: NGN
+      display_names:
+        other: Nigerian nairaa
+        one: Nigerian naira
     NIC:
       display_names:
         other: Nicaraguan córdobaa (1988–1991)
         one: Nicaraguan córdoba (1988–1991)
+    NIO:
+      symbol: NIO
+      display_names:
+        other: Nicaraguan córdobaa
+        one: Nicaraguan córdoba
     NLG:
       display_names:
         other: Alankomaiden guldenia
         one: Alankomaiden guldeni
+    NOK:
+      symbol: NOK
+      display_names:
+        other: Norjan kruunua
+        one: Norjan kruunu
+    NPR:
+      symbol: NPR
+      display_names:
+        other: Nepalin rupiaa
+        one: Nepalin rupia
+    NZD:
+      symbol: NZD
+      display_names:
+        other: Uuden-Seelannin dollaria
+        one: Uuden-Seelannin dollari
     OMR:
       display_names:
         other: Omanin rialia
@@ -1033,6 +955,21 @@ number_formats:
       display_names:
         other: Papua-Uuden-Guinean kinaa
         one: Papua-Uuden-Guinean kina
+    PHP:
+      symbol: PHP
+      display_names:
+        other: Filippiinien pesoa
+        one: Filippiinien peso
+    PKR:
+      symbol: PKR
+      display_names:
+        other: Pakistanin rupiaa
+        one: Pakistanin rupia
+    PLN:
+      symbol: PLN
+      display_names:
+        other: Puolan złotya
+        one: Puolan złoty
     PLZ:
       display_names:
         other: Puolan złotya (1950–1995)
@@ -1041,6 +978,11 @@ number_formats:
       display_names:
         other: Portugalin escudoa
         one: Portugalin escudo
+    PYG:
+      symbol: PYG
+      display_names:
+        other: Paraguayn guarania
+        one: Paraguayn guarani
     QAR:
       display_names:
         other: Qatarin rialia
@@ -1053,18 +995,37 @@ number_formats:
       display_names:
         other: Romanian leuta (1952–2006)
         one: Romanian leu (1952–2006)
+    RON:
+      symbol: RON
+      display_names:
+        other: Romanian leuta
+        one: Romanian leu
     RSD:
       display_names:
         other: Serbian dinaaria
         one: Serbian dinaari
+    RUB:
+      display_names:
+        other: Venäjän ruplaa
+        one: Venäjän rupla
     RUR:
       display_names:
         other: Venäjän ruplaa (1991–1998)
         one: Venäjän rupla (1991–1998)
+    RWF:
+      symbol: RWF
+      display_names:
+        other: Ruandan frangia
+        one: Ruandan frangi
     SAR:
       display_names:
         other: Saudi-Arabian rialia
         one: Saudi-Arabian rial
+    SBD:
+      symbol: SBD
+      display_names:
+        other: Salomonsaarten dollaria
+        one: Salomonsaarten dollari
     SCR:
       display_names:
         other: Seychellien rupiaa
@@ -1081,6 +1042,21 @@ number_formats:
       display_names:
         other: Sudanin puntaa (1957–1998)
         one: Sudanin punta (1957–1998)
+    SEK:
+      symbol: SEK
+      display_names:
+        other: Ruotsin kruunua
+        one: Ruotsin kruunu
+    SGD:
+      symbol: SGD
+      display_names:
+        other: Singaporen dollaria
+        one: Singaporen dollari
+    SHP:
+      symbol: SHP
+      display_names:
+        other: Saint Helenan puntaa
+        one: Saint Helenan punta
     SIT:
       display_names:
         other: Slovenian tolaria
@@ -1101,14 +1077,29 @@ number_formats:
       display_names:
         other: Somalian šillinkiä
         one: Somalian šillinki
+    SRD:
+      symbol: SRD
+      display_names:
+        other: Surinamen dollaria
+        one: Surinamen dollari
     SRG:
       display_names:
         other: Surinamen guldeni
         one: Surinamen guldeni
+    SSP:
+      symbol: SSP
+      display_names:
+        other: Etelä-Sudanin puntaa
+        one: Etelä-Sudanin punta
     STD:
       display_names:
         other: São Tomén ja Príncipen dobraa (1977–2017)
         one: São Tomén ja Príncipen dobra (1977–2017)
+    STN:
+      symbol: STD
+      display_names:
+        other: São Tomén ja Príncipen dobraa
+        one: São Tomén ja Príncipen dobra
     SUR:
       display_names:
         other: Neuvostoliiton ruplaa
@@ -1117,10 +1108,20 @@ number_formats:
       display_names:
         other: El Salvadorin colónia
         one: El Salvadorin colón
+    SYP:
+      symbol: SYP
+      display_names:
+        other: Syyrian puntaa
+        one: Syyrian punta
     SZL:
       display_names:
         other: Swazimaan lilangenia
         one: Swazimaan lilangeni
+    THB:
+      symbol: THB
+      display_names:
+        other: Thaimaan bahtia
+        one: Thaimaan baht
     TJR:
       display_names:
         other: Tadžikistanin ruplaa
@@ -1141,6 +1142,11 @@ number_formats:
       display_names:
         other: Tunisian dinaaria
         one: Tunisian dinaari
+    TOP:
+      symbol: TOP
+      display_names:
+        other: Tongan pa’angaa
+        one: Tongan pa’anga
     TPE:
       display_names:
         other: Timorin escudoa
@@ -1149,10 +1155,30 @@ number_formats:
       display_names:
         other: Turkin liiraa (1922–2005)
         one: Turkin liira (1922–2005)
+    TRY:
+      symbol: TRY
+      display_names:
+        other: Turkin liiraa
+        one: Turkin liira
+    TTD:
+      symbol: TTD
+      display_names:
+        other: Trinidadin ja Tobagon dollaria
+        one: Trinidadin ja Tobagon dollari
+    TWD:
+      symbol: TWD
+      display_names:
+        other: Taiwanin uutta dollaria
+        one: Taiwanin uusi dollari
     TZS:
       display_names:
         other: Tansanian šillinkiä
         one: Tansanian šillinki
+    UAH:
+      symbol: UAH
+      display_names:
+        other: Ukrainan hryvniaa
+        one: Ukrainan hryvnia
     UAK:
       display_names:
         other: Ukrainan karbovanetzia
@@ -1165,6 +1191,11 @@ number_formats:
       display_names:
         other: Ugandan šillinkiä
         one: Ugandan šillinki
+    USD:
+      symbol: "$"
+      display_names:
+        other: Yhdysvaltain dollaria
+        one: Yhdysvaltain dollari
     USN:
       display_names:
         other: Yhdysvaltain dollaria (seuraava päivä)
@@ -1181,6 +1212,11 @@ number_formats:
       display_names:
         other: Uruguayn pesoa (1975–1993)
         one: Uruguayn peso (1975–1993)
+    UYU:
+      symbol: UYU
+      display_names:
+        other: Uruguayn pesoa
+        one: Uruguayn peso
     UYW:
       display_names:
         other: Uruguayn nimellistä palkkaindeksiyksikköä
@@ -1193,10 +1229,20 @@ number_formats:
       display_names:
         other: Venezuelan bolívaria (1871–2008)
         one: Venezuelan bolívar (1871–2008)
+    VEF:
+      symbol: VEF
+      display_names:
+        other: Venezuelan bolívaria (2008–2018)
+        one: Venezuelan bolívar (2008–2018)
     VES:
       display_names:
         other: Venezuelan suvereenia bolívaria
         one: Venezuelan suvereeni bolívar
+    VND:
+      symbol: VND
+      display_names:
+        other: Vietnamin dongia
+        one: Vietnamin dong
     VNN:
       display_names:
         other: Vietnamin dongia (1978–1985)
@@ -1209,6 +1255,10 @@ number_formats:
       display_names:
         other: Samoan talaa
         one: Samoan tala
+    XAF:
+      display_names:
+        other: CFA-frangia BEAC
+        one: CFA-frangi BEAC
     XAG:
       display_names:
         other: troy-unssia hopeaa
@@ -1233,6 +1283,11 @@ number_formats:
       display_names:
         other: EUA’ta (XBD)
         one: EUA (XBD)
+    XCD:
+      symbol: XCD
+      display_names:
+        other: Itä-Karibian dollaria
+        one: Itä-Karibian dollari
     XDR:
       display_names:
         other: erityisnosto-oikeutta (SDR)
@@ -1249,10 +1304,19 @@ number_formats:
       display_names:
         other: Ranskan UIC-frangia
         one: Ranskan UIC-frangi
+    XOF:
+      display_names:
+        other: CFA-frangia BCEAO
+        one: CFA-frangi BCEAO
     XPD:
       display_names:
         other: troy-unssia palladiumia
         one: troy-unssi palladiumia
+    XPF:
+      symbol: XPF
+      display_names:
+        other: CFP-frangia
+        one: CFP-frangi
     XPT:
       display_names:
         other: troy-unssia platinaa
@@ -1273,6 +1337,11 @@ number_formats:
       display_names:
         other: AfDB-laskentayksikköä
         one: AfDB-laskentayksikkö
+    XXX:
+      symbol: XXX
+      display_names:
+        other: tuntematonta rahayksikköä
+        one: tuntematon rahayksikkö
     YDD:
       display_names:
         other: Jemenin dinaaria
@@ -1301,10 +1370,20 @@ number_formats:
       display_names:
         other: Etelä-Afrikan rahoitusrandia
         one: Etelä-Afrikan rahoitusrandi
+    ZAR:
+      symbol: ZAR
+      display_names:
+        other: Etelä-Afrikan randia
+        one: Etelä-Afrikan randi
     ZMK:
       display_names:
         other: Sambian kwachaa (1968–2012)
         one: Sambian kwacha (1968–2012)
+    ZMW:
+      symbol: ZMW
+      display_names:
+        other: Sambian kwachaa
+        one: Sambian kwacha
     ZRN:
       display_names:
         other: Zairen uutta zairea (1993–1998)
@@ -1325,3 +1404,2692 @@ number_formats:
       display_names:
         other: Zimbabwen dollaria (2008)
         one: Zimbabwen dollari (2008)
+  units:
+    g-force:
+      long:
+        display_name: G-voimat
+        one: "{0} G-voima"
+        one_elative: "{0} G-voimasta"
+        one_genitive: "{0} G-voiman"
+        one_illative: "{0} G-voimaan"
+        one_partitive: "{0} G-voimaa"
+        other: "{0} G-voimaa"
+        other_elative: "{0} G-voimasta"
+        other_genitive: "{0} G-voiman"
+        other_illative: "{0} G-voimaan"
+        other_partitive: "{0} G-voimaa"
+      short:
+        display_name: G
+      narrow:
+        one: "{0}G"
+        other: "{0}G"
+    meter-per-square-second:
+      long:
+        display_name: metrit per sekunti toiseen
+        one: "{0} metri per sekunti toiseen"
+        one_elative: "{0} metristä per sekunti toiseen"
+        one_genitive: "{0} metrin per sekunti toiseen"
+        one_illative: "{0} metriin per sekunti toiseen"
+        one_partitive: "{0} metriä per sekunti toiseen"
+        other: "{0} metriä per sekunti toiseen"
+        other_elative: "{0} metristä per sekunti toiseen"
+        other_genitive: "{0} metrin per sekunti toiseen"
+        other_illative: "{0} metriin per sekunti toiseen"
+        other_partitive: "{0} metriä per sekunti toiseen"
+      narrow:
+        one: "{0}m/s²"
+        other: "{0}m/s²"
+    revolution:
+      long:
+        display_name: kierros
+        one: "{0} kierros"
+        one_elative: "{0} kierroksesta"
+        one_genitive: "{0} kierroksen"
+        one_illative: "{0} kierrokseen"
+        one_partitive: "{0} kierrosta"
+        other: "{0} kierrosta"
+        other_elative: "{0} kierroksesta"
+        other_genitive: "{0} kierroksen"
+        other_illative: "{0} kierrokseen"
+        other_partitive: "{0} kierrosta"
+      narrow:
+        one: "{0}rev"
+        other: "{0}rev"
+    radian:
+      long:
+        display_name: radiaanit
+        one: "{0} radiaani"
+        one_elative: "{0} radiaanista"
+        one_genitive: "{0} radiaanin"
+        one_illative: "{0} radiaaniin"
+        one_partitive: "{0} radiaania"
+        other: "{0} radiaania"
+        other_elative: "{0} radiaanista"
+        other_genitive: "{0} radiaanin"
+        other_illative: "{0} radiaaniin"
+        other_partitive: "{0} radiaania"
+      narrow:
+        one: "{0}rad"
+        other: "{0}rad"
+    degree:
+      long:
+        display_name: asteet
+        one: "{0} aste"
+        one_elative: "{0} asteesta"
+        one_genitive: "{0} asteen"
+        one_illative: "{0} asteeseen"
+        one_partitive: "{0} astetta"
+        other: "{0} astetta"
+        other_elative: "{0} asteesta"
+        other_genitive: "{0} asteen"
+        other_illative: "{0} asteeseen"
+        other_partitive: "{0} astetta"
+      short:
+        display_name: "°"
+    arc-minute:
+      long:
+        display_name: kulmaminuutit
+        one: "{0} kulmaminuutti"
+        one_elative: "{0} kulmaminuutista"
+        one_genitive: "{0} kulmaninuutin"
+        one_illative: "{0} kulmaminuuttiin"
+        one_partitive: "{0} kulmaminuuttia"
+        other: "{0} kulmaminuuttia"
+        other_elative: "{0} kulmaminuutista"
+        other_genitive: "{0} kulmaminuutin"
+        other_illative: "{0} kulmaminuuttiin"
+        other_partitive: "{0} kulmaminuuttia"
+      short:
+        display_name: "′"
+    arc-second:
+      long:
+        display_name: kulmasekunnit
+        one: "{0} kulmasekunti"
+        one_elative: "{0} kulmasekunnista"
+        one_genitive: "{0} kulmasekunnin"
+        one_illative: "{0} kulmasekuntiin"
+        one_partitive: "{0} kulmasekuntia"
+        other: "{0} kulmasekuntia"
+        other_elative: "{0} kulmasekunnista"
+        other_genitive: "{0} kulmasekunnin"
+        other_illative: "{0} kulmasekuntiin"
+        other_partitive: "{0} kulmasekuntia"
+      short:
+        display_name: "″"
+    square-kilometer:
+      long:
+        display_name: neliökilometrit
+        one: "{0} neliökilometri"
+        one_elative: "{0} neliökilometristä"
+        one_genitive: "{0} neliökilometrin"
+        one_illative: "{0} neliökilometriin"
+        one_partitive: "{0} neliökilometriä"
+        other: "{0} neliökilometriä"
+        other_elative: "{0} neliökilometristä"
+        other_genitive: "{0} neliökilometrin"
+        other_illative: "{0} neliökilometriin"
+        other_partitive: "{0} neliökilometriä"
+        per_unit_pattern: "{0} / neliökilometri"
+      narrow:
+        one: "{0}km²"
+        other: "{0}km²"
+    hectare:
+      long:
+        display_name: hehtaarit
+        one: "{0} hehtaari"
+        one_elative: "{0} hehtaarista"
+        one_genitive: "{0} hehtaarin"
+        one_illative: "{0} hehtaariin"
+        one_partitive: "{0} hehtaaria"
+        other: "{0} hehtaaria"
+        other_elative: "{0} hehtaarista"
+        other_genitive: "{0} hehtaarin"
+        other_illative: "{0} hehtaariin"
+        other_partitive: "{0} hehtaaria"
+      short:
+        display_name: ha
+      narrow:
+        one: "{0}ha"
+        other: "{0}ha"
+    square-meter:
+      long:
+        display_name: neliömetrit
+        one: "{0} neliömetri"
+        one_elative: "{0} neliömetristä"
+        one_genitive: "{0} neliömetrin"
+        one_illative: "{0} neliömetriin"
+        one_partitive: "{0} neliömetriä"
+        other: "{0} neliömetriä"
+        other_elative: "{0} neliömetristä"
+        other_genitive: "{0} neliömetrin"
+        other_illative: "{0} neliömetriin"
+        other_partitive: "{0} neliömetriä"
+        per_unit_pattern: "{0} / neliömetri"
+      narrow:
+        one: "{0}m²"
+        other: "{0}m²"
+    square-centimeter:
+      long:
+        display_name: neliösenttimetrit
+        one: "{0} neliösenttimetri"
+        one_elative: "{0} neliösenttimetristä"
+        one_genitive: "{0} neliösenttimetrin"
+        one_illative: "{0} neliösenttimetriin"
+        one_partitive: "{0} neliösenttimetriä"
+        other: "{0} neliösenttimetriä"
+        other_elative: "{0} neliösenttimetristä"
+        other_genitive: "{0} neliösenttimetrin"
+        other_illative: "{0} neliösenttimetriin"
+        other_partitive: "{0} neliösenttimetriä"
+        per_unit_pattern: "{0} / neliösenttimetri"
+      narrow:
+        one: "{0}cm²"
+        other: "{0}cm²"
+    square-mile:
+      long:
+        display_name: neliömailit
+        one: "{0} neliömaili"
+        other: "{0} neliömailia"
+        per_unit_pattern: "{0} / neliömaili"
+      narrow:
+        one: "{0}mi²"
+        other: "{0}mi²"
+    acre:
+      long:
+        display_name: eekkerit
+        one: "{0} eekkeri"
+        other: "{0} eekkeriä"
+      short:
+        display_name: ac
+      narrow:
+        one: "{0}ac"
+        other: "{0}ac"
+    square-yard:
+      long:
+        display_name: neliöjaardit
+        one: "{0} neliöjaardi"
+        other: "{0} neliöjaardia"
+      narrow:
+        one: "{0}yd²"
+        other: "{0}yd²"
+    square-foot:
+      long:
+        display_name: neliöjalat
+        one: "{0} neliöjalka"
+        other: "{0} neliöjalkaa"
+      narrow:
+        one: "{0}ft²"
+        other: "{0}ft²"
+    square-inch:
+      long:
+        display_name: neliötuumat
+        one: "{0} neliötuuma"
+        other: "{0} neliötuumaa"
+        per_unit_pattern: "{0} / neliötuuma"
+      narrow:
+        one: "{0}in²"
+        other: "{0}in²"
+    karat:
+      long:
+        display_name: karaatit
+        one: "{0} karaatti"
+        one_elative: "{0} karaatista"
+        one_genitive: "{0} karaatin"
+        one_illative: "{0} karaattiin"
+        one_partitive: "{0} karaattia"
+        other: "{0} karaattia"
+        other_elative: "{0} karaatista"
+        other_genitive: "{0} karaatin"
+        other_illative: "{0} karaattiin"
+        other_partitive: "{0} karaattia"
+      short:
+        display_name: ka
+        one: "{0} ka"
+        other: "{0} ka"
+      narrow:
+        one: "{0}ka"
+        other: "{0}ka"
+    milligram-ofglucose-per-deciliter:
+      long:
+        display_name: milligrammat desilitrassa
+        one: "{0} milligramma desilitrassa"
+        one_elative: "{0} milligrammasta desilitrassa"
+        one_genitive: "{0} milligramman desilitrassa"
+        one_illative: "{0} milligrammaan desilitrassa"
+        one_partitive: "{0} milligrammaa desilitrassa"
+        other: "{0} milligrammaa desilitrassa"
+        other_elative: "{0} milligrammasta desilitrassa"
+        other_genitive: "{0} milligramman desilitrassa"
+        other_illative: "{0} milligrammaan desilitrassa"
+        other_partitive: "{0} milligrammaa desilitrassa"
+      short:
+        display_name: mg/dl
+        one: "{0} mg/dl"
+        other: "{0} mg/dl"
+      narrow:
+        one: "{0}mg/dl"
+        other: "{0}mg/dl"
+    millimole-per-liter:
+      long:
+        display_name: millimoolit litrassa
+        one: "{0} millimooli litrassa"
+        one_elative: "{0} millimoolista litrassa"
+        one_genitive: "{0} millimoolin litrassa"
+        one_illative: "{0} millimooliin litrassa"
+        one_partitive: "{0} millimoolia litrassa"
+        other: "{0} millimoolia litrassa"
+        other_elative: "{0} millimoolista litrassa"
+        other_genitive: "{0} millimoolin litrassa"
+        other_illative: "{0} millimooliin litrassa"
+        other_partitive: "{0} millimoolia litrassa"
+      short:
+        display_name: mmol/l
+        one: "{0} mmol/l"
+        other: "{0} mmol/l"
+      narrow:
+        one: "{0}mmol/l"
+        other: "{0}mmol/l"
+    item:
+      long:
+        display_name: kohteet
+        one: "{0} kohde"
+        one_elative: "{0} kohteesta"
+        one_genitive: "{0} kohteen"
+        one_illative: "{0} kohteeseen"
+        one_partitive: "{0} kohdetta"
+        other: "{0} kohdetta"
+        other_elative: "{0} kohteesta"
+        other_genitive: "{0} kohteen"
+        other_illative: "{0} kohteeseen"
+        other_partitive: "{0} kohdetta"
+      short:
+        display_name: kohde
+        one: "{0} kohde"
+        other: "{0} kohde"
+      narrow:
+        one: "{0} kohde"
+        other: "{0} kohdetta"
+    permillion:
+      long:
+        display_name: miljoonasosat
+        one: "{0} miljoonasosa"
+        one_elative: "{0} miljoonasosasta"
+        one_genitive: "{0} miljoonasosan"
+        one_illative: "{0} miljoonasosaan"
+        one_partitive: "{0} miljoonasosaa"
+        other: "{0} miljoonasosaa"
+        other_elative: "{0} miljoonasosasta"
+        other_genitive: "{0} miljoonasosan"
+        other_illative: "{0} miljoonasosaan"
+        other_partitive: "{0} miljoonasosaa"
+      narrow:
+        one: "{0}ppm"
+        other: "{0}ppm"
+    percent:
+      long:
+        display_name: prosentit
+        one: "{0} prosentti"
+        one_elative: "{0} prosentista"
+        one_genitive: "{0} prosentin"
+        one_illative: "{0} prosenttiin"
+        one_partitive: "{0} prosenttia"
+        other: "{0} prosenttia"
+        other_elative: "{0} prosentista"
+        other_genitive: "{0} prosentin"
+        other_illative: "{0} prosenttiin"
+        other_partitive: "{0} prosenttia"
+      short:
+        one: "{0} %"
+        other: "{0} %"
+    permille:
+      long:
+        display_name: promillet
+        one: "{0} promille"
+        one_elative: "{0} promillesta"
+        one_genitive: "{0} promillen"
+        one_illative: "{0} promilleen"
+        one_partitive: "{0} promillea"
+        other: "{0} promillea"
+        other_elative: "{0} promillesta"
+        other_genitive: "{0} promillen"
+        other_illative: "{0} promilleen"
+        other_partitive: "{0} promillea"
+      short:
+        one: "{0} ‰"
+        other: "{0} ‰"
+      narrow:
+        one: "{0}‰"
+        other: "{0}‰"
+    permyriad:
+      long:
+        one: "{0} peruspiste"
+        one_elative: "{0} peruspisteestä"
+        one_genitive: "{0} peruspisteen"
+        one_illative: "{0} peruspisteeseen"
+        one_partitive: "{0} peruspistettä"
+        other: "{0} peruspistettä"
+        other_elative: "{0} peruspisteestä"
+        other_genitive: "{0} peruspisteen"
+        other_illative: "{0} peruspisteeseen"
+        other_partitive: "{0} peruspistettä"
+      short:
+        display_name: peruspiste
+        one: "{0} ‱"
+        other: "{0} ‱"
+      narrow:
+        display_name: "‱"
+        one: "{0}‱"
+        other: "{0}‱"
+    mole:
+      long:
+        display_name: moolit
+        one: "{0} mooli"
+        one_elative: "{0} moolista"
+        one_genitive: "{0} moolin"
+        one_illative: "{0} mooliin"
+        one_partitive: "{0} moolia"
+        other: "{0} moolia"
+        other_elative: "{0} moolista"
+        other_genitive: "{0} moolin"
+        other_illative: "{0} mooliin"
+        other_partitive: "{0} moolia"
+      short:
+        display_name: mooli
+      narrow:
+        display_name: mol
+        one: "{0}mol"
+        other: "{0}mol"
+    liter-per-kilometer:
+      long:
+        display_name: litrat / kilometri
+        one: "{0} litra / kilometri"
+        one_elative: "{0} litrasta / kilometri"
+        one_genitive: "{0} litran / kilometri"
+        one_illative: "{0} litraan / kilometri"
+        one_partitive: "{0} litraa / kilometri"
+        other: "{0} litraa / kilometri"
+        other_elative: "{0} litrasta / kilometri"
+        other_genitive: "{0} litran / kilometri"
+        other_illative: "{0} litraan / kilometri"
+        other_partitive: "{0} litraa / kilometri"
+      short:
+        display_name: l/km
+        one: "{0} l/km"
+        other: "{0} l/km"
+      narrow:
+        one: "{0}l/km"
+        other: "{0}l/km"
+    liter-per-100-kilometer:
+      long:
+        display_name: litrat / 100 kilometriä
+        one: "{0} litra / 100 km"
+        one_elative: "{0} litrasta / 100 km"
+        one_genitive: "{0} litran / 100 km"
+        one_illative: "{0} litraan / 100 km"
+        one_partitive: "{0} litraa / 100 km"
+        other: "{0} litraa / 100 km"
+        other_elative: "{0} litrasta / 100 km"
+        other_genitive: "{0} litran / 100 km"
+        other_illative: "{0} litraan / 100 km"
+        other_partitive: "{0} litraa / 100 km"
+      short:
+        display_name: l/100 km
+        one: "{0} l/100 km"
+        other: "{0} l/100 km"
+      narrow:
+        display_name: l/100km
+        one: "{0}l/100km"
+        other: "{0}l/100km"
+    mile-per-gallon:
+      long:
+        display_name: mailit / am. gallona
+        one: "{0} maili / am. gallona"
+        other: "{0} mailia / am. gallona"
+      short:
+        display_name: mpg-am
+        one: "{0} mpg-am"
+        other: "{0} mpg-am"
+      narrow:
+        one: "{0}mpg-am"
+        other: "{0}mpg-am"
+    mile-per-gallon-imperial:
+      long:
+        display_name: mailit / br. gallona
+        one: "{0} maili / br. gallona"
+        other: "{0} mailia / br. gallona"
+      short:
+        display_name: mpg-br
+        one: "{0} mpg-br"
+        other: "{0} mpg-br"
+      narrow:
+        one: "{0}mpg-br"
+        other: "{0}mpg-br"
+    petabyte:
+      long:
+        display_name: petatavut
+        one: "{0} petatavu"
+        one_elative: "{0} petatavusta"
+        one_genitive: "{0} petatavun"
+        one_illative: "{0} petatavuun"
+        one_partitive: "{0} petatavua"
+        other: "{0} petatavua"
+        other_elative: "{0} petatavusta"
+        other_genitive: "{0} petatavun"
+        other_illative: "{0} petatavuun"
+        other_partitive: "{0} petatavua"
+      short:
+        display_name: Pt
+        one: "{0} Pt"
+        other: "{0} Pt"
+      narrow:
+        one: "{0}Pt"
+        other: "{0}Pt"
+    terabyte:
+      long:
+        display_name: teratavut
+        one: "{0} teratavu"
+        one_elative: "{0} teratavusta"
+        one_genitive: "{0} teratavun"
+        one_illative: "{0} teratavuun"
+        one_partitive: "{0} teratavua"
+        other: "{0} teratavua"
+        other_elative: "{0} teratavusta"
+        other_genitive: "{0} teratavun"
+        other_illative: "{0} teratavuun"
+        other_partitive: "{0} teratavua"
+      short:
+        display_name: Tt
+        one: "{0} Tt"
+        other: "{0} Tt"
+      narrow:
+        one: "{0}Tt"
+        other: "{0}Tt"
+    terabit:
+      long:
+        display_name: terabitit
+        one: "{0} terabitti"
+        one_elative: "{0} terabitistä"
+        one_genitive: "{0} terabitin"
+        one_illative: "{0} terabittiin"
+        one_partitive: "{0} terabittiä"
+        other: "{0} terabittiä"
+        other_elative: "{0} terabitistä"
+        other_genitive: "{0} terabitin"
+        other_illative: "{0} terabittiin"
+        other_partitive: "{0} terabittiä"
+      narrow:
+        one: "{0}Tb"
+        other: "{0}Tb"
+    gigabyte:
+      long:
+        display_name: gigatavut
+        one: "{0} gigatavu"
+        one_elative: "{0} gigatavusta"
+        one_genitive: "{0} gigatavun"
+        one_illative: "{0} gigatavuun"
+        one_partitive: "{0} gigatavua"
+        other: "{0} gigatavua"
+        other_elative: "{0} gigatavusta"
+        other_genitive: "{0} gigatavun"
+        other_illative: "{0} gigatavuun"
+        other_partitive: "{0} gigatavua"
+      short:
+        display_name: Gt
+        one: "{0} Gt"
+        other: "{0} Gt"
+      narrow:
+        one: "{0}Gt"
+        other: "{0}Gt"
+    gigabit:
+      long:
+        display_name: gigabitit
+        one: "{0} gigabitti"
+        one_elative: "{0} gigabitistä"
+        one_genitive: "{0} gigabitin"
+        one_illative: "{0} gigabittiin"
+        one_partitive: "{0} gigabittiä"
+        other: "{0} gigabittiä"
+        other_elative: "{0} gigabitistä"
+        other_genitive: "{0} gigabitin"
+        other_illative: "{0} gigabittiin"
+        other_partitive: "{0} gigabittiä"
+      narrow:
+        one: "{0}Gb"
+        other: "{0}Gb"
+    megabyte:
+      long:
+        display_name: megatavut
+        one: "{0} megatavu"
+        one_elative: "{0} megatavusta"
+        one_genitive: "{0} megatavun"
+        one_illative: "{0} megatavuun"
+        one_partitive: "{0} megatavua"
+        other: "{0} megatavua"
+        other_elative: "{0} megatavusta"
+        other_genitive: "{0} megatavun"
+        other_illative: "{0} megatavuun"
+        other_partitive: "{0} megatavua"
+      short:
+        display_name: Mt
+        one: "{0} Mt"
+        other: "{0} Mt"
+      narrow:
+        one: "{0}Mt"
+        other: "{0}Mt"
+    megabit:
+      long:
+        display_name: megabitit
+        one: "{0} megabitti"
+        one_elative: "{0} megabitistä"
+        one_genitive: "{0} megabitin"
+        one_illative: "{0} megabittiin"
+        one_partitive: "{0} megabittiä"
+        other: "{0} megabittiä"
+        other_elative: "{0} megabitistä"
+        other_genitive: "{0} megabitin"
+        other_illative: "{0} megabittiin"
+        other_partitive: "{0} megabittiä"
+      narrow:
+        one: "{0}Mb"
+        other: "{0}Mb"
+    kilobyte:
+      long:
+        display_name: kilotavut
+        one: "{0} kilotavu"
+        one_elative: "{0} kilotavusta"
+        one_genitive: "{0} kilotavun"
+        one_illative: "{0} kilotavuun"
+        one_partitive: "{0} kilotavua"
+        other: "{0} kilotavua"
+        other_elative: "{0} kilotavusta"
+        other_genitive: "{0} kilotavun"
+        other_illative: "{0} kilotavuun"
+        other_partitive: "{0} kilotavua"
+      short:
+        display_name: kt
+        one: "{0} kt"
+        other: "{0} kt"
+      narrow:
+        one: "{0}kt"
+        other: "{0}kt"
+    kilobit:
+      long:
+        display_name: kilobitit
+        one: "{0} kilobitti"
+        one_elative: "{0} kilobitistä"
+        one_genitive: "{0} kilobitin"
+        one_illative: "{0} kilobittiin"
+        one_partitive: "{0} kilobittiä"
+        other: "{0} kilobittiä"
+        other_elative: "{0} kilobitistä"
+        other_genitive: "{0} kilobitin"
+        other_illative: "{0} kilobittiin"
+        other_partitive: "{0} kilobittiä"
+      narrow:
+        one: "{0}kb"
+        other: "{0}kb"
+    byte:
+      long:
+        display_name: tavut
+        one: "{0} tavu"
+        one_elative: "{0} tavusta"
+        one_genitive: "{0} tavun"
+        one_illative: "{0} tavuun"
+        one_partitive: "{0} tavua"
+        other: "{0} tavua"
+        other_elative: "{0} tavusta"
+        other_genitive: "{0} tavun"
+        other_illative: "{0} tavuun"
+        other_partitive: "{0} tavua"
+      short:
+        display_name: t
+        one: "{0} t"
+        other: "{0} t"
+      narrow:
+        one: "{0}t"
+        other: "{0}t"
+    bit:
+      long:
+        display_name: bitit
+        one: "{0} bitti"
+        one_elative: "{0} bitistä"
+        one_genitive: "{0} bitin"
+        one_illative: "{0} bittiin"
+        one_partitive: "{0} bittiä"
+        other: "{0} bittiä"
+        other_elative: "{0} bitistä"
+        other_genitive: "{0} bitin"
+        other_illative: "{0} bittiin"
+        other_partitive: "{0} bittiä"
+      short:
+        display_name: b
+        one: "{0} b"
+        other: "{0} b"
+      narrow:
+        one: "{0}b"
+        other: "{0}b"
+    century:
+      long:
+        display_name: vuosisadat
+        one: "{0} vuosisata"
+        one_elative: "{0} vuosisadasta"
+        one_genitive: "{0} vuosisadan"
+        one_illative: "{0} vuosisataan"
+        one_partitive: "{0} vuosisataa"
+        other: "{0} vuosisataa"
+        other_elative: "{0} vuosisadasta"
+        other_genitive: "{0} vuosisadan"
+        other_illative: "{0} vuosisataan"
+        other_partitive: "{0} vuosisataa"
+      short:
+        display_name: vs
+        one: "{0} vs"
+        other: "{0} vs"
+    decade:
+      long:
+        display_name: vuosikymmenet
+        one: "{0} vuosikymmen"
+        one_elative: "{0} vuosikymmenestä"
+        one_genitive: "{0} vuosikymmenen"
+        one_illative: "{0} vuosikymmeneen"
+        one_partitive: "{0} vuosikymmentä"
+        other: "{0} vuosikymmentä"
+        other_elative: "{0} vuosikymmenestä"
+        other_genitive: "{0} vuosikymmenen"
+        other_illative: "{0} vuosikymmeneen"
+        other_partitive: "{0} vuosikymmentä"
+    year:
+      long:
+        display_name: vuodet
+        one: "{0} vuosi"
+        one_elative: "{0} vuodesta"
+        one_genitive: "{0} vuoden"
+        one_illative: "{0} vuoteen"
+        one_partitive: "{0} vuotta"
+        other: "{0} vuotta"
+        other_elative: "{0} vuodesta"
+        other_genitive: "{0} vuoden"
+        other_illative: "{0} vuoteen"
+        other_partitive: "{0} vuoteen"
+        per_unit_pattern: "{0} / vuosi"
+      short:
+        display_name: v
+        one: "{0} v"
+        other: "{0} v"
+        per_unit_pattern: "{0}/v"
+      narrow:
+        one: "{0}v"
+        other: "{0}v"
+    quarter:
+      long:
+        display_name: neljännekset
+        one: "{0} neljännes"
+        one_elative: "{0} neljänneksestä"
+        one_genitive: "{0} neljänneksen"
+        one_illative: "{0} neljännekseen"
+        one_partitive: "{0} neljännestä"
+        other: "{0} neljännestä"
+        other_elative: "{0} neljänneksestä"
+        other_genitive: "{0} neljänneksen"
+        other_illative: "{0} neljännekseen"
+        other_partitive: "{0} neljännestä"
+        per_unit_pattern: "{0}/neljännes"
+      short:
+        display_name: q
+    month:
+      long:
+        display_name: kuukaudet
+        one: "{0} kuukausi"
+        one_elative: "{0} kuukaudesta"
+        one_genitive: "{0} kuukauden"
+        one_illative: "{0} kuukauteen"
+        one_partitive: "{0} kuukautta"
+        other: "{0} kuukautta"
+        other_elative: "{0} kuukaudesta"
+        other_genitive: "{0} kuukauden"
+        other_illative: "{0} kuukauteen"
+        other_partitive: "{0} kuukautta"
+        per_unit_pattern: "{0} / kuukausi"
+      short:
+        display_name: kk
+        one: "{0} kk"
+        other: "{0} kk"
+        per_unit_pattern: "{0}/kk"
+      narrow:
+        one: "{0}kk"
+        other: "{0}kk"
+    week:
+      long:
+        display_name: viikot
+        one: "{0} viikko"
+        one_elative: "{0} viikosta"
+        one_genitive: "{0} viikon"
+        one_illative: "{0} viikkoon"
+        one_partitive: "{0} viikkoa"
+        other: "{0} viikkoa"
+        other_elative: "{0} viikosta"
+        other_genitive: "{0} viikon"
+        other_illative: "{0} viikkoon"
+        other_partitive: "{0} viikkoa"
+        per_unit_pattern: "{0} / viikko"
+      short:
+        display_name: vk
+        one: "{0} vk"
+        other: "{0} vk"
+        per_unit_pattern: "{0}/vk"
+      narrow:
+        one: "{0}vk"
+        other: "{0}vk"
+    day:
+      long:
+        display_name: päivät
+        one: "{0} päivä"
+        one_elative: "{0} päivästä"
+        one_genitive: "{0} päivän"
+        one_illative: "{0} päivään"
+        one_partitive: "{0} päivää"
+        other: "{0} päivää"
+        other_elative: "{0} päivästä"
+        other_genitive: "{0} päivän"
+        other_illative: "{0} päivään"
+        other_partitive: "{0} päivää"
+        per_unit_pattern: "{0} / päivä"
+      short:
+        display_name: pv
+        one: "{0} pv"
+        other: "{0} pv"
+        per_unit_pattern: "{0}/pv"
+      narrow:
+        one: "{0}pv"
+        other: "{0}pv"
+    hour:
+      long:
+        display_name: tunnit
+        one: "{0} tunti"
+        one_elative: "{0} tunnista"
+        one_genitive: "{0} tunnin"
+        one_illative: "{0} tuntiin"
+        one_partitive: "{0} tuntia"
+        other: "{0} tuntia"
+        other_elative: "{0} tunnista"
+        other_genitive: "{0} tunnin"
+        other_illative: "{0} tuntiin"
+        other_partitive: "{0} tuntia"
+        per_unit_pattern: "{0} / tunti"
+      short:
+        display_name: t
+        one: "{0} t"
+        other: "{0} t"
+        per_unit_pattern: "{0}/t"
+      narrow:
+        one: "{0}t"
+        other: "{0}t"
+    minute:
+      long:
+        display_name: minuutit
+        one: "{0} minuutti"
+        one_elative: "{0} minuutista"
+        one_genitive: "{0} minuutin"
+        one_illative: "{0} minuuttiin"
+        one_partitive: "{0} minuuttia"
+        other: "{0} minuuttia"
+        other_elative: "{0} minuutista"
+        other_genitive: "{0} minuutin"
+        other_illative: "{0} minuutista"
+        other_partitive: "{0} minuuttia"
+        per_unit_pattern: "{0} / minuutti"
+      narrow:
+        one: "{0}min"
+        other: "{0}min"
+    second:
+      long:
+        display_name: sekunnit
+        one: "{0} sekunti"
+        one_elative: "{0} sekunnista"
+        one_genitive: "{0} sekunnin"
+        one_illative: "{0} sekuntiin"
+        one_partitive: "{0} sekuntia"
+        other: "{0} sekuntia"
+        other_elative: "{0} sekunnista"
+        other_genitive: "{0} sekunnin"
+        other_illative: "{0} sekuntiin"
+        other_partitive: "{0} sekuntia"
+        per_unit_pattern: "{0} / sekunti"
+      short:
+        display_name: sek
+      narrow:
+        display_name: s
+        one: "{0}s"
+        other: "{0}s"
+    millisecond:
+      long:
+        display_name: millisekunnit
+        one: "{0} millisekunti"
+        one_elative: "{0} millisekunnista"
+        one_genitive: "{0} millisekunnin"
+        one_illative: "{0} millisekuntiin"
+        one_partitive: "{0} millisekuntia"
+        other: "{0} millisekuntia"
+        other_elative: "{0} millisekunnista"
+        other_genitive: "{0} millisekunnin"
+        other_illative: "{0} millisekuntiin"
+        other_partitive: "{0} millisekuntia"
+      narrow:
+        one: "{0}ms"
+        other: "{0}ms"
+    microsecond:
+      long:
+        display_name: mikrosekunnit
+        one: "{0} mikrosekunti"
+        one_elative: "{0} mikrosekunnista"
+        one_genitive: "{0} mikrosekunnin"
+        one_illative: "{0} mikrosekuntiin"
+        one_partitive: "{0} mikrosekuntia"
+        other: "{0} mikrosekuntia"
+        other_elative: "{0} mikrosekunnista"
+        other_genitive: "{0} mikrosekunnin"
+        other_illative: "{0} mikrosekuntiin"
+        other_partitive: "{0} mikrosekuntia"
+      narrow:
+        one: "{0}μs"
+        other: "{0}μs"
+    nanosecond:
+      long:
+        display_name: nanosekunnit
+        one: "{0} nanosekunti"
+        one_elative: "{0} nanosekunnista"
+        one_genitive: "{0} nanosekunnin"
+        one_illative: "{0} nanosekuntiin"
+        one_partitive: "{0} nanosekuntia"
+        other: "{0} nanosekuntia"
+        other_elative: "{0} nanosekunnista"
+        other_genitive: "{0} nanosekunnin"
+        other_illative: "{0} nanosekuntiin"
+        other_partitive: "{0} nanosekuntia"
+      narrow:
+        one: "{0}ns"
+        other: "{0}ns"
+    ampere:
+      long:
+        display_name: ampeerit
+        one: "{0} ampeeri"
+        one_elative: "{0} ampeerista"
+        one_genitive: "{0} ampeerin"
+        one_illative: "{0} ampeeriin"
+        one_partitive: "{0} ampeeria"
+        other: "{0} ampeeria"
+        other_elative: "{0} ampeerista"
+        other_genitive: "{0} ampeerin"
+        other_illative: "{0} ampeeriin"
+        other_partitive: "{0} ampeeria"
+      short:
+        display_name: A
+      narrow:
+        one: "{0}A"
+        other: "{0}A"
+    milliampere:
+      long:
+        display_name: milliampeerit
+        one: "{0} milliampeeri"
+        one_elative: "{0} milliampeerista"
+        one_genitive: "{0} milliampeerin"
+        one_illative: "{0} milliampeeriin"
+        one_partitive: "{0} milliampeeria"
+        other: "{0} milliampeeria"
+        other_elative: "{0} milliampeerista"
+        other_genitive: "{0} milliampeerin"
+        other_illative: "{0} milliampeeriin"
+        other_partitive: "{0} milliampeeria"
+      narrow:
+        one: "{0}mA"
+        other: "{0}mA"
+    ohm:
+      long:
+        display_name: ohmit
+        one: "{0} ohmi"
+        one_elative: "{0} ohmista"
+        one_genitive: "{0} ohmin"
+        one_illative: "{0} ohmiin"
+        one_partitive: "{0} ohmia"
+        other: "{0} ohmia"
+        other_elative: "{0} ohmista"
+        other_genitive: "{0} ohmin"
+        other_illative: "{0} ohmiin"
+        other_partitive: "{0} ohmia"
+      short:
+        display_name: Ω
+      narrow:
+        one: "{0}Ω"
+        other: "{0}Ω"
+    volt:
+      long:
+        display_name: voltit
+        one: "{0} voltti"
+        one_elative: "{0} voltista"
+        one_genitive: "{0} voltin"
+        one_illative: "{0} volttiin"
+        one_partitive: "{0} volttia"
+        other: "{0} volttia"
+        other_elative: "{0} voltista"
+        other_genitive: "{0} voltin"
+        other_illative: "{0} volttiin"
+        other_partitive: "{0} volttia"
+      short:
+        display_name: V
+      narrow:
+        one: "{0}V"
+        other: "{0}V"
+    kilocalorie:
+      long:
+        display_name: kilokalorit
+        one: "{0} kilokalori"
+        one_elative: "{0} kilokalorista"
+        one_genitive: "{0} kilokalorin"
+        one_illative: "{0} kilokaloriin"
+        one_partitive: "{0} kilokaloria"
+        other: "{0} kilokaloria"
+        other_elative: "{0} kilokalorista"
+        other_genitive: "{0} kilokalorin"
+        other_illative: "{0} kilokaloriin"
+        other_partitive: "{0} kilokaloria"
+      narrow:
+        one: "{0}kcal"
+        other: "{0}kcal"
+    calorie:
+      long:
+        display_name: kalorit
+        one: "{0} kalori"
+        one_elative: "{0} kalorista"
+        one_genitive: "{0} kalorin"
+        one_illative: "{0} kaloriin"
+        one_partitive: "{0} kaloria"
+        other: "{0} kaloria"
+        other_elative: "{0} kalorista"
+        other_genitive: "{0} kalorin"
+        other_illative: "{0} kaloriin"
+        other_partitive: "{0} kaloria"
+      narrow:
+        one: "{0}cal"
+        other: "{0}cal"
+    foodcalorie:
+      long:
+        display_name: kilokalorit
+        one: "{0} kilokalori"
+        other: "{0} kilokaloria"
+      narrow:
+        one: "{0}kcal"
+        other: "{0}kcal"
+    kilojoule:
+      long:
+        display_name: kilojoulet
+        one: "{0} kilojoule"
+        one_elative: "{0} kilojoulesta"
+        one_genitive: "{0} kilojoulen"
+        one_illative: "{0} kilojouleen"
+        one_partitive: "{0} kilojoulea"
+        other: "{0} kilojoulea"
+        other_elative: "{0} kilojoulesta"
+        other_genitive: "{0} kilojoulen"
+        other_illative: "{0} kilojouleen"
+        other_partitive: "{0} kilojoulea"
+      narrow:
+        one: "{0}kJ"
+        other: "{0}kJ"
+    joule:
+      long:
+        display_name: joulet
+        one: "{0} joule"
+        one_elative: "{0} joulesta"
+        one_genitive: "{0} joulen"
+        one_illative: "{0} jouleen"
+        one_partitive: "{0} joulea"
+        other: "{0} joulea"
+        other_elative: "{0} joulesta"
+        other_genitive: "{0} joulen"
+        other_illative: "{0} jouleen"
+        other_partitive: "{0} joulea"
+      short:
+        display_name: J
+      narrow:
+        one: "{0}J"
+        other: "{0}J"
+    kilowatt-hour:
+      long:
+        display_name: kilowattitunnit
+        one: "{0} kilowattitunti"
+        one_elative: "{0} kilowattitunnista"
+        one_genitive: "{0} kilowattitunnin"
+        one_illative: "{0} kilowattituntiin"
+        one_partitive: "{0} kilowattituntia"
+        other: "{0} kilowattituntia"
+        other_elative: "{0} kilowattitunnista"
+        other_genitive: "{0} kilowattitunnin"
+        other_illative: "{0} kilowattituntiin"
+        other_partitive: "{0} kilowattituntia"
+      narrow:
+        one: "{0}kWh"
+        other: "{0}kWh"
+    electronvolt:
+      long:
+        display_name: elektronivoltit
+        one: "{0} elektronivoltti"
+        other: "{0} elektronivolttia"
+      short:
+        display_name: elektronivoltti
+      narrow:
+        display_name: eV
+        one: "{0}eV"
+        other: "{0}eV"
+    british-thermal-unit:
+      long:
+        display_name: brittiläiset termiset yksiköt
+        one: "{0} brittiläinen terminen yksikkö"
+        other: "{0} brittiläistä termistä yksikköä"
+      short:
+        display_name: BTU
+      narrow:
+        one: "{0}Btu"
+        other: "{0}Btu"
+    pound-force:
+      long:
+        display_name: pauna-voimat
+        one: "{0} pauna-voima"
+        other: "{0} pauna-voimaa"
+      short:
+        display_name: pauna-voima
+      narrow:
+        display_name: lbf
+        one: "{0}lbf"
+        other: "{0}lbf"
+    newton:
+      long:
+        display_name: newtonit
+        one: "{0} newton"
+        one_elative: "{0} newtonista"
+        one_genitive: "{0} newtonin"
+        one_illative: "{0} newtoniin"
+        one_partitive: "{0} newtonia"
+        other: "{0} newtonia"
+        other_elative: "{0} newtonista"
+        other_genitive: "{0} newtonin"
+        other_illative: "{0} newtoniin"
+        other_partitive: "{0} newtonia"
+      short:
+        display_name: newton
+      narrow:
+        display_name: "N"
+        one: "{0}N"
+        other: "{0}N"
+    kilowatt-hour-per-100-kilometer:
+      long:
+        display_name: kilowattitunnit / 100 kilometriä
+        one: "{0} kilowattitunti 100 kilometrillä"
+        one_elative: "{0} kilowattitunnista / 100 km"
+        one_genitive: "{0} kilowattitunnin / 100 km"
+        one_illative: "{0} kilowattituntiin / 100 km"
+        one_partitive: "{0} kilowattituntia / 100 km"
+        other: "{0} kilowattituntia 100 kilometrillä"
+        other_elative: "{0} kilowattitunnista / 100 km"
+        other_genitive: "{0} kilowattitunnin / 100 km"
+        other_illative: "{0} kilowattituntiin / 100 km"
+        other_partitive: "{0} kilowattituntia / 100 km"
+      short:
+        display_name: kWh/100 km
+        one: "{0} kWh/100 km"
+        other: "{0} kWh/100 km"
+      narrow:
+        one: "{0}kWh/100 km"
+        other: "{0}kWh/100 km"
+    gigahertz:
+      long:
+        display_name: gigahertsit
+        one: "{0} gigahertsi"
+        one_elative: "{0} gigahertsistä"
+        one_genitive: "{0} gigahertsin"
+        one_illative: "{0} gigahertsiin"
+        one_partitive: "{0} gigahertsiä"
+        other: "{0} gigahertsiä"
+        other_elative: "{0} gigahertsistä"
+        other_genitive: "{0} gigahertsin"
+        other_illative: "{0} gigahertsiin"
+        other_partitive: "{0} gigahertsiä"
+      narrow:
+        one: "{0}GHz"
+        other: "{0}GHz"
+    megahertz:
+      long:
+        display_name: megahertsit
+        one: "{0} megahertsi"
+        one_elative: "{0} megahertsistä"
+        one_genitive: "{0} megahertsin"
+        one_illative: "{0} megahertsiin"
+        one_partitive: "{0} megahertsiä"
+        other: "{0} megahertsiä"
+        other_elative: "{0} megahertsistä"
+        other_genitive: "{0} megahertsin"
+        other_illative: "{0} megahertsiin"
+        other_partitive: "{0} megahertsiä"
+      narrow:
+        one: "{0}MHz"
+        other: "{0}MHz"
+    kilohertz:
+      long:
+        display_name: kilohertsit
+        one: "{0} kilohertsi"
+        one_elative: "{0} kilohertsistä"
+        one_genitive: "{0} kilohertsin"
+        one_illative: "{0} kilohertsiin"
+        one_partitive: "{0} kilohertsiä"
+        other: "{0} kilohertsiä"
+        other_elative: "{0} kilohertsistä"
+        other_genitive: "{0} kilohertsin"
+        other_illative: "{0} kilohertsiin"
+        other_partitive: "{0} kilohertsiä"
+      narrow:
+        one: "{0}kHz"
+        other: "{0}kHz"
+    hertz:
+      long:
+        display_name: hertsit
+        one: "{0} hertsi"
+        one_elative: "{0} hertsistä"
+        one_genitive: "{0} hertsin"
+        one_illative: "{0} hertsiin"
+        one_partitive: "{0} hertsiä"
+        other: "{0} hertsiä"
+        other_elative: "{0} hertsistä"
+        other_genitive: "{0} hertsin"
+        other_illative: "{0} hertsiin"
+        other_partitive: "{0} hertsiä"
+      narrow:
+        one: "{0}Hz"
+        other: "{0}Hz"
+    em:
+      long:
+        display_name: em-väli
+        one: "{0} em-väli"
+        one_elative: "{0} em-välistä"
+        one_genitive: "{0} em-välin"
+        one_illative: "{0} em-väliin"
+        one_partitive: "{0} em-väliä"
+        other: "{0} em-väliä"
+        other_elative: "{0} em-välistä"
+        other_genitive: "{0} em-välin"
+        other_illative: "{0} em-väliin"
+        other_partitive: "{0} em-väliä"
+      narrow:
+        one: "{0}em"
+        other: "{0}em"
+    pixel:
+      long:
+        display_name: pikselit
+        one: "{0} pikseli"
+        one_elative: "{0} pikselistä"
+        one_genitive: "{0} pikselin"
+        one_illative: "{0} pikseliin"
+        one_partitive: "{0} pikseliä"
+        other: "{0} pikseliä"
+        other_elative: "{0} pikselistä"
+        other_genitive: "{0} pikselin"
+        other_illative: "{0} pikseliin"
+        other_partitive: "{0} pikseliä"
+      narrow:
+        one: "{0}px"
+        other: "{0}px"
+    megapixel:
+      long:
+        display_name: megapikselit
+        one: "{0} megapikseliä"
+        one_elative: "{0} megapikselistä"
+        one_genitive: "{0} megapikselin"
+        one_illative: "{0} megapikseliin"
+        one_partitive: "{0} megapikseliä"
+        other: "{0} megapikseliä"
+        other_elative: "{0} megapikselistä"
+        other_genitive: "{0} megapikselin"
+        other_illative: "{0} megapikseliin"
+        other_partitive: "{0} megapikseliä"
+      narrow:
+        one: "{0}MP"
+        other: "{0}MP"
+    pixel-per-centimeter:
+      long:
+        display_name: pikselit/senttimetri
+        one: "{0} pikseli / senttimetri"
+        one_elative: "{0} pikselistä / senttimetri"
+        one_genitive: "{0} pikselin / senttimetri"
+        one_illative: "{0} pikseliin / senttimetri"
+        one_partitive: "{0} pikseliä / senttimetri"
+        other: "{0} pikseliä / senttimetri"
+        other_elative: "{0} pikselistä / senttimetri"
+        other_genitive: "{0} pikselin / senttimetri"
+        other_illative: "{0} pikseliin / senttimetri"
+        other_partitive: "{0} pikseliä / senttimetri"
+      narrow:
+        one: "{0}ppcm"
+        other: "{0}ppcm"
+    pixel-per-inch:
+      long:
+        display_name: pikselit tuumalla
+        one: "{0} pikseli tuumalla"
+        other: "{0} pikseliä tuumalla"
+      narrow:
+        one: "{0}ppi"
+        other: "{0}ppi"
+    dot-per-centimeter:
+      long:
+        display_name: pisteet senttimetrillä
+        one: "{0} piste senttimetrillä"
+        other: "{0} pistettä senttimetrillä"
+      narrow:
+        one: "{0}ppcm"
+        other: "{0}ppcm"
+    dot-per-inch:
+      long:
+        display_name: pisteet tuumalla
+        one: "{0} piste tuumalla"
+        other: "{0} pistettä tuumalla"
+      short:
+        display_name: dpi
+        one: "{0} dpi"
+        other: "{0} dpi"
+      narrow:
+        one: "{0}dpi"
+        other: "{0}dpi"
+    earth-radius:
+      long:
+        display_name: Maan säteet
+        one: "{0} Maan säde"
+        other: "{0} Maan sädettä"
+      narrow:
+        one: "{0}R⊕"
+        other: "{0}R⊕"
+    kilometer:
+      long:
+        display_name: kilometrit
+        one: "{0} kilometri"
+        one_elative: "{0} kilometristä"
+        one_genitive: "{0} kilometrin"
+        one_illative: "{0} kilometriin"
+        one_partitive: "{0} kilometriä"
+        other: "{0} kilometriä"
+        other_elative: "{0} kilometristä"
+        other_genitive: "{0} kilometrin"
+        other_illative: "{0} kilometriin"
+        other_partitive: "{0} kilometriä"
+        per_unit_pattern: "{0} / kilometri"
+      narrow:
+        one: "{0}km"
+        other: "{0}km"
+    meter:
+      long:
+        display_name: metrit
+        one: "{0} metri"
+        one_elative: "{0} metristä"
+        one_genitive: "{0} metrin"
+        one_illative: "{0} metriin"
+        one_partitive: "{0} metriä"
+        other: "{0} metriä"
+        other_elative: "{0} metristä"
+        other_genitive: "{0} metrin"
+        other_illative: "{0} metriin"
+        other_partitive: "{0} metriä"
+        per_unit_pattern: "{0} / metri"
+      short:
+        display_name: m
+      narrow:
+        one: "{0}m"
+        other: "{0}m"
+    decimeter:
+      long:
+        display_name: desimetrit
+        one: "{0} desimetri"
+        one_elative: "{0} desimetristä"
+        one_genitive: "{0} desimetrin"
+        one_illative: "{0} desimetriin"
+        one_partitive: "{0} desimetriä"
+        other: "{0} desimetriä"
+        other_elative: "{0} desimetristä"
+        other_genitive: "{0} desimetrin"
+        other_illative: "{0} desimetriin"
+        other_partitive: "{0} desimetriä"
+      narrow:
+        one: "{0}dm"
+        other: "{0}dm"
+    centimeter:
+      long:
+        display_name: senttimetrit
+        one: "{0} senttimetri"
+        one_elative: "{0} senttimetristä"
+        one_genitive: "{0} senttimetrin"
+        one_illative: "{0} senttimetriin"
+        one_partitive: "{0} senttimetriä"
+        other: "{0} senttimetriä"
+        other_elative: "{0} senttimetristä"
+        other_genitive: "{0} senttimetrin"
+        other_illative: "{0} senttimetriin"
+        other_partitive: "{0} senttimetriä"
+        per_unit_pattern: "{0} / senttimetri"
+      narrow:
+        one: "{0}cm"
+        other: "{0}cm"
+    millimeter:
+      long:
+        display_name: millimetrit
+        one: "{0} millimetri"
+        one_elative: "{0} millimetristä"
+        one_genitive: "{0} millimetrin"
+        one_illative: "{0} millimetriin"
+        one_partitive: "{0} millimetrin"
+        other: "{0} millimetriä"
+        other_elative: "{0} millimetristä"
+        other_genitive: "{0} millimetrin"
+        other_illative: "{0} millimetriin"
+        other_partitive: "{0} millimetriä"
+      narrow:
+        one: "{0}mm"
+        other: "{0}mm"
+    micrometer:
+      long:
+        display_name: mikrometrit
+        one: "{0} mikrometri"
+        one_elative: "{0} mikrometristä"
+        one_genitive: "{0} mikrometrin"
+        one_illative: "{0} mikrometriin"
+        one_partitive: "{0} mikrometriä"
+        other: "{0} mikrometriä"
+        other_elative: "{0} mikrometristä"
+        other_genitive: "{0} mikrometrin"
+        other_illative: "{0} mikrometriin"
+        other_partitive: "{0} mikrometriä"
+      narrow:
+        one: "{0}μm"
+        other: "{0}μm"
+    nanometer:
+      long:
+        display_name: nanometrit
+        one: "{0} nanometri"
+        one_elative: "{0} nanometristä"
+        one_genitive: "{0} nanometrin"
+        one_illative: "{0} nanometriin"
+        one_partitive: "{0} nanometriä"
+        other: "{0} nanometriä"
+        other_elative: "{0} nanometristä"
+        other_genitive: "{0} nanometrin"
+        other_illative: "{0} nanometriin"
+        other_partitive: "{0} nanometriä"
+      narrow:
+        one: "{0}nm"
+        other: "{0}nm"
+    picometer:
+      long:
+        display_name: pikometrit
+        one: "{0} pikometri"
+        one_elative: "{0} pikometristä"
+        one_genitive: "{0} pikometrin"
+        one_illative: "{0} pikometriin"
+        one_partitive: "{0} pikometriä"
+        other: "{0} pikometriä"
+        other_elative: "{0} pikometristä"
+        other_genitive: "{0} pikometrin"
+        other_illative: "{0} pikometriin"
+        other_partitive: "{0} pikometriä"
+      narrow:
+        one: "{0}pm"
+        other: "{0}pm"
+    mile:
+      long:
+        display_name: mailit
+        one: "{0} maili"
+        other: "{0} mailia"
+      narrow:
+        one: "{0}mi"
+        other: "{0}mi"
+    yard:
+      long:
+        display_name: jaardit
+        one: "{0} jaardi"
+        other: "{0} jaardia"
+      narrow:
+        one: "{0}yd"
+        other: "{0}yd"
+    foot:
+      long:
+        display_name: jalat
+        one: "{0} jalka"
+        other: "{0} jalkaa"
+        per_unit_pattern: "{0} / jalka"
+      narrow:
+        one: "{0}′"
+        other: "{0}′"
+        per_unit_pattern: "{0}/′"
+    inch:
+      long:
+        display_name: tuumat
+        one: "{0} tuuma"
+        other: "{0} tuumaa"
+        per_unit_pattern: "{0} / tuuma"
+      narrow:
+        one: "{0}″"
+        other: "{0}″"
+        per_unit_pattern: "{0}/″"
+    parsec:
+      long:
+        display_name: parsekit
+        one: "{0} parsek"
+        other: "{0} parsekia"
+      narrow:
+        one: "{0}pc"
+        other: "{0}pc"
+    light-year:
+      long:
+        display_name: valovuodet
+        one: "{0} valovuosi"
+        other: "{0} valovuotta"
+      short:
+        display_name: vv
+        one: "{0} vv"
+        other: "{0} vv"
+      narrow:
+        one: "{0}vv"
+        other: "{0}vv"
+    astronomical-unit:
+      long:
+        display_name: astronomiset yksiköt
+        one: "{0} astronominen yksikkö"
+        other: "{0} astronomista yksikköä"
+      narrow:
+        one: "{0}au"
+        other: "{0}au"
+    furlong:
+      long:
+        display_name: furlongit
+        one: "{0} furlong"
+        other: "{0} furlongia"
+      narrow:
+        one: "{0}fur"
+        other: "{0}fur"
+    fathom:
+      long:
+        display_name: sylet
+        one: "{0} syli"
+        other: "{0} syltä"
+      short:
+        one: "{0} fm"
+      narrow:
+        one: "{0}fth"
+        other: "{0}fth"
+    nautical-mile:
+      long:
+        display_name: meripeninkulmat
+        one: "{0} meripeninkulma"
+        other: "{0} meripeninkulmaa"
+      short:
+        display_name: mpk
+        one: "{0} mpk"
+        other: "{0} mpk"
+      narrow:
+        one: "{0}mpk"
+        other: "{0}mpk"
+    mile-scandinavian:
+      long:
+        display_name: peninkulmat
+        one: "{0} peninkulma"
+        one_elative: "{0} peninkulmasta"
+        one_genitive: "{0} peninkulman"
+        one_illative: "{0} peninkulmaan"
+        one_partitive: "{0} peninkulmaa"
+        other: "{0} peninkulmaa"
+        other_elative: "{0} peninkulmasta"
+        other_genitive: "{0} peninkulman"
+        other_illative: "{0} peninkulmaan"
+        other_partitive: "{0} peninkulmaa"
+      short:
+        display_name: pnk
+        one: "{0} pnk"
+        other: "{0} pnk"
+      narrow:
+        one: "{0}pnk"
+        other: "{0}pnk"
+    solar-radius:
+      long:
+        one: "{0} auringon säde"
+        other: "{0} auringon sädettä"
+      short:
+        display_name: auringon säteet
+      narrow:
+        display_name: R☉
+        one: "{0}R☉"
+        other: "{0}R☉"
+    lux:
+      long:
+        display_name: luksit
+        one: "{0} luksi"
+        one_elative: "{0} luksista"
+        one_genitive: "{0} luksin"
+        one_illative: "{0} luksiin"
+        one_partitive: "{0} luksia"
+        other: "{0} luksia"
+        other_elative: "{0} luksista"
+        other_genitive: "{0} luksin"
+        other_illative: "{0} luksiin"
+        other_partitive: "{0} luksia"
+      narrow:
+        one: "{0}lx"
+        other: "{0}lx"
+    candela:
+      long:
+        display_name: kandelat
+        one: "{0} kandela"
+        one_elative: "{0} kandelasta"
+        one_genitive: "{0} kandelan"
+        one_illative: "{0} kandelaan"
+        one_partitive: "{0} kandelaa"
+        other: "{0} kandelaa"
+        other_elative: "{0} kandelasta"
+        other_genitive: "{0} kandelan"
+        other_illative: "{0} kandelaan"
+        other_partitive: "{0} kandelaa"
+      narrow:
+        one: "{0}cd"
+        other: "{0}cd"
+    lumen:
+      long:
+        display_name: luumenit
+        one: "{0} luumen"
+        one_elative: "{0} luumenista"
+        one_genitive: "{0} luumenin"
+        one_illative: "{0} luumeniin"
+        one_partitive: "{0} luumenia"
+        other: "{0} luumenia"
+        other_elative: "{0} luumenista"
+        other_genitive: "{0} luumenin"
+        other_illative: "{0} luumeniin"
+        other_partitive: "{0} luumenia"
+      narrow:
+        one: "{0}lm"
+        other: "{0}lm"
+    solar-luminosity:
+      long:
+        one: "{0} Auringon luminositeetti"
+        other: "{0} Auringon luminositeettia"
+      short:
+        display_name: Auringon luminositeetit
+      narrow:
+        display_name: L☉
+        one: "{0}L☉"
+        other: "{0}L☉"
+    tonne:
+      long:
+        display_name: tonnit
+        one: "{0} tonni"
+        one_elative: "{0} tonnista"
+        one_genitive: "{0} tonnin"
+        one_illative: "{0} tonniin"
+        one_partitive: "{0} tonnia"
+        other: "{0} tonnia"
+        other_elative: "{0} tonnista"
+        other_genitive: "{0} tonnin"
+        other_illative: "{0} tonniin"
+        other_partitive: "{0} tonnia"
+      narrow:
+        one: "{0}t"
+        other: "{0}t"
+    kilogram:
+      long:
+        display_name: kilogrammat
+        one: "{0} kilogramma"
+        one_elative: "{0} kilogrammasta"
+        one_genitive: "{0} kilogramman"
+        one_illative: "{0} kilogrammaan"
+        one_partitive: "{0} kilogrammaa"
+        other: "{0} kilogrammaa"
+        other_elative: "{0} kilogrammasta"
+        other_genitive: "{0} kilogramman"
+        other_illative: "{0} kilogrammaan"
+        other_partitive: "{0} kilogrammaa"
+        per_unit_pattern: "{0} / kilogramma"
+      narrow:
+        one: "{0}kg"
+        other: "{0}kg"
+    gram:
+      long:
+        display_name: grammat
+        one: "{0} gramma"
+        one_elative: "{0} grammasta"
+        one_genitive: "{0} gramman"
+        one_illative: "{0} grammaan"
+        one_partitive: "{0} grammaa"
+        other: "{0} grammaa"
+        other_elative: "{0} grammasta"
+        other_genitive: "{0} gramman"
+        other_illative: "{0} grammaan"
+        other_partitive: "{0} grammaa"
+        per_unit_pattern: "{0} / gramma"
+      short:
+        display_name: g
+      narrow:
+        one: "{0}g"
+        other: "{0}g"
+    milligram:
+      long:
+        display_name: milligrammat
+        one: "{0} milligramma"
+        one_elative: "{0} milligrammasta"
+        one_genitive: "{0} milligramman"
+        one_illative: "{0} milligrammaan"
+        one_partitive: "{0} milligrammaa"
+        other: "{0} milligrammaa"
+        other_elative: "{0} milligrammasta"
+        other_genitive: "{0} milligramman"
+        other_illative: "{0} milligrammaan"
+        other_partitive: "{0} milligrammaa"
+      narrow:
+        one: "{0}mg"
+        other: "{0}mg"
+    microgram:
+      long:
+        display_name: mikrogrammat
+        one: "{0} mikrogramma"
+        one_elative: "{0} mikrogrammasta"
+        one_genitive: "{0} mikrogramman"
+        one_illative: "{0} mikrogrammaan"
+        one_partitive: "{0} mikrogrammaa"
+        other: "{0} mikrogrammaa"
+        other_elative: "{0} mikrogrammasta"
+        other_genitive: "{0} mikrogramman"
+        other_illative: "{0} mikrogrammaan"
+        other_partitive: "{0} mikrogrammaa"
+      narrow:
+        one: "{0}μg"
+        other: "{0}μg"
+    ton:
+      long:
+        display_name: am. tonnit
+        one: "{0} am. tonni"
+        other: "{0} am. tonnia"
+      short:
+        display_name: am. tn
+        one: "{0} am. tn"
+        other: "{0} am. tn"
+      narrow:
+        display_name: am.tn
+        one: "{0}am.tn"
+        other: "{0}am.tn"
+    stone:
+      long:
+        display_name: stonet
+        one: "{0} stone"
+        other: "{0} stonea"
+      narrow:
+        one: "{0}st"
+        other: "{0}st"
+    pound:
+      long:
+        display_name: paunat
+        one: "{0} pauna"
+        other: "{0} paunaa"
+        per_unit_pattern: "{0} / pauna"
+      narrow:
+        one: "{0}lb"
+        other: "{0}lb"
+    ounce:
+      long:
+        display_name: unssit
+        one: "{0} unssi"
+        other: "{0} unssia"
+        per_unit_pattern: "{0} / unssi"
+      narrow:
+        one: "{0}oz"
+        other: "{0}oz"
+    ounce-troy:
+      long:
+        display_name: troy-unssit
+        one: "{0} troy-unssi"
+        other: "{0} troy-unssia"
+      narrow:
+        one: "{0}oz t"
+        other: "{0}oz t"
+    carat:
+      long:
+        display_name: karaatit
+        one: "{0} karaatti"
+        one_elative: "{0} karaatista"
+        one_genitive: "{0} karaatin"
+        one_illative: "{0} karaattiin"
+        one_partitive: "{0} karaattia"
+        other: "{0} karaattia"
+        other_elative: "{0} karaatista"
+        other_genitive: "{0} karaatin"
+        other_illative: "{0} karaattiin"
+        other_partitive: "{0} karaattia"
+      short:
+        display_name: ka
+        one: "{0} ka"
+        other: "{0} ka"
+      narrow:
+        one: "{0}ka"
+        other: "{0}ka"
+    dalton:
+      long:
+        one: "{0} atomimassayksikkö"
+        other: "{0} atomimassayksikköä"
+      short:
+        display_name: atomimassayksiköt
+      narrow:
+        display_name: Da
+        one: "{0}Da"
+        other: "{0}Da"
+    earth-mass:
+      long:
+        one: "{0} Maan massa"
+        other: "{0} Maan massaa"
+      short:
+        display_name: Maan massat
+      narrow:
+        display_name: M⊕
+        one: "{0}M⊕"
+        other: "{0}M⊕"
+    solar-mass:
+      long:
+        one: "{0} auringon massa"
+        other: "{0} auringon massaa"
+      short:
+        display_name: auringon massat
+      narrow:
+        display_name: M☉
+        one: "{0}M☉"
+        other: "{0}M☉"
+    gigawatt:
+      long:
+        display_name: gigawatit
+        one: "{0} gigawatti"
+        one_elative: "{0} gigawatista"
+        one_genitive: "{0} gigawatin"
+        one_illative: "{0} gigawattiin"
+        one_partitive: "{0} gigawattia"
+        other: "{0} gigawattia"
+        other_elative: "{0} gigawatista"
+        other_genitive: "{0} gigawatin"
+        other_illative: "{0} gigawattiin"
+        other_partitive: "{0} gigawattia"
+      narrow:
+        one: "{0}GW"
+        other: "{0}GW"
+    megawatt:
+      long:
+        display_name: megawatit
+        one: "{0} megawatti"
+        one_elative: "{0} megawatista"
+        one_genitive: "{0} megawatin"
+        one_illative: "{0} megawattiin"
+        one_partitive: "{0} megawattia"
+        other: "{0} megawattia"
+        other_elative: "{0} megawatista"
+        other_genitive: "{0} megawatin"
+        other_illative: "{0} megawattiin"
+        other_partitive: "{0} megawattia"
+      narrow:
+        one: "{0}MW"
+        other: "{0}MW"
+    kilowatt:
+      long:
+        display_name: kilowatit
+        one: "{0} kilowatti"
+        one_elative: "{0} kilowatista"
+        one_genitive: "{0} kilowatin"
+        one_illative: "{0} kilowattiin"
+        one_partitive: "{0} kilowattia"
+        other: "{0} kilowattia"
+        other_elative: "{0} kilowatista"
+        other_genitive: "{0} kilowatin"
+        other_illative: "{0} kilowattiin"
+        other_partitive: "{0} kilowattia"
+      narrow:
+        one: "{0}kW"
+        other: "{0}kW"
+    watt:
+      long:
+        display_name: watit
+        one: "{0} watti"
+        one_elative: "{0} watista"
+        one_genitive: "{0} watin"
+        one_illative: "{0} wattiin"
+        one_partitive: "{0} wattia"
+        other: "{0} wattia"
+        other_elative: "{0} watista"
+        other_genitive: "{0} watin"
+        other_illative: "{0} wattiin"
+        other_partitive: "{0} wattia"
+      short:
+        display_name: W
+      narrow:
+        one: "{0}W"
+        other: "{0}W"
+    milliwatt:
+      long:
+        display_name: milliwatit
+        one: "{0} milliwatti"
+        one_elative: "{0} milliwatista"
+        one_genitive: "{0} milliwatin"
+        one_illative: "{0} milliwattiin"
+        one_partitive: "{0} milliwattia"
+        other: "{0} milliwattia"
+        other_elative: "{0} milliwatista"
+        other_genitive: "{0} milliwatin"
+        other_illative: "{0} milliwattiin"
+        other_partitive: "{0} milliwattia"
+      narrow:
+        one: "{0}mW"
+        other: "{0}mW"
+    horsepower:
+      long:
+        display_name: hevosvoimat
+        one: "{0} hevosvoima"
+        other: "{0} hevosvoimaa"
+      short:
+        display_name: hv
+        one: "{0} hv"
+        other: "{0} hv"
+      narrow:
+        one: "{0}hv"
+        other: "{0}hv"
+    millimeter-ofhg:
+      long:
+        display_name: elohopeamillimetrit
+        one: "{0} elohopeamillimetri"
+        one_elative: "{0} elohopeamillimetristä"
+        one_genitive: "{0} elohopeamillimetrin"
+        one_illative: "{0} elohopeamillimetriin"
+        one_partitive: "{0} elohopeamillimetriä"
+        other: "{0} elohopeamillimetriä"
+        other_elative: "{0} elohopeamillimetristä"
+        other_genitive: "{0} elohopeamillimetrin"
+        other_illative: "{0} elohopeamillimetriin"
+        other_partitive: "{0} elohopeamillimetriä"
+      short:
+        display_name: mmHg
+        one: "{0} mmHg"
+        other: "{0} mmHg"
+      narrow:
+        one: "{0}mmHg"
+        other: "{0}mmHg"
+    pound-force-per-square-inch:
+      long:
+        display_name: paunat / neliötuuma
+        one: "{0} pauna / neliötuuma"
+        other: "{0} paunaa / neliötuuma"
+      narrow:
+        one: "{0}psi"
+        other: "{0}psi"
+    inch-ofhg:
+      long:
+        display_name: elohopeatuumat
+        one: "{0} elohopeatuuma"
+        other: "{0} elohopeatuumaa"
+      narrow:
+        one: "{0}″ Hg"
+        other: "{0}″ Hg"
+    bar:
+      long:
+        display_name: baarit
+        one: "{0} baari"
+        one_elative: "{0} baarista"
+        one_genitive: "{0} baarin"
+        one_illative: "{0} baariin"
+        one_partitive: "{0} baaria"
+        other: "{0} baaria"
+        other_elative: "{0} baarista"
+        other_genitive: "{0} baarin"
+        other_illative: "{0} baariin"
+        other_partitive: "{0} baaria"
+      narrow:
+        one: "{0}bar"
+        other: "{0}bar"
+    millibar:
+      long:
+        display_name: millibaarit
+        one: "{0} millibaari"
+        one_elative: "{0} millibaarista"
+        one_genitive: "{0} millibaarin"
+        one_illative: "{0} millibaariin"
+        one_partitive: "{0} millibaaria"
+        other: "{0} millibaaria"
+        other_elative: "{0} millibaarista"
+        other_genitive: "{0} millibaarin"
+        other_illative: "{0} millibaariin"
+        other_partitive: "{0} millibaaria"
+      narrow:
+        one: "{0}mbar"
+        other: "{0}mbar"
+    atmosphere:
+      long:
+        display_name: normaali-ilmakehät
+        one: "{0} normaali-ilmakehä"
+        one_elative: "{0} normaali-ilmakehästä"
+        one_genitive: "{0} normaali-ilmakehän"
+        one_illative: "{0} normaali-ilmakehään"
+        one_partitive: "{0} normaali-ilmakehää"
+        other: "{0} normaali-ilmakehää"
+        other_elative: "{0} normaali-ilmakehästä"
+        other_genitive: "{0} normaali-ilmakehän"
+        other_illative: "{0} normaali-ilmakehään"
+        other_partitive: "{0} normaali-ilmakehää"
+      narrow:
+        one: "{0}atm"
+        other: "{0}atm"
+    pascal:
+      long:
+        display_name: pascalit
+        one: "{0} pascal"
+        one_elative: "{0} pascalista"
+        one_genitive: "{0} pascalin"
+        one_illative: "{0} pascaliin"
+        one_partitive: "{0} pascalia"
+        other: "{0} pascalia"
+        other_elative: "{0} pascalista"
+        other_genitive: "{0} pascalin"
+        other_illative: "{0} pascaliin"
+        other_partitive: "{0} pascalia"
+      narrow:
+        one: "{0}Pa"
+        other: "{0}Pa"
+    hectopascal:
+      long:
+        display_name: hehtopascalit
+        one: "{0} hehtopascal"
+        one_elative: "{0} hehtopascalista"
+        one_genitive: "{0} hehtopascalin"
+        one_illative: "{0} hehtopascaliin"
+        one_partitive: "{0} hehtopascalia"
+        other: "{0} hehtopascalia"
+        other_elative: "{0} hehtopascalista"
+        other_genitive: "{0} hehtopascalin"
+        other_illative: "{0} hehtopascaliin"
+        other_partitive: "{0} hehtopascalia"
+      narrow:
+        one: "{0}hPa"
+        other: "{0}hPa"
+    kilopascal:
+      long:
+        display_name: kilopascalit
+        one: "{0} kilopascal"
+        one_elative: "{0} kilopascalista"
+        one_genitive: "{0} kilopascalin"
+        one_illative: "{0} kilopascaliin"
+        one_partitive: "{0} kilopascalia"
+        other: "{0} kilopascalia"
+        other_elative: "{0} kilopascalista"
+        other_genitive: "{0} kilopascalin"
+        other_illative: "{0} kilopascaliin"
+        other_partitive: "{0} kilopascalia"
+      narrow:
+        one: "{0}kPa"
+        other: "{0}kPa"
+    megapascal:
+      long:
+        display_name: megapascalit
+        one: "{0} megapascal"
+        one_elative: "{0} megapascalista"
+        one_genitive: "{0} megapascalin"
+        one_illative: "{0} megapascaliin"
+        one_partitive: "{0} megapascalia"
+        other: "{0} megapascalia"
+        other_elative: "{0} megapascalista"
+        other_genitive: "{0} megapascalin"
+        other_illative: "{0} megapascaliin"
+        other_partitive: "{0} megapascalia"
+      narrow:
+        one: "{0}MPa"
+        other: "{0}MPa"
+    kilometer-per-hour:
+      long:
+        display_name: kilometrit tunnissa
+        one: "{0} kilometri tunnissa"
+        one_elative: "{0} kilometristä tunnissa"
+        one_genitive: "{0} kilometrin tunnissa"
+        one_illative: "{0} kilometriin tunnissa"
+        one_partitive: "{0} kilometriä tunnissa"
+        other: "{0} kilometriä tunnissa"
+        other_elative: "{0} kilometristä tunnissa"
+        other_genitive: "{0} kilometrin tunnissa"
+        other_illative: "{0} kilometriin tunnissa"
+        other_partitive: "{0} kilometriä tunnissa"
+      narrow:
+        one: "{0}km/h"
+        other: "{0}km/h"
+    meter-per-second:
+      long:
+        display_name: metrit sekunnissa
+        one: "{0} metri sekunnissa"
+        one_elative: "{0} metristä sekunnissa"
+        one_genitive: "{0} metrin sekunnissa"
+        one_illative: "{0} metriin sekunnissa"
+        one_partitive: "{0} metriä sekunnissa"
+        other: "{0} metriä sekunnissa"
+        other_elative: "{0} metristä sekunnissa"
+        other_genitive: "{0} metrin sekunnissa"
+        other_illative: "{0} metriin sekunnissa"
+        other_partitive: "{0} metriä sekunnissa"
+      narrow:
+        one: "{0}m/s"
+        other: "{0}m/s"
+    mile-per-hour:
+      long:
+        display_name: mailit tunnissa
+        one: "{0} maili tunnissa"
+        other: "{0} mailia tunnissa"
+      narrow:
+        one: "{0}mi/h"
+        other: "{0}mi/h"
+    knot:
+      long:
+        display_name: solmut
+        one: "{0} solmu"
+        other: "{0} solmua"
+      narrow:
+        one: "{0}kn"
+        other: "{0}kn"
+    beaufort:
+      long:
+        display_name: bofori
+        one: "{0} bofori"
+        other: "{0} boforia"
+    generic:
+      long:
+        display_name: asteet
+        one: "{0} aste"
+        one_elative: "{0} asteesta"
+        one_genitive: "{0} asteen"
+        one_illative: "{0} asteeseen"
+        one_partitive: "{0} astetta"
+        other: "{0} astetta"
+        other_elative: "{0} asteesta"
+        other_genitive: "{0} asteen"
+        other_illative: "{0} asteeseen"
+        other_partitive: "{0} astetta"
+    celsius:
+      long:
+        display_name: celsiusasteet
+        one: "{0} celsiusaste"
+        one_elative: "{0} celsiusasteesta"
+        one_genitive: "{0} celsiusasteen"
+        one_illative: "{0} celsiusasteeseen"
+        one_partitive: "{0} celsiusastetta"
+        other: "{0} celsiusastetta"
+        other_elative: "{0} celsiusasteesta"
+        other_genitive: "{0} celsiusasteen"
+        other_illative: "{0} celsiusasteeseen"
+        other_partitive: "{0} celsiusastetta"
+      short:
+        one: "{0} °C"
+        other: "{0} °C"
+      narrow:
+        one: "{0}°"
+        other: "{0}°"
+    fahrenheit:
+      long:
+        display_name: fahrenheitasteet
+        one: "{0} fahrenheitaste"
+        other: "{0} fahrenheitastetta"
+      short:
+        one: "{0} °F"
+        other: "{0} °F"
+      narrow:
+        one: "{0}°F"
+        other: "{0}°F"
+    kelvin:
+      long:
+        display_name: kelvinit
+        one: "{0} kelvin"
+        one_elative: "{0} kelvinistä"
+        one_genitive: "{0} kelvinin"
+        one_illative: "{0} kelviniin"
+        one_partitive: "{0} kelviniä"
+        other: "{0} kelviniä"
+        other_elative: "{0} kelvinistä"
+        other_genitive: "{0} kelvinin"
+        other_illative: "{0} kelviniin"
+        other_partitive: "{0} kelviniä"
+      narrow:
+        one: "{0}K"
+        other: "{0}K"
+    pound-force-foot:
+      long:
+        display_name: pauna-jalat
+        one: "{0} pauna-jalka"
+        other: "{0} pauna-jalkaa"
+      narrow:
+        one: "{0}lbf⋅ft"
+        other: "{0}lbf⋅ft"
+    newton-meter:
+      long:
+        display_name: newtonmetrit
+        one: "{0} newtonmetri"
+        one_elative: "{0} newtonmetristä"
+        one_genitive: "{0} newtonmetrin"
+        one_illative: "{0} newtonmetriin"
+        one_partitive: "{0} newtonmetriä"
+        other: "{0} newtonmetriä"
+        other_elative: "{0} newtonmetristä"
+        other_genitive: "{0} newtonmetrin"
+        other_illative: "{0} newtonmetriin"
+        other_partitive: "{0} newtonmetriä"
+      short:
+        display_name: Nm
+        one: "{0} Nm"
+        other: "{0} Nm"
+      narrow:
+        one: "{0}Nm"
+        other: "{0}Nm"
+    cubic-kilometer:
+      long:
+        display_name: kuutiokilometrit
+        one: "{0} kuutiokilometri"
+        one_elative: "{0} kuutiokilometristä"
+        one_genitive: "{0} kuutiokilometrin"
+        one_illative: "{0} kuutiokilometriin"
+        one_partitive: "{0} kuutiokilometriä"
+        other: "{0} kuutiokilometriä"
+        other_elative: "{0} kuutiokilometristä"
+        other_genitive: "{0} kuutiokilometrin"
+        other_illative: "{0} kuutiokilometriin"
+        other_partitive: "{0} kuutiokilometriä"
+      narrow:
+        one: "{0}km³"
+        other: "{0}km³"
+    cubic-meter:
+      long:
+        display_name: kuutiometrit
+        one: "{0} kuutiometri"
+        one_elative: "{0} kuutiometristä"
+        one_genitive: "{0} kuutiometrin"
+        one_illative: "{0} kuutiometriin"
+        one_partitive: "{0} kuutiometriä"
+        other: "{0} kuutiometriä"
+        other_elative: "{0} kuutiometristä"
+        other_genitive: "{0} kuutiometrin"
+        other_illative: "{0} kuutiometriin"
+        other_partitive: "{0} kuutiometriä"
+        per_unit_pattern: "{0} / kuutiometri"
+      narrow:
+        one: "{0}m³"
+        other: "{0}m³"
+    cubic-centimeter:
+      long:
+        display_name: kuutiosenttimetrit
+        one: "{0} kuutiosenttimetri"
+        one_elative: "{0} kuutiosenttimetristä"
+        one_genitive: "{0} kuutiosenttimetrin"
+        one_illative: "{0} kuutiosenttimetriin"
+        one_partitive: "{0} kuutiosenttimetriä"
+        other: "{0} kuutiosenttimetriä"
+        other_elative: "{0} kuutiosenttimetristä"
+        other_genitive: "{0} kuutiosenttimetrin"
+        other_illative: "{0} kuutiosenttimetriin"
+        other_partitive: "{0} kuutiosenttimetriä"
+        per_unit_pattern: "{0} / kuutiosenttimetri"
+      narrow:
+        one: "{0}cm³"
+        other: "{0}cm³"
+    cubic-mile:
+      long:
+        display_name: kuutiomailit
+        one: "{0} kuutiomaili"
+        other: "{0} kuutiomailia"
+      narrow:
+        one: "{0}mi³"
+        other: "{0}mi³"
+    cubic-yard:
+      long:
+        display_name: kuutiojaardit
+        one: "{0} kuutiojaardi"
+        other: "{0} kuutiojaardia"
+      narrow:
+        one: "{0}yd³"
+        other: "{0}yd³"
+    cubic-foot:
+      long:
+        display_name: kuutiojalat
+        one: "{0} kuutiojalka"
+        other: "{0} kuutiojalkaa"
+      narrow:
+        one: "{0}ft³"
+        other: "{0}ft³"
+    cubic-inch:
+      long:
+        display_name: kuutiotuumat
+        one: "{0} kuutiotuuma"
+        other: "{0} kuutiotuumaa"
+      narrow:
+        one: "{0}in³"
+        other: "{0}in³"
+    megaliter:
+      long:
+        display_name: megalitrat
+        one: "{0} megalitra"
+        one_elative: "{0} megalitrasta"
+        one_genitive: "{0} megalitran"
+        one_illative: "{0} megalitraan"
+        one_partitive: "{0} megalitraa"
+        other: "{0} megalitraa"
+        other_elative: "{0} megalitrasta"
+        other_genitive: "{0} megalitran"
+        other_illative: "{0} megalitraan"
+        other_partitive: "{0} megalitraa"
+      short:
+        display_name: Ml
+        one: "{0} Ml"
+        other: "{0} Ml"
+      narrow:
+        one: "{0}Ml"
+        other: "{0}Ml"
+    hectoliter:
+      long:
+        display_name: hehtolitrat
+        one: "{0} hehtolitra"
+        one_elative: "{0} hehtolitrasta"
+        one_genitive: "{0} hehtolitran"
+        one_illative: "{0} hehtolitraan"
+        one_partitive: "{0} hehtolitraa"
+        other: "{0} hehtolitraa"
+        other_elative: "{0} hehtolitrasta"
+        other_genitive: "{0} hehtolitran"
+        other_illative: "{0} hehtolitraan"
+        other_partitive: "{0} hehtolitraa"
+      short:
+        display_name: hl
+        one: "{0} hl"
+        other: "{0} hl"
+      narrow:
+        one: "{0}hl"
+        other: "{0}hl"
+    liter:
+      long:
+        display_name: litrat
+        one: "{0} litra"
+        one_elative: "{0} litrasta"
+        one_genitive: "{0} litran"
+        one_illative: "{0} litraan"
+        one_partitive: "{0} litraa"
+        other: "{0} litraa"
+        other_elative: "{0} litrasta"
+        other_genitive: "{0} litran"
+        other_illative: "{0} litraan"
+        other_partitive: "{0} litraa"
+        per_unit_pattern: "{0} / litra"
+      short:
+        display_name: l
+      narrow:
+        one: "{0}l"
+        other: "{0}l"
+    deciliter:
+      long:
+        display_name: desilitrat
+        one: "{0} desilitra"
+        one_elative: "{0} desilitrasta"
+        one_genitive: "{0} desilitran"
+        one_illative: "{0} desilitraan"
+        one_partitive: "{0} desilitraa"
+        other: "{0} desilitraa"
+        other_elative: "{0} desilitrasta"
+        other_genitive: "{0} desilitran"
+        other_illative: "{0} desilitraan"
+        other_partitive: "{0} desilitraa"
+      short:
+        display_name: dl
+        one: "{0} dl"
+        other: "{0} dl"
+      narrow:
+        one: "{0}dl"
+        other: "{0}dl"
+    centiliter:
+      long:
+        display_name: senttilitrat
+        one: "{0} senttilitra"
+        one_elative: "{0} senttilitrasta"
+        one_genitive: "{0} senttilitran"
+        one_illative: "{0} senttilitraan"
+        one_partitive: "{0} senttilitraa"
+        other: "{0} senttilitraa"
+        other_elative: "{0} senttilitrasta"
+        other_genitive: "{0} senttilitran"
+        other_illative: "{0} senttilitraan"
+        other_partitive: "{0} senttilitraa"
+      short:
+        display_name: cl
+        one: "{0} cl"
+        other: "{0} cl"
+      narrow:
+        one: "{0}cl"
+        other: "{0}cl"
+    milliliter:
+      long:
+        display_name: millilitrat
+        one: "{0} millilitra"
+        one_elative: "{0} millilitrasta"
+        one_genitive: "{0} millilitran"
+        one_illative: "{0} millilitraan"
+        one_partitive: "{0} millilitraa"
+        other: "{0} millilitraa"
+        other_elative: "{0} millilitrasta"
+        other_genitive: "{0} millilitran"
+        other_illative: "{0} millilitraan"
+        other_partitive: "{0} millilitraa"
+      short:
+        display_name: ml
+        one: "{0} ml"
+        other: "{0} ml"
+      narrow:
+        one: "{0}ml"
+        other: "{0}ml"
+    pint-metric:
+      long:
+        display_name: tuopit
+        one: "{0} tuoppi"
+        one_elative: "{0} tuopista"
+        one_genitive: "{0} tuopin"
+        one_illative: "{0} tuoppiin"
+        one_partitive: "{0} tuoppia"
+        other: "{0} tuoppia"
+        other_elative: "{0} tuopista"
+        other_genitive: "{0} tuopin"
+        other_illative: "{0} tuoppiin"
+        other_partitive: "{0} tuoppia"
+      short:
+        display_name: tp
+        one: "{0} tp"
+        other: "{0} tp"
+      narrow:
+        one: "{0}tp"
+        other: "{0}tp"
+    cup-metric:
+      long:
+        display_name: teekupit
+        one: "{0} teekuppi"
+        one_elative: "{0} teekupista"
+        one_genitive: "{0} teekupin"
+        one_illative: "{0} teekuppiin"
+        one_partitive: "{0} teekuppia"
+        other: "{0} teekuppia"
+        other_elative: "{0} teekupista"
+        other_genitive: "{0} teekupin"
+        other_illative: "{0} teekuppiin"
+        other_partitive: "{0} teekuppia"
+      short:
+        display_name: tkp
+        one: "{0} tkp"
+        other: "{0} tkp"
+      narrow:
+        one: "{0}tkp"
+        other: "{0}tkp"
+    acre-foot:
+      long:
+        display_name: eekkerijalat
+        one: "{0} eekkerijalka"
+        other: "{0} eekkerijalkaa"
+      narrow:
+        one: "{0}ac ft"
+        other: "{0}ac ft"
+    bushel:
+      long:
+        display_name: bushelit
+        one: "{0} busheli"
+        other: "{0} bushelia"
+      narrow:
+        one: "{0}bu"
+        other: "{0}bu"
+    gallon:
+      long:
+        display_name: am. gallonat
+        one: "{0} am. gallona"
+        other: "{0} am. gallonaa"
+        per_unit_pattern: "{0} / am. gallona"
+      short:
+        display_name: am. gal
+        one: "{0} am. gal"
+        other: "{0} am. gal"
+        per_unit_pattern: "{0}/am. gal"
+      narrow:
+        display_name: am.gal
+        one: "{0}am.gal"
+        other: "{0}am.gal"
+        per_unit_pattern: "{0}/am.gal"
+    gallon-imperial:
+      long:
+        display_name: br. gallonat
+        one: "{0} br. gallona"
+        other: "{0} br. gallonaa"
+        per_unit_pattern: "{0} / br. gallona"
+      short:
+        display_name: br. gal
+        one: "{0} br. gal"
+        other: "{0} br. gal"
+        per_unit_pattern: "{0}/br. gal"
+      narrow:
+        display_name: br.gal
+        one: "{0}br.gal"
+        other: "{0}br.gal"
+        per_unit_pattern: "{0}/br.gal"
+    quart:
+      long:
+        display_name: neljännesgallonat
+        one: "{0} neljännesgallona"
+        other: "{0} neljännesgallonaa"
+      narrow:
+        one: "{0}qt"
+        other: "{0}qt"
+    pint:
+      long:
+        display_name: pintit
+        one: "{0} pint"
+        other: "{0} pinttiä"
+      narrow:
+        one: "{0}pt"
+        other: "{0}pt"
+    cup:
+      long:
+        display_name: kupit
+        one: "{0} kuppi"
+        other: "{0} kuppia"
+      short:
+        display_name: kp
+        one: "{0} kp"
+        other: "{0} kp"
+      narrow:
+        one: "{0}kp"
+        other: "{0}kp"
+    fluid-ounce:
+      long:
+        display_name: nesteunssit
+        one: "{0} nesteunssi"
+        other: "{0} nesteunssia"
+      short:
+        display_name: fl oz
+        one: "{0} fl oz"
+        other: "{0} fl oz"
+      narrow:
+        one: "{0}fl oz"
+        other: "{0}fl oz"
+    fluid-ounce-imperial:
+      long:
+        display_name: br. nesteunssit
+        one: "{0} br. nesteunssi"
+        other: "{0} br. nesteunssia"
+      short:
+        display_name: br. nesteunssi
+        one: "{0} fl oz br."
+        other: "{0} fl oz br."
+      narrow:
+        one: "{0}fl oz br."
+        other: "{0}fl oz br."
+    tablespoon:
+      long:
+        display_name: ruokalusikat
+        one: "{0} ruokalusikka"
+        other: "{0} ruokalusikkaa"
+      short:
+        display_name: rkl
+        one: "{0} rkl"
+        other: "{0} rkl"
+      narrow:
+        one: "{0}rkl"
+        other: "{0}rkl"
+    teaspoon:
+      long:
+        display_name: teelusikat
+        one: "{0} teelusikka"
+        other: "{0} teelusikkaa"
+      short:
+        display_name: tl
+        one: "{0} tl"
+        other: "{0} tl"
+      narrow:
+        one: "{0}tl"
+        other: "{0}tl"
+    barrel:
+      long:
+        one: "{0} barreli"
+        other: "{0} barrelia"
+      short:
+        display_name: barrelit
+      narrow:
+        display_name: bbl
+        one: "{0}bbl"
+        other: "{0}bbl"
+    dessert-spoon:
+      long:
+        display_name: jälkiruokalusikat
+        one: "{0} jälkiruokalusikka"
+        other: "{0} jälkiruokalusikkaa"
+      short:
+        display_name: jrkl
+        one: "{0} jrkl"
+        other: "{0} jrkl"
+      narrow:
+        one: "{0}jrkl"
+        other: "{0}jrkl"
+    dessert-spoon-imperial:
+      long:
+        display_name: br. jälkiruokalusikat
+        one: "{0} br. jälkiruokalusikka"
+        other: "{0} br. jälkiruokalusikkaa"
+      short:
+        display_name: br. jrkl
+        one: "{0} br. jrkl"
+        other: "{0} br. jrkl"
+    quart-imperial:
+      long:
+        display_name: br. neljännesgallonat
+        one: "{0} br. neljännesgallona"
+        other: "{0} br. neljännesgallonaa"
+      short:
+        display_name: qt br
+        one: "{0} qt br."
+        other: "{0} qt br."
+      narrow:
+        one: "{0}qt br."
+        other: "{0}qt br."
+    portion-per-1e9:
+      long:
+        display_name: miljardisosat
+        one: "{0} miljardisosa"
+        one_elative: "{0} miljardisosasta"
+        one_genitive: "{0} miljardisosan"
+        one_illative: "{0} miljardisosaan"
+        one_partitive: "{0} miljardisosaa"
+        other: "{0} miljardisosaa"
+        other_elative: "{0} miljardisosasta"
+        other_genitive: "{0} miljardisosan"
+        other_illative: "{0} miljardisosaan"
+        other_partitive: "{0} miljardisosaa"
+    night:
+      long:
+        display_name: yöt
+        one: "{0} yö"
+        one_elative: "{0} yöstä"
+        one_genitive: "{0} yön"
+        one_illative: "{0} yöhön"
+        one_partitive: "{0} yötä"
+        other: "{0} yötä"
+        other_elative: "{0} yöstä"
+        other_genitive: "{0} yön"
+        other_illative: "{0} yöhön"
+        other_partitive: "{0} yötä"
+        per_unit_pattern: "{0} / yö"
+      short:
+        display_name: yöt
+        one: "{0} yö"
+        other: "{0} yö"
+        per_unit_pattern: "{0}/yö"
+      narrow:
+        display_name: yöt
+        one: "{0}yö"
+        other: "{0}yöt"
+        per_unit_pattern: "{0}/yö"
+    dunam:
+      short:
+        display_name: dunamit
+        one: "{0} dunam"
+        other: "{0} dunamia"
+      narrow:
+        one: "{0}dunam"
+        other: "{0}dunam"
+    dot:
+      short:
+        display_name: pisteet
+        one: "{0} piste"
+        other: "{0} pistettä"
+      narrow:
+        display_name: piste
+        one: "{0}piste"
+        other: "{0}pistettä"
+    grain:
+      short:
+        display_name: graanit
+        one: "{0} graani"
+        other: "{0} graania"
+      narrow:
+        one: "{0}graani"
+        other: "{0}graania"
+    drop:
+      short:
+        display_name: tipat
+        one: "{0} tippa"
+        other: "{0} tippaa"
+      narrow:
+        display_name: gtt
+        one: "{0}gtt"
+        other: "{0}gtt"
+    dram:
+      short:
+        display_name: dramit
+        one: "{0} dram"
+        other: "{0} dramia"
+      narrow:
+        one: "{0}dram"
+        other: "{0}dramia"
+    jigger:
+      short:
+        display_name: jiggerit
+        one: "{0} jigger"
+        other: "{0} jiggeriä"
+      narrow:
+        one: "{0}jigger"
+        other: "{0}jiggeriä"
+    pinch:
+      short:
+        display_name: ripaus
+        one: "{0} ripaus"
+        other: "{0} ripausta"
+      narrow:
+        one: "{0}ripaus"
+        other: "{0}ripausta"
+    therm-us:
+      narrow:
+        one: "{0}US therm"
+        other: "{0}US therm"
+    point:
+      narrow:
+        one: "{0}pt"
+        other: "{0}pt"

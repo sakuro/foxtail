@@ -1,14 +1,24 @@
 ---
 locale: lu
-generated_at: '2025-09-13T17:38:52Z'
+generated_at: '2025-09-14T06:11:03Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: "."
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Ndiriha wa Lemila alabu
+        one: Ndiriha wa Lemila alabu
     AOA:
       display_names:
         other: Kwanza wa Angola
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: Ndola wa Ositali
         one: Ndola wa Ositali
-    BWP:
-      display_names:
-        other: Pula wa Botswana
-        one: Pula wa Botswana
-    CAD:
-      display_names:
-        other: Ndola wa Kanada
-        one: Ndola wa Kanada
-    CNY:
-      display_names:
-        other: Yuani Renminbi wa Shine
-        one: Yuani Renminbi wa Shine
-    EGP:
-      display_names:
-        other: Pauni wa Mushidi
-        one: Pauni wa Mushidi
-    EUR:
-      display_names:
-        other: Iro
-        one: Iro
-    GBP:
-      display_names:
-        other: Pauni wa Angeletele
-        one: Pauni wa Angeletele
-    INR:
-      display_names:
-        other: Rupi wa Inde
-        one: Rupi wa Inde
-    JPY:
-      display_names:
-        other: Yeni wa Zapɔ
-        one: Yeni wa Zapɔ
-    KMF:
-      display_names:
-        other: Nfalanga wa Komoru
-        one: Nfalanga wa Komoru
-    LRD:
-      display_names:
-        other: Ndola wa Liberya
-        one: Ndola wa Liberya
-    MGA:
-      display_names:
-        other: Nfalanga wa Madagasikare
-        one: Nfalanga wa Madagasikare
-    MUR:
-      display_names:
-        other: Rupia wa Morisi
-        one: Rupia wa Morisi
-    NAD:
-      display_names:
-        other: Ndola wa Namibi
-        one: Ndola wa Namibi
-    NGN:
-      display_names:
-        other: Naira wa Nizerya
-        one: Naira wa Nizerya
-    RWF:
-      display_names:
-        other: Nfalanga wa Rwanda
-        one: Nfalanga wa Rwanda
-    SHP:
-      display_names:
-        other: Pauni wa Santu Elena
-        one: Pauni wa Santu Elena
-    STN:
-      display_names:
-        other: Dobra wa Sao Tome ne Presipe
-        one: Dobra wa Sao Tome ne Presipe
-    USD:
-      display_names:
-        other: Ndola wa Ameriki
-        one: Ndola wa Ameriki
-    XAF:
-      display_names:
-        other: Nfalanga CFA BEAC
-        one: Nfalanga CFA BEAC
-    XOF:
-      display_names:
-        other: Nfalanga CFA BCEAO
-        one: Nfalanga CFA BCEAO
-    ZAR:
-      display_names:
-        other: Rande wa Afrika wa Mwinshi
-        one: Rande wa Afrika wa Mwinshi
-    ZMW:
-      display_names:
-        other: Kwasha wa Zambi
-        one: Kwasha wa Zambi
-    AED:
-      display_names:
-        other: Ndiriha wa Lemila alabu
-        one: Ndiriha wa Lemila alabu
     BHD:
       display_names:
         other: Ndina wa Bahrene
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: Nfalanga wa Bulundi
         one: Nfalanga wa Bulundi
+    BWP:
+      display_names:
+        other: Pula wa Botswana
+        one: Pula wa Botswana
+    CAD:
+      display_names:
+        other: Ndola wa Kanada
+        one: Ndola wa Kanada
     CDF:
       symbol: FC
       display_names:
@@ -126,6 +52,10 @@ number_formats:
       display_names:
         other: Nfalanga wa Swise
         one: Nfalanga wa Swise
+    CNY:
+      display_names:
+        other: Yuani Renminbi wa Shine
+        one: Yuani Renminbi wa Shine
     CVE:
       display_names:
         other: Esikuludo wa Kapevere
@@ -138,6 +68,10 @@ number_formats:
       display_names:
         other: Ndina wa Alijeri
         one: Ndina wa Alijeri
+    EGP:
+      display_names:
+        other: Pauni wa Mushidi
+        one: Pauni wa Mushidi
     ERN:
       display_names:
         other: Nakfa wa Elitle
@@ -146,6 +80,14 @@ number_formats:
       display_names:
         other: Bira wa Etshiopi
         one: Bira wa Etshiopi
+    EUR:
+      display_names:
+        other: Iro
+        one: Iro
+    GBP:
+      display_names:
+        other: Pauni wa Angeletele
+        one: Pauni wa Angeletele
     GHC:
       display_names:
         other: Sedi wa Ngana
@@ -158,10 +100,26 @@ number_formats:
       display_names:
         other: Nfalanga wa Ngina
         one: Nfalanga wa Ngina
+    INR:
+      display_names:
+        other: Rupi wa Inde
+        one: Rupi wa Inde
+    JPY:
+      display_names:
+        other: Yeni wa Zapɔ
+        one: Yeni wa Zapɔ
     KES:
       display_names:
         other: Nshili wa Kenya
         one: Nshili wa Kenya
+    KMF:
+      display_names:
+        other: Nfalanga wa Komoru
+        one: Nfalanga wa Komoru
+    LRD:
+      display_names:
+        other: Ndola wa Liberya
+        one: Ndola wa Liberya
     LSL:
       display_names:
         other: Loti wa Lesoto
@@ -174,6 +132,10 @@ number_formats:
       display_names:
         other: Ndiriha wa Maroke
         one: Ndiriha wa Maroke
+    MGA:
+      display_names:
+        other: Nfalanga wa Madagasikare
+        one: Nfalanga wa Madagasikare
     MRO:
       display_names:
         other: Ugwiya wa Moritani (1973–2017)
@@ -182,6 +144,10 @@ number_formats:
       display_names:
         other: Ugwiya wa Moritani
         one: Ugwiya wa Moritani
+    MUR:
+      display_names:
+        other: Rupia wa Morisi
+        one: Rupia wa Morisi
     MWK:
       display_names:
         other: Kwasha wa Malawi
@@ -190,6 +156,18 @@ number_formats:
       display_names:
         other: Metikali wa Mozambiki
         one: Metikali wa Mozambiki
+    NAD:
+      display_names:
+        other: Ndola wa Namibi
+        one: Ndola wa Namibi
+    NGN:
+      display_names:
+        other: Naira wa Nizerya
+        one: Naira wa Nizerya
+    RWF:
+      display_names:
+        other: Nfalanga wa Rwanda
+        one: Nfalanga wa Rwanda
     SAR:
       display_names:
         other: Riyale wa Alabu Nsawu
@@ -206,6 +184,10 @@ number_formats:
       display_names:
         other: Pauni wa Suda
         one: Pauni wa Suda
+    SHP:
+      display_names:
+        other: Pauni wa Santu Elena
+        one: Pauni wa Santu Elena
     SLE:
       display_names:
         other: Leone
@@ -222,6 +204,10 @@ number_formats:
       display_names:
         other: Dobra wa Sao Tome ne Presipe (1977–2017)
         one: Dobra wa Sao Tome ne Presipe (1977–2017)
+    STN:
+      display_names:
+        other: Dobra wa Sao Tome ne Presipe
+        one: Dobra wa Sao Tome ne Presipe
     SZL:
       display_names:
         other: Lilangeni
@@ -238,10 +224,30 @@ number_formats:
       display_names:
         other: Nshili wa Uganda
         one: Nshili wa Uganda
+    USD:
+      display_names:
+        other: Ndola wa Ameriki
+        one: Ndola wa Ameriki
+    XAF:
+      display_names:
+        other: Nfalanga CFA BEAC
+        one: Nfalanga CFA BEAC
+    XOF:
+      display_names:
+        other: Nfalanga CFA BCEAO
+        one: Nfalanga CFA BCEAO
+    ZAR:
+      display_names:
+        other: Rande wa Afrika wa Mwinshi
+        one: Rande wa Afrika wa Mwinshi
     ZMK:
       display_names:
         other: Kwasha wa Zambi (1968–2012)
         one: Kwasha wa Zambi (1968–2012)
+    ZMW:
+      display_names:
+        other: Kwasha wa Zambi
+        one: Kwasha wa Zambi
     ZWD:
       display_names:
         other: Ndola wa Zimbabwe

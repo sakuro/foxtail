@@ -94,25 +94,6 @@ module Foxtail
           formats
         end
 
-        private def apply_fallback_symbols(symbols)
-          # Default symbols from root locale when not specified
-          fallback_symbols = {
-            "decimal" => ".",
-            "group" => ",",
-            "minus_sign" => "-",
-            "plus_sign" => "+",
-            "percent_sign" => "%",
-            "per_mille" => "‰",
-            "exponential" => "E",
-            "infinity" => "∞",
-            "nan" => "NaN"
-          }
-
-          fallback_symbols.each do |key, symbol|
-            symbols[key] = symbol if symbols[key].nil? || symbols[key].empty?
-          end
-        end
-
         private def extract_currency_fractions
           # Currency fractions come from supplemental data, not individual locale files
           # We need to read from supplemental/supplementalData.xml
@@ -151,9 +132,23 @@ module Foxtail
           currency_formats = {"standard" => formats["currency"]}
 
           # Check for accounting pattern
-          xpath = "ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat[@type='accounting']/pattern[not(@type)]"
-          accounting_element = xml_doc.elements[xpath]
-          currency_formats["accounting"] = accounting_element.text if accounting_element
+          xpath = "ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat[@type='accounting']"
+          accounting_format = xml_doc.elements[xpath]
+
+          if accounting_format
+            # Check for direct pattern
+            pattern_element = accounting_format.elements["pattern[not(@type)]"]
+            if pattern_element
+              currency_formats["accounting"] = pattern_element.text
+            else
+              # Check for alias
+              alias_element = accounting_format.elements["alias"]
+              if alias_element && alias_element.attributes["path"] == "../currencyFormat[@type='standard']" && formats["currency"]
+                # Resolve alias: accounting -> standard
+                currency_formats["accounting"] = formats["currency"]
+              end
+            end
+          end
 
           currency_formats
         end

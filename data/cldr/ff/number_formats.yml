@@ -1,14 +1,24 @@
 ---
 locale: ff
-generated_at: '2025-09-13T17:36:49Z'
+generated_at: '2025-09-14T06:09:42Z'
 cldr_version: '46'
 number_formats:
   symbols:
     decimal: ","
     group: " "
+  decimal_formats:
+    standard: 
+  percent_formats:
+    standard: 
   currency_formats:
     standard: "#,##0.00 ¤"
+  scientific_formats:
+    standard: 
   currencies:
+    AED:
+      display_names:
+        other: Dirham Emiraati Araab Dentuɗi
+        one: Dirham Emiraati Araab Dentuɗi
     AOA:
       display_names:
         other: Kwansaa Anngolaa
@@ -17,98 +27,6 @@ number_formats:
       display_names:
         other: Dolaar Ostaraalii
         one: Dolaar Ostaraalii
-    BWP:
-      display_names:
-        other: Pulaa Botwanaa
-        one: Pulaa Botwanaa
-    CAD:
-      display_names:
-        other: Dolaar Kandaaa
-        one: Dolaar Kandaaa
-    CNY:
-      display_names:
-        other: Yuam Siin
-        one: Yuam Siin
-    EGP:
-      display_names:
-        other: Liibar Ejipt
-        one: Liibar Ejipt
-    EUR:
-      display_names:
-        other: Oroo
-        one: Oroo
-    GBP:
-      display_names:
-        other: Liibar Sterling
-        one: Liibar Sterling
-    INR:
-      display_names:
-        other: Rupii Enndo
-        one: Rupii Enndo
-    JPY:
-      display_names:
-        other: Yen Sapoo
-        one: Yen Sapoo
-    KMF:
-      display_names:
-        other: Faraa Komoor
-        one: Faraa Komoor
-    LRD:
-      display_names:
-        other: Dolaar Liberiyaa
-        one: Dolaar Liberiyaa
-    MGA:
-      display_names:
-        other: Ariyari Madagaskaar
-        one: Ariyari Madagaskaar
-    MUR:
-      display_names:
-        other: Rupii Moriis
-        one: Rupii Moriis
-    NAD:
-      display_names:
-        other: Dolaar Namibii
-        one: Dolaar Namibii
-    NGN:
-      display_names:
-        other: Nayraa Nijeriyaa
-        one: Nayraa Nijeriyaa
-    RWF:
-      display_names:
-        other: Faraa Ruwanndaa
-        one: Faraa Ruwanndaa
-    SHP:
-      display_names:
-        other: Liibar Sent Helen
-        one: Liibar Sent Helen
-    STN:
-      display_names:
-        other: Dobra Sawo Tome e Prensipe
-        one: Dobra Sawo Tome e Prensipe
-    USD:
-      display_names:
-        other: Dolaar Dowlaaji Dentuɗi
-        one: Dolaar Dowlaaji Dentuɗi
-    XAF:
-      display_names:
-        other: Mbuuɗi Seefaa BEAC
-        one: Mbuuɗi Seefaa BEAC
-    XOF:
-      display_names:
-        other: Mbuuɗu Seefaa BCEAO
-        one: Mbuuɗu Seefaa BCEAO
-    ZAR:
-      display_names:
-        other: Rannda Afrik Bŋ Worgo
-        one: Rannda Afrik Bŋ Worgo
-    ZMW:
-      display_names:
-        other: Kuwacca Sammbi
-        one: Kuwacca Sammbi
-    AED:
-      display_names:
-        other: Dirham Emiraati Araab Dentuɗi
-        one: Dirham Emiraati Araab Dentuɗi
     BHD:
       display_names:
         other: Dinaar Bahrayn
@@ -117,6 +35,14 @@ number_formats:
       display_names:
         other: Mbuuɗu Burunndi
         one: Mbuuɗu Burunndi
+    BWP:
+      display_names:
+        other: Pulaa Botwanaa
+        one: Pulaa Botwanaa
+    CAD:
+      display_names:
+        other: Dolaar Kandaaa
+        one: Dolaar Kandaaa
     CDF:
       display_names:
         other: Faraa Konngo
@@ -125,6 +51,10 @@ number_formats:
       display_names:
         other: Faraa Suwiis
         one: Faraa Suwiis
+    CNY:
+      display_names:
+        other: Yuam Siin
+        one: Yuam Siin
     CVE:
       display_names:
         other: Eskudoo Kap Weer
@@ -137,6 +67,10 @@ number_formats:
       display_names:
         other: Dinaar Alaseri
         one: Dinaar Alaseri
+    EGP:
+      display_names:
+        other: Liibar Ejipt
+        one: Liibar Ejipt
     ERN:
       display_names:
         other: Nafka Eriteree
@@ -145,6 +79,14 @@ number_formats:
       display_names:
         other: Biir Ecoppi
         one: Biir Ecoppi
+    EUR:
+      display_names:
+        other: Oroo
+        one: Oroo
+    GBP:
+      display_names:
+        other: Liibar Sterling
+        one: Liibar Sterling
     GHC:
       display_names:
         other: Sedi Ganaa
@@ -157,10 +99,26 @@ number_formats:
       display_names:
         other: Faraa Gine
         one: Faraa Gine
+    INR:
+      display_names:
+        other: Rupii Enndo
+        one: Rupii Enndo
+    JPY:
+      display_names:
+        other: Yen Sapoo
+        one: Yen Sapoo
     KES:
       display_names:
         other: Siling Keñaa
         one: Siling Keñaa
+    KMF:
+      display_names:
+        other: Faraa Komoor
+        one: Faraa Komoor
+    LRD:
+      display_names:
+        other: Dolaar Liberiyaa
+        one: Dolaar Liberiyaa
     LSL:
       display_names:
         other: Loti Lesotoo
@@ -173,6 +131,10 @@ number_formats:
       display_names:
         other: Diraham Maruk
         one: Diraham Maruk
+    MGA:
+      display_names:
+        other: Ariyari Madagaskaar
+        one: Ariyari Madagaskaar
     MRO:
       display_names:
         other: Ugiyya Muritani (1973–2017)
@@ -181,6 +143,10 @@ number_formats:
       display_names:
         other: Ugiyya Muritani
         one: Ugiyya Muritani
+    MUR:
+      display_names:
+        other: Rupii Moriis
+        one: Rupii Moriis
     MWK:
       display_names:
         other: Kuwacca Malaawi
@@ -189,6 +155,18 @@ number_formats:
       display_names:
         other: Metikal Mosammbik
         one: Metikal Mosammbik
+    NAD:
+      display_names:
+        other: Dolaar Namibii
+        one: Dolaar Namibii
+    NGN:
+      display_names:
+        other: Nayraa Nijeriyaa
+        one: Nayraa Nijeriyaa
+    RWF:
+      display_names:
+        other: Faraa Ruwanndaa
+        one: Faraa Ruwanndaa
     SAR:
       display_names:
         other: Riyaal Arabi Sawdit
@@ -201,6 +179,10 @@ number_formats:
       display_names:
         other: Liibar Sudaan
         one: Liibar Sudaan
+    SHP:
+      display_names:
+        other: Liibar Sent Helen
+        one: Liibar Sent Helen
     SLE:
       display_names:
         other: Lewoon Seraa Liyon
@@ -217,6 +199,10 @@ number_formats:
       display_names:
         other: Dobra Sawo Tome e Prensipe (1977–2017)
         one: Dobra Sawo Tome e Prensipe (1977–2017)
+    STN:
+      display_names:
+        other: Dobra Sawo Tome e Prensipe
+        one: Dobra Sawo Tome e Prensipe
     SZL:
       display_names:
         other: Lilangeni Swaasilannda
@@ -233,10 +219,30 @@ number_formats:
       display_names:
         other: Siling Uganndaa
         one: Siling Uganndaa
+    USD:
+      display_names:
+        other: Dolaar Dowlaaji Dentuɗi
+        one: Dolaar Dowlaaji Dentuɗi
+    XAF:
+      display_names:
+        other: Mbuuɗi Seefaa BEAC
+        one: Mbuuɗi Seefaa BEAC
+    XOF:
+      display_names:
+        other: Mbuuɗu Seefaa BCEAO
+        one: Mbuuɗu Seefaa BCEAO
+    ZAR:
+      display_names:
+        other: Rannda Afrik Bŋ Worgo
+        one: Rannda Afrik Bŋ Worgo
     ZMK:
       display_names:
         other: Kuwacca Sammbi (1968–2012)
         one: Kuwacca Sammbi (1968–2012)
+    ZMW:
+      display_names:
+        other: Kuwacca Sammbi
+        one: Kuwacca Sammbi
     ZWD:
       display_names:
         other: Dolaar Simbaabuwe
