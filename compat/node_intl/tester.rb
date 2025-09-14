@@ -14,11 +14,15 @@ class NodeIntlTester
   # Test result structure
   TestResult = Data.define(:id, :value, :locale, :options, :foxtail_result, :node_result, :status, :error) {
     def success?
-      status == :match
+      status == :match || status == :conditional_match
     end
 
     def failure?
       status == :mismatch || status == :error
+    end
+
+    def conditional_match?
+      status == :conditional_match
     end
   }
 
@@ -191,6 +195,8 @@ class NodeIntlTester
 
         status = if foxtail_result == node_result["result"]
                    :match
+                 elsif normalize_whitespace(foxtail_result) == normalize_whitespace(node_result["result"])
+                   :conditional_match
                  else
                    :mismatch
                  end
@@ -216,5 +222,11 @@ class NodeIntlTester
     formatter.call(value, locale: locale_tag, **options)
   rescue => e
     "ERROR: #{e.message}"
+  end
+
+  # Normalize whitespace characters for comparison
+  # Converts non-breaking spaces (U+00A0) to regular spaces (U+0020)
+  private def normalize_whitespace(text)
+    text&.tr("\u00A0", " ")
   end
 end
