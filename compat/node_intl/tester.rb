@@ -104,12 +104,30 @@ class NodeIntlTester
                                      "USD"
                                    end
             when "unit"
-              options[:unit] = "kilometer"
+              # Test multiple basic units and compound units
+              case test_values.index(value) % 6
+              when 0
+                options[:unit] = "kilometer"
+              when 1
+                options[:unit] = "meter"
+              when 2
+                options[:unit] = "gram"
+              when 3
+                options[:unit] = "liter"
+              when 4
+                options[:unit] = "celsius"
+              when 5
+                options[:unit] = "kilometer-per-hour"
+              end
               options[:unitDisplay] = "short"
             end
 
             # Generate unique ID
             id_parts = [style, notation, locale.tr("-", "_"), value.to_s.gsub("-", "neg").tr(".", "_")]
+            # Add unit name to ID for unit style
+            if style == "unit" && options[:unit]
+              id_parts << options[:unit].tr("-", "_")
+            end
             id = id_parts.join("_")
 
             @test_cases << {

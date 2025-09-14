@@ -173,6 +173,64 @@ module Foxtail
           }
         end
 
+        # Get unit pattern for a given unit and display style
+        def unit_pattern(unit_name, unit_display="short", count="other")
+          unit_data = @resolver.resolve("number_formats.units.#{unit_name}", "number_formats")
+          return nil unless unit_data
+
+          # Try requested display type first
+          display_data = unit_data[unit_display]
+          if display_data
+            pattern = display_data[count] ||
+                      display_data["other"] ||
+                      display_data["one"]
+            return pattern if pattern&.include?("{0}")
+          end
+
+          # Fallback to other display types if requested one not available
+          fallback_types = case unit_display
+                           when "short" then %w[narrow long]
+                           when "narrow" then %w[short long]
+                           when "long" then %w[short narrow]
+                           else %w[short narrow long]
+                           end
+
+          fallback_types.each do |fallback_type|
+            fallback_data = unit_data[fallback_type]
+            next unless fallback_data
+
+            pattern = fallback_data[count] ||
+                      fallback_data["other"] ||
+                      fallback_data["one"]
+            return pattern if pattern&.include?("{0}")
+          end
+
+          nil
+        end
+
+        # Get unit display name
+        def unit_display_name(unit_name, unit_display="short")
+          unit_data = @resolver.resolve("number_formats.units.#{unit_name}", "number_formats")
+          return nil unless unit_data
+
+          display_data = unit_data[unit_display]
+          return nil unless display_data
+
+          display_data["display_name"]
+        end
+
+        # Get all available units
+        def available_units
+          units = @resolver.resolve("number_formats.units", "number_formats")
+          units&.keys || []
+        end
+
+        # Check if a unit exists
+        def unit_exists?(unit_name)
+          unit_data = @resolver.resolve("number_formats.units.#{unit_name}", "number_formats")
+          !unit_data.nil?
+        end
+
         private def default_decimal_pattern
           "#,##0.###"
         end
