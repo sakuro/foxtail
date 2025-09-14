@@ -21,7 +21,7 @@ module Foxtail
       class PluralRules < Base
         def initialize(locale)
           super
-          @resolver = Resolver.new(@locale.to_simple.to_s)
+          @resolver = Resolver.new(@locale)
         end
 
         # Select appropriate plural category for the given number

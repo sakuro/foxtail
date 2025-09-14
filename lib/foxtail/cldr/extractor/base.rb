@@ -125,8 +125,8 @@ module Foxtail
           raise ArgumentError, "CLDR source directory not found: #{locales_dir}"
         end
 
-        private def parent_locales
-          @parent_locales ||= @inheritance.load_parent_locales(@output_dir)
+        private def parent_locale_ids
+          @parent_locale_ids ||= @inheritance.load_parent_locale_ids(@output_dir)
         end
 
         private def load_raw_locale_data(locale_id)
@@ -146,8 +146,8 @@ module Foxtail
           return nil if locale_id == "root"
 
           # Check explicit parent mappings first
-          if parent_locales[locale_id]
-            parent_locales[locale_id]
+          if parent_locale_ids[locale_id]
+            parent_locale_ids[locale_id]
           else
             # Use algorithmic parent resolution
             chain = @inheritance.resolve_inheritance_chain(locale_id)
