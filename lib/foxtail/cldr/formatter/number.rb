@@ -647,10 +647,11 @@ module Foxtail
             original_negative = options[:original_was_negative] || false
 
             if decimal_value.abs < 1 && decimal_value.abs > 0
-              # For small decimal values, use Node.js compact notation defaults
+              # For small decimal values, use CLDR pattern with proper locale symbols
               significant_digits = number_formats.compact_decimal_significant_digits
-              format_spec = "%.#{significant_digits[:maximum]}g"
-              formatted = format_spec % decimal_value.abs
+              # Create a pattern with appropriate decimal places (e.g., "0.##" for maximum 2 digits)
+              decimal_pattern = "0.#{"#" * significant_digits[:maximum]}"
+              formatted = format_decimal_with_locale_symbols(decimal_value.abs, decimal_pattern, number_formats, significant_digits[:maximum])
             else
               # For integer values, round first then format
               # Apply rounding to original signed value for correct result
@@ -672,7 +673,7 @@ module Foxtail
           end
 
           # Apply the pattern (handles positive value)
-          formatted_number = apply_compact_pattern(decimal_value.abs, compact_info)
+          formatted_number = apply_compact_pattern(decimal_value.abs, compact_info, number_formats)
 
           # Preserve original sign using passed option
           original_negative = options[:original_was_negative] || false
@@ -725,7 +726,7 @@ module Foxtail
         end
 
         # Apply CLDR compact pattern (e.g., "0万", "0K") to format the number
-        private def apply_compact_pattern(decimal_value, compact_info)
+        private def apply_compact_pattern(decimal_value, compact_info, number_formats)
           # NOTE: decimal_value should already be positive (abs applied by caller)
           scaled_value = decimal_value / BigDecimal(compact_info[:divisor])
           pattern = compact_info[:pattern]
@@ -741,7 +742,7 @@ module Foxtail
           # Format number based on the pattern's zero count
           formatted_number = if zero_count == 1
                                # Pattern like "0K" - show 1 significant digit with decimal if needed
-                               format_compact_single_digit(scaled_value)
+                               format_compact_single_digit(scaled_value, number_formats)
                              else
                                # Pattern like "00K", "000K" - show integer with appropriate digits
                                format_compact_multiple_digits(scaled_value, zero_count)
@@ -782,13 +783,19 @@ module Foxtail
         end
 
         # Format scaled value for single-digit compact patterns (e.g., "0K")
-        private def format_compact_single_digit(scaled_value)
+        private def format_compact_single_digit(scaled_value, number_formats=nil)
           if scaled_value >= 10
             scaled_value.round.to_s
           elsif scaled_value.round(1) == scaled_value.round(0)
             scaled_value.round(0).to_s
           else
-            scaled_value.round(1).to_s("F")
+            formatted = scaled_value.round(1).to_s("F")
+            # Replace English decimal separator with locale-specific one
+            if number_formats
+              formatted.gsub(".", number_formats.decimal_symbol)
+            else
+              formatted
+            end
           end
         end
 
@@ -913,6 +920,16 @@ module Foxtail
           else
             formatted_number
           end
+        end
+
+        # Format decimal number with proper locale symbols for compact notation
+        private def format_decimal_with_locale_symbols(decimal_value, _pattern, number_formats, max_digits)
+          # Use Ruby's sprintf-style formatting with 'g' to get the right precision
+          format_spec = "%.#{max_digits}g"
+          formatted = format_spec % decimal_value
+
+          # Replace the English '.' with the locale's decimal symbol
+          formatted.gsub(".", number_formats.decimal_symbol)
         end
 
         private def apply_style_pattern_to_compact_result(formatted_number, pattern, style_symbol, _number_formats)
