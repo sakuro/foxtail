@@ -701,8 +701,13 @@ module Foxtail
           scaled_value = Float(decimal_value) / compact_info[:divisor]
           pattern = compact_info[:pattern]
 
-          # Count zeros in pattern to determine how many digits to show
-          zero_count = pattern.count("0")
+          # Parse pattern into tokens
+          parser = Foxtail::CLDR::PatternParser::Number.new
+          tokens = parser.parse(pattern)
+
+          # Count digit tokens to determine how many digits to show
+          digit_tokens = tokens.select { |t| t.is_a?(Foxtail::CLDR::PatternParser::Number::DigitToken) }
+          zero_count = digit_tokens.sum(&:digit_count)
 
           # Format number based on the pattern's zero count
           formatted_number = if zero_count == 1
@@ -713,8 +718,37 @@ module Foxtail
                                format_compact_multiple_digits(scaled_value, zero_count)
                              end
 
-          # Replace zeros in pattern with formatted number
-          pattern.sub(/0+/, formatted_number)
+          # Replace digit tokens with formatted number
+          apply_compact_pattern_using_tokens(tokens, formatted_number)
+        end
+
+        private def apply_compact_pattern_using_tokens(tokens, formatted_number)
+          result_parts = []
+          number_inserted = false
+
+          tokens.each do |token|
+            case token
+            when Foxtail::CLDR::PatternParser::Number::DigitToken
+              # Replace digit tokens with formatted number (only once)
+              unless number_inserted
+                result_parts << formatted_number
+                number_inserted = true
+              end
+            when Foxtail::CLDR::PatternParser::Number::LiteralToken,
+                 Foxtail::CLDR::PatternParser::Number::QuotedToken
+              # Keep literal tokens (including unit symbols like "K", "万")
+              if token.is_a?(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+                result_parts << token.literal_text
+              else
+                result_parts << token.to_s
+              end
+            else
+              # Keep other tokens as-is
+              result_parts << token.to_s
+            end
+          end
+
+          result_parts.join
         end
 
         # Format scaled value for single-digit compact patterns (e.g., "0K")
@@ -736,8 +770,8 @@ module Foxtail
 
         # Find the base divisor for a unit by finding the smallest magnitude with the same unit symbol
         private def find_base_divisor_for_unit(target_pattern, all_patterns)
-          # Extract unit symbol from target pattern (everything after the zeros)
-          unit_symbol = target_pattern.gsub(/0+/, "")
+          # Extract unit symbol from target pattern using token parsing
+          unit_symbol = extract_unit_symbol_from_pattern(target_pattern)
 
           # If there's no unit symbol (pattern is just "0"), this means no compacting
           return 1 if unit_symbol.empty?
@@ -746,7 +780,7 @@ module Foxtail
           same_unit_magnitudes = []
           all_patterns.each do |magnitude_str, count_patterns|
             count_patterns.each_value do |pattern|
-              pattern_unit = pattern.gsub(/0+/, "")
+              pattern_unit = extract_unit_symbol_from_pattern(pattern)
               if pattern_unit == unit_symbol
                 same_unit_magnitudes << Integer(magnitude_str, 10)
               end
@@ -755,6 +789,25 @@ module Foxtail
 
           # Return the smallest magnitude for this unit (that's the base divisor)
           same_unit_magnitudes.min || 1
+        end
+
+        private def extract_unit_symbol_from_pattern(pattern)
+          parser = Foxtail::CLDR::PatternParser::Number.new
+          tokens = parser.parse(pattern)
+
+          # Get all non-digit tokens and join them to form the unit symbol
+          unit_tokens = tokens.reject do |token|
+            token.is_a?(Foxtail::CLDR::PatternParser::Number::DigitToken)
+          end
+
+          unit_tokens.map do |token|
+            case token
+            when Foxtail::CLDR::PatternParser::Number::QuotedToken
+              token.literal_text
+            else
+              token.to_s
+            end
+          end.join
         end
 
         # Combine scientific pattern with style-specific symbols
