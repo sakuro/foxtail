@@ -14,8 +14,9 @@ module Foxtail
         # @param args [Array] Positional arguments (first argument is the value to format)
         # @param locale [Locale::Tag] The locale for formatting
         # @param options [Hash] Formatting options
-        # @option options [String] :style Format style ("decimal", "percent", "currency", "scientific")
-        # @option options [String] :pattern Custom CLDR pattern (overrides style)
+        # @option options [String] :style Format style ("decimal", "percent", "currency")
+        # @option options [String] :notation Number notation ("standard", "scientific")
+        # @option options [String] :pattern Custom CLDR pattern (overrides style and notation)
         # @option options [String] :currency Currency code for currency formatting (e.g., "USD", "JPY")
         # @option options [Integer] :minimumFractionDigits Minimum decimal places
         # @option options [Integer] :maximumFractionDigits Maximum decimal places
@@ -28,7 +29,11 @@ module Foxtail
         #
         # @example Currency formatting
         #   formatter.call(100, locale: Locale::Tag.parse("en-US"), style: "currency", currency: "USD")
-        #   # => "US$100.00"
+        #   # => "$100.00"
+        #
+        # @example Scientific notation
+        #   formatter.call(1234, locale: Locale::Tag.parse("en-US"), notation: "scientific")
+        #   # => "1.234E3"
         #
         # @example Custom pattern with currency names
         #   formatter.call(100, locale: Locale::Tag.parse("en-US"), pattern: "#,##0.00 ¤¤¤", currency: "USD")
@@ -76,8 +81,18 @@ module Foxtail
           # Custom pattern takes priority
           return options[:pattern] if options[:pattern]
 
-          # Style-based pattern selection
           style = options[:style] || "decimal"
+          notation = options[:notation] || "standard"
+
+          # Handle scientific notation regardless of style
+          if notation == "scientific"
+            # Apply Node.js Intl.NumberFormat defaults for scientific notation
+            # maximumFractionDigits defaults to 3 for scientific notation
+            options[:maximumFractionDigits] ||= 3
+            return number_formats.scientific_pattern
+          end
+
+          # Style-based pattern selection for standard notation
           case style
           when "percent"
             number_formats.percent_pattern
@@ -94,8 +109,6 @@ module Foxtail
             end
 
             pattern
-          when "scientific"
-            number_formats.scientific_pattern
           else
             number_formats.decimal_pattern
           end
@@ -169,11 +182,15 @@ module Foxtail
           # Check if this is scientific notation (has ExponentToken)
           has_scientific = tokens.any?(Foxtail::CLDR::PatternParser::Number::ExponentToken)
 
+          mantissa = decimal_value
+          exponent = 0
+
           if has_scientific
             # For scientific notation, normalize the number to mantissa form (1-10 × 10^exp)
             normalized_result = normalize_for_scientific(decimal_value, pattern_info)
-            decimal_value = normalized_result[:mantissa]
+            mantissa = normalized_result[:mantissa]
             exponent = normalized_result[:exponent]
+            decimal_value = mantissa
           end
 
           # Convert to string for digit processing, avoiding scientific notation
@@ -226,13 +243,35 @@ module Foxtail
 
           # Add decimal part if present
           if has_scientific
-            # For scientific notation, show all significant digits of the mantissa (remove trailing zeros)
-            if fractional_part.length > 0
-              # Remove trailing zeros but preserve significant digits
-              trimmed_fractional = fractional_part.gsub(/0+$/, "")
-              if trimmed_fractional.length > 0
-                result += number_formats.decimal_symbol
-                result += trimmed_fractional
+            # For scientific notation, respect maximumFractionDigits option
+            if pattern_info[:fractional_digits] > 0
+              # Round the mantissa to the specified number of fractional digits
+              rounded_mantissa = mantissa.round(pattern_info[:fractional_digits])
+              rounded_str = rounded_mantissa.to_s("F")
+              rounded_parts = rounded_str.split(".")
+              rounded_fractional = rounded_parts[1] || ""
+
+              # Check if rounding caused overflow (e.g., 9.999 → 10.0)
+              if rounded_mantissa >= 10
+                # Adjust for overflow (mantissa went from < 10 to >= 10)
+                mantissa = rounded_mantissa / 10
+                exponent += 1
+                # Recalculate integer and fractional parts
+                new_str = mantissa.to_s("F")
+                new_parts = new_str.split(".")
+                # Replace the integer part in the result
+                result = result[0...-integer_part.length] + new_parts[0]
+                rounded_fractional = new_parts[1] || ""
+              end
+
+              if rounded_fractional.length > 0
+                # Limit to maximumFractionDigits and remove trailing zeros
+                limited_fractional = rounded_fractional[0...pattern_info[:fractional_digits]]
+                trimmed_fractional = limited_fractional.gsub(/0+$/, "")
+                if trimmed_fractional.length > 0
+                  result += number_formats.decimal_symbol
+                  result += trimmed_fractional
+                end
               end
             end
           elsif pattern_info[:has_decimal] && fractional_part.length > 0 && pattern_info[:fractional_digits] > 0
@@ -316,7 +355,15 @@ module Foxtail
           end
 
           if options[:maximumFractionDigits]
-            info[:fractional_digits] = [info[:fractional_digits], options[:maximumFractionDigits]].min
+            # For scientific notation patterns without explicit fractional digits (like #E0),
+            # use the maximumFractionDigits value directly
+            if info[:fractional_digits] == 0 && options[:notation] == "scientific"
+              info[:fractional_digits] = options[:maximumFractionDigits]
+              info[:has_decimal] = true if options[:maximumFractionDigits] > 0
+            else
+              info[:fractional_digits] = [info[:fractional_digits], options[:maximumFractionDigits]].min
+            end
+
             # If maximum is 0, don't show decimals at all
             if options[:maximumFractionDigits] == 0
               info[:fractional_digits] = 0

@@ -165,39 +165,39 @@ RSpec.describe Foxtail::CLDR::Formatter::Number do
       end
     end
 
-    context "with scientific notation style" do
-      it "formats numbers in scientific notation using CLDR pattern" do
-        result = formatter.call(123.456, style: "scientific", locale: locale("en"))
-        # CLDR pattern "#E0" produces proper scientific notation with minimum necessary digits
-        expect(result).to match(/^1\.23456E\+?2$/)
+    context "with scientific notation" do
+      it "formats numbers in scientific notation with default precision" do
+        result = formatter.call(123.456, notation: "scientific", locale: locale("en"))
+        # Default maximumFractionDigits is 3 for scientific notation (Node.js Intl behavior)
+        expect(result).to match(/^1\.235E\+?2$/)
       end
 
-      it "formats large numbers in scientific notation" do
-        result = formatter.call(1_234_567.89, style: "scientific", locale: locale("en"))
-        # Should produce format like "1.23456789E6" with necessary significant digits
-        expect(result).to match(/^1\.23456789E\+?6$/)
+      it "formats large numbers in scientific notation with rounding" do
+        result = formatter.call(1_234_567.89, notation: "scientific", locale: locale("en"))
+        # Should round to 3 decimal places: 1.23456789 → 1.235
+        expect(result).to match(/^1\.235E\+?6$/)
       end
 
       it "formats small numbers in scientific notation" do
-        result = formatter.call(0.000123, style: "scientific", locale: locale("en"))
+        result = formatter.call(0.000123, notation: "scientific", locale: locale("en"))
         # Should produce format like "1.23E-4"
         expect(result).to match(/^1\.23E-4$/)
       end
 
-      it "formats negative numbers in scientific notation" do
-        result = formatter.call(-987_654.321, style: "scientific", locale: locale("en"))
-        # Should produce format like "-9.87654321E5"
-        expect(result).to match(/^-9\.87654321E\+?5$/)
+      it "formats negative numbers in scientific notation with rounding" do
+        result = formatter.call(-987_654.321, notation: "scientific", locale: locale("en"))
+        # Should round to 3 decimal places: 9.87654321 → 9.877
+        expect(result).to match(/^-9\.877E\+?5$/)
       end
 
       it "formats integer with minimum digits" do
-        result = formatter.call(1, style: "scientific", locale: locale("en"))
+        result = formatter.call(1, notation: "scientific", locale: locale("en"))
         # Should produce "1E0" for simple integer
         expect(result).to match(/^1E\+?0$/)
       end
 
       it "formats decimal with necessary precision" do
-        result = formatter.call(12.3, style: "scientific", locale: locale("en"))
+        result = formatter.call(12.3, notation: "scientific", locale: locale("en"))
         # Should produce "1.23E1" maintaining necessary precision
         expect(result).to match(/^1\.23E\+?1$/)
       end
@@ -227,7 +227,7 @@ RSpec.describe Foxtail::CLDR::Formatter::Number do
       end
 
       it "formats with zero-padded scientific notation" do
-        result = formatter.call(1234, pattern: "000.0E000", locale: locale("en"))
+        result = formatter.call(1234, pattern: "000.000E000", locale: locale("en"))
         expect(result).to eq("1.234E003")
       end
 
