@@ -45,11 +45,12 @@ class NodeIntlReporter
     report << "| Mismatches | #{mismatches} | #{mismatch_percentage}% |"
     report << "| Errors | #{errors} | #{error_percentage}% |"
     report << ""
-    report << "*Total test cases: #{total}*"
     if conditional_matches > 0
       report << ""
       report << "**Conditional matches**: Results that match after normalizing whitespace characters (CLDR uses non-breaking spaces U+00A0, Node.js uses regular spaces U+0020)"
+      report << ""
     end
+    report << "*Total test cases: #{total}*"
     report << ""
 
     # Category breakdown
