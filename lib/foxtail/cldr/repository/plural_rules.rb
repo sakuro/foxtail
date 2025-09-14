@@ -19,11 +19,6 @@ module Foxtail
       #   rules.select(2)     # => "other"
       #   rules.select(0)     # => "other"
       class PluralRules < Base
-        def initialize(locale)
-          super
-          @resolver = Resolver.new(@locale)
-        end
-
         # Select appropriate plural category for the given number
         # @param number [Numeric] the number to evaluate
         # @return [String] plural category ("zero", "one", "two", "few", "many", "other")

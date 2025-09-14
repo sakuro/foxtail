@@ -7,9 +7,10 @@ RSpec.describe Foxtail::CLDR::Repository::PluralRules do
       expect(rules).to be_instance_of(Foxtail::CLDR::Repository::PluralRules)
     end
 
-    it "handles unsupported locale gracefully" do
-      rules = Foxtail::CLDR::Repository::PluralRules.new(locale("nonexistent"))
-      expect(rules.select(1)).to eq("other") # fallback behavior
+    it "raises DataNotAvailable for unsupported locale" do
+      expect {
+        Foxtail::CLDR::Repository::PluralRules.new(locale("nonexistent"))
+      }.to raise_error(Foxtail::CLDR::Repository::DataNotAvailable)
     end
   end
 
@@ -201,9 +202,10 @@ RSpec.describe Foxtail::CLDR::Repository::PluralRules do
       expect(rules.select(1)).to eq("one")
     end
 
-    it "returns empty hash for missing locale files" do
-      rules = Foxtail::CLDR::Repository::PluralRules.new(locale("nonexistent_locale"))
-      expect(rules.select(1)).to eq("other") # fallback
+    it "raises DataNotAvailable for missing locale files" do
+      expect {
+        Foxtail::CLDR::Repository::PluralRules.new(locale("nonexistent_locale"))
+      }.to raise_error(Foxtail::CLDR::Repository::DataNotAvailable)
     end
   end
 

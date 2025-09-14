@@ -25,6 +25,12 @@ module Foxtail
 
         def initialize(locale)
           @locale = locale
+          @resolver = Resolver.new(@locale)
+
+          # Check data availability during construction
+          return if data?
+
+          raise DataNotAvailable, "CLDR data not available for locale: #{@locale}"
         end
 
         # Instance method to access the shared inflector
@@ -36,15 +42,6 @@ module Foxtail
           !find_available_data_file.nil?
         end
 
-        # Get locale candidates using Locale library's fallback chain
-        private def locale_candidates
-          return [] unless @locale
-
-          candidates = @locale.to_simple.candidates.map(&:to_s)
-          candidates.reject!(&:empty?)
-          candidates
-        end
-
         # Find the first available data file in the fallback chain
         private def find_available_data_file
           locale_candidates.each do |candidate|
@@ -52,6 +49,15 @@ module Foxtail
             return path if File.exist?(path)
           end
           nil
+        end
+
+        # Get locale candidates using Locale library's fallback chain
+        private def locale_candidates
+          return [] unless @locale
+
+          candidates = @locale.to_simple.candidates.map(&:to_s)
+          candidates.reject!(&:empty?)
+          candidates
         end
 
         # Construct data file path for a given locale candidate

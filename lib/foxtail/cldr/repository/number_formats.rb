@@ -19,16 +19,6 @@ module Foxtail
       #   formats.decimal_pattern     # => "#,##0.###"
       #   formats.percent_pattern     # => "#,##0%"
       class NumberFormats < Base
-        def initialize(locale)
-          super
-          @resolver = Resolver.new(@locale)
-
-          # Check data availability during construction
-          return if data?
-
-          raise DataNotAvailable, "CLDR data not available for locale: #{locale}"
-        end
-
         # Get decimal symbol
         def decimal_symbol
           @resolver.resolve("number_formats.symbols.decimal", "number_formats") || "."
@@ -81,18 +71,12 @@ module Foxtail
 
         # Get currency format pattern
         def currency_pattern(style="standard")
-          @resolver.resolve(
-            "number_formats.currency_formats.#{style}",
-            "number_formats"
-          )
+          @resolver.resolve("number_formats.currency_formats.#{style}", "number_formats")
         end
 
         # Get scientific format pattern
         def scientific_pattern(style="standard")
-          @resolver.resolve(
-            "number_formats.scientific_formats.#{style}",
-            "number_formats"
-          )
+          @resolver.resolve("number_formats.scientific_formats.#{style}", "number_formats")
         end
 
         # Get currency symbol for a given currency code
@@ -112,10 +96,7 @@ module Foxtail
         # @param currency_code [String] the currency code (e.g., "USD")
         # @return [Hash<Symbol, String>] hash with plural categories (:one, :other, etc.)
         def currency_names(currency_code)
-          display_names = @resolver.resolve(
-            "number_formats.currencies.#{currency_code}.display_names",
-            "number_formats"
-          )
+          display_names = @resolver.resolve("number_formats.currencies.#{currency_code}.display_names", "number_formats")
           return {other: currency_code} unless display_names
 
           # Convert string keys to symbols for consistency with PluralRules
@@ -129,10 +110,7 @@ module Foxtail
 
         # Get cash digits for a currency (falls back to regular digits)
         def currency_cash_digits(currency_code)
-          @resolver.resolve(
-            "currency_fractions.#{currency_code}.cash_digits",
-            "number_formats"
-          ) || currency_digits(currency_code)
+          @resolver.resolve("currency_fractions.#{currency_code}.cash_digits", "number_formats") || currency_digits(currency_code)
         end
 
         # Get all available currency codes
@@ -143,17 +121,11 @@ module Foxtail
 
         # Get compact format pattern for given magnitude and display style
         def compact_pattern(magnitude, compact_display="short", count="other")
-          pattern = @resolver.resolve(
-            "number_formats.compact_formats.#{compact_display}.#{magnitude}.#{count}",
-            "number_formats"
-          )
+          pattern = @resolver.resolve("number_formats.compact_formats.#{compact_display}.#{magnitude}.#{count}", "number_formats")
 
           # Fallback to "one" if "other" is not found (common in English CLDR data)
           if pattern.nil? && count == "other"
-            pattern = @resolver.resolve(
-              "number_formats.compact_formats.#{compact_display}.#{magnitude}.one",
-              "number_formats"
-            )
+            pattern = @resolver.resolve("number_formats.compact_formats.#{compact_display}.#{magnitude}.one", "number_formats")
           end
 
           pattern
@@ -167,10 +139,7 @@ module Foxtail
         # Get default significant digits settings for compact notation
         # Based on Node.js Intl.NumberFormat defaults for decimal compact notation
         def compact_decimal_significant_digits
-          {
-            maximum: 2,
-            minimum: 1
-          }
+          {maximum: 2, minimum: 1}
         end
 
         # Get unit pattern for a given unit and display style
@@ -181,27 +150,24 @@ module Foxtail
           # Try requested display type first
           display_data = unit_data[unit_display]
           if display_data
-            pattern = display_data[count] ||
-                      display_data["other"] ||
-                      display_data["one"]
+            pattern = display_data[count] || display_data["other"] || display_data["one"]
             return pattern if pattern&.include?("{0}")
           end
 
           # Fallback to other display types if requested one not available
-          fallback_types = case unit_display
-                           when "short" then %w[narrow long]
-                           when "narrow" then %w[short long]
-                           when "long" then %w[short narrow]
-                           else %w[short narrow long]
-                           end
+          fallback_types =
+            case unit_display
+            when "short" then %w[narrow long]
+            when "narrow" then %w[short long]
+            when "long" then %w[short narrow]
+            else %w[short narrow long]
+            end
 
           fallback_types.each do |fallback_type|
             fallback_data = unit_data[fallback_type]
             next unless fallback_data
 
-            pattern = fallback_data[count] ||
-                      fallback_data["other"] ||
-                      fallback_data["one"]
+            pattern = fallback_data[count] || fallback_data["other"] || fallback_data["one"]
             return pattern if pattern&.include?("{0}")
           end
 
