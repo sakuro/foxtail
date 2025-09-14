@@ -84,12 +84,23 @@ module Foxtail
           style = options[:style] || "decimal"
           notation = options[:notation] || "standard"
 
-          # Handle scientific notation regardless of style
-          if notation == "scientific"
+          # Handle scientific and engineering notation with style consideration
+          if notation == "scientific" || notation == "engineering"
             # Apply Node.js Intl.NumberFormat defaults for scientific notation
-            # maximumFractionDigits defaults to 3 for scientific notation
-            options[:maximumFractionDigits] ||= 3
-            return number_formats.scientific_pattern
+            if style == "percent"
+              # For percent style scientific notation, Node.js uses maximumFractionDigits: 0
+              options[:maximumFractionDigits] ||= 0
+            else
+              options[:maximumFractionDigits] ||= 3
+            end
+
+            # Combine scientific pattern with style-specific symbols
+            base_pattern = number_formats.scientific_pattern
+            return combine_pattern_with_style(base_pattern, style, number_formats, options)
+          elsif notation == "compact"
+            # Compact notation uses simplified patterns with abbreviations
+            # For now, use decimal pattern as base - we'll handle the compacting in formatting
+            return number_formats.decimal_pattern
           end
 
           # Style-based pattern selection for standard notation
@@ -179,6 +190,13 @@ module Foxtail
           # Analyze pattern structure first to check for scientific notation
           pattern_info = analyze_pattern_structure(tokens, **options)
 
+          notation = options[:notation] || "standard"
+
+          # Handle compact notation first (before scientific check)
+          if notation == "compact"
+            return format_compact_number(decimal_value, number_formats, options)
+          end
+
           # Check if this is scientific notation (has ExponentToken)
           has_scientific = tokens.any?(Foxtail::CLDR::PatternParser::Number::ExponentToken)
 
@@ -186,20 +204,31 @@ module Foxtail
           exponent = 0
 
           if has_scientific
-            # For scientific notation, normalize the number to mantissa form (1-10 × 10^exp)
-            normalized_result = normalize_for_scientific(decimal_value, pattern_info)
+            if notation == "engineering"
+              # For engineering notation, normalize to mantissa form with exponent as multiple of 3
+              normalized_result = normalize_for_engineering(decimal_value, pattern_info)
+            else
+              # For scientific notation, normalize the number to mantissa form (1-10 × 10^exp)
+              normalized_result = normalize_for_scientific(decimal_value, pattern_info)
+            end
             mantissa = normalized_result[:mantissa]
             exponent = normalized_result[:exponent]
             decimal_value = mantissa
           end
 
           # Convert to string for digit processing, avoiding scientific notation
-          value_str = decimal_value.to_s("F")
-
-          # Separate integer and fractional parts
-          parts = value_str.split(".")
-          integer_part = parts[0] || "0"
-          fractional_part = parts[1] || ""
+          if has_scientific
+            # For scientific notation, use mantissa for integer/fractional parts
+            # Use floor to safely get integer part without precision loss
+            integer_part = mantissa.abs.floor.to_s
+            fractional_decimal = mantissa.abs - mantissa.abs.floor
+            fractional_part = fractional_decimal.zero? ? "" : fractional_decimal.to_s.split(".")[1] || ""
+          else
+            value_str = decimal_value.to_s("F")
+            parts = value_str.split(".")
+            integer_part = parts[0] || "0"
+            fractional_part = parts[1] || ""
+          end
 
           # Format the number according to the pattern
           result = ""
@@ -243,26 +272,42 @@ module Foxtail
 
           # Add decimal part if present
           if has_scientific
+            # Round the mantissa to the specified number of fractional digits
+            rounded_mantissa = mantissa.round(pattern_info[:fractional_digits])
+
+            # Check if rounding caused overflow (regardless of fractional_digits value)
+            notation = options[:notation] || "standard"
+            overflow_threshold = notation == "engineering" ? 1000 : 10
+
+            if rounded_mantissa.abs >= overflow_threshold
+              # Adjust for overflow
+              division_factor = notation == "engineering" ? 1000 : 10
+              exponent_increment = notation == "engineering" ? 3 : 1
+
+              mantissa = BigDecimal(rounded_mantissa) / BigDecimal(division_factor)
+              exponent += exponent_increment
+              # Recalculate integer and fractional parts
+              new_str = mantissa.to_s("F")
+              new_parts = new_str.split(".")
+              # Replace the integer part in the result
+              result = result[0...-integer_part.length] + new_parts[0]
+
+              # Update rounded_mantissa for fractional part calculation
+              rounded_mantissa = mantissa
+            else
+              # No overflow, but update integer part with rounded value
+              rounded_integer_part = rounded_mantissa.abs.floor.to_s
+              if rounded_integer_part != integer_part
+                # Replace the integer part in the result with rounded value
+                result = result[0...-integer_part.length] + rounded_integer_part
+              end
+            end
+
             # For scientific notation, respect maximumFractionDigits option
             if pattern_info[:fractional_digits] > 0
-              # Round the mantissa to the specified number of fractional digits
-              rounded_mantissa = mantissa.round(pattern_info[:fractional_digits])
               rounded_str = rounded_mantissa.to_s("F")
               rounded_parts = rounded_str.split(".")
               rounded_fractional = rounded_parts[1] || ""
-
-              # Check if rounding caused overflow (e.g., 9.999 → 10.0)
-              if rounded_mantissa >= 10
-                # Adjust for overflow (mantissa went from < 10 to >= 10)
-                mantissa = rounded_mantissa / 10
-                exponent += 1
-                # Recalculate integer and fractional parts
-                new_str = mantissa.to_s("F")
-                new_parts = new_str.split(".")
-                # Replace the integer part in the result
-                result = result[0...-integer_part.length] + new_parts[0]
-                rounded_fractional = new_parts[1] || ""
-              end
 
               if rounded_fractional.length > 0
                 # Limit to maximumFractionDigits and remove trailing zeros
@@ -355,9 +400,10 @@ module Foxtail
           end
 
           if options[:maximumFractionDigits]
-            # For scientific notation patterns without explicit fractional digits (like #E0),
+            # For scientific/engineering notation patterns without explicit fractional digits (like #E0),
             # use the maximumFractionDigits value directly
-            if info[:fractional_digits] == 0 && options[:notation] == "scientific"
+            notation = options[:notation] || "standard"
+            if info[:fractional_digits] == 0 && (notation == "scientific" || notation == "engineering")
               info[:fractional_digits] = options[:maximumFractionDigits]
               info[:has_decimal] = true if options[:maximumFractionDigits] > 0
             else
@@ -521,6 +567,223 @@ module Foxtail
           mantissa = -mantissa if decimal_value.negative?
 
           {mantissa:, exponent:}
+        end
+
+        # Normalize number for engineering notation (mantissa between 1-1000, exponent multiple of 3)
+        private def normalize_for_engineering(decimal_value, _pattern_info)
+          return {mantissa: BigDecimal(0), exponent: 0} if decimal_value.zero?
+
+          abs_value = decimal_value.abs
+
+          # Calculate exponent to normalize mantissa between 1-10 first
+          raw_exponent = Math.log10(Float(abs_value)).floor
+
+          # Adjust exponent to be multiple of 3
+          # Engineering notation uses exponents: ..., -6, -3, 0, 3, 6, 9, ...
+          engineering_exponent = (raw_exponent / 3.0).floor * 3
+
+          # Calculate mantissa by dividing by 10^engineering_exponent
+          mantissa = abs_value / (BigDecimal(10)**engineering_exponent)
+
+          # Preserve sign
+          mantissa = -mantissa if decimal_value.negative?
+
+          {mantissa:, exponent: engineering_exponent}
+        end
+
+        # Format number using compact notation based on CLDR data
+        private def format_compact_number(decimal_value, number_formats, options)
+          style = options[:style] || "decimal"
+
+          # Note: Percent multiplication already applied in format_number method (line 168-170)
+
+          # Handle zero value with style
+          if decimal_value.zero?
+            case style
+            when "currency"
+              currency_code = options[:currency] || "USD"
+              symbol = number_formats.currency_symbol(currency_code)
+              return "#{symbol}0"
+            when "percent"
+              return "0%"
+            else
+              return "0"
+            end
+          end
+
+          compact_display = options[:compactDisplay] || "short"
+          compact_info = find_compact_pattern(decimal_value, number_formats, compact_display)
+
+          if compact_info.nil?
+            # No compacting - format with appropriate decimal places and apply style
+            original_negative = options[:original_was_negative] || false
+
+            if decimal_value.abs < 1 && decimal_value.abs > 0
+              # For small decimal values, use Node.js compact notation defaults:
+              # maximumSignificantDigits: 2, minimumSignificantDigits: 1
+              formatted = "%.2g" % decimal_value.abs
+            else
+              # For integer values, round first then format
+              # Apply rounding to original signed value for correct result
+              original_value = original_negative ? -decimal_value : decimal_value
+              rounded_value = original_value.round
+              formatted = rounded_value.abs.to_s
+              if rounded_value.negative?
+                formatted = number_formats.minus_sign + formatted
+              end
+              # Apply style to the formatted number
+              return apply_style_to_compact_result(formatted, style, number_formats, options)
+            end
+
+            # Apply sign and style
+            if original_negative
+              formatted = number_formats.minus_sign + formatted
+            end
+            return apply_style_to_compact_result(formatted, style, number_formats, options)
+          end
+
+          # Apply the pattern (handles positive value)
+          formatted_number = apply_compact_pattern(decimal_value.abs, compact_info)
+
+          # Preserve original sign using passed option
+          original_negative = options[:original_was_negative] || false
+          if original_negative
+            formatted_number = number_formats.minus_sign + formatted_number
+          end
+
+          # Apply style to compact result
+          apply_style_to_compact_result(formatted_number, style, number_formats, options)
+        end
+
+        # Find the appropriate compact pattern from CLDR data
+        private def find_compact_pattern(decimal_value, number_formats, compact_display)
+          abs_value = decimal_value.abs.to_f
+          patterns = number_formats.compact_patterns(compact_display)
+
+          return nil if patterns.empty?
+
+          # Find the best matching pattern by magnitude
+          # CLDR patterns are keyed by magnitude (e.g., "1000", "10000", "100000")
+          # Each magnitude represents the threshold where that pattern starts being used
+          best_magnitude = nil
+          best_divisor = 1
+
+          # Sort magnitudes in ascending order and find the highest one that the value reaches
+          magnitudes = patterns.keys.map { |k| Integer(k, 10) }.sort
+          magnitudes.each do |magnitude|
+            # Value must be >= magnitude to use this pattern
+            next if abs_value < magnitude
+
+            best_magnitude = magnitude.to_s
+            best_divisor = magnitude
+            # Continue to find the highest applicable magnitude
+          end
+
+          return nil unless best_magnitude
+
+          pattern = number_formats.compact_pattern(best_magnitude, compact_display, "other")
+          return nil unless pattern
+
+          # Find the base divisor for this unit by finding the smallest magnitude with the same unit
+          base_divisor = find_base_divisor_for_unit(pattern, patterns)
+
+          {
+            pattern:,
+            divisor: base_divisor,
+            magnitude: best_magnitude
+          }
+        end
+
+        # Apply CLDR compact pattern (e.g., "0万", "0K") to format the number
+        private def apply_compact_pattern(decimal_value, compact_info)
+          # Note: decimal_value should already be positive (abs applied by caller)
+          scaled_value = Float(decimal_value) / compact_info[:divisor]
+          pattern = compact_info[:pattern]
+
+          # Count zeros in pattern to determine how many digits to show
+          zero_count = pattern.count("0")
+
+          # Format number based on the pattern's zero count
+          formatted_number = if zero_count == 1
+                               # Pattern like "0K" - show 1 significant digit with decimal if needed
+                               format_compact_single_digit(scaled_value)
+                             else
+                               # Pattern like "00K", "000K" - show integer with appropriate digits
+                               format_compact_multiple_digits(scaled_value, zero_count)
+                             end
+
+          # Replace zeros in pattern with formatted number
+          pattern.sub(/0+/, formatted_number)
+        end
+
+        # Format scaled value for single-digit compact patterns (e.g., "0K")
+        private def format_compact_single_digit(scaled_value)
+          if scaled_value >= 10
+            scaled_value.round.to_s
+          elsif scaled_value.round(1) == scaled_value.round
+            scaled_value.round.to_s
+          else
+            "%.1f" % scaled_value.round(1)
+          end
+        end
+
+        # Format scaled value for multi-digit compact patterns (e.g., "00K", "000K")
+        private def format_compact_multiple_digits(scaled_value, _zero_count)
+          # For multi-digit patterns, show integer value
+          scaled_value.round.to_s
+        end
+
+        # Find the base divisor for a unit by finding the smallest magnitude with the same unit symbol
+        private def find_base_divisor_for_unit(target_pattern, all_patterns)
+          # Extract unit symbol from target pattern (everything after the zeros)
+          unit_symbol = target_pattern.gsub(/0+/, "")
+
+          # If there's no unit symbol (pattern is just "0"), this means no compacting
+          return 1 if unit_symbol.empty?
+
+          # Find all patterns with the same unit symbol and get their magnitudes
+          same_unit_magnitudes = []
+          all_patterns.each do |magnitude_str, count_patterns|
+            count_patterns.each_value do |pattern|
+              pattern_unit = pattern.gsub(/0+/, "")
+              if pattern_unit == unit_symbol
+                same_unit_magnitudes << Integer(magnitude_str, 10)
+              end
+            end
+          end
+
+          # Return the smallest magnitude for this unit (that's the base divisor)
+          same_unit_magnitudes.min || 1
+        end
+
+        # Combine scientific pattern with style-specific symbols
+        private def combine_pattern_with_style(base_pattern, style, number_formats, options)
+          case style
+          when "currency"
+            # Add currency symbol to scientific pattern: ¤#E0
+            "¤#{base_pattern}"
+          when "percent"
+            # Add percent symbol to scientific pattern: #E0%
+            "#{base_pattern}%"
+          else
+            base_pattern
+          end
+        end
+
+        # Apply style formatting to compact notation result
+        private def apply_style_to_compact_result(formatted_number, style, number_formats, options)
+          case style
+          when "currency"
+            currency_code = options[:currency] || "USD"
+            symbol = number_formats.currency_symbol(currency_code)
+            "#{symbol}#{formatted_number}"
+          when "percent"
+            # For percent style, the number should be multiplied by 100
+            # But in compact notation context, we treat it as already formatted
+            "#{formatted_number}%"
+          else
+            formatted_number
+          end
         end
       end
     end
