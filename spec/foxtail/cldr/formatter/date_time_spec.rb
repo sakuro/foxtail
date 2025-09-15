@@ -5,7 +5,13 @@ require "time"
 RSpec.describe Foxtail::CLDR::Formatter::DateTime do
   subject(:formatter) { Foxtail::CLDR::Formatter::DateTime.new }
 
-  let(:test_time) { Time.new(2023, 6, 15, 14, 30, 45) }
+  let(:test_time) { Time.utc(2023, 6, 15, 14, 30, 45) }
+
+  # Stub timezone detection to return JST for consistent test results
+  before do
+    allow(Foxtail::CLDR::Formatter::LocalTimezoneDetector).to receive(:detect)
+      .and_return(instance_double(Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone, id: "Asia/Tokyo"))
+  end
 
   describe "#call" do
     context "with locale options" do
@@ -51,14 +57,14 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
 
       it "formats with timeStyle short" do
         result = formatter.call(test_time, locale: en_locale, timeStyle: "short")
-        # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
-        expect(result).to eq("2:30\u202FPM")
+        # UTC 14:30 -> JST 23:30
+        expect(result).to eq("11:30 PM")
       end
 
       it "combines dateStyle and timeStyle" do
         result = formatter.call(test_time, locale: en_locale, dateStyle: "medium", timeStyle: "short")
-        # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
-        expect(result).to eq("Jun 15, 2023 2:30\u202FPM")
+        # Updated to match current CLDR pattern format (UTC 14:30 -> JST 23:30)
+        expect(result).to eq("Jun 15, 2023, 11:30 PM")
       end
     end
 
@@ -97,17 +103,20 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
 
       it "formats with time components in custom pattern" do
         result = formatter.call(test_time, locale: en_locale, pattern: "HH:mm:ss")
-        expect(result).to eq("14:30:45")
+        # UTC 14:30:45 -> JST 23:30:45
+        expect(result).to eq("23:30:45")
       end
 
       it "formats with 12-hour time in custom pattern" do
         result = formatter.call(test_time, locale: en_locale, pattern: "h:mm a")
-        expect(result).to eq("2:30 PM")
+        # UTC 14:30 -> JST 23:30 (11:30 PM)
+        expect(result).to eq("11:30 PM")
       end
 
       it "formats with complex custom pattern" do
         result = formatter.call(test_time, locale: en_locale, pattern: "EEEE, d MMMM yyyy 'at' HH:mm")
-        expect(result).to eq("Thursday, 15 June 2023 at 14:30")
+        # UTC 14:30 -> JST 23:30
+        expect(result).to eq("Thursday, 15 June 2023 at 23:30")
       end
 
       it "uses locale-specific names in custom patterns" do
@@ -121,8 +130,93 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
       end
 
       it "handles mixed tokens and literals" do
-        result = formatter.call(test_time, locale: en_locale, pattern: "Date: dd/MM/yyyy Time: HH:mm")
-        expect(result).to eq("Date: 15/06/2023 Time: 14:30")
+        result = formatter.call(test_time, locale: en_locale, pattern: "'Date:' dd/MM/yyyy 'Time:' HH:mm")
+        # UTC 14:30 -> JST 23:30
+        expect(result).to eq("Date: 15/06/2023 Time: 23:30")
+      end
+
+      it "formats timezone symbols with timeZone option" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+
+        # VV: timezone ID
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "VV")
+        expect(result).to eq("America/New_York")
+
+        # VVV: exemplar city
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "VVV")
+        expect(result).to eq("New York") # Extracted from timezone ID
+
+        # ZZZZZ: ISO offset format
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "ZZZZZ")
+        expect(result).to eq("-04:00") # EDT in June
+
+        # Z: basic offset format
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "Z")
+        expect(result).to eq("-0400") # EDT in June
+      end
+
+      it "formats complex pattern with timezone symbols" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "Asia/Tokyo", pattern: "yyyy-MM-dd HH:mm VV (ZZZZZ)")
+        expect(result).to eq("2023-06-15 23:30 Asia/Tokyo (+09:00)")
+      end
+    end
+
+    context "with timeZone options" do
+      it "formats with UTC timezone" do
+        result = formatter.call(test_time, locale: locale("en"), timeZone: "UTC", pattern: "HH:mm")
+        # test_time is UTC 14:30, so with UTC timezone option it stays 14:30
+        expect(result).to eq("14:30")
+      end
+
+      it "formats with offset timezone +09:00" do
+        utc_time = Time.new(2023, 6, 15, 5, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "+09:00", pattern: "HH:mm")
+        # 05:30 UTC + 9 hours = 14:30
+        expect(result).to eq("14:30")
+      end
+
+      it "formats with offset timezone -05:00" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "-05:00", pattern: "HH:mm")
+        # 14:30 UTC - 5 hours = 09:30
+        expect(result).to eq("09:30")
+      end
+
+      it "preserves original timezone when no timeZone option" do
+        result = formatter.call(test_time, locale: locale("en"), pattern: "HH:mm")
+        # test_time is UTC 14:30, system timezone is Asia/Tokyo, so 14:30 UTC -> 23:30 JST
+        expect(result).to eq("23:30")
+      end
+
+      it "formats with IANA timezone America/New_York" do
+        # June is during DST, so EDT (UTC-4)
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "America/New_York", pattern: "HH:mm")
+        # 14:30 UTC - 4 hours = 10:30 EDT
+        expect(result).to eq("10:30")
+      end
+
+      it "formats with IANA timezone Asia/Tokyo" do
+        utc_time = Time.new(2023, 6, 15, 5, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "Asia/Tokyo", pattern: "HH:mm")
+        # 05:30 UTC + 9 hours = 14:30 JST
+        expect(result).to eq("14:30")
+      end
+
+      it "formats with IANA timezone Europe/London" do
+        # June is during BST (British Summer Time, UTC+1)
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "Europe/London", pattern: "HH:mm")
+        # 14:30 UTC + 1 hour = 15:30 BST
+        expect(result).to eq("15:30")
+      end
+
+      it "raises error for invalid timezone" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        expect {
+          formatter.call(utc_time, locale: locale("en"), timeZone: "Invalid/Timezone", pattern: "HH:mm")
+        }.to raise_error(TZInfo::InvalidTimezoneIdentifier)
       end
     end
   end

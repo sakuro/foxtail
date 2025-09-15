@@ -16,7 +16,6 @@ module Foxtail
               "currency_formats" => extract_currency_formats(xml_doc, formats),
               "scientific_formats" => {"standard" => formats["scientific"]},
               "compact_formats" => extract_compact_formats(xml_doc),
-              "currencies" => merge_locale_and_root_currencies(xml_doc),
               "units" => extract_units(xml_doc)
             }
           }
@@ -181,97 +180,6 @@ module Foxtail
           compact_formats["long"] = long_formats unless long_formats.empty?
 
           compact_formats
-        end
-
-        private def merge_locale_and_root_currencies(xml_doc)
-          # Extract only locale-specific currency data
-          # Runtime inheritance system handles missing currencies via locale inheritance chain
-          # This preserves correct CLDR inheritance (e.g., en_US inherits from en, not root)
-          extract_currencies(xml_doc)
-        end
-
-        private def extract_all_currencies
-          # Fallback method - just use root currencies
-          load_root_currencies
-        end
-
-        private def load_root_currencies
-          root_path = File.join(source_dir, "common", "main", "root.xml")
-          return {} unless File.exist?(root_path)
-
-          currencies = {}
-
-          begin
-            root_doc = REXML::Document.new(File.read(root_path))
-
-            # Get all currency codes and symbols from root
-            root_doc.elements.each("ldml/numbers/currencies/currency") do |currency|
-              code = currency.attributes["type"]
-              next unless code
-
-              currency_data = {}
-
-              # Get symbol (prefer non-narrow)
-              symbol_element = currency.elements["symbol[not(@alt)]"] || currency.elements["symbol"]
-              if symbol_element
-                currency_data["symbol"] = symbol_element.text
-              end
-
-              # Get display names
-              display_names = {}
-              currency.elements.each("displayName") do |name|
-                count = name.attributes["count"]
-                if count
-                  display_names[count] = name.text
-                else
-                  display_names["other"] = name.text
-                  display_names["one"] = name.text unless display_names.key?("one")
-                end
-              end
-              currency_data["display_names"] = display_names unless display_names.empty?
-
-              currencies[code] = currency_data unless currency_data.empty?
-            end
-          rescue => e
-            CLDR.logger.warn "Could not extract root currencies: #{e.message}"
-          end
-
-          currencies
-        end
-
-        private def extract_currencies(xml_doc)
-          currencies = {}
-
-          xml_doc.elements.each("ldml/numbers/currencies/currency") do |currency|
-            code = currency.attributes["type"]
-            next unless code
-
-            currency_data = {}
-
-            # Symbol (prefer non-narrow, same logic as load_root_currencies)
-            symbol_element = currency.elements["symbol[not(@alt)]"] || currency.elements["symbol"]
-            if symbol_element
-              currency_data["symbol"] = symbol_element.text
-            end
-
-            # Display names with nested structure
-            display_names = {}
-            currency.elements.each("displayName") do |name|
-              count = name.attributes["count"]
-              if count
-                display_names[count] = name.text
-              else
-                display_names["other"] = name.text # Default to "other" for consistency
-                # Also set specific forms if no count attribute
-                display_names["one"] = name.text unless display_names.key?("one")
-              end
-            end
-
-            currency_data["display_names"] = display_names unless display_names.empty?
-            currencies[code] = currency_data unless currency_data.empty?
-          end
-
-          currencies
         end
 
         # Extract unit formatting data from CLDR XML

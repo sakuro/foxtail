@@ -41,8 +41,6 @@ module Foxtail
         private def load_traditional_aliases
           supplemental_path = File.join(source_dir, "common", "supplemental", "supplementalMetadata.xml")
 
-          return {} unless File.exist?(supplemental_path)
-
           aliases = {}
 
           begin
@@ -96,8 +94,6 @@ module Foxtail
 
         private def load_likely_subtag_aliases
           likely_subtags_path = File.join(source_dir, "common", "supplemental", "likelySubtags.xml")
-
-          return {} unless File.exist?(likely_subtags_path)
 
           aliases = {}
 

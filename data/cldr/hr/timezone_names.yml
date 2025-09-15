@@ -1,0 +1,887 @@
+---
+locale: hr
+generated_at: '2025-09-15T06:26:30Z'
+cldr_version: '46'
+timezone_names:
+  formats:
+    hour_format: "+HH:mm; -HH:mm"
+    region_format_daylight: "{0}, ljetno vrijeme"
+    region_format_standard: "{0}, standardno vrijeme"
+  zones:
+    Pacific/Honolulu:
+      exemplar_city: Honolulu
+    Etc/UTC:
+      long:
+        standard: koordinirano svjetsko vrijeme
+    Etc/Unknown:
+      exemplar_city: Nepoznati grad
+    Europe/Andorra:
+      exemplar_city: Andora
+    America/Anguilla:
+      exemplar_city: Angvila
+    Europe/Tirane:
+      exemplar_city: Tirana
+    Asia/Yerevan:
+      exemplar_city: Erevan
+    Europe/Vienna:
+      exemplar_city: Beč
+    Europe/Brussels:
+      exemplar_city: Bruxelles
+    Europe/Sofia:
+      exemplar_city: Sofija
+    Asia/Bahrain:
+      exemplar_city: Bahrein
+    America/St_Barthelemy:
+      exemplar_city: Saint Barthélemy
+    Atlantic/Bermuda:
+      exemplar_city: Bermudi
+    Asia/Brunei:
+      exemplar_city: Brunej
+    Europe/Zurich:
+      exemplar_city: Zürich
+    Asia/Urumqi:
+      exemplar_city: Urumči
+    Asia/Shanghai:
+      exemplar_city: Šangaj
+    America/Costa_Rica:
+      exemplar_city: Kostarika
+    Asia/Nicosia:
+      exemplar_city: Nikozija
+    Europe/Prague:
+      exemplar_city: Prag
+    Africa/Djibouti:
+      exemplar_city: Džibuti
+    Europe/Copenhagen:
+      exemplar_city: Kopenhagen
+    America/Dominica:
+      exemplar_city: Dominika
+    Africa/Algiers:
+      exemplar_city: Alžir
+    Africa/Cairo:
+      exemplar_city: Kairo
+    Atlantic/Canary:
+      exemplar_city: Kanari
+    Africa/Addis_Ababa:
+      exemplar_city: Addis Abeba
+    Pacific/Fiji:
+      exemplar_city: Fidži
+    Atlantic/Faeroe:
+      exemplar_city: Ferojski otoci
+    Europe/Paris:
+      exemplar_city: Pariz
+    Europe/London:
+      long:
+        daylight: britansko ljetno vrijeme
+    America/Guadeloupe:
+      exemplar_city: Guadalupe
+    Europe/Athens:
+      exemplar_city: Atena
+    Atlantic/South_Georgia:
+      exemplar_city: Južna Georgija
+    America/Guatemala:
+      exemplar_city: Gvatemala
+    America/Guyana:
+      exemplar_city: Gvajana
+    Europe/Budapest:
+      exemplar_city: Budimpešta
+    Asia/Jakarta:
+      exemplar_city: Džakarta
+    Europe/Dublin:
+      long:
+        daylight: irsko standardno vrijeme
+    Asia/Jerusalem:
+      exemplar_city: Jeruzalem
+    Europe/Isle_of_Man:
+      exemplar_city: Otok Man
+    Asia/Baghdad:
+      exemplar_city: Bagdad
+    Asia/Tehran:
+      exemplar_city: Teheran
+    Europe/Rome:
+      exemplar_city: Rim
+    America/Jamaica:
+      exemplar_city: Jamajka
+    Asia/Tokyo:
+      exemplar_city: Tokio
+    Asia/Bishkek:
+      exemplar_city: Biškek
+    Pacific/Enderbury:
+      exemplar_city: Enderbury
+    Asia/Pyongyang:
+      exemplar_city: Pjongjang
+    Asia/Seoul:
+      exemplar_city: Seul
+    Asia/Kuwait:
+      exemplar_city: Kuvajt
+    Asia/Aqtau:
+      exemplar_city: Aktau
+    Asia/Aqtobe:
+      exemplar_city: Aktobe
+    Asia/Qostanay:
+      exemplar_city: Kostanay
+    Asia/Qyzylorda:
+      exemplar_city: Kizilorda
+    Asia/Almaty:
+      exemplar_city: Alma Ata
+    Europe/Luxembourg:
+      exemplar_city: Luksemburg
+    Europe/Monaco:
+      exemplar_city: Monako
+    Europe/Chisinau:
+      exemplar_city: Kišinjev
+    Europe/Skopje:
+      exemplar_city: Skoplje
+    Asia/Rangoon:
+      exemplar_city: Rangun
+    Asia/Ulaanbaatar:
+      exemplar_city: Ulan Bator
+    Asia/Macau:
+      exemplar_city: Makao
+    Indian/Mauritius:
+      exemplar_city: Mauricijus
+    Indian/Maldives:
+      exemplar_city: Maldivi
+    America/Bahia_Banderas:
+      exemplar_city: Bahia Banderas
+    America/Mexico_City:
+      exemplar_city: Ciudad de México
+    America/Merida:
+      exemplar_city: Merida
+    America/Cancun:
+      exemplar_city: Cancun
+    Asia/Katmandu:
+      exemplar_city: Katmandu
+    Pacific/Marquesas:
+      exemplar_city: Markižansko otočje
+    Asia/Karachi:
+      exemplar_city: Karači
+    Europe/Warsaw:
+      exemplar_city: Varšava
+    America/Puerto_Rico:
+      exemplar_city: Portoriko
+    Atlantic/Azores:
+      exemplar_city: Azori
+    Europe/Lisbon:
+      exemplar_city: Lisabon
+    Asia/Qatar:
+      exemplar_city: Katar
+    Europe/Bucharest:
+      exemplar_city: Bukurešt
+    Europe/Belgrade:
+      exemplar_city: Beograd
+    Europe/Kaliningrad:
+      exemplar_city: Kalinjingrad
+    Europe/Moscow:
+      exemplar_city: Moskva
+    Europe/Astrakhan:
+      exemplar_city: Astrahan
+    Europe/Ulyanovsk:
+      exemplar_city: Uljanovsk
+    Asia/Yekaterinburg:
+      exemplar_city: Jekaterinburg
+    Asia/Novokuznetsk:
+      exemplar_city: Novokuznjeck
+    Asia/Krasnoyarsk:
+      exemplar_city: Krasnojarsk
+    Asia/Chita:
+      exemplar_city: Čita
+    Asia/Yakutsk:
+      exemplar_city: Jakutsk
+    Asia/Khandyga:
+      exemplar_city: Handiga
+    Asia/Sakhalin:
+      exemplar_city: Sahalin
+    Asia/Srednekolymsk:
+      exemplar_city: Srednekolimsk
+    Asia/Kamchatka:
+      exemplar_city: Kamčatka
+    Asia/Anadyr:
+      exemplar_city: Anadir
+    Asia/Riyadh:
+      exemplar_city: Rijad
+    Asia/Singapore:
+      exemplar_city: Singapur
+    Atlantic/St_Helena:
+      exemplar_city: Sveta Helena
+    America/El_Salvador:
+      exemplar_city: Salvador
+    Asia/Damascus:
+      exemplar_city: Damask
+    Africa/Lome:
+      exemplar_city: Lomé
+    Asia/Dushanbe:
+      exemplar_city: Dušanbe
+    Asia/Ashgabat:
+      exemplar_city: Ašgabat
+    Europe/Kiev:
+      exemplar_city: Kijev
+    Europe/Simferopol:
+      exemplar_city: Simferopolj
+    America/North_Dakota/Beulah:
+      exemplar_city: Beulah, Sjeverna Dakota
+    America/North_Dakota/New_Salem:
+      exemplar_city: New Salem, Sjeverna Dakota
+    America/North_Dakota/Center:
+      exemplar_city: Center, Sjeverna Dakota
+    Asia/Tashkent:
+      exemplar_city: Taškent
+    Europe/Vatican:
+      exemplar_city: Vatikan
+    Asia/Saigon:
+      exemplar_city: Ho Ši Min
+  metazones:
+    Acre:
+      long:
+        generic: Acre vrijeme
+        standard: Acre standardno vrijeme
+        daylight: Acre ljetno vrijeme
+    Afghanistan:
+      long:
+        standard: afganistansko vrijeme
+    Africa_Central:
+      long:
+        standard: srednjoafričko vrijeme
+    Africa_Eastern:
+      long:
+        standard: istočnoafričko vrijeme
+    Africa_Southern:
+      long:
+        standard: južnoafričko vrijeme
+    Africa_Western:
+      long:
+        generic: zapadnoafričko vrijeme
+        standard: zapadnoafričko standardno vrijeme
+        daylight: zapadnoafričko ljetno vrijeme
+    Alaska:
+      long:
+        generic: aljaško vrijeme
+        standard: aljaško standardno vrijeme
+        daylight: aljaško ljetno vrijeme
+    Almaty:
+      long:
+        generic: altmajsko vrijeme
+        standard: altmajsko standardno vrijeme
+        daylight: altmajsko ljetno vrijeme
+    Amazon:
+      long:
+        generic: amazonsko vrijeme
+        standard: amazonsko standardno vrijeme
+        daylight: amazonsko ljetno vrijeme
+    America_Central:
+      long:
+        generic: središnje vrijeme
+        standard: središnje standardno vrijeme
+        daylight: središnje ljetno vrijeme
+    America_Eastern:
+      long:
+        generic: istočno vrijeme
+        standard: istočno standardno vrijeme
+        daylight: istočno ljetno vrijeme
+    America_Mountain:
+      long:
+        generic: planinsko vrijeme
+        standard: planinsko standardno vrijeme
+        daylight: planinsko ljetno vrijeme
+    America_Pacific:
+      long:
+        generic: pacifičko vrijeme
+        standard: pacifičko standardno vrijeme
+        daylight: pacifičko ljetno vrijeme
+    Anadyr:
+      long:
+        generic: anadirsko vrijeme
+        standard: anadirsko standardno vrijeme
+        daylight: anadirsko ljetno vrijeme
+    Apia:
+      long:
+        generic: vrijeme Apije
+        standard: standardno vrijeme Apije
+        daylight: ljetno vrijeme Apije
+    Aqtau:
+      long:
+        generic: vrijeme grada Aktau
+        standard: standardno vrijeme grada Aktau
+        daylight: ljetno vrijeme grada Aktau
+    Aqtobe:
+      long:
+        generic: vrijeme grada Aktobe
+        standard: standardno vrijeme grada Aktobe
+        daylight: ljetno vrijeme grada Aktobe
+    Arabian:
+      long:
+        generic: arapsko vrijeme
+        standard: arapsko standardno vrijeme
+        daylight: arapsko ljetno vrijeme
+    Argentina:
+      long:
+        generic: argentinsko vrijeme
+        standard: argentinsko standardno vrijeme
+        daylight: argentinsko ljetno vrijeme
+    Argentina_Western:
+      long:
+        generic: zapadnoargentinsko vrijeme
+        standard: zapadnoargentinsko standardno vrijeme
+        daylight: zapadnoargentinsko ljetno vrijeme
+    Armenia:
+      long:
+        generic: armensko vrijeme
+        standard: armensko standardno vrijeme
+        daylight: armensko ljetno vrijeme
+    Atlantic:
+      long:
+        generic: atlantsko vrijeme
+        standard: atlantsko standardno vrijeme
+        daylight: atlantsko ljetno vrijeme
+    Australia_Central:
+      long:
+        generic: srednjoaustralsko vrijeme
+        standard: srednjoaustralsko standardno vrijeme
+        daylight: srednjoaustralsko ljetno vrijeme
+    Australia_CentralWestern:
+      long:
+        generic: australsko središnje zapadno vrijeme
+        standard: australsko središnje zapadno standardno vrijeme
+        daylight: australsko središnje zapadno ljetno vrijeme
+    Australia_Eastern:
+      long:
+        generic: istočnoaustralsko vrijeme
+        standard: istočnoaustralsko standardno vrijeme
+        daylight: istočnoaustralsko ljetno vrijeme
+    Australia_Western:
+      long:
+        generic: zapadnoaustralsko vrijeme
+        standard: zapadnoaustralsko standardno vrijeme
+        daylight: zapadnoaustralsko ljetno vrijeme
+    Azerbaijan:
+      long:
+        generic: azerbajdžansko vrijeme
+        standard: azerbajdžansko standardno vrijeme
+        daylight: azerbajdžansko ljetno vrijeme
+    Azores:
+      long:
+        generic: azorsko vrijeme
+        standard: azorsko standardno vrijeme
+        daylight: azorsko ljetno vrijeme
+    Bangladesh:
+      long:
+        generic: bangladeško vrijeme
+        standard: bangladeško standardno vrijeme
+        daylight: bangladeško ljetno vrijeme
+    Bhutan:
+      long:
+        standard: butansko vrijeme
+    Bolivia:
+      long:
+        standard: bolivijsko vrijeme
+    Brasilia:
+      long:
+        generic: brazilsko vrijeme
+        standard: brazilsko standardno vrijeme
+        daylight: brazilsko ljetno vrijeme
+    Brunei:
+      long:
+        standard: vrijeme za Brunej Darussalam
+    Cape_Verde:
+      long:
+        generic: vrijeme Zelenortskog otočja
+        standard: standardno vrijeme Zelenortskog otočja
+        daylight: ljetno vrijeme Zelenortskog otočja
+    Casey:
+      long:
+        standard: vrijeme Caseyja
+    Chamorro:
+      long:
+        standard: standardno vrijeme Chamorra
+    Chatham:
+      long:
+        generic: vrijeme Chathama
+        standard: standardno vrijeme Chathama
+        daylight: ljetno vrijeme Chathama
+    Chile:
+      long:
+        generic: čileansko vrijeme
+        standard: čileansko standardno vrijeme
+        daylight: čileansko ljetno vrijeme
+    China:
+      long:
+        generic: kinesko vrijeme
+        standard: kinesko standardno vrijeme
+        daylight: kinesko ljetno vrijeme
+    Christmas:
+      long:
+        standard: vrijeme Božićnog Otoka
+    Cocos:
+      long:
+        standard: vrijeme Kokosovih Otoka
+    Colombia:
+      long:
+        generic: kolumbijsko vrijeme
+        standard: kolumbijsko standardno vrijeme
+        daylight: kolumbijsko ljetno vrijeme
+    Cook:
+      long:
+        generic: vrijeme Cookovih Otoka
+        standard: standardno vrijeme Cookovih Otoka
+        daylight: Cookovi Otoci, polusatni pomak, ljetno vrijeme
+    Cuba:
+      long:
+        generic: kubansko vrijeme
+        standard: kubansko standardno vrijeme
+        daylight: kubansko ljetno vrijeme
+    Davis:
+      long:
+        standard: vrijeme Davisa
+    DumontDUrville:
+      long:
+        standard: vrijeme Dumont-d’Urvillea
+    East_Timor:
+      long:
+        standard: istočnotimorsko vrijeme
+    Easter:
+      long:
+        generic: vrijeme Uskršnjeg otoka
+        standard: standardno vrijeme Uskršnjeg otoka
+        daylight: ljetno vrijeme Uskršnjeg otoka
+    Ecuador:
+      long:
+        standard: ekvadorsko vrijeme
+    Europe_Central:
+      short:
+        generic: CET
+        standard: CET
+        daylight: CEST
+      long:
+        generic: srednjoeuropsko vrijeme
+        standard: srednjoeuropsko standardno vrijeme
+        daylight: srednjoeuropsko ljetno vrijeme
+    Europe_Eastern:
+      short:
+        generic: EET
+        standard: EET
+        daylight: EEST
+      long:
+        generic: istočnoeuropsko vrijeme
+        standard: istočnoeuropsko standardno vrijeme
+        daylight: istočnoeuropsko ljetno vrijeme
+    Europe_Further_Eastern:
+      long:
+        standard: dalekoistočno europsko vrijeme
+    Europe_Western:
+      short:
+        generic: WET
+        standard: WET
+        daylight: WEST
+      long:
+        generic: zapadnoeuropsko vrijeme
+        standard: zapadnoeuropsko standardno vrijeme
+        daylight: zapadnoeuropsko ljetno vrijeme
+    Falkland:
+      long:
+        generic: falklandsko vrijeme
+        standard: falklandsko standardno vrijeme
+        daylight: falklandsko ljetno vrijeme
+    Fiji:
+      long:
+        generic: vrijeme Fidžija
+        standard: standardno vrijeme Fidžija
+        daylight: ljetno vrijeme Fidžija
+    French_Guiana:
+      long:
+        standard: vrijeme Francuske Gijane
+    French_Southern:
+      long:
+        standard: vrijeme Francuskih Južnih Teritorija
+    Galapagos:
+      long:
+        standard: vrijeme Galapagosa
+    Gambier:
+      long:
+        standard: vrijeme Gambiera
+    Georgia:
+      long:
+        generic: gruzijsko vrijeme
+        standard: gruzijsko standardno vrijeme
+        daylight: gruzijsko ljetno vrijeme
+    Gilbert_Islands:
+      long:
+        standard: vrijeme Gilbertovih otoka
+    GMT:
+      short:
+        standard: GMT
+      long:
+        standard: univerzalno vrijeme
+    Greenland_Eastern:
+      long:
+        generic: istočnogrenlandsko vrijeme
+        standard: istočnogrenlandsko standardno vrijeme
+        daylight: istočnogrenlandsko ljetno vrijeme
+    Greenland_Western:
+      long:
+        generic: zapadnogrenlandsko vrijeme
+        standard: zapadnogrenlandsko standardno vrijeme
+        daylight: zapadnogrenlandsko ljetno vrijeme
+    Guam:
+      long:
+        standard: guamsko standardno vrijeme
+    Gulf:
+      long:
+        standard: zaljevsko standardno vrijeme
+    Guyana:
+      long:
+        standard: gvajansko vrijeme
+    Hawaii_Aleutian:
+      long:
+        generic: havajsko-aleutsko vrijeme
+        standard: havajsko-aleutsko standardno vrijeme
+        daylight: havajsko-aleutsko ljetno vrijeme
+    Hong_Kong:
+      long:
+        generic: hongkonško vrijeme
+        standard: hongkonško standardno vrijeme
+        daylight: hongkonško ljetno vrijeme
+    Hovd:
+      long:
+        generic: hovdsko vrijeme
+        standard: hovdsko standardno vrijeme
+        daylight: hovdsko ljetno vrijeme
+    India:
+      long:
+        standard: indijsko vrijeme
+    Indian_Ocean:
+      long:
+        standard: vrijeme Indijskog oceana
+    Indochina:
+      long:
+        standard: indokinesko vrijeme
+    Indonesia_Central:
+      long:
+        standard: srednjoindonezijsko vrijeme
+    Indonesia_Eastern:
+      long:
+        standard: istočnoindonezijsko vrijeme
+    Indonesia_Western:
+      long:
+        standard: zapadnoindonezijsko vrijeme
+    Iran:
+      long:
+        generic: iransko vrijeme
+        standard: iransko standardno vrijeme
+        daylight: iransko ljetno vrijeme
+    Irkutsk:
+      long:
+        generic: irkutsko vrijeme
+        standard: irkutsko standardno vrijeme
+        daylight: irkutsko ljetno vrijeme
+    Israel:
+      long:
+        generic: izraelsko vrijeme
+        standard: izraelsko standardno vrijeme
+        daylight: izraelsko ljetno vrijeme
+    Japan:
+      long:
+        generic: japansko vrijeme
+        standard: japansko standardno vrijeme
+        daylight: japansko ljetno vrijeme
+    Kamchatka:
+      long:
+        generic: Petropavlovsk-kamčatsko vrijeme
+        standard: Petropavlovsk-kamčatsko standardno vrijeme
+        daylight: Petropavlovsk-kamčatsko ljetno vrijeme
+    Kazakhstan:
+      long:
+        standard: kazahstansko vrijeme
+    Kazakhstan_Eastern:
+      long:
+        standard: istočnokazahstansko vrijeme
+    Kazakhstan_Western:
+      long:
+        standard: zapadnokazahstansko vrijeme
+    Korea:
+      long:
+        generic: korejsko vrijeme
+        standard: korejsko standardno vrijeme
+        daylight: korejsko ljetno vrijeme
+    Kosrae:
+      long:
+        standard: vrijeme Kosrae
+    Krasnoyarsk:
+      long:
+        generic: krasnojarsko vrijeme
+        standard: krasnojarsko standardno vrijeme
+        daylight: krasnojarsko ljetno vrijeme
+    Kyrgystan:
+      long:
+        standard: kirgistansko vrijeme
+    Lanka:
+      long:
+        standard: lankansko vrijeme
+    Line_Islands:
+      long:
+        standard: vrijeme Ekvatorskih otoka
+    Lord_Howe:
+      long:
+        generic: vrijeme otoka Lord Howe
+        standard: standardno vrijeme otoka Lord Howe
+        daylight: ljetno vrijeme otoka Lord Howe
+    Macau:
+      long:
+        generic: makaosko vrijeme
+        standard: standardno makaosko vrijeme
+        daylight: ljetno makaosko vrijeme
+    Magadan:
+      long:
+        generic: magadansko vrijeme
+        standard: magadansko standardno vrijeme
+        daylight: magadansko ljetno vrijeme
+    Malaysia:
+      long:
+        standard: malezijsko vrijeme
+    Maldives:
+      long:
+        standard: maldivsko vrijeme
+    Marquesas:
+      long:
+        standard: markižansko vrijeme
+    Marshall_Islands:
+      long:
+        standard: vrijeme Maršalovih Otoka
+    Mauritius:
+      long:
+        generic: vrijeme Mauricijusa
+        standard: standardno vrijeme Mauricijusa
+        daylight: ljetno vrijeme Mauricijusa
+    Mawson:
+      long:
+        standard: mawsonsko vrijeme
+    Mexico_Pacific:
+      long:
+        generic: meksičko pacifičko vrijeme
+        standard: meksičko pacifičko standardno vrijeme
+        daylight: meksičko pacifičko ljetno vrijeme
+    Mongolia:
+      long:
+        generic: ulanbatorsko vrijeme
+        standard: ulanbatorsko standardno vrijeme
+        daylight: ulanbatorsko ljetno vrijeme
+    Moscow:
+      long:
+        generic: moskovsko vrijeme
+        standard: moskovsko standardno vrijeme
+        daylight: moskovsko ljetno vrijeme
+    Myanmar:
+      long:
+        standard: mjanmarsko vrijeme
+    Nauru:
+      long:
+        standard: vrijeme Naurua
+    Nepal:
+      long:
+        standard: nepalsko vrijeme
+    New_Caledonia:
+      long:
+        generic: vrijeme Nove Kaledonije
+        standard: standardno vrijeme Nove Kaledonije
+        daylight: ljetno vrijeme Nove Kaledonije
+    New_Zealand:
+      long:
+        generic: novozelandsko vrijeme
+        standard: novozelandsko standardno vrijeme
+        daylight: novozelandsko ljetno vrijeme
+    Newfoundland:
+      long:
+        generic: newfoundlandsko vrijeme
+        standard: newfoundlandsko standardno vrijeme
+        daylight: newfoundlandsko ljetno vrijeme
+    Niue:
+      long:
+        standard: vrijeme Niuea
+    Norfolk:
+      long:
+        generic: vrijeme Otoka Norfolk
+        standard: standardno vrijeme Otoka Norfolk
+        daylight: ljetno vrijeme Otoka Norfolk
+    Noronha:
+      long:
+        generic: vrijeme grada Fernando de Noronha
+        standard: standardno vrijeme grada Fernando de Noronha
+        daylight: ljetno vrijeme grada Fernando de Noronha
+    North_Mariana:
+      long:
+        standard: vrijeme Sjevernomarijanskih Otoka
+    Novosibirsk:
+      long:
+        generic: novosibirsko vrijeme
+        standard: novosibirsko standardno vrijeme
+        daylight: novosibirsko ljetno vrijeme
+    Omsk:
+      long:
+        generic: omsko vrijeme
+        standard: omsko standardno vrijeme
+        daylight: omsko ljetno vrijeme
+    Pakistan:
+      long:
+        generic: pakistansko vrijeme
+        standard: pakistansko standardno vrijeme
+        daylight: pakistansko ljetno vrijeme
+    Palau:
+      long:
+        standard: vrijeme Palaua
+    Papua_New_Guinea:
+      long:
+        standard: vrijeme Papue Nove Gvineje
+    Paraguay:
+      long:
+        generic: paragvajsko vrijeme
+        standard: paragvajsko standardno vrijeme
+        daylight: paragvajsko ljetno vrijeme
+    Peru:
+      long:
+        generic: peruansko vrijeme
+        standard: peruansko standardno vrijeme
+        daylight: peruansko ljetno vrijeme
+    Philippines:
+      long:
+        generic: filipinsko vrijeme
+        standard: filipinsko standardno vrijeme
+        daylight: filipinsko ljetno vrijeme
+    Phoenix_Islands:
+      long:
+        standard: vrijeme Otoka Phoenix
+    Pierre_Miquelon:
+      long:
+        generic: vrijeme za Sveti Petar i Mikelon
+        standard: standardno vrijeme za Sveti Petar i Mikelon
+        daylight: ljetno vrijeme za Sveti Petar i Mikelon
+    Pitcairn:
+      long:
+        standard: pitcairnsko vrijeme
+    Ponape:
+      long:
+        standard: ponapejsko vrijeme
+    Pyongyang:
+      long:
+        standard: pjongjanško vrijeme
+    Qyzylorda:
+      long:
+        generic: vrijeme grada Kizilorde
+        standard: standardno vrijeme grada Kizilorde
+        daylight: ljetno vrijeme grada Kizilorde
+    Reunion:
+      long:
+        standard: vrijeme Reuniona
+    Rothera:
+      long:
+        standard: vrijeme Rothere
+    Sakhalin:
+      long:
+        generic: sahalinsko vrijeme
+        standard: sahalinsko standardno vrijeme
+        daylight: sahalinsko ljetno vrijeme
+    Samara:
+      long:
+        generic: samarsko vrijeme
+        standard: samarsko standardno vrijeme
+        daylight: samarsko ljetno vrijeme
+    Samoa:
+      long:
+        generic: samoansko vrijeme
+        standard: samoansko standardno vrijeme
+        daylight: samoansko ljetno vrijeme
+    Seychelles:
+      long:
+        standard: sejšelsko vrijeme
+    Singapore:
+      long:
+        standard: singapursko vrijeme
+    Solomon:
+      long:
+        standard: vrijeme Salomonovih Otoka
+    South_Georgia:
+      long:
+        standard: vrijeme Južne Georgije
+    Suriname:
+      long:
+        standard: surinamsko vrijeme
+    Syowa:
+      long:
+        standard: vrijeme Syowe
+    Tahiti:
+      long:
+        standard: vrijeme Tahitija
+    Taipei:
+      long:
+        generic: tajpeško vrijeme
+        standard: tajpeško standardno vrijeme
+        daylight: tajpeško ljetno vrijeme
+    Tajikistan:
+      long:
+        standard: tadžikistansko vrijeme
+    Tokelau:
+      long:
+        standard: vrijeme Tokelaua
+    Tonga:
+      long:
+        generic: vrijeme Tonge
+        standard: standardno vrijeme Tonge
+        daylight: ljetno vrijeme Tonge
+    Truk:
+      long:
+        standard: vrijeme Chuuka
+    Turkmenistan:
+      long:
+        generic: turkmenistansko vrijeme
+        standard: turkmenistansko standardno vrijeme
+        daylight: turkmenistansko ljetno vrijeme
+    Tuvalu:
+      long:
+        standard: vrijeme Tuvalua
+    Uruguay:
+      long:
+        generic: urugvajsko vrijeme
+        standard: urugvajsko standardno vrijeme
+        daylight: urugvajsko ljetno vrijeme
+    Uzbekistan:
+      long:
+        generic: uzbekistansko vrijeme
+        standard: uzbekistansko standardno vrijeme
+        daylight: uzbekistansko ljetno vrijeme
+    Vanuatu:
+      long:
+        generic: vrijeme Vanuatua
+        standard: standardno vrijeme Vanuatua
+        daylight: ljetno vrijeme Vanuatua
+    Venezuela:
+      long:
+        standard: venezuelsko vrijeme
+    Vladivostok:
+      long:
+        generic: vladivostočko vrijeme
+        standard: vladivostočko standardno vrijeme
+        daylight: vladivostočko ljetno vrijeme
+    Volgograd:
+      long:
+        generic: volgogradsko vrijeme
+        standard: volgogradsko standardno vrijeme
+        daylight: volgogradsko ljetno vrijeme
+    Vostok:
+      long:
+        standard: vostočko vrijeme
+    Wake:
+      long:
+        standard: vrijeme Otoka Wake
+    Wallis:
+      long:
+        standard: vrijeme Otoka Wallis i Futuna
+    Yakutsk:
+      long:
+        generic: jakutsko vrijeme
+        standard: jakutsko standardno vrijeme
+        daylight: jakutsko ljetno vrijeme
+    Yekaterinburg:
+      long:
+        generic: jekaterinburško vrijeme
+        standard: jekaterinburško standardno vrijeme
+        daylight: jekaterinburško ljetno vrijeme
+    Yukon:
+      long:
+        standard: jukonško vrijeme

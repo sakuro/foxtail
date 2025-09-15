@@ -37,8 +37,6 @@ module Foxtail
         def load_parent_locales_from_source
           supplemental_path = File.join(@source_dir, "common", "supplemental", "supplementalData.xml")
 
-          return {} unless File.exist?(supplemental_path)
-
           parents = {}
 
           begin

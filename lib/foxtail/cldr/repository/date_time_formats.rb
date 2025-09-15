@@ -44,11 +44,44 @@ module Foxtail
           @resolver.resolve("datetime_formats.time_formats.#{style}", "datetime_formats") || default_time_pattern(style)
         end
 
+        # Get available format pattern for specific field combination
+        def available_format(pattern_key)
+          @resolver.resolve("datetime_formats.datetime_formats.available_formats.#{pattern_key}", "datetime_formats")
+        end
+
         # Get datetime format pattern (combination)
         def datetime_pattern(date_style="medium", time_style="medium")
+          # Get the appropriate combination pattern based on date style
+          # CLDR specification: determine combining pattern from date style complexity
+          combination_style = determine_combination_style(date_style)
+          combination_pattern = @resolver.resolve("datetime_formats.datetime_formats.#{combination_style}", "datetime_formats")
+
           date_fmt = date_pattern(date_style)
           time_fmt = time_pattern(time_style)
-          "#{date_fmt} #{time_fmt}"
+          if combination_pattern
+            # Apply CLDR pattern: {1} = date, {0} = time
+            combination_pattern.gsub(Regexp.union(["{0}", "{1}"]), "{1}" => date_fmt, "{0}" => time_fmt)
+          else
+            # Fallback to simple concatenation
+            "#{date_fmt} #{time_fmt}"
+          end
+        end
+
+        # Determine combination style based on date style complexity
+        # Following CLDR specification for dateTimeFormat selection
+        private def determine_combination_style(date_style)
+          case date_style
+          when "full"
+            "full"   # Use full combining pattern for full date
+          when "long"
+            "long"   # Use long combining pattern for long date
+          when "medium"
+            "medium" # Use medium combining pattern for medium date
+          when "short"
+            "short"  # Use short combining pattern for short date
+          else
+            "medium" # Default fallback
+          end
         end
 
         private def default_date_pattern(style)

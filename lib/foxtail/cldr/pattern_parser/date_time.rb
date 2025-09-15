@@ -53,7 +53,7 @@ module Foxtail
             when "m" then :minute
             when "s", "S" then :second
             when "a" then :am_pm
-            when "z", "Z", "X", "x" then :timezone
+            when "z", "Z", "X", "x", "V" then :timezone
             else :unknown
             end
           end
@@ -79,24 +79,55 @@ module Foxtail
 
         # CLDR pattern field specifications, ordered by length (longest first)
         FIELD_PATTERNS = %w[
+          ZZZZZ
           EEEE
-          EEE
+          zzzz
           yyyy
           MMMM
+          QQQQ
+          GGGG
+          VVV
+          EEE
           MMM
+          QQQ
+          GGG
           MM
           dd
           HH
           hh
+          KK
+          kk
           mm
           ss
+          VV
           yy
+          G
+          Q
           M
+          L
+          w
+          W
           d
+          D
+          F
+          g
+          E
+          e
+          c
           H
           h
+          K
+          k
+          m
+          s
+          S
+          A
           y
+          Z
+          z
           a
+          b
+          B
         ].freeze
 
         private_constant :FIELD_PATTERNS

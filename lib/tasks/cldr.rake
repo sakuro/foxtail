@@ -25,6 +25,8 @@ CLDR_EXTRACT_DIR = File.join(TMP_DIR, "cldr-core")
 # Output file lists
 PLURAL_RULES_FILES = FileList[File.join(DATA_DIR, "*/plural_rules.yml")]
 NUMBER_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/number_formats.yml")]
+CURRENCIES_FILES = FileList[File.join(DATA_DIR, "*/currencies.yml")]
+TIMEZONE_NAMES_FILES = FileList[File.join(DATA_DIR, "*/timezone_names.yml")]
 DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
 LOCALE_ALIASES_FILE = File.join(DATA_DIR, "locale_aliases.yml")
 PARENT_LOCALES_FILE = File.join(DATA_DIR, "parent_locales.yml")
@@ -36,6 +38,7 @@ CLEAN.include(CLDR_EXTRACT_DIR)
 CLOBBER.include(
   PLURAL_RULES_FILES,
   NUMBER_FORMATS_FILES,
+  CURRENCIES_FILES,
   DATETIME_FORMATS_FILES,
   LOCALE_ALIASES_FILE,
   PARENT_LOCALES_FILE
@@ -78,8 +81,11 @@ namespace :cldr do
   task extract: %i[
     extract:parent_locales
     extract:locale_aliases
+    extract:metazone_mapping
     extract:plural_rules
     extract:number_formats
+    extract:currencies
+    extract:timezone_names
     extract:datetime_formats
   ]
 
@@ -103,6 +109,17 @@ namespace :cldr do
 
       extractor.extract_all
     end
+
+    desc "Extract CLDR metazone mapping from downloaded CLDR core data"
+    task metazone_mapping: %i[set_debug_logging download] do
+      extractor = Foxtail::CLDR::Extractor::MetazoneMapping.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: DATA_DIR
+      )
+
+      extractor.extract_all
+    end
+
     desc "Extract CLDR data for a specific locale"
     task :locale, [:locale_id] => %i[set_debug_logging download] do |_task, args|
       unless args[:locale_id]
@@ -118,6 +135,10 @@ namespace :cldr do
           output_dir: DATA_DIR
         ),
         Foxtail::CLDR::Extractor::NumberFormats.new(
+          source_dir: CLDR_EXTRACT_DIR,
+          output_dir: DATA_DIR
+        ),
+        Foxtail::CLDR::Extractor::Currencies.new(
           source_dir: CLDR_EXTRACT_DIR,
           output_dir: DATA_DIR
         ),
@@ -143,6 +164,26 @@ namespace :cldr do
     desc "Extract CLDR number formats from downloaded CLDR core data"
     task number_formats: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::NumberFormats.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: DATA_DIR
+      )
+
+      extractor.extract_all
+    end
+
+    desc "Extract CLDR currencies from downloaded CLDR core data"
+    task currencies: %i[set_debug_logging download parent_locales] do
+      extractor = Foxtail::CLDR::Extractor::Currencies.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: DATA_DIR
+      )
+
+      extractor.extract_all
+    end
+
+    desc "Extract CLDR timezone names from downloaded CLDR core data"
+    task timezone_names: %i[set_debug_logging download parent_locales] do
+      extractor = Foxtail::CLDR::Extractor::TimezoneNames.new(
         source_dir: CLDR_EXTRACT_DIR,
         output_dir: DATA_DIR
       )

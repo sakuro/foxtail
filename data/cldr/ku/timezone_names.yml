@@ -1,0 +1,926 @@
+---
+locale: ku
+generated_at: '2025-09-15T06:26:36Z'
+cldr_version: '46'
+timezone_names:
+  formats:
+    region_format: Saeta {0}(y)ê
+    region_format_daylight: Saeta Havînê ya {0}(y)ê
+    region_format_standard: Saeta Standard a {0}(y)ê
+  zones:
+    Etc/UTC:
+      short:
+        standard: SGH
+      long:
+        standard: Saeta Gerdûnî ya Hevdemî
+    Etc/Unknown:
+      exemplar_city: Bajarê Nenas
+    Europe/Andorra:
+      exemplar_city: Andora
+    Asia/Dubai:
+      exemplar_city: Dûbaî
+    Asia/Kabul:
+      exemplar_city: Kabûl
+    Europe/Tirane:
+      exemplar_city: Tîran
+    Asia/Yerevan:
+      exemplar_city: Rewan
+    Antarctica/Davis:
+      exemplar_city: Davîs
+    Europe/Vienna:
+      exemplar_city: Viyana
+    Australia/Sydney:
+      exemplar_city: Sîdney
+    America/Aruba:
+      exemplar_city: Arûba
+    Asia/Baku:
+      exemplar_city: Bakû
+    Europe/Sarajevo:
+      exemplar_city: Saraybosna
+    Asia/Dhaka:
+      exemplar_city: Daka
+    Europe/Brussels:
+      exemplar_city: Bruksel
+    Europe/Sofia:
+      exemplar_city: Sofya
+    Asia/Bahrain:
+      exemplar_city: Behreyn
+    America/St_Barthelemy:
+      exemplar_city: Saint Barthelemy
+    Atlantic/Bermuda:
+      exemplar_city: Bermûda
+    Asia/Brunei:
+      exemplar_city: Brûney
+    Europe/Minsk:
+      exemplar_city: Mînsk
+    America/Belize:
+      exemplar_city: Belîze
+    Africa/Kinshasa:
+      exemplar_city: Kînşasa
+    Europe/Zurich:
+      exemplar_city: Zûrîh
+    Asia/Urumqi:
+      exemplar_city: Ûrûmçî
+    Asia/Shanghai:
+      exemplar_city: Şanghay
+    America/Costa_Rica:
+      exemplar_city: Kosta Rîka
+    Atlantic/Cape_Verde:
+      exemplar_city: Kap Verde
+    Asia/Nicosia:
+      exemplar_city: Lefkoşe
+    Europe/Prague:
+      exemplar_city: Prag
+    Europe/Busingen:
+      exemplar_city: Bûsîngen
+    Europe/Berlin:
+      exemplar_city: Berlîn
+    Africa/Djibouti:
+      exemplar_city: Cibûtî
+    Europe/Copenhagen:
+      exemplar_city: Kopenhag
+    America/Dominica:
+      exemplar_city: Domînîka
+    Africa/Algiers:
+      exemplar_city: Cezayîr
+    Europe/Tallinn:
+      exemplar_city: Talîn
+    Africa/Cairo:
+      exemplar_city: Qahîre
+    Atlantic/Canary:
+      exemplar_city: Giravên Kanaryayê
+    Africa/Ceuta:
+      exemplar_city: Septe
+    Europe/Madrid:
+      exemplar_city: Madrîd
+    Europe/Helsinki:
+      exemplar_city: Helsînkî
+    Pacific/Fiji:
+      exemplar_city: Fîjî
+    Europe/Paris:
+      exemplar_city: Parîs
+    Africa/Libreville:
+      exemplar_city: Lîbrevîl
+    Europe/London:
+      exemplar_city: Londra
+      long:
+        daylight: Saeta Havînê ya Brîtanyayê
+    Asia/Tbilisi:
+      exemplar_city: Tiflîs
+    Africa/Accra:
+      exemplar_city: Akra
+    Europe/Gibraltar:
+      exemplar_city: Cebelîtariq
+    Africa/Conakry:
+      exemplar_city: Konakrî
+    Europe/Athens:
+      exemplar_city: Atîna
+    Atlantic/South_Georgia:
+      exemplar_city: Georgiaya Başûr
+    Europe/Budapest:
+      exemplar_city: Bûdapeşt
+    Asia/Jakarta:
+      exemplar_city: Cakarta
+    Asia/Makassar:
+      exemplar_city: Makasar
+    Asia/Jayapura:
+      exemplar_city: Cayapûra
+    Europe/Dublin:
+      exemplar_city: Dûblîn
+      long:
+        daylight: Saeta Standard a Îrlandayê
+    Asia/Jerusalem:
+      exemplar_city: Quds
+    Europe/Isle_of_Man:
+      exemplar_city: Girava Manê
+    Asia/Baghdad:
+      exemplar_city: Bexda
+    Europe/Rome:
+      exemplar_city: Roma
+    America/Jamaica:
+      exemplar_city: Jamaîka
+    Asia/Amman:
+      exemplar_city: Eman
+    Africa/Nairobi:
+      exemplar_city: Naîrobî
+    Asia/Bishkek:
+      exemplar_city: Bîşkek
+    Indian/Comoro:
+      exemplar_city: Komor
+    Asia/Seoul:
+      exemplar_city: Seûl
+    Asia/Kuwait:
+      exemplar_city: Kuweyt
+    Asia/Aqtau:
+      exemplar_city: Aqtaw
+    Asia/Atyrau:
+      exemplar_city: Atîrav
+    Asia/Qyzylorda:
+      exemplar_city: Qizilorda
+    Asia/Almaty:
+      exemplar_city: Almatî
+    Asia/Beirut:
+      exemplar_city: Beyrût
+    Asia/Colombo:
+      exemplar_city: Kolombo
+    Africa/Maseru:
+      exemplar_city: Maserû
+    Europe/Vilnius:
+      exemplar_city: Vîlnûs
+    Europe/Luxembourg:
+      exemplar_city: Luksembûrg
+    Europe/Riga:
+      exemplar_city: Rîga
+    Africa/Tripoli:
+      exemplar_city: Trablûs
+    Africa/Casablanca:
+      exemplar_city: Kazablanka
+    Europe/Monaco:
+      exemplar_city: Monako
+    Europe/Chisinau:
+      exemplar_city: Kişînew
+    Europe/Podgorica:
+      exemplar_city: Podgorîka
+    Europe/Skopje:
+      exemplar_city: Uskup
+    Asia/Ulaanbaatar:
+      exemplar_city: Ûlanbatar
+    Asia/Macau:
+      exemplar_city: Makao
+    Indian/Maldives:
+      exemplar_city: Maldîv
+    America/Ciudad_Juarez:
+      exemplar_city: Ciûdad Juarez
+    America/Bahia_Banderas:
+      exemplar_city: Bahîa Banderas
+    America/Merida:
+      exemplar_city: Merîda
+    America/Cancun:
+      exemplar_city: Cancûn
+    Asia/Kuala_Lumpur:
+      exemplar_city: Kûala Lûmpûr
+    Asia/Kuching:
+      exemplar_city: Kûçîng
+    Asia/Katmandu:
+      exemplar_city: Katmandû
+    Asia/Muscat:
+      exemplar_city: Muskat
+    Pacific/Tahiti:
+      exemplar_city: Tahîtî
+    Asia/Manila:
+      exemplar_city: Manîla
+    Asia/Karachi:
+      exemplar_city: Karaçî
+    Europe/Warsaw:
+      exemplar_city: Warşova
+    America/Puerto_Rico:
+      exemplar_city: Porto Rîko
+    Asia/Gaza:
+      exemplar_city: Xeze
+    Atlantic/Azores:
+      exemplar_city: Giravên Azorê
+    Europe/Lisbon:
+      exemplar_city: Lîzbon
+    Asia/Qatar:
+      exemplar_city: Qeter
+    Europe/Bucharest:
+      exemplar_city: Bukreş
+    Europe/Belgrade:
+      exemplar_city: Belgrad
+    Europe/Kaliningrad:
+      exemplar_city: Kalînîngrad
+    Europe/Moscow:
+      exemplar_city: Moskova
+    Europe/Astrakhan:
+      exemplar_city: Astraxan
+    Europe/Kirov:
+      exemplar_city: Kîrov
+    Asia/Chita:
+      exemplar_city: Çîta
+    Asia/Khandyga:
+      exemplar_city: Xandîga
+    Asia/Sakhalin:
+      exemplar_city: Saxalîn
+    Asia/Ust-Nera:
+      exemplar_city: Ûst-Nera
+    Asia/Kamchatka:
+      exemplar_city: Kamçatka
+    Asia/Anadyr:
+      exemplar_city: Anadir
+    Africa/Kigali:
+      exemplar_city: Kîgalî
+    Asia/Riyadh:
+      exemplar_city: Riyad
+    Africa/Khartoum:
+      exemplar_city: Xartûm
+    Europe/Stockholm:
+      exemplar_city: Stokholm
+    Asia/Singapore:
+      exemplar_city: Sîngapûr
+    Europe/San_Marino:
+      exemplar_city: San Marîno
+    Africa/Mogadishu:
+      exemplar_city: Mogadîşû
+    Asia/Damascus:
+      exemplar_city: Şam
+    Asia/Dushanbe:
+      exemplar_city: Duşenbe
+    Asia/Dili:
+      exemplar_city: Dîlî
+    Asia/Ashgabat:
+      exemplar_city: Eşqabat
+    Africa/Tunis:
+      exemplar_city: Tûnis
+    Europe/Istanbul:
+      exemplar_city: Stenbol
+    Asia/Taipei:
+      exemplar_city: Taîpeî
+    Africa/Dar_es_Salaam:
+      exemplar_city: Daruselam
+    Europe/Kiev:
+      exemplar_city: Kîev
+    America/North_Dakota/Beulah:
+      exemplar_city: Beûlah, Dakotaya Bakur
+    America/North_Dakota/New_Salem:
+      exemplar_city: New Salem, Dakotaya Bakur
+    America/North_Dakota/Center:
+      exemplar_city: Center, Dakotaya Bakur
+    Asia/Samarkand:
+      exemplar_city: Semerkand
+    Asia/Tashkent:
+      exemplar_city: Taşkent
+    Europe/Vatican:
+      exemplar_city: Vatîkan
+    Asia/Saigon:
+      exemplar_city: Bajarê Ho Chi Minhê
+  metazones:
+    Afghanistan:
+      long:
+        standard: Saeta Efxanistanê
+    Africa_Central:
+      long:
+        standard: Saeta Afrîkaya Navîn
+    Africa_Eastern:
+      long:
+        standard: Saeta Afrîkaya Rojhilat
+    Africa_Southern:
+      long:
+        standard: Saeta Standard a Afrîkaya Başûr
+    Africa_Western:
+      long:
+        generic: Saeta Afrîkaya Rojava
+        standard: Saeta Standard a Afrîkaya Rojava
+        daylight: Saeta Havînê ya Afrîkaya Rojava
+    Alaska:
+      short:
+        generic: SAK
+        standard: SSAK
+        daylight: SHAK
+      long:
+        generic: Saeta Alaskayê
+        standard: Saeta Standard a Alaskayê
+        daylight: Saeta Havînê ya Alaskayê
+    Amazon:
+      long:
+        generic: Saeta Amazonê
+        standard: Saeta Standard a Amazonê
+        daylight: Saeta Havînê ya Amazonê
+    America_Central:
+      short:
+        generic: SN
+        standard: SSN
+        daylight: SHN
+      long:
+        generic: Saeta Navendî ya Amerîkaya Bakur
+        standard: Saeta Standard a Navendî ya Amerîkaya Bakur
+        daylight: Saeta Havînê ya Navendî ya Amerîkaya Bakur
+    America_Eastern:
+      short:
+        generic: SR
+        standard: SSR
+        daylight: SHR
+      long:
+        generic: Saeta Rojhilat a Amerîkaya Bakur
+        standard: Saeta Standard a Rojhilat ya Amerîkaya Bakur
+        daylight: Saeta Havînê ya Rojhilat ya Amerîkaya Bakur
+    America_Mountain:
+      short:
+        generic: SÇ
+        standard: SSÇ
+        daylight: SHÇ
+      long:
+        generic: Saeta Çîyayî ya Amerîkaya Bakur
+        standard: Saeta Standard a Çîyayî ya Amerîkaya Bakur
+        daylight: Saeta Havînê ya Çîyayî ya Amerîkaya Bakur
+    America_Pacific:
+      short:
+        generic: SP
+        standard: SSP
+        daylight: SHP
+      long:
+        generic: Saeta Pasîfîkê ya Amerîkaya Bakur
+        standard: Saeta Standard a Pasîfîkê ya Amerîkaya Bakur
+        daylight: Saeta Havînê ya Pasîfîkê ya Amerîkaya Bakur
+    Apia:
+      long:
+        generic: Saeta Apiayê
+        standard: Saeta Standard a Apiayê
+        daylight: Saeta Havînê ya Apiayê
+    Arabian:
+      long:
+        generic: Saeta Erebistanê
+        standard: Saeta Standard a Erebistanê
+        daylight: Saeta Havînê ya Erebistanê
+    Argentina:
+      long:
+        generic: Saeta Arjantînê
+        standard: Saeta Standard a Arjantînê
+        daylight: Saeta Havînê ya Arjantînê
+    Argentina_Western:
+      long:
+        generic: Saeta Arjantîna Rojava
+        standard: Saeta Standard a Arjantîna Rojava
+        daylight: Saeta Havînê ya Arjantîna Rojava
+    Armenia:
+      long:
+        generic: Saeta Ermenistanê
+        standard: Saeta Standard a Ermenistanê
+        daylight: Saeta Havînê ya Ermenistanê
+    Atlantic:
+      short:
+        generic: SA
+        standard: SSA
+        daylight: SHA
+      long:
+        generic: Saeta Atlantîkê
+        standard: Saeta Standard a Atlantîkê
+        daylight: Saeta Havînê ya Atlantîkê
+    Australia_Central:
+      long:
+        generic: Saeta Awistralyaya Navîn
+        standard: Saeta Standard a Awistralyaya Navîn
+        daylight: Saeta Havînê ya Awistralyaya Navîn
+    Australia_CentralWestern:
+      long:
+        generic: Saeta Rojavaya Navîn a Awistralyayê
+        standard: Saeta Standard a Rojavaya Navîn a Awistralyayê
+        daylight: Saeta Havînê ya Rojavaya Navîn a Awistralyayê
+    Australia_Eastern:
+      long:
+        generic: Saeta Awistralyaya Rojhilat
+        standard: Saeta Standard a Awistralyaya Rojhilat
+        daylight: Saeta Havînê ya Awistralyaya Rojhilat
+    Australia_Western:
+      long:
+        generic: Saeta Awistralyaya Rojava
+        standard: Saeta Standard a Awistralyaya Rojava
+        daylight: Saeta Havînê ya Awistralyaya Rojava
+    Azerbaijan:
+      long:
+        generic: Saeta Azerbeycanê
+        standard: Saeta Standard a Azerbeycanê
+        daylight: Saeta Havînê ya Azerbeycanê
+    Azores:
+      long:
+        generic: Saeta Azoran
+        standard: Saeta Standard a Azoran
+        daylight: Saeta Havînê ya Azoran
+    Bangladesh:
+      long:
+        generic: Saeta Bengladeşê
+        standard: Saeta Standard a Bengladeşê
+        daylight: Saeta Havînê ya Bengladeşê
+    Bhutan:
+      long:
+        standard: Saeta Bûtanê
+    Bolivia:
+      long:
+        standard: Saeta Bolîvyayê
+    Brasilia:
+      long:
+        generic: Saeta Brasîlyayê
+        standard: Saeta Standard a Brasîlyayê
+        daylight: Saeta Havînê ya Brasîlyayê
+    Brunei:
+      long:
+        standard: Saeta Brûney Darusselamê
+    Cape_Verde:
+      long:
+        generic: Saeta Cape Verdeyê
+        standard: Saeta Standard a Cape Verdeyê
+        daylight: Saeta Havînê ya Cape Verdeyê
+    Chamorro:
+      long:
+        standard: Saeta Standard a Chamorroyê
+    Chatham:
+      long:
+        generic: Saeta Chathamê
+        standard: Saeta Standard a Chathamê
+        daylight: Saeta Havînê ya Chathamê
+    Chile:
+      long:
+        generic: Saeta Şîlîyê
+        standard: Saeta Standard a Şîlîyê
+        daylight: Saeta Havînê ya Şîlîyê
+    China:
+      long:
+        generic: Saeta Çînê
+        standard: Saeta Standard a Çînê
+        daylight: Saeta Havînê ya Çînê
+    Christmas:
+      long:
+        standard: Saeta Girava Christmasê
+    Cocos:
+      long:
+        standard: Saeta Giravên Cocosê
+    Colombia:
+      long:
+        generic: Saeta Kolombîyayê
+        standard: Saeta Standard a Kolombîyayê
+        daylight: Saeta Havînê ya Kolombîyayê
+    Cook:
+      long:
+        generic: Saeta Giravên Cookê
+        standard: Saeta Standard a Giravên Cookê
+        daylight: Saeta Nîvhavînê ya Giravên Cookê
+    Cuba:
+      short:
+        generic: SK
+        standard: SSK
+        daylight: SHK
+      long:
+        generic: Saeta Kubayê
+        standard: Saeta Standard a Kubayê
+        daylight: Saeta Havînê ya Kubayê
+    Davis:
+      long:
+        standard: Saeta Davîsê
+    DumontDUrville:
+      long:
+        standard: Saeta Dumont-d’Urvilleyê
+    East_Timor:
+      long:
+        standard: Saeta Tîmûra Rojhilat
+    Easter:
+      long:
+        generic: Saeta Girava Paskalyayê
+        standard: Saeta Standard a Girava Paskalyayê
+        daylight: Saeta Havînê ya Girava Paskalyayê
+    Ecuador:
+      long:
+        standard: Saeta Ekwadorê
+    Europe_Central:
+      long:
+        generic: Saeta Ewropaya Navîn
+        standard: Saeta Standard a Ewropaya Navîn
+        daylight: Saeta Havînê ya Ewropaya Navîn
+    Europe_Eastern:
+      long:
+        generic: Saeta Ewropaya Rojhilat
+        standard: Saeta Standard a Ewropaya Rojhilat
+        daylight: Saeta Havînê ya Ewropaya Rojhilat
+    Europe_Further_Eastern:
+      long:
+        standard: Saeta Ewropaya Rojhilat a Pêştir
+    Europe_Western:
+      long:
+        generic: Saeta Ewropaya Rojava
+        standard: Saeta Standard a Ewropaya Rojava
+        daylight: Saeta Havînê ya Ewropaya Rojava
+    Falkland:
+      long:
+        generic: Saeta Giravên Falklandê
+        standard: Saeta Standard a Giravên Falklandê
+        daylight: Saeta Havînê ya Giravên Falklandê
+    Fiji:
+      long:
+        generic: Saeta Fîjîyê
+        standard: Saeta Standard a Fîjîyê
+        daylight: Saeta Havînê ya Fîjîyê
+    French_Guiana:
+      long:
+        standard: Saeta Guiyanaya Fransî
+    French_Southern:
+      long:
+        standard: Saeta Antarktîka û Başûrê Fransayê
+    Galapagos:
+      long:
+        standard: Saeta Galapagosê
+    Gambier:
+      long:
+        standard: Saeta Gambierê
+    Georgia:
+      long:
+        generic: Saeta Gurcistanê
+        standard: Saeta Standard a Gurcistanê
+        daylight: Saeta Havînê ya Gurcistanê
+    Gilbert_Islands:
+      long:
+        standard: Saeta Giravên Gilbertê
+    GMT:
+      long:
+        standard: Saeta Navînî ya Greenwichê
+    Greenland_Eastern:
+      short:
+        generic: SGR
+        standard: SSGR
+        daylight: SHGR
+      long:
+        generic: Saeta Grînlanda Rojhilat
+        standard: Saeta Standard a Grînlanda Rojhilat
+        daylight: Saeta Havînê ya Grînlanda Rojhilat
+    Greenland_Western:
+      short:
+        generic: SGRO
+        standard: SSGRO
+        daylight: SHGRO
+      long:
+        generic: Saeta Grînlanda Rojava
+        standard: Saeta Standard a Grînlanda Rojava
+        daylight: Saeta Havînê ya Grînlanda Rojava
+    Gulf:
+      long:
+        standard: Saeta Standard a Kendavê
+    Guyana:
+      long:
+        standard: Saeta Guyanayê
+    Hawaii_Aleutian:
+      short:
+        generic: SHAL
+        standard: SSHA
+        daylight: SHHA
+      long:
+        generic: Saeta Hawaii-Aleutianê
+        standard: Saeta Standard a Hawaii-Aleutianê
+        daylight: Saeta Havînê ya Hawaii-Aleutianê
+    Hong_Kong:
+      long:
+        generic: Saeta Hong Kongê
+        standard: Saeta Standard a Hong Kongê
+        daylight: Saeta Havînê ya Hong Kongê
+    Hovd:
+      long:
+        generic: Saeta Hovdê
+        standard: Saeta Standard a Hovdê
+        daylight: Saeta Havînê ya Hovdê
+    India:
+      long:
+        standard: Saeta Standard a Hindistanê
+    Indian_Ocean:
+      long:
+        standard: Saeta Okyanûsa Hindê
+    Indochina:
+      long:
+        standard: Saeta Hindiçînê
+    Indonesia_Central:
+      long:
+        standard: Saeta Endonezyaya Navîn
+    Indonesia_Eastern:
+      long:
+        standard: Saeta Endonezyaya Rojhilat
+    Indonesia_Western:
+      long:
+        standard: Saeta Endonezyaya Rojava
+    Iran:
+      long:
+        generic: Saeta Îranê
+        standard: Saeta Standard a Îranê
+        daylight: Saeta Havînê ya Îranê
+    Irkutsk:
+      long:
+        generic: Saeta Irkutskê
+        standard: Saeta Standard a Irkutskê
+        daylight: Saeta Havînê ya Irkutskê
+    Israel:
+      long:
+        generic: Saeta Îsraîlê
+        standard: Saeta Standard a Îsraîlê
+        daylight: Saeta Havînê ya Îsraîlê
+    Japan:
+      long:
+        generic: Saeta Japonyayê
+        standard: Saeta Standard a Japonyayê
+        daylight: Saeta Havşnê ya Japonyayê
+    Kazakhstan:
+      long:
+        standard: Saeta Qazaxistanê
+    Kazakhstan_Eastern:
+      long:
+        standard: Saeta Qazaxistana Rojhilat
+    Kazakhstan_Western:
+      long:
+        standard: Saeta Qazaxistana Rojava
+    Korea:
+      long:
+        generic: Saeta Koreyê
+        standard: Saeta Standard a Koreyê
+        daylight: Saeta Havînê ya Koreyê
+    Kosrae:
+      long:
+        standard: Saeta Kosraeyê
+    Krasnoyarsk:
+      long:
+        generic: Saeta Krasnoyarskê
+        standard: Saeta Standard a Krasnoyarskê
+        daylight: Saeta Havînê ya Krasnoyarskê
+    Kyrgystan:
+      long:
+        standard: Saeta Qirxizistanê
+    Line_Islands:
+      long:
+        standard: Saeta Giravên Lîneyê
+    Lord_Howe:
+      long:
+        generic: Saeta Lord Howeyê
+        standard: Saeta Standard a Lord Howeyê
+        daylight: Saeta Havînê ya Lord Howeyê
+    Magadan:
+      long:
+        generic: Saeta Magadanê
+        standard: Saeta Standard a Magadanê
+        daylight: Saeta Havînê ya Magadanê
+    Malaysia:
+      long:
+        standard: Saeta Malezyayê
+    Maldives:
+      long:
+        standard: Saeta Maldîvan
+    Marquesas:
+      long:
+        standard: Saeta Marquesasê
+    Marshall_Islands:
+      long:
+        standard: Saeta Giravên Marşalê
+    Mauritius:
+      long:
+        generic: Saeta Mauritiusê
+        standard: Saeta Standard a Mauritiusê
+        daylight: Saeta Havînê ya Mauritiusê
+    Mawson:
+      long:
+        standard: Saeta Mawsonê
+    Mexico_Pacific:
+      long:
+        generic: Saeta Pasîfîka Meksîkayê
+        standard: Saeta Standard a Pasîfîka Meksîkayê
+        daylight: Saeta Havînê ya Pasîfîka Meksîkayê
+    Mongolia:
+      long:
+        generic: Saeta Ûlanbatarê
+        standard: Saeta Standard a Ûlanbatarê
+        daylight: Saeta Havînê ya Ûlanbatarê
+    Moscow:
+      long:
+        generic: Saeta Moskovayê
+        standard: Saeta Standard a Moskovayê
+        daylight: Saeta Havînê ya Moskovayê
+    Myanmar:
+      long:
+        standard: Saeta Myanmarê
+    Nauru:
+      long:
+        standard: Saeta Naûrûyê
+    Nepal:
+      long:
+        standard: Saeta Nepalê
+    New_Caledonia:
+      long:
+        generic: Saeta Kaledonyaya Nû
+        standard: Saeta Standard a Kaledonyaya Nû
+        daylight: Saeta Havînê ya Kaledonyaya Nû
+    New_Zealand:
+      long:
+        generic: Saeta Zelandaya Nû
+        standard: Saeta Standard a Zelandaya Nû
+        daylight: Saeta Havînê ya Zelandaya Nû
+    Newfoundland:
+      short:
+        generic: SNF
+        standard: SSNF
+        daylight: SHNF
+      long:
+        generic: Saeta Newfoundlandê
+        standard: Saeta Standard a Newfoundlandê
+        daylight: Saeta Havînê ya Newfoundlandê
+    Niue:
+      long:
+        standard: Saeta Niueyê
+    Norfolk:
+      long:
+        generic: Saeta Girava Norfolkê
+        standard: Saeta Standard a Girava Norfolkê
+        daylight: Saeta Havînê ya Girava Norfolkê
+    Noronha:
+      long:
+        generic: Saeta Fernando de Noronhayê
+        standard: Saeta Standard a Fernando de Noronhayê
+        daylight: Saeta Havînê ya Fernando de Noronhayê
+    Novosibirsk:
+      long:
+        generic: Saeta Novosibirskê
+        standard: Saeta Standard a Novosibirskê
+        daylight: Saeta Havînê ya Novosibirskê
+    Omsk:
+      long:
+        generic: Saeta Omskê
+        standard: Saeta Standard a Omskê
+        daylight: Saeta Havînê ya Omskê
+    Pakistan:
+      long:
+        generic: Saeta Pakistanê
+        standard: Saeta Standard a Pakistanê
+        daylight: Saeta Havînê ya Pakistanê
+    Palau:
+      long:
+        standard: Saeta Palauyê
+    Papua_New_Guinea:
+      long:
+        standard: Saeta Gîneya Nû ya Papûayê
+    Paraguay:
+      long:
+        generic: Saeta Paragûayê
+        standard: Saeta Standard a Paragûayê
+        daylight: Saeta Havînê ya Paragûayê
+    Peru:
+      long:
+        generic: Saeta Perûyê
+        standard: Saeta Standard a Perûyê
+        daylight: Saeta Havînê ya Perûyê
+    Philippines:
+      long:
+        generic: Saeta Fîlîpînê
+        standard: Saeta Standard a Fîlîpînê
+        daylight: Saeta Havînê ya Fîlîpînê
+    Phoenix_Islands:
+      long:
+        standard: Saeta Giravên Phoenîks
+    Pierre_Miquelon:
+      long:
+        generic: Saeta Saint Pierre û Miquelonê
+        standard: Saeta Standard a Saint Pierre û Miquelonê
+        daylight: Saeta Havînê ya Saint Pierre û Miquelonê
+    Pitcairn:
+      long:
+        standard: Saeta Pitcairnê
+    Ponape:
+      long:
+        standard: Saeta Ponapeyê
+    Pyongyang:
+      long:
+        standard: Saeta Pyongyangê
+    Reunion:
+      long:
+        standard: Saeta Réunionê
+    Rothera:
+      long:
+        standard: Saeta Rotherayê
+    Sakhalin:
+      long:
+        generic: Saeta Saxalînê
+        standard: Saeta Standard a Saxalînê
+        daylight: Saeta Havînê ya Saxalînê
+    Samoa:
+      long:
+        generic: Saeta Samoayê
+        standard: Saeta Standard a Samoayê
+        daylight: Saeta Havînê ya Samoayê
+    Seychelles:
+      long:
+        standard: Saeta Seyşelerê
+    Singapore:
+      long:
+        standard: Saeta Standard a Sîngapûrê
+    Solomon:
+      long:
+        standard: Saeta Giravên Solomonê
+    South_Georgia:
+      long:
+        standard: Saeta Georgiaya Başûr
+    Suriname:
+      long:
+        standard: Saeta Surînamê
+    Syowa:
+      long:
+        standard: Saeta Syowayê
+    Tahiti:
+      long:
+        standard: Saeta Tahîtîyê
+    Taipei:
+      long:
+        generic: Saeta Taîpeîyê
+        standard: Saeta Standard a Taîpeîyê
+        daylight: Saeta Havînê ya Taîpeîyê
+    Tajikistan:
+      long:
+        standard: Saeta Tacikistanê
+    Tokelau:
+      long:
+        standard: Saeta Tokelauyê
+    Tonga:
+      long:
+        generic: Saeta Tongayê
+        standard: Saeta Standard a Tongayê
+        daylight: Saeta Havînê ya Tongayê
+    Truk:
+      long:
+        standard: Saeta Chuukê
+    Turkmenistan:
+      long:
+        generic: Saeta Tirkmenistanê
+        standard: Saeta Standard a Tirkmenistanê
+        daylight: Saeta Havînê ya Tirkmenistanê
+    Tuvalu:
+      long:
+        standard: Saeta Tûvalûyê
+    Uruguay:
+      long:
+        generic: Saeta Ûrûgûayê
+        standard: Saeta Standard a Ûrûgûayê
+        daylight: Saeta Havînê ya Ûrûgûayê
+    Uzbekistan:
+      long:
+        generic: Saeta Ozbekistanê
+        standard: Saeta Standard a Ozbekistanê
+        daylight: Saeta Havînê ya Ozbekistanê
+    Vanuatu:
+      long:
+        generic: Saeta Vanûatûyê
+        standard: Saeta Standard a Vanûatûyê
+        daylight: Saeta Havînê ya Vanûatûyê
+    Venezuela:
+      long:
+        standard: Saeta Venezûelayê
+    Vladivostok:
+      long:
+        generic: Saeta Vladivostokê
+        standard: Saeta Standard a Vladivostokê
+        daylight: Saeta Havînê ya Vladivostokê
+    Volgograd:
+      long:
+        generic: Saeta Volgogradê
+        standard: Saeta Standard a Volgogradê
+        daylight: Saeta Havînê ya Volgogradê
+    Vostok:
+      long:
+        standard: Saeta Vostokê
+    Wake:
+      long:
+        standard: Saeta Girava Wakeyê
+    Wallis:
+      long:
+        standard: Saeta Wallis û Futunayê
+    Yakutsk:
+      long:
+        generic: Saeta Yakutskê
+        standard: Saeta Standard a Yakutskê
+        daylight: Saeta Havînê ya Yakutskê
+    Yekaterinburg:
+      long:
+        generic: Saeta Yekaterinburgê
+        standard: Saeta Standard a Yekaterinburgê
+        daylight: Saeta Havînê ya Yekaterinburgê
+    Yukon:
+      short:
+        standard: SY
+      long:
+        standard: Saeta Yukonê

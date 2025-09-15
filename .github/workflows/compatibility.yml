@@ -132,13 +132,17 @@ jobs:
           # Read the markdown report
           REPORT=$(cat compat/node_intl_compatibility_report.md)
 
-          # Extract the summary table and total test cases line
-          SUMMARY=$(echo "$REPORT" | sed -n '/## Summary/,/*Total test cases:/p')
+          # Extract the overall summary and both format compatibility tables
+          SUMMARY=$(echo "$REPORT" | sed -n '/## Overall Summary/,/### DateTimeFormat Mismatches/p' | head -n -1)
+          if [ -z "$SUMMARY" ]; then
+            # Fallback: extract everything up to the first detailed mismatch
+            SUMMARY=$(echo "$REPORT" | sed -n '/## Overall Summary/,/^**.*_.*_.*$/p' | head -n -1)
+          fi
 
           # Create the comment body
           {
             echo 'body<<EOF'
-            echo '## 📊 Node.js Intl.NumberFormat Compatibility Report'
+            echo '## 📊 Node.js Intl Compatibility Report'
             echo ''
             echo "$SUMMARY"
             echo ''

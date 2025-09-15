@@ -4,6 +4,8 @@
 class NodeIntlReporter
   def initialize(results)
     @results = results
+    @number_results = results.select {|r| r.id.start_with?("number_") }
+    @datetime_results = results.select {|r| r.id.start_with?("datetime_") }
   end
 
   # Generate summary statistics
@@ -20,7 +22,24 @@ class NodeIntlReporter
     report = []
     report << "# Node.js Intl Compatibility Report"
     report << ""
-    report << "## Summary"
+
+    # Overall summary
+    report.concat(generate_overall_summary)
+    report << ""
+
+    # NumberFormat section
+    report.concat(generate_numberformat_section)
+    report << ""
+
+    # DateTimeFormat section
+    report.concat(generate_datetimeformat_section)
+
+    report.join("\n")
+  end
+
+  private def generate_overall_summary
+    report = []
+    report << "## Overall Summary"
     report << ""
 
     # Overall statistics
@@ -37,6 +56,7 @@ class NodeIntlReporter
 
     report << "| Metric | Count | Percentage |"
     report << "|--------|------:|-----------:|"
+    report << "| Total Tests | #{total} | 100.0% |"
     report << "| Matches | #{total_matches} | #{match_percentage}% |"
     if conditional_matches > 0
       report << "| - Exact matches | #{exact_matches} | #{total.zero? ? 0.0 : (Float(exact_matches) / total * 100).round(1)}% |"
@@ -44,92 +64,75 @@ class NodeIntlReporter
     end
     report << "| Mismatches | #{mismatches} | #{mismatch_percentage}% |"
     report << "| Errors | #{errors} | #{error_percentage}% |"
-    report << ""
+
     if conditional_matches > 0
       report << ""
       report << "**Conditional matches**: Results that match after normalizing whitespace characters (CLDR uses non-breaking spaces U+00A0, Node.js uses regular spaces U+0020)"
-      report << ""
-    end
-    report << "*Total test cases: #{total}*"
-    report << ""
-
-    # Category breakdown
-    report << "## Category Breakdown"
-    report << ""
-    categories = group_by_category
-    report << "| Category | Matches | Total | Percentage |"
-    report << "|----------|---------|-------|------------|"
-
-    categories.each do |category, results|
-      total_cat = results.size
-      matches_cat = results.count(&:success?)
-      percentage_cat = total_cat.zero? ? 0.0 : (Float(matches_cat) / total_cat * 100).round(1)
-
-      status_icon = if percentage_cat == 100.0
-                      "✅"
-                    else
-                      percentage_cat >= 90.0 ? "⚠️" : "❌"
-                    end
-
-      report << "| #{status_icon} #{category.capitalize} | #{matches_cat} | #{total_cat} | #{percentage_cat}% |"
     end
 
-    report << ""
-
-    # Detailed results for mismatches
-    mismatches = @results.select {|r| r.status == :mismatch }
-    if mismatches.any?
-      report << "## Mismatches"
-      report << ""
-
-      mismatches.each do |result|
-        report << "### #{result.id}"
-        report << ""
-        report << "- **Value**: #{result.value}"
-        report << "- **Locale**: #{result.locale}"
-        report << "- **Options**: #{result.options.inspect}"
-        report << "- **Foxtail**: `#{result.foxtail_result}`"
-        report << "- **Node.js**: `#{result.node_result}`"
-        report << ""
-      end
-    end
-
-    # Errors
-    errors = @results.select {|r| r.status == :error }
-    if errors.any?
-      report << "## Errors"
-      report << ""
-
-      errors.each do |result|
-        report << "### #{result.id}"
-        report << ""
-        report << "- **Value**: #{result.value}"
-        report << "- **Locale**: #{result.locale}"
-        report << "- **Options**: #{result.options.inspect}"
-        report << "- **Error**: #{result.error}"
-        report << ""
-      end
-    end
-
-    report.join("\n")
+    report
   end
 
-  private def group_by_category
-    @results.group_by do |result|
-      case result.id
-      when /^decimal_/
-        "decimal"
-      when /^currency_/
-        "currency"
-      when /^percent_/
-        "percent"
-      when /^scientific_/
-        "scientific"
-      when /^datetime_/
-        "datetime"
-      else
-        "other"
+  private def generate_numberformat_section
+    generate_format_section("NumberFormat", @number_results)
+  end
+
+  private def generate_datetimeformat_section
+    generate_format_section("DateTimeFormat", @datetime_results)
+  end
+
+  private def generate_format_section(format_name, results)
+    report = []
+    report << "## #{format_name} Compatibility"
+    report << ""
+
+    total = results.size
+    exact_matches = results.count {|r| r.status == :match }
+    conditional_matches = results.count {|r| r.status == :conditional_match }
+    total_matches = exact_matches + conditional_matches
+    mismatches = results.count {|r| r.status == :mismatch }
+    errors = results.count {|r| r.status == :error }
+
+    if total.zero?
+      report << "No test cases found for #{format_name}."
+      return report
+    end
+
+    match_percentage = (Float(total_matches) / total * 100).round(1)
+
+    report << "| Metric | Count | Percentage |"
+    report << "|--------|------:|-----------:|"
+    report << "| Tests | #{total} | 100.0% |"
+    report << "| Matches | #{total_matches} | #{match_percentage}% |"
+    if conditional_matches > 0
+      report << "| - Exact matches | #{exact_matches} | #{(Float(exact_matches) / total * 100).round(1)}% |"
+      report << "| - Conditional matches | #{conditional_matches} | #{(Float(conditional_matches) / total * 100).round(1)}% |"
+    end
+    report << "| Mismatches | #{mismatches} | #{(Float(mismatches) / total * 100).round(1)}% |"
+    report << "| Errors | #{errors} | #{(Float(errors) / total * 100).round(1)}% |"
+
+    # Add mismatches for this format
+    format_mismatches = results.select {|r| r.status == :mismatch }
+    if format_mismatches.any?
+      report << ""
+      report << "### #{format_name} Mismatches"
+      report << ""
+
+      format_mismatches.first(5).each do |result|
+        report << "**#{result.id}**"
+        report << "- Value: #{result.value}, Locale: #{result.locale}"
+        report << "- Options: #{result.options.inspect}"
+        report << "- Foxtail: `#{result.foxtail_result}`"
+        report << "- Node.js: `#{result.node_result}`"
+        report << ""
+      end
+
+      if format_mismatches.size > 5
+        report << "*... and #{format_mismatches.size - 5} more mismatches*"
+        report << ""
       end
     end
+
+    report
   end
 end

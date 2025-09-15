@@ -1,0 +1,1016 @@
+---
+locale: fr
+generated_at: '2025-09-15T06:26:26Z'
+cldr_version: '46'
+timezone_names:
+  formats:
+    hour_format: "+HH:mm;−HH:mm"
+    gmt_format: UTC{0}
+    region_format: 'heure : {0}'
+    region_format_daylight: "{0} (heure d’été)"
+    region_format_standard: "{0} (heure standard)"
+  zones:
+    Pacific/Honolulu:
+      exemplar_city: Honolulu
+      short:
+        generic: HT
+        standard: HST
+        daylight: HDT
+    Etc/UTC:
+      short:
+        standard: TU
+      long:
+        standard: temps universel coordonné
+    Etc/Unknown:
+      exemplar_city: ville inconnue
+    Europe/Andorra:
+      exemplar_city: Andorre
+    Asia/Dubai:
+      exemplar_city: Dubaï
+    Asia/Kabul:
+      exemplar_city: Kaboul
+    Europe/Tirane:
+      exemplar_city: Tirana
+    Asia/Yerevan:
+      exemplar_city: Erevan
+    Antarctica/Syowa:
+      exemplar_city: Showa
+    Antarctica/DumontDUrville:
+      exemplar_city: Dumont-d’Urville
+    America/Argentina/Rio_Gallegos:
+      exemplar_city: Río Gallegos
+    America/Argentina/Ushuaia:
+      exemplar_city: Ushuaïa
+    America/Argentina/Tucuman:
+      exemplar_city: Tucumán
+    America/Cordoba:
+      exemplar_city: Córdoba
+    Europe/Vienna:
+      exemplar_city: Vienne
+    Australia/Adelaide:
+      exemplar_city: Adélaïde
+    Asia/Baku:
+      exemplar_city: Bakou
+    America/Barbados:
+      exemplar_city: La Barbade
+    Europe/Brussels:
+      exemplar_city: Bruxelles
+    Asia/Bahrain:
+      exemplar_city: Bahreïn
+    America/St_Barthelemy:
+      exemplar_city: Saint-Barthélemy
+    Atlantic/Bermuda:
+      exemplar_city: Bermudes
+    America/Eirunepe:
+      exemplar_city: Eirunepé
+    America/Manaus:
+      exemplar_city: Manaos
+    America/Cuiaba:
+      exemplar_city: Cuiabá
+    America/Santarem:
+      exemplar_city: Santarém
+    America/Belem:
+      exemplar_city: Belém
+    America/Araguaina:
+      exemplar_city: Araguaína
+    America/Sao_Paulo:
+      exemplar_city: São Paulo
+    America/Maceio:
+      exemplar_city: Maceió
+    America/St_Johns:
+      exemplar_city: Saint-Jean de Terre-Neuve
+    Pacific/Easter:
+      exemplar_city: Île de Pâques
+    Asia/Urumqi:
+      exemplar_city: Ürümqi
+    America/Havana:
+      exemplar_city: La Havane
+    Atlantic/Cape_Verde:
+      exemplar_city: Cap-Vert
+    Asia/Nicosia:
+      exemplar_city: Nicosie
+    Asia/Famagusta:
+      exemplar_city: Famagouste
+    Europe/Busingen:
+      exemplar_city: Büsingen
+    Europe/Copenhagen:
+      exemplar_city: Copenhague
+    America/Dominica:
+      exemplar_city: Dominique
+    America/Santo_Domingo:
+      exemplar_city: Saint-Domingue
+    Africa/Algiers:
+      exemplar_city: Alger
+    Pacific/Galapagos:
+      exemplar_city: Galápagos
+    Africa/Cairo:
+      exemplar_city: Le Caire
+    Africa/El_Aaiun:
+      exemplar_city: Laâyoune
+    Atlantic/Canary:
+      exemplar_city: Îles Canaries
+    Africa/Addis_Ababa:
+      exemplar_city: Addis-Abeba
+    Pacific/Fiji:
+      exemplar_city: Fidji
+    Atlantic/Faeroe:
+      exemplar_city: Îles Féroé
+    Europe/London:
+      exemplar_city: Londres
+      long:
+        daylight: heure d’été britannique
+    America/Grenada:
+      exemplar_city: Grenade
+    Asia/Tbilisi:
+      exemplar_city: Tbilissi
+    Europe/Guernsey:
+      exemplar_city: Guernesey
+    America/Thule:
+      exemplar_city: Thulé
+    Europe/Athens:
+      exemplar_city: Athènes
+    Atlantic/South_Georgia:
+      exemplar_city: Géorgie du Sud
+    Asia/Makassar:
+      exemplar_city: Macassar
+    Europe/Dublin:
+      long:
+        daylight: heure d’été irlandaise
+    Asia/Jerusalem:
+      exemplar_city: Jérusalem
+    Europe/Isle_of_Man:
+      exemplar_city: Île de Man
+    Asia/Calcutta:
+      exemplar_city: Calcutta
+    Asia/Baghdad:
+      exemplar_city: Bagdad
+    Asia/Tehran:
+      exemplar_city: Téhéran
+    America/Jamaica:
+      exemplar_city: Jamaïque
+    Asia/Bishkek:
+      exemplar_city: Bichkek
+    Pacific/Enderbury:
+      exemplar_city: Enderbury
+    Pacific/Kanton:
+      exemplar_city: Canton
+    Indian/Comoro:
+      exemplar_city: Comores
+    America/St_Kitts:
+      exemplar_city: Saint-Christophe
+    Asia/Seoul:
+      exemplar_city: Séoul
+    Asia/Kuwait:
+      exemplar_city: Koweït
+    America/Cayman:
+      exemplar_city: Caïmans
+    Asia/Aqtau:
+      exemplar_city: Aktaou
+    Asia/Oral:
+      exemplar_city: Ouralsk
+    Asia/Atyrau:
+      exemplar_city: Atyraou
+    Asia/Aqtobe:
+      exemplar_city: Aktioubinsk
+    Asia/Qostanay:
+      exemplar_city: Kostanaï
+    Asia/Qyzylorda:
+      exemplar_city: Kzyl Orda
+    Asia/Almaty:
+      exemplar_city: Alma Ata
+    Asia/Beirut:
+      exemplar_city: Beyrouth
+    America/St_Lucia:
+      exemplar_city: Sainte-Lucie
+    Africa/Tripoli:
+      exemplar_city: Tripoli (Libye)
+    Asia/Rangoon:
+      exemplar_city: Rangoun
+    Asia/Ulaanbaatar:
+      exemplar_city: Oulan-Bator
+    Europe/Malta:
+      exemplar_city: Malte
+    Indian/Mauritius:
+      exemplar_city: Maurice
+    America/Mazatlan:
+      exemplar_city: Mazatlán
+    America/Bahia_Banderas:
+      exemplar_city: Bahia de Banderas
+    America/Mexico_City:
+      exemplar_city: Mexico
+    Pacific/Noumea:
+      exemplar_city: Nouméa
+    Asia/Katmandu:
+      exemplar_city: Katmandou
+    Asia/Muscat:
+      exemplar_city: Mascate
+    Pacific/Marquesas:
+      exemplar_city: Marquises
+    Asia/Manila:
+      exemplar_city: Manille
+    Europe/Warsaw:
+      exemplar_city: Varsovie
+    America/Puerto_Rico:
+      exemplar_city: Porto Rico
+    Asia/Hebron:
+      exemplar_city: Hébron
+    Atlantic/Azores:
+      exemplar_city: Açores
+    Atlantic/Madeira:
+      exemplar_city: Madère
+    Europe/Lisbon:
+      exemplar_city: Lisbonne
+    Pacific/Palau:
+      exemplar_city: Palaos
+    Indian/Reunion:
+      exemplar_city: La Réunion
+    Europe/Bucharest:
+      exemplar_city: Bucarest
+    Europe/Moscow:
+      exemplar_city: Moscou
+    Europe/Ulyanovsk:
+      exemplar_city: Oulianovsk
+    Asia/Yekaterinburg:
+      exemplar_city: Ekaterinbourg
+    Asia/Novosibirsk:
+      exemplar_city: Novossibirsk
+    Asia/Krasnoyarsk:
+      exemplar_city: Krasnoïarsk
+    Asia/Irkutsk:
+      exemplar_city: Irkoutsk
+    Asia/Chita:
+      exemplar_city: Tchita
+    Asia/Yakutsk:
+      exemplar_city: Iakoutsk
+    Asia/Sakhalin:
+      exemplar_city: Sakhaline
+    Asia/Kamchatka:
+      exemplar_city: Kamtchatka
+    Asia/Riyadh:
+      exemplar_city: Riyad
+    Indian/Mahe:
+      exemplar_city: Mahé
+    Asia/Singapore:
+      exemplar_city: Singapour
+    Atlantic/St_Helena:
+      exemplar_city: Sainte-Hélène
+    Europe/San_Marino:
+      exemplar_city: Saint-Marin
+    Africa/Mogadishu:
+      exemplar_city: Mogadiscio
+    Asia/Damascus:
+      exemplar_city: Damas
+    Africa/Ndjamena:
+      exemplar_city: N’Djamena
+    Africa/Lome:
+      exemplar_city: Lomé
+    Asia/Dushanbe:
+      exemplar_city: Douchanbé
+    Asia/Ashgabat:
+      exemplar_city: Achgabat
+    America/Port_of_Spain:
+      exemplar_city: Port-d’Espagne
+    Europe/Kiev:
+      exemplar_city: Kiev
+    America/North_Dakota/Beulah:
+      exemplar_city: Beulah (Dakota du Nord)
+    America/North_Dakota/New_Salem:
+      exemplar_city: New Salem (Dakota du Nord)
+    America/North_Dakota/Center:
+      exemplar_city: Center (Dakota du Nord)
+    America/Indiana/Vincennes:
+      exemplar_city: Vincennes [Indiana]
+    America/Indiana/Petersburg:
+      exemplar_city: Petersburg [Indiana]
+    America/Indiana/Tell_City:
+      exemplar_city: Tell City [Indiana]
+    America/Indiana/Knox:
+      exemplar_city: Knox [Indiana]
+    America/Indiana/Winamac:
+      exemplar_city: Winamac [Indiana]
+    America/Indiana/Marengo:
+      exemplar_city: Marengo [Indiana]
+    America/Indiana/Vevay:
+      exemplar_city: Vevay [Indiana]
+    America/Kentucky/Monticello:
+      exemplar_city: Monticello [Kentucky]
+    America/Detroit:
+      exemplar_city: Détroit
+    Asia/Samarkand:
+      exemplar_city: Samarcande
+    Asia/Tashkent:
+      exemplar_city: Tachkent
+    Europe/Vatican:
+      exemplar_city: Le Vatican
+    America/St_Vincent:
+      exemplar_city: Saint-Vincent
+    America/St_Thomas:
+      exemplar_city: Saint-Thomas
+    Asia/Saigon:
+      exemplar_city: Hô-Chi-Minh-Ville
+    Pacific/Efate:
+      exemplar_city: Éfaté
+  metazones:
+    Acre:
+      long:
+        generic: heure de l’Acre
+        standard: heure normale de l’Acre
+        daylight: heure d’été de l’Acre
+    Afghanistan:
+      long:
+        standard: heure de l’Afghanistan
+    Africa_Central:
+      long:
+        standard: heure normale d’Afrique centrale
+    Africa_Eastern:
+      long:
+        standard: heure normale d’Afrique de l’Est
+    Africa_Southern:
+      long:
+        standard: heure normale d’Afrique méridionale
+    Africa_Western:
+      long:
+        generic: heure d’Afrique de l’Ouest
+        standard: heure normale d’Afrique de l’Ouest
+        daylight: heure d’été d’Afrique de l’Ouest
+    Alaska:
+      short:
+        generic: HAK
+        standard: HNAK
+        daylight: HEAK
+      long:
+        generic: heure de l’Alaska
+        standard: heure normale de l’Alaska
+        daylight: heure d’été de l’Alaska
+    Almaty:
+      long:
+        generic: heure d’Alma Ata
+        standard: heure normale d’Alma Ata
+        daylight: heure d’été d’Alma Ata
+    Amazon:
+      long:
+        generic: heure de l’Amazonie
+        standard: heure normale de l’Amazonie
+        daylight: heure d’été de l’Amazonie
+    America_Central:
+      short:
+        generic: HC
+        standard: HNC
+        daylight: HEC
+      long:
+        generic: heure du centre nord-américain
+        standard: heure normale du centre nord-américain
+        daylight: heure d’été du centre nord-américain
+    America_Eastern:
+      short:
+        generic: HE
+        standard: HNE
+        daylight: HEE
+      long:
+        generic: heure de l’Est nord-américain
+        standard: heure normale de l’Est nord-américain
+        daylight: heure d’été de l’Est nord-américain
+    America_Mountain:
+      short:
+        generic: HR
+        standard: HNR
+        daylight: HER
+      long:
+        generic: heure des Rocheuses
+        standard: heure normale des Rocheuses
+        daylight: heure d’été des Rocheuses
+    America_Pacific:
+      short:
+        generic: HP
+        standard: HNP
+        daylight: HEP
+      long:
+        generic: heure du Pacifique nord-américain
+        standard: heure normale du Pacifique nord-américain
+        daylight: heure d’été du Pacifique nord-américain
+    Anadyr:
+      long:
+        generic: heure d’Anadyr
+        standard: heure normale d’Anadyr
+        daylight: heure d’été d’Anadyr
+    Apia:
+      long:
+        generic: heure d’Apia
+        standard: heure normale d’Apia
+        daylight: heure d’été d’Apia
+    Aqtau:
+      long:
+        generic: heure d’Aktaou
+        standard: heure normale d’Aktaou
+        daylight: heure d’été d’Aktaou
+    Aqtobe:
+      long:
+        generic: heure d’Aqtöbe
+        standard: heure normale d’Aqtöbe
+        daylight: heure d’été d’Aqtöbe
+    Arabian:
+      long:
+        generic: heure de l’Arabie
+        standard: heure normale de l’Arabie
+        daylight: heure d’été de l’Arabie
+    Argentina:
+      long:
+        generic: heure de l’Argentine
+        standard: heure normale d’Argentine
+        daylight: heure d’été de l’Argentine
+    Argentina_Western:
+      long:
+        generic: heure de l’Ouest argentin
+        standard: heure normale de l’Ouest argentin
+        daylight: heure d’été de l’Ouest argentin
+    Armenia:
+      long:
+        generic: heure de l’Arménie
+        standard: heure normale de l’Arménie
+        daylight: heure d’été d’Arménie
+    Atlantic:
+      short:
+        generic: HA
+        standard: HNA
+        daylight: HEA
+      long:
+        generic: heure de l’Atlantique
+        standard: heure normale de l’Atlantique
+        daylight: heure d’été de l’Atlantique
+    Australia_Central:
+      long:
+        generic: heure du centre de l’Australie
+        standard: heure normale du centre de l’Australie
+        daylight: heure d’été du centre de l’Australie
+    Australia_CentralWestern:
+      long:
+        generic: heure du centre-ouest de l’Australie
+        standard: heure normale du centre-ouest de l’Australie
+        daylight: heure d’été du centre-ouest de l’Australie
+    Australia_Eastern:
+      long:
+        generic: heure de l’Est de l’Australie
+        standard: heure normale de l’Est de l’Australie
+        daylight: heure d’été de l’Est de l’Australie
+    Australia_Western:
+      long:
+        generic: heure de l’Ouest de l’Australie
+        standard: heure normale de l’Ouest de l’Australie
+        daylight: heure d’été de l’Ouest de l’Australie
+    Azerbaijan:
+      long:
+        generic: heure de l’Azerbaïdjan
+        standard: heure normale de l’Azerbaïdjan
+        daylight: heure d’été d’Azerbaïdjan
+    Azores:
+      long:
+        generic: heure des Açores
+        standard: heure normale des Açores
+        daylight: heure d’été des Açores
+    Bangladesh:
+      long:
+        generic: heure du Bangladesh
+        standard: heure normale du Bangladesh
+        daylight: heure d’été du Bangladesh
+    Bhutan:
+      long:
+        standard: heure du Bhoutan
+    Bolivia:
+      long:
+        standard: heure de Bolivie
+    Brasilia:
+      long:
+        generic: heure de Brasilia
+        standard: heure normale de Brasilia
+        daylight: heure d’été de Brasilia
+    Brunei:
+      long:
+        standard: heure du Brunei
+    Cape_Verde:
+      long:
+        generic: heure du Cap-Vert
+        standard: heure normale du Cap-Vert
+        daylight: heure d’été du Cap-Vert
+    Casey:
+      long:
+        standard: heure de Casey
+    Chamorro:
+      long:
+        standard: heure des Chamorro
+    Chatham:
+      long:
+        generic: heure des îles Chatham
+        standard: heure normale des îles Chatham
+        daylight: heure d’été des îles Chatham
+    Chile:
+      long:
+        generic: heure du Chili
+        standard: heure normale du Chili
+        daylight: heure d’été du Chili
+    China:
+      long:
+        generic: heure de la Chine
+        standard: heure normale de la Chine
+        daylight: heure d’été de Chine
+    Christmas:
+      long:
+        standard: heure de l’île Christmas
+    Cocos:
+      long:
+        standard: heure des îles Cocos
+    Colombia:
+      long:
+        generic: heure de Colombie
+        standard: heure normale de Colombie
+        daylight: heure d’été de Colombie
+    Cook:
+      long:
+        generic: heure des îles Cook
+        standard: heure normale des îles Cook
+        daylight: heure d’été des îles Cook
+    Cuba:
+      short:
+        generic: HCU
+        standard: HNCU
+        daylight: HECU
+      long:
+        generic: heure de Cuba
+        standard: heure normale de Cuba
+        daylight: heure d’été de Cuba
+    Davis:
+      long:
+        standard: heure de Davis
+    DumontDUrville:
+      long:
+        standard: heure de Dumont-d’Urville
+    East_Timor:
+      long:
+        standard: heure du Timor oriental
+    Easter:
+      long:
+        generic: heure de l’île de Pâques
+        standard: heure normale de l’île de Pâques
+        daylight: heure d’été de l’île de Pâques
+    Ecuador:
+      long:
+        standard: heure de l’Équateur
+    Europe_Central:
+      long:
+        generic: heure d’Europe centrale
+        standard: heure normale d’Europe centrale
+        daylight: heure d’été d’Europe centrale
+    Europe_Eastern:
+      short:
+        generic: EET
+        standard: EEST
+        daylight: EEDT
+      long:
+        generic: heure d’Europe de l’Est
+        standard: heure normale d’Europe de l’Est
+        daylight: heure d’été d’Europe de l’Est
+    Europe_Further_Eastern:
+      long:
+        standard: heure de Kaliningrad
+    Europe_Western:
+      short:
+        generic: WET
+        standard: WEST
+        daylight: WEDT
+      long:
+        generic: heure d’Europe de l’Ouest
+        standard: heure normale d’Europe de l’Ouest
+        daylight: heure d’été d’Europe de l’Ouest
+    Falkland:
+      long:
+        generic: heure des îles Malouines
+        standard: heure normale des îles Malouines
+        daylight: heure d’été des îles Malouines
+    Fiji:
+      long:
+        generic: heure des îles Fidji
+        standard: heure normale des îles Fidji
+        daylight: heure d’été des îles Fidji
+    French_Guiana:
+      long:
+        standard: heure de la Guyane française
+    French_Southern:
+      long:
+        standard: heure des Terres australes et antarctiques françaises
+    Galapagos:
+      long:
+        standard: heure des îles Galápagos
+    Gambier:
+      long:
+        standard: heure des îles Gambier
+    Georgia:
+      long:
+        generic: heure de la Géorgie
+        standard: heure normale de la Géorgie
+        daylight: heure d’été de Géorgie
+    Gilbert_Islands:
+      long:
+        standard: heure des îles Gilbert
+    GMT:
+      short:
+        standard: GMT
+      long:
+        standard: heure moyenne de Greenwich
+    Greenland_Eastern:
+      short:
+        generic: HEG
+        standard: HNEG
+        daylight: HEEG
+      long:
+        generic: heure de l’Est du Groenland
+        standard: heure normale de l’Est du Groenland
+        daylight: heure d’été de l’Est du Groenland
+    Greenland_Western:
+      short:
+        generic: HOG
+        standard: HNOG
+        daylight: HEOG
+      long:
+        generic: heure de l’Ouest du Groenland
+        standard: heure normale de l’Ouest du Groenland
+        daylight: heure d’été de l’Ouest du Groenland
+    Guam:
+      long:
+        standard: heure de Guam
+    Gulf:
+      long:
+        standard: heure du Golfe
+    Guyana:
+      long:
+        standard: heure du Guyana
+    Hawaii_Aleutian:
+      short:
+        generic: HHA
+        standard: HNHA
+        daylight: HEHA
+      long:
+        generic: heure d’Hawaï - Aléoutiennes
+        standard: heure normale d’Hawaï - Aléoutiennes
+        daylight: heure d’été d’Hawaï - Aléoutiennes
+    Hong_Kong:
+      long:
+        generic: heure de Hong Kong
+        standard: heure normale de Hong Kong
+        daylight: heure d’été de Hong Kong
+    Hovd:
+      long:
+        generic: heure de Hovd
+        standard: heure normale de Hovd
+        daylight: heure d’été de Hovd
+    India:
+      long:
+        standard: heure de l’Inde
+    Indian_Ocean:
+      long:
+        standard: heure de l’Océan Indien
+    Indochina:
+      long:
+        standard: heure d’Indochine
+    Indonesia_Central:
+      long:
+        standard: heure du Centre indonésien
+    Indonesia_Eastern:
+      long:
+        standard: heure de l’Est indonésien
+    Indonesia_Western:
+      long:
+        standard: heure de l’Ouest indonésien
+    Iran:
+      long:
+        generic: heure de l’Iran
+        standard: heure normale d’Iran
+        daylight: heure d’été d’Iran
+    Irkutsk:
+      long:
+        generic: heure d’Irkoutsk
+        standard: heure normale d’Irkoutsk
+        daylight: heure d’été d’Irkoutsk
+    Israel:
+      long:
+        generic: heure d’Israël
+        standard: heure normale d’Israël
+        daylight: heure d’été d’Israël
+    Japan:
+      long:
+        generic: heure du Japon
+        standard: heure normale du Japon
+        daylight: heure d’été du Japon
+    Kamchatka:
+      long:
+        generic: heure de Petropavlovsk-Kamchatski
+        standard: heure normale de Petropavlovsk-Kamchatski
+        daylight: heure d’été de Petropavlovsk-Kamchatski
+    Kazakhstan:
+      long:
+        standard: heure du Kazakhstan
+    Kazakhstan_Eastern:
+      long:
+        standard: heure de l’Est du Kazakhstan
+    Kazakhstan_Western:
+      long:
+        standard: heure de l’Ouest du Kazakhstan
+    Korea:
+      long:
+        generic: heure de la Corée
+        standard: heure normale de la Corée
+        daylight: heure d’été de Corée
+    Kosrae:
+      long:
+        standard: heure de Kosrae
+    Krasnoyarsk:
+      long:
+        generic: heure de Krasnoïarsk
+        standard: heure normale de Krasnoïarsk
+        daylight: heure d’été de Krasnoïarsk
+    Kyrgystan:
+      long:
+        standard: heure du Kirghizistan
+    Lanka:
+      long:
+        standard: heure de Lanka
+    Line_Islands:
+      long:
+        standard: heure des îles de la Ligne
+    Lord_Howe:
+      long:
+        generic: heure de Lord Howe
+        standard: heure normale de Lord Howe
+        daylight: heure d’été de Lord Howe
+    Macau:
+      long:
+        generic: heure de Macao
+        standard: heure normale de Macao
+        daylight: heure d’été de Macao
+    Magadan:
+      long:
+        generic: heure de Magadan
+        standard: heure normale de Magadan
+        daylight: heure d’été de Magadan
+    Malaysia:
+      long:
+        standard: heure de la Malaisie
+    Maldives:
+      long:
+        standard: heure des Maldives
+    Marquesas:
+      long:
+        standard: heure des îles Marquises
+    Marshall_Islands:
+      long:
+        standard: heure des îles Marshall
+    Mauritius:
+      long:
+        generic: heure de Maurice
+        standard: heure normale de Maurice
+        daylight: heure d’été de Maurice
+    Mawson:
+      long:
+        standard: heure de Mawson
+    Mexico_Pacific:
+      short:
+        generic: HPMX
+        standard: HNPMX
+        daylight: HEPMX
+      long:
+        generic: heure du Pacifique mexicain
+        standard: heure normale du Pacifique mexicain
+        daylight: heure d’été du Pacifique mexicain
+    Mongolia:
+      long:
+        generic: heure d’Oulan-Bator
+        standard: heure normale d’Oulan-Bator
+        daylight: heure d’été d’Oulan-Bator
+    Moscow:
+      long:
+        generic: heure de Moscou
+        standard: heure normale de Moscou
+        daylight: heure d’été de Moscou
+    Myanmar:
+      long:
+        standard: heure du Myanmar
+    Nauru:
+      long:
+        standard: heure de Nauru
+    Nepal:
+      long:
+        standard: heure du Népal
+    New_Caledonia:
+      long:
+        generic: heure de la Nouvelle-Calédonie
+        standard: heure normale de la Nouvelle-Calédonie
+        daylight: heure d’été de Nouvelle-Calédonie
+    New_Zealand:
+      long:
+        generic: heure de la Nouvelle-Zélande
+        standard: heure normale de la Nouvelle-Zélande
+        daylight: heure d’été de la Nouvelle-Zélande
+    Newfoundland:
+      short:
+        generic: HTN
+        standard: HNTN
+        daylight: HETN
+      long:
+        generic: heure de Terre-Neuve
+        standard: heure normale de Terre-Neuve
+        daylight: heure d’été de Terre-Neuve
+    Niue:
+      long:
+        standard: heure de Niue
+    Norfolk:
+      long:
+        generic: heure de l’île Norfolk
+        standard: heure normale de l’île Norfolk
+        daylight: heure d’été de l’île Norfolk
+    Noronha:
+      long:
+        generic: heure de Fernando de Noronha
+        standard: heure normale de Fernando de Noronha
+        daylight: heure d’été de Fernando de Noronha
+    North_Mariana:
+      long:
+        standard: heure des îles Mariannes du Nord
+    Novosibirsk:
+      long:
+        generic: heure de Novossibirsk
+        standard: heure normale de Novossibirsk
+        daylight: heure d’été de Novossibirsk
+    Omsk:
+      long:
+        generic: heure de Omsk
+        standard: heure normale de Omsk
+        daylight: heure d’été de Omsk
+    Pakistan:
+      long:
+        generic: heure du Pakistan
+        standard: heure normale du Pakistan
+        daylight: heure d’été du Pakistan
+    Palau:
+      long:
+        standard: heure des Palaos
+    Papua_New_Guinea:
+      long:
+        standard: heure de la Papouasie-Nouvelle-Guinée
+    Paraguay:
+      long:
+        generic: heure du Paraguay
+        standard: heure normale du Paraguay
+        daylight: heure d’été du Paraguay
+    Peru:
+      long:
+        generic: heure du Pérou
+        standard: heure normale du Pérou
+        daylight: heure d’été du Pérou
+    Philippines:
+      long:
+        generic: heure des Philippines
+        standard: heure normale des Philippines
+        daylight: heure d’été des Philippines
+    Phoenix_Islands:
+      long:
+        standard: heure des îles Phoenix
+    Pierre_Miquelon:
+      short:
+        generic: HPM
+        standard: HNPM
+        daylight: HEPM
+      long:
+        generic: heure de Saint-Pierre-et-Miquelon
+        standard: heure normale de Saint-Pierre-et-Miquelon
+        daylight: heure d’été de Saint-Pierre-et-Miquelon
+    Pitcairn:
+      long:
+        standard: heure des îles Pitcairn
+    Ponape:
+      long:
+        standard: heure de l’île de Pohnpei
+    Pyongyang:
+      long:
+        standard: heure de Pyongyang
+    Qyzylorda:
+      long:
+        generic: heure de Kyzylorda
+        standard: heure normale de Kyzylorda
+        daylight: heure d’été de Kyzylorda
+    Reunion:
+      long:
+        standard: heure de La Réunion
+    Rothera:
+      long:
+        standard: heure de Rothera
+    Sakhalin:
+      long:
+        generic: heure de Sakhaline
+        standard: heure normale de Sakhaline
+        daylight: heure d’été de Sakhaline
+    Samara:
+      long:
+        generic: heure de Samara
+        standard: heure normale de Samara
+        daylight: heure d’été de Samara
+    Samoa:
+      long:
+        generic: heure des Samoa
+        standard: heure normale des Samoa
+        daylight: heure d’été des Samoa
+    Seychelles:
+      long:
+        standard: heure des Seychelles
+    Singapore:
+      long:
+        standard: heure de Singapour
+    Solomon:
+      long:
+        standard: heure des îles Salomon
+    South_Georgia:
+      long:
+        standard: heure de Géorgie du Sud
+    Suriname:
+      long:
+        standard: heure du Suriname
+    Syowa:
+      long:
+        standard: heure de Syowa
+    Tahiti:
+      long:
+        standard: heure de Tahiti
+    Taipei:
+      long:
+        generic: heure de Taipei
+        standard: heure normale de Taipei
+        daylight: heure d’été de Taipei
+    Tajikistan:
+      long:
+        standard: heure du Tadjikistan
+    Tokelau:
+      long:
+        standard: heure de Tokelau
+    Tonga:
+      long:
+        generic: heure des Tonga
+        standard: heure normale des Tonga
+        daylight: heure d’été de Tonga
+    Truk:
+      long:
+        standard: heure de Chuuk
+    Turkmenistan:
+      long:
+        generic: heure du Turkménistan
+        standard: heure normale du Turkménistan
+        daylight: heure d’été du Turkménistan
+    Tuvalu:
+      long:
+        standard: heure des Tuvalu
+    Uruguay:
+      long:
+        generic: heure de l’Uruguay
+        standard: heure normale de l’Uruguay
+        daylight: heure d’été de l’Uruguay
+    Uzbekistan:
+      long:
+        generic: heure de l’Ouzbékistan
+        standard: heure normale de l’Ouzbékistan
+        daylight: heure d’été de l’Ouzbékistan
+    Vanuatu:
+      long:
+        generic: heure du Vanuatu
+        standard: heure normale du Vanuatu
+        daylight: heure d’été de Vanuatu
+    Venezuela:
+      long:
+        standard: heure du Venezuela
+    Vladivostok:
+      long:
+        generic: heure de Vladivostok
+        standard: heure normale de Vladivostok
+        daylight: heure d’été de Vladivostok
+    Volgograd:
+      long:
+        generic: heure de Volgograd
+        standard: heure normale de Volgograd
+        daylight: heure d’été de Volgograd
+    Vostok:
+      long:
+        standard: heure de Vostok
+    Wake:
+      long:
+        standard: heure de l’île Wake
+    Wallis:
+      long:
+        standard: heure de Wallis-et-Futuna
+    Yakutsk:
+      long:
+        generic: heure de Iakoutsk
+        standard: heure normale de Iakoutsk
+        daylight: heure d’été de Iakoutsk
+    Yekaterinburg:
+      long:
+        generic: heure d’Ekaterinbourg
+        standard: heure normale d’Ekaterinbourg
+        daylight: heure d’été d’Ekaterinbourg
+    Yukon:
+      long:
+        standard: heure normale du Yukon

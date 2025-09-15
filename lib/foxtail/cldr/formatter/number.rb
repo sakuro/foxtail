@@ -53,11 +53,23 @@ module Foxtail
             @options = options.dup
             @formats = Foxtail::CLDR::Repository::NumberFormats.new(locale)
 
+            # Initialize Currency repository if needed
+            if use_currency?(options)
+              @currencies = Foxtail::CLDR::Repository::Currencies.new(locale)
+            end
+
             # Apply style-specific option defaults
             style = @options[:style] || "decimal"
             notation = @options[:notation] || "standard"
 
-            # Apply currency-specific decimal digits if not overridden by options
+            # Apply scientific notation defaults first (takes precedence over currency defaults)
+            if notation == "scientific" || notation == "engineering"
+              # Apply Node.js Intl.NumberFormat defaults for scientific notation
+              # For percent style scientific notation, Node.js uses maximumFractionDigits: 0
+              @options[:maximumFractionDigits] ||= (style == "percent" ? 0 : 3)
+            end
+
+            # Apply currency-specific decimal digits if not overridden by options or scientific notation
             if style == "currency"
               currency_code = @options[:currency] || "USD"
               unless @options[:minimumFractionDigits] || @options[:maximumFractionDigits]
@@ -65,13 +77,6 @@ module Foxtail
                 @options[:minimumFractionDigits] = currency_digits
                 @options[:maximumFractionDigits] = currency_digits
               end
-            end
-
-            # Apply scientific notation defaults
-            if notation == "scientific" || notation == "engineering"
-              # Apply Node.js Intl.NumberFormat defaults for scientific notation
-              # For percent style scientific notation, Node.js uses maximumFractionDigits: 0
-              @options[:maximumFractionDigits] ||= (style == "percent" ? 0 : 3)
             end
 
             @options.freeze
@@ -119,6 +124,23 @@ module Foxtail
             build_formatted_string(format_value, pattern_tokens, original_was_negative)
           end
 
+          # Check if currency repository is needed (any currency symbol ¤, ¤¤, ¤¤¤)
+          private def use_currency?(options)
+            # Check for currency style
+            style = options[:style]
+            return true if style == "currency"
+
+            # Check custom pattern for currency tokens using proper token parsing
+            pattern = options[:pattern]
+            if pattern
+              parser = Foxtail::CLDR::PatternParser::Number.new
+              tokens = parser.parse(pattern)
+              return tokens.any?(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
+            end
+
+            false
+          end
+
           private def convert_to_decimal(original_value)
             case original_value
             when BigDecimal
@@ -151,8 +173,9 @@ module Foxtail
               return combine_pattern_with_style(base_pattern, style)
             elsif notation == "compact"
               # Compact notation uses simplified patterns with abbreviations
-              # For now, use decimal pattern as base - we'll handle the compacting in formatting
-              return @formats.decimal_pattern
+              # Use decimal pattern as base but apply style-specific symbols
+              base_pattern = @formats.decimal_pattern
+              return combine_pattern_with_style(base_pattern, style)
             end
 
             # Style-based pattern selection for standard notation
@@ -511,7 +534,7 @@ module Foxtail
 
             case token.currency_type
             when :symbol
-              @formats.currency_symbol(currency_code)
+              @currencies.currency_symbol(currency_code)
             when :code
               currency_code
             when :name
@@ -519,8 +542,7 @@ module Foxtail
               original_value = @original_value
               plural_rules = Foxtail::CLDR::Repository::PluralRules.new(@formats.locale)
               plural_category = plural_rules.select(original_value)
-              currency_names = @formats.currency_names(currency_code)
-              currency_names[plural_category.to_sym] || currency_names[:other] || currency_code
+              @currencies.currency_name(currency_code, plural_category)
             end
           end
 
@@ -869,7 +891,7 @@ module Foxtail
             case style
             when "currency"
               currency_code = @options[:currency] || "USD"
-              symbol = @formats.currency_symbol(currency_code)
+              symbol = @currencies.currency_symbol(currency_code)
               currency_pattern = @formats.currency_pattern
               apply_style_pattern_to_compact_result(formatted_number, currency_pattern, symbol)
             when "percent"

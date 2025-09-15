@@ -40,5 +40,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "dry-inflector", "~> 1.0"
   spec.add_dependency "dry-logger", "~> 1.0"
   spec.add_dependency "locale", "~> 2.1"
+  spec.add_dependency "tzinfo", "~> 2.0"
   spec.add_dependency "zeitwerk", "~> 2.6"
 end

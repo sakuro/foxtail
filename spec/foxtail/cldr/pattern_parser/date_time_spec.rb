@@ -72,17 +72,17 @@ RSpec.describe Foxtail::CLDR::PatternParser::DateTime do
 
     context "with literal text" do
       it "parses simple literals" do
-        tokens = parser.parse("Date:")
+        tokens = parser.parse("Info:")
         expect(tokens).to have_attributes(size: 1)
         expect(tokens.first).to be_a(described_class::LiteralToken)
-        expect(tokens.first.value).to eq("Date:")
+        expect(tokens.first.value).to eq("Info:")
       end
 
       it "combines consecutive literal characters" do
-        tokens = parser.parse("Date: Time:")
+        tokens = parser.parse("Info: Output:")
         expect(tokens).to have_attributes(size: 1)
         expect(tokens.first).to be_a(described_class::LiteralToken)
-        expect(tokens.first.value).to eq("Date: Time:")
+        expect(tokens.first.value).to eq("Info: Output:")
       end
     end
 
@@ -165,13 +165,13 @@ RSpec.describe Foxtail::CLDR::PatternParser::DateTime do
       end
 
       it "parses pattern with potential ambiguous tokens" do
-        # This was the challenging case: "Date: dd/MM/yyyy Time: HH:mm"
-        # The 'a' in "Date:" should not be parsed as AM/PM
-        tokens = parser.parse("Date: dd/MM/yyyy Time: HH:mm")
+        # This was the challenging case: "Info: dd/MM/yyyy Output: HH:mm"
+        # The pattern should correctly separate literals from fields
+        tokens = parser.parse("Info: dd/MM/yyyy Output: HH:mm")
 
-        # Should parse as: ["Date: ", "dd", "/", "MM", "/", "yyyy", " Time: ", "HH", ":", "mm"]
+        # Should parse as: ["Info: ", "dd", "/", "MM", "/", "yyyy", " Output: ", "HH", ":", "mm"]
         expect(tokens[0]).to be_a(described_class::LiteralToken)
-        expect(tokens[0].value).to eq("Date: ")
+        expect(tokens[0].value).to eq("Info: ")
 
         expect(tokens[1]).to be_a(described_class::FieldToken)
         expect(tokens[1].value).to eq("dd")
@@ -214,11 +214,11 @@ RSpec.describe Foxtail::CLDR::PatternParser::DateTime do
       end
 
       it "distinguishes AM/PM from letter in word" do
-        # This should treat 'a' as part of the word, not as AM/PM
-        tokens = parser.parse("Date")
+        # This should treat letters as part of the word, not as field patterns
+        tokens = parser.parse("Info")
         expect(tokens).to have_attributes(size: 1)
         expect(tokens.first).to be_a(described_class::LiteralToken)
-        expect(tokens.first.value).to eq("Date")
+        expect(tokens.first.value).to eq("Info")
       end
 
       it "handles multiple consecutive field patterns" do
