@@ -152,6 +152,36 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
         # Should preserve the original time without timezone conversion
         expect(result).to eq("14:30")
       end
+
+      it "formats with IANA timezone America/New_York" do
+        # June is during DST, so EDT (UTC-4)
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "America/New_York", pattern: "HH:mm")
+        # 14:30 UTC - 4 hours = 10:30 EDT
+        expect(result).to eq("10:30")
+      end
+
+      it "formats with IANA timezone Asia/Tokyo" do
+        utc_time = Time.new(2023, 6, 15, 5, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "Asia/Tokyo", pattern: "HH:mm")
+        # 05:30 UTC + 9 hours = 14:30 JST
+        expect(result).to eq("14:30")
+      end
+
+      it "formats with IANA timezone Europe/London" do
+        # June is during BST (British Summer Time, UTC+1)
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "Europe/London", pattern: "HH:mm")
+        # 14:30 UTC + 1 hour = 15:30 BST
+        expect(result).to eq("15:30")
+      end
+
+      it "raises error for invalid timezone" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        expect {
+          formatter.call(utc_time, locale: locale("en"), timeZone: "Invalid/Timezone", pattern: "HH:mm")
+        }.to raise_error(TZInfo::InvalidTimezoneIdentifier)
+      end
     end
   end
 end

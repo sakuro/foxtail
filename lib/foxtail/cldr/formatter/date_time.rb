@@ -4,6 +4,7 @@ require "date"
 require "locale"
 require "strscan"
 require "time"
+require "tzinfo"
 
 module Foxtail
   module CLDR
@@ -108,10 +109,16 @@ module Foxtail
             if timezone_string.match?(/^[+-]\d{2}:\d{2}$/)
               apply_offset_timezone(utc_time, timezone_string)
             else
-              # For named timezones, we'll need proper timezone database support
-              # For now, return UTC as fallback
-              utc_time
+              # Handle IANA timezone names using tzinfo
+              apply_named_timezone(utc_time, timezone_string)
             end
+          end
+
+          # Apply named timezone using tzinfo (e.g., "America/New_York", "Asia/Tokyo")
+          private def apply_named_timezone(utc_time, timezone_name)
+            timezone = TZInfo::Timezone.get(timezone_name)
+            # Convert UTC time to the specified timezone
+            timezone.utc_to_local(utc_time)
           end
 
           # Apply offset-based timezone (e.g., "+09:00", "-05:00")
