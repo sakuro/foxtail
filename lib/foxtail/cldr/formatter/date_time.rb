@@ -209,7 +209,95 @@ module Foxtail
             end
           end
 
+          # Generate CLDR pattern key from field options
+          private def generate_available_format_key(options)
+            key_parts = []
+
+            # Order following CLDR availableFormats convention: y, MMM, E, d
+            # Year (y)
+            if options[:year]
+              key_parts << 'y'
+            end
+
+            # Month (M)
+            if options[:month]
+              case options[:month]
+              when 'long'
+                key_parts << 'MMMM'  # Full month name pattern
+              when 'short'
+                key_parts << 'MMM'   # Abbreviated month name pattern
+              when 'numeric'
+                key_parts << 'M'
+              when '2-digit'
+                key_parts << 'MM'
+              else
+                key_parts << 'MMM'
+              end
+            end
+
+            # Weekday (E) - comes before day in some patterns
+            if options[:weekday]
+              case options[:weekday]
+              when 'long'
+                key_parts << 'EEEE'  # Full weekday name
+              when 'short'
+                key_parts << 'EEE'   # Abbreviated weekday name
+              when 'narrow'
+                key_parts << 'E'     # Single letter weekday
+              else
+                key_parts << 'E'     # Default to single letter
+              end
+            end
+
+            # Day (d) - comes last
+            if options[:day]
+              case options[:day]
+              when 'numeric'
+                key_parts << 'd'
+              when '2-digit'
+                key_parts << 'dd'
+              else
+                key_parts << 'd'
+              end
+            end
+
+            key_parts.join('')
+          end
+
           private def format_with_fields
+            # Try to find appropriate CLDR availableFormats pattern
+            pattern_key = generate_available_format_key(@options)
+            available_pattern = @formats.available_format(pattern_key)
+
+            # If exact pattern not found, try fallback patterns
+            if !available_pattern && @options[:month] == 'long'
+              # Try with MMM instead of MMMM for month long
+              fallback_key = pattern_key.gsub('MMMM', 'MMM')
+              available_pattern = @formats.available_format(fallback_key)
+
+              if available_pattern
+                # Upgrade MMM to MMMM in the pattern for long month names
+                available_pattern = available_pattern.gsub('MMM', 'MMMM')
+              end
+            end
+
+            if available_pattern && has_only_date_fields?
+              # Use CLDR availableFormats pattern for proper ordering and separators
+              format_with_pattern(available_pattern)
+            else
+              # Fallback to individual field formatting for time fields or unavailable patterns
+              format_fields_individually
+            end
+          end
+
+          # Check if options contain only date fields (no time fields)
+          private def has_only_date_fields?
+            time_fields = [:hour, :minute, :second, :hour12]
+            time_fields.none? { |field| @options.key?(field) }
+          end
+
+          # Format individual fields with basic ordering
+          private def format_fields_individually
             parts = []
 
             # Weekday
@@ -288,6 +376,7 @@ module Foxtail
             replacements = {
               "EEEE" => @formats.weekday_name(weekday_key, "wide"),
               "EEE" => @formats.weekday_name(weekday_key, "abbreviated"),
+              "E" => @formats.weekday_name(weekday_key, "abbreviated"),
               "MMMM" => @formats.month_name(@time_with_zone.month, "wide"),
               "MMM" => @formats.month_name(@time_with_zone.month, "abbreviated"),
               "MM" => @time_with_zone.strftime("%m"),

@@ -44,6 +44,11 @@ module Foxtail
           @resolver.resolve("datetime_formats.time_formats.#{style}", "datetime_formats") || default_time_pattern(style)
         end
 
+        # Get available format pattern for specific field combination
+        def available_format(pattern_key)
+          @resolver.resolve("datetime_formats.datetime_formats.available_formats.#{pattern_key}", "datetime_formats")
+        end
+
         # Get datetime format pattern (combination)
         def datetime_pattern(date_style="medium", time_style="medium")
           # Get the appropriate combination pattern based on date style
