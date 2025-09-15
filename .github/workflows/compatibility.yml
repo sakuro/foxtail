@@ -132,8 +132,12 @@ jobs:
           # Read the markdown report
           REPORT=$(cat compat/node_intl_compatibility_report.md)
 
-          # Extract the overall summary and NumberFormat/DateTimeFormat sections
-          SUMMARY=$(echo "$REPORT" | sed -n '/## Overall Summary/,/## DateTimeFormat Compatibility/p' | sed '$d')
+          # Extract the overall summary and both format sections (up to first mismatch section)
+          SUMMARY=$(echo "$REPORT" | sed -n '/## Overall Summary/,/### NumberFormat Mismatches/p' | head -n -1)
+          if [ -z "$SUMMARY" ]; then
+            # Fallback if no mismatch sections exist - get first 50 lines after Overall Summary
+            SUMMARY=$(echo "$REPORT" | sed -n '/## Overall Summary/,$ p' | head -n 50)
+          fi
 
           # Create the comment body
           {
