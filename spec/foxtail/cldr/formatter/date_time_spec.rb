@@ -57,16 +57,14 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
 
       it "formats with timeStyle short" do
         result = formatter.call(test_time, locale: en_locale, timeStyle: "short")
-        # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
         # UTC 14:30 -> JST 23:30
-        expect(result).to eq("11:30\u202FPM")
+        expect(result).to eq("11:30 PM")
       end
 
       it "combines dateStyle and timeStyle" do
         result = formatter.call(test_time, locale: en_locale, dateStyle: "medium", timeStyle: "short")
         # Updated to match current CLDR pattern format (UTC 14:30 -> JST 23:30)
-        # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
-        expect(result).to eq("Jun 15, 2023, 11:30\u202FPM")
+        expect(result).to eq("Jun 15, 2023, 11:30 PM")
       end
     end
 

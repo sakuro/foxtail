@@ -192,9 +192,6 @@ module Foxtail
             end
           end
 
-          # Apply fallback patterns from root locale for missing formats
-          apply_fallback_time_formats(formats)
-
           formats
         end
 
@@ -231,28 +228,6 @@ module Foxtail
 
         private def write_data(locale_id, data)
           write_yaml_file(locale_id, "datetime_formats.yml", data)
-        end
-
-        private def apply_fallback_time_formats(formats)
-          # Default time patterns from root locale with proper narrow no-break space
-          # These patterns match the actual CLDR data found in the en.xml file
-          fallback_patterns = {
-            "full" => "h:mm:ss\u202Fa zzzz",
-            "long" => "h:mm:ss\u202Fa z",
-            "medium" => "h:mm:ss\u202Fa",
-            "short" => "h:mm\u202Fa"
-          }
-
-          # Override existing patterns to ensure consistent narrow no-break space usage
-          # This ensures that even if CLDR patterns are extracted, they get the proper spacing
-          fallback_patterns.each do |type, pattern|
-            # Replace existing patterns to ensure narrow no-break space consistency
-            if formats[type] && formats[type].include?(" a")
-              formats[type] = formats[type].gsub(" a", "\u202Fa")
-            elsif formats[type].nil? || formats[type].empty?
-              formats[type] = pattern
-            end
-          end
         end
       end
     end
