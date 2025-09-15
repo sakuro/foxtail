@@ -124,6 +124,32 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
         result = formatter.call(test_time, locale: en_locale, pattern: "Date: dd/MM/yyyy Time: HH:mm")
         expect(result).to eq("Date: 15/06/2023 Time: 14:30")
       end
+
+      it "formats timezone symbols with timeZone option" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+
+        # VV: timezone ID
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "VV")
+        expect(result).to eq("America/New_York")
+
+        # VVV: exemplar city
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "VVV")
+        expect(result).to eq("New York") # Extracted from timezone ID
+
+        # ZZZZZ: ISO offset format
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "ZZZZZ")
+        expect(result).to eq("-04:00") # EDT in June
+
+        # Z: basic offset format
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "America/New_York", pattern: "Z")
+        expect(result).to eq("-0400") # EDT in June
+      end
+
+      it "formats complex pattern with timezone symbols" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: en_locale, timeZone: "Asia/Tokyo", pattern: "yyyy-MM-dd HH:mm VV (ZZZZZ)")
+        expect(result).to eq("2023-06-15 23:30 Asia/Tokyo (+09:00)")
+      end
     end
 
     context "with timeZone options" do

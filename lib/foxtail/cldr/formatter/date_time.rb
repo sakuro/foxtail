@@ -37,6 +37,7 @@ module Foxtail
             @original_value = value
             @options = options.dup.freeze
             @formats = Foxtail::CLDR::Repository::DateTimeFormats.new(locale)
+            @timezone_names = Foxtail::CLDR::Repository::TimezoneNames.new(locale)
 
             # Parse and convert value to Time
             @original_time = convert_to_time(value)
@@ -258,7 +259,14 @@ module Foxtail
               "h" => @time_with_zone.strftime("%-l"),
               "mm" => @time_with_zone.strftime("%M"),
               "ss" => @time_with_zone.strftime("%S"),
-              "a" => @time_with_zone.strftime("%p")
+              "a" => @time_with_zone.strftime("%p"),
+              # Timezone symbols
+              "zzzz" => format_timezone_name(:long),
+              "z" => format_timezone_name(:short),
+              "VVV" => format_timezone_exemplar_city,
+              "VV" => format_timezone_id,
+              "ZZZZZ" => format_timezone_offset_iso,
+              "Z" => format_timezone_offset_basic
             }
 
             # Format each token according to its type
@@ -274,6 +282,99 @@ module Foxtail
                 token.value
               end
             }.join
+          end
+
+          # Format timezone name (z, zzzz)
+          private def format_timezone_name(length)
+            timezone_id = @options[:timeZone]
+            return nil unless timezone_id
+
+            # Try to get localized timezone name
+            name = @timezone_names.zone_name(timezone_id, length, :generic) ||
+                   @timezone_names.zone_name(timezone_id, length, :standard)
+
+            # Fall back to timezone ID if no name available
+            name || timezone_id
+          end
+
+          # Format exemplar city (VVV)
+          private def format_timezone_exemplar_city
+            timezone_id = @options[:timeZone]
+            return nil unless timezone_id
+
+            # Get exemplar city or extract from timezone ID
+            city = @timezone_names.exemplar_city(timezone_id)
+            city || extract_city_from_timezone_id(timezone_id)
+          end
+
+          # Format timezone ID (VV)
+          private def format_timezone_id
+            @options[:timeZone]
+          end
+
+          # Format timezone offset in ISO format (ZZZZZ: +09:00, -05:00)
+          private def format_timezone_offset_iso
+            return nil unless @time_with_zone && @options[:timeZone]
+
+            # Calculate offset from timezone setting
+            offset_seconds = calculate_timezone_offset
+            @timezone_names.format_offset(offset_seconds)
+          end
+
+          # Format timezone offset in basic format (Z: +0900, -0500)
+          private def format_timezone_offset_basic
+            return nil unless @time_with_zone && @options[:timeZone]
+
+            # Calculate offset from timezone setting
+            offset_seconds = calculate_timezone_offset
+            hours = offset_seconds.abs / 3600
+            minutes = (offset_seconds.abs % 3600) / 60
+            sign = offset_seconds >= 0 ? "+" : "-"
+            "%s%02d%02d" % [sign, hours, minutes]
+          end
+
+          # Calculate timezone offset in seconds from UTC
+          private def calculate_timezone_offset
+            return 0 unless @original_time && @time_with_zone
+
+            # If timezone was applied, calculate the offset
+            if @options[:timeZone]
+              case @options[:timeZone]
+              when "UTC", "GMT"
+                0
+              when /^[+-]\d{2}:\d{2}$/
+                # Parse offset from format like "+09:00", "-05:00"
+                match = @options[:timeZone].match(/^([+-])(\d{2}):(\d{2})$/)
+                return 0 unless match
+
+                sign = match[1] == "+" ? 1 : -1
+                hours = Integer(match[2], 10)
+                minutes = Integer(match[3], 10)
+                sign * ((hours * 3600) + (minutes * 60))
+              else
+                # For named timezones, get offset from tzinfo
+                begin
+                  timezone = TZInfo::Timezone.get(@options[:timeZone])
+                  utc_time = @original_time.getutc
+                  period = timezone.period_for_utc(utc_time)
+                  period.offset.utc_total_offset
+                rescue TZInfo::InvalidTimezoneIdentifier
+                  0
+                end
+              end
+            else
+              0
+            end
+          end
+
+          # Extract city name from timezone ID (e.g., "America/New_York" -> "New York")
+          private def extract_city_from_timezone_id(timezone_id)
+            parts = timezone_id.split("/")
+            return timezone_id if parts.length < 2
+
+            city = parts.last
+            # Replace underscores with spaces and capitalize words
+            city.tr("_", " ").split.map(&:capitalize).join(" ")
           end
         end
       end
