@@ -1,6 +1,6 @@
 ---
 locale: es_PY
-generated_at: '2025-09-15T03:59:54Z'
+generated_at: '2025-09-15T15:46:41Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -10,68 +10,6 @@ number_formats:
     standard: 
   currency_formats:
     standard: "¤ #,##0.00;¤ -#,##0.00"
-  units:
-    year:
-      long:
-        per_unit_pattern: "{0}/año"
-      category: duration
-      short:
-        display_name: años
-        one: "{0} año"
-        other: "{0} años"
-        per_unit_pattern: "{0}/año"
-      narrow:
-        display_name: año
-    ampere:
-      long:
-        display_name: amperios
-        one: "{0} amperio"
-        other: "{0} amperios"
-      category: electric
-    milliampere:
-      long:
-        display_name: miliamperios
-        one: "{0} miliamperio"
-        other: "{0} miliamperios"
-      category: electric
-    ohm:
-      long:
-        one: "{0} ohmio"
-        other: "{0} ohmios"
-      category: electric
-    month:
-      short:
-        display_name: meses
-        one: "{0} mes"
-        other: "{0} meses"
-        per_unit_pattern: "{0}/mes"
-      category: duration
-      narrow:
-        display_name: mes
-    day:
-      short:
-        display_name: días
-        one: "{0} día"
-        other: "{0} días"
-        per_unit_pattern: "{0}/día"
-      category: duration
-      narrow:
-        display_name: día
-    second:
-      short:
-        display_name: seg.
-        one: "{0} seg."
-        other: "{0} seg."
-        per_unit_pattern: "{0}/seg."
-      category: duration
-    volt:
-      short:
-        display_name: voltios
-      category: electric
-    watt:
-      short:
-        display_name: vatios
-      category: power
 currency_fractions:
   ADP:
     digits: 0

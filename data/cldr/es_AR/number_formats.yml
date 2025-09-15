@@ -1,6 +1,6 @@
 ---
 locale: es_AR
-generated_at: '2025-09-15T03:59:50Z'
+generated_at: '2025-09-15T15:46:36Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -11,75 +11,6 @@ number_formats:
   currency_formats:
     standard: "¤ #,##0.00"
     accounting: "¤ #,##0.00;(¤ #,##0.00)"
-  units:
-    year:
-      long:
-        per_unit_pattern: "{0}/año"
-      category: duration
-      short:
-        display_name: años
-        one: "{0} año"
-        other: "{0} años"
-        per_unit_pattern: "{0}/a"
-      narrow:
-        other: "{0}a."
-    ampere:
-      long:
-        display_name: amperios
-        one: "{0} amperio"
-        other: "{0} amperios"
-      category: electric
-    milliampere:
-      long:
-        display_name: miliamperios
-        one: "{0} miliamperio"
-        other: "{0} miliamperios"
-      category: electric
-    ohm:
-      long:
-        one: "{0} ohmio"
-        other: "{0} ohmios"
-      category: electric
-    kilojoule:
-      long:
-        display_name: kilojulios
-        one: "{0} kilojulio"
-        other: "{0} kilojulios"
-      category: energy
-    joule:
-      long:
-        display_name: julios
-        one: "{0} julio"
-        other: "{0} julios"
-      category: energy
-    century:
-      short:
-        display_name: s
-        one: "{0} s"
-        other: "{0} s"
-      category: duration
-    hour:
-      short:
-        display_name: hs.
-      category: duration
-    second:
-      short:
-        display_name: seg.
-        one: "{0} seg."
-        other: "{0} seg."
-        per_unit_pattern: "{0}/seg."
-      category: duration
-      narrow:
-        one: "{0}seg."
-        other: "{0}seg."
-    volt:
-      short:
-        display_name: voltios
-      category: electric
-    watt:
-      short:
-        display_name: vatios
-      category: power
 currency_fractions:
   ADP:
     digits: 0

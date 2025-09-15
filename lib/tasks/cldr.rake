@@ -26,6 +26,7 @@ CLDR_EXTRACT_DIR = File.join(TMP_DIR, "cldr-core")
 PLURAL_RULES_FILES = FileList[File.join(DATA_DIR, "*/plural_rules.yml")]
 NUMBER_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/number_formats.yml")]
 CURRENCIES_FILES = FileList[File.join(DATA_DIR, "*/currencies.yml")]
+UNITS_FILES = FileList[File.join(DATA_DIR, "*/units.yml")]
 TIMEZONE_NAMES_FILES = FileList[File.join(DATA_DIR, "*/timezone_names.yml")]
 DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
 LOCALE_ALIASES_FILE = File.join(DATA_DIR, "locale_aliases.yml")
@@ -39,6 +40,7 @@ CLOBBER.include(
   PLURAL_RULES_FILES,
   NUMBER_FORMATS_FILES,
   CURRENCIES_FILES,
+  UNITS_FILES,
   DATETIME_FORMATS_FILES,
   LOCALE_ALIASES_FILE,
   PARENT_LOCALES_FILE
@@ -85,6 +87,7 @@ namespace :cldr do
     extract:plural_rules
     extract:number_formats
     extract:currencies
+    extract:units
     extract:timezone_names
     extract:datetime_formats
   ]
@@ -142,6 +145,10 @@ namespace :cldr do
           source_dir: CLDR_EXTRACT_DIR,
           output_dir: DATA_DIR
         ),
+        Foxtail::CLDR::Extractor::Units.new(
+          source_dir: CLDR_EXTRACT_DIR,
+          output_dir: DATA_DIR
+        ),
         Foxtail::CLDR::Extractor::DateTimeFormats.new(
           source_dir: CLDR_EXTRACT_DIR,
           output_dir: DATA_DIR
@@ -174,6 +181,16 @@ namespace :cldr do
     desc "Extract CLDR currencies from downloaded CLDR core data"
     task currencies: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::Currencies.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: DATA_DIR
+      )
+
+      extractor.extract_all
+    end
+
+    desc "Extract CLDR units from downloaded CLDR core data"
+    task units: %i[set_debug_logging download parent_locales] do
+      extractor = Foxtail::CLDR::Extractor::Units.new(
         source_dir: CLDR_EXTRACT_DIR,
         output_dir: DATA_DIR
       )

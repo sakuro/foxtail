@@ -1,6 +1,6 @@
 ---
 locale: es_CO
-generated_at: '2025-09-15T03:59:51Z'
+generated_at: '2025-09-15T15:46:37Z'
 cldr_version: '46'
 number_formats:
   symbols:
@@ -10,67 +10,6 @@ number_formats:
     standard: 
   currency_formats:
     standard: "¤ #,##0.00"
-  units:
-    month:
-      long:
-        per_unit_pattern: "{0}/mes"
-      category: duration
-      short:
-        display_name: mes
-        one: "{0} mes"
-        other: "{0} meses"
-        per_unit_pattern: "{0}/mes"
-      narrow:
-        display_name: mes
-        one: "{0} mes"
-        other: "{0} meses"
-    week:
-      long:
-        per_unit_pattern: "{0}/sem."
-      category: duration
-      narrow:
-        one: "{0} sem."
-        other: "{0} sems."
-    year:
-      short:
-        display_name: a.
-        other: "{0} a."
-        per_unit_pattern: "{0}/año"
-      category: duration
-      narrow:
-        one: "{0} a."
-        other: "{0} a."
-    day:
-      short:
-        display_name: días
-        one: "{0} día"
-        other: "{0} días"
-        per_unit_pattern: "{0}/día"
-      category: duration
-      narrow:
-        display_name: día
-        one: "{0} día"
-        other: "{0} días"
-    hour:
-      narrow:
-        one: "{0} h"
-        other: "{0} h"
-      category: duration
-    minute:
-      narrow:
-        one: "{0} min"
-        other: "{0} min"
-      category: duration
-    second:
-      narrow:
-        one: "{0} s"
-        other: "{0} s"
-      category: duration
-    millisecond:
-      narrow:
-        one: "{0} ms"
-        other: "{0} ms"
-      category: duration
 currency_fractions:
   ADP:
     digits: 0
