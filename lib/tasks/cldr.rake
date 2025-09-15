@@ -81,6 +81,7 @@ namespace :cldr do
   task extract: %i[
     extract:parent_locales
     extract:locale_aliases
+    extract:metazone_mapping
     extract:plural_rules
     extract:number_formats
     extract:currencies
@@ -108,6 +109,17 @@ namespace :cldr do
 
       extractor.extract_all
     end
+
+    desc "Extract CLDR metazone mapping from downloaded CLDR core data"
+    task metazone_mapping: %i[set_debug_logging download] do
+      extractor = Foxtail::CLDR::Extractor::MetazoneMapping.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: DATA_DIR
+      )
+
+      extractor.extract_all
+    end
+
     desc "Extract CLDR data for a specific locale"
     task :locale, [:locale_id] => %i[set_debug_logging download] do |_task, args|
       unless args[:locale_id]

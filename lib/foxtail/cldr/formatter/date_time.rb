@@ -89,8 +89,8 @@ module Foxtail
 
           # Apply timezone conversion to UTC time for display
           private def apply_timezone(utc_time, timezone_option)
-            # If no timezone specified, use original time (preserve local timezone)
-            return @original_time unless timezone_option
+            # If no timezone specified, use system timezone (Node.js compatibility)
+            timezone_option = system_timezone unless timezone_option
 
             case timezone_option
             when "UTC", "GMT"
@@ -112,6 +112,52 @@ module Foxtail
             else
               # Handle IANA timezone names using tzinfo
               apply_named_timezone(utc_time, timezone_string)
+            end
+          end
+
+          # Get system timezone ID (e.g., "Asia/Tokyo", "America/New_York")
+          private def system_timezone
+            @system_timezone ||= Foxtail::CLDR::Formatter::LocalTimezoneDetector.detect.id
+          end
+
+          # Format GMT-style offset name for timezone display (e.g., "GMT+9", "GMT-5")
+          private def format_gmt_offset_name(offset_string)
+            # Parse offset string like "+09:00" or "-05:00"
+            match = offset_string.match(/^([+-])(\d{2}):(\d{2})$/)
+            return offset_string unless match
+
+            sign = match[1]
+            hours = match[2].to_i
+            minutes = match[3].to_i
+
+            # Format as "GMT+H" or "GMT-H" (Node.js style, no leading zeros for hours)
+            if minutes.zero?
+              "GMT#{sign}#{hours}"
+            else
+              # Include minutes if non-zero (rare case)
+              "GMT#{sign}#{hours}:#{sprintf('%02d', minutes)}"
+            end
+          end
+
+          # Get metazone ID for timezone ID
+          private def timezone_to_metazone(timezone_id)
+            @metazone_mapping ||= load_metazone_mapping
+            @metazone_mapping[timezone_id]
+          end
+
+          # Load metazone mapping data
+          private def load_metazone_mapping
+            mapping_file = File.join(__dir__, "..", "..", "..", "..", "data", "cldr", "metazone_mapping.yml")
+
+            return {} unless File.exist?(mapping_file)
+
+            begin
+              require "yaml"
+              yaml_data = YAML.load_file(mapping_file)
+              # Handle both string and symbol keys
+              yaml_data[:timezone_to_metazone] || yaml_data["timezone_to_metazone"] || {}
+            rescue => e
+              {}
             end
           end
 
@@ -286,12 +332,26 @@ module Foxtail
 
           # Format timezone name (z, zzzz)
           private def format_timezone_name(length)
-            timezone_id = @options[:timeZone]
-            return nil unless timezone_id
+            # Get the effective timezone ID (original option or system timezone)
+            timezone_id = @options[:timeZone] || system_timezone
 
-            # Try to get localized timezone name
+            # Try to get localized timezone name from CLDR data
             name = @timezone_names.zone_name(timezone_id, length, :generic) ||
                    @timezone_names.zone_name(timezone_id, length, :standard)
+
+            # If no zone-specific name, try metazone mapping
+            if name.nil?
+              metazone_id = timezone_to_metazone(timezone_id)
+              if metazone_id
+                name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
+                       @timezone_names.metazone_name(metazone_id, length, :generic)
+              end
+            end
+
+            # If no localized name found and this is an offset format, generate GMT-style name
+            if name.nil? && timezone_id.match?(/^[+-]\d{2}:\d{2}$/)
+              name = format_gmt_offset_name(timezone_id)
+            end
 
             # Fall back to timezone ID if no name available
             name || timezone_id
@@ -299,8 +359,8 @@ module Foxtail
 
           # Format exemplar city (VVV)
           private def format_timezone_exemplar_city
-            timezone_id = @options[:timeZone]
-            return nil unless timezone_id
+            # Get the effective timezone ID (original option or system timezone)
+            timezone_id = @options[:timeZone] || system_timezone
 
             # Get exemplar city or extract from timezone ID
             city = @timezone_names.exemplar_city(timezone_id)
@@ -309,7 +369,7 @@ module Foxtail
 
           # Format timezone ID (VV)
           private def format_timezone_id
-            @options[:timeZone]
+            @options[:timeZone] || system_timezone
           end
 
           # Format timezone offset in ISO format (ZZZZZ: +09:00, -05:00)

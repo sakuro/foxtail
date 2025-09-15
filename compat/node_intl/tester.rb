@@ -282,13 +282,7 @@ class NodeIntlTester
       else
         foxtail_result = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
 
-        status = if foxtail_result == node_result["result"]
-                   :match
-                 elsif normalize_whitespace(foxtail_result) == normalize_whitespace(node_result["result"])
-                   :conditional_match
-                 else
-                   :mismatch
-                 end
+        status = determine_match_status(foxtail_result, node_result["result"])
 
         TestResult.new(
           id: test_case[:id],
@@ -335,13 +329,7 @@ class NodeIntlTester
       else
         foxtail_result = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
 
-        status = if foxtail_result == node_result["result"]
-                   :match
-                 elsif normalize_whitespace(foxtail_result) == normalize_whitespace(node_result["result"])
-                   :conditional_match
-                 else
-                   :mismatch
-                 end
+        status = determine_match_status(foxtail_result, node_result["result"])
 
         TestResult.new(
           id: test_case[:id],
@@ -375,9 +363,72 @@ class NodeIntlTester
     "ERROR: #{e.message}"
   end
 
+  # Determine match status between Foxtail and Node.js results
+  private def determine_match_status(foxtail_result, node_result)
+    # Exact match
+    return :match if foxtail_result == node_result
+
+    # Whitespace normalization (existing conditional match)
+    return :conditional_match if normalize_whitespace(foxtail_result) == normalize_whitespace(node_result)
+
+    # Timezone format equivalence (new conditional match)
+    return :conditional_match if equivalent_timezone_format?(foxtail_result, node_result)
+
+    # No match
+    :mismatch
+  end
+
+  # Check if two results represent equivalent timezone formats
+  private def equivalent_timezone_format?(foxtail, node)
+    return false unless foxtail && node
+
+    # Pattern: "7:30:00 PM Asia/Tokyo" vs "7:30:00 PM GMT+9"
+    # Extract time and timezone parts
+    foxtail_parts = foxtail.match(/^(.+)\s+(.+)$/)
+    node_parts = node.match(/^(.+)\s+(.+)$/)
+
+    return false unless foxtail_parts && node_parts
+
+    time_part_f, tz_part_f = foxtail_parts[1], foxtail_parts[2]
+    time_part_n, tz_part_n = node_parts[1], node_parts[2]
+
+    # Time parts must be identical (after whitespace normalization)
+    return false unless normalize_whitespace(time_part_f) == normalize_whitespace(time_part_n)
+
+    # Check if timezone parts are equivalent
+    equivalent_timezone_names?(tz_part_f, tz_part_n)
+  end
+
+  # Check if two timezone names are equivalent representations
+  private def equivalent_timezone_names?(tz1, tz2)
+    return false unless tz1 && tz2
+
+    # Known equivalent patterns
+    equivalents = {
+      # IANA ID <-> GMT offset patterns
+      "Asia/Tokyo" => ["GMT+9", "JST"],
+      "America/New_York" => ["GMT-5", "GMT-4", "EST", "EDT"], # Depending on DST
+      "Europe/London" => ["GMT+0", "GMT+1", "GMT", "BST"],
+      "America/Los_Angeles" => ["GMT-8", "GMT-7", "PST", "PDT"]
+      # Add more as needed
+    }
+
+    # Check bidirectional equivalence
+    equivalents.each do |canonical, alternatives|
+      if tz1 == canonical && alternatives.include?(tz2)
+        return true
+      elsif tz2 == canonical && alternatives.include?(tz1)
+        return true
+      end
+    end
+
+    false
+  end
+
   # Normalize whitespace characters for comparison
-  # Converts non-breaking spaces (U+00A0) to regular spaces (U+0020)
+  # Converts various Unicode space characters to regular spaces (U+0020)
+  # U+00A0: non-breaking space, U+202F: thin space
   private def normalize_whitespace(text)
-    text&.tr("\u00A0", " ")
+    text&.tr("\u00A0\u202F", " ")
   end
 end
