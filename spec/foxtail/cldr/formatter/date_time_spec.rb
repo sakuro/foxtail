@@ -125,5 +125,33 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
         expect(result).to eq("Date: 15/06/2023 Time: 14:30")
       end
     end
+
+    context "with timeZone options" do
+      it "formats with UTC timezone" do
+        result = formatter.call(test_time, locale: locale("en"), timeZone: "UTC", pattern: "HH:mm")
+        # test_time is JST (UTC+9), so 14:30 JST = 05:30 UTC
+        expect(result).to eq("05:30")
+      end
+
+      it "formats with offset timezone +09:00" do
+        utc_time = Time.new(2023, 6, 15, 5, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "+09:00", pattern: "HH:mm")
+        # 05:30 UTC + 9 hours = 14:30
+        expect(result).to eq("14:30")
+      end
+
+      it "formats with offset timezone -05:00" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "-05:00", pattern: "HH:mm")
+        # 14:30 UTC - 5 hours = 09:30
+        expect(result).to eq("09:30")
+      end
+
+      it "preserves original timezone when no timeZone option" do
+        result = formatter.call(test_time, locale: locale("en"), pattern: "HH:mm")
+        # Should preserve the original time without timezone conversion
+        expect(result).to eq("14:30")
+      end
+    end
   end
 end

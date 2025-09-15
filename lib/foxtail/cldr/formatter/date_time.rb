@@ -37,20 +37,24 @@ module Foxtail
             @options = options.dup.freeze
             @formats = Foxtail::CLDR::Repository::DateTimeFormats.new(locale)
 
-            # Parse and convert value to Time for consistent processing
-            @time = convert_to_time(value)
+            # Parse and convert value to Time
+            @original_time = convert_to_time(value)
+            # Apply timezone conversion once during initialization
+            utc_time = @original_time&.getutc
+            @time_with_zone = apply_timezone(utc_time, options[:timeZone])
           end
 
           # Format the date/time value using CLDR data and options
           def format
-            return @original_value.to_s if @time.nil?
+            return @original_value.to_s if @time_with_zone.nil?
 
             # Handle custom pattern first (highest priority)
             if @options[:pattern]
               format_with_pattern(@options[:pattern])
-            elsif @options[:dateStyle] || @options[:timeStyle]
-              # Handle dateStyle/timeStyle (Intl.DateTimeFormat style)
-              format_with_styles
+            elsif @options[:dateStyle] || @options[:timeStyle] || !field_options?
+              # Handle dateStyle/timeStyle or default format (no fields = medium/medium)
+              pattern = build_pattern_from_styles
+              format_with_pattern(pattern)
             else
               # Handle individual field specifications
               format_with_fields
@@ -81,7 +85,58 @@ module Foxtail
             end
           end
 
-          private def format_with_styles
+          # Apply timezone conversion to UTC time for display
+          private def apply_timezone(utc_time, timezone_option)
+            # If no timezone specified, use original time (preserve local timezone)
+            return @original_time unless timezone_option
+
+            case timezone_option
+            when "UTC", "GMT"
+              utc_time
+            when String
+              # Handle timezone names like "America/New_York", "+09:00", etc.
+              apply_timezone_string(utc_time, timezone_option)
+            else
+              # Default to original time if timezone option is invalid
+              @original_time
+            end
+          end
+
+          # Apply timezone specified as string
+          private def apply_timezone_string(utc_time, timezone_string)
+            # Handle offset formats like "+09:00", "-05:00"
+            if timezone_string.match?(/^[+-]\d{2}:\d{2}$/)
+              apply_offset_timezone(utc_time, timezone_string)
+            else
+              # For named timezones, we'll need proper timezone database support
+              # For now, return UTC as fallback
+              utc_time
+            end
+          end
+
+          # Apply offset-based timezone (e.g., "+09:00", "-05:00")
+          private def apply_offset_timezone(utc_time, offset_string)
+            # Parse offset string like "+09:00" or "-05:00"
+            match = offset_string.match(/^([+-])(\d{2}):(\d{2})$/)
+            return utc_time unless match
+
+            sign = match[1] == "+" ? 1 : -1
+            hours = Integer(match[2], 10)
+            minutes = Integer(match[3], 10)
+            offset_seconds = sign * ((hours * 3600) + (minutes * 60))
+
+            # Apply offset to UTC time
+            utc_time + offset_seconds
+          end
+
+          # Check if individual field options are specified
+          private def field_options?
+            field_keys = %i[year month day weekday hour minute second hour12]
+            field_keys.any? {|key| @options.key?(key) }
+          end
+
+          # Build CLDR pattern from dateStyle/timeStyle options
+          private def build_pattern_from_styles
             date_style = @options[:dateStyle]
             time_style = @options[:timeStyle]
 
@@ -89,27 +144,20 @@ module Foxtail
               # Both date and time
               date_pattern = @formats.date_pattern(date_style)
               time_pattern = @formats.time_pattern(time_style)
-              pattern = "#{date_pattern} #{time_pattern}"
+              "#{date_pattern} #{time_pattern}"
             elsif date_style
               # Date only
-              pattern = @formats.date_pattern(date_style)
+              @formats.date_pattern(date_style)
             elsif time_style
               # Time only
-              pattern = @formats.time_pattern(time_style)
+              @formats.time_pattern(time_style)
             else
               # Fallback
-              pattern = @formats.datetime_pattern("medium", "medium")
+              @formats.datetime_pattern("medium", "medium")
             end
-
-            format_with_pattern(pattern)
           end
 
           private def format_with_fields
-            if @options.empty?
-              # Default format
-              return format_with_styles
-            end
-
             parts = []
 
             # Weekday
@@ -120,7 +168,7 @@ module Foxtail
                       when "narrow" then "narrow"
                       else "wide"
                       end
-              weekday_key = %w[sun mon tue wed thu fri sat][@time.wday]
+              weekday_key = %w[sun mon tue wed thu fri sat][@time_with_zone.wday]
               parts << @formats.weekday_name(weekday_key, width)
             end
 
@@ -128,9 +176,9 @@ module Foxtail
             if @options[:year]
               case @options[:year]
               when "numeric"
-                parts << @time.strftime("%Y")
+                parts << @time_with_zone.strftime("%Y")
               when "2-digit"
-                parts << @time.strftime("%y")
+                parts << @time_with_zone.strftime("%y")
               end
             end
 
@@ -138,15 +186,15 @@ module Foxtail
             if @options[:month]
               case @options[:month]
               when "numeric"
-                parts << @time.month.to_s
+                parts << @time_with_zone.month.to_s
               when "2-digit"
-                parts << @time.strftime("%m")
+                parts << @time_with_zone.strftime("%m")
               when "long"
-                parts << @formats.month_name(@time.month, "wide")
+                parts << @formats.month_name(@time_with_zone.month, "wide")
               when "short"
-                parts << @formats.month_name(@time.month, "abbreviated")
+                parts << @formats.month_name(@time_with_zone.month, "abbreviated")
               when "narrow"
-                parts << @formats.month_name(@time.month, "narrow")
+                parts << @formats.month_name(@time_with_zone.month, "narrow")
               end
             end
 
@@ -154,23 +202,23 @@ module Foxtail
             if @options[:day]
               case @options[:day]
               when "numeric"
-                parts << @time.day.to_s
+                parts << @time_with_zone.day.to_s
               when "2-digit"
-                parts << @time.strftime("%d")
+                parts << @time_with_zone.strftime("%d")
               end
             end
 
             # Hour, minute, second (basic implementation)
             if @options[:hour]
-              parts << @time.strftime(@options[:hour12] ? "%l" : "%H").strip
+              parts << @time_with_zone.strftime(@options[:hour12] ? "%l" : "%H").strip
             end
 
             if @options[:minute]
-              parts << @time.strftime("%M")
+              parts << @time_with_zone.strftime("%M")
             end
 
             if @options[:second]
-              parts << @time.strftime("%S")
+              parts << @time_with_zone.strftime("%S")
             end
 
             parts.join(" ")
@@ -178,7 +226,7 @@ module Foxtail
 
           # Format time using a CLDR pattern with formal parser
           private def format_with_pattern(pattern)
-            weekday_key = %w[sun mon tue wed thu fri sat][@time.wday]
+            weekday_key = %w[sun mon tue wed thu fri sat][@time_with_zone.wday]
 
             # Use the formal CLDR pattern parser
             parser = Foxtail::CLDR::PatternParser::DateTime.new
@@ -188,22 +236,22 @@ module Foxtail
             replacements = {
               "EEEE" => @formats.weekday_name(weekday_key, "wide"),
               "EEE" => @formats.weekday_name(weekday_key, "abbreviated"),
-              "MMMM" => @formats.month_name(@time.month, "wide"),
-              "MMM" => @formats.month_name(@time.month, "abbreviated"),
-              "MM" => @time.strftime("%m"),
-              "M" => @time.month.to_s,
-              "yyyy" => @time.year.to_s,
-              "yy" => @time.strftime("%y"),
-              "y" => @time.year.to_s,
-              "dd" => @time.strftime("%d"),
-              "d" => @time.day.to_s,
-              "HH" => @time.strftime("%H"),
-              "H" => @time.hour.to_s,
-              "hh" => @time.strftime("%I"),
-              "h" => @time.strftime("%-l"),
-              "mm" => @time.strftime("%M"),
-              "ss" => @time.strftime("%S"),
-              "a" => @time.strftime("%p")
+              "MMMM" => @formats.month_name(@time_with_zone.month, "wide"),
+              "MMM" => @formats.month_name(@time_with_zone.month, "abbreviated"),
+              "MM" => @time_with_zone.strftime("%m"),
+              "M" => @time_with_zone.month.to_s,
+              "yyyy" => @time_with_zone.year.to_s,
+              "yy" => @time_with_zone.strftime("%y"),
+              "y" => @time_with_zone.year.to_s,
+              "dd" => @time_with_zone.strftime("%d"),
+              "d" => @time_with_zone.day.to_s,
+              "HH" => @time_with_zone.strftime("%H"),
+              "H" => @time_with_zone.hour.to_s,
+              "hh" => @time_with_zone.strftime("%I"),
+              "h" => @time_with_zone.strftime("%-l"),
+              "mm" => @time_with_zone.strftime("%M"),
+              "ss" => @time_with_zone.strftime("%S"),
+              "a" => @time_with_zone.strftime("%p")
             }
 
             # Format each token according to its type
