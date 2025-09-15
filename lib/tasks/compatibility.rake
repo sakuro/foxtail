@@ -18,12 +18,12 @@ namespace :compatibility do
 
     # Generate and save markdown report
     markdown_report = reporter.generate_markdown_report
-    File.write("fluentjs_compatibility_report.md", markdown_report)
+    File.write("compat/fluentjs_compatibility_report.md", markdown_report)
 
     # Show summary and file info
     summary = reporter.generate_summary_report
     puts summary
-    puts "📄 Detailed report saved to fluentjs_compatibility_report.md"
+    puts "📄 Detailed report saved to compat/fluentjs_compatibility_report.md"
   end
 
   desc "Generate Node.js Intl compatibility report (NumberFormat + DateTimeFormat)"
@@ -37,11 +37,11 @@ namespace :compatibility do
 
     # Generate and save markdown report
     markdown_report = reporter.generate_markdown_report
-    File.write("node_intl_compatibility_report.md", markdown_report)
+    File.write("compat/node_intl_compatibility_report.md", markdown_report)
 
     # Show summary and file info
     summary = reporter.generate_summary_report
     puts summary
-    puts "📄 Detailed report saved to node_intl_compatibility_report.md"
+    puts "📄 Detailed report saved to compat/node_intl_compatibility_report.md"
   end
 end
