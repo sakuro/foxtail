@@ -263,15 +263,15 @@ module Foxtail
 
             # Time fields (H/h, m, s, a)
             if options[:hour]
-              # Choose hour pattern based on hour12 option
-              hour_pattern = case [options[:hour], options[:hour12]]
+              # Choose hour pattern based on hour12 setting and digit requirement
+              hour_pattern = case [options[:hour], effective_hour12]
                              in ["numeric", false]
                                "H"
                              in ["2-digit", false]
                                "HH"
-                             in ["numeric", _]
+                             in ["numeric", true]
                                "h"
-                             in ["2-digit", _]
+                             in ["2-digit", true]
                                "hh"
                              else
                                "h"
@@ -302,9 +302,7 @@ module Foxtail
             end
 
             # Add AM/PM marker if 12-hour format
-            if options[:hour] && options[:hour12] != false
-              key_parts << "a"
-            end
+            key_parts << "a" if options[:hour] && effective_hour12
 
             key_parts.join
           end
@@ -326,13 +324,29 @@ module Foxtail
               end
             end
 
-            if available_pattern && only_date_fields?
+            if available_pattern
+              # Adapt pattern for 2-digit requirements
+              adapted_pattern = adapt_pattern_for_options(available_pattern)
               # Use CLDR availableFormats pattern for proper ordering and separators
-              format_with_pattern(available_pattern)
+              format_with_pattern(adapted_pattern)
             else
-              # Fallback to individual field formatting for time fields or unavailable patterns
+              # Fallback to individual field formatting for unavailable patterns
               format_fields_individually
             end
+          end
+
+          # Adapt pattern to match option requirements (e.g., 2-digit padding)
+          private def adapt_pattern_for_options(pattern)
+            adapted = pattern.dup
+
+            # Adapt hour field based on hour option
+            if @options[:hour] == "2-digit"
+              # Replace single H with HH for 2-digit padding
+              adapted = adapted.gsub(/\bH\b/, "HH")
+              adapted = adapted.gsub(/\bh\b/, "hh")
+            end
+
+            adapted
           end
 
           # Check if options contain only date fields (no time fields)
@@ -367,7 +381,7 @@ module Foxtail
 
             # Hour pattern
             if @options[:hour]
-              key_parts << if @options[:hour12]
+              key_parts << if effective_hour12
                              "h" # 12-hour format
                            else
                              "H" # 24-hour format
@@ -465,7 +479,8 @@ module Foxtail
 
               adapt_second_token(token)
             when :am_pm
-              return nil unless @options[:hour12]
+              # Show AM/PM if using 12-hour format (explicit or locale default)
+              return nil unless effective_hour12
 
               token # Keep AM/PM as-is
             else
@@ -492,7 +507,7 @@ module Foxtail
 
           # Adapt hour token based on options
           private def adapt_hour_token(_token)
-            pattern = if @options[:hour12]
+            pattern = if effective_hour12
                         # Use 12-hour format
                         @options[:hour] == "2-digit" ? "hh" : "h"
                       else
@@ -792,6 +807,20 @@ module Foxtail
               # No explicit timezone option - use system timezone offset
               calculate_tzinfo_offset(system_timezone)
             end
+          end
+
+          # Determine effective hour12 setting (explicit option or locale default)
+          private def effective_hour12
+            @options[:hour12].nil? ? locale_default_hour12? : @options[:hour12]
+          end
+
+          # Determine locale default for hour12 format based on CLDR time patterns
+          # If locale's short time pattern uses 'h' (12-hour), default to hour12=true
+          # If it uses 'H' (24-hour), default to hour12=false
+          private def locale_default_hour12?
+            short_time_pattern = @formats.time_pattern("short")
+            # Check if pattern contains lowercase 'h' (12-hour format indicator)
+            short_time_pattern&.include?("h")
           end
 
           # Calculate timezone offset using TZInfo
