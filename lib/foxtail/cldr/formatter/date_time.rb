@@ -195,10 +195,8 @@ module Foxtail
             time_style = @options[:timeStyle]
 
             if date_style && time_style
-              # Both date and time
-              date_pattern = @formats.date_pattern(date_style)
-              time_pattern = @formats.time_pattern(time_style)
-              "#{date_pattern} #{time_pattern}"
+              # Both date and time - use CLDR datetime combination pattern
+              @formats.datetime_pattern(date_style, time_style)
             elsif date_style
               # Date only
               @formats.date_pattern(date_style)
