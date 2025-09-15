@@ -16,19 +16,24 @@ module Foxtail
           mapping_data = extract_metazone_mapping
           output_file = File.join(@output_dir, "metazone_mapping.yml")
 
-          File.write(output_file, YAML.dump(mapping_data))
-          Foxtail::CLDR.logger.info "Metazone mapping extracted to #{output_file}"
+          yaml_data = {
+            "generated_at" => Time.now.utc.iso8601,
+            "cldr_version" => ENV.fetch("CLDR_VERSION", "46")
+          }.merge(mapping_data)
+
+          # Skip writing if only generated_at differs
+          unless should_skip_write?(output_file, yaml_data)
+            File.write(output_file, YAML.dump(yaml_data))
+            Foxtail::CLDR.logger.debug "Wrote metazone mapping to #{relative_path(output_file)}"
+          end
+
+          timezone_count = mapping_data["timezone_to_metazone"]&.size || 0
+          metazone_count = mapping_data["metazone_to_timezones"]&.size || 0
+          Foxtail::CLDR.logger.info "Metazone mapping extracted (#{timezone_count} timezones -> #{metazone_count} metazones)"
         end
 
         private def extract_metazone_mapping
           metazones_file = File.join(@source_dir, "common", "supplemental", "metaZones.xml")
-
-          unless File.exist?(metazones_file)
-            Foxtail::CLDR.logger.warn "metaZones.xml not found at #{metazones_file}"
-            return generate_empty_mapping
-          end
-
-          Foxtail::CLDR.logger.debug "Processing #{metazones_file}"
 
           doc = REXML::Document.new(File.read(metazones_file))
           mapping = {}
@@ -61,11 +66,9 @@ module Foxtail
         # Generate the final mapping data structure
         private def generate_mapping_data(timezone_to_metazone)
           {
-            generated_at: Time.now.utc.iso8601,
-            cldr_version: ENV.fetch("CLDR_VERSION", "46"),
-            timezone_to_metazone:,
+            "timezone_to_metazone" => timezone_to_metazone,
             # Also create reverse mapping for convenience
-            metazone_to_timezones: create_reverse_mapping(timezone_to_metazone)
+            "metazone_to_timezones" => create_reverse_mapping(timezone_to_metazone)
           }
         end
 
@@ -79,16 +82,6 @@ module Foxtail
 
           # Convert to regular hash and sort arrays
           reverse.transform_values(&:sort).to_h
-        end
-
-        # Generate empty mapping data for fallback
-        private def generate_empty_mapping
-          {
-            generated_at: Time.now.utc.iso8601,
-            cldr_version: ENV.fetch("CLDR_VERSION", "46"),
-            timezone_to_metazone: {},
-            metazone_to_timezones: {}
-          }
         end
       end
     end
