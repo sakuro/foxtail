@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "spec_helper"
-
 RSpec.describe Foxtail::CLDR::Repository::Units do
   let(:units) { Foxtail::CLDR::Repository::Units.new(locale("en")) }
 

@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Foxtail::CLDR::Repository::Currencies do
-  let(:locale) { Locale::Tag.parse("en") }
-  let(:currencies) { Foxtail::CLDR::Repository::Currencies.new(locale) }
+  let(:currencies) { Foxtail::CLDR::Repository::Currencies.new(locale("en")) }
 
   describe "#currency_name" do
     it "returns localized currency display name" do
