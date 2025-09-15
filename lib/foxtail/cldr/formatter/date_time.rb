@@ -706,7 +706,27 @@ module Foxtail
               name = format_gmt_offset_name(timezone_id)
             end
 
-            # Fall back to timezone ID if no name available
+            # If no localized name found for named timezones, fall back to GMT/UTC offset format
+            if name.nil?
+              offset_seconds = calculate_timezone_offset
+              if offset_seconds == 0
+                # Use base GMT or UTC format from CLDR
+                base_format = @timezone_names.gmt_format
+                name = base_format.gsub("{0}", "")
+              else
+                hours = offset_seconds.abs / 3600
+                minutes = (offset_seconds.abs % 3600) / 60
+                sign = offset_seconds >= 0 ? "+" : "-"
+                offset_string = "#{sign}#{hours}"
+                offset_string += ":#{"%02d" % minutes}" if minutes > 0
+
+                # Apply CLDR gmt_format pattern (e.g., "GMT{0}" or "UTC{0}")
+                gmt_pattern = @timezone_names.gmt_format
+                name = gmt_pattern.gsub("{0}", offset_string)
+              end
+            end
+
+            # Final fallback to timezone ID if offset calculation failed
             name || timezone_id
           end
 
@@ -766,18 +786,20 @@ module Foxtail
                 sign * ((hours * 3600) + (minutes * 60))
               else
                 # For named timezones, get offset from tzinfo
-                begin
-                  timezone = TZInfo::Timezone.get(@options[:timeZone])
-                  utc_time = @original_time.getutc
-                  period = timezone.period_for_utc(utc_time)
-                  period.offset.utc_total_offset
-                rescue TZInfo::InvalidTimezoneIdentifier
-                  0
-                end
+                calculate_tzinfo_offset(@options[:timeZone])
               end
             else
-              0
+              # No explicit timezone option - use system timezone offset
+              calculate_tzinfo_offset(system_timezone)
             end
+          end
+
+          # Calculate timezone offset using TZInfo
+          private def calculate_tzinfo_offset(timezone_id)
+            timezone = TZInfo::Timezone.get(timezone_id)
+            utc_time = @original_time.getutc
+            period = timezone.period_for_utc(utc_time)
+            period.offset.utc_total_offset
           end
 
           # Extract city name from timezone ID (e.g., "America/New_York" -> "New York")

@@ -91,6 +91,13 @@ module Foxtail
           zone_name(zone_id, :short, type)
         end
 
+        # Get GMT/UTC format pattern from CLDR data
+        #
+        # @return [String, nil] GMT format pattern (e.g., "GMT{0}", "UTC{0}"), or nil if not found
+        def gmt_format
+          @resolver.resolve("timezone_names.formats.gmt_format", "timezone_names")
+        end
+
         # Get full timezone name (long name)
         #
         # @param zone_id [String] IANA timezone identifier
