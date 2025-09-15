@@ -249,7 +249,7 @@ module Foxtail
                            end
             end
 
-            # Day (d) - comes last
+            # Day (d) - comes last for date fields
             if options[:day]
               key_parts << case options[:day]
                            when "numeric"
@@ -259,6 +259,51 @@ module Foxtail
                            else
                              "d"
                            end
+            end
+
+            # Time fields (H/h, m, s, a)
+            if options[:hour]
+              # Choose hour pattern based on hour12 option
+              hour_pattern = case [options[:hour], options[:hour12]]
+                             in ["numeric", false]
+                               "H"
+                             in ["2-digit", false]
+                               "HH"
+                             in ["numeric", _]
+                               "h"
+                             in ["2-digit", _]
+                               "hh"
+                             else
+                               "h"
+                             end
+              key_parts << hour_pattern
+            end
+
+            if options[:minute]
+              key_parts << case options[:minute]
+                           when "numeric"
+                             "m"
+                           when "2-digit"
+                             "mm"
+                           else
+                             "m"
+                           end
+            end
+
+            if options[:second]
+              key_parts << case options[:second]
+                           when "numeric"
+                             "s"
+                           when "2-digit"
+                             "ss"
+                           else
+                             "s"
+                           end
+            end
+
+            # Add AM/PM marker if 12-hour format
+            if options[:hour] && options[:hour12] != false
+              key_parts << "a"
             end
 
             key_parts.join
