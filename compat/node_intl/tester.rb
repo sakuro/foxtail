@@ -389,8 +389,10 @@ class NodeIntlTester
 
     return false unless foxtail_parts && node_parts
 
-    time_part_f, tz_part_f = foxtail_parts[1], foxtail_parts[2]
-    time_part_n, tz_part_n = node_parts[1], node_parts[2]
+    time_part_f = foxtail_parts[1]
+    tz_part_f = foxtail_parts[2]
+    time_part_n = node_parts[1]
+    tz_part_n = node_parts[2]
 
     # Time parts must be identical (after whitespace normalization)
     return false unless normalize_whitespace(time_part_f) == normalize_whitespace(time_part_n)
@@ -407,22 +409,14 @@ class NodeIntlTester
     equivalents = {
       # IANA ID <-> GMT offset patterns
       "Asia/Tokyo" => ["GMT+9", "JST"],
-      "America/New_York" => ["GMT-5", "GMT-4", "EST", "EDT"], # Depending on DST
+      "America/New_York" => %w[GMT-5 GMT-4 EST EDT], # Depending on DST
       "Europe/London" => ["GMT+0", "GMT+1", "GMT", "BST"],
-      "America/Los_Angeles" => ["GMT-8", "GMT-7", "PST", "PDT"]
+      "America/Los_Angeles" => %w[GMT-8 GMT-7 PST PDT]
       # Add more as needed
     }
 
     # Check bidirectional equivalence
-    equivalents.each do |canonical, alternatives|
-      if tz1 == canonical && alternatives.include?(tz2)
-        return true
-      elsif tz2 == canonical && alternatives.include?(tz1)
-        return true
-      end
-    end
-
-    false
+    equivalents.any? {|canonical, alternatives| (tz1 == canonical && alternatives.include?(tz2)) || (tz2 == canonical && alternatives.include?(tz1)) }
   end
 
   # Normalize whitespace characters for comparison

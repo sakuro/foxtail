@@ -37,9 +37,7 @@ class NodeIntlReporter
     report.join("\n")
   end
 
-  private
-
-  def generate_overall_summary
+  private def generate_overall_summary
     report = []
     report << "## Overall Summary"
     report << ""
@@ -75,15 +73,15 @@ class NodeIntlReporter
     report
   end
 
-  def generate_numberformat_section
+  private def generate_numberformat_section
     generate_format_section("NumberFormat", @number_results)
   end
 
-  def generate_datetimeformat_section
+  private def generate_datetimeformat_section
     generate_format_section("DateTimeFormat", @datetime_results)
   end
 
-  def generate_format_section(format_name, results)
+  private def generate_format_section(format_name, results)
     report = []
     report << "## #{format_name} Compatibility"
     report << ""
@@ -137,5 +135,4 @@ class NodeIntlReporter
 
     report
   end
-
 end

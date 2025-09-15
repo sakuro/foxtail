@@ -5,7 +5,13 @@ require "time"
 RSpec.describe Foxtail::CLDR::Formatter::DateTime do
   subject(:formatter) { Foxtail::CLDR::Formatter::DateTime.new }
 
-  let(:test_time) { Time.new(2023, 6, 15, 14, 30, 45) }
+  let(:test_time) { Time.utc(2023, 6, 15, 14, 30, 45) }
+
+  # Stub timezone detection to return JST for consistent test results
+  before do
+    allow(Foxtail::CLDR::Formatter::LocalTimezoneDetector).to receive(:detect)
+      .and_return(instance_double(Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone, id: "Asia/Tokyo"))
+  end
 
   describe "#call" do
     context "with locale options" do
@@ -52,13 +58,15 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
       it "formats with timeStyle short" do
         result = formatter.call(test_time, locale: en_locale, timeStyle: "short")
         # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
-        expect(result).to eq("2:30\u202FPM")
+        # UTC 14:30 -> JST 23:30
+        expect(result).to eq("11:30\u202FPM")
       end
 
       it "combines dateStyle and timeStyle" do
         result = formatter.call(test_time, locale: en_locale, dateStyle: "medium", timeStyle: "short")
+        # Updated to match current CLDR pattern format (UTC 14:30 -> JST 23:30)
         # NOTE: CLDR uses \u202F (Narrow No-Break Space) between time and AM/PM
-        expect(result).to eq("Jun 15, 2023 2:30\u202FPM")
+        expect(result).to eq("Jun 15, 2023, 11:30\u202FPM")
       end
     end
 
@@ -97,17 +105,20 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
 
       it "formats with time components in custom pattern" do
         result = formatter.call(test_time, locale: en_locale, pattern: "HH:mm:ss")
-        expect(result).to eq("14:30:45")
+        # UTC 14:30:45 -> JST 23:30:45
+        expect(result).to eq("23:30:45")
       end
 
       it "formats with 12-hour time in custom pattern" do
         result = formatter.call(test_time, locale: en_locale, pattern: "h:mm a")
-        expect(result).to eq("2:30 PM")
+        # UTC 14:30 -> JST 23:30 (11:30 PM)
+        expect(result).to eq("11:30 PM")
       end
 
       it "formats with complex custom pattern" do
         result = formatter.call(test_time, locale: en_locale, pattern: "EEEE, d MMMM yyyy 'at' HH:mm")
-        expect(result).to eq("Thursday, 15 June 2023 at 14:30")
+        # UTC 14:30 -> JST 23:30
+        expect(result).to eq("Thursday, 15 June 2023 at 23:30")
       end
 
       it "uses locale-specific names in custom patterns" do
@@ -121,8 +132,9 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
       end
 
       it "handles mixed tokens and literals" do
-        result = formatter.call(test_time, locale: en_locale, pattern: "Date: dd/MM/yyyy Time: HH:mm")
-        expect(result).to eq("Date: 15/06/2023 Time: 14:30")
+        result = formatter.call(test_time, locale: en_locale, pattern: "'Date:' dd/MM/yyyy 'Time:' HH:mm")
+        # UTC 14:30 -> JST 23:30
+        expect(result).to eq("Date: 15/06/2023 Time: 23:30")
       end
 
       it "formats timezone symbols with timeZone option" do
@@ -155,8 +167,8 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
     context "with timeZone options" do
       it "formats with UTC timezone" do
         result = formatter.call(test_time, locale: locale("en"), timeZone: "UTC", pattern: "HH:mm")
-        # test_time is JST (UTC+9), so 14:30 JST = 05:30 UTC
-        expect(result).to eq("05:30")
+        # test_time is UTC 14:30, so with UTC timezone option it stays 14:30
+        expect(result).to eq("14:30")
       end
 
       it "formats with offset timezone +09:00" do
@@ -175,8 +187,8 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
 
       it "preserves original timezone when no timeZone option" do
         result = formatter.call(test_time, locale: locale("en"), pattern: "HH:mm")
-        # Should preserve the original time without timezone conversion
-        expect(result).to eq("14:30")
+        # test_time is UTC 14:30, system timezone is Asia/Tokyo, so 14:30 UTC -> 23:30 JST
+        expect(result).to eq("23:30")
       end
 
       it "formats with IANA timezone America/New_York" do

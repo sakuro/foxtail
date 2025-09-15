@@ -3,12 +3,12 @@
 require "tempfile"
 
 RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
-  let(:detector) { described_class.new }
+  let(:detector) { Foxtail::CLDR::Formatter::LocalTimezoneDetector.new }
 
   describe ".detect" do
     it "returns a DetectedTimezone object" do
-      result = described_class.detect
-      expect(result).to be_a(Foxtail::LocalTimezoneDetector::DetectedTimezone)
+      result = Foxtail::CLDR::Formatter::LocalTimezoneDetector.detect
+      expect(result).to be_a(Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone)
       expect(result.id).to be_a(String)
       expect(result.offset_seconds).to be_a(Integer)
     end
@@ -60,23 +60,23 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
   describe "timezone detection strategies" do
     describe "#detect_from_tz_env" do
       it "detects IANA format from TZ environment variable" do
-        allow(ENV).to receive(:[]).with("TZ").and_return("America/New_York")
-        expect(detector.send(:detect_from_tz_env)).to eq("America/New_York")
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("America/New_York")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("America/New_York")
       end
 
       it "handles POSIX format TZ variable" do
-        allow(ENV).to receive(:[]).with("TZ").and_return(":Europe/London")
-        expect(detector.send(:detect_from_tz_env)).to eq("Europe/London")
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return(":Europe/London")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("Europe/London")
       end
 
       it "ignores abbreviation format" do
-        allow(ENV).to receive(:[]).with("TZ").and_return("JST")
-        expect(detector.send(:detect_from_tz_env)).to be_nil
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("JST")
+        expect(detector.__send__(:detect_from_tz_env)).to be_nil
       end
 
       it "ignores empty TZ variable" do
-        allow(ENV).to receive(:[]).with("TZ").and_return("")
-        expect(detector.send(:detect_from_tz_env)).to be_nil
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("")
+        expect(detector.__send__(:detect_from_tz_env)).to be_nil
       end
     end
 
@@ -85,27 +85,27 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
         allow(File).to receive(:symlink?).with("/etc/localtime").and_return(true)
         allow(File).to receive(:readlink).with("/etc/localtime").and_return("/usr/share/zoneinfo/Asia/Tokyo")
 
-        expect(detector.send(:detect_from_etc_localtime)).to eq("Asia/Tokyo")
+        expect(detector.__send__(:detect_from_etc_localtime)).to eq("Asia/Tokyo")
       end
 
       it "handles relative symlink paths" do
         allow(File).to receive(:symlink?).with("/etc/localtime").and_return(true)
         allow(File).to receive(:readlink).with("/etc/localtime").and_return("../usr/share/zoneinfo/Europe/London")
 
-        expect(detector.send(:detect_from_etc_localtime)).to eq("Europe/London")
+        expect(detector.__send__(:detect_from_etc_localtime)).to eq("Europe/London")
       end
 
       it "returns nil if not a symlink" do
         allow(File).to receive(:symlink?).with("/etc/localtime").and_return(false)
 
-        expect(detector.send(:detect_from_etc_localtime)).to be_nil
+        expect(detector.__send__(:detect_from_etc_localtime)).to be_nil
       end
 
       it "returns nil on read error" do
         allow(File).to receive(:symlink?).with("/etc/localtime").and_return(true)
         allow(File).to receive(:readlink).with("/etc/localtime").and_raise(Errno::ENOENT)
 
-        expect(detector.send(:detect_from_etc_localtime)).to be_nil
+        expect(detector.__send__(:detect_from_etc_localtime)).to be_nil
       end
     end
 
@@ -114,20 +114,20 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
         allow(File).to receive(:readable?).with("/etc/timezone").and_return(true)
         allow(File).to receive(:read).with("/etc/timezone").and_return("Europe/London\n")
 
-        expect(detector.send(:detect_from_etc_timezone)).to eq("Europe/London")
+        expect(detector.__send__(:detect_from_etc_timezone)).to eq("Europe/London")
       end
 
       it "returns nil for invalid format" do
         allow(File).to receive(:readable?).with("/etc/timezone").and_return(true)
         allow(File).to receive(:read).with("/etc/timezone").and_return("InvalidFormat")
 
-        expect(detector.send(:detect_from_etc_timezone)).to be_nil
+        expect(detector.__send__(:detect_from_etc_timezone)).to be_nil
       end
 
       it "returns nil if file not readable" do
         allow(File).to receive(:readable?).with("/etc/timezone").and_return(false)
 
-        expect(detector.send(:detect_from_etc_timezone)).to be_nil
+        expect(detector.__send__(:detect_from_etc_timezone)).to be_nil
       end
     end
   end
@@ -135,11 +135,11 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
   describe "#command_available?" do
     it "returns true for existing commands" do
       # Most systems should have 'echo'
-      expect(detector.send(:command_available?, "echo")).to be true
+      expect(detector.__send__(:command_available?, "echo")).to be true
     end
 
     it "returns false for non-existent commands" do
-      expect(detector.send(:command_available?, "this_command_does_not_exist_12345")).to be false
+      expect(detector.__send__(:command_available?, "this_command_does_not_exist_12345")).to be false
     end
   end
 end

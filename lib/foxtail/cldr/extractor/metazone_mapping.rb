@@ -20,10 +20,7 @@ module Foxtail
           Foxtail::CLDR.logger.info "Metazone mapping extracted to #{output_file}"
         end
 
-        private
-
-        # Extract metazone mapping from metaZones.xml
-        def extract_metazone_mapping
+        private def extract_metazone_mapping
           metazones_file = File.join(@source_dir, "common", "supplemental", "metaZones.xml")
 
           unless File.exist?(metazones_file)
@@ -62,19 +59,19 @@ module Foxtail
         end
 
         # Generate the final mapping data structure
-        def generate_mapping_data(timezone_to_metazone)
+        private def generate_mapping_data(timezone_to_metazone)
           {
             generated_at: Time.now.utc.iso8601,
             cldr_version: ENV.fetch("CLDR_VERSION", "46"),
-            timezone_to_metazone: timezone_to_metazone,
+            timezone_to_metazone:,
             # Also create reverse mapping for convenience
             metazone_to_timezones: create_reverse_mapping(timezone_to_metazone)
           }
         end
 
         # Create reverse mapping: metazone -> [timezone_ids]
-        def create_reverse_mapping(timezone_to_metazone)
-          reverse = Hash.new { |h, k| h[k] = [] }
+        private def create_reverse_mapping(timezone_to_metazone)
+          reverse = Hash.new {|h, k| h[k] = [] }
 
           timezone_to_metazone.each do |timezone_id, metazone_id|
             reverse[metazone_id] << timezone_id
@@ -85,7 +82,7 @@ module Foxtail
         end
 
         # Generate empty mapping data for fallback
-        def generate_empty_mapping
+        private def generate_empty_mapping
           {
             generated_at: Time.now.utc.iso8601,
             cldr_version: ENV.fetch("CLDR_VERSION", "46"),

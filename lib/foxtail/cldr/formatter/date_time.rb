@@ -90,7 +90,7 @@ module Foxtail
           # Apply timezone conversion to UTC time for display
           private def apply_timezone(utc_time, timezone_option)
             # If no timezone specified, use system timezone (Node.js compatibility)
-            timezone_option = system_timezone unless timezone_option
+            timezone_option ||= system_timezone
 
             case timezone_option
             when "UTC", "GMT"
@@ -127,15 +127,15 @@ module Foxtail
             return offset_string unless match
 
             sign = match[1]
-            hours = match[2].to_i
-            minutes = match[3].to_i
+            hours = Integer(match[2], 10)
+            minutes = Integer(match[3], 10)
 
             # Format as "GMT+H" or "GMT-H" (Node.js style, no leading zeros for hours)
             if minutes.zero?
               "GMT#{sign}#{hours}"
             else
               # Include minutes if non-zero (rare case)
-              "GMT#{sign}#{hours}:#{sprintf('%02d', minutes)}"
+              "GMT#{sign}#{hours}:#{"%02d" % minutes}"
             end
           end
 
@@ -156,7 +156,7 @@ module Foxtail
               yaml_data = YAML.load_file(mapping_file)
               # Handle both string and symbol keys
               yaml_data[:timezone_to_metazone] || yaml_data["timezone_to_metazone"] || {}
-            rescue => e
+            rescue
               {}
             end
           end
@@ -216,52 +216,52 @@ module Foxtail
             # Order following CLDR availableFormats convention: y, MMM, E, d
             # Year (y)
             if options[:year]
-              key_parts << 'y'
+              key_parts << "y"
             end
 
             # Month (M)
             if options[:month]
-              case options[:month]
-              when 'long'
-                key_parts << 'MMMM'  # Full month name pattern
-              when 'short'
-                key_parts << 'MMM'   # Abbreviated month name pattern
-              when 'numeric'
-                key_parts << 'M'
-              when '2-digit'
-                key_parts << 'MM'
-              else
-                key_parts << 'MMM'
-              end
+              key_parts << case options[:month]
+                           when "long"
+                             "MMMM"  # Full month name pattern
+                           when "short"
+                             "MMM"   # Abbreviated month name pattern
+                           when "numeric"
+                             "M"
+                           when "2-digit"
+                             "MM"
+                           else
+                             "MMM"
+                           end
             end
 
             # Weekday (E) - comes before day in some patterns
             if options[:weekday]
-              case options[:weekday]
-              when 'long'
-                key_parts << 'EEEE'  # Full weekday name
-              when 'short'
-                key_parts << 'EEE'   # Abbreviated weekday name
-              when 'narrow'
-                key_parts << 'E'     # Single letter weekday
-              else
-                key_parts << 'E'     # Default to single letter
-              end
+              key_parts << case options[:weekday]
+                           when "long"
+                             "EEEE"  # Full weekday name
+                           when "short"
+                             "EEE"   # Abbreviated weekday name
+                           when "narrow"
+                             "E"     # Single letter weekday
+                           else
+                             "E"     # Default to single letter
+                           end
             end
 
             # Day (d) - comes last
             if options[:day]
-              case options[:day]
-              when 'numeric'
-                key_parts << 'd'
-              when '2-digit'
-                key_parts << 'dd'
-              else
-                key_parts << 'd'
-              end
+              key_parts << case options[:day]
+                           when "numeric"
+                             "d"
+                           when "2-digit"
+                             "dd"
+                           else
+                             "d"
+                           end
             end
 
-            key_parts.join('')
+            key_parts.join
           end
 
           private def format_with_fields
@@ -270,18 +270,18 @@ module Foxtail
             available_pattern = @formats.available_format(pattern_key)
 
             # If exact pattern not found, try fallback patterns
-            if !available_pattern && @options[:month] == 'long'
+            if !available_pattern && @options[:month] == "long"
               # Try with MMM instead of MMMM for month long
-              fallback_key = pattern_key.gsub('MMMM', 'MMM')
+              fallback_key = pattern_key.gsub("MMMM", "MMM")
               available_pattern = @formats.available_format(fallback_key)
 
               if available_pattern
                 # Upgrade MMM to MMMM in the pattern for long month names
-                available_pattern = available_pattern.gsub('MMM', 'MMMM')
+                available_pattern = available_pattern.gsub("MMM", "MMMM")
               end
             end
 
-            if available_pattern && has_only_date_fields?
+            if available_pattern && only_date_fields?
               # Use CLDR availableFormats pattern for proper ordering and separators
               format_with_pattern(available_pattern)
             else
@@ -291,9 +291,239 @@ module Foxtail
           end
 
           # Check if options contain only date fields (no time fields)
-          private def has_only_date_fields?
-            time_fields = [:hour, :minute, :second, :hour12]
-            time_fields.none? { |field| @options.key?(field) }
+          private def only_date_fields?
+            time_fields = %i[hour minute second hour12]
+            time_fields.none? {|field| @options.key?(field) }
+          end
+
+          # Format time fields using CLDR time patterns
+          private def format_time_fields
+            # Check if we have any time fields to format
+            return nil unless @options[:hour] || @options[:minute] || @options[:second]
+
+            # Generate time pattern key based on field options
+            time_pattern_key = generate_time_pattern_key
+
+            # Try to get CLDR availableFormats time pattern
+            available_pattern = @formats.available_format(time_pattern_key)
+
+            if available_pattern
+              # Use CLDR available format pattern
+              format_with_pattern(available_pattern)
+            else
+              # Fallback to basic time formatting with locale-appropriate separators
+              format_time_with_basic_pattern
+            end
+          end
+
+          # Generate time pattern key (e.g., "Hms", "hms", "Hm", "hm")
+          private def generate_time_pattern_key
+            key_parts = []
+
+            # Hour pattern
+            if @options[:hour]
+              key_parts << if @options[:hour12]
+                             "h" # 12-hour format
+                           else
+                             "H" # 24-hour format
+                           end
+            end
+
+            # Minute pattern
+            if @options[:minute]
+              key_parts << "m"
+            end
+
+            # Second pattern
+            if @options[:second]
+              key_parts << "s"
+            end
+
+            key_parts.join
+          end
+
+          # Format time with basic pattern using locale's time format as template
+          private def format_time_with_basic_pattern
+            # Find the best matching time template
+            template_pattern = find_best_time_template
+
+            # Parse the template pattern into tokens
+            parser = Foxtail::CLDR::PatternParser::DateTime.new
+            template_tokens = parser.parse(template_pattern)
+
+            # Build new pattern by filtering and adapting tokens based on requested fields
+            adapted_tokens = adapt_time_tokens_to_fields(template_tokens)
+
+            # Reconstruct pattern and format
+            adapted_pattern = adapted_tokens.map(&:value).join
+            format_with_pattern(adapted_pattern)
+          end
+
+          # Find the best time template that matches our field requirements
+          private def find_best_time_template
+            # Try to find a template that matches our field count
+            field_count = [@options[:hour], @options[:minute], @options[:second]].count {|f| f }
+
+            case field_count
+            when 3
+              # Hour, minute, second - try full or medium first
+              @formats.time_pattern("full") || @formats.time_pattern("medium")
+            when 2
+              # Hour, minute - try short
+              @formats.time_pattern("short")
+            else
+              @formats.time_pattern("short")
+            end
+          end
+
+          # Adapt template tokens to match requested fields
+          private def adapt_time_tokens_to_fields(template_tokens)
+            adapted_tokens = []
+
+            template_tokens.each do |token|
+              case token
+              when Foxtail::CLDR::PatternParser::DateTime::FieldToken
+                # Handle field tokens based on requested options
+                adapted_token = adapt_field_token(token)
+                adapted_tokens << adapted_token if adapted_token
+              when Foxtail::CLDR::PatternParser::DateTime::LiteralToken
+                # Include literal tokens (separators, units) as-is for now
+                # Will be filtered later based on adjacent field presence
+                adapted_tokens << token
+              when Foxtail::CLDR::PatternParser::DateTime::QuotedToken
+                # Include quoted literals as-is
+                adapted_tokens << token
+              else
+                adapted_tokens << token
+              end
+            end
+
+            # Remove orphaned separators (literals between missing fields)
+            filter_orphaned_literals(adapted_tokens)
+          end
+
+          # Adapt individual field token based on requested options
+          private def adapt_field_token(token)
+            field_type = detect_field_type(token.value)
+
+            case field_type
+            when :hour
+              return nil unless @options[:hour]
+
+              adapt_hour_token(token)
+            when :minute
+              return nil unless @options[:minute]
+
+              adapt_minute_token(token)
+            when :second
+              return nil unless @options[:second]
+
+              adapt_second_token(token)
+            when :am_pm
+              return nil unless @options[:hour12]
+
+              token # Keep AM/PM as-is
+            else
+              # Unknown field type - keep as-is
+              token
+            end
+          end
+
+          # Detect field type from token value
+          private def detect_field_type(token_value)
+            case token_value
+            when /^H+$/, /^h+$/, /^K+$/, /^k+$/
+              :hour
+            when /^m+$/
+              :minute
+            when /^s+$/
+              :second
+            when /^a+$/, /^b+$/, /^B+$/
+              :am_pm
+            else
+              :unknown
+            end
+          end
+
+          # Adapt hour token based on options
+          private def adapt_hour_token(_token)
+            pattern = if @options[:hour12]
+                        # Use 12-hour format
+                        @options[:hour] == "2-digit" ? "hh" : "h"
+                      else
+                        # Use 24-hour format
+                        @options[:hour] == "2-digit" ? "HH" : "H"
+                      end
+            Foxtail::CLDR::PatternParser::DateTime::FieldToken.new(pattern)
+          end
+
+          # Adapt minute token based on options
+          private def adapt_minute_token(_token)
+            # Always use 2-digit minutes for consistency
+            Foxtail::CLDR::PatternParser::DateTime::FieldToken.new("mm")
+          end
+
+          # Adapt second token based on options
+          private def adapt_second_token(_token)
+            # Always use 2-digit seconds for consistency
+            Foxtail::CLDR::PatternParser::DateTime::FieldToken.new("ss")
+          end
+
+          # Remove orphaned literal tokens between missing fields
+          private def filter_orphaned_literals(tokens)
+            result = []
+            i = 0
+
+            while i < tokens.length
+              token = tokens[i]
+
+              case token
+              when Foxtail::CLDR::PatternParser::DateTime::LiteralToken
+                # Check if this literal is between two field tokens
+                prev_is_field = i > 0 && tokens[i - 1].is_a?(Foxtail::CLDR::PatternParser::DateTime::FieldToken)
+                next_is_field = i < tokens.length - 1 && tokens[i + 1].is_a?(Foxtail::CLDR::PatternParser::DateTime::FieldToken)
+
+                # Include literal only if it's between fields or at boundaries with fields
+                if (prev_is_field && next_is_field) ||
+                   (i == 0 && next_is_field) ||
+                   (i == tokens.length - 1 && prev_is_field)
+
+                  result << token
+                end
+                # Otherwise skip orphaned literals
+              else
+                result << token
+              end
+
+              i += 1
+            end
+
+            result
+          end
+
+          # Extract time separator from CLDR time format template
+          private def extract_time_separator_from_template(template)
+            # Parse template using CLDR parser to find actual separators
+            parser = Foxtail::CLDR::PatternParser::DateTime.new
+            tokens = parser.parse(template)
+
+            # Find the first literal token between time fields
+            prev_was_time_field = false
+            time_field_types = %i[hour minute second].freeze
+
+            tokens.each do |token|
+              case token
+              when Foxtail::CLDR::PatternParser::DateTime::FieldToken
+                field_type = detect_field_type(token.value)
+                prev_was_time_field = time_field_types.include?(field_type)
+              when Foxtail::CLDR::PatternParser::DateTime::LiteralToken
+                # Return the first separator found between time fields
+                return token.value if prev_was_time_field
+              end
+            end
+
+            # Default to colon if no separator found
+            ":"
           end
 
           # Format individual fields with basic ordering
@@ -348,20 +578,11 @@ module Foxtail
               end
             end
 
-            # Hour, minute, second (basic implementation)
-            if @options[:hour]
-              parts << @time_with_zone.strftime(@options[:hour12] ? "%l" : "%H").strip
-            end
+            # Format time fields using appropriate CLDR pattern
+            time_part = format_time_fields
+            parts << time_part if time_part && !time_part.empty?
 
-            if @options[:minute]
-              parts << @time_with_zone.strftime("%M")
-            end
-
-            if @options[:second]
-              parts << @time_with_zone.strftime("%S")
-            end
-
-            parts.join(" ")
+            parts.reject(&:empty?).join(" ")
           end
 
           # Format time using a CLDR pattern with formal parser

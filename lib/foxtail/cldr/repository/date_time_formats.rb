@@ -56,15 +56,13 @@ module Foxtail
           combination_style = determine_combination_style(date_style)
           combination_pattern = @resolver.resolve("datetime_formats.datetime_formats.#{combination_style}", "datetime_formats")
 
+          date_fmt = date_pattern(date_style)
+          time_fmt = time_pattern(time_style)
           if combination_pattern
             # Apply CLDR pattern: {1} = date, {0} = time
-            date_fmt = date_pattern(date_style)
-            time_fmt = time_pattern(time_style)
-            combination_pattern.gsub("{1}", date_fmt).gsub("{0}", time_fmt)
+            combination_pattern.gsub(Regexp.union(["{0}", "{1}"]), "{1}" => date_fmt, "{0}" => time_fmt)
           else
             # Fallback to simple concatenation
-            date_fmt = date_pattern(date_style)
-            time_fmt = time_pattern(time_style)
             "#{date_fmt} #{time_fmt}"
           end
         end
