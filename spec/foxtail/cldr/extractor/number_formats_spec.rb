@@ -43,7 +43,7 @@ RSpec.describe Foxtail::CLDR::Extractor::NumberFormats do
         expect(data["locale"]).to eq("root")
         expect(data["number_formats"]).to be_a(Hash)
         expect(data["number_formats"]["symbols"]).to include("decimal", "group")
-        expect(data["number_formats"]["currencies"]).to include("USD", "EUR")
+        expect(data["number_formats"]).not_to have_key("currencies")
       end
     end
 
@@ -71,18 +71,6 @@ RSpec.describe Foxtail::CLDR::Extractor::NumberFormats do
         # Check some known currencies with special fraction rules
         expect(fractions).to include("JPY") # 0 digits
         expect(fractions["JPY"]).to include("digits" => 0)
-      end
-    end
-
-    describe "#load_root_currencies" do
-      it "reads from fixture root.xml" do
-        currencies = extractor.__send__(:load_root_currencies)
-
-        expect(currencies).to be_a(Hash)
-        expect(currencies).to include("USD")
-        expect(currencies["USD"]).to include("symbol")
-        # The actual symbol from CLDR root is "US$"
-        expect(currencies["USD"]["symbol"]).to eq("US$")
       end
     end
   end

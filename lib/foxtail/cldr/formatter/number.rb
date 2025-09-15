@@ -53,6 +53,11 @@ module Foxtail
             @options = options.dup
             @formats = Foxtail::CLDR::Repository::NumberFormats.new(locale)
 
+            # Initialize Currency repository if needed
+            if use_currency?(options)
+              @currencies = Foxtail::CLDR::Repository::Currencies.new(locale)
+            end
+
             # Apply style-specific option defaults
             style = @options[:style] || "decimal"
             notation = @options[:notation] || "standard"
@@ -117,6 +122,23 @@ module Foxtail
             # Pass original sign information via options
             original_was_negative = transformed_value.negative? && !has_separator
             build_formatted_string(format_value, pattern_tokens, original_was_negative)
+          end
+
+          # Check if currency repository is needed (any currency symbol ¤, ¤¤, ¤¤¤)
+          private def use_currency?(options)
+            # Check for currency style
+            style = options[:style]
+            return true if style == "currency"
+
+            # Check custom pattern for currency tokens using proper token parsing
+            pattern = options[:pattern]
+            if pattern
+              parser = Foxtail::CLDR::PatternParser::Number.new
+              tokens = parser.parse(pattern)
+              return tokens.any?(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
+            end
+
+            false
           end
 
           private def convert_to_decimal(original_value)
@@ -511,7 +533,7 @@ module Foxtail
 
             case token.currency_type
             when :symbol
-              @formats.currency_symbol(currency_code)
+              @currencies.currency_symbol(currency_code)
             when :code
               currency_code
             when :name
@@ -519,8 +541,7 @@ module Foxtail
               original_value = @original_value
               plural_rules = Foxtail::CLDR::Repository::PluralRules.new(@formats.locale)
               plural_category = plural_rules.select(original_value)
-              currency_names = @formats.currency_names(currency_code)
-              currency_names[plural_category.to_sym] || currency_names[:other] || currency_code
+              @currencies.currency_name(currency_code, plural_category)
             end
           end
 
