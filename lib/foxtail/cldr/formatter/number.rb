@@ -173,8 +173,9 @@ module Foxtail
               return combine_pattern_with_style(base_pattern, style)
             elsif notation == "compact"
               # Compact notation uses simplified patterns with abbreviations
-              # For now, use decimal pattern as base - we'll handle the compacting in formatting
-              return @formats.decimal_pattern
+              # Use decimal pattern as base but apply style-specific symbols
+              base_pattern = @formats.decimal_pattern
+              return combine_pattern_with_style(base_pattern, style)
             end
 
             # Style-based pattern selection for standard notation
@@ -890,7 +891,7 @@ module Foxtail
             case style
             when "currency"
               currency_code = @options[:currency] || "USD"
-              symbol = @formats.currency_symbol(currency_code)
+              symbol = @currencies.currency_symbol(currency_code)
               currency_pattern = @formats.currency_pattern
               apply_style_pattern_to_compact_result(formatted_number, currency_pattern, symbol)
             when "percent"
