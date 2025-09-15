@@ -58,6 +58,11 @@ module Foxtail
               @currencies = Foxtail::CLDR::Repository::Currencies.new(locale)
             end
 
+            # Initialize Units repository if needed
+            if use_units?(options)
+              @units = Foxtail::CLDR::Repository::Units.new(locale)
+            end
+
             # Apply style-specific option defaults
             style = @options[:style] || "decimal"
             notation = @options[:notation] || "standard"
@@ -139,6 +144,12 @@ module Foxtail
             end
 
             false
+          end
+
+          private def use_units?(options)
+            # Check for unit style
+            style = options[:style]
+            style == "unit"
           end
 
           private def convert_to_decimal(original_value)
@@ -362,7 +373,7 @@ module Foxtail
             if style == "unit"
               unit = @options[:unit] || "meter"
               unit_display = @options[:unitDisplay] || "short"
-              unit_pattern = @formats.unit_pattern(unit, unit_display)
+              unit_pattern = @units.unit_pattern(unit, unit_display.to_sym, :other)
 
               if unit_pattern
                 # Replace {0} placeholder with the formatted number
@@ -900,7 +911,7 @@ module Foxtail
             when "unit"
               unit = @options[:unit] || "meter"
               unit_display = @options[:unitDisplay] || "short"
-              unit_pattern = @formats.unit_pattern(unit, unit_display)
+              unit_pattern = @units.unit_pattern(unit, unit_display.to_sym, :other)
 
               if unit_pattern
                 unit_pattern.gsub("{0}", formatted_number)

@@ -1,0 +1,2285 @@
+---
+locale: is
+generated_at: '2025-09-15T15:50:43Z'
+cldr_version: '46'
+units:
+  g-force:
+    long:
+      display_name: þyngdarhröðun
+      one: "{0} þyngdarhröðun"
+      one_accusative: "{0} þyngdarhröðun"
+      one_dative: "{0} þyngdarhröðun"
+      one_genitive: "{0} þyngdarhröðunar"
+      other: "{0} þyngdarhraðanir"
+      other_accusative: "{0} þyngdarhraðanir"
+      other_dative: "{0} þyngdarhröðunum"
+      other_genitive: "{0} þyngdarhraðana"
+      gender: feminine
+    short:
+      display_name: g-hröðun
+    narrow:
+      one: "{0}G"
+      other: "{0}G"
+  meter-per-square-second:
+    long:
+      display_name: metrar á sekúndu, á sekúndu
+      one: "{0} metri á sekúndu, á sekúndu"
+      one_accusative: "{0} metra á sekúndu, á sekúndu"
+      one_dative: "{0} metra á sekúndu, á sekúndu"
+      one_genitive: "{0} metra á sekúndu, á sekúndu"
+      other: "{0} metrar á sekúndu, á sekúndu"
+      other_accusative: "{0} metra á sekúndu, á sekúndu"
+      other_dative: "{0} metrum á sekúndu, á sekúndu"
+      other_genitive: "{0} metra á sekúndu, á sekúndu"
+      gender: masculine
+    short:
+      display_name: metrar/sek²
+    narrow:
+      display_name: m/s²
+      one: "{0}m/s²"
+      other: "{0}m/s²"
+  revolution:
+    long:
+      display_name: snúningur
+      one: "{0} snúningur"
+      one_accusative: "{0} snúning"
+      one_dative: "{0} snúningi"
+      one_genitive: "{0} snúnings"
+      other: "{0} snúningar"
+      other_accusative: "{0} snúninga"
+      other_dative: "{0} snúningum"
+      other_genitive: "{0} snúninga"
+      gender: masculine
+    short:
+      display_name: sn.
+      one: "{0} sn."
+      other: "{0} sn."
+  radian:
+    long:
+      display_name: radíanar
+      one: "{0} radían"
+      one_accusative: "{0} radían"
+      one_dative: "{0} radíani"
+      one_genitive: "{0} radíans"
+      other: "{0} radíanar"
+      other_accusative: "{0} radíana"
+      other_dative: "{0} radíönum"
+      other_genitive: "{0} radíana"
+      gender: masculine
+  degree:
+    long:
+      one: "{0} gráða"
+      one_accusative: "{0} gráðu"
+      one_dative: "{0} gráðu"
+      one_genitive: "{0} gráðu"
+      other: "{0} gráður"
+      other_accusative: "{0} gráður"
+      other_dative: "{0} gráðum"
+      other_genitive: "{0} gráða"
+      gender: feminine
+    short:
+      display_name: gráður
+  arc-minute:
+    long:
+      display_name: bogamínútur
+      one: "{0} bogamínúta"
+      one_accusative: "{0} bogamínútu"
+      one_dative: "{0} bogamínútu"
+      one_genitive: "{0} bogamínútu"
+      other: "{0} bogamínútur"
+      other_accusative: "{0} bogamínútur"
+      other_dative: "{0} bogamínútum"
+      other_genitive: "{0} bogamínútna"
+      gender: feminine
+    short:
+      display_name: bogamín.
+      one: "{0} bogamín."
+      other: "{0} bogamín."
+    narrow:
+      one: "{0}′"
+      other: "{0}′"
+  arc-second:
+    long:
+      display_name: bogasekúndur
+      one: "{0} bogasekúnda"
+      one_accusative: "{0} bogasekúndu"
+      one_dative: "{0} bogasekúndu"
+      one_genitive: "{0} bogasekúndu"
+      other: "{0} bogasekúndur"
+      other_accusative: "{0} bogasekúndur"
+      other_dative: "{0} bogasekúndum"
+      other_genitive: "{0} bogasekúndna"
+      gender: feminine
+    short:
+      display_name: bogasek.
+      one: "{0} bogasek."
+      other: "{0} bogasek."
+    narrow:
+      one: "{0}″"
+      other: "{0}″"
+  square-kilometer:
+    long:
+      display_name: ferkílómetrar
+      one: "{0} ferkílómetri"
+      one_accusative: "{0} ferkílómetra"
+      one_dative: "{0} ferkílómetra"
+      one_genitive: "{0} ferkílómetra"
+      other: "{0} ferkílómetrar"
+      other_accusative: "{0} ferkílómetra"
+      other_dative: "{0} ferkílómetrum"
+      other_genitive: "{0} ferkílómetra"
+      gender: masculine
+  hectare:
+    long:
+      one: "{0} hektari"
+      one_accusative: "{0} hektara"
+      one_dative: "{0} hektara"
+      one_genitive: "{0} hektara"
+      other: "{0} hektarar"
+      other_accusative: "{0} hektara"
+      other_dative: "{0} hekturum"
+      other_genitive: "{0} hektara"
+      gender: masculine
+    short:
+      display_name: hektarar
+    narrow:
+      display_name: hektari
+  square-meter:
+    long:
+      one: "{0} fermetri"
+      one_accusative: "{0} fermetra"
+      one_dative: "{0} fermetra"
+      one_genitive: "{0} fermetra"
+      other: "{0} fermetrar"
+      other_accusative: "{0} fermetra"
+      other_dative: "{0} fermetrum"
+      other_genitive: "{0} fermetra"
+      gender: masculine
+      per_unit_pattern: "{0} á fermetra"
+    short:
+      display_name: fermetrar
+  square-centimeter:
+    long:
+      display_name: fersentimetrar
+      one: "{0} fersentimetri"
+      one_accusative: "{0} fersentimetra"
+      one_dative: "{0} fersentimetra"
+      one_genitive: "{0} fersentimetra"
+      other: "{0} fersentimetrar"
+      other_accusative: "{0} fersentimetra"
+      other_dative: "{0} fersentimetrum"
+      other_genitive: "{0} fersentimetra"
+      gender: masculine
+      per_unit_pattern: "{0} á fersentimetra"
+  acre:
+    long:
+      one: "{0} ekra"
+      other: "{0} ekrur"
+    short:
+      display_name: ekrur
+      one: "{0} ek."
+      other: "{0} ek."
+    narrow:
+      display_name: ekra
+  square-yard:
+    long:
+      display_name: feryardar
+      one: "{0} feryard"
+      other: "{0} feryardar"
+    short:
+      display_name: yardar²
+    narrow:
+      display_name: yd²
+  square-inch:
+    long:
+      display_name: fertommur
+      one: "{0} fertomma"
+      other: "{0} fertommur"
+      per_unit_pattern: "{0} á fertommu"
+    short:
+      display_name: tommur²
+      one: "{0} t²"
+      other: "{0} t²"
+      per_unit_pattern: "{0}/t²"
+  dunam:
+    long:
+      one: "{0} dúnam"
+      other: "{0} dúnöm"
+    short:
+      display_name: dúnöm
+      one: "{0} dúnam"
+      other: "{0} dúnam"
+    narrow:
+      display_name: dúnam
+  karat:
+    long:
+      display_name: karöt
+      one: "{0} karat"
+      one_accusative: "{0} karat"
+      one_dative: "{0} karati"
+      one_genitive: "{0} karats"
+      other: "{0} karöt"
+      other_accusative: "{0} karöt"
+      other_dative: "{0} karötum"
+      other_genitive: "{0} karata"
+      gender: neuter
+  milligram-ofglucose-per-deciliter:
+    long:
+      display_name: milligrömm á desílítra
+      one: "{0} milligramm á desílítra"
+      one_accusative: "{0} milligramm á desílítra"
+      one_dative: "{0} milligrammi á desílítra"
+      one_genitive: "{0} milligramms á desílítra"
+      other: "{0} milligrömm á desílítra"
+      other_accusative: "{0} milligrömm á desílítra"
+      other_dative: "{0} milligrömmum á desílítra"
+      other_genitive: "{0} milligramma á desílítra"
+      gender: neuter
+    short:
+      display_name: mg/dl
+      one: "{0} mg/dl"
+      other: "{0} mg/dl"
+    narrow:
+      one: "{0}mg/dl"
+      other: "{0}mg/dl"
+  millimole-per-liter:
+    long:
+      display_name: millimól á lítra
+      one: "{0} millimól á lítra"
+      one_accusative: "{0} millimól á lítra"
+      one_dative: "{0} millimóli á lítra"
+      one_genitive: "{0} millimóls á lítra"
+      other: "{0} millimól á lítra"
+      other_accusative: "{0} millimól á lítra"
+      other_dative: "{0} millimólum á lítra"
+      other_genitive: "{0} millimóla á lítra"
+      gender: neuter
+    short:
+      display_name: millimól/lítri
+      one: "{0} mmól/l"
+      other: "{0} mmól/l"
+    narrow:
+      display_name: mmól/l
+      one: "{0}mmól/l"
+      other: "{0}mmól/l"
+  item:
+    long:
+      one: "{0} atriði"
+      one_accusative: "{0} atriði"
+      one_dative: "{0} atriði"
+      one_genitive: "{0} atriðis"
+      other: "{0} atriði"
+      other_accusative: "{0} atriði"
+      other_dative: "{0} atriðum"
+      other_genitive: "{0} atriða"
+      gender: neuter
+    short:
+      display_name: atriði
+      one: "{0} atriði"
+      other: "{0} atriði"
+  permillion:
+    long:
+      one: "{0} milljónarhluti"
+      one_accusative: "{0} milljónarhluta"
+      one_dative: "{0} milljónarhluta"
+      one_genitive: "{0} milljónarhluta"
+      other: "{0} milljónarhlutar"
+      other_accusative: "{0} milljónarhluta"
+      other_dative: "{0} milljónarhlutum"
+      other_genitive: "{0} milljónarhluta"
+      gender: masculine
+    short:
+      display_name: milljónarhlutar
+    narrow:
+      display_name: ppm
+      one: "{0}ppm"
+      other: "{0}ppm"
+  percent:
+    long:
+      one: "{0} prósent"
+      one_accusative: "{0} prósent"
+      one_dative: "{0} prósenti"
+      one_genitive: "{0} prósents"
+      other: "{0} prósent"
+      other_accusative: "{0} prósent"
+      other_dative: "{0} prósentum"
+      other_genitive: "{0} prósenta"
+      gender: neuter
+    short:
+      display_name: prósent
+      one: "{0}%"
+      other: "{0} %"
+    narrow:
+      display_name: "%"
+      one: "{0}%"
+      other: "{0}%"
+  permille:
+    long:
+      one: "{0} prómill"
+      one_accusative: "{0} prómill"
+      one_dative: "{0} prómilli"
+      one_genitive: "{0} prómills"
+      other: "{0} prómill"
+      other_accusative: "{0} prómill"
+      other_dative: "{0} prómillum"
+      other_genitive: "{0} prómilla"
+      gender: neuter
+    short:
+      display_name: prómill
+  permyriad:
+    long:
+      one: "{0} permyriad"
+      one_accusative: "{0} permyriad"
+      one_dative: "{0} permyriadi"
+      one_genitive: "{0} permyriads"
+      other: "{0} permyriad"
+      other_accusative: "{0} permyriad"
+      other_dative: "{0} permyriadum"
+      other_genitive: "{0} permyriada"
+      gender: neuter
+    short:
+      display_name: permyriad
+    narrow:
+      display_name: "‱"
+  mole:
+    long:
+      one: "{0} mól"
+      one_accusative: "{0} mól"
+      one_dative: "{0} móli"
+      one_genitive: "{0} móls"
+      other: "{0} mól"
+      other_accusative: "{0} mól"
+      other_dative: "{0} mólum"
+      other_genitive: "{0} móla"
+      gender: neuter
+    short:
+      display_name: mól
+      one: "{0} mól"
+      other: "{0} mól"
+  liter-per-kilometer:
+    long:
+      display_name: lítrar á kílómetra
+      one: "{0} lítri á kílómetra"
+      one_accusative: "{0} lítra á kílómetra"
+      one_dative: "{0} lítra á kílómetra"
+      one_genitive: "{0} lítra á kílómetra"
+      other: "{0} lítrar á kílómetra"
+      other_accusative: "{0} lítra á kílómetra"
+      other_dative: "{0} lítrum á kílómetra"
+      other_genitive: "{0} lítra á kílómetra"
+      gender: masculine
+    short:
+      display_name: lítrar/km
+      one: "{0} l/km"
+      other: "{0} l/km"
+  liter-per-100-kilometer:
+    long:
+      display_name: lítrar á 100 kílómetra
+      one: "{0} lítri á 100 kílómetra"
+      one_accusative: "{0} lítra á 100 kílómetra"
+      one_dative: "{0} lítra á 100 kílómetra"
+      one_genitive: "{0} lítra á 100 kílómetra"
+      other: "{0} lítrar á 100 kílómetra"
+      other_accusative: "{0} lítra á 100 kílómetra"
+      other_dative: "{0} lítrum á 100 kílómetra"
+      other_genitive: "{0} lítra á 100 kílómetra"
+      gender: masculine
+    short:
+      display_name: l/100 km
+      one: "{0} l/100 km"
+      other: "{0} l/100 km"
+    narrow:
+      display_name: l/100km
+      one: "{0}l/100km"
+      other: "{0}l/100km"
+  mile-per-gallon:
+    long:
+      display_name: mílur á gallon
+      one: "{0} míla á gallon"
+      other: "{0} mílur á gallon"
+    short:
+      display_name: mílur/gallon
+      one: "{0} mí./gal."
+      other: "{0} mí./gal."
+  mile-per-gallon-imperial:
+    long:
+      display_name: mílur á breskt gallon
+      one: "{0} míla á breskt gallon"
+      other: "{0} mílur á breskt gallon"
+    short:
+      display_name: mílur/breskt gal.
+      one: "{0} mí./br.g."
+      other: "{0} mí./br.g."
+  petabyte:
+    long:
+      display_name: petabæti
+      one: "{0} petabæti"
+      one_accusative: "{0} petabæti"
+      one_dative: "{0} petabæti"
+      one_genitive: "{0} petabætis"
+      other: "{0} petabæti"
+      other_accusative: "{0} petabæti"
+      other_dative: "{0} petabætum"
+      other_genitive: "{0} petabæta"
+      gender: neuter
+    short:
+      display_name: Pbæt
+    narrow:
+      display_name: PB
+      one: "{0}PB"
+      other: "{0}PB"
+  terabyte:
+    long:
+      display_name: terabæti
+      one: "{0} terabæti"
+      one_accusative: "{0} terabæti"
+      one_dative: "{0} terabæti"
+      one_genitive: "{0} terabætis"
+      other: "{0} terabæti"
+      other_accusative: "{0} terabæti"
+      other_dative: "{0} terabætum"
+      other_genitive: "{0} terabæta"
+      gender: neuter
+  terabit:
+    long:
+      display_name: terabitar
+      one: "{0} terabiti"
+      one_accusative: "{0} terabita"
+      one_dative: "{0} terabita"
+      one_genitive: "{0} terabita"
+      other: "{0} terabitar"
+      other_accusative: "{0} terabita"
+      other_dative: "{0} terabitum"
+      other_genitive: "{0} terabita"
+      gender: masculine
+  gigabyte:
+    long:
+      display_name: gígabæti
+      one: "{0} gígabæti"
+      one_accusative: "{0} gígabæti"
+      one_dative: "{0} gígabæti"
+      one_genitive: "{0} gígabætis"
+      other: "{0} gígabæti"
+      other_accusative: "{0} gígabæti"
+      other_dative: "{0} gígabætum"
+      other_genitive: "{0} gígabæta"
+      gender: neuter
+  gigabit:
+    long:
+      display_name: gígabitar
+      one: "{0} gígabiti"
+      one_accusative: "{0} gígabita"
+      one_dative: "{0} gígabita"
+      one_genitive: "{0} gígabita"
+      other: "{0} gígabitar"
+      other_accusative: "{0} gígabita"
+      other_dative: "{0} gígabitum"
+      other_genitive: "{0} gígabita"
+      gender: masculine
+  megabyte:
+    long:
+      display_name: megabæti
+      one: "{0} megabæti"
+      one_accusative: "{0} megabæti"
+      one_dative: "{0} megabæti"
+      one_genitive: "{0} megabætis"
+      other: "{0} megabæti"
+      other_accusative: "{0} megabæti"
+      other_dative: "{0} megabætum"
+      other_genitive: "{0} megabæta"
+      gender: neuter
+  megabit:
+    long:
+      display_name: megabitar
+      one: "{0} megabiti"
+      one_accusative: "{0} megabita"
+      one_dative: "{0} megabita"
+      one_genitive: "{0} megabita"
+      other: "{0} megabitar"
+      other_accusative: "{0} megabita"
+      other_dative: "{0} megabitum"
+      other_genitive: "{0} megabita"
+      gender: masculine
+  kilobyte:
+    long:
+      display_name: kílóbæti
+      one: "{0} kílóbæti"
+      one_accusative: "{0} kílóbæti"
+      one_dative: "{0} kílóbæti"
+      one_genitive: "{0} kílóbætis"
+      other: "{0} kílóbæti"
+      other_accusative: "{0} kílóbæti"
+      other_dative: "{0} kílóbætum"
+      other_genitive: "{0} kílóbæta"
+      gender: neuter
+  kilobit:
+    long:
+      display_name: kílóbitar
+      one: "{0} kílóbiti"
+      one_accusative: "{0} kílóbita"
+      one_dative: "{0} kílóbita"
+      one_genitive: "{0} kílóbita"
+      other: "{0} kílóbitar"
+      other_accusative: "{0} kílóbita"
+      other_dative: "{0} kílóbitum"
+      other_genitive: "{0} kílóbita"
+      gender: masculine
+  byte:
+    long:
+      one: "{0} bæti"
+      one_accusative: "{0} bæti"
+      one_dative: "{0} bæti"
+      one_genitive: "{0} bætis"
+      other: "{0} bæti"
+      other_accusative: "{0} bæti"
+      other_dative: "{0} bætum"
+      other_genitive: "{0} bæta"
+      gender: neuter
+    short:
+      display_name: bæti
+      one: "{0} bæti"
+      other: "{0} bæti"
+  bit:
+    long:
+      display_name: bitar
+      one: "{0} biti"
+      one_accusative: "{0} bita"
+      one_dative: "{0} bita"
+      one_genitive: "{0} bita"
+      other: "{0} bitar"
+      other_accusative: "{0} bita"
+      other_dative: "{0} bitum"
+      other_genitive: "{0} bita"
+      gender: masculine
+    short:
+      display_name: biti
+      one: "{0} biti"
+      other: "{0} bitar"
+  century:
+    long:
+      display_name: aldir
+      one: "{0} öld"
+      one_accusative: "{0} öld"
+      one_dative: "{0} öld"
+      one_genitive: "{0} aldar"
+      other: "{0} aldir"
+      other_accusative: "{0} aldir"
+      other_dative: "{0} öldum"
+      other_genitive: "{0} alda"
+      gender: feminine
+    short:
+      display_name: árh
+      one: "{0} árh"
+      other: "{0} árh"
+    narrow:
+      one: "{0}árh"
+      other: "{0}árh"
+  decade:
+    long:
+      display_name: áratugir
+      one: "{0} áratugur"
+      one_accusative: "{0} áratug"
+      one_dative: "{0} áratugi"
+      one_genitive: "{0} áratugs"
+      other: "{0} áratugir"
+      other_accusative: "{0} áratugi"
+      other_dative: "{0} áratugum"
+      other_genitive: "{0} áratuga"
+      gender: masculine
+    short:
+      display_name: árat.
+      one: "{0} árat."
+      other: "{0} árat."
+  year:
+    long:
+      one: "{0} ár"
+      one_accusative: "{0} ár"
+      one_dative: "{0} ári"
+      one_genitive: "{0} árs"
+      other: "{0} ár"
+      other_accusative: "{0} ár"
+      other_dative: "{0} árum"
+      other_genitive: "{0} ára"
+      gender: neuter
+      per_unit_pattern: "{0} á ári"
+    short:
+      display_name: ár
+      one: "{0} ár"
+      other: "{0} ár"
+      per_unit_pattern: "{0}/ári"
+    narrow:
+      one: "{0}á"
+      other: "{0}á"
+      per_unit_pattern: "{0}/ár"
+  quarter:
+    long:
+      display_name: ársfjórðungar
+      one: "{0} ársfjórðungur"
+      one_accusative: "{0} ársfjórðung"
+      one_dative: "{0} ársfjórðungi"
+      one_genitive: "{0} ársfjórðungs"
+      other: "{0} ársfjórðungar"
+      other_accusative: "{0} ársfjórðunga"
+      other_dative: "{0} ársfjórðungum"
+      other_genitive: "{0} ársfjórðunga"
+      gender: masculine
+      per_unit_pattern: "{0}/ársfjórðung"
+    short:
+      display_name: ársfj.
+      one: "{0} ársfj."
+      other: "{0} ársfj."
+      per_unit_pattern: "{0}/ársfj."
+  month:
+    long:
+      one: "{0} mánuður"
+      one_accusative: "{0} mánuð"
+      one_dative: "{0} mánuði"
+      one_genitive: "{0} mánaðar"
+      other: "{0} mánuðir"
+      other_accusative: "{0} mánuði"
+      other_dative: "{0} mánuðum"
+      other_genitive: "{0} mánaða"
+      gender: masculine
+      per_unit_pattern: "{0} á mánuði"
+    short:
+      display_name: mánuðir
+      one: "{0} mán."
+      other: "{0} mán."
+    narrow:
+      display_name: mánuður
+  week:
+    long:
+      one: "{0} vika"
+      one_accusative: "{0} viku"
+      one_dative: "{0} viku"
+      one_genitive: "{0} viku"
+      other: "{0} vikur"
+      other_accusative: "{0} vikur"
+      other_dative: "{0} vikum"
+      other_genitive: "{0} vikna"
+      gender: feminine
+      per_unit_pattern: "{0} á viku"
+    short:
+      display_name: vikur
+      one: "{0} vika"
+      other: "{0} vikur"
+      per_unit_pattern: "{0}/v"
+    narrow:
+      display_name: vika
+      one: "{0} v."
+      other: "{0} v."
+  day:
+    long:
+      one: "{0} dagur"
+      one_accusative: "{0} dag"
+      one_dative: "{0} degi"
+      one_genitive: "{0} dags"
+      other: "{0} dagar"
+      other_accusative: "{0} daga"
+      other_dative: "{0} dögum"
+      other_genitive: "{0} daga"
+      gender: masculine
+      per_unit_pattern: "{0} á dag"
+    short:
+      display_name: dagar
+      one: "{0} dagur"
+      other: "{0} dagar"
+      per_unit_pattern: "{0}/d."
+    narrow:
+      display_name: dagur
+      one: "{0} d."
+      other: "{0} d."
+  day-person:
+    long:
+      one: "{0} dagur"
+      one_accusative: "{0} dag"
+      one_dative: "{0} degi"
+      one_genitive: "{0} dags"
+      other: "{0} dagar"
+      other_accusative: "{0} daga"
+      other_dative: "{0} dögum"
+      other_genitive: "{0} daga"
+      gender: masculine
+  hour:
+    long:
+      one: "{0} klukkustund"
+      one_accusative: "{0} klukkustund"
+      one_dative: "{0} klukkustund"
+      one_genitive: "{0} klukkustundar"
+      other: "{0} klukkustundir"
+      other_accusative: "{0} klukkustundir"
+      other_dative: "{0} klukkustundum"
+      other_genitive: "{0} klukkustunda"
+      gender: feminine
+      per_unit_pattern: "{0} á klst."
+    short:
+      display_name: klukkustundir
+      one: "{0} klst."
+      other: "{0} klst."
+      per_unit_pattern: "{0}/klst."
+    narrow:
+      display_name: klukkustund
+  minute:
+    long:
+      display_name: mínútur
+      one: "{0} mínúta"
+      one_accusative: "{0} mínútu"
+      one_dative: "{0} mínútu"
+      one_genitive: "{0} mínútu"
+      other: "{0} mínútur"
+      other_accusative: "{0} mínútur"
+      other_dative: "{0} mínútum"
+      other_genitive: "{0} mínútna"
+      gender: feminine
+      per_unit_pattern: "{0} á mínútu"
+    short:
+      display_name: mín.
+      one: "{0} mín."
+      other: "{0} mín."
+      per_unit_pattern: "{0}/mín."
+  second:
+    long:
+      display_name: sekúndur
+      one: "{0} sekúnda"
+      one_accusative: "{0} sekúndu"
+      one_dative: "{0} sekúndu"
+      one_genitive: "{0} sekúndu"
+      other: "{0} sekúndur"
+      other_accusative: "{0} sekúndur"
+      other_dative: "{0} sekúndum"
+      other_genitive: "{0} sekúndna"
+      gender: feminine
+      per_unit_pattern: "{0} á sekúndu"
+    short:
+      display_name: sek.
+      one: "{0} sek."
+      other: "{0} sek."
+      per_unit_pattern: "{0}/sek."
+  millisecond:
+    long:
+      display_name: millisekúndur
+      one: "{0} millisekúnda"
+      one_accusative: "{0} millisekúndu"
+      one_dative: "{0} millisekúndu"
+      one_genitive: "{0} millisekúndu"
+      other: "{0} millisekúndur"
+      other_accusative: "{0} millisekúndur"
+      other_dative: "{0} millisekúndum"
+      other_genitive: "{0} millisekúndna"
+      gender: feminine
+    short:
+      display_name: millisek.
+    narrow:
+      one: "{0}ms"
+      other: "{0}ms"
+  microsecond:
+    long:
+      display_name: míkrósekúndur
+      one: "{0} míkrósekúnda"
+      one_accusative: "{0} míkrósekúndu"
+      one_dative: "{0} míkrósekúndu"
+      one_genitive: "{0} míkrósekúndu"
+      other: "{0} míkrósekúndur"
+      other_accusative: "{0} míkrósekúndur"
+      other_dative: "{0} míkrósekúndum"
+      other_genitive: "{0} míkrósekúndna"
+      gender: feminine
+    short:
+      display_name: μsek.
+  nanosecond:
+    long:
+      display_name: nanósekúndur
+      one: "{0} nanósekúnda"
+      one_accusative: "{0} nanósekúndu"
+      one_dative: "{0} nanósekúndu"
+      one_genitive: "{0} nanósekúndu"
+      other: "{0} nanósekúndur"
+      other_accusative: "{0} nanósekúndur"
+      other_dative: "{0} nanósekúndum"
+      other_genitive: "{0} nanósekúndna"
+      gender: feminine
+    short:
+      display_name: nanósek.
+  ampere:
+    long:
+      display_name: amper
+      one: "{0} amper"
+      one_accusative: "{0} amper"
+      one_dative: "{0} amperi"
+      one_genitive: "{0} ampers"
+      other: "{0} amper"
+      other_accusative: "{0} amper"
+      other_dative: "{0} amperum"
+      other_genitive: "{0} ampera"
+      gender: neuter
+    short:
+      display_name: A
+  milliampere:
+    long:
+      display_name: milliamper
+      one: "{0} milliamper"
+      one_accusative: "{0} milliamper"
+      one_dative: "{0} milliamperi"
+      one_genitive: "{0} milliampers"
+      other: "{0} milliamper"
+      other_accusative: "{0} milliamper"
+      other_dative: "{0} milliamperum"
+      other_genitive: "{0} milliampera"
+      gender: neuter
+  ohm:
+    long:
+      one: "{0} óm"
+      one_accusative: "{0} óm"
+      one_dative: "{0} ómi"
+      one_genitive: "{0} óms"
+      other: "{0} óm"
+      other_accusative: "{0} óm"
+      other_dative: "{0} ómum"
+      other_genitive: "{0} óma"
+      gender: neuter
+    short:
+      display_name: óm
+  volt:
+    long:
+      one: "{0} volt"
+      one_accusative: "{0} volt"
+      one_dative: "{0} volti"
+      one_genitive: "{0} volts"
+      other: "{0} volt"
+      other_accusative: "{0} volt"
+      other_dative: "{0} voltum"
+      other_genitive: "{0} volta"
+      gender: neuter
+  kilocalorie:
+    long:
+      display_name: kílókaloríur
+      one: "{0} kílókaloría"
+      one_accusative: "{0} kílókaloríu"
+      one_dative: "{0} kílókaloríu"
+      one_genitive: "{0} kílókaloríu"
+      other: "{0} kílókaloríur"
+      other_accusative: "{0} kílókaloríur"
+      other_dative: "{0} kílókaloríum"
+      other_genitive: "{0} kílókaloría"
+      gender: feminine
+  calorie:
+    long:
+      display_name: kaloríur
+      one: "{0} kaloría"
+      one_accusative: "{0} kaloríu"
+      one_dative: "{0} kaloríu"
+      one_genitive: "{0} kaloríu"
+      other: "{0} kaloríur"
+      other_accusative: "{0} kaloríur"
+      other_dative: "{0} kaloríum"
+      other_genitive: "{0} kaloría"
+      gender: feminine
+  foodcalorie:
+    long:
+      display_name: hitaeiningar
+      one: "{0} hitaeining"
+      other: "{0} hitaeiningar"
+    short:
+      display_name: kal
+      one: "{0} kal"
+      other: "{0} kal"
+  kilojoule:
+    long:
+      one: "{0} kílójúl"
+      one_accusative: "{0} kílójúl"
+      one_dative: "{0} kílójúli"
+      one_genitive: "{0} kílójúls"
+      other: "{0} kílójúl"
+      other_accusative: "{0} kílójúl"
+      other_dative: "{0} kílójúlum"
+      other_genitive: "{0} kílójúla"
+      gender: neuter
+    short:
+      display_name: kílójúl
+    narrow:
+      display_name: kJ
+  joule:
+    long:
+      one: "{0} júl"
+      one_accusative: "{0} júl"
+      one_dative: "{0} júli"
+      one_genitive: "{0} júls"
+      other: "{0} júl"
+      other_accusative: "{0} júl"
+      other_dative: "{0} júlum"
+      other_genitive: "{0} júla"
+      gender: neuter
+    short:
+      display_name: júl
+  kilowatt-hour:
+    long:
+      display_name: kílóvattstundir
+      one: "{0} kílóvattstund"
+      one_accusative: "{0} kílóvattstund"
+      one_dative: "{0} kílóvattstund"
+      one_genitive: "{0} kílóvattstundar"
+      other: "{0} kílóvattstundir"
+      other_accusative: "{0} kílóvattstundir"
+      other_dative: "{0} kílóvattstundum"
+      other_genitive: "{0} kílóvattstunda"
+      gender: feminine
+  electronvolt:
+    long:
+      one: "{0} rafeindarvolt"
+      other: "{0} rafeindarvolt"
+    short:
+      display_name: rafeindarvolt
+    narrow:
+      display_name: eV
+  british-thermal-unit:
+    long:
+      display_name: Breskar varmaeiningar
+      one: "{0} Bresk varmaeining"
+      other: "{0} Breskar varmaeiningar"
+    short:
+      display_name: BTU
+  therm-us:
+    long:
+      display_name: bandarískar varmaeiningar
+      one: "{0} bandarísk varmaeining"
+      other: "{0} bandarískar varmaeiningar"
+    short:
+      display_name: bandarísk varmaeining
+      one: "{0} bna varmaeining"
+      other: "{0} bna varmaeiningar"
+  pound-force:
+    long:
+      display_name: kraftar punds
+      one: "{0} kraftur punds"
+      other: "{0} kraftar punds"
+    short:
+      display_name: kraftur punds
+  newton:
+    long:
+      one: "{0} njúton"
+      one_accusative: "{0} njúton"
+      one_dative: "{0} njútoni"
+      one_genitive: "{0} njútons"
+      other: "{0} njúton"
+      other_accusative: "{0} njúton"
+      other_dative: "{0} njútoni"
+      other_genitive: "{0} njútons"
+      gender: neuter
+    short:
+      display_name: njúton
+  kilowatt-hour-per-100-kilometer:
+    long:
+      one: "{0} kílóvatt á 100 kílómetra"
+      one_accusative: "{0} kílóvatt á 100 kílómetra"
+      one_dative: "{0} kílóvatti á 100 kílómetra"
+      one_genitive: "{0} kílóvatts á 100 kílómetra"
+      other: "{0} kílóvött á 100 kílómetra"
+      other_accusative: "{0} kílóvött á 100 kílómetra"
+      other_dative: "{0} kílóvöttum á 100 kílómetra"
+      other_genitive: "{0} kílóvatta á 100 kílómetra"
+      gender: neuter
+    narrow:
+      one: "{0} kWh/100km"
+      other: "{0}kWh/100km"
+  gigahertz:
+    long:
+      display_name: gígahertz
+      one: "{0} gígahertz"
+      one_accusative: "{0} gígahertz"
+      one_dative: "{0} gígahertzi"
+      one_genitive: "{0} gígahertz"
+      other: "{0} gígahertz"
+      other_accusative: "{0} gígahertz"
+      other_dative: "{0} gígahertzum"
+      other_genitive: "{0} gígahertza"
+      gender: neuter
+  megahertz:
+    long:
+      display_name: megahertz
+      one: "{0} megahertz"
+      one_accusative: "{0} megahertz"
+      one_dative: "{0} megahertzi"
+      one_genitive: "{0} megahertz"
+      other: "{0} megahertz"
+      other_accusative: "{0} megahertz"
+      other_dative: "{0} megahertzum"
+      other_genitive: "{0} megahertza"
+      gender: neuter
+  kilohertz:
+    long:
+      display_name: kílóhertz
+      one: "{0} kílóhertz"
+      one_accusative: "{0} kílóhertz"
+      one_dative: "{0} kílóhertzi"
+      one_genitive: "{0} kílóhertz"
+      other: "{0} kílóhertz"
+      other_accusative: "{0} kílóhertz"
+      other_dative: "{0} kílóhertzum"
+      other_genitive: "{0} kílóhertza"
+      gender: neuter
+  hertz:
+    long:
+      display_name: hertz
+      one: "{0} hertz"
+      one_accusative: "{0} hertz"
+      one_dative: "{0} hertzi"
+      one_genitive: "{0} hertz"
+      other: "{0} hertz"
+      other_accusative: "{0} hertz"
+      other_dative: "{0} hertzum"
+      other_genitive: "{0} hertza"
+      gender: neuter
+  em:
+    long:
+      gender: neuter
+  pixel:
+    long:
+      one: "{0} pixill"
+      one_accusative: "{0} pixil"
+      one_dative: "{0} pixli"
+      one_genitive: "{0} pixils"
+      other: "{0} pixlar"
+      other_accusative: "{0} pixla"
+      other_dative: "{0} pixlum"
+      other_genitive: "{0} pixla"
+      gender: masculine
+    short:
+      display_name: pixlar
+    narrow:
+      display_name: px
+  megapixel:
+    long:
+      one: "{0} megapixill"
+      one_accusative: "{0} megapixil"
+      one_dative: "{0} megapixli"
+      one_genitive: "{0} megapixils"
+      other: "{0} megapixlar"
+      other_accusative: "{0} megapixla"
+      other_dative: "{0} megapixlum"
+      other_genitive: "{0} megapixla"
+      gender: masculine
+    short:
+      display_name: megapixlar
+  pixel-per-centimeter:
+    long:
+      display_name: pixlar á sentimetra
+      one: "{0} pixill á sentimetra"
+      one_accusative: "{0} pixil á sentimetra"
+      one_dative: "{0} pixli á sentimetra"
+      one_genitive: "{0} pixils á sentimetra"
+      other: "{0} pixlar á sentimetra"
+      other_accusative: "{0} pixla á sentimetra"
+      other_dative: "{0} pixlum á sentimetra"
+      other_genitive: "{0} pixla á sentimetra"
+      gender: masculine
+  pixel-per-inch:
+    long:
+      display_name: pixlar á tommu
+      one: "{0} pixill á tommu"
+      other: "{0} pixlar á tommu"
+  dot-per-centimeter:
+    long:
+      display_name: pixlar á sentimetra
+      one: "{0} pixill á sentimetra"
+      other: "{0} pixlar á sentimetra"
+    short:
+      display_name: dpcm
+      one: "{0} dpcm"
+      other: "{0} dpcm"
+  dot-per-inch:
+    long:
+      display_name: pixlar á tommu
+      one: "{0} pixill á tommu"
+      other: "{0} pixlar á tommu"
+    short:
+      display_name: dpi
+      one: "{0} dpi"
+      other: "{0} dpi"
+  dot:
+    long:
+      one: "{0} pixill"
+      other: "{0} pixlar"
+    short:
+      display_name: punktar
+    narrow:
+      display_name: punktur
+      one: "{0}px"
+      other: "{0}px"
+  earth-radius:
+    long:
+      display_name: geisli jarðar
+      one: "{0} geisli jarðar"
+      other: "{0} geisli jarðar"
+  kilometer:
+    long:
+      display_name: kílómetrar
+      one: "{0} kílómetri"
+      one_accusative: "{0} kílómetra"
+      one_dative: "{0} kílómetra"
+      one_genitive: "{0} kílómetra"
+      other: "{0} kílómetrar"
+      other_accusative: "{0} kílómetra"
+      other_dative: "{0} kílómetrum"
+      other_genitive: "{0} kílómetra"
+      gender: masculine
+      per_unit_pattern: "{0} á kílómetra"
+  meter:
+    long:
+      display_name: metrar
+      one: "{0} metri"
+      one_accusative: "{0} metra"
+      one_dative: "{0} metra"
+      one_genitive: "{0} metra"
+      other: "{0} metrar"
+      other_accusative: "{0} metra"
+      other_dative: "{0} metrum"
+      other_genitive: "{0} metra"
+      gender: masculine
+      per_unit_pattern: "{0} á metra"
+    short:
+      display_name: m
+    narrow:
+      one: "{0}m"
+      other: "{0}m"
+  decimeter:
+    long:
+      display_name: desimetrar
+      one: "{0} desimetri"
+      one_accusative: "{0} desimetra"
+      one_dative: "{0} desimetra"
+      one_genitive: "{0} desimetra"
+      other: "{0} desimetrar"
+      other_accusative: "{0} desimetra"
+      other_dative: "{0} desimetrum"
+      other_genitive: "{0} desimetra"
+      gender: masculine
+  centimeter:
+    long:
+      display_name: sentimetrar
+      one: "{0} sentimetri"
+      one_accusative: "{0} sentimetra"
+      one_dative: "{0} sentimetra"
+      one_genitive: "{0} sentimetra"
+      other: "{0} sentimetrar"
+      other_accusative: "{0} sentimetra"
+      other_dative: "{0} sentimetrum"
+      other_genitive: "{0} sentimetra"
+      gender: masculine
+      per_unit_pattern: "{0} á sentimetra"
+    narrow:
+      one: "{0}cm"
+      other: "{0}cm"
+  millimeter:
+    long:
+      display_name: millimetrar
+      one: "{0} millimetri"
+      one_accusative: "{0} millimetra"
+      one_dative: "{0} millimetra"
+      one_genitive: "{0} millimetra"
+      other: "{0} millimetrar"
+      other_accusative: "{0} millimetra"
+      other_dative: "{0} millimetrum"
+      other_genitive: "{0} millimetra"
+      gender: masculine
+    narrow:
+      one: "{0}mm"
+      other: "{0}mm"
+  micrometer:
+    long:
+      display_name: míkrómetrar
+      one: "{0} míkrómetri"
+      one_accusative: "{0} míkrómetra"
+      one_dative: "{0} míkrómetra"
+      one_genitive: "{0} míkrómetra"
+      other: "{0} míkrómetrar"
+      other_accusative: "{0} míkrómetra"
+      other_dative: "{0} míkrómetrum"
+      other_genitive: "{0} míkrómetra"
+      gender: masculine
+    short:
+      display_name: μmetrar
+  nanometer:
+    long:
+      display_name: nanómetrar
+      one: "{0} nanómetri"
+      one_accusative: "{0} nanómetra"
+      one_dative: "{0} nanómetra"
+      one_genitive: "{0} nanómetra"
+      other: "{0} nanómetrar"
+      other_accusative: "{0} nanómetra"
+      other_dative: "{0} nanómetrum"
+      other_genitive: "{0} nanómetra"
+      gender: masculine
+  picometer:
+    long:
+      display_name: píkómetrar
+      one: "{0} píkómetri"
+      one_accusative: "{0} píkómetra"
+      one_dative: "{0} píkómetra"
+      one_genitive: "{0} píkómetra"
+      other: "{0} píkómetrar"
+      other_accusative: "{0} píkómetra"
+      other_dative: "{0} píkómetrum"
+      other_genitive: "{0} píkómetra"
+      gender: masculine
+  mile:
+    long:
+      one: "{0} míla"
+      other: "{0} mílur"
+    short:
+      display_name: mílur
+      one: "{0} mí"
+      other: "{0} mí"
+  yard:
+    long:
+      one: "{0} yard"
+      other: "{0} yardar"
+    short:
+      display_name: yardar
+  foot:
+    long:
+      per_unit_pattern: "{0} á fet"
+    short:
+      display_name: fet
+      one: "{0} fet"
+      other: "{0} fet"
+      per_unit_pattern: "{0}/fet"
+  inch:
+    long:
+      one: "{0} tomma"
+      other: "{0} tommur"
+      per_unit_pattern: "{0} á tommu"
+    short:
+      display_name: tommur
+      one: "{0} t."
+      other: "{0} t."
+      per_unit_pattern: "{0}/t."
+    narrow:
+      one: "{0}″"
+      other: "{0}″"
+      per_unit_pattern: "{0}/tom"
+  parsec:
+    long:
+      one: "{0} parsek"
+      other: "{0} parsek"
+    short:
+      display_name: parsek
+  astronomical-unit:
+    long:
+      display_name: stjarnfræðieiningar
+      one: "{0} stjarnfræðieining"
+      other: "{0} stjarnfræðieiningar"
+    short:
+      display_name: se
+      one: "{0} se"
+      other: "{0} se"
+  furlong:
+    long:
+      one: "{0} furlong"
+      other: "{0} furlong"
+    short:
+      display_name: furlong
+    narrow:
+      one: "{0}fur"
+      other: "{0}fur"
+  fathom:
+    long:
+      one: "{0} faðmur"
+      other: "{0} faðmar"
+    short:
+      display_name: faðmar
+    narrow:
+      display_name: faðmur
+      one: "{0}fth"
+      other: "{0}fth"
+  nautical-mile:
+    long:
+      display_name: sjómílur
+      one: "{0} sjómíla"
+      other: "{0} sjómílur"
+    short:
+      display_name: sml
+      one: "{0} sml"
+      other: "{0} sml"
+  mile-scandinavian:
+    long:
+      display_name: sænsk míla
+      one: "{0} sænsk míla"
+      one_accusative: "{0} sænska mílu"
+      one_dative: "{0} sænskri mílu"
+      one_genitive: "{0} sænskrar mílu"
+      other: "{0} sænskar mílur"
+      other_accusative: "{0} sænskar mílur"
+      other_dative: "{0} sænskum mílum"
+      other_genitive: "{0} sænskra mílna"
+      gender: feminine
+    short:
+      display_name: sæ. míl.
+      one: "{0} sæ. míl."
+      other: "{0} sæ. míl."
+    narrow:
+      one: "{0} sæ. míl"
+      other: "{0} sæ. míl"
+  point:
+    long:
+      one: "{0} stig"
+      one_accusative: "{0} stig"
+      one_dative: "{0} stigi"
+      one_genitive: "{0} stigs"
+      other: "{0} stig"
+      other_accusative: "{0} stig"
+      other_dative: "{0} stigum"
+      other_genitive: "{0} stiga"
+      gender: neuter
+    short:
+      display_name: stig
+      one: "{0} stig"
+      other: "{0} stig"
+  solar-radius:
+    long:
+      one: "{0} sólarradíus"
+      other: "{0} sólarradíusar"
+    short:
+      display_name: sólarradíusar
+      one: "{0} Rsól"
+      other: "{0} Rsól"
+  lux:
+    long:
+      one: "{0} lúx"
+      one_accusative: "{0} lúx"
+      one_dative: "{0} lúxi"
+      one_genitive: "{0} lúx"
+      other: "{0} lúx"
+      other_accusative: "{0} lúx"
+      other_dative: "{0} lúxum"
+      other_genitive: "{0} lúxa"
+      gender: neuter
+    short:
+      display_name: lúx
+  candela:
+    long:
+      one: "{0} kerti"
+      one_accusative: "{0} kerti"
+      one_dative: "{0} kerti"
+      one_genitive: "{0} kertis"
+      other: "{0} kerti"
+      other_accusative: "{0} kerti"
+      other_dative: "{0} kertum"
+      other_genitive: "{0} kerta"
+      gender: neuter
+    short:
+      display_name: kerti
+      one: "{0} kerti"
+      other: "{0} kerti"
+  lumen:
+    long:
+      display_name: lúmen
+      one: "{0} lúmen"
+      one_accusative: "{0} lúmen"
+      one_dative: "{0} lúmeni"
+      one_genitive: "{0} lúmens"
+      other: "{0} lúmen"
+      other_accusative: "{0} lúmen"
+      other_dative: "{0} lúmenum"
+      other_genitive: "{0} lúmena"
+      gender: neuter
+  solar-luminosity:
+    long:
+      one: "{0} ljósafl sólar"
+      other: "{0} ljósafl sólar"
+    short:
+      display_name: ljósafl sólar
+      one: "{0} Lsól"
+      other: "{0} Lsól"
+  tonne:
+    long:
+      display_name: tonn
+      one: "{0} tonn"
+      one_accusative: "{0} tonn"
+      one_dative: "{0} tonni"
+      one_genitive: "{0} tonns"
+      other: "{0} tonn"
+      other_accusative: "{0} tonn"
+      other_dative: "{0} tonnum"
+      other_genitive: "{0} tonna"
+      gender: neuter
+    short:
+      display_name: tn
+      one: "{0} tn"
+      other: "{0} tn"
+    narrow:
+      display_name: t
+      one: "{0} t"
+      other: "{0} t"
+  kilogram:
+    long:
+      display_name: kílógrömm
+      one: "{0} kílógramm"
+      one_accusative: "{0} kílógramm"
+      one_dative: "{0} kílógrammi"
+      one_genitive: "{0} kílógramms"
+      other: "{0} kílógrömm"
+      other_accusative: "{0} kílógrömm"
+      other_dative: "{0} kílógrömmum"
+      other_genitive: "{0} kílógramma"
+      gender: neuter
+      per_unit_pattern: "{0} á kílógramm"
+  gram:
+    long:
+      one: "{0} gramm"
+      one_accusative: "{0} gramm"
+      one_dative: "{0} grammi"
+      one_genitive: "{0} gramms"
+      other: "{0} grömm"
+      other_accusative: "{0} grömm"
+      other_dative: "{0} grömmum"
+      other_genitive: "{0} gramma"
+      gender: neuter
+      per_unit_pattern: "{0} á gramm"
+    short:
+      display_name: grömm
+    narrow:
+      display_name: g
+  milligram:
+    long:
+      display_name: milligrömm
+      one: "{0} milligramm"
+      one_accusative: "{0} milligramm"
+      one_dative: "{0} milligrammi"
+      one_genitive: "{0} milligramms"
+      other: "{0} milligrömm"
+      other_accusative: "{0} milligrömm"
+      other_dative: "{0} milligrömmum"
+      other_genitive: "{0} milligramma"
+      gender: neuter
+  microgram:
+    long:
+      display_name: míkrógrömm
+      one: "{0} míkrógramm"
+      one_accusative: "{0} míkrógramm"
+      one_dative: "{0} míkrógrammi"
+      one_genitive: "{0} míkrógramms"
+      other: "{0} míkrógrömm"
+      other_accusative: "{0} míkrógrömm"
+      other_dative: "{0} míkrógrömmum"
+      other_genitive: "{0} míkrógramma"
+      gender: neuter
+  ton:
+    long:
+      display_name: bandarísk tonn
+      one: "{0} bandarískt tonn"
+      other: "{0} bandarísk tonn"
+    short:
+      display_name: BNA tonn
+      one: "{0} BNA tn"
+      other: "{0} BNA tn"
+    narrow:
+      one: "{0}tn"
+      other: "{0}tn"
+  stone:
+    long:
+      one: "{0} stone"
+      other: "{0} stones"
+    short:
+      display_name: stones
+    narrow:
+      display_name: stone
+      one: "{0}st"
+      other: "{0}st"
+  pound:
+    long:
+      one: "{0} pund"
+      other: "{0} pund"
+      per_unit_pattern: "{0} á pund"
+    short:
+      display_name: pund
+    narrow:
+      one: "{0} p."
+      other: "{0} p."
+  ounce:
+    long:
+      display_name: únsur
+      one: "{0} únsa"
+      other: "{0} únsur"
+      per_unit_pattern: "{0} á únsu"
+    narrow:
+      display_name: únsur
+      one: "{0} únsa"
+      other: "{0} únsur"
+  ounce-troy:
+    long:
+      display_name: troyesúnsur
+      one: "{0} troyesúnsa"
+      other: "{0} troyesúnsur"
+    short:
+      display_name: troyesoz
+    narrow:
+      display_name: oz t
+  carat:
+    long:
+      one: "{0} karat"
+      one_accusative: "{0} karat"
+      one_dative: "{0} karati"
+      one_genitive: "{0} karats"
+      other: "{0} karöt"
+      other_accusative: "{0} karöt"
+      other_dative: "{0} karötum"
+      other_genitive: "{0} karata"
+      gender: neuter
+    short:
+      display_name: karöt
+      one: "{0} kt."
+      other: "{0} kt."
+  dalton:
+    long:
+      one: "{0} dalton"
+      other: "{0} dalton"
+    short:
+      display_name: dalton
+  earth-mass:
+    long:
+      one: "{0} jarðmassi"
+      other: "{0} jarðmassar"
+    short:
+      display_name: jarðmassar
+  solar-mass:
+    long:
+      one: "{0} sólmassi"
+      other: "{0} sólmassar"
+    short:
+      display_name: sólmassar
+      one: "{0} Msól"
+      other: "{0} Msól"
+  gigawatt:
+    long:
+      display_name: gígavött
+      one: "{0} gígavatt"
+      one_accusative: "{0} gígavatt"
+      one_dative: "{0} gígavatti"
+      one_genitive: "{0} gígavatts"
+      other: "{0} gígavött"
+      other_accusative: "{0} gígavött"
+      other_dative: "{0} gígavöttum"
+      other_genitive: "{0} gígavatta"
+      gender: neuter
+  megawatt:
+    long:
+      display_name: megavött
+      one: "{0} megavatt"
+      one_accusative: "{0} megavatt"
+      one_dative: "{0} megavatti"
+      one_genitive: "{0} megavatts"
+      other: "{0} megavött"
+      other_accusative: "{0} megavött"
+      other_dative: "{0} megavöttum"
+      other_genitive: "{0} megavatta"
+      gender: neuter
+  kilowatt:
+    long:
+      display_name: kílóvött
+      one: "{0} kílóvatt"
+      one_accusative: "{0} kílóvatt"
+      one_dative: "{0} kílóvatti"
+      one_genitive: "{0} kílóvatts"
+      other: "{0} kílóvött"
+      other_accusative: "{0} kílóvött"
+      other_dative: "{0} kílóvöttum"
+      other_genitive: "{0} kílóvatta"
+      gender: neuter
+  watt:
+    long:
+      one: "{0} vatt"
+      one_accusative: "{0} vatt"
+      one_dative: "{0} vatti"
+      one_genitive: "{0} vatts"
+      other: "{0} vött"
+      other_accusative: "{0} vött"
+      other_dative: "{0} vöttum"
+      other_genitive: "{0} vatta"
+      gender: neuter
+    short:
+      display_name: vött
+  milliwatt:
+    long:
+      display_name: millivött
+      one: "{0} millivatt"
+      one_accusative: "{0} millivatt"
+      one_dative: "{0} millivatti"
+      one_genitive: "{0} millivatts"
+      other: "{0} millivött"
+      other_accusative: "{0} millivött"
+      other_dative: "{0} millivöttum"
+      other_genitive: "{0} millivatta"
+      gender: neuter
+  horsepower:
+    long:
+      display_name: hestöfl
+      one: "{0} hestafl"
+      other: "{0} hestöfl"
+    short:
+      display_name: hö
+      one: "{0} hö"
+      other: "{0} hö"
+  millimeter-ofhg:
+    long:
+      display_name: millimetrar af kvikasilfri
+      one: "{0} millimetri af kvikasilfri"
+      one_accusative: "{0} millimetra af kvikasilfri"
+      one_dative: "{0} millimetra af kvikasilfri"
+      one_genitive: "{0} millimetra af kvikasilfri"
+      other: "{0} millimetrar af kvikasilfri"
+      other_accusative: "{0} millimetra af kvikasilfri"
+      other_dative: "{0} millimetrum af kvikasilfri"
+      other_genitive: "{0} millimetra af kvikasilfri"
+      gender: masculine
+  pound-force-per-square-inch:
+    long:
+      display_name: pund á fertommu
+      one: "{0} pund á fertommu"
+      other: "{0} pund á fertommu"
+  inch-ofhg:
+    long:
+      display_name: tommur af kvikasilfri
+      one: "{0} tomma af kvikasilfri"
+      other: "{0} tommur af kvikasilfri"
+    short:
+      display_name: to Hg
+      one: "{0} to Hg"
+      other: "{0} to Hg"
+    narrow:
+      display_name: inHg
+      one: '{0}" Hg'
+      other: '{0}" Hg'
+  bar:
+    long:
+      display_name: bör
+      one: "{0} bar"
+      one_accusative: "{0} bar"
+      one_dative: "{0} bari"
+      one_genitive: "{0} bars"
+      other: "{0} bör"
+      other_accusative: "{0} bör"
+      other_dative: "{0} börum"
+      other_genitive: "{0} bara"
+      gender: neuter
+    short:
+      one: "{0} bar"
+      other: "{0} bör"
+  millibar:
+    long:
+      display_name: millibör
+      one: "{0} millibar"
+      one_accusative: "{0} millibar"
+      one_dative: "{0} millibari"
+      one_genitive: "{0} millibars"
+      other: "{0} millibör"
+      other_accusative: "{0} millibör"
+      other_dative: "{0} millibörum"
+      other_genitive: "{0} millibara"
+      gender: neuter
+    short:
+      one: "{0} mbar"
+      other: "{0} mbör"
+  atmosphere:
+    long:
+      display_name: loftþyngdir
+      one: "{0} loftþyngd"
+      one_accusative: "{0} loftþyngd"
+      one_dative: "{0} loftþyngd"
+      one_genitive: "{0} loftþyngdar"
+      other: "{0} loftþyngdir"
+      other_accusative: "{0} loftþyngdir"
+      other_dative: "{0} loftþyngdum"
+      other_genitive: "{0} loftþyngda"
+      gender: feminine
+  pascal:
+    long:
+      display_name: pasköl
+      one: "{0} paskal"
+      one_accusative: "{0} paskal"
+      one_dative: "{0} paskali"
+      one_genitive: "{0} paskals"
+      other: "{0} pasköl"
+      other_accusative: "{0} pasköl"
+      other_dative: "{0} paskölum"
+      other_genitive: "{0} paskala"
+      gender: neuter
+  hectopascal:
+    long:
+      display_name: hektópasköl
+      one: "{0} hektópaskal"
+      one_accusative: "{0} hektópaskal"
+      one_dative: "{0} hektópaskali"
+      one_genitive: "{0} hektópaskals"
+      other: "{0} hektópasköl"
+      other_accusative: "{0} hektópasköl"
+      other_dative: "{0} hektópaskölum"
+      other_genitive: "{0} hektópaskala"
+      gender: neuter
+  kilopascal:
+    long:
+      display_name: kílópasköl
+      one: "{0} kílópaskal"
+      one_accusative: "{0} kílópaskal"
+      one_dative: "{0} kílópaskali"
+      one_genitive: "{0} kílópaskals"
+      other: "{0} kílópasköl"
+      other_accusative: "{0} kílópasköl"
+      other_dative: "{0} kílópaskölum"
+      other_genitive: "{0} kílópaskala"
+      gender: neuter
+  megapascal:
+    long:
+      display_name: megapasköl
+      one: "{0} megapaskal"
+      one_accusative: "{0} megapaskal"
+      one_dative: "{0} megapaskali"
+      one_genitive: "{0} megapaskals"
+      other: "{0} megapasköl"
+      other_accusative: "{0} megapasköl"
+      other_dative: "{0} megapaskölum"
+      other_genitive: "{0} megapaskala"
+      gender: neuter
+  kilometer-per-hour:
+    long:
+      one: "{0} kílómetri á klukkustund"
+      one_accusative: "{0} kílómetra á klukkustund"
+      one_dative: "{0} kílómetra á klukkustund"
+      one_genitive: "{0} kílómetra á klukkustund"
+      other: "{0} kílómetrar á klukkustund"
+      other_accusative: "{0} kílómetra á klukkustund"
+      other_dative: "{0} kílómetrum á klukkustund"
+      other_genitive: "{0} kílómetra á klukkustund"
+      gender: masculine
+    short:
+      display_name: kílómetrar á klukkustund
+      one: "{0} km/klst."
+      other: "{0} km/klst."
+    narrow:
+      display_name: km/klst.
+  meter-per-second:
+    long:
+      display_name: metrar á sekúndu
+      one: "{0} metri á sekúndu"
+      one_accusative: "{0} metra á sekúndu"
+      one_dative: "{0} metra á sekúndu"
+      one_genitive: "{0} metra á sekúndu"
+      other: "{0} metrar á sekúndu"
+      other_accusative: "{0} metra á sekúndu"
+      other_dative: "{0} metrum á sekúndu"
+      other_genitive: "{0} metra á sekúndu"
+      gender: masculine
+    short:
+      display_name: metrar/sek.
+    narrow:
+      display_name: m/sek.
+  mile-per-hour:
+    long:
+      display_name: mílur á klukkustund
+      one: "{0} míla á klukkustund"
+      other: "{0} mílur á klukkustund"
+    short:
+      display_name: mílur/klst.
+      one: "{0} míla/klst."
+      other: "{0} mílur/klst."
+    narrow:
+      one: "{0} míla/klst."
+      other: "{0} míl./klst."
+  knot:
+    long:
+      display_name: hnútar
+      one: "{0} hnútur"
+      other: "{0} hnútar"
+  beaufort:
+    long:
+      display_name: Beaufort
+      one: "{0} Beaufort"
+      other: "{0} Beaufort"
+    short:
+      one: "{0} B"
+      other: "{0} B"
+    narrow:
+      one: "{0}B"
+      other: "{0}B"
+  generic:
+    long:
+      one: "{0} gráða"
+      one_accusative: "{0} gráðu"
+      one_dative: "{0} gráðu"
+      one_genitive: "{0} gráðu"
+      other: "{0} gráður"
+      other_accusative: "{0} gráður"
+      other_dative: "{0} gráðum"
+      other_genitive: "{0} gráða"
+      gender: feminine
+  celsius:
+    long:
+      one: "{0} gráða á Celsíus"
+      one_accusative: "{0} gráðu á Celsíus"
+      one_dative: "{0} gráðu á Celsíus"
+      one_genitive: "{0} gráðu á Celsíus"
+      other: "{0} gráður á Celsíus"
+      other_accusative: "{0} gráður á Celsíus"
+      other_dative: "{0} gráðum á Celsíus"
+      other_genitive: "{0} gráða á Celsíus"
+      gender: feminine
+    short:
+      display_name: gráður á Celsíus
+    narrow:
+      display_name: "°C"
+  fahrenheit:
+    long:
+      display_name: gráður á Fahrenheit
+      one: "{0} gráða á Fahrenheit"
+      other: "{0} gráður á Fahrenheit"
+  kelvin:
+    long:
+      display_name: kelvin
+      one: "{0} kelvin"
+      one_accusative: "{0} kelvin"
+      one_dative: "{0} kelvin"
+      one_genitive: "{0} kelvins"
+      other: "{0} kelvin"
+      other_accusative: "{0} kelvin"
+      other_dative: "{0} kelvinum"
+      other_genitive: "{0} kelvina"
+      gender: neuter
+  pound-force-foot:
+    long:
+      display_name: pundfet
+      one: "{0} pundfet"
+      other: "{0} pundfet"
+    narrow:
+      one: "{0}lbf⋅ft"
+      other: "{0}lbf⋅ft"
+  newton-meter:
+    long:
+      display_name: njútonmetrar
+      one: "{0} njútonmetri"
+      one_accusative: "{0} njútonmetra"
+      one_dative: "{0} njútonmetra"
+      one_genitive: "{0} njútonmetra"
+      other: "{0} njútonmetrar"
+      other_accusative: "{0} njútonmetra"
+      other_dative: "{0} njútonmetrum"
+      other_genitive: "{0} njútonmetra"
+      gender: masculine
+  cubic-kilometer:
+    long:
+      display_name: rúmkílómetrar
+      one: "{0} rúmkílómetri"
+      one_accusative: "{0} rúmkílómetra"
+      one_dative: "{0} rúmkílómetra"
+      one_genitive: "{0} rúmkílómetra"
+      other: "{0} rúmkílómetrar"
+      other_accusative: "{0} rúmkílómetra"
+      other_dative: "{0} rúmkílómetrum"
+      other_genitive: "{0} rúmkílómetra"
+      gender: masculine
+  cubic-meter:
+    long:
+      display_name: rúmmetrar
+      one: "{0} rúmmetri"
+      one_accusative: "{0} rúmmetra"
+      one_dative: "{0} rúmmetra"
+      one_genitive: "{0} rúmmetra"
+      other: "{0} rúmmetrar"
+      other_accusative: "{0} rúmmetra"
+      other_dative: "{0} rúmmetrum"
+      other_genitive: "{0} rúmmetra"
+      gender: masculine
+      per_unit_pattern: "{0} á rúmmetra"
+  cubic-centimeter:
+    long:
+      display_name: rúmsentimetrar
+      one: "{0} rúmsentimetri"
+      one_accusative: "{0} rúmsentimetra"
+      one_dative: "{0} rúmsentimetra"
+      one_genitive: "{0} rúmsentimetra"
+      other: "{0} rúmsentimetrar"
+      other_accusative: "{0} rúmsentimetra"
+      other_dative: "{0} rúmsentimetrum"
+      other_genitive: "{0} rúmsentimetra"
+      gender: masculine
+      per_unit_pattern: "{0} á rúmsentimetra"
+  cubic-mile:
+    long:
+      display_name: rúmmílur
+      one: "{0} rúmmíla"
+      other: "{0} rúmmílur"
+    short:
+      display_name: mí³
+      one: "{0} mí³"
+      other: "{0} mí³"
+    narrow:
+      one: "{0}mi³"
+      other: "{0}mi³"
+  cubic-yard:
+    long:
+      display_name: rúmyardar
+      one: "{0} rúmyard"
+      other: "{0} rúmyardar"
+    short:
+      display_name: yardar³
+  cubic-foot:
+    long:
+      display_name: rúmfet
+      one: "{0} rúmfet"
+      other: "{0} rúmfet"
+    short:
+      display_name: fet³
+      one: "{0} fet³"
+      other: "{0} fet³"
+  cubic-inch:
+    long:
+      display_name: rúmtommur
+      one: "{0} rúmtomma"
+      other: "{0} rúmtommur"
+    short:
+      display_name: tommur³
+      one: "{0} t³"
+      other: "{0} t³"
+  megaliter:
+    long:
+      display_name: megalítrar
+      one: "{0} megalítri"
+      one_accusative: "{0} megalítra"
+      one_dative: "{0} megalítra"
+      one_genitive: "{0} megalítra"
+      other: "{0} megalítrar"
+      other_accusative: "{0} megalítra"
+      other_dative: "{0} megalítrum"
+      other_genitive: "{0} megalítra"
+      gender: masculine
+    short:
+      display_name: Ml
+      one: "{0} Ml"
+      other: "{0} Ml"
+  hectoliter:
+    long:
+      display_name: hektólítrar
+      one: "{0} hektólítri"
+      one_accusative: "{0} hektólítra"
+      one_dative: "{0} hektólítra"
+      one_genitive: "{0} hektólítra"
+      other: "{0} hektólítrar"
+      other_accusative: "{0} hektólítra"
+      other_dative: "{0} hektólítrum"
+      other_genitive: "{0} hektólítra"
+      gender: masculine
+    short:
+      display_name: hl
+      one: "{0} hl"
+      other: "{0} hl"
+  liter:
+    long:
+      one: "{0} lítri"
+      one_accusative: "{0} lítra"
+      one_dative: "{0} lítra"
+      one_genitive: "{0} lítra"
+      other: "{0} lítrar"
+      other_accusative: "{0} lítra"
+      other_dative: "{0} lítrum"
+      other_genitive: "{0} lítra"
+      gender: masculine
+      per_unit_pattern: "{0} á lítra"
+    short:
+      display_name: lítrar
+    narrow:
+      display_name: lítri
+  deciliter:
+    long:
+      display_name: desilítrar
+      one: "{0} desilítri"
+      one_accusative: "{0} desilítra"
+      one_dative: "{0} desilítra"
+      one_genitive: "{0} desilítra"
+      other: "{0} desilítrar"
+      other_accusative: "{0} desilítra"
+      other_dative: "{0} desilítrum"
+      other_genitive: "{0} desilítra"
+      gender: masculine
+    short:
+      display_name: dl
+      one: "{0} dl"
+      other: "{0} dl"
+  centiliter:
+    long:
+      display_name: sentilítrar
+      one: "{0} sentilítri"
+      one_accusative: "{0} sentilítra"
+      one_dative: "{0} sentilítra"
+      one_genitive: "{0} sentilítra"
+      other: "{0} sentilítrar"
+      other_accusative: "{0} sentilítra"
+      other_dative: "{0} sentilítrum"
+      other_genitive: "{0} sentilítra"
+      gender: masculine
+    short:
+      display_name: cl
+      one: "{0} cl"
+      other: "{0} cl"
+  milliliter:
+    long:
+      display_name: millilítrar
+      one: "{0} millilítri"
+      one_accusative: "{0} millilítra"
+      one_dative: "{0} millilítra"
+      one_genitive: "{0} millilítra"
+      other: "{0} millilítrar"
+      other_accusative: "{0} millilítra"
+      other_dative: "{0} millilítrum"
+      other_genitive: "{0} millilítra"
+      gender: masculine
+    short:
+      display_name: ml
+      one: "{0} ml"
+      other: "{0} ml"
+  pint-metric:
+    long:
+      gender: feminine
+  cup-metric:
+    long:
+      display_name: ástralskir bollar
+      one: "{0} ástralskur bolli"
+      one_accusative: "{0} ástralskan bolla"
+      one_dative: "{0} áströlskum bolla"
+      one_genitive: "{0} ástralsks bolla"
+      other: "{0} ástralskir bollar"
+      other_accusative: "{0} ástralska bolla"
+      other_dative: "{0} áströlskum bollum"
+      other_genitive: "{0} ástralskra bolla"
+      gender: masculine
+    short:
+      display_name: ástr. bolli
+      one: "{0} ástr. bolli"
+      other: "{0} ástr. bollar"
+  gallon:
+    long:
+      display_name: gallon
+      one: "{0} gallon"
+      other: "{0} gallon"
+      per_unit_pattern: "{0} á gallon"
+    short:
+      display_name: gal
+      one: "{0} gal"
+      other: "{0} gal"
+      per_unit_pattern: "{0}/gal"
+  gallon-imperial:
+    long:
+      display_name: Breskt gallon
+      one: "{0} breskt gallon"
+      other: "{0} breskt gallon"
+      per_unit_pattern: "{0}/ á breskt gallon"
+    short:
+      display_name: breskt gal.
+      one: "{0} breskt gal."
+      other: "{0} breskt gal."
+      per_unit_pattern: "{0} breskt gal."
+  quart:
+    long:
+      display_name: kvartar
+      one: "{0} kvart"
+      other: "{0} kvartar"
+    short:
+      display_name: qts
+    narrow:
+      display_name: qt
+  pint:
+    long:
+      display_name: hálfpottar
+      one: "{0} hálfpottur"
+      other: "{0} hálfpottar"
+    short:
+      display_name: hálfp.
+      one: "{0} hálfp."
+      other: "{0} hálfp."
+  fluid-ounce:
+    long:
+      display_name: vökvaúnsur
+      one: "{0} vökvaúnsa"
+      other: "{0} vökvaúnsur"
+    short:
+      display_name: fl oz
+      one: "{0} fl oz"
+      other: "{0} fl oz"
+  fluid-ounce-imperial:
+    long:
+      display_name: breskar vökvaúnsur
+      one: "{0} bresk vökvaúnsa"
+      other: "{0} breskar vökvaúnsur"
+    short:
+      display_name: breskar fl oz
+      one: "{0} bresk fl oz"
+      other: "{0} breskar fl oz"
+  tablespoon:
+    long:
+      display_name: matskeiðar
+      one: "{0} matskeið"
+      other: "{0} matskeiðar"
+    short:
+      display_name: msk
+      one: "{0} msk"
+      other: "{0} msk"
+  teaspoon:
+    long:
+      display_name: teskeiðar
+      one: "{0} teskeið"
+      other: "{0} teskeiðar"
+    short:
+      display_name: tsk
+      one: "{0} tsk"
+      other: "{0} tsk"
+  barrel:
+    long:
+      display_name: tunnur
+    short:
+      display_name: tunna
+      one: "{0} tunna"
+      other: "{0} tunnur"
+  dessert-spoon:
+    long:
+      display_name: ábætisskeið
+      one: "{0} ábætisskeið"
+      other: "{0} ábætisskeið"
+    short:
+      display_name: ábætissk.
+      one: "{0} ábætissk."
+      other: "{0} ábætissk."
+    narrow:
+      display_name: áb.skeið
+      one: "{0} áb.skeið"
+      other: "{0} áb.skeið"
+  dessert-spoon-imperial:
+    long:
+      display_name: bresk ábætisskeið
+      one: "{0} bresk ábætisskeið"
+      other: "{0} bresk ábætisskeið"
+    short:
+      display_name: bresk ábætissk.
+      one: "{0} bresk ábætissk."
+      other: "{0} bresk ábætissk."
+    narrow:
+      display_name: br. áb.skeið
+      one: "{0} br áb.sk"
+      other: "{0} br áb.sk"
+  drop:
+    long:
+      display_name: dropar
+    short:
+      display_name: dropi
+      one: "{0} dropi"
+      other: "{0} dropar"
+  dram:
+    long:
+      display_name: drömm
+    short:
+      display_name: dramm
+      one: "{0} dramm"
+      other: "{0} drömm"
+  jigger:
+    long:
+      display_name: sjússar
+    short:
+      display_name: sjúss
+      one: "{0} sjúss"
+      other: "{0} sjússar"
+  pinch:
+    long:
+      display_name: klípur
+    short:
+      display_name: klípa
+      one: "{0} klípa"
+      other: "{0} klípur"
+  portion-per-1e9:
+    long:
+      display_name: hlutar á milljarð
+      one: "{0} hluti á milljarð"
+      one_accusative: "{0} hluta á milljarð"
+      one_dative: "{0} hluta á milljarð"
+      one_genitive: "{0} hluta á milljarð"
+      other: "{0} hlutar á milljarð"
+      other_accusative: "{0} hluta á milljarð"
+      other_dative: "{0} hlutum á milljarð"
+      other_genitive: "{0} hluta á milljarð"
+      gender: masculine
+  night:
+    long:
+      display_name: nætur
+      one: "{0} nótt"
+      one_accusative: "{0} nótt"
+      one_dative: "{0} nótt"
+      one_genitive: "{0} nætur"
+      other: "{0} nætur"
+      other_accusative: "{0} nætur"
+      other_dative: "{0} nóttum"
+      other_genitive: "{0} nótta"
+      gender: feminine
+      per_unit_pattern: "{0}/nótt"
+    short:
+      display_name: næt.
+      one: "{0} nótt"
+      other: "{0} næt."
+      per_unit_pattern: "{0}/nótt"
+    narrow:
+      display_name: n.
+      one: "{0} n."
+      other: "{0} n."
+      per_unit_pattern: "{0}/n."
+  square-mile:
+    short:
+      display_name: fermílur
+      one: "{0} fermíla"
+      other: "{0} fermílur"
+    narrow:
+      one: "{0}mí²"
+      other: "{0}mí²"
+  square-foot:
+    short:
+      display_name: ferfet
+      one: "{0} ferfet"
+      other: "{0} ferfet"
+    narrow:
+      display_name: ft²
+      one: "{0}ft²"
+      other: "{0}ft²"
+  light-year:
+    short:
+      display_name: ljósár
+      one: "{0} ljósár"
+      other: "{0} ljósár"
+    narrow:
+      one: "{0} lj."
+      other: "{0} lj."
+  grain:
+    short:
+      display_name: ögn
+      one: "{0} ögn"
+      other: "{0} agnir"
+  acre-foot:
+    short:
+      display_name: ekrufet
+      one: "{0} ekrufet"
+      other: "{0} ekrufet"
+  bushel:
+    short:
+      display_name: skeppur
+      one: "{0} skeppa"
+      other: "{0} skeppur"
+    narrow:
+      display_name: skeppa
+  cup:
+    short:
+      display_name: bollar
+      one: "{0} bolli"
+      other: "{0} bollar"
+    narrow:
+      display_name: bolli
+  quart-imperial:
+    short:
+      display_name: lagarmál
+      one: "{0} lagarmál"
+      other: "{0} lagarmál"
+    narrow:
+      one: "{0} l.mál"
+      other: "{0} l.mál"

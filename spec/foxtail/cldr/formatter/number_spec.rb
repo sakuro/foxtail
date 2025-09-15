@@ -343,5 +343,67 @@ RSpec.describe Foxtail::CLDR::Formatter::Number do
         end
       end
     end
+
+    context "with unit style" do
+      let(:en_locale) { locale("en") }
+
+      it "formats with unit style using default meter" do
+        result = formatter.call(5, locale: en_locale, style: "unit")
+        expect(result).to eq("5 m")
+      end
+
+      it "formats with specified unit" do
+        result = formatter.call(100, locale: en_locale, style: "unit", unit: "kilometer")
+        expect(result).to eq("100 km")
+      end
+
+      it "formats with different unit display styles" do
+        # Test short display (default)
+        result_short = formatter.call(2, locale: en_locale, style: "unit", unit: "meter", unitDisplay: "short")
+        expect(result_short).to eq("2 m")
+
+        # Test long display - should use plural form for 2
+        result_long = formatter.call(2, locale: en_locale, style: "unit", unit: "meter", unitDisplay: "long")
+        expect(result_long).to eq("2 meters")
+      end
+
+      it "handles fractional numbers" do
+        result = formatter.call(1.5, locale: en_locale, style: "unit", unit: "meter")
+        expect(result).to eq("1.5 m")
+      end
+
+      it "applies number formatting rules (grouping)" do
+        result = formatter.call(1000, locale: en_locale, style: "unit", unit: "meter")
+        expect(result).to eq("1,000 m")
+
+        result = formatter.call(1234.5, locale: en_locale, style: "unit", unit: "meter")
+        expect(result).to eq("1,234.5 m")
+      end
+
+      it "respects locale-specific number formatting" do
+        # German: period for thousands, comma for decimal
+        de_locale = locale("de")
+        result = formatter.call(1000, locale: de_locale, style: "unit", unit: "meter")
+        expect(result).to eq("1.000 m")
+
+        result = formatter.call(1234.5, locale: de_locale, style: "unit", unit: "meter")
+        expect(result).to eq("1.234,5 m")
+
+        # French: thin space for thousands, comma for decimal
+        fr_locale = locale("fr")
+        result = formatter.call(1000, locale: fr_locale, style: "unit", unit: "meter")
+        expect(result).to eq("1\u{202F}000\u{202F}m")
+
+        result = formatter.call(1234.5, locale: fr_locale, style: "unit", unit: "meter")
+        expect(result).to eq("1\u{202F}234,5\u{202F}m")
+
+        # Test short vs long unit display differences
+        result_short = formatter.call(2, locale: fr_locale, style: "unit", unit: "meter", unitDisplay: "short")
+        result_long = formatter.call(2, locale: fr_locale, style: "unit", unit: "meter", unitDisplay: "long")
+
+        expect(result_short).to eq("2\u{202F}m")
+        expect(result_long).to eq("2\u{00A0}mètres")
+      end
+    end
   end
 end

@@ -1,0 +1,605 @@
+---
+locale: se
+generated_at: '2025-09-15T15:51:06Z'
+cldr_version: '46'
+units:
+  g-force:
+    long:
+      one: "{0} Maapallo gravitaatiovoima"
+      two: "{0} Maapallo gravitaatiovoimat"
+      other: "{0} Maapallo gravitaatiovoimat"
+    short:
+      display_name: Maapallo gravitaatiovoimat
+    narrow:
+      one: "{0}G"
+      two: "{0}G"
+      other: "{0}G"
+  degree:
+    long:
+      one: "{0} grádat"
+      two: "{0} grádat"
+      other: "{0} grádat"
+    short:
+      display_name: grádat
+  arc-minute:
+    long:
+      one: "{0} jorbbas minuhta"
+      two: "{0} jorbbas minuhtta"
+      other: "{0} jorbbas minuhtta"
+    short:
+      display_name: jorbbas minuhtta
+  arc-second:
+    long:
+      one: "{0} jorbbas sekunda"
+      two: "{0} jorbbas sekundda"
+      other: "{0} jorbbas sekundda"
+    short:
+      display_name: jorbbas sekundda
+  square-kilometer:
+    long:
+      one: "{0} neliökilomehter"
+      two: "{0} neliökilomehtera"
+      other: "{0} neliökilomehtera"
+    short:
+      display_name: neliökilomehtera
+    narrow:
+      one: "{0}km²"
+      two: "{0}km²"
+      other: "{0}km²"
+  hectare:
+    long:
+      one: "{0} hehtaari"
+      two: "{0} hehtaaria"
+      other: "{0} hehtaaria"
+    short:
+      display_name: hehtaaria
+    narrow:
+      one: "{0}ha"
+      two: "{0}ha"
+      other: "{0}ha"
+  square-meter:
+    long:
+      one: "{0} neliömehter"
+      two: "{0} neliömehtera"
+      other: "{0} neliömehtera"
+    short:
+      display_name: neliömehtera
+    narrow:
+      one: "{0}m²"
+      two: "{0}m²"
+      other: "{0}m²"
+  square-mile:
+    long:
+      one: "{0} eangas neliömiil"
+      two: "{0} eangas neliömiila"
+      other: "{0} eangas neliömiila"
+    short:
+      display_name: eangas neliömiila
+  acre:
+    long:
+      one: "{0} Amerihká tynnyrinala"
+      two: "{0} Amerihká tynnyrinala"
+      other: "{0} Amerihká tynnyrinala"
+    short:
+      display_name: Amerihká tynnyrinala
+  square-foot:
+    long:
+      one: "{0} neliöjuolgi"
+      two: "{0} neliöjuolgi"
+      other: "{0} neliöjuolgi"
+    short:
+      display_name: neliöjuolgi
+  year:
+    long:
+      one: "{0} jahki"
+      two: "{0} jahkki"
+      other: "{0} jahkki"
+      per_unit_pattern: "{0} juohke jahki"
+    short:
+      display_name: jahkki
+      one: "{0} jah"
+      two: "{0} jah"
+      other: "{0} jah"
+      per_unit_pattern: "{0}/jah"
+    narrow:
+      one: "{0}j"
+      two: "{0}j"
+      other: "{0}j"
+  month:
+    long:
+      one: "{0} mánotbadji"
+      two: "{0} mánotbaji"
+      other: "{0} mánotbadji"
+      per_unit_pattern: "{0} juohke mánotbadji"
+    short:
+      display_name: mánotbadji
+      one: "{0} mán"
+      two: "{0} mán"
+      other: "{0} mán"
+      per_unit_pattern: "{0}/mán"
+    narrow:
+      one: "{0}m"
+      two: "{0}m"
+      other: "{0}m"
+  week:
+    long:
+      one: "{0} váhku"
+      two: "{0} váhkku"
+      other: "{0} váhkku"
+      per_unit_pattern: "{0} juohke váhku"
+    short:
+      display_name: váhkku
+      one: "{0} v"
+      two: "{0} v"
+      other: "{0} v"
+      per_unit_pattern: "{0}/v"
+    narrow:
+      one: "{0}v"
+      two: "{0}v"
+      other: "{0}v"
+  day:
+    long:
+      one: "{0} jándor"
+      two: "{0} jándora"
+      other: "{0} jándora"
+      per_unit_pattern: "{0} juohke jándor"
+    short:
+      display_name: jándora
+    narrow:
+      one: "{0}d"
+      two: "{0}d"
+      other: "{0}d"
+  hour:
+    long:
+      one: "{0} diibmu"
+      two: "{0} diimmur"
+      other: "{0} diibmur"
+      per_unit_pattern: "{0} juohke diibmu"
+    short:
+      display_name: diibmur
+    narrow:
+      one: "{0}h"
+      two: "{0}h"
+      other: "{0}h"
+  minute:
+    long:
+      one: "{0} minuhta"
+      two: "{0} minuhtta"
+      other: "{0} minuhtta"
+      per_unit_pattern: "{0} juohke minuhta"
+    short:
+      display_name: minuhtta
+    narrow:
+      one: "{0}m"
+      two: "{0}m"
+      other: "{0}m"
+  second:
+    long:
+      one: "{0} sekunda"
+      two: "{0} sekundda"
+      other: "{0} sekundda"
+      per_unit_pattern: "{0} juohke sekunda"
+    short:
+      display_name: sekundda
+    narrow:
+      one: "{0}s"
+      two: "{0}s"
+      other: "{0}s"
+  millisecond:
+    long:
+      one: "{0} millisekunda"
+      two: "{0} millisekundda"
+      other: "{0} millisekundda"
+    short:
+      display_name: millisekundda
+    narrow:
+      one: "{0}ms"
+      two: "{0}ms"
+      other: "{0}ms"
+  microsecond:
+    long:
+      display_name: mikrosekundda
+      one: "{0} mikrosekunda"
+      two: "{0} mikrosekundda"
+      other: "{0} mikrosekundda"
+    narrow:
+      one: "{0}μs"
+      two: "{0}μs"
+      other: "{0}μs"
+  nanosecond:
+    long:
+      display_name: nanosekundda
+      one: "{0} nanosekunda"
+      two: "{0} nanosekundda"
+      other: "{0} nanosekundda"
+    narrow:
+      one: "{0}ns"
+      two: "{0}ns"
+      other: "{0}ns"
+  kilometer:
+    long:
+      one: "{0} kilomehter"
+      two: "{0} kilomehtera"
+      other: "{0} kilomehtera"
+      per_unit_pattern: "{0} juohke kilomehter"
+    short:
+      display_name: kilomehtera
+    narrow:
+      one: "{0}km"
+      two: "{0}km"
+      other: "{0}km"
+  meter:
+    long:
+      one: "{0} mehter"
+      two: "{0} mehtera"
+      other: "{0} mehtera"
+      per_unit_pattern: "{0} juohke mehter"
+    short:
+      display_name: mehtera
+    narrow:
+      one: "{0}m"
+      two: "{0}m"
+      other: "{0}m"
+  decimeter:
+    long:
+      display_name: desimehtera
+      one: "{0} desimehter"
+      two: "{0} desimehtera"
+      other: "{0} desimehtera"
+    narrow:
+      one: "{0}dm"
+      two: "{0}dm"
+      other: "{0}dm"
+  centimeter:
+    long:
+      one: "{0} sentimehter"
+      two: "{0} sentimehtera"
+      other: "{0} sentimehtera"
+      per_unit_pattern: "{0} juohke sentimehter"
+    short:
+      display_name: sentimehtera
+    narrow:
+      one: "{0}cm"
+      two: "{0}cm"
+      other: "{0}cm"
+  millimeter:
+    long:
+      one: "{0} millimehter"
+      two: "{0} millimehtera"
+      other: "{0} millimehtera"
+    short:
+      display_name: millimehtera
+    narrow:
+      one: "{0}mm"
+      two: "{0}mm"
+      other: "{0}mm"
+  micrometer:
+    long:
+      display_name: mikromehtera
+      one: "{0} mikromehter"
+      two: "{0} mikromehtera"
+      other: "{0} mikromehtera"
+    narrow:
+      one: "{0}μm"
+      two: "{0}μm"
+      other: "{0}μm"
+  nanometer:
+    long:
+      display_name: nanomehtera
+      one: "{0} nanomehter"
+      two: "{0} nanomehtera"
+      other: "{0} nanomehtera"
+    narrow:
+      one: "{0}nm"
+      two: "{0} nm"
+      other: "{0}nm"
+  picometer:
+    long:
+      one: "{0} pikomehter"
+      two: "{0} pikomehtera"
+      other: "{0} pikomehtera"
+    short:
+      display_name: pikomehtera
+    narrow:
+      one: "{0}pm"
+      two: "{0}pm"
+      other: "{0}pm"
+  mile:
+    long:
+      one: "{0} eangas miil"
+      two: "{0} eangas miila"
+      other: "{0} eangas miila"
+    short:
+      display_name: eangas miila
+  yard:
+    long:
+      one: "{0} eangas yard"
+      two: "{0} eangas yard"
+      other: "{0} eangas yard"
+    short:
+      display_name: eangas yard
+  foot:
+    long:
+      per_unit_pattern: "{0} juohke juolgi"
+    short:
+      display_name: juolgi
+      one: "{0} juolgi"
+      two: "{0} juolgi"
+      other: "{0} juolgi"
+      per_unit_pattern: "{0}/juolgi"
+  inch:
+    long:
+      per_unit_pattern: "{0} juohke bealgi"
+    short:
+      display_name: bealgi
+      one: "{0} bealgi"
+      two: "{0} bealgi"
+      other: "{0} bealgi"
+      per_unit_pattern: "{0}/bealgi"
+  light-year:
+    long:
+      one: "{0} chuovgat jagi"
+      two: "{0} chuovgat jagi"
+      other: "{0} chuovgat jagi"
+    short:
+      display_name: chuovgat jagi
+  tonne:
+    long:
+      one: "{0} tonna"
+      two: "{0} tonna"
+      other: "{0} tonna"
+    short:
+      display_name: tonna
+    narrow:
+      one: "{0}t"
+      two: "{0}t"
+      other: "{0}t"
+  kilogram:
+    long:
+      one: "{0} kilogram"
+      two: "{0} kilogram"
+      other: "{0} kilogram"
+      per_unit_pattern: "{0} juohke kilogram"
+    short:
+      display_name: kilogram
+    narrow:
+      one: "{0}kg"
+      two: "{0}kg"
+      other: "{0}kg"
+  gram:
+    long:
+      one: "{0} gram"
+      two: "{0} gram"
+      other: "{0} gram"
+      per_unit_pattern: "{0} juohke gram"
+    narrow:
+      one: "{0}g"
+      two: "{0}g"
+      other: "{0}g"
+  ton:
+    long:
+      one: "{0} eangas tonna à 907kg"
+      two: "{0} eangas tonna à 907kg"
+      other: "{0} eangas tonna à 907kg"
+    short:
+      display_name: eangas tonna à 907kg
+      one: "{0} eang.ton. à 907kg"
+      two: "{0} eang.ton. à 907kg"
+      other: "{0} eang.ton. à 907kg"
+    narrow:
+      display_name: eangas tonna
+      one: "{0} e.ton."
+      two: "{0} e.ton."
+      other: "{0} e.ton."
+  kilowatt:
+    long:
+      one: "{0} kilowatt"
+      two: "{0} kilowatt"
+      other: "{0} kilowatt"
+    short:
+      display_name: kilowatt
+    narrow:
+      one: "{0}kW"
+      two: "{0}kW"
+      other: "{0}kW"
+  watt:
+    long:
+      one: "{0} watt"
+      two: "{0} watt"
+      other: "{0} watt"
+    narrow:
+      one: "{0}W"
+      two: "{0}W"
+      other: "{0}W"
+  horsepower:
+    long:
+      one: "{0} hevosvoima"
+      two: "{0} hevosvoima"
+      other: "{0} hevosvoima"
+    short:
+      display_name: hevosvoima
+      one: "{0} hv"
+      two: "{0} hv"
+      other: "{0} hv"
+    narrow:
+      one: "{0}hv"
+      two: "{0}hv"
+      other: "{0}hv"
+  inch-ofhg:
+    long:
+      one: "{0} bealgi kvikksølv"
+      two: "{0} bealgi kvikksølv"
+      other: "{0} bealgi kvikksølv"
+    short:
+      display_name: bealgi kvikksølv
+      one: "{0} bealgi Hg"
+      two: "{0} bealgi Hg"
+      other: "{0} bealgi Hg"
+  millibar:
+    long:
+      one: "{0} millibar"
+      two: "{0} millibar"
+      other: "{0} millibar"
+    short:
+      display_name: millibar
+    narrow:
+      one: "{0}mbar"
+      two: "{0}mbar"
+      other: "{0}mbar"
+  hectopascal:
+    long:
+      one: "{0} hehtopascal"
+      two: "{0} hehtopascal"
+      other: "{0} hehtopascal"
+    short:
+      display_name: hehtopascal
+    narrow:
+      one: "{0}hPa"
+      two: "{0}hPa"
+      other: "{0}hPa"
+  kilometer-per-hour:
+    long:
+      one: "{0} kilomehter kohti diibmu"
+      two: "{0} kilomehtera kohti diibmu"
+      other: "{0} kilomehtera kohti diibmu"
+    short:
+      display_name: kilomehtera kohti diibmu
+    narrow:
+      one: "{0}km/h"
+      two: "{0}km/h"
+      other: "{0}km/h"
+  meter-per-second:
+    long:
+      one: "{0} mehter kohti sekunti"
+      two: "{0} mehtera kohti sekunti"
+      other: "{0} mehtera kohti sekunti"
+    short:
+      display_name: mehtera kohti sekunti
+    narrow:
+      one: "{0}m/s"
+      two: "{0}m/s"
+      other: "{0}m/s"
+  mile-per-hour:
+    long:
+      one: "{0} eangas miil kohti diibmu"
+      two: "{0} eangas miila kohti diibmu"
+      other: "{0} eangas miila kohti diibmu"
+    short:
+      display_name: eangas miila kohti diibmu
+  celsius:
+    long:
+      one: "{0} grádat Celsius"
+      two: "{0} grádat Celsius"
+      other: "{0} grádat Celsius"
+    short:
+      display_name: grádat Celsius
+    narrow:
+      one: "{0}°"
+      two: "{0}°"
+      other: "{0}°"
+  fahrenheit:
+    long:
+      one: "{0} grádat Fahrenheit"
+      two: "{0} grádat Fahrenheit"
+      other: "{0} grádat Fahrenheit"
+    short:
+      display_name: grádat Fahrenheit
+  cubic-kilometer:
+    long:
+      one: "{0} kubikkilomehter"
+      two: "{0} kubikkilomehtera"
+      other: "{0} kubikkilomehtera"
+    short:
+      display_name: kubikkilomehtera
+    narrow:
+      one: "{0}km³"
+      two: "{0}km³"
+      other: "{0}km³"
+  cubic-mile:
+    long:
+      one: "{0} eangas kubikkmiil"
+      two: "{0} eangas kubikkmiila"
+      other: "{0} eangas kubikkmiila"
+    short:
+      display_name: eangas kubikkmiila
+  liter:
+    long:
+      one: "{0} lihtar"
+      two: "{0} lihtara"
+      other: "{0} lihtara"
+      per_unit_pattern: "{0} juohke lithar"
+    short:
+      display_name: lihtara
+      per_unit_pattern: "{0}/L"
+    narrow:
+      one: "{0}L"
+      two: "{0}L"
+      other: "{0}L"
+  mile-scandinavian:
+    short:
+      display_name: miila
+      one: "{0} miil"
+      two: "{0} miila"
+      other: "{0} miila"
+  pound:
+    short:
+      display_name: pauna
+      one: "{0} pauna"
+      two: "{0} pauna"
+      other: "{0} pauna"
+  ounce:
+    short:
+      display_name: unssi
+      one: "{0} unssi"
+      two: "{0} unssi"
+      other: "{0} unssi"
+  meter-per-square-second:
+    narrow:
+      one: "{0}m/s²"
+      two: "{0}m/s²"
+      other: "{0}m/s²"
+  square-centimeter:
+    narrow:
+      one: "{0}cm²"
+      two: "{0}cm²"
+      other: "{0}cm²"
+  milligram:
+    narrow:
+      one: "{0}mg"
+      two: "{0}mg"
+      other: "{0}mg"
+  microgram:
+    narrow:
+      one: "{0}μg"
+      two: "{0}μg"
+      other: "{0}μg"
+  cubic-centimeter:
+    narrow:
+      one: "{0}cm³"
+      two: "{0}cm³"
+      other: "{0}cm³"
+  megaliter:
+    narrow:
+      one: "{0}ML"
+      two: "{0}ML"
+      other: "{0}ML"
+  hectoliter:
+    narrow:
+      one: "{0}hL"
+      two: "{0}hL"
+      other: "{0}hL"
+  deciliter:
+    narrow:
+      one: "{0}dL"
+      two: "{0}dL"
+      other: "{0}dL"
+  centiliter:
+    narrow:
+      one: "{0}cL"
+      two: "{0}cL"
+      other: "{0}cL"
+  milliliter:
+    narrow:
+      one: "{0}mL"
+      two: "{0}mL"
+      other: "{0}mL"

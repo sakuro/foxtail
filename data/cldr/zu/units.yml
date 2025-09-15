@@ -1,0 +1,790 @@
+---
+locale: zu
+generated_at: '2025-09-15T15:51:24Z'
+cldr_version: '46'
+units:
+  g-force:
+    long:
+      one: "{0} g-force"
+      other: "{0} g-force"
+  revolution:
+    long:
+      one: "{0} revolution"
+      other: "{0} revolutions"
+    narrow:
+      one: "{0}rev"
+      other: "{0}rev"
+  radian:
+    long:
+      one: "{0} radians"
+      other: "{0} radians"
+    short:
+      display_name: radians
+    narrow:
+      one: "{0}rev"
+      other: "{0}rev"
+  arc-minute:
+    long:
+      display_name: arcminutes
+      one: "{0} arcminute"
+      other: "{0} arcminutes"
+    short:
+      display_name: arcmins
+      one: "{0} arcmin"
+      other: "{0} arcmins"
+    narrow:
+      one: "{0}′"
+      other: "{0}′"
+  arc-second:
+    long:
+      display_name: arcseconds
+      one: "{0} arcsecond"
+      other: "{0} arcseconds"
+    short:
+      display_name: arcsecs
+      one: "{0} arcsec"
+      other: "{0} arcsecs"
+    narrow:
+      one: "{0}″"
+      other: "{0}″"
+  square-meter:
+    long:
+      per_unit_pattern: "{0} per m²"
+    narrow:
+      one: "{0} m²"
+      other: "{0}m²"
+  karat:
+    long:
+      display_name: ama-karats
+      one: "{0} i-karat"
+      other: "{0} ama-karats"
+    short:
+      display_name: karats
+    narrow:
+      display_name: karat
+      one: "{0}kt"
+      other: "{0}kt"
+  permillion:
+    long:
+      display_name: ppm
+    short:
+      display_name: izingxenye/izigidi
+    narrow:
+      one: "{0}item"
+      other: "{0}ppm"
+  permille:
+    long:
+      display_name: permille
+  mile-per-gallon:
+    long:
+      display_name: mpg
+    short:
+      display_name: miles/gal
+      one: "{0} mpg"
+      other: "{0} mpg"
+    narrow:
+      one: "{0}mpg"
+      other: "{0}mpg"
+  terabit:
+    long:
+      display_name: terabits
+      one: "{0} i-terabit"
+      other: "{0} ama-terabits"
+    short:
+      display_name: Tbit
+    narrow:
+      one: "{0}Tb"
+      other: "{0}Tb"
+  gigabit:
+    long:
+      display_name: gigabits
+      one: "{0} i-gigabit"
+      other: "{0} ama-gigabits"
+    short:
+      display_name: Gbit
+    narrow:
+      one: "{0}Gb"
+      other: "{0}Gb"
+  megabit:
+    long:
+      display_name: megabits
+      one: "{0} i-megabit"
+      other: "{0} megabits"
+    short:
+      display_name: Mbit
+    narrow:
+      one: "{0}Mb"
+      other: "{0}Mb"
+  kilobit:
+    long:
+      display_name: kilobits
+      one: "{0} i-kilobit"
+      other: "{0} ama-kilobits"
+    short:
+      display_name: kbit
+    narrow:
+      one: "{0}Mb"
+      other: "{0}Mb"
+  byte:
+    long:
+      display_name: bytes
+      one: "{0} i-byte"
+      other: "{0} ama-bytes"
+    narrow:
+      one: "{0}B"
+      other: "{0}B"
+  bit:
+    long:
+      display_name: bits
+      one: "{0} i-bit"
+      other: "{0} ama-bits"
+    narrow:
+      one: "{0}bit"
+      other: "{0}bit"
+  decade:
+    long:
+      one: "{0} dec"
+      other: "{0} decades"
+    narrow:
+      one: "{0}dec"
+      other: "{0} dec"
+  month:
+    long:
+      one: "{0} inyanga"
+      other: "{0} izinyanga"
+      per_unit_pattern: "{0} ngenyanga"
+    short:
+      display_name: izinyanga
+      one: "{0} nyanga"
+      other: "{0} izinyanga"
+    narrow:
+      one: "{0} m"
+      other: "{0} m"
+  week:
+    long:
+      one: "{0} iviki"
+      other: "{0} amaviki"
+    short:
+      display_name: amaviki
+      one: "{0} viki"
+      other: "{0} amaviki"
+    narrow:
+      one: "{0} w"
+      other: "{0} w"
+  hour:
+    long:
+      one: "{0} ihora"
+      other: "{0} amahora"
+    short:
+      display_name: amahora
+      one: "{0} hora"
+      other: "{0} hr"
+    narrow:
+      one: "{0} hora"
+      other: "{0} hora"
+  minute:
+    long:
+      one: "{0} iminithi"
+      other: "{0} amaminithi"
+    short:
+      display_name: amaminithi
+      one: "{0} iminithi"
+      other: "{0} iminithi"
+    narrow:
+      one: "{0} umzuzu"
+      other: "{0} umzuzu"
+  second:
+    long:
+      one: "{0} isekhondi"
+      other: "{0} amasekhondi"
+      per_unit_pattern: "{0}ps"
+    short:
+      display_name: amasekhondi
+      one: "{0} sekhondi"
+      other: "{0} sec"
+    narrow:
+      display_name: isekhondi
+      one: "{0} s"
+      other: "{0} s"
+  microsecond:
+    long:
+      display_name: microseconds
+      one: "{0} microsecond"
+      other: "{0} microseconds"
+    short:
+      display_name: μsecs
+  foodcalorie:
+    long:
+      display_name: Calories
+      one: "{0} Calorie"
+      other: "{0} Calories"
+    short:
+      display_name: Cal
+      one: "{0} Cal"
+      other: "{0} Cal"
+  joule:
+    long:
+      display_name: joule
+      one: "{0} i-joule"
+      other: "{0} J"
+    short:
+      display_name: joules
+    narrow:
+      one: "{0}J"
+      other: "{0}J"
+  megapixel:
+    long:
+      one: "{0} MP"
+      other: "{0} megapixels"
+    narrow:
+      one: "{0}MP"
+      other: "{0}MP"
+  dot-per-centimeter:
+    long:
+      display_name: amachashazi ngesenthimitha
+      one: "{0} ichashazi ngesenthimitha"
+      other: "{0} amachashazi ngesethimitha"
+    short:
+      display_name: dpcm
+      one: "{0} dpcm"
+      other: "{0} dpcm"
+    narrow:
+      one: "{0}dpcm"
+      other: "{0}dpcm"
+  dot-per-inch:
+    long:
+      display_name: amachashazi nge-inch
+      one: "{0} ichashazi nge-inch"
+      other: "{0} amachashazi nge-inch"
+    short:
+      display_name: dpi
+      one: "{0} dpi"
+      other: "{0} dpi"
+    narrow:
+      one: "{0} dpi"
+      other: "{0}dpi"
+  lux:
+    long:
+      one: "{0} i-lux"
+      other: "{0} i-lux"
+    short:
+      display_name: lux
+  candela:
+    long:
+      one: "{0} cd"
+      other: "{0} candela"
+    narrow:
+      one: "{0}cd"
+      other: "{0}cd"
+  lumen:
+    long:
+      one: "{0} i-lumen"
+      other: "{0} lm"
+    narrow:
+      one: "{0} lm"
+      other: "{0}lm"
+  kilogram:
+    long:
+      per_unit_pattern: "{0}kg"
+  knot:
+    long:
+      display_name: knot
+      one: "{0} amafindo"
+      other: "{0} amafindo"
+  dessert-spoon:
+    long:
+      one: "{0} sipuni dessert"
+      other: "{0} dstspn"
+    narrow:
+      one: "{0}bbl"
+      other: "{0}bbl"
+  dessert-spoon-imperial:
+    long:
+      one: "{0} Imp. isipuni dessert"
+      other: "{0} dstspn Imp"
+    narrow:
+      one: "{0}dsp-Imp"
+      other: "{0}dsp-Imp"
+  quart-imperial:
+    long:
+      one: "{0} Imp. quart"
+      other: "{0} qt Imp."
+    narrow:
+      one: "{0} Imp. quart"
+      other: "{0} qt Imp."
+  degree:
+    short:
+      display_name: "°"
+  dunam:
+    short:
+      display_name: dunams
+    narrow:
+      display_name: dunam
+      one: "{0}dunam"
+      other: "{0}dunam"
+  day:
+    short:
+      display_name: izinsuku
+      one: "{0} usuku"
+      other: "{0} izinsuku"
+    narrow:
+      one: "{0}"
+      other: "{0} suku"
+  dot:
+    short:
+      display_name: amachashazi
+      one: "{0} ichashazi"
+      other: "{0} amachashazi"
+    narrow:
+      display_name: ichashazi
+      one: "{0}ichashazi"
+      other: "{0}ichashazi"
+  meter:
+    short:
+      display_name: m
+  gram:
+    short:
+      display_name: g
+  liter:
+    short:
+      display_name: l
+    narrow:
+      per_unit_pattern: "{0}hL"
+  gallon:
+    short:
+      display_name: gal
+      one: "{0} gal"
+      other: "{0} gal"
+      per_unit_pattern: "{0}/gal"
+    narrow:
+      one: "{0}gal"
+      other: "{0}gal"
+  fluid-ounce:
+    short:
+      display_name: fl oz
+      one: "{0} fl oz"
+      other: "{0} fl oz"
+  meter-per-square-second:
+    narrow:
+      one: "{0}m/s²"
+      other: "{0}m/s²"
+  square-kilometer:
+    narrow:
+      one: "{0}km²"
+      other: "{0}km²"
+  hectare:
+    narrow:
+      one: "{0}ha"
+      other: "{0}ha"
+  square-centimeter:
+    narrow:
+      one: "{0}m²"
+      other: "{0}m²"
+  square-mile:
+    narrow:
+      one: "{0}dunam"
+      other: "{0}dunam"
+  acre:
+    narrow:
+      one: "{0}m²"
+      other: "{0}m²"
+  square-yard:
+    narrow:
+      one: "{0}yd²"
+      other: "{0}yd²"
+  square-inch:
+    narrow:
+      one: "{0}in²"
+      other: "{0}in²"
+  milligram-ofglucose-per-deciliter:
+    narrow:
+      one: "{0}mg/dL"
+      other: "{0}mg/dL"
+  mole:
+    narrow:
+      one: "{0}mol"
+      other: "{0}mol"
+  liter-per-kilometer:
+    narrow:
+      one: "{0}L/km"
+      other: "{0}L/km"
+  liter-per-100-kilometer:
+    narrow:
+      one: "{0}L/100km"
+      other: "{0}L/100km"
+  mile-per-gallon-imperial:
+    narrow:
+      one: "{0}m/gUK"
+      other: "{0}m/gUK"
+  petabyte:
+    narrow:
+      one: "{0}PB"
+      other: "{0}PB"
+  terabyte:
+    narrow:
+      one: "{0}TB"
+      other: "{0}TB"
+  gigabyte:
+    narrow:
+      one: "{0}GB"
+      other: "{0}GB"
+  megabyte:
+    narrow:
+      one: "{0}MB"
+      other: "{0}MB"
+  kilobyte:
+    narrow:
+      one: "{0}Mb"
+      other: "{0} kB"
+  century:
+    narrow:
+      one: "{0}c"
+      other: "{0}c"
+  ampere:
+    narrow:
+      one: "{0}A"
+      other: "{0}A"
+  milliampere:
+    narrow:
+      one: "{0}mA"
+      other: "{0}mA"
+  ohm:
+    narrow:
+      one: "{0}Ω"
+      other: "{0}Ω"
+  volt:
+    narrow:
+      one: "{0}V"
+      other: "{0}V"
+  kilocalorie:
+    narrow:
+      one: "{0}kcal"
+      other: "{0}kcal"
+  calorie:
+    narrow:
+      one: "{0}kcal"
+      other: "{0}kcal"
+  kilojoule:
+    narrow:
+      one: "{0}kJ"
+      other: "{0}kJ"
+  kilowatt-hour:
+    narrow:
+      one: "{0}kWh"
+      other: "{0}kWh"
+  electronvolt:
+    narrow:
+      one: "{0}eV"
+      other: "{0}eV"
+  british-thermal-unit:
+    narrow:
+      one: "{0}Btu"
+      other: "{0}Btu"
+  pound-force:
+    narrow:
+      one: "{0}lbf"
+      other: "{0}lbf"
+  kilowatt-hour-per-100-kilometer:
+    narrow:
+      one: "{0}kWh/100km"
+      other: "{0}kWh/100km"
+  gigahertz:
+    narrow:
+      one: "{0}GHz"
+      other: "{0}GHz"
+  megahertz:
+    narrow:
+      one: "{0}MHz"
+      other: "{0}MHz"
+  kilohertz:
+    narrow:
+      one: "{0} kHz"
+      other: "{0}kHz"
+  hertz:
+    narrow:
+      one: "{0}Hz"
+      other: "{0}Hz"
+  em:
+    narrow:
+      one: "{0}em"
+      other: "{0}em"
+  pixel:
+    narrow:
+      one: "{0}px"
+      other: "{0}px"
+  pixel-per-centimeter:
+    narrow:
+      one: "{0}ppcm"
+      other: "{0} ppcm"
+  pixel-per-inch:
+    narrow:
+      one: "{0}ppi"
+      other: "{0}ppi"
+  earth-radius:
+    narrow:
+      one: "{0}R⊕"
+      other: "{0}R⊕"
+  decimeter:
+    narrow:
+      one: "{0}dm"
+      other: "{0}dm"
+  micrometer:
+    narrow:
+      one: "{0}μm"
+      other: "{0}μm"
+  nanometer:
+    narrow:
+      one: "{0}nm"
+      other: "{0}nm"
+  picometer:
+    narrow:
+      one: "{0}pm"
+      other: "{0}pm"
+  mile:
+    narrow:
+      one: "{0}mi"
+      other: "{0}mi"
+  yard:
+    narrow:
+      one: "{0}yd"
+      other: "{0}yd"
+  foot:
+    narrow:
+      one: "{0}′"
+      other: "{0} ft"
+  tonne:
+    narrow:
+      one: "{0}t"
+      other: "{0}t"
+  milligram:
+    narrow:
+      one: "{0}mg"
+      other: "{0}mg"
+  microgram:
+    narrow:
+      one: "{0}μg"
+      other: "{0}μg"
+  ton:
+    narrow:
+      one: "{0}tn"
+      other: "{0}tn"
+  stone:
+    narrow:
+      one: "{0} st"
+      other: "{0}st"
+  pound:
+    narrow:
+      one: "{0}#"
+      other: "{0}#"
+  ounce:
+    narrow:
+      one: "{0}oz"
+      other: "{0}oz"
+  ounce-troy:
+    narrow:
+      one: "{0}oz t"
+      other: "{0}oz t"
+  carat:
+    narrow:
+      one: "{0}CD"
+      other: "{0}CD"
+  dalton:
+    narrow:
+      one: "{0}Da"
+      other: "{0}Da"
+  earth-mass:
+    narrow:
+      one: "{0}M⊕"
+      other: "{0}M⊕"
+  solar-mass:
+    narrow:
+      one: "{0}M☉"
+      other: "{0}M☉"
+  grain:
+    narrow:
+      one: "{0}gr"
+      other: "{0}gr"
+  gigawatt:
+    narrow:
+      one: "{0}GW"
+      other: "{0}GW"
+  megawatt:
+    narrow:
+      one: "{0}MW"
+      other: "{0}MW"
+  kilowatt:
+    narrow:
+      one: "{0}MW"
+      other: "{0}MW"
+  watt:
+    narrow:
+      one: "{0}W"
+      other: "{0}W"
+  milliwatt:
+    narrow:
+      one: "{0}mW"
+      other: "{0}mW"
+  horsepower:
+    narrow:
+      one: "{0}hp"
+      other: "{0}hp"
+  millimeter-ofhg:
+    narrow:
+      one: "{0}mmHg"
+      other: "{0}mmHg"
+  pound-force-per-square-inch:
+    narrow:
+      one: "{0} psi"
+      other: "{0}psi"
+  inch-ofhg:
+    narrow:
+      one: "{0}″ Hg"
+      other: "{0}″ Hg"
+  bar:
+    narrow:
+      one: "{0}bar"
+      other: "{0}bar"
+  millibar:
+    narrow:
+      one: "{0}mb"
+      other: "{0}mb"
+  atmosphere:
+    narrow:
+      one: "{0}atm"
+      other: "{0}atm"
+  pascal:
+    narrow:
+      one: "{0}Pa"
+      other: "{0}Pa"
+  hectopascal:
+    narrow:
+      one: "{0}hPa"
+      other: "{0}hPa"
+  kilopascal:
+    narrow:
+      one: "{0}kPa"
+      other: "{0}kPa"
+  megapascal:
+    narrow:
+      one: "{0}kPa"
+      other: "{0}kPa"
+  kilometer-per-hour:
+    narrow:
+      one: "{0}kph"
+      other: "{0} km/h"
+  meter-per-second:
+    narrow:
+      one: "{0}m/s"
+      other: "{0}m/s"
+  mile-per-hour:
+    narrow:
+      display_name: mi/hr
+      one: "{0}mph"
+      other: "{0}mph"
+  celsius:
+    narrow:
+      one: "{0}°"
+      other: "{0}°"
+  kelvin:
+    narrow:
+      one: "{0}K"
+      other: "{0}K"
+  cubic-kilometer:
+    narrow:
+      one: "{0}km³"
+      other: "{0}km³"
+  cubic-meter:
+    narrow:
+      one: "{0}m³"
+      other: "{0}m³"
+  cubic-centimeter:
+    narrow:
+      one: "{0}m³"
+      other: "{0}m³"
+  cubic-mile:
+    narrow:
+      one: "{0}mi³"
+      other: "{0}mi³"
+  cubic-yard:
+    narrow:
+      one: "{0}yd³"
+      other: "{0}yd³"
+  cubic-foot:
+    narrow:
+      one: "{0}ft³"
+      other: "{0}ft³"
+  cubic-inch:
+    narrow:
+      one: "{0}ft³"
+      other: "{0}ft³"
+  megaliter:
+    narrow:
+      one: "{0}ML"
+      other: "{0}ML"
+  hectoliter:
+    narrow:
+      one: "{0}hL"
+      other: "{0}hL"
+  deciliter:
+    narrow:
+      one: "{0}hL"
+      other: "{0}hL"
+  centiliter:
+    narrow:
+      one: "{0}cL"
+      other: "{0}cL"
+  milliliter:
+    narrow:
+      one: "{0}cL"
+      other: "{0}cL"
+  pint-metric:
+    narrow:
+      display_name: pt
+      one: "{0}mpt"
+      other: "{0}mpt"
+  cup-metric:
+    narrow:
+      one: "{0}mc"
+      other: "{0}mc"
+  acre-foot:
+    narrow:
+      one: "{0}ac ft"
+      other: "{0}ac ft"
+  bushel:
+    narrow:
+      one: "{0}bu"
+      other: "{0}bu"
+  gallon-imperial:
+    narrow:
+      display_name: Imp gal
+      one: "{0}galIm"
+      other: "{0}galIm"
+      per_unit_pattern: "{0}/galIm"
+  quart:
+    narrow:
+      one: "{0}qt"
+      other: "{0}qt"
+  pint:
+    narrow:
+      one: "{0}pt"
+      other: "{0}pt"
+  cup:
+    narrow:
+      one: "{0}c"
+      other: "{0}c"
+  fluid-ounce-imperial:
+    narrow:
+      one: "{0}fl oz Im"
+      other: "{0}fl oz Im"
+  barrel:
+    narrow:
+      one: "{0}bbl"
+      other: "{0}bbl"
+  drop:
+    narrow:
+      display_name: dr
+      one: "{0}dr"
+      other: "{0}dr"
+  dram:
+    narrow:
+      display_name: fl.dr.
