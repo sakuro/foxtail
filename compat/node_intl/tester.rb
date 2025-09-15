@@ -24,6 +24,14 @@ class NodeIntlTester
     def conditional_match?
       status == :conditional_match
     end
+
+    def number_format?
+      id.start_with?("number_")
+    end
+
+    def datetime_format?
+      id.start_with?("datetime_")
+    end
   }
 
   def initialize
@@ -158,7 +166,7 @@ class NodeIntlTester
             end
 
             # Generate unique ID
-            id_parts = [style, notation, locale.tr("-", "_"), value.to_s.gsub("-", "neg").tr(".", "_")]
+            id_parts = ["number", style, notation, locale.tr("-", "_"), value.to_s.gsub("-", "neg").tr(".", "_")]
             # Add unit name to ID for unit style
             if style == "unit" && options[:unit]
               id_parts << options[:unit].tr("-", "_")
