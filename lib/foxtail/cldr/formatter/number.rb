@@ -62,7 +62,14 @@ module Foxtail
             style = @options[:style] || "decimal"
             notation = @options[:notation] || "standard"
 
-            # Apply currency-specific decimal digits if not overridden by options
+            # Apply scientific notation defaults first (takes precedence over currency defaults)
+            if notation == "scientific" || notation == "engineering"
+              # Apply Node.js Intl.NumberFormat defaults for scientific notation
+              # For percent style scientific notation, Node.js uses maximumFractionDigits: 0
+              @options[:maximumFractionDigits] ||= (style == "percent" ? 0 : 3)
+            end
+
+            # Apply currency-specific decimal digits if not overridden by options or scientific notation
             if style == "currency"
               currency_code = @options[:currency] || "USD"
               unless @options[:minimumFractionDigits] || @options[:maximumFractionDigits]
@@ -70,13 +77,6 @@ module Foxtail
                 @options[:minimumFractionDigits] = currency_digits
                 @options[:maximumFractionDigits] = currency_digits
               end
-            end
-
-            # Apply scientific notation defaults
-            if notation == "scientific" || notation == "engineering"
-              # Apply Node.js Intl.NumberFormat defaults for scientific notation
-              # For percent style scientific notation, Node.js uses maximumFractionDigits: 0
-              @options[:maximumFractionDigits] ||= (style == "percent" ? 0 : 3)
             end
 
             @options.freeze
