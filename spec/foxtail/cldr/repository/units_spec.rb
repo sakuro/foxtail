@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
 require "spec_helper"
-require "locale"
 
 RSpec.describe Foxtail::CLDR::Repository::Units do
-  let(:locale) { Locale::Tag.parse("en") }
-  let(:units) { described_class.new(locale) }
+  let(:units) { Foxtail::CLDR::Repository::Units.new(locale("en")) }
 
   describe "#unit_name" do
     it "returns localized unit display name" do

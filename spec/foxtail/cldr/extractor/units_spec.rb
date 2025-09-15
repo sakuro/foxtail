@@ -57,17 +57,17 @@ RSpec.describe Foxtail::CLDR::Extractor::Units do
           }
         }
       }
-      expect(extractor.send(:data?, valid_data)).to be(true)
+      expect(extractor.__send__(:data?, valid_data)).to be(true)
     end
 
     it "returns false for empty units data" do
       empty_data = {"units" => {}}
-      expect(extractor.send(:data?, empty_data)).to be(false)
+      expect(extractor.__send__(:data?, empty_data)).to be(false)
     end
 
     it "returns false for invalid data structure" do
       invalid_data = {"units" => "not a hash"}
-      expect(extractor.send(:data?, invalid_data)).to be(false)
+      expect(extractor.__send__(:data?, invalid_data)).to be(false)
     end
   end
 end

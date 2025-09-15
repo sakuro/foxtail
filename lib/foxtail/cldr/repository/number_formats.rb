@@ -141,8 +141,6 @@ module Foxtail
         def compact_decimal_significant_digits
           {maximum: 2, minimum: 1}
         end
-
-
       end
     end
   end

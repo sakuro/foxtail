@@ -180,7 +180,6 @@ module Foxtail
 
           compact_formats
         end
-
       end
     end
   end

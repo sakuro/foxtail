@@ -24,7 +24,7 @@ module Foxtail
         # @param unit [String] Unit name (e.g., "kilometer", "pound")
         # @param width [Symbol] Display width (:long, :short, :narrow)
         # @return [String] Localized unit name, or unit name if not found
-        def unit_name(unit, width = :long)
+        def unit_name(unit, width=:long)
           name = @resolver.resolve("units.#{unit}.#{width}.display_name", "units")
           name || unit
         end
@@ -35,7 +35,7 @@ module Foxtail
         # @param width [Symbol] Display width (:long, :short, :narrow)
         # @param count [Symbol] Plural form (:one, :other, etc.)
         # @return [String] Unit pattern with {0} placeholder, or nil if not found
-        def unit_pattern(unit, width = :long, count = :other)
+        def unit_pattern(unit, width=:long, count=:other)
           @resolver.resolve("units.#{unit}.#{width}.#{count}", "units")
         end
 
@@ -52,7 +52,7 @@ module Foxtail
         # @param unit [String] Unit name
         # @param width [Symbol] Display width
         # @return [String] Gender (e.g., "masculine", "feminine", "neuter")
-        def unit_gender(unit, width = :long)
+        def unit_gender(unit, width=:long)
           @resolver.resolve("units.#{unit}.#{width}.gender", "units")
         end
 
@@ -61,7 +61,7 @@ module Foxtail
         # @param unit [String] Unit name
         # @param width [Symbol] Display width
         # @return [String] Per-unit pattern with {0} placeholder
-        def per_unit_pattern(unit, width = :long)
+        def per_unit_pattern(unit, width=:long)
           @resolver.resolve("units.#{unit}.#{width}.per_unit_pattern", "units")
         end
 
@@ -89,7 +89,9 @@ module Foxtail
           unit_data = @resolver.resolve("units.#{unit}", "units")
           return [] unless unit_data
 
-          unit_data.keys.reject { |key| key == "category" }.map(&:to_sym)
+          keys = unit_data.keys.reject {|key| key == "category" }
+          keys.map!(&:to_sym)
+          keys
         end
 
         # Get all available counts for a unit and width
@@ -97,11 +99,14 @@ module Foxtail
         # @param unit [String] Unit name
         # @param width [Symbol] Display width
         # @return [Array<Symbol>] List of available counts
-        def available_counts(unit, width = :long)
+        def available_counts(unit, width=:long)
           width_data = @resolver.resolve("units.#{unit}.#{width}", "units")
           return [] unless width_data
 
-          width_data.keys.reject { |key| %w[display_name gender per_unit_pattern].include?(key) }.map(&:to_sym)
+          excluded_keys = %w[display_name gender per_unit_pattern]
+          keys = width_data.keys.reject {|key| excluded_keys.include?(key) }
+          keys.map!(&:to_sym)
+          keys
         end
       end
     end
