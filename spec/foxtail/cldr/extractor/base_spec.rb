@@ -24,13 +24,13 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     end
   end
 
-  let(:test_source_dir) { File.join(Dir.tmpdir, "test_cldr_source") }
-  let(:test_output_dir) { File.join(Dir.tmpdir, "test_cldr_output") }
+  let(:test_source_dir) { Pathname(Dir.tmpdir) + "test_cldr_source" }
+  let(:test_output_dir) { Pathname(Dir.tmpdir) + "test_cldr_output" }
   let(:extractor) { test_extractor_class.new(source_dir: test_source_dir, output_dir: test_output_dir) }
 
   before do
     # Setup test directory structure with fixtures
-    FileUtils.mkdir_p(test_output_dir)
+    test_output_dir.mkpath
     setup_extractor_test_fixture(test_source_dir)
 
     # Create parent_locales.yml for Extractor tests
@@ -45,7 +45,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
         "es_MX" => "es_419"
       }
     }
-    File.write(File.join(test_output_dir, "parent_locales.yml"), parent_locales_data.to_yaml)
+    (test_output_dir + "parent_locales.yml").write(parent_locales_data.to_yaml)
   end
 
   after do
@@ -56,8 +56,8 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
   describe "#initialize" do
     it "sets source and output directories" do
-      expect(extractor.source_dir).to eq(test_source_dir)
-      expect(extractor.output_dir).to eq(test_output_dir)
+      expect(extractor.source_dir).to eq(Pathname(test_source_dir))
+      expect(extractor.output_dir).to eq(Pathname(test_output_dir))
     end
   end
 
@@ -72,8 +72,8 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
       extractor.extract_all
 
       %w[en fr de].each do |locale|
-        file_path = File.join(test_output_dir, locale, "test_extractor.yml")
-        expect(File.exist?(file_path)).to be true
+        file_path = test_output_dir + locale + "test_extractor.yml"
+        expect(file_path.exist?).to be true
       end
     end
   end
@@ -97,9 +97,9 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
       it "creates output file" do
         extractor.extract_locale("en")
-        file_path = File.join(test_output_dir, "en", "test_extractor.yml")
+        file_path = test_output_dir + "en" + "test_extractor.yml"
 
-        expect(File.exist?(file_path)).to be true
+        expect(file_path.exist?).to be true
 
         # Verify file content has metadata
         content = YAML.load_file(file_path)
@@ -136,15 +136,15 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
         empty_extractor.extract_locale("en")
 
-        file_path = File.join(test_output_dir, "en", "empty_data.yml")
-        expect(File.exist?(file_path)).to be false
+        file_path = test_output_dir + "en" + "empty_data.yml"
+        expect(file_path.exist?).to be false
       end
     end
 
     context "when parent_locales.yml is missing" do
       before do
         # Remove parent_locales.yml to test error handling
-        FileUtils.rm_f(File.join(test_output_dir, "parent_locales.yml"))
+        (test_output_dir + "parent_locales.yml").delete if (test_output_dir + "parent_locales.yml").exist?
       end
 
       it "raises ArgumentError with appropriate message" do
@@ -176,7 +176,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     context "when source directory is invalid" do
       it "raises ArgumentError if source directory does not exist" do
         bad_extractor = test_extractor_class.new(
-          source_dir: "/nonexistent/path",
+          source_dir: Pathname("/nonexistent/path"),
           output_dir: test_output_dir
         )
 
@@ -187,7 +187,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
   end
 
   describe "#should_skip_write?" do
-    let(:file_path) { File.join(test_output_dir, "test_file.yml") }
+    let(:file_path) { test_output_dir + "test_file.yml" }
 
     context "when file does not exist" do
       it "returns false" do
@@ -206,7 +206,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
       end
 
       before do
-        File.write(file_path, existing_data.to_yaml)
+        file_path.write(existing_data.to_yaml)
       end
 
       context "when only generated_at differs" do
@@ -257,7 +257,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
       context "when existing file is corrupted" do
         before do
-          File.write(file_path, "invalid yaml content: [")
+          file_path.write("invalid yaml content: [")
         end
 
         it "returns false" do
@@ -267,7 +267,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
       context "when existing file contains non-hash data" do
         before do
-          File.write(file_path, "just a string".to_yaml)
+          file_path.write("just a string".to_yaml)
         end
 
         it "returns false" do
@@ -281,15 +281,15 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     let(:locale_id) { "en" }
     let(:filename) { "test_extractor.yml" }
     let(:test_data) { {"test_key" => "test_value"} }
-    let(:file_path) { File.join(test_output_dir, locale_id, filename) }
+    let(:file_path) { test_output_dir + locale_id + filename }
 
     context "when file does not exist" do
       it "writes the file" do
-        expect(File.exist?(file_path)).to be false
+        expect(file_path.exist?).to be false
 
         extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
 
-        expect(File.exist?(file_path)).to be true
+        expect(file_path.exist?).to be true
         content = YAML.load_file(file_path)
         expect(content["test_key"]).to eq("test_value")
       end
@@ -305,7 +305,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
         # Write initial file
         extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
         sleep(0.01) # Wait to ensure mtime would change if file is rewritten
-        File.mtime(file_path)
+        file_path.mtime
       end
 
       it "skips writing when only generated_at would differ" do
@@ -314,7 +314,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
         extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
 
         # File modification time should not change when skipping
-        expect(File.mtime(file_path)).to eq(initial_mtime)
+        expect(file_path.mtime).to eq(initial_mtime)
 
         # Should have logged exactly once (from initial write in let block)
         expect(Foxtail::CLDR.logger).to have_received(:debug).once
@@ -326,7 +326,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
         # Write initial file
         extractor.__send__(:write_yaml_file, locale_id, filename, {"old_key" => "old_value"})
         sleep(0.01) # Wait to ensure mtime would change
-        File.mtime(file_path)
+        file_path.mtime
       end
 
       it "overwrites the file when content differs" do
@@ -335,7 +335,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
         extractor.__send__(:write_yaml_file, locale_id, filename, test_data)
 
         # File should be updated
-        expect(File.mtime(file_path)).to be > initial_mtime
+        expect(file_path.mtime).to be > initial_mtime
 
         content = YAML.load_file(file_path)
         expect(content["test_key"]).to eq("test_value")

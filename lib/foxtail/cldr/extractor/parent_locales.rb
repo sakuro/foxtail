@@ -19,15 +19,15 @@ module Foxtail
             "parent_locales" => extract_parent_locales_data
           }
 
-          output_path = File.join(@output_dir, "parent_locales.yml")
-          FileUtils.mkdir_p(File.dirname(output_path))
+          output_path = @output_dir + "parent_locales.yml"
+          output_path.parent.mkpath
 
           # Skip writing if only generated_at differs
           if should_skip_write?(output_path, parent_locales_data)
             return parent_locales_data
           end
 
-          File.write(output_path, YAML.dump(parent_locales_data))
+          output_path.write(YAML.dump(parent_locales_data))
           CLDR.logger.info "ParentLocales extraction complete"
 
           parent_locales_data
@@ -35,12 +35,12 @@ module Foxtail
 
         # Load parent locale mappings directly from CLDR source (ParentLocales extractor only)
         def load_parent_locales_from_source
-          supplemental_path = File.join(@source_dir, "common", "supplemental", "supplementalData.xml")
+          supplemental_path = @source_dir + "common" + "supplemental" + "supplementalData.xml"
 
           parents = {}
 
           begin
-            doc = REXML::Document.new(File.read(supplemental_path))
+            doc = REXML::Document.new(supplemental_path.read)
 
             # Extract parent locale relationships
             doc.elements.each("supplementalData/parentLocales/parentLocale") do |parent_element|

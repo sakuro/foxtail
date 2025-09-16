@@ -3,8 +3,8 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Extractor::PluralRules do
-  let(:fixture_source_dir) { File.join(Dir.tmpdir, "test_plural_rules_source") }
-  let(:temp_output_dir) { Dir.mktmpdir }
+  let(:fixture_source_dir) { Pathname(Dir.tmpdir) + "test_plural_rules_source" }
+  let(:temp_output_dir) { Pathname(Dir.mktmpdir) }
   let(:extractor) { Foxtail::CLDR::Extractor::PluralRules.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
 
   before do
@@ -23,9 +23,9 @@ RSpec.describe Foxtail::CLDR::Extractor::PluralRules do
 
       # Should create plural rules for various locales
       %w[en ja ru].each do |locale|
-        output_file = File.join(temp_output_dir, locale, "plural_rules.yml")
+        output_file = temp_output_dir + locale + "plural_rules.yml"
 
-        next unless File.exist?(output_file)
+        next unless output_file.exist?
 
         data = YAML.load_file(output_file)
         expect(data["locale"]).to eq(locale)
@@ -38,8 +38,8 @@ RSpec.describe Foxtail::CLDR::Extractor::PluralRules do
     it "extracts rules for specific locale" do
       extractor.extract_locale("en")
 
-      output_file = File.join(temp_output_dir, "en", "plural_rules.yml")
-      expect(File.exist?(output_file)).to be true
+      output_file = temp_output_dir + "en" + "plural_rules.yml"
+      expect(output_file.exist?).to be true
 
       data = YAML.load_file(output_file)
       expect(data["locale"]).to eq("en")
@@ -51,7 +51,7 @@ RSpec.describe Foxtail::CLDR::Extractor::PluralRules do
   describe "private methods" do
     describe "#extract_all_locales_from_supplemental" do
       it "parses supplemental plurals.xml" do
-        doc = REXML::Document.new(File.read(File.join(fixture_source_dir, "common", "supplemental", "plurals.xml")))
+        doc = REXML::Document.new((fixture_source_dir + "common" + "supplemental" + "plurals.xml").read)
         locale_rules = extractor.__send__(:extract_all_locales_from_supplemental, doc)
 
         expect(locale_rules).to be_a(Hash)

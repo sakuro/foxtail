@@ -11,7 +11,7 @@ module Foxtail
         def initialize(locale, data_dir: nil)
           @locale = locale
           @locale_id = locale.respond_to?(:to_simple) ? locale.to_simple.to_s : locale.to_s
-          @data_dir = data_dir || File.join(__dir__, "..", "..", "..", "..", "data", "cldr")
+          @data_dir = data_dir ? Pathname(data_dir) : Foxtail.cldr_dir
           @inheritance = Inheritance.instance
           @cache = {}
           @loaded_locales = {}
@@ -95,12 +95,12 @@ module Foxtail
           cache_key = [locale_id, data_type]
           return @loaded_locales[cache_key] if @loaded_locales.key?(cache_key)
 
-          file_path = File.join(@data_dir, locale_id, "#{data_type}.yml")
+          file_path = @data_dir + locale_id + "#{data_type}.yml"
           CLDR.logger.debug "Attempting to load: #{file_path}"
 
-          data = if File.exist?(file_path)
+          data = if file_path.exist?
                    begin
-                     loaded_data = YAML.load_file(file_path)
+                     loaded_data = YAML.load_file(file_path.to_s)
                      CLDR.logger.debug "Successfully loaded #{file_path} for locale #{locale_id}"
                      loaded_data
                    rescue => e

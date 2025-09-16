@@ -3,7 +3,7 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Repository::Resolver do
-  let(:temp_dir) { Dir.mktmpdir }
+  let(:temp_dir) { Pathname(Dir.mktmpdir) }
   let(:data_dir) { temp_dir }
   let(:inheritance) { Foxtail::CLDR::Repository::Inheritance.instance }
 
@@ -94,7 +94,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
     context "with missing intermediate locales" do
       before do
         # Create only root and ja_JP, skip ja
-        FileUtils.rm_rf(File.join(data_dir, "ja"))
+        FileUtils.rm_rf(data_dir + "ja")
       end
 
       let(:resolver) { Foxtail::CLDR::Repository::Resolver.new("ja_JP", data_dir:) }
@@ -148,7 +148,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
     context "with locale aliases" do
       it "resolves locale aliases including zh_TW to zh_Hant_TW" do
         # Use the real data/cldr directory for testing
-        data_dir = Foxtail::CLDR::Repository::Base.data_dir
+        data_dir = Foxtail.cldr_dir
 
         # First test that alias loading works
         aliases = inheritance.load_locale_aliases(data_dir)
@@ -171,7 +171,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
       end
 
       it "handles territory aliases in compound locales" do
-        data_dir = Foxtail::CLDR::Repository::Base.data_dir
+        data_dir = Foxtail.cldr_dir
         aliases = inheritance.load_locale_aliases(data_dir)
 
         # Test with simple compound case that works with current implementation
@@ -184,7 +184,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
       end
 
       it "returns original locale if no alias exists" do
-        data_dir = Foxtail::CLDR::Repository::Base.data_dir
+        data_dir = Foxtail.cldr_dir
         aliases = inheritance.load_locale_aliases(data_dir)
 
         canonical = inheritance.resolve_locale_alias("en_US", aliases)
@@ -202,7 +202,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
             "es_MX" => "es_419"
           }
         }
-        File.write(File.join(data_dir, "parent_locales.yml"), parent_locales_data.to_yaml)
+        (data_dir + "parent_locales.yml").write(parent_locales_data.to_yaml)
 
         # Create test data for inheritance chain testing
         create_test_data("root", {
@@ -239,7 +239,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
 
       it "falls back to algorithmic inheritance when parent locales file is missing" do
         # Remove parent locales file
-        FileUtils.rm(File.join(data_dir, "parent_locales.yml"))
+        (data_dir + "parent_locales.yml").delete
 
         resolver_without_parents = Foxtail::CLDR::Repository::Resolver.new("en_AU", data_dir:)
 
@@ -256,18 +256,18 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
   end
 
   private def create_test_data(locale, data)
-    locale_dir = File.join(data_dir, locale)
-    FileUtils.mkdir_p(locale_dir)
+    locale_dir = data_dir + locale
+    locale_dir.mkpath
 
     data.each do |data_type, content|
-      file_path = File.join(locale_dir, "#{data_type}.yml")
+      file_path = locale_dir + "#{data_type}.yml"
       yaml_content = {
         "locale" => locale,
         "generated_at" => Time.now.utc.iso8601,
         "cldr_version" => "46",
         data_type => content
       }
-      File.write(file_path, yaml_content.to_yaml)
+      file_path.write(yaml_content.to_yaml)
     end
   end
 end

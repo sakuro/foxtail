@@ -82,28 +82,38 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
 
     describe "#detect_from_etc_localtime" do
       it "extracts timezone ID from symlink target" do
-        allow(File).to receive(:symlink?).with("/etc/localtime").and_return(true)
-        allow(File).to receive(:readlink).with("/etc/localtime").and_return("/usr/share/zoneinfo/Asia/Tokyo")
+        localtime_path = instance_double(Pathname)
+        target_path = instance_double(Pathname)
+        allow(Pathname).to receive(:new).with("/etc/localtime").and_return(localtime_path)
+        allow(localtime_path).to receive_messages(symlink?: true, readlink: target_path)
+        allow(target_path).to receive(:to_s).and_return("/usr/share/zoneinfo/Asia/Tokyo")
 
         expect(detector.__send__(:detect_from_etc_localtime)).to eq("Asia/Tokyo")
       end
 
       it "handles relative symlink paths" do
-        allow(File).to receive(:symlink?).with("/etc/localtime").and_return(true)
-        allow(File).to receive(:readlink).with("/etc/localtime").and_return("../usr/share/zoneinfo/Europe/London")
+        localtime_path = instance_double(Pathname)
+        target_path = instance_double(Pathname)
+        allow(Pathname).to receive(:new).with("/etc/localtime").and_return(localtime_path)
+        allow(localtime_path).to receive_messages(symlink?: true, readlink: target_path)
+        allow(target_path).to receive(:to_s).and_return("../usr/share/zoneinfo/Europe/London")
 
         expect(detector.__send__(:detect_from_etc_localtime)).to eq("Europe/London")
       end
 
       it "returns nil if not a symlink" do
-        allow(File).to receive(:symlink?).with("/etc/localtime").and_return(false)
+        localtime_path = instance_double(Pathname)
+        allow(Pathname).to receive(:new).with("/etc/localtime").and_return(localtime_path)
+        allow(localtime_path).to receive(:symlink?).and_return(false)
 
         expect(detector.__send__(:detect_from_etc_localtime)).to be_nil
       end
 
       it "returns nil on read error" do
-        allow(File).to receive(:symlink?).with("/etc/localtime").and_return(true)
-        allow(File).to receive(:readlink).with("/etc/localtime").and_raise(Errno::ENOENT)
+        localtime_path = instance_double(Pathname)
+        allow(Pathname).to receive(:new).with("/etc/localtime").and_return(localtime_path)
+        allow(localtime_path).to receive(:symlink?).and_return(true)
+        allow(localtime_path).to receive(:readlink).and_raise(Errno::ENOENT)
 
         expect(detector.__send__(:detect_from_etc_localtime)).to be_nil
       end
@@ -111,21 +121,25 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
 
     describe "#detect_from_etc_timezone" do
       it "reads timezone ID from file" do
-        allow(File).to receive(:readable?).with("/etc/timezone").and_return(true)
-        allow(File).to receive(:read).with("/etc/timezone").and_return("Europe/London\n")
+        timezone_file = instance_double(Pathname)
+        allow(Pathname).to receive(:new).with("/etc/timezone").and_return(timezone_file)
+        allow(timezone_file).to receive_messages(readable?: true, read: "Europe/London\n")
 
         expect(detector.__send__(:detect_from_etc_timezone)).to eq("Europe/London")
       end
 
       it "returns nil for invalid format" do
-        allow(File).to receive(:readable?).with("/etc/timezone").and_return(true)
-        allow(File).to receive(:read).with("/etc/timezone").and_return("InvalidFormat")
+        timezone_file = instance_double(Pathname)
+        allow(Pathname).to receive(:new).with("/etc/timezone").and_return(timezone_file)
+        allow(timezone_file).to receive_messages(readable?: true, read: "InvalidFormat")
 
         expect(detector.__send__(:detect_from_etc_timezone)).to be_nil
       end
 
       it "returns nil if file not readable" do
-        allow(File).to receive(:readable?).with("/etc/timezone").and_return(false)
+        timezone_file = instance_double(Pathname)
+        allow(Pathname).to receive(:new).with("/etc/timezone").and_return(timezone_file)
+        allow(timezone_file).to receive(:readable?).and_return(false)
 
         expect(detector.__send__(:detect_from_etc_timezone)).to be_nil
       end

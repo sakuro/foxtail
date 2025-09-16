@@ -2,6 +2,7 @@
 
 require "fileutils"
 require "foxtail"
+require "pathname"
 require "rake/clean"
 require "shellwords"
 
@@ -16,21 +17,19 @@ CLDR_VERSION = "46"
 CLDR_CORE_URL = "https://unicode.org/Public/cldr/#{CLDR_VERSION}/core.zip".freeze
 
 # Define paths
-PROJECT_ROOT = File.expand_path("../..", __dir__)
-TMP_DIR = File.join(PROJECT_ROOT, "tmp")
-DATA_DIR = File.join(PROJECT_ROOT, "data", "cldr")
-CLDR_ZIP_PATH = File.join(TMP_DIR, "cldr-core.zip")
-CLDR_EXTRACT_DIR = File.join(TMP_DIR, "cldr-core")
+TMP_DIR = Foxtail::ROOT + "tmp"
+CLDR_ZIP_PATH = TMP_DIR + "cldr-core.zip"
+CLDR_EXTRACT_DIR = TMP_DIR + "cldr-core"
 
 # Output file lists
-PLURAL_RULES_FILES = FileList[File.join(DATA_DIR, "*/plural_rules.yml")]
-NUMBER_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/number_formats.yml")]
-CURRENCIES_FILES = FileList[File.join(DATA_DIR, "*/currencies.yml")]
-UNITS_FILES = FileList[File.join(DATA_DIR, "*/units.yml")]
-TIMEZONE_NAMES_FILES = FileList[File.join(DATA_DIR, "*/timezone_names.yml")]
-DATETIME_FORMATS_FILES = FileList[File.join(DATA_DIR, "*/datetime_formats.yml")]
-LOCALE_ALIASES_FILE = File.join(DATA_DIR, "locale_aliases.yml")
-PARENT_LOCALES_FILE = File.join(DATA_DIR, "parent_locales.yml")
+PLURAL_RULES_FILES = FileList[Foxtail.cldr_dir.glob("*/plural_rules.yml").map(&:to_s)]
+NUMBER_FORMATS_FILES = FileList[Foxtail.cldr_dir.glob("*/number_formats.yml").map(&:to_s)]
+CURRENCIES_FILES = FileList[Foxtail.cldr_dir.glob("*/currencies.yml").map(&:to_s)]
+UNITS_FILES = FileList[Foxtail.cldr_dir.glob("*/units.yml").map(&:to_s)]
+TIMEZONE_NAMES_FILES = FileList[Foxtail.cldr_dir.glob("*/timezone_names.yml").map(&:to_s)]
+DATETIME_FORMATS_FILES = FileList[Foxtail.cldr_dir.glob("*/datetime_formats.yml").map(&:to_s)]
+LOCALE_ALIASES_FILE = Foxtail.cldr_dir + "locale_aliases.yml"
+PARENT_LOCALES_FILE = Foxtail.cldr_dir + "parent_locales.yml"
 
 # Clean tasks
 # CLEAN removes extracted CLDR source (can be re-extracted from zip)
@@ -45,7 +44,7 @@ CLOBBER.include(
   LOCALE_ALIASES_FILE,
   PARENT_LOCALES_FILE
 )
-CLOBBER.exclude(File.join(DATA_DIR, "README.md"))
+CLOBBER.exclude((Foxtail.cldr_dir + "README.md").to_s)
 # Keep the downloaded zip file to avoid re-downloading
 CLOBBER.exclude(CLDR_ZIP_PATH)
 
@@ -97,7 +96,7 @@ namespace :cldr do
     task parent_locales: %i[set_debug_logging download] do
       extractor = Foxtail::CLDR::Extractor::ParentLocales.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -107,7 +106,7 @@ namespace :cldr do
     task locale_aliases: %i[set_debug_logging download] do
       extractor = Foxtail::CLDR::Extractor::LocaleAliases.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -117,7 +116,7 @@ namespace :cldr do
     task metazone_mapping: %i[set_debug_logging download] do
       extractor = Foxtail::CLDR::Extractor::MetazoneMapping.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -135,23 +134,23 @@ namespace :cldr do
       extractors = [
         Foxtail::CLDR::Extractor::PluralRules.new(
           source_dir: CLDR_EXTRACT_DIR,
-          output_dir: DATA_DIR
+          output_dir: Foxtail.cldr_dir
         ),
         Foxtail::CLDR::Extractor::NumberFormats.new(
           source_dir: CLDR_EXTRACT_DIR,
-          output_dir: DATA_DIR
+          output_dir: Foxtail.cldr_dir
         ),
         Foxtail::CLDR::Extractor::Currencies.new(
           source_dir: CLDR_EXTRACT_DIR,
-          output_dir: DATA_DIR
+          output_dir: Foxtail.cldr_dir
         ),
         Foxtail::CLDR::Extractor::Units.new(
           source_dir: CLDR_EXTRACT_DIR,
-          output_dir: DATA_DIR
+          output_dir: Foxtail.cldr_dir
         ),
         Foxtail::CLDR::Extractor::DateTimeFormats.new(
           source_dir: CLDR_EXTRACT_DIR,
-          output_dir: DATA_DIR
+          output_dir: Foxtail.cldr_dir
         )
       ]
 
@@ -162,7 +161,7 @@ namespace :cldr do
     task plural_rules: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::PluralRules.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -172,7 +171,7 @@ namespace :cldr do
     task number_formats: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::NumberFormats.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -182,7 +181,7 @@ namespace :cldr do
     task currencies: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::Currencies.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -192,7 +191,7 @@ namespace :cldr do
     task units: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::Units.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -202,7 +201,7 @@ namespace :cldr do
     task timezone_names: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::TimezoneNames.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all
@@ -212,7 +211,7 @@ namespace :cldr do
     task datetime_formats: %i[set_debug_logging download parent_locales] do
       extractor = Foxtail::CLDR::Extractor::DateTimeFormats.new(
         source_dir: CLDR_EXTRACT_DIR,
-        output_dir: DATA_DIR
+        output_dir: Foxtail.cldr_dir
       )
 
       extractor.extract_all

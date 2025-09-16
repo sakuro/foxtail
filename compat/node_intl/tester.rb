@@ -8,7 +8,7 @@ require_relative "../../lib/foxtail"
 # Executes Node.js Intl.NumberFormat compatibility tests
 class NodeIntlTester
   # Path to Node.js comparator script
-  COMPARATOR_SCRIPT = Pathname.new(__dir__) / "comparator.js"
+  COMPARATOR_SCRIPT = Pathname(__dir__) / "comparator.js"
   private_constant :COMPARATOR_SCRIPT
 
   # Test result structure

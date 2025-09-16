@@ -9,15 +9,15 @@ module Foxtail
         def extract_all
           validate_source_directory
 
-          supplemental_path = File.join(source_dir, "common", "supplemental", "plurals.xml")
-          unless File.exist?(supplemental_path)
+          supplemental_path = @source_dir + "common" + "supplemental" + "plurals.xml"
+          unless supplemental_path.exist?
             CLDR.logger.warn "Plural rules file not found: #{supplemental_path}"
             return
           end
 
           CLDR.logger.info "Extracting PluralRules from supplemental data..."
 
-          doc = REXML::Document.new(File.read(supplemental_path))
+          doc = REXML::Document.new(supplemental_path.read)
           locale_rules_map = extract_all_locales_from_supplemental(doc)
 
           locale_rules_map.each do |locale_id, rules_data|
@@ -33,13 +33,13 @@ module Foxtail
         def extract_locale(locale_id)
           validate_source_directory
 
-          supplemental_path = File.join(source_dir, "common", "supplemental", "plurals.xml")
-          unless File.exist?(supplemental_path)
+          supplemental_path = @source_dir + "common" + "supplemental" + "plurals.xml"
+          unless supplemental_path.exist?
             CLDR.logger.warn "Plural rules file not found: #{supplemental_path}"
             return
           end
 
-          doc = REXML::Document.new(File.read(supplemental_path))
+          doc = REXML::Document.new(supplemental_path.read)
           locale_rules_map = extract_all_locales_from_supplemental(doc)
 
           if locale_rules_map.key?(locale_id)

@@ -7,7 +7,7 @@ require_relative "ast_comparator"
 # Executes fluent.js compatibility tests
 class CompatibilityTester
   # Path to fluent.js fixtures
-  SYNTAX_FIXTURES_ROOT = Pathname.new(__dir__).parent.parent / "fluent.js" / "fluent-syntax" / "test"
+  SYNTAX_FIXTURES_ROOT = Pathname(__dir__).parent.parent / "fluent.js" / "fluent-syntax" / "test"
   private_constant :SYNTAX_FIXTURES_ROOT
   STRUCTURE_FIXTURES = SYNTAX_FIXTURES_ROOT / "fixtures_structure"
   private_constant :STRUCTURE_FIXTURES
@@ -60,7 +60,7 @@ class CompatibilityTester
 
   # Load expected AST from JSON fixture
   def load_expected_ast(json_path)
-    content = File.read(json_path, encoding: "utf-8")
+    content = json_path.read(encoding: "utf-8")
     JSON.parse(content)
   rescue JSON::ParserError => e
     raise StandardError, "Failed to parse JSON fixture #{json_path}: #{e.message}"
@@ -68,7 +68,7 @@ class CompatibilityTester
 
   # Load FTL source content
   def load_ftl_source(ftl_path)
-    File.read(ftl_path, encoding: "utf-8")
+    ftl_path.read(encoding: "utf-8")
   rescue Encoding::InvalidByteSequenceError => e
     raise StandardError, "Failed to read FTL fixture #{ftl_path}: #{e.message}"
   end

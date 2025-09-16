@@ -18,11 +18,6 @@ module Foxtail
           end
         end
 
-        # Get the root CLDR data directory path
-        def self.data_dir
-          File.expand_path("../../../../data/cldr", __dir__)
-        end
-
         def initialize(locale)
           @locale = locale
           @resolver = Resolver.new(@locale)
@@ -46,7 +41,7 @@ module Foxtail
         private def find_available_data_file
           locale_candidates.each do |candidate|
             path = data_file_path(candidate)
-            return path if File.exist?(path)
+            return path if path.exist?
           end
           nil
         end
@@ -62,7 +57,7 @@ module Foxtail
 
         # Construct data file path for a given locale candidate
         private def data_file_path(locale_str)
-          File.join(self.class.data_dir, locale_str, data_filename)
+          Foxtail.cldr_dir + locale_str + data_filename
         end
 
         # Load CLDR data with fallback support
@@ -70,7 +65,7 @@ module Foxtail
           data_path = find_available_data_file
           return {} unless data_path
 
-          YAML.load_file(data_path) || {}
+          YAML.load_file(data_path.to_s) || {}
         end
 
         # Automatically derive data filename from class name using inflector

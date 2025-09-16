@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "dry/inflector"
-require "fileutils"
 require "pathname"
 require "rexml/document"
 require "time"
@@ -54,11 +53,11 @@ module Foxtail
         def extract_all
           validate_source_directory
 
-          locale_files = Dir.glob(File.join(source_dir, "common", "main", "*.xml"))
+          locale_files = @source_dir.glob("common/main/*.xml")
           CLDR.logger.info "Extracting #{self.class.name.split("::").last} from #{locale_files.size} locales..."
 
           locale_files.each_with_index do |xml_file, index|
-            locale_id = File.basename(xml_file, ".xml")
+            locale_id = xml_file.basename(".xml").to_s
             extract_locale(locale_id)
 
             # Progress indicator every 100 locales
@@ -118,9 +117,9 @@ module Foxtail
         end
 
         private def validate_source_directory
-          locales_dir = File.join(source_dir, "common", "main")
+          locales_dir = @source_dir + "common" + "main"
 
-          return if Dir.exist?(locales_dir)
+          return if locales_dir.exist?
 
           raise ArgumentError, "CLDR source directory not found: #{locales_dir}"
         end
@@ -130,11 +129,11 @@ module Foxtail
         end
 
         private def load_raw_locale_data(locale_id)
-          xml_path = File.join(source_dir, "common", "main", "#{locale_id}.xml")
-          return nil unless File.exist?(xml_path)
+          xml_path = @source_dir + "common" + "main" + "#{locale_id}.xml"
+          return nil unless xml_path.exist?
 
           begin
-            doc = REXML::Document.new(File.read(xml_path))
+            doc = REXML::Document.new(xml_path.read)
             extract_data_from_xml(doc)
           rescue => e
             CLDR.logger.warn "Could not load data for locale #{locale_id}: #{e.message}"
@@ -178,14 +177,14 @@ module Foxtail
         end
 
         private def ensure_locale_directory(locale_id)
-          locale_dir = File.join(output_dir, locale_id)
-          FileUtils.mkdir_p(locale_dir)
+          locale_dir = @output_dir + locale_id
+          locale_dir.mkpath
         end
 
         private def write_yaml_file(locale_id, filename, data)
           ensure_locale_directory(locale_id)
 
-          file_path = File.join(output_dir, locale_id, filename)
+          file_path = @output_dir + locale_id + filename
           @processed_files << file_path
 
           yaml_data = {
@@ -207,7 +206,7 @@ module Foxtail
           end
 
           CLDR.logger.debug "Writing #{relative_path(file_path)}"
-          File.write(file_path, yaml_data.to_yaml)
+          file_path.write(yaml_data.to_yaml)
         end
 
         # Check if we should skip writing the file
@@ -215,10 +214,10 @@ module Foxtail
         # @param new_data [Hash] Data to be written
         # @return [Boolean] true if write should be skipped
         private def should_skip_write?(file_path, new_data)
-          return false unless File.exist?(file_path)
+          return false unless file_path.exist?
 
           begin
-            existing_data = YAML.load_file(file_path)
+            existing_data = YAML.load_file(file_path.to_s)
             return false unless existing_data.is_a?(Hash)
 
             # Compare data without generated_at
@@ -232,14 +231,14 @@ module Foxtail
         # Clean up files that are no longer needed (not processed in this run)
         private def cleanup_obsolete_files
           filename = data_filename
-          existing_files = Dir.glob(File.join(output_dir, "*", filename))
+          existing_files = @output_dir.glob("*/#{filename}")
           obsolete_files = existing_files - @processed_files
 
           if obsolete_files.any?
             CLDR.logger.info "Removing #{obsolete_files.size} obsolete #{self.class.name.split("::").last} files..."
             obsolete_files.each do |file_path|
               CLDR.logger.debug "Removing obsolete file: #{relative_path(file_path)}"
-              File.delete(file_path)
+              file_path.delete
             end
           else
             CLDR.logger.debug "No obsolete #{self.class.name.split("::").last} files to remove"
@@ -257,7 +256,7 @@ module Foxtail
 
         # Convert absolute path to relative path from data output directory
         private def relative_path(file_path)
-          Pathname.new(file_path).relative_path_from(Pathname.new(output_dir)).to_s
+          file_path.relative_path_from(@output_dir)
         rescue ArgumentError
           # Fallback to absolute path if relative path calculation fails
           file_path

@@ -3,8 +3,8 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
-  let(:fixture_source_dir) { File.join(Dir.tmpdir, "test_datetime_formats_source") }
-  let(:temp_output_dir) { Dir.mktmpdir }
+  let(:fixture_source_dir) { Pathname(Dir.tmpdir) + "test_datetime_formats_source" }
+  let(:temp_output_dir) { Pathname(Dir.mktmpdir) }
   let(:extractor) { Foxtail::CLDR::Extractor::DateTimeFormats.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
 
   before do
@@ -28,7 +28,7 @@ RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
         "es_MX" => "es_419"
       }
     }
-    File.write(File.join(temp_output_dir, "parent_locales.yml"), parent_locales_data.to_yaml)
+    (temp_output_dir + "parent_locales.yml").write(parent_locales_data.to_yaml)
   end
 
   describe "#extract_locale" do
@@ -36,8 +36,8 @@ RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
       it "extracts datetime format data" do
         extractor.extract_locale("root")
 
-        output_file = File.join(temp_output_dir, "root", "datetime_formats.yml")
-        expect(File.exist?(output_file)).to be true
+        output_file = temp_output_dir + "root" + "datetime_formats.yml"
+        expect(output_file.exist?).to be true
 
         data = YAML.load_file(output_file)
         expect(data["locale"]).to eq("root")
@@ -49,8 +49,8 @@ RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
       it "extracts locale-specific datetime data" do
         extractor.extract_locale("en")
 
-        output_file = File.join(temp_output_dir, "en", "datetime_formats.yml")
-        expect(File.exist?(output_file)).to be true
+        output_file = temp_output_dir + "en" + "datetime_formats.yml"
+        expect(output_file.exist?).to be true
 
         data = YAML.load_file(output_file)
         expect(data["locale"]).to eq("en")
@@ -71,8 +71,8 @@ RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
       it "extracts Japanese datetime data" do
         extractor.extract_locale("ja")
 
-        output_file = File.join(temp_output_dir, "ja", "datetime_formats.yml")
-        expect(File.exist?(output_file)).to be true
+        output_file = temp_output_dir + "ja" + "datetime_formats.yml"
+        expect(output_file.exist?).to be true
 
         data = YAML.load_file(output_file)
         expect(data["locale"]).to eq("ja")
@@ -87,8 +87,8 @@ RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
 
       # Should create files for root, en, ja
       %w[root en ja].each do |locale|
-        output_file = File.join(temp_output_dir, locale, "datetime_formats.yml")
-        expect(File.exist?(output_file)).to be true
+        output_file = temp_output_dir + locale + "datetime_formats.yml"
+        expect(output_file.exist?).to be true
       end
     end
   end

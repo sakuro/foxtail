@@ -18,7 +18,7 @@ namespace :compatibility do
 
     # Generate and save markdown report
     markdown_report = reporter.generate_markdown_report
-    File.write("compat/fluentjs_compatibility_report.md", markdown_report)
+    Pathname("compat/fluentjs_compatibility_report.md").write(markdown_report)
 
     # Show summary and file info
     summary = reporter.generate_summary_report
@@ -37,7 +37,7 @@ namespace :compatibility do
 
     # Generate and save markdown report
     markdown_report = reporter.generate_markdown_report
-    File.write("compat/node_intl_compatibility_report.md", markdown_report)
+    Pathname("compat/node_intl_compatibility_report.md").write(markdown_report)
 
     # Show summary and file info
     summary = reporter.generate_summary_report

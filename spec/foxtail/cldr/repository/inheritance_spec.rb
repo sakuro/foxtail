@@ -38,8 +38,8 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
   end
 
   describe "#load_parent_locale_ids" do
-    let(:temp_dir) { Dir.mktmpdir }
-    let(:parent_locales_file) { File.join(temp_dir, "parent_locales.yml") }
+    let(:temp_dir) { Pathname(Dir.mktmpdir) }
+    let(:parent_locales_file) { temp_dir + "parent_locales.yml" }
 
     after { FileUtils.rm_rf(temp_dir) }
 
@@ -54,7 +54,7 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
         }
       }
 
-      File.write(parent_locales_file, yaml_content.to_yaml)
+      parent_locales_file.write(yaml_content.to_yaml)
 
       parents = inheritance.load_parent_locale_ids(temp_dir)
 
@@ -74,7 +74,7 @@ RSpec.describe Foxtail::CLDR::Repository::Inheritance do
     end
 
     it "raises ArgumentError when YAML is malformed" do
-      File.write(parent_locales_file, "invalid: yaml: [")
+      parent_locales_file.write("invalid: yaml: [")
 
       expect {
         inheritance.load_parent_locale_ids(temp_dir)

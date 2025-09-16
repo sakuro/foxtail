@@ -39,12 +39,12 @@ module Foxtail
         end
 
         private def load_traditional_aliases
-          supplemental_path = File.join(source_dir, "common", "supplemental", "supplementalMetadata.xml")
+          supplemental_path = @source_dir + "common" + "supplemental" + "supplementalMetadata.xml"
 
           aliases = {}
 
           begin
-            doc = REXML::Document.new(File.read(supplemental_path))
+            doc = REXML::Document.new(supplemental_path.read)
 
             # Extract language aliases
             doc.elements.each("supplementalData/metadata/alias/languageAlias") do |alias_element|
@@ -93,12 +93,12 @@ module Foxtail
         end
 
         private def load_likely_subtag_aliases
-          likely_subtags_path = File.join(source_dir, "common", "supplemental", "likelySubtags.xml")
+          likely_subtags_path = @source_dir + "common" + "supplemental" + "likelySubtags.xml"
 
           aliases = {}
 
           begin
-            doc = REXML::Document.new(File.read(likely_subtags_path))
+            doc = REXML::Document.new(likely_subtags_path.read)
 
             # Extract likely subtags that can serve as aliases
             doc.elements.each("supplementalData/likelySubtags/likelySubtag") do |subtag_element|
@@ -125,7 +125,7 @@ module Foxtail
         end
 
         private def write_alias_data(aliases)
-          file_path = File.join(output_dir, "locale_aliases.yml")
+          file_path = @output_dir + "locale_aliases.yml"
 
           yaml_data = {
             "generated_at" => Time.now.utc.iso8601,
@@ -138,14 +138,14 @@ module Foxtail
             return
           end
 
-          File.write(file_path, yaml_data.to_yaml)
+          file_path.write(yaml_data.to_yaml)
           CLDR.logger.debug "Wrote LocaleAliases to #{relative_path(file_path)}"
         end
 
         private def validate_source_directory
-          supplemental_dir = File.join(source_dir, "common", "supplemental")
+          supplemental_dir = @source_dir + "common" + "supplemental"
 
-          return if Dir.exist?(supplemental_dir)
+          return if supplemental_dir.exist?
 
           raise ArgumentError, "CLDR supplemental directory not found: #{supplemental_dir}"
         end
