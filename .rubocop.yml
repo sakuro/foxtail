@@ -81,10 +81,9 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Enabled: false
 
-# Currency formatting tests require nested context for clear organization of test cases
+# Complex test scenarios require nested context for clear organization
 RSpec/NestedGroups:
-  Exclude:
-    - 'spec/foxtail/cldr/formatter/number_spec.rb'  # Currency formatting tests need logical grouping
+  Enabled: false
 
 # The after(:all) hooks in compatibility tests are safe - they only output summaries
 # and don't modify state or create database records that could leak between tests
