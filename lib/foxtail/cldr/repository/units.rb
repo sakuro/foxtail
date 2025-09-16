@@ -6,18 +6,19 @@ module Foxtail
   module CLDR
     module Repository
       # CLDR unit data loader and processor
-      # Provides locale-specific unit information
       #
-      # Based on Unicode CLDR specifications:
-      # - Unit display names, patterns, and formatting
-      # - Supports localized unit names for different plural forms and widths
+      # Provides locale-specific unit information including display names,
+      # patterns, and formatting with support for localized unit names
+      # for different plural forms and widths.
       #
-      # Example usage:
+      # @example
       #   locale = Locale::Tag.parse("ja")
       #   units = Units.new(locale)
       #   units.unit_name("kilometer", :long)        # => "キロメートル"
       #   units.unit_pattern("kilometer", :long, :one) # => "{0} キロメートル"
       #   units.unit_category("kilometer")           # => "length"
+      #
+      # @see https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements
       class Units < Base
         # Get localized unit display name
         #

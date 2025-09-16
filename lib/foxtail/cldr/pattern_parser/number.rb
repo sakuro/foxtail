@@ -14,10 +14,17 @@ module Foxtail
       # The parsing follows CLDR number pattern specifications and produces
       # tokens that can be used by NumberFormatter for actual formatting.
       #
-      # @example Basic usage
+      # @example Basic decimal pattern
       #   parser = Number.new
       #   tokens = parser.parse("#,##0.00")
       #   # => [DigitToken, GroupToken, DigitToken, DecimalToken, DigitToken]
+      #
+      # @example Currency pattern with symbols
+      #   parser = Number.new
+      #   tokens = parser.parse("¤#,##0.00")
+      #   # => [CurrencyToken.new("¤"), DigitToken, GroupToken, DigitToken, DecimalToken, DigitToken]
+      #
+      # @see https://unicode.org/reports/tr35/tr35-numbers.html#Number_Format_Patterns
       class Number
         # Base class for all pattern tokens
         class Token

@@ -6,18 +6,19 @@ module Foxtail
   module CLDR
     module Repository
       # CLDR currency data loader and processor
-      # Provides locale-specific currency information
       #
-      # Based on Unicode CLDR specifications:
-      # - Currency display names, symbols, and formatting
-      # - Supports localized currency names for different plural forms
+      # Provides locale-specific currency information including display names,
+      # symbols, and formatting with support for localized currency names
+      # for different plural forms.
       #
-      # Example usage:
+      # @example
       #   locale = Locale::Tag.parse("ja")
       #   currencies = Currencies.new(locale)
       #   currencies.currency_name("USD")           # => "米ドル"
       #   currencies.currency_symbol("USD")         # => "$"
       #   currencies.currency_name("JPY", :one)    # => "日本円"
+      #
+      # @see https://unicode.org/reports/tr35/tr35-numbers.html#Currencies
       class Currencies < Base
         # Get localized currency display name
         #

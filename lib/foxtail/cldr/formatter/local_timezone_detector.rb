@@ -4,6 +4,7 @@ module Foxtail
   module CLDR
     module Formatter
       # Detects the system's local timezone similar to ICU's TimeZone::detectHostTimeZone()
+      #
       # This class provides cross-platform timezone detection with fallback mechanisms
       class LocalTimezoneDetector
         # Detected timezone information

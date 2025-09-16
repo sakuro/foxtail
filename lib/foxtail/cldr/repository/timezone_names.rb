@@ -6,19 +6,20 @@ module Foxtail
   module CLDR
     module Repository
       # CLDR timezone names data loader and processor
-      # Provides locale-specific timezone name information
       #
-      # Based on Unicode CLDR specifications:
-      # - Timezone display names, abbreviations, and formatting
-      # - Supports localized timezone names for different types (standard, daylight, generic)
-      # - Includes exemplar cities and metazone names
+      # Provides locale-specific timezone name information including display names,
+      # abbreviations, and formatting with support for localized timezone names
+      # for different types (standard, daylight, generic), exemplar cities,
+      # and metazone names.
       #
-      # Example usage:
+      # @example
       #   locale = Locale::Tag.parse("ja")
       #   timezone_names = TimezoneNames.new(locale)
       #   timezone_names.zone_name("America/New_York", :long, :standard)  # => "北アメリカ東部標準時"
       #   timezone_names.exemplar_city("America/New_York")                # => "ニューヨーク"
       #   timezone_names.timezone_format(:hour_format)                   # => "+HH:mm;-HH:mm"
+      #
+      # @see https://unicode.org/reports/tr35/tr35-dates.html#Time_Zone_Names
       class TimezoneNames < Base
         # Get localized timezone display name
         #

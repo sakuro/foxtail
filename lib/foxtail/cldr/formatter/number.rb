@@ -8,6 +8,7 @@ module Foxtail
   module CLDR
     module Formatter
       # CLDR-based number formatter implementing Intl.NumberFormat functionality
+      #
       # Uses PatternParser::Number for proper token-based pattern processing
       class Number
         # Format numbers with locale-specific formatting

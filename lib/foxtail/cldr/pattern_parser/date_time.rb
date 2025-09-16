@@ -5,10 +5,17 @@ module Foxtail
     module PatternParser
       # Formal CLDR date/time pattern parser
       #
-      # Parses CLDR date/time format patterns according to UTS #35 specification:
-      # https://unicode.org/reports/tr35/tr35-dates.html#Date_Format_Patterns
+      # This class is responsible for tokenizing CLDR date/time patterns like:
+      # - "EEEE, MMMM d, yyyy" (full date with weekday)
+      # - "MMM d, y" (medium date)
+      # - "HH:mm:ss" (24-hour time)
+      # - "h:mm a" (12-hour time with AM/PM)
+      # - "yyyy-MM-dd'T'HH:mm:ss" (ISO format with literal)
       #
-      # @example
+      # The parsing follows CLDR date/time pattern specifications and produces
+      # tokens that can be used by DateTimeFormatter for actual formatting.
+      #
+      # @example Basic date pattern
       #   parser = DateTime.new
       #   tokens = parser.parse("EEEE, MMMM d, yyyy")
       #   # => [
@@ -20,6 +27,13 @@ module Foxtail
       #   #      LiteralToken.new(", "),
       #   #      FieldToken.new("yyyy")
       #   #    ]
+      #
+      # @example Time pattern with literals
+      #   parser = DateTime.new
+      #   tokens = parser.parse("h:mm 'o''clock' a")
+      #   # => [FieldToken.new("h"), LiteralToken.new(":"), FieldToken.new("mm"), QuotedToken.new("o'clock"), LiteralToken.new(" "), FieldToken.new("a")]
+      #
+      # @see https://unicode.org/reports/tr35/tr35-dates.html#Date_Format_Patterns
       class DateTime
         # Base class for all pattern tokens
         class Token

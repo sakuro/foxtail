@@ -6,18 +6,19 @@ module Foxtail
   module CLDR
     module Repository
       # CLDR number formatting data loader and processor
-      # Provides locale-specific number formatting information
       #
-      # Based on Unicode CLDR specifications:
-      # - https://unicode.org/reports/tr35/tr35-numbers.html
-      # - Supports decimal symbols, grouping, patterns for decimal/percent/currency
+      # Provides locale-specific number formatting information including
+      # decimal symbols, grouping, and number formatting patterns with
+      # support for decimal, percent, currency, and scientific notation.
       #
-      # Example usage:
+      # @example
       #   formats = NumberFormats.new("en")
       #   formats.decimal_symbol      # => "."
       #   formats.group_symbol        # => ","
       #   formats.decimal_pattern     # => "#,##0.###"
       #   formats.percent_pattern     # => "#,##0%"
+      #
+      # @see https://unicode.org/reports/tr35/tr35-numbers.html
       class NumberFormats < Base
         # Get decimal symbol
         def decimal_symbol

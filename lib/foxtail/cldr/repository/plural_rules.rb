@@ -7,17 +7,18 @@ module Foxtail
   module CLDR
     module Repository
       # ICU-compliant plural rules processor
+      #
       # Evaluates CLDR plural rule expressions to determine plural categories
+      # with support for all standard plural categories: zero, one, two, few,
+      # many, other.
       #
-      # Based on Unicode CLDR specifications:
-      # - https://unicode.org/reports/tr35/tr35-numbers.html#Language_Plural_Rules
-      # - Supports all standard plural categories: zero, one, two, few, many, other
-      #
-      # Example usage:
+      # @example
       #   rules = PluralRules.new("en")
       #   rules.select(1)     # => "one"
       #   rules.select(2)     # => "other"
       #   rules.select(0)     # => "other"
+      #
+      # @see https://unicode.org/reports/tr35/tr35-numbers.html#Language_Plural_Rules
       class PluralRules < Base
         # Select appropriate plural category for the given number
         # @param number [Numeric] the number to evaluate

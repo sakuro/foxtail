@@ -9,21 +9,57 @@ module Foxtail
   module CLDR
     module Formatter
       # CLDR-based date and time formatter implementing Intl.DateTimeFormat functionality
+      #
+      # Uses Repository::DateTimeFormats and Repository::TimezoneNames for proper locale-specific formatting
       class DateTime
         # Format dates with locale-specific formatting using CLDR data
+        #
         # Intl.DateTimeFormat equivalent with CLDR integration
         #
-        # Options:
-        #   dateStyle: "full", "long", "medium", "short"
-        #   timeStyle: "full", "long", "medium", "short"
-        #   year: "numeric", "2-digit"
-        #   month: "numeric", "2-digit", "long", "short"
-        #   day: "numeric", "2-digit"
-        #   weekday: "long", "short", "narrow"
-        #   locale: Locale instance (required)
-        #
+        # @param args [Array] Positional arguments (first argument is the value to format)
+        # @param locale [Locale::Tag] The locale for formatting
+        # @param options [Hash] Formatting options
+        # @option options [String] :dateStyle Date formatting style ("full", "long", "medium", "short")
+        # @option options [String] :timeStyle Time formatting style ("full", "long", "medium", "short")
+        # @option options [String] :year Year format ("numeric", "2-digit")
+        # @option options [String] :month Month format ("numeric", "2-digit", "long", "short", "narrow")
+        # @option options [String] :day Day format ("numeric", "2-digit")
+        # @option options [String] :weekday Weekday format ("long", "short", "narrow")
+        # @option options [String] :hour Hour format ("numeric", "2-digit")
+        # @option options [String] :minute Minute format ("numeric", "2-digit")
+        # @option options [String] :second Second format ("numeric", "2-digit")
+        # @option options [String] :timeZone Timezone identifier (e.g., "America/New_York", "Asia/Tokyo")
+        # @option options [String] :timeZoneName Timezone name display ("long", "short")
+        # @option options [Boolean] :hour12 Use 12-hour format (true) or 24-hour format (false)
         # @raise [ArgumentError] when the value cannot be parsed as a date/time
         # @raise [Foxtail::CLDR::DataNotAvailable] when CLDR data is not available for the locale
+        # @return [String] Formatted date/time string
+        #
+        # @example Basic date formatting
+        #   formatter.call(Date.new(2023, 12, 25), locale: Locale::Tag.parse("en-US"))
+        #   # => "12/25/2023"
+        #
+        # @example Date style formatting
+        #   formatter.call(Date.new(2023, 12, 25), locale: Locale::Tag.parse("en-US"), dateStyle: "full")
+        #   # => "Monday, December 25, 2023"
+        #
+        # @example Time formatting
+        #   formatter.call(Time.new(2023, 12, 25, 14, 30), locale: Locale::Tag.parse("en-US"), timeStyle: "medium")
+        #   # => "2:30:00 PM"
+        #
+        # @example Custom component formatting
+        #   formatter.call(Date.new(2023, 12, 25), locale: Locale::Tag.parse("ja"), year: "numeric", month: "long", day: "numeric")
+        #   # => "2023年12月25日"
+        #
+        # @example Timezone formatting
+        #   formatter.call(Time.now, locale: Locale::Tag.parse("en-US"), timeZone: "America/New_York", timeStyle: "full")
+        #   # => "2:30:00 PM Eastern Standard Time"
+        #
+        # @example 12-hour vs 24-hour format
+        #   formatter.call(Time.new(2023, 12, 25, 14, 30), locale: Locale::Tag.parse("en-US"), hour12: true)
+        #   # => "2:30 PM"
+        #
+        # @see https://unicode.org/reports/tr35/tr35-dates.html#Date_Format_Patterns
         def call(*args, locale:, **options)
           context = Context.new(args.first, locale, options)
           context.format

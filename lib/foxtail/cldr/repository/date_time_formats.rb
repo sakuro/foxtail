@@ -6,17 +6,18 @@ module Foxtail
   module CLDR
     module Repository
       # CLDR datetime formatting data loader and processor
-      # Provides locale-specific date and time formatting information
       #
-      # Based on Unicode CLDR specifications:
-      # - https://unicode.org/reports/tr35/tr35-dates.html
-      # - Supports date/time patterns, month names, weekday names
+      # Provides locale-specific date and time formatting information including
+      # date and time patterns, month names, and weekday names with support
+      # for various formatting widths and contexts.
       #
-      # Example usage:
+      # @example
       #   formats = DateTimeFormats.new("en")
       #   formats.month_name(1, "wide")     # => "January"
       #   formats.weekday_name("sun", "abbreviated")  # => "Sun"
       #   formats.date_pattern("medium")    # => "MMM d, y"
+      #
+      # @see https://unicode.org/reports/tr35/tr35-dates.html
       class DateTimeFormats < Base
         # Get month name (1-12)
         def month_name(month, width="wide", context="format")
