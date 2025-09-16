@@ -39,7 +39,7 @@ module Foxtail
 
     # Parse FTL file into a Resource
     def self.from_file(path, **)
-      source = File.read(path)
+      source = path.read
       from_string(source, **)
     end
 

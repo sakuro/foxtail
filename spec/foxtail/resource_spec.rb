@@ -65,7 +65,7 @@ RSpec.describe Foxtail::Resource do
     end
 
     it "reads and parses FTL file" do
-      resource = Foxtail::Resource.from_file(temp_file.path)
+      resource = Foxtail::Resource.from_file(Pathname(temp_file.path))
 
       expect(resource.entries.size).to eq(1)
       expect(resource.entries.first["id"]).to eq("test")
@@ -76,7 +76,7 @@ RSpec.describe Foxtail::Resource do
       temp_file.write("hello = Hello world")
       temp_file.close
 
-      resource = Foxtail::Resource.from_file(temp_file.path)
+      resource = Foxtail::Resource.from_file(Pathname(temp_file.path))
       expect(resource.entries.size).to eq(1)
     end
   end

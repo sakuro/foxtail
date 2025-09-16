@@ -49,23 +49,23 @@ module Foxtail
         # @return [Hash] Mapping of locale ID to parent locale ID
         # @raise [ArgumentError] if parent_locales.yml is not found
         def load_parent_locale_ids(data_dir)
-          parent_locales_path = File.join(data_dir, "parent_locales.yml")
+          parent_locales_path = data_dir + "parent_locales.yml"
 
-          unless File.exist?(parent_locales_path)
+          unless parent_locales_path.exist?
             raise ArgumentError, "Parent locales data not found: #{parent_locales_path}. " \
                                  "Run parent locales extraction first."
           end
 
           begin
-            yaml_data = YAML.load_file(parent_locales_path)
+            yaml_data = YAML.load_file(parent_locales_path.to_s)
             parent_locale_ids = yaml_data["parent_locales"] || {}
 
             # Log only on first load
             unless @parent_locales_logged
               relative_path = begin
-                Pathname.new(parent_locales_path).relative_path_from(Pathname.new(data_dir)).to_s
+                parent_locales_path.relative_path_from(data_dir).to_s
               rescue
-                parent_locales_path
+                parent_locales_path.to_s
               end
               CLDR.logger.debug "Loaded #{parent_locale_ids.size} parent locale mappings from #{relative_path}"
               @parent_locales_logged = true
@@ -81,12 +81,12 @@ module Foxtail
         # @param data_dir [String] Path to CLDR data directory
         # @return [Hash] Mapping of alias locale to canonical locale
         def load_locale_aliases(data_dir)
-          aliases_path = File.join(data_dir, "locale_aliases.yml")
+          aliases_path = data_dir + "locale_aliases.yml"
 
-          return {} unless File.exist?(aliases_path)
+          return {} unless aliases_path.exist?
 
           begin
-            yaml_data = YAML.load_file(aliases_path)
+            yaml_data = YAML.load_file(aliases_path.to_s)
             aliases = yaml_data["locale_aliases"] || {}
             CLDR.logger.debug "Loaded #{aliases.size} locale aliases from #{aliases_path}"
             aliases

@@ -95,14 +95,14 @@ module Foxtail
         private def extract_currency_fractions
           # Currency fractions come from supplemental data, not individual locale files
           # We need to read from supplemental/supplementalData.xml
-          supplemental_path = File.join(source_dir, "common", "supplemental", "supplementalData.xml")
+          supplemental_path = @source_dir + "common" + "supplemental" + "supplementalData.xml"
 
-          return {} unless File.exist?(supplemental_path)
+          return {} unless supplemental_path.exist?
 
           fractions = {}
 
           begin
-            supplemental_doc = REXML::Document.new(File.read(supplemental_path))
+            supplemental_doc = REXML::Document.new(supplemental_path.read)
 
             supplemental_doc.elements.each("supplementalData/currencyData/fractions/info") do |info|
               currency = info.attributes["iso4217"]

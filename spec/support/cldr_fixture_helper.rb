@@ -2,23 +2,23 @@
 
 module CLDRFixtureHelper
   # Copy CLDR fixture files to a temporary directory structure
-  # @param temp_dir [String] Base temporary directory
+  # @param temp_dir [Pathname] Base temporary directory
   # @param files [Array<String>] List of fixture files to copy
-  # @return [String] Path to created CLDR source directory
+  # @return [Pathname] Path to created CLDR source directory
   def setup_cldr_fixture(temp_dir, files)
     # Create CLDR directory structure
-    main_dir = File.join(temp_dir, "common", "main")
-    supplemental_dir = File.join(temp_dir, "common", "supplemental")
+    main_dir = temp_dir + "common" + "main"
+    supplemental_dir = temp_dir + "common" + "supplemental"
 
-    FileUtils.mkdir_p(main_dir)
-    FileUtils.mkdir_p(supplemental_dir)
+    main_dir.mkpath
+    supplemental_dir.mkpath
 
     # Copy specified fixture files
-    fixture_dir = File.join(__dir__, "..", "fixtures", "cldr")
+    fixture_dir = Pathname(__dir__) + ".." + "fixtures" + "cldr"
 
     files.each do |file|
-      source_path = File.join(fixture_dir, file)
-      next unless File.exist?(source_path)
+      source_path = fixture_dir + file
+      next unless source_path.exist?
 
       # Determine destination based on file type
       dest_dir = if file.include?("supplemental") || file == "likelySubtags.xml" || file == "plurals.xml"
@@ -27,7 +27,8 @@ module CLDRFixtureHelper
                    main_dir
                  end
 
-      dest_path = File.join(dest_dir, File.basename(file, ".xml").sub(/^test_/, "") + ".xml")
+      base_name = Pathname(file).basename(".xml").to_s.sub(/^test_/, "")
+      dest_path = dest_dir + "#{base_name}.xml"
       FileUtils.cp(source_path, dest_path)
     end
 

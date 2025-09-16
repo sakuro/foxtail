@@ -86,11 +86,11 @@ module Foxtail
 
         # Strategy 2: Read /etc/localtime symlink
         private def detect_from_etc_localtime
-          localtime_path = "/etc/localtime"
-          return nil unless File.symlink?(localtime_path)
+          localtime_path = Pathname.new("/etc/localtime")
+          return nil unless localtime_path.symlink?
 
           begin
-            target = File.readlink(localtime_path)
+            target = localtime_path.readlink.to_s
 
             # Extract timezone ID from paths like:
             # "/usr/share/zoneinfo/Asia/Tokyo" -> "Asia/Tokyo"
@@ -105,11 +105,11 @@ module Foxtail
 
         # Strategy 3: Read /etc/timezone file (Debian/Ubuntu)
         private def detect_from_etc_timezone
-          timezone_file = "/etc/timezone"
-          return nil unless File.readable?(timezone_file)
+          timezone_file = Pathname.new("/etc/timezone")
+          return nil unless timezone_file.readable?
 
           begin
-            timezone_id = File.read(timezone_file).strip
+            timezone_id = timezone_file.read.strip
             return nil if timezone_id.empty?
 
             # Validate format (basic check for IANA timezone ID)
@@ -152,10 +152,10 @@ module Foxtail
 
           # Try reading from macOS system preferences
           # /var/db/timezone/zoneinfo contains the current timezone
-          zoneinfo_path = "/var/db/timezone/zoneinfo"
-          if File.readable?(zoneinfo_path)
+          zoneinfo_path = Pathname.new("/var/db/timezone/zoneinfo")
+          if zoneinfo_path.readable?
             begin
-              timezone_id = File.read(zoneinfo_path).strip
+              timezone_id = zoneinfo_path.read.strip
               return timezone_id if timezone_id.match?(%r{^[A-Za-z_/]+/[A-Za-z_/]+$})
             rescue
               # Continue

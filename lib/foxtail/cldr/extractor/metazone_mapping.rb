@@ -14,7 +14,7 @@ module Foxtail
           Foxtail::CLDR.logger.info "Extracting metazone mapping data..."
 
           mapping_data = extract_metazone_mapping
-          output_file = File.join(@output_dir, "metazone_mapping.yml")
+          output_file = @output_dir + "metazone_mapping.yml"
 
           yaml_data = {
             "generated_at" => Time.now.utc.iso8601,
@@ -23,7 +23,7 @@ module Foxtail
 
           # Skip writing if only generated_at differs
           unless should_skip_write?(output_file, yaml_data)
-            File.write(output_file, YAML.dump(yaml_data))
+            output_file.write(YAML.dump(yaml_data))
             Foxtail::CLDR.logger.debug "Wrote metazone mapping to #{relative_path(output_file)}"
           end
 
@@ -33,9 +33,9 @@ module Foxtail
         end
 
         private def extract_metazone_mapping
-          metazones_file = File.join(@source_dir, "common", "supplemental", "metaZones.xml")
+          metazones_file = @source_dir + "common" + "supplemental" + "metaZones.xml"
 
-          doc = REXML::Document.new(File.read(metazones_file))
+          doc = REXML::Document.new(metazones_file.read)
           mapping = {}
 
           # Extract timezone -> metazone mappings

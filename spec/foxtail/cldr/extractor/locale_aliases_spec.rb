@@ -3,8 +3,8 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
-  let(:fixture_source_dir) { File.join(Dir.tmpdir, "test_locale_aliases_source") }
-  let(:temp_output_dir) { Dir.mktmpdir }
+  let(:fixture_source_dir) { Pathname(Dir.tmpdir) + "test_locale_aliases_source" }
+  let(:temp_output_dir) { Pathname(Dir.mktmpdir) }
   let(:extractor) { Foxtail::CLDR::Extractor::LocaleAliases.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
 
   before do
@@ -21,8 +21,8 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
     it "extracts locale aliases from fixture files" do
       extractor.extract_all
 
-      output_file = File.join(temp_output_dir, "locale_aliases.yml")
-      expect(File.exist?(output_file)).to be true
+      output_file = temp_output_dir + "locale_aliases.yml"
+      expect(output_file.exist?).to be true
 
       data = YAML.load_file(output_file)
       expect(data["locale_aliases"]).to be_a(Hash)
@@ -32,7 +32,7 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
     it "includes zh_TW -> zh_Hant_TW mapping" do
       extractor.extract_all
 
-      output_file = File.join(temp_output_dir, "locale_aliases.yml")
+      output_file = temp_output_dir + "locale_aliases.yml"
       data = YAML.load_file(output_file)
 
       expect(data["locale_aliases"]).to include("zh_TW" => "zh_Hant_TW")
@@ -66,15 +66,15 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
         "no_NO" => "nb_NO"
       }
     end
-    let(:file_path) { File.join(temp_output_dir, "locale_aliases.yml") }
+    let(:file_path) { temp_output_dir + "locale_aliases.yml" }
 
     context "when file does not exist" do
       it "writes the file" do
-        expect(File.exist?(file_path)).to be false
+        expect(file_path.exist?).to be false
 
         extractor.__send__(:write_alias_data, test_aliases)
 
-        expect(File.exist?(file_path)).to be true
+        expect(file_path.exist?).to be true
         content = YAML.load_file(file_path)
         expect(content["locale_aliases"]).to eq(test_aliases)
       end
@@ -90,7 +90,7 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
         # Write initial file
         extractor.__send__(:write_alias_data, test_aliases)
         sleep(0.01) # Wait to ensure mtime would change if file is rewritten
-        File.mtime(file_path)
+        file_path.mtime
       end
 
       it "skips writing when only generated_at would differ" do
@@ -99,7 +99,7 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
         extractor.__send__(:write_alias_data, test_aliases)
 
         # File modification time should not change when skipping
-        expect(File.mtime(file_path)).to eq(initial_mtime)
+        expect(file_path.mtime).to eq(initial_mtime)
 
         # Should have logged exactly once (from initial write in let block)
         expect(Foxtail::CLDR.logger).to have_received(:debug).once
@@ -117,7 +117,7 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
         # Write initial file with different content
         extractor.__send__(:write_alias_data, old_aliases)
         sleep(0.01) # Wait to ensure mtime would change
-        File.mtime(file_path)
+        file_path.mtime
       end
 
       it "overwrites the file when content differs" do
@@ -126,7 +126,7 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
         extractor.__send__(:write_alias_data, test_aliases)
 
         # File should be updated
-        expect(File.mtime(file_path)).to be > initial_mtime
+        expect(file_path.mtime).to be > initial_mtime
 
         content = YAML.load_file(file_path)
         expect(content["locale_aliases"]).to eq(test_aliases)

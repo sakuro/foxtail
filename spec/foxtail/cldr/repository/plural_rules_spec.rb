@@ -154,52 +154,28 @@ RSpec.describe Foxtail::CLDR::Repository::PluralRules do
 
   describe "data loading" do
     it "loads data on-demand for each locale" do
-      # Test that data is loaded from the correct file path
-      allow(File).to receive(:exist?).and_call_original
+      # Use a temporary directory and copy fixture files
+      Dir.mktmpdir do |tmpdir|
+        test_data_dir = Pathname(tmpdir) + "test_cldr"
+        fixture_dir = Pathname(__dir__).parent.parent.parent + "fixtures" + "cldr"
 
-      # Mock root locale (inheritance chain includes root)
-      allow(File).to receive(:exist?)
-        .with(a_string_ending_with("data/cldr/root/plural_rules.yml"))
-        .and_return(true)
-      allow(YAML).to receive(:load_file)
-        .with(a_string_ending_with("data/cldr/root/plural_rules.yml"))
-        .and_return({
-          "plural_rules" => {
-            "other" => ""
-          }
-        })
+        # Copy fixture files to test directory
+        test_data_dir.mkpath
+        FileUtils.cp_r(fixture_dir + "parent_locales.yml", test_data_dir) if (fixture_dir + "parent_locales.yml").exist?
+        FileUtils.cp_r(fixture_dir + "en", test_data_dir) if (fixture_dir + "en").exist?
+        FileUtils.cp_r(fixture_dir + "root", test_data_dir) if (fixture_dir + "root").exist?
 
-      # Mock locale aliases file
-      allow(File).to receive(:exist?)
-        .with(a_string_ending_with("data/cldr/locale_aliases.yml"))
-        .and_return(false)
+        # Initialize resolver with the test data directory
+        resolver = Foxtail::CLDR::Repository::Resolver.new(locale("en"), data_dir: test_data_dir)
 
-      # Mock parent locales file
-      allow(File).to receive(:exist?)
-        .with(a_string_ending_with("data/cldr/parent_locales.yml"))
-        .and_return(true)
-      allow(YAML).to receive(:load_file)
-        .with(a_string_ending_with("data/cldr/parent_locales.yml"))
-        .and_return({
-          "parent_locales" => {
-            "en_AU" => "en_001"
-          }
-        })
+        # Create PluralRules with custom resolver
+        allow(Foxtail::CLDR::Repository::Resolver).to receive(:new)
+          .with(locale("en"))
+          .and_return(resolver)
 
-      # Mock en locale
-      allow(File).to receive(:exist?)
-        .with(a_string_ending_with("data/cldr/en/plural_rules.yml"))
-        .and_return(true)
-      allow(YAML).to receive(:load_file)
-        .with(a_string_ending_with("data/cldr/en/plural_rules.yml"))
-        .and_return({
-          "plural_rules" => {
-            "one" => "i = 1 and v = 0"
-          }
-        })
-
-      rules = Foxtail::CLDR::Repository::PluralRules.new(locale("en"))
-      expect(rules.select(1)).to eq("one")
+        rules = Foxtail::CLDR::Repository::PluralRules.new(locale("en"))
+        expect(rules.select(1)).to eq("one")
+      end
     end
 
     it "raises DataNotAvailable for missing locale files" do

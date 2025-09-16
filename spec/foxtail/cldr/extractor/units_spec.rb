@@ -3,8 +3,8 @@
 require "tmpdir"
 
 RSpec.describe Foxtail::CLDR::Extractor::Units do
-  let(:fixture_source_dir) { File.join(Dir.tmpdir, "test_units_source") }
-  let(:temp_output_dir) { Dir.mktmpdir }
+  let(:fixture_source_dir) { Pathname(Dir.tmpdir) + "test_units_source" }
+  let(:temp_output_dir) { Pathname(Dir.mktmpdir) }
   let(:extractor) { Foxtail::CLDR::Extractor::Units.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
 
   before do
@@ -29,17 +29,17 @@ RSpec.describe Foxtail::CLDR::Extractor::Units do
       }
     }
 
-    parent_locales_file = File.join(temp_output_dir, "parent_locales.yml")
-    FileUtils.mkdir_p(File.dirname(parent_locales_file))
-    File.write(parent_locales_file, YAML.dump(parent_locales_data))
+    parent_locales_file = temp_output_dir + "parent_locales.yml"
+    parent_locales_file.dirname.mkpath
+    parent_locales_file.write(YAML.dump(parent_locales_data))
   end
 
   describe "#extract_locale" do
     it "extracts units data for a locale" do
       extractor.extract_locale("en")
 
-      units_file = File.join(temp_output_dir, "en", "units.yml")
-      expect(File.exist?(units_file)).to be(true)
+      units_file = temp_output_dir + "en" + "units.yml"
+      expect(units_file.exist?).to be(true)
 
       data = YAML.load_file(units_file)
       expect(data).to have_key("units")

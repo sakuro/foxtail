@@ -147,13 +147,13 @@ module Foxtail
 
           # Load metazone mapping data
           private def load_metazone_mapping
-            mapping_file = File.join(__dir__, "..", "..", "..", "..", "data", "cldr", "metazone_mapping.yml")
+            mapping_file = Foxtail.cldr_dir + "metazone_mapping.yml"
 
-            return {} unless File.exist?(mapping_file)
+            return {} unless mapping_file.exist?
 
             begin
               require "yaml"
-              yaml_data = YAML.load_file(mapping_file)
+              yaml_data = YAML.load_file(mapping_file.to_s)
               # Handle both string and symbol keys
               yaml_data[:timezone_to_metazone] || yaml_data["timezone_to_metazone"] || {}
             rescue
