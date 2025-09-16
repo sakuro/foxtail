@@ -18,7 +18,7 @@ module Foxtail
 
     # Access individual function by name
     # @param name [String] Function name ("NUMBER" or "DATETIME")
-    # @return [Object] The function instance
+    # @return [Proc, #call] The function instance
     def self.[](name)
       defaults[name]
     end
