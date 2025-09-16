@@ -15,7 +15,7 @@ module Foxtail
       #   locale = Locale::Tag.parse("ja")
       #   units = Units.new(locale)
       #   units.unit_name("kilometer", :long)        # => "キロメートル"
-      #   units.unit_pattern("kilometer", :long, :one) # => "{0} キロメートル"
+      #   units.unit_pattern("kilometer", :long, :one) # => "<tt>{0}</tt> キロメートル"
       #   units.unit_category("kilometer")           # => "length"
       #
       # @see https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements
@@ -35,7 +35,7 @@ module Foxtail
         # @param unit [String] Unit name
         # @param width [Symbol] Display width (:long, :short, :narrow)
         # @param count [Symbol] Plural form (:one, :other, etc.)
-        # @return [String] Unit pattern with {0} placeholder, or nil if not found
+        # @return [String] Unit pattern with <tt>{0}</tt> placeholder, or nil if not found
         def unit_pattern(unit, width=:long, count=:other)
           @resolver.resolve("units.#{unit}.#{width}.#{count}", "units")
         end
@@ -61,7 +61,7 @@ module Foxtail
         #
         # @param unit [String] Unit name
         # @param width [Symbol] Display width
-        # @return [String] Per-unit pattern with {0} placeholder
+        # @return [String] Per-unit pattern with <tt>{0}</tt> placeholder
         def per_unit_pattern(unit, width=:long)
           @resolver.resolve("units.#{unit}.#{width}.per_unit_pattern", "units")
         end
