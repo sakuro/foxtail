@@ -3,7 +3,13 @@
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts unit data from CLDR XML and writes to YAML files
+      # CLDR unit data extractor
+      #
+      # Extracts locale-specific unit information from CLDR XML files including
+      # display names, patterns, and formatting data for measurement units,
+      # then writes structured YAML files for use by the units repository.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements
       class Units < Base
         private def extract_data_from_xml(xml_doc)
           units = extract_units(xml_doc)

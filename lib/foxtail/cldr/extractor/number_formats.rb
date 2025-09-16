@@ -3,7 +3,14 @@
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts number format data from CLDR XML and writes to YAML files
+      # CLDR number format data extractor
+      #
+      # Extracts locale-specific number formatting information from CLDR XML files
+      # including decimal symbols, grouping patterns, currency formats, and scientific
+      # notation patterns, then writes structured YAML files for use by the number
+      # formats repository.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-numbers.html
       class NumberFormats < Base
         private def extract_data_from_xml(xml_doc)
           formats = extract_format_patterns(xml_doc)

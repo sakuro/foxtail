@@ -3,7 +3,13 @@
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts timezone names data from CLDR XML and writes to YAML files
+      # CLDR timezone names data extractor
+      #
+      # Extracts locale-specific timezone name information from CLDR XML files
+      # including display names, abbreviations, exemplar cities, and metazone names,
+      # then writes structured YAML files for use by the timezone names repository.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-dates.html#Time_Zone_Names
       class TimezoneNames < Base
         private def extract_data_from_xml(xml_doc)
           timezone_data = extract_timezone_names(xml_doc)

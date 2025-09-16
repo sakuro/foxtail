@@ -3,7 +3,14 @@
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts date and time format data from CLDR XML and writes to YAML files
+      # CLDR date and time format data extractor
+      #
+      # Extracts locale-specific date and time formatting information from CLDR XML
+      # files including date patterns, time patterns, month names, weekday names,
+      # and era names, then writes structured YAML files for use by the date time
+      # formats repository.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-dates.html
       class DateTimeFormats < Base
         CALENDAR_CONTEXTS = %w[format stand-alone].freeze
         private_constant :CALENDAR_CONTEXTS

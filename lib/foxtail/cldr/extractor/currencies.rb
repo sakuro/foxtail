@@ -3,7 +3,13 @@
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts currency data from CLDR XML and writes to YAML files
+      # CLDR currency data extractor
+      #
+      # Extracts locale-specific currency information from CLDR XML files including
+      # display names, symbols, and formatting data, then writes structured YAML
+      # files for use by the currency repository.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-numbers.html#Currencies
       class Currencies < Base
         private def extract_data_from_xml(xml_doc)
           currencies = extract_currencies(xml_doc)

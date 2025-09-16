@@ -3,7 +3,13 @@
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts plural rules from CLDR supplemental XML data and writes to YAML files
+      # CLDR plural rules data extractor
+      #
+      # Extracts plural rule expressions from CLDR supplemental XML data for number
+      # categorization, then writes structured YAML files for use by the plural
+      # rules repository.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-numbers.html#Language_Plural_Rules
       class PluralRules < Base
         # Override extract_all since plural rules are in supplemental data, not individual locale files
         def extract_all
