@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "multi_locale"
+
 module Foxtail
   module CLDR
     module Extractor
@@ -10,13 +12,9 @@ module Foxtail
       # then writes structured YAML files for use by the timezone names repository.
       #
       # @see https://unicode.org/reports/tr35/tr35-dates.html#Time_Zone_Names
-      class TimezoneNames < Base
+      class TimezoneNames < MultiLocale
         private def extract_data_from_xml(xml_doc)
-          timezone_data = extract_timezone_names(xml_doc)
-
-          {
-            "timezone_names" => timezone_data
-          }
+          {"timezone_names" => extract_timezone_names(xml_doc)}
         end
 
         private def data?(data)
@@ -24,10 +22,6 @@ module Foxtail
           return false unless data["timezone_names"].is_a?(Hash)
 
           !data["timezone_names"].empty?
-        end
-
-        private def write_data(locale_id, data)
-          write_yaml_file(locale_id, "timezone_names.yml", data)
         end
 
         private def extract_timezone_names(xml_doc)

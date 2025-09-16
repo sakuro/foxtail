@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "multi_locale"
+
 module Foxtail
   module CLDR
     module Extractor
@@ -11,7 +13,7 @@ module Foxtail
       # formats repository.
       #
       # @see https://unicode.org/reports/tr35/tr35-numbers.html
-      class NumberFormats < Base
+      class NumberFormats < MultiLocale
         private def extract_data_from_xml(xml_doc)
           formats = extract_format_patterns(xml_doc)
 
@@ -39,26 +41,14 @@ module Foxtail
           data.any? {|_, section_data| section_data.is_a?(Hash) && !section_data.empty? }
         end
 
-        private def write_data(locale_id, data)
-          write_yaml_file(locale_id, "number_formats.yml", data)
-        end
-
         private def extract_symbols(xml_doc)
           symbols = {}
 
-          symbol_mappings = {
-            "decimal" => "decimal",
-            "group" => "group",
-            "minusSign" => "minus_sign",
-            "plusSign" => "plus_sign",
-            "percentSign" => "percent_sign",
-            "perMille" => "per_mille",
-            "exponential" => "exponential",
-            "infinity" => "infinity",
-            "nan" => "nan"
-          }
+          # All symbol names can be converted using inflector.underscore
+          xpath_names = %w[decimal group minusSign plusSign percentSign perMille exponential infinity nan]
 
-          symbol_mappings.each do |xpath_name, key_name|
+          xpath_names.each do |xpath_name|
+            key_name = inflector.underscore(xpath_name)
             xml_doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/#{xpath_name}") do |element|
               symbols[key_name] = element.text
             end

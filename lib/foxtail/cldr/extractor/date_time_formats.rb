@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "multi_locale"
+
 module Foxtail
   module CLDR
     module Extractor
@@ -11,7 +13,7 @@ module Foxtail
       # formats repository.
       #
       # @see https://unicode.org/reports/tr35/tr35-dates.html
-      class DateTimeFormats < Base
+      class DateTimeFormats < MultiLocale
         CALENDAR_CONTEXTS = %w[format stand-alone].freeze
         private_constant :CALENDAR_CONTEXTS
 
@@ -231,10 +233,6 @@ module Foxtail
           return false unless data.is_a?(Hash)
 
           data.any? {|_, section_data| section_data.is_a?(Hash) && !section_data.empty? }
-        end
-
-        private def write_data(locale_id, data)
-          write_yaml_file(locale_id, "datetime_formats.yml", data)
         end
       end
     end

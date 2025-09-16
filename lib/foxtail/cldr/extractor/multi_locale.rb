@@ -11,25 +11,41 @@ module Foxtail
       #
       # @see Base
       class MultiLocale < Base
+        # Shared cache across all extractor instances
+        # @return [Hash] Cache for extracted data shared between instances
+        def self.extracted_data_cache
+          @extracted_data_cache ||= {}
+        end
+
+        def initialize(source_dir:, output_dir:)
+          super
+          @parent_locales = nil
+          @inheritance = Repository::Inheritance.instance
+          @processed_files = []
+        end
+
         # Template method for extracting all locales
-        def extract_all
+        def extract
           locale_files = @source_dir.glob("common/main/*.xml")
-          CLDR.logger.info "Extracting #{self.class.name.split("::").last} from #{locale_files.size} locales..."
+          CLDR.logger.info "Extracting #{inflector.demodulize(self.class)} from #{locale_files.size} locales..."
 
-          locale_files.each_with_index do |xml_file, index|
-            locale_id = xml_file.basename(".xml").to_s
-            extract_locale(locale_id)
-
-            # Progress indicator every 100 locales
-            if (index + 1) % 100 == 0
-              CLDR.logger.info "Progress: #{index + 1}/#{locale_files.size} locales processed"
+          locale_files.each_slice(100).with_index do |batch, batch_index|
+            batch.each do |xml_file|
+              locale_id = xml_file.basename(".xml").to_s
+              extract_locale(locale_id)
             end
+
+            # Progress indicator after each batch
+            processed_count = (batch_index + 1) * 100
+            # Don't exceed total count for the last batch
+            processed_count = [processed_count, locale_files.size].min
+            CLDR.logger.info "Progress: #{processed_count}/#{locale_files.size} locales processed"
           end
 
           # Clean up obsolete files after processing all locales
           cleanup_obsolete_files
 
-          CLDR.logger.info "#{self.class.name.split("::").last} extraction complete (#{locale_files.size} locales)"
+          CLDR.logger.info "#{inflector.demodulize(self.class)} extraction complete (#{locale_files.size} locales)"
         end
 
         # Template method for extracting a specific locale
@@ -39,13 +55,19 @@ module Foxtail
           # Only write if we have meaningful data
           return unless extracted_data && data?(extracted_data)
 
-          write_data(locale_id, extracted_data)
+          write_yaml_file(locale_id, data_filename, extracted_data)
+        end
+
+        # Access shared cache instance
+        # @return [Hash] Cache for extracted data shared between instances
+        private def extracted_data_cache
+          self.class.extracted_data_cache
         end
 
         # Extract minimal locale data (only differences from parent)
-        def extract_locale_with_inheritance(locale_id)
+        private def extract_locale_with_inheritance(locale_id)
           # Use underscore class name for cache key
-          class_name = self.class.name ? self.class.name.split("::").last : "data"
+          class_name = inflector.demodulize(self.class)
           cache_key = "#{inflector.underscore(class_name)}:#{locale_id}"
 
           return extracted_data_cache[cache_key] if extracted_data_cache.key?(cache_key)
@@ -147,18 +169,14 @@ module Foxtail
           }
 
           # Merge in the data, preserving its structure
-          if data.is_a?(Hash)
-            yaml_data.merge!(data)
-          else
-            yaml_data["data"] = data
-          end
+          yaml_data.merge!(data)
 
           # Skip writing if only generated_at differs
           if should_skip_write?(file_path, yaml_data)
             return
           end
 
-          CLDR.logger.debug "Writing #{relative_path(file_path)}"
+          CLDR.logger.debug "Writing #{file_path.relative_path_from(@output_dir)}"
           file_path.write(yaml_data.to_yaml)
         end
 
@@ -169,23 +187,14 @@ module Foxtail
           obsolete_files = existing_files - @processed_files
 
           if obsolete_files.any?
-            CLDR.logger.info "Removing #{obsolete_files.size} obsolete #{self.class.name.split("::").last} files..."
+            CLDR.logger.info "Removing #{obsolete_files.size} obsolete #{inflector.demodulize(self.class)} files..."
             obsolete_files.each do |file_path|
-              CLDR.logger.debug "Removing obsolete file: #{relative_path(file_path)}"
+              CLDR.logger.debug "Removing obsolete file: #{file_path.relative_path_from(@output_dir)}"
               file_path.delete
             end
           else
-            CLDR.logger.debug "No obsolete #{self.class.name.split("::").last} files to remove"
+            CLDR.logger.debug "No obsolete #{inflector.demodulize(self.class)} files to remove"
           end
-        end
-
-        # Automatically derive data filename from class name using inflector
-        private def data_filename
-          # Get the class name without module prefix (e.g., "DateTimeFormats")
-          # Handle anonymous classes (for testing)
-          class_name = self.class.name ? self.class.name.split("::").last : "data"
-          # Convert to snake_case and add .yml extension
-          "#{inflector.underscore(class_name)}.yml"
         end
 
         # Abstract methods - subclasses must implement these
@@ -202,13 +211,6 @@ module Foxtail
         # @return [Boolean] true if data should be written to file
         private def data?(data)
           raise NotImplementedError, "Subclasses must implement data?"
-        end
-
-        # Write extracted data to appropriate file(s)
-        # @param locale_id [String] The locale identifier
-        # @param data [Object] The extracted data
-        private def write_data(locale_id, data)
-          raise NotImplementedError, "Subclasses must implement write_data"
         end
       end
     end

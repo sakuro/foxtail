@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "multi_locale"
+
 module Foxtail
   module CLDR
     module Extractor
@@ -10,53 +12,53 @@ module Foxtail
       # rules repository.
       #
       # @see https://unicode.org/reports/tr35/tr35-numbers.html#Language_Plural_Rules
-      class PluralRules < Base
-        # Override extract_all since plural rules are in supplemental data, not individual locale files
-        def extract_all
-          supplemental_path = @source_dir + "common" + "supplemental" + "plurals.xml"
-          unless supplemental_path.exist?
-            CLDR.logger.warn "Plural rules file not found: #{supplemental_path}"
-            return
-          end
-
-          CLDR.logger.info "Extracting PluralRules from supplemental data..."
-
-          doc = REXML::Document.new(supplemental_path.read)
-          locale_rules_map = extract_all_locales_from_supplemental(doc)
-
-          locale_rules_map.each do |locale_id, rules_data|
-            next unless data?(rules_data)
-
-            write_data(locale_id, rules_data)
-          end
-
-          CLDR.logger.info "PluralRules extraction complete (#{locale_rules_map.size} locales)"
+      class PluralRules < MultiLocale
+        def initialize(source_dir:, output_dir:)
+          super
+          @supplemental_rules_cache = nil
         end
 
-        # Override extract_locale since plural rules come from supplemental data
-        def extract_locale(locale_id)
-          supplemental_path = @source_dir + "common" + "supplemental" + "plurals.xml"
-          unless supplemental_path.exist?
-            CLDR.logger.warn "Plural rules file not found: #{supplemental_path}"
-            return
-          end
+        # Override extract to load supplemental data first, then use parent class logic
+        def extract
+          load_supplemental_rules_cache
 
-          doc = REXML::Document.new(supplemental_path.read)
-          locale_rules_map = extract_all_locales_from_supplemental(doc)
+          CLDR.logger.info "Extracting #{inflector.demodulize(self.class)} from supplemental data for #{@supplemental_rules_cache.size} locales..."
 
-          if locale_rules_map.key?(locale_id)
-            rules_data = locale_rules_map[locale_id]
-            if data?(rules_data)
-              write_data(locale_id, rules_data)
+          @supplemental_rules_cache.keys.each_slice(100).with_index do |batch, batch_index|
+            batch.each do |locale_id|
+              extract_locale(locale_id)
             end
-          else
-            CLDR.logger.warn "No plural rules found for locale: #{locale_id}"
+
+            # Progress indicator after each batch
+            processed_count = (batch_index + 1) * 100
+            # Don't exceed total count for the last batch
+            processed_count = [processed_count, @supplemental_rules_cache.size].min
+            CLDR.logger.info "Progress: #{processed_count}/#{@supplemental_rules_cache.size} locales processed"
           end
+
+          # Clean up obsolete files after processing all locales
+          cleanup_obsolete_files
+
+          CLDR.logger.info "#{inflector.demodulize(self.class)} extraction complete (#{@supplemental_rules_cache.size} locales)"
         end
 
-        # Not used for plural rules - they come from supplemental data
+        # Override to use supplemental cache instead of individual XML files
+        private def load_raw_locale_data(locale_id)
+          load_supplemental_rules_cache unless @supplemental_rules_cache
+          @supplemental_rules_cache[locale_id]
+        end
+
+        # Not used for plural rules - we override load_raw_locale_data instead
         private def extract_data_from_xml(_xml_doc)
-          raise NotImplementedError, "Use extract_all_locales_from_supplemental for plural rules"
+          raise NotImplementedError, "PluralRules uses supplemental data, not individual locale XML files"
+        end
+
+        private def load_supplemental_rules_cache
+          return if @supplemental_rules_cache
+
+          supplemental_path = @source_dir + "common" + "supplemental" + "plurals.xml"
+          doc = REXML::Document.new(supplemental_path.read)
+          @supplemental_rules_cache = extract_all_locales_from_supplemental(doc)
         end
 
         private def extract_all_locales_from_supplemental(doc)
@@ -80,9 +82,9 @@ module Foxtail
               plural_rules[count] = condition
             end
 
-            # Assign these rules to all locales in the group
+            # Assign these rules to all locales in the group with proper structure
             locales.each do |locale_id|
-              locale_rules_map[locale_id] = plural_rules.dup
+              locale_rules_map[locale_id] = {"plural_rules" => plural_rules.dup}
             end
           end
 
@@ -90,13 +92,33 @@ module Foxtail
         end
 
         private def data?(data)
-          data.is_a?(Hash) && !data.empty?
+          return false unless data.is_a?(Hash)
+          return false unless data["plural_rules"].is_a?(Hash)
+
+          !data["plural_rules"].empty?
         end
 
-        private def write_data(locale_id, data)
-          # Wrap rules in plural_rules key to match expected structure
-          structured_data = {"plural_rules" => data}
-          write_yaml_file(locale_id, "plural_rules.yml", structured_data)
+        # Override extract_differences with nuanced plural rules logic
+        # Preserve complete rule sets only for locales with multiple categories
+        private def extract_differences(child_data, parent_data)
+          diff = super
+
+          # Special handling for plural rules: preserve 'other' only if there are other keys
+          if child_data.is_a?(Hash) && child_data["plural_rules"].is_a?(Hash)
+            plural_rules = child_data["plural_rules"]
+
+            # If there are keys other than 'other', preserve the complete rule set including 'other'
+            if plural_rules.keys.size > 1 || !plural_rules.key?("other")
+              diff["plural_rules"] ||= {}
+              # Copy all rules including 'other' to ensure completeness
+              plural_rules.each do |key, value|
+                diff["plural_rules"][key] = value
+              end
+            end
+            # If only 'other' exists, let the parent logic remove it (file won't be created)
+          end
+
+          diff
         end
       end
     end

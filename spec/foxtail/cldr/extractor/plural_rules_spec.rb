@@ -10,6 +10,8 @@ RSpec.describe Foxtail::CLDR::Extractor::PluralRules do
   before do
     # Setup fixture source directory
     setup_cldr_fixture(fixture_source_dir, %w[plurals.xml])
+    # Setup parent locales fixture for inheritance processing
+    setup_parent_locales_fixture(temp_output_dir)
   end
 
   after do
@@ -17,9 +19,9 @@ RSpec.describe Foxtail::CLDR::Extractor::PluralRules do
     FileUtils.rm_rf(fixture_source_dir)
   end
 
-  describe "#extract_all" do
+  describe "#extract" do
     it "extracts plural rules from fixture supplemental data" do
-      extractor.extract_all
+      extractor.extract
 
       # Should create plural rules for various locales
       %w[en ja ru].each do |locale|

@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 module CLDRFixtureHelper
+  FIXTURES_DIR = Pathname(__dir__).parent + "fixtures" + "cldr"
+  private_constant :FIXTURES_DIR
+
   # Copy CLDR fixture files to a temporary directory structure
   # @param temp_dir [Pathname] Base temporary directory
   # @param files [Array<String>] List of fixture files to copy
@@ -14,10 +17,8 @@ module CLDRFixtureHelper
     supplemental_dir.mkpath
 
     # Copy specified fixture files
-    fixture_dir = Pathname(__dir__) + ".." + "fixtures" + "cldr"
-
     files.each do |file|
-      source_path = fixture_dir + file
+      source_path = FIXTURES_DIR + file
       next unless source_path.exist?
 
       # Determine destination based on file type
@@ -58,5 +59,17 @@ module CLDRFixtureHelper
 
   def setup_metazone_mapping_fixture(temp_dir)
     setup_cldr_fixture(temp_dir, %w[metaZones.xml])
+  end
+
+  def setup_parent_locales_fixture(temp_dir)
+    # Copy parent_locales.yml to the output directory (not source directory)
+    fixture_path = FIXTURES_DIR + "parent_locales.yml"
+    output_path = temp_dir + "parent_locales.yml"
+
+    # Ensure output directory exists
+    temp_dir.mkpath
+
+    # Copy the fixture file
+    FileUtils.cp(fixture_path, output_path)
   end
 end

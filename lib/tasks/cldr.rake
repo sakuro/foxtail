@@ -163,7 +163,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR number formats from downloaded CLDR core data"
@@ -173,7 +173,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR currencies from downloaded CLDR core data"
@@ -183,7 +183,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR units from downloaded CLDR core data"
@@ -193,7 +193,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR timezone names from downloaded CLDR core data"
@@ -203,7 +203,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR datetime formats from downloaded CLDR core data"
@@ -213,7 +213,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
   end
 end

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "multi_locale"
+
 module Foxtail
   module CLDR
     module Extractor
@@ -10,13 +12,9 @@ module Foxtail
       # then writes structured YAML files for use by the units repository.
       #
       # @see https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements
-      class Units < Base
+      class Units < MultiLocale
         private def extract_data_from_xml(xml_doc)
-          units = extract_units(xml_doc)
-
-          {
-            "units" => units
-          }
+          {"units" => extract_units(xml_doc)}
         end
 
         private def data?(data)
@@ -24,10 +22,6 @@ module Foxtail
           return false unless data["units"].is_a?(Hash)
 
           !data["units"].empty?
-        end
-
-        private def write_data(locale_id, data)
-          write_yaml_file(locale_id, "units.yml", data)
         end
 
         # Extract unit formatting data from CLDR XML

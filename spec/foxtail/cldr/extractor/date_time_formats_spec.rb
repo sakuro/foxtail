@@ -81,9 +81,9 @@ RSpec.describe Foxtail::CLDR::Extractor::DateTimeFormats do
     end
   end
 
-  describe "#extract_all" do
+  describe "#extract" do
     it "processes all locale files in fixtures" do
-      extractor.extract_all
+      extractor.extract
 
       # Should create files for root, en, ja
       %w[root en ja].each do |locale|

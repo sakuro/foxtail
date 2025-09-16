@@ -2,11 +2,15 @@
 
 require "tmpdir"
 
-RSpec.describe Foxtail::CLDR::Extractor::Base do
-  # Create a concrete test class since BaseExtractor is abstract
+RSpec.describe Foxtail::CLDR::Extractor::MultiLocale do
+  # Create a concrete test class since MultiLocale is abstract
   let(:test_extractor_class) do
     Class.new(described_class) do
       def self.name
+        "TestExtractor"
+      end
+
+      def self.to_s
         "TestExtractor"
       end
 
@@ -16,10 +20,6 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
       def data?(data)
         data.is_a?(Hash) && !data.empty?
-      end
-
-      def write_data(locale_id, data)
-        write_yaml_file(locale_id, "test_extractor.yml", data)
       end
     end
   end
@@ -61,15 +61,15 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     end
   end
 
-  describe "#extract_all" do
+  describe "#extract" do
     it "processes all locale files" do
-      extractor.extract_all
+      extractor.extract
       expect(Foxtail::CLDR.logger).to have_received(:info).with("Extracting TestExtractor from 3 locales...")
       expect(Foxtail::CLDR.logger).to have_received(:info).with("TestExtractor extraction complete (3 locales)")
     end
 
     it "creates output files for each locale" do
-      extractor.extract_all
+      extractor.extract
 
       %w[en fr de].each do |locale|
         file_path = test_output_dir + locale + "test_extractor.yml"
@@ -113,6 +113,10 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     context "when extracted data is empty" do
       let(:empty_extractor_class) do
         Class.new(described_class) do
+          def self.name
+            "EmptyExtractor"
+          end
+
           def data_type_name
             "empty data"
           end
@@ -123,10 +127,6 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
           def data?(_data)
             false
-          end
-
-          def write_data(locale_id, data)
-            write_yaml_file(locale_id, "empty_data.yml", data)
           end
         end
       end
@@ -156,7 +156,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
   end
 
   describe "abstract methods" do
-    let(:abstract_extractor) { Foxtail::CLDR::Extractor::Base.new(source_dir: test_source_dir, output_dir: test_output_dir) }
+    let(:abstract_extractor) { Foxtail::CLDR::Extractor::MultiLocale.new(source_dir: test_source_dir, output_dir: test_output_dir) }
 
     it "raises NotImplementedError for extract_data_from_xml" do
       doc = REXML::Document.new("<test/>")
@@ -165,10 +165,6 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
 
     it "raises NotImplementedError for data?" do
       expect { abstract_extractor.__send__(:data?, {}) }.to raise_error(NotImplementedError)
-    end
-
-    it "raises NotImplementedError for write_data" do
-      expect { abstract_extractor.__send__(:write_data, "en", {}) }.to raise_error(NotImplementedError)
     end
   end
 

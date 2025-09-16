@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "multi_locale"
+
 module Foxtail
   module CLDR
     module Extractor
@@ -10,13 +12,9 @@ module Foxtail
       # files for use by the currency repository.
       #
       # @see https://unicode.org/reports/tr35/tr35-numbers.html#Currencies
-      class Currencies < Base
+      class Currencies < MultiLocale
         private def extract_data_from_xml(xml_doc)
-          currencies = extract_currencies(xml_doc)
-
-          {
-            "currencies" => currencies
-          }
+          {"currencies" => extract_currencies(xml_doc)}
         end
 
         private def data?(data)
@@ -24,10 +22,6 @@ module Foxtail
           return false unless data["currencies"].is_a?(Hash)
 
           !data["currencies"].empty?
-        end
-
-        private def write_data(locale_id, data)
-          write_yaml_file(locale_id, "currencies.yml", data)
         end
 
         private def extract_currencies(xml_doc)
