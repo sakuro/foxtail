@@ -2,7 +2,6 @@
 
 require "date"
 require "locale"
-require "strscan"
 require "time"
 require "tzinfo"
 
