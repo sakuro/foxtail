@@ -51,8 +51,6 @@ module Foxtail
 
         # Template method for extracting all locales
         def extract_all
-          validate_source_directory
-
           locale_files = @source_dir.glob("common/main/*.xml")
           CLDR.logger.info "Extracting #{self.class.name.split("::").last} from #{locale_files.size} locales..."
 
@@ -114,14 +112,6 @@ module Foxtail
           result = extract_differences(raw_data, parent_data)
           extracted_data_cache[cache_key] = result
           result
-        end
-
-        private def validate_source_directory
-          locales_dir = @source_dir + "common" + "main"
-
-          return if locales_dir.exist?
-
-          raise ArgumentError, "CLDR source directory not found: #{locales_dir}"
         end
 
         private def parent_locale_ids

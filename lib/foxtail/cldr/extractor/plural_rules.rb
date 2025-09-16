@@ -7,8 +7,6 @@ module Foxtail
       class PluralRules < Base
         # Override extract_all since plural rules are in supplemental data, not individual locale files
         def extract_all
-          validate_source_directory
-
           supplemental_path = @source_dir + "common" + "supplemental" + "plurals.xml"
           unless supplemental_path.exist?
             CLDR.logger.warn "Plural rules file not found: #{supplemental_path}"
@@ -31,8 +29,6 @@ module Foxtail
 
         # Override extract_locale since plural rules come from supplemental data
         def extract_locale(locale_id)
-          validate_source_directory
-
           supplemental_path = @source_dir + "common" + "supplemental" + "plurals.xml"
           unless supplemental_path.exist?
             CLDR.logger.warn "Plural rules file not found: #{supplemental_path}"

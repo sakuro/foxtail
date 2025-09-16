@@ -172,20 +172,6 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
     end
   end
 
-  describe "validation" do
-    context "when source directory is invalid" do
-      it "raises ArgumentError if source directory does not exist" do
-        bad_extractor = test_extractor_class.new(
-          source_dir: Pathname("/nonexistent/path"),
-          output_dir: test_output_dir
-        )
-
-        expect { bad_extractor.extract_all }
-          .to raise_error(ArgumentError, /CLDR source directory not found/)
-      end
-    end
-  end
-
   describe "#should_skip_write?" do
     let(:file_path) { test_output_dir + "test_file.yml" }
 

@@ -7,7 +7,6 @@ module Foxtail
       class LocaleAliases < Base
         # Extract all locale aliases from supplemental metadata
         def extract_all
-          validate_source_directory
           extract_locale_aliases
         end
 
@@ -140,14 +139,6 @@ module Foxtail
 
           file_path.write(yaml_data.to_yaml)
           CLDR.logger.debug "Wrote LocaleAliases to #{relative_path(file_path)}"
-        end
-
-        private def validate_source_directory
-          supplemental_dir = @source_dir + "common" + "supplemental"
-
-          return if supplemental_dir.exist?
-
-          raise ArgumentError, "CLDR supplemental directory not found: #{supplemental_dir}"
         end
 
         # Template method implementations (not used for supplemental data)
