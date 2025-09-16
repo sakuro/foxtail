@@ -13,8 +13,7 @@ task :set_debug_logging do
 end
 
 # CLDR version configuration
-CLDR_VERSION = "46"
-CLDR_CORE_URL = "https://unicode.org/Public/cldr/#{CLDR_VERSION}/core.zip".freeze
+CLDR_CORE_URL = "https://unicode.org/Public/cldr/#{Foxtail::CLDR::SOURCE_VERSION}/core.zip".freeze
 
 # Define paths
 TMP_DIR = Foxtail::ROOT + "tmp"

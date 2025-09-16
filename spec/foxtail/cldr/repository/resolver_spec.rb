@@ -264,7 +264,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
       yaml_content = {
         "locale" => locale,
         "generated_at" => Time.now.utc.iso8601,
-        "cldr_version" => "46",
+        "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
         data_type => content
       }
       file_path.write(yaml_content.to_yaml)

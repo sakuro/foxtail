@@ -190,7 +190,7 @@ module Foxtail
           yaml_data = {
             "locale" => locale_id,
             "generated_at" => Time.now.utc.iso8601,
-            "cldr_version" => ENV.fetch("CLDR_VERSION", "46")
+            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION
           }
 
           # Merge in the data, preserving its structure
