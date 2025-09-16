@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE supplementalData SYSTEM "../../common/dtd/ldmlSupplemental.dtd">
+<supplementalData>
+	<version number="$Revision$"/>
+	<metaZones>
+		<metazoneInfo>
+			<timezone type="America/New_York">
+				<usesMetazone to="2006-12-31 07:00" mzone="America_Eastern"/>
+				<usesMetazone mzone="America_Eastern"/>
+			</timezone>
+			<timezone type="America/Chicago">
+				<usesMetazone to="2006-12-31 08:00" mzone="America_Central"/>
+				<usesMetazone mzone="America_Central"/>
+			</timezone>
+			<timezone type="America/Denver">
+				<usesMetazone to="2006-12-31 09:00" mzone="America_Mountain"/>
+				<usesMetazone mzone="America_Mountain"/>
+			</timezone>
+			<timezone type="America/Los_Angeles">
+				<usesMetazone to="2006-12-31 10:00" mzone="America_Pacific"/>
+				<usesMetazone mzone="America_Pacific"/>
+			</timezone>
+			<timezone type="Europe/London">
+				<usesMetazone to="1996-10-27 01:00" mzone="GMT"/>
+				<usesMetazone mzone="GMT"/>
+			</timezone>
+			<timezone type="Europe/Paris">
+				<usesMetazone to="1980-09-28 01:00" mzone="Europe_Central"/>
+				<usesMetazone mzone="Europe_Central"/>
+			</timezone>
+			<timezone type="Asia/Tokyo">
+				<usesMetazone to="1951-05-06 15:00" mzone="Japan"/>
+				<usesMetazone mzone="Japan"/>
+			</timezone>
+			<timezone type="America/Detroit">
+				<usesMetazone to="2006-12-31 07:00" mzone="America_Eastern"/>
+				<usesMetazone mzone="America_Eastern"/>
+			</timezone>
+		</metazoneInfo>
+	</metaZones>
+</supplementalData>

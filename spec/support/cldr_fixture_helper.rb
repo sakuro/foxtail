@@ -21,7 +21,7 @@ module CLDRFixtureHelper
       next unless source_path.exist?
 
       # Determine destination based on file type
-      dest_dir = if file.include?("supplemental") || file == "likelySubtags.xml" || file == "plurals.xml"
+      dest_dir = if file.include?("supplemental") || file == "likelySubtags.xml" || file == "plurals.xml" || file == "metaZones.xml"
                    supplemental_dir
                  else
                    main_dir
@@ -54,5 +54,9 @@ module CLDRFixtureHelper
 
   def setup_malformed_xml_fixture(temp_dir)
     setup_cldr_fixture(temp_dir, %w[malformed_supplementalData.xml])
+  end
+
+  def setup_metazone_mapping_fixture(temp_dir)
+    setup_cldr_fixture(temp_dir, %w[metaZones.xml])
   end
 end

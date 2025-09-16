@@ -1,40 +1,30 @@
 # frozen_string_literal: true
 
+require_relative "single_file"
+
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts CLDR locale alias mappings from supplemental metadata
-      class LocaleAliases < Base
+      # CLDR locale aliases data extractor
+      #
+      # Extracts locale alias mappings from CLDR supplemental metadata including
+      # language aliases, territory aliases, and script aliases, then writes a
+      # single structured YAML file for use by locale resolution.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-core.html#Locale_Inheritance
+      class LocaleAliases < SingleFile
         # Extract all locale aliases from supplemental metadata
-        def extract_all
-          extract_locale_aliases
-        end
-
-        # Single file extractor - no cleanup needed
-        private def cleanup_obsolete_files
-          # No-op: locale aliases generates a single file, no cleanup needed
-        end
-
-        private def extract_locale_aliases
-          CLDR.logger.info "Extracting LocaleAliases..."
-
-          aliases = load_locale_aliases_from_supplemental
-
-          return if aliases.empty?
-
-          write_alias_data(aliases)
-          CLDR.logger.info "LocaleAliases extraction complete (#{aliases.size} aliases)"
-        end
-
-        private def load_locale_aliases_from_supplemental
+        private def extract_data
           # Load from supplementalMetadata.xml (traditional aliases)
-          aliases = load_traditional_aliases
+          traditional_aliases = load_traditional_aliases
 
           # Load from likelySubtags.xml (locale expansion rules)
           likely_aliases = load_likely_subtag_aliases
 
           # Merge both sources (traditional aliases take precedence)
-          aliases.merge(likely_aliases)
+          locale_aliases = traditional_aliases.merge(likely_aliases)
+
+          {"locale_aliases" => locale_aliases}
         end
 
         private def load_traditional_aliases
@@ -121,39 +111,6 @@ module Foxtail
             CLDR.logger.debug "Loaded #{aliases.size} likely subtag aliases from likelySubtags.xml"
           end
           aliases
-        end
-
-        private def write_alias_data(aliases)
-          file_path = @output_dir + "locale_aliases.yml"
-
-          yaml_data = {
-            "generated_at" => Time.now.utc.iso8601,
-            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
-            "locale_aliases" => aliases
-          }
-
-          # Skip writing if only generated_at differs
-          if should_skip_write?(file_path, yaml_data)
-            return
-          end
-
-          file_path.write(yaml_data.to_yaml)
-          CLDR.logger.debug "Wrote LocaleAliases to #{relative_path(file_path)}"
-        end
-
-        # Template method implementations (not used for supplemental data)
-        private def extract_data_from_xml(_xml_doc)
-          # Not used - we override extract_all instead
-          nil
-        end
-
-        private def data?(_data)
-          # Not used - we override extract_all instead
-          false
-        end
-
-        private def write_data(_locale_id, _data)
-          # Not used - we override extract_all instead
         end
       end
     end

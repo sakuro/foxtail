@@ -2,39 +2,27 @@
 
 require "rexml/document"
 require "yaml"
+require_relative "single_file"
 
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts parent locale mappings from CLDR supplemental data
-      class ParentLocales < Base
+      # CLDR parent locales data extractor
+      #
+      # Extracts parent locale mappings from CLDR supplemental data for locale
+      # inheritance resolution, then writes a single structured YAML file for
+      # use by the locale inheritance system.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-core.html#Locale_Inheritance
+      class ParentLocales < SingleFile
         # Extract parent locale mappings for all components
         # @return [Hash] Parent locale mappings
-        def extract_all
-          CLDR.logger.info "Extracting ParentLocales..."
-
-          parent_locales_data = {
-            "generated_at" => Time.now.utc.iso8601,
-            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
-            "parent_locales" => extract_parent_locales_data
-          }
-
-          output_path = @output_dir + "parent_locales.yml"
-          output_path.parent.mkpath
-
-          # Skip writing if only generated_at differs
-          if should_skip_write?(output_path, parent_locales_data)
-            return parent_locales_data
-          end
-
-          output_path.write(YAML.dump(parent_locales_data))
-          CLDR.logger.info "ParentLocales extraction complete"
-
-          parent_locales_data
+        private def extract_data
+          parent_locales = extract_parent_locales
+          {"parent_locales" => parent_locales}
         end
 
-        # Load parent locale mappings directly from CLDR source (ParentLocales extractor only)
-        def load_parent_locales_from_source
+        private def extract_parent_locales
           supplemental_path = @source_dir + "common" + "supplemental" + "supplementalData.xml"
 
           parents = {}
@@ -60,14 +48,6 @@ module Foxtail
           end
 
           parents
-        end
-        # Single file extractor - no cleanup needed
-        private def cleanup_obsolete_files
-          # No-op: parent locales generates a single file, no cleanup needed
-        end
-
-        private def extract_parent_locales_data
-          load_parent_locales_from_source
         end
       end
     end

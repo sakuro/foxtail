@@ -17,9 +17,9 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
     FileUtils.rm_rf(fixture_source_dir)
   end
 
-  describe "#extract_all" do
+  describe "#extract" do
     it "extracts parent locales data to YAML" do
-      extractor.extract_all
+      extractor.extract
 
       output_file = temp_output_dir + "parent_locales.yml"
       expect(output_file.exist?).to be true
@@ -39,7 +39,7 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
     end
 
     it "returns parent locales data" do
-      result = extractor.extract_all
+      result = extractor.extract
 
       expect(result).to have_key("parent_locales")
       expect(result["parent_locales"]).to be_a(Hash)
@@ -47,14 +47,14 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
     end
   end
 
-  describe "extract_all with skip logic" do
+  describe "extract with skip logic" do
     let(:file_path) { temp_output_dir + "parent_locales.yml" }
 
     context "when file does not exist" do
       it "writes the file" do
         expect(file_path.exist?).to be false
 
-        extractor.extract_all
+        extractor.extract
 
         expect(file_path.exist?).to be true
         content = YAML.load_file(file_path)
@@ -71,7 +71,7 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
 
       let(:initial_mtime) do
         # Write initial file
-        extractor.extract_all
+        extractor.extract
         sleep(0.01) # Wait to ensure mtime would change if file is rewritten
         file_path.mtime
       end
@@ -79,7 +79,7 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
       it "skips writing when only generated_at would differ" do
         initial_mtime # Ensure file exists with recorded mtime
 
-        result = extractor.extract_all
+        result = extractor.extract
 
         # File modification time should not change when skipping
         expect(file_path.mtime).to eq(initial_mtime)
@@ -87,17 +87,17 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
         # But should still return the data
         expect(result["parent_locales"]).to include("en_AU" => "en_001")
 
-        # Should have logged info messages 3 times total:
+        # Should have logged info messages 4 times total:
         # - 2 from initial write (Extracting... and complete)
-        # - 1 from second call (Extracting... only, skips complete when not writing)
-        expect(Foxtail::CLDR.logger).to have_received(:info).exactly(3).times
+        # - 2 from second call (Extracting... and complete, even when skipping file write)
+        expect(Foxtail::CLDR.logger).to have_received(:info).exactly(4).times
       end
     end
 
     context "when CLDR version changes" do
       let(:initial_mtime) do
         # Write initial file
-        extractor.extract_all
+        extractor.extract
         sleep(0.01) # Wait to ensure mtime would change
         file_path.mtime
       end
@@ -108,7 +108,7 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
         # Change CLDR version
         stub_const("Foxtail::CLDR::SOURCE_VERSION", "47")
 
-        extractor.extract_all
+        extractor.extract
 
         # File should be updated
         expect(file_path.mtime).to be > initial_mtime

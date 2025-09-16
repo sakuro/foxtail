@@ -2,34 +2,35 @@
 
 require "rexml/document"
 require "yaml"
+require_relative "single_file"
 
 module Foxtail
   module CLDR
     module Extractor
-      # Extracts timezone to metazone mapping data from CLDR XML files
-      # This data is language-independent and maps timezone IDs to metazone IDs
-      class MetazoneMapping < Base
+      # CLDR metazone mapping data extractor
+      #
+      # Extracts timezone to metazone mapping data from CLDR supplemental XML files.
+      # This language-independent data maps timezone IDs to metazone IDs with temporal
+      # validity periods, then writes a single structured YAML file for use by
+      # timezone processing.
+      #
+      # @see https://unicode.org/reports/tr35/tr35-dates.html#Metazone_Names
+      class MetazoneMapping < SingleFile
         # Extract metazone mapping data from CLDR
-        def extract_all
-          Foxtail::CLDR.logger.info "Extracting metazone mapping data..."
+        private def extract_data
+          timezone_to_metazone = extract_metazone_mapping
+          metazone_to_timezones = create_reverse_mapping(timezone_to_metazone)
+          {
+            "timezone_to_metazone" => timezone_to_metazone,
+            "metazone_to_timezones" => metazone_to_timezones
+          }
+        end
 
-          mapping_data = extract_metazone_mapping
-          output_file = @output_dir + "metazone_mapping.yml"
-
-          yaml_data = {
-            "generated_at" => Time.now.utc.iso8601,
-            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION
-          }.merge(mapping_data)
-
-          # Skip writing if only generated_at differs
-          unless should_skip_write?(output_file, yaml_data)
-            output_file.write(YAML.dump(yaml_data))
-            Foxtail::CLDR.logger.debug "Wrote metazone mapping to #{relative_path(output_file)}"
-          end
-
-          timezone_count = mapping_data["timezone_to_metazone"]&.size || 0
-          metazone_count = mapping_data["metazone_to_timezones"]&.size || 0
-          Foxtail::CLDR.logger.info "Metazone mapping extracted (#{timezone_count} timezones -> #{metazone_count} metazones)"
+        # Override describe_data to provide specific description for metazone mapping
+        private def describe_data(data)
+          timezone_count = data["timezone_to_metazone"]&.size || 0
+          metazone_count = data["metazone_to_timezones"]&.size || 0
+          "#{timezone_count} timezones -> #{metazone_count} metazones"
         end
 
         private def extract_metazone_mapping
@@ -60,28 +61,12 @@ module Foxtail
             mapping[timezone_id] = current_metazone if current_metazone
           end
 
-          generate_mapping_data(mapping)
-        end
-
-        # Generate the final mapping data structure
-        private def generate_mapping_data(timezone_to_metazone)
-          {
-            "timezone_to_metazone" => timezone_to_metazone,
-            # Also create reverse mapping for convenience
-            "metazone_to_timezones" => create_reverse_mapping(timezone_to_metazone)
-          }
+          mapping
         end
 
         # Create reverse mapping: metazone -> [timezone_ids]
         private def create_reverse_mapping(timezone_to_metazone)
-          reverse = Hash.new {|h, k| h[k] = [] }
-
-          timezone_to_metazone.each do |timezone_id, metazone_id|
-            reverse[metazone_id] << timezone_id
-          end
-
-          # Convert to regular hash and sort arrays
-          reverse.transform_values(&:sort).to_h
+          timezone_to_metazone.group_by(&:last).transform_values {|pairs| pairs.map(&:first).sort! }
         end
       end
     end

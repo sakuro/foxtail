@@ -17,9 +17,9 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
     FileUtils.rm_rf(fixture_source_dir)
   end
 
-  describe "#extract_all" do
+  describe "#extract" do
     it "extracts locale aliases from fixture files" do
-      extractor.extract_all
+      extractor.extract
 
       output_file = temp_output_dir + "locale_aliases.yml"
       expect(output_file.exist?).to be true
@@ -30,7 +30,7 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
     end
 
     it "includes zh_TW -> zh_Hant_TW mapping" do
-      extractor.extract_all
+      extractor.extract
 
       output_file = temp_output_dir + "locale_aliases.yml"
       data = YAML.load_file(output_file)
@@ -59,7 +59,7 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
     end
   end
 
-  describe "write_alias_data with skip logic" do
+  describe "extract with skip logic" do
     let(:test_aliases) do
       {
         "zh_TW" => "zh_Hant_TW",
@@ -72,7 +72,8 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
       it "writes the file" do
         expect(file_path.exist?).to be false
 
-        extractor.__send__(:write_alias_data, test_aliases)
+        data = {"locale_aliases" => test_aliases}
+        extractor.__send__(:write_single_file, "locale_aliases.yml", data)
 
         expect(file_path.exist?).to be true
         content = YAML.load_file(file_path)
@@ -88,7 +89,8 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
 
       let(:initial_mtime) do
         # Write initial file
-        extractor.__send__(:write_alias_data, test_aliases)
+        data = {"locale_aliases" => test_aliases}
+        extractor.__send__(:write_single_file, "locale_aliases.yml", data)
         sleep(0.01) # Wait to ensure mtime would change if file is rewritten
         file_path.mtime
       end
@@ -96,7 +98,8 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
       it "skips writing when only generated_at would differ" do
         initial_mtime # Ensure file exists with recorded mtime
 
-        extractor.__send__(:write_alias_data, test_aliases)
+        data = {"locale_aliases" => test_aliases}
+        extractor.__send__(:write_single_file, "locale_aliases.yml", data)
 
         # File modification time should not change when skipping
         expect(file_path.mtime).to eq(initial_mtime)
@@ -115,7 +118,8 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
 
       let(:initial_mtime) do
         # Write initial file with different content
-        extractor.__send__(:write_alias_data, old_aliases)
+        old_data = {"locale_aliases" => old_aliases}
+        extractor.__send__(:write_single_file, "locale_aliases.yml", old_data)
         sleep(0.01) # Wait to ensure mtime would change
         file_path.mtime
       end
@@ -123,7 +127,8 @@ RSpec.describe Foxtail::CLDR::Extractor::LocaleAliases do
       it "overwrites the file when content differs" do
         initial_mtime # Ensure file exists with recorded mtime
 
-        extractor.__send__(:write_alias_data, test_aliases)
+        data = {"locale_aliases" => test_aliases}
+        extractor.__send__(:write_single_file, "locale_aliases.yml", data)
 
         # File should be updated
         expect(file_path.mtime).to be > initial_mtime

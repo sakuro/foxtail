@@ -98,7 +98,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR locale aliases from downloaded CLDR core data"
@@ -108,7 +108,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR metazone mapping from downloaded CLDR core data"
@@ -118,7 +118,7 @@ namespace :cldr do
         output_dir: Foxtail.cldr_dir
       )
 
-      extractor.extract_all
+      extractor.extract
     end
 
     desc "Extract CLDR data for a specific locale"
