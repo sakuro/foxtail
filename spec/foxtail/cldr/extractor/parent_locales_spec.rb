@@ -106,7 +106,7 @@ RSpec.describe Foxtail::CLDR::Extractor::ParentLocales do
         initial_mtime # Ensure file exists with recorded mtime
 
         # Change CLDR version
-        allow(ENV).to receive(:fetch).with("CLDR_VERSION", "46").and_return("47")
+        stub_const("Foxtail::CLDR::SOURCE_VERSION", "47")
 
         extractor.extract_all
 

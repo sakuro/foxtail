@@ -105,7 +105,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
         content = YAML.load_file(file_path)
         expect(content["locale"]).to eq("en")
         expect(content["generated_at"]).not_to be_nil
-        expect(content["cldr_version"]).to eq("46")
+        expect(content["cldr_version"]).to eq(Foxtail::CLDR::SOURCE_VERSION)
         expect(content["test_key"]).to eq("test_value")
       end
     end
@@ -200,7 +200,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
         {
           "locale" => "en",
           "generated_at" => "2023-01-01T00:00:00Z",
-          "cldr_version" => "46",
+          "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
           "test_key" => "test_value"
         }
       end
@@ -214,7 +214,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
           {
             "locale" => "en",
             "generated_at" => "2023-12-31T23:59:59Z",
-            "cldr_version" => "46",
+            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
             "test_key" => "test_value"
           }
         end
@@ -229,7 +229,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
           {
             "locale" => "en",
             "generated_at" => "2023-12-31T23:59:59Z",
-            "cldr_version" => "46",
+            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
             "test_key" => "different_value"
           }
         end
@@ -244,7 +244,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
           {
             "locale" => "en",
             "generated_at" => "2023-12-31T23:59:59Z",
-            "cldr_version" => "46",
+            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
             "test_key" => "test_value",
             "new_field" => "new_value"
           }

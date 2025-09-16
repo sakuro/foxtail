@@ -15,7 +15,7 @@ module Foxtail
 
           parent_locales_data = {
             "generated_at" => Time.now.utc.iso8601,
-            "cldr_version" => ENV.fetch("CLDR_VERSION", "46"),
+            "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
             "parent_locales" => extract_parent_locales_data
           }
 
