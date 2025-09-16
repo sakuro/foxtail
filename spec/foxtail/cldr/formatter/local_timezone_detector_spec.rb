@@ -29,29 +29,29 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
   describe "DetectedTimezone" do
     describe "#offset_string" do
       it "formats positive offset correctly" do
-        tz = described_class::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400) # +9 hours
+        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400) # +9 hours
         expect(tz.offset_string).to eq("+09:00")
       end
 
       it "formats negative offset correctly" do
-        tz = described_class::DetectedTimezone.new(id: "America/New_York", offset_seconds: -18000) # -5 hours
+        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "America/New_York", offset_seconds: -18000) # -5 hours
         expect(tz.offset_string).to eq("-05:00")
       end
 
       it "formats zero offset correctly" do
-        tz = described_class::DetectedTimezone.new(id: "UTC", offset_seconds: 0)
+        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "UTC", offset_seconds: 0)
         expect(tz.offset_string).to eq("+00:00")
       end
     end
 
     describe "#unknown?" do
       it "returns true for Etc/Unknown timezone" do
-        tz = described_class::DetectedTimezone.new(id: "Etc/Unknown", offset_seconds: 0)
+        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "Etc/Unknown", offset_seconds: 0)
         expect(tz).to be_unknown
       end
 
       it "returns false for known timezone" do
-        tz = described_class::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400)
+        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400)
         expect(tz).not_to be_unknown
       end
     end

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative "single_file"
-
 module Foxtail
   module CLDR
     module Extractor

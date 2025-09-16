@@ -2,7 +2,6 @@
 
 require "rexml/document"
 require "yaml"
-require_relative "single_file"
 
 module Foxtail
   module CLDR

@@ -5,14 +5,8 @@ require "tmpdir"
 RSpec.describe Foxtail::CLDR::Extractor::MultiLocale do
   # Create a concrete test class since MultiLocale is abstract
   let(:test_extractor_class) do
-    Class.new(described_class) do
-      def self.name
-        "TestExtractor"
-      end
-
-      def self.to_s
-        "TestExtractor"
-      end
+    Class.new(Foxtail::CLDR::Extractor::MultiLocale) do
+      def self.to_s = "TestExtractor"
 
       def extract_data_from_xml(_xml_doc)
         {"test_key" => "test_value"}
@@ -112,7 +106,7 @@ RSpec.describe Foxtail::CLDR::Extractor::MultiLocale do
 
     context "when extracted data is empty" do
       let(:empty_extractor_class) do
-        Class.new(described_class) do
+        Class.new(Foxtail::CLDR::Extractor::MultiLocale) do
           def self.name
             "EmptyExtractor"
           end
