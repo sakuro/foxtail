@@ -4,6 +4,7 @@ require "date"
 require "locale"
 require "time"
 require "tzinfo"
+require "yaml"
 
 module Foxtail
   module CLDR
@@ -187,7 +188,6 @@ module Foxtail
             return {} unless mapping_file.exist?
 
             begin
-              require "yaml"
               yaml_data = YAML.load_file(mapping_file.to_s)
               # Handle both string and symbol keys
               yaml_data[:timezone_to_metazone] || yaml_data["timezone_to_metazone"] || {}
