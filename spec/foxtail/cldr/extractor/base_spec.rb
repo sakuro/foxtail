@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "tmpdir"
-
 RSpec.describe Foxtail::CLDR::Extractor::Base, type: :extractor do
   # Create a concrete test class since Base is abstract
   let(:test_extractor_class) do

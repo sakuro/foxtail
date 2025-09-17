@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "tmpdir"
+
 # Shared context for CLDR extractor tests providing complete test infrastructure
 #
 # This context provides everything needed for extractor tests:

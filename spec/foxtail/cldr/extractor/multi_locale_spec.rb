@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "tmpdir"
-
 RSpec.describe Foxtail::CLDR::Extractor::MultiLocale, type: :extractor do
   # Create a concrete test class since MultiLocale is abstract
   let(:test_extractor_class) do

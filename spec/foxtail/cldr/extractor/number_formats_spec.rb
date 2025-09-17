@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "tmpdir"
-
 RSpec.describe Foxtail::CLDR::Extractor::NumberFormats, type: :extractor do
   let(:extractor) { Foxtail::CLDR::Extractor::NumberFormats.new(source_dir:, output_dir:) }
 

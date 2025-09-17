@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "tmpdir"
-
 RSpec.describe Foxtail::CLDR::Extractor::Currencies, type: :extractor do
   let(:extractor) { Foxtail::CLDR::Extractor::Currencies.new(source_dir:, output_dir:) }
 

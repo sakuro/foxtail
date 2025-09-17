@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "tmpdir"
-
 RSpec.describe Foxtail::CLDR::Extractor::PluralRules, type: :extractor do
   let(:extractor) { Foxtail::CLDR::Extractor::PluralRules.new(source_dir:, output_dir:) }
 

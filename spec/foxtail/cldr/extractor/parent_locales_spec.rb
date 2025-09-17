@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "tmpdir"
-
 RSpec.describe Foxtail::CLDR::Extractor::ParentLocales, type: :extractor do
   let(:extractor) { Foxtail::CLDR::Extractor::ParentLocales.new(source_dir:, output_dir:) }
 
