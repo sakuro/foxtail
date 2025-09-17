@@ -739,8 +739,15 @@ module Foxtail
             timezone_id = @options[:timeZone] || system_timezone
 
             # Try to get localized timezone name from CLDR data
-            name = @timezone_names.zone_name(timezone_id, length, :generic) ||
-                   @timezone_names.zone_name(timezone_id, length, :standard)
+            # Check for daylight saving time specific name first
+            name = nil
+            if daylight_saving_time?(timezone_id)
+              name = @timezone_names.zone_name(timezone_id, length, :daylight)
+            end
+
+            # Fall back to generic or standard names
+            name ||= @timezone_names.zone_name(timezone_id, length, :generic) ||
+                     @timezone_names.zone_name(timezone_id, length, :standard)
 
             # Special handling for Etc/UTC: check if locale prefers different format (UTC vs locale-specific)
             if name && timezone_id == "Etc/UTC"
@@ -780,26 +787,42 @@ module Foxtail
                   gmt_format = @timezone_names.gmt_format
                   offset_seconds = calculate_timezone_offset
 
-                  # If locale uses UTC format and we're at zero offset, prefer gmt_format over metazone
-                  if gmt_format&.start_with?("UTC") && offset_seconds == 0
-                    name = gmt_format.gsub("{0}", "")
-                  elsif gmt_format&.start_with?("UTC") && offset_seconds != 0
-                    # For non-zero offsets, use the UTC format with offset
-                    hours = offset_seconds.abs / 3600
-                    minutes = (offset_seconds.abs % 3600) / 60
-                    sign = offset_seconds >= 0 ? "+" : "-"
-                    offset_string = "#{sign}#{hours}"
-                    offset_string += ":#{"%02d" % minutes}" if minutes > 0
-                    name = gmt_format.gsub("{0}", offset_string)
-                  else
-                    # Use metazone name for GMT-preferring locales
-                    name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
-                           @timezone_names.metazone_name(metazone_id, length, :generic)
+                  # For full format (:long), prefer localized metazone names over UTC format
+                  if length == :long
+                    if daylight_saving_time?(timezone_id)
+                      name = @timezone_names.metazone_name(metazone_id, length, :daylight)
+                    end
+                    name ||= @timezone_names.metazone_name(metazone_id, length, :standard) ||
+                             @timezone_names.metazone_name(metazone_id, length, :generic)
+                  end
+
+                  # If no metazone name found or not full format, fall back to UTC/GMT format
+                  if name.nil?
+                    if gmt_format&.start_with?("UTC") && offset_seconds == 0
+                      name = gmt_format.gsub("{0}", "")
+                    elsif gmt_format&.start_with?("UTC") && offset_seconds != 0
+                      # For non-zero offsets, use the UTC format with offset
+                      hours = offset_seconds.abs / 3600
+                      minutes = (offset_seconds.abs % 3600) / 60
+                      sign = offset_seconds >= 0 ? "+" : "-"
+                      offset_string = "#{sign}#{hours}"
+                      offset_string += ":#{"%02d" % minutes}" if minutes > 0
+                      name = gmt_format.gsub("{0}", offset_string)
+                    else
+                      # Use metazone name for GMT-preferring locales
+                      name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
+                             @timezone_names.metazone_name(metazone_id, length, :generic)
+                    end
                   end
                 else
-                  # For non-GMT metazones, use metazone name as usual
-                  name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
-                         @timezone_names.metazone_name(metazone_id, length, :generic)
+                  # For non-GMT metazones, check for daylight saving time
+                  if daylight_saving_time?(timezone_id)
+                    name = @timezone_names.metazone_name(metazone_id, length, :daylight)
+                  end
+
+                  # Fall back to standard or generic metazone name
+                  name ||= @timezone_names.metazone_name(metazone_id, length, :standard) ||
+                           @timezone_names.metazone_name(metazone_id, length, :generic)
                 end
               end
             end
@@ -917,6 +940,26 @@ module Foxtail
             utc_time = @original_time.getutc
             period = timezone.period_for_utc(utc_time)
             period.offset.utc_total_offset
+          end
+
+          # Check if the current time is in daylight saving time for the given timezone
+          private def daylight_saving_time?(timezone_id)
+            return false unless @original_time
+
+            # Handle special timezone IDs that don't use DST
+            case timezone_id
+            when "UTC", "GMT", %r{^Etc/UTC}, /^[+-]\d{2}:\d{2}$/
+              return false
+            end
+
+            begin
+              timezone = TZInfo::Timezone.get(timezone_id)
+              utc_time = @original_time.getutc
+              period = timezone.period_for_utc(utc_time)
+              period.dst?
+            rescue TZInfo::InvalidTimezoneIdentifier
+              false
+            end
           end
 
           # Extract city name from timezone ID (e.g., "America/New_York" -> "New York")
