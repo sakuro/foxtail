@@ -742,6 +742,35 @@ module Foxtail
             name = @timezone_names.zone_name(timezone_id, length, :generic) ||
                    @timezone_names.zone_name(timezone_id, length, :standard)
 
+            # Special handling for Etc/UTC: check if locale prefers different format (UTC vs locale-specific)
+            if name && timezone_id == "Etc/UTC"
+              gmt_format = @timezone_names.gmt_format
+              offset_seconds = calculate_timezone_offset
+
+              # If locale uses UTC format, prefer appropriate format over zone-specific name like "TU"
+              if gmt_format&.start_with?("UTC")
+                # For long format, use the long zone name if available (e.g., "temps universel coordonné")
+                if length == :long
+                  long_name = @timezone_names.zone_name(timezone_id, :long, :standard)
+                  if long_name
+                    name = long_name
+                  elsif offset_seconds == 0
+                    name = gmt_format.gsub("{0}", "")
+                  end
+                # For short format, use gmt_format
+                elsif offset_seconds == 0
+                  name = gmt_format.gsub("{0}", "")
+                else
+                  hours = offset_seconds.abs / 3600
+                  minutes = (offset_seconds.abs % 3600) / 60
+                  sign = offset_seconds >= 0 ? "+" : "-"
+                  offset_string = "#{sign}#{hours}"
+                  offset_string += ":#{"%02d" % minutes}" if minutes > 0
+                  name = gmt_format.gsub("{0}", offset_string)
+                end
+              end
+            end
+
             # If no zone-specific name, try metazone mapping
             if name.nil?
               metazone_id = timezone_to_metazone(timezone_id)
