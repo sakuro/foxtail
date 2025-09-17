@@ -165,6 +165,53 @@ RSpec.describe Foxtail::CLDR::Formatter::Number do
       end
     end
 
+    context "with special values" do
+      it "formats positive infinity" do
+        result = formatter.call(Float::INFINITY, locale: locale("en"))
+        expect(result).to eq("∞")
+      end
+
+      it "formats negative infinity" do
+        result = formatter.call(-Float::INFINITY, locale: locale("en"))
+        expect(result).to eq("-∞")
+      end
+
+      it "formats NaN" do
+        result = formatter.call(Float::NAN, locale: locale("en"))
+        expect(result).to eq("NaN")
+      end
+
+      it "formats infinity with percent style" do
+        result = formatter.call(Float::INFINITY, locale: locale("en"), style: "percent")
+        expect(result).to eq("∞%")
+      end
+
+      it "formats negative infinity with currency style" do
+        result = formatter.call(-Float::INFINITY, locale: locale("en"), style: "currency", currency: "USD")
+        expect(result).to eq("-$∞")
+      end
+
+      it "formats NaN with unit style" do
+        result = formatter.call(Float::NAN, locale: locale("en"), style: "unit", unit: "meter", unitDisplay: "short")
+        expect(result).to eq("NaN m")
+      end
+
+      it "formats infinity with scientific notation" do
+        result = formatter.call(Float::INFINITY, locale: locale("en"), notation: "scientific")
+        expect(result).to eq("∞")
+      end
+
+      it "formats negative infinity with engineering notation" do
+        result = formatter.call(-Float::INFINITY, locale: locale("en"), notation: "engineering")
+        expect(result).to eq("-∞")
+      end
+
+      it "formats NaN with compact notation" do
+        result = formatter.call(Float::NAN, locale: locale("en"), notation: "compact")
+        expect(result).to eq("NaN")
+      end
+    end
+
     context "with scientific notation" do
       it "formats numbers in scientific notation with default precision" do
         result = formatter.call(123.456, notation: "scientific", locale: locale("en"))

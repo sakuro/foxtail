@@ -90,6 +90,11 @@ module Foxtail
 
           # Format the number value using CLDR data and options
           def format
+            # Handle special values (Infinity, -Infinity, NaN) early
+            if special_value?(@original_value)
+              return format_special_value(@original_value)
+            end
+
             # Apply style-specific transformations
             transformed_value = apply_style_transformations
 
@@ -1008,6 +1013,86 @@ module Foxtail
           end
 
           # Calculate base-10 logarithm of BigDecimal value
+          # Check if value is a special value (Infinity, -Infinity, NaN)
+          private def special_value?(value)
+            return false unless value.is_a?(Numeric)
+
+            value.infinite? || value.nan?
+          end
+
+          # Format special values (Infinity, -Infinity, NaN)
+          private def format_special_value(value)
+            style = @options[:style] || "decimal"
+            notation = @options[:notation] || "standard"
+
+            # Determine the base symbol
+            symbol = if value.nan?
+                       "NaN"
+                     elsif value.infinite? == 1
+                       "∞"
+                     else # value.infinite? == -1
+                       "#{@formats.minus_sign}∞"
+                     end
+
+            # Apply style-specific formatting
+            case style
+            when "percent"
+              # Add percent sign based on locale pattern
+              percent_pattern = @formats.percent_pattern
+              if percent_pattern.include?("% ")
+                "#{symbol} %"  # Space before % (e.g., German, French)
+              else
+                "#{symbol}%"    # No space (e.g., English)
+              end
+            when "currency"
+              currency_code = @options[:currency] || "USD"
+              currency_symbol = @currencies.currency_symbol(currency_code)
+              currency_pattern = @formats.currency_pattern(@options[:currencyDisplay] == "accounting" ? "accounting" : "standard")
+
+              # Determine currency position from pattern
+              # Pattern examples: "¤#,##0.00" (symbol first), "#,##0.00 ¤" (symbol last)
+              currency_at_end = currency_pattern =~ /#[^¤]*¤/
+
+              # Handle different currency patterns
+              if value.infinite? == -1 && @options[:currencyDisplay] == "accounting"
+                # Accounting style for negative infinity
+                "(#{currency_symbol}∞)"
+              elsif currency_at_end
+                # Currency at end (e.g., German "1.234,56 €", French "1 234,56 €")
+                # Check if there's a space before currency in the pattern
+                space_before = currency_pattern.include?(" ¤")
+                separator = space_before ? " " : ""
+                if value.infinite? == -1
+                  "#{@formats.minus_sign}∞#{separator}#{currency_symbol}"
+                else
+                  "∞#{separator}#{currency_symbol}"
+                end
+              else
+                # Currency at beginning (e.g., English "$1,234.56")
+                if value.infinite? == -1
+                  "#{@formats.minus_sign}#{currency_symbol}∞"
+                else
+                  "#{currency_symbol}∞"
+                end
+              end
+            when "unit"
+              unit = @options[:unit] || "meter"
+              unit_display = @options[:unitDisplay] || "short"
+              unit_pattern = @units.unit_pattern(unit, unit_display.to_sym, :other)
+
+              if unit_pattern
+                # Replace {0} placeholder with the symbol
+                unit_pattern.gsub("{0}", symbol)
+              else
+                # Fallback: append unit name
+                "#{symbol} #{unit}"
+              end
+            else
+              # Decimal and other styles
+              symbol
+            end
+          end
+
           private def bigdecimal_log10(value)
             return BigDecimal("-Infinity") if value <= 0
 
