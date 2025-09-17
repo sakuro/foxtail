@@ -189,8 +189,7 @@ module Foxtail
 
             begin
               yaml_data = YAML.load_file(mapping_file.to_s)
-              # Handle both string and symbol keys
-              yaml_data[:timezone_to_metazone] || yaml_data["timezone_to_metazone"] || {}
+              yaml_data["timezone_to_metazone"] || {}
             rescue
               {}
             end
