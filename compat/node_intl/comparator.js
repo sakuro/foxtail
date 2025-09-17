@@ -46,9 +46,19 @@ const fs = require('fs');
 
 function formatNumber(value, locale, options = {}) {
   try {
+    // Convert special string values to actual JavaScript constants
+    let actualValue = value;
+    if (value === "Infinity") {
+      actualValue = Infinity;
+    } else if (value === "-Infinity") {
+      actualValue = -Infinity;
+    } else if (value === "NaN") {
+      actualValue = NaN;
+    }
+
     const formatter = new Intl.NumberFormat(locale, options);
     return {
-      result: formatter.format(value),
+      result: formatter.format(actualValue),
       error: null
     };
   } catch (error) {

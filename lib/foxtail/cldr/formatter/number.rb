@@ -90,6 +90,11 @@ module Foxtail
 
           # Format the number value using CLDR data and options
           def format
+            # Handle special values (Infinity, -Infinity, NaN) early
+            if special_value?(@original_value)
+              return format_special_value(@original_value)
+            end
+
             # Apply style-specific transformations
             transformed_value = apply_style_transformations
 
@@ -1008,6 +1013,109 @@ module Foxtail
           end
 
           # Calculate base-10 logarithm of BigDecimal value
+          # Check if value is a special value (Infinity, -Infinity, NaN)
+          private def special_value?(value)
+            return false unless value.is_a?(Numeric)
+
+            # Check for infinity (available on Float and BigDecimal)
+            return true if value.respond_to?(:infinite?) && value.infinite?
+
+            # Check for NaN (available on Float and BigDecimal)
+            return true if value.respond_to?(:nan?) && value.nan?
+
+            false
+          end
+
+          # Format special values (Infinity, -Infinity, NaN)
+          private def format_special_value(value)
+            # Determine the base symbol (without embedding minus for negative infinity)
+            if value.nan?
+              symbol = "NaN"
+            elsif value.infinite?
+              symbol = "∞" # Let pattern handle minus sign for negative infinity
+            else
+              raise ArgumentError, "Expected special value (Infinity, -Infinity, or NaN), got: #{value.inspect}"
+            end
+
+            # Use the same pattern-based approach as regular formatting
+            pattern = determine_pattern
+            parser = Foxtail::CLDR::PatternParser::Number.new
+            tokens = parser.parse(pattern)
+
+            # Split positive and negative patterns if present
+            pattern_tokens, has_separator =
+              case tokens
+              in [*positive, Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken, *negative]
+                # Use negative pattern for negative infinity, positive for others
+                [value.infinite? == -1 ? negative : positive, true]
+              in _
+                [tokens, false]
+              end
+
+            # Build the result using tokens (similar to build_formatted_string)
+            result = ""
+
+            # Handle minus sign for negative infinity (when no separate negative pattern)
+            original_was_negative = value.infinite? == -1 && !has_separator
+
+            # Process prefix tokens (currency symbols, literals, etc. before the number)
+            if original_was_negative
+              # Add minus sign first for negative values (like regular formatting)
+              result += @formats.minus_sign
+            end
+
+            pattern_tokens.each do |token|
+              break if token.is_a?(Foxtail::CLDR::PatternParser::Number::DigitToken) ||
+                       token.is_a?(Foxtail::CLDR::PatternParser::Number::GroupToken) ||
+                       token.is_a?(Foxtail::CLDR::PatternParser::Number::DecimalToken)
+
+              # Skip exponent tokens for special values - they don't have meaningful exponents
+              next if token.is_a?(Foxtail::CLDR::PatternParser::Number::ExponentToken)
+
+              result += format_non_digit_token(token, value)
+            end
+
+            # Add the special value symbol
+            result += symbol
+
+            # Process suffix tokens (percent signs, currency symbols at the end, etc.)
+            found_digit_section = false
+            pattern_tokens.each do |token|
+              if token.is_a?(Foxtail::CLDR::PatternParser::Number::DigitToken) ||
+                 token.is_a?(Foxtail::CLDR::PatternParser::Number::GroupToken) ||
+                 token.is_a?(Foxtail::CLDR::PatternParser::Number::DecimalToken)
+
+                found_digit_section = true
+                next
+              end
+
+              # Only process tokens after the digit section
+              next unless found_digit_section
+              # Skip exponent tokens for special values
+              next if token.is_a?(Foxtail::CLDR::PatternParser::Number::ExponentToken)
+
+              result += format_non_digit_token(token, value)
+            end
+
+            # Apply unit pattern for unit style (same as regular formatting)
+            style = @options[:style] || "decimal"
+            if style == "unit"
+              unit = @options[:unit] || "meter"
+              unit_display = @options[:unitDisplay] || "short"
+              unit_pattern = @units.unit_pattern(unit, unit_display.to_sym, :other)
+
+              if unit_pattern
+                # Replace {0} placeholder with the formatted result
+                result = unit_pattern.gsub("{0}", result)
+              else
+                # Fallback: append unit name
+                result += " #{unit}"
+              end
+            end
+
+            result
+          end
+
           private def bigdecimal_log10(value)
             return BigDecimal("-Infinity") if value <= 0
 
