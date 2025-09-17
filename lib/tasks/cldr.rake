@@ -17,8 +17,8 @@ CLDR_CORE_URL = "https://unicode.org/Public/cldr/#{Foxtail::CLDR::SOURCE_VERSION
 
 # Define paths
 TMP_DIR = Foxtail::ROOT + "tmp"
-CLDR_ZIP_PATH = TMP_DIR + "cldr-core.zip"
-CLDR_EXTRACT_DIR = TMP_DIR + "cldr-core"
+CLDR_ZIP_PATH = TMP_DIR + "cldr-core-v#{Foxtail::CLDR::SOURCE_VERSION}.zip"
+CLDR_EXTRACT_DIR = TMP_DIR + "cldr-core-v#{Foxtail::CLDR::SOURCE_VERSION}"
 
 # Output file lists
 PLURAL_RULES_FILES = FileList[Foxtail.cldr_dir.glob("*/plural_rules.yml").map(&:to_s)]
@@ -44,8 +44,10 @@ CLOBBER.include(
   PARENT_LOCALES_FILE
 )
 CLOBBER.exclude((Foxtail.cldr_dir + "README.md").to_s)
-# Keep the downloaded zip file to avoid re-downloading
+# Keep the downloaded zip files to avoid re-downloading
 CLOBBER.exclude(CLDR_ZIP_PATH)
+# Also keep other version zip files if they exist
+CLOBBER.exclude(TMP_DIR + "cldr-core-v*.zip")
 
 namespace :cldr do
   desc "Download CLDR core data to tmp directory"
