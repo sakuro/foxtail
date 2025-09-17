@@ -3,7 +3,7 @@
 require "simplecov"
 
 require "foxtail"
-require_relative "support/cldr_fixture_helper"
+require_relative "support/extractor_context"
 require_relative "support/locale_context"
 require_relative "support/logging_context"
 
@@ -18,6 +18,6 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
-  # Include CLDR fixture helper
-  config.include CLDRFixtureHelper
+  # Automatically include extractor directory management for extractor specs
+  config.include_context "when using extractor directory management", type: :extractor
 end

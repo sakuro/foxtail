@@ -2,31 +2,21 @@
 
 require "tmpdir"
 
-RSpec.describe Foxtail::CLDR::Extractor::Base do
+RSpec.describe Foxtail::CLDR::Extractor::Base, type: :extractor do
   # Create a concrete test class since Base is abstract
   let(:test_extractor_class) do
     Class.new(Foxtail::CLDR::Extractor::Base) do
+      # Define class name for data_filename generation (test_extractor.yml)
       def self.to_s = "TestExtractor"
     end
   end
 
-  let(:test_source_dir) { Pathname(Dir.tmpdir) + "test_cldr_source" }
-  let(:test_output_dir) { Pathname(Dir.tmpdir) + "test_cldr_output" }
-  let(:extractor) { test_extractor_class.new(source_dir: test_source_dir, output_dir: test_output_dir) }
-
-  before do
-    test_output_dir.mkpath
-  end
-
-  after do
-    test_output_dir.rmtree if test_output_dir.exist?
-    test_source_dir.rmtree if test_source_dir.exist?
-  end
+  let(:extractor) { test_extractor_class.new(source_dir:, output_dir:) }
 
   describe "#initialize" do
     it "sets source and output directories" do
-      expect(extractor.instance_variable_get(:@source_dir)).to eq(test_source_dir)
-      expect(extractor.instance_variable_get(:@output_dir)).to eq(test_output_dir)
+      expect(extractor.instance_variable_get(:@source_dir)).to eq(source_dir)
+      expect(extractor.instance_variable_get(:@output_dir)).to eq(output_dir)
     end
   end
 
@@ -46,7 +36,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Base do
   end
 
   describe "#should_skip_write?" do
-    let(:file_path) { test_output_dir + "test.yml" }
+    let(:file_path) { output_dir + "test.yml" }
     let(:yaml_data) { {"test" => "data", "generated_at" => "2023-01-01T00:00:00Z"} }
 
     context "when file doesn't exist" do

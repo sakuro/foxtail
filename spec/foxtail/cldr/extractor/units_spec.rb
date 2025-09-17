@@ -2,43 +2,22 @@
 
 require "tmpdir"
 
-RSpec.describe Foxtail::CLDR::Extractor::Units do
-  let(:fixture_source_dir) { Pathname(Dir.tmpdir) + "test_units_source" }
-  let(:temp_output_dir) { Pathname(Dir.mktmpdir) }
-  let(:extractor) { Foxtail::CLDR::Extractor::Units.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
+RSpec.describe Foxtail::CLDR::Extractor::Units, type: :extractor do
+  let(:extractor) { Foxtail::CLDR::Extractor::Units.new(source_dir:, output_dir:) }
 
   before do
     # Setup fixture source directory
-    setup_basic_cldr_fixture(fixture_source_dir)
+    setup_extractor_fixture(%w[root.xml en.xml ja.xml supplementalData.xml plurals.xml])
 
-    # Create parent_locales.yml for Extractor tests
-    create_parent_locales_file
-  end
-
-  after do
-    FileUtils.rm_rf(temp_output_dir)
-    FileUtils.rm_rf(fixture_source_dir)
-  end
-
-  def create_parent_locales_file
-    parent_locales_data = {
-      "parent_locales" => {
-        "en_AU" => "en_001",
-        "en_001" => "en",
-        "ja_JP" => "ja"
-      }
-    }
-
-    parent_locales_file = temp_output_dir + "parent_locales.yml"
-    parent_locales_file.dirname.mkpath
-    parent_locales_file.write(YAML.dump(parent_locales_data))
+    # Setup parent_locales fixture
+    setup_parent_locales_fixture
   end
 
   describe "#extract_locale" do
     it "extracts units data for a locale" do
       extractor.extract_locale("en")
 
-      units_file = temp_output_dir + "en" + "units.yml"
+      units_file = output_dir + "en" + "units.yml"
       expect(units_file.exist?).to be(true)
 
       data = YAML.load_file(units_file)

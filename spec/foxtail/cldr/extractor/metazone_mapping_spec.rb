@@ -2,26 +2,19 @@
 
 require "tmpdir"
 
-RSpec.describe Foxtail::CLDR::Extractor::MetazoneMapping do
-  let(:fixture_source_dir) { Pathname(Dir.tmpdir) + "test_metazone_mapping_source" }
-  let(:temp_output_dir) { Pathname(Dir.mktmpdir) }
-  let(:extractor) { Foxtail::CLDR::Extractor::MetazoneMapping.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
+RSpec.describe Foxtail::CLDR::Extractor::MetazoneMapping, type: :extractor do
+  let(:extractor) { Foxtail::CLDR::Extractor::MetazoneMapping.new(source_dir:, output_dir:) }
 
   before do
     # Setup fixture source directory with metaZones.xml
-    setup_metazone_mapping_fixture(fixture_source_dir)
-  end
-
-  after do
-    FileUtils.rm_rf(temp_output_dir)
-    FileUtils.rm_rf(fixture_source_dir)
+    setup_extractor_fixture(%w[metaZones.xml])
   end
 
   describe "#extract" do
     it "extracts metazone mapping data to YAML" do
       extractor.extract
 
-      output_file = temp_output_dir + "metazone_mapping.yml"
+      output_file = output_dir + "metazone_mapping.yml"
       expect(output_file.exist?).to be true
 
       data = YAML.load_file(output_file)
@@ -48,78 +41,6 @@ RSpec.describe Foxtail::CLDR::Extractor::MetazoneMapping do
       expect(result).to have_key("metazone_to_timezones")
       expect(result["timezone_to_metazone"]).to be_a(Hash)
       expect(result["metazone_to_timezones"]).to be_a(Hash)
-    end
-  end
-
-  describe "extract with skip logic" do
-    let(:file_path) { temp_output_dir + "metazone_mapping.yml" }
-
-    context "when file does not exist" do
-      it "writes the file" do
-        expect(file_path.exist?).to be false
-
-        extractor.extract
-
-        expect(file_path.exist?).to be true
-        content = YAML.load_file(file_path)
-        expect(content["timezone_to_metazone"]).to include("America/New_York" => "America_Eastern")
-      end
-    end
-
-    context "when file exists with same content" do
-      before do
-        # Allow info and debug logging throughout the test
-        allow(Foxtail::CLDR.logger).to receive(:info)
-        allow(Foxtail::CLDR.logger).to receive(:debug)
-      end
-
-      let(:initial_mtime) do
-        # Write initial file
-        extractor.extract
-        sleep(0.01) # Wait to ensure mtime would change if file is rewritten
-        file_path.mtime
-      end
-
-      it "skips writing when only generated_at would differ" do
-        initial_mtime # Ensure file exists with recorded mtime
-
-        result = extractor.extract
-
-        # File modification time should not change when skipping
-        expect(file_path.mtime).to eq(initial_mtime)
-
-        # But should still return the data
-        expect(result["timezone_to_metazone"]).to include("America/New_York" => "America_Eastern")
-
-        # Should have logged info messages 4 times total:
-        # - 2 from initial write (Extracting... and complete)
-        # - 2 from second call (Extracting... and complete, even when skipping file write)
-        expect(Foxtail::CLDR.logger).to have_received(:info).exactly(4).times
-      end
-    end
-
-    context "when CLDR version changes" do
-      let(:initial_mtime) do
-        # Write initial file
-        extractor.extract
-        sleep(0.01) # Wait to ensure mtime would change
-        file_path.mtime
-      end
-
-      it "overwrites the file when CLDR version differs" do
-        initial_mtime # Ensure file exists with recorded mtime
-
-        # Change CLDR version
-        stub_const("Foxtail::CLDR::SOURCE_VERSION", "47")
-
-        extractor.extract
-
-        # File should be updated
-        expect(file_path.mtime).to be > initial_mtime
-
-        content = YAML.load_file(file_path)
-        expect(content["cldr_version"]).to eq("47")
-      end
     end
   end
 

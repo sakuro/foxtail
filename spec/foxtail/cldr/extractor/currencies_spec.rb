@@ -2,33 +2,15 @@
 
 require "tmpdir"
 
-RSpec.describe Foxtail::CLDR::Extractor::Currencies do
-  let(:fixture_source_dir) { Pathname(Dir.tmpdir) + "test_currencies_source" }
-  let(:temp_output_dir) { Pathname(Dir.mktmpdir) }
-  let(:extractor) { Foxtail::CLDR::Extractor::Currencies.new(source_dir: fixture_source_dir, output_dir: temp_output_dir) }
+RSpec.describe Foxtail::CLDR::Extractor::Currencies, type: :extractor do
+  let(:extractor) { Foxtail::CLDR::Extractor::Currencies.new(source_dir:, output_dir:) }
 
   before do
     # Setup fixture source directory
-    setup_basic_cldr_fixture(fixture_source_dir)
+    setup_extractor_fixture(%w[root.xml en.xml ja.xml supplementalData.xml plurals.xml])
 
-    # Create parent_locales.yml for Extractor tests
-    create_parent_locales_file
-  end
-
-  after do
-    FileUtils.rm_rf(temp_output_dir)
-    FileUtils.rm_rf(fixture_source_dir)
-  end
-
-  def create_parent_locales_file
-    parent_locales_data = {
-      "parent_locales" => {
-        "en_AU" => "en_001",
-        "en_001" => "en",
-        "es_MX" => "es_419"
-      }
-    }
-    (temp_output_dir + "parent_locales.yml").write(parent_locales_data.to_yaml)
+    # Setup parent_locales fixture
+    setup_parent_locales_fixture
   end
 
   describe "#extract_locale" do
@@ -36,7 +18,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Currencies do
       it "extracts currency data" do
         extractor.extract_locale("root")
 
-        output_file = temp_output_dir + "root" + "currencies.yml"
+        output_file = output_dir + "root" + "currencies.yml"
         expect(output_file.exist?).to be true
 
         data = YAML.load_file(output_file)
@@ -52,7 +34,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Currencies do
       it "extracts locale-specific currency data" do
         extractor.extract_locale("en")
 
-        output_file = temp_output_dir + "en" + "currencies.yml"
+        output_file = output_dir + "en" + "currencies.yml"
         expect(output_file.exist?).to be true
 
         data = YAML.load_file(output_file)
@@ -69,7 +51,7 @@ RSpec.describe Foxtail::CLDR::Extractor::Currencies do
 
       # Should create files for root, en, ja
       %w[root en ja].each do |locale|
-        output_file = temp_output_dir + locale + "currencies.yml"
+        output_file = output_dir + locale + "currencies.yml"
         expect(output_file.exist?).to be true
       end
     end
