@@ -741,7 +741,7 @@ module Foxtail
             # Try to get localized timezone name from CLDR data
             # Check for daylight saving time specific name first
             name = nil
-            if is_daylight_saving_time?(timezone_id)
+            if daylight_saving_time?(timezone_id)
               name = @timezone_names.zone_name(timezone_id, length, :daylight)
             end
 
@@ -805,7 +805,7 @@ module Foxtail
                   end
                 else
                   # For non-GMT metazones, check for daylight saving time
-                  if is_daylight_saving_time?(timezone_id)
+                  if daylight_saving_time?(timezone_id)
                     name = @timezone_names.metazone_name(metazone_id, length, :daylight)
                   end
 
@@ -932,12 +932,12 @@ module Foxtail
           end
 
           # Check if the current time is in daylight saving time for the given timezone
-          private def is_daylight_saving_time?(timezone_id)
+          private def daylight_saving_time?(timezone_id)
             return false unless @original_time
 
             # Handle special timezone IDs that don't use DST
             case timezone_id
-            when "UTC", "GMT", /^Etc\/UTC/, /^[+-]\d{2}:\d{2}$/
+            when "UTC", "GMT", %r{^Etc/UTC}, /^[+-]\d{2}:\d{2}$/
               return false
             end
 
