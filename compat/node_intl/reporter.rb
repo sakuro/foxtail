@@ -117,8 +117,11 @@ class NodeIntlReporter
       report << ""
       report << "### #{format_name} Mismatches"
       report << ""
+      report << "<details>"
+      report << "<summary>Show all #{format_mismatches.size} mismatches</summary>"
+      report << ""
 
-      format_mismatches.first(5).each do |result|
+      format_mismatches.each do |result|
         report << "**#{result.id}**"
         report << "- Value: #{result.value}, Locale: #{result.locale}"
         report << "- Options: #{result.options.inspect}"
@@ -127,10 +130,8 @@ class NodeIntlReporter
         report << ""
       end
 
-      if format_mismatches.size > 5
-        report << "*... and #{format_mismatches.size - 5} more mismatches*"
-        report << ""
-      end
+      report << "</details>"
+      report << ""
     end
 
     report
