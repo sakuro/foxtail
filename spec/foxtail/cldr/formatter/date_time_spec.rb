@@ -218,6 +218,25 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
           formatter.call(utc_time, locale: locale("en"), timeZone: "Invalid/Timezone", pattern: "HH:mm")
         }.to raise_error(TZInfo::InvalidTimezoneIdentifier)
       end
+
+      it "formats timezone names with different patterns" do
+        utc_time = Time.new(2023, 6, 15, 14, 30, 45, "+00:00")
+
+        # Test Etc/UTC timezone handling
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "Etc/UTC", pattern: "z")
+        expect(result).to be_a(String)
+        expect(result).not_to be_empty
+
+        # Test offset format timezone
+        result = formatter.call(utc_time, locale: locale("en"), timeZone: "+09:00", pattern: "z")
+        expect(result).to be_a(String)
+        expect(result).not_to be_empty
+
+        # Test GMT metazone with different locales
+        result = formatter.call(utc_time, locale: locale("fr"), timeZone: "UTC", pattern: "z")
+        expect(result).to be_a(String)
+        expect(result).not_to be_empty
+      end
     end
   end
 end
