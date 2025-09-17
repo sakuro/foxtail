@@ -11,37 +11,12 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
   after { FileUtils.rm_rf(temp_dir) }
 
   describe "#resolve" do
-    before do
-      # Create test data files
-      create_test_data("root", {
-        "number_formats" => {
-          "symbols" => {"decimal" => ".", "group" => ","},
-          "currencies" => {
-            "USD" => {"symbol" => "$", "name" => "US Dollar"},
-            "EUR" => {"symbol" => "€", "name" => "Euro"}
-          }
-        }
-      })
-
-      create_test_data("ja", {
-        "number_formats" => {
-          "symbols" => {"decimal" => ".", "group" => ","},
-          "currencies" => {
-            "USD" => {"name" => "米ドル"}
-          }
-        }
-      })
-
-      create_test_data("ja_JP", {
-        "number_formats" => {
-          "currencies" => {
-            "JPY" => {"symbol" => "¥", "name" => "円"}
-          }
-        }
-      })
-    end
-
     context "with simple inheritance" do
+      before do
+        # Copy fixture files to test data directory
+        copy_fixture_data(%w[root ja ja_JP], "number_formats")
+      end
+
       let(:resolver) { Foxtail::CLDR::Repository::Resolver.new("ja_JP", data_dir:) }
 
       it "resolves data from current locale" do
@@ -75,6 +50,10 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
     end
 
     context "with nested data resolution" do
+      before do
+        copy_fixture_data(%w[root ja ja_JP], "number_formats")
+      end
+
       let(:resolver) { Foxtail::CLDR::Repository::Resolver.new("ja_JP", data_dir:) }
 
       it "resolves nested hash structures" do
@@ -95,7 +74,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
     context "with missing intermediate locales" do
       before do
         # Create only root and ja_JP, skip ja
-        FileUtils.rm_rf(data_dir + "ja")
+        copy_fixture_data(%w[root ja_JP], "number_formats")
       end
 
       let(:resolver) { Foxtail::CLDR::Repository::Resolver.new("ja_JP", data_dir:) }
@@ -107,32 +86,7 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
 
     context "with datetime formats" do
       before do
-        create_test_data("root", {
-          "datetime_formats" => {
-            "date_formats" => {"medium" => "MMM d, y"},
-            "months" => {
-              "format" => {
-                "wide" => {
-                  "1" => "January",
-                  "2" => "February"
-                }
-              }
-            }
-          }
-        })
-
-        create_test_data("ja", {
-          "datetime_formats" => {
-            "months" => {
-              "format" => {
-                "wide" => {
-                  "1" => "1月",
-                  "2" => "2月"
-                }
-              }
-            }
-          }
-        })
+        copy_fixture_data(%w[root ja], "datetime_formats")
       end
 
       let(:resolver) { Foxtail::CLDR::Repository::Resolver.new("ja", data_dir:) }
@@ -195,34 +149,12 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
 
     context "with parent locales data" do
       before do
-        # Create parent locales YAML file
-        parent_locales_data = {
-          "parent_locales" => {
-            "en_AU" => "en_001",
-            "en_001" => "en",
-            "es_MX" => "es_419"
-          }
-        }
-        (data_dir + "parent_locales.yml").write(parent_locales_data.to_yaml)
+        # Copy parent locales fixture
+        fixtures_dir = Pathname(__dir__).parent.parent.parent + "fixtures" + "cldr"
+        FileUtils.cp(fixtures_dir + "test_parent_locales.yml", data_dir + "parent_locales.yml")
 
-        # Create test data for inheritance chain testing
-        create_test_data("root", {
-          "number_formats" => {
-            "symbols" => {"decimal" => ".", "group" => ","}
-          }
-        })
-
-        create_test_data("en", {
-          "number_formats" => {
-            "currencies" => {"USD" => {"name" => "US Dollar"}}
-          }
-        })
-
-        create_test_data("en_001", {
-          "number_formats" => {
-            "currencies" => {"USD" => {"symbol" => "US$"}}
-          }
-        })
+        # Copy fixture data for inheritance chain testing
+        copy_fixture_data(%w[root en en_001], "number_formats")
       end
 
       let(:resolver) { Foxtail::CLDR::Repository::Resolver.new("en_AU", data_dir:) }
@@ -248,27 +180,25 @@ RSpec.describe Foxtail::CLDR::Repository::Resolver do
         # (en_001 would be skipped)
         result = resolver_without_parents.resolve("number_formats.currencies.USD", "number_formats")
 
-        # Should only get name from en (no symbol from en_001)
+        # Should get name from en and symbol from root (en_001 would be skipped)
         expect(result).to eq({
-          "name" => "US Dollar" # from en only
+          "name" => "US Dollar", # from en
+          "symbol" => "$" # from root
         })
       end
     end
   end
 
-  private def create_test_data(locale, data)
-    locale_dir = data_dir + locale
-    locale_dir.mkpath
+  private def copy_fixture_data(locales, data_type)
+    fixtures_dir = Pathname(__dir__).parent.parent.parent + "fixtures" + "cldr"
 
-    data.each do |data_type, content|
-      file_path = locale_dir + "#{data_type}.yml"
-      yaml_content = {
-        "locale" => locale,
-        "generated_at" => Time.now.utc.iso8601,
-        "cldr_version" => Foxtail::CLDR::SOURCE_VERSION,
-        data_type => content
-      }
-      file_path.write(yaml_content.to_yaml)
+    locales.each do |locale|
+      source_file = fixtures_dir + locale + "#{data_type}.yml"
+
+      locale_dir = data_dir + locale
+      locale_dir.mkpath
+      dest_file = locale_dir + "#{data_type}.yml"
+      FileUtils.cp(source_file, dest_file)
     end
   end
 end
