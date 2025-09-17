@@ -747,9 +747,18 @@ module Foxtail
               gmt_format = @timezone_names.gmt_format
               offset_seconds = calculate_timezone_offset
 
-              # If locale uses UTC format, prefer gmt_format over zone-specific name like "TU"
+              # If locale uses UTC format, prefer appropriate format over zone-specific name like "TU"
               if gmt_format&.start_with?("UTC")
-                if offset_seconds == 0
+                # For long format, use the long zone name if available (e.g., "temps universel coordonné")
+                if length == :long
+                  long_name = @timezone_names.zone_name(timezone_id, :long, :standard)
+                  if long_name
+                    name = long_name
+                  elsif offset_seconds == 0
+                    name = gmt_format.gsub("{0}", "")
+                  end
+                # For short format, use gmt_format
+                elsif offset_seconds == 0
                   name = gmt_format.gsub("{0}", "")
                 else
                   hours = offset_seconds.abs / 3600
