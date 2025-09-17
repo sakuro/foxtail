@@ -768,11 +768,7 @@ module Foxtail
                 elsif offset_seconds == 0
                   name = gmt_format.gsub("{0}", "")
                 else
-                  hours = offset_seconds.abs / 3600
-                  minutes = (offset_seconds.abs % 3600) / 60
-                  sign = offset_seconds >= 0 ? "+" : "-"
-                  offset_string = "#{sign}#{hours}"
-                  offset_string += ":#{"%02d" % minutes}" if minutes > 0
+                  offset_string = format_gmt_offset_string(offset_seconds)
                   name = gmt_format.gsub("{0}", offset_string)
                 end
               end
@@ -802,11 +798,7 @@ module Foxtail
                       name = gmt_format.gsub("{0}", "")
                     elsif gmt_format&.start_with?("UTC") && offset_seconds != 0
                       # For non-zero offsets, use the UTC format with offset
-                      hours = offset_seconds.abs / 3600
-                      minutes = (offset_seconds.abs % 3600) / 60
-                      sign = offset_seconds >= 0 ? "+" : "-"
-                      offset_string = "#{sign}#{hours}"
-                      offset_string += ":#{"%02d" % minutes}" if minutes > 0
+                      offset_string = format_gmt_offset_string(offset_seconds)
                       name = gmt_format.gsub("{0}", offset_string)
                     else
                       # Use metazone name for GMT-preferring locales
@@ -840,11 +832,7 @@ module Foxtail
                 base_format = @timezone_names.gmt_format
                 name = base_format.gsub("{0}", "")
               else
-                hours = offset_seconds.abs / 3600
-                minutes = (offset_seconds.abs % 3600) / 60
-                sign = offset_seconds >= 0 ? "+" : "-"
-                offset_string = "#{sign}#{hours}"
-                offset_string += ":#{"%02d" % minutes}" if minutes > 0
+                offset_string = format_gmt_offset_string(offset_seconds)
 
                 # Apply CLDR gmt_format pattern (e.g., "GMT{0}" or "UTC{0}")
                 gmt_pattern = @timezone_names.gmt_format
@@ -940,6 +928,18 @@ module Foxtail
             utc_time = @original_time.getutc
             period = timezone.period_for_utc(utc_time)
             period.offset.utc_total_offset
+          end
+
+          # Format offset seconds into GMT/UTC style string (e.g., "+9", "+9:30", "-5")
+          private def format_gmt_offset_string(offset_seconds)
+            return "" if offset_seconds == 0
+
+            hours = offset_seconds.abs / 3600
+            minutes = (offset_seconds.abs % 3600) / 60
+            sign = offset_seconds >= 0 ? "+" : "-"
+            offset_string = "#{sign}#{hours}"
+            offset_string += ":#{"%02d" % minutes}" if minutes > 0
+            offset_string
           end
 
           # Check if the current time is in daylight saving time for the given timezone
