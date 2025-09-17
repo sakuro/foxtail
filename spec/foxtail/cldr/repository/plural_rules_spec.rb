@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "fileutils"
+
 RSpec.describe Foxtail::CLDR::Repository::PluralRules do
   describe "#initialize" do
     it "loads rules for supported locale" do
