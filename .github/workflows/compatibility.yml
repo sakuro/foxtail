@@ -132,21 +132,14 @@ jobs:
           # Read the markdown report
           REPORT=$(cat compat/node_intl_compatibility_report.md)
 
-          # Extract the overall summary and both format compatibility tables
-          SUMMARY=$(echo "$REPORT" | sed -n '/## Overall Summary/,/### DateTimeFormat Mismatches/p' | head -n -1)
-          if [ -z "$SUMMARY" ]; then
-            # Fallback: extract everything up to the first detailed mismatch
-            SUMMARY=$(echo "$REPORT" | sed -n '/## Overall Summary/,/^**.*_.*_.*$/p' | head -n -1)
-          fi
-
-          # Create the comment body
+          # Create the comment body with complete report
           {
             echo 'body<<EOF'
             echo '## 📊 Node.js Intl Compatibility Report'
             echo ''
-            echo "$SUMMARY"
+            echo "$REPORT"
             echo ''
-            echo "[Full report available in workflow artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+            echo "[Report also available in workflow artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
             echo ''
             echo '> 🔍 This compatibility check ran because formatter-related files were modified.'
             echo 'EOF'

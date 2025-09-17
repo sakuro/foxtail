@@ -67,7 +67,12 @@ class NodeIntlReporter
 
     if conditional_matches > 0
       report << ""
-      report << "**Conditional matches**: Results that match after normalizing whitespace characters (CLDR uses non-breaking spaces U+00A0, Node.js uses regular spaces U+0020)"
+      report << "**Conditional matches**: Results that match after applying normalization rules:"
+      report << ""
+      report << "- **Whitespace normalization**: Foxtail uses Unicode whitespace characters per CLDR standards, while Node.js uses regular spaces"
+      report << "  - **Foxtail**: Non-breaking space (U+00A0) and narrow no-break space (U+202F)"
+      report << "  - **Node.js**: Regular space (U+0020)"
+      report << "  - These are normalized to regular spaces for comparison as they represent equivalent spacing"
     end
 
     report
@@ -117,8 +122,11 @@ class NodeIntlReporter
       report << ""
       report << "### #{format_name} Mismatches"
       report << ""
+      report << "<details>"
+      report << "<summary>Show all #{format_mismatches.size} mismatches</summary>"
+      report << ""
 
-      format_mismatches.first(5).each do |result|
+      format_mismatches.each do |result|
         report << "**#{result.id}**"
         report << "- Value: #{result.value}, Locale: #{result.locale}"
         report << "- Options: #{result.options.inspect}"
@@ -127,10 +135,8 @@ class NodeIntlReporter
         report << ""
       end
 
-      if format_mismatches.size > 5
-        report << "*... and #{format_mismatches.size - 5} more mismatches*"
-        report << ""
-      end
+      report << "</details>"
+      report << ""
     end
 
     report

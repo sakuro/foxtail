@@ -746,8 +746,32 @@ module Foxtail
             if name.nil?
               metazone_id = timezone_to_metazone(timezone_id)
               if metazone_id
-                name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
-                       @timezone_names.metazone_name(metazone_id, length, :generic)
+                # For GMT metazone, check if locale prefers different format (UTC vs GMT)
+                if metazone_id == "GMT"
+                  gmt_format = @timezone_names.gmt_format
+                  offset_seconds = calculate_timezone_offset
+
+                  # If locale uses UTC format and we're at zero offset, prefer gmt_format over metazone
+                  if gmt_format&.start_with?("UTC") && offset_seconds == 0
+                    name = gmt_format.gsub("{0}", "")
+                  elsif gmt_format&.start_with?("UTC") && offset_seconds != 0
+                    # For non-zero offsets, use the UTC format with offset
+                    hours = offset_seconds.abs / 3600
+                    minutes = (offset_seconds.abs % 3600) / 60
+                    sign = offset_seconds >= 0 ? "+" : "-"
+                    offset_string = "#{sign}#{hours}"
+                    offset_string += ":#{"%02d" % minutes}" if minutes > 0
+                    name = gmt_format.gsub("{0}", offset_string)
+                  else
+                    # Use metazone name for GMT-preferring locales
+                    name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
+                           @timezone_names.metazone_name(metazone_id, length, :generic)
+                  end
+                else
+                  # For non-GMT metazones, use metazone name as usual
+                  name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
+                         @timezone_names.metazone_name(metazone_id, length, :generic)
+                end
               end
             end
 
