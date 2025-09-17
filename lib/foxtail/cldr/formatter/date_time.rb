@@ -739,8 +739,15 @@ module Foxtail
             timezone_id = @options[:timeZone] || system_timezone
 
             # Try to get localized timezone name from CLDR data
-            name = @timezone_names.zone_name(timezone_id, length, :generic) ||
-                   @timezone_names.zone_name(timezone_id, length, :standard)
+            # Check for daylight saving time specific name first
+            name = nil
+            if is_daylight_saving_time?(timezone_id)
+              name = @timezone_names.zone_name(timezone_id, length, :daylight)
+            end
+
+            # Fall back to generic or standard names
+            name ||= @timezone_names.zone_name(timezone_id, length, :generic) ||
+                     @timezone_names.zone_name(timezone_id, length, :standard)
 
             # Special handling for Etc/UTC: check if locale prefers different format (UTC vs locale-specific)
             if name && timezone_id == "Etc/UTC"
@@ -797,9 +804,14 @@ module Foxtail
                            @timezone_names.metazone_name(metazone_id, length, :generic)
                   end
                 else
-                  # For non-GMT metazones, use metazone name as usual
-                  name = @timezone_names.metazone_name(metazone_id, length, :standard) ||
-                         @timezone_names.metazone_name(metazone_id, length, :generic)
+                  # For non-GMT metazones, check for daylight saving time
+                  if is_daylight_saving_time?(timezone_id)
+                    name = @timezone_names.metazone_name(metazone_id, length, :daylight)
+                  end
+
+                  # Fall back to standard or generic metazone name
+                  name ||= @timezone_names.metazone_name(metazone_id, length, :standard) ||
+                           @timezone_names.metazone_name(metazone_id, length, :generic)
                 end
               end
             end
@@ -917,6 +929,26 @@ module Foxtail
             utc_time = @original_time.getutc
             period = timezone.period_for_utc(utc_time)
             period.offset.utc_total_offset
+          end
+
+          # Check if the current time is in daylight saving time for the given timezone
+          private def is_daylight_saving_time?(timezone_id)
+            return false unless @original_time
+
+            # Handle special timezone IDs that don't use DST
+            case timezone_id
+            when "UTC", "GMT", /^Etc\/UTC/, /^[+-]\d{2}:\d{2}$/
+              return false
+            end
+
+            begin
+              timezone = TZInfo::Timezone.get(timezone_id)
+              utc_time = @original_time.getutc
+              period = timezone.period_for_utc(utc_time)
+              period.dst?
+            rescue TZInfo::InvalidTimezoneIdentifier
+              false
+            end
           end
 
           # Extract city name from timezone ID (e.g., "America/New_York" -> "New York")
