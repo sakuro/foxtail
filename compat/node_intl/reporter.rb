@@ -69,11 +69,10 @@ class NodeIntlReporter
       report << ""
       report << "**Conditional matches**: Results that match after applying normalization rules:"
       report << ""
-      report << "- **Whitespace normalization**: Non-breaking spaces (U+00A0) and thin spaces (U+202F) are converted to regular spaces (U+0020)"
-      report << "- **Timezone format equivalence**: Different but equivalent timezone representations are considered matches:"
-      report << "  - IANA timezone IDs vs GMT offsets/abbreviations (e.g., `Europe/London` ↔ `GMT+0`, `GMT+1`, `BST`)"
-      report << "  - Both standard and daylight saving time representations are accepted because IANA IDs don't indicate which is active"
-      report << "  - This prevents false mismatches when the same timezone is represented differently depending on the date/time"
+      report << "- **Whitespace normalization**: Foxtail uses Unicode whitespace characters per CLDR standards, while Node.js uses regular spaces"
+      report << "  - **Foxtail**: Non-breaking space (U+00A0) and narrow no-break space (U+202F)"
+      report << "  - **Node.js**: Regular space (U+0020)"
+      report << "  - These are normalized to regular spaces for comparison as they represent equivalent spacing"
     end
 
     report
