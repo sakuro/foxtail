@@ -67,7 +67,13 @@ class NodeIntlReporter
 
     if conditional_matches > 0
       report << ""
-      report << "**Conditional matches**: Results that match after normalizing whitespace characters (CLDR uses non-breaking spaces U+00A0, Node.js uses regular spaces U+0020)"
+      report << "**Conditional matches**: Results that match after applying normalization rules:"
+      report << ""
+      report << "- **Whitespace normalization**: Non-breaking spaces (U+00A0) and thin spaces (U+202F) are converted to regular spaces (U+0020)"
+      report << "- **Timezone format equivalence**: Different but equivalent timezone representations are considered matches:"
+      report << "  - IANA timezone IDs vs GMT offsets/abbreviations (e.g., `Europe/London` ↔ `GMT+0`, `GMT+1`, `BST`)"
+      report << "  - Both standard and daylight saving time representations are accepted because IANA IDs don't indicate which is active"
+      report << "  - This prevents false mismatches when the same timezone is represented differently depending on the date/time"
     end
 
     report
