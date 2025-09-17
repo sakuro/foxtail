@@ -214,7 +214,14 @@ class NodeIntlTester
       {weekday: "long", year: "numeric", month: "short", day: "numeric"},
       {hour: "2-digit", minute: "2-digit"},
       {hour: "numeric", minute: "2-digit", second: "2-digit", hour12: true},
-      {hour: "numeric", minute: "2-digit", second: "2-digit", hour12: false}
+      {hour: "numeric", minute: "2-digit", second: "2-digit", hour12: false},
+      # Timezone-specific test cases
+      {timeStyle: "full", timeZone: "Asia/Tokyo"},
+      {timeStyle: "long", timeZone: "Asia/Tokyo"},
+      {timeStyle: "full", timeZone: "Europe/London"},
+      {timeStyle: "long", timeZone: "Europe/London"},
+      {timeStyle: "full", timeZone: "America/New_York"},
+      {timeStyle: "long", timeZone: "America/New_York"}
     ]
 
     test_dates.each do |date_value|
@@ -371,52 +378,8 @@ class NodeIntlTester
     # Whitespace normalization (existing conditional match)
     return :conditional_match if normalize_whitespace(foxtail_result) == normalize_whitespace(node_result)
 
-    # Timezone format equivalence (new conditional match)
-    return :conditional_match if equivalent_timezone_format?(foxtail_result, node_result)
-
     # No match
     :mismatch
-  end
-
-  # Check if two results represent equivalent timezone formats
-  private def equivalent_timezone_format?(foxtail, node)
-    return false unless foxtail && node
-
-    # Pattern: "7:30:00 PM Asia/Tokyo" vs "7:30:00 PM GMT+9"
-    # Extract time and timezone parts
-    foxtail_parts = foxtail.match(/^(.+)\s+(.+)$/)
-    node_parts = node.match(/^(.+)\s+(.+)$/)
-
-    return false unless foxtail_parts && node_parts
-
-    time_part_f = foxtail_parts[1]
-    tz_part_f = foxtail_parts[2]
-    time_part_n = node_parts[1]
-    tz_part_n = node_parts[2]
-
-    # Time parts must be identical (after whitespace normalization)
-    return false unless normalize_whitespace(time_part_f) == normalize_whitespace(time_part_n)
-
-    # Check if timezone parts are equivalent
-    equivalent_timezone_names?(tz_part_f, tz_part_n)
-  end
-
-  # Check if two timezone names are equivalent representations
-  private def equivalent_timezone_names?(tz1, tz2)
-    return false unless tz1 && tz2
-
-    # Known equivalent patterns
-    equivalents = {
-      # IANA ID <-> GMT offset patterns
-      "Asia/Tokyo" => ["GMT+9", "JST"],
-      "America/New_York" => %w[GMT-5 GMT-4 EST EDT], # Depending on DST
-      "Europe/London" => ["GMT+0", "GMT+1", "GMT", "BST"],
-      "America/Los_Angeles" => %w[GMT-8 GMT-7 PST PDT]
-      # Add more as needed
-    }
-
-    # Check bidirectional equivalence
-    equivalents.any? {|canonical, alternatives| (tz1 == canonical && alternatives.include?(tz2)) || (tz2 == canonical && alternatives.include?(tz1)) }
   end
 
   # Normalize whitespace characters for comparison
