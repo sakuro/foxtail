@@ -687,13 +687,8 @@ module Foxtail
             parser = Foxtail::CLDR::PatternParser::DateTime.new
             tokens = parser.parse(pattern)
 
-            # Define replacements for each field token
-            replacements = {
-              "EEEE" => @formats.weekday_name(weekday_key, "wide"),
-              "EEE" => @formats.weekday_name(weekday_key, "abbreviated"),
-              "E" => @formats.weekday_name(weekday_key, "abbreviated"),
-              "MMMM" => @formats.month_name(@time_with_zone.month, "wide"),
-              "MMM" => @formats.month_name(@time_with_zone.month, "abbreviated"),
+            # Pre-compute lightweight C-level operations (strftime and to_s)
+            fast_replacements = {
               "MM" => @time_with_zone.strftime("%m"),
               "M" => @time_with_zone.month.to_s,
               "yyyy" => @time_with_zone.year.to_s,
@@ -707,21 +702,35 @@ module Foxtail
               "h" => @time_with_zone.strftime("%-l"),
               "mm" => @time_with_zone.strftime("%M"),
               "ss" => @time_with_zone.strftime("%S"),
-              "a" => @time_with_zone.strftime("%p"),
-              # Timezone symbols
-              "zzzz" => format_timezone_name(:long),
-              "z" => format_timezone_name(:short),
-              "VVV" => format_timezone_exemplar_city,
-              "VV" => format_timezone_id,
-              "ZZZZZ" => format_timezone_offset_iso,
-              "Z" => format_timezone_offset_basic
+              "a" => @time_with_zone.strftime("%p")
             }
+
+            # Define method for on-demand computation of heavy operations
+            get_field_value = ->(field) do
+              # Check fast replacements first
+              return fast_replacements[field] if fast_replacements.key?(field)
+
+              # Heavy operations for fields not in fast_replacements
+              case field
+              when "EEEE" then @formats.weekday_name(weekday_key, "wide")
+              when "EEE", "E" then @formats.weekday_name(weekday_key, "abbreviated")
+              when "MMMM" then @formats.month_name(@time_with_zone.month, "wide")
+              when "MMM" then @formats.month_name(@time_with_zone.month, "abbreviated")
+              when "zzzz" then format_timezone_name(:long)
+              when "z" then format_timezone_name(:short)
+              when "VVV" then format_timezone_exemplar_city
+              when "VV" then format_timezone_id
+              when "ZZZZZ" then format_timezone_offset_iso
+              when "Z" then format_timezone_offset_basic
+              else field # Return the field itself if not found
+              end
+            end
 
             # Format each token according to its type
             tokens.map {|token|
               case token
               when Foxtail::CLDR::PatternParser::DateTime::FieldToken
-                replacements[token.value] || token.value
+                get_field_value.call(token.value) || token.value
               when Foxtail::CLDR::PatternParser::DateTime::LiteralToken
                 token.value
               when Foxtail::CLDR::PatternParser::DateTime::QuotedToken
