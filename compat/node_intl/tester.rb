@@ -116,7 +116,10 @@ class NodeIntlTester
       1234.56,     # Number with decimals
       123_456_789, # Large number
       0.000123,    # Small number
-      -987.65      # Negative number
+      -987.65,     # Negative number
+      "Infinity",  # Positive infinity (as string for JSON compatibility)
+      "-Infinity", # Negative infinity (as string for JSON compatibility)
+      "NaN"        # Not a Number (as string for JSON compatibility)
     ]
 
     # All valid style values
@@ -166,7 +169,18 @@ class NodeIntlTester
             end
 
             # Generate unique ID
-            id_parts = ["number", style, notation, locale.tr("-", "_"), value.to_s.gsub("-", "neg").tr(".", "_")]
+            # Handle special values in ID generation
+            value_part = case value
+                         when "Infinity"
+                           "Infinity"
+                         when "-Infinity"
+                           "NegInfinity"
+                         when "NaN"
+                           "NaN"
+                         else
+                           value.to_s.gsub("-", "neg").tr(".", "_")
+                         end
+            id_parts = ["number", style, notation, locale.tr("-", "_"), value_part]
             # Add unit name to ID for unit style
             if style == "unit" && options[:unit]
               id_parts << options[:unit].tr("-", "_")
@@ -353,10 +367,22 @@ class NodeIntlTester
   end
 
   private def format_number_with_foxtail(value, locale, options)
+    # Convert special string values to actual Ruby constants
+    actual_value = case value
+                   when "Infinity"
+                     Float::INFINITY
+                   when "-Infinity"
+                     -Float::INFINITY
+                   when "NaN"
+                     Float::NAN
+                   else
+                     value
+                   end
+
     formatter = Foxtail::CLDR::Formatter::Number.new
     locale_tag = Locale::Tag.parse(locale)
 
-    formatter.call(value, locale: locale_tag, **options)
+    formatter.call(actual_value, locale: locale_tag, **options)
   rescue => e
     "ERROR: #{e.message}"
   end
