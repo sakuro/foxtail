@@ -14,9 +14,9 @@ RSpec.describe Foxtail::Functions do
       expect(Foxtail::Functions["DATETIME"]).to respond_to(:call)
     end
 
-    it "returns frozen function instances" do
-      expect(Foxtail::Functions["NUMBER"]).to be_frozen
-      expect(Foxtail::Functions["DATETIME"]).to be_frozen
+    it "returns Proc instances" do
+      expect(Foxtail::Functions["NUMBER"]).to be_a(Proc)
+      expect(Foxtail::Functions["DATETIME"]).to be_a(Proc)
     end
   end
 
@@ -27,17 +27,17 @@ RSpec.describe Foxtail::Functions do
       # Should contain the expected keys
       expect(result.keys).to contain_exactly("NUMBER", "DATETIME")
 
-      # Functions should be callable and produce same results
+      # Functions should be callable with new signature (value, locale:, **options)
       en_locale = locale("en")
-      expect(result["NUMBER"].call(42, {}, locale: en_locale)).to eq(Foxtail::Functions["NUMBER"].call(42, {}, locale: en_locale))
-      expect(result["DATETIME"].call(Time.new(2023, 1, 1), {}, locale: en_locale)).to eq(Foxtail::Functions["DATETIME"].call(Time.new(2023, 1, 1), {}, locale: en_locale))
+      expect(result["NUMBER"].call(42, locale: en_locale)).to eq("42")
+      expect(result["DATETIME"].call(Time.new(2023, 1, 1), locale: en_locale)).to include("2023")
     end
 
-    it "returns class instances instead of lambdas for better performance" do
+    it "returns Proc instances for lazy initialization" do
       result = Foxtail::Functions.defaults
 
-      expect(result["NUMBER"]).to be_a(Foxtail::CLDR::Formatter::Number)
-      expect(result["DATETIME"]).to be_a(Foxtail::CLDR::Formatter::DateTime)
+      expect(result["NUMBER"]).to be_a(Proc)
+      expect(result["DATETIME"]).to be_a(Proc)
     end
   end
 end

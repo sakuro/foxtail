@@ -27,8 +27,8 @@ RSpec.describe Foxtail::Bundle do
       number_func = bundle.functions["NUMBER"]
       datetime_func = bundle.functions["DATETIME"]
 
-      expect(number_func.call(42, {}, locale:)).to eq("42")
-      expect(datetime_func.call(Time.new(2023, 6, 15), {}, locale:)).to include("Jun 15, 2023")
+      expect(number_func.call(42, locale:)).to eq("42")
+      expect(datetime_func.call(Time.new(2023, 6, 15), locale:)).to include("Jun 15, 2023")
     end
 
     it "accepts custom options" do

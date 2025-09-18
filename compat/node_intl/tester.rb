@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "json"
+require "locale"
 require "open3"
 require "pathname"
 require_relative "../../lib/foxtail"
@@ -434,20 +435,20 @@ class NodeIntlTester
                      value
                    end
 
-    formatter = Foxtail::CLDR::Formatter::Number.new
     locale_tag = Locale::Tag.parse(locale)
+    formatter = Foxtail::CLDR::Formatter::Number.new(locale: locale_tag, **options)
 
-    result = formatter.call(actual_value, locale: locale_tag, **options)
+    result = formatter.call(actual_value)
     {result:, error: nil}
   rescue => e
     {result: nil, error: e.message}
   end
 
   private def format_datetime_with_foxtail(value, locale, options)
-    formatter = Foxtail::CLDR::Formatter::DateTime.new
     locale_tag = Locale::Tag.parse(locale)
+    formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: locale_tag, **options)
 
-    result = formatter.call(value, locale: locale_tag, **options)
+    result = formatter.call(value)
     {result:, error: nil}
   rescue => e
     {result: nil, error: e.message}
