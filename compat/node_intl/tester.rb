@@ -294,14 +294,13 @@ class NodeIntlTester
         )
       elsif node_result["error"]
         # Node.js threw an error - check if Foxtail also throws an error
-        foxtail_result = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+        foxtail_response = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
 
-        # If Foxtail returns an error string, it's a match (both errored)
-        # If Foxtail returns a normal string, it's a mismatch
-        status = if foxtail_result.start_with?("ERROR:")
-                   :match # Both threw errors
+        # Both should error for special values
+        status = if foxtail_response[:error]
+                   :match # Both threw errors - this is correct behavior
                  else
-                   :mismatch # Node.js threw error, but Foxtail returned a value
+                   :mismatch # Node.js threw error, but Foxtail returned a value - inconsistent
                  end
 
         TestResult.new(
@@ -309,26 +308,42 @@ class NodeIntlTester
           value: test_case[:value],
           locale: test_case[:locale],
           options: test_case[:options],
-          foxtail_result:,
+          foxtail_result: foxtail_response[:error] ? "ERROR: #{foxtail_response[:error]}" : foxtail_response[:result],
           node_result: "ERROR: #{node_result["error"]}",
           status:,
           error: nil
         )
       else
-        foxtail_result = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+        foxtail_response = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
 
-        status = determine_match_status(foxtail_result, node_result["result"])
+        # Node.js succeeded - check if Foxtail also succeeded
+        if foxtail_response[:error]
+          # Node.js succeeded but Foxtail errored - mismatch
+          TestResult.new(
+            id: test_case[:id],
+            value: test_case[:value],
+            locale: test_case[:locale],
+            options: test_case[:options],
+            foxtail_result: "ERROR: #{foxtail_response[:error]}",
+            node_result: node_result["result"],
+            status: :mismatch,
+            error: nil
+          )
+        else
+          # Both succeeded - compare the results
+          status = determine_match_status(foxtail_response[:result], node_result["result"])
 
-        TestResult.new(
-          id: test_case[:id],
-          value: test_case[:value],
-          locale: test_case[:locale],
-          options: test_case[:options],
-          foxtail_result:,
-          node_result: node_result["result"],
-          status:,
-          error: nil
-        )
+          TestResult.new(
+            id: test_case[:id],
+            value: test_case[:value],
+            locale: test_case[:locale],
+            options: test_case[:options],
+            foxtail_result: foxtail_response[:result],
+            node_result: node_result["result"],
+            status:,
+            error: nil
+          )
+        end
       end
     end
   end
@@ -352,14 +367,13 @@ class NodeIntlTester
         )
       elsif node_result["error"]
         # Node.js threw an error - check if Foxtail also throws an error
-        foxtail_result = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+        foxtail_response = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
 
-        # If Foxtail returns an error string, it's a match (both errored)
-        # If Foxtail returns a normal string, it's a mismatch
-        status = if foxtail_result.start_with?("ERROR:")
-                   :match # Both threw errors
+        # Both should error for special values
+        status = if foxtail_response[:error]
+                   :match # Both threw errors - this is correct behavior
                  else
-                   :mismatch # Node.js threw error, but Foxtail returned a value
+                   :mismatch # Node.js threw error, but Foxtail returned a value - inconsistent
                  end
 
         TestResult.new(
@@ -367,26 +381,42 @@ class NodeIntlTester
           value: test_case[:value],
           locale: test_case[:locale],
           options: test_case[:options],
-          foxtail_result:,
+          foxtail_result: foxtail_response[:error] ? "ERROR: #{foxtail_response[:error]}" : foxtail_response[:result],
           node_result: "ERROR: #{node_result["error"]}",
           status:,
           error: nil
         )
       else
-        foxtail_result = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+        foxtail_response = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
 
-        status = determine_match_status(foxtail_result, node_result["result"])
+        # Node.js succeeded - check if Foxtail also succeeded
+        if foxtail_response[:error]
+          # Node.js succeeded but Foxtail errored - mismatch
+          TestResult.new(
+            id: test_case[:id],
+            value: test_case[:value],
+            locale: test_case[:locale],
+            options: test_case[:options],
+            foxtail_result: "ERROR: #{foxtail_response[:error]}",
+            node_result: node_result["result"],
+            status: :mismatch,
+            error: nil
+          )
+        else
+          # Both succeeded - compare the results
+          status = determine_match_status(foxtail_response[:result], node_result["result"])
 
-        TestResult.new(
-          id: test_case[:id],
-          value: test_case[:value],
-          locale: test_case[:locale],
-          options: test_case[:options],
-          foxtail_result:,
-          node_result: node_result["result"],
-          status:,
-          error: nil
-        )
+          TestResult.new(
+            id: test_case[:id],
+            value: test_case[:value],
+            locale: test_case[:locale],
+            options: test_case[:options],
+            foxtail_result: foxtail_response[:result],
+            node_result: node_result["result"],
+            status:,
+            error: nil
+          )
+        end
       end
     end
   end
@@ -407,18 +437,20 @@ class NodeIntlTester
     formatter = Foxtail::CLDR::Formatter::Number.new
     locale_tag = Locale::Tag.parse(locale)
 
-    formatter.call(actual_value, locale: locale_tag, **options)
+    result = formatter.call(actual_value, locale: locale_tag, **options)
+    {result:, error: nil}
   rescue => e
-    "ERROR: #{e.message}"
+    {result: nil, error: e.message}
   end
 
   private def format_datetime_with_foxtail(value, locale, options)
     formatter = Foxtail::CLDR::Formatter::DateTime.new
     locale_tag = Locale::Tag.parse(locale)
 
-    formatter.call(value, locale: locale_tag, **options)
+    result = formatter.call(value, locale: locale_tag, **options)
+    {result:, error: nil}
   rescue => e
-    "ERROR: #{e.message}"
+    {result: nil, error: e.message}
   end
 
   # Determine match status between Foxtail and Node.js results
