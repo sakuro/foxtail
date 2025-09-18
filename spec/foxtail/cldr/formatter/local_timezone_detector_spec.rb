@@ -15,14 +15,73 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
   end
 
   describe "#detect" do
-    it "detects timezone with valid offset" do
-      result = detector.detect
+    context "when TZ environment variable is available" do
+      before do
+        allow(detector).to receive_messages(
+          detect_from_tz_env: "America/New_York",
+          detect_from_etc_localtime: "Asia/Tokyo"
+        )
+      end
 
-      # Should have a reasonable timezone ID (either IANA format or Etc/Unknown)
-      expect(result.id).to match(%r{^([A-Za-z_/]+/[A-Za-z_/]+|Etc/Unknown)$})
+      it "uses TZ environment variable and ignores other methods" do
+        result = detector.detect
 
-      # Offset should match system offset
-      expect(result.offset_seconds).to eq(Time.now.utc_offset)
+        expect(result.id).to eq("America/New_York")
+        expect(result.offset_seconds).to eq(Time.now.utc_offset)
+      end
+    end
+
+    context "when TZ environment variable is not available but /etc/localtime is" do
+      before do
+        allow(detector).to receive_messages(
+          detect_from_tz_env: nil,
+          detect_from_etc_localtime: "Asia/Tokyo",
+          detect_from_etc_timezone: "Europe/London"
+        )
+      end
+
+      it "uses /etc/localtime and ignores subsequent methods" do
+        result = detector.detect
+
+        expect(result.id).to eq("Asia/Tokyo")
+        expect(result.offset_seconds).to eq(Time.now.utc_offset)
+      end
+    end
+
+    context "when TZ and /etc/localtime are not available but /etc/timezone is" do
+      before do
+        allow(detector).to receive_messages(
+          detect_from_tz_env: nil,
+          detect_from_etc_localtime: nil,
+          detect_from_etc_timezone: "Europe/London"
+        )
+      end
+
+      it "uses /etc/timezone" do
+        result = detector.detect
+
+        expect(result.id).to eq("Europe/London")
+        expect(result.offset_seconds).to eq(Time.now.utc_offset)
+      end
+    end
+
+    context "when all detection strategies fail" do
+      before do
+        allow(detector).to receive_messages(
+          detect_from_tz_env: nil,
+          detect_from_etc_localtime: nil,
+          detect_from_etc_timezone: nil,
+          detect_from_systemctl: nil,
+          detect_from_macos: nil
+        )
+      end
+
+      it "falls back to Etc/Unknown" do
+        result = detector.detect
+
+        expect(result.id).to eq("Etc/Unknown")
+        expect(result.offset_seconds).to eq(Time.now.utc_offset)
+      end
     end
   end
 
