@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "pathname"
+
 module Foxtail
   module CLDR
     module Formatter
@@ -79,6 +81,17 @@ module Foxtail
           when %r{^[A-Za-z_/]+/[A-Za-z_/]+}
             # Direct IANA format "America/New_York"
             tz
+          when "UTC", "GMT"
+            # UTC and GMT are equivalent
+            "UTC"
+          when /^UTC[+-]\d{1,2}(:\d{2})?$/
+            # UTC with offset (UTC+0, UTC+0:00, UTC-5, UTC-5:30)
+            # Map UTC±0 variants to plain UTC
+            tz.match?(/^UTC[+-]0(:[0-5]\d)?$/) ? "UTC" : tz
+          when /^GMT[+-]\d{1,2}(:\d{2})?$/
+            # GMT with offset (GMT+0, GMT+0:00, GMT-5, GMT-5:30)
+            # Map GMT±0 variants to UTC
+            tz.match?(/^GMT[+-]0(:[0-5]\d)?$/) ? "UTC" : tz
           when /^[A-Z]{3,4}$/
             # Abbreviation like "JST", "EST" - not reliable for IANA ID
             nil
