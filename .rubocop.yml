@@ -139,6 +139,11 @@ Rake/MethodDefinitionInTask:
   Exclude:
     - 'lib/tasks/compatibility.rake'  # save_detailed_report is task-scoped to avoid global conflicts
 
+# Top-level methods in Rake files are acceptable for task helpers
+Style/TopLevelMethodDefinition:
+  Exclude:
+    - 'lib/tasks/compatibility.rake'  # check_compatibility_test_environment! is a rake task helper
+
 # Long lines that improve readability when not split
 Layout/LineLength:
   Enabled: false

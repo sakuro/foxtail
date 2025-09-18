@@ -78,6 +78,46 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
         allow(ENV).to receive(:fetch).with("TZ", nil).and_return("")
         expect(detector.__send__(:detect_from_tz_env)).to be_nil
       end
+
+      it "detects UTC timezone" do
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("UTC")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("UTC")
+      end
+
+      it "detects GMT as UTC" do
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("GMT")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("UTC")
+      end
+
+      it "detects UTC+0 variants as UTC" do
+        %w[UTC+0 UTC+0:00 UTC-0 UTC-0:00].each do |tz_format|
+          allow(ENV).to receive(:fetch).with("TZ", nil).and_return(tz_format)
+          expect(detector.__send__(:detect_from_tz_env)).to eq("UTC")
+        end
+      end
+
+      it "detects GMT+0 variants as UTC" do
+        %w[GMT+0 GMT+0:00 GMT-0 GMT-0:00].each do |tz_format|
+          allow(ENV).to receive(:fetch).with("TZ", nil).and_return(tz_format)
+          expect(detector.__send__(:detect_from_tz_env)).to eq("UTC")
+        end
+      end
+
+      it "preserves UTC offset formats" do
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("UTC+5")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("UTC+5")
+
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("UTC-5:30")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("UTC-5:30")
+      end
+
+      it "preserves GMT offset formats" do
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("GMT+5")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("GMT+5")
+
+        allow(ENV).to receive(:fetch).with("TZ", nil).and_return("GMT-5:30")
+        expect(detector.__send__(:detect_from_tz_env)).to eq("GMT-5:30")
+      end
     end
 
     describe "#detect_from_etc_localtime" do
