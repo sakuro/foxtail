@@ -107,16 +107,32 @@ module Foxtail
             when Date, DateTime
               value.to_time
             when String
+              # Check for special value strings first
+              if value == "Infinity" || value == "-Infinity" || value == "NaN"
+                raise ArgumentError, "Cannot convert special value '#{value}' to time"
+              end
+
               # Try to parse as timestamp first, then as date string
               # Check if it's a numeric string (Unix timestamp)
-              if value.match?(/^\d+\.?\d*$/)
+              if value.match?(/^\d+\.?\d*$/) || value.match?(/^[-+]?\d*\.?\d+([eE][-+]?\d+)?$/)
                 timestamp = Float(value)
+
+                # Check for special values after conversion
+                if timestamp.infinite? || timestamp.nan?
+                  raise ArgumentError, "Cannot convert special value to time"
+                end
+
                 timestamp /= 1000.0 if timestamp > 1_000_000_000_000
                 Time.at(timestamp)
               else
                 Time.parse(value)
               end
             when Numeric
+              # Check for special values first
+              if value.infinite? || value.nan?
+                raise ArgumentError, "Cannot convert special value to time"
+              end
+
               # Assume Unix timestamp (milliseconds or seconds)
               timestamp = value > 1_000_000_000_000 ? value / 1000.0 : value
               Time.at(timestamp)

@@ -238,5 +238,63 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
         expect(result).not_to be_empty
       end
     end
+
+    context "with special values (Infinity, NaN)" do
+      it "raises an error for positive infinity" do
+        expect {
+          formatter.call(Float::INFINITY, locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|invalid.*time/i)
+      end
+
+      it "raises an error for negative infinity" do
+        expect {
+          formatter.call(-Float::INFINITY, locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|invalid.*time/i)
+      end
+
+      it "raises an error for NaN" do
+        expect {
+          formatter.call(Float::NAN, locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|invalid.*time/i)
+      end
+
+      it "raises an error for string representations of infinity" do
+        expect {
+          formatter.call("Infinity", locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|invalid.*time/i)
+      end
+
+      it "raises an error for string representations of negative infinity" do
+        expect {
+          formatter.call("-Infinity", locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|invalid.*time/i)
+      end
+
+      it "raises an error for string representations of NaN" do
+        expect {
+          formatter.call("NaN", locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|invalid.*time/i)
+      end
+
+      it "raises an error for extremely large numeric strings that overflow to infinity" do
+        # String with 400 digits that will overflow to Infinity when converted to Float
+        huge_number_string = "1#{"0" * 400}"
+        expect {
+          formatter.call(huge_number_string, locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|overflow|invalid.*time/i)
+      end
+
+      it "raises an error for numeric strings with extremely large exponents" do
+        expect {
+          formatter.call("1.0e309", locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|overflow|invalid.*time/i)
+      end
+
+      it "raises an error for numeric strings exceeding Float::MAX" do
+        expect {
+          formatter.call("1.8e308", locale: locale("en"), dateStyle: "medium")
+        }.to raise_error(ArgumentError, /special value|overflow|invalid.*time/i)
+      end
+    end
   end
 end
