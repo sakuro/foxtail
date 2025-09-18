@@ -23,6 +23,10 @@ class NodeIntlReporter
     report << "# Node.js Intl Compatibility Report"
     report << ""
 
+    # Timezone environment investigation
+    report.concat(generate_timezone_investigation)
+    report << ""
+
     # Overall summary
     report.concat(generate_overall_summary)
     report << ""
@@ -35,6 +39,88 @@ class NodeIntlReporter
     report.concat(generate_datetimeformat_section)
 
     report.join("\n")
+  end
+
+  private def generate_timezone_investigation
+    require_relative "../../lib/foxtail/cldr/formatter/local_timezone_detector"
+
+    report = []
+    report << "## Test Environment Timezone Investigation"
+    report << ""
+    report << "This section provides information about the timezone environment during testing to help interpret results."
+    report << ""
+
+    # Current timezone detection
+    detector = Foxtail::CLDR::Formatter::LocalTimezoneDetector.new
+    detected = detector.detect
+
+    # Get current Node.js timezone
+    current_node_timezone = %x(node -e "
+      const resolved = Intl.DateTimeFormat().resolvedOptions();
+      console.log(resolved.timeZone);
+    " 2>/dev/null).strip
+    current_node_timezone = "ERROR" if current_node_timezone.empty?
+
+    report << "### Current Environment"
+    report << ""
+    report << "| Setting | Value |"
+    report << "|---------|-------|"
+    report << "| ENV['TZ'] | `#{ENV.fetch("TZ", "not set").inspect}` |"
+    report << "| Time.now.zone | `#{Time.now.zone.inspect}` |"
+    report << "| Time.now.utc_offset | #{Time.now.utc_offset} seconds (#{format_utc_offset(Time.now.utc_offset)}) |"
+    report << "| Foxtail detected timezone | `#{detected.id}` |"
+    report << "| Foxtail detected offset | #{detected.offset_seconds} seconds (#{detected.offset_string}) |"
+    report << "| Node.js resolved timezone | `#{current_node_timezone}` |"
+    report << ""
+
+    # Test various TZ environment formats
+    test_formats = %w[UTC UTC+0 UTC+0:00 UTC-0 UTC-0:00 GMT GMT+0 GMT-0 America/New_York Europe/London Asia/Tokyo]
+
+    report << "### TZ Environment Variable Tests"
+    report << ""
+    report << "Testing how different TZ environment variable formats are detected:"
+    report << ""
+    report << "| TZ Format | Ruby Time.zone | Ruby UTC Offset | Foxtail Detection | Foxtail Offset | Node.js Resolved |"
+    report << "|-----------|----------------|-----------------|-------------------|----------------|------------------|"
+
+    test_formats.each do |tz_format|
+      # Test in a subprocess to avoid affecting current environment
+      result = %x(TZ=#{tz_format} ruby -e "
+        require_relative 'lib/foxtail/cldr/formatter/local_timezone_detector'
+        detector = Foxtail::CLDR::Formatter::LocalTimezoneDetector.new
+        detected = detector.detect
+        puts [Time.now.zone.inspect, Time.now.utc_offset, detected.id.inspect, detected.offset_seconds].join('|')
+      " 2>/dev/null).strip
+
+      # Get Node.js timezone detection
+      node_result = %x(TZ=#{tz_format} node -e "
+        const date = new Date();
+        const resolved = Intl.DateTimeFormat().resolvedOptions();
+        console.log(resolved.timeZone);
+      " 2>/dev/null).strip
+
+      if result.empty?
+        report << "| `#{tz_format}` | ERROR | ERROR | ERROR | ERROR | #{node_result.empty? ? "ERROR" : node_result} |"
+      else
+        ruby_zone, ruby_offset, foxtail_id, foxtail_offset = result.split("|")
+        ruby_offset_formatted = format_utc_offset(ruby_offset.to_i)
+        foxtail_offset_formatted = format_utc_offset(foxtail_offset.to_i)
+        node_timezone = node_result.empty? ? "ERROR" : node_result
+        report << "| `#{tz_format}` | #{ruby_zone} | #{ruby_offset} (#{ruby_offset_formatted}) | #{foxtail_id} | #{foxtail_offset} (#{foxtail_offset_formatted}) | #{node_timezone} |"
+      end
+    end
+
+    report << ""
+    report << "**Note**: Discrepancies between Ruby's timezone detection and Foxtail's detection may affect datetime formatting compatibility results."
+
+    report
+  end
+
+  private def format_utc_offset(seconds)
+    hours = seconds / 3600
+    minutes = (seconds % 3600) / 60
+    sign = seconds >= 0 ? "+" : "-"
+    "%s%02d:%02d" % [sign, hours.abs, minutes.abs]
   end
 
   private def generate_overall_summary
