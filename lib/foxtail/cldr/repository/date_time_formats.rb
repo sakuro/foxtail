@@ -35,6 +35,17 @@ module Foxtail
           days[day.to_s] || day.to_s
         end
 
+        # Get day period (AM/PM) based on hour (0-23)
+        def day_period(hour, width="abbreviated", context="format")
+          # Determine AM/PM based on hour
+          period_type = hour < 12 ? "am" : "pm"
+
+          day_periods = @resolver.resolve("datetime_formats.day_periods.#{context}.#{width}", "datetime_formats")
+          return period_type.upcase unless day_periods
+
+          day_periods[period_type] || period_type.upcase
+        end
+
         # Get date format pattern
         def date_pattern(style="medium")
           @resolver.resolve("datetime_formats.date_formats.#{style}", "datetime_formats") || default_date_pattern(style)

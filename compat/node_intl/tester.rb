@@ -459,7 +459,7 @@ class NodeIntlTester
     # Exact match
     return :match if foxtail_result == node_result
 
-    # Whitespace normalization (existing conditional match)
+    # Whitespace normalization (conditional match)
     return :conditional_match if normalize_whitespace(foxtail_result) == normalize_whitespace(node_result)
 
     # No match

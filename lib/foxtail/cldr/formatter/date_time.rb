@@ -715,6 +715,16 @@ module Foxtail
           parser = Foxtail::CLDR::PatternParser::DateTime.new
           tokens = parser.parse(pattern)
 
+          # Calculate various hour formats for 12-hour time
+          hour_24 = @time_with_zone.hour
+          hour_12_1_12 = if hour_24 == 0
+                           12
+                         else
+                           (hour_24 > 12 ? hour_24 - 12 : hour_24)
+                         end # 1-12 (h)
+          hour_12_0_11 = hour_24 % 12 # 0-11 (K)
+          hour_24_1_24 = hour_24 == 0 ? 24 : hour_24 # 1-24 (k)
+
           # Pre-compute lightweight C-level operations (strftime and to_s)
           fast_replacements = {
             "MM" => @time_with_zone.strftime("%m"),
@@ -727,10 +737,13 @@ module Foxtail
             "HH" => @time_with_zone.strftime("%H"),
             "H" => @time_with_zone.hour.to_s,
             "hh" => @time_with_zone.strftime("%I"),
-            "h" => @time_with_zone.strftime("%-l"),
+            "h" => hour_12_1_12.to_s,
+            "KK" => hour_12_0_11.to_s.rjust(2, "0"),
+            "K" => hour_12_0_11.to_s,
+            "kk" => hour_24_1_24.to_s.rjust(2, "0"),
+            "k" => hour_24_1_24.to_s,
             "mm" => @time_with_zone.strftime("%M"),
-            "ss" => @time_with_zone.strftime("%S"),
-            "a" => @time_with_zone.strftime("%p")
+            "ss" => @time_with_zone.strftime("%S")
           }
 
           # Define method for on-demand computation of heavy operations
@@ -750,6 +763,7 @@ module Foxtail
             when "VV" then format_timezone_id
             when "ZZZZZ" then format_timezone_offset_iso
             when "Z" then format_timezone_offset_basic
+            when "a" then @formats.day_period(@time_with_zone.hour)
             else field # Return the field itself if not found
             end
           end
