@@ -94,11 +94,6 @@ module Foxtail
           utc_time = @original_time&.getutc
           @time_with_zone = apply_timezone(utc_time, @options[:timeZone])
 
-          format
-        end
-
-        # Format the date/time value using CLDR data and options
-        def format
           return @original_value.to_s if @time_with_zone.nil?
 
           # Handle custom pattern first (highest priority)
@@ -113,6 +108,8 @@ module Foxtail
             format_with_fields
           end
         end
+
+        alias format call
 
         # Convert value to Time for consistent processing
         private def convert_to_time(value)

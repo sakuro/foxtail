@@ -97,11 +97,6 @@ module Foxtail
           @original_value = value
           @decimal_value = convert_to_decimal(value)
 
-          format
-        end
-
-        # Format the number value using CLDR data and options
-        def format
           # Handle special values (Infinity, -Infinity, NaN) early
           if special_value?(@original_value)
             return format_special_value(@original_value)
@@ -146,6 +141,8 @@ module Foxtail
           original_was_negative = transformed_value.negative? && !has_separator
           build_formatted_string(format_value, pattern_tokens, original_was_negative)
         end
+
+        alias format call
 
         # Check if currency repository is needed (any currency symbol ¤, ¤¤, ¤¤¤)
         private def use_currency?(options)
