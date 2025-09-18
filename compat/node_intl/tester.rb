@@ -206,7 +206,10 @@ class NodeIntlTester
       "2023-12-25T00:00:00Z",     # Christmas (year end)
       "2023-07-04T15:45:30Z",     # Mid-year with seconds
       "2023-02-14T23:59:59Z",     # Valentine's day, end of day
-      "2024-02-29T12:00:00Z"      # Leap year date
+      "2024-02-29T12:00:00Z",     # Leap year date
+      "Infinity",                 # Special value: positive infinity
+      "-Infinity",                # Special value: negative infinity
+      "NaN" # Special value: not a number
     ]
 
     # Test locales
@@ -290,15 +293,26 @@ class NodeIntlTester
           error: "Node.js result not found"
         )
       elsif node_result["error"]
+        # Node.js threw an error - check if Foxtail also throws an error
+        foxtail_result = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+
+        # If Foxtail returns an error string, it's a match (both errored)
+        # If Foxtail returns a normal string, it's a mismatch
+        status = if foxtail_result.start_with?("ERROR:")
+                   :match # Both threw errors
+                 else
+                   :mismatch # Node.js threw error, but Foxtail returned a value
+                 end
+
         TestResult.new(
           id: test_case[:id],
           value: test_case[:value],
           locale: test_case[:locale],
           options: test_case[:options],
-          foxtail_result: nil,
-          node_result: nil,
-          status: :error,
-          error: "Node.js error: #{node_result["error"]}"
+          foxtail_result:,
+          node_result: "ERROR: #{node_result["error"]}",
+          status:,
+          error: nil
         )
       else
         foxtail_result = format_number_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
@@ -337,15 +351,26 @@ class NodeIntlTester
           error: "Node.js result not found"
         )
       elsif node_result["error"]
+        # Node.js threw an error - check if Foxtail also throws an error
+        foxtail_result = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
+
+        # If Foxtail returns an error string, it's a match (both errored)
+        # If Foxtail returns a normal string, it's a mismatch
+        status = if foxtail_result.start_with?("ERROR:")
+                   :match # Both threw errors
+                 else
+                   :mismatch # Node.js threw error, but Foxtail returned a value
+                 end
+
         TestResult.new(
           id: test_case[:id],
           value: test_case[:value],
           locale: test_case[:locale],
           options: test_case[:options],
-          foxtail_result: nil,
-          node_result: nil,
-          status: :error,
-          error: "Node.js error: #{node_result["error"]}"
+          foxtail_result:,
+          node_result: "ERROR: #{node_result["error"]}",
+          status:,
+          error: nil
         )
       else
         foxtail_result = format_datetime_with_foxtail(test_case[:value], test_case[:locale], test_case[:options])
