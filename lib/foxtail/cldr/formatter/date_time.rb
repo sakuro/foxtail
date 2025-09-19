@@ -369,11 +369,33 @@ module Foxtail
           key_parts.join
         end
 
-        private private def format_with_fields
+        # Format datetime using individual field specifications
+        #
+        # This method handles complex field combinations by trying to find
+        # appropriate CLDR availableFormats patterns with hierarchical fallbacks.
+        #
+        # Strategy:
+        # 1. Single field → Direct formatting (avoid pattern lookup overhead)
+        # 2. Multiple fields → Try exact CLDR pattern match
+        # 3. No exact match → Try simplified pattern fallbacks
+        # 4. Still no match → Fall back to individual field formatting
+        #
+        # The fallback system enables Node.js Intl.DateTimeFormat compatibility
+        # by finding the closest CLDR pattern and adapting it to user requirements.
+        #
+        # @return [String] Formatted datetime string
+        private def format_with_fields
           # Check if this is a single field request - if so, format directly
-          field_count = [@options[:year], @options[:month], @options[:day], @options[:weekday], 
-                        @options[:hour], @options[:minute], @options[:second]].count { |v| v }
-          
+          field_count = [
+            @options[:year],
+            @options[:month],
+            @options[:day],
+            @options[:weekday],
+            @options[:hour],
+            @options[:minute],
+            @options[:second]
+          ].count {|v| v }
+
           if field_count == 1
             # Single field - format directly without CLDR patterns
             return format_fields_individually
@@ -398,21 +420,35 @@ module Foxtail
         end
 
         # Find a fallback pattern by simplifying the pattern key
+        #
+        # This system implements a hierarchical pattern fallback strategy for CLDR
+        # availableFormats when exact patterns don't exist:
+        #
+        # Example: {weekday: "long", year: "numeric", month: "short", day: "numeric"}
+        # 1. Generate key: "yMMMEEEEd"
+        # 2. Not found in CLDR → try simplifications
+        # 3. Simplify "EEEE" → "E": "yMMMEd"
+        # 4. Found in CLDR: "E, MMM d, y"
+        # 5. Restore "E" → "EEEE": "EEEE, MMM d, y"
+        # 6. Result: "Sunday, Jan 15, 2023" (Node.js compatible)
+        #
+        # @param original_key [String] The original pattern key (e.g., "yMMMEEEEd")
+        # @return [String, nil] Adapted fallback pattern or nil
         private def find_fallback_pattern(original_key)
-          # Map of simplifications to try
+          # Map of simplifications to try (order matters - try most specific first)
           simplifications = [
             # Weekday simplifications
-            %w[EEEE E],   # Full weekday -> single letter
-            %w[EEE E],    # Abbreviated weekday -> single letter
+            %w[EEEE E],   # Full weekday → single letter
+            %w[EEE E],    # Abbreviated weekday → single letter
             # Month simplifications
-            %w[MMMM MMM], # Full month name -> abbreviated
-            %w[MMM M],    # Abbreviated month -> numeric
-            %w[MM M],     # 2-digit month -> numeric
+            %w[MMMM MMM], # Full month name → abbreviated
+            %w[MMM M],    # Abbreviated month → numeric
+            %w[MM M],     # 2-digit month → numeric
             # Day simplifications
-            %w[dd d], # 2-digit day -> numeric
+            %w[dd d], # 2-digit day → numeric
             # Year simplifications
-            %w[yyyy y],   # Full year -> abbreviated
-            %w[yy y]      # 2-digit year -> abbreviated
+            %w[yyyy y],   # Full year → abbreviated
+            %w[yy y]      # 2-digit year → abbreviated
           ]
 
           # Try each simplification
@@ -433,6 +469,23 @@ module Foxtail
         end
 
         # Restore the original format specifier in the found pattern
+        #
+        # Takes a simplified pattern found in CLDR and restores it to match
+        # the original field specification requirements.
+        #
+        # Example:
+        #   pattern: "E, MMM d, y"     (found with simplified "E")
+        #   original_spec: "EEEE"      (user wanted full weekday)
+        #   simplified_spec: "E"       (what we searched for)
+        #   Result: "EEEE, MMM d, y"  (restored to user's requirements)
+        #
+        # Uses PatternParser for safe token-level replacement to avoid
+        # accidentally replacing literals or other field types.
+        #
+        # @param pattern [String] The CLDR pattern found with simplified key
+        # @param original_spec [String] Original field specification (e.g., "EEEE")
+        # @param simplified_spec [String] Simplified specification used for search (e.g., "E")
+        # @return [String] Pattern with original specification restored
         private def restore_original_format(pattern, original_spec, simplified_spec)
           # Use pattern parser to safely replace tokens
           parser = PatternParser::DateTime.new
@@ -451,6 +504,23 @@ module Foxtail
         end
 
         # Try more aggressive fallbacks for complex patterns
+        #
+        # When simple field simplifications fail, this method tries common
+        # pattern combinations that are likely to exist in CLDR data.
+        #
+        # Strategy:
+        # 1. Check which fields the original pattern contains
+        # 2. Try predefined common patterns that match those fields
+        # 3. Adapt found pattern to original field specifications
+        #
+        # Example:
+        #   original_key: "yMMMEEEEdd" (not found)
+        #   → Try "yMMMEd" (common pattern)
+        #   → Found: "E, MMM d, y"
+        #   → Adapt: "EEEE, MMM dd, y" (restore original specs)
+        #
+        # @param original_key [String] The original pattern key that wasn't found
+        # @return [String, nil] Adapted pattern or nil if no fallback found
         private def try_aggressive_fallbacks(original_key)
           # Common pattern combinations to try
           common_patterns = [
