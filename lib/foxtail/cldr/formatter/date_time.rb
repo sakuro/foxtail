@@ -307,7 +307,7 @@ module Foxtail
                          when "narrow"
                            "E"     # Single letter weekday
                          else
-                           "E"     # Default to single letter
+                           "EEE"   # Default to abbreviated, not single letter
                          end
           end
 
@@ -369,22 +369,44 @@ module Foxtail
           key_parts.join
         end
 
+        # Format datetime using individual field specifications
+        #
+        # This method handles complex field combinations by trying to find
+        # appropriate CLDR availableFormats patterns with hierarchical fallbacks.
+        #
+        # Strategy:
+        # 1. Single field → Direct formatting (avoid pattern lookup overhead)
+        # 2. Multiple fields → Try exact CLDR pattern match
+        # 3. No exact match → Try simplified pattern fallbacks
+        # 4. Still no match → Fall back to individual field formatting
+        #
+        # The fallback system enables Node.js Intl.DateTimeFormat compatibility
+        # by finding the closest CLDR pattern and adapting it to user requirements.
+        #
+        # @return [String] Formatted datetime string
         private def format_with_fields
+          # Check if this is a single field request - if so, format directly
+          field_count = [
+            @options[:year],
+            @options[:month],
+            @options[:day],
+            @options[:weekday],
+            @options[:hour],
+            @options[:minute],
+            @options[:second]
+          ].count {|v| v }
+
+          if field_count == 1
+            # Single field - format directly without CLDR patterns
+            return format_fields_individually
+          end
+
           # Try to find appropriate CLDR availableFormats pattern
           pattern_key = generate_available_format_key(@options)
           available_pattern = @formats.available_format(pattern_key)
 
           # If exact pattern not found, try fallback patterns
-          if !available_pattern && @options[:month] == "long"
-            # Try with MMM instead of MMMM for month long
-            fallback_key = pattern_key.gsub("MMMM", "MMM")
-            available_pattern = @formats.available_format(fallback_key)
-
-            if available_pattern
-              # Upgrade MMM to MMMM in the pattern for long month names
-              available_pattern = available_pattern.gsub("MMM", "MMMM")
-            end
-          end
+          available_pattern ||= find_fallback_pattern(pattern_key)
 
           if available_pattern
             # Adapt pattern for 2-digit requirements
@@ -397,18 +419,472 @@ module Foxtail
           end
         end
 
-        # Adapt pattern to match option requirements (e.g., 2-digit padding)
-        private def adapt_pattern_for_options(pattern)
-          adapted = pattern.dup
+        # Find a fallback pattern by simplifying the pattern key
+        #
+        # This system implements a hierarchical pattern fallback strategy for CLDR
+        # availableFormats when exact patterns don't exist:
+        #
+        # Example: {weekday: "long", year: "numeric", month: "short", day: "numeric"}
+        # 1. Generate key: "yMMMEEEEd"
+        # 2. Not found in CLDR → try simplifications
+        # 3. Simplify "EEEE" → "E": "yMMMEd"
+        # 4. Found in CLDR: "E, MMM d, y"
+        # 5. Restore "E" → "EEEE": "EEEE, MMM d, y"
+        # 6. Result: "Sunday, Jan 15, 2023" (Node.js compatible)
+        #
+        # @param original_key [String] The original pattern key (e.g., "yMMMEEEEd")
+        # @return [String, nil] Adapted fallback pattern or nil
+        private def find_fallback_pattern(original_key)
+          # Map of simplifications to try (order matters - try most specific first)
+          simplifications = [
+            # Weekday simplifications
+            %w[EEEE E],   # Full weekday → single letter
+            %w[EEE E],    # Abbreviated weekday → single letter
+            # Month simplifications
+            %w[MMMM MMM], # Full month name → abbreviated
+            %w[MMM M],    # Abbreviated month → numeric
+            %w[MM M],     # 2-digit month → numeric
+            # Day simplifications
+            %w[dd d], # 2-digit day → numeric
+            # Time field simplifications
+            %w[mm m],     # 2-digit minute → numeric
+            %w[ss s],     # 2-digit second → numeric
+            %w[HH H],     # 2-digit hour → numeric
+            %w[hh h],     # 2-digit 12-hour → numeric
+            # Year simplifications
+            %w[yyyy y],   # Full year → abbreviated
+            %w[yy y]      # 2-digit year → abbreviated
+          ]
 
-          # Adapt hour field based on hour option
-          if @options[:hour] == "2-digit"
-            # Replace single H with HH for 2-digit padding
-            adapted = adapted.gsub(/\bH\b/, "HH")
-            adapted = adapted.gsub(/\bh\b/, "hh")
+          # Try single field simplifications first
+          simplifications.each do |from, to|
+            next unless original_key.include?(from)
+
+            simplified_key = original_key.sub(from, to)
+            pattern = @formats.available_format(simplified_key)
+
+            if pattern
+              # Restore the original format in the pattern
+              return restore_original_format(pattern, from, to)
+            end
           end
 
-          adapted
+          # Try combinations of time field simplifications for "Hmmss" → "Hms"
+          if original_key.match?(/H.*mm.*ss/)
+            # Try simplifying both minute and second fields
+            temp_key = original_key.sub("mm", "m").sub("ss", "s")
+            pattern = @formats.available_format(temp_key)
+
+            if pattern
+              # Safe restoration using pattern parser
+              parser = PatternParser::DateTime.new
+              tokens = parser.parse(pattern)
+
+              restored_tokens = tokens.map {|token|
+                if token.is_a?(PatternParser::DateTime::FieldToken)
+                  case token.value
+                  when "m" then PatternParser::DateTime::FieldToken.new("mm")
+                  when "s" then PatternParser::DateTime::FieldToken.new("ss")
+                  else token
+                  end
+                else
+                  token
+                end
+              }
+
+              return restored_tokens.map(&:value).join
+            end
+          end
+
+          # Try combinations of time field simplifications for "hmmss" → "hms" (12-hour format)
+          if original_key.match?(/h.*mm.*ss/)
+            # Try simplifying both minute and second fields for 12-hour format
+            temp_key = original_key.sub("mm", "m").sub("ss", "s")
+            pattern = @formats.available_format(temp_key)
+
+            if pattern
+              # Safe restoration using pattern parser
+              parser = PatternParser::DateTime.new
+              tokens = parser.parse(pattern)
+
+              restored_tokens = tokens.map {|token|
+                if token.is_a?(PatternParser::DateTime::FieldToken)
+                  case token.value
+                  when "m" then PatternParser::DateTime::FieldToken.new("mm")
+                  when "s" then PatternParser::DateTime::FieldToken.new("ss")
+                  else token
+                  end
+                else
+                  token
+                end
+              }
+
+              return restored_tokens.map(&:value).join
+            end
+          end
+
+          # If still not found, try more aggressive simplifications
+          try_aggressive_fallbacks(original_key)
+        end
+
+        # Restore the original format specifier in the found pattern
+        #
+        # Takes a simplified pattern found in CLDR and restores it to match
+        # the original field specification requirements.
+        #
+        # Example:
+        #   pattern: "E, MMM d, y"     (found with simplified "E")
+        #   original_spec: "EEEE"      (user wanted full weekday)
+        #   simplified_spec: "E"       (what we searched for)
+        #   Result: "EEEE, MMM d, y"  (restored to user's requirements)
+        #
+        # Uses PatternParser for safe token-level replacement to avoid
+        # accidentally replacing literals or other field types.
+        #
+        # @param pattern [String] The CLDR pattern found with simplified key
+        # @param original_spec [String] Original field specification (e.g., "EEEE")
+        # @param simplified_spec [String] Simplified specification used for search (e.g., "E")
+        # @return [String] Pattern with original specification restored
+        private def restore_original_format(pattern, original_spec, simplified_spec)
+          # Use pattern parser to safely replace tokens
+          parser = PatternParser::DateTime.new
+          tokens = parser.parse(pattern)
+
+          restored_tokens = tokens.map {|token|
+            if token.is_a?(PatternParser::DateTime::FieldToken) && token.value == simplified_spec
+              # Replace with original specification
+              PatternParser::DateTime::FieldToken.new(original_spec)
+            else
+              token
+            end
+          }
+
+          restored_tokens.map(&:value).join
+        end
+
+        # Try more aggressive fallbacks for complex patterns
+        #
+        # When simple field simplifications fail, this method tries common
+        # pattern combinations that are likely to exist in CLDR data.
+        #
+        # Strategy:
+        # 1. Check which fields the original pattern contains
+        # 2. Try predefined common patterns that match those fields
+        # 3. Adapt found pattern to original field specifications
+        #
+        # Example:
+        #   original_key: "yMMMEEEEdd" (not found)
+        #   → Try "yMMMEd" (common pattern)
+        #   → Found: "E, MMM d, y"
+        #   → Adapt: "EEEE, MMM dd, y" (restore original specs)
+        #
+        # @param original_key [String] The original pattern key that wasn't found
+        # @return [String, nil] Adapted pattern or nil if no fallback found
+        private def try_aggressive_fallbacks(original_key)
+          # Check which fields we have
+          has_year = original_key.include?("y")
+          has_month = original_key.match?(/M+/)
+          has_day = original_key.include?("d")
+          has_weekday = original_key.match?(/E+/)
+          has_hour = original_key.match?(/[Hh]+/)
+          has_minute = original_key.match?(/m+/)
+          has_second = original_key.match?(/s+/)
+          has_ampm = original_key.include?("a")
+
+          has_date_fields = has_year || has_month || has_day || has_weekday
+          has_time_fields = has_hour || has_minute || has_second
+
+          # If we only have time fields, try basic time patterns first
+          if has_time_fields && !has_date_fields
+            # Try exact basic time patterns that may have proper ordering
+            # Priority order based on hour12 setting
+            basic_time_patterns = []
+            if has_hour && has_minute && has_second
+              # For 12-hour format, prefer h patterns; for 24-hour, prefer H patterns
+              basic_time_patterns += if effective_hour12
+                                       %w[hms Hms] # 12-hour first
+                                     else
+                                       %w[Hms hms] # 24-hour first
+                                     end
+            elsif has_hour && has_minute
+              basic_time_patterns += if effective_hour12
+                                       %w[hm Hm]
+                                     else
+                                       %w[Hm hm]
+                                     end
+            elsif has_hour
+              basic_time_patterns += if effective_hour12
+                                       %w[h H]
+                                     else
+                                       %w[H h]
+                                     end
+            end
+
+            # Try these patterns directly - they may have locale-specific ordering
+            basic_time_patterns.each do |pattern_key|
+              pattern = @formats.available_format(pattern_key)
+              if pattern
+                # For basic time patterns, use them as-is since they already have proper locale-specific ordering
+                # Only adapt for 2-digit requirements without changing hour field type
+                return adapt_pattern_for_options(pattern)
+              end
+            end
+          end
+
+          # If we have both date and time fields, try to combine them
+          if has_date_fields && has_time_fields
+            # Find a date pattern (without AM/PM)
+            date_patterns = [
+              "yMMMEd",  # Year, month, weekday, day
+              "yMMMd",   # Year, month, day
+              "yMd",     # Year, month (numeric), day
+              "MMMEd",   # Month, weekday, day
+              "MMMd",    # Month, day
+              "MEd",     # Month (numeric), weekday, day
+              "Md"       # Month (numeric), day
+            ]
+
+            date_pattern = nil
+            date_patterns.each do |pattern_key|
+              pattern_has_year = pattern_key.include?("y")
+              pattern_has_month = pattern_key.match?(/M+/)
+              pattern_has_day = pattern_key.include?("d")
+              pattern_has_weekday = pattern_key.match?(/E+/)
+
+              next if pattern_has_year && !has_year
+              next if pattern_has_month && !has_month
+              next if pattern_has_day && !has_day
+              next if pattern_has_weekday && !has_weekday
+
+              pattern = @formats.available_format(pattern_key)
+              next unless pattern
+
+              # Create date-only original key for adaptation
+              date_only_key = original_key.gsub(/[Hh]+/, "").gsub(/m+/, "").gsub(/s+/, "").delete("a")
+              date_pattern = adapt_fallback_pattern(pattern, date_only_key)
+              break
+            end
+
+            # Find a time pattern (try basic patterns first for proper ordering)
+            time_patterns = []
+            if has_hour && has_minute && has_second
+              time_patterns += if effective_hour12
+                                 %w[hms Hms]
+                               else
+                                 %w[Hms hms]
+                               end
+            elsif has_hour && has_minute
+              time_patterns += if effective_hour12
+                                 %w[hm Hm]
+                               else
+                                 %w[Hm hm]
+                               end
+            elsif has_hour
+              time_patterns += if effective_hour12
+                                 %w[h H]
+                               else
+                                 %w[H h]
+                               end
+            end
+
+            time_pattern = nil
+            time_patterns.each do |pattern_key|
+              pattern = @formats.available_format(pattern_key)
+              next unless pattern
+
+              # Create time-only original key for adaptation
+              time_only_key = ""
+              time_only_key += original_key.match(/[Hh]+/)[0] if /[Hh]+/.match?(original_key)
+              time_only_key += original_key.match(/m+/)[0] if /m+/.match?(original_key)
+              time_only_key += original_key.match(/s+/)[0] if /s+/.match?(original_key)
+              time_only_key += "a" if has_ampm
+
+              time_pattern = adapt_fallback_pattern(pattern, time_only_key)
+              break
+            end
+
+            # Combine date and time if both found
+            if date_pattern && time_pattern
+              return "#{date_pattern}, #{time_pattern}"
+            end
+          end
+
+          # If we only have date fields, try date-only patterns
+          if has_date_fields && !has_time_fields
+            date_patterns = [
+              "yMMMEd",  # Year, month, weekday, day
+              "yMMMd",   # Year, month, day
+              "yMd",     # Year, month (numeric), day
+              "MMMEd",   # Month, weekday, day
+              "MMMd",    # Month, day
+              "MEd",     # Month (numeric), weekday, day
+              "Md"       # Month (numeric), day
+            ]
+
+            date_patterns.each do |pattern_key|
+              pattern_has_year = pattern_key.include?("y")
+              pattern_has_month = pattern_key.match?(/M+/)
+              pattern_has_day = pattern_key.include?("d")
+              pattern_has_weekday = pattern_key.match?(/E+/)
+
+              next if pattern_has_year && !has_year
+              next if pattern_has_month && !has_month
+              next if pattern_has_day && !has_day
+              next if pattern_has_weekday && !has_weekday
+
+              pattern = @formats.available_format(pattern_key)
+              if pattern
+                return adapt_fallback_pattern(pattern, original_key)
+              end
+            end
+          end
+
+          nil
+        end
+
+        # Adapt a fallback pattern to match the original field specifications
+        private def adapt_fallback_pattern(pattern, original_key)
+          # Extract original field specifications
+          original_specs = extract_field_specs(original_key)
+
+          # Parse the pattern
+          parser = PatternParser::DateTime.new
+          tokens = parser.parse(pattern)
+
+          # Replace field tokens with original specifications
+          adapted_tokens = tokens.map {|token|
+            if token.is_a?(PatternParser::DateTime::FieldToken)
+              field_type = token.field_type
+              original_spec = original_specs[field_type]
+
+              if original_spec
+                PatternParser::DateTime::FieldToken.new(original_spec)
+              else
+                token
+              end
+            else
+              token
+            end
+          }
+
+          # Add AM/PM marker if needed and not already present
+          if original_specs[:ampm] && adapted_tokens.none? {|t| t.is_a?(PatternParser::DateTime::FieldToken) && t.value == "a" }
+            # Add AM/PM marker after time fields using proper token
+            # Find the last time-related token position
+            last_time_index = adapted_tokens.rindex {|t|
+              t.is_a?(PatternParser::DateTime::FieldToken) &&
+                (t.field_type == :hour || t.field_type == :minute || t.field_type == :second)
+            }
+
+            if last_time_index
+              # Insert space and AM/PM marker after the last time field
+              adapted_tokens.insert(last_time_index + 1, PatternParser::DateTime::LiteralToken.new(" "))
+              adapted_tokens.insert(last_time_index + 2, PatternParser::DateTime::FieldToken.new("a"))
+            else
+              # Fallback: append at the end
+              adapted_tokens << PatternParser::DateTime::LiteralToken.new(" ")
+              adapted_tokens << PatternParser::DateTime::FieldToken.new("a")
+            end
+          end
+
+          adapted_tokens.map(&:value).join
+        end
+
+        # Extract field specifications from pattern key
+        private def extract_field_specs(pattern_key)
+          specs = {}
+
+          # Year
+          if (match = pattern_key.match(/(y+)/))
+            specs[:year] = match[1]
+          end
+
+          # Month
+          if (match = pattern_key.match(/(M+)/))
+            specs[:month] = match[1]
+          end
+
+          # Day
+          if (match = pattern_key.match(/(d+)/))
+            specs[:day] = match[1]
+          end
+
+          # Weekday
+          if (match = pattern_key.match(/(E+)/))
+            specs[:weekday] = match[1]
+          end
+
+          # Hour (check both H and h patterns)
+          if (match = pattern_key.match(/([Hh]+)/))
+            specs[:hour] = match[1]
+          end
+
+          # Minute
+          if (match = pattern_key.match(/(m+)/))
+            specs[:minute] = match[1]
+          end
+
+          # Second
+          if (match = pattern_key.match(/(s+)/))
+            specs[:second] = match[1]
+          end
+
+          # AM/PM marker
+          if pattern_key.include?("a")
+            specs[:ampm] = "a"
+          end
+
+          specs
+        end
+
+        # Adapt pattern to match option requirements (e.g., 2-digit padding)
+        private def adapt_pattern_for_options(pattern)
+          return pattern unless @options[:hour]
+
+          parser = PatternParser::DateTime.new
+          tokens = parser.parse(pattern)
+
+          adapted_tokens = tokens.map {|token|
+            if token.is_a?(PatternParser::DateTime::FieldToken) && token.field_type == :hour
+              adapt_hour_field(token)
+            else
+              token
+            end
+          }
+
+          adapted_tokens.map(&:value).join
+        end
+
+        # Adapt hour field token based on options
+        #
+        # Node.js Intl.DateTimeFormat behavior:
+        # - hour: "numeric" → follow CLDR pattern defaults per locale
+        # - hour: "2-digit" → always 2-digit padded
+        #
+        # Note: Different locales have different defaults for numeric hour:
+        # - English: "HH" (2-digit) for "Hms" pattern
+        # - Japanese: "H" (1-digit) for "Hms" pattern
+        #
+        # @param token [PatternParser::DateTime::FieldToken] The hour field token
+        # @return [PatternParser::DateTime::FieldToken] Adapted token
+        private def adapt_hour_field(token)
+          case @options[:hour]
+          when "2-digit"
+            # Convert to 2-digit format
+            case token.value
+            when "H" then PatternParser::DateTime::FieldToken.new("HH")
+            when "h" then PatternParser::DateTime::FieldToken.new("hh")
+            when "K" then PatternParser::DateTime::FieldToken.new("KK")
+            when "k" then PatternParser::DateTime::FieldToken.new("kk")
+            else token
+            end
+          when "numeric"
+            # Keep CLDR pattern default for numeric hour
+            # Node.js behavior varies by locale but we follow CLDR patterns
+            token
+          else
+            token
+          end
         end
 
         # Check if options contain only date fields (no time fields)
@@ -429,8 +905,10 @@ module Foxtail
           available_pattern = @formats.available_format(time_pattern_key)
 
           if available_pattern
+            # Adapt pattern for 2-digit requirements
+            adapted_pattern = adapt_pattern_for_options(available_pattern)
             # Use CLDR available format pattern
-            format_with_pattern(available_pattern)
+            format_with_pattern(adapted_pattern)
           else
             # Fallback to basic time formatting with locale-appropriate separators
             format_time_with_basic_pattern
@@ -715,6 +1193,16 @@ module Foxtail
           parser = Foxtail::CLDR::PatternParser::DateTime.new
           tokens = parser.parse(pattern)
 
+          # Calculate various hour formats for 12-hour time
+          hour_24 = @time_with_zone.hour
+          hour_12_1_12 = if hour_24 == 0
+                           12
+                         else
+                           (hour_24 > 12 ? hour_24 - 12 : hour_24)
+                         end # 1-12 (h)
+          hour_12_0_11 = hour_24 % 12 # 0-11 (K)
+          hour_24_1_24 = hour_24 == 0 ? 24 : hour_24 # 1-24 (k)
+
           # Pre-compute lightweight C-level operations (strftime and to_s)
           fast_replacements = {
             "MM" => @time_with_zone.strftime("%m"),
@@ -727,10 +1215,13 @@ module Foxtail
             "HH" => @time_with_zone.strftime("%H"),
             "H" => @time_with_zone.hour.to_s,
             "hh" => @time_with_zone.strftime("%I"),
-            "h" => @time_with_zone.strftime("%-l"),
+            "h" => hour_12_1_12.to_s,
+            "KK" => hour_12_0_11.to_s.rjust(2, "0"),
+            "K" => hour_12_0_11.to_s,
+            "kk" => hour_24_1_24.to_s.rjust(2, "0"),
+            "k" => hour_24_1_24.to_s,
             "mm" => @time_with_zone.strftime("%M"),
-            "ss" => @time_with_zone.strftime("%S"),
-            "a" => @time_with_zone.strftime("%p")
+            "ss" => @time_with_zone.strftime("%S")
           }
 
           # Define method for on-demand computation of heavy operations
@@ -750,6 +1241,7 @@ module Foxtail
             when "VV" then format_timezone_id
             when "ZZZZZ" then format_timezone_offset_iso
             when "Z" then format_timezone_offset_basic
+            when "a" then @formats.day_period(@time_with_zone.hour)
             else field # Return the field itself if not found
             end
           end
@@ -861,10 +1353,16 @@ module Foxtail
               offset_string = format_gmt_offset_string(offset_seconds)
               gmt_format.gsub("{0}", offset_string)
             end
-          else
-            # Use metazone name for GMT-preferring locales
+          elsif offset_seconds == 0
+            # Use metazone name for GMT-preferring locales, considering DST
+            # Standard GMT (no offset) - use standard or generic name
             @timezone_names.metazone_name(metazone_id, length, :standard) ||
             @timezone_names.metazone_name(metazone_id, length, :generic)
+          else
+            # Non-zero offset during GMT metazone - format with offset
+            # This handles DST cases like London in summer (GMT+1)
+            offset_string = format_gmt_offset_string(offset_seconds)
+            gmt_format.gsub("{0}", offset_string)
           end
         end
 
@@ -978,7 +1476,11 @@ module Foxtail
 
         # Determine effective hour12 setting (explicit option or locale default)
         private def effective_hour12
-          @options[:hour12].nil? ? locale_default_hour12? : @options[:hour12]
+          return false if @options[:hour12] == false
+          return true if @options[:hour12] == true
+
+          # Default to locale preference when hour12 is nil
+          locale_default_hour12?
         end
 
         # Determine locale default for hour12 format based on CLDR time patterns
@@ -1004,9 +1506,28 @@ module Foxtail
 
           hours = offset_seconds.abs / 3600
           minutes = (offset_seconds.abs % 3600) / 60
-          sign = offset_seconds >= 0 ? "+" : "-"
+
+          # Use CLDR hour_format pattern to get correct plus/minus signs
+          # hour_format is like "+HH:mm;−HH:mm" where the minus is Unicode U+2212
+          hour_format_pattern = @timezone_names.hour_format
+          if hour_format_pattern
+            # Split by semicolon to get positive and negative patterns
+            patterns = hour_format_pattern.split(";")
+            positive_pattern = patterns[0] || "+HH:mm"
+            negative_pattern = patterns[1] || patterns[0]&.sub("+", "−") || "−HH:mm"
+
+            # Extract the sign characters from patterns
+            plus_sign = positive_pattern[/^[^Hm]+/] || "+"
+            minus_sign = negative_pattern[/^[^Hm]+/] || "−"
+
+            sign = offset_seconds >= 0 ? plus_sign : minus_sign
+          else
+            # Fallback to ASCII if no hour_format available
+            sign = offset_seconds >= 0 ? "+" : "-"
+          end
+
           offset_string = "#{sign}#{hours}"
-          offset_string += ":#{"02d" % minutes}" if minutes > 0
+          offset_string += ":#{"%02d" % minutes}" if minutes > 0
           offset_string
         end
 

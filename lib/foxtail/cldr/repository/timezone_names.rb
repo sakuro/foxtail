@@ -99,6 +99,11 @@ module Foxtail
           @resolver.resolve("timezone_names.formats.gmt_format", "timezone_names")
         end
 
+        # Get the CLDR hour format pattern (e.g., "+HH:mm;−HH:mm" with Unicode minus)
+        def hour_format
+          @resolver.resolve("timezone_names.formats.hour_format", "timezone_names")
+        end
+
         # Get full timezone name (long name)
         #
         # @param zone_id [String] IANA timezone identifier

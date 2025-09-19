@@ -82,6 +82,12 @@ RSpec.describe Foxtail::CLDR::Repository::TimezoneNames do
       end
     end
 
+    describe "#hour_format" do
+      it "returns hour format pattern with ASCII plus and minus signs" do
+        expect(timezone_names.hour_format).to eq("+HH:mm;-HH:mm")
+      end
+    end
+
     describe "#format_offset" do
       it "formats positive offsets" do
         expect(timezone_names.format_offset(9 * 3600)).to eq("+09:00") # JST
@@ -95,6 +101,23 @@ RSpec.describe Foxtail::CLDR::Repository::TimezoneNames do
 
       it "formats zero offset" do
         expect(timezone_names.format_offset(0)).to eq("+00:00") # UTC
+      end
+    end
+  end
+
+  describe "with French locale" do
+    subject(:timezone_names) { Foxtail::CLDR::Repository::TimezoneNames.new(locale("fr")) }
+
+    describe "#hour_format" do
+      it "returns hour format pattern with Unicode minus sign U+2212" do
+        # French uses Unicode minus sign (U+2212) instead of ASCII hyphen
+        expect(timezone_names.hour_format).to eq("+HH:mm;\u{2212}HH:mm")
+      end
+    end
+
+    describe "#gmt_format" do
+      it "returns UTC format for French" do
+        expect(timezone_names.gmt_format).to eq("UTC{0}")
       end
     end
   end

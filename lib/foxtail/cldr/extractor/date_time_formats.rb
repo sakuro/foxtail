@@ -135,7 +135,15 @@ module Foxtail
                 type = period.attributes["type"]
                 next unless type
 
+                # Skip variant entries if we already have a standard entry
+                alt = period.attributes["alt"]
                 context_key = context # Keep original format: "stand-alone"
+
+                # Only use variant if no standard entry exists
+                if alt == "variant" && periods[context_key][width][type]
+                  next
+                end
+
                 periods[context_key][width][type] = period.text
               end
             end

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ldml SYSTEM "../../common/dtd/ldml.dtd">
+<ldml>
+  <identity>
+    <version number="$Revision$"/>
+    <language type="timezone"/>
+  </identity>
+  <dates>
+    <timeZoneNames>
+      <hourFormat>+HH:mm;−HH:mm</hourFormat>
+      <gmtFormat>UTC{0}</gmtFormat>
+      <regionFormat>{0} Time</regionFormat>
+      <metazone type="America_Eastern">
+        <short>
+          <generic draft="unconfirmed">HE</generic>
+          <standard draft="unconfirmed">HNE</standard>
+          <daylight draft="unconfirmed">HEE</daylight>
+        </short>
+      </metazone>
+      <metazone type="America_Pacific">
+        <short>
+          <generic draft="contributed">PT</generic>
+          <standard draft="contributed">PST</standard>
+          <daylight draft="contributed">PDT</daylight>
+        </short>
+      </metazone>
+      <metazone type="Europe_London">
+        <short>
+          <generic>GMT</generic>
+          <standard>GMT</standard>
+          <daylight>BST</daylight>
+        </short>
+      </metazone>
+      <metazone type="Test_Provisional">
+        <short>
+          <generic draft="provisional">TZ</generic>
+          <standard draft="provisional">TZS</standard>
+          <daylight draft="provisional">TZD</daylight>
+        </short>
+      </metazone>
+      <zone type="America/New_York">
+        <short>
+          <generic draft="unconfirmed">ET</generic>
+          <standard draft="unconfirmed">EST</standard>
+          <daylight draft="unconfirmed">EDT</daylight>
+        </short>
+      </zone>
+      <zone type="Europe/London">
+        <exemplarCity>London</exemplarCity>
+        <short>
+          <generic>GMT</generic>
+          <standard>GMT</standard>
+          <daylight>BST</daylight>
+        </short>
+      </zone>
+    </timeZoneNames>
+  </dates>
+</ldml>
