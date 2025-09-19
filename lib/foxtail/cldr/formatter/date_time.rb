@@ -429,8 +429,10 @@ module Foxtail
           available_pattern = @formats.available_format(time_pattern_key)
 
           if available_pattern
+            # Adapt pattern for 2-digit requirements
+            adapted_pattern = adapt_pattern_for_options(available_pattern)
             # Use CLDR available format pattern
-            format_with_pattern(available_pattern)
+            format_with_pattern(adapted_pattern)
           else
             # Fallback to basic time formatting with locale-appropriate separators
             format_time_with_basic_pattern
