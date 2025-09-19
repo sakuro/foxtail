@@ -12,10 +12,10 @@ module Foxtail
     def self.defaults
       @defaults ||= {
         "NUMBER" => ->(value, locale:, **options) {
-          CLDR::Formatter::Number.new(locale:, **options).call(value)
+          Intl::NumberFormat.new(locale:, **options).call(value)
         },
         "DATETIME" => ->(value, locale:, **options) {
-          CLDR::Formatter::DateTime.new(locale:, **options).call(value)
+          Intl::DateTimeFormat.new(locale:, **options).call(value)
         }
       }.freeze
     end

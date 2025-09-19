@@ -100,7 +100,7 @@ RSpec/ContextWording:
 Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/parser/stream.rb'                    # Internal stream processing utilities
-    - 'lib/foxtail/cldr/pattern_parser/number.rb'      # Internal pattern parsing utilities
+    - 'lib/foxtail/intl/pattern_parser/number.rb'      # Internal pattern parsing utilities
     - 'compat/fluent_js/compatibility_tester.rb'        # Internal compatibility testing utilities
     - 'compat/fluent_js/compatibility_reporter.rb'      # Internal compatibility reporting utilities
     - 'compat/fluent_js/ast_comparator.rb'              # Internal AST comparison utilities
@@ -114,14 +114,14 @@ Style/OptionHash:
     - 'lib/foxtail/bundle.rb'                      # Bundle#format(id, args={}) - public API
     - 'lib/foxtail/bundle/ast_converter.rb'       # Internal converter initialization
     - 'lib/foxtail/bundle/scope.rb'               # Scope.new(bundle, args={}) - public API
-    - 'lib/foxtail/cldr/formatter/date_time.rb'   # DateTimeFormatter#call(value, options={}) - matches Intl.DateTimeFormat API
+    - 'lib/foxtail/intl/date_time_format.rb'   # DateTimeFormatter#call(value, options={}) - matches Intl.DateTimeFormat API
 
 # Duplicate branches provide intentional fallback behavior for robustness
 Lint/DuplicateBranch:
   Exclude:
     - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
     - 'lib/foxtail/cldr/repository/date_time_formats.rb'      # Default datetime format patterns (medium as fallback)
-    - 'lib/foxtail/cldr/formatter/date_time.rb'  # CLDR style normalization with wide as default
+    - 'lib/foxtail/intl/date_time_format.rb'  # CLDR style normalization with wide as default
 
 # Number conversions are safe for statistical percentages (integers to float)
 Lint/NumberConversion:

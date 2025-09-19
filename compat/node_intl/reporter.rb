@@ -42,7 +42,7 @@ class NodeIntlReporter
   end
 
   private def generate_timezone_investigation
-    require_relative "../../lib/foxtail/cldr/formatter/local_timezone_detector"
+    require_relative "../../lib/foxtail/intl/local_timezone_detector"
 
     report = []
     report << "## Test Environment Timezone Investigation"
@@ -51,7 +51,7 @@ class NodeIntlReporter
     report << ""
 
     # Current timezone detection
-    detector = Foxtail::CLDR::Formatter::LocalTimezoneDetector.new
+    detector = Foxtail::Intl::LocalTimezoneDetector.new
     detected = detector.detect
 
     # Get current Node.js timezone
@@ -86,8 +86,8 @@ class NodeIntlReporter
     test_formats.each do |tz_format|
       # Test in a subprocess to avoid affecting current environment
       result = %x(TZ=#{tz_format} ruby -e "
-        require_relative 'lib/foxtail/cldr/formatter/local_timezone_detector'
-        detector = Foxtail::CLDR::Formatter::LocalTimezoneDetector.new
+        require_relative 'lib/foxtail/intl/local_timezone_detector'
+        detector = Foxtail::Intl::LocalTimezoneDetector.new
         detected = detector.detect
         puts [Time.now.zone.inspect, Time.now.utc_offset, detected.id.inspect, detected.offset_seconds].join('|')
       " 2>/dev/null).strip

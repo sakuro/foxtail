@@ -436,7 +436,7 @@ class NodeIntlTester
                    end
 
     locale_tag = Locale::Tag.parse(locale)
-    formatter = Foxtail::CLDR::Formatter::Number.new(locale: locale_tag, **options)
+    formatter = Foxtail::Intl::NumberFormat.new(locale: locale_tag, **options)
 
     result = formatter.call(actual_value)
     {result:, error: nil}
@@ -446,7 +446,7 @@ class NodeIntlTester
 
   private def format_datetime_with_foxtail(value, locale, options)
     locale_tag = Locale::Tag.parse(locale)
-    formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: locale_tag, **options)
+    formatter = Foxtail::Intl::DateTimeFormat.new(locale: locale_tag, **options)
 
     result = formatter.call(value)
     {result:, error: nil}

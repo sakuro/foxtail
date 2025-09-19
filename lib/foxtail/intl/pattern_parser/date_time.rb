@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Foxtail
-  module CLDR
+  module Intl
     module PatternParser
       # Formal CLDR date/time pattern parser
       #
