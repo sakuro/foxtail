@@ -41,7 +41,7 @@ def check_compatibility_test_environment!
       note_message = <<~NOTE
         ℹ️  Note: Timezone configuration
            Current: TZ=#{current_tz.inspect} (detected: #{detected_timezone}, offset: #{detected_offset})
-           Optimal: TZ=UTC+0 (for exact CI match with 8 DateTimeFormat mismatches)
+           Optimal: TZ=UTC+0 (for exact CI match)
 
            Your current configuration may work, but for exact CI compatibility use:
            mise exec ruby@#{required_ruby_major_minor} -- env TZ=UTC+0 rake compatibility:node_intl
@@ -52,7 +52,7 @@ def check_compatibility_test_environment!
       timezone_warning = <<~WARNING
         ⚠️  WARNING: Timezone environment mismatch
            Current: TZ=#{current_tz.inspect} (detected: #{detected_timezone}, offset: #{detected_offset})
-           Required: TZ should be UTC+0 for exact CI compatibility (8 mismatches)
+           Required: TZ should be UTC+0 for exact CI compatibility
 
            For consistent results with CI, please run with TZ=UTC+0:
            TZ=UTC+0 rake compatibility:node_intl
@@ -60,9 +60,7 @@ def check_compatibility_test_environment!
            Or with mise:
            mise exec ruby@#{required_ruby_major_minor} -- env TZ=UTC+0 rake compatibility:node_intl
 
-           Alternative UTC formats will work but may show different mismatch counts:
-           - TZ=UTC: 65 DateTimeFormat mismatches
-           - TZ=GMT: 50 DateTimeFormat mismatches
+           Alternative UTC formats will work but may show different mismatch counts
 
       WARNING
       puts timezone_warning
@@ -74,7 +72,7 @@ def check_compatibility_test_environment!
     ✅ Environment check passed:
        Ruby: #{RUBY_VERSION}
        TZ: #{current_tz} (Time.zone: #{Time.now.zone})
-       Expected DateTimeFormat mismatches: 8 (matching CI)
+       Ready for compatibility testing
 
   SUCCESS
   puts success_message
