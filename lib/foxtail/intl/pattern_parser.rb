@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Foxtail
-  module CLDR
+  module Intl
     # Pattern parsers for CLDR formatting patterns
     module PatternParser
     end

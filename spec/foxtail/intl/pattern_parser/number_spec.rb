@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe Foxtail::CLDR::PatternParser::Number do
-  subject(:parser) { Foxtail::CLDR::PatternParser::Number.new }
+RSpec.describe Foxtail::Intl::PatternParser::Number do
+  subject(:parser) { Foxtail::Intl::PatternParser::Number.new }
 
   describe "#parse" do
     context "with empty or nil patterns" do
@@ -18,7 +18,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses required zeros" do
         tokens = parser.parse("000")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens.first.value).to eq("000")
         expect(tokens.first.digit_count).to eq(3)
         expect(tokens.first.required?).to be(true)
@@ -28,7 +28,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses optional hashes" do
         tokens = parser.parse("###")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens.first.value).to eq("###")
         expect(tokens.first.digit_count).to eq(3)
         expect(tokens.first.required?).to be(false)
@@ -39,11 +39,11 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         tokens = parser.parse("##0")
         expect(tokens).to have_attributes(size: 2)
 
-        expect(tokens[0]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[0]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[0].value).to eq("##")
         expect(tokens[0].optional?).to be(true)
 
-        expect(tokens[1]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[1]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[1].value).to eq("0")
         expect(tokens[1].required?).to be(true)
       end
@@ -53,49 +53,49 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses decimal separator" do
         tokens = parser.parse(".")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::DecimalToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::DecimalToken)
         expect(tokens.first.value).to eq(".")
       end
 
       it "parses grouping separator" do
         tokens = parser.parse(",")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::GroupToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::GroupToken)
         expect(tokens.first.value).to eq(",")
       end
 
       it "parses percent symbol" do
         tokens = parser.parse("%")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::PercentToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::PercentToken)
         expect(tokens.first.value).to eq("%")
       end
 
       it "parses per mille symbol" do
         tokens = parser.parse("‰")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::PerMilleToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::PerMilleToken)
         expect(tokens.first.value).to eq("‰")
       end
 
       it "parses plus sign" do
         tokens = parser.parse("+")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::PlusToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::PlusToken)
         expect(tokens.first.value).to eq("+")
       end
 
       it "parses minus sign" do
         tokens = parser.parse("-")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::MinusToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::MinusToken)
         expect(tokens.first.value).to eq("-")
       end
 
       it "parses pattern separator" do
         tokens = parser.parse(";")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::PatternSeparatorToken)
         expect(tokens.first.value).to eq(";")
       end
     end
@@ -104,7 +104,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses single currency symbol" do
         tokens = parser.parse("¤")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::CurrencyToken)
         expect(tokens.first.value).to eq("¤")
         expect(tokens.first.currency_type).to eq(:symbol)
       end
@@ -112,7 +112,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses double currency symbol" do
         tokens = parser.parse("¤¤")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::CurrencyToken)
         expect(tokens.first.value).to eq("¤¤")
         expect(tokens.first.currency_type).to eq(:code)
       end
@@ -120,7 +120,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses triple currency symbol" do
         tokens = parser.parse("¤¤¤")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::CurrencyToken)
         expect(tokens.first.value).to eq("¤¤¤")
         expect(tokens.first.currency_type).to eq(:name)
       end
@@ -137,7 +137,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses basic exponent" do
         tokens = parser.parse("E0")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::ExponentToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::ExponentToken)
         expect(tokens.first.value).to eq("E0")
         expect(tokens.first.exponent_digits).to eq(1)
         expect(tokens.first.show_exponent_sign?).to be(false)
@@ -146,7 +146,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses exponent with multiple digits" do
         tokens = parser.parse("E00")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::ExponentToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::ExponentToken)
         expect(tokens.first.value).to eq("E00")
         expect(tokens.first.exponent_digits).to eq(2)
       end
@@ -154,7 +154,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses exponent with plus sign" do
         tokens = parser.parse("E+0")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::ExponentToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::ExponentToken)
         expect(tokens.first.value).to eq("E+0")
         expect(tokens.first.exponent_digits).to eq(1)
         expect(tokens.first.show_exponent_sign?).to be(true)
@@ -163,14 +163,14 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses lowercase e as exponent" do
         tokens = parser.parse("e0")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::ExponentToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::ExponentToken)
         expect(tokens.first.value).to eq("e0")
       end
 
       it "does not parse E without digits as exponent" do
         tokens = parser.parse("E")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::LiteralToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::LiteralToken)
         expect(tokens.first.value).to eq("E")
       end
     end
@@ -179,14 +179,14 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses simple literals" do
         tokens = parser.parse("Total:")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::LiteralToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::LiteralToken)
         expect(tokens.first.value).to eq("Total:")
       end
 
       it "combines consecutive literal characters" do
         tokens = parser.parse("Total: Amount:")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::LiteralToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::LiteralToken)
         expect(tokens.first.value).to eq("Total: Amount:")
       end
     end
@@ -195,7 +195,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "parses simple quoted text" do
         tokens = parser.parse("'Total is'")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::QuotedToken)
         expect(tokens.first.value).to eq("'Total is'")
         expect(tokens.first.literal_text).to eq("Total is")
       end
@@ -203,21 +203,21 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "handles escaped quotes" do
         tokens = parser.parse("'User''s balance'")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::QuotedToken)
         expect(tokens.first.literal_text).to eq("User's balance")
       end
 
       it "handles empty quoted strings" do
         tokens = parser.parse("''")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::QuotedToken)
         expect(tokens.first.literal_text).to eq("")
       end
 
       it "treats unclosed quotes as literals" do
         tokens = parser.parse("'unclosed")
         expect(tokens).to have_attributes(size: 1)
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::LiteralToken)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::LiteralToken)
         expect(tokens.first.value).to eq("'unclosed")
       end
     end
@@ -227,22 +227,22 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         tokens = parser.parse("#,##0.00")
         expect(tokens).to have_attributes(size: 6)
 
-        expect(tokens[0]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[0]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[0].value).to eq("#")
 
-        expect(tokens[1]).to be_a(Foxtail::CLDR::PatternParser::Number::GroupToken)
+        expect(tokens[1]).to be_a(Foxtail::Intl::PatternParser::Number::GroupToken)
         expect(tokens[1].value).to eq(",")
 
-        expect(tokens[2]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[2]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[2].value).to eq("##")
 
-        expect(tokens[3]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[3]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[3].value).to eq("0")
 
-        expect(tokens[4]).to be_a(Foxtail::CLDR::PatternParser::Number::DecimalToken)
+        expect(tokens[4]).to be_a(Foxtail::Intl::PatternParser::Number::DecimalToken)
         expect(tokens[4].value).to eq(".")
 
-        expect(tokens[5]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[5]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[5].value).to eq("00")
       end
 
@@ -250,23 +250,23 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         tokens = parser.parse("¤#,##0.00")
         expect(tokens).to have_attributes(size: 7)
 
-        expect(tokens[0]).to be_a(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
+        expect(tokens[0]).to be_a(Foxtail::Intl::PatternParser::Number::CurrencyToken)
         expect(tokens[0].value).to eq("¤")
 
-        expect(tokens[1]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[1]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[1].value).to eq("#")
 
-        expect(tokens[2]).to be_a(Foxtail::CLDR::PatternParser::Number::GroupToken)
+        expect(tokens[2]).to be_a(Foxtail::Intl::PatternParser::Number::GroupToken)
 
-        expect(tokens[3]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[3]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[3].value).to eq("##")
 
-        expect(tokens[4]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[4]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[4].value).to eq("0")
 
-        expect(tokens[5]).to be_a(Foxtail::CLDR::PatternParser::Number::DecimalToken)
+        expect(tokens[5]).to be_a(Foxtail::Intl::PatternParser::Number::DecimalToken)
 
-        expect(tokens[6]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[6]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[6].value).to eq("00")
       end
 
@@ -274,7 +274,7 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         tokens = parser.parse("#,##0.00%")
         expect(tokens).to have_attributes(size: 7)
 
-        expect(tokens.last).to be_a(Foxtail::CLDR::PatternParser::Number::PercentToken)
+        expect(tokens.last).to be_a(Foxtail::Intl::PatternParser::Number::PercentToken)
         expect(tokens.last.value).to eq("%")
       end
 
@@ -282,15 +282,15 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         tokens = parser.parse("#.##E0")
         expect(tokens).to have_attributes(size: 4)
 
-        expect(tokens[0]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[0]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[0].value).to eq("#")
 
-        expect(tokens[1]).to be_a(Foxtail::CLDR::PatternParser::Number::DecimalToken)
+        expect(tokens[1]).to be_a(Foxtail::Intl::PatternParser::Number::DecimalToken)
 
-        expect(tokens[2]).to be_a(Foxtail::CLDR::PatternParser::Number::DigitToken)
+        expect(tokens[2]).to be_a(Foxtail::Intl::PatternParser::Number::DigitToken)
         expect(tokens[2].value).to eq("##")
 
-        expect(tokens[3]).to be_a(Foxtail::CLDR::PatternParser::Number::ExponentToken)
+        expect(tokens[3]).to be_a(Foxtail::Intl::PatternParser::Number::ExponentToken)
         expect(tokens[3].value).to eq("E0")
       end
 
@@ -299,14 +299,14 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         expect(tokens).to have_attributes(size: 15)
 
         # Find the separator
-        separator_index = tokens.find_index {|t| t.is_a?(Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken) }
+        separator_index = tokens.find_index {|t| t.is_a?(Foxtail::Intl::PatternParser::Number::PatternSeparatorToken) }
         expect(separator_index).to eq(6)
 
         # Check negative pattern has parentheses
-        expect(tokens[7]).to be_a(Foxtail::CLDR::PatternParser::Number::LiteralToken)
+        expect(tokens[7]).to be_a(Foxtail::Intl::PatternParser::Number::LiteralToken)
         expect(tokens[7].value).to eq("(")
 
-        expect(tokens[14]).to be_a(Foxtail::CLDR::PatternParser::Number::LiteralToken)
+        expect(tokens[14]).to be_a(Foxtail::Intl::PatternParser::Number::LiteralToken)
         expect(tokens[14].value).to eq(")")
       end
 
@@ -314,10 +314,10 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         tokens = parser.parse("'Total: '¤#,##0.00")
         expect(tokens).to have_attributes(size: 8)
 
-        expect(tokens[0]).to be_a(Foxtail::CLDR::PatternParser::Number::QuotedToken)
+        expect(tokens[0]).to be_a(Foxtail::Intl::PatternParser::Number::QuotedToken)
         expect(tokens[0].literal_text).to eq("Total: ")
 
-        expect(tokens[1]).to be_a(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
+        expect(tokens[1]).to be_a(Foxtail::Intl::PatternParser::Number::CurrencyToken)
       end
     end
 
@@ -325,21 +325,21 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       it "handles multiple consecutive separators" do
         tokens = parser.parse(",,")
         expect(tokens).to have_attributes(size: 2)
-        expect(tokens.all?(Foxtail::CLDR::PatternParser::Number::GroupToken)).to be(true)
+        expect(tokens.all?(Foxtail::Intl::PatternParser::Number::GroupToken)).to be(true)
       end
 
       it "handles mixed symbols" do
         tokens = parser.parse("+-")
         expect(tokens).to have_attributes(size: 2)
-        expect(tokens[0]).to be_a(Foxtail::CLDR::PatternParser::Number::PlusToken)
-        expect(tokens[1]).to be_a(Foxtail::CLDR::PatternParser::Number::MinusToken)
+        expect(tokens[0]).to be_a(Foxtail::Intl::PatternParser::Number::PlusToken)
+        expect(tokens[1]).to be_a(Foxtail::Intl::PatternParser::Number::MinusToken)
       end
 
       it "handles patterns with no digits" do
         tokens = parser.parse("¤%")
         expect(tokens).to have_attributes(size: 2)
-        expect(tokens[0]).to be_a(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
-        expect(tokens[1]).to be_a(Foxtail::CLDR::PatternParser::Number::PercentToken)
+        expect(tokens[0]).to be_a(Foxtail::Intl::PatternParser::Number::CurrencyToken)
+        expect(tokens[1]).to be_a(Foxtail::Intl::PatternParser::Number::PercentToken)
       end
     end
 
@@ -348,21 +348,21 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
         tokens = parser.parse("#,##0.###")
         # Should handle grouping and optional decimal places
         expect(tokens.size).to be > 3
-        expect(tokens.any?(Foxtail::CLDR::PatternParser::Number::GroupToken)).to be(true)
-        expect(tokens.any?(Foxtail::CLDR::PatternParser::Number::DecimalToken)).to be(true)
+        expect(tokens.any?(Foxtail::Intl::PatternParser::Number::GroupToken)).to be(true)
+        expect(tokens.any?(Foxtail::Intl::PatternParser::Number::DecimalToken)).to be(true)
       end
 
       it "parses US currency pattern" do
         tokens = parser.parse("¤#,##0.00")
-        expect(tokens.first).to be_a(Foxtail::CLDR::PatternParser::Number::CurrencyToken)
-        expect(tokens.any?(Foxtail::CLDR::PatternParser::Number::GroupToken)).to be(true)
+        expect(tokens.first).to be_a(Foxtail::Intl::PatternParser::Number::CurrencyToken)
+        expect(tokens.any?(Foxtail::Intl::PatternParser::Number::GroupToken)).to be(true)
       end
 
       it "parses percent pattern with positive/negative" do
         tokens = parser.parse("#,##0%;-#,##0%")
-        separator_index = tokens.find_index {|t| t.is_a?(Foxtail::CLDR::PatternParser::Number::PatternSeparatorToken) }
+        separator_index = tokens.find_index {|t| t.is_a?(Foxtail::Intl::PatternParser::Number::PatternSeparatorToken) }
         expect(separator_index).not_to be_nil
-        expect(tokens.count {|t| t.is_a?(Foxtail::CLDR::PatternParser::Number::PercentToken) }).to eq(2)
+        expect(tokens.count {|t| t.is_a?(Foxtail::Intl::PatternParser::Number::PercentToken) }).to eq(2)
       end
     end
   end
@@ -370,35 +370,35 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
   describe "Token classes" do
     describe "Token equality" do
       it "considers tokens equal if same class and value" do
-        token1 = Foxtail::CLDR::PatternParser::Number::DigitToken.new("000")
-        token2 = Foxtail::CLDR::PatternParser::Number::DigitToken.new("000")
+        token1 = Foxtail::Intl::PatternParser::Number::DigitToken.new("000")
+        token2 = Foxtail::Intl::PatternParser::Number::DigitToken.new("000")
         expect(token1).to eq(token2)
       end
 
       it "considers tokens different if different class" do
-        digit_token = Foxtail::CLDR::PatternParser::Number::DigitToken.new("0")
-        literal_token = Foxtail::CLDR::PatternParser::Number::LiteralToken.new("0")
+        digit_token = Foxtail::Intl::PatternParser::Number::DigitToken.new("0")
+        literal_token = Foxtail::Intl::PatternParser::Number::LiteralToken.new("0")
         expect(digit_token).not_to eq(literal_token)
       end
 
       it "considers tokens different if different values" do
-        token1 = Foxtail::CLDR::PatternParser::Number::DigitToken.new("0")
-        token2 = Foxtail::CLDR::PatternParser::Number::DigitToken.new("00")
+        token1 = Foxtail::Intl::PatternParser::Number::DigitToken.new("0")
+        token2 = Foxtail::Intl::PatternParser::Number::DigitToken.new("00")
         expect(token1).not_to eq(token2)
       end
     end
 
     describe "Token string representation" do
       it "returns value as string" do
-        token = Foxtail::CLDR::PatternParser::Number::DigitToken.new("000")
+        token = Foxtail::Intl::PatternParser::Number::DigitToken.new("000")
         expect(token.to_s).to eq("000")
       end
     end
 
     describe "DigitToken methods" do
       it "correctly identifies required vs optional digits" do
-        required_token = Foxtail::CLDR::PatternParser::Number::DigitToken.new("000")
-        optional_token = Foxtail::CLDR::PatternParser::Number::DigitToken.new("###")
+        required_token = Foxtail::Intl::PatternParser::Number::DigitToken.new("000")
+        optional_token = Foxtail::Intl::PatternParser::Number::DigitToken.new("###")
 
         expect(required_token.required?).to be(true)
         expect(required_token.optional?).to be(false)
@@ -408,16 +408,16 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       end
 
       it "correctly counts digits" do
-        token = Foxtail::CLDR::PatternParser::Number::DigitToken.new("0000")
+        token = Foxtail::Intl::PatternParser::Number::DigitToken.new("0000")
         expect(token.digit_count).to eq(4)
       end
     end
 
     describe "CurrencyToken methods" do
       it "correctly identifies currency types" do
-        symbol_token = Foxtail::CLDR::PatternParser::Number::CurrencyToken.new("¤")
-        code_token = Foxtail::CLDR::PatternParser::Number::CurrencyToken.new("¤¤")
-        name_token = Foxtail::CLDR::PatternParser::Number::CurrencyToken.new("¤¤¤")
+        symbol_token = Foxtail::Intl::PatternParser::Number::CurrencyToken.new("¤")
+        code_token = Foxtail::Intl::PatternParser::Number::CurrencyToken.new("¤¤")
+        name_token = Foxtail::Intl::PatternParser::Number::CurrencyToken.new("¤¤¤")
 
         expect(symbol_token.currency_type).to eq(:symbol)
         expect(code_token.currency_type).to eq(:code)
@@ -427,9 +427,9 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
 
     describe "ExponentToken methods" do
       it "correctly counts exponent digits" do
-        token1 = Foxtail::CLDR::PatternParser::Number::ExponentToken.new("E0")
-        token2 = Foxtail::CLDR::PatternParser::Number::ExponentToken.new("E00")
-        token3 = Foxtail::CLDR::PatternParser::Number::ExponentToken.new("E+000")
+        token1 = Foxtail::Intl::PatternParser::Number::ExponentToken.new("E0")
+        token2 = Foxtail::Intl::PatternParser::Number::ExponentToken.new("E00")
+        token3 = Foxtail::Intl::PatternParser::Number::ExponentToken.new("E+000")
 
         expect(token1.exponent_digits).to eq(1)
         expect(token2.exponent_digits).to eq(2)
@@ -437,8 +437,8 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
       end
 
       it "correctly identifies exponent sign display" do
-        token_without_sign = Foxtail::CLDR::PatternParser::Number::ExponentToken.new("E0")
-        token_with_sign = Foxtail::CLDR::PatternParser::Number::ExponentToken.new("E+0")
+        token_without_sign = Foxtail::Intl::PatternParser::Number::ExponentToken.new("E0")
+        token_with_sign = Foxtail::Intl::PatternParser::Number::ExponentToken.new("E+0")
 
         expect(token_without_sign.show_exponent_sign?).to be(false)
         expect(token_with_sign.show_exponent_sign?).to be(true)
@@ -447,12 +447,12 @@ RSpec.describe Foxtail::CLDR::PatternParser::Number do
 
     describe "QuotedToken methods" do
       it "correctly extracts literal text" do
-        token = Foxtail::CLDR::PatternParser::Number::QuotedToken.new("'Hello World'")
+        token = Foxtail::Intl::PatternParser::Number::QuotedToken.new("'Hello World'")
         expect(token.literal_text).to eq("Hello World")
       end
 
       it "handles escaped quotes in literal text" do
-        token = Foxtail::CLDR::PatternParser::Number::QuotedToken.new("'Don''t worry'")
+        token = Foxtail::Intl::PatternParser::Number::QuotedToken.new("'Don''t worry'")
         expect(token.literal_text).to eq("Don't worry")
       end
     end

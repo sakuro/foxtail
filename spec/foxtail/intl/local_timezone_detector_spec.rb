@@ -2,13 +2,13 @@
 
 require "tempfile"
 
-RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
-  let(:detector) { Foxtail::CLDR::Formatter::LocalTimezoneDetector.new }
+RSpec.describe Foxtail::Intl::LocalTimezoneDetector do
+  let(:detector) { Foxtail::Intl::LocalTimezoneDetector.new }
 
   describe ".detect" do
     it "returns a DetectedTimezone object" do
-      result = Foxtail::CLDR::Formatter::LocalTimezoneDetector.detect
-      expect(result).to be_a(Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone)
+      result = Foxtail::Intl::LocalTimezoneDetector.detect
+      expect(result).to be_a(Foxtail::Intl::LocalTimezoneDetector::DetectedTimezone)
       expect(result.id).to be_a(String)
       expect(result.offset_seconds).to be_a(Integer)
     end
@@ -88,29 +88,29 @@ RSpec.describe Foxtail::CLDR::Formatter::LocalTimezoneDetector do
   describe "DetectedTimezone" do
     describe "#offset_string" do
       it "formats positive offset correctly" do
-        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400) # +9 hours
+        tz = Foxtail::Intl::LocalTimezoneDetector::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400) # +9 hours
         expect(tz.offset_string).to eq("+09:00")
       end
 
       it "formats negative offset correctly" do
-        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "America/New_York", offset_seconds: -18000) # -5 hours
+        tz = Foxtail::Intl::LocalTimezoneDetector::DetectedTimezone.new(id: "America/New_York", offset_seconds: -18000) # -5 hours
         expect(tz.offset_string).to eq("-05:00")
       end
 
       it "formats zero offset correctly" do
-        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "UTC", offset_seconds: 0)
+        tz = Foxtail::Intl::LocalTimezoneDetector::DetectedTimezone.new(id: "UTC", offset_seconds: 0)
         expect(tz.offset_string).to eq("+00:00")
       end
     end
 
     describe "#unknown?" do
       it "returns true for Etc/Unknown timezone" do
-        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "Etc/Unknown", offset_seconds: 0)
+        tz = Foxtail::Intl::LocalTimezoneDetector::DetectedTimezone.new(id: "Etc/Unknown", offset_seconds: 0)
         expect(tz).to be_unknown
       end
 
       it "returns false for known timezone" do
-        tz = Foxtail::CLDR::Formatter::LocalTimezoneDetector::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400)
+        tz = Foxtail::Intl::LocalTimezoneDetector::DetectedTimezone.new(id: "Asia/Tokyo", offset_seconds: 32400)
         expect(tz).not_to be_unknown
       end
     end
