@@ -7,14 +7,14 @@ require_relative "foxtail/version"
 # Ruby implementation of Project Fluent localization system
 module Foxtail
   # Root directory of the gem
-  ROOT = Pathname(__dir__).parent.expand_path
+  ROOT = Pathname(__dir__).parent.expand_path.freeze
   public_constant :ROOT
 
   # Data directory containing various data files
-  def self.data_dir = ROOT + "data"
+  def self.data_dir = (ROOT + "data").freeze
 
   # CLDR data directory
-  def self.cldr_dir = data_dir + "cldr"
+  def self.cldr_dir = (data_dir + "cldr").freeze
 
   # Configure Zeitwerk loader for this gem
   loader = Zeitwerk::Loader.for_gem
