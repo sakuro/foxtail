@@ -272,7 +272,7 @@ module Foxtail
         end
 
         # Generate CLDR pattern key from field options
-        private def generate_available_format_key(options)
+        private private def generate_available_format_key(options)
           key_parts = []
 
           # Order following CLDR availableFormats convention: y, MMM, E, d
@@ -307,7 +307,7 @@ module Foxtail
                          when "narrow"
                            "E"     # Single letter weekday
                          else
-                           "E"     # Default to single letter
+                           "EEE"   # Default to abbreviated, not single letter
                          end
           end
 
@@ -369,22 +369,22 @@ module Foxtail
           key_parts.join
         end
 
-        private def format_with_fields
+        private private def format_with_fields
+          # Check if this is a single field request - if so, format directly
+          field_count = [@options[:year], @options[:month], @options[:day], @options[:weekday], 
+                        @options[:hour], @options[:minute], @options[:second]].count { |v| v }
+          
+          if field_count == 1
+            # Single field - format directly without CLDR patterns
+            return format_fields_individually
+          end
+
           # Try to find appropriate CLDR availableFormats pattern
           pattern_key = generate_available_format_key(@options)
           available_pattern = @formats.available_format(pattern_key)
 
           # If exact pattern not found, try fallback patterns
-          if !available_pattern && @options[:month] == "long"
-            # Try with MMM instead of MMMM for month long
-            fallback_key = pattern_key.gsub("MMMM", "MMM")
-            available_pattern = @formats.available_format(fallback_key)
-
-            if available_pattern
-              # Upgrade MMM to MMMM in the pattern for long month names
-              available_pattern = available_pattern.gsub("MMM", "MMMM")
-            end
-          end
+          available_pattern ||= find_fallback_pattern(pattern_key)
 
           if available_pattern
             # Adapt pattern for 2-digit requirements
@@ -397,6 +397,158 @@ module Foxtail
           end
         end
 
+        # Find a fallback pattern by simplifying the pattern key
+        private def find_fallback_pattern(original_key)
+          # Map of simplifications to try
+          simplifications = [
+            # Weekday simplifications
+            %w[EEEE E],   # Full weekday -> single letter
+            %w[EEE E],    # Abbreviated weekday -> single letter
+            # Month simplifications
+            %w[MMMM MMM], # Full month name -> abbreviated
+            %w[MMM M],    # Abbreviated month -> numeric
+            %w[MM M],     # 2-digit month -> numeric
+            # Day simplifications
+            %w[dd d], # 2-digit day -> numeric
+            # Year simplifications
+            %w[yyyy y],   # Full year -> abbreviated
+            %w[yy y]      # 2-digit year -> abbreviated
+          ]
+
+          # Try each simplification
+          simplifications.each do |from, to|
+            next unless original_key.include?(from)
+
+            simplified_key = original_key.sub(from, to)
+            pattern = @formats.available_format(simplified_key)
+
+            if pattern
+              # Restore the original format in the pattern
+              return restore_original_format(pattern, from, to)
+            end
+          end
+
+          # If still not found, try more aggressive simplifications
+          try_aggressive_fallbacks(original_key)
+        end
+
+        # Restore the original format specifier in the found pattern
+        private def restore_original_format(pattern, original_spec, simplified_spec)
+          # Use pattern parser to safely replace tokens
+          parser = PatternParser::DateTime.new
+          tokens = parser.parse(pattern)
+
+          restored_tokens = tokens.map {|token|
+            if token.is_a?(PatternParser::DateTime::FieldToken) && token.value == simplified_spec
+              # Replace with original specification
+              PatternParser::DateTime::FieldToken.new(original_spec)
+            else
+              token
+            end
+          }
+
+          restored_tokens.map(&:value).join
+        end
+
+        # Try more aggressive fallbacks for complex patterns
+        private def try_aggressive_fallbacks(original_key)
+          # Common pattern combinations to try
+          common_patterns = [
+            "yMMMEd",  # Year, month, weekday, day
+            "yMMMd",   # Year, month, day
+            "yMd",     # Year, month (numeric), day
+            "MMMEd",   # Month, weekday, day
+            "MMMd",    # Month, day
+            "MEd",     # Month (numeric), weekday, day
+            "Md"       # Month (numeric), day
+          ]
+
+          # Check which fields we have
+          has_year = original_key.include?("y")
+          has_month = original_key.match?(/M+/)
+          has_day = original_key.include?("d")
+          has_weekday = original_key.match?(/E+/)
+
+          # Try common patterns that match our fields
+          common_patterns.each do |pattern_key|
+            # Check if pattern matches our fields
+            pattern_has_year = pattern_key.include?("y")
+            pattern_has_month = pattern_key.match?(/M+/)
+            pattern_has_day = pattern_key.include?("d")
+            pattern_has_weekday = pattern_key.match?(/E+/)
+
+            # Skip if pattern has fields we don't have
+            next if pattern_has_year && !has_year
+            next if pattern_has_month && !has_month
+            next if pattern_has_day && !has_day
+            next if pattern_has_weekday && !has_weekday
+
+            # Try this pattern
+            pattern = @formats.available_format(pattern_key)
+            if pattern
+              # Adapt the pattern to match our original requirements
+              return adapt_fallback_pattern(pattern, original_key)
+            end
+          end
+
+          nil
+        end
+
+        # Adapt a fallback pattern to match the original field specifications
+        private def adapt_fallback_pattern(pattern, original_key)
+          # Extract original field specifications
+          original_specs = extract_field_specs(original_key)
+
+          # Parse the pattern
+          parser = PatternParser::DateTime.new
+          tokens = parser.parse(pattern)
+
+          # Replace field tokens with original specifications
+          adapted_tokens = tokens.map {|token|
+            if token.is_a?(PatternParser::DateTime::FieldToken)
+              field_type = token.field_type
+              original_spec = original_specs[field_type]
+
+              if original_spec
+                PatternParser::DateTime::FieldToken.new(original_spec)
+              else
+                token
+              end
+            else
+              token
+            end
+          }
+
+          adapted_tokens.map(&:value).join
+        end
+
+        # Extract field specifications from pattern key
+        private def extract_field_specs(pattern_key)
+          specs = {}
+
+          # Year
+          if pattern_key.match?(/(y+)/)
+            specs[:year] = Regexp.last_match[1]
+          end
+
+          # Month
+          if pattern_key.match?(/(M+)/)
+            specs[:month] = Regexp.last_match[1]
+          end
+
+          # Day
+          if pattern_key.match?(/(d+)/)
+            specs[:day] = Regexp.last_match[1]
+          end
+
+          # Weekday
+          if pattern_key.match?(/(E+)/)
+            specs[:weekday] = Regexp.last_match[1]
+          end
+
+          specs
+        end
+
         # Adapt pattern to match option requirements (e.g., 2-digit padding)
         private def adapt_pattern_for_options(pattern)
           return pattern unless @options[:hour]
@@ -404,13 +556,13 @@ module Foxtail
           parser = PatternParser::DateTime.new
           tokens = parser.parse(pattern)
 
-          adapted_tokens = tokens.map do |token|
+          adapted_tokens = tokens.map {|token|
             if token.is_a?(PatternParser::DateTime::FieldToken) && token.field_type == :hour
               adapt_hour_field(token)
             else
               token
             end
-          end
+          }
 
           adapted_tokens.map(&:value).join
         end
