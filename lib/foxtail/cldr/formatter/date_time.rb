@@ -272,7 +272,7 @@ module Foxtail
         end
 
         # Generate CLDR pattern key from field options
-        private private def generate_available_format_key(options)
+        private def generate_available_format_key(options)
           key_parts = []
 
           # Order following CLDR availableFormats convention: y, MMM, E, d
@@ -446,12 +446,17 @@ module Foxtail
             %w[MM M],     # 2-digit month → numeric
             # Day simplifications
             %w[dd d], # 2-digit day → numeric
+            # Time field simplifications
+            %w[mm m],     # 2-digit minute → numeric
+            %w[ss s],     # 2-digit second → numeric
+            %w[HH H],     # 2-digit hour → numeric
+            %w[hh h],     # 2-digit 12-hour → numeric
             # Year simplifications
             %w[yyyy y],   # Full year → abbreviated
             %w[yy y]      # 2-digit year → abbreviated
           ]
 
-          # Try each simplification
+          # Try single field simplifications first
           simplifications.each do |from, to|
             next unless original_key.include?(from)
 
@@ -461,6 +466,33 @@ module Foxtail
             if pattern
               # Restore the original format in the pattern
               return restore_original_format(pattern, from, to)
+            end
+          end
+
+          # Try combinations of time field simplifications for "Hmmss" → "Hms"
+          if original_key.match?(/H.*mm.*ss/)
+            # Try simplifying both minute and second fields
+            temp_key = original_key.sub("mm", "m").sub("ss", "s")
+            pattern = @formats.available_format(temp_key)
+
+            if pattern
+              # Safe restoration using pattern parser
+              parser = PatternParser::DateTime.new
+              tokens = parser.parse(pattern)
+
+              restored_tokens = tokens.map {|token|
+                if token.is_a?(PatternParser::DateTime::FieldToken)
+                  case token.value
+                  when "m" then PatternParser::DateTime::FieldToken.new("mm")
+                  when "s" then PatternParser::DateTime::FieldToken.new("ss")
+                  else token
+                  end
+                else
+                  token
+                end
+              }
+
+              return restored_tokens.map(&:value).join
             end
           end
 
@@ -638,6 +670,17 @@ module Foxtail
         end
 
         # Adapt hour field token based on options
+        #
+        # Node.js Intl.DateTimeFormat behavior:
+        # - hour: "numeric" → follow CLDR pattern defaults per locale
+        # - hour: "2-digit" → always 2-digit padded
+        #
+        # Note: Different locales have different defaults for numeric hour:
+        # - English: "HH" (2-digit) for "Hms" pattern
+        # - Japanese: "H" (1-digit) for "Hms" pattern
+        #
+        # @param token [PatternParser::DateTime::FieldToken] The hour field token
+        # @return [PatternParser::DateTime::FieldToken] Adapted token
         private def adapt_hour_field(token)
           case @options[:hour]
           when "2-digit"
@@ -650,30 +693,9 @@ module Foxtail
             else token
             end
           when "numeric"
-            # Node.js compatibility: behavior differs by hour12 setting
-            if @options[:hour12] == true
-              # 12-hour format: use 1-digit for numeric
-              case token.value
-              when "HH" then PatternParser::DateTime::FieldToken.new("H")
-              when "hh" then PatternParser::DateTime::FieldToken.new("h")
-              when "KK" then PatternParser::DateTime::FieldToken.new("K")
-              when "kk" then PatternParser::DateTime::FieldToken.new("k")
-              else token
-              end
-            elsif @options[:hour12] == false
-              # Explicit 24-hour format: keep CLDR pattern as-is for Node.js compatibility
-              # CLDR defines different patterns per locale (en: HH, ja: H, etc.)
-              token
-            else
-              # Default behavior (hour12: nil): use 1-digit for numeric
-              case token.value
-              when "HH" then PatternParser::DateTime::FieldToken.new("H")
-              when "hh" then PatternParser::DateTime::FieldToken.new("h")
-              when "KK" then PatternParser::DateTime::FieldToken.new("K")
-              when "kk" then PatternParser::DateTime::FieldToken.new("k")
-              else token
-              end
-            end
+            # Keep CLDR pattern default for numeric hour
+            # Node.js behavior varies by locale but we follow CLDR patterns
+            token
           else
             token
           end
