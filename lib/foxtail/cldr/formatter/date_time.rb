@@ -496,6 +496,33 @@ module Foxtail
             end
           end
 
+          # Try combinations of time field simplifications for "hmmss" → "hms" (12-hour format)
+          if original_key.match?(/h.*mm.*ss/)
+            # Try simplifying both minute and second fields for 12-hour format
+            temp_key = original_key.sub("mm", "m").sub("ss", "s")
+            pattern = @formats.available_format(temp_key)
+
+            if pattern
+              # Safe restoration using pattern parser
+              parser = PatternParser::DateTime.new
+              tokens = parser.parse(pattern)
+
+              restored_tokens = tokens.map {|token|
+                if token.is_a?(PatternParser::DateTime::FieldToken)
+                  case token.value
+                  when "m" then PatternParser::DateTime::FieldToken.new("mm")
+                  when "s" then PatternParser::DateTime::FieldToken.new("ss")
+                  else token
+                  end
+                else
+                  token
+                end
+              }
+
+              return restored_tokens.map(&:value).join
+            end
+          end
+
           # If still not found, try more aggressive simplifications
           try_aggressive_fallbacks(original_key)
         end
@@ -567,6 +594,43 @@ module Foxtail
           has_date_fields = has_year || has_month || has_day || has_weekday
           has_time_fields = has_hour || has_minute || has_second
 
+          # If we only have time fields, try basic time patterns first
+          if has_time_fields && !has_date_fields
+            # Try exact basic time patterns that may have proper ordering
+            # Priority order based on hour12 setting
+            basic_time_patterns = []
+            if has_hour && has_minute && has_second
+              # For 12-hour format, prefer h patterns; for 24-hour, prefer H patterns
+              basic_time_patterns += if effective_hour12
+                                       %w[hms Hms] # 12-hour first
+                                     else
+                                       %w[Hms hms] # 24-hour first
+                                     end
+            elsif has_hour && has_minute
+              basic_time_patterns += if effective_hour12
+                                       %w[hm Hm]
+                                     else
+                                       %w[Hm hm]
+                                     end
+            elsif has_hour
+              basic_time_patterns += if effective_hour12
+                                       %w[h H]
+                                     else
+                                       %w[H h]
+                                     end
+            end
+
+            # Try these patterns directly - they may have locale-specific ordering
+            basic_time_patterns.each do |pattern_key|
+              pattern = @formats.available_format(pattern_key)
+              if pattern
+                # For basic time patterns, use them as-is since they already have proper locale-specific ordering
+                # Only adapt for 2-digit requirements without changing hour field type
+                return adapt_pattern_for_options(pattern)
+              end
+            end
+          end
+
           # If we have both date and time fields, try to combine them
           if has_date_fields && has_time_fields
             # Find a date pattern (without AM/PM)
@@ -595,25 +659,32 @@ module Foxtail
               pattern = @formats.available_format(pattern_key)
               next unless pattern
 
-              # Adapt date pattern (but remove AM/PM from original specs for date part)
+              # Create date-only original key for adaptation
               date_only_key = original_key.gsub(/[Hh]+/, "").gsub(/m+/, "").gsub(/s+/, "").delete("a")
               date_pattern = adapt_fallback_pattern(pattern, date_only_key)
               break
             end
 
-            # Find a time pattern (including AM/PM if needed)
+            # Find a time pattern (try basic patterns first for proper ordering)
             time_patterns = []
             if has_hour && has_minute && has_second
-              time_patterns += %w[Hms hms]
+              time_patterns += if effective_hour12
+                                 %w[hms Hms]
+                               else
+                                 %w[Hms hms]
+                               end
             elsif has_hour && has_minute
-              time_patterns += %w[Hm hm]
+              time_patterns += if effective_hour12
+                                 %w[hm Hm]
+                               else
+                                 %w[Hm hm]
+                               end
             elsif has_hour
-              time_patterns += %w[H h]
-            end
-
-            # Add AM/PM if needed
-            if has_ampm
-              time_patterns = time_patterns.map {|p| p.include?("h") ? "#{p}a" : p }
+              time_patterns += if effective_hour12
+                                 %w[h H]
+                               else
+                                 %w[H h]
+                               end
             end
 
             time_pattern = nil
@@ -635,29 +706,6 @@ module Foxtail
             # Combine date and time if both found
             if date_pattern && time_pattern
               return "#{date_pattern}, #{time_pattern}"
-            end
-          end
-
-          # If we only have time fields, try time-only patterns
-          if has_time_fields && !has_date_fields
-            time_patterns = []
-            if has_hour && has_minute && has_second
-              time_patterns += %w[Hms hms]
-            elsif has_hour && has_minute
-              time_patterns += %w[Hm hm]
-            elsif has_hour
-              time_patterns += %w[H h]
-            end
-
-            if has_ampm
-              time_patterns = time_patterns.map {|p| p.include?("h") ? "#{p}a" : p }
-            end
-
-            time_patterns.each do |pattern_key|
-              pattern = @formats.available_format(pattern_key)
-              if pattern
-                return adapt_fallback_pattern(pattern, original_key)
-              end
             end
           end
 

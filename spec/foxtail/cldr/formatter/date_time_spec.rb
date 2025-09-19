@@ -438,6 +438,86 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
       end
     end
 
+    context "with Japanese AM/PM positioning" do
+      let(:ja_locale) { locale("ja") }
+      let(:morning_time) { Time.new(2023, 1, 15, 10, 30, 0, "+00:00") } # 10:30 AM
+      let(:midnight_time) { Time.new(2023, 12, 25, 0, 0, 0, "+00:00") } # 12:00 AM (midnight)
+      let(:noon_time) { Time.new(2024, 2, 29, 12, 0, 0, "+00:00") }      # 12:00 PM (noon)
+      let(:evening_time) { Time.new(2023, 7, 4, 15, 45, 30, "+00:00") }  # 3:45 PM
+      let(:late_night_time) { Time.new(2023, 2, 14, 23, 59, 59, "+00:00") } # 11:59 PM
+
+      # Test cases based on Node.js compatibility failures
+      # Node.js expects AM/PM before time for Japanese: 午前10:30:00
+      # Currently Foxtail produces: 10:30:00 午前
+
+      it "positions AM marker before time (morning)" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: ja_locale,
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+          timeZone: "UTC"
+        )
+        result = formatter.call(morning_time)
+        expect(result).to eq("午前10:30:00")
+      end
+
+      it "positions AM marker before time (midnight)" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: ja_locale,
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+          timeZone: "UTC"
+        )
+        result = formatter.call(midnight_time)
+        # Midnight should be 0:00 in 12-hour format for Node.js compatibility
+        expect(result).to eq("午前0:00:00")
+      end
+
+      it "positions PM marker before time (noon)" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: ja_locale,
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+          timeZone: "UTC"
+        )
+        result = formatter.call(noon_time)
+        # Noon should be 0:00 in 12-hour format for Node.js compatibility
+        expect(result).to eq("午後0:00:00")
+      end
+
+      it "positions PM marker before time (evening)" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: ja_locale,
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+          timeZone: "UTC"
+        )
+        result = formatter.call(evening_time)
+        expect(result).to eq("午後3:45:30")
+      end
+
+      it "positions PM marker before time (late night)" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: ja_locale,
+          hour: "numeric",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+          timeZone: "UTC"
+        )
+        result = formatter.call(late_night_time)
+        expect(result).to eq("午後11:59:59")
+      end
+    end
+
     context "with special values (Infinity, NaN)" do
       it "raises an error for positive infinity" do
         expect {
