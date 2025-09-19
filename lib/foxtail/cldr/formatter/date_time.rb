@@ -399,16 +399,62 @@ module Foxtail
 
         # Adapt pattern to match option requirements (e.g., 2-digit padding)
         private def adapt_pattern_for_options(pattern)
-          adapted = pattern.dup
+          return pattern unless @options[:hour]
 
-          # Adapt hour field based on hour option
-          if @options[:hour] == "2-digit"
-            # Replace single H with HH for 2-digit padding
-            adapted = adapted.gsub(/\bH\b/, "HH")
-            adapted = adapted.gsub(/\bh\b/, "hh")
+          parser = PatternParser::DateTime.new
+          tokens = parser.parse(pattern)
+
+          adapted_tokens = tokens.map do |token|
+            if token.is_a?(PatternParser::DateTime::FieldToken) && token.field_type == :hour
+              adapt_hour_field(token)
+            else
+              token
+            end
           end
 
-          adapted
+          adapted_tokens.map(&:value).join
+        end
+
+        # Adapt hour field token based on options
+        private def adapt_hour_field(token)
+          case @options[:hour]
+          when "2-digit"
+            # Convert to 2-digit format
+            case token.value
+            when "H" then PatternParser::DateTime::FieldToken.new("HH")
+            when "h" then PatternParser::DateTime::FieldToken.new("hh")
+            when "K" then PatternParser::DateTime::FieldToken.new("KK")
+            when "k" then PatternParser::DateTime::FieldToken.new("kk")
+            else token
+            end
+          when "numeric"
+            # Node.js compatibility: behavior differs by hour12 setting
+            if @options[:hour12] == true
+              # 12-hour format: use 1-digit for numeric
+              case token.value
+              when "HH" then PatternParser::DateTime::FieldToken.new("H")
+              when "hh" then PatternParser::DateTime::FieldToken.new("h")
+              when "KK" then PatternParser::DateTime::FieldToken.new("K")
+              when "kk" then PatternParser::DateTime::FieldToken.new("k")
+              else token
+              end
+            elsif @options[:hour12] == false
+              # Explicit 24-hour format: keep CLDR pattern as-is for Node.js compatibility
+              # CLDR defines different patterns per locale (en: HH, ja: H, etc.)
+              token
+            else
+              # Default behavior (hour12: nil): use 1-digit for numeric
+              case token.value
+              when "HH" then PatternParser::DateTime::FieldToken.new("H")
+              when "hh" then PatternParser::DateTime::FieldToken.new("h")
+              when "KK" then PatternParser::DateTime::FieldToken.new("K")
+              when "kk" then PatternParser::DateTime::FieldToken.new("k")
+              else token
+              end
+            end
+          else
+            token
+          end
         end
 
         # Check if options contain only date fields (no time fields)
@@ -994,7 +1040,11 @@ module Foxtail
 
         # Determine effective hour12 setting (explicit option or locale default)
         private def effective_hour12
-          @options[:hour12].nil? ? locale_default_hour12? : @options[:hour12]
+          return false if @options[:hour12] == false
+          return true if @options[:hour12] == true
+
+          # Default to locale preference when hour12 is nil
+          locale_default_hour12?
         end
 
         # Determine locale default for hour12 format based on CLDR time patterns
