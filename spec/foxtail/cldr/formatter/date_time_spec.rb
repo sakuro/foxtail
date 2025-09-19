@@ -628,6 +628,19 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
         result = formatter.call(time)
         expect(result).to match(/GMT\+3|18:45:30/)
       end
+
+      it "displays correct GMT offset during daylight saving time" do
+        summer_time = Time.new(2023, 7, 4, 15, 45, 30, "+00:00") # UTC
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: en_locale,
+          timeStyle: "long",
+          timeZone: "Europe/London"
+        )
+        result = formatter.call(summer_time)
+        # Should show GMT+1 during British Summer Time (now fixed)
+        # This matches Node.js behavior: "4:45:30 PM GMT+1"
+        expect(result).to eq("4:45:30 PM GMT+1")
+      end
     end
   end
 end

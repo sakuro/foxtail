@@ -1353,10 +1353,16 @@ module Foxtail
               offset_string = format_gmt_offset_string(offset_seconds)
               gmt_format.gsub("{0}", offset_string)
             end
-          else
-            # Use metazone name for GMT-preferring locales
+          elsif offset_seconds == 0
+            # Use metazone name for GMT-preferring locales, considering DST
+            # Standard GMT (no offset) - use standard or generic name
             @timezone_names.metazone_name(metazone_id, length, :standard) ||
             @timezone_names.metazone_name(metazone_id, length, :generic)
+          else
+            # Non-zero offset during GMT metazone - format with offset
+            # This handles DST cases like London in summer (GMT+1)
+            offset_string = format_gmt_offset_string(offset_seconds)
+            gmt_format.gsub("{0}", offset_string)
           end
         end
 
