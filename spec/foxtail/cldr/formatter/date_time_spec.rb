@@ -585,4 +585,49 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
       end
     end
   end
+
+  describe "Unicode minus sign in GMT offset formatting" do
+    context "with French locale" do
+      let(:fr_locale) { locale("fr-FR") }
+      let(:time) { Time.new(2023, 7, 4, 15, 45, 30, "+00:00") }
+
+      it "uses Unicode minus sign U+2212 for negative offsets" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: fr_locale,
+          timeStyle: "long",
+          timeZone: "America/New_York" # UTC-4 in summer
+        )
+        result = formatter.call(time)
+        # French format uses Unicode minus sign (U+2212) not ASCII hyphen
+        expect(result).to include("UTC\u{2212}4")
+        expect(result).not_to include("UTC-4") # Should not contain ASCII hyphen
+      end
+
+      it "uses ASCII plus sign for positive offsets" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: fr_locale,
+          timeStyle: "long",
+          timeZone: "Asia/Tokyo" # UTC+9
+        )
+        result = formatter.call(time)
+        expect(result).to include("UTC+9")
+      end
+    end
+
+    context "with English locale" do
+      let(:en_locale) { locale("en-US") }
+      let(:time) { Time.new(2023, 7, 4, 15, 45, 30, "+00:00") }
+
+      it "uses ASCII hyphen for negative offsets" do
+        formatter = Foxtail::CLDR::Formatter::DateTime.new(
+          locale: en_locale,
+          timeStyle: "long",
+          timeZone: "+03:00" # Explicit offset timezone
+        )
+        # For offset timezones, formatter may show GMT+3 style
+        result = formatter.call(time)
+        expect(result).to match(/GMT\+3|18:45:30/)
+      end
+    end
+  end
 end

@@ -1500,9 +1500,28 @@ module Foxtail
 
           hours = offset_seconds.abs / 3600
           minutes = (offset_seconds.abs % 3600) / 60
-          sign = offset_seconds >= 0 ? "+" : "-"
+
+          # Use CLDR hour_format pattern to get correct plus/minus signs
+          # hour_format is like "+HH:mm;−HH:mm" where the minus is Unicode U+2212
+          hour_format_pattern = @timezone_names.hour_format
+          if hour_format_pattern
+            # Split by semicolon to get positive and negative patterns
+            patterns = hour_format_pattern.split(";")
+            positive_pattern = patterns[0] || "+HH:mm"
+            negative_pattern = patterns[1] || patterns[0]&.sub("+", "−") || "−HH:mm"
+
+            # Extract the sign characters from patterns
+            plus_sign = positive_pattern[/^[^Hm]+/] || "+"
+            minus_sign = negative_pattern[/^[^Hm]+/] || "−"
+
+            sign = offset_seconds >= 0 ? plus_sign : minus_sign
+          else
+            # Fallback to ASCII if no hour_format available
+            sign = offset_seconds >= 0 ? "+" : "-"
+          end
+
           offset_string = "#{sign}#{hours}"
-          offset_string += ":#{"02d" % minutes}" if minutes > 0
+          offset_string += ":#{"%02d" % minutes}" if minutes > 0
           offset_string
         end
 

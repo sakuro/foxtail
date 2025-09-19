@@ -130,6 +130,25 @@ module Foxtail
             variant_elem = length_elem.elements[variant]
             next unless variant_elem&.text
 
+            # Skip elements with draft="unconfirmed" for better Node.js compatibility
+            #
+            # CLDR draft status levels (from least to most stable):
+            #   - draft="unconfirmed" : Unconfirmed data, should not be used in production
+            #   - draft="contributed" : Contributed by users but not fully validated
+            #   - draft="provisional" : Provisionally approved, may change
+            #   - (no draft attribute) : Fully confirmed and stable
+            #
+            # Node.js Intl behavior (as of testing):
+            #   - Consistently avoids draft="unconfirmed" data across all locales
+            #   - May use draft="contributed" for some locales (e.g., 'ast' uses AKDT)
+            #   - Behavior varies by locale importance (major locales are more conservative)
+            #   - Falls back to UTC±offset format when abbreviated names are not confirmed
+            #
+            # We exclude only "unconfirmed" to maintain compatibility while preserving
+            # useful contributed/provisional data that Node.js sometimes accepts.
+            draft_status = variant_elem.attributes["draft"]
+            next if draft_status == "unconfirmed"
+
             variants[variant] = variant_elem.text
           end
 
