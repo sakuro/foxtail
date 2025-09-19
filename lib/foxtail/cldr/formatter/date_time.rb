@@ -554,42 +554,140 @@ module Foxtail
         # @param original_key [String] The original pattern key that wasn't found
         # @return [String, nil] Adapted pattern or nil if no fallback found
         private def try_aggressive_fallbacks(original_key)
-          # Common pattern combinations to try
-          common_patterns = [
-            "yMMMEd",  # Year, month, weekday, day
-            "yMMMd",   # Year, month, day
-            "yMd",     # Year, month (numeric), day
-            "MMMEd",   # Month, weekday, day
-            "MMMd",    # Month, day
-            "MEd",     # Month (numeric), weekday, day
-            "Md"       # Month (numeric), day
-          ]
-
           # Check which fields we have
           has_year = original_key.include?("y")
           has_month = original_key.match?(/M+/)
           has_day = original_key.include?("d")
           has_weekday = original_key.match?(/E+/)
+          has_hour = original_key.match?(/[Hh]+/)
+          has_minute = original_key.match?(/m+/)
+          has_second = original_key.match?(/s+/)
+          has_ampm = original_key.include?("a")
 
-          # Try common patterns that match our fields
-          common_patterns.each do |pattern_key|
-            # Check if pattern matches our fields
-            pattern_has_year = pattern_key.include?("y")
-            pattern_has_month = pattern_key.match?(/M+/)
-            pattern_has_day = pattern_key.include?("d")
-            pattern_has_weekday = pattern_key.match?(/E+/)
+          has_date_fields = has_year || has_month || has_day || has_weekday
+          has_time_fields = has_hour || has_minute || has_second
 
-            # Skip if pattern has fields we don't have
-            next if pattern_has_year && !has_year
-            next if pattern_has_month && !has_month
-            next if pattern_has_day && !has_day
-            next if pattern_has_weekday && !has_weekday
+          # If we have both date and time fields, try to combine them
+          if has_date_fields && has_time_fields
+            # Find a date pattern (without AM/PM)
+            date_patterns = [
+              "yMMMEd",  # Year, month, weekday, day
+              "yMMMd",   # Year, month, day
+              "yMd",     # Year, month (numeric), day
+              "MMMEd",   # Month, weekday, day
+              "MMMd",    # Month, day
+              "MEd",     # Month (numeric), weekday, day
+              "Md"       # Month (numeric), day
+            ]
 
-            # Try this pattern
-            pattern = @formats.available_format(pattern_key)
-            if pattern
-              # Adapt the pattern to match our original requirements
-              return adapt_fallback_pattern(pattern, original_key)
+            date_pattern = nil
+            date_patterns.each do |pattern_key|
+              pattern_has_year = pattern_key.include?("y")
+              pattern_has_month = pattern_key.match?(/M+/)
+              pattern_has_day = pattern_key.include?("d")
+              pattern_has_weekday = pattern_key.match?(/E+/)
+
+              next if pattern_has_year && !has_year
+              next if pattern_has_month && !has_month
+              next if pattern_has_day && !has_day
+              next if pattern_has_weekday && !has_weekday
+
+              pattern = @formats.available_format(pattern_key)
+              next unless pattern
+
+              # Adapt date pattern (but remove AM/PM from original specs for date part)
+              date_only_key = original_key.gsub(/[Hh]+/, "").gsub(/m+/, "").gsub(/s+/, "").delete("a")
+              date_pattern = adapt_fallback_pattern(pattern, date_only_key)
+              break
+            end
+
+            # Find a time pattern (including AM/PM if needed)
+            time_patterns = []
+            if has_hour && has_minute && has_second
+              time_patterns += %w[Hms hms]
+            elsif has_hour && has_minute
+              time_patterns += %w[Hm hm]
+            elsif has_hour
+              time_patterns += %w[H h]
+            end
+
+            # Add AM/PM if needed
+            if has_ampm
+              time_patterns = time_patterns.map {|p| p.include?("h") ? "#{p}a" : p }
+            end
+
+            time_pattern = nil
+            time_patterns.each do |pattern_key|
+              pattern = @formats.available_format(pattern_key)
+              next unless pattern
+
+              # Create time-only original key for adaptation
+              time_only_key = ""
+              time_only_key += original_key.match(/[Hh]+/)[0] if /[Hh]+/.match?(original_key)
+              time_only_key += original_key.match(/m+/)[0] if /m+/.match?(original_key)
+              time_only_key += original_key.match(/s+/)[0] if /s+/.match?(original_key)
+              time_only_key += "a" if has_ampm
+
+              time_pattern = adapt_fallback_pattern(pattern, time_only_key)
+              break
+            end
+
+            # Combine date and time if both found
+            if date_pattern && time_pattern
+              return "#{date_pattern}, #{time_pattern}"
+            end
+          end
+
+          # If we only have time fields, try time-only patterns
+          if has_time_fields && !has_date_fields
+            time_patterns = []
+            if has_hour && has_minute && has_second
+              time_patterns += %w[Hms hms]
+            elsif has_hour && has_minute
+              time_patterns += %w[Hm hm]
+            elsif has_hour
+              time_patterns += %w[H h]
+            end
+
+            if has_ampm
+              time_patterns = time_patterns.map {|p| p.include?("h") ? "#{p}a" : p }
+            end
+
+            time_patterns.each do |pattern_key|
+              pattern = @formats.available_format(pattern_key)
+              if pattern
+                return adapt_fallback_pattern(pattern, original_key)
+              end
+            end
+          end
+
+          # If we only have date fields, try date-only patterns
+          if has_date_fields && !has_time_fields
+            date_patterns = [
+              "yMMMEd",  # Year, month, weekday, day
+              "yMMMd",   # Year, month, day
+              "yMd",     # Year, month (numeric), day
+              "MMMEd",   # Month, weekday, day
+              "MMMd",    # Month, day
+              "MEd",     # Month (numeric), weekday, day
+              "Md"       # Month (numeric), day
+            ]
+
+            date_patterns.each do |pattern_key|
+              pattern_has_year = pattern_key.include?("y")
+              pattern_has_month = pattern_key.match?(/M+/)
+              pattern_has_day = pattern_key.include?("d")
+              pattern_has_weekday = pattern_key.match?(/E+/)
+
+              next if pattern_has_year && !has_year
+              next if pattern_has_month && !has_month
+              next if pattern_has_day && !has_day
+              next if pattern_has_weekday && !has_weekday
+
+              pattern = @formats.available_format(pattern_key)
+              if pattern
+                return adapt_fallback_pattern(pattern, original_key)
+              end
             end
           end
 
@@ -621,6 +719,26 @@ module Foxtail
             end
           }
 
+          # Add AM/PM marker if needed and not already present
+          if original_specs[:ampm] && adapted_tokens.none? {|t| t.is_a?(PatternParser::DateTime::FieldToken) && t.value == "a" }
+            # Add AM/PM marker after time fields using proper token
+            # Find the last time-related token position
+            last_time_index = adapted_tokens.rindex {|t|
+              t.is_a?(PatternParser::DateTime::FieldToken) &&
+                (t.field_type == :hour || t.field_type == :minute || t.field_type == :second)
+            }
+
+            if last_time_index
+              # Insert space and AM/PM marker after the last time field
+              adapted_tokens.insert(last_time_index + 1, PatternParser::DateTime::LiteralToken.new(" "))
+              adapted_tokens.insert(last_time_index + 2, PatternParser::DateTime::FieldToken.new("a"))
+            else
+              # Fallback: append at the end
+              adapted_tokens << PatternParser::DateTime::LiteralToken.new(" ")
+              adapted_tokens << PatternParser::DateTime::FieldToken.new("a")
+            end
+          end
+
           adapted_tokens.map(&:value).join
         end
 
@@ -629,23 +747,43 @@ module Foxtail
           specs = {}
 
           # Year
-          if pattern_key.match?(/(y+)/)
-            specs[:year] = Regexp.last_match[1]
+          if (match = pattern_key.match(/(y+)/))
+            specs[:year] = match[1]
           end
 
           # Month
-          if pattern_key.match?(/(M+)/)
-            specs[:month] = Regexp.last_match[1]
+          if (match = pattern_key.match(/(M+)/))
+            specs[:month] = match[1]
           end
 
           # Day
-          if pattern_key.match?(/(d+)/)
-            specs[:day] = Regexp.last_match[1]
+          if (match = pattern_key.match(/(d+)/))
+            specs[:day] = match[1]
           end
 
           # Weekday
-          if pattern_key.match?(/(E+)/)
-            specs[:weekday] = Regexp.last_match[1]
+          if (match = pattern_key.match(/(E+)/))
+            specs[:weekday] = match[1]
+          end
+
+          # Hour (check both H and h patterns)
+          if (match = pattern_key.match(/([Hh]+)/))
+            specs[:hour] = match[1]
+          end
+
+          # Minute
+          if (match = pattern_key.match(/(m+)/))
+            specs[:minute] = match[1]
+          end
+
+          # Second
+          if (match = pattern_key.match(/(s+)/))
+            specs[:second] = match[1]
+          end
+
+          # AM/PM marker
+          if pattern_key.include?("a")
+            specs[:ampm] = "a"
           end
 
           specs

@@ -273,6 +273,171 @@ RSpec.describe Foxtail::CLDR::Formatter::DateTime do
       end
     end
 
+    context "with individual field options" do
+      let(:midnight_utc) { Time.new(2023, 12, 25, 0, 0, 0, "+00:00") }
+      let(:en_locale) { locale("en") }
+      let(:de_locale) { locale("de") }
+      let(:fr_locale) { locale("fr") }
+      let(:ja_locale) { locale("ja") }
+
+      # Test hour field adaptation with different options
+      describe "hour field formatting" do
+        it "formats hour as numeric (1-digit for non-zero)" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "numeric", minute: "2-digit", second: "2-digit", hour12: false, timeZone: "UTC")
+          result = formatter.call(midnight_utc)
+          # Should follow CLDR pattern for English (HH -> keep as 2-digit for en-US)
+          expect(result).to match(/\d{1,2}:00:00/)
+        end
+
+        it "formats hour as 2-digit (always padded)" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false, timeZone: "UTC")
+          result = formatter.call(midnight_utc)
+          expect(result).to eq("00:00:00")
+        end
+
+        it "handles different locales with hour numeric" do
+          # Test multiple locales to ensure pattern adaptation works
+          [en_locale, de_locale, fr_locale, ja_locale].each do |test_locale|
+            formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: test_locale, hour: "numeric", minute: "2-digit", hour12: false, timeZone: "UTC")
+            result = formatter.call(midnight_utc)
+            expect(result).to match(/\d{1,2}:00/) # Should have proper hour formatting
+          end
+        end
+
+        it "handles 12-hour format with hour options" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "numeric", minute: "2-digit", hour12: true, timeZone: "UTC")
+          result = formatter.call(midnight_utc)
+          expect(result).to match(/\d{1,2}:00 (AM|PM)/)
+        end
+
+        it "handles non-zero hours with numeric formatting" do
+          one_pm_utc = Time.new(2023, 12, 25, 13, 0, 0, "+00:00")
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "numeric", minute: "2-digit", hour12: false, timeZone: "UTC")
+          result = formatter.call(one_pm_utc)
+          expect(result).to match(/1?3:00/)
+        end
+      end
+
+      # Test minute and second field formatting
+      describe "minute and second field formatting" do
+        it "formats minute as 2-digit" do
+          five_minutes_utc = Time.new(2023, 12, 25, 0, 5, 0, "+00:00")
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "numeric", minute: "2-digit", hour12: false, timeZone: "UTC")
+          result = formatter.call(five_minutes_utc)
+          expect(result).to match(/\d{1,2}:05/)
+        end
+
+        it "formats second as 2-digit" do
+          five_seconds_utc = Time.new(2023, 12, 25, 0, 0, 5, "+00:00")
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "numeric", minute: "2-digit", second: "2-digit", hour12: false, timeZone: "UTC")
+          result = formatter.call(five_seconds_utc)
+          expect(result).to match(/\d{1,2}:00:05/)
+        end
+      end
+
+      # Test single field formatting (triggers format_fields_individually)
+      describe "single field formatting" do
+        it "formats only weekday" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, weekday: "long")
+          result = formatter.call(test_time)
+          expect(result).to eq("Thursday")
+        end
+
+        it "formats only month" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, month: "long")
+          result = formatter.call(test_time)
+          expect(result).to eq("June")
+        end
+
+        it "formats only year" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, year: "numeric")
+          result = formatter.call(test_time)
+          expect(result).to eq("2023")
+        end
+
+        it "formats only day" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, day: "numeric")
+          result = formatter.call(test_time)
+          expect(result).to eq("15")
+        end
+
+        it "formats only hour" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "numeric", hour12: false, timeZone: "UTC")
+          result = formatter.call(test_time)
+          expect(result).to eq("14")
+        end
+      end
+
+      # Test complex field combinations that might trigger fallback patterns
+      describe "complex field combinations" do
+        it "handles hour, minute, second combination" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false, timeZone: "UTC")
+          result = formatter.call(test_time)
+          expect(result).to eq("14:30:45")
+        end
+
+        it "handles year, month, day combination" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, year: "numeric", month: "long", day: "numeric")
+          result = formatter.call(test_time)
+          expect(result).to eq("June 15, 2023")
+        end
+
+        it "handles weekday, year, month, day combination" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, weekday: "long", year: "numeric", month: "short", day: "numeric")
+          result = formatter.call(test_time)
+          expect(result).to eq("Thursday, Jun 15, 2023")
+        end
+
+        it "handles mixed date and time fields" do
+          formatter = Foxtail::CLDR::Formatter::DateTime.new(
+            locale: en_locale,
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
+            hour12: true,
+            timeZone: "UTC"
+          )
+          result = formatter.call(test_time)
+          # Mixed date and time fields should produce both date and time
+          # timeZone: "UTC" keeps the time at 14:30 UTC = 2:30 PM in 12-hour format
+          expect(result).to eq("Jun 15, 2023, 2:30 PM")
+        end
+      end
+
+      # Test different width options for the same field
+      describe "field width variations" do
+        it "handles different month widths" do
+          test_cases = [
+            {width: "numeric", expected: "6"},
+            {width: "2-digit", expected: "06"},
+            {width: "short", expected: "Jun"},
+            {width: "long", expected: "June"}
+          ]
+
+          test_cases.each do |test_case|
+            formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, month: test_case[:width])
+            result = formatter.call(test_time)
+            expect(result).to eq(test_case[:expected])
+          end
+        end
+
+        it "handles different weekday widths" do
+          test_cases = [
+            {width: "short", expected: "Thu"},
+            {width: "long", expected: "Thursday"}
+          ]
+
+          test_cases.each do |test_case|
+            formatter = Foxtail::CLDR::Formatter::DateTime.new(locale: en_locale, weekday: test_case[:width])
+            result = formatter.call(test_time)
+            expect(result).to eq(test_case[:expected])
+          end
+        end
+      end
+    end
+
     context "with special values (Infinity, NaN)" do
       it "raises an error for positive infinity" do
         expect {
