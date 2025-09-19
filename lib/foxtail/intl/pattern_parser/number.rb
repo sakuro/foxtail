@@ -12,7 +12,7 @@ module Foxtail
       # - "#.##E0" (scientific notation)
       #
       # The parsing follows CLDR number pattern specifications and produces
-      # tokens that can be used by NumberFormatter for actual formatting.
+      # tokens that can be used by NumberFormat for actual formatting.
       #
       # @example Basic decimal pattern
       #   parser = Number.new

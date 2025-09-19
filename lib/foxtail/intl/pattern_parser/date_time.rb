@@ -13,7 +13,7 @@ module Foxtail
       # - "yyyy-MM-dd'T'HH:mm:ss" (ISO format with literal)
       #
       # The parsing follows CLDR date/time pattern specifications and produces
-      # tokens that can be used by DateTimeFormatter for actual formatting.
+      # tokens that can be used by DateTimeFormat for actual formatting.
       #
       # @example Basic date pattern
       #   parser = DateTime.new
