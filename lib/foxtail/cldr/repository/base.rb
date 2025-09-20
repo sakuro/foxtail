@@ -60,14 +60,6 @@ module Foxtail
           Foxtail.cldr_dir + locale_str + data_filename
         end
 
-        # Load CLDR data with fallback support
-        private def load_data
-          data_path = find_available_data_file
-          return {} unless data_path
-
-          YAML.load_file(data_path.to_s) || {}
-        end
-
         # Automatically derive data filename from class name using inflector
         private def data_filename
           # Get the class name without module prefix (e.g., "DateTimeFormats")
