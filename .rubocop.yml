@@ -81,6 +81,10 @@ RSpec/ExampleLength:
 RSpec/MultipleExpectations:
   Enabled: false
 
+# Allow testing array inclusion patterns for locale-specific formatting symbols
+RSpec/ExpectActual:
+  Enabled: false
+
 # Complex test scenarios require nested context for clear organization
 RSpec/NestedGroups:
   Enabled: false
