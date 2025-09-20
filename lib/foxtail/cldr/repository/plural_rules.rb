@@ -81,14 +81,7 @@ module Foxtail
             v = w = f = t = 0
           end
 
-          {
-            n:,
-            i:,
-            v:,
-            w:,
-            f:,
-            t:
-          }
+          {n:, i:, v:, w:, f:, t:}
         end
 
         # Evaluate CLDR plural rule condition
