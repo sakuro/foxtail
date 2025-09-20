@@ -80,46 +80,6 @@ module Foxtail
           @resolver.resolve("number_formats.scientific_formats.#{style}", "number_formats")
         end
 
-        # Get currency symbol for a given currency code
-        def currency_symbol(currency_code)
-          @resolver.resolve("number_formats.currencies.#{currency_code}.symbol", "number_formats") || currency_code
-        end
-
-        # Get currency display name for a given currency code and plural form
-        def currency_display_name(currency_code, count="other")
-          @resolver.resolve("number_formats.currencies.#{currency_code}.display_names.#{count}", "number_formats") ||
-            @resolver.resolve("number_formats.currencies.#{currency_code}.display_names.other", "number_formats") ||
-            currency_code
-        end
-
-        # Get all currency names (plural forms) for a given currency code
-        # Returns a hash with plural categories as keys
-        # @param currency_code [String] the currency code (e.g., "USD")
-        # @return [Hash<Symbol, String>] hash with plural categories (:one, :other, etc.)
-        def currency_names(currency_code)
-          display_names = @resolver.resolve("number_formats.currencies.#{currency_code}.display_names", "number_formats")
-          return {other: currency_code} unless display_names
-
-          # Convert string keys to symbols for consistency with PluralRules
-          display_names.transform_keys(&:to_sym)
-        end
-
-        # Get decimal digits for a currency (defaults to 2 if not found)
-        def currency_digits(currency_code)
-          @resolver.resolve("currency_fractions.#{currency_code}.digits", "number_formats") || 2
-        end
-
-        # Get cash digits for a currency (falls back to regular digits)
-        def currency_cash_digits(currency_code)
-          @resolver.resolve("currency_fractions.#{currency_code}.cash_digits", "number_formats") || currency_digits(currency_code)
-        end
-
-        # Get all available currency codes
-        def currency_codes
-          currencies = @resolver.resolve("number_formats.currencies", "number_formats")
-          currencies&.keys || []
-        end
-
         # Get compact format pattern for given magnitude and display style
         def compact_pattern(magnitude, compact_display="short", count="other")
           pattern = @resolver.resolve("number_formats.compact_formats.#{compact_display}.#{magnitude}.#{count}", "number_formats")
@@ -141,6 +101,11 @@ module Foxtail
         # Based on Node.js Intl.NumberFormat defaults for decimal compact notation
         def compact_decimal_significant_digits
           {maximum: 2, minimum: 1}
+        end
+
+        # Get decimal digits for a currency (defaults to 2 if not found)
+        def currency_digits(currency_code)
+          @resolver.resolve("currency_fractions.#{currency_code}.digits", "number_formats") || 2
         end
       end
     end
