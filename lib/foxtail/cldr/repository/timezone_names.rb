@@ -143,8 +143,7 @@ module Foxtail
           minutes = (abs_offset_seconds % 3600) / 60
 
           # Replace HH and mm in pattern
-          pattern.gsub("HH", "%02d" % hours)
-            .gsub("mm", "%02d" % minutes)
+          pattern.gsub(/HH|mm/, "HH" => "%02d" % hours, "mm" => "%02d" % minutes)
         end
       end
     end

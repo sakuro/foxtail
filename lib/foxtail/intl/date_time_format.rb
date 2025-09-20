@@ -659,7 +659,7 @@ module Foxtail
             next unless pattern
 
             # Create date-only original key for adaptation
-            date_only_key = original_key.gsub(/[Hh]+/, "").gsub(/m+/, "").gsub(/s+/, "").delete("a")
+            date_only_key = original_key.gsub(/(?:a|([Hhms])\1*)/, "")
             date_pattern = adapt_fallback_pattern(pattern, date_only_key)
             break
           end
