@@ -308,6 +308,7 @@ git add -p    # Review and stage changes interactively
 7. **Link issues**: Use "Fixes #123" in PR descriptions
 8. **Update documentation**: Keep README and CHANGELOG current
 9. **Write concise commit messages**: Focus on what matters, skip implementation details that don't affect the main purpose
+10. **Keep commit messages short**: Avoid verbose explanations unless absolutely necessary
 
 ## Example Workflow
 

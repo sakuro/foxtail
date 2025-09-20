@@ -124,27 +124,24 @@ module Foxtail
           # Parse hour format pattern (e.g., "+HH:mm;-HH:mm")
           positive_pattern, negative_pattern = hour_format.split(";")
 
-          if offset_seconds >= 0
-            format_offset_with_pattern(offset_seconds, positive_pattern)
-          else
-            format_offset_with_pattern(-offset_seconds, negative_pattern)
-          end
+          format_offset_with_pattern(offset_seconds.abs, offset_seconds >= 0 ? positive_pattern : negative_pattern)
         end
 
         private def format_offset_default(offset_seconds)
-          hours = offset_seconds.abs / 3600
-          minutes = (offset_seconds.abs % 3600) / 60
+          hours, minutes = hours_and_minutes(offset_seconds.abs)
           sign = offset_seconds >= 0 ? "+" : "-"
           "%s%02d:%02d" % [sign, hours, minutes]
         end
 
         private def format_offset_with_pattern(abs_offset_seconds, pattern)
-          hours = abs_offset_seconds / 3600
-          minutes = (abs_offset_seconds % 3600) / 60
+          hours, minutes = hours_and_minutes(abs_offset_seconds)
 
           # Replace HH and mm in pattern
-          pattern.gsub("HH", "%02d" % hours)
-            .gsub("mm", "%02d" % minutes)
+          pattern.gsub(/HH|mm/, "HH" => "%02d" % hours, "mm" => "%02d" % minutes)
+        end
+
+        private def hours_and_minutes(abs_offset_seconds)
+          [abs_offset_seconds / 3600, (abs_offset_seconds % 3600) / 60]
         end
       end
     end

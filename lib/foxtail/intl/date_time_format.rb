@@ -659,7 +659,7 @@ module Foxtail
             next unless pattern
 
             # Create date-only original key for adaptation
-            date_only_key = original_key.gsub(/[Hh]+/, "").gsub(/m+/, "").gsub(/s+/, "").delete("a")
+            date_only_key = original_key.gsub(/(?:a|([Hhms])\1*)/, "")
             date_pattern = adapt_fallback_pattern(pattern, date_only_key)
             break
           end
@@ -667,23 +667,11 @@ module Foxtail
           # Find a time pattern (try basic patterns first for proper ordering)
           time_patterns = []
           if has_hour && has_minute && has_second
-            time_patterns += if effective_hour12
-                               %w[hms Hms]
-                             else
-                               %w[Hms hms]
-                             end
+            time_patterns += effective_hour12 ? %w[hms Hms] : %w[Hms hms]
           elsif has_hour && has_minute
-            time_patterns += if effective_hour12
-                               %w[hm Hm]
-                             else
-                               %w[Hm hm]
-                             end
+            time_patterns += effective_hour12 ? %w[hm Hm] : %w[Hm hm]
           elsif has_hour
-            time_patterns += if effective_hour12
-                               %w[h H]
-                             else
-                               %w[H h]
-                             end
+            time_patterns += effective_hour12 ? %w[h H] : %w[H h]
           end
 
           time_pattern = nil
