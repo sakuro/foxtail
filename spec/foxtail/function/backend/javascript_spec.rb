@@ -174,7 +174,7 @@ RSpec.describe Foxtail::Function::Backend::JavaScript do
     it "raises error for invalid types" do
       expect {
         backend.__send__(:convert_to_timestamp, {})
-      }.to raise_error(ArgumentError, /Cannot convert/)
+      }.to raise_error(ArgumentError, "Cannot convert Hash to timestamp")
     end
   end
 

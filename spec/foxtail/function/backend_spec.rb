@@ -42,7 +42,7 @@ RSpec.describe Foxtail::Function::Backend do
     it "raises error for invalid backend" do
       expect {
         Foxtail::Function::Backend.default = "not a backend"
-      }.to raise_error(ArgumentError, /must be a subclass/)
+      }.to raise_error(ArgumentError, "Backend must be a subclass of Foxtail::Function::Backend::Base")
     end
   end
 end
