@@ -46,10 +46,7 @@ module Foxtail
       # Backend selection and configuration
       class << self
         private def detect_best_backend
-          available_backends.first || raise(
-            RuntimeError,
-            "No function backends available"
-          )
+          available_backends.first or raise RuntimeError, "No function backends available"
         end
       end
 
