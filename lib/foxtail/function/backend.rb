@@ -48,7 +48,7 @@ module Foxtail
         private def detect_best_backend
           available_backends.first || raise(
             RuntimeError,
-            "No function backends available. Please install a JavaScript runtime (Node.js recommended)"
+            "No function backends available"
           )
         end
       end
@@ -70,10 +70,12 @@ module Foxtail
       end
 
       # Get list of available backends
+      # Ordered by preference: JavaScript (faster) first, FoxtailIntl (always available) as fallback
       # @return [Array<Base>] Available backend instances
       def self.available_backends
         [
-          JavaScript.new
+          JavaScript.new,
+          FoxtailIntl.new
         ].select(&:available?)
       end
     end
