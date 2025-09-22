@@ -44,15 +44,16 @@ module Foxtail
     end
 
     # Configure backend with options
-    # @param backend_name [Symbol] Backend type (:javascript, :native)
+    # @param backend_name [Symbol] Backend type (:auto, :javascript, :foxtail_intl)
     # @param options [Hash] Backend-specific configuration options
-    def self.configure(backend_name: :javascript, **_options)
-      case backend_name
-      when :javascript
-        self.backend = Backend::JavaScript.new
-      else
-        raise ArgumentError, "Unknown backend: #{backend_name}"
-      end
+    # @example Use JavaScript backend explicitly
+    #   Foxtail::Function.configure(backend_name: :javascript)
+    # @example Use FoxtailIntl backend
+    #   Foxtail::Function.configure(backend_name: :foxtail_intl)
+    # @example Auto-detect best available backend (default)
+    #   Foxtail::Function.configure(backend_name: :auto)
+    def self.configure(backend_name: :auto, **_options)
+      self.backend = backend_name == :auto ? Backend.default : Backend.create(backend_name)
     end
 
     # Get information about current backend

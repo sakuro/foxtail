@@ -48,6 +48,23 @@ RSpec.describe Foxtail::Function do
       expect(Foxtail::Function.backend).to be_a(Foxtail::Function::Backend::JavaScript)
     end
 
+    it "configures FoxtailIntl backend" do
+      Foxtail::Function.configure(backend_name: :foxtail_intl)
+      expect(Foxtail::Function.backend).to be_a(Foxtail::Function::Backend::FoxtailIntl)
+    end
+
+    it "auto-detects backend when :auto is specified" do
+      Foxtail::Function.configure(backend_name: :auto)
+      expect(Foxtail::Function.backend).to be_a(Foxtail::Function::Backend::Base)
+      expect(Foxtail::Function.backend.available?).to be true
+    end
+
+    it "uses auto-detect by default" do
+      Foxtail::Function.configure
+      expect(Foxtail::Function.backend).to be_a(Foxtail::Function::Backend::Base)
+      expect(Foxtail::Function.backend.available?).to be true
+    end
+
     it "raises error for unknown backend" do
       expect {
         Foxtail::Function.configure(backend_name: :unknown)

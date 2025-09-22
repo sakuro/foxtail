@@ -50,6 +50,31 @@ module Foxtail
         end
       end
 
+      # Create backend instance by name
+      # @param name [Symbol] Backend name
+      # @return [Base] Backend instance
+      # @raise [ArgumentError] If backend name is unknown
+      def self.create(name)
+        case name
+        when :javascript
+          JavaScript.new
+        when :foxtail_intl
+          FoxtailIntl.new
+        else
+          raise ArgumentError, "Unknown backend: #{name}"
+        end
+      end
+
+      # Get backend by name, checking availability
+      # @param name [Symbol] Backend name
+      # @return [Base, nil] Backend instance if available, nil otherwise
+      def self.get(name)
+        backend = create(name)
+        backend.available? ? backend : nil
+      rescue ArgumentError
+        nil
+      end
+
       # Get default backend instance
       # @return [Base] Default backend instance
       def self.default
