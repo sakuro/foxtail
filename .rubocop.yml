@@ -94,11 +94,17 @@ RSpec/NestedGroups:
 RSpec/BeforeAfterAll:
   Exclude:
     - 'spec/syntax_compatibility_spec.rb'          # Safe summary output hooks only
+    - 'spec/foxtail/function/backend/javascript_spec.rb'  # Node.js runtime setup required for consistent test behavior
 
 # Context names describe test structure rather than behavioral conditions
 RSpec/ContextWording:
   Exclude:
     - 'spec/syntax_compatibility_spec.rb'          # "individual fixtures" groups dynamic fixture tests
+
+# Allow JavaScript class naming pattern for spec files
+RSpec/SpecFilePathFormat:
+  CustomTransform:
+    JavaScript: javascript
 
 # Internal utility methods in stream processing don't require documentation
 Style/DocumentationMethod:

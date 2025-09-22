@@ -26,7 +26,8 @@ module Foxtail
   loader.inflector.inflect(
     "ast" => "AST",
     "ast_converter" => "ASTConverter",
-    "cldr" => "CLDR"
+    "cldr" => "CLDR",
+    "javascript" => "JavaScript"
   )
 
   loader.setup

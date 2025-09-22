@@ -4,18 +4,34 @@ require "date"
 require "time"
 
 module Foxtail
-  # Built-in formatting functions
-  # Corresponds to fluent-bundle/src/builtins.ts
+  # Built-in formatting functions for FTL
+  # Uses pluggable backends for actual formatting implementation
   module Function
+    # Default backend instance
+    # @return [Backend::Base] Current backend instance
+    def self.backend
+      @backend ||= Backend.default
+    end
+
+    # Set backend instance
+    # @param new_backend [Backend::Base] Backend to use for formatting
+    def self.backend=(new_backend)
+      unless new_backend.is_a?(Backend::Base)
+        raise ArgumentError, "Backend must be a subclass of Foxtail::Function::Backend::Base"
+      end
+
+      @backend = new_backend
+    end
+
     # Default functions available to all bundles
-    # Each function is a Proc that accepts (value, locale:, **options) and returns formatted result
+    # Each function is a Proc that delegates to the current backend
     def self.defaults
       @defaults ||= {
         "NUMBER" => ->(value, locale:, **options) {
-          Intl::NumberFormat.new(locale:, **options).call(value)
+          backend.call("NUMBER", value, locale:, **options)
         },
         "DATETIME" => ->(value, locale:, **options) {
-          Intl::DateTimeFormat.new(locale:, **options).call(value)
+          backend.call("DATETIME", value, locale:, **options)
         }
       }.freeze
     end
@@ -25,6 +41,28 @@ module Foxtail
     # @return [Proc] The function Proc that accepts (value, locale:, **options)
     def self.[](name)
       defaults[name]
+    end
+
+    # Configure backend with options
+    # @param backend_name [Symbol] Backend type (:javascript, :native)
+    # @param options [Hash] Backend-specific configuration options
+    def self.configure(backend_name: :javascript, **_options)
+      case backend_name
+      when :javascript
+        self.backend = Backend::JavaScript.new
+      else
+        raise ArgumentError, "Unknown backend: #{backend_name}"
+      end
+    end
+
+    # Get information about current backend
+    # @return [Hash] Backend information
+    def self.backend_info
+      {
+        name: backend.name,
+        available: backend.available?,
+        supported_functions: backend.supported_functions
+      }
     end
   end
 end

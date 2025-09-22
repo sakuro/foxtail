@@ -12,6 +12,9 @@ group :development, :test do
 end
 
 group :development do
+  # Function backends (we use JavaScript backend in development and test for now)
+  gem "execjs", "~> 2.7"
+
   # RuboCop
   gem "docquet", github: "sakuro/docquet" # An opinionated RuboCop config
   gem "rubocop"
