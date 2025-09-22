@@ -20,4 +20,19 @@ RSpec.configure do |config|
 
   # Automatically include extractor directory management for extractor specs
   config.include_context "when using extractor directory management", type: :extractor
+
+  # Configure ExecJS runtime for JavaScript backend tests
+  config.before(:suite) do
+    # Check if Node.js is available and set as default runtime
+    if system("node --version > /dev/null 2>&1")
+      require "execjs"
+      @original_runtime = ExecJS.runtime
+      ExecJS.runtime = ExecJS::Runtimes::Node
+    end
+  end
+
+  config.after(:suite) do
+    # Restore original runtime if it was changed
+    ExecJS.runtime = @original_runtime if defined?(@original_runtime)
+  end
 end

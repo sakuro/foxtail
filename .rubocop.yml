@@ -94,7 +94,6 @@ RSpec/NestedGroups:
 RSpec/BeforeAfterAll:
   Exclude:
     - 'spec/syntax_compatibility_spec.rb'          # Safe summary output hooks only
-    - 'spec/foxtail/function/backend/javascript_spec.rb'  # Node.js runtime setup required for consistent test behavior
 
 # Context names describe test structure rather than behavioral conditions
 RSpec/ContextWording:

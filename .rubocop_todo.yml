@@ -20,19 +20,7 @@ Naming/VariableNumber:
   Exclude:
     - 'lib/foxtail/intl/date_time_format.rb'
 
-# Configuration parameters: AssignmentOnly.
-RSpec/InstanceVariable:
-  Exclude:
-    - 'spec/foxtail/function/backend/javascript_spec.rb'
-
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/CommentedKeyword:
   Exclude:
     - 'lib/foxtail/intl/date_time_format.rb'
-
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: allowed_in_returns, forbidden
-Style/DoubleNegation:
-  Exclude:
-    - 'lib/foxtail/function/backend/foxtail_intl.rb'
