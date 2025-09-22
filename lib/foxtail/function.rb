@@ -62,11 +62,7 @@ module Foxtail
     # Detect best available backend
     # @return [Symbol] Best available backend type
     private_class_method def self.detect_best_backend
-      # Try JavaScript first (better standards compliance), fallback to Foxtail::Intl (faster)
-      js_formatter = JavaScript::NumberFormat.new(locale: Locale::Tag.parse("en"))
-      js_formatter.available? ? :javascript : :foxtail_intl
-    rescue
-      :foxtail_intl
+      ExecJS.runtime ? :javascript : :foxtail_intl
     end
   end
 end

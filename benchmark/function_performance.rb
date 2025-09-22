@@ -65,7 +65,7 @@ class FunctionPerformanceBenchmark
         )
 
         # Test if JavaScript is available for this locale
-        if js_basic.available?
+        if execjs_available?
           js_basic.call(1234) # Test call
         end
 
@@ -95,7 +95,7 @@ class FunctionPerformanceBenchmark
           }
         }
 
-        puts "✓ #{locale_info[:name]} (#{tag}) - JS: #{js_basic.available?}"
+        puts "✓ #{locale_info[:name]} (#{tag}) - JS: #{execjs_available?}"
       rescue => e
         puts "✗ #{locale_info[:name]} (#{tag}) - Error: #{e.message}"
       end
@@ -138,12 +138,6 @@ class FunctionPerformanceBenchmark
     @formatters.each do |tag, data|
       puts "--- #{data[:info][:name]} (#{tag}) ---"
       puts "Numbering system: #{data[:info][:numbering]}"
-
-      # Skip if JavaScript not available
-      unless data[:js][:basic].available?
-        puts "JavaScript not available, skipping..."
-        next
-      end
 
       # Basic number formatting
       puts "\nBasic number formatting:"
@@ -216,8 +210,6 @@ class FunctionPerformanceBenchmark
     test_date = Time.new(2023, 6, 15, 14, 30, 0)
 
     @formatters.each do |tag, data|
-      next unless data[:js][:basic].available?
-
       puts "\n--- #{data[:info][:name]} (#{tag}) ---"
 
       # Number formatting
@@ -261,8 +253,6 @@ class FunctionPerformanceBenchmark
     test_num = 123_456
 
     @formatters.each_value do |data|
-      next unless data[:js][:basic].available?
-
       js_result = data[:js][:basic].call(test_num)
       intl_result = data[:intl][:basic].call(test_num)
 

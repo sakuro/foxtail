@@ -14,15 +14,6 @@ module Foxtail
           @runtime_name = nil
         end
 
-        # Check if JavaScript runtime is available
-        # @return [Boolean] True if ExecJS runtime is available
-        def available?
-          ensure_context!
-          !@context.nil?
-        rescue
-          false
-        end
-
         private def ensure_context!
           return if @context
 
@@ -34,66 +25,6 @@ module Foxtail
 
         private def build_context
           ExecJS.compile(javascript_code)
-        end
-
-        private def javascript_code
-          <<~JS
-            // Intl.NumberFormat wrapper with error handling
-            function formatNumber(value, locale, options) {
-              try {
-                if (value === null || value === undefined) {
-                  return String(value);
-                }
-
-                // Handle special numeric values
-                if (typeof value === 'string') {
-                  const numValue = parseFloat(value);
-                  if (isNaN(numValue)) {
-                    return String(value);
-                  }
-                  value = numValue;
-                }
-
-                return new Intl.NumberFormat(locale, options || {}).format(value);
-              } catch (error) {
-                // Fallback to basic string conversion
-                return String(value);
-              }
-            }
-
-            // Intl.DateTimeFormat wrapper with error handling
-            function formatDateTime(timestamp, locale, options) {
-              try {
-                if (timestamp === null || timestamp === undefined) {
-                  return String(timestamp);
-                }
-
-                // Create Date object from timestamp (milliseconds)
-                const date = new Date(timestamp);
-
-                // Check if date is valid
-                if (isNaN(date.getTime())) {
-                  return String(timestamp);
-                }
-
-                return new Intl.DateTimeFormat(locale, options || {}).format(date);
-              } catch (error) {
-                // Fallback to basic date string
-                return new Date(timestamp).toString();
-              }
-            }
-
-            // Test function to verify runtime capabilities
-            function testIntlSupport() {
-              try {
-                new Intl.NumberFormat('en-US').format(1234);
-                new Intl.DateTimeFormat('en-US').format(new Date());
-                return true;
-              } catch (error) {
-                return false;
-              }
-            }
-          JS
         end
       end
 
@@ -121,6 +52,26 @@ module Foxtail
         end
 
         alias format call
+
+        private def javascript_code
+          <<~JS
+            function formatNumber(value, locale, options) {
+              if (value === null || value === undefined) {
+                return String(value);
+              }
+
+              if (typeof value === 'string') {
+                const numValue = parseFloat(value);
+                if (isNaN(numValue)) {
+                  return String(value);
+                }
+                value = numValue;
+              }
+
+              return new Intl.NumberFormat(locale, options || {}).format(value);
+            }
+          JS
+        end
 
         private def convert_number_options(options)
           js_options = {}
@@ -191,6 +142,24 @@ module Foxtail
         end
 
         alias format call
+
+        private def javascript_code
+          <<~JS
+            function formatDateTime(timestamp, locale, options) {
+              if (timestamp === null || timestamp === undefined) {
+                return String(timestamp);
+              }
+
+              const date = new Date(timestamp);
+
+              if (isNaN(date.getTime())) {
+                return String(timestamp);
+              }
+
+              return new Intl.DateTimeFormat(locale, options || {}).format(date);
+            }
+          JS
+        end
 
         private def convert_to_timestamp(value)
           case value
