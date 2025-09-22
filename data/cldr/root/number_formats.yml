@@ -1,53 +1,78 @@
 ---
 locale: root
-generated_at: '2025-09-15T15:48:32Z'
+generated_at: '2025-09-22T02:22:20Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-    minus_sign: "-"
-    plus_sign: "+"
-    percent_sign: "%"
-    per_mille: "‰"
-    exponential: E
-    infinity: "∞"
-    nan: NaN
-  decimal_formats:
-    standard: "#,##0.###"
-  percent_formats:
-    standard: "#,##0%"
-  currency_formats:
-    standard: "¤ #,##0.00"
-    accounting: "¤ #,##0.00"
-  scientific_formats:
-    standard: "#E0"
-  compact_formats:
-    short:
-      '1000':
-        other: 0K
-      '10000':
-        other: 00K
-      '100000':
-        other: 000K
-      '1000000':
-        other: 0M
-      '10000000':
-        other: 00M
-      '100000000':
-        other: 000M
-      '1000000000':
-        other: 0G
-      '10000000000':
-        other: 00G
-      '100000000000':
-        other: 000G
-      '1000000000000':
-        other: 0T
-      '10000000000000':
-        other: 00T
-      '100000000000000':
-        other: 000T
+  arab:
+    symbols:
+      decimal: "٫"
+      group: "٬"
+      minus_sign: "؜-"
+      plus_sign: "؜+"
+      percent_sign: "٪؜"
+      per_mille: "؉"
+      exponential: اس
+      infinity: "∞"
+      nan: NaN
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0%"
+    currency_formats:
+      standard: "#,##0.00 ¤"
+      accounting: "#,##0.00 ¤"
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  latn:
+    symbols:
+      decimal: "."
+      group: ","
+      minus_sign: "-"
+      plus_sign: "+"
+      percent_sign: "%"
+      per_mille: "‰"
+      exponential: E
+      infinity: "∞"
+      nan: NaN
+    decimal_formats:
+      standard: "#,##0.###"
+    percent_formats:
+      standard: "#,##0%"
+    currency_formats:
+      standard: "¤ #,##0.00"
+      accounting: "¤ #,##0.00"
+    scientific_formats:
+      standard: "#E0"
+    compact_formats:
+      short:
+        '1000':
+          other: 0K
+        '10000':
+          other: 00K
+        '100000':
+          other: 000K
+        '1000000':
+          other: 0M
+        '10000000':
+          other: 00M
+        '100000000':
+          other: 000M
+        '1000000000':
+          other: 0G
+        '10000000000':
+          other: 00G
+        '100000000000':
+          other: 000G
+        '1000000000000':
+          other: 0T
+        '10000000000000':
+          other: 00T
+        '100000000000000':
+          other: 000T
+numbering_system_settings:
+  default: latn
+  native: latn
 currency_fractions:
   ADP:
     digits: 0

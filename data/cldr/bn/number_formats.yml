@@ -1,89 +1,104 @@
 ---
 locale: bn
-generated_at: '2025-09-15T15:45:48Z'
+generated_at: '2025-09-22T02:19:21Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##,##0.###"
-  percent_formats:
-    standard: "#,##,##0%"
-  currency_formats:
-    standard: "#,##,##0.00¤"
-    accounting: "#,##,##0.00¤;(#,##,##0.00¤)"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        one: 0 হা
-        other: 0 হা
-      '10000':
-        one: 00 হা
-        other: 00 হা
-      '100000':
-        one: 0 লা
-        other: 0 লা
-      '1000000':
-        one: 00 লা
-        other: 00 লা
-      '10000000':
-        one: 0 কো
-        other: 0 কো
-      '100000000':
-        one: 00 কো
-        other: 00 কো
-      '1000000000':
-        one: 000 কো
-        other: 000 কো
-      '10000000000':
-        one: 00 শত কো
-        other: 00শত কো
-      '100000000000':
-        one: 000কো
-        other: 000কো
-      '1000000000000':
-        one: 0 লা'.'কো'.'
-        other: 0 লা'.'কো'.'
-      '10000000000000':
-        one: 00 লা'.'কো'.'
-        other: 00 লা'.'কো'.'
-      '100000000000000':
-        one: 000 লা'.'কো'.'
-        other: 000 লা'.'কো'.'
-    long:
-      '1000':
-        one: 0 হাজার
-        other: 0 হাজার
-      '10000':
-        one: 00 হাজার
-        other: 00 হাজার
-      '100000':
-        one: 0 লাখ
-        other: 0 লাখ
-      '1000000':
-        one: 00 লাখ
-        other: 00 লাখ
-      '10000000':
-        one: 0 কোটি
-        other: 0 কোটি
-      '100000000':
-        one: 00 কোটি
-        other: 00 কোটি
-      '1000000000':
-        one: 000 কোটি
-        other: 000 কোটি
-      '10000000000':
-        one: 0000 কোটি
-        other: 0000 কোটি
-      '100000000000':
-        one: 00000 কোটি
-        other: 00000 কোটি
-      '1000000000000':
-        one: 0 লাখ কোটি
-        other: 0 লাখ কোটি
-      '10000000000000':
-        one: 00 লাখ কোটি
-        other: 00 লাখ কোটি
-      '100000000000000':
-        one: 000 লাখ কোটি
-        other: 000 লাখ কোটি
+  beng:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0%"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  latn:
+    decimal_formats:
+      standard: "#,##,##0.###"
+    percent_formats:
+      standard: "#,##,##0%"
+    currency_formats:
+      standard: "#,##,##0.00¤"
+      accounting: "#,##,##0.00¤;(#,##,##0.00¤)"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: 0 হা
+          other: 0 হা
+        '10000':
+          one: 00 হা
+          other: 00 হা
+        '100000':
+          one: 0 লা
+          other: 0 লা
+        '1000000':
+          one: 00 লা
+          other: 00 লা
+        '10000000':
+          one: 0 কো
+          other: 0 কো
+        '100000000':
+          one: 00 কো
+          other: 00 কো
+        '1000000000':
+          one: 000 কো
+          other: 000 কো
+        '10000000000':
+          one: 00 শত কো
+          other: 00শত কো
+        '100000000000':
+          one: 000কো
+          other: 000কো
+        '1000000000000':
+          one: 0 লা'.'কো'.'
+          other: 0 লা'.'কো'.'
+        '10000000000000':
+          one: 00 লা'.'কো'.'
+          other: 00 লা'.'কো'.'
+        '100000000000000':
+          one: 000 লা'.'কো'.'
+          other: 000 লা'.'কো'.'
+      long:
+        '1000':
+          one: 0 হাজার
+          other: 0 হাজার
+        '10000':
+          one: 00 হাজার
+          other: 00 হাজার
+        '100000':
+          one: 0 লাখ
+          other: 0 লাখ
+        '1000000':
+          one: 00 লাখ
+          other: 00 লাখ
+        '10000000':
+          one: 0 কোটি
+          other: 0 কোটি
+        '100000000':
+          one: 00 কোটি
+          other: 00 কোটি
+        '1000000000':
+          one: 000 কোটি
+          other: 000 কোটি
+        '10000000000':
+          one: 0000 কোটি
+          other: 0000 কোটি
+        '100000000000':
+          one: 00000 কোটি
+          other: 00000 কোটি
+        '1000000000000':
+          one: 0 লাখ কোটি
+          other: 0 লাখ কোটি
+        '10000000000000':
+          one: 00 লাখ কোটি
+          other: 00 লাখ কোটি
+        '100000000000000':
+          one: 000 লাখ কোটি
+          other: 000 লাখ কোটি
+numbering_system_settings:
+  default: beng
+  native: beng

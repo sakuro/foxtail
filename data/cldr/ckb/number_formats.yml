@@ -1,15 +1,17 @@
 ---
 locale: ckb
-generated_at: '2025-09-15T03:59:10Z'
+generated_at: '2025-09-22T02:19:33Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    plus_sign: "‎+"
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: 
-  currency_formats:
-    standard: 
-  scientific_formats:
-    standard: 
+  arab:
+    symbols:
+      minus_sign: "‏-"
+      plus_sign: "‏+"
+      percent_sign: "٪"
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+numbering_system_settings:
+  default: arab
+  native: arab

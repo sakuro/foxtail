@@ -1,11 +1,15 @@
 ---
 locale: fa_AF
-generated_at: '2025-09-15T03:59:58Z'
+generated_at: '2025-09-22T02:20:21Z'
 cldr_version: '46'
 number_formats:
-  currency_formats:
-    standard: "¤ #,##0.00"
-    accounting: "¤ #,##0.00;‎(¤ #,##0.00)"
+  arabext:
+    currency_formats:
+      standard: "¤ #,##0.00"
+  latn:
+    currency_formats:
+      standard: "¤ #,##0.00"
+      accounting: "¤ #,##0.00;‎(¤ #,##0.00)"
 currency_fractions:
   ADP:
     digits: 0

@@ -1,14 +1,29 @@
 ---
 locale: ccp
-generated_at: '2025-09-15T15:45:56Z'
+generated_at: '2025-09-22T02:19:30Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##,##0.###"
-  percent_formats:
-    standard: "#,##,##0%"
-  currency_formats:
-    standard: "#,##,##0.00¤"
-    accounting: "#,##,##0.00¤;(#,##,##0.00¤)"
-  scientific_formats:
-    standard: 
+  cakm:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0%"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  latn:
+    decimal_formats:
+      standard: "#,##,##0.###"
+    percent_formats:
+      standard: "#,##,##0%"
+    currency_formats:
+      standard: "#,##,##0.00¤"
+      accounting: "#,##,##0.00¤;(#,##,##0.00¤)"
+    scientific_formats:
+      standard: 
+numbering_system_settings:
+  default: cakm
+  native: cakm

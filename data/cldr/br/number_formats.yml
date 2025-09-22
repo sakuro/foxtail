@@ -1,100 +1,106 @@
 ---
 locale: br
-generated_at: '2025-09-15T15:45:50Z'
+generated_at: '2025-09-22T02:19:23Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: ","
-    group: " "
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: "#,##0 %"
-  currency_formats:
-    standard: "#,##0.00 ¤"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        one: 0k
-        other: 0k
-      '10000':
-        one: 00k
-        other: 00k
-      '100000':
-        one: 000k
-        other: 000k
-    long:
-      '1000':
-        one: 0 miliad
-        two: 0 viliad
-        few: 0 miliad
-        many: 0 a viliadoù
-        other: 0 miliad
-      '10000':
-        one: 00 miliad
-        two: 00 viliad
-        few: 00 miliad
-        many: 00 a viliadoù
-        other: 00 miliad
-      '100000':
-        one: 000 miliad
-        two: 000 viliad
-        few: 000 miliad
-        many: 000 a viliadoù
-        other: 000 miliad
-      '1000000':
-        one: 0 milion
-        two: 0 v/milion
-        few: 0 milion
-        many: 0 a v/milionoù
-        other: 0 milion
-      '10000000':
-        one: 00 milion
-        two: 00 v/milion
-        few: 00 milion
-        many: 00 a v/milionoù
-        other: 00 milion
-      '100000000':
-        one: 000 milion
-        two: 000 v/milion
-        few: 000 milion
-        many: 000 a v/milionoù
-        other: 000 milion
-      '1000000000':
-        one: 0 miliard
-        two: 0 viliard
-        few: 0 miliard
-        many: 0 a viliardoù
-        other: 0 miliard
-      '10000000000':
-        one: 00 miliard
-        two: 00 viliard
-        few: 00 miliard
-        many: 00 a viliardoù
-        other: 00 miliard
-      '100000000000':
-        one: 000 miliard
-        two: 000 viliard
-        few: 000 miliard
-        many: 000 a viliardoù
-        other: 000 miliard
-      '1000000000000':
-        one: 0 bilion
-        two: 0 v/bilion
-        few: 0 bilion
-        many: 0 a v/bilionoù
-        other: 0 bilion
-      '10000000000000':
-        one: 00 bilion
-        two: 00 v/bilion
-        few: 00 bilion
-        many: 00 a v/bilionoù
-        other: 00 bilion
-      '100000000000000':
-        one: 000 bilion
-        two: 000 v/bilion
-        few: 000 bilion
-        many: 000 a v/bilionoù
-        other: 000 bilion
+  arab:
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+  latn:
+    symbols:
+      decimal: ","
+      group: " "
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: "#,##0.00 ¤"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: 0k
+          other: 0k
+        '10000':
+          one: 00k
+          other: 00k
+        '100000':
+          one: 000k
+          other: 000k
+      long:
+        '1000':
+          one: 0 miliad
+          two: 0 viliad
+          few: 0 miliad
+          many: 0 a viliadoù
+          other: 0 miliad
+        '10000':
+          one: 00 miliad
+          two: 00 viliad
+          few: 00 miliad
+          many: 00 a viliadoù
+          other: 00 miliad
+        '100000':
+          one: 000 miliad
+          two: 000 viliad
+          few: 000 miliad
+          many: 000 a viliadoù
+          other: 000 miliad
+        '1000000':
+          one: 0 milion
+          two: 0 v/milion
+          few: 0 milion
+          many: 0 a v/milionoù
+          other: 0 milion
+        '10000000':
+          one: 00 milion
+          two: 00 v/milion
+          few: 00 milion
+          many: 00 a v/milionoù
+          other: 00 milion
+        '100000000':
+          one: 000 milion
+          two: 000 v/milion
+          few: 000 milion
+          many: 000 a v/milionoù
+          other: 000 milion
+        '1000000000':
+          one: 0 miliard
+          two: 0 viliard
+          few: 0 miliard
+          many: 0 a viliardoù
+          other: 0 miliard
+        '10000000000':
+          one: 00 miliard
+          two: 00 viliard
+          few: 00 miliard
+          many: 00 a viliardoù
+          other: 00 miliard
+        '100000000000':
+          one: 000 miliard
+          two: 000 viliard
+          few: 000 miliard
+          many: 000 a viliardoù
+          other: 000 miliard
+        '1000000000000':
+          one: 0 bilion
+          two: 0 v/bilion
+          few: 0 bilion
+          many: 0 a v/bilionoù
+          other: 0 bilion
+        '10000000000000':
+          one: 00 bilion
+          two: 00 v/bilion
+          few: 00 bilion
+          many: 00 a v/bilionoù
+          other: 00 bilion
+        '100000000000000':
+          one: 000 bilion
+          two: 000 v/bilion
+          few: 000 bilion
+          many: 000 a v/bilionoù
+          other: 000 bilion

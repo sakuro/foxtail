@@ -1,88 +1,118 @@
 ---
 locale: pa
-generated_at: '2025-09-15T15:48:20Z'
+generated_at: '2025-09-22T02:22:07Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##,##0.###"
-  percent_formats:
-    standard: "#,##,##0%"
-  currency_formats:
-    standard: "¤#,##,##0.00"
-  scientific_formats:
-    standard: "[#E0]"
-  compact_formats:
-    short:
-      '1000':
-        one: 0 ਹਜ਼ਾਰ
-        other: 0 ਹਜ਼ਾਰ
-      '10000':
-        one: 00 ਹਜ਼ਾਰ
-        other: 00 ਹਜ਼ਾਰ
-      '100000':
-        one: 0 ਲੱਖ
-        other: 0 ਲੱਖ
-      '1000000':
-        one: 00 ਲੱਖ
-        other: 00 ਲੱਖ
-      '10000000':
-        one: 0 ਕਰੋੜ
-        other: 0 ਕਰੋੜ
-      '100000000':
-        one: 00 ਕਰੋੜ
-        other: 00 ਕਰੋੜ
-      '1000000000':
-        one: 0 ਅਰਬ
-        other: 0 ਅਰਬ
-      '10000000000':
-        one: 00 ਅਰਬ
-        other: 00 ਅਰਬ
-      '100000000000':
-        one: 0 ਖਰਬ
-        other: 0 ਖਰਬ
-      '1000000000000':
-        one: 00 ਖਰਬ
-        other: 00 ਖਰਬ
-      '10000000000000':
-        one: 0 ਨੀਲ
-        other: 0 ਨੀਲ
-      '100000000000000':
-        one: 00 ਨੀਲ
-        other: 00 ਨੀਲ
-    long:
-      '1000':
-        one: 0 ਹਜ਼ਾਰ
-        other: 0 ਹਜ਼ਾਰ
-      '10000':
-        one: 00 ਹਜ਼ਾਰ
-        other: 00 ਹਜ਼ਾਰ
-      '100000':
-        one: 0 ਲੱਖ
-        other: 0 ਲੱਖ
-      '1000000':
-        one: 00 ਲੱਖ
-        other: 00 ਲੱਖ
-      '10000000':
-        one: 0 ਕਰੋੜ
-        other: 0 ਕਰੋੜ
-      '100000000':
-        one: 00 ਕਰੋੜ
-        other: 00 ਕਰੋੜ
-      '1000000000':
-        one: 0 ਅਰਬ
-        other: 0 ਅਰਬ
-      '10000000000':
-        one: 00 ਅਰਬ
-        other: 00 ਅਰਬ
-      '100000000000':
-        one: 0 ਖਰਬ
-        other: 0 ਖਰਬ
-      '1000000000000':
-        one: 00 ਖਰਬ
-        other: 00 ਖਰਬ
-      '10000000000000':
-        one: 0 ਨੀਲ
-        other: 0 ਨੀਲ
-      '100000000000000':
-        one: 00 ਨੀਲ
-        other: 00 ਨੀਲ
+  arab:
+    symbols:
+      decimal: "."
+      group: ","
+      minus_sign: "-"
+      plus_sign: "+"
+      percent_sign: "%"
+      per_mille: "‰"
+      exponential: E
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "¤#,##,##0.00"
+  arabext:
+    symbols:
+      group: ","
+      minus_sign: "-"
+      plus_sign: "+"
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "¤ #,##,##0.00"
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  latn:
+    decimal_formats:
+      standard: "#,##,##0.###"
+    percent_formats:
+      standard: "#,##,##0%"
+    currency_formats:
+      standard: "¤#,##,##0.00"
+    scientific_formats:
+      standard: "[#E0]"
+    compact_formats:
+      short:
+        '1000':
+          one: 0 ਹਜ਼ਾਰ
+          other: 0 ਹਜ਼ਾਰ
+        '10000':
+          one: 00 ਹਜ਼ਾਰ
+          other: 00 ਹਜ਼ਾਰ
+        '100000':
+          one: 0 ਲੱਖ
+          other: 0 ਲੱਖ
+        '1000000':
+          one: 00 ਲੱਖ
+          other: 00 ਲੱਖ
+        '10000000':
+          one: 0 ਕਰੋੜ
+          other: 0 ਕਰੋੜ
+        '100000000':
+          one: 00 ਕਰੋੜ
+          other: 00 ਕਰੋੜ
+        '1000000000':
+          one: 0 ਅਰਬ
+          other: 0 ਅਰਬ
+        '10000000000':
+          one: 00 ਅਰਬ
+          other: 00 ਅਰਬ
+        '100000000000':
+          one: 0 ਖਰਬ
+          other: 0 ਖਰਬ
+        '1000000000000':
+          one: 00 ਖਰਬ
+          other: 00 ਖਰਬ
+        '10000000000000':
+          one: 0 ਨੀਲ
+          other: 0 ਨੀਲ
+        '100000000000000':
+          one: 00 ਨੀਲ
+          other: 00 ਨੀਲ
+      long:
+        '1000':
+          one: 0 ਹਜ਼ਾਰ
+          other: 0 ਹਜ਼ਾਰ
+        '10000':
+          one: 00 ਹਜ਼ਾਰ
+          other: 00 ਹਜ਼ਾਰ
+        '100000':
+          one: 0 ਲੱਖ
+          other: 0 ਲੱਖ
+        '1000000':
+          one: 00 ਲੱਖ
+          other: 00 ਲੱਖ
+        '10000000':
+          one: 0 ਕਰੋੜ
+          other: 0 ਕਰੋੜ
+        '100000000':
+          one: 00 ਕਰੋੜ
+          other: 00 ਕਰੋੜ
+        '1000000000':
+          one: 0 ਅਰਬ
+          other: 0 ਅਰਬ
+        '10000000000':
+          one: 00 ਅਰਬ
+          other: 00 ਅਰਬ
+        '100000000000':
+          one: 0 ਖਰਬ
+          other: 0 ਖਰਬ
+        '1000000000000':
+          one: 00 ਖਰਬ
+          other: 00 ਖਰਬ
+        '10000000000000':
+          one: 0 ਨੀਲ
+          other: 0 ਨੀਲ
+        '100000000000000':
+          one: 00 ਨੀਲ
+          other: 00 ਨੀਲ
+numbering_system_settings:
+  native: guru

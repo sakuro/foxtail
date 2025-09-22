@@ -1,14 +1,21 @@
 ---
 locale: en_ZA
-generated_at: '2025-09-15T03:59:48Z'
+generated_at: '2025-09-22T02:20:11Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: "."
-    group: ","
-  currency_formats:
-    standard: "¤#,##0.00"
-  compact_formats: {}
+  latn:
+    symbols:
+      decimal: "."
+      group: ","
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "¤#,##0.00"
+    scientific_formats:
+      standard: 
+    compact_formats: {}
 currency_fractions:
   ADP:
     digits: 0

@@ -68,6 +68,12 @@ module Foxtail
         @options = options.dup.freeze
         @formats = Foxtail::CLDR::Repository::DateTimeFormats.new(locale)
         @timezone_names = Foxtail::CLDR::Repository::TimezoneNames.new(locale)
+
+        # Initialize digit mapper for numbering system support
+        numbering_system = options[:numberingSystem] || determine_numbering_system
+        @digit_mapper = if numbering_system && numbering_system != "latn"
+                          DigitMapper.new(numbering_system)
+                        end
       end
 
       # Format a date/time with the configured locale and options
@@ -1133,9 +1139,9 @@ module Foxtail
         if @options[:year]
           case @options[:year]
           when "numeric"
-            parts << @time_with_zone.strftime("%Y")
+            parts << apply_digit_conversion(@time_with_zone.strftime("%Y"))
           when "2-digit"
-            parts << @time_with_zone.strftime("%y")
+            parts << apply_digit_conversion(@time_with_zone.strftime("%y"))
           end
         end
 
@@ -1143,9 +1149,9 @@ module Foxtail
         if @options[:month]
           case @options[:month]
           when "numeric"
-            parts << @time_with_zone.month.to_s
+            parts << apply_digit_conversion(@time_with_zone.month.to_s)
           when "2-digit"
-            parts << @time_with_zone.strftime("%m")
+            parts << apply_digit_conversion(@time_with_zone.strftime("%m"))
           when "long"
             parts << @formats.month_name(@time_with_zone.month, "wide")
           when "short"
@@ -1159,9 +1165,9 @@ module Foxtail
         if @options[:day]
           case @options[:day]
           when "numeric"
-            parts << @time_with_zone.day.to_s
+            parts << apply_digit_conversion(@time_with_zone.day.to_s)
           when "2-digit"
-            parts << @time_with_zone.strftime("%d")
+            parts << apply_digit_conversion(@time_with_zone.strftime("%d"))
           end
         end
 
@@ -1192,23 +1198,23 @@ module Foxtail
 
         # Pre-compute lightweight C-level operations (strftime and to_s)
         fast_replacements = {
-          "MM" => @time_with_zone.strftime("%m"),
-          "M" => @time_with_zone.month.to_s,
-          "yyyy" => @time_with_zone.year.to_s,
-          "yy" => @time_with_zone.strftime("%y"),
-          "y" => @time_with_zone.year.to_s,
-          "dd" => @time_with_zone.strftime("%d"),
-          "d" => @time_with_zone.day.to_s,
-          "HH" => @time_with_zone.strftime("%H"),
-          "H" => @time_with_zone.hour.to_s,
-          "hh" => @time_with_zone.strftime("%I"),
-          "h" => hour_12_1_12.to_s,
-          "KK" => hour_12_0_11.to_s.rjust(2, "0"),
-          "K" => hour_12_0_11.to_s,
-          "kk" => hour_24_1_24.to_s.rjust(2, "0"),
-          "k" => hour_24_1_24.to_s,
-          "mm" => @time_with_zone.strftime("%M"),
-          "ss" => @time_with_zone.strftime("%S")
+          "MM" => apply_digit_conversion(@time_with_zone.strftime("%m")),
+          "M" => apply_digit_conversion(@time_with_zone.month.to_s),
+          "yyyy" => apply_digit_conversion(@time_with_zone.year.to_s),
+          "yy" => apply_digit_conversion(@time_with_zone.strftime("%y")),
+          "y" => apply_digit_conversion(@time_with_zone.year.to_s),
+          "dd" => apply_digit_conversion(@time_with_zone.strftime("%d")),
+          "d" => apply_digit_conversion(@time_with_zone.day.to_s),
+          "HH" => apply_digit_conversion(@time_with_zone.strftime("%H")),
+          "H" => apply_digit_conversion(@time_with_zone.hour.to_s),
+          "hh" => apply_digit_conversion(@time_with_zone.strftime("%I")),
+          "h" => apply_digit_conversion(hour_12_1_12.to_s),
+          "KK" => apply_digit_conversion(hour_12_0_11.to_s.rjust(2, "0")),
+          "K" => apply_digit_conversion(hour_12_0_11.to_s),
+          "kk" => apply_digit_conversion(hour_24_1_24.to_s.rjust(2, "0")),
+          "k" => apply_digit_conversion(hour_24_1_24.to_s),
+          "mm" => apply_digit_conversion(@time_with_zone.strftime("%M")),
+          "ss" => apply_digit_conversion(@time_with_zone.strftime("%S"))
         }
 
         # Define method for on-demand computation of heavy operations
@@ -1234,7 +1240,7 @@ module Foxtail
         end
 
         # Format each token according to its type
-        tokens.map {|token|
+        result = tokens.map {|token|
           case token
           when PatternParser::DateTime::FieldToken
             get_field_value.call(token.value) || token.value
@@ -1246,6 +1252,9 @@ module Foxtail
             token.value
           end
         }.join
+
+        # Apply digit conversion if needed
+        apply_digit_conversion(result)
       end
 
       # Format timezone name (z, zzzz)
@@ -1546,6 +1555,23 @@ module Foxtail
         city = parts.last
         # Replace underscores with spaces and capitalize words
         city.tr("_", " ").split.map(&:capitalize).join(" ")
+      end
+
+      # Determine numbering system for this locale
+      private def determine_numbering_system
+        # Check if locale has native numbering system
+        number_formats = Foxtail::CLDR::Repository::NumberFormats.new(@locale)
+        settings = number_formats.numbering_system_settings
+
+        # Default numbering system for this locale
+        settings["default"] || "latn"
+      end
+
+      # Apply digit conversion for numbering systems
+      private def apply_digit_conversion(text)
+        return text unless @digit_mapper
+
+        @digit_mapper.map(text)
       end
     end
   end

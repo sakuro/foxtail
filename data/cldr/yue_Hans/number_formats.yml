@@ -1,42 +1,47 @@
 ---
 locale: yue_Hans
-generated_at: '2025-09-15T15:49:29Z'
+generated_at: '2025-09-22T02:23:21Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    nan: 非数值
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: 
-  currency_formats:
-    standard: "¤#,##0.00"
-    accounting: "¤#,##0.00;(¤#,##0.00)"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        other: '0'
-      '10000':
-        other: 0万
-      '100000':
-        other: 00万
-      '1000000':
-        other: 000万
-      '10000000':
-        other: 0000万
-      '100000000':
-        other: 0亿
-      '1000000000':
-        other: 00亿
-      '10000000000':
-        other: 000亿
-      '100000000000':
-        other: 0000亿
-      '1000000000000':
-        other: 0兆
-      '10000000000000':
-        other: 00兆
-      '100000000000000':
-        other: 000兆
+  latn:
+    symbols:
+      nan: 非数值
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "¤#,##0.00"
+      accounting: "¤#,##0.00;(¤#,##0.00)"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          other: '0'
+        '10000':
+          other: 0万
+        '100000':
+          other: 00万
+        '1000000':
+          other: 000万
+        '10000000':
+          other: 0000万
+        '100000000':
+          other: 0亿
+        '1000000000':
+          other: 00亿
+        '10000000000':
+          other: 000亿
+        '100000000000':
+          other: 0000亿
+        '1000000000000':
+          other: 0兆
+        '10000000000000':
+          other: 00兆
+        '100000000000000':
+          other: 000兆
+numbering_system_settings:
+  native: hanidec
+  traditional: hans
+  finance: hansfin

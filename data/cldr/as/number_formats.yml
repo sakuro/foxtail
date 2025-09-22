@@ -1,89 +1,104 @@
 ---
 locale: as
-generated_at: '2025-09-15T15:45:36Z'
+generated_at: '2025-09-22T02:19:08Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: "#,##,##0.###"
-  percent_formats:
-    standard: "#,##,##0%"
-  currency_formats:
-    standard: "¤ #,##,##0.00"
-    accounting: "¤#,##0.00;(¤#,##0.00)"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        one: 0 হাজাৰ
-        other: 0 হাজাৰ
-      '10000':
-        one: 00 হাজাৰ
-        other: 00 হাজাৰ
-      '100000':
-        one: 0 লাখ
-        other: 0 লাখ
-      '1000000':
-        one: 0 নিযুত
-        other: 0 নিযুত
-      '10000000':
-        one: 00 নিযুত
-        other: 00 নিযুত
-      '100000000':
-        one: 000 নিঃ
-        other: 000 নিঃ
-      '1000000000':
-        one: 0 শঃ কোঃ
-        other: 0 শঃ কোঃ
-      '10000000000':
-        one: 00 শঃ কোঃ
-        other: 00 শঃ কোঃ
-      '100000000000':
-        one: 000 শঃ কঃ
-        other: 000 শঃ কঃ
-      '1000000000000':
-        one: 0 শঃ পঃ
-        other: 0 শঃ পঃ
-      '10000000000000':
-        one: 00 শঃ পঃ
-        other: 00 শঃ পঃ
-      '100000000000000':
-        one: 000 শঃ পঃ
-        other: 000 শঃ পঃ
-    long:
-      '1000':
-        one: 0 হাজাৰ
-        other: 0 হাজাৰ
-      '10000':
-        one: 00 হাজাৰ
-        other: 00 হাজাৰ
-      '100000':
-        one: 0 লাখ
-        other: 0 লাখ
-      '1000000':
-        one: 0 নিযুত
-        other: 0 নিযুত
-      '10000000':
-        one: 00 নিযুত
-        other: 00 নিযুত
-      '100000000':
-        one: 000 নিযুত
-        other: 000 নিযুত
-      '1000000000':
-        one: 0 শত কোটি
-        other: 0 শত কোটি
-      '10000000000':
-        one: 00 শত কোটি
-        other: 00 শত কোটি
-      '100000000000':
-        one: 000 শত কোটি
-        other: 000 শত কোটি
-      '1000000000000':
-        one: 0 শত পৰাৰ্দ্ধ
-        other: 0 শত পৰাৰ্দ্ধ
-      '10000000000000':
-        one: 00 শত পৰাৰ্দ্ধ
-        other: 00 শত পৰাৰ্দ্ধ
-      '100000000000000':
-        one: 000 শত পৰাৰ্দ্ধ
-        other: 000 শত পৰাৰ্দ্ধ
+  beng:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "#,##0.00"
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  latn:
+    decimal_formats:
+      standard: "#,##,##0.###"
+    percent_formats:
+      standard: "#,##,##0%"
+    currency_formats:
+      standard: "¤ #,##,##0.00"
+      accounting: "¤#,##0.00;(¤#,##0.00)"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: 0 হাজাৰ
+          other: 0 হাজাৰ
+        '10000':
+          one: 00 হাজাৰ
+          other: 00 হাজাৰ
+        '100000':
+          one: 0 লাখ
+          other: 0 লাখ
+        '1000000':
+          one: 0 নিযুত
+          other: 0 নিযুত
+        '10000000':
+          one: 00 নিযুত
+          other: 00 নিযুত
+        '100000000':
+          one: 000 নিঃ
+          other: 000 নিঃ
+        '1000000000':
+          one: 0 শঃ কোঃ
+          other: 0 শঃ কোঃ
+        '10000000000':
+          one: 00 শঃ কোঃ
+          other: 00 শঃ কোঃ
+        '100000000000':
+          one: 000 শঃ কঃ
+          other: 000 শঃ কঃ
+        '1000000000000':
+          one: 0 শঃ পঃ
+          other: 0 শঃ পঃ
+        '10000000000000':
+          one: 00 শঃ পঃ
+          other: 00 শঃ পঃ
+        '100000000000000':
+          one: 000 শঃ পঃ
+          other: 000 শঃ পঃ
+      long:
+        '1000':
+          one: 0 হাজাৰ
+          other: 0 হাজাৰ
+        '10000':
+          one: 00 হাজাৰ
+          other: 00 হাজাৰ
+        '100000':
+          one: 0 লাখ
+          other: 0 লাখ
+        '1000000':
+          one: 0 নিযুত
+          other: 0 নিযুত
+        '10000000':
+          one: 00 নিযুত
+          other: 00 নিযুত
+        '100000000':
+          one: 000 নিযুত
+          other: 000 নিযুত
+        '1000000000':
+          one: 0 শত কোটি
+          other: 0 শত কোটি
+        '10000000000':
+          one: 00 শত কোটি
+          other: 00 শত কোটি
+        '100000000000':
+          one: 000 শত কোটি
+          other: 000 শত কোটি
+        '1000000000000':
+          one: 0 শত পৰাৰ্দ্ধ
+          other: 0 শত পৰাৰ্দ্ধ
+        '10000000000000':
+          one: 00 শত পৰাৰ্দ্ধ
+          other: 00 শত পৰাৰ্দ্ধ
+        '100000000000000':
+          one: 000 শত পৰাৰ্দ্ধ
+          other: 000 শত পৰাৰ্দ্ধ
+numbering_system_settings:
+  default: beng
+  native: beng

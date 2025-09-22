@@ -1,105 +1,106 @@
 ---
 locale: ksh
-generated_at: '2025-09-15T15:47:40Z'
+generated_at: '2025-09-22T02:21:22Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: ","
-    group: " "
-    minus_sign: "−"
-    exponential: "×10^"
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: "#,##0 %"
-  currency_formats:
-    standard: "#,##0.00 ¤"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        one: 0 tsd
-        other: 0 tsd
-      '10000':
-        one: 00 tsd
-        other: 00 tsd
-      '100000':
-        one: 000 tsd
-        other: 000 tsd
-      '1000000':
-        one: 0 Mio
-        other: 0 Mio
-      '10000000':
-        one: 00 Mio
-        other: 00 Mio
-      '100000000':
-        one: 000 Mio
-        other: 000 Mio
-      '1000000000':
-        one: 0 Mrd
-        other: 0 Mrd
-      '10000000000':
-        one: 00 Mrd
-        other: 00 Mrd
-      '100000000000':
-        one: 000 Mrd
-        other: 000 Mrd
-      '1000000000000':
-        one: 0 Bio
-        other: 0 Bio
-      '10000000000000':
-        one: 00 Bio
-        other: 00 Bio
-      '100000000000000':
-        one: 000 Bio
-        other: 000 Bio
-    long:
-      '1000':
-        zero: 0 Dousend
-        one: 0 Dousend
-        other: 0 Dousend
-      '10000':
-        zero: 00 Dousend
-        one: 00 Dousend
-        other: 00 Dousend
-      '100000':
-        zero: 000 Dousend
-        one: 000 Dousend
-        other: 000 Dousend
-      '1000000':
-        zero: 0 Milljuhne
-        one: 0 Million
-        other: 0 Milljuhne
-      '10000000':
-        zero: 00 Milljuhne
-        one: 00 Milljuhne
-        other: 00 Millionen
-      '100000000':
-        zero: 000 Milljuhne
-        one: 000 Milljuhne
-        other: 000 Millionen
-      '1000000000':
-        zero: 0 Milljard
-        one: 0 Milliarde
-        other: 0 Milljarde
-      '10000000000':
-        zero: 00 Milljarde
-        one: 00 Milljarde
-        other: 00 Milliarden
-      '100000000000':
-        zero: 000 Milljarde
-        one: 000 Milliarde
-        other: 000 Milliarden
-      '1000000000000':
-        zero: 0 Billjuhn
-        one: 0 Billjuhn
-        other: 0 Billjuhn
-      '10000000000000':
-        zero: 00 Billjuhn
-        one: 00 Billion
-        other: 00 Billionen
-      '100000000000000':
-        zero: 000 Billjuhn
-        one: 000 Billion
-        other: 000 Billionen
+  latn:
+    symbols:
+      decimal: ","
+      group: " "
+      minus_sign: "−"
+      exponential: "×10^"
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: "#,##0.00 ¤"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: 0 tsd
+          other: 0 tsd
+        '10000':
+          one: 00 tsd
+          other: 00 tsd
+        '100000':
+          one: 000 tsd
+          other: 000 tsd
+        '1000000':
+          one: 0 Mio
+          other: 0 Mio
+        '10000000':
+          one: 00 Mio
+          other: 00 Mio
+        '100000000':
+          one: 000 Mio
+          other: 000 Mio
+        '1000000000':
+          one: 0 Mrd
+          other: 0 Mrd
+        '10000000000':
+          one: 00 Mrd
+          other: 00 Mrd
+        '100000000000':
+          one: 000 Mrd
+          other: 000 Mrd
+        '1000000000000':
+          one: 0 Bio
+          other: 0 Bio
+        '10000000000000':
+          one: 00 Bio
+          other: 00 Bio
+        '100000000000000':
+          one: 000 Bio
+          other: 000 Bio
+      long:
+        '1000':
+          zero: 0 Dousend
+          one: 0 Dousend
+          other: 0 Dousend
+        '10000':
+          zero: 00 Dousend
+          one: 00 Dousend
+          other: 00 Dousend
+        '100000':
+          zero: 000 Dousend
+          one: 000 Dousend
+          other: 000 Dousend
+        '1000000':
+          zero: 0 Milljuhne
+          one: 0 Million
+          other: 0 Milljuhne
+        '10000000':
+          zero: 00 Milljuhne
+          one: 00 Milljuhne
+          other: 00 Millionen
+        '100000000':
+          zero: 000 Milljuhne
+          one: 000 Milljuhne
+          other: 000 Millionen
+        '1000000000':
+          zero: 0 Milljard
+          one: 0 Milliarde
+          other: 0 Milljarde
+        '10000000000':
+          zero: 00 Milljarde
+          one: 00 Milljarde
+          other: 00 Milliarden
+        '100000000000':
+          zero: 000 Milljarde
+          one: 000 Milliarde
+          other: 000 Milliarden
+        '1000000000000':
+          zero: 0 Billjuhn
+          one: 0 Billjuhn
+          other: 0 Billjuhn
+        '10000000000000':
+          zero: 00 Billjuhn
+          one: 00 Billion
+          other: 00 Billionen
+        '100000000000000':
+          zero: 000 Billjuhn
+          one: 000 Billion
+          other: 000 Billionen

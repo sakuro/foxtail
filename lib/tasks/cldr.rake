@@ -29,6 +29,7 @@ TIMEZONE_NAMES_FILES = FileList[Foxtail.cldr_dir.glob("*/timezone_names.yml").ma
 DATETIME_FORMATS_FILES = FileList[Foxtail.cldr_dir.glob("*/datetime_formats.yml").map(&:to_s)]
 LOCALE_ALIASES_FILE = Foxtail.cldr_dir + "locale_aliases.yml"
 PARENT_LOCALES_FILE = Foxtail.cldr_dir + "parent_locales.yml"
+NUMBERING_SYSTEMS_FILE = Foxtail.cldr_dir + "numbering_systems.yml"
 
 # Clean tasks
 # CLEAN removes extracted CLDR source (can be re-extracted from zip)
@@ -41,7 +42,8 @@ CLOBBER.include(
   UNITS_FILES,
   DATETIME_FORMATS_FILES,
   LOCALE_ALIASES_FILE,
-  PARENT_LOCALES_FILE
+  PARENT_LOCALES_FILE,
+  NUMBERING_SYSTEMS_FILE
 )
 CLOBBER.exclude((Foxtail.cldr_dir + "README.md").to_s)
 # Keep the downloaded zip files to avoid re-downloading
@@ -84,6 +86,7 @@ namespace :cldr do
     extract:parent_locales
     extract:locale_aliases
     extract:metazone_mapping
+    extract:numbering_systems
     extract:plural_rules
     extract:number_formats
     extract:currencies
@@ -116,6 +119,16 @@ namespace :cldr do
     desc "Extract CLDR metazone mapping from downloaded CLDR core data"
     task metazone_mapping: %i[set_debug_logging download] do
       extractor = Foxtail::CLDR::Extractor::MetazoneMapping.new(
+        source_dir: CLDR_EXTRACT_DIR,
+        output_dir: Foxtail.cldr_dir
+      )
+
+      extractor.extract
+    end
+
+    desc "Extract CLDR numbering systems from downloaded CLDR core data"
+    task numbering_systems: %i[set_debug_logging download] do
+      extractor = Foxtail::CLDR::Extractor::NumberingSystems.new(
         source_dir: CLDR_EXTRACT_DIR,
         output_dir: Foxtail.cldr_dir
       )

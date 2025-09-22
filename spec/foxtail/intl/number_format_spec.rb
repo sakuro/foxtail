@@ -450,6 +450,166 @@ RSpec.describe Foxtail::Intl::NumberFormat do
       end
     end
 
+    context "with numbering systems" do
+      describe "Arabic numbering system" do
+        it "formats numbers with Arabic-Indic digits" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("ar-EG"))
+          result = formatter.call(123_456.789)
+          expect(result).to eq("١٢٣٬٤٥٦٫٧٨٩")
+        end
+
+        it "formats with explicit Arab numbering system on English locale" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("en-US"), numberingSystem: "arab")
+          result = formatter.call(123_456.789)
+          expect(result).to eq("١٢٣٬٤٥٦٫٧٨٩")
+        end
+
+        it "formats currency with Arabic digits" do
+          formatter = Foxtail::Intl::NumberFormat.new(
+            locale: locale("ar-SA"),
+            style: "currency",
+            currency: "SAR"
+          )
+          result = formatter.call(1234.56)
+          expect(result).to eq("\u200f\u0661\u066c\u0662\u0663\u0664\u066b\u0665\u0666\u00a0\u0631.\u0633.\u200f")
+        end
+
+        it "formats percentage with Arabic digits" do
+          formatter = Foxtail::Intl::NumberFormat.new(
+            locale: locale("ar-EG"),
+            style: "percent"
+          )
+          result = formatter.call(0.12)
+          expect(result).to eq("١٢٪؜")
+        end
+      end
+
+      describe "Chinese numbering systems" do
+        it "formats with Chinese decimal numbering (hanidec)" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("zh-Hans-CN"), numberingSystem: "hanidec")
+          result = formatter.call(123_456.789)
+          expect(result).to eq("一二三,四五六.七八九")
+        end
+
+        it "formats with full-width digits for Japanese" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("ja-JP"), numberingSystem: "fullwide")
+          result = formatter.call(98765)
+          expect(result).to eq("９８,７６５")
+        end
+
+        it "formats currency with Chinese decimal numbering" do
+          formatter = Foxtail::Intl::NumberFormat.new(
+            locale: locale("zh-CN"),
+            style: "currency",
+            currency: "CNY",
+            numberingSystem: "hanidec"
+          )
+          result = formatter.call(1234.56)
+          expect(result).to eq("¥一,二三四.五六")
+        end
+
+        it "formats with traditional Chinese locale and Latin digits (default)" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("zh-TW"))
+          result = formatter.call(1_234_567)
+          expect(result).to eq("1,234,567")
+        end
+      end
+
+      describe "Korean numbering system" do
+        it "formats with Korean locale using Latin digits (default)" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("ko-KR"))
+          result = formatter.call(1_234_567)
+          expect(result).to eq("1,234,567")
+        end
+
+        it "formats Korean currency" do
+          formatter = Foxtail::Intl::NumberFormat.new(
+            locale: locale("ko-KR"),
+            style: "currency",
+            currency: "KRW"
+          )
+          result = formatter.call(1_234_567)
+          expect(result).to eq("₩1,234,567")
+        end
+
+        it "formats percentage in Korean locale" do
+          formatter = Foxtail::Intl::NumberFormat.new(
+            locale: locale("ko-KR"),
+            style: "percent"
+          )
+          result = formatter.call(0.25)
+          expect(result).to eq("25%")
+        end
+
+        it "formats with full-width digits when specified" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("ko-KR"), numberingSystem: "fullwide")
+          result = formatter.call(42000)
+          expect(result).to eq("４２,０００")
+        end
+      end
+
+      describe "Thai numbering system" do
+        it "formats with Thai digits" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("th-TH"), numberingSystem: "thai")
+          result = formatter.call(42000)
+          expect(result).to eq("๔๒,๐๐๐")
+        end
+
+        it "formats currency with Thai digits" do
+          formatter = Foxtail::Intl::NumberFormat.new(
+            locale: locale("th-TH"),
+            style: "currency",
+            currency: "THB",
+            numberingSystem: "thai"
+          )
+          result = formatter.call(1234.56)
+          expect(result).to eq("฿๑,๒๓๔.๕๖")
+        end
+
+        it "formats percentage with Thai digits" do
+          formatter = Foxtail::Intl::NumberFormat.new(
+            locale: locale("th-TH"),
+            style: "percent",
+            numberingSystem: "thai"
+          )
+          result = formatter.call(0.12)
+          expect(result).to eq("๑๒%")
+        end
+
+        it "formats with Latin digits for Thai locale (default)" do
+          formatter = Foxtail::Intl::NumberFormat.new(locale: locale("th-TH"))
+          result = formatter.call(1_234_567)
+          expect(result).to eq("1,234,567")
+        end
+      end
+
+      describe "Multiple numbering systems comparison" do
+        let(:number) { 1234.56 }
+
+        it "formats same number in different numbering systems" do
+          # Latin (default)
+          latin_formatter = Foxtail::Intl::NumberFormat.new(locale: locale("en-US"))
+          expect(latin_formatter.call(number)).to eq("1,234.56")
+
+          # Arabic-Indic
+          arab_formatter = Foxtail::Intl::NumberFormat.new(locale: locale("en-US"), numberingSystem: "arab")
+          expect(arab_formatter.call(number)).to eq("١٬٢٣٤٫٥٦")
+
+          # Devanagari
+          deva_formatter = Foxtail::Intl::NumberFormat.new(locale: locale("en-US"), numberingSystem: "deva")
+          expect(deva_formatter.call(number)).to eq("१,२३४.५६")
+
+          # Thai
+          thai_formatter = Foxtail::Intl::NumberFormat.new(locale: locale("en-US"), numberingSystem: "thai")
+          expect(thai_formatter.call(number)).to eq("๑,๒๓๔.๕๖")
+
+          # Full-width
+          fullwide_formatter = Foxtail::Intl::NumberFormat.new(locale: locale("en-US"), numberingSystem: "fullwide")
+          expect(fullwide_formatter.call(number)).to eq("１,２３４.５６")
+        end
+      end
+    end
+
     context "with unit style" do
       let(:en_locale) { locale("en") }
 
