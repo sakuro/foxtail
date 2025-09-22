@@ -9,6 +9,10 @@ group :development, :test do
   gem "repl_type_completor"
 
   gem "rake"
+
+  # Function backend (we use JavaScript backend in development and test for now)
+  gem "execjs"
+  gem "mini_racer"
 end
 
 group :development do

@@ -123,7 +123,7 @@ module Foxtail
     def find: (String id) -> untyped?
   end
 
-  module Functions
+  module Function
     def self.defaults: () -> Hash[String, Proc]
     def self.number: () -> Proc
     def self.datetime: () -> Proc

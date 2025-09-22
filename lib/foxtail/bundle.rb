@@ -20,7 +20,7 @@ module Foxtail
   #   # => "Hello, World!"
   #
   # @example With custom functions
-  #   functions = Foxtail::Functions.defaults.merge(
+  #   functions = Foxtail::Function.defaults.merge(
   #     "UPPER" => ->(str, **_opts) { str.upcase }
   #   )
   #   bundle = Foxtail::Bundle.new(locale, functions: functions)
@@ -63,7 +63,7 @@ module Foxtail
 
       @messages = {}  # id → Bundle::AST Message
       @terms = {}     # id → Bundle::AST Term
-      @functions = options[:functions] || Functions.defaults
+      @functions = options[:functions] || Function.defaults
       @use_isolating = options.fetch(:use_isolating, true)
       @transform = options[:transform]
     end

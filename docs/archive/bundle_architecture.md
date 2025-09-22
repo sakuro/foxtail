@@ -22,7 +22,7 @@ This document outlines the architecture design for the Foxtail Bundle system, wh
 ┌─────────────────────────────────────────────────┐
 │              Foxtail Public API                 │
 │                                                 │
-│  Bundle ◄── Resource ◄── Functions             │
+│  Bundle ◄── Resource ◄── Function             │
 └─────────────────────────────────────────────────┘
                          │
                          ▼
@@ -52,7 +52,7 @@ lib/foxtail/
 │   ├── resolver.rb    # Foxtail::Bundle::Resolver (internal)
 │   └── scope.rb       # Foxtail::Bundle::Scope (internal)
 ├── resource.rb        # Foxtail::Resource (public API)
-├── functions.rb       # Foxtail::Functions (public API)
+├── function.rb        # Foxtail::Function (public API)
 ├── parser.rb          # Foxtail::Parser (development tool)
 ├── parser/
 │   ├── ast.rb         # Foxtail::Parser::AST
@@ -119,7 +119,7 @@ end
 - Pros: Reuse existing 99% compatible parser, single parser to maintain
 - Cons: Slightly slower (estimated 1.3x), two-step process (parse then convert)
 
-### 3. Foxtail::Functions
+### 3. Foxtail::Function
 
 **Purpose**: Built-in formatting functions (NUMBER, DATETIME, etc.)
 
@@ -127,7 +127,7 @@ end
 
 ```ruby
 module Foxtail
-  module Functions
+  module Function
     NUMBER = lambda do |value, options = {}|
       # Number formatting logic
     end
@@ -314,7 +314,7 @@ FTL
 
 # Create bundle
 bundle = Foxtail::Bundle.new("en-US", 
-  functions: Foxtail::Functions::DEFAULTS
+  functions: Foxtail::Function::DEFAULTS
 )
 
 # Add resource
@@ -334,7 +334,7 @@ errors = []
 result = bundle.format_pattern(message[:value], { name: "Alice" }, errors)
 
 # Custom functions
-my_functions = Foxtail::Functions::DEFAULTS.merge({
+my_functions = Foxtail::Function::DEFAULTS.merge({
   "UPPER" => lambda { |text, _opts| text.to_s.upcase }
 })
 
@@ -354,7 +354,7 @@ bundle = Foxtail::Bundle.new("en", functions: my_functions)
 3. Handle circular references and errors
 
 ### Phase 3: Advanced Features
-1. Implement Functions module with NUMBER/DATETIME
+1. Implement Function module with NUMBER/DATETIME
 2. Add transform support
 3. Add isolating support
 

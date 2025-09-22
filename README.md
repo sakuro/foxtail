@@ -70,7 +70,7 @@ ja_bundle.format("emails", count: 1)
 
 ### Advanced Features
 
-Numbers, dates, and currencies with CLDR formatting. CLDR (Unicode Common Locale Data Repository) provides locale-specific formatting rules for numbers, dates, currencies, and pluralization across 200+ locales:
+Numbers, dates, and currencies with international formatting. Foxtail supports JavaScript Intl API and Ruby CLDR implementations, providing locale-specific formatting rules for numbers, dates, currencies, and pluralization across 200+ locales:
 
 ```ruby
 # English (US)
@@ -176,9 +176,64 @@ $ bundle exec rake
 - **Ruby**: 3.2.9 or higher
 - **fluent.js**: 97/98 test fixtures passing (99.0%)
 
+## Function Backends
+
+Foxtail supports two backends for NUMBER and DATETIME functions:
+
+### Automatic Backend Selection
+
+```ruby
+# Auto-detect (default behavior)
+Foxtail::Function.backend = :auto
+# => Uses JavaScript if ExecJS runtime available, otherwise Foxtail::Intl
+```
+
+### Backend Comparison
+
+| Backend | Performance | Standards Compliance | Requirements |
+|---------|-------------|---------------------|--------------|
+| **JavaScript** | Depends on runtime* | Excellent (Intl API) | JavaScript runtime |
+| **Foxtail::Intl** | Very fast | Good (Ruby CLDR) | None |
+
+*JavaScript backend performance depends on the ExecJS runtime:
+- **Embedded engines** (mini_racer): Fast, direct V8 integration
+  - Number formatting: ~5-6x slower than Foxtail::Intl
+  - DateTime formatting: ~1.7x slower than Foxtail::Intl
+- **External engines** (Node.js): Much slower due to process communication overhead
+  - Can be 100-1000x slower than Foxtail::Intl for number formatting
+
+### Manual Backend Selection
+
+```ruby
+# Use JavaScript backend (better standards compliance)
+Foxtail::Function.backend = :javascript
+
+# Use Foxtail::Intl backend (better performance)
+Foxtail::Function.backend = :foxtail_intl
+```
+
+### Accuracy Considerations
+
+The JavaScript backend provides better compliance with international standards, especially for complex locales with specialized formatting rules:
+- **Indian (hi-IN)**: Correct lakh/crore grouping (12,34,567 vs 1,234,567)
+- **Persian (fa-IR)**: Solar Hijri calendar support
+- **Thai (th-TH)**: Buddhist Era (พ.ศ.) year display
+
+The Foxtail::Intl backend offers significantly better performance with good accuracy for most use cases.
+
+Both backends work seamlessly through the Bundle system:
+
+```ruby
+# Same code works with either backend
+bundle.format("price", amount: 1234.56)
+# JavaScript: Uses native Intl.NumberFormat
+# Foxtail::Intl: Uses Ruby CLDR implementation
+```
+
 ## Performance
 
-- Fast message resolution with efficient CLDR data handling
+- **Message resolution**: Fast with efficient CLDR data handling
+- **Function backends**: Choose based on your performance vs accuracy requirements
 
 ## Contributing
 
