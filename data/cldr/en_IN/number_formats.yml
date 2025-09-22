@@ -1,53 +1,56 @@
 ---
 locale: en_IN
-generated_at: '2025-09-15T15:46:22Z'
+generated_at: '2025-09-22T02:19:58Z'
 cldr_version: '46'
 number_formats:
-  symbols: {}
-  decimal_formats:
-    standard: "#,##,##0.###"
-  percent_formats:
-    standard: "#,##,##0%"
-  currency_formats:
-    standard: "¤#,##,##0.00"
-  compact_formats:
-    short:
-      '1000':
-        one: 0K
-        other: 0K
-      '10000':
-        one: 00K
-        other: 00K
-      '100000':
-        one: 0L
-        other: 0L
-      '1000000':
-        one: 00L
-        other: 00L
-      '10000000':
-        one: 0Cr
-        other: 0Cr
-      '100000000':
-        one: 00Cr
-        other: 00Cr
-      '1000000000':
-        one: 000Cr
-        other: 000Cr
-      '10000000000':
-        one: 0KCr
-        other: 0KCr
-      '100000000000':
-        one: 00KCr
-        other: 00KCr
-      '1000000000000':
-        one: 0LCr
-        other: 0LCr
-      '10000000000000':
-        one: 00LCr
-        other: 00LCr
-      '100000000000000':
-        one: 000LCr
-        other: 000LCr
+  latn:
+    symbols: {}
+    decimal_formats:
+      standard: "#,##,##0.###"
+    percent_formats:
+      standard: "#,##,##0%"
+    currency_formats:
+      standard: "¤#,##,##0.00"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: 0K
+          other: 0K
+        '10000':
+          one: 00K
+          other: 00K
+        '100000':
+          one: 0L
+          other: 0L
+        '1000000':
+          one: 00L
+          other: 00L
+        '10000000':
+          one: 0Cr
+          other: 0Cr
+        '100000000':
+          one: 00Cr
+          other: 00Cr
+        '1000000000':
+          one: 000Cr
+          other: 000Cr
+        '10000000000':
+          one: 0KCr
+          other: 0KCr
+        '100000000000':
+          one: 00KCr
+          other: 00KCr
+        '1000000000000':
+          one: 0LCr
+          other: 0LCr
+        '10000000000000':
+          one: 00LCr
+          other: 00LCr
+        '100000000000000':
+          one: 000LCr
+          other: 000LCr
 currency_fractions:
   ADP:
     digits: 0

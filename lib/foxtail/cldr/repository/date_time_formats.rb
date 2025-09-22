@@ -40,7 +40,19 @@ module Foxtail
           # Determine AM/PM based on hour
           period_type = hour < 12 ? "am" : "pm"
 
+          # Try specified width first
           day_periods = @resolver.resolve("datetime_formats.day_periods.#{context}.#{width}", "datetime_formats")
+
+          # If the period is not found or is English default (AM/PM), try wide
+          if day_periods && (day_periods[period_type] == "AM" || day_periods[period_type] == "PM")
+            wide_periods = @resolver.resolve("datetime_formats.day_periods.#{context}.wide", "datetime_formats")
+            if wide_periods && wide_periods[period_type] &&
+               wide_periods[period_type] != "AM" && wide_periods[period_type] != "PM"
+
+              return wide_periods[period_type]
+            end
+          end
+
           return period_type.upcase unless day_periods
 
           day_periods[period_type] || period_type.upcase

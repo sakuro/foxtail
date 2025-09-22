@@ -1,54 +1,14 @@
 ---
 locale: to
-generated_at: '2025-09-15T15:49:07Z'
+generated_at: '2025-09-22T02:22:58Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    nan: TF
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: 
-  currency_formats:
-    standard: 
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        other: 0a
-      '10000':
-        other: 0m
-      '100000':
-        other: 0k
-      '1000000000':
-        other: 0P
-      '10000000000':
-        other: 00P
-      '100000000000':
-        other: 000P
-    long:
-      '1000':
-        other: 0 afe
-      '10000':
-        other: 0 mano
-      '100000':
-        other: 0 kilu
-      '1000000':
-        other: 0 miliona
-      '10000000':
-        other: 00 miliona
-      '100000000':
-        other: 000 miliona
-      '1000000000':
-        other: 0 piliona
-      '10000000000':
-        other: 00 piliona
-      '100000000000':
-        other: 000 piliona
-      '1000000000000':
-        other: 0 tiliona
-      '10000000000000':
-        other: 00 tiliona
-      '100000000000000':
-        other: 000 tiliona
+  arab:
+    symbols:
+      minus_sign: "‏-"
+      plus_sign: "‏+"
+      nan: TF
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 

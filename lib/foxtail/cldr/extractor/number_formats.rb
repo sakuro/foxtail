@@ -13,18 +13,30 @@ module Foxtail
       # @see https://unicode.org/reports/tr35/tr35-numbers.html
       class NumberFormats < MultiLocale
         private def extract_data_from_xml(xml_doc)
-          formats = extract_format_patterns(xml_doc)
+          # First discover all numbering systems used in this locale
+          numbering_systems = discover_numbering_systems(xml_doc)
 
-          data = {
-            "number_formats" => {
-              "symbols" => extract_symbols(xml_doc),
+          # Extract data for all discovered numbering systems
+          all_formats = {}
+          numbering_systems.each do |ns|
+            formats = extract_format_patterns(xml_doc, ns)
+            next if formats.empty?
+
+            all_formats[ns] = {
+              "symbols" => extract_symbols(xml_doc, ns),
               "decimal_formats" => {"standard" => formats["decimal"]},
               "percent_formats" => {"standard" => formats["percent"]},
-              "currency_formats" => extract_currency_formats(xml_doc, formats),
+              "currency_formats" => extract_currency_formats(xml_doc, formats, ns),
               "scientific_formats" => {"standard" => formats["scientific"]},
-              "compact_formats" => extract_compact_formats(xml_doc)
+              "compact_formats" => extract_compact_formats(xml_doc, ns)
             }
-          }
+          end
+
+          data = {"number_formats" => all_formats}
+
+          # Add numbering system settings
+          numbering_settings = extract_numbering_system_settings(xml_doc)
+          data["numbering_system_settings"] = numbering_settings unless numbering_settings.empty?
 
           # Add currency_fractions at the root level to match previous structure
           currency_fractions = extract_currency_fractions
@@ -39,7 +51,27 @@ module Foxtail
           data.any? {|_, section_data| section_data.is_a?(Hash) && !section_data.empty? }
         end
 
-        private def extract_symbols(xml_doc)
+        private def discover_numbering_systems(xml_doc)
+          systems = Set.new
+
+          # Always include latn as the default
+          systems << "latn"
+
+          # Find all numberSystem attributes in the document
+          xml_doc.elements.each("//symbols[@numberSystem]") do |element|
+            ns = element.attributes["numberSystem"]
+            systems << ns if ns
+          end
+
+          xml_doc.elements.each("//*[@numberSystem]") do |element|
+            ns = element.attributes["numberSystem"]
+            systems << ns if ns
+          end
+
+          systems.to_a.sort
+        end
+
+        private def extract_symbols(xml_doc, numbering_system="latn")
           symbols = {}
 
           # All symbol names can be converted using inflector.underscore
@@ -47,7 +79,7 @@ module Foxtail
 
           xpath_names.each do |xpath_name|
             key_name = inflector.underscore(xpath_name)
-            xml_doc.elements.each("ldml/numbers/symbols[@numberSystem='latn']/#{xpath_name}") do |element|
+            xml_doc.elements.each("ldml/numbers/symbols[@numberSystem='#{numbering_system}']/#{xpath_name}") do |element|
               symbols[key_name] = element.text
             end
           end
@@ -58,26 +90,26 @@ module Foxtail
           symbols
         end
 
-        private def extract_format_patterns(xml_doc)
+        private def extract_format_patterns(xml_doc, numbering_system="latn")
           formats = {}
 
           # Decimal formats - get the standard pattern (no type attribute)
-          xpath = "ldml/numbers/decimalFormats[@numberSystem='latn']/decimalFormatLength[not(@type)]/decimalFormat/pattern[not(@type)]"
+          xpath = "ldml/numbers/decimalFormats[@numberSystem='#{numbering_system}']/decimalFormatLength[not(@type)]/decimalFormat/pattern[not(@type)]"
           decimal_element = xml_doc.elements[xpath]
           formats["decimal"] = decimal_element.text if decimal_element
 
           # Percent formats - get the standard pattern
-          xpath = "ldml/numbers/percentFormats[@numberSystem='latn']/percentFormatLength[not(@type)]/percentFormat/pattern[not(@type)]"
+          xpath = "ldml/numbers/percentFormats[@numberSystem='#{numbering_system}']/percentFormatLength[not(@type)]/percentFormat/pattern[not(@type)]"
           percent_element = xml_doc.elements[xpath]
           formats["percent"] = percent_element.text if percent_element
 
           # Scientific formats - get the standard pattern
-          xpath = "ldml/numbers/scientificFormats[@numberSystem='latn']/scientificFormatLength[not(@type)]/scientificFormat/pattern[not(@type)]"
+          xpath = "ldml/numbers/scientificFormats[@numberSystem='#{numbering_system}']/scientificFormatLength[not(@type)]/scientificFormat/pattern[not(@type)]"
           scientific_element = xml_doc.elements[xpath]
           formats["scientific"] = scientific_element.text if scientific_element
 
           # Currency formats - get the standard pattern
-          xpath = "ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat/pattern[not(@type)]"
+          xpath = "ldml/numbers/currencyFormats[@numberSystem='#{numbering_system}']/currencyFormatLength[not(@type)]/currencyFormat/pattern[not(@type)]"
           currency_element = xml_doc.elements[xpath]
           formats["currency"] = currency_element.text if currency_element
 
@@ -121,11 +153,11 @@ module Foxtail
           fractions
         end
 
-        private def extract_currency_formats(xml_doc, formats)
+        private def extract_currency_formats(xml_doc, formats, numbering_system="latn")
           currency_formats = {"standard" => formats["currency"]}
 
           # Check for accounting pattern
-          xpath = "ldml/numbers/currencyFormats[@numberSystem='latn']/currencyFormatLength[not(@type)]/currencyFormat[@type='accounting']"
+          xpath = "ldml/numbers/currencyFormats[@numberSystem='#{numbering_system}']/currencyFormatLength[not(@type)]/currencyFormat[@type='accounting']"
           accounting_format = xml_doc.elements[xpath]
 
           if accounting_format
@@ -146,12 +178,12 @@ module Foxtail
           currency_formats
         end
 
-        private def extract_compact_formats(xml_doc)
+        private def extract_compact_formats(xml_doc, numbering_system="latn")
           compact_formats = {}
 
           # Extract short compact formats (like "0K", "0万")
           short_formats = {}
-          xml_doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='latn']/decimalFormatLength[@type='short']/decimalFormat/pattern") do |pattern|
+          xml_doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='#{numbering_system}']/decimalFormatLength[@type='short']/decimalFormat/pattern") do |pattern|
             type = pattern.attributes["type"]
             count = pattern.attributes["count"] || "other"
             next unless type && pattern.text
@@ -163,7 +195,7 @@ module Foxtail
 
           # Extract long compact formats (like "0 thousand", "0万")
           long_formats = {}
-          xml_doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='latn']/decimalFormatLength[@type='long']/decimalFormat/pattern") do |pattern|
+          xml_doc.elements.each("ldml/numbers/decimalFormats[@numberSystem='#{numbering_system}']/decimalFormatLength[@type='long']/decimalFormat/pattern") do |pattern|
             type = pattern.attributes["type"]
             count = pattern.attributes["count"] || "other"
             next unless type && pattern.text
@@ -174,6 +206,25 @@ module Foxtail
           compact_formats["long"] = long_formats unless long_formats.empty?
 
           compact_formats
+        end
+
+        private def extract_numbering_system_settings(xml_doc)
+          settings = {}
+
+          # Extract default numbering system
+          default_elem = xml_doc.elements["ldml/numbers/defaultNumberingSystem"]
+          settings["default"] = default_elem.text if default_elem
+
+          # Extract alternative default (latn) if present
+          default_latn_elem = xml_doc.elements["ldml/numbers/defaultNumberingSystem[@alt='latn']"]
+          settings["default_latn"] = default_latn_elem.text if default_latn_elem
+
+          # Extract other numbering systems (native, traditional, finance)
+          xml_doc.elements.each("ldml/numbers/otherNumberingSystems/*") do |elem|
+            settings[elem.name] = elem.text
+          end
+
+          settings
         end
       end
     end

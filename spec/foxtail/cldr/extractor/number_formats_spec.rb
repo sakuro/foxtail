@@ -22,7 +22,7 @@ RSpec.describe Foxtail::CLDR::Extractor::NumberFormats, type: :extractor do
         data = YAML.load_file(output_file)
         expect(data["locale"]).to eq("root")
         expect(data["number_formats"]).to be_a(Hash)
-        expect(data["number_formats"]["symbols"]).to include("decimal", "group")
+        expect(data["number_formats"]["latn"]["symbols"]).to include("decimal", "group")
         expect(data["number_formats"]).not_to have_key("currencies")
       end
     end

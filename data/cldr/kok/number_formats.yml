@@ -1,47 +1,62 @@
 ---
 locale: kok
-generated_at: '2025-09-15T15:47:36Z'
+generated_at: '2025-09-22T02:21:18Z'
 cldr_version: '46'
 number_formats:
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: 
-  currency_formats:
-    standard: "¤#,##0.00;(¤#,##0.00)"
-    accounting: "¤#,##0.00;(¤#,##0.00)"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000000000':
-        other: 0B
-      '10000000000':
-        other: 00B
-      '100000000000':
-        other: 000B
-    long:
-      '1000':
-        other: 0 हजार
-      '10000':
-        other: 00 हजार
-      '100000':
-        other: 000 हजार
-      '1000000':
-        other: 0 दशलक्ष
-      '10000000':
-        other: 00 दशलक्ष
-      '100000000':
-        other: 000 दशलक्ष
-      '1000000000':
-        other: 0 अब्ज
-      '10000000000':
-        other: 00 अब्ज
-      '100000000000':
-        other: 000 अब्ज
-      '1000000000000':
-        other: 0 ट्रिलियन
-      '10000000000000':
-        other: 00 ट्रिलियन
-      '100000000000000':
-        other: 000 ट्रिलियन
+  deva:
+    symbols:
+      nan: 0/0
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "¤#,##,##0.00"
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  latn:
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "¤#,##0.00;(¤#,##0.00)"
+      accounting: "¤#,##0.00;(¤#,##0.00)"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000000000':
+          other: 0B
+        '10000000000':
+          other: 00B
+        '100000000000':
+          other: 000B
+      long:
+        '1000':
+          other: 0 हजार
+        '10000':
+          other: 00 हजार
+        '100000':
+          other: 000 हजार
+        '1000000':
+          other: 0 दशलक्ष
+        '10000000':
+          other: 00 दशलक्ष
+        '100000000':
+          other: 000 दशलक्ष
+        '1000000000':
+          other: 0 अब्ज
+        '10000000000':
+          other: 00 अब्ज
+        '100000000000':
+          other: 000 अब्ज
+        '1000000000000':
+          other: 0 ट्रिलियन
+        '10000000000000':
+          other: 00 ट्रिलियन
+        '100000000000000':
+          other: 000 ट्रिलियन
+numbering_system_settings:
+  native: deva

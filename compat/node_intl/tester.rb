@@ -47,6 +47,7 @@ class NodeIntlTester
 
     # Number format test cases
     add_style_notation_combination_tests
+    add_numbering_system_tests
 
     # DateTime format test cases
     add_datetime_format_tests
@@ -129,8 +130,8 @@ class NodeIntlTester
     # All valid notation values
     notations = %w[standard scientific engineering compact]
 
-    # Test locales
-    locales = %w[en-US ja-JP de-DE fr-FR]
+    # Test locales - including Arabic, Chinese, Korean, Thai
+    locales = %w[en-US ja-JP de-DE fr-FR ar-SA zh-CN ko-KR th-TH]
 
     styles.each do |style|
       notations.each do |notation|
@@ -147,6 +148,14 @@ class NodeIntlTester
                                      "JPY"
                                    when "de-DE", "fr-FR"
                                      "EUR"
+                                   when "ar-SA"
+                                     "SAR"
+                                   when "zh-CN"
+                                     "CNY"
+                                   when "ko-KR"
+                                     "KRW"
+                                   when "th-TH"
+                                     "THB"
                                    else
                                      "USD"
                                    end
@@ -200,6 +209,54 @@ class NodeIntlTester
     end
   end
 
+  # Add numberingSystem option tests for Node.js compatibility
+  private def add_numbering_system_tests
+    # Test values for numbering system tests
+    test_values = [
+      123_456.789, # Number with fractional part
+      42000,       # Large round number
+      1234.56,     # Currency-friendly number
+      0.12         # Percentage-friendly number
+    ]
+
+    # Supported numbering systems
+    numbering_systems = %w[arab hanidec thai fullwide]
+
+    # Test locales - use English as base locale for numbering system override
+    locales = %w[en-US]
+
+    # Test different styles
+    styles = %w[decimal currency percent]
+
+    numbering_systems.each do |numbering_system|
+      styles.each do |style|
+        test_values.each do |value|
+          locales.each do |locale|
+            # Build options with numberingSystem
+            options = {style:, numberingSystem: numbering_system}
+
+            # Add required parameters for specific styles
+            case style
+            when "currency"
+              options[:currency] = "USD"
+            end
+
+            # Generate unique ID
+            value_part = value.to_s.gsub("-", "neg").tr(".", "_")
+            id = ["number", style, "standard", locale.tr("-", "_"), value_part, "ns", numbering_system].join("_")
+
+            @number_test_cases << {
+              id:,
+              value:,
+              locale:,
+              options:
+            }
+          end
+        end
+      end
+    end
+  end
+
   private def add_datetime_format_tests
     # Test dates for different scenarios
     test_dates = [
@@ -213,8 +270,8 @@ class NodeIntlTester
       "NaN" # Special value: not a number
     ]
 
-    # Test locales
-    locales = %w[en-US ja-JP de-DE fr-FR]
+    # Test locales - including Arabic, Chinese, Korean, Thai
+    locales = %w[en-US ja-JP de-DE fr-FR ar-SA zh-CN ko-KR th-TH]
 
     # Date/Time style combinations
     styles = [

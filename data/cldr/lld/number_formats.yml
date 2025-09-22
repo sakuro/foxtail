@@ -1,92 +1,93 @@
 ---
 locale: lld
-generated_at: '2025-09-15T04:01:12Z'
+generated_at: '2025-09-22T02:21:29Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: ","
-    group: "."
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: 
-  currency_formats:
-    standard: "#,##0.00 ¤"
-    accounting: "#,##0.00 ¤"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        one: 0m
-        other: 0m
-      '10000':
-        one: 00m
-        other: 00m
-      '100000':
-        one: 000m
-        other: 000m
-      '1000000':
-        one: 0 Mln
-        other: 0 Mln
-      '10000000':
-        one: 00 Mln
-        other: 00 Mln
-      '100000000':
-        one: 000 Mln
-        other: 000 Mln
-      '1000000000':
-        one: 0 Mlg
-        other: 0 Mlg
-      '10000000000':
-        one: 00 Mlg
-        other: 00 Mlg
-      '100000000000':
-        one: 000 Mlg
-        other: 000 Mlg
-      '1000000000000':
-        one: 0 Bln
-        other: 0 Bln
-      '10000000000000':
-        one: 00 Bln
-        other: 00 Bln
-      '100000000000000':
-        one: 000 Bln
-        other: 000 Bln
-    long:
-      '1000':
-        one: mile
-        other: 0 mile
-      '10000':
-        one: 00 mile
-        other: 00 mile
-      '100000':
-        one: 000 mile
-        other: 000 mile
-      '1000000':
-        one: 0 miliun
-        other: 0 miliuns
-      '10000000':
-        one: 00 miliuns
-        other: 00 miliuns
-      '100000000':
-        one: 000 miliuns
-        other: 000 miliuns
-      '1000000000':
-        one: 0 miliard
-        other: 0 miliarg
-      '10000000000':
-        one: 00 miliarg
-        other: 00 miliarg
-      '100000000000':
-        one: 000 miliarg
-        other: 000 miliarg
-      '1000000000000':
-        one: 0 biliun
-        other: 0 biliuns
-      '10000000000000':
-        one: 00 biliuns
-        other: 00 biliuns
-      '100000000000000':
-        one: 000 biliuns
-        other: 000 biliuns
+  latn:
+    symbols:
+      decimal: ","
+      group: "."
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "#,##0.00 ¤"
+      accounting: "#,##0.00 ¤"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: 0m
+          other: 0m
+        '10000':
+          one: 00m
+          other: 00m
+        '100000':
+          one: 000m
+          other: 000m
+        '1000000':
+          one: 0 Mln
+          other: 0 Mln
+        '10000000':
+          one: 00 Mln
+          other: 00 Mln
+        '100000000':
+          one: 000 Mln
+          other: 000 Mln
+        '1000000000':
+          one: 0 Mlg
+          other: 0 Mlg
+        '10000000000':
+          one: 00 Mlg
+          other: 00 Mlg
+        '100000000000':
+          one: 000 Mlg
+          other: 000 Mlg
+        '1000000000000':
+          one: 0 Bln
+          other: 0 Bln
+        '10000000000000':
+          one: 00 Bln
+          other: 00 Bln
+        '100000000000000':
+          one: 000 Bln
+          other: 000 Bln
+      long:
+        '1000':
+          one: mile
+          other: 0 mile
+        '10000':
+          one: 00 mile
+          other: 00 mile
+        '100000':
+          one: 000 mile
+          other: 000 mile
+        '1000000':
+          one: 0 miliun
+          other: 0 miliuns
+        '10000000':
+          one: 00 miliuns
+          other: 00 miliuns
+        '100000000':
+          one: 000 miliuns
+          other: 000 miliuns
+        '1000000000':
+          one: 0 miliard
+          other: 0 miliarg
+        '10000000000':
+          one: 00 miliarg
+          other: 00 miliarg
+        '100000000000':
+          one: 000 miliarg
+          other: 000 miliarg
+        '1000000000000':
+          one: 0 biliun
+          other: 0 biliuns
+        '10000000000000':
+          one: 00 biliuns
+          other: 00 biliuns
+        '100000000000000':
+          one: 000 biliuns
+          other: 000 biliuns

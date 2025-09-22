@@ -1,103 +1,588 @@
 ---
 locale: bs
-generated_at: '2025-09-15T15:45:51Z'
+generated_at: '2025-09-22T02:19:25Z'
 cldr_version: '46'
 number_formats:
-  symbols:
-    decimal: ","
-    group: "."
-  decimal_formats:
-    standard: 
-  percent_formats:
-    standard: 
-  currency_formats:
-    standard: "#,##0.00 ¤"
-  scientific_formats:
-    standard: 
-  compact_formats:
-    short:
-      '1000':
-        one: 0 hilj'.'
-        other: 0 hilj'.'
-      '10000':
-        one: 00 hilj'.'
-        other: 00 hilj'.'
-      '100000':
-        one: 000 hilj'.'
-        other: 000 hilj'.'
-      '1000000':
-        one: 0 mil'.'
-        other: 0 mil'.'
-      '10000000':
-        one: 00 mil'.'
-        other: 00 mil'.'
-      '100000000':
-        one: 000 mil'.'
-        other: 000 mil'.'
-      '1000000000':
-        one: 0 mlrd'.'
-        other: 0 mlrd'.'
-      '10000000000':
-        one: 00 mlrd'.'
-        other: 00 mlrd'.'
-      '100000000000':
-        one: 000 mlrd'.'
-        other: 000 mlrd'.'
-      '1000000000000':
-        one: 0 bil'.'
-        other: 0 bil'.'
-      '10000000000000':
-        one: 00 bil'.'
-        other: 00 bil'.'
-      '100000000000000':
-        one: 000 bil'.'
-        other: 000 bil'.'
-    long:
-      '1000':
-        one: 0 hiljada
-        few: 0 hiljade
-        other: 0 hiljada
-      '10000':
-        one: 00 hiljada
-        few: 00 hiljade
-        other: 00 hiljada
-      '100000':
-        one: 000 hiljada
-        few: 000 hiljade
-        other: 000 hiljada
-      '1000000':
-        one: 0 milion
-        few: 0 miliona
-        other: 0 miliona
-      '10000000':
-        one: 00 milion
-        few: 00 miliona
-        other: 00 miliona
-      '100000000':
-        one: 000 milion
-        few: 000 miliona
-        other: 000 miliona
-      '1000000000':
-        one: 0 milijarda
-        few: 0 milijarde
-        other: 0 milijardi
-      '10000000000':
-        one: 00 milijarda
-        few: 00 milijarde
-        other: 00 milijardi
-      '100000000000':
-        one: 000 milijarda
-        few: 000 milijarde
-        other: 000 milijardi
-      '1000000000000':
-        one: 0 bilion
-        few: 0 biliona
-        other: 0 biliona
-      '10000000000000':
-        one: 00 bilion
-        few: 00 biliona
-        other: 00 biliona
-      '100000000000000':
-        one: 000 bilion
-        few: 000 biliona
-        other: 000 biliona
+  adlm:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  arabext:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  bali:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  beng:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  brah:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  cakm:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  cham:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  deva:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  fullwide:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  gong:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  gonm:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  gujr:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  guru:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  hanidec:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  java:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  kali:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  khmr:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  knda:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  lana:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  lanatham:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  laoo:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  latn:
+    symbols:
+      decimal: ","
+      group: "."
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "#,##0.00 ¤"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: 0 hilj'.'
+          other: 0 hilj'.'
+        '10000':
+          one: 00 hilj'.'
+          other: 00 hilj'.'
+        '100000':
+          one: 000 hilj'.'
+          other: 000 hilj'.'
+        '1000000':
+          one: 0 mil'.'
+          other: 0 mil'.'
+        '10000000':
+          one: 00 mil'.'
+          other: 00 mil'.'
+        '100000000':
+          one: 000 mil'.'
+          other: 000 mil'.'
+        '1000000000':
+          one: 0 mlrd'.'
+          other: 0 mlrd'.'
+        '10000000000':
+          one: 00 mlrd'.'
+          other: 00 mlrd'.'
+        '100000000000':
+          one: 000 mlrd'.'
+          other: 000 mlrd'.'
+        '1000000000000':
+          one: 0 bil'.'
+          other: 0 bil'.'
+        '10000000000000':
+          one: 00 bil'.'
+          other: 00 bil'.'
+        '100000000000000':
+          one: 000 bil'.'
+          other: 000 bil'.'
+      long:
+        '1000':
+          one: 0 hiljada
+          few: 0 hiljade
+          other: 0 hiljada
+        '10000':
+          one: 00 hiljada
+          few: 00 hiljade
+          other: 00 hiljada
+        '100000':
+          one: 000 hiljada
+          few: 000 hiljade
+          other: 000 hiljada
+        '1000000':
+          one: 0 milion
+          few: 0 miliona
+          other: 0 miliona
+        '10000000':
+          one: 00 milion
+          few: 00 miliona
+          other: 00 miliona
+        '100000000':
+          one: 000 milion
+          few: 000 miliona
+          other: 000 miliona
+        '1000000000':
+          one: 0 milijarda
+          few: 0 milijarde
+          other: 0 milijardi
+        '10000000000':
+          one: 00 milijarda
+          few: 00 milijarde
+          other: 00 milijardi
+        '100000000000':
+          one: 000 milijarda
+          few: 000 milijarde
+          other: 000 milijardi
+        '1000000000000':
+          one: 0 bilion
+          few: 0 biliona
+          other: 0 biliona
+        '10000000000000':
+          one: 00 bilion
+          few: 00 biliona
+          other: 00 biliona
+        '100000000000000':
+          one: 000 bilion
+          few: 000 biliona
+          other: 000 biliona
+  lepc:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  limb:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  mlym:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  mong:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  mtei:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  mymr:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  mymrshan:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  nkoo:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  olck:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  orya:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  osma:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  rohg:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  saur:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  shrd:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  sora:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  sund:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  takr:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  talu:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  tamldec:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  telu:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  thai:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  tibt:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}
+  vaii:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: "#,##0 %"
+    currency_formats:
+      standard: 
+    scientific_formats:
+      standard: 
+    compact_formats: {}

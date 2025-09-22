@@ -75,6 +75,11 @@ module Foxtail
           end
         end
 
+        # Determine numbering system and initialize digit mapper
+        @numbering_system = determine_numbering_system(@locale, @options)
+        @symbol_numbering_system = determine_symbol_numbering_system(@locale, @options)
+        @digit_mapper = Foxtail::Intl::DigitMapper.new(@numbering_system) if @numbering_system != "latn"
+
         @options.freeze
       end
 
@@ -98,7 +103,7 @@ module Foxtail
 
         # Handle special values (Infinity, -Infinity, NaN) early
         if special_value?(@original_value)
-          return format_special_value(@original_value)
+          return format_special_value(@original_value, using_negative_pattern: false)
         end
 
         # Apply style-specific transformations
@@ -113,11 +118,16 @@ module Foxtail
         # Always use absolute value for formatting (we handle sign separately)
         format_value = transformed_value.negative? ? transformed_value.abs : transformed_value
 
-        pattern_tokens, has_separator =
+        pattern_tokens, using_negative_pattern =
           case tokens
           in [*positive, PatternParser::Number::PatternSeparatorToken, *negative]
             # Pattern with positive and negative forms (e.g., "#,##0.00;(#,##0.00)")
-            [transformed_value.negative? ? negative : positive, true]
+            # For scientific notation, always use positive pattern to preserve ExponentToken
+            if positive.any?(PatternParser::Number::ExponentToken)
+              [positive, false]
+            else
+              [transformed_value.negative? ? negative : positive, transformed_value.negative?]
+            end
           in _
             # Pattern with only positive form
             [tokens, false]
@@ -137,8 +147,9 @@ module Foxtail
 
         # Build formatted string from tokens
         # Pass original sign information via options
-        original_was_negative = transformed_value.negative? && !has_separator
-        build_formatted_string(format_value, pattern_tokens, original_was_negative)
+        # For scientific notation, always preserve original sign information
+        original_was_negative = transformed_value.negative?
+        build_formatted_string(format_value, pattern_tokens, original_was_negative, using_negative_pattern:)
       end
 
       alias format call
@@ -194,32 +205,34 @@ module Foxtail
         # Handle scientific and engineering notation with style consideration
         if notation == "scientific" || notation == "engineering"
           # Combine scientific pattern with style-specific symbols
-          base_pattern = @formats.scientific_pattern
+          base_pattern = @formats.scientific_pattern("standard", @numbering_system)
           return combine_pattern_with_style(base_pattern, style)
         elsif notation == "compact"
           # Compact notation uses simplified patterns with abbreviations
           # Use decimal pattern as base but apply style-specific symbols
-          base_pattern = @formats.decimal_pattern
+          base_pattern = @formats.decimal_pattern("standard", @numbering_system)
           return combine_pattern_with_style(base_pattern, style)
         end
 
         # Style-based pattern selection for standard notation
         case style
         when "percent"
-          @formats.percent_pattern
+          @formats.percent_pattern("standard", @numbering_system)
         when "currency"
           currency_style = @options[:currencyDisplay] == "accounting" ? "accounting" : "standard"
-          @formats.currency_pattern(currency_style)
+          @formats.currency_pattern(currency_style, @numbering_system)
         else
           # Use decimal pattern for unit, decimal, and default cases
-          @formats.decimal_pattern
+          @formats.decimal_pattern("standard", @numbering_system)
         end
       end
 
       # Apply style-specific value transformations
       private def apply_style_transformations
         # Round to currency-specific decimal places for zero-precision currencies (e.g., JPY)
-        if @options[:style] == "currency" && @options[:maximumFractionDigits] == 0
+        # Skip rounding for compact notation to preserve small decimal values
+        notation = @options[:notation] || "standard"
+        if @options[:style] == "currency" && @options[:maximumFractionDigits] == 0 && notation != "compact"
           BigDecimal(@decimal_value.round(0).to_s)
         else
           @decimal_value
@@ -227,7 +240,7 @@ module Foxtail
       end
 
       # Build the final formatted string from tokens
-      private def build_formatted_string(format_value, tokens, original_was_negative)
+      private def build_formatted_string(format_value, tokens, original_was_negative, using_negative_pattern: false)
         # Analyze pattern structure first to check for scientific notation
         pattern_info = analyze_pattern_structure(tokens)
 
@@ -235,7 +248,7 @@ module Foxtail
 
         # Handle compact notation first (before scientific check)
         if notation == "compact"
-          return format_compact_number(format_value, original_was_negative)
+          return format_compact_number(format_value, original_was_negative, using_negative_pattern:)
         end
 
         # Check if this is scientific notation (has ExponentToken)
@@ -276,7 +289,7 @@ module Foxtail
         result = ""
 
         # Determine minus sign placement for negative numbers without explicit negative pattern
-        if original_was_negative
+        if original_was_negative && !using_negative_pattern
           # Check if there's a space or other non-currency tokens between currency and digits
           has_separator_after_currency = pattern_info[:prefix_tokens].size > 1 &&
                                          pattern_info[:prefix_tokens].any? {|t| !t.is_a?(PatternParser::Number::CurrencyToken) }
@@ -290,14 +303,14 @@ module Foxtail
             pattern_info[:prefix_tokens].each do |token|
               result += format_non_digit_token(token, format_value)
             end
-            result += @formats.minus_sign
+            result += @formats.minus_sign(@symbol_numbering_system)
           else
             # Currency symbol without separator: "¤#,##0.00"
             # Pattern: [CurrencyToken("¤")] + digits
             # Result:  "-$1,234.50"
             #          ^ ^^^^^^^^^
             #          minus+prefix+digits
-            result += @formats.minus_sign
+            result += @formats.minus_sign(@symbol_numbering_system)
             pattern_info[:prefix_tokens].each do |token|
               result += format_non_digit_token(token, format_value)
             end
@@ -356,7 +369,7 @@ module Foxtail
               limited_fractional = rounded_fractional[0...pattern_info[:fractional_digits]]
               trimmed_fractional = limited_fractional.gsub(/0+$/, "")
               if trimmed_fractional.length > 0
-                result += @formats.decimal_symbol
+                result += @formats.decimal_symbol(@symbol_numbering_system)
                 result += trimmed_fractional
               end
             end
@@ -364,12 +377,12 @@ module Foxtail
         elsif pattern_info[:has_decimal] && fractional_part.length > 0 && pattern_info[:fractional_digits] > 0
           formatted_fractional = format_fractional_part(fractional_part, pattern_info)
           if formatted_fractional.length > 0
-            result += @formats.decimal_symbol
+            result += @formats.decimal_symbol(@symbol_numbering_system)
             result += formatted_fractional
           end
         elsif pattern_info[:has_decimal] && pattern_info[:required_fractional_digits] > 0
           # Show decimal separator and required zeros even if no fractional part
-          result += @formats.decimal_symbol
+          result += @formats.decimal_symbol(@symbol_numbering_system)
           result += "0" * pattern_info[:required_fractional_digits]
         end
 
@@ -396,6 +409,11 @@ module Foxtail
             # Fallback: append unit name if no pattern found
             result += " #{unit}"
           end
+        end
+
+        # Apply numbering system digit conversion as final step
+        if @digit_mapper
+          result = @digit_mapper.map(result)
         end
 
         result
@@ -487,7 +505,7 @@ module Foxtail
         digit_groups = split_into_groups(integer_part)
 
         # Apply grouping separators
-        digit_groups.join(@formats.group_symbol)
+        digit_groups.join(@formats.group_symbol(@symbol_numbering_system))
       end
 
       # Split integer string into groups of 3 digits from the right
@@ -535,7 +553,14 @@ module Foxtail
         when PatternParser::Number::CurrencyToken
           format_currency_token(token, decimal_value)
         when PatternParser::Number::PercentToken
-          @formats.percent_sign
+          percent_symbol = @formats.percent_sign(@symbol_numbering_system)
+          # For compact notation, remove ALM from percent sign for Node.js compatibility
+          notation = @options[:notation] || "standard"
+          if notation == "compact"
+            # Compact notation doesn't use bidirectional control characters
+            percent_symbol = percent_symbol.tr("\u200E\u200F\u061C", "")
+          end
+          percent_symbol
         when PatternParser::Number::PerMilleToken
           "‰"
         when PatternParser::Number::ExponentToken
@@ -547,7 +572,7 @@ module Foxtail
         when PatternParser::Number::PlusToken
           "+"
         when PatternParser::Number::MinusToken
-          @formats.minus_sign
+          @formats.minus_sign(@symbol_numbering_system)
         else
           ""
         end
@@ -573,7 +598,8 @@ module Foxtail
 
       # Format exponent token for scientific notation (deprecated - use format_exponent_token_with_value)
       private def format_exponent_token(token, decimal_value)
-        return "E0" if decimal_value.zero?
+        exp_symbol = @formats.exponential_symbol(@symbol_numbering_system)
+        return "#{exp_symbol}0" if decimal_value.zero?
 
         # Calculate exponent
         abs_value = decimal_value.abs
@@ -581,22 +607,23 @@ module Foxtail
 
         # Format exponent with required digits
         exponent_str = exponent.abs.to_s.rjust(token.exponent_digits, "0")
-        exponent_str = "#{@formats.minus_sign}#{exponent_str}" if exponent.negative?
+        exponent_str = "#{@formats.minus_sign(@symbol_numbering_system)}#{exponent_str}" if exponent.negative?
         exponent_str = "+#{exponent_str}" if exponent.positive? && token.show_exponent_sign?
 
-        "E#{exponent_str}"
+        "#{exp_symbol}#{exponent_str}"
       end
 
       # Format exponent token with pre-calculated exponent value
       private def format_exponent_token_with_value(token, exponent)
-        return "E0" if exponent.zero?
+        exp_symbol = @formats.exponential_symbol(@symbol_numbering_system)
+        return "#{exp_symbol}0" if exponent.zero?
 
         # Format exponent with required digits
         exponent_str = exponent.abs.to_s.rjust(token.exponent_digits, "0")
-        exponent_str = "#{@formats.minus_sign}#{exponent_str}" if exponent.negative?
+        exponent_str = "#{@formats.minus_sign(@symbol_numbering_system)}#{exponent_str}" if exponent.negative?
         exponent_str = "+#{exponent_str}" if exponent.positive? && token.show_exponent_sign?
 
-        "E#{exponent_str}"
+        "#{exp_symbol}#{exponent_str}"
       end
 
       # Normalize number for scientific notation (mantissa between 1-10)
@@ -689,12 +716,12 @@ module Foxtail
       end
 
       # Format number using compact notation based on CLDR data
-      private def format_compact_number(decimal_value, original_was_negative)
+      private def format_compact_number(decimal_value, original_was_negative, using_negative_pattern: false)
         style = @options[:style] || "decimal"
 
         # Handle zero value with style - use proper pattern formatting
         if decimal_value.zero?
-          formatted_number = "0"
+          formatted_number = apply_digit_conversion("0")
           return apply_style_to_compact_result(formatted_number, style)
         end
 
@@ -715,17 +742,17 @@ module Foxtail
             # Apply rounding to original signed value for correct result
             original_value = original_was_negative ? -decimal_value : decimal_value
             rounded_value = original_value.round
-            formatted = rounded_value.abs.to_s
+            formatted = apply_digit_conversion(rounded_value.abs.to_s)
             if rounded_value.negative?
-              formatted = @formats.minus_sign + formatted
+              formatted = @formats.minus_sign(@symbol_numbering_system) + formatted
             end
             # Apply style to the formatted number
             return apply_style_to_compact_result(formatted, style)
           end
 
           # Apply sign and style
-          if original_was_negative
-            formatted = @formats.minus_sign + formatted
+          if original_was_negative && !using_negative_pattern
+            formatted = @formats.minus_sign(@symbol_numbering_system) + formatted
           end
           return apply_style_to_compact_result(formatted, style)
         end
@@ -734,8 +761,8 @@ module Foxtail
         formatted_number = apply_compact_pattern(decimal_value.abs, compact_info)
 
         # Preserve original sign using passed option
-        if original_was_negative
-          formatted_number = @formats.minus_sign + formatted_number
+        if original_was_negative && !using_negative_pattern
+          formatted_number = @formats.minus_sign(@symbol_numbering_system) + formatted_number
         end
 
         # Apply style to compact result
@@ -745,7 +772,7 @@ module Foxtail
       # Find the appropriate compact pattern from CLDR data
       private def find_compact_pattern(decimal_value, compact_display)
         abs_value = decimal_value.abs
-        patterns = @formats.compact_patterns(compact_display)
+        patterns = @formats.compact_patterns(compact_display, @numbering_system)
 
         return nil if patterns.empty?
 
@@ -765,7 +792,7 @@ module Foxtail
 
         return nil unless best_magnitude
 
-        pattern = @formats.compact_pattern(best_magnitude, compact_display, "other")
+        pattern = @formats.compact_pattern(best_magnitude, compact_display, "other", @numbering_system)
         return nil unless pattern
 
         # Find the base divisor for this unit by finding the smallest magnitude with the same unit
@@ -838,13 +865,15 @@ module Foxtail
       # Format scaled value for single-digit compact patterns (e.g., "0K")
       private def format_compact_single_digit(scaled_value)
         if scaled_value >= 10
-          scaled_value.round.to_s
+          apply_digit_conversion(scaled_value.round.to_s)
         elsif scaled_value.round(1) == scaled_value.round(0)
-          scaled_value.round(0).to_s
+          apply_digit_conversion(scaled_value.round(0).to_s)
         else
           formatted = scaled_value.round(1).to_s("F")
           # Replace English decimal separator with locale-specific one
-          formatted.gsub(".", @formats.decimal_symbol)
+          formatted.gsub!(".", @formats.decimal_symbol(@symbol_numbering_system))
+          # Apply digit conversion to the entire formatted string
+          apply_digit_conversion(formatted)
         end
       end
 
@@ -857,7 +886,7 @@ module Foxtail
           # Apply locale-specific grouping for large numbers
           format_integer_with_locale_grouping(integer_value.to_s)
         else
-          integer_value.to_s
+          apply_digit_conversion(integer_value.to_s)
         end
       end
 
@@ -866,7 +895,9 @@ module Foxtail
         # Split into groups of 3 digits from right to left
         groups = integer_str.reverse.scan(/.{1,3}/).map(&:reverse)
         groups.reverse!
-        groups.join(@formats.group_symbol)
+        grouped = groups.join(@formats.group_symbol(@symbol_numbering_system))
+        # Apply digit conversion to the entire grouped string
+        apply_digit_conversion(grouped)
       end
 
       # Find the base divisor for a unit by finding the smallest magnitude with the same unit symbol
@@ -921,7 +952,17 @@ module Foxtail
           apply_style_pattern_to_compact_result(formatted_number, currency_pattern, symbol)
         when "percent"
           percent_pattern = @formats.percent_pattern
-          apply_style_pattern_to_compact_result(formatted_number, percent_pattern, "%")
+          # For compact notation, use different percent symbol logic
+          if @symbol_numbering_system == "arab" && @locale.language == "en"
+            # English locale with Arabic numbering: use Latin percent in compact
+            percent_symbol = "%"
+          else
+            # Get localized percent symbol and remove ALM for compact notation
+            percent_symbol = @formats.percent_sign(@symbol_numbering_system)
+            # Compact notation doesn't use bidirectional control characters
+            percent_symbol = percent_symbol.tr("\u200E\u200F\u061C", "")
+          end
+          apply_style_pattern_to_compact_result(formatted_number, percent_pattern, percent_symbol)
         when "unit"
           unit = @options[:unit] || "meter"
           unit_display = @options[:unitDisplay] || "short"
@@ -944,16 +985,28 @@ module Foxtail
         formatted = format_spec % decimal_value
 
         # Replace the English '.' with the locale's decimal symbol
-        formatted.gsub(".", @formats.decimal_symbol)
+        formatted.gsub!(".", @formats.decimal_symbol(@symbol_numbering_system))
+        # Apply digit conversion to the entire formatted string
+        apply_digit_conversion(formatted)
       end
 
       private def apply_style_pattern_to_compact_result(formatted_number, pattern, style_symbol)
         parser = PatternParser::Number.new
-        tokens = parser.parse(pattern)
+        all_tokens = parser.parse(pattern)
 
         # Check if formatted number is negative and extract clean number
-        is_negative = formatted_number.start_with?(@formats.minus_sign)
-        clean_number = is_negative ? formatted_number[@formats.minus_sign.length..] : formatted_number
+        is_negative = formatted_number.start_with?(@formats.minus_sign(@symbol_numbering_system))
+        clean_number = is_negative ? formatted_number[@formats.minus_sign(@symbol_numbering_system).length..] : formatted_number
+
+        # Split positive and negative patterns using pattern matching
+        tokens = case all_tokens
+                 in [*positive, PatternParser::Number::PatternSeparatorToken, *negative]
+                   # Pattern with positive and negative forms
+                   is_negative ? negative : positive
+                 in _
+                   # Pattern with only positive form
+                   all_tokens
+                 end
 
         # Apply locale-specific grouping to clean number if it's a large integer
         # Only apply grouping for percent style in compact notation (Node.js behavior)
@@ -980,9 +1033,9 @@ module Foxtail
             pattern_info[:prefix_tokens].each do |token|
               result += format_compact_non_digit_token(token, style_symbol)
             end
-            result += @formats.minus_sign + clean_number
+            result += @formats.minus_sign(@symbol_numbering_system) + clean_number
           else
-            result += @formats.minus_sign
+            result += @formats.minus_sign(@symbol_numbering_system)
             pattern_info[:prefix_tokens].each do |token|
               result += format_compact_non_digit_token(token, style_symbol)
             end
@@ -999,6 +1052,12 @@ module Foxtail
         # Add suffix tokens
         pattern_info[:suffix_tokens].each do |token|
           result += format_compact_non_digit_token(token, style_symbol)
+        end
+
+        # For Arabic compact notation, add leading RLM for Node.js compatibility
+        # This handles ar-SA and similar RTL locales
+        if style_symbol.is_a?(String) && style_symbol.include?("ر.س") && !result.start_with?("\u200F")
+          result = "\u200F#{result}"
         end
 
         result
@@ -1035,12 +1094,12 @@ module Foxtail
       end
 
       # Format special values (Infinity, -Infinity, NaN)
-      private def format_special_value(value)
+      private def format_special_value(value, using_negative_pattern: false)
         # Determine the base symbol (without embedding minus for negative infinity)
         if value.nan?
-          symbol = "NaN"
+          symbol = @formats.nan_symbol(@symbol_numbering_system)
         elsif value.infinite?
-          symbol = "∞" # Let pattern handle minus sign for negative infinity
+          symbol = @formats.infinity_symbol(@symbol_numbering_system)
         else
           raise ArgumentError, "Expected special value (Infinity, -Infinity, or NaN), got: #{value.inspect}"
         end
@@ -1067,9 +1126,10 @@ module Foxtail
         original_was_negative = value.infinite? == -1 && !has_separator
 
         # Process prefix tokens (currency symbols, literals, etc. before the number)
-        if original_was_negative
+        if original_was_negative && !using_negative_pattern
           # Add minus sign first for negative values (like regular formatting)
-          result += @formats.minus_sign
+          # But only when not using a negative pattern (which handles sign internally)
+          result += @formats.minus_sign(@symbol_numbering_system)
         end
 
         pattern_tokens.each do |token|
@@ -1121,6 +1181,11 @@ module Foxtail
           end
         end
 
+        # Apply numbering system digit conversion as final step
+        if @digit_mapper
+          result = @digit_mapper.map(result)
+        end
+
         result
       end
 
@@ -1130,6 +1195,61 @@ module Foxtail
         # Use BigMath.log with precision of 10 digits
         # log10(x) = log(x) / log(10)
         BigMath.log(value, 10) / BigMath.log(BigDecimal(10), 10)
+      end
+
+      # Determine the numbering system to use based on locale and options
+      #
+      # Priority order:
+      # 1. Explicit numberingSystem option
+      # 2. Locale's default/native numbering system from CLDR
+      # 3. "latn" as fallback
+      #
+      # @param locale [Locale::Tag] The locale
+      # @param options [Hash] Formatting options
+      # @return [String] Numbering system ID
+      private def determine_numbering_system(_locale, options)
+        # 1. Check explicit numberingSystem option
+        return options[:numberingSystem] if options[:numberingSystem]
+
+        # 2. Get locale's numbering system settings from CLDR
+        begin
+          numbering_settings = @formats.numbering_system_settings
+
+          # Use default system from CLDR (not native, which is for explicit choice)
+          return numbering_settings["default"] if numbering_settings["default"]
+        rescue
+          # If CLDR data not available, fall back to latn
+        end
+
+        # 4. Default fallback
+        "latn"
+      end
+
+      # Determine numbering system for symbols (separate from digit numbering system)
+      #
+      # Symbol numbering system logic:
+      # - If numberingSystem is explicitly specified, use locale's default for symbols
+      # - If no explicit numberingSystem, use the same logic as determine_numbering_system
+      #
+      # @param locale [Locale::Tag] The locale
+      # @param options [Hash] Formatting options
+      # @return [String] Numbering system ID for symbols
+      private def determine_symbol_numbering_system(locale, options)
+        # If explicit numberingSystem is specified, use that numbering system for symbols too
+        # This matches Node.js Intl.NumberFormat behavior
+        if options[:numberingSystem]
+          return options[:numberingSystem]
+        end
+
+        # Otherwise, use the same logic as digit numbering system
+        determine_numbering_system(locale, options)
+      end
+
+      # Apply digit conversion using the digit mapper if numbering system is not latn
+      private def apply_digit_conversion(text)
+        return text unless @digit_mapper
+
+        @digit_mapper.map(text)
       end
     end
   end

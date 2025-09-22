@@ -1,83 +1,94 @@
 ---
 locale: sw_KE
-generated_at: '2025-09-15T15:48:59Z'
+generated_at: '2025-09-22T02:22:49Z'
 cldr_version: '46'
 number_formats:
-  symbols: {}
-  currency_formats:
-    standard: "#,##0.00;(#,##0.00)"
-    accounting: "#,##0.00;(#,##0.00)"
-  compact_formats:
-    short:
-      '1000':
-        one: elfu 0
-        other: elfu 0
-      '10000':
-        one: elfu 00
-        other: elfu 00
-      '100000':
-        one: elfu 000
-        other: elfu 000
-      '1000000':
-        one: M0
-        other: M0
-      '10000000':
-        one: M00
-        other: M00
-      '100000000':
-        one: M000
-        other: M000
-      '1000000000':
-        one: B0
-        other: B0
-      '10000000000':
-        one: B00
-        other: B00
-      '100000000000':
-        one: B000
-        other: B000
-      '1000000000000':
-        one: T0
-        other: T0
-      '10000000000000':
-        one: T00
-        other: T00
-      '100000000000000':
-        one: T000
-        other: T000
-    long:
-      '10000':
-        other: elfu 00
-      '100000':
-        one: elfu 000
-        other: elfu 000
-      '1000000':
-        one: milioni 0
-        other: milioni 0
-      '10000000':
-        one: milioni 00
-        other: milioni 00
-      '100000000':
-        one: milioni 000
-        other: milioni 000
-      '1000000000':
-        one: bilioni 0
-        other: bilioni 0
-      '10000000000':
-        one: bilioni 00
-        other: bilioni 00
-      '100000000000':
-        one: bilioni 000
-        other: bilioni 000
-      '1000000000000':
-        one: trilioni 0
-        other: trilioni 0
-      '10000000000000':
-        one: trilioni 00
-        other: trilioni 00
-      '100000000000000':
-        one: trilioni 000
-        other: trilioni 000
+  latn:
+    symbols: {}
+    decimal_formats:
+      standard: 
+    percent_formats:
+      standard: 
+    currency_formats:
+      standard: "#,##0.00;(#,##0.00)"
+      accounting: "#,##0.00;(#,##0.00)"
+    scientific_formats:
+      standard: 
+    compact_formats:
+      short:
+        '1000':
+          one: elfu 0
+          other: elfu 0
+        '10000':
+          one: elfu 00
+          other: elfu 00
+        '100000':
+          one: elfu 000
+          other: elfu 000
+        '1000000':
+          one: M0
+          other: M0
+        '10000000':
+          one: M00
+          other: M00
+        '100000000':
+          one: M000
+          other: M000
+        '1000000000':
+          one: B0
+          other: B0
+        '10000000000':
+          one: B00
+          other: B00
+        '100000000000':
+          one: B000
+          other: B000
+        '1000000000000':
+          one: T0
+          other: T0
+        '10000000000000':
+          one: T00
+          other: T00
+        '100000000000000':
+          one: T000
+          other: T000
+      long:
+        '1000':
+          one: elfu 0;elfu -0
+          other: elfu 0;elfu -0
+        '10000':
+          one: elfu 00;elfu -00
+          other: elfu 00
+        '100000':
+          one: elfu 000
+          other: elfu 000
+        '1000000':
+          one: milioni 0
+          other: milioni 0
+        '10000000':
+          one: milioni 00
+          other: milioni 00
+        '100000000':
+          one: milioni 000
+          other: milioni 000
+        '1000000000':
+          one: bilioni 0
+          other: bilioni 0
+        '10000000000':
+          one: bilioni 00
+          other: bilioni 00
+        '100000000000':
+          one: bilioni 000
+          other: bilioni 000
+        '1000000000000':
+          one: trilioni 0
+          other: trilioni 0
+        '10000000000000':
+          one: trilioni 00
+          other: trilioni 00
+        '100000000000000':
+          one: trilioni 000
+          other: trilioni 000
 currency_fractions:
   ADP:
     digits: 0
