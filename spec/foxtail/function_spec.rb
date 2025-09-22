@@ -2,27 +2,27 @@
 
 require "time"
 
-RSpec.describe Foxtail::Functions do
+RSpec.describe Foxtail::Function do
   describe "[]" do
     it "provides access to NUMBER and DATETIME functions" do
-      expect(Foxtail::Functions["NUMBER"]).not_to be_nil
-      expect(Foxtail::Functions["DATETIME"]).not_to be_nil
+      expect(Foxtail::Function["NUMBER"]).not_to be_nil
+      expect(Foxtail::Function["DATETIME"]).not_to be_nil
     end
 
     it "returns callable functions" do
-      expect(Foxtail::Functions["NUMBER"]).to respond_to(:call)
-      expect(Foxtail::Functions["DATETIME"]).to respond_to(:call)
+      expect(Foxtail::Function["NUMBER"]).to respond_to(:call)
+      expect(Foxtail::Function["DATETIME"]).to respond_to(:call)
     end
 
     it "returns Proc instances" do
-      expect(Foxtail::Functions["NUMBER"]).to be_a(Proc)
-      expect(Foxtail::Functions["DATETIME"]).to be_a(Proc)
+      expect(Foxtail::Function["NUMBER"]).to be_a(Proc)
+      expect(Foxtail::Function["DATETIME"]).to be_a(Proc)
     end
   end
 
   describe ".defaults" do
     it "returns function instances that are callable" do
-      result = Foxtail::Functions.defaults
+      result = Foxtail::Function.defaults
 
       # Should contain the expected keys
       expect(result.keys).to contain_exactly("NUMBER", "DATETIME")
@@ -34,7 +34,7 @@ RSpec.describe Foxtail::Functions do
     end
 
     it "returns Proc instances for lazy initialization" do
-      result = Foxtail::Functions.defaults
+      result = Foxtail::Function.defaults
 
       expect(result["NUMBER"]).to be_a(Proc)
       expect(result["DATETIME"]).to be_a(Proc)

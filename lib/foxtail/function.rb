@@ -6,7 +6,7 @@ require "time"
 module Foxtail
   # Built-in formatting functions
   # Corresponds to fluent-bundle/src/builtins.ts
-  module Functions
+  module Function
     # Default functions available to all bundles
     # Each function is a Proc that accepts (value, locale:, **options) and returns formatted result
     def self.defaults

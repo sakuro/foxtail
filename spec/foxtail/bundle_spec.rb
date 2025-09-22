@@ -48,7 +48,7 @@ RSpec.describe Foxtail::Bundle do
 
     it "accepts merged functions with defaults" do
       custom_function = ->(_val, _opts) { "custom" }
-      merged_functions = Foxtail::Functions.defaults.merge("CUSTOM" => custom_function)
+      merged_functions = Foxtail::Function.defaults.merge("CUSTOM" => custom_function)
       locale = locale("en")
       bundle = Foxtail::Bundle.new(locale, functions: merged_functions)
 

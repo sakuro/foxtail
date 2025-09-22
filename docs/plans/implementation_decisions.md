@@ -59,7 +59,7 @@ end
 ```
 Foxtail::Bundle           # Public API
 Foxtail::Resource         # Public API
-Foxtail::Functions        # Public API
+Foxtail::Function        # Public API
 Foxtail::Bundle::AST      # Internal
 Foxtail::Bundle::Resolver # Internal
 Foxtail::Bundle::Scope    # Internal
@@ -69,7 +69,7 @@ Foxtail::Bundle::Scope    # Internal
 - Clear separation between public API and internals
 - Resource is frequently used by users, deserves top-level access
 - Bundle-specific internals are properly namespaced
-- Functions need to be easily accessible for customization
+- Function need to be easily accessible for customization
 
 ### 4. Converter as Instance
 
@@ -134,20 +134,20 @@ end
 - ❌ Larger gem size
 - ❌ More complex dependency chain
 
-### 7. Functions Architecture Evolution
+### 7. Function Architecture Evolution
 
-**Decision**: Class-based Functions instead of simple lambdas
+**Decision**: Class-based Function instead of simple lambdas
 
 **Original Plan**:
 ```ruby
-Functions::NUMBER = lambda do |value, options = {}|
+Function::NUMBER = lambda do |value, options = {}|
   # Simple formatting
 end
 ```
 
 **Final Implementation**:
 ```ruby
-Functions::DEFAULTS = {
+Function::DEFAULTS = {
   "NUMBER" => NumberFormatter.new,
   "DATETIME" => DateTimeFormatter.new
 }
@@ -197,7 +197,7 @@ Functions::DEFAULTS = {
 
 **Lambda-based functions**:
 ```ruby
-Functions::NUMBER = lambda do |value, options = {}|
+Function::NUMBER = lambda do |value, options = {}|
   # Implementation
 end
 ```
@@ -254,7 +254,7 @@ end
 
 1. **Parser**: Using full parser instead of regex-based
 2. **Intl API**: Ruby doesn't have Intl, need alternatives
-3. **Functions**: Different built-in function implementations
+3. **Function**: Different built-in function implementations
 
 ### Maintaining Compatibility
 
@@ -272,8 +272,8 @@ end
 
 ### Extension Points
 
-1. **Custom Functions** - Already supported
-2. **Transform Functions** - Planned
+1. **Custom Function** - Already supported
+2. **Transform Function** - Planned
 3. **Custom Resolvers** - Possible with current design
 
 ## Dependencies
