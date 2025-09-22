@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "date"
+require "execjs"
 require "locale"
 require "time"
 
@@ -15,13 +16,15 @@ module Foxtail
     end
 
     # Set backend type
-    # @param backend_type [Symbol] Backend type (:javascript or :foxtail_intl)
+    # @param backend_type [Symbol] Backend type (:auto, :javascript, or :foxtail_intl)
     def self.backend=(backend_type)
-      unless %i[javascript foxtail_intl].include?(backend_type)
-        raise ArgumentError, "Backend must be :javascript or :foxtail_intl"
+      if backend_type == :auto
+        @backend = detect_best_backend
+      elsif %i[javascript foxtail_intl].include?(backend_type)
+        @backend = backend_type
+      else
+        raise ArgumentError, "Backend must be :auto, :javascript, or :foxtail_intl"
       end
-
-      @backend = backend_type
     end
 
     # Default functions available to all bundles
@@ -54,39 +57,6 @@ module Foxtail
     # @return [Proc] The function Proc that accepts (value, locale:, **options)
     def self.[](name)
       defaults[name]
-    end
-
-    # Configure backend with options
-    # @param backend_name [Symbol] Backend type (:auto, :javascript, :foxtail_intl)
-    # @param options [Hash] Backend-specific configuration options (unused in new design)
-    # @example Use JavaScript backend explicitly
-    #   Foxtail::Function.configure(backend_name: :javascript)
-    # @example Use FoxtailIntl backend
-    #   Foxtail::Function.configure(backend_name: :foxtail_intl)
-    # @example Auto-detect best available backend (default)
-    #   Foxtail::Function.configure(backend_name: :auto)
-    def self.configure(backend_name: :auto, **_options)
-      self.backend = backend_name == :auto ? detect_best_backend : backend_name
-    end
-
-    # Get information about current backend
-    # @return [Hash] Backend information
-    def self.backend_info
-      case backend
-      when :javascript
-        js_formatter = JavaScript::NumberFormat.new(locale: Locale::Tag.parse("en"))
-        {
-          name: "JavaScript (#{js_formatter.available? ? "available" : "unavailable"})",
-          available: js_formatter.available?,
-          supported_functions: %w[NUMBER DATETIME]
-        }
-      when :foxtail_intl
-        {
-          name: "Foxtail-Intl (native Ruby CLDR)",
-          available: true,
-          supported_functions: %w[NUMBER DATETIME]
-        }
-      end
     end
 
     # Detect best available backend

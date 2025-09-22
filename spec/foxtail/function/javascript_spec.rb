@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-RSpec.describe Foxtail::Function::JavaScript do
+RSpec.describe Foxtail::Function::JavaScript, :requires_javascript do
   describe "NumberFormat" do
     subject(:formatter) { Foxtail::Function::JavaScript::NumberFormat.new(locale:) }
 

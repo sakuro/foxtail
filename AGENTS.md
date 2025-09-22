@@ -75,4 +75,3 @@ AI agents MUST read the following documentation files before working on this pro
 3. Read `docs/agents/git-pr.md` for Git workflow and commit message formatting
 
 These documents provide essential context for maintaining code quality, following project conventions, and ensuring professional collaboration standards.
-- まだ後悔していないユーザー一人のプロダクトなので、互換性や移行パスは考慮しなくてよい。

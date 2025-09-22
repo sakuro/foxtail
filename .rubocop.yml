@@ -66,7 +66,6 @@ Naming/MethodParameterName:
 RSpec/DescribeClass:
   Exclude:
     - 'spec/foxtail/parser/ast_spec.rb'     # Tests AST node equality behavior across multiple classes
-    - 'spec/syntax_compatibility_spec.rb'   # Tests fluent.js compatibility integration
 
 # Allow multiple describe blocks for comprehensive AST testing
 RSpec/MultipleDescribes:
@@ -89,16 +88,6 @@ RSpec/ExpectActual:
 RSpec/NestedGroups:
   Enabled: false
 
-# The after(:all) hooks in compatibility tests are safe - they only output summaries
-# and don't modify state or create database records that could leak between tests
-RSpec/BeforeAfterAll:
-  Exclude:
-    - 'spec/syntax_compatibility_spec.rb'          # Safe summary output hooks only
-
-# Context names describe test structure rather than behavioral conditions
-RSpec/ContextWording:
-  Exclude:
-    - 'spec/syntax_compatibility_spec.rb'          # "individual fixtures" groups dynamic fixture tests
 
 # Allow JavaScript class naming pattern for spec files
 RSpec/SpecFilePathFormat:
@@ -115,6 +104,7 @@ Style/DocumentationMethod:
     - 'compat/fluent_js/ast_comparator.rb'              # Internal AST comparison utilities
     - 'compat/node_intl/tester.rb'                      # Internal Node.js Intl testing utilities
     - 'compat/node_intl/reporter.rb'                    # Internal Node.js Intl reporting utilities
+    - 'benchmark/function_performance.rb'               # Benchmark script utilities
 
 # Options hashes are part of the established API for Bundle, Scope, and Functions
 # Changing to keyword arguments would break existing usage and tests

@@ -4,27 +4,29 @@
 require "benchmark"
 require "bundler/setup"
 require_relative "../lib/foxtail"
+require "execjs"
 require "locale"
+require "timeout"
 
 # Benchmark script to compare JavaScript vs Foxtail::Intl performance
 # Tests complex locales with different numbering systems and formatting rules
 class FunctionPerformanceBenchmark
   def initialize
     @test_locales = [
-      { tag: "ja-JP", name: "Japanese", numbering: "latn" },
-      { tag: "ar-EG", name: "Arabic (Egypt)", numbering: "arab" },
-      { tag: "hi-IN", name: "Hindi (India)", numbering: "deva" },
-      { tag: "th-TH", name: "Thai", numbering: "thai" },
-      { tag: "zh-CN", name: "Chinese (Simplified)", numbering: "hanidec" },
-      { tag: "fa-IR", name: "Persian", numbering: "arabext" },
-      { tag: "ru-RU", name: "Russian", numbering: "latn" },
-      { tag: "de-DE", name: "German", numbering: "latn" }
+      {tag: "ja-JP", name: "Japanese", numbering: "latn"},
+      {tag: "ar-EG", name: "Arabic (Egypt)", numbering: "arab"},
+      {tag: "hi-IN", name: "Hindi (India)", numbering: "deva"},
+      {tag: "th-TH", name: "Thai", numbering: "thai"},
+      {tag: "zh-CN", name: "Chinese (Simplified)", numbering: "hanidec"},
+      {tag: "fa-IR", name: "Persian", numbering: "arabext"},
+      {tag: "ru-RU", name: "Russian", numbering: "latn"},
+      {tag: "de-DE", name: "German", numbering: "latn"}
     ]
 
     @test_numbers = [
       42,
       1234.56,
-      123456789.123,
+      123_456_789.123,
       0.00001,
       -999.99,
       1_000_000_000
@@ -41,6 +43,8 @@ class FunctionPerformanceBenchmark
 
   def setup_formatters
     puts "Setting up formatters for complex locales..."
+    puts "ExecJS runtime: #{execjs_available? ? ExecJS.runtime.name : "Not available"}"
+    puts
 
     @formatters = {}
 
@@ -50,13 +54,14 @@ class FunctionPerformanceBenchmark
 
       begin
         # JavaScript formatters
-        js_basic = Foxtail::Function::JavaScript::NumberFormat.new(locale: locale)
+        js_basic = Foxtail::Function::JavaScript::NumberFormat.new(locale:)
         js_currency = Foxtail::Function::JavaScript::NumberFormat.new(
-          locale: locale, style: "currency",
+          locale:,
+          style: "currency",
           currency: currency_for_locale(tag)
         )
         js_datetime = Foxtail::Function::JavaScript::DateTimeFormat.new(
-          locale: locale, dateStyle: "full", timeStyle: "medium"
+          locale:, dateStyle: "full", timeStyle: "medium"
         )
 
         # Test if JavaScript is available for this locale
@@ -65,18 +70,19 @@ class FunctionPerformanceBenchmark
         end
 
         # Foxtail::Intl formatters
-        intl_basic = Foxtail::Intl::NumberFormat.new(locale: locale)
+        intl_basic = Foxtail::Intl::NumberFormat.new(locale:)
         intl_currency = Foxtail::Intl::NumberFormat.new(
-          locale: locale, style: "currency",
+          locale:,
+          style: "currency",
           currency: currency_for_locale(tag)
         )
         intl_datetime = Foxtail::Intl::DateTimeFormat.new(
-          locale: locale, dateStyle: "full", timeStyle: "medium"
+          locale:, dateStyle: "full", timeStyle: "medium"
         )
 
         @formatters[tag] = {
           info: locale_info,
-          locale: locale,
+          locale:,
           js: {
             basic: js_basic,
             currency: js_currency,
@@ -90,7 +96,6 @@ class FunctionPerformanceBenchmark
         }
 
         puts "✓ #{locale_info[:name]} (#{tag}) - JS: #{js_basic.available?}"
-
       rescue => e
         puts "✗ #{locale_info[:name]} (#{tag}) - Error: #{e.message}"
       end
@@ -112,12 +117,22 @@ class FunctionPerformanceBenchmark
     end
   end
 
+  def run_with_timeout(timeout_seconds)
+    Timeout.timeout(timeout_seconds) do
+      yield
+    end
+  rescue Timeout::Error
+    puts "TIMEOUT (#{timeout_seconds}s)"
+  end
+
   def run_benchmarks
-    iterations = 500  # Reduced for complex locales
+    iterations = 2000
+    timeout_seconds = 30
 
     puts "=== Complex Locale Performance Comparison ==="
     puts "Iterations: #{iterations}"
     puts "Test numbers: #{@test_numbers.size}, Test dates: #{@test_dates.size}"
+    puts "Timeout: #{timeout_seconds} seconds per test"
     puts
 
     @formatters.each do |tag, data|
@@ -134,14 +149,18 @@ class FunctionPerformanceBenchmark
       puts "\nBasic number formatting:"
       Benchmark.bm(15) do |x|
         x.report("JavaScript:") do
-          iterations.times do
-            @test_numbers.each { |num| data[:js][:basic].call(num) }
+          run_with_timeout(timeout_seconds) do
+            iterations.times do
+              @test_numbers.each {|num| data[:js][:basic].call(num) }
+            end
           end
         end
 
         x.report("Foxtail::Intl:") do
-          iterations.times do
-            @test_numbers.each { |num| data[:intl][:basic].call(num) }
+          run_with_timeout(timeout_seconds) do
+            iterations.times do
+              @test_numbers.each {|num| data[:intl][:basic].call(num) }
+            end
           end
         end
       end
@@ -150,14 +169,18 @@ class FunctionPerformanceBenchmark
       puts "\nCurrency formatting:"
       Benchmark.bm(15) do |x|
         x.report("JavaScript:") do
-          iterations.times do
-            @test_numbers.each { |num| data[:js][:currency].call(num) }
+          run_with_timeout(timeout_seconds) do
+            iterations.times do
+              @test_numbers.each {|num| data[:js][:currency].call(num) }
+            end
           end
         end
 
         x.report("Foxtail::Intl:") do
-          iterations.times do
-            @test_numbers.each { |num| data[:intl][:currency].call(num) }
+          run_with_timeout(timeout_seconds) do
+            iterations.times do
+              @test_numbers.each {|num| data[:intl][:currency].call(num) }
+            end
           end
         end
       end
@@ -166,26 +189,30 @@ class FunctionPerformanceBenchmark
       puts "\nDateTime formatting:"
       Benchmark.bm(15) do |x|
         x.report("JavaScript:") do
-          iterations.times do
-            @test_dates.each { |date| data[:js][:datetime].call(date) }
+          run_with_timeout(timeout_seconds) do
+            iterations.times do
+              @test_dates.each {|date| data[:js][:datetime].call(date) }
+            end
           end
         end
 
         x.report("Foxtail::Intl:") do
-          iterations.times do
-            @test_dates.each { |date| data[:intl][:datetime].call(date) }
+          run_with_timeout(timeout_seconds) do
+            iterations.times do
+              @test_dates.each {|date| data[:intl][:datetime].call(date) }
+            end
           end
         end
       end
 
-      puts "\n" + "="*50
+      puts "\n#{"=" * 50}"
     end
   end
 
   def run_accuracy_check
     puts "=== Accuracy Verification (Complex Locales) ==="
 
-    test_number = 1234567.89
+    test_number = 1_234_567.89
     test_date = Time.new(2023, 6, 15, 14, 30, 0)
 
     @formatters.each do |tag, data|
@@ -199,7 +226,7 @@ class FunctionPerformanceBenchmark
       puts "Number (#{test_number}):"
       puts "  JavaScript:    '#{js_num}'"
       puts "  Foxtail::Intl: '#{intl_num}'"
-      puts "  Match: #{js_num == intl_num ? '✓' : '✗'}"
+      puts "  Match: #{js_num == intl_num ? "✓" : "✗"}"
 
       # Currency formatting
       js_curr = data[:js][:currency].call(test_number)
@@ -207,7 +234,7 @@ class FunctionPerformanceBenchmark
       puts "Currency:"
       puts "  JavaScript:    '#{js_curr}'"
       puts "  Foxtail::Intl: '#{intl_curr}'"
-      puts "  Match: #{js_curr == intl_curr ? '✓' : '✗'}"
+      puts "  Match: #{js_curr == intl_curr ? "✓" : "✗"}"
 
       # DateTime formatting
       js_date = data[:js][:datetime].call(test_date)
@@ -215,16 +242,25 @@ class FunctionPerformanceBenchmark
       puts "DateTime (#{test_date}):"
       puts "  JavaScript:    '#{js_date}'"
       puts "  Foxtail::Intl: '#{intl_date}'"
-      puts "  Match: #{js_date == intl_date ? '✓' : '✗'}"
+      puts "  Match: #{js_date == intl_date ? "✓" : "✗"}"
     end
+  end
+
+  def execjs_available?
+    ExecJS.runtime
+    true
+  rescue ExecJS::RuntimeUnavailable
+    false
   end
 
   def show_numbering_system_examples
     puts "\n=== Numbering System Examples ==="
+    puts "ExecJS runtime: #{execjs_available? ? ExecJS.runtime.name : "Not available"}"
+    puts
 
-    test_num = 123456
+    test_num = 123_456
 
-    @formatters.each do |tag, data|
+    @formatters.each_value do |data|
       next unless data[:js][:basic].available?
 
       js_result = data[:js][:basic].call(test_num)
