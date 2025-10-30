@@ -64,14 +64,22 @@ This is a Ruby gem project with a standard structure:
 This project includes specialized documentation for AI agents to ensure consistent, high-quality contributions. All agents should read and follow these guidelines:
 
 ### Agent Documentation Directory
-- **[docs/agents/rubocop.md](docs/agents/rubocop.md)** - RuboCop fix workflows and style enforcement procedures
-- **[docs/agents/languages.md](docs/agents/languages.md)** - Language usage conventions for multilingual projects  
+- **[docs/agents/languages.md](docs/agents/languages.md)** - Language usage conventions for multilingual projects
 - **[docs/agents/git-pr.md](docs/agents/git-pr.md)** - Git commit and pull request guidelines with proper formatting
+
+### Skills for Common Tasks
+
+The project includes Claude Code skills that provide detailed, interactive guidance for common development tasks:
+
+- **`.claude/skills/fix-rubocop/`** - Systematically reduce RuboCop violations and clean up .rubocop_todo.yml
+- **`.claude/skills/git-commit/`** - Create git commits following project conventions (emoji codes, English messages, safe staging)
+- **`.claude/skills/create-pr/`** - Create GitHub pull requests with proper formatting and shell safety
+
+Skills activate automatically when relevant tasks are requested. They provide step-by-step workflows, examples, and troubleshooting guidance.
 
 ### Required Reading Instructions
 AI agents MUST read the following documentation files before working on this project:
-1. Read `docs/agents/rubocop.md` for code style and linting procedures
-2. Read `docs/agents/languages.md` for proper language usage in different contexts
-3. Read `docs/agents/git-pr.md` for Git workflow and commit message formatting
+1. Read `docs/agents/languages.md` for proper language usage in different contexts
+2. Read `docs/agents/git-pr.md` for Git workflow and commit message formatting
 
 These documents provide essential context for maintaining code quality, following project conventions, and ensuring professional collaboration standards.

@@ -11,34 +11,27 @@ This guide helps AI agents follow the project's Git and GitHub conventions for c
 
 ## Commit Messages
 
-### Format Requirements
+> **Note**: For detailed commit workflow including pre-commit checks, file staging,
+> and message formatting, see the `git-commit` skill at `.claude/skills/git-commit/SKILL.md`.
 
-All commit messages MUST follow this format:
+### Format Requirements
 
 ```
 :emoji: Subject line in imperative mood
 
-Detailed explanation of changes (optional)
-- Bullet points for key changes
-- Technical details and trade-offs
+Brief explanation (optional, keep concise)
 
-:robot: Generated with [Agent Name](http://agent.url)
+:robot: Generated with [Claude Code](https://claude.com/claude-code)
 
-Co-Authored-By: Agent Name <agent@email>
+Co-Authored-By: Claude <noreply@anthropic.com>
 ```
-
-**Note**: Replace `[Agent Name]`, `http://agent.url`, and `<agent@email>` with your specific AI agent information.
 
 ### Key Rules
 
-1. **Always use GitHub emoji codes** (`:emoji:`), never raw Unicode emojis
-2. **Start with emoji**: The first character must be `:`
-3. **Space after emoji**: `:emoji: Subject` not `:emoji:Subject`
-4. **Imperative mood**: "Fix bug" not "Fixed bug" or "Fixes bug"
-5. **No period at end of subject**
-6. **Include AI attribution** for AI-generated commits
-7. **Keep messages concise**: Focus on the main change, avoid tangential details
-8. **Don't mention reverted changes**: If you undid something that didn't exist before this commit, don't mention it
+1. Start with GitHub emoji code (`:emoji:`), never raw Unicode emojis
+2. Use imperative mood: "Fix bug" not "Fixed bug"
+3. Keep messages concise: focus on what/why, not how
+4. Always use heredoc for multi-line commits: `git commit -m "$(cat <<'EOF' ... EOF)"`
 
 ### Common Emoji Codes
 
@@ -54,44 +47,6 @@ Co-Authored-By: Agent Name <agent@email>
 | ✅ | `:white_check_mark:` | Adding/updating tests |
 | 🔥 | `:fire:` | Removing code/files |
 | 📦 | `:package:` | Updating dependencies |
-
-### MANDATORY: Always Use Heredoc for Commit Messages
-
-**REQUIRED: Use quoted heredoc for ALL multi-line commits**
-
-```bash
-git commit -m "$(cat <<'EOF'
-:zap: Optimize Style#call performance with caching
-
-Cache SGR sequences at initialization to avoid recalculation.
-- 7-18x performance improvement
-- 85-91% reduction in object allocations
-
-:robot: Generated with [Agent Name](http://agent.url)
-
-Co-Authored-By: Agent Name <agent@email>
-EOF
-)"
-```
-
-**⚠️ CRITICAL: Shell Safety Rules**
-
-**FORBIDDEN: These will break or corrupt commits**
-```bash
-# ❌ NEVER use unquoted strings with special characters
-git commit -m ":bug: Fix issue with `backticks` and $variables"
-
-# ❌ NEVER use unquoted heredoc (causes variable expansion)
-git commit -m "$(cat <<EOF
-:bug: Commit message with $dangerous variables
-EOF
-)"
-```
-
-**REQUIRED: Use quoted heredoc with single quotes**
-- Always use `<<'EOF'` (single quotes) not `<<EOF` or `<<"EOF"`
-- Single quotes prevent shell variable expansion and preserve special characters
-- This is the ONLY safe way for complex commit messages
 
 ## Branch Management
 
@@ -115,90 +70,33 @@ git switch -c feature/your-feature-name
 
 ## Pull Request Creation
 
-### Using gh CLI
+> **Note**: For detailed PR creation workflow including body formatting, shell safety,
+> and complete examples, see the `create-pr` skill at `.claude/skills/create-pr/SKILL.md`.
 
-Always use the `gh` CLI tool for creating pull requests.
+### Key Requirements
 
-### MANDATORY: Always Use Temporary Files or Heredoc
+1. **Use gh CLI**: Always use `gh pr create` command
+2. **Title format**: Start with emoji code, use English, imperative mood
+3. **Body method**: Use temp file (`--body-file`) or quoted heredoc (`<<'EOF'`)
+4. **Never use**: Inline `--body` with complex content or unquoted heredoc
 
-**NEVER use inline `--body` for complex content**. Always use one of these methods:
+### Basic Structure
 
-**Method 1: Temporary file (RECOMMENDED)**
 ```bash
-# Create temporary file for PR body
 cat > /tmp/pr_body.md <<'EOF'
 ## Summary
-Your PR description with `backticks` and complex markdown
-EOF
-
-# Create PR using temp file
-gh pr create --title ":emoji: Clear descriptive title" --body-file /tmp/pr_body.md
-
-# Clean up
-rm /tmp/pr_body.md
-```
-
-**Method 2: Heredoc with command substitution**
-
-```bash
-gh pr create --title ":memo: Update documentation" --body "$(cat <<'EOF'
-## Summary
-Brief description of changes
+Brief description
 
 ## Changes
-- Change 1
-- Change 2
+- Key change 1
+- Key change 2
 
-## Before
-```ruby
-old_code
-```
-
-## After
-```ruby
-new_code
-```
-
-:robot: Generated with [Agent Name](http://agent.url)
+:robot: Generated with [Claude Code](https://claude.com/claude-code)
 EOF
-)"
-```
 
-### ⚠️ CRITICAL RULES FOR PR BODY CREATION
-
-**FORBIDDEN: These commands will fail or corrupt your PR**
-```bash
-# ❌ NEVER use inline --body with complex content
-gh pr create --title "Title" --body "Multi-line content with `backticks`"
-
-# ❌ NEVER use unescaped heredoc in --body
-gh pr create --title "Title" --body "$(cat <<EOF
-Unquoted heredoc causes shell expansion issues
-EOF
-)"
-```
-
-**REQUIRED: Use these patterns only**
-```bash
-# ✅ ALWAYS use temporary file for complex content
-cat > /tmp/pr_body.md <<'EOF'
-Your content here
-EOF
-gh pr create --title "Title" --body-file /tmp/pr_body.md
+gh pr create --title ":emoji: Descriptive title" --body-file /tmp/pr_body.md
 rm /tmp/pr_body.md
-
-# ✅ OR use quoted heredoc with command substitution
-gh pr create --title "Title" --body "$(cat <<'EOF'
-Your content here
-EOF
-)"
 ```
-
-### PR Title Format
-
-- Must start with GitHub emoji code (same as commits)
-- Clear, descriptive title
-- Example: `:zap: Optimize Style#call performance with SGR caching`
 
 ## Pull Request Merging
 
@@ -245,70 +143,43 @@ gh pr merge 6 --merge \
 
 **Problem**: Backticks in heredoc cause shell interpretation issues
 
-**Solution**: Use command substitution with heredoc:
-```bash
-gh pr create --title "Title" --body "$(cat <<'EOF'
-Content with `backticks` in markdown
-EOF
-)"
-```
+**Solution**: Use temp file or quoted heredoc (`<<'EOF'`). See `create-pr` skill for details.
 
 ### Issue: Pre-push Hook Failures
 
-**Problem**: RuboCop or tests fail during push
+**Problem**: Tests or linters fail during push
 
-**Solution**:
-1. Run `rake` locally first
-2. Fix any issues before pushing
-3. Use `bundle exec rubocop -A` for safe auto-fixes
+**Solution**: Run tests and linters locally first (see `git-commit` skill for details)
 
 ## Staging Changes Safely
 
-### Avoid Bulk Operations
+> **Note**: For detailed staging workflow, see the `git-commit` skill.
 
-**Never use these commands** as they can add unintended files:
+**CRITICAL: Never use bulk operations:**
 ```bash
-git add .        # Adds ALL files in current directory
-git add -A       # Adds ALL tracked and untracked files
-git add *        # Adds files matching shell glob
+git add .        # ❌ Adds ALL files
+git add -A       # ❌ Adds ALL tracked and untracked files
+git add *        # ❌ Adds files matching shell glob
 ```
 
-### Recommended Approaches
-
-**Option 1: Add specific files explicitly**
+**Always add specific files explicitly:**
 ```bash
-git add lib/specific_file.rb
-git add spec/specific_spec.rb
 git add README.md
-```
-
-**Option 2: Review changes first, then stage**
-```bash
-# See what would be added
-git status
-git diff
-
-# Add specific files you want to commit
-git add path/to/changed_file.rb
-```
-
-**Option 3: Interactive staging for complex changes**
-```bash
-git add -p    # Review and stage changes interactively
+git add lib/module/file.ext
 ```
 
 ## Best Practices
 
-1. **Always run tests before pushing**: `rake` or `bundle exec rspec`
-2. **Check RuboCop**: `bundle exec rubocop` before committing
-3. **Keep commits focused**: One logical change per commit
-4. **Stage files explicitly**: Avoid `git add .` - specify files individually
-5. **Review staged changes**: Use `git diff --cached` before committing
-6. **Write clear PR descriptions**: Include before/after examples when relevant
-7. **Link issues**: Use "Fixes #123" in PR descriptions
-8. **Update documentation**: Keep README and CHANGELOG current
-9. **Write concise commit messages**: Focus on what matters, skip implementation details that don't affect the main purpose
-10. **Keep commit messages short**: Avoid verbose explanations unless absolutely necessary
+**For commits** (see `git-commit` skill for details):
+1. Always run tests before committing
+2. Stage files explicitly - never use `git add .`
+3. Keep commits focused - one logical change per commit
+4. Write concise commit messages
+
+**For pull requests:**
+1. **Write clear PR descriptions**: Include before/after examples when relevant
+2. **Link issues**: Use "Fixes #123" in PR descriptions
+3. **Update documentation**: Keep README and CHANGELOG current
 
 ## Example Workflow
 
@@ -319,50 +190,17 @@ git switch -c fix/performance-issue
 # 2. Make changes
 # ... edit files ...
 
-# 3. Run tests and lint
-rake
-
-# 4. Stage changes (be specific!)
-git add lib/performance_fix.rb
-git add spec/performance_fix_spec.rb
-
-# 5. Commit with proper message
-git commit -m "$(cat <<'EOF'
-:zap: Fix performance regression in render method
-
-Memoize expensive calculations to avoid recalculation.
-- 3x faster rendering
-- Reduces memory allocations
-
-Fixes #42
-
-:robot: Generated with [Agent Name](http://agent.url)
-
-Co-Authored-By: Agent Name <agent@email>
-EOF
-)"
+# 3-5. Commit changes (see git-commit skill for details)
+# - Run tests
+# - Stage specific files
+# - Commit with proper message format
 
 # 6. Push branch
 git push -u origin fix/performance-issue
 
-# 7. Create PR (use temporary file)
-cat > /tmp/pr_body.md <<'EOF'
-Fixes #42 - Performance regression in render method
-
-## Changes
-- Memoization of expensive calculations
-- 3x faster rendering
-- Reduces memory allocations
-
-## Test Results
-- All tests pass
-- Performance benchmarks included
-EOF
-
+# 7. Create PR (see create-pr skill for details)
 gh pr create --title ":zap: Fix performance regression in render method" \
   --body-file /tmp/pr_body.md
-
-rm /tmp/pr_body.md
 
 # 8. After approval, merge
 gh pr merge 7 --merge \
