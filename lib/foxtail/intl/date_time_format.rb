@@ -1353,7 +1353,7 @@ module Foxtail
           # Use metazone name for GMT-preferring locales, considering DST
           # Standard GMT (no offset) - use standard or generic name
           @timezone_names.metazone_name(metazone_id, length, :standard) ||
-          @timezone_names.metazone_name(metazone_id, length, :generic)
+            @timezone_names.metazone_name(metazone_id, length, :generic)
         else
           # Non-zero offset during GMT metazone - format with offset
           # This handles DST cases like London in summer (GMT+1)
@@ -1377,7 +1377,7 @@ module Foxtail
 
         # Fall back to standard or generic metazone name
         @timezone_names.metazone_name(metazone_id, length, :standard) ||
-        @timezone_names.metazone_name(metazone_id, length, :generic)
+          @timezone_names.metazone_name(metazone_id, length, :generic)
       end
 
       # Format offset-style timezone IDs (e.g., "+09:00")

@@ -306,7 +306,7 @@ module Foxtail
       # Check if selector value is numeric for plural rules processing
       private def numeric_selector?(value)
         value.is_a?(Numeric) ||
-        (value.is_a?(String) && value.match?(/^\d+(\.\d+)?$/))
+          (value.is_a?(String) && value.match?(/^\d+(\.\d+)?$/))
       end
 
       # Check if key matches selector via ICU plural rules
