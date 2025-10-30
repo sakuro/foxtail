@@ -242,7 +242,7 @@ module Foxtail
 
           # If surrounded by non-CLDR ASCII letters, it's part of literal text
           (prev_char&.match?(/[a-zA-Z]/) && !prev_char.match?(cldr_letters)) ||
-          (next_char&.match?(/[a-zA-Z]/) && !next_char.match?(cldr_letters))
+            (next_char&.match?(/[a-zA-Z]/) && !next_char.match?(cldr_letters))
         end
       end
     end

@@ -89,8 +89,8 @@ module Foxtail
         # whether the pattern was defined on the same line as the message ID
         # For now, use a simple approach
         pattern.elements.length == 1 &&
-        pattern.elements.first.is_a?(Foxtail::Parser::AST::TextElement) &&
-        !pattern.elements.first.value.include?("\n")
+          pattern.elements.first.is_a?(Foxtail::Parser::AST::TextElement) &&
+          !pattern.elements.first.value.include?("\n")
       end
 
       # Check if this is a simple inline pattern (should be string, not array)
