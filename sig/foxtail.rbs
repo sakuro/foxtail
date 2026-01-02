@@ -155,22 +155,4 @@ module Foxtail
     end
   end
 
-  module CLDR
-    class Base
-      def initialize: (Locale::Tag::Simple locale) -> void
-    end
-
-    class PluralRules < Base
-      def cardinal: (Numeric n) -> Symbol
-      def ordinal: (Numeric n) -> Symbol
-    end
-
-    class NumberFormats < Base
-      def format: (Numeric number, ?Hash[Symbol, untyped] options) -> String
-    end
-
-    class DateTimeFormats < Base
-      def format: (Time | Date | DateTime datetime, ?Hash[Symbol, untyped] options) -> String
-    end
-  end
 end

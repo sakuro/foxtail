@@ -10,12 +10,6 @@ module Foxtail
   ROOT = Pathname(__dir__).parent.expand_path.freeze
   public_constant :ROOT
 
-  # Data directory containing various data files
-  def self.data_dir = (ROOT + "data").freeze
-
-  # CLDR data directory
-  def self.cldr_dir = (data_dir + "cldr").freeze
-
   # Configure Zeitwerk loader for this gem
   loader = Zeitwerk::Loader.for_gem
 
@@ -26,7 +20,6 @@ module Foxtail
   loader.inflector.inflect(
     "ast" => "AST",
     "ast_converter" => "ASTConverter",
-    "cldr" => "CLDR",
     "icu4x" => "Icu4xBackend"
   )
 
