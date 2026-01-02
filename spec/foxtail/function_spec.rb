@@ -4,9 +4,8 @@ require "time"
 
 RSpec.describe Foxtail::Function do
   describe ".backend" do
-    it "returns a backend symbol" do
-      expect(Foxtail::Function.backend).to be_a(Symbol)
-      expect(%i[icu4x javascript foxtail_intl]).to include(Foxtail::Function.backend)
+    it "returns :icu4x" do
+      expect(Foxtail::Function.backend).to eq(:icu4x)
     end
   end
 
@@ -17,19 +16,19 @@ RSpec.describe Foxtail::Function do
     end
 
     it "sets the backend symbol" do
-      Foxtail::Function.backend = :foxtail_intl
-      expect(Foxtail::Function.backend).to eq(:foxtail_intl)
+      Foxtail::Function.backend = :icu4x
+      expect(Foxtail::Function.backend).to eq(:icu4x)
     end
 
     it "auto-detects backend when :auto is specified" do
       Foxtail::Function.backend = :auto
-      expect(%i[icu4x javascript foxtail_intl]).to include(Foxtail::Function.backend)
+      expect(Foxtail::Function.backend).to eq(:icu4x)
     end
 
     it "raises error for invalid backend" do
       expect {
         Foxtail::Function.backend = :unknown
-      }.to raise_error(ArgumentError, "Backend must be :auto, :icu4x, :javascript, or :foxtail_intl")
+      }.to raise_error(ArgumentError, "Backend must be :auto or :icu4x")
     end
   end
 
@@ -46,54 +45,6 @@ RSpec.describe Foxtail::Function do
   end
 
   describe ".defaults" do
-    context "with JavaScript backend" do
-      around do |example|
-        Foxtail::Function.backend = :javascript
-        example.run
-        Foxtail::Function.instance_variable_set(:@backend, nil)
-      end
-
-      it "returns JavaScript-based function Procs" do
-        result = Foxtail::Function.defaults
-
-        expect(result.keys).to contain_exactly("NUMBER", "DATETIME")
-        expect(result["NUMBER"]).to be_a(Proc)
-        expect(result["DATETIME"]).to be_a(Proc)
-      end
-
-      it "returns correct formatted results", :requires_javascript do
-        result = Foxtail::Function.defaults
-        en_locale = locale("en")
-
-        expect(result["NUMBER"].call(42, locale: en_locale)).to eq("42")
-        expect(result["DATETIME"].call(Time.new(2023, 1, 1), locale: en_locale)).to include("2023")
-      end
-    end
-
-    context "with Foxtail::Intl backend" do
-      around do |example|
-        Foxtail::Function.backend = :foxtail_intl
-        example.run
-        Foxtail::Function.instance_variable_set(:@backend, nil)
-      end
-
-      it "returns Foxtail::Intl-based function Procs" do
-        result = Foxtail::Function.defaults
-
-        expect(result.keys).to contain_exactly("NUMBER", "DATETIME")
-        expect(result["NUMBER"]).to be_a(Proc)
-        expect(result["DATETIME"]).to be_a(Proc)
-      end
-
-      it "returns correct formatted results" do
-        result = Foxtail::Function.defaults
-        en_locale = locale("en")
-
-        expect(result["NUMBER"].call(42, locale: en_locale)).to eq("42")
-        expect(result["DATETIME"].call(Time.new(2023, 1, 1), locale: en_locale)).to include("2023")
-      end
-    end
-
     context "with ICU4X backend" do
       around do |example|
         Foxtail::Function.backend = :icu4x
