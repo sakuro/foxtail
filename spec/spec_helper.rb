@@ -20,10 +20,4 @@ RSpec.configure do |config|
 
   # Automatically include extractor directory management for extractor specs
   config.include_context "when using extractor directory management", type: :extractor
-
-  # Skip JavaScript tests when no runtime is available
-  config.before(:each, :requires_javascript) do
-    require "execjs"
-    skip "JavaScript runtime not available" unless ExecJS.runtime
-  end
 end

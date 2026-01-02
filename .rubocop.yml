@@ -89,10 +89,10 @@ RSpec/NestedGroups:
   Enabled: false
 
 
-# Allow JavaScript class naming pattern for spec files
+# Allow module naming patterns for spec files
 RSpec/SpecFilePathFormat:
   CustomTransform:
-    JavaScript: javascript
+    Icu4xBackend: icu4x
 
 # Internal utility methods in stream processing don't require documentation
 Style/DocumentationMethod:
@@ -121,6 +121,11 @@ Lint/DuplicateBranch:
     - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
     - 'lib/foxtail/cldr/repository/date_time_formats.rb'      # Default datetime format patterns (medium as fallback)
     - 'lib/foxtail/intl/date_time_format.rb'  # CLDR style normalization with wide as default
+    - 'lib/foxtail/function/icu4x.rb'             # DateTime and Date both use .to_time
+
+# Double negation is idiomatic for boolean coercion
+Style/DoubleNegation:
+  Enabled: false
 
 # Number conversions are safe for statistical percentages (integers to float)
 Lint/NumberConversion:

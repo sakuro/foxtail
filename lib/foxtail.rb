@@ -27,8 +27,7 @@ module Foxtail
     "ast" => "AST",
     "ast_converter" => "ASTConverter",
     "cldr" => "CLDR",
-    "javascript" => "JavaScript",
-    "foxtail_intl" => "FoxtailIntl"
+    "icu4x" => "Icu4xBackend"
   )
 
   loader.setup
