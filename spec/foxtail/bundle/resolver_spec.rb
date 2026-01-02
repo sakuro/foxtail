@@ -348,8 +348,8 @@ RSpec.describe Foxtail::Bundle::Resolver do
 
     it "falls back to default when plural rules fail" do
       # Test with unsupported locale that might fail plural rule evaluation
-      plural_rules_double = instance_double(Foxtail::CLDR::Repository::PluralRules)
-      allow(Foxtail::CLDR::Repository::PluralRules).to receive(:new).and_return(plural_rules_double)
+      plural_rules_double = instance_double(ICU4X::PluralRules)
+      allow(ICU4X::PluralRules).to receive(:new).and_return(plural_rules_double)
       allow(plural_rules_double).to receive(:select).and_raise("Error")
 
       expr = {
