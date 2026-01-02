@@ -5,9 +5,12 @@ require "icu4x"
 module Foxtail
   # Main runtime class for message formatting and localization.
   #
-  # Bundle manages a collection of messages and terms for one or more locales,
+  # Bundle manages a collection of messages and terms for a single locale,
   # providing formatting capabilities with support for pluralization,
   # variable interpolation, and function calls.
+  #
+  # ICU4X handles locale fallback internally through the locale's parent chain
+  # (e.g., ja-JP → ja → und), so only a single locale is needed.
   #
   # @example Basic usage
   #   locale = ICU4X::Locale.parse("en-US")
@@ -27,7 +30,7 @@ module Foxtail
   #
   # Corresponds to fluent-bundle/src/bundle.ts in the original JavaScript implementation.
   class Bundle
-    attr_reader :locales
+    attr_reader :locale
     attr_reader :messages
     attr_reader :terms
     attr_reader :functions
@@ -36,41 +39,25 @@ module Foxtail
 
     # Create a new Bundle instance.
     #
-    # @param locales [ICU4X::Locale, Array<ICU4X::Locale>]
-    #   A single locale or array of locale instances for fallback chain
+    # @param locale [ICU4X::Locale] The locale for this bundle
     # @param options [Hash] Configuration options
     # @option options [Hash] :functions Custom formatting functions (defaults to NUMBER and DATETIME)
     # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks (default: true, not currently implemented)
     # @option options [Proc, nil] :transform Optional message transformation function (not currently implemented)
-    # @raise [ArgumentError] if locales are not ICU4X::Locale instances
+    # @raise [ArgumentError] if locale is not an ICU4X::Locale instance
     #
     # @example Basic bundle creation
     #   locale = ICU4X::Locale.parse("en-US")
     #   bundle = Foxtail::Bundle.new(locale)
-    #
-    # @example Bundle with fallback locales
-    #   locales = [ICU4X::Locale.parse("en-US"), ICU4X::Locale.parse("en")]
-    #   bundle = Foxtail::Bundle.new(locales)
-    def initialize(locales, **options)
-      # Accept only ICU4X::Locale instances for type safety
-      @locales = Array(locales).each_with_object([]) {|locale, acc|
-        unless locale.is_a?(ICU4X::Locale)
-          raise ArgumentError, "All locales must be ICU4X::Locale instances, got: #{locale.class}"
-        end
+    def initialize(locale, **options)
+      raise ArgumentError, "locale must be an ICU4X::Locale instance, got: #{locale.class}" unless locale.is_a?(ICU4X::Locale)
 
-        acc << locale
-      }.freeze
-
+      @locale = locale
       @messages = {}  # id → Bundle::AST Message
       @terms = {}     # id → Bundle::AST Term
       @functions = options[:functions] || Function.defaults
       @use_isolating = options.fetch(:use_isolating, true)
       @transform = options[:transform]
-    end
-
-    # Get primary locale for this bundle
-    def locale
-      @locales.first.to_s
     end
 
     # Add a resource to this bundle

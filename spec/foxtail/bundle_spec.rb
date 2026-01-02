@@ -4,12 +4,12 @@ RSpec.describe Foxtail::Bundle do
   describe "#initialize" do
     it "accepts a single locale" do
       bundle = Foxtail::Bundle.new(locale("en-US"))
-      expect(bundle.locales.map(&:to_s)).to eq(["en-US"])
+      expect(bundle.locale.to_s).to eq("en-US")
     end
 
-    it "accepts multiple locales" do
-      bundle = Foxtail::Bundle.new([locale("en-US"), locale("en")])
-      expect(bundle.locales.map(&:to_s)).to eq(%w[en-US en])
+    it "rejects non-ICU4X::Locale arguments" do
+      expect { Foxtail::Bundle.new("en-US") }.to raise_error(ArgumentError, /must be an ICU4X::Locale/)
+      expect { Foxtail::Bundle.new(nil) }.to raise_error(ArgumentError, /must be an ICU4X::Locale/)
     end
 
     it "sets default options" do

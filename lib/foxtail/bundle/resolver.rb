@@ -214,23 +214,7 @@ module Foxtail
           # Create child scope for function execution
           scope.child_scope
 
-          # Try each locale in bundle's locale chain
-          last_error = nil
-
-          @bundle.locales.each do |locale|
-            result = func.call(*positional_args, locale:, **options)
-            return result
-          rescue => e
-            # For any errors, continue to next locale
-            last_error = e
-            next
-          end
-
-          # If all locales failed, raise the last error
-          raise last_error if last_error
-
-          # This shouldn't happen, but just in case
-          "{#{func_name}()}"
+          func.call(*positional_args, locale: @bundle.locale, **options)
         rescue => e
           scope.add_error("Function error in #{func_name}: #{e.message}")
           "{#{func_name}()}"
@@ -328,17 +312,12 @@ module Foxtail
             return false
           end
 
-        # Try each locale in the bundle's chain for plural rules
-        @bundle.locales.each do |locale|
-          plural_rules = ICU4X::PluralRules.new(locale)
-          plural_category = plural_rules.select(numeric_value).to_s
-          return key_str.to_s == plural_category
-        rescue
-          # If plural rule evaluation fails for this locale, try next
-          next
-        end
-        # If all locales failed, add error and return false
-        scope.add_error("Plural rule error: no matching locale found")
+        # Use bundle's locale for plural rules
+        plural_rules = ICU4X::PluralRules.new(@bundle.locale)
+        plural_category = plural_rules.select(numeric_value).to_s
+        key_str.to_s == plural_category
+      rescue => e
+        scope.add_error("Plural rule error: #{e.message}")
         false
       end
 
