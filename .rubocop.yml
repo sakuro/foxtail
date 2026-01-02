@@ -51,7 +51,6 @@ Style/MissingElse:
 Naming/PredicateMethod:
   Exclude:
     - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
-    - 'lib/foxtail/cldr/repository/plural_rules.rb'     # evaluate_simple_condition() - evaluates CLDR conditions
     - 'compat/fluent_js/compatibility_tester.rb'  # span_related() - checks difference type rather than boolean property
     - 'compat/fluent_js/ast_comparator.rb'       # span_related() - checks difference type rather than boolean property
 
@@ -115,7 +114,6 @@ Style/OptionHash:
 Lint/DuplicateBranch:
   Exclude:
     - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
-    - 'lib/foxtail/cldr/repository/date_time_formats.rb'      # Default datetime format patterns (medium as fallback)
     - 'lib/foxtail/function/icu4x.rb'             # DateTime and Date both use .to_time
 
 # Double negation is idiomatic for boolean coercion

@@ -221,7 +221,7 @@ module Foxtail
             result = func.call(*positional_args, locale:, **options)
             return result
           rescue => e
-            # For any errors (including CLDRDataNotAvailable), continue to next locale
+            # For any errors, continue to next locale
             last_error = e
             next
           end

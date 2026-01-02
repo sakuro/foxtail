@@ -300,7 +300,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
   end
 
   describe "plural category matching" do
-    it "matches plural categories using CLDR rules" do
+    it "matches plural categories using ICU4X plural rules" do
       # Test English plural rules (1 is "one", others are "other")
       expr = {
         "type" => "select",
