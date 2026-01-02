@@ -88,11 +88,6 @@ RSpec/NestedGroups:
   Enabled: false
 
 
-# Allow module naming patterns for spec files
-RSpec/SpecFilePathFormat:
-  CustomTransform:
-    Icu4xBackend: icu4x
-
 # Internal utility methods in stream processing don't require documentation
 Style/DocumentationMethod:
   Exclude:
