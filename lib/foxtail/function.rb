@@ -7,23 +7,23 @@ require "time"
 
 module Foxtail
   # Built-in formatting functions for FTL
-  # Provides direct access to JavaScript and Foxtail::Intl formatters
+  # Provides direct access to ICU4X, JavaScript, and Foxtail::Intl formatters
   module Function
     # Current backend type
-    # @return [Symbol] Current backend (:javascript or :foxtail_intl)
+    # @return [Symbol] Current backend (:icu4x, :javascript, or :foxtail_intl)
     def self.backend
       @backend ||= detect_best_backend
     end
 
     # Set backend type
-    # @param backend_type [Symbol] Backend type (:auto, :javascript, or :foxtail_intl)
+    # @param backend_type [Symbol] Backend type (:auto, :icu4x, :javascript, or :foxtail_intl)
     def self.backend=(backend_type)
       if backend_type == :auto
         @backend = detect_best_backend
-      elsif %i[javascript foxtail_intl].include?(backend_type)
+      elsif %i[icu4x javascript foxtail_intl].include?(backend_type)
         @backend = backend_type
       else
-        raise ArgumentError, "Backend must be :auto, :javascript, or :foxtail_intl"
+        raise ArgumentError, "Backend must be :auto, :icu4x, :javascript, or :foxtail_intl"
       end
     end
 
@@ -31,6 +31,15 @@ module Foxtail
     # Returns Proc functions that instantiate formatters and call them
     def self.defaults
       case backend
+      when :icu4x
+        {
+          "NUMBER" => ->(value, locale:, **options) {
+            Icu4xBackend::NumberFormat.new(locale:, **options).call(value)
+          },
+          "DATETIME" => ->(value, locale:, **options) {
+            Icu4xBackend::DateTimeFormat.new(locale:, **options).call(value)
+          }
+        }
       when :javascript
         {
           "NUMBER" => ->(value, locale:, **options) {
@@ -60,9 +69,9 @@ module Foxtail
     end
 
     # Detect best available backend
-    # @return [Symbol] Best available backend type
+    # @return [Symbol] Best available backend type (icu4x is preferred)
     private_class_method def self.detect_best_backend
-      ExecJS.runtime ? :javascript : :foxtail_intl
+      :icu4x
     end
   end
 end

@@ -27,6 +27,7 @@ module Foxtail
     "ast" => "AST",
     "ast_converter" => "ASTConverter",
     "cldr" => "CLDR",
+    "icu4x" => "Icu4xBackend",
     "javascript" => "JavaScript",
     "foxtail_intl" => "FoxtailIntl"
   )
