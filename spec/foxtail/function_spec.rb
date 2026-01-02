@@ -3,35 +3,6 @@
 require "time"
 
 RSpec.describe Foxtail::Function do
-  describe ".backend" do
-    it "returns :icu4x" do
-      expect(Foxtail::Function.backend).to eq(:icu4x)
-    end
-  end
-
-  describe ".backend=" do
-    after do
-      # Reset to default backend
-      Foxtail::Function.instance_variable_set(:@backend, nil)
-    end
-
-    it "sets the backend symbol" do
-      Foxtail::Function.backend = :icu4x
-      expect(Foxtail::Function.backend).to eq(:icu4x)
-    end
-
-    it "auto-detects backend when :auto is specified" do
-      Foxtail::Function.backend = :auto
-      expect(Foxtail::Function.backend).to eq(:icu4x)
-    end
-
-    it "raises error for invalid backend" do
-      expect {
-        Foxtail::Function.backend = :unknown
-      }.to raise_error(ArgumentError, "Backend must be :auto or :icu4x")
-    end
-  end
-
   describe "[]" do
     it "provides access to NUMBER and DATETIME functions" do
       expect(Foxtail::Function["NUMBER"]).not_to be_nil
@@ -45,29 +16,21 @@ RSpec.describe Foxtail::Function do
   end
 
   describe ".defaults" do
-    context "with ICU4X backend" do
-      around do |example|
-        Foxtail::Function.backend = :icu4x
-        example.run
-        Foxtail::Function.instance_variable_set(:@backend, nil)
-      end
+    it "returns ICU4X-based function Procs" do
+      result = Foxtail::Function.defaults
 
-      it "returns ICU4X-based function Procs" do
-        result = Foxtail::Function.defaults
+      expect(result.keys).to contain_exactly("NUMBER", "DATETIME")
+      expect(result["NUMBER"]).to be_a(Proc)
+      expect(result["DATETIME"]).to be_a(Proc)
+    end
 
-        expect(result.keys).to contain_exactly("NUMBER", "DATETIME")
-        expect(result["NUMBER"]).to be_a(Proc)
-        expect(result["DATETIME"]).to be_a(Proc)
-      end
+    it "returns correct formatted results" do
+      result = Foxtail::Function.defaults
+      en_locale = locale("en")
 
-      it "returns correct formatted results" do
-        result = Foxtail::Function.defaults
-        en_locale = locale("en")
-
-        expect(result["NUMBER"].call(42, locale: en_locale)).to eq("42")
-        # ICU4X requires dateStyle or timeStyle; use mid-year date to avoid timezone edge cases
-        expect(result["DATETIME"].call(Time.new(2023, 6, 15), locale: en_locale, dateStyle: :medium)).to include("2023")
-      end
+      expect(result["NUMBER"].call(42, locale: en_locale)).to eq("42")
+      # ICU4X requires dateStyle or timeStyle; use mid-year date to avoid timezone edge cases
+      expect(result["DATETIME"].call(Time.new(2023, 6, 15), locale: en_locale, dateStyle: :medium)).to include("2023")
     end
   end
 end
