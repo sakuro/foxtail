@@ -102,8 +102,6 @@ Style/DocumentationMethod:
     - 'compat/fluent_js/compatibility_tester.rb'        # Internal compatibility testing utilities
     - 'compat/fluent_js/compatibility_reporter.rb'      # Internal compatibility reporting utilities
     - 'compat/fluent_js/ast_comparator.rb'              # Internal AST comparison utilities
-    - 'compat/node_intl/tester.rb'                      # Internal Node.js Intl testing utilities
-    - 'compat/node_intl/reporter.rb'                    # Internal Node.js Intl reporting utilities
     - 'benchmark/function_performance.rb'               # Benchmark script utilities
 
 # Options hashes are part of the established API for Bundle, Scope, and Functions
@@ -131,12 +129,7 @@ Style/DoubleNegation:
 Lint/NumberConversion:
   Exclude:
     - 'compat/fluent_js/compatibility_reporter.rb'  # Statistical percentage calculations with known integer inputs
-    - 'compat/node_intl/reporter.rb'                    # Statistical percentage calculations with known integer inputs
 
-# Float comparisons are acceptable for exact percentage thresholds in reports
-Lint/FloatComparison:
-  Exclude:
-    - 'compat/node_intl/reporter.rb'                    # 100.0% threshold comparison for report icons
 
 # Task-scoped methods prevent global namespace pollution (see rubocop-rake#42)
 Rake/MethodDefinitionInTask:
