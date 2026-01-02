@@ -19,8 +19,7 @@ module Foxtail
   # Configure inflections for acronyms
   loader.inflector.inflect(
     "ast" => "AST",
-    "ast_converter" => "ASTConverter",
-    "icu4x" => "Icu4xBackend"
+    "ast_converter" => "ASTConverter"
   )
 
   loader.setup
