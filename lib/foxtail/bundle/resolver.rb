@@ -330,8 +330,10 @@ module Foxtail
 
         # Try each locale in the bundle's chain for plural rules
         @bundle.locales.each do |locale|
-          plural_rules = Foxtail::CLDR::Repository::PluralRules.new(locale)
-          plural_category = plural_rules.select(numeric_value)
+          locale_str = locale.respond_to?(:to_rfc) ? locale.to_rfc : locale.to_s
+          icu_locale = ICU4X::Locale.parse(locale_str)
+          plural_rules = ICU4X::PluralRules.new(icu_locale)
+          plural_category = plural_rules.select(numeric_value).to_s
           return key_str.to_s == plural_category
         rescue
           # If plural rule evaluation fails for this locale, try next
