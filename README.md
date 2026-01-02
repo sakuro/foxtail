@@ -82,7 +82,7 @@ FTL
 en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 en_bundle.add_resource(en_resource)
 en_bundle.format("price", amount: 1234.50)
-# => "The price is $1,234.50."
+# => "The price is $1,234.5."
 en_bundle.format("discount", percent: 0.15)
 # => "Sale: 15% off!"
 
@@ -111,15 +111,6 @@ FTL
 en_bundle.add_resource(pattern_resource)
 en_bundle.format("greeting", gender: "male", name: "John")
 # => "Hello, Mr. John!"
-
-# Currency names with custom pattern
-currency_resource = Foxtail::Resource.from_string(<<~FTL)
-  price-name = {NUMBER($amount, pattern: "#,##0.00 ¤¤¤", currency: "USD")}
-FTL
-
-en_bundle.add_resource(currency_resource)
-en_bundle.format("price-name", amount: 100)
-# => "100.00 US dollars"
 ```
 
 
