@@ -4,12 +4,12 @@ RSpec.describe Foxtail::Bundle do
   describe "#initialize" do
     it "accepts a single locale" do
       bundle = Foxtail::Bundle.new(locale("en-US"))
-      expect(bundle.locales.map(&:to_s)).to eq(["en_US"])
+      expect(bundle.locales.map(&:to_s)).to eq(["en-US"])
     end
 
     it "accepts multiple locales" do
       bundle = Foxtail::Bundle.new([locale("en-US"), locale("en")])
-      expect(bundle.locales.map(&:to_s)).to eq(%w[en_US en])
+      expect(bundle.locales.map(&:to_s)).to eq(%w[en-US en])
     end
 
     it "sets default options" do

@@ -5,34 +5,34 @@ module Foxtail
   end
 
   class Bundle
-    @locales: Array[Locale::Tag::Simple]
+    @locales: Array[ICU4X::Locale]
     @messages: Hash[String, Hash[String, untyped]]
     @terms: Hash[String, Hash[String, untyped]]
     @functions: Hash[String, Proc]
     @use_isolating: bool
     @transform: Proc?
 
-    attr_reader locales: Array[Locale::Tag::Simple]
+    attr_reader locales: Array[ICU4X::Locale]
     attr_reader messages: Hash[String, Hash[String, untyped]]
     attr_reader terms: Hash[String, Hash[String, untyped]]
     attr_reader functions: Hash[String, Proc]
     attr_reader use_isolating: bool
     attr_reader transform: Proc?
 
-    def initialize: (Locale::Tag::Simple | Array[Locale::Tag::Simple] locales, **untyped options) -> void
-    def locale: () -> Locale::Tag::Simple
-    def add_resource: (String | Resource resource, ?locale: Locale::Tag::Simple?) -> void
+    def initialize: (ICU4X::Locale | Array[ICU4X::Locale] locales, **untyped options) -> void
+    def locale: () -> String
+    def add_resource: (String | Resource resource, **untyped options) -> Array[String]
     def message?: (String | Symbol id) -> bool
     def message: (String | Symbol id) -> Hash[String, untyped]?
     def term?: (String | Symbol id) -> bool
     def term: (String | Symbol id) -> Hash[String, untyped]?
     def format: (String | Symbol id, ?Hash[String | Symbol, untyped] args) -> String
-    def format_pattern: (Hash[String, untyped] pattern, ?Hash[String | Symbol, untyped] args) -> String
+    def format_pattern: (Hash[String, untyped] pattern, ?Hash[String | Symbol, untyped] args, ?Array[String]? errors) -> String
 
     private
 
-    def add_message_entry: (untyped entry, Locale::Tag::Simple locale) -> void
-    def add_term_entry: (untyped entry, Locale::Tag::Simple locale) -> void
+    def add_message_entry: (untyped entry, bool allow_overrides) -> void
+    def add_term_entry: (untyped entry, bool allow_overrides) -> void
   end
 
   class Parser

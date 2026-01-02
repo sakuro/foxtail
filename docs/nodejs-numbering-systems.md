@@ -291,7 +291,7 @@ The Node.js patterns can inform Foxtail's Ruby API design:
 
 ```ruby
 # Foxtail equivalent concepts
-bundle = Foxtail::Bundle.new(Locale::Tag.parse("ar-SA"))
+bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ar-SA"))
 bundle.format("price", amount: 1234.56, numbering_system: "arab")
 
 # With number format options
