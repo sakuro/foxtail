@@ -10,15 +10,11 @@ module Foxtail
   # Uses ICU4X for number and datetime formatting
   module Function
     # Default functions available to all bundles
-    # Returns Proc functions for NUMBER and DATETIME formatting
+    # Returns Method objects for NUMBER and DATETIME formatting
     def self.defaults
       {
-        "NUMBER" => ->(value, locale:, **options) {
-          format_number(value, locale, options)
-        },
-        "DATETIME" => ->(value, locale:, **options) {
-          format_datetime(value, locale, options)
-        }
+        "NUMBER" => method(:format_number),
+        "DATETIME" => method(:format_datetime)
       }
     end
 
@@ -30,9 +26,9 @@ module Foxtail
     # Format number using ICU4X
     # @param value [Numeric] Number to format
     # @param locale [ICU4X::Locale] Locale for formatting
-    # @param options [Hash] Formatting options
+    # @param options [Hash] Formatting options (camelCase keys)
     # @return [String] Formatted number
-    private_class_method def self.format_number(value, locale, options)
+    private_class_method def self.format_number(value, locale:, **options)
       icu_options = convert_number_options(options)
       ICU4X::NumberFormat.new(locale, **icu_options).format(value)
     end
@@ -40,9 +36,9 @@ module Foxtail
     # Format datetime using ICU4X
     # @param value [Time, DateTime, Date] DateTime to format
     # @param locale [ICU4X::Locale] Locale for formatting
-    # @param options [Hash] Formatting options
+    # @param options [Hash] Formatting options (camelCase keys)
     # @return [String] Formatted datetime
-    private_class_method def self.format_datetime(value, locale, options)
+    private_class_method def self.format_datetime(value, locale:, **options)
       icu_options = convert_datetime_options(options)
       # ICU4X requires at least one of date_style or time_style
       # Default to :medium for date if neither specified

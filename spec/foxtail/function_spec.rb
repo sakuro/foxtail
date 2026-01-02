@@ -16,12 +16,12 @@ RSpec.describe Foxtail::Function do
   end
 
   describe ".defaults" do
-    it "returns ICU4X-based function Procs" do
+    it "returns ICU4X-based function Methods" do
       result = Foxtail::Function.defaults
 
       expect(result.keys).to contain_exactly("NUMBER", "DATETIME")
-      expect(result["NUMBER"]).to be_a(Proc)
-      expect(result["DATETIME"]).to be_a(Proc)
+      expect(result["NUMBER"]).to be_a(Method)
+      expect(result["DATETIME"]).to be_a(Method)
     end
 
     it "returns correct formatted results" do
