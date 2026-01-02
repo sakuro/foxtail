@@ -140,7 +140,7 @@ Unicode mathematical alphanumeric symbols:
 ### 3. API Design
 ```ruby
 # Example API for Foxtail
-bundle = Foxtail::Bundle.new(Locale::Tag.parse("ja"))
+bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
 bundle.format("price", amount: 1234, numbering_system: "jpan")
 # => "一千二百三十四円"
 

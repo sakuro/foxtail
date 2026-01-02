@@ -3,7 +3,6 @@
 require "date"
 require "icu4x"
 require "icu4x/data/recommended"
-require "locale"
 require "time"
 
 module Foxtail
@@ -30,36 +29,26 @@ module Foxtail
 
     # Format number using ICU4X
     # @param value [Numeric] Number to format
-    # @param locale [Locale::Tag::Simple] Locale for formatting
+    # @param locale [ICU4X::Locale] Locale for formatting
     # @param options [Hash] Formatting options
     # @return [String] Formatted number
     private_class_method def self.format_number(value, locale, options)
-      icu_locale = to_icu_locale(locale)
       icu_options = convert_number_options(options)
-      ICU4X::NumberFormat.new(icu_locale, **icu_options).format(value)
+      ICU4X::NumberFormat.new(locale, **icu_options).format(value)
     end
 
     # Format datetime using ICU4X
     # @param value [Time, DateTime, Date] DateTime to format
-    # @param locale [Locale::Tag::Simple] Locale for formatting
+    # @param locale [ICU4X::Locale] Locale for formatting
     # @param options [Hash] Formatting options
     # @return [String] Formatted datetime
     private_class_method def self.format_datetime(value, locale, options)
-      icu_locale = to_icu_locale(locale)
       icu_options = convert_datetime_options(options)
       # ICU4X requires at least one of date_style or time_style
       # Default to :medium for date if neither specified
       icu_options[:date_style] ||= :medium unless icu_options[:time_style]
       time_value = to_time(value)
-      ICU4X::DateTimeFormat.new(icu_locale, **icu_options).format(time_value)
-    end
-
-    # Convert Locale::Tag to ICU4X::Locale
-    # @param locale [Locale::Tag::Simple, String] Locale to convert
-    # @return [ICU4X::Locale] ICU4X locale object
-    private_class_method def self.to_icu_locale(locale)
-      locale_str = locale.respond_to?(:to_rfc) ? locale.to_rfc : locale.to_s
-      ICU4X::Locale.parse(locale_str)
+      ICU4X::DateTimeFormat.new(locale, **icu_options).format(time_value)
     end
 
     # Convert value to Time object

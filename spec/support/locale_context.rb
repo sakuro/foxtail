@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "locale"
+require "icu4x"
 
 # Shared context for locale helper method
 RSpec.shared_context "with locale" do
-  def locale(locale_string) = Locale::Tag.parse(locale_string)
+  def locale(locale_string) = ICU4X::Locale.parse(locale_string)
 end
 
 # Include locale helpers in all specs

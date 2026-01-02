@@ -38,6 +38,5 @@ Gem::Specification.new do |spec|
   # Dependencies
   spec.add_dependency "icu4x", "~> 0.6"
   spec.add_dependency "icu4x-data-recommended", "~> 0.6"
-  spec.add_dependency "locale", "~> 2.1"
   spec.add_dependency "zeitwerk", "~> 2.6"
 end

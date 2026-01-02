@@ -47,7 +47,7 @@ en_resource = Foxtail::Resource.from_string(<<~FTL)
   }.
 FTL
 
-en_bundle = Foxtail::Bundle.new(Locale::Tag.parse("en-US"))
+en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 en_bundle.add_resource(en_resource)
 en_bundle.format("hello", name: "Alice")
 # => "Hello, Alice!"
@@ -60,7 +60,7 @@ ja_resource = Foxtail::Resource.from_string(<<~FTL)
   emails = メールが{$count}件あります。
 FTL
 
-ja_bundle = Foxtail::Bundle.new(Locale::Tag.parse("ja"))
+ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
 ja_bundle.add_resource(ja_resource)
 ja_bundle.format("hello", name: "太郎")
 # => "こんにちは、太郎さん！"
@@ -79,7 +79,7 @@ en_resource = Foxtail::Resource.from_string(<<~FTL)
   discount = Sale: {NUMBER($percent, style: "percent")} off!
 FTL
 
-en_bundle = Foxtail::Bundle.new(Locale::Tag.parse("en-US"))
+en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 en_bundle.add_resource(en_resource)
 en_bundle.format("price", amount: 1234.50)
 # => "The price is $1,234.50."
@@ -92,7 +92,7 @@ ja_resource = Foxtail::Resource.from_string(<<~FTL)
   discount = セール：{NUMBER($percent, style: "percent")}オフ！
 FTL
 
-ja_bundle = Foxtail::Bundle.new(Locale::Tag.parse("ja"))
+ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
 ja_bundle.add_resource(ja_resource)
 ja_bundle.format("price", amount: 1234)
 # => "価格は￥1,234です。"
@@ -184,9 +184,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sakuro
 
 This project stands on the shoulders of giants:
 
-- **ICU4X**: Number, date/time, and plural rules formatting via the [icu4x gem](https://github.com/nicholaides/icu4x-rb) ([MIT License](https://opensource.org/licenses/MIT))
+- **ICU4X**: Number, date/time, plural rules, and locale handling via the [icu4x gem](https://github.com/nicholaides/icu4x-rb) ([MIT License](https://opensource.org/licenses/MIT))
 - **Fluent Project**: Foxtail aims for compatibility with Mozilla's [Fluent localization system](https://projectfluent.org/), particularly [fluent.js](https://github.com/projectfluent/fluent.js) ([Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt))
-- **Ruby Locale**: Locale parsing and handling provided by the [Ruby GetText project](https://ruby-gettext.github.io/) ([Ruby License](https://www.ruby-lang.org/en/about/license.txt))
 
 ## License
 

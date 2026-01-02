@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "locale"
+require "icu4x"
 
 module Foxtail
   # Main runtime class for message formatting and localization.
@@ -10,7 +10,7 @@ module Foxtail
   # variable interpolation, and function calls.
   #
   # @example Basic usage
-  #   locale = Locale::Tag.parse("en-US")
+  #   locale = ICU4X::Locale.parse("en-US")
   #   bundle = Foxtail::Bundle.new(locale)
   #
   #   resource = Foxtail::Resource.from_string("hello = Hello, {$name}!")
@@ -36,28 +36,28 @@ module Foxtail
 
     # Create a new Bundle instance.
     #
-    # @param locales [Locale::Tag::Simple, Array<Locale::Tag::Simple>]
+    # @param locales [ICU4X::Locale, Array<ICU4X::Locale>]
     #   A single locale or array of locale instances for fallback chain
     # @param options [Hash] Configuration options
     # @option options [Hash] :functions Custom formatting functions (defaults to NUMBER and DATETIME)
     # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks (default: true, not currently implemented)
     # @option options [Proc, nil] :transform Optional message transformation function (not currently implemented)
-    # @raise [ArgumentError] if locales are not Locale::Tag::Simple instances
+    # @raise [ArgumentError] if locales are not ICU4X::Locale instances
     #
     # @example Basic bundle creation
-    #   locale = Locale::Tag.parse("en-US")
+    #   locale = ICU4X::Locale.parse("en-US")
     #   bundle = Foxtail::Bundle.new(locale)
     #
     # @example Bundle with fallback locales
-    #   locales = [Locale::Tag.parse("en-US"), Locale::Tag.parse("en")]
+    #   locales = [ICU4X::Locale.parse("en-US"), ICU4X::Locale.parse("en")]
     #   bundle = Foxtail::Bundle.new(locales)
     def initialize(locales, **options)
-      # Accept only Locale instances for type safety
+      # Accept only ICU4X::Locale instances for type safety
       @locales = Array(locales).each_with_object([]) {|locale, acc|
-        unless locale.is_a?(Locale::Tag::Simple)
-          raise ArgumentError, "All locales must be Locale instances " \
-                               "(subclass of Locale::Tag::Simple), got: #{locale.class}"
+        unless locale.is_a?(ICU4X::Locale)
+          raise ArgumentError, "All locales must be ICU4X::Locale instances, got: #{locale.class}"
         end
+
         acc << locale
       }.freeze
 
