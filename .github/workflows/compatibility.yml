@@ -11,12 +11,8 @@ on:
       - 'lib/foxtail/parser/**'
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
-      - 'lib/foxtail/intl/**'
-      - 'lib/foxtail/cldr/extractor/**'
-      - 'lib/foxtail/cldr/repository/**'
       - 'spec/parser/**'
-      - 'compat/**'
-      - 'data/cldr/**'
+      - 'compat/fluent_js/**'
       - '.github/workflows/compatibility.yml'
 
   pull_request:
@@ -24,12 +20,8 @@ on:
       - 'lib/foxtail/parser/**'
       - 'lib/foxtail/parser.rb'
       - 'lib/foxtail/bundle/ast_converter.rb'
-      - 'lib/foxtail/intl/**'
-      - 'lib/foxtail/cldr/extractor/**'
-      - 'lib/foxtail/cldr/repository/**'
       - 'spec/parser/**'
-      - 'compat/**'
-      - 'data/cldr/**'
+      - 'compat/fluent_js/**'
       - '.github/workflows/compatibility.yml'
 
   # Allow manual triggering for comprehensive testing
@@ -91,63 +83,6 @@ jobs:
           } >> $GITHUB_OUTPUT
 
       - name: Comment PR with Fluent.js compatibility summary
-        if: github.event_name == 'pull_request'
-        uses: int128/comment-action@v1
-        with:
-          post: |
-            ${{ steps.extract-summary.outputs.body }}
-
-  node-intl:
-    runs-on: ubuntu-latest
-    name: Node.js Intl Compatibility
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'pull_request' || github.event_name == 'push'
-
-    steps:
-      - uses: actions/checkout@v5
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.4'  # Use latest supported version
-          bundler-cache: true
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Generate Node.js Intl compatibility report
-        run: |
-          bundle exec rake compatibility:node_intl
-
-      - name: Upload Node.js Intl compatibility report
-        uses: actions/upload-artifact@v4
-        with:
-          name: node-intl-compatibility-report
-          path: compat/node_intl_compatibility_report.md
-          retention-days: 30
-
-      - name: Extract Node.js Intl compatibility summary
-        if: github.event_name == 'pull_request'
-        id: extract-summary
-        run: |
-          # Read the markdown report
-          REPORT=$(cat compat/node_intl_compatibility_report.md)
-
-          # Create the comment body with complete report
-          {
-            echo 'body<<EOF'
-            echo '## 📊 Node.js Intl Compatibility Report'
-            echo ''
-            echo "$REPORT"
-            echo ''
-            echo "[Report also available in workflow artifacts](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
-            echo ''
-            echo '> 🔍 This compatibility check ran because formatter-related files were modified.'
-            echo 'EOF'
-          } >> $GITHUB_OUTPUT
-
-      - name: Comment PR with Node.js Intl compatibility summary
         if: github.event_name == 'pull_request'
         uses: int128/comment-action@v1
         with:
