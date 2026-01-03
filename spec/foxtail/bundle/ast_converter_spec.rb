@@ -33,21 +33,21 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
       # Check message
       hello_msg = entries[0]
-      expect(hello_msg["type"]).to eq("message")
-      expect(hello_msg["id"]).to eq("hello")
-      expect(hello_msg["value"]).to be_an(Array)
+      expect(hello_msg[:type]).to eq("message")
+      expect(hello_msg[:id]).to eq("hello")
+      expect(hello_msg[:value]).to be_an(Array)
 
       # Check term
       brand_term = entries[1]
-      expect(brand_term["type"]).to eq("term")
-      expect(brand_term["id"]).to eq("-brand")
-      expect(brand_term["value"]).to eq("Firefox")
+      expect(brand_term[:type]).to eq("term")
+      expect(brand_term[:id]).to eq("-brand")
+      expect(brand_term[:value]).to eq("Firefox")
 
       # Check simple message
       goodbye_msg = entries[2]
-      expect(goodbye_msg["type"]).to eq("message")
-      expect(goodbye_msg["id"]).to eq("goodbye")
-      expect(goodbye_msg["value"]).to eq("Goodbye!")
+      expect(goodbye_msg[:type]).to eq("message")
+      expect(goodbye_msg[:id]).to eq("goodbye")
+      expect(goodbye_msg[:value]).to eq("Goodbye!")
     end
   end
 
@@ -59,13 +59,13 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
     it "converts parser message to bundle AST message" do
       result = converter.convert_message(parser_message)
 
-      expect(result["type"]).to eq("message")
-      expect(result["id"]).to eq("hello")
-      expect(result["value"]).to be_an(Array)
-      expect(result["value"][0]).to eq("Hello, ")
-      expect(result["value"][1]["type"]).to eq("var")
-      expect(result["value"][1]["name"]).to eq("name")
-      expect(result["value"][2]).to eq("!")
+      expect(result[:type]).to eq("message")
+      expect(result[:id]).to eq("hello")
+      expect(result[:value]).to be_an(Array)
+      expect(result[:value][0]).to eq("Hello, ")
+      expect(result[:value][1][:type]).to eq("var")
+      expect(result[:value][1][:name]).to eq("name")
+      expect(result[:value][2]).to eq("!")
     end
 
     context "with attributes" do
@@ -79,8 +79,8 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       it "converts message attributes" do
         result = converter.convert_message(parser_message)
 
-        expect(result["attributes"]).to be_a(Hash)
-        expect(result["attributes"]["title"]).to eq("Page title")
+        expect(result[:attributes]).to be_a(Hash)
+        expect(result[:attributes]["title"]).to eq("Page title")
       end
     end
   end
@@ -93,9 +93,9 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
     it "converts parser term to bundle AST term" do
       result = converter.convert_term(parser_term)
 
-      expect(result["type"]).to eq("term")
-      expect(result["id"]).to eq("-brand")
-      expect(result["value"]).to eq("Firefox")
+      expect(result[:type]).to eq("term")
+      expect(result[:id]).to eq("-brand")
+      expect(result[:value]).to eq("Firefox")
     end
   end
 
@@ -123,8 +123,8 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
         expect(result).to be_an(Array)
         expect(result[0]).to eq("Hello, ")
-        expect(result[1]["type"]).to eq("var")
-        expect(result[1]["name"]).to eq("name")
+        expect(result[1][:type]).to eq("var")
+        expect(result[1][:name]).to eq("name")
         expect(result[2]).to eq("!")
       end
     end
@@ -139,36 +139,36 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       var_placeable = pattern_elements[0]
       result = converter.__send__(:convert_expression, var_placeable.expression)
 
-      expect(result["type"]).to eq("var")
-      expect(result["name"]).to eq("var")
+      expect(result[:type]).to eq("var")
+      expect(result[:name]).to eq("var")
     end
 
     it "converts message references" do
       msg_placeable = pattern_elements[2]
       result = converter.__send__(:convert_expression, msg_placeable.expression)
 
-      expect(result["type"]).to eq("mesg")
-      expect(result["name"]).to eq("hello")
+      expect(result[:type]).to eq("mesg")
+      expect(result[:name]).to eq("hello")
     end
 
     it "converts term references" do
       term_placeable = pattern_elements[4]
       result = converter.__send__(:convert_expression, term_placeable.expression)
 
-      expect(result["type"]).to eq("term")
-      expect(result["name"]).to eq("term")
+      expect(result[:type]).to eq("term")
+      expect(result[:name]).to eq("term")
     end
 
     it "converts function references with positional arguments" do
       func_placeable = pattern_elements[6]
       result = converter.__send__(:convert_expression, func_placeable.expression)
 
-      expect(result["type"]).to eq("func")
-      expect(result["name"]).to eq("NUMBER")
-      expect(result["args"]).to be_an(Array)
-      expect(result["args"].length).to eq(1)
-      expect(result["args"][0]["type"]).to eq("var")
-      expect(result["args"][0]["name"]).to eq("count")
+      expect(result[:type]).to eq("func")
+      expect(result[:name]).to eq("NUMBER")
+      expect(result[:args]).to be_an(Array)
+      expect(result[:args].length).to eq(1)
+      expect(result[:args][0][:type]).to eq("var")
+      expect(result[:args][0][:name]).to eq("count")
     end
 
     it "converts function references with named arguments" do
@@ -177,22 +177,22 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       func_placeable = parser_resource.body.first.value.elements[0]
       result = converter.__send__(:convert_expression, func_placeable.expression)
 
-      expect(result["type"]).to eq("func")
-      expect(result["name"]).to eq("FUNC")
-      expect(result["args"]).to be_an(Array)
-      expect(result["args"].length).to eq(2)
+      expect(result[:type]).to eq("func")
+      expect(result[:name]).to eq("FUNC")
+      expect(result[:args]).to be_an(Array)
+      expect(result[:args].length).to eq(2)
 
       # First named argument
-      expect(result["args"][0]["type"]).to eq("narg")
-      expect(result["args"][0]["name"]).to eq("arg1")
-      expect(result["args"][0]["value"]["type"]).to eq("num")
-      expect(result["args"][0]["value"]["value"]).to eq(1.0)
+      expect(result[:args][0][:type]).to eq("narg")
+      expect(result[:args][0][:name]).to eq("arg1")
+      expect(result[:args][0][:value][:type]).to eq("num")
+      expect(result[:args][0][:value][:value]).to eq(1.0)
 
       # Second named argument
-      expect(result["args"][1]["type"]).to eq("narg")
-      expect(result["args"][1]["name"]).to eq("arg2")
-      expect(result["args"][1]["value"]["type"]).to eq("str")
-      expect(result["args"][1]["value"]["value"]).to eq("hello")
+      expect(result[:args][1][:type]).to eq("narg")
+      expect(result[:args][1][:name]).to eq("arg2")
+      expect(result[:args][1][:value][:type]).to eq("str")
+      expect(result[:args][1][:value][:value]).to eq("hello")
     end
 
     it "processes escape sequences in text elements" do
@@ -200,7 +200,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       parser_resource = Foxtail::Parser.new.parse(ftl_source)
       result = converter.convert_resource(parser_resource)
 
-      expect(result.first["value"]).to eq("Text with \"quotes\" and \\backslash and A")
+      expect(result.first[:value]).to eq("Text with \"quotes\" and \\backslash and A")
     end
   end
 
@@ -221,29 +221,29 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
     it "converts select expressions" do
       result = converter.__send__(:convert_expression, select_expr)
 
-      expect(result["type"]).to eq("select")
-      expect(result["selector"]["type"]).to eq("var")
-      expect(result["selector"]["name"]).to eq("count")
-      expect(result["variants"]).to be_an(Array)
-      expect(result["variants"].length).to eq(3)
-      expect(result["star"]).to eq(2) # Index of default variant
+      expect(result[:type]).to eq("select")
+      expect(result[:selector][:type]).to eq("var")
+      expect(result[:selector][:name]).to eq("count")
+      expect(result[:variants]).to be_an(Array)
+      expect(result[:variants].length).to eq(3)
+      expect(result[:star]).to eq(2) # Index of default variant
     end
 
     it "converts variant keys correctly" do
       result = converter.__send__(:convert_expression, select_expr)
-      variants = result["variants"]
+      variants = result[:variants]
 
       # Number literal key
-      expect(variants[0]["key"]["type"]).to eq("num")
-      expect(variants[0]["key"]["value"]).to eq(0.0)
+      expect(variants[0][:key][:type]).to eq("num")
+      expect(variants[0][:key][:value]).to eq(0.0)
 
       # String literal key
-      expect(variants[1]["key"]["type"]).to eq("str")
-      expect(variants[1]["key"]["value"]).to eq("one")
+      expect(variants[1][:key][:type]).to eq("str")
+      expect(variants[1][:key][:value]).to eq("one")
 
       # Default variant key
-      expect(variants[2]["key"]["type"]).to eq("str")
-      expect(variants[2]["key"]["value"]).to eq("other")
+      expect(variants[2][:key][:type]).to eq("str")
+      expect(variants[2][:key][:value]).to eq("other")
     end
   end
 
@@ -265,22 +265,22 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       it "converts number literals from select expression" do
         zero_variant = select_expr.variants[0]
         result = converter.__send__(:convert_literal, zero_variant.key)
-        expect(result["type"]).to eq("num")
-        expect(result["value"]).to eq(0.0)
+        expect(result[:type]).to eq("num")
+        expect(result[:value]).to eq(0.0)
       end
 
       it "converts identifier literals from select expression" do
         one_variant = select_expr.variants[1]
         result = converter.__send__(:convert_literal, one_variant.key)
-        expect(result["type"]).to eq("str")
-        expect(result["value"]).to eq("one")
+        expect(result[:type]).to eq("str")
+        expect(result[:value]).to eq("one")
       end
 
       it "converts default identifier literals from select expression" do
         other_variant = select_expr.variants[2]
         result = converter.__send__(:convert_literal, other_variant.key)
-        expect(result["type"]).to eq("str")
-        expect(result["value"]).to eq("other")
+        expect(result[:type]).to eq("str")
+        expect(result[:value]).to eq("other")
       end
     end
   end

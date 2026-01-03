@@ -201,9 +201,9 @@ module Foxtail
             if expr.arguments.named
               expr.arguments.named.each do |named_arg|
                 args << {
-                  "type" => "narg",
-                  "name" => named_arg.name.name,
-                  "value" => convert_expression(named_arg.value)
+                  type: "narg",
+                  name: named_arg.name.name,
+                  value: convert_expression(named_arg.value)
                 }
               end
             end
