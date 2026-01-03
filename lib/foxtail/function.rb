@@ -55,22 +55,14 @@ module Foxtail
           result[:style] = value.to_sym
         when :currency
           result[:currency] = value.to_s
-        when :currencyDisplay
-          result[:currency_display] = value.to_sym
         when :minimumIntegerDigits
           result[:minimum_integer_digits] = Integer(value)
         when :minimumFractionDigits
           result[:minimum_fraction_digits] = Integer(value)
         when :maximumFractionDigits
           result[:maximum_fraction_digits] = Integer(value)
-        when :minimumSignificantDigits
-          result[:minimum_significant_digits] = Integer(value)
-        when :maximumSignificantDigits
-          result[:maximum_significant_digits] = Integer(value)
         when :useGrouping
           result[:use_grouping] = !!value
-          # Unsupported options are silently ignored for now
-          # TODO: Add support as icu4x gem adds features
         end
       end
 
@@ -89,26 +81,8 @@ module Foxtail
           result[:date_style] = value.to_sym
         when :timeStyle
           result[:time_style] = value.to_sym
-        when :year
-          result[:year] = value.to_sym
-        when :month
-          result[:month] = value.to_sym
-        when :day
-          result[:day] = value.to_sym
-        when :weekday
-          result[:weekday] = value.to_sym
-        when :hour
-          result[:hour] = value.to_sym
-        when :minute
-          result[:minute] = value.to_sym
-        when :second
-          result[:second] = value.to_sym
         when :timeZone
           result[:time_zone] = value.to_s
-        when :hour12
-          result[:hour12] = !!value
-          # Unsupported options are silently ignored for now
-          # TODO: Add support as icu4x gem adds features
         end
       end
 
