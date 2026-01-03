@@ -3,7 +3,7 @@
 RSpec.describe Foxtail::Bundle::Resolver do
   let(:bundle) { Foxtail::Bundle.new(locale("en")) }
   let(:resolver) { Foxtail::Bundle::Resolver.new(bundle) }
-  let(:scope) { Foxtail::Bundle::Scope.new(bundle, {name: "World", count: 5}) }
+  let(:scope) { Foxtail::Bundle::Scope.new(bundle, name: "World", count: 5) }
 
   describe "#initialize" do
     it "stores the bundle reference" do
@@ -209,7 +209,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
       }
 
       test_date = Time.new(2023, 6, 15)
-      scope_with_date = Foxtail::Bundle::Scope.new(bundle, {date: test_date})
+      scope_with_date = Foxtail::Bundle::Scope.new(bundle, date: test_date)
 
       result = resolver.resolve_expression(expr, scope_with_date)
       expect(result).to eq("2023") # Should format only the year
@@ -313,12 +313,12 @@ RSpec.describe Foxtail::Bundle::Resolver do
       }
 
       # Test count = 1 (should match "one")
-      scope_with_one = Foxtail::Bundle::Scope.new(bundle, {count: 1})
+      scope_with_one = Foxtail::Bundle::Scope.new(bundle, count: 1)
       result = resolver.resolve_expression(expr, scope_with_one)
       expect(result).to eq("one item")
 
       # Test count = 2 (should match "other")
-      scope_with_two = Foxtail::Bundle::Scope.new(bundle, {count: 2})
+      scope_with_two = Foxtail::Bundle::Scope.new(bundle, count: 2)
       result = resolver.resolve_expression(expr, scope_with_two)
       expect(result).to eq("many items")
     end
@@ -336,12 +336,12 @@ RSpec.describe Foxtail::Bundle::Resolver do
       }
 
       # Exact numeric match should take precedence
-      scope_with_zero = Foxtail::Bundle::Scope.new(bundle, {count: 0})
+      scope_with_zero = Foxtail::Bundle::Scope.new(bundle, count: 0)
       result = resolver.resolve_expression(expr, scope_with_zero)
       expect(result).to eq("no items")
 
       # Plural rule matching for non-exact matches
-      scope_with_one = Foxtail::Bundle::Scope.new(bundle, {count: 1})
+      scope_with_one = Foxtail::Bundle::Scope.new(bundle, count: 1)
       result = resolver.resolve_expression(expr, scope_with_one)
       expect(result).to eq("one item")
     end
@@ -362,7 +362,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
         "star" => 1
       }
 
-      scope_with_one = Foxtail::Bundle::Scope.new(bundle, {count: 1})
+      scope_with_one = Foxtail::Bundle::Scope.new(bundle, count: 1)
       result = resolver.resolve_expression(expr, scope_with_one)
       expect(result).to eq("many items") # Should fall back to default
     end

@@ -40,30 +40,31 @@ module Foxtail
     # Create a new Bundle instance.
     #
     # @param locale [ICU4X::Locale] The locale for this bundle
-    # @param options [Hash] Configuration options
-    # @option options [Hash] :functions Custom formatting functions (defaults to NUMBER and DATETIME)
-    # @option options [Boolean] :use_isolating Whether to use Unicode isolating marks (default: true, not currently implemented)
-    # @option options [Proc, nil] :transform Optional message transformation function (not currently implemented)
+    # @param functions [Hash{String => #call}] Custom formatting functions (defaults to NUMBER and DATETIME)
+    # @param use_isolating [Boolean] Whether to use Unicode isolating marks (default: true, not currently implemented)
+    # @param transform [#call, nil] Optional message transformation function (not currently implemented)
     # @raise [ArgumentError] if locale is not an ICU4X::Locale instance
     #
     # @example Basic bundle creation
     #   locale = ICU4X::Locale.parse("en-US")
     #   bundle = Foxtail::Bundle.new(locale)
-    def initialize(locale, **options)
+    def initialize(locale, functions: Function.defaults, use_isolating: true, transform: nil)
       raise ArgumentError, "locale must be an ICU4X::Locale instance, got: #{locale.class}" unless locale.is_a?(ICU4X::Locale)
 
       @locale = locale
       @messages = {}  # id → Bundle::AST Message
       @terms = {}     # id → Bundle::AST Term
-      @functions = options[:functions] || Function.defaults
-      @use_isolating = options.fetch(:use_isolating, true)
-      @transform = options[:transform]
+      @functions = functions
+      @use_isolating = use_isolating
+      @transform = transform
     end
 
     # Add a resource to this bundle
-    def add_resource(resource, **options)
-      allow_overrides = options.fetch(:allow_overrides, false)
-
+    #
+    # @param resource [Resource] The resource to add
+    # @param allow_overrides [Boolean] Whether to allow overriding existing messages/terms
+    # @return [Array] Errors from the resource
+    def add_resource(resource, allow_overrides: false)
       resource.entries.each do |entry|
         # In fluent-bundle format, terms have '-' prefix in id
         if entry["id"]&.start_with?("-")
@@ -109,11 +110,11 @@ module Foxtail
     # @example Pluralization
     #   bundle.format("emails", count: 1)
     #   # => "You have one email." (assuming plural message)
-    def format(id, args={})
+    def format(id, **args)
       message = message(id)
       return id.to_s unless message
 
-      scope = Scope.new(self, args)
+      scope = Scope.new(self, **args)
       resolver = Resolver.new(self)
       resolver.resolve_pattern(message["value"], scope)
       # For now, return just the result
@@ -121,8 +122,8 @@ module Foxtail
     end
 
     # Format a pattern with the given arguments (using Resolver)
-    def format_pattern(pattern, args={}, errors=nil)
-      scope = Scope.new(self, args)
+    def format_pattern(pattern, errors: nil, **args)
+      scope = Scope.new(self, **args)
       resolver = Resolver.new(self)
       result = resolver.resolve_pattern(pattern, scope)
 

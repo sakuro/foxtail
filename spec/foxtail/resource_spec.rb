@@ -45,7 +45,7 @@ RSpec.describe Foxtail::Resource do
     end
 
     it "accepts converter options" do
-      resource = Foxtail::Resource.from_string(ftl_source, skip_junk: false, strict: true)
+      resource = Foxtail::Resource.from_string(ftl_source, skip_junk: false)
       expect(resource.entries.size).to eq(3)
     end
   end

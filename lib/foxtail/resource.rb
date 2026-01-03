@@ -15,9 +15,8 @@ module Foxtail
     # Parse FTL source string into a Resource
     #
     # @param source [String] FTL source text to parse
-    # @param options [Hash] Parsing options
-    # @option options [Boolean] :skip_junk Skip invalid entries (default: true)
-    # @option options [Boolean] :skip_comments Skip comment entries (default: true)
+    # @param skip_junk [Boolean] Skip invalid entries (default: true)
+    # @param skip_comments [Boolean] Skip comment entries (default: true)
     # @return [Foxtail::Resource] New resource with parsed entries
     # @raise [ArgumentError] if source is not a string
     #
@@ -27,20 +26,25 @@ module Foxtail
     #     goodbye = Goodbye!
     #   FTL
     #   resource = Foxtail::Resource.from_string(source)
-    def self.from_string(source, **options)
+    def self.from_string(source, skip_junk: true, skip_comments: true)
       parser = Parser.new
       parser_resource = parser.parse(source)
 
-      converter = Bundle::ASTConverter.new(options)
+      converter = Bundle::ASTConverter.new(skip_junk:, skip_comments:)
       entries = converter.convert_resource(parser_resource)
 
       new(entries, errors: converter.errors)
     end
 
     # Parse FTL file into a Resource
-    def self.from_file(path, **)
+    #
+    # @param path [Pathname] Path to FTL file
+    # @param skip_junk [Boolean] Skip invalid entries (default: true)
+    # @param skip_comments [Boolean] Skip comment entries (default: true)
+    # @return [Foxtail::Resource] New resource with parsed entries
+    def self.from_file(path, skip_junk: true, skip_comments: true)
       source = path.read
-      from_string(source, **)
+      from_string(source, skip_junk:, skip_comments:)
     end
 
     def initialize(entries, errors: [])

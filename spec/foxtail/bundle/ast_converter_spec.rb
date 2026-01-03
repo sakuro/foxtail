@@ -9,7 +9,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
     end
 
     it "accepts custom options" do
-      custom_converter = Foxtail::Bundle::ASTConverter.new(skip_junk: false, skip_comments: false, strict: true)
+      custom_converter = Foxtail::Bundle::ASTConverter.new(skip_junk: false, skip_comments: false)
       expect(custom_converter.errors).to eq([])
     end
   end
