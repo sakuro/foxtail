@@ -126,6 +126,15 @@ module Foxtail
         end
       end
 
+      # Junk entry for unparseable content
+      # @!attribute content [r] [String] The raw unparseable content
+      # @!attribute annotations [r] [Array<Hash>] Parser annotations/errors
+      Junk = Data.define(:content, :annotations)
+
+      # Comment entry for FTL comments
+      # @!attribute content [r] [String] The comment text
+      Comment = Data.define(:content)
+
       # Type checking helpers (following TypeScript union types)
 
       # Check if node is a literal (string or number)

@@ -306,20 +306,12 @@ module Foxtail
 
       # Handle junk entries
       private def handle_junk(junk)
-        @errors << {
-          type: "junk",
-          content: junk.content,
-          annotations: junk.annotations.map(&:to_h)
-        }
+        @errors << AST::Junk[content: junk.content, annotations: junk.annotations.map(&:to_h)]
       end
 
       # Handle comment entries
       private def handle_comment(comment)
-        # Could be used for debugging or metadata
-        @errors << {
-          type: "comment",
-          content: comment.content
-        }
+        @errors << AST::Comment[content: comment.content]
       end
     end
   end
