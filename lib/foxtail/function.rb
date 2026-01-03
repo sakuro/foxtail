@@ -7,7 +7,7 @@ module Foxtail
   # Uses ICU4X for number and datetime formatting
   module Function
     # Default functions available to all bundles
-    # Returns Method objects for NUMBER and DATETIME formatting
+    # @return [Hash{String => #call}] Function name to callable object mapping
     def self.defaults
       {
         "NUMBER" => method(:format_number),
@@ -17,7 +17,7 @@ module Foxtail
 
     # Access individual function by name
     # @param name [String] Function name ("NUMBER" or "DATETIME")
-    # @return [Proc] The function Proc that accepts (value, locale:, **options)
+    # @return [#call] Callable that accepts (value, locale:, **options)
     def self.[](name) = defaults[name]
 
     # Format number using ICU4X
