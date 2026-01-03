@@ -191,21 +191,6 @@ RSpec.describe Foxtail::Bundle::Resolver do
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("1,234.56") # Should format with 2 decimal places (with locale formatting)
     end
-
-    it "resolves DATETIME function calls with named arguments" do
-      skip "ICU4X requires date_style or time_style; component-only formatting (year: numeric) is not supported"
-      # Test with actual DATETIME function
-      expr = ast::FunctionReference[name: "DATETIME", args: [
-        ast::VariableReference[name: "date"],
-        ast::NamedArgument[name: "year", value: ast::StringLiteral[value: "numeric"]]
-      ]]
-
-      test_date = Time.new(2023, 6, 15)
-      scope_with_date = Foxtail::Bundle::Scope.new(bundle, date: test_date)
-
-      result = resolver.resolve_expression(expr, scope_with_date)
-      expect(result).to eq("2023") # Should format only the year
-    end
   end
 
   describe "#resolve_select_expression" do
