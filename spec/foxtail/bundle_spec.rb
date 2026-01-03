@@ -195,9 +195,9 @@ RSpec.describe Foxtail::Bundle do
         expect(result).to eq("Hello, {$name}!")
       end
 
-      it "handles string and symbol keys" do
+      it "handles multiple variables" do
         result1 = bundle.format("greeting", name: "Alice")
-        result2 = bundle.format("greeting", "name" => "Bob")
+        result2 = bundle.format("greeting", name: "Bob")
         expect(result1).to eq("Hello, Alice!")
         expect(result2).to eq("Hello, Bob!")
       end
@@ -254,14 +254,14 @@ RSpec.describe Foxtail::Bundle do
 
     it "formats array patterns" do
       pattern = ["Hello, ", {"type" => "var", "name" => "name"}, "!"]
-      result = bundle.format_pattern(pattern, {name: "World"})
+      result = bundle.format_pattern(pattern, name: "World")
       expect(result).to eq("Hello, World!")
     end
 
     it "collects errors when provided" do
       pattern = [{"type" => "var", "name" => "missing"}]
       errors = []
-      result = bundle.format_pattern(pattern, {}, errors)
+      result = bundle.format_pattern(pattern, errors:)
 
       expect(result).to eq("{$missing}")
       expect(errors).not_to be_empty

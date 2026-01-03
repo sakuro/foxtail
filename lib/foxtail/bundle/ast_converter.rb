@@ -9,10 +9,11 @@ module Foxtail
       AST = Foxtail::Bundle::AST
       private_constant :AST
 
-      def initialize(options={})
-        @skip_junk = options.fetch(:skip_junk, true)
-        @skip_comments = options.fetch(:skip_comments, true)
-        @strict = options.fetch(:strict, false)
+      # @param skip_junk [Boolean] Skip invalid entries (default: true)
+      # @param skip_comments [Boolean] Skip comment entries (default: true)
+      def initialize(skip_junk: true, skip_comments: true)
+        @skip_junk = skip_junk
+        @skip_comments = skip_comments
         @errors = []
       end
 

@@ -11,7 +11,7 @@ module Foxtail
       attr_reader :errors
       attr_reader :dirty
 
-      def initialize(bundle, args={})
+      def initialize(bundle, **args)
         @bundle = bundle
         @args = args      # External variables passed to format()
         @locals = {}      # Local variables (set within functions)
@@ -21,12 +21,12 @@ module Foxtail
 
       # Get a variable value (checks locals first, then args)
       def variable(name)
-        @locals[name] || @args[name.to_sym] || @args[name.to_s]
+        @locals[name.to_sym] || @args[name.to_sym]
       end
 
       # Set a local variable (used within functions)
       def set_local(name, value)
-        @locals[name.to_s] = value
+        @locals[name.to_sym] = value
       end
 
       # Track a message/term ID to detect circular references
@@ -56,8 +56,8 @@ module Foxtail
       end
 
       # Create a child scope (for function calls)
-      def child_scope(new_args={})
-        child = self.class.new(@bundle, @args.merge(new_args))
+      def child_scope(**new_args)
+        child = self.class.new(@bundle, **@args, **new_args)
         child.instance_variable_set(:@locals, @locals.dup)
         child.instance_variable_set(:@dirty, @dirty.dup)
         child

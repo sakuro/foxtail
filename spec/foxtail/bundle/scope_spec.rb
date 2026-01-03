@@ -2,8 +2,8 @@
 
 RSpec.describe Foxtail::Bundle::Scope do
   let(:bundle) { Foxtail::Bundle.new(locale("en")) }
-  let(:args) { {:name => "World", :count => 5, "email" => "test@example.com"} }
-  let(:scope) { Foxtail::Bundle::Scope.new(bundle, args) }
+  let(:args) { {name: "World", count: 5, email: "test@example.com"} }
+  let(:scope) { Foxtail::Bundle::Scope.new(bundle, **args) }
 
   describe "#initialize" do
     it "sets bundle and args" do
@@ -28,12 +28,9 @@ RSpec.describe Foxtail::Bundle::Scope do
   end
 
   describe "#variable" do
-    it "gets variables from args (symbol keys)" do
+    it "gets variables from args" do
       expect(scope.variable("name")).to eq("World")
       expect(scope.variable("count")).to eq(5)
-    end
-
-    it "gets variables from args (string keys)" do
       expect(scope.variable("email")).to eq("test@example.com")
     end
 
@@ -53,20 +50,20 @@ RSpec.describe Foxtail::Bundle::Scope do
   end
 
   describe "#set_local" do
-    it "sets local variables as strings" do
+    it "sets local variables as symbols" do
       scope.set_local("local_var", "value")
-      expect(scope.locals["local_var"]).to eq("value")
+      expect(scope.locals[:local_var]).to eq("value")
     end
 
-    it "converts keys to strings" do
+    it "converts keys to symbols" do
       scope.set_local(:symbol_key, "value")
-      expect(scope.locals["symbol_key"]).to eq("value")
+      expect(scope.locals[:symbol_key]).to eq("value")
     end
 
     it "overwrites existing locals" do
       scope.set_local("var", "first")
       scope.set_local("var", "second")
-      expect(scope.locals["var"]).to eq("second")
+      expect(scope.locals[:var]).to eq("second")
     end
   end
 
@@ -136,7 +133,7 @@ RSpec.describe Foxtail::Bundle::Scope do
 
     it "creates a child scope with merged args" do
       child_args = {child_key: "child_value"}
-      child = scope.child_scope(child_args)
+      child = scope.child_scope(**child_args)
 
       expect(child.bundle).to eq(bundle)
       expect(child.args).to include(args)
@@ -149,7 +146,7 @@ RSpec.describe Foxtail::Bundle::Scope do
 
       # Modifications don't affect parent
       child.set_local("child_local", "value")
-      expect(scope.locals).not_to have_key("child_local")
+      expect(scope.locals).not_to have_key(:child_local)
     end
 
     it "copies dirty set from parent" do
@@ -190,13 +187,14 @@ RSpec.describe Foxtail::Bundle::Scope do
 
     it "returns merged args and locals" do
       all_vars = scope.all_variables
-      expect(all_vars).to include(args)
-      expect(all_vars["local_var"]).to eq("local_value")
+      expect(all_vars[:count]).to eq(5)
+      expect(all_vars[:email]).to eq("test@example.com")
+      expect(all_vars[:local_var]).to eq("local_value")
     end
 
     it "prioritizes locals over args in merged result" do
       all_vars = scope.all_variables
-      expect(all_vars["name"]).to eq("overridden")
+      expect(all_vars[:name]).to eq("overridden")
     end
 
     it "doesn't modify original args or locals" do
