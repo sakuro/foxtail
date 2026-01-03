@@ -16,7 +16,10 @@ module Foxtail
           pattern
         when Array
           resolve_complex_pattern(pattern, scope)
-        when Hash
+        when AST::StringLiteral, AST::NumberLiteral, AST::VariableReference,
+             AST::TermReference, AST::MessageReference, AST::FunctionReference,
+             AST::SelectExpression
+
           # Single expression (shouldn't normally happen in patterns)
           resolve_expression(pattern, scope)
         else
@@ -34,20 +37,19 @@ module Foxtail
         case element
         when String
           element
-        when Hash
+        when AST::NumberLiteral
           result = resolve_expression(element, scope)
-          # Convert resolved values to displayable strings
-          case result
-          when Numeric
-            # For numeric values in patterns, format for display
-            if element[:precision] && element[:precision] > 0
-              format_number(result, element[:precision])
-            else
-              result.to_s
-            end
+          # For numeric values in patterns, format for display
+          if element.precision > 0
+            format_number(result, element.precision)
           else
             result.to_s
           end
+        when AST::StringLiteral, AST::VariableReference, AST::TermReference,
+             AST::MessageReference, AST::FunctionReference, AST::SelectExpression
+
+          result = resolve_expression(element, scope)
+          result.to_s
         else
           element.to_s
         end
@@ -55,25 +57,25 @@ module Foxtail
 
       # Resolve expressions (variables, terms, messages, functions, etc.)
       def resolve_expression(expr, scope)
-        case expr[:type]
-        when "str"
-          expr[:value].to_s
-        when "num"
+        case expr
+        when AST::StringLiteral
+          expr.value.to_s
+        when AST::NumberLiteral
           # Return raw numeric value, not formatted string
-          expr[:value]
-        when "var"
+          expr.value
+        when AST::VariableReference
           resolve_variable_reference(expr, scope)
-        when "term"
+        when AST::TermReference
           resolve_term_reference(expr, scope)
-        when "mesg"
+        when AST::MessageReference
           resolve_message_reference(expr, scope)
-        when "func"
+        when AST::FunctionReference
           resolve_function_call(expr, scope)
-        when "select"
+        when AST::SelectExpression
           resolve_select_expression(expr, scope)
         else
-          scope.add_error("Unknown expression type: #{expr[:type]}")
-          "{#{expr[:type]}}"
+          scope.add_error("Unknown expression type: #{expr.class}")
+          "{#{expr.class}}"
         end
       end
 
@@ -92,8 +94,7 @@ module Foxtail
 
       # Resolve variable references
       private def resolve_variable_reference(expr, scope)
-        name = expr[:name]
-        expr[:attr] # Future: attribute access
+        name = expr.name
 
         value = scope.variable(name)
 
@@ -109,8 +110,8 @@ module Foxtail
 
       # Resolve term references
       private def resolve_term_reference(expr, scope)
-        name = expr[:name]
-        attr = expr[:attr]
+        name = expr.name
+        attr = expr.attr
 
         # Circular reference check
         unless scope.track(name)
@@ -127,10 +128,9 @@ module Foxtail
 
         # Resolve term value
         result = if attr
-                   # Future: resolve attribute
                    resolve_term_attribute(term, attr, scope)
                  else
-                   resolve_pattern(term[:value], scope)
+                   resolve_pattern(term.value, scope)
                  end
 
         scope.release(name)
@@ -139,8 +139,8 @@ module Foxtail
 
       # Resolve message references
       private def resolve_message_reference(expr, scope)
-        name = expr[:name]
-        attr = expr[:attr]
+        name = expr.name
+        attr = expr.attr
 
         # Circular reference check
         unless scope.track(name)
@@ -157,10 +157,9 @@ module Foxtail
 
         # Resolve message value
         result = if attr
-                   # Future: resolve attribute
                    resolve_message_attribute(message, attr, scope)
                  else
-                   resolve_pattern(message[:value], scope)
+                   resolve_pattern(message.value, scope)
                  end
 
         scope.release(name)
@@ -169,8 +168,8 @@ module Foxtail
 
       # Resolve function calls
       private def resolve_function_call(expr, scope)
-        func_name = expr[:name]
-        args = expr[:args] || []
+        func_name = expr.name
+        args = expr.args || []
 
         func = @bundle.functions[func_name]
 
@@ -187,10 +186,11 @@ module Foxtail
         options = {}
 
         args.each do |arg|
-          if arg[:type] == "narg"
+          case arg
+          when AST::NamedArgument
             # Named argument - add to options hash
-            key = arg[:name].to_sym
-            value = resolve_expression(arg[:value], scope)
+            key = arg.name.to_sym
+            value = resolve_expression(arg.value, scope)
             options[key] = value
           else
             # Positional argument
@@ -201,9 +201,9 @@ module Foxtail
         # If arguments resolution generated errors, fail the entire function call
         if scope.errors.length > initial_error_count
           arg_list = args.map {|arg|
-            case arg[:type]
-            when "var" then "$#{arg[:name]}"
-            when "narg" then "#{arg[:name]}: #{arg[:value]}"
+            case arg
+            when AST::VariableReference then "$#{arg.name}"
+            when AST::NamedArgument then "#{arg.name}: #{arg.value}"
             else arg.to_s
             end
           }.join(", ")
@@ -223,9 +223,9 @@ module Foxtail
 
       # Resolve select expressions
       private def resolve_select_expression(expr, scope)
-        selector = expr[:selector]
-        variants = expr[:variants]
-        star_index = expr[:star] || 0
+        selector = expr.selector
+        variants = expr.variants
+        star_index = expr.star || 0
 
         # Resolve selector value
         selector_value = resolve_expression(selector, scope)
@@ -239,7 +239,7 @@ module Foxtail
         end
 
         if selected_variant
-          resolve_pattern(selected_variant[:value], scope)
+          resolve_pattern(selected_variant.value, scope)
         else
           scope.add_error("No variant found for selector: #{selector_value}")
           selector_value.to_s
@@ -249,16 +249,16 @@ module Foxtail
       # Find a matching variant for the selector value
       private def find_matching_variant(variants, selector_value, scope)
         variants.find do |variant|
-          key = variant[:key]
+          key = variant.key
           key_value = resolve_expression(key, scope)
 
-          case key[:type]
-          when "num"
+          case key
+          when AST::NumberLiteral
             # Numeric comparison
             # If precision is 0, compare as integers
             # Otherwise compare as floats
             if selector_value.is_a?(Numeric) && key_value.is_a?(Numeric)
-              if key[:precision] == 0
+              if key.precision == 0
                 # Integer comparison when precision is 0
                 Integer(key_value) == Integer(selector_value)
               else
@@ -269,7 +269,7 @@ module Foxtail
               # Fallback to string comparison if not both numeric
               key_value.to_s == selector_value.to_s
             end
-          when "str"
+          when AST::StringLiteral
             # String comparison - check for ICU plural category match
             if numeric_selector?(selector_value)
               # Try ICU plural rules matching first
@@ -321,29 +321,29 @@ module Foxtail
         false
       end
 
-      # Resolve term attributes (future implementation)
+      # Resolve term attributes
       private def resolve_term_attribute(term, attr, scope)
-        attributes = term[:attributes] || {}
+        attributes = term.attributes || {}
         attr_pattern = attributes[attr]
 
         if attr_pattern
           resolve_pattern(attr_pattern, scope)
         else
-          scope.add_error("Unknown term attribute: #{term[:id]}.#{attr}")
-          "{#{term[:id]}.#{attr}}"
+          scope.add_error("Unknown term attribute: #{term.id}.#{attr}")
+          "{#{term.id}.#{attr}}"
         end
       end
 
-      # Resolve message attributes (future implementation)
+      # Resolve message attributes
       private def resolve_message_attribute(message, attr, scope)
-        attributes = message[:attributes] || {}
+        attributes = message.attributes || {}
         attr_pattern = attributes[attr]
 
         if attr_pattern
           resolve_pattern(attr_pattern, scope)
         else
-          scope.add_error("Unknown message attribute: #{message[:id]}.#{attr}")
-          "{#{message[:id]}.#{attr}}"
+          scope.add_error("Unknown message attribute: #{message.id}.#{attr}")
+          "{#{message.id}.#{attr}}"
         end
       end
     end

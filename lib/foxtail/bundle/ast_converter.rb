@@ -41,20 +41,20 @@ module Foxtail
 
       # Convert Parser::AST::Message to Bundle::AST message
       def convert_message(parser_message)
-        AST.message(
-          parser_message.id.name,
+        AST::Message[
+          id: parser_message.id.name,
           value: convert_pattern(parser_message.value),
           attributes: convert_attributes(parser_message.attributes)
-        )
+        ]
       end
 
       # Convert Parser::AST::Term to Bundle::AST term
       def convert_term(parser_term)
-        AST.term_def(
-          parser_term.id.name,
-          convert_pattern(parser_term.value),
+        AST::Term[
+          id: parser_term.id.name,
+          value: convert_pattern(parser_term.value),
           attributes: convert_attributes(parser_term.attributes)
-        )
+        ]
       end
 
       # Convert Parser::AST::Pattern to Bundle::AST pattern
@@ -177,15 +177,13 @@ module Foxtail
       private def convert_expression(expr)
         case expr
         when Foxtail::Parser::AST::VariableReference
-          AST.var(expr.id.name)
+          AST::VariableReference[name: expr.id.name]
 
         when Foxtail::Parser::AST::MessageReference
-          attr = expr.attribute&.name
-          AST.mesg(expr.id.name, attr:)
+          AST::MessageReference[name: expr.id.name, attr: expr.attribute&.name]
 
         when Foxtail::Parser::AST::TermReference
-          attr = expr.attribute&.name
-          AST.term(expr.id.name, attr:)
+          AST::TermReference[name: expr.id.name, attr: expr.attribute&.name]
 
         when Foxtail::Parser::AST::FunctionReference
           # Convert function arguments - both positional and named
@@ -200,16 +198,12 @@ module Foxtail
             # Add named arguments
             if expr.arguments.named
               expr.arguments.named.each do |named_arg|
-                args << {
-                  type: "narg",
-                  name: named_arg.name.name,
-                  value: convert_expression(named_arg.value)
-                }
+                args << AST::NamedArgument[name: named_arg.name.name, value: convert_expression(named_arg.value)]
               end
             end
           end
 
-          AST.func(expr.id.name, args:)
+          AST::FunctionReference[name: expr.id.name, args:]
 
         when Foxtail::Parser::AST::SelectExpression
           selector = convert_expression(expr.selector)
@@ -217,20 +211,20 @@ module Foxtail
             key = convert_literal(variant.key)
             # Variant values stay as strings in Bundle format, not arrays
             value = convert_variant_pattern(variant.value)
-            AST.variant(key, value)
+            AST::Variant[key:, value:]
           }
           star_index = expr.variants.find_index(&:default) || 0
-          AST.select(selector, variants, star: star_index)
+          AST::SelectExpression[selector:, variants:, star: star_index]
 
         when Foxtail::Parser::AST::StringLiteral
-          AST.str(expr.value)
+          AST::StringLiteral[value: expr.value]
 
         when Foxtail::Parser::AST::NumberLiteral
-          AST.num(expr.value)
+          AST::NumberLiteral[value: expr.value]
 
         else
           # Unknown expression - convert to string literal as fallback
-          AST.str(expr.to_s)
+          AST::StringLiteral[value: expr.to_s]
         end
       end
 
@@ -238,24 +232,24 @@ module Foxtail
       private def convert_literal(literal)
         case literal
         when Foxtail::Parser::AST::StringLiteral
-          AST.str(literal.value)
+          AST::StringLiteral[value: literal.value]
         when Foxtail::Parser::AST::NumberLiteral
-          AST.num(literal.value)
+          AST::NumberLiteral[value: literal.value]
         when Foxtail::Parser::AST::Identifier
-          AST.str(literal.name)
+          AST::StringLiteral[value: literal.name]
         else
-          AST.str(literal.to_s)
+          AST::StringLiteral[value: literal.to_s]
         end
       end
 
-      # Convert attributes hash
+      # Convert attributes hash (returns nil if empty)
       private def convert_attributes(parser_attributes)
-        attributes = {}
+        return nil if parser_attributes.empty?
 
+        attributes = {}
         parser_attributes.each do |attr|
           attributes[attr.id.name] = convert_attribute_pattern(attr.value)
         end
-
         attributes
       end
 
@@ -302,7 +296,7 @@ module Foxtail
         }
 
         # If contains expressions, keep as array; if all strings, join
-        has_expressions = converted.any?(Hash)
+        has_expressions = converted.any? {|el| AST.expression?(el) }
         if has_expressions
           converted
         else
