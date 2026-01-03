@@ -42,14 +42,10 @@ module Foxtail
       end
 
       # @api private
-      def current_char
-        char_at(@index)
-      end
+      def current_char = char_at(@index)
 
       # @api private
-      def current_peek
-        char_at(@index + @peek_offset)
-      end
+      def current_peek = char_at(@index + @peek_offset)
 
       # @api private
       def next
@@ -73,9 +69,7 @@ module Foxtail
       end
 
       # @api private
-      def reset_peek(offset=0)
-        @peek_offset = offset
-      end
+      def reset_peek(offset=0) = @peek_offset = offset
 
       # @api private
       def skip_to_peek
@@ -129,9 +123,7 @@ module Foxtail
       end
 
       # @api private
-      def peek_blank
-        peek while current_peek == " " || current_peek == EOL
-      end
+      def peek_blank = (peek while current_peek == " " || current_peek == EOL)
 
       # @api private
       def skip_blank
@@ -185,9 +177,7 @@ module Foxtail
           cc.between?(65, 90) # A-Z
       end
 
-      def identifier_start?
-        char_id_start?(current_peek)
-      end
+      def identifier_start? = char_id_start?(current_peek)
 
       def number_start?
         ch = current_char == "-" ? peek : current_char
@@ -277,9 +267,7 @@ module Foxtail
         false
       end
 
-      def attribute_start?
-        current_peek == "."
-      end
+      def attribute_start? = current_peek == "."
 
       # @api private
       def skip_to_next_entry_start(junk_start)

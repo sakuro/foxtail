@@ -15,9 +15,7 @@ module Foxtail
         end
 
         # Abstract method - subclasses must implement
-        def parse
-          raise NotImplementedError, "Subclasses must implement parse method"
-        end
+        def parse = raise NotImplementedError, "Subclasses must implement parse method"
       end
     end
   end

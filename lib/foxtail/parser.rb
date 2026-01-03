@@ -125,7 +125,6 @@ module Foxtail
         raise ParseError, "E0002" unless ps.identifier_start?
 
         get_message(ps)
-
       end
     end
 
@@ -158,18 +157,17 @@ module Foxtail
         ps.next
       end
 
-      comment_class = case level
-                      when 0
-                        AST::Comment
-                      when 1
-                        AST::GroupComment
-                      else
-                        AST::ResourceComment
-                      end
-
-      result = comment_class.new(content)
+      result = comment_class_for_level(level).new(content)
       add_span_if_enabled(result, ps, start_pos)
       result
+    end
+
+    private def comment_class_for_level(level)
+      case level
+      when 0 then AST::Comment
+      when 1 then AST::GroupComment
+      else AST::ResourceComment
+      end
     end
 
     private def get_message(ps)

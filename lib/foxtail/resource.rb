@@ -55,33 +55,21 @@ module Foxtail
     private_class_method :new
 
     # Check if resource has any entries
-    def empty?
-      @entries.empty?
-    end
+    def empty? = @entries.empty?
 
     # Get the number of entries
-    def size
-      @entries.size
-    end
+    def size = @entries.size
 
     # Iterate over entries
-    def each(&)
-      @entries.each(&)
-    end
+    def each(&) = @entries.each(&)
 
     # Get entries by type
-    def messages
-      @entries.select {|entry| entry.id && !entry.id.start_with?("-") }
-    end
+    def messages = @entries.select {|entry| entry.id && !entry.id.start_with?("-") }
 
     # Get term entries (IDs starting with "-")
-    def terms
-      @entries.select {|entry| entry.id&.start_with?("-") }
-    end
+    def terms = @entries.select {|entry| entry.id&.start_with?("-") }
 
     # Find entry by ID
-    def find(id)
-      @entries.find {|entry| entry.id == id }
-    end
+    def find(id) = @entries.find {|entry| entry.id == id }
   end
 end

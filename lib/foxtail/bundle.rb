@@ -78,24 +78,16 @@ module Foxtail
     end
 
     # Check if a message exists
-    def message?(id)
-      @messages.key?(id.to_s)
-    end
+    def message?(id) = @messages.key?(id.to_s)
 
     # Get a message by ID
-    def message(id)
-      @messages[id.to_s]
-    end
+    def message(id) = @messages[id.to_s]
 
     # Check if a term exists (private method in fluent-bundle)
-    def term?(id)
-      @terms.key?(id.to_s)
-    end
+    def term?(id) = @terms.key?(id.to_s)
 
     # Get a term by ID (private method in fluent-bundle)
-    def term(id)
-      @terms[id.to_s]
-    end
+    def term(id) = @terms[id.to_s]
 
     # Format a message with the given arguments
     #

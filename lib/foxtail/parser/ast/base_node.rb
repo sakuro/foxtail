@@ -8,9 +8,7 @@ module Foxtail
       class BaseNode
         attr_accessor :type
 
-        def initialize
-          @type = self.class.name.split("::").last
-        end
+        def initialize = @type = self.class.name.split("::").last
 
         # Compare nodes for equality, ignoring span information
         def ==(other)
