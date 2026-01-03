@@ -33,19 +33,19 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
       # Check message
       hello_msg = entries[0]
-      expect(hello_msg.type).to eq("message")
+      expect(hello_msg).to be_a(Foxtail::Bundle::AST::Message)
       expect(hello_msg.id).to eq("hello")
       expect(hello_msg.value).to be_an(Array)
 
       # Check term
       brand_term = entries[1]
-      expect(brand_term.type).to eq("term")
+      expect(brand_term).to be_a(Foxtail::Bundle::AST::Term)
       expect(brand_term.id).to eq("-brand")
       expect(brand_term.value).to eq("Firefox")
 
       # Check simple message
       goodbye_msg = entries[2]
-      expect(goodbye_msg.type).to eq("message")
+      expect(goodbye_msg).to be_a(Foxtail::Bundle::AST::Message)
       expect(goodbye_msg.id).to eq("goodbye")
       expect(goodbye_msg.value).to eq("Goodbye!")
     end
@@ -59,11 +59,11 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
     it "converts parser message to bundle AST message" do
       result = converter.convert_message(parser_message)
 
-      expect(result.type).to eq("message")
+      expect(result).to be_a(Foxtail::Bundle::AST::Message)
       expect(result.id).to eq("hello")
       expect(result.value).to be_an(Array)
       expect(result.value[0]).to eq("Hello, ")
-      expect(result.value[1].type).to eq("var")
+      expect(result.value[1]).to be_a(Foxtail::Bundle::AST::VariableReference)
       expect(result.value[1].name).to eq("name")
       expect(result.value[2]).to eq("!")
     end
@@ -93,7 +93,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
     it "converts parser term to bundle AST term" do
       result = converter.convert_term(parser_term)
 
-      expect(result.type).to eq("term")
+      expect(result).to be_a(Foxtail::Bundle::AST::Term)
       expect(result.id).to eq("-brand")
       expect(result.value).to eq("Firefox")
     end
@@ -123,7 +123,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
         expect(result).to be_an(Array)
         expect(result[0]).to eq("Hello, ")
-        expect(result[1].type).to eq("var")
+        expect(result[1]).to be_a(Foxtail::Bundle::AST::VariableReference)
         expect(result[1].name).to eq("name")
         expect(result[2]).to eq("!")
       end
@@ -139,7 +139,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       var_placeable = pattern_elements[0]
       result = converter.__send__(:convert_expression, var_placeable.expression)
 
-      expect(result.type).to eq("var")
+      expect(result).to be_a(Foxtail::Bundle::AST::VariableReference)
       expect(result.name).to eq("var")
     end
 
@@ -147,7 +147,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       msg_placeable = pattern_elements[2]
       result = converter.__send__(:convert_expression, msg_placeable.expression)
 
-      expect(result.type).to eq("mesg")
+      expect(result).to be_a(Foxtail::Bundle::AST::MessageReference)
       expect(result.name).to eq("hello")
     end
 
@@ -155,7 +155,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       term_placeable = pattern_elements[4]
       result = converter.__send__(:convert_expression, term_placeable.expression)
 
-      expect(result.type).to eq("term")
+      expect(result).to be_a(Foxtail::Bundle::AST::TermReference)
       expect(result.name).to eq("term")
     end
 
@@ -163,11 +163,11 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       func_placeable = pattern_elements[6]
       result = converter.__send__(:convert_expression, func_placeable.expression)
 
-      expect(result.type).to eq("func")
+      expect(result).to be_a(Foxtail::Bundle::AST::FunctionReference)
       expect(result.name).to eq("NUMBER")
       expect(result.args).to be_an(Array)
       expect(result.args.length).to eq(1)
-      expect(result.args[0].type).to eq("var")
+      expect(result.args[0]).to be_a(Foxtail::Bundle::AST::VariableReference)
       expect(result.args[0].name).to eq("count")
     end
 
@@ -177,21 +177,21 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       func_placeable = parser_resource.body.first.value.elements[0]
       result = converter.__send__(:convert_expression, func_placeable.expression)
 
-      expect(result.type).to eq("func")
+      expect(result).to be_a(Foxtail::Bundle::AST::FunctionReference)
       expect(result.name).to eq("FUNC")
       expect(result.args).to be_an(Array)
       expect(result.args.length).to eq(2)
 
       # First named argument
-      expect(result.args[0].type).to eq("narg")
+      expect(result.args[0]).to be_a(Foxtail::Bundle::AST::NamedArgument)
       expect(result.args[0].name).to eq("arg1")
-      expect(result.args[0].value.type).to eq("num")
+      expect(result.args[0].value).to be_a(Foxtail::Bundle::AST::NumberLiteral)
       expect(result.args[0].value.value).to eq(1.0)
 
       # Second named argument
-      expect(result.args[1].type).to eq("narg")
+      expect(result.args[1]).to be_a(Foxtail::Bundle::AST::NamedArgument)
       expect(result.args[1].name).to eq("arg2")
-      expect(result.args[1].value.type).to eq("str")
+      expect(result.args[1].value).to be_a(Foxtail::Bundle::AST::StringLiteral)
       expect(result.args[1].value.value).to eq("hello")
     end
 
@@ -221,8 +221,8 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
     it "converts select expressions" do
       result = converter.__send__(:convert_expression, select_expr)
 
-      expect(result.type).to eq("select")
-      expect(result.selector.type).to eq("var")
+      expect(result).to be_a(Foxtail::Bundle::AST::SelectExpression)
+      expect(result.selector).to be_a(Foxtail::Bundle::AST::VariableReference)
       expect(result.selector.name).to eq("count")
       expect(result.variants).to be_an(Array)
       expect(result.variants.length).to eq(3)
@@ -234,15 +234,15 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       variants = result.variants
 
       # Number literal key
-      expect(variants[0].key.type).to eq("num")
+      expect(variants[0].key).to be_a(Foxtail::Bundle::AST::NumberLiteral)
       expect(variants[0].key.value).to eq(0.0)
 
       # String literal key
-      expect(variants[1].key.type).to eq("str")
+      expect(variants[1].key).to be_a(Foxtail::Bundle::AST::StringLiteral)
       expect(variants[1].key.value).to eq("one")
 
       # Default variant key
-      expect(variants[2].key.type).to eq("str")
+      expect(variants[2].key).to be_a(Foxtail::Bundle::AST::StringLiteral)
       expect(variants[2].key.value).to eq("other")
     end
   end
@@ -265,21 +265,21 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       it "converts number literals from select expression" do
         zero_variant = select_expr.variants[0]
         result = converter.__send__(:convert_literal, zero_variant.key)
-        expect(result.type).to eq("num")
+        expect(result).to be_a(Foxtail::Bundle::AST::NumberLiteral)
         expect(result.value).to eq(0.0)
       end
 
       it "converts identifier literals from select expression" do
         one_variant = select_expr.variants[1]
         result = converter.__send__(:convert_literal, one_variant.key)
-        expect(result.type).to eq("str")
+        expect(result).to be_a(Foxtail::Bundle::AST::StringLiteral)
         expect(result.value).to eq("one")
       end
 
       it "converts default identifier literals from select expression" do
         other_variant = select_expr.variants[2]
         result = converter.__send__(:convert_literal, other_variant.key)
-        expect(result.type).to eq("str")
+        expect(result).to be_a(Foxtail::Bundle::AST::StringLiteral)
         expect(result.value).to eq("other")
       end
     end

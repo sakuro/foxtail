@@ -5,7 +5,6 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a string literal node" do
       result = Foxtail::Bundle::AST::StringLiteral[value: "hello"]
       expect(result).to be_a(Foxtail::Bundle::AST::StringLiteral)
-      expect(result.type).to eq("str")
       expect(result.value).to eq("hello")
     end
 
@@ -19,7 +18,6 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a number literal node with default precision" do
       result = Foxtail::Bundle::AST::NumberLiteral[value: 42.5]
       expect(result).to be_a(Foxtail::Bundle::AST::NumberLiteral)
-      expect(result.type).to eq("num")
       expect(result.value).to eq(42.5)
       expect(result.precision).to eq(0)
     end
@@ -47,7 +45,6 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a variable reference node" do
       result = Foxtail::Bundle::AST::VariableReference[name: "username"]
       expect(result).to be_a(Foxtail::Bundle::AST::VariableReference)
-      expect(result.type).to eq("var")
       expect(result.name).to eq("username")
     end
 
@@ -61,7 +58,6 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a term reference node" do
       result = Foxtail::Bundle::AST::TermReference[name: "brand"]
       expect(result).to be_a(Foxtail::Bundle::AST::TermReference)
-      expect(result.type).to eq("term")
       expect(result.name).to eq("brand")
       expect(result.attr).to be_nil
       expect(result.args).to eq([])
@@ -92,7 +88,6 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a message reference node" do
       result = Foxtail::Bundle::AST::MessageReference[name: "hello"]
       expect(result).to be_a(Foxtail::Bundle::AST::MessageReference)
-      expect(result.type).to eq("mesg")
       expect(result.name).to eq("hello")
       expect(result.attr).to be_nil
     end
@@ -108,7 +103,6 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a function reference node" do
       result = Foxtail::Bundle::AST::FunctionReference[name: "NUMBER"]
       expect(result).to be_a(Foxtail::Bundle::AST::FunctionReference)
-      expect(result.type).to eq("func")
       expect(result.name).to eq("NUMBER")
       expect(result.args).to eq([])
     end
@@ -136,7 +130,6 @@ RSpec.describe Foxtail::Bundle::AST do
 
       result = Foxtail::Bundle::AST::SelectExpression[selector:, variants:]
       expect(result).to be_a(Foxtail::Bundle::AST::SelectExpression)
-      expect(result.type).to eq("select")
       expect(result.selector).to eq(selector)
       expect(result.variants).to eq(variants)
       expect(result.star).to eq(0)
@@ -169,7 +162,6 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a message node" do
       result = Foxtail::Bundle::AST::Message[id: "hello"]
       expect(result).to be_a(Foxtail::Bundle::AST::Message)
-      expect(result.type).to eq("message")
       expect(result.id).to eq("hello")
       expect(result.value).to be_nil
       expect(result.attributes).to be_nil
@@ -201,7 +193,6 @@ RSpec.describe Foxtail::Bundle::AST do
       value = "Firefox"
       result = Foxtail::Bundle::AST::Term[id: "brand", value:]
       expect(result).to be_a(Foxtail::Bundle::AST::Term)
-      expect(result.type).to eq("term")
       expect(result.id).to eq("-brand")
       expect(result.value).to eq(value)
     end

@@ -12,9 +12,6 @@ module Foxtail
       class StringLiteral
         # @param value [#to_s] The string value (will be converted to String)
         def initialize(value:) = super(value: value.to_s)
-
-        # @return [String] The AST node type identifier
-        def type = "str"
       end
 
       NumberLiteral = Data.define(:value, :precision)
@@ -26,9 +23,6 @@ module Foxtail
         # @param value [Numeric, String] The numeric value (will be converted to Float)
         # @param precision [Integer] Number of decimal places (default: 0)
         def initialize(value:, precision: 0) = super(value: Float(value), precision: Integer(precision))
-
-        # @return [String] The AST node type identifier
-        def type = "num"
       end
 
       VariableReference = Data.define(:name)
@@ -38,9 +32,6 @@ module Foxtail
       class VariableReference
         # @param name [#to_s] The variable name (will be converted to String)
         def initialize(name:) = super(name: name.to_s)
-
-        # @return [String] The AST node type identifier
-        def type = "var"
       end
 
       TermReference = Data.define(:name, :attr, :args)
@@ -54,9 +45,6 @@ module Foxtail
         # @param attr [#to_s, nil] The attribute name (default: nil)
         # @param args [Array] Arguments passed to the term (default: [])
         def initialize(name:, attr: nil, args: []) = super(name: name.to_s, attr: attr&.to_s, args:)
-
-        # @return [String] The AST node type identifier
-        def type = "term"
       end
 
       MessageReference = Data.define(:name, :attr)
@@ -68,9 +56,6 @@ module Foxtail
         # @param name [#to_s] The message identifier (will be converted to String)
         # @param attr [#to_s, nil] The attribute name (default: nil)
         def initialize(name:, attr: nil) = super(name: name.to_s, attr: attr&.to_s)
-
-        # @return [String] The AST node type identifier
-        def type = "mesg"
       end
 
       FunctionReference = Data.define(:name, :args)
@@ -82,9 +67,6 @@ module Foxtail
         # @param name [#to_s] The function name (will be converted to String)
         # @param args [Array] Function arguments (default: [])
         def initialize(name:, args: []) = super(name: name.to_s, args:)
-
-        # @return [String] The AST node type identifier
-        def type = "func"
       end
 
       NamedArgument = Data.define(:name, :value)
@@ -96,9 +78,6 @@ module Foxtail
         # @param name [#to_s] The argument name (will be converted to String)
         # @param value The argument value expression
         def initialize(name:, value:) = super(name: name.to_s, value:)
-
-        # @return [String] The AST node type identifier
-        def type = "narg"
       end
 
       SelectExpression = Data.define(:selector, :variants, :star)
@@ -112,9 +91,6 @@ module Foxtail
         # @param variants [Array<Variant>] The variant branches
         # @param star [Integer] Index of the default variant (default: 0)
         def initialize(selector:, variants:, star: 0) = super
-
-        # @return [String] The AST node type identifier
-        def type = "select"
       end
 
       # Variant for select expressions (no type field, no special initialization)
@@ -131,9 +107,6 @@ module Foxtail
         # @param value The message pattern (default: nil)
         # @param attributes [Hash, nil] Message attributes (default: nil)
         def initialize(id:, value: nil, attributes: nil) = super(id: id.to_s, value:, attributes:)
-
-        # @return [String] The AST node type identifier
-        def type = "message"
       end
 
       Term = Data.define(:id, :value, :attributes)
@@ -151,9 +124,6 @@ module Foxtail
           term_id = "-#{term_id}" unless term_id.start_with?("-")
           super(id: term_id, value:, attributes:)
         end
-
-        # @return [String] The AST node type identifier
-        def type = "term"
       end
 
       # Type checking helpers (following TypeScript union types)
