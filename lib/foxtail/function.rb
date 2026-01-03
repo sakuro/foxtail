@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require "date"
 require "icu4x"
-require "time"
 
 module Foxtail
   # Built-in formatting functions for FTL
@@ -33,7 +31,7 @@ module Foxtail
     end
 
     # Format datetime using ICU4X
-    # @param value [Time, DateTime, Date] DateTime to format
+    # @param value [Time] Time to format
     # @param locale [ICU4X::Locale] Locale for formatting
     # @param options [Hash] Formatting options (camelCase keys)
     # @return [String] Formatted datetime
@@ -42,26 +40,7 @@ module Foxtail
       # ICU4X requires at least one of date_style or time_style
       # Default to :medium for date if neither specified
       icu_options[:date_style] ||= :medium unless icu_options[:time_style]
-      time_value = to_time(value)
-      ICU4X::DateTimeFormat.new(locale, **icu_options).format(time_value)
-    end
-
-    # Convert value to Time object
-    # @param value [Time, DateTime, Date, String, Integer] Value to convert
-    # @return [Time] Time object
-    private_class_method def self.to_time(value)
-      case value
-      when Time
-        value
-      when DateTime, Date
-        value.to_time
-      when String
-        Time.parse(value)
-      when Integer
-        Time.at(value)
-      else
-        raise ArgumentError, "Cannot convert #{value.class} to Time"
-      end
+      ICU4X::DateTimeFormat.new(locale, **icu_options).format(value)
     end
 
     # Convert FTL/JS style number options to ICU4X options
