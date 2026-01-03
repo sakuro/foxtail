@@ -17,6 +17,7 @@ end
 group :development do
   # Ruby Language Server
   gem "debug", require: false
+  gem "rbs", require: false
   gem "ruby-lsp", require: false
 
   # RuboCop
@@ -26,9 +27,6 @@ group :development do
   gem "rubocop-rake", require: false
   gem "rubocop-rspec", require: false
   gem "rubocop-thread_safety", require: false
-
-  # Type checking
-  gem "steep", require: false
 
   # YARD
   gem "redcarpet", require: false
