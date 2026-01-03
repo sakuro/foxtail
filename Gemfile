@@ -5,30 +5,38 @@ source "https://rubygems.org"
 gemspec
 
 group :development, :test do
-  gem "irb"
-  gem "repl_type_completor"
+  gem "rake", require: false
 
-  gem "rake"
+  gem "irb", require: false
+  gem "repl_type_completor", require: false
+
+  # Data for i18n
+  gem "icu4x-data-recommended", require: false
 end
 
 group :development do
+  # Ruby Language Server
+  gem "debug", require: false
+  gem "ruby-lsp", require: false
+
   # RuboCop
-  gem "docquet", github: "sakuro/docquet" # An opinionated RuboCop config
-  gem "rubocop"
-  gem "rubocop-performance"
-  gem "rubocop-rake"
-  gem "rubocop-rspec"
+  gem "docquet", require: false # An opionated RuboCop config tool
+  gem "rubocop", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rake", require: false
+  gem "rubocop-rspec", require: false
+  gem "rubocop-thread_safety", require: false
+
+  # Type checking
+  gem "steep", require: false
 
   # YARD
-  gem "gemoji"
-  gem "redcarpet"
-  gem "yard"
-
-  # Language Server Protocol support
-  gem "ruby-lsp"
+  gem "redcarpet", require: false
+  gem "yard", require: false
 end
 
 group :test do
-  gem "rspec"
+  # RSpec & SimpleCov
+  gem "rspec", require: false
   gem "simplecov", require: false
 end
