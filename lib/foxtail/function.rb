@@ -2,7 +2,6 @@
 
 require "date"
 require "icu4x"
-require "icu4x/data/recommended"
 require "time"
 
 module Foxtail
