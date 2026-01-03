@@ -71,17 +71,17 @@ module Foxtail
 
     # Get entries by type
     def messages
-      @entries.select {|entry| entry[:id] && !entry[:id].start_with?("-") }
+      @entries.select {|entry| entry.id && !entry.id.start_with?("-") }
     end
 
     # Get term entries (IDs starting with "-")
     def terms
-      @entries.select {|entry| entry[:id]&.start_with?("-") }
+      @entries.select {|entry| entry.id&.start_with?("-") }
     end
 
     # Find entry by ID
     def find(id)
-      @entries.find {|entry| entry[:id] == id }
+      @entries.find {|entry| entry.id == id }
     end
   end
 end

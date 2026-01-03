@@ -200,11 +200,7 @@ module Foxtail
             # Add named arguments
             if expr.arguments.named
               expr.arguments.named.each do |named_arg|
-                args << {
-                  type: "narg",
-                  name: named_arg.name.name,
-                  value: convert_expression(named_arg.value)
-                }
+                args << AST.narg(named_arg.name.name, convert_expression(named_arg.value))
               end
             end
           end
@@ -248,14 +244,14 @@ module Foxtail
         end
       end
 
-      # Convert attributes hash
+      # Convert attributes hash (returns nil if empty)
       private def convert_attributes(parser_attributes)
-        attributes = {}
+        return nil if parser_attributes.empty?
 
+        attributes = {}
         parser_attributes.each do |attr|
           attributes[attr.id.name] = convert_attribute_pattern(attr.value)
         end
-
         attributes
       end
 
@@ -302,7 +298,7 @@ module Foxtail
         }
 
         # If contains expressions, keep as array; if all strings, join
-        has_expressions = converted.any?(Hash)
+        has_expressions = converted.any? {|el| AST.expression?(el) }
         if has_expressions
           converted
         else

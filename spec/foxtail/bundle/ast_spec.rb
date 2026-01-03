@@ -4,29 +4,36 @@ RSpec.describe Foxtail::Bundle::AST do
   describe ".str" do
     it "creates a string literal node" do
       result = Foxtail::Bundle::AST.str("hello")
-      expect(result).to eq({type: "str", value: "hello"})
+      expect(result).to be_a(Foxtail::Bundle::AST::StringLiteral)
+      expect(result.type).to eq("str")
+      expect(result.value).to eq("hello")
     end
 
     it "converts non-string values to string" do
       result = Foxtail::Bundle::AST.str(42)
-      expect(result).to eq({type: "str", value: "42"})
+      expect(result.value).to eq("42")
     end
   end
 
   describe ".num" do
     it "creates a number literal node with default precision" do
       result = Foxtail::Bundle::AST.num(42.5)
-      expect(result).to eq({type: "num", value: 42.5, precision: 0})
+      expect(result).to be_a(Foxtail::Bundle::AST::NumberLiteral)
+      expect(result.type).to eq("num")
+      expect(result.value).to eq(42.5)
+      expect(result.precision).to eq(0)
     end
 
     it "converts string numbers to float" do
       result = Foxtail::Bundle::AST.num("42.5")
-      expect(result).to eq({type: "num", value: 42.5, precision: 0})
+      expect(result.value).to eq(42.5)
+      expect(result.precision).to eq(0)
     end
 
     it "includes precision when provided" do
       result = Foxtail::Bundle::AST.num(42.5, precision: 2)
-      expect(result).to eq({type: "num", value: 42.5, precision: 2})
+      expect(result.value).to eq(42.5)
+      expect(result.precision).to eq(2)
     end
 
     it "raises error when precision is nil" do
@@ -39,65 +46,83 @@ RSpec.describe Foxtail::Bundle::AST do
   describe ".var" do
     it "creates a variable reference node" do
       result = Foxtail::Bundle::AST.var("username")
-      expect(result).to eq({type: "var", name: "username"})
+      expect(result).to be_a(Foxtail::Bundle::AST::VariableReference)
+      expect(result.type).to eq("var")
+      expect(result.name).to eq("username")
     end
 
     it "converts non-string names to string" do
       result = Foxtail::Bundle::AST.var(:username)
-      expect(result).to eq({type: "var", name: "username"})
+      expect(result.name).to eq("username")
     end
   end
 
   describe ".term" do
     it "creates a term reference node" do
       result = Foxtail::Bundle::AST.term("brand")
-      expect(result).to eq({type: "term", name: "brand", attr: nil, args: []})
+      expect(result).to be_a(Foxtail::Bundle::AST::TermReference)
+      expect(result.type).to eq("term")
+      expect(result.name).to eq("brand")
+      expect(result.attr).to be_nil
+      expect(result.args).to eq([])
     end
 
     it "includes attribute when provided" do
       result = Foxtail::Bundle::AST.term("brand", attr: "title")
-      expect(result).to eq({type: "term", name: "brand", attr: "title", args: []})
+      expect(result.name).to eq("brand")
+      expect(result.attr).to eq("title")
+      expect(result.args).to eq([])
     end
 
     it "includes args when provided" do
       args = [Foxtail::Bundle::AST.str("value")]
       result = Foxtail::Bundle::AST.term("brand", args:)
-      expect(result).to eq({type: "term", name: "brand", attr: nil, args:})
+      expect(result.name).to eq("brand")
+      expect(result.attr).to be_nil
+      expect(result.args).to eq(args)
     end
 
     it "includes empty args array" do
       result = Foxtail::Bundle::AST.term("brand", args: [])
-      expect(result).to eq({type: "term", name: "brand", attr: nil, args: []})
+      expect(result.args).to eq([])
     end
   end
 
   describe ".mesg" do
     it "creates a message reference node" do
       result = Foxtail::Bundle::AST.mesg("hello")
-      expect(result).to eq({type: "mesg", name: "hello", attr: nil})
+      expect(result).to be_a(Foxtail::Bundle::AST::MessageReference)
+      expect(result.type).to eq("mesg")
+      expect(result.name).to eq("hello")
+      expect(result.attr).to be_nil
     end
 
     it "includes attribute when provided" do
       result = Foxtail::Bundle::AST.mesg("hello", attr: "title")
-      expect(result).to eq({type: "mesg", name: "hello", attr: "title"})
+      expect(result.name).to eq("hello")
+      expect(result.attr).to eq("title")
     end
   end
 
   describe ".func" do
     it "creates a function reference node" do
       result = Foxtail::Bundle::AST.func("NUMBER")
-      expect(result).to eq({type: "func", name: "NUMBER", args: []})
+      expect(result).to be_a(Foxtail::Bundle::AST::FunctionReference)
+      expect(result.type).to eq("func")
+      expect(result.name).to eq("NUMBER")
+      expect(result.args).to eq([])
     end
 
     it "includes args when provided" do
       args = [Foxtail::Bundle::AST.str("value")]
       result = Foxtail::Bundle::AST.func("NUMBER", args:)
-      expect(result).to eq({type: "func", name: "NUMBER", args:})
+      expect(result.name).to eq("NUMBER")
+      expect(result.args).to eq(args)
     end
 
     it "includes empty args array" do
       result = Foxtail::Bundle::AST.func("NUMBER", args: [])
-      expect(result).to eq({type: "func", name: "NUMBER", args: []})
+      expect(result.args).to eq([])
     end
   end
 
@@ -110,12 +135,11 @@ RSpec.describe Foxtail::Bundle::AST do
       ]
 
       result = Foxtail::Bundle::AST.select(selector, variants)
-      expect(result).to eq({
-        type: "select",
-        selector:,
-        variants:,
-        star: 0
-      })
+      expect(result).to be_a(Foxtail::Bundle::AST::SelectExpression)
+      expect(result.type).to eq("select")
+      expect(result.selector).to eq(selector)
+      expect(result.variants).to eq(variants)
+      expect(result.star).to eq(0)
     end
 
     it "accepts custom star index" do
@@ -123,12 +147,9 @@ RSpec.describe Foxtail::Bundle::AST do
       variants = [Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("other"), "many")]
 
       result = Foxtail::Bundle::AST.select(selector, variants, star: 1)
-      expect(result).to eq({
-        type: "select",
-        selector:,
-        variants:,
-        star: 1
-      })
+      expect(result.selector).to eq(selector)
+      expect(result.variants).to eq(variants)
+      expect(result.star).to eq(1)
     end
   end
 
@@ -138,31 +159,40 @@ RSpec.describe Foxtail::Bundle::AST do
       value = "single item"
 
       result = Foxtail::Bundle::AST.variant(key, value)
-      expect(result).to eq({key:, value:})
+      expect(result).to be_a(Foxtail::Bundle::AST::Variant)
+      expect(result.key).to eq(key)
+      expect(result.value).to eq(value)
     end
   end
 
   describe ".message" do
     it "creates a message node" do
       result = Foxtail::Bundle::AST.message("hello")
-      expect(result).to eq({type: "message", id: "hello"})
+      expect(result).to be_a(Foxtail::Bundle::AST::Message)
+      expect(result.type).to eq("message")
+      expect(result.id).to eq("hello")
+      expect(result.value).to be_nil
+      expect(result.attributes).to be_nil
     end
 
     it "includes value when provided" do
       value = "Hello world"
       result = Foxtail::Bundle::AST.message("hello", value:)
-      expect(result).to eq({type: "message", id: "hello", value:})
+      expect(result.id).to eq("hello")
+      expect(result.value).to eq(value)
     end
 
     it "includes attributes when provided" do
       attributes = {"title" => "Greeting"}
       result = Foxtail::Bundle::AST.message("hello", attributes:)
-      expect(result).to eq({type: "message", id: "hello", attributes:})
+      expect(result.id).to eq("hello")
+      expect(result.attributes).to eq(attributes)
     end
 
-    it "omits empty attributes hash" do
-      result = Foxtail::Bundle::AST.message("hello", attributes: {})
-      expect(result).to eq({type: "message", id: "hello"})
+    it "accepts nil attributes" do
+      result = Foxtail::Bundle::AST.message("hello", attributes: nil)
+      expect(result.id).to eq("hello")
+      expect(result.attributes).to be_nil
     end
   end
 
@@ -170,20 +200,26 @@ RSpec.describe Foxtail::Bundle::AST do
     it "creates a term definition node" do
       value = "Firefox"
       result = Foxtail::Bundle::AST.term_def("brand", value)
-      expect(result).to eq({type: "term", id: "-brand", value:})
+      expect(result).to be_a(Foxtail::Bundle::AST::Term)
+      expect(result.type).to eq("term")
+      expect(result.id).to eq("-brand")
+      expect(result.value).to eq(value)
     end
 
     it "includes attributes when provided" do
       value = "Firefox"
       attributes = {"case" => "nominative"}
       result = Foxtail::Bundle::AST.term_def("brand", value, attributes:)
-      expect(result).to eq({type: "term", id: "-brand", value:, attributes:})
+      expect(result.id).to eq("-brand")
+      expect(result.value).to eq(value)
+      expect(result.attributes).to eq(attributes)
     end
 
-    it "omits empty attributes hash" do
+    it "accepts nil attributes" do
       value = "Firefox"
-      result = Foxtail::Bundle::AST.term_def("brand", value, attributes: {})
-      expect(result).to eq({type: "term", id: "-brand", value:})
+      result = Foxtail::Bundle::AST.term_def("brand", value, attributes: nil)
+      expect(result.id).to eq("-brand")
+      expect(result.attributes).to be_nil
     end
   end
 
@@ -204,7 +240,7 @@ RSpec.describe Foxtail::Bundle::AST do
         expect(Foxtail::Bundle::AST.literal?(node)).to be false
       end
 
-      it "returns false for non-hash values" do
+      it "returns false for non-Data values" do
         expect(Foxtail::Bundle::AST.literal?("string")).to be false
         expect(Foxtail::Bundle::AST.literal?(42)).to be false
       end
@@ -248,7 +284,7 @@ RSpec.describe Foxtail::Bundle::AST do
       it "returns false for non-expressions" do
         expect(Foxtail::Bundle::AST.expression?("string")).to be false
         expect(Foxtail::Bundle::AST.expression?(42)).to be false
-        expect(Foxtail::Bundle::AST.expression?({type: "unknown"})).to be false
+        expect(Foxtail::Bundle::AST.expression?({})).to be false
       end
     end
 
@@ -264,7 +300,7 @@ RSpec.describe Foxtail::Bundle::AST do
 
       it "returns false for non-pattern elements" do
         expect(Foxtail::Bundle::AST.pattern_element?(42)).to be false
-        expect(Foxtail::Bundle::AST.pattern_element?({type: "unknown"})).to be false
+        expect(Foxtail::Bundle::AST.pattern_element?({})).to be false
       end
     end
 
@@ -301,7 +337,7 @@ RSpec.describe Foxtail::Bundle::AST do
 
       it "returns false for non-patterns" do
         expect(Foxtail::Bundle::AST.pattern?(42)).to be false
-        expect(Foxtail::Bundle::AST.pattern?({type: "unknown"})).to be false
+        expect(Foxtail::Bundle::AST.pattern?({})).to be false
       end
     end
   end

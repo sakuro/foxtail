@@ -18,13 +18,13 @@ RSpec.describe Foxtail::Bundle::Resolver do
     end
 
     it "resolves array patterns" do
-      pattern = ["Hello, ", {type: "var", name: "name"}, "!"]
+      pattern = ["Hello, ", Foxtail::Bundle::AST.var("name"), "!"]
       result = resolver.resolve_pattern(pattern, scope)
       expect(result).to eq("Hello, World!")
     end
 
     it "resolves single expression patterns" do
-      pattern = {type: "var", name: "name"}
+      pattern = Foxtail::Bundle::AST.var("name")
       result = resolver.resolve_pattern(pattern, scope)
       expect(result).to eq("World")
     end
@@ -37,41 +37,42 @@ RSpec.describe Foxtail::Bundle::Resolver do
 
   describe "#resolve_expression" do
     it "resolves string literals" do
-      expr = {type: "str", value: "hello"}
+      expr = Foxtail::Bundle::AST.str("hello")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("hello")
     end
 
     it "resolves number literals" do
-      expr = {type: "num", value: 42.5}
+      expr = Foxtail::Bundle::AST.num(42.5)
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq(42.5)
     end
 
     it "resolves number literals with precision" do
-      expr = {type: "num", value: 42.567, precision: 2}
+      expr = Foxtail::Bundle::AST.num(42.567, precision: 2)
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq(42.567)
     end
 
     it "resolves variable references" do
-      expr = {type: "var", name: "name"}
+      expr = Foxtail::Bundle::AST.var("name")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("World")
     end
 
     it "handles missing variables" do
-      expr = {type: "var", name: "missing"}
+      expr = Foxtail::Bundle::AST.var("missing")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("{$missing}")
       expect(scope.errors).to include("Unknown variable: $missing")
     end
 
     it "handles unknown expression types" do
-      expr = {type: "unknown", value: "test"}
-      result = resolver.resolve_expression(expr, scope)
-      expect(result).to eq("{unknown}")
-      expect(scope.errors).to include("Unknown expression type: unknown")
+      # Create a mock object that isn't a known expression type
+      unknown_expr = Object.new
+      result = resolver.resolve_expression(unknown_expr, scope)
+      expect(result).to include("Object")
+      expect(scope.errors.any? {|e| e.include?("Unknown expression type") }).to be true
     end
   end
 
@@ -82,13 +83,13 @@ RSpec.describe Foxtail::Bundle::Resolver do
     before { bundle.add_resource(resource) }
 
     it "resolves term references" do
-      expr = {type: "term", name: "brand"}
+      expr = Foxtail::Bundle::AST.term("brand")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("Firefox")
     end
 
     it "handles missing terms" do
-      expr = {type: "term", name: "missing"}
+      expr = Foxtail::Bundle::AST.term("missing")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("{-missing}")
       expect(scope.errors).to include("Unknown term: -missing")
@@ -101,7 +102,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
       bundle.add_resource(resource_a, allow_overrides: true)
       bundle.add_resource(resource_b, allow_overrides: true)
 
-      expr = {type: "term", name: "a"}
+      expr = Foxtail::Bundle::AST.term("a")
       result = resolver.resolve_expression(expr, scope)
       # Should return the circular reference fallback
       expect(result).to match(/\{-[ab]\}/)
@@ -116,13 +117,13 @@ RSpec.describe Foxtail::Bundle::Resolver do
     before { bundle.add_resource(resource) }
 
     it "resolves message references" do
-      expr = {type: "mesg", name: "hello"}
+      expr = Foxtail::Bundle::AST.mesg("hello")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("Hello world")
     end
 
     it "handles missing messages" do
-      expr = {type: "mesg", name: "missing"}
+      expr = Foxtail::Bundle::AST.mesg("missing")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("{missing}")
       expect(scope.errors).to include("Unknown message: missing")
@@ -135,13 +136,13 @@ RSpec.describe Foxtail::Bundle::Resolver do
     let(:resolver_with_func) { Foxtail::Bundle::Resolver.new(bundle_with_func) }
 
     it "resolves function calls" do
-      expr = {type: "func", name: "TEST", args: [{type: "str", value: "input"}]}
+      expr = Foxtail::Bundle::AST.func("TEST", args: [Foxtail::Bundle::AST.str("input")])
       result = resolver_with_func.resolve_expression(expr, scope)
       expect(result).to eq("Function result: input")
     end
 
     it "handles missing functions" do
-      expr = {type: "func", name: "MISSING", args: []}
+      expr = Foxtail::Bundle::AST.func("MISSING", args: [])
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("{MISSING()}")
       expect(scope.errors).to include("Unknown function: MISSING")
@@ -152,7 +153,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
       bundle_with_error = Foxtail::Bundle.new(locale("en"), functions: {"ERROR" => error_function})
       resolver_with_error = Foxtail::Bundle::Resolver.new(bundle_with_error)
 
-      expr = {type: "func", name: "ERROR", args: []}
+      expr = Foxtail::Bundle::AST.func("ERROR", args: [])
       result = resolver_with_error.resolve_expression(expr, scope)
       expect(result).to eq("{ERROR()}")
       expect(scope.errors).to include("Function error in ERROR: Test error")
@@ -163,15 +164,11 @@ RSpec.describe Foxtail::Bundle::Resolver do
       bundle_with_options = Foxtail::Bundle.new(locale("en"), functions: {"FORMAT" => options_function})
       resolver_with_options = Foxtail::Bundle::Resolver.new(bundle_with_options)
 
-      expr = {
-        type: "func",
-        name: "FORMAT",
-        args: [
-          {type: "num", value: 42.5},
-          {type: "narg", name: "style", value: {type: "str", value: "currency"}},
-          {type: "narg", name: "minimumFractionDigits", value: {type: "num", value: 2.0}}
-        ]
-      }
+      expr = Foxtail::Bundle::AST.func("FORMAT", args: [
+        Foxtail::Bundle::AST.num(42.5),
+        Foxtail::Bundle::AST.narg("style", Foxtail::Bundle::AST.str("currency")),
+        Foxtail::Bundle::AST.narg("minimumFractionDigits", Foxtail::Bundle::AST.num(2.0))
+      ])
 
       result = resolver_with_options.resolve_expression(expr, scope)
       expect(result).to include("42.5")
@@ -183,14 +180,10 @@ RSpec.describe Foxtail::Bundle::Resolver do
 
     it "resolves NUMBER function calls with named arguments" do
       # Test with actual NUMBER function
-      expr = {
-        type: "func",
-        name: "NUMBER",
-        args: [
-          {type: "num", value: 1234.56},
-          {type: "narg", name: "minimumFractionDigits", value: {type: "num", value: 2.0}}
-        ]
-      }
+      expr = Foxtail::Bundle::AST.func("NUMBER", args: [
+        Foxtail::Bundle::AST.num(1234.56),
+        Foxtail::Bundle::AST.narg("minimumFractionDigits", Foxtail::Bundle::AST.num(2.0))
+      ])
 
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("1,234.56") # Should format with 2 decimal places (with locale formatting)
@@ -199,14 +192,10 @@ RSpec.describe Foxtail::Bundle::Resolver do
     it "resolves DATETIME function calls with named arguments" do
       skip "ICU4X requires date_style or time_style; component-only formatting (year: numeric) is not supported"
       # Test with actual DATETIME function
-      expr = {
-        type: "func",
-        name: "DATETIME",
-        args: [
-          {type: "var", name: "date"},
-          {type: "narg", name: "year", value: {type: "str", value: "numeric"}}
-        ]
-      }
+      expr = Foxtail::Bundle::AST.func("DATETIME", args: [
+        Foxtail::Bundle::AST.var("date"),
+        Foxtail::Bundle::AST.narg("year", Foxtail::Bundle::AST.str("numeric"))
+      ])
 
       test_date = Time.new(2023, 6, 15)
       scope_with_date = Foxtail::Bundle::Scope.new(bundle, date: test_date)
@@ -218,48 +207,45 @@ RSpec.describe Foxtail::Bundle::Resolver do
 
   describe "#resolve_select_expression" do
     it "resolves select expressions with number matching" do
-      expr = {
-        type: "select",
-        selector: {type: "var", name: "count"},
-        variants: [
-          {key: {type: "num", value: 0}, value: "none"},
-          {key: {type: "num", value: 5}, value: "five"},
-          {key: {type: "str", value: "other"}, value: "many"}
+      expr = Foxtail::Bundle::AST.select(
+        Foxtail::Bundle::AST.var("count"),
+        [
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.num(0), "none"),
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.num(5), "five"),
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("other"), "many")
         ],
         star: 2
-      }
+      )
 
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("five")
     end
 
     it "uses default variant when no match" do
-      expr = {
-        type: "select",
-        selector: {type: "var", name: "count"},
-        variants: [
-          {key: {type: "num", value: 0}, value: "none"},
-          {key: {type: "str", value: "other"}, value: "many"}
+      expr = Foxtail::Bundle::AST.select(
+        Foxtail::Bundle::AST.var("count"),
+        [
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.num(0), "none"),
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("other"), "many")
         ],
         star: 1
-      }
+      )
 
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("many")
     end
 
     it "resolves complex variant values" do
-      expr = {
-        type: "select",
-        selector: {type: "var", name: "count"},
-        variants: [
-          {
-            key: {type: "num", value: 5},
-            value: ["You have ", {type: "var", name: "count"}, " items"]
-          }
+      expr = Foxtail::Bundle::AST.select(
+        Foxtail::Bundle::AST.var("count"),
+        [
+          Foxtail::Bundle::AST.variant(
+            Foxtail::Bundle::AST.num(5),
+            ["You have ", Foxtail::Bundle::AST.var("count"), " items"]
+          )
         ],
         star: 0
-      }
+      )
 
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("You have 5 items")
@@ -280,19 +266,19 @@ RSpec.describe Foxtail::Bundle::Resolver do
     before { bundle.add_resource(resource) }
 
     it "resolves message attributes" do
-      expr = {type: "mesg", name: "hello", attr: "title"}
+      expr = Foxtail::Bundle::AST.mesg("hello", attr: "title")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("Greeting")
     end
 
     it "resolves term attributes" do
-      expr = {type: "term", name: "brand", attr: "version"}
+      expr = Foxtail::Bundle::AST.term("brand", attr: "version")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("89.0")
     end
 
     it "handles missing attributes" do
-      expr = {type: "mesg", name: "hello", attr: "missing"}
+      expr = Foxtail::Bundle::AST.mesg("hello", attr: "missing")
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("{hello.missing}")
       expect(scope.errors).to include("Unknown message attribute: hello.missing")
@@ -302,15 +288,14 @@ RSpec.describe Foxtail::Bundle::Resolver do
   describe "plural category matching" do
     it "matches plural categories using ICU4X plural rules" do
       # Test English plural rules (1 is "one", others are "other")
-      expr = {
-        type: "select",
-        selector: {type: "var", name: "count"},
-        variants: [
-          {key: {type: "str", value: "one"}, value: "one item"},
-          {key: {type: "str", value: "other"}, value: "many items"}
+      expr = Foxtail::Bundle::AST.select(
+        Foxtail::Bundle::AST.var("count"),
+        [
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("one"), "one item"),
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("other"), "many items")
         ],
         star: 1
-      }
+      )
 
       # Test count = 1 (should match "one")
       scope_with_one = Foxtail::Bundle::Scope.new(bundle, count: 1)
@@ -324,16 +309,15 @@ RSpec.describe Foxtail::Bundle::Resolver do
     end
 
     it "handles numeric selectors with string variants" do
-      expr = {
-        type: "select",
-        selector: {type: "var", name: "count"},
-        variants: [
-          {key: {type: "num", value: 0}, value: "no items"},
-          {key: {type: "str", value: "one"}, value: "one item"},
-          {key: {type: "str", value: "other"}, value: "many items"}
+      expr = Foxtail::Bundle::AST.select(
+        Foxtail::Bundle::AST.var("count"),
+        [
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.num(0), "no items"),
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("one"), "one item"),
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("other"), "many items")
         ],
         star: 2
-      }
+      )
 
       # Exact numeric match should take precedence
       scope_with_zero = Foxtail::Bundle::Scope.new(bundle, count: 0)
@@ -352,15 +336,14 @@ RSpec.describe Foxtail::Bundle::Resolver do
       allow(ICU4X::PluralRules).to receive(:new).and_return(plural_rules_double)
       allow(plural_rules_double).to receive(:select).and_raise("Error")
 
-      expr = {
-        type: "select",
-        selector: {type: "var", name: "count"},
-        variants: [
-          {key: {type: "str", value: "one"}, value: "one item"},
-          {key: {type: "str", value: "other"}, value: "many items"}
+      expr = Foxtail::Bundle::AST.select(
+        Foxtail::Bundle::AST.var("count"),
+        [
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("one"), "one item"),
+          Foxtail::Bundle::AST.variant(Foxtail::Bundle::AST.str("other"), "many items")
         ],
         star: 1
-      }
+      )
 
       scope_with_one = Foxtail::Bundle::Scope.new(bundle, count: 1)
       result = resolver.resolve_expression(expr, scope_with_one)
