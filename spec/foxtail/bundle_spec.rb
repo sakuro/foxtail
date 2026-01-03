@@ -253,13 +253,13 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "formats array patterns" do
-      pattern = ["Hello, ", Foxtail::Bundle::AST.var("name"), "!"]
+      pattern = ["Hello, ", Foxtail::Bundle::AST::VariableReference[name: "name"], "!"]
       result = bundle.format_pattern(pattern, name: "World")
       expect(result).to eq("Hello, World!")
     end
 
     it "collects errors when provided" do
-      pattern = [Foxtail::Bundle::AST.var("missing")]
+      pattern = [Foxtail::Bundle::AST::VariableReference[name: "missing"]]
       errors = []
       result = bundle.format_pattern(pattern, errors:)
 

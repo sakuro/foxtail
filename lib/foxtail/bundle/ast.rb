@@ -10,6 +10,9 @@ module Foxtail
       # String literal expression in Fluent patterns
       # @!attribute value [r] [String] The string value
       class StringLiteral
+        # @param value [#to_s] The string value (will be converted to String)
+        def initialize(value:) = super(value: value.to_s)
+
         # @return [String] The AST node type identifier
         def type = "str"
       end
@@ -20,6 +23,10 @@ module Foxtail
       # @!attribute value [r] [Float] The numeric value
       # @!attribute precision [r] [Integer] Number of decimal places
       class NumberLiteral
+        # @param value [Numeric, String] The numeric value (will be converted to Float)
+        # @param precision [Integer] Number of decimal places (default: 0)
+        def initialize(value:, precision: 0) = super(value: Float(value), precision: Integer(precision))
+
         # @return [String] The AST node type identifier
         def type = "num"
       end
@@ -29,6 +36,9 @@ module Foxtail
       # Variable reference expression ($variable) in Fluent patterns
       # @!attribute name [r] [String] The variable name (without $ prefix)
       class VariableReference
+        # @param name [#to_s] The variable name (will be converted to String)
+        def initialize(name:) = super(name: name.to_s)
+
         # @return [String] The AST node type identifier
         def type = "var"
       end
@@ -40,6 +50,11 @@ module Foxtail
       # @!attribute attr [r] [String, nil] The attribute name if accessing an attribute
       # @!attribute args [r] [Array] Arguments passed to the term
       class TermReference
+        # @param name [#to_s] The term name (will be converted to String)
+        # @param attr [#to_s, nil] The attribute name (default: nil)
+        # @param args [Array] Arguments passed to the term (default: [])
+        def initialize(name:, attr: nil, args: []) = super(name: name.to_s, attr: attr&.to_s, args:)
+
         # @return [String] The AST node type identifier
         def type = "term"
       end
@@ -50,6 +65,10 @@ module Foxtail
       # @!attribute name [r] [String] The message identifier
       # @!attribute attr [r] [String, nil] The attribute name if accessing an attribute
       class MessageReference
+        # @param name [#to_s] The message identifier (will be converted to String)
+        # @param attr [#to_s, nil] The attribute name (default: nil)
+        def initialize(name:, attr: nil) = super(name: name.to_s, attr: attr&.to_s)
+
         # @return [String] The AST node type identifier
         def type = "mesg"
       end
@@ -60,6 +79,10 @@ module Foxtail
       # @!attribute name [r] [String] The function name (uppercase by convention)
       # @!attribute args [r] [Array] Function arguments (positional and named)
       class FunctionReference
+        # @param name [#to_s] The function name (will be converted to String)
+        # @param args [Array] Function arguments (default: [])
+        def initialize(name:, args: []) = super(name: name.to_s, args:)
+
         # @return [String] The AST node type identifier
         def type = "func"
       end
@@ -70,6 +93,10 @@ module Foxtail
       # @!attribute name [r] [String] The argument name
       # @!attribute value [r] The argument value expression
       class NamedArgument
+        # @param name [#to_s] The argument name (will be converted to String)
+        # @param value The argument value expression
+        def initialize(name:, value:) = super(name: name.to_s, value:)
+
         # @return [String] The AST node type identifier
         def type = "narg"
       end
@@ -81,11 +108,16 @@ module Foxtail
       # @!attribute variants [r] [Array<Variant>] The variant branches
       # @!attribute star [r] [Integer] Index of the default variant
       class SelectExpression
+        # @param selector The expression to match against
+        # @param variants [Array<Variant>] The variant branches
+        # @param star [Integer] Index of the default variant (default: 0)
+        def initialize(selector:, variants:, star: 0) = super
+
         # @return [String] The AST node type identifier
         def type = "select"
       end
 
-      # Variant for select expressions (no type field)
+      # Variant for select expressions (no type field, no special initialization)
       Variant = Data.define(:key, :value)
 
       Message = Data.define(:id, :value, :attributes)
@@ -95,6 +127,11 @@ module Foxtail
       # @!attribute value [r] The message pattern (String or Array)
       # @!attribute attributes [r] [Hash, nil] Message attributes
       class Message
+        # @param id [#to_s] The message identifier (will be converted to String)
+        # @param value The message pattern (default: nil)
+        # @param attributes [Hash, nil] Message attributes (default: nil)
+        def initialize(id:, value: nil, attributes: nil) = super(id: id.to_s, value:, attributes:)
+
         # @return [String] The AST node type identifier
         def type = "message"
       end
@@ -106,51 +143,17 @@ module Foxtail
       # @!attribute value [r] The term pattern (String or Array)
       # @!attribute attributes [r] [Hash, nil] Term attributes
       class Term
+        # @param id [#to_s] The term identifier (- prefix will be added if missing)
+        # @param value The term pattern
+        # @param attributes [Hash, nil] Term attributes (default: nil)
+        def initialize(id:, value:, attributes: nil)
+          term_id = id.to_s
+          term_id = "-#{term_id}" unless term_id.start_with?("-")
+          super(id: term_id, value:, attributes:)
+        end
+
         # @return [String] The AST node type identifier
         def type = "term"
-      end
-
-      # Factory methods for convenient node creation
-      # Following fluent-bundle/ast.ts type definitions
-
-      # Create a string literal
-      def self.str(value) = StringLiteral[value.to_s]
-
-      # Create a number literal
-      # @param value [Numeric] The numeric value to convert
-      # @param precision [Integer] Number of decimal places (default: 0)
-      # @raise [TypeError] when precision is nil or cannot be converted to integer
-      def self.num(value, precision: 0) = NumberLiteral[Float(value), Integer(precision)]
-
-      # Create a variable reference
-      def self.var(name) = VariableReference[name.to_s]
-
-      # Create a term reference
-      def self.term(name, attr: nil, args: []) = TermReference[name.to_s, attr&.to_s, args]
-
-      # Create a message reference
-      def self.mesg(name, attr: nil) = MessageReference[name.to_s, attr&.to_s]
-
-      # Create a function reference
-      def self.func(name, args: []) = FunctionReference[name.to_s, args]
-
-      # Create a named argument
-      def self.narg(name, value) = NamedArgument[name.to_s, value]
-
-      # Create a select expression
-      def self.select(selector, variants, star: 0) = SelectExpression[selector, variants, star]
-
-      # Create a variant
-      def self.variant(key, value) = Variant[key, value]
-
-      # Create a message entry
-      def self.message(id, value: nil, attributes: nil) = Message[id.to_s, value, attributes]
-
-      # Create a term entry
-      def self.term_def(id, value, attributes: nil)
-        # Ensure term ID has '-' prefix for bundle format
-        term_id = id.to_s.start_with?("-") ? id.to_s : "-#{id}"
-        Term[term_id, value, attributes]
       end
 
       # Type checking helpers (following TypeScript union types)
