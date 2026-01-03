@@ -5,9 +5,7 @@ module Foxtail
     # Pattern resolution engine
     # Corresponds to fluent-bundle/src/resolver.ts
     class Resolver
-      def initialize(bundle)
-        @bundle = bundle
-      end
+      def initialize(bundle) = @bundle = bundle
 
       # Resolve a pattern with the given scope
       def resolve_pattern(pattern, scope)
@@ -127,11 +125,7 @@ module Foxtail
         end
 
         # Resolve term value
-        result = if attr
-                   resolve_term_attribute(term, attr, scope)
-                 else
-                   resolve_pattern(term.value, scope)
-                 end
+        result = attr ? resolve_term_attribute(term, attr, scope) : resolve_pattern(term.value, scope)
 
         scope.release(name)
         result
@@ -156,11 +150,7 @@ module Foxtail
         end
 
         # Resolve message value
-        result = if attr
-                   resolve_message_attribute(message, attr, scope)
-                 else
-                   resolve_pattern(message.value, scope)
-                 end
+        result = attr ? resolve_message_attribute(message, attr, scope) : resolve_pattern(message.value, scope)
 
         scope.release(name)
         result
@@ -289,8 +279,7 @@ module Foxtail
 
       # Check if selector value is numeric for plural rules processing
       private def numeric_selector?(value)
-        value.is_a?(Numeric) ||
-          (value.is_a?(String) && value.match?(/^\d+(\.\d+)?$/))
+        value.is_a?(Numeric) || (value.is_a?(String) && value.match?(/^\d+(\.\d+)?$/))
       end
 
       # Check if key matches selector via ICU plural rules

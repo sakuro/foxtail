@@ -20,14 +20,10 @@ module Foxtail
       end
 
       # Get a variable value (checks locals first, then args)
-      def variable(name)
-        @locals[name.to_sym] || @args[name.to_sym]
-      end
+      def variable(name) = @locals[name.to_sym] || @args[name.to_sym]
 
       # Set a local variable (used within functions)
-      def set_local(name, value)
-        @locals[name.to_sym] = value
-      end
+      def set_local(name, value) = @locals[name.to_sym] = value
 
       # Track a message/term ID to detect circular references
       def track(id)
@@ -41,19 +37,13 @@ module Foxtail
       end
 
       # Release tracking of a message/term ID
-      def release(id)
-        @dirty.delete(id)
-      end
+      def release(id) = @dirty.delete(id)
 
       # Add an error to the collection
-      def add_error(message)
-        @errors << message
-      end
+      def add_error(message) = @errors << message
 
       # Check if an ID is currently being tracked (circular reference check)
-      def tracking?(id)
-        @dirty.include?(id)
-      end
+      def tracking?(id) = @dirty.include?(id)
 
       # Create a child scope (for function calls)
       def child_scope(**)
@@ -64,14 +54,10 @@ module Foxtail
       end
 
       # Reset locals (used in some resolution contexts)
-      def clear_locals
-        @locals.clear
-      end
+      def clear_locals = @locals.clear
 
       # Get all available variables (locals + args)
-      def all_variables
-        @args.merge(@locals)
-      end
+      def all_variables = @args.merge(@locals)
     end
   end
 end

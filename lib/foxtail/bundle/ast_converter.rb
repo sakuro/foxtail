@@ -102,15 +102,10 @@ module Foxtail
       end
 
       # Convert array of pattern elements
+      # Always return array for complex patterns - fluent-bundle keeps
+      # multi-element patterns as arrays even if they're all strings
       private def convert_complex_pattern(elements)
-        converted = elements.map {|element|
-          convert_pattern_element(element)
-        }
-
-        # Flatten any arrays from split multiline text
-        converted.flatten
-        # Always return array for complex patterns - fluent-bundle keeps
-        # multi-element patterns as arrays even if they're all strings
+        elements.flat_map {|element| convert_pattern_element(element) }
       end
 
       # Convert individual pattern element
@@ -120,8 +115,7 @@ module Foxtail
           element
         when Foxtail::Parser::AST::TextElement
           # Process escape sequences and then split multiline text
-          text = process_escape_sequences(element.value)
-          split_multiline_text(text)
+          split_multiline_text(process_escape_sequences(element.value))
         when Foxtail::Parser::AST::Placeable
           convert_expression(element.expression)
         else
@@ -136,9 +130,7 @@ module Foxtail
         text = text.encode("UTF-8", invalid: :replace, undef: :replace, replace: "")
 
         # Handle Unicode escape sequences first
-        text = text.gsub(/\\u([0-9a-fA-F]{4})/) {|_match|
-          [$1.to_i(16)].pack("U")
-        }
+        text = text.gsub(/\\u([0-9a-fA-F]{4})/) {|_match| [$1.to_i(16)].pack("U") }
 
         # Handle other escape sequences
         text.gsub(/\\(.)/) do |match|
@@ -264,11 +256,7 @@ module Foxtail
       end
 
       # Convert attribute complex pattern to string
-      private def convert_attribute_complex_pattern(elements)
-        elements.map {|element|
-          convert_pattern_element(element)
-        }.join
-      end
+      private def convert_attribute_complex_pattern(elements) = elements.map {|element| convert_pattern_element(element) }.join
 
       # Convert variant pattern (SelectExpression variant values stay as strings)
       private def convert_variant_pattern(parser_pattern)
@@ -296,12 +284,7 @@ module Foxtail
         }
 
         # If contains expressions, keep as array; if all strings, join
-        has_expressions = converted.any? {|el| AST.expression?(el) }
-        if has_expressions
-          converted
-        else
-          converted.join
-        end
+        converted.any? {|el| AST.expression?(el) } ? converted : converted.join
       end
 
       # Handle junk entries
