@@ -1,20 +1,6 @@
 # frozen_string_literal: true
 
-require "time"
-
 RSpec.describe Foxtail::Function do
-  describe "[]" do
-    it "provides access to NUMBER and DATETIME functions" do
-      expect(Foxtail::Function["NUMBER"]).not_to be_nil
-      expect(Foxtail::Function["DATETIME"]).not_to be_nil
-    end
-
-    it "returns callable functions" do
-      expect(Foxtail::Function["NUMBER"]).to respond_to(:call)
-      expect(Foxtail::Function["DATETIME"]).to respond_to(:call)
-    end
-  end
-
   describe ".defaults" do
     it "returns ICU4X-based function Methods" do
       result = Foxtail::Function.defaults
