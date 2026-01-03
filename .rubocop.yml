@@ -18,6 +18,7 @@ plugins:
   - rubocop-performance
   - rubocop-rake
   - rubocop-rspec
+  - rubocop-thread_safety
 
 inherit_gem:
   docquet:
@@ -32,6 +33,7 @@ inherit_gem:
     - config/cops/rspec.yml
     - config/cops/security.yml
     - config/cops/style.yml
+    - config/cops/thread_safety.yml
 
 inherit_from: .rubocop_todo.yml
 
@@ -95,7 +97,6 @@ Style/DocumentationMethod:
     - 'compat/fluent_js/compatibility_tester.rb'        # Internal compatibility testing utilities
     - 'compat/fluent_js/compatibility_reporter.rb'      # Internal compatibility reporting utilities
     - 'compat/fluent_js/ast_comparator.rb'              # Internal AST comparison utilities
-    - 'benchmark/function_performance.rb'               # Benchmark script utilities
 
 # Options hashes are part of the established API for Bundle, Scope, and Functions
 # Changing to keyword arguments would break existing usage and tests
@@ -109,7 +110,6 @@ Style/OptionHash:
 Lint/DuplicateBranch:
   Exclude:
     - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
-    - 'lib/foxtail/function/icu4x.rb'             # DateTime and Date both use .to_time
 
 # Double negation is idiomatic for boolean coercion
 Style/DoubleNegation:
