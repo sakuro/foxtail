@@ -36,7 +36,9 @@ jobs:
 
     - name: Update version file
       run: |
-        sed -i "s/VERSION = \".*\"/VERSION = \"${{ github.event.inputs.version }}\"/" lib/${{ env.GEM_NAME }}/version.rb
+        GEM_PATH="${{ env.GEM_NAME }}"
+        GEM_PATH="${GEM_PATH//-//}"  # Convert hyphens to slashes for path
+        sed -i 's/VERSION = ".*"/VERSION = "${{ github.event.inputs.version }}"/' "lib/$GEM_PATH/version.rb"
 
     - name: Update CHANGELOG.md
       run: |
@@ -51,7 +53,9 @@ jobs:
 
     - name: Commit changes
       run: |
-        git add lib/${{ env.GEM_NAME }}/version.rb CHANGELOG.md
+        GEM_PATH="${{ env.GEM_NAME }}"
+        GEM_PATH="${GEM_PATH//-//}"  # Convert hyphens to slashes for path
+        git add "lib/$GEM_PATH/version.rb" CHANGELOG.md
         git commit -m "$(cat <<'EOF'
         :bookmark: Prepare release v${{ github.event.inputs.version }}
 
@@ -71,13 +75,86 @@ jobs:
         git push -u origin release-v${{ github.event.inputs.version }}
         git push origin v${{ github.event.inputs.version }}
 
+    - name: Check if first release
+      id: check_first_release
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        # Check if any releases exist
+        RELEASE_COUNT=$(gh release list --limit 1 --json name --jq 'length')
+        if [ "$RELEASE_COUNT" -eq 0 ]; then
+          echo "is_first_release=true" >> $GITHUB_OUTPUT
+        else
+          echo "is_first_release=false" >> $GITHUB_OUTPUT
+        fi
+
     - name: Create Pull Request
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh pr create \
-          --title ":bookmark: Release v${{ github.event.inputs.version }}" \
-          --body "$(cat <<'EOF'
+        # Generate PR body based on whether this is the first release
+        if [ "${{ steps.check_first_release.outputs.is_first_release }}" = "true" ]; then
+          # First release - include full setup checklist
+          PR_BODY="$(cat <<'EOF'
+        ## Summary
+
+        Prepare for release v${{ github.event.inputs.version }}
+
+        **Note**: This is the first release for this gem.
+
+        ## Changes
+
+        - Update VERSION constant to ${{ github.event.inputs.version }}
+        - Update CHANGELOG.md with release date
+        - Add new unreleased section for future development
+
+        ## Quality Checks
+
+        These checks will be performed automatically by CI and validation workflows:
+
+        - RuboCop checks
+        - All tests pass
+        - Version format validation
+        - CHANGELOG.md format validation
+
+        ## Release Requirements Checklist
+
+        Before merging this PR, ensure the following requirements are met:
+
+        ### Trusted Publishing Setup
+        - [ ] **Pending Trusted Publisher**: Create on RubyGems.org for OIDC authentication
+        - [ ] Configure at: https://rubygems.org/oidc/pending_trusted_publishers
+        - [ ] Required settings:
+          - Gem name: `${{ env.GEM_NAME }}`
+          - Repository owner: `${{ github.repository_owner }}`
+          - Repository name: `${{ github.event.repository.name }}`
+          - Workflow filename: `release-publish.yml`
+          - Environment name: `release`
+        - [ ] **Note**: Pending publisher will auto-convert to active publisher after first successful gem push
+
+        **Note**: GitHub repository settings (workflow permissions, environment) are automatically configured by the initialization script.
+        - [ ] Guide: https://guides.rubygems.org/trusted-publishing/releasing-gems/
+
+        ### RubyGems.org Setup
+        - [ ] **Gem name availability**: Verify `${{ env.GEM_NAME }}` is available or owned by you
+        - [ ] **Account verified**: RubyGems.org account email verified and MFA enabled (recommended)
+        - [ ] **MFA Compatibility**: Trusted Publishing works seamlessly with MFA enabled
+        - [ ] Configure MFA at: https://rubygems.org/profile/edit
+        - [ ] **Note**: With Trusted Publishing, you can safely use "UI and API" MFA level without breaking CI/CD
+        - [ ] MFA setup guide: https://guides.rubygems.org/setting-up-multifactor-authentication/
+
+        ## Post-Merge Actions
+
+        After merging this PR, the release workflow will automatically:
+        - Use the git tag v${{ github.event.inputs.version }} (already created on this branch)
+        - Build and publish gem to RubyGems from the tagged commit
+        - Create GitHub release with assets
+
+        EOF
+        )"
+        else
+          # Subsequent release - simplified checklist
+          PR_BODY="$(cat <<'EOF'
         ## Summary
 
         Prepare for release v${{ github.event.inputs.version }}
@@ -90,35 +167,21 @@ jobs:
 
         ## Quality Checks
 
-        - [x] RuboCop checks passed
-        - [x] All tests passed
-        - [x] Version format validated
-        - [x] CHANGELOG.md updated
+        These checks will be performed automatically by CI and validation workflows:
+
+        - RuboCop checks
+        - All tests pass
+        - Version format validation
+        - CHANGELOG.md format validation
 
         ## Release Requirements Checklist
 
         Before merging this PR, ensure the following requirements are met:
 
-        ### GitHub Repository Settings
-        - [ ] **Workflow permissions**: Set to "Read repository contents and packages permissions"
-        - [ ] **Pull request permissions**: "Allow GitHub Actions to create and approve pull requests" enabled
-        - [ ] Configure at: https://github.com/${{ github.repository }}/settings/actions
-
-        ### Required Secrets
-        - [ ] **RUBYGEMS_API_KEY**: RubyGems.org API key for gem publishing
-        - [ ] Configure at: https://github.com/${{ github.repository }}/settings/secrets/actions
-        - [ ] Generate API key at: https://rubygems.org/profile/api_keys (requires password confirmation)
-        - [ ] API key scopes: Enable "Push rubygem" and "Yank rubygem"
-        - [ ] API key security: Enable "Enable MFA"
-        - [ ] Gem scope: Start with "All Gems", restrict to `${{ env.GEM_NAME }}` after first release
-
-        ### RubyGems.org Setup
-        - [ ] **Gem name availability**: Verify `${{ env.GEM_NAME }}` is available or owned by you (first release only)
-        - [ ] **Account verified**: RubyGems.org account email verified and MFA enabled (recommended)
-        - [ ] Configure MFA at: https://rubygems.org/profile/edit
-        - [ ] Set Authentication Levels to "UI and gem signin" (enables MFA while allowing CI/CD)
-        - [ ] **Note**: Do not use "UI and API" as it breaks automated CI/CD workflows
-        - [ ] MFA setup guide: https://guides.rubygems.org/setting-up-multifactor-authentication/
+        - [ ] **CHANGELOG.md**: Verify all notable changes are documented
+        - [ ] **Breaking changes**: If any, ensure they are clearly documented in CHANGELOG
+        - [ ] **Dependencies**: Check if any dependency updates are needed
+        - [ ] **Documentation**: Ensure README and docs reflect any new features or changes
 
         ## Post-Merge Actions
 
@@ -129,3 +192,9 @@ jobs:
 
         EOF
         )"
+        fi
+
+        # Create PR with the appropriate body
+        gh pr create \
+          --title ":bookmark: Release v${{ github.event.inputs.version }}" \
+          --body "$PR_BODY"
