@@ -15,11 +15,6 @@ module Foxtail
       }
     end
 
-    # Access individual function by name
-    # @param name [String] Function name ("NUMBER" or "DATETIME")
-    # @return [#call] Callable that accepts (value, locale:, **options)
-    def self.[](name) = defaults[name]
-
     # Format number using ICU4X
     # @param value [Numeric] Number to format
     # @param locale [ICU4X::Locale] Locale for formatting
