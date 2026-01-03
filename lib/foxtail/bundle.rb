@@ -110,11 +110,11 @@ module Foxtail
     # @example Pluralization
     #   bundle.format("emails", count: 1)
     #   # => "You have one email." (assuming plural message)
-    def format(id, **args)
+    def format(id, **)
       message = message(id)
       return id.to_s unless message
 
-      scope = Scope.new(self, **args)
+      scope = Scope.new(self, **)
       resolver = Resolver.new(self)
       resolver.resolve_pattern(message["value"], scope)
       # For now, return just the result
@@ -122,8 +122,8 @@ module Foxtail
     end
 
     # Format a pattern with the given arguments (using Resolver)
-    def format_pattern(pattern, errors: nil, **args)
-      scope = Scope.new(self, **args)
+    def format_pattern(pattern, errors: nil, **)
+      scope = Scope.new(self, **)
       resolver = Resolver.new(self)
       result = resolver.resolve_pattern(pattern, scope)
 

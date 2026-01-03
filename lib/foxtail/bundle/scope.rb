@@ -56,8 +56,8 @@ module Foxtail
       end
 
       # Create a child scope (for function calls)
-      def child_scope(**new_args)
-        child = self.class.new(@bundle, **@args, **new_args)
+      def child_scope(**)
+        child = self.class.new(@bundle, **@args, **)
         child.instance_variable_set(:@locals, @locals.dup)
         child.instance_variable_set(:@dirty, @dirty.dup)
         child
