@@ -7,35 +7,32 @@ require_relative "ast_comparator"
 # Executes fluent.js compatibility tests
 class CompatibilityTester
   # Path to fluent.js fixtures
-  SYNTAX_FIXTURES_ROOT = Pathname(__dir__).parent.parent / "fluent.js" / "fluent-syntax" / "test"
+  SYNTAX_FIXTURES_ROOT = Pathname(__dir__).parent / "fluent.js" / "fluent-syntax" / "test"
   private_constant :SYNTAX_FIXTURES_ROOT
   STRUCTURE_FIXTURES = SYNTAX_FIXTURES_ROOT / "fixtures_structure"
   private_constant :STRUCTURE_FIXTURES
   REFERENCE_FIXTURES = SYNTAX_FIXTURES_ROOT / "fixtures_reference"
   private_constant :REFERENCE_FIXTURES
 
-  # Test result structure
-  TestResult = Data.define(:name, :category, :status, :comparison, :error) {
-    def success?
-      status == :perfect_match
-    end
+  TestResult = Data.define(:name, :category, :status, :comparison, :error)
 
-    def partial_success?
-      status == :partial_match
-    end
+  # Test result structure with status query methods
+  class TestResult
+    # @return [Boolean] true if test achieved perfect match
+    def success? = status == :perfect_match
 
-    def functional_success?
-      success? || partial_success?
-    end
+    # @return [Boolean] true if test achieved partial match
+    def partial_success? = status == :partial_match
 
-    def failure?
-      status == :parsing_failure
-    end
+    # @return [Boolean] true if test achieved either perfect or partial match
+    def functional_success? = success? || partial_success?
 
-    def difference?
-      status == :content_difference
-    end
-  }
+    # @return [Boolean] true if test failed during parsing
+    def failure? = status == :parsing_failure
+
+    # @return [Boolean] true if test has content differences
+    def difference? = status == :content_difference
+  end
 
   # Find all .ftl/.json fixture pairs in directory
   def find_fixture_pairs(directory)

@@ -13,7 +13,7 @@ class AstComparator
     {
       match: expected == actual,
       differences:,
-      structural_match: check_structural_match(expected, actual),
+      structural_match: structural_match?(expected, actual),
       span_only_differences: differences.all? {|diff| span_related?(diff) }
     }
   end
@@ -27,7 +27,7 @@ class AstComparator
   end
 
   # Check if ASTs match structurally (ignoring spans and minor details)
-  private def check_structural_match(expected, actual)
+  private def structural_match?(expected, actual)
     # Strip spans and compare structure
     expected_structural = strip_spans_and_details(expected)
     actual_structural = strip_spans_and_details(actual)
