@@ -92,7 +92,7 @@ RSpec.describe Foxtail::Bundle do
 
       # Should still have original message
       message = bundle.message("hello")
-      expect(message["value"]).to be_an(Array) # Original complex pattern
+      expect(message[:value]).to be_an(Array) # Original complex pattern
     end
 
     it "allows overrides when specified" do
@@ -104,7 +104,7 @@ RSpec.describe Foxtail::Bundle do
 
       # Should have new message
       message = bundle.message("hello")
-      expect(message["value"]).to eq("Different message")
+      expect(message[:value]).to eq("Different message")
     end
   end
 
@@ -122,8 +122,8 @@ RSpec.describe Foxtail::Bundle do
     it "retrieves messages" do
       message = bundle.message("hello")
       expect(message).to be_a(Hash)
-      expect(message["id"]).to eq("hello")
-      expect(message["attributes"]).to be_nil
+      expect(message[:id]).to eq("hello")
+      expect(message[:attributes]).to be_nil
     end
 
     it "returns nil for nonexistent messages" do
@@ -150,8 +150,8 @@ RSpec.describe Foxtail::Bundle do
     it "retrieves terms" do
       term = bundle.term("-brand")
       expect(term).to be_a(Hash)
-      expect(term["id"]).to eq("-brand")
-      expect(term["attributes"]).to be_nil
+      expect(term[:id]).to eq("-brand")
+      expect(term[:attributes]).to be_nil
     end
 
     it "returns nil for nonexistent terms" do
@@ -253,13 +253,13 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "formats array patterns" do
-      pattern = ["Hello, ", {"type" => "var", "name" => "name"}, "!"]
+      pattern = ["Hello, ", {type: "var", name: "name"}, "!"]
       result = bundle.format_pattern(pattern, name: "World")
       expect(result).to eq("Hello, World!")
     end
 
     it "collects errors when provided" do
-      pattern = [{"type" => "var", "name" => "missing"}]
+      pattern = [{type: "var", name: "missing"}]
       errors = []
       result = bundle.format_pattern(pattern, errors:)
 

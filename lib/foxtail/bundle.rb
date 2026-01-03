@@ -67,7 +67,7 @@ module Foxtail
     def add_resource(resource, allow_overrides: false)
       resource.entries.each do |entry|
         # In fluent-bundle format, terms have '-' prefix in id
-        if entry["id"]&.start_with?("-")
+        if entry[:id]&.start_with?("-")
           add_term_entry(entry, allow_overrides)
         else
           add_message_entry(entry, allow_overrides)
@@ -116,7 +116,7 @@ module Foxtail
 
       scope = Scope.new(self, **)
       resolver = Resolver.new(self)
-      resolver.resolve_pattern(message["value"], scope)
+      resolver.resolve_pattern(message[:value], scope)
       # For now, return just the result
       # In full implementation, would return [result, scope.errors]
     end
@@ -134,7 +134,7 @@ module Foxtail
     end
 
     private def add_message_entry(entry, allow_overrides)
-      id = entry["id"]
+      id = entry[:id]
       if @messages.key?(id) && !allow_overrides
         # In full implementation, would add to errors
         return
@@ -144,7 +144,7 @@ module Foxtail
     end
 
     private def add_term_entry(entry, allow_overrides)
-      id = entry["id"]
+      id = entry[:id]
       if @terms.key?(id) && !allow_overrides
         # In full implementation, would add to errors
         return

@@ -9,69 +9,50 @@ module Foxtail
       # Following fluent-bundle/ast.ts type definitions exactly
 
       # Create a string literal: StringLiteral
-      def self.str(value)
-        {"type" => "str", "value" => value.to_s}
-      end
+      def self.str(value) = {type: "str", value: value.to_s}
 
       # Create a number literal: NumberLiteral
       # @param value [Numeric] The numeric value to convert
       # @param precision [Integer] Number of decimal places (default: 0)
       # @raise [TypeError] when precision is nil or cannot be converted to integer
-      def self.num(value, precision: 0)
-        {
-          "type" => "num",
-          "value" => Float(value),
-          "precision" => Integer(precision)
-        }
-      end
+      def self.num(value, precision: 0) = {type: "num", value: Float(value), precision: Integer(precision)}
 
       # Create a variable reference: VariableReference
-      def self.var(name)
-        {"type" => "var", "name" => name.to_s}
-      end
+      def self.var(name) = {type: "var", name: name.to_s}
 
       # Create a term reference: TermReference
       def self.term(name, attr: nil, args: [])
-        node = {"type" => "term", "name" => name.to_s}
-        node["attr"] = attr&.to_s
-        node["args"] = args # Always include args field
+        node = {type: "term", name: name.to_s}
+        node[:attr] = attr&.to_s
+        node[:args] = args # Always include args field
         node
       end
 
       # Create a message reference: MessageReference
       def self.mesg(name, attr: nil)
-        node = {"type" => "mesg", "name" => name.to_s}
-        node["attr"] = attr&.to_s
+        node = {type: "mesg", name: name.to_s}
+        node[:attr] = attr&.to_s
         node
       end
 
       # Create a function reference: FunctionReference
       def self.func(name, args: [])
-        node = {"type" => "func", "name" => name.to_s}
-        node["args"] = args # Always include args field
+        node = {type: "func", name: name.to_s}
+        node[:args] = args # Always include args field
         node
       end
 
       # Create a select expression: SelectExpression
-      def self.select(selector, variants, star: 0)
-        {
-          "type" => "select",
-          "selector" => selector,
-          "variants" => variants,
-          "star" => star
-        }
-      end
+      def self.select(selector, variants, star: 0) = {type: "select", selector:, variants:, star:}
 
       # Create a variant: Variant
-      def self.variant(key, value)
-        {"key" => key, "value" => value}
-      end
+      def self.variant(key, value) = {key:, value:}
 
       # Create a message: Message (fluent-bundle compatible format)
       def self.message(id, value: nil, attributes: {})
-        node = {"type" => "message", "id" => id.to_s}
-        node["value"] = value if value
-        node["attributes"] = attributes if attributes&.any?
+        node = {type: "message", id: id.to_s}
+        node[:value] = value if value
+        node[:attributes] = attributes if attributes&.any?
         node
       end
 
@@ -79,16 +60,16 @@ module Foxtail
       def self.term_def(id, value, attributes: {})
         # Ensure term ID has '-' prefix for bundle format
         term_id = id.to_s.start_with?("-") ? id.to_s : "-#{id}"
-        node = {"type" => "term", "id" => term_id}
-        node["value"] = value
-        node["attributes"] = attributes if attributes&.any?
+        node = {type: "term", id: term_id}
+        node[:value] = value
+        node[:attributes] = attributes if attributes&.any?
         node
       end
 
       # Type checking helpers (following TypeScript union types)
       # Check if node is a literal (string or number)
       def self.literal?(node)
-        node.is_a?(Hash) && %w[str num].include?(node["type"])
+        node.is_a?(Hash) && %w[str num].include?(node[:type])
       end
 
       # Check if node is an expression
@@ -96,7 +77,7 @@ module Foxtail
         return true if literal?(node)
         return false unless node.is_a?(Hash)
 
-        %w[var term mesg func select].include?(node["type"])
+        %w[var term mesg func select].include?(node[:type])
       end
 
       # Check if node can be a pattern element
