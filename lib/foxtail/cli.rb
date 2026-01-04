@@ -7,6 +7,7 @@ module Foxtail
   module CLI
     extend Dry::CLI::Registry
 
+    register "ids", Commands::Ids
     register "lint", Commands::Lint
     register "tidy", Commands::Tidy
   end
