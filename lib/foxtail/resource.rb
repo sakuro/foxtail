@@ -26,7 +26,10 @@ module Foxtail
     #     goodbye = Goodbye!
     #   FTL
     #   resource = Foxtail::Resource.from_string(source)
+    # @raise [ArgumentError] if source is not a String
     def self.from_string(source)
+      raise ArgumentError, "source must be a String, got #{source.class}" unless source.is_a?(String)
+
       parser = Bundle::Parser.new
       entries = parser.parse(source)
 
