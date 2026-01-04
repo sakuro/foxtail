@@ -3,9 +3,6 @@
 module FluentJsCompatibility
   # Compares AST structures for fluent.js compatibility testing
   class AstComparator
-    # Check if two AST structures match exactly
-    def match?(expected, actual) = expected == actual
-
     # Find detailed differences between AST structures (for debugging)
     def find_differences(expected, actual, path="root")
       differences = []

@@ -5,8 +5,6 @@ require_relative "support/fluent_js"
 RSpec.describe "Fluent.js Compatibility" do
   include FluentJsCompatibility::TestHelper
 
-  let(:comparator) { FluentJsCompatibility::AstComparator.new }
-
   describe "structure fixtures (with spans)" do
     FluentJsCompatibility::FixtureLoader.structure_fixtures.each do |fixture|
       context fixture[:name] do
@@ -15,7 +13,7 @@ RSpec.describe "Fluent.js Compatibility" do
           ftl_source = FluentJsCompatibility::FixtureLoader.load_ftl_source(fixture[:ftl_path])
           actual_ast = parse_ftl(ftl_source, with_spans: true)
 
-          expect(comparator.match?(expected_ast, actual_ast)).to be true
+          expect(actual_ast).to match_ast(expected_ast)
         end
       end
     end
@@ -36,7 +34,7 @@ RSpec.describe "Fluent.js Compatibility" do
 
             process_junk_annotations!(actual_ast)
 
-            expect(comparator.match?(expected_ast, actual_ast)).to be true
+            expect(actual_ast).to match_ast(expected_ast)
           end
         end
       end
