@@ -45,14 +45,14 @@ module Foxtail
 
         private def process_file(path, write:, check:, diff:, with_junk:, multiple_files:)
           content = File.read(path)
-          parser = Foxtail::Parser.new
+          parser = Foxtail::Syntax::Parser.new
           resource = parser.parse(content)
 
           # Check for Junk entries (syntax errors)
-          has_junk = resource.body.any?(Parser::AST::Junk)
+          has_junk = resource.body.any?(Foxtail::Syntax::Parser::AST::Junk)
           return :has_errors if has_junk && !with_junk
 
-          serializer = Foxtail::Serializer.new(with_junk:)
+          serializer = Foxtail::Syntax::Serializer.new(with_junk:)
           formatted = serializer.serialize(resource)
 
           if check

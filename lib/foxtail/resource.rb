@@ -27,7 +27,7 @@ module Foxtail
     #   FTL
     #   resource = Foxtail::Resource.from_string(source)
     def self.from_string(source, skip_junk: true, skip_comments: true)
-      parser = Parser.new
+      parser = Syntax::Parser.new
       parser_resource = parser.parse(source)
 
       converter = Bundle::ASTConverter.new(skip_junk:, skip_comments:)

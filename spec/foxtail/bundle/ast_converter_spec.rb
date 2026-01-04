@@ -23,7 +23,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       FTL
     end
 
-    let(:parser_resource) { Foxtail::Parser.new.parse(ftl_source) }
+    let(:parser_resource) { Foxtail::Syntax::Parser.new.parse(ftl_source) }
 
     it "converts parser resource to bundle AST entries" do
       entries = converter.convert_resource(parser_resource)
@@ -53,7 +53,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
   describe "#convert_message" do
     let(:ftl_source) { "hello = Hello, {$name}!" }
-    let(:parser_resource) { Foxtail::Parser.new.parse(ftl_source) }
+    let(:parser_resource) { Foxtail::Syntax::Parser.new.parse(ftl_source) }
     let(:parser_message) { parser_resource.body.first }
 
     it "converts parser message to bundle AST message" do
@@ -87,7 +87,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
   describe "#convert_term" do
     let(:ftl_source) { "-brand = Firefox" }
-    let(:parser_resource) { Foxtail::Parser.new.parse(ftl_source) }
+    let(:parser_resource) { Foxtail::Syntax::Parser.new.parse(ftl_source) }
     let(:parser_term) { parser_resource.body.first }
 
     it "converts parser term to bundle AST term" do
@@ -114,7 +114,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
     describe "#convert_complex_pattern" do
       let(:ftl_source) { "hello = Hello, {$name}!" }
-      let(:parser_resource) { Foxtail::Parser.new.parse(ftl_source) }
+      let(:parser_resource) { Foxtail::Syntax::Parser.new.parse(ftl_source) }
       let(:parser_message) { parser_resource.body.first }
       let(:pattern_elements) { parser_message.value.elements }
 
@@ -132,7 +132,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
   describe "expression conversion" do
     let(:ftl_source) { "test = {$var} {hello} {-term} {NUMBER($count)}" }
-    let(:parser_resource) { Foxtail::Parser.new.parse(ftl_source) }
+    let(:parser_resource) { Foxtail::Syntax::Parser.new.parse(ftl_source) }
     let(:pattern_elements) { parser_resource.body.first.value.elements }
 
     it "converts variable references" do
@@ -173,7 +173,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
     it "converts function references with named arguments" do
       ftl_source = "test = {FUNC(arg1: 1, arg2: \"hello\")}"
-      parser_resource = Foxtail::Parser.new.parse(ftl_source)
+      parser_resource = Foxtail::Syntax::Parser.new.parse(ftl_source)
       func_placeable = parser_resource.body.first.value.elements[0]
       result = converter.__send__(:convert_expression, func_placeable.expression)
 
@@ -197,7 +197,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
 
     it "processes escape sequences in text elements" do
       ftl_source = "test = Text with \\\"quotes\\\" and \\\\backslash and \\u0041"
-      parser_resource = Foxtail::Parser.new.parse(ftl_source)
+      parser_resource = Foxtail::Syntax::Parser.new.parse(ftl_source)
       result = converter.convert_resource(parser_resource)
 
       expect(result.first.value).to eq("Text with \"quotes\" and \\backslash and A")
@@ -215,7 +215,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       FTL
     end
 
-    let(:parser_resource) { Foxtail::Parser.new.parse(ftl_source) }
+    let(:parser_resource) { Foxtail::Syntax::Parser.new.parse(ftl_source) }
     let(:select_expr) { parser_resource.body.first.value.elements[1].expression }
 
     it "converts select expressions" do
@@ -258,7 +258,7 @@ RSpec.describe Foxtail::Bundle::ASTConverter do
       FTL
     end
 
-    let(:parser_resource) { Foxtail::Parser.new.parse(ftl_source) }
+    let(:parser_resource) { Foxtail::Syntax::Parser.new.parse(ftl_source) }
     let(:select_expr) { parser_resource.body.first.value.elements.first.expression }
 
     describe "#convert_literal" do

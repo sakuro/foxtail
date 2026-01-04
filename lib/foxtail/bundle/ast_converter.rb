@@ -25,13 +25,13 @@ module Foxtail
 
         parser_resource.body.each do |entry|
           case entry
-          when Foxtail::Parser::AST::Message
+          when Foxtail::Syntax::Parser::AST::Message
             entries << convert_message(entry)
-          when Foxtail::Parser::AST::Term
+          when Foxtail::Syntax::Parser::AST::Term
             entries << convert_term(entry)
-          when Foxtail::Parser::AST::Junk
+          when Foxtail::Syntax::Parser::AST::Junk
             handle_junk(entry) unless @skip_junk
-          when Foxtail::Parser::AST::Comment
+          when Foxtail::Syntax::Parser::AST::Comment
             handle_comment(entry) unless @skip_comments
           end
         end
@@ -65,7 +65,7 @@ module Foxtail
         case parser_pattern
         when String
           parser_pattern
-        when Foxtail::Parser::AST::Pattern
+        when Foxtail::Syntax::Parser::AST::Pattern
           converted = convert_complex_pattern(parser_pattern.elements)
 
           # Apply fluent-bundle logic:
@@ -90,7 +90,7 @@ module Foxtail
         # whether the pattern was defined on the same line as the message ID
         # For now, use a simple approach
         pattern.elements.length == 1 &&
-          pattern.elements.first.is_a?(Foxtail::Parser::AST::TextElement) &&
+          pattern.elements.first.is_a?(Foxtail::Syntax::Parser::AST::TextElement) &&
           !pattern.elements.first.value.include?("\n")
       end
 
@@ -113,10 +113,10 @@ module Foxtail
         case element
         when String
           element
-        when Foxtail::Parser::AST::TextElement
+        when Foxtail::Syntax::Parser::AST::TextElement
           # Process escape sequences and then split multiline text
           split_multiline_text(process_escape_sequences(element.value))
-        when Foxtail::Parser::AST::Placeable
+        when Foxtail::Syntax::Parser::AST::Placeable
           convert_expression(element.expression)
         else
           element.to_s
@@ -168,16 +168,16 @@ module Foxtail
       # Convert Parser::AST expression to Bundle::AST expression
       private def convert_expression(expr)
         case expr
-        when Foxtail::Parser::AST::VariableReference
+        when Foxtail::Syntax::Parser::AST::VariableReference
           AST::VariableReference[name: expr.id.name]
 
-        when Foxtail::Parser::AST::MessageReference
+        when Foxtail::Syntax::Parser::AST::MessageReference
           AST::MessageReference[name: expr.id.name, attr: expr.attribute&.name]
 
-        when Foxtail::Parser::AST::TermReference
+        when Foxtail::Syntax::Parser::AST::TermReference
           AST::TermReference[name: expr.id.name, attr: expr.attribute&.name]
 
-        when Foxtail::Parser::AST::FunctionReference
+        when Foxtail::Syntax::Parser::AST::FunctionReference
           # Convert function arguments - both positional and named
           args = []
 
@@ -197,7 +197,7 @@ module Foxtail
 
           AST::FunctionReference[name: expr.id.name, args:]
 
-        when Foxtail::Parser::AST::SelectExpression
+        when Foxtail::Syntax::Parser::AST::SelectExpression
           selector = convert_expression(expr.selector)
           variants = expr.variants.map {|variant|
             key = convert_literal(variant.key)
@@ -208,10 +208,10 @@ module Foxtail
           star_index = expr.variants.find_index(&:default) || 0
           AST::SelectExpression[selector:, variants:, star: star_index]
 
-        when Foxtail::Parser::AST::StringLiteral
+        when Foxtail::Syntax::Parser::AST::StringLiteral
           AST::StringLiteral[value: expr.value]
 
-        when Foxtail::Parser::AST::NumberLiteral
+        when Foxtail::Syntax::Parser::AST::NumberLiteral
           AST::NumberLiteral[value: expr.value]
 
         else
@@ -223,11 +223,11 @@ module Foxtail
       # Convert literals (for SelectExpression variant keys)
       private def convert_literal(literal)
         case literal
-        when Foxtail::Parser::AST::StringLiteral
+        when Foxtail::Syntax::Parser::AST::StringLiteral
           AST::StringLiteral[value: literal.value]
-        when Foxtail::Parser::AST::NumberLiteral
+        when Foxtail::Syntax::Parser::AST::NumberLiteral
           AST::NumberLiteral[value: literal.value]
-        when Foxtail::Parser::AST::Identifier
+        when Foxtail::Syntax::Parser::AST::Identifier
           AST::StringLiteral[value: literal.name]
         else
           AST::StringLiteral[value: literal.to_s]
@@ -250,7 +250,7 @@ module Foxtail
         case parser_pattern
         when String
           parser_pattern
-        when Foxtail::Parser::AST::Pattern
+        when Foxtail::Syntax::Parser::AST::Pattern
           convert_attribute_complex_pattern(parser_pattern.elements)
         end
       end
@@ -263,7 +263,7 @@ module Foxtail
         case parser_pattern
         when String
           parser_pattern
-        when Foxtail::Parser::AST::Pattern
+        when Foxtail::Syntax::Parser::AST::Pattern
           convert_variant_complex_pattern(parser_pattern.elements)
         end
       end
@@ -274,9 +274,9 @@ module Foxtail
           case element
           when String
             element
-          when Foxtail::Parser::AST::TextElement
+          when Foxtail::Syntax::Parser::AST::TextElement
             element.value
-          when Foxtail::Parser::AST::Placeable
+          when Foxtail::Syntax::Parser::AST::Placeable
             convert_expression(element.expression)
           else
             element.to_s

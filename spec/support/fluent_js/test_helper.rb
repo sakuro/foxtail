@@ -10,7 +10,7 @@ module FluentJsCompatibility
     private_constant :KNOWN_MISMATCHES
 
     def parse_ftl(source, with_spans:)
-      parser = Foxtail::Parser.new(with_spans:)
+      parser = Foxtail::Syntax::Parser.new(with_spans:)
       resource = parser.parse(source)
       resource.to_h
     end

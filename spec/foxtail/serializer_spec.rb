@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-RSpec.describe Foxtail::Serializer do
-  subject(:serializer) { Foxtail::Serializer.new(**options) }
+RSpec.describe Foxtail::Syntax::Serializer do
+  subject(:serializer) { Foxtail::Syntax::Serializer.new(**options) }
 
   let(:options) { {} }
-  let(:parser) { Foxtail::Parser.new }
+  let(:parser) { Foxtail::Syntax::Parser.new }
 
   def parse_and_serialize(ftl)
     resource = parser.parse(ftl)
