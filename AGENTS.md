@@ -14,6 +14,7 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 | Bundle system details | [doc/bundle-system.md](doc/bundle-system.md) |
 | Language fallback | [doc/sequence.md](doc/sequence.md) |
 | `icu4x` integration | [doc/icu4x-integration.md](doc/icu4x-integration.md) |
+| CLI reference | [doc/cli.md](doc/cli.md) |
 | Testing strategy | [doc/testing.md](doc/testing.md) |
 
 ## Core Principles
