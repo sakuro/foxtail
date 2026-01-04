@@ -3,8 +3,11 @@
 module FluentJsCompatibility
   # Helper methods for running compatibility tests
   module TestHelper
-    KNOWN_INCOMPATIBILITIES = %w[leading_dots].freeze
-    private_constant :KNOWN_INCOMPATIBILITIES
+    KNOWN_MISMATCHES = [
+      # https://github.com/projectfluent/fluent.js/blob/9a183312d4db035d6002c93e03f0c169a58f3234/fluent-syntax/test/reference_test.js#L24-L28
+      {category: :reference, name: "leading_dots"}
+    ].freeze
+    private_constant :KNOWN_MISMATCHES
 
     def parse_ftl(source, with_spans:)
       parser = Foxtail::Parser.new(with_spans:)
@@ -20,6 +23,6 @@ module FluentJsCompatibility
       end
     end
 
-    module_function def known_incompatibility?(fixture_name) = KNOWN_INCOMPATIBILITIES.include?(fixture_name)
+    module_function def known_mismatch?(fixture) = KNOWN_MISMATCHES.include?(fixture.slice(:category, :name))
   end
 end
