@@ -39,16 +39,19 @@ inherit_from: .rubocop_todo.yml
 
 # Project-specific settings can be added here
 
-# Case statements don't always need else clauses when all cases are handled
-# or when unhandled cases should be ignored intentionally
-Style/MissingElse:
+# Long lines that improve readability when not split
+Layout/LineLength:
   Enabled: false
 
-# These methods are intentionally named without ? suffix as they represent actions/operations
-# rather than simple boolean queries
-Naming/PredicateMethod:
+# Duplicate branches provide intentional fallback behavior for robustness
+Lint/DuplicateBranch:
   Exclude:
-    - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
+    - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
+
+# Parser logic requires deep nesting for comment attachment handling
+Metrics/BlockNesting:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
@@ -56,6 +59,12 @@ Naming/MethodParameterName:
     - ps  # parser state - used throughout lib/foxtail/parser.rb
     - ch  # character - used in lib/foxtail/parser/stream.rb for character operations
     - id  # identifier - used in lib/foxtail/bundle.rb, lib/foxtail/bundle/scope.rb, and AST classes
+
+# These methods are intentionally named without ? suffix as they represent actions/operations
+# rather than simple boolean queries
+Naming/PredicateMethod:
+  Exclude:
+    - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
 
 # These specs test cross-cutting concerns rather than specific classes
 RSpec/DescribeClass:
@@ -73,20 +82,11 @@ Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/parser/stream.rb'          # Internal stream processing utilities
 
-# Duplicate branches provide intentional fallback behavior for robustness
-Lint/DuplicateBranch:
-  Exclude:
-    - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
-
 # Double negation is idiomatic for boolean coercion
 Style/DoubleNegation:
   Enabled: false
 
-# Long lines that improve readability when not split
-Layout/LineLength:
+# Case statements don't always need else clauses when all cases are handled
+# or when unhandled cases should be ignored intentionally
+Style/MissingElse:
   Enabled: false
-
-# Parser logic requires deep nesting for comment attachment handling
-Metrics/BlockNesting:
-  Exclude:
-    - 'lib/foxtail/parser.rb'
