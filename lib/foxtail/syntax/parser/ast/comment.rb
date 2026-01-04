@@ -4,10 +4,10 @@ module Foxtail
   module Syntax
     class Parser
       module AST
-      # Regular comment node in FTL syntax (# comment)
-      class Comment < BaseComment
+        # Regular comment node in FTL syntax (# comment)
+        class Comment < BaseComment
+        end
       end
     end
   end
-end
 end

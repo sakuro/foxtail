@@ -101,7 +101,7 @@ RSpec.describe Foxtail::Bundle::Parser do
       end
 
       it "parses message with function call" do
-        result = parser.parse('hello = { NUMBER($count) }')
+        result = parser.parse("hello = { NUMBER($count) }")
         message = result.first
         expect(message.value).to be_a(Array)
         expect(message.value[0]).to be_a(Foxtail::Bundle::AST::FunctionReference)
@@ -145,7 +145,7 @@ RSpec.describe Foxtail::Bundle::Parser do
 
     describe "literals" do
       it "parses number literals" do
-        result = parser.parse('value = { 42 }')
+        result = parser.parse("value = { 42 }")
         message = result.first
         expect(message.value[0]).to be_a(Foxtail::Bundle::AST::NumberLiteral)
         expect(message.value[0].value).to eq(42.0)
@@ -153,7 +153,7 @@ RSpec.describe Foxtail::Bundle::Parser do
       end
 
       it "parses number literals with decimals" do
-        result = parser.parse('value = { 3.14 }')
+        result = parser.parse("value = { 3.14 }")
         message = result.first
         expect(message.value[0]).to be_a(Foxtail::Bundle::AST::NumberLiteral)
         expect(message.value[0].value).to eq(3.14)
@@ -161,7 +161,7 @@ RSpec.describe Foxtail::Bundle::Parser do
       end
 
       it "parses negative number literals" do
-        result = parser.parse('value = { -42 }')
+        result = parser.parse("value = { -42 }")
         message = result.first
         expect(message.value[0].value).to eq(-42.0)
       end

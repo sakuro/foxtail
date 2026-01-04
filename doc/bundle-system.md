@@ -57,6 +57,7 @@ bundle.format_pattern(pattern, name: "World")
 ### Resource
 
 Wrapper for parsed FTL content, providing the bridge between parsing and runtime.
+Uses `Bundle::Parser` internally for efficient runtime parsing with error recovery.
 
 ```ruby
 # From string
@@ -69,7 +70,8 @@ resource = Foxtail::Resource.from_file(Pathname("messages.ftl"))
 
 # Access entries
 resource.entries  # => [Bundle::AST::Message, ...]
-resource.errors   # => [...]
+
+# Invalid entries are silently skipped (error recovery)
 ```
 
 ### Resolver
@@ -126,8 +128,9 @@ The runtime uses optimized Data classes for immutability and performance.
 |-------|---------|
 | `Message` | Message with id, value, and attributes |
 | `Term` | Term (id starts with `-`) |
-| `Junk` | Unparseable content |
-| `Comment` | FTL comments |
+
+Note: Bundle AST does not include Junk or Comment entries (those are only in Syntax AST).
+Invalid entries are skipped by the runtime parser's error recovery mechanism.
 
 ### Expression Types
 
@@ -226,14 +229,21 @@ bundle.add_resource(overrides, allow_overrides: true)
 
 ### Parse Errors
 
-Errors during parsing are returned by `add_resource`:
+The runtime parser (`Bundle::Parser`) uses error recovery - invalid entries are silently skipped.
+This provides robust runtime behavior where malformed FTL doesn't break the application.
 
 ```ruby
-errors = bundle.add_resource(resource)
-errors.each do |error|
-  puts "Parse error: #{error}"
-end
+# Invalid entries are silently skipped
+resource = Foxtail::Resource.from_string(<<~FTL)
+  valid = This works
+  invalid entry without equals
+  also_valid = This also works
+FTL
+
+resource.entries.map(&:id)  # => ["valid", "also_valid"]
 ```
+
+For detailed error reporting during development, use `Syntax::Parser` instead.
 
 ### Runtime Errors
 

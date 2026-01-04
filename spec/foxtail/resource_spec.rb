@@ -42,7 +42,6 @@ RSpec.describe Foxtail::Resource do
       expect(brand_term.id).to eq("-brand")
       expect(brand_term.value).to eq("Firefox")
     end
-
   end
 
   describe ".from_file" do

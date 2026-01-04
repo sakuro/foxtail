@@ -419,7 +419,9 @@ module Foxtail
           count += 1
         end
 
-        raise ParseError, "Expected at least one variant" if count == 0
+        # Allow empty variants for error recovery (incomplete select expression)
+        return {variants: [], star: nil} if count == 0
+
         raise ParseError, "Expected default variant" if star.nil?
 
         {variants:, star:}
