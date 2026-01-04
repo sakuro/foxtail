@@ -7,7 +7,7 @@
   - Runtime message formatting with Bundle system
   - Pattern selection with pluralization support
 - **Formatting Features**
-  - ICU4X-based number and date formatting
+  - `icu4x`-based number and date formatting
   - Built-in functions: NUMBER() and DATETIME()
 
 ### Compatibility
