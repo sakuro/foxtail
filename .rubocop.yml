@@ -39,10 +39,6 @@ inherit_from: .rubocop_todo.yml
 
 # Project-specific settings can be added here
 
-# Disable all Metrics cops for now - will address these later
-Metrics:
-  Enabled: false
-
 # Case statements don't always need else clauses when all cases are handled
 # or when unhandled cases should be ignored intentionally
 Style/MissingElse:
@@ -72,22 +68,6 @@ RSpec/MultipleDescribes:
   Exclude:
     - 'spec/foxtail/parser/ast_spec.rb'     # Tests multiple AST node classes in logical groupings
 
-# Complex integration and parser tests need longer examples and multiple expectations
-RSpec/ExampleLength:
-  Enabled: false
-
-# Integration and compatibility tests require multiple expectations for comprehensive validation
-RSpec/MultipleExpectations:
-  Enabled: false
-
-# Allow testing array inclusion patterns for locale-specific formatting symbols
-RSpec/ExpectActual:
-  Enabled: false
-
-# Complex test scenarios require nested context for clear organization
-RSpec/NestedGroups:
-  Enabled: false
-
 # Internal utility methods in stream processing don't require documentation
 Style/DocumentationMethod:
   Exclude:
@@ -105,3 +85,8 @@ Style/DoubleNegation:
 # Long lines that improve readability when not split
 Layout/LineLength:
   Enabled: false
+
+# Parser logic requires deep nesting for comment attachment handling
+Metrics/BlockNesting:
+  Exclude:
+    - 'lib/foxtail/parser.rb'
