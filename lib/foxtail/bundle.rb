@@ -38,8 +38,6 @@ module Foxtail
     attr_reader :terms
     # @return [Hash{String => #call}] Custom formatting functions
     attr_reader :functions
-    # @return [Boolean] Whether to use Unicode bidi isolation marks
-    attr_reader :use_isolating
     # @return [#call, nil] Optional message transformation function
     attr_reader :transform
 
@@ -64,6 +62,9 @@ module Foxtail
       @use_isolating = use_isolating
       @transform = transform
     end
+
+    # @return [Boolean] Whether to use Unicode bidi isolation marks
+    def use_isolating? = @use_isolating
 
     # Add a resource to this bundle
     #

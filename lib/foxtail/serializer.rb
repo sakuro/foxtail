@@ -3,14 +3,14 @@
 module Foxtail
   # Serializes AST nodes back to FTL format
   class Serializer
-    # @return [Boolean] Whether to include junk entries in output
-    attr_reader :with_junk
-
     # Create a new Serializer instance
     # @param with_junk [Boolean] Whether to include junk entries in output (default: false)
     def initialize(with_junk: false)
       @with_junk = with_junk
     end
+
+    # @return [Boolean] Whether to include junk entries in output
+    def with_junk? = @with_junk
 
     # Serialize a Resource AST to FTL string
     # @return [String] FTL formatted source text
@@ -19,7 +19,7 @@ module Foxtail
       parts = []
 
       resource.body.each do |entry|
-        next if entry.is_a?(Parser::AST::Junk) && !with_junk
+        next if entry.is_a?(Parser::AST::Junk) && !with_junk?
 
         parts << serialize_entry(entry, has_entries:)
         has_entries = true

@@ -17,7 +17,7 @@ RSpec.describe Foxtail::Bundle do
       bundle = Foxtail::Bundle.new(locale)
       expect(bundle.functions).to have_key("NUMBER")
       expect(bundle.functions).to have_key("DATETIME")
-      expect(bundle.use_isolating).to be true
+      expect(bundle.use_isolating?).to be true
       expect(bundle.transform).to be_nil
     end
 
@@ -42,7 +42,7 @@ RSpec.describe Foxtail::Bundle do
       )
 
       expect(bundle.functions).to eq(functions)
-      expect(bundle.use_isolating).to be false
+      expect(bundle.use_isolating?).to be false
       expect(bundle.transform).to eq(:some_transform)
     end
 

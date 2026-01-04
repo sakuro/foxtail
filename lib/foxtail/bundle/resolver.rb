@@ -34,7 +34,7 @@ module Foxtail
       # Resolve a complex pattern (array of elements)
       def resolve_complex_pattern(elements, scope)
         # Apply bidi isolation only when use_isolating is true and pattern has multiple elements
-        use_isolating = @bundle.use_isolating && elements.size > 1
+        use_isolating = @bundle.use_isolating? && elements.size > 1
 
         elements.map {|element| resolve_pattern_element(element, scope, use_isolating:) }.join
       end

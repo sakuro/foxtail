@@ -11,14 +11,14 @@ module Foxtail
     # Note: Uses Struct instead of Data.define because the value field is mutated in dedent()
     Indent = Struct.new(:value, :start, :end, :span, keyword_init: true)
 
-    # @return [Boolean] Whether to include span information in AST nodes
-    attr_reader :with_spans
-
     # Create a new Parser instance
     # @param with_spans [Boolean] Whether to include span information in AST nodes (default: true)
     def initialize(with_spans: true)
       @with_spans = with_spans
     end
+
+    # @return [Boolean] Whether to include span information in AST nodes
+    def with_spans? = @with_spans
 
     # Main entry point - parse FTL source into AST
     # @return [Parser::AST::Resource]
