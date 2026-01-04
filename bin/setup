@@ -11,7 +11,7 @@ if [ -z "${ICU4X_DATA_PATH+x}" ]; then
     echo "ICU4X_DATA_PATH is set to $ICU4X_DATA_PATH in .env"
   else
     echo "Add following setting to your .env"
-    echo $'ICU4X_DATA_PATH="$ICU4X_DATA_PATH"'
+    echo 'ICU4X_DATA_PATH="'$ICU4X_DATA_PATH'"'
   fi
 else
   echo "ICU4X_DATA_PATH is $ICU4X_DATA_PATH"
