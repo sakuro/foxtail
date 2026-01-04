@@ -61,7 +61,10 @@ module Foxtail
     def size = @entries.size
 
     # Iterate over entries
-    def each(&) = @entries.each(&)
+    def each(&)
+      @entries.each(&)
+      self
+    end
 
     # Get message entries (IDs not starting with "-")
     def messages = @entries.select {|entry| entry.id && !entry.id.start_with?("-") }
