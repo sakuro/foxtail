@@ -90,24 +90,12 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.write("hello=Hello\n")
           f.flush
 
-          # Capture stdout at OS level to suppress system("diff") output
-          Tempfile.create("stdout") do |stdout_capture|
-            original_stdout = $stdout.dup
-            $stdout.reopen(stdout_capture)
+          output = capture_system_stdout {
+            command.call(files: [f.path], write: false, check: false, diff: true, with_junk: false)
+          }
 
-            begin
-              command.call(files: [f.path], write: false, check: false, diff: true, with_junk: false)
-            ensure
-              $stdout.flush
-              $stdout.reopen(original_stdout)
-              original_stdout.close
-            end
-
-            stdout_capture.rewind
-            output = stdout_capture.read
-            expect(output).to include("-hello=Hello")
-            expect(output).to include("+hello = Hello")
-          end
+          expect(output).to include("-hello=Hello")
+          expect(output).to include("+hello = Hello")
         end
       end
     end
