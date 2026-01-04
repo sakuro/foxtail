@@ -160,7 +160,7 @@ RSpec.describe Foxtail::Bundle do
   end
 
   describe "#format" do
-    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false) }
 
     context "with simple messages" do
       before do
@@ -245,7 +245,7 @@ RSpec.describe Foxtail::Bundle do
   end
 
   describe "#format_pattern" do
-    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false) }
 
     it "formats string patterns" do
       result = bundle.format_pattern("Hello world")

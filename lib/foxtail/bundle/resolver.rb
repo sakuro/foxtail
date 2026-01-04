@@ -5,6 +5,12 @@ module Foxtail
     # Pattern resolution engine
     # Corresponds to fluent-bundle/src/resolver.ts
     class Resolver
+      # Unicode bidi isolation characters
+      FSI = "\u2068" # First Strong Isolate
+      PDI = "\u2069" # Pop Directional Isolate
+
+      private_constant :FSI, :PDI
+
       def initialize(bundle) = @bundle = bundle
 
       # Resolve a pattern with the given scope
@@ -27,29 +33,34 @@ module Foxtail
 
       # Resolve a complex pattern (array of elements)
       def resolve_complex_pattern(elements, scope)
-        elements.map {|element| resolve_pattern_element(element, scope) }.join
+        # Apply bidi isolation only when use_isolating is true and pattern has multiple elements
+        use_isolating = @bundle.use_isolating && elements.size > 1
+
+        elements.map {|element| resolve_pattern_element(element, scope, use_isolating:) }.join
       end
 
       # Resolve individual pattern elements
-      def resolve_pattern_element(element, scope)
+      def resolve_pattern_element(element, scope, use_isolating: false)
         case element
         when String
+          # Text elements are not wrapped with isolation marks
           element
         when AST::NumberLiteral
           result = resolve_expression(element, scope)
           # For numeric values in patterns, format for display
-          if element.precision > 0
-            format_number(result, element.precision)
-          else
-            result.to_s
-          end
+          formatted = if element.precision > 0
+                        format_number(result, element.precision)
+                      else
+                        result.to_s
+                      end
+          wrap_with_isolation(formatted, use_isolating)
         when AST::StringLiteral, AST::VariableReference, AST::TermReference,
              AST::MessageReference, AST::FunctionReference, AST::SelectExpression
 
           result = resolve_expression(element, scope)
-          result.to_s
+          wrap_with_isolation(result.to_s, use_isolating)
         else
-          element.to_s
+          wrap_with_isolation(element.to_s, use_isolating)
         end
       end
 
@@ -88,6 +99,10 @@ module Foxtail
           # Integer - format without decimal point
           Integer(value).to_s
         end
+      end
+
+      private def wrap_with_isolation(value, use_isolating)
+        use_isolating ? "#{FSI}#{value}#{PDI}" : value
       end
 
       # Resolve variable references

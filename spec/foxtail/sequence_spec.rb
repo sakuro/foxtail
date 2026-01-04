@@ -6,7 +6,7 @@ RSpec.describe Foxtail::Sequence do
   let(:ja_locale) { ICU4X::Locale.parse("ja") }
 
   let(:en_us_bundle) do
-    bundle = Foxtail::Bundle.new(en_us_locale)
+    bundle = Foxtail::Bundle.new(en_us_locale, use_isolating: false)
     resource = Foxtail::Resource.from_string(<<~FTL)
       hello = Hello, {$name}!
       us-only = US English only
@@ -16,7 +16,7 @@ RSpec.describe Foxtail::Sequence do
   end
 
   let(:en_bundle) do
-    bundle = Foxtail::Bundle.new(en_locale)
+    bundle = Foxtail::Bundle.new(en_locale, use_isolating: false)
     resource = Foxtail::Resource.from_string(<<~FTL)
       hello = Hello, {$name}!
       en-only = English only
@@ -26,7 +26,7 @@ RSpec.describe Foxtail::Sequence do
   end
 
   let(:ja_bundle) do
-    bundle = Foxtail::Bundle.new(ja_locale)
+    bundle = Foxtail::Bundle.new(ja_locale, use_isolating: false)
     resource = Foxtail::Resource.from_string(<<~FTL)
       hello = こんにちは、{$name}さん！
       ja-only = 日本語のみ

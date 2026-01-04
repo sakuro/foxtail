@@ -41,7 +41,7 @@ module Foxtail
     #
     # @param locale [ICU4X::Locale] The locale for this bundle
     # @param functions [Hash{String => #call}] Custom formatting functions (defaults to NUMBER and DATETIME)
-    # @param use_isolating [Boolean] Whether to use Unicode isolating marks (default: true, not currently implemented)
+    # @param use_isolating [Boolean] Whether to use Unicode bidi isolation marks for placeables (default: true)
     # @param transform [#call, nil] Optional message transformation function (not currently implemented)
     # @raise [ArgumentError] if locale is not an ICU4X::Locale instance
     #

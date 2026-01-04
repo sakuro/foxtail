@@ -32,7 +32,7 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 | `messages` | `Hash` | Message storage (id → Message) |
 | `terms` | `Hash` | Term storage (id → Term) |
 | `functions` | `Hash` | Custom functions |
-| `use_isolating` | `Boolean` | Enable bidi isolation (default: true) - [not yet implemented](https://github.com/sakuro/foxtail/issues/117) |
+| `use_isolating` | `Boolean` | Enable bidi isolation (default: true) |
 | `transform` | `Proc` | Text transformation function - [not yet implemented](https://github.com/sakuro/foxtail/issues/118) |
 
 **Key Methods**:
@@ -262,11 +262,19 @@ The system gracefully handles:
 
 ### Use Isolating
 
-Controls bidirectional text isolation ([not yet implemented](https://github.com/sakuro/foxtail/issues/117)):
+Controls bidirectional text isolation:
 
 ```ruby
-bundle = Foxtail::Bundle.new(locale, use_isolating: true)
-# Wraps placeables with Unicode isolation marks
+bundle = Foxtail::Bundle.new(locale, use_isolating: true)  # default
+# Wraps placeables with Unicode isolation marks (FSI U+2068, PDI U+2069)
+```
+
+When enabled (default), placeables are wrapped with Unicode bidi isolation marks to prevent text direction issues when mixing RTL and LTR content. The marks are invisible in normal text display.
+
+**Tip**: When writing tests that compare formatted output strings, you may want to use `use_isolating: false` to avoid invisible Unicode characters in assertions:
+
+```ruby
+let(:bundle) { Foxtail::Bundle.new(locale, use_isolating: false) }
 ```
 
 ### Transform

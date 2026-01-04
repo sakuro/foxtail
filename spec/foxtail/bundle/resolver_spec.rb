@@ -4,7 +4,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
   # Convenience alias for AST classes
   let(:ast) { Foxtail::Bundle::AST }
 
-  let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
+  let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false) }
   let(:resolver) { Foxtail::Bundle::Resolver.new(bundle) }
   let(:scope) { Foxtail::Bundle::Scope.new(bundle, name: "World", count: 5) }
 
@@ -336,6 +336,48 @@ RSpec.describe Foxtail::Bundle::Resolver do
       scope_with_one = Foxtail::Bundle::Scope.new(bundle, count: 1)
       result = resolver.resolve_expression(expr, scope_with_one)
       expect(result).to eq("many items") # Should fall back to default
+    end
+  end
+
+  describe "bidi isolation" do
+    let(:isolating_bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: true) }
+    let(:isolating_resolver) { Foxtail::Bundle::Resolver.new(isolating_bundle) }
+    let(:isolating_scope) { Foxtail::Bundle::Scope.new(isolating_bundle, name: "World") }
+
+    # Unicode bidi isolation characters
+    let(:fsi) { "\u2068" } # First Strong Isolate
+    let(:pdi) { "\u2069" } # Pop Directional Isolate
+
+    it "wraps placeables with isolation marks when use_isolating is true" do
+      pattern = ["Hello, ", ast::VariableReference[name: "name"], "!"]
+      result = isolating_resolver.resolve_pattern(pattern, isolating_scope)
+      expect(result).to eq("Hello, #{fsi}World#{pdi}!")
+    end
+
+    it "does not wrap when pattern has only one element" do
+      pattern = [ast::VariableReference[name: "name"]]
+      result = isolating_resolver.resolve_pattern(pattern, isolating_scope)
+      expect(result).to eq("World")
+    end
+
+    it "does not wrap text elements" do
+      pattern = ["Hello", " ", "World"]
+      result = isolating_resolver.resolve_pattern(pattern, isolating_scope)
+      expect(result).to eq("Hello World")
+    end
+
+    it "wraps multiple placeables separately" do
+      scope_with_vars = Foxtail::Bundle::Scope.new(isolating_bundle, first: "John", last: "Doe")
+      pattern = ["Name: ", ast::VariableReference[name: "first"], " ", ast::VariableReference[name: "last"]]
+      result = isolating_resolver.resolve_pattern(pattern, scope_with_vars)
+      expect(result).to eq("Name: #{fsi}John#{pdi} #{fsi}Doe#{pdi}")
+    end
+
+    it "does not wrap when use_isolating is false" do
+      # Uses the default bundle with use_isolating: false
+      pattern = ["Hello, ", ast::VariableReference[name: "name"], "!"]
+      result = resolver.resolve_pattern(pattern, scope)
+      expect(result).to eq("Hello, World!")
     end
   end
 end
