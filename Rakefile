@@ -4,7 +4,7 @@ require "bundler/gem_tasks"
 
 require "rake/clean"
 CLEAN.include("coverage", ".rspec_status", ".yardoc")
-CLOBBER.include("docs/api", "pkg")
+CLOBBER.include("doc/api", "pkg")
 
 require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec)
