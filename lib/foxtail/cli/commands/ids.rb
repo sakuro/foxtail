@@ -19,6 +19,8 @@ module Foxtail
 
         # Execute the ids command
         def call(files:, only_messages:, only_terms:, with_attributes:, json:, **)
+          raise Foxtail::CLI::NoFilesError if files.empty?
+
           ids = []
 
           files.each do |file|

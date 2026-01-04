@@ -18,6 +18,14 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
   end
 
   describe "#call" do
+    context "with no files" do
+      it "raises NoFilesError" do
+        expect {
+          command.call(files: [], only_messages: false, only_terms: false, with_attributes: false, json: false)
+        }.to raise_error(Foxtail::CLI::NoFilesError, "No files specified")
+      end
+    end
+
     context "with default options" do
       it "outputs all message and term IDs" do
         Tempfile.create(%w[test .ftl]) do |f|

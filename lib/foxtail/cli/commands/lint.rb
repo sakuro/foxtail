@@ -14,6 +14,8 @@ module Foxtail
 
         # Execute the lint command
         def call(files:, quiet:, **)
+          raise Foxtail::CLI::NoFilesError if files.empty?
+
           total_errors = 0
           total_files = 0
 
