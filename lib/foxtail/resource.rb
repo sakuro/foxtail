@@ -1,16 +1,14 @@
 # frozen_string_literal: true
 
 module Foxtail
-  # Parse FTL source into Bundle::AST entries
-  # Public API for creating resources from FTL content
+  # Container for parsed FTL entries (messages and terms).
   #
-  # This class uses the runtime parser (Bundle::Parser) which is optimized
-  # for performance and directly produces Bundle::AST structures.
-  # Invalid entries are silently skipped (error recovery).
-  # Comments are not preserved (runtime optimization).
+  # Created via {.from_string} or {.from_file}, which use the runtime parser
+  # ({Bundle::Parser}) optimized for performance with error recovery.
+  # Invalid entries are silently skipped; comments are not preserved.
   #
   # For full AST with source positions, comments, and error details,
-  # use Syntax::Parser instead.
+  # use {Syntax::Parser} instead.
   class Resource
     include Enumerable
 
