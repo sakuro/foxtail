@@ -131,13 +131,6 @@ This will install dependencies and set up the fluent.js submodule for compatibil
 $ bundle exec rake spec
 ```
 
-### Compatibility Testing
-
-```bash
-# Test compatibility with fluent.js (97/98 passing)
-$ bundle exec rspec spec/fluent_js_compatibility_spec.rb
-```
-
 ### Code Quality
 
 ```bash
