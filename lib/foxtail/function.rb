@@ -21,8 +21,11 @@ module Foxtail
     # @param options [Hash] Formatting options (camelCase keys)
     # @return [String] Formatted number
     private_class_method def self.format_number(value, locale:, **options)
+      numeric_value = coerce_to_numeric(value)
+      return "{NUMBER()}" unless numeric_value
+
       icu_options = convert_number_options(options)
-      ICU4X::NumberFormat.new(locale, **icu_options).format(value)
+      ICU4X::NumberFormat.new(locale, **icu_options).format(numeric_value)
     end
 
     # Format datetime using ICU4X
@@ -31,11 +34,14 @@ module Foxtail
     # @param options [Hash] Formatting options (camelCase keys)
     # @return [String] Formatted datetime
     private_class_method def self.format_datetime(value, locale:, **options)
+      time_value = coerce_to_time(value)
+      return "{DATETIME()}" unless time_value
+
       icu_options = convert_datetime_options(options)
       # ICU4X requires at least one of date_style or time_style
       # Default to :medium for date if neither specified
       icu_options[:date_style] ||= :medium unless icu_options[:time_style]
-      ICU4X::DateTimeFormat.new(locale, **icu_options).format(value)
+      ICU4X::DateTimeFormat.new(locale, **icu_options).format(time_value)
     end
 
     # Convert FTL/JS style number options to ICU4X options
@@ -82,6 +88,36 @@ module Foxtail
       end
 
       result
+    end
+
+    # Coerce value to a numeric type
+    # @param value [Object] Value to coerce
+    # @return [Numeric, nil] Numeric value or nil if coercion fails
+    private_class_method def self.coerce_to_numeric(value)
+      case value
+      when Numeric
+        value
+      when String
+        Float(value)
+      end
+    rescue ArgumentError
+      nil
+    end
+
+    # Coerce value to a Time object
+    # @param value [Object] Value to coerce
+    # @return [Time, nil] Time value or nil if coercion fails
+    private_class_method def self.coerce_to_time(value)
+      case value
+      when Time
+        value
+      when String
+        return nil if value.empty?
+
+        Time.iso8601(value)
+      end
+    rescue ArgumentError
+      nil
     end
   end
 end
