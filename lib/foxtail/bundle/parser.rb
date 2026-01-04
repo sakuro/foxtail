@@ -291,9 +291,9 @@ module Foxtail
       end
 
       # Safely dedent a value by common indent, returning original if too short
-      private def safe_dedent(value, common_indent)
+      private private def safe_dedent(value, common_indent)
         end_index = value.length - common_indent
-        return value if end_index <= 0
+        return value if end_index < 0
 
         value[0...end_index]
       end
