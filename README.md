@@ -44,83 +44,39 @@ For details, see the [icu4x gem documentation](https://github.com/sakuro/icu4x).
 ### Basic Usage
 
 ```ruby
-require 'foxtail'
+require "foxtail"
+require "icu4x"
 
-# English (US)
-en_resource = Foxtail::Resource.from_string(<<~FTL)
-  hello = Hello, {$name}!
-  emails = You have {$count ->
-    [0] no emails
-    [one] one email
-   *[other] {$count} emails
+resource = Foxtail::Resource.from_string(<<~FTL)
+  hello = Hello, { $name }!
+  emails = You have { $count ->
+      [one] one email
+     *[other] { $count } emails
   }.
 FTL
 
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
-en_bundle.add_resource(en_resource)
-en_bundle.format("hello", name: "Alice")
+bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+bundle.add_resource(resource)
+
+bundle.format("hello", name: "Alice")
 # => "Hello, Alice!"
-en_bundle.format("emails", count: 1)
+
+bundle.format("emails", count: 1)
 # => "You have one email."
 
-# Japanese
-ja_resource = Foxtail::Resource.from_string(<<~FTL)
-  hello = こんにちは、{$name}さん！
-  emails = メールが{$count}件あります。
-FTL
-
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
-ja_bundle.add_resource(ja_resource)
-ja_bundle.format("hello", name: "太郎")
-# => "こんにちは、太郎さん！"
-ja_bundle.format("emails", count: 1)
-# => "メールが1件あります。"
+bundle.format("emails", count: 5)
+# => "You have 5 emails."
 ```
 
-### Advanced Features
+### More Examples
 
-Numbers, dates, and currencies with international formatting using `icu4x`:
+See the [examples/](examples/) directory for executable demonstrations:
 
-```ruby
-# English (US)
-en_resource = Foxtail::Resource.from_string(<<~FTL)
-  price = The price is {NUMBER($amount, style: "currency", currency: "USD")}.
-  discount = Sale: {NUMBER($percent, style: "percent")} off!
-FTL
-
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
-en_bundle.add_resource(en_resource)
-en_bundle.format("price", amount: 1234.50)
-# => "The price is $1,234.5."
-en_bundle.format("discount", percent: 0.15)
-# => "Sale: 15% off!"
-
-# Japanese
-ja_resource = Foxtail::Resource.from_string(<<~FTL)
-  price = 価格は{NUMBER($amount, style: "currency", currency: "JPY")}です。
-  discount = セール：{NUMBER($percent, style: "percent")}オフ！
-FTL
-
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
-ja_bundle.add_resource(ja_resource)
-ja_bundle.format("price", amount: 1234)
-# => "価格は￥1,234です。"
-ja_bundle.format("discount", percent: 0.15)
-# => "セール：15%オフ！"
-
-# Pattern selection with strings
-pattern_resource = Foxtail::Resource.from_string(<<~FTL)
-  greeting = {$gender ->
-    [male] Hello, Mr. {$name}!
-    [female] Hello, Ms. {$name}!
-   *[other] Hello, {$name}!
-  }
-FTL
-
-en_bundle.add_resource(pattern_resource)
-en_bundle.format("greeting", gender: "male", name: "John")
-# => "Hello, Mr. John!"
-```
+- **Basic features**: Variables, selectors, terms, attributes
+- **Number/Date formatting**: Currency, percent, date styles
+- **Custom functions**: Adding your own formatters
+- **Multi-language apps**: Language fallback with `Sequence`
+- **E-commerce**: Real-world pricing and cart localization
 
 
 ## Development

@@ -129,3 +129,7 @@ sequence = Foxtail::Sequence.new(bundle_en_gb, bundle_en, bundle_default)
 # Falls back to complete locale
 sequence = Foxtail::Sequence.new(bundle_new_locale, bundle_complete_locale)
 ```
+
+## Example
+
+See [examples/multilingual_app/](../examples/multilingual_app/) for a complete working example with FTL files.
