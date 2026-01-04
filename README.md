@@ -8,6 +8,7 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 - **Runtime message formatting** - Bundle system with `icu4x`-based formatting
 - **FTL syntax parser** - Syntax support with error recovery
 - **Multi-language support** - Number, date, and pluralization formatting
+- **CLI tools** - Lint and validate FTL files
 - **Ruby implementation** - API following Ruby conventions
 
 ## Installation
@@ -110,6 +111,26 @@ $ bundle exec rake
 - **[Sequence](doc/sequence.md)** - Language fallback chains
 
 See [doc/architecture.md](doc/architecture.md) for detailed design documentation.
+
+## CLI
+
+Foxtail provides command-line tools for working with FTL files.
+
+### Lint
+
+Check FTL files for syntax errors:
+
+```bash
+foxtail lint messages.ftl
+foxtail lint locales/**/*.ftl
+```
+
+Options:
+- `-q, --quiet` - Only show errors, no summary
+
+Exit codes:
+- `0` - No errors found
+- `1` - Errors found or no files matched
 
 ## Compatibility
 

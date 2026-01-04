@@ -24,15 +24,17 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir[
     "lib/**/*.rb",
+    "exe/*",
     "CHANGELOG.md",
     "LICENSE.txt",
     "README.md"
   ]
   spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{\Aexe/}) {|f| File.basename(f) }
+  spec.executables = ["foxtail"]
   spec.require_paths = ["lib"]
 
   # Dependencies
+  spec.add_dependency "dry-cli", "~> 1.0"
   spec.add_dependency "icu4x", "~> 0.6"
   spec.add_dependency "zeitwerk", "~> 2.6"
 end

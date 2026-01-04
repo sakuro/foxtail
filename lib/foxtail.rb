@@ -14,7 +14,8 @@ module Foxtail
   # Configure inflections for acronyms
   loader.inflector.inflect(
     "ast" => "AST",
-    "ast_converter" => "ASTConverter"
+    "ast_converter" => "ASTConverter",
+    "cli" => "CLI"
   )
 
   loader.setup
