@@ -63,7 +63,5 @@ module Foxtail
         end
       end
     end
-
-    register "ids", Commands::Ids
   end
 end

@@ -37,8 +37,6 @@ module Foxtail
           raise Foxtail::CLI::TidyCheckError, files_needing_format if check && !files_needing_format.empty?
         end
 
-        private
-
         private def process_file(path, write:, check:, diff:, with_junk:, multiple_files:)
           content = File.read(path)
           parser = Foxtail::Parser.new
@@ -100,7 +98,5 @@ module Foxtail
         end
       end
     end
-
-    register "tidy", Commands::Tidy
   end
 end

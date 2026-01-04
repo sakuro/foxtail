@@ -59,7 +59,5 @@ module Foxtail
         end
       end
     end
-
-    register "lint", Commands::Lint
   end
 end
