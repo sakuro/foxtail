@@ -90,21 +90,21 @@ class CompatibilityTester
       comparison = comparator.compare(expected_ast, actual_ast)
       status = comparator.determine_status(comparison)
 
-      results << TestResult.new(
+      results << TestResult[
         name: pair[:name],
         category: :structure,
         status:,
         comparison:,
         error: nil
-      )
+      ]
     rescue => e
-      results << TestResult.new(
+      results << TestResult[
         name: pair[:name],
         category: :structure,
         status: :parsing_failure,
         comparison: nil,
         error: e.message
-      )
+      ]
     end
 
     results
@@ -118,13 +118,13 @@ class CompatibilityTester
     fixture_pairs.each do |pair|
       # Skip known incompatibility
       if pair[:name] == "leading_dots"
-        results << TestResult.new(
+        results << TestResult[
           name: pair[:name],
           category: :reference,
           status: :known_incompatibility,
           comparison: nil,
           error: "Known fluent.js incompatibility - intentionally skipped"
-        )
+        ]
         next
       end
 
@@ -139,21 +139,21 @@ class CompatibilityTester
         comparison = comparator.compare(expected_ast, actual_ast)
         status = comparator.determine_status(comparison)
 
-        results << TestResult.new(
+        results << TestResult[
           name: pair[:name],
           category: :reference,
           status:,
           comparison:,
           error: nil
-        )
+        ]
       rescue => e
-        results << TestResult.new(
+        results << TestResult[
           name: pair[:name],
           category: :reference,
           status: :parsing_failure,
           comparison: nil,
           error: e.message
-        )
+        ]
       end
     end
 
