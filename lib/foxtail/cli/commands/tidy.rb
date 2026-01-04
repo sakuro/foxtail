@@ -17,6 +17,8 @@ module Foxtail
 
         # Execute the tidy command
         def call(files:, write:, check:, diff:, with_junk:, **)
+          raise Foxtail::CLI::NoFilesError if files.empty?
+
           files_with_errors = []
           files_needing_format = []
           multiple_files = files.size > 1

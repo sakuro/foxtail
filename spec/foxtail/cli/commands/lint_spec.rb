@@ -6,6 +6,14 @@ RSpec.describe Foxtail::CLI::Commands::Lint do
   subject(:command) { Foxtail::CLI::Commands::Lint.new }
 
   describe "#call" do
+    context "with no files" do
+      it "raises NoFilesError" do
+        expect {
+          command.call(files: [], quiet: true)
+        }.to raise_error(Foxtail::CLI::NoFilesError, "No files specified")
+      end
+    end
+
     context "with valid FTL files" do
       it "reports no errors and does not raise" do
         Tempfile.create(%w[valid .ftl]) do |f|
