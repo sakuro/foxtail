@@ -8,5 +8,6 @@ module Foxtail
     extend Dry::CLI::Registry
 
     register "lint", Commands::Lint
+    register "tidy", Commands::Tidy
   end
 end

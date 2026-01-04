@@ -6,6 +6,7 @@ require "dry/cli"
 
 begin
   Dry::CLI.new(Foxtail::CLI).call
-rescue Foxtail::CLI::LintError
+rescue Foxtail::CLI::Error => e
+  warn e.message
   exit 1
 end
