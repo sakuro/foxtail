@@ -15,10 +15,7 @@ RSpec.describe "Fluent.js Compatibility" do
           ftl_source = FluentJsCompatibility::FixtureLoader.load_ftl_source(fixture[:ftl_path])
           actual_ast = parse_ftl(ftl_source, with_spans: true)
 
-          comparison = comparator.compare(expected_ast, actual_ast)
-          status = comparator.determine_status(comparison)
-
-          expect(status).to eq(:perfect_match).or eq(:partial_match)
+          expect(comparator.match?(expected_ast, actual_ast)).to be true
         end
       end
     end
@@ -39,10 +36,7 @@ RSpec.describe "Fluent.js Compatibility" do
 
             process_junk_annotations!(actual_ast)
 
-            comparison = comparator.compare(expected_ast, actual_ast)
-            status = comparator.determine_status(comparison)
-
-            expect(status).to eq(:perfect_match).or eq(:partial_match)
+            expect(comparator.match?(expected_ast, actual_ast)).to be true
           end
         end
       end

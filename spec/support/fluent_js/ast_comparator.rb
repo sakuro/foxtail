@@ -3,62 +3,11 @@
 module FluentJsCompatibility
   # Compares AST structures for fluent.js compatibility testing
   class AstComparator
-    # Keys that should be ignored for structural comparison
-    SPAN_RELATED_KEYS = %w[span start end].freeze
-    private_constant :SPAN_RELATED_KEYS
+    # Check if two AST structures match exactly
+    def match?(expected, actual) = expected == actual
 
-    # Deep comparison of AST structures
-    def compare(expected, actual)
-      differences = expected == actual ? [] : find_differences(expected, actual, "root")
-
-      {
-        match: expected == actual,
-        differences:,
-        structural_match: structural_match?(expected, actual),
-        span_only_differences: differences.all? {|diff| span_related?(diff) }
-      }
-    end
-
-    # Determine match status based on comparison results
-    def determine_status(comparison)
-      return :perfect_match if comparison[:match]
-      return :partial_match if comparison[:structural_match] || comparison[:span_only_differences]
-
-      :content_difference
-    end
-
-    # Check if ASTs match structurally (ignoring spans and minor details)
-    private def structural_match?(expected, actual)
-      expected_structural = strip_spans_and_details(expected)
-      actual_structural = strip_spans_and_details(actual)
-      expected_structural == actual_structural
-    end
-
-    # Check if difference is only span-related
-    private def span_related?(diff)
-      diff.include?("span") || diff.include?("start") || diff.include?("end")
-    end
-
-    # Strip spans and minor details for structural comparison
-    private def strip_spans_and_details(obj)
-      case obj
-      when Hash
-        result = {}
-        obj.each do |key, value|
-          next if SPAN_RELATED_KEYS.include?(key)
-
-          result[key] = strip_spans_and_details(value)
-        end
-        result
-      when Array
-        obj.map {|item| strip_spans_and_details(item) }
-      else
-        obj
-      end
-    end
-
-    # Find detailed differences between AST structures
-    private def find_differences(expected, actual, path)
+    # Find detailed differences between AST structures (for debugging)
+    def find_differences(expected, actual, path="root")
       differences = []
 
       case [expected.class, actual.class]
