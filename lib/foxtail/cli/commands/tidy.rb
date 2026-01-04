@@ -16,6 +16,12 @@ module Foxtail
         option :with_junk, type: :flag, default: false, desc: "Allow formatting files with syntax errors"
 
         # Execute the tidy command
+        # @param files [Array<String>] FTL files to format
+        # @param write [Boolean] Write result back to source file
+        # @param check [Boolean] Check if files are formatted (for CI)
+        # @param diff [Boolean] Show diff instead of formatted output
+        # @param with_junk [Boolean] Allow formatting files with syntax errors
+        # @return [void]
         def call(files:, write:, check:, diff:, with_junk:, **)
           raise Foxtail::CLI::NoFilesError if files.empty?
 

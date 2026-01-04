@@ -30,11 +30,17 @@ module Foxtail
   #
   # Corresponds to fluent-bundle/src/bundle.ts in the original JavaScript implementation.
   class Bundle
+    # @return [ICU4X::Locale] The locale for this bundle
     attr_reader :locale
+    # @return [Hash{String => Bundle::AST::Message}] Message entries indexed by ID
     attr_reader :messages
+    # @return [Hash{String => Bundle::AST::Term}] Term entries indexed by ID
     attr_reader :terms
+    # @return [Hash{String => #call}] Custom formatting functions
     attr_reader :functions
+    # @return [Boolean] Whether to use Unicode bidi isolation marks
     attr_reader :use_isolating
+    # @return [#call, nil] Optional message transformation function
     attr_reader :transform
 
     # Create a new Bundle instance.
@@ -63,7 +69,7 @@ module Foxtail
     #
     # @param resource [Resource] The resource to add
     # @param allow_overrides [Boolean] Whether to allow overriding existing messages/terms
-    # @return [Array] Errors from the resource
+    # @return [Array<Bundle::AST::Junk, Bundle::AST::Comment>] Errors from the resource
     def add_resource(resource, allow_overrides: false)
       resource.entries.each do |entry|
         # In fluent-bundle format, terms have '-' prefix in id
@@ -78,15 +84,19 @@ module Foxtail
     end
 
     # Check if a message exists
+    # @return [Boolean]
     def message?(id) = @messages.key?(id.to_s)
 
     # Get a message by ID
+    # @return [Bundle::AST::Message, nil]
     def message(id) = @messages[id.to_s]
 
     # Check if a term exists (private method in fluent-bundle)
+    # @return [Boolean]
     def term?(id) = @terms.key?(id.to_s)
 
     # Get a term by ID (private method in fluent-bundle)
+    # @return [Bundle::AST::Term, nil]
     def term(id) = @terms[id.to_s]
 
     # Format a message with the given arguments.
@@ -114,6 +124,7 @@ module Foxtail
     end
 
     # Format a pattern with the given arguments (using Resolver)
+    # @return [String]
     def format_pattern(pattern, errors: nil, **)
       scope = Scope.new(self, **)
       resolver = Resolver.new(self)

@@ -18,6 +18,12 @@ module Foxtail
         option :json, type: :flag, default: false, aliases: ["-j"], desc: "Output as JSON array"
 
         # Execute the ids command
+        # @param files [Array<String>] FTL files to extract IDs from
+        # @param only_messages [Boolean] Show only message IDs
+        # @param only_terms [Boolean] Show only term IDs
+        # @param with_attributes [Boolean] Include attribute names
+        # @param json [Boolean] Output as JSON array
+        # @return [void]
         def call(files:, only_messages:, only_terms:, with_attributes:, json:, **)
           raise Foxtail::CLI::NoFilesError if files.empty?
 

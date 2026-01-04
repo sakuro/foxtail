@@ -13,6 +13,9 @@ module Foxtail
         option :quiet, type: :flag, default: false, aliases: ["-q"], desc: "Only show errors, no summary"
 
         # Execute the lint command
+        # @param files [Array<String>] FTL files to lint
+        # @param quiet [Boolean] Only show errors, no summary
+        # @return [void]
         def call(files:, quiet:, **)
           raise Foxtail::CLI::NoFilesError if files.empty?
 

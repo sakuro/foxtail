@@ -6,10 +6,10 @@ module Foxtail
   class Resource
     include Enumerable
 
-    # @return [Array<Hash>] Parsed FTL entries (messages and terms)
+    # @return [Array<Bundle::AST::Message, Bundle::AST::Term>] Parsed FTL entries (messages and terms)
     attr_reader :entries
 
-    # @return [Array<Hash>] Parse errors encountered during processing
+    # @return [Array<Bundle::AST::Junk, Bundle::AST::Comment>] Parse errors encountered during processing
     attr_reader :errors
 
     # Parse FTL source string into a Resource
@@ -55,24 +55,30 @@ module Foxtail
     private_class_method :new
 
     # Check if resource has any entries
+    # @return [Boolean]
     def empty? = @entries.empty?
 
     # Get the number of entries
+    # @return [Integer]
     def size = @entries.size
 
     # Iterate over entries
+    # @return [self]
     def each(&)
       @entries.each(&)
       self
     end
 
     # Get message entries (IDs not starting with "-")
+    # @return [Array<Bundle::AST::Message>]
     def messages = @entries.select {|entry| entry.id && !entry.id.start_with?("-") }
 
     # Get term entries (IDs starting with "-")
+    # @return [Array<Bundle::AST::Term>]
     def terms = @entries.select {|entry| entry.id&.start_with?("-") }
 
     # Find entry by ID
+    # @return [Bundle::AST::Message, Bundle::AST::Term, nil]
     def find(id) = @entries.find {|entry| entry.id == id }
   end
 end

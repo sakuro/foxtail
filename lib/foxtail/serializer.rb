@@ -3,13 +3,17 @@
 module Foxtail
   # Serializes AST nodes back to FTL format
   class Serializer
+    # @return [Boolean] Whether to include junk entries in output
     attr_reader :with_junk
 
+    # Create a new Serializer instance
+    # @param with_junk [Boolean] Whether to include junk entries in output (default: false)
     def initialize(with_junk: false)
       @with_junk = with_junk
     end
 
     # Serialize a Resource AST to FTL string
+    # @return [String] FTL formatted source text
     def serialize(resource)
       has_entries = false
       parts = []
@@ -25,6 +29,7 @@ module Foxtail
     end
 
     # Serialize a single entry (Message, Term, Comment, or Junk)
+    # @return [String] FTL formatted entry text
     def serialize_entry(entry, has_entries: false)
       case entry
       when Parser::AST::Message
@@ -43,8 +48,6 @@ module Foxtail
         raise ArgumentError, "Unknown entry type: #{entry.class}"
       end
     end
-
-    private
 
     private def serialize_standalone_comment(comment, prefix, has_entries)
       result = serialize_comment(comment, prefix)

@@ -17,8 +17,10 @@ module Foxtail
 
     # Raised when lint command finds errors in FTL files
     class LintError < Error
+      # @return [Integer] Number of errors found
       attr_reader :error_count
 
+      # @param error_count [Integer] Number of errors found
       def initialize(error_count)
         @error_count = error_count
         super("Lint found #{error_count} error(s)")
@@ -27,8 +29,10 @@ module Foxtail
 
     # Raised when tidy command encounters syntax errors without --with-junk
     class TidyError < Error
+      # @return [Array<String>] Paths to files with syntax errors
       attr_reader :files_with_errors
 
+      # @param files_with_errors [Array<String>] Paths to files with syntax errors
       def initialize(files_with_errors)
         @files_with_errors = files_with_errors
         super("Files contain syntax errors: #{files_with_errors.join(", ")}")
@@ -37,8 +41,10 @@ module Foxtail
 
     # Raised when tidy --check finds files that need formatting
     class TidyCheckError < Error
+      # @return [Array<String>] Paths to files needing formatting
       attr_reader :files_needing_format
 
+      # @param files_needing_format [Array<String>] Paths to files needing formatting
       def initialize(files_needing_format)
         @files_needing_format = files_needing_format
         super("Files need formatting: #{files_needing_format.join(", ")}")
