@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative "../lib/foxtail"
+require "dry/cli"
+
+begin
+  Dry::CLI.new(Foxtail::CLI).call
+rescue Foxtail::CLI::LintError
+  exit 1
+end
