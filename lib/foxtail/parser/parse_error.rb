@@ -4,9 +4,13 @@ module Foxtail
   class Parser
     # Parse error with detailed error codes and messages
     class ParseError < Error
+      # @return [String] Error code (e.g., "E0001", "E0002")
       attr_reader :code
+      # @return [Array] Additional arguments for error message formatting
       attr_reader :args
 
+      # @param code [String] Error code
+      # @param args [Array] Additional arguments for error message formatting
       def initialize(code, *args)
         @code = code
         @args = args

@@ -13,6 +13,7 @@ module Foxtail
     def with_junk? = @with_junk
 
     # Serialize a Resource AST to FTL string
+    # @param resource [Parser::AST::Resource] Resource to serialize
     # @return [String] FTL formatted source text
     def serialize(resource)
       has_entries = false
@@ -29,6 +30,8 @@ module Foxtail
     end
 
     # Serialize a single entry (Message, Term, Comment, or Junk)
+    # @param entry [Parser::AST::Message, Parser::AST::Term, Parser::AST::BaseComment, Parser::AST::Junk] Entry to serialize
+    # @param has_entries [Boolean] Whether previous entries exist (for spacing)
     # @return [String] FTL formatted entry text
     def serialize_entry(entry, has_entries: false)
       case entry

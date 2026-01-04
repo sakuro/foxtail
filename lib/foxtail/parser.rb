@@ -21,6 +21,7 @@ module Foxtail
     def with_spans? = @with_spans
 
     # Main entry point - parse FTL source into AST
+    # @param source [String] FTL source text to parse
     # @return [Parser::AST::Resource]
     def parse(source)
       ps = Stream.new(source)
@@ -70,6 +71,7 @@ module Foxtail
     end
 
     # Parse the first AST::Message or AST::Term in source
+    # @param source [String] FTL source text to parse
     # @return [Parser::AST::Message, Parser::AST::Term, Parser::AST::Junk]
     def parse_entry(source)
       ps = Stream.new(source)
