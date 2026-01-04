@@ -114,23 +114,13 @@ See [doc/architecture.md](doc/architecture.md) for detailed design documentation
 
 ## CLI
 
-Foxtail provides command-line tools for working with FTL files.
+Foxtail provides command-line tools for working with FTL files:
 
-### Lint
+- `foxtail lint` - Check FTL files for syntax errors
+- `foxtail tidy` - Format FTL files with consistent style
+- `foxtail ids` - Extract message and term IDs
 
-Check FTL files for syntax errors:
-
-```bash
-foxtail lint messages.ftl
-foxtail lint locales/**/*.ftl
-```
-
-Options:
-- `-q, --quiet` - Only show errors, no summary
-
-Exit codes:
-- `0` - No errors found
-- `1` - Errors found or no files matched
+See [doc/cli.md](doc/cli.md) for full documentation.
 
 ## Compatibility
 
