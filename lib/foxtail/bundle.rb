@@ -70,7 +70,7 @@ module Foxtail
     #
     # @param resource [Resource] The resource to add
     # @param allow_overrides [Boolean] Whether to allow overriding existing messages/terms
-    # @return [Array] Empty array (error recovery is handled during parsing)
+    # @return [self] Returns self for method chaining
     def add_resource(resource, allow_overrides: false)
       resource.entries.each do |entry|
         # In fluent-bundle format, terms have '-' prefix in id
@@ -81,7 +81,7 @@ module Foxtail
         end
       end
 
-      [] # Runtime parser uses error recovery - no errors to return
+      self
     end
 
     # Check if a message exists
