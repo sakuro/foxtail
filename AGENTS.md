@@ -15,8 +15,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 #### Compatibility Testing
 
 ##### Fluent.js Compatibility
-- **Compatibility report**: `rake compatibility:fluentjs` - Comprehensive Fluent.js compatibility report (97/98 passing)
-- **RSpec directly**: `bundle exec rspec spec/fluent_js_compatibility_spec.rb`
+- **Run tests**: `bundle exec rspec spec/fluent_js_compatibility_spec.rb`
+- Compares Foxtail parser output with fluent.js reference AST (97/98 passing, 1 known incompatibility)
 
 ##### Node.js Intl.NumberFormat Compatibility
 - **Compatibility report**: `rake compatibility:node_intl` - Node.js Intl.NumberFormat compatibility report

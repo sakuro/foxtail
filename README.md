@@ -135,7 +135,7 @@ $ bundle exec rake spec
 
 ```bash
 # Test compatibility with fluent.js (97/98 passing)
-$ bundle exec rake compatibility:report
+$ bundle exec rspec spec/fluent_js_compatibility_spec.rb
 ```
 
 ### Code Quality

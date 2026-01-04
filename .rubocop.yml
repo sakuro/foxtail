@@ -53,8 +53,6 @@ Style/MissingElse:
 Naming/PredicateMethod:
   Exclude:
     - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
-    - 'compat/compatibility_tester.rb'  # span_related() - checks difference type rather than boolean property
-    - 'compat/ast_comparator.rb'       # span_related() - checks difference type rather than boolean property
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
@@ -66,7 +64,8 @@ Naming/MethodParameterName:
 # These specs test cross-cutting concerns rather than specific classes
 RSpec/DescribeClass:
   Exclude:
-    - 'spec/foxtail/parser/ast_spec.rb'     # Tests AST node equality behavior across multiple classes
+    - 'spec/foxtail/parser/ast_spec.rb'           # Tests AST node equality behavior across multiple classes
+    - 'spec/fluent_js_compatibility_spec.rb'      # Tests compatibility against fluent.js fixtures
 
 # Allow multiple describe blocks for comprehensive AST testing
 RSpec/MultipleDescribes:
@@ -92,10 +91,7 @@ RSpec/NestedGroups:
 # Internal utility methods in stream processing don't require documentation
 Style/DocumentationMethod:
   Exclude:
-    - 'lib/foxtail/parser/stream.rb'                    # Internal stream processing utilities
-    - 'compat/compatibility_tester.rb'        # Internal compatibility testing utilities
-    - 'compat/compatibility_reporter.rb'      # Internal compatibility reporting utilities
-    - 'compat/ast_comparator.rb'              # Internal AST comparison utilities
+    - 'lib/foxtail/parser/stream.rb'          # Internal stream processing utilities
 
 # Options hashes are part of the established API for Bundle, Scope, and Functions
 # Changing to keyword arguments would break existing usage and tests
@@ -113,21 +109,6 @@ Lint/DuplicateBranch:
 # Double negation is idiomatic for boolean coercion
 Style/DoubleNegation:
   Enabled: false
-
-# Number conversions are safe for statistical percentages (integers to float)
-Lint/NumberConversion:
-  Exclude:
-    - 'compat/compatibility_reporter.rb'  # Statistical percentage calculations with known integer inputs
-
-# Task-scoped methods prevent global namespace pollution (see rubocop-rake#42)
-Rake/MethodDefinitionInTask:
-  Exclude:
-    - 'lib/tasks/compatibility.rake'  # save_detailed_report is task-scoped to avoid global conflicts
-
-# Top-level methods in Rake files are acceptable for task helpers
-Style/TopLevelMethodDefinition:
-  Exclude:
-    - 'lib/tasks/compatibility.rake'  # check_compatibility_test_environment! is a rake task helper
 
 # Long lines that improve readability when not split
 Layout/LineLength:
