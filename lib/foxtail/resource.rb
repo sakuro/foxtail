@@ -63,7 +63,7 @@ module Foxtail
     # Iterate over entries
     def each(&) = @entries.each(&)
 
-    # Get entries by type
+    # Get message entries (IDs not starting with "-")
     def messages = @entries.select {|entry| entry.id && !entry.id.start_with?("-") }
 
     # Get term entries (IDs starting with "-")
