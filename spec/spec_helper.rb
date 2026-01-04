@@ -3,7 +3,6 @@
 require "simplecov"
 
 require "foxtail"
-require_relative "support/locale_context"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

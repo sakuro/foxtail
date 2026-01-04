@@ -12,7 +12,7 @@ RSpec.describe Foxtail::Function do
 
     it "returns correct formatted results" do
       result = Foxtail::Function.defaults
-      en_locale = locale("en")
+      en_locale = ICU4X::Locale.parse("en")
 
       expect(result["NUMBER"].call(42, locale: en_locale)).to eq("42")
       # ICU4X requires dateStyle or timeStyle; use mid-year date to avoid timezone edge cases

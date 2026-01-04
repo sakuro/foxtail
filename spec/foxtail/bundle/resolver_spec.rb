@@ -4,7 +4,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
   # Convenience alias for AST classes
   let(:ast) { Foxtail::Bundle::AST }
 
-  let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+  let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
   let(:resolver) { Foxtail::Bundle::Resolver.new(bundle) }
   let(:scope) { Foxtail::Bundle::Scope.new(bundle, name: "World", count: 5) }
 
@@ -135,7 +135,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
 
   describe "#resolve_function_call" do
     let(:test_function) { ->(*args, **_options) { "Function result: #{args[0]}" } }
-    let(:bundle_with_func) { Foxtail::Bundle.new(locale("en"), functions: {"TEST" => test_function}) }
+    let(:bundle_with_func) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), functions: {"TEST" => test_function}) }
     let(:resolver_with_func) { Foxtail::Bundle::Resolver.new(bundle_with_func) }
 
     it "resolves function calls" do
@@ -153,7 +153,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
 
     it "handles function errors" do
       error_function = ->(*_args, **_options) { raise RuntimeError, "Test error" }
-      bundle_with_error = Foxtail::Bundle.new(locale("en"), functions: {"ERROR" => error_function})
+      bundle_with_error = Foxtail::Bundle.new(ICU4X::Locale.parse("en"), functions: {"ERROR" => error_function})
       resolver_with_error = Foxtail::Bundle::Resolver.new(bundle_with_error)
 
       expr = ast::FunctionReference[name: "ERROR", args: []]
@@ -164,7 +164,7 @@ RSpec.describe Foxtail::Bundle::Resolver do
 
     it "resolves function calls with named arguments" do
       options_function = ->(*args, **options) { "#{args[0]} with options: #{options.inspect}" }
-      bundle_with_options = Foxtail::Bundle.new(locale("en"), functions: {"FORMAT" => options_function})
+      bundle_with_options = Foxtail::Bundle.new(ICU4X::Locale.parse("en"), functions: {"FORMAT" => options_function})
       resolver_with_options = Foxtail::Bundle::Resolver.new(bundle_with_options)
 
       expr = ast::FunctionReference[name: "FORMAT", args: [

@@ -3,7 +3,7 @@
 RSpec.describe Foxtail::Bundle do
   describe "#initialize" do
     it "accepts a single locale" do
-      bundle = Foxtail::Bundle.new(locale("en-US"))
+      bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
       expect(bundle.locale.to_s).to eq("en-US")
     end
 
@@ -13,7 +13,7 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "sets default options" do
-      locale = locale("en")
+      locale = ICU4X::Locale.parse("en")
       bundle = Foxtail::Bundle.new(locale)
       expect(bundle.functions).to have_key("NUMBER")
       expect(bundle.functions).to have_key("DATETIME")
@@ -22,7 +22,7 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "includes working default functions" do
-      locale = locale("en")
+      locale = ICU4X::Locale.parse("en")
       bundle = Foxtail::Bundle.new(locale)
       number_func = bundle.functions["NUMBER"]
       datetime_func = bundle.functions["DATETIME"]
@@ -33,7 +33,7 @@ RSpec.describe Foxtail::Bundle do
 
     it "accepts custom options" do
       functions = {"NUMBER" => ->(val, _opts) { val.to_s }}
-      locale = locale("en")
+      locale = ICU4X::Locale.parse("en")
       bundle = Foxtail::Bundle.new(
         locale,
         functions:,
@@ -49,7 +49,7 @@ RSpec.describe Foxtail::Bundle do
     it "accepts merged functions with defaults" do
       custom_function = ->(_val, _opts) { "custom" }
       merged_functions = Foxtail::Function.defaults.merge("CUSTOM" => custom_function)
-      locale = locale("en")
+      locale = ICU4X::Locale.parse("en")
       bundle = Foxtail::Bundle.new(locale, functions: merged_functions)
 
       expect(bundle.functions).to have_key("NUMBER")
@@ -60,7 +60,7 @@ RSpec.describe Foxtail::Bundle do
   end
 
   describe "#add_resource" do
-    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
     let(:ftl_source) do
       <<~FTL
         hello = Hello, {$name}!
@@ -109,7 +109,7 @@ RSpec.describe Foxtail::Bundle do
   end
 
   describe "#message? and #message" do
-    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
     let(:resource) { Foxtail::Resource.from_string("hello = Hello world") }
 
     before { bundle.add_resource(resource) }
@@ -137,7 +137,7 @@ RSpec.describe Foxtail::Bundle do
   end
 
   describe "#term? and #term" do
-    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
     let(:resource) { Foxtail::Resource.from_string("-brand = Firefox") }
 
     before { bundle.add_resource(resource) }
@@ -160,7 +160,7 @@ RSpec.describe Foxtail::Bundle do
   end
 
   describe "#format" do
-    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
 
     context "with simple messages" do
       before do
@@ -245,7 +245,7 @@ RSpec.describe Foxtail::Bundle do
   end
 
   describe "#format_pattern" do
-    let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
 
     it "formats string patterns" do
       result = bundle.format_pattern("Hello world")

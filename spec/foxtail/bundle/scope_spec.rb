@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Foxtail::Bundle::Scope do
-  let(:bundle) { Foxtail::Bundle.new(locale("en")) }
+  let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en")) }
   let(:args) { {name: "World", count: 5, email: "test@example.com"} }
   let(:scope) { Foxtail::Bundle::Scope.new(bundle, **args) }
 
