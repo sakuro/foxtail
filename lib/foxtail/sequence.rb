@@ -34,9 +34,9 @@ module Foxtail
     end
 
     # Formats a message using the first bundle that contains it.
+    # Keyword arguments are passed through to the bundle's format method.
     #
     # @param id [String] The message ID
-    # @param kwargs [Hash] Variables to pass to the message
     # @return [String] The formatted message, or the ID if not found
     def format(id, **)
       bundle = find_bundle(id)

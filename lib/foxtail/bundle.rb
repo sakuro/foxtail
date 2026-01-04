@@ -89,10 +89,10 @@ module Foxtail
     # Get a term by ID (private method in fluent-bundle)
     def term(id) = @terms[id.to_s]
 
-    # Format a message with the given arguments
+    # Format a message with the given arguments.
+    # Keyword arguments are substituted into the message as variables.
     #
     # @param id [String, Symbol] Message identifier to format
-    # @param args [Hash] Arguments to substitute into the message
     # @return [String] Formatted message string, or the id itself if message not found
     #
     # @example Basic message formatting
