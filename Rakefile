@@ -15,7 +15,4 @@ RuboCop::RakeTask.new
 require "yard"
 YARD::Rake::YardocTask.new(:doc)
 
-# Load custom tasks
-Dir.glob("lib/tasks/*.rake").each {|file| load file }
-
 task default: %i[spec rubocop]
