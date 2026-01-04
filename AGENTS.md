@@ -12,17 +12,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Run a single test file**: `bundle exec rspec spec/path/to/file_spec.rb`
 - **Run tests with specific example**: `bundle exec rspec spec/path/to/file_spec.rb:line_number`
 
-#### Compatibility Testing
-
-##### Fluent.js Compatibility
-- **Compatibility report**: `rake compatibility:fluentjs` - Comprehensive Fluent.js compatibility report (97/98 passing)
-- **RSpec directly**: `bundle exec rspec spec/fluent_js_compatibility_spec.rb`
-
-##### Node.js Intl.NumberFormat Compatibility
-- **Compatibility report**: `rake compatibility:node_intl` - Node.js Intl.NumberFormat compatibility report
-- Compares Foxtail number formatting with Node.js Intl.NumberFormat behavior
-- Tests decimal, currency, percent, and scientific notation formatting across multiple locales
-
 ### Linting & Code Style
 - **Run RuboCop linter**: `rake rubocop` or `bundle exec rubocop`
 - **Auto-fix RuboCop issues**: `bundle exec rubocop -a`
