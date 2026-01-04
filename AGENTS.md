@@ -4,6 +4,17 @@
 
 A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern localization system designed to improve how software is translated.
 
+## Documentation Map
+
+| Purpose | Document |
+|---------|----------|
+| Project overview & usage | [README.md](README.md) |
+| Architecture & design | [doc/architecture.md](doc/architecture.md) |
+| FTL syntax support | [doc/ftl-syntax.md](doc/ftl-syntax.md) |
+| Bundle system details | [doc/bundle-system.md](doc/bundle-system.md) |
+| `icu4x` integration | [doc/icu4x-integration.md](doc/icu4x-integration.md) |
+| Testing strategy | [doc/testing.md](doc/testing.md) |
+
 ## Core Principles
 
 ### Language Policy
@@ -40,16 +51,10 @@ bin/console                 # Interactive console
 bundle exec rake doc        # Generate YARD documentation
 ```
 
-## Architecture
-
-### Core Structure
-
-- **lib/foxtail.rb**: Main entry point
-- **lib/foxtail/**: Ruby implementation files
-- **spec/**: RSpec test directory
-
-### Configuration
+## Configuration
 
 - **Ruby version**: >= 3.2
 - **RuboCop style**: Double quotes for strings
 - **Release**: Automated via CI workflow
+
+See [doc/architecture.md](doc/architecture.md) for detailed architecture information.

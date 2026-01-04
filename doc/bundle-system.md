@@ -1,0 +1,304 @@
+# Bundle System
+
+## Overview
+
+The Bundle system is the runtime component of Foxtail that stores messages and formats them with locale-aware processing. It converts parsed FTL into an optimized runtime representation.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Resource --> |add_resource| Bundle
+    Bundle --> |format| Resolver
+    Resolver --> |uses| Scope
+    Scope --> |tracks| Variables[Variables & Errors]
+```
+
+## Components
+
+### Bundle
+
+The main container for messages and terms.
+
+```ruby
+bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+```
+
+**Attributes**:
+
+| Attribute | Type | Description |
+|-----------|------|-------------|
+| `locale` | `ICU4X::Locale` | Locale for formatting |
+| `messages` | `Hash` | Message storage (id → Message) |
+| `terms` | `Hash` | Term storage (id → Term) |
+| `functions` | `Hash` | Custom functions |
+| `use_isolating` | `Boolean` | Enable bidi isolation (default: true) - [not yet implemented](https://github.com/sakuro/foxtail/issues/117) |
+| `transform` | `Proc` | Text transformation function - [not yet implemented](https://github.com/sakuro/foxtail/issues/118) |
+
+**Key Methods**:
+
+```ruby
+# Add messages from a resource
+bundle.add_resource(resource)
+
+# Check for message existence
+bundle.message?("hello")  # => true
+
+# Get message object
+bundle.message("hello")   # => Bundle::AST::Message
+
+# Format a message
+bundle.format("hello", name: "World")  # => "Hello, World!"
+
+# Format a pattern directly
+bundle.format_pattern(pattern, name: "World")
+```
+
+### Resource
+
+Wrapper for parsed FTL content, providing the bridge between parsing and runtime.
+
+```ruby
+# From string
+resource = Foxtail::Resource.from_string(<<~FTL)
+  hello = Hello, {$name}!
+FTL
+
+# From file
+resource = Foxtail::Resource.from_file(Pathname("messages.ftl"))
+
+# Access entries
+resource.entries  # => [Bundle::AST::Message, ...]
+resource.errors   # => [...]
+```
+
+### Resolver
+
+Evaluates patterns and expressions at runtime.
+
+**Resolution Flow**:
+
+```mermaid
+flowchart TD
+    Pattern --> |String| Direct[Direct Return]
+    Pattern --> |Array| Complex[Complex Pattern]
+    Complex --> Elements[Pattern Elements]
+    Elements --> |String| Text[Append Text]
+    Elements --> |Expression| Resolve[Resolve Expression]
+    Resolve --> Variable[Variable Reference]
+    Resolve --> Message[Message Reference]
+    Resolve --> Term[Term Reference]
+    Resolve --> Function[Function Call]
+    Resolve --> Select[Select Expression]
+```
+
+### Scope
+
+Manages variable context and error tracking during resolution.
+
+**Attributes**:
+
+| Attribute | Purpose |
+|-----------|---------|
+| `bundle` | Parent bundle reference |
+| `args` | External variables |
+| `locals` | Local variables (term arguments) |
+| `errors` | Collected errors |
+| `dirty` | Circular reference detection |
+
+**Circular Reference Detection**:
+
+```ruby
+# Scope tracks active references to detect cycles
+scope.track(reference) do
+  # If reference already tracked, returns placeholder
+  # Otherwise, resolves normally
+end
+```
+
+## Bundle AST
+
+The runtime uses optimized Data classes for immutability and performance.
+
+### Entry Types
+
+| Class | Purpose |
+|-------|---------|
+| `Message` | Message with id, value, and attributes |
+| `Term` | Term (id starts with `-`) |
+| `Junk` | Unparseable content |
+| `Comment` | FTL comments |
+
+### Expression Types
+
+| Class | FTL Syntax | Example |
+|-------|------------|---------|
+| `StringLiteral` | `{"text"}` | Quoted string |
+| `NumberLiteral` | `{ 42 }` | Number with precision |
+| `VariableReference` | `{$name}` | External variable |
+| `MessageReference` | `{message}` | Message reference |
+| `TermReference` | `{-term}` | Term reference |
+| `FunctionReference` | `{NUMBER($n)}` | Function call |
+| `SelectExpression` | `{$x -> ...}` | Pattern selection |
+
+### Pattern Optimization
+
+Patterns are optimized during AST conversion:
+
+| FTL Pattern | Runtime Representation |
+|-------------|----------------------|
+| `hello = Hello` | `"Hello"` (String) |
+| `hello = {$name}` | `VariableReference` (single element) |
+| `hello = Hi, {$name}!` | `["Hi, ", VariableReference, "!"]` (Array) |
+
+## Usage Examples
+
+### Basic Formatting
+
+```ruby
+bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+resource = Foxtail::Resource.from_string(<<~FTL)
+  hello = Hello, {$name}!
+FTL
+
+bundle.add_resource(resource)
+bundle.format("hello", name: "World")
+# => "Hello, World!"
+```
+
+### Pluralization
+
+```ruby
+resource = Foxtail::Resource.from_string(<<~FTL)
+  emails = { $count ->
+      [0] No emails
+      [one] One email
+     *[other] {$count} emails
+  }
+FTL
+
+bundle.add_resource(resource)
+bundle.format("emails", count: 0)   # => "No emails"
+bundle.format("emails", count: 1)   # => "One email"
+bundle.format("emails", count: 5)   # => "5 emails"
+```
+
+### Terms for Reusable Content
+
+```ruby
+resource = Foxtail::Resource.from_string(<<~FTL)
+  -brand = Foxtail
+  about = About {-brand}
+  powered-by = Powered by {-brand}
+FTL
+
+bundle.add_resource(resource)
+bundle.format("about")       # => "About Foxtail"
+bundle.format("powered-by")  # => "Powered by Foxtail"
+```
+
+### Attributes
+
+```ruby
+resource = Foxtail::Resource.from_string(<<~FTL)
+  login = Log In
+      .placeholder = Username
+      .aria-label = Login button
+FTL
+
+bundle.add_resource(resource)
+message = bundle.message("login")
+# Access attributes via message.attributes["placeholder"]
+```
+
+### Multiple Resources
+
+```ruby
+# Resources can be added incrementally
+bundle.add_resource(common_resource)
+bundle.add_resource(page_specific_resource)
+
+# Control overrides
+bundle.add_resource(overrides, allow_overrides: true)
+```
+
+## Error Handling
+
+### Parse Errors
+
+Errors during parsing are returned by `add_resource`:
+
+```ruby
+errors = bundle.add_resource(resource)
+errors.each do |error|
+  puts "Parse error: #{error}"
+end
+```
+
+### Runtime Errors
+
+Runtime errors are collected in the scope:
+
+```ruby
+# format returns the formatted string
+# Errors during resolution result in placeholder text
+result = bundle.format("message", **args)
+# Missing variables show as: {$variable_name}
+```
+
+### Error Recovery
+
+The system gracefully handles:
+
+| Error | Behavior |
+|-------|----------|
+| Missing message | Returns message ID |
+| Missing variable | Returns `{$name}` placeholder |
+| Missing term | Returns `{-name}` placeholder |
+| Unknown function | Returns `{FUNCTION()}` placeholder |
+| Circular reference | Returns placeholder, prevents infinite loop |
+
+## Configuration Options
+
+### Use Isolating
+
+Controls bidirectional text isolation ([not yet implemented](https://github.com/sakuro/foxtail/issues/117)):
+
+```ruby
+bundle = Foxtail::Bundle.new(locale, use_isolating: true)
+# Wraps placeables with Unicode isolation marks
+```
+
+### Transform
+
+Apply text transformations ([not yet implemented](https://github.com/sakuro/foxtail/issues/118)):
+
+```ruby
+bundle = Foxtail::Bundle.new(locale, transform: ->(s) { s.upcase })
+bundle.format("hello", name: "world")
+# => "HELLO, WORLD!"
+```
+
+### Custom Functions
+
+Register custom formatting functions:
+
+```ruby
+bundle = Foxtail::Bundle.new(locale, functions: {
+  "SHOUT" => ->(args, opts, scope) { args.first.to_s.upcase }
+})
+
+# FTL: greeting = {SHOUT($name)}
+bundle.format("greeting", name: "hello")  # => "HELLO"
+```
+
+## Integration with ICU4X
+
+The Bundle uses `icu4x` for:
+
+- Locale handling (`ICU4X::Locale`)
+- Number formatting (`NUMBER` function)
+- Date/time formatting (`DATETIME` function)
+- Plural rules for variant selection
+
+See [icu4x-integration.md](icu4x-integration.md) for details.
