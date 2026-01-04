@@ -10,7 +10,7 @@ module Foxtail
 
         argument :files, type: :array, required: true, desc: "FTL files to lint"
 
-        option :quiet, type: :boolean, default: false, aliases: ["-q"], desc: "Only show errors, no summary"
+        option :quiet, type: :flag, default: false, aliases: ["-q"], desc: "Only show errors, no summary"
 
         # Execute the lint command
         def call(files:, quiet:, **)
