@@ -15,7 +15,7 @@ module Foxtail
     # For validation and tooling, use Syntax::Parser instead.
     class Parser
       # Internal parse error for control flow
-      class ParseError < StandardError; end
+      class ParseError < Error; end
 
       # Regex patterns (equivalent to fluent-bundle/src/resource.ts)
       RE_MESSAGE_START = /^(-?[a-zA-Z][\w-]*) *= */m
