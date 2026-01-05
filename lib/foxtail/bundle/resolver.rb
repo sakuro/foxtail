@@ -49,11 +49,7 @@ module Foxtail
         when Parser::AST::NumberLiteral
           result = resolve_expression(element, scope)
           # For numeric values in patterns, format for display
-          formatted = if element.precision > 0
-                        format_number(result, element.precision)
-                      else
-                        result.to_s
-                      end
+          formatted = element.precision > 0 ? format_number(result, element.precision) : result.to_s
           wrap_with_isolation(formatted, use_isolating)
         when Parser::AST::StringLiteral, Parser::AST::VariableReference, Parser::AST::TermReference,
              Parser::AST::MessageReference, Parser::AST::FunctionReference, Parser::AST::SelectExpression
