@@ -31,7 +31,8 @@ all_functions = Foxtail::Function.defaults.merge(custom_functions)
 # Create bundle with merged functions
 bundle = Foxtail::Bundle.new(
   ICU4X::Locale.parse("en-US"),
-  functions: all_functions
+  functions: all_functions,
+  use_isolating: false
 )
 
 resource = Foxtail::Resource.from_string(<<~FTL)

@@ -10,7 +10,7 @@
 require "foxtail"
 
 # Create a bundle for English (US) locale
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 
 # Parse FTL content and add to bundle
 resource = Foxtail::Resource.from_string(<<~FTL)

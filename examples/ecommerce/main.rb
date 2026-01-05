@@ -16,10 +16,10 @@ require "pathname"
 locales_dir = Pathname.new(__dir__).join("locales")
 
 # Load bundles for available locales
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 en_bundle.add_resource(Foxtail::Resource.from_file(locales_dir.join("en.ftl")))
 
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
+ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
 ja_bundle.add_resource(Foxtail::Resource.from_file(locales_dir.join("ja.ftl")))
 
 # Sample product data

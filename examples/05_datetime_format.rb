@@ -11,7 +11,7 @@
 require "foxtail"
 
 # English (US)
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 en_resource = Foxtail::Resource.from_string(<<~FTL)
   # Date only - various styles
   date-full = { DATETIME($date, dateStyle: "full") }
@@ -27,7 +27,7 @@ FTL
 en_bundle.add_resource(en_resource)
 
 # Japanese
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
+ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
 ja_resource = Foxtail::Resource.from_string(<<~FTL)
   date-full = { DATETIME($date, dateStyle: "full") }
   date-medium = { DATETIME($date, dateStyle: "medium") }

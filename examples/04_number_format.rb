@@ -11,7 +11,7 @@
 require "foxtail"
 
 # English (US)
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 en_resource = Foxtail::Resource.from_string(<<~FTL)
   # Basic number formatting
   count = Total: { NUMBER($value) }
@@ -27,7 +27,7 @@ FTL
 en_bundle.add_resource(en_resource)
 
 # Japanese
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
+ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
 ja_resource = Foxtail::Resource.from_string(<<~FTL)
   # Currency in Yen
   price = 価格：{ NUMBER($amount, style: "currency", currency: "JPY") }

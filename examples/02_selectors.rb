@@ -9,7 +9,7 @@
 
 require "foxtail"
 
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 
 resource = Foxtail::Resource.from_string(<<~FTL)
   # Plural selector - matches plural categories (zero, one, two, few, many, other)
