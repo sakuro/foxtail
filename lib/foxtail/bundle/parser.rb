@@ -27,7 +27,7 @@ module Foxtail
       RE_VARIANT_START = /\*?\[/
       private_constant :RE_VARIANT_START
 
-      RE_NUMBER_LITERAL = /(-?[0-9]+(?:\.([0-9]+))?)/
+      RE_NUMBER_LITERAL = /(-?\d+(?:\.(\d+))?)/
       private_constant :RE_NUMBER_LITERAL
 
       RE_IDENTIFIER = /([a-zA-Z][\w-]*)/
@@ -36,7 +36,7 @@ module Foxtail
       RE_REFERENCE = /([$-])?([a-zA-Z][\w-]*)(?:\.([a-zA-Z][\w-]*))?/
       private_constant :RE_REFERENCE
 
-      RE_FUNCTION_NAME = /^[A-Z][A-Z0-9_-]*$/
+      RE_FUNCTION_NAME = /^[A-Z][A-Z\d_-]*$/
       private_constant :RE_FUNCTION_NAME
 
       RE_TEXT_RUN = /([^{}\n\r]+)/
