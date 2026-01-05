@@ -20,9 +20,9 @@ module Foxtail
           pattern
         when Array
           resolve_complex_pattern(pattern, scope)
-        when AST::StringLiteral, AST::NumberLiteral, AST::VariableReference,
-             AST::TermReference, AST::MessageReference, AST::FunctionReference,
-             AST::SelectExpression
+        when Parser::AST::StringLiteral, Parser::AST::NumberLiteral, Parser::AST::VariableReference,
+             Parser::AST::TermReference, Parser::AST::MessageReference, Parser::AST::FunctionReference,
+             Parser::AST::SelectExpression
 
           # Single expression (shouldn't normally happen in patterns)
           resolve_expression(pattern, scope)
@@ -45,7 +45,7 @@ module Foxtail
         when String
           # Text elements are not wrapped with isolation marks
           element
-        when AST::NumberLiteral
+        when Parser::AST::NumberLiteral
           result = resolve_expression(element, scope)
           # For numeric values in patterns, format for display
           formatted = if element.precision > 0
@@ -54,8 +54,8 @@ module Foxtail
                         result.to_s
                       end
           wrap_with_isolation(formatted, use_isolating)
-        when AST::StringLiteral, AST::VariableReference, AST::TermReference,
-             AST::MessageReference, AST::FunctionReference, AST::SelectExpression
+        when Parser::AST::StringLiteral, Parser::AST::VariableReference, Parser::AST::TermReference,
+             Parser::AST::MessageReference, Parser::AST::FunctionReference, Parser::AST::SelectExpression
 
           result = resolve_expression(element, scope)
           wrap_with_isolation(result.to_s, use_isolating)
@@ -67,20 +67,20 @@ module Foxtail
       # Resolve expressions (variables, terms, messages, functions, etc.)
       def resolve_expression(expr, scope)
         case expr
-        when AST::StringLiteral
+        when Parser::AST::StringLiteral
           expr.value.to_s
-        when AST::NumberLiteral
+        when Parser::AST::NumberLiteral
           # Return raw numeric value, not formatted string
           expr.value
-        when AST::VariableReference
+        when Parser::AST::VariableReference
           resolve_variable_reference(expr, scope)
-        when AST::TermReference
+        when Parser::AST::TermReference
           resolve_term_reference(expr, scope)
-        when AST::MessageReference
+        when Parser::AST::MessageReference
           resolve_message_reference(expr, scope)
-        when AST::FunctionReference
+        when Parser::AST::FunctionReference
           resolve_function_call(expr, scope)
-        when AST::SelectExpression
+        when Parser::AST::SelectExpression
           resolve_select_expression(expr, scope)
         else
           scope.add_error("Unknown expression type: #{expr.class}")
@@ -192,7 +192,7 @@ module Foxtail
 
         args.each do |arg|
           case arg
-          when AST::NamedArgument
+          when Parser::AST::NamedArgument
             # Named argument - add to options hash
             key = arg.name.to_sym
             value = resolve_expression(arg.value, scope)
@@ -207,8 +207,8 @@ module Foxtail
         if scope.errors.length > initial_error_count
           arg_list = args.map {|arg|
             case arg
-            when AST::VariableReference then "$#{arg.name}"
-            when AST::NamedArgument then "#{arg.name}: #{arg.value}"
+            when Parser::AST::VariableReference then "$#{arg.name}"
+            when Parser::AST::NamedArgument then "#{arg.name}: #{arg.value}"
             else arg.to_s
             end
           }.join(", ")
@@ -258,7 +258,7 @@ module Foxtail
           key_value = resolve_expression(key, scope)
 
           case key
-          when AST::NumberLiteral
+          when Parser::AST::NumberLiteral
             # Numeric comparison
             # If precision is 0, compare as integers
             # Otherwise compare as floats
@@ -274,7 +274,7 @@ module Foxtail
               # Fallback to string comparison if not both numeric
               key_value.to_s == selector_value.to_s
             end
-          when AST::StringLiteral
+          when Parser::AST::StringLiteral
             # String comparison - check for ICU plural category match
             if numeric_selector?(selector_value)
               # Try ICU plural rules matching first

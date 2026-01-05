@@ -6,7 +6,7 @@ module Foxtail
     # Equivalent to fluent-bundle's FluentResource parser.
     #
     # This parser is optimized for runtime performance and produces
-    # Bundle::AST structures directly. Unlike Syntax::Parser, it:
+    # Bundle::Parser::AST structures directly. Unlike Syntax::Parser, it:
     # - Does not track source positions
     # - Does not preserve comments
     # - Uses error recovery to skip invalid entries

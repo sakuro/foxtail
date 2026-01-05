@@ -121,7 +121,7 @@ RSpec.describe Foxtail::Bundle do
 
     it "retrieves messages" do
       message = bundle.message("hello")
-      expect(message).to be_a(Foxtail::Bundle::AST::Message)
+      expect(message).to be_a(Foxtail::Bundle::Parser::AST::Message)
       expect(message.id).to eq("hello")
       expect(message.attributes).to be_nil
     end
@@ -149,7 +149,7 @@ RSpec.describe Foxtail::Bundle do
 
     it "retrieves terms" do
       term = bundle.term("-brand")
-      expect(term).to be_a(Foxtail::Bundle::AST::Term)
+      expect(term).to be_a(Foxtail::Bundle::Parser::AST::Term)
       expect(term.id).to eq("-brand")
       expect(term.attributes).to be_nil
     end
@@ -253,13 +253,13 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "formats array patterns" do
-      pattern = ["Hello, ", Foxtail::Bundle::AST::VariableReference[name: "name"], "!"]
+      pattern = ["Hello, ", Foxtail::Bundle::Parser::AST::VariableReference[name: "name"], "!"]
       result = bundle.format_pattern(pattern, name: "World")
       expect(result).to eq("Hello, World!")
     end
 
     it "collects errors when provided" do
-      pattern = [Foxtail::Bundle::AST::VariableReference[name: "missing"]]
+      pattern = [Foxtail::Bundle::Parser::AST::VariableReference[name: "missing"]]
       errors = []
       result = bundle.format_pattern(pattern, errors)
 

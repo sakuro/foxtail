@@ -12,7 +12,7 @@ module Foxtail
   class Resource
     include Enumerable
 
-    # @return [Array<Bundle::AST::Message, Bundle::AST::Term>] Parsed FTL entries (messages and terms)
+    # @return [Array<Bundle::Parser::AST::Message, Bundle::Parser::AST::Term>] Parsed FTL entries (messages and terms)
     attr_reader :entries
 
     # Parse FTL source string into a Resource
@@ -67,15 +67,15 @@ module Foxtail
     end
 
     # Get message entries (IDs not starting with "-")
-    # @return [Array<Bundle::AST::Message>]
+    # @return [Array<Bundle::Parser::AST::Message>]
     def messages = @entries.select {|entry| entry.id && !entry.id.start_with?("-") }
 
     # Get term entries (IDs starting with "-")
-    # @return [Array<Bundle::AST::Term>]
+    # @return [Array<Bundle::Parser::AST::Term>]
     def terms = @entries.select {|entry| entry.id&.start_with?("-") }
 
     # Find entry by ID
-    # @return [Bundle::AST::Message, Bundle::AST::Term, nil]
+    # @return [Bundle::Parser::AST::Message, Bundle::Parser::AST::Term, nil]
     def find(id) = @entries.find {|entry| entry.id == id }
   end
 end

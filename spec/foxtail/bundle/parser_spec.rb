@@ -9,7 +9,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse("hello = Hello world")
         expect(result.length).to eq(1)
         message = result.first
-        expect(message).to be_a(Foxtail::Bundle::AST::Message)
+        expect(message).to be_a(Foxtail::Bundle::Parser::AST::Message)
         expect(message.id).to eq("hello")
         expect(message.value).to eq("Hello world")
       end
@@ -38,7 +38,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse("-brand = Firefox")
         expect(result.length).to eq(1)
         term = result.first
-        expect(term).to be_a(Foxtail::Bundle::AST::Term)
+        expect(term).to be_a(Foxtail::Bundle::Parser::AST::Term)
         expect(term.id).to eq("-brand")
         expect(term.value).to eq("Firefox")
       end
@@ -80,7 +80,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         expect(message.value).to be_a(Array)
         expect(message.value.length).to eq(2)
         expect(message.value[0]).to eq("Hello ")
-        expect(message.value[1]).to be_a(Foxtail::Bundle::AST::VariableReference)
+        expect(message.value[1]).to be_a(Foxtail::Bundle::Parser::AST::VariableReference)
         expect(message.value[1].name).to eq("name")
       end
 
@@ -88,7 +88,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse("hello = Hello { other }")
         message = result.first
         expect(message.value).to be_a(Array)
-        expect(message.value[1]).to be_a(Foxtail::Bundle::AST::MessageReference)
+        expect(message.value[1]).to be_a(Foxtail::Bundle::Parser::AST::MessageReference)
         expect(message.value[1].name).to eq("other")
       end
 
@@ -96,7 +96,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse("hello = Hello { -brand }")
         message = result.first
         expect(message.value).to be_a(Array)
-        expect(message.value[1]).to be_a(Foxtail::Bundle::AST::TermReference)
+        expect(message.value[1]).to be_a(Foxtail::Bundle::Parser::AST::TermReference)
         expect(message.value[1].name).to eq("brand")
       end
 
@@ -104,7 +104,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse("hello = { NUMBER($count) }")
         message = result.first
         expect(message.value).to be_a(Array)
-        expect(message.value[0]).to be_a(Foxtail::Bundle::AST::FunctionReference)
+        expect(message.value[0]).to be_a(Foxtail::Bundle::Parser::AST::FunctionReference)
         expect(message.value[0].name).to eq("NUMBER")
         expect(message.value[0].args.length).to eq(1)
       end
@@ -122,7 +122,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         message = result.first
         expect(message.value).to be_a(Array)
         select = message.value[0]
-        expect(select).to be_a(Foxtail::Bundle::AST::SelectExpression)
+        expect(select).to be_a(Foxtail::Bundle::Parser::AST::SelectExpression)
         expect(select.variants.length).to eq(2)
         expect(select.star).to eq(1) # Default variant index
       end
@@ -138,7 +138,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse(ftl)
         message = result.first
         select = message.value[0]
-        expect(select.variants[0].key).to be_a(Foxtail::Bundle::AST::NumberLiteral)
+        expect(select.variants[0].key).to be_a(Foxtail::Bundle::Parser::AST::NumberLiteral)
         expect(select.variants[0].key.value).to eq(0.0)
       end
     end
@@ -147,7 +147,7 @@ RSpec.describe Foxtail::Bundle::Parser do
       it "parses number literals" do
         result = parser.parse("value = { 42 }")
         message = result.first
-        expect(message.value[0]).to be_a(Foxtail::Bundle::AST::NumberLiteral)
+        expect(message.value[0]).to be_a(Foxtail::Bundle::Parser::AST::NumberLiteral)
         expect(message.value[0].value).to eq(42.0)
         expect(message.value[0].precision).to eq(0)
       end
@@ -155,7 +155,7 @@ RSpec.describe Foxtail::Bundle::Parser do
       it "parses number literals with decimals" do
         result = parser.parse("value = { 3.14 }")
         message = result.first
-        expect(message.value[0]).to be_a(Foxtail::Bundle::AST::NumberLiteral)
+        expect(message.value[0]).to be_a(Foxtail::Bundle::Parser::AST::NumberLiteral)
         expect(message.value[0].value).to eq(3.14)
         expect(message.value[0].precision).to eq(2)
       end
@@ -169,7 +169,7 @@ RSpec.describe Foxtail::Bundle::Parser do
       it "parses string literals" do
         result = parser.parse('value = { "hello" }')
         message = result.first
-        expect(message.value[0]).to be_a(Foxtail::Bundle::AST::StringLiteral)
+        expect(message.value[0]).to be_a(Foxtail::Bundle::Parser::AST::StringLiteral)
         expect(message.value[0].value).to eq("hello")
       end
 
@@ -191,9 +191,9 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse('value = { NUMBER($count, style: "currency") }')
         message = result.first
         func = message.value[0]
-        expect(func).to be_a(Foxtail::Bundle::AST::FunctionReference)
+        expect(func).to be_a(Foxtail::Bundle::Parser::AST::FunctionReference)
         expect(func.args.length).to eq(2)
-        expect(func.args[1]).to be_a(Foxtail::Bundle::AST::NamedArgument)
+        expect(func.args[1]).to be_a(Foxtail::Bundle::Parser::AST::NamedArgument)
         expect(func.args[1].name).to eq("style")
         expect(func.args[1].value.value).to eq("currency")
       end
@@ -249,7 +249,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse("hello = { other.attr }")
         message = result.first
         ref = message.value[0]
-        expect(ref).to be_a(Foxtail::Bundle::AST::MessageReference)
+        expect(ref).to be_a(Foxtail::Bundle::Parser::AST::MessageReference)
         expect(ref.name).to eq("other")
         expect(ref.attr).to eq("attr")
       end
@@ -258,7 +258,7 @@ RSpec.describe Foxtail::Bundle::Parser do
         result = parser.parse("hello = { -brand.short }")
         message = result.first
         ref = message.value[0]
-        expect(ref).to be_a(Foxtail::Bundle::AST::TermReference)
+        expect(ref).to be_a(Foxtail::Bundle::Parser::AST::TermReference)
         expect(ref.name).to eq("brand")
         expect(ref.attr).to eq("short")
       end

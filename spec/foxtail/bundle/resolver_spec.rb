@@ -2,7 +2,7 @@
 
 RSpec.describe Foxtail::Bundle::Resolver do
   # Convenience alias for AST classes
-  let(:ast) { Foxtail::Bundle::AST }
+  let(:ast) { Foxtail::Bundle::Parser::AST }
 
   let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false) }
   let(:resolver) { Foxtail::Bundle::Resolver.new(bundle) }

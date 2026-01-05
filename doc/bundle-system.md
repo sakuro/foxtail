@@ -47,7 +47,7 @@ bundle.add_resource(resource)
 bundle.message?("hello")  # => true
 
 # Get message object
-bundle.message("hello")   # => Bundle::AST::Message
+bundle.message("hello")   # => Bundle::Parser::AST::Message
 
 # Format a message
 bundle.format("hello", name: "World")  # => "Hello, World!"
@@ -71,7 +71,7 @@ FTL
 resource = Foxtail::Resource.from_file(Pathname("messages.ftl"))
 
 # Access entries
-resource.entries  # => [Bundle::AST::Message, ...]
+resource.entries  # => [Bundle::Parser::AST::Message, ...]
 
 # Invalid entries are silently skipped (error recovery)
 ```

@@ -39,7 +39,7 @@ flowchart LR
     end
     subgraph "Runtime (fluent-bundle equivalent)"
         BP[Bundle::Parser]
-        BA[Bundle::AST]
+        BA[Bundle::Parser::AST]
         BP --> BA
     end
 ```
@@ -51,7 +51,7 @@ flowchart LR
 - **AST**: Hash-based nodes inheriting from `BaseNode`, comments and Junk preserved
 - **Use Cases**: CLI tools (`lint`, `tidy`, `ids`), syntax analysis
 
-### Bundle Parser (`Bundle::Parser`) → `Bundle::AST`
+### Bundle Parser (`Bundle::Parser`) → `Bundle::Parser::AST`
 - **Purpose**: Lightweight runtime parser optimized for message formatting
 - **Output**: Runtime AST directly usable by Bundle (no conversion needed)
 - **Location**: `lib/foxtail/bundle/parser.rb`
@@ -85,7 +85,7 @@ The syntax parser reads FTL source and produces a detailed AST with source posit
 |-----------|------|----------------|
 | `Bundle` | `lib/foxtail/bundle.rb` | Message storage and formatting |
 | `Bundle::Parser` | `lib/foxtail/bundle/parser.rb` | Runtime FTL parsing |
-| `Bundle::AST` | `lib/foxtail/bundle/ast.rb` | Runtime Data classes |
+| `Bundle::Parser::AST` | `lib/foxtail/bundle/parser/ast.rb` | Runtime Data classes |
 | `Resolver` | `lib/foxtail/bundle/resolver.rb` | Pattern evaluation |
 | `Scope` | `lib/foxtail/bundle/scope.rb` | Variable context |
 
@@ -103,7 +103,7 @@ The syntax parser reads FTL source and produces a detailed AST with source posit
 # 1. Parse FTL source directly to runtime AST
 source = "hello = Hello, {$name}!"
 resource = Foxtail::Resource.from_string(source)
-# => Resource with Bundle::AST entries
+# => Resource with Bundle::Parser::AST entries
 
 # 2. Add to bundle
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en"))
@@ -184,7 +184,8 @@ lib/foxtail/
 │       └── ast/               # Syntax::Parser::AST (28 classes)
 ├── bundle/
 │   ├── parser.rb              # Bundle::Parser (runtime)
-│   ├── ast.rb                 # Bundle::AST (Data classes)
+│   ├── parser/
+│   │   └── ast.rb             # Bundle::Parser::AST (Data classes)
 │   ├── resolver.rb            # Resolver
 │   └── scope.rb               # Scope
 ├── resource.rb                # Resource (public API)

@@ -32,9 +32,9 @@ module Foxtail
   class Bundle
     # @return [ICU4X::Locale] The locale for this bundle
     attr_reader :locale
-    # @return [Hash{String => Bundle::AST::Message}] Message entries indexed by ID
+    # @return [Hash{String => Bundle::Parser::AST::Message}] Message entries indexed by ID
     attr_reader :messages
-    # @return [Hash{String => Bundle::AST::Term}] Term entries indexed by ID
+    # @return [Hash{String => Bundle::Parser::AST::Term}] Term entries indexed by ID
     attr_reader :terms
     # @return [Hash{String => #call}] Custom formatting functions
     attr_reader :functions
@@ -56,8 +56,8 @@ module Foxtail
       raise ArgumentError, "locale must be an ICU4X::Locale instance, got: #{locale.class}" unless locale.is_a?(ICU4X::Locale)
 
       @locale = locale
-      @messages = {}  # id → Bundle::AST Message
-      @terms = {}     # id → Bundle::AST Term
+      @messages = {}  # id → Bundle::Parser::AST Message
+      @terms = {}     # id → Bundle::Parser::AST Term
       @functions = functions
       @use_isolating = use_isolating
       @transform = transform
@@ -89,7 +89,7 @@ module Foxtail
     def message?(id) = @messages.key?(id.to_s)
 
     # Get a message by ID
-    # @return [Bundle::AST::Message, nil]
+    # @return [Bundle::Parser::AST::Message, nil]
     def message(id) = @messages[id.to_s]
 
     # Check if a term exists (private method in fluent-bundle)
@@ -97,7 +97,7 @@ module Foxtail
     def term?(id) = @terms.key?(id.to_s)
 
     # Get a term by ID (private method in fluent-bundle)
-    # @return [Bundle::AST::Term, nil]
+    # @return [Bundle::Parser::AST::Term, nil]
     def term(id) = @terms[id.to_s]
 
     # Format a message with the given arguments.
