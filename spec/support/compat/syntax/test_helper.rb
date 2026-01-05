@@ -1,31 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "../fluent_compat_base"
+require_relative "../base"
 
 module FluentSyntaxCompatibility
-  FIXTURES_ROOT = FluentCompatBase::FLUENT_JS_ROOT / "fluent-syntax" / "test"
-  private_constant :FIXTURES_ROOT
-
-  STRUCTURE_FIXTURES = FIXTURES_ROOT / "fixtures_structure"
-  private_constant :STRUCTURE_FIXTURES
-
-  REFERENCE_FIXTURES = FIXTURES_ROOT / "fixtures_reference"
-  private_constant :REFERENCE_FIXTURES
-
-  module_function def all_fixtures
-    FluentCompatBase.find_fixture_pairs(
-      json_dir: STRUCTURE_FIXTURES,
-      ftl_dir: STRUCTURE_FIXTURES,
-      category: :structure,
-      with_spans: true
-    ) + FluentCompatBase.find_fixture_pairs(
-      json_dir: REFERENCE_FIXTURES,
-      ftl_dir: REFERENCE_FIXTURES,
-      category: :reference,
-      with_spans: false
-    )
-  end
-
   # Helper methods for fluent-syntax compatibility tests
   module TestHelper
     KNOWN_MISMATCHES = [

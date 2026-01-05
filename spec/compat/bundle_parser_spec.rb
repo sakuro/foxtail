@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
-require_relative "../support/fluent_bundle"
+require_relative "../support/compat/bundle"
+
+SYNTAX_FIXTURES = FluentCompatBase::FLUENT_JS_ROOT / "fluent-syntax" / "test" / "fixtures_structure"
+BUNDLE_FIXTURES = FluentCompatBase::FLUENT_JS_ROOT / "fluent-bundle" / "test" / "fixtures_structure"
 
 RSpec.describe "fluent-bundle Compatibility" do
   include FluentBundleCompatibility::TestHelper
 
-  FluentBundleCompatibility.all_fixtures.each do |fixture|
+  FluentCompatBase.collect_fixtures({json_dir: BUNDLE_FIXTURES, ftl_dir: SYNTAX_FIXTURES}).each do |fixture|
     context fixture[:name] do
       it "matches fluent-bundle JSON output" do
         expected_json = FluentCompatBase.load_json(fixture[:json_path])

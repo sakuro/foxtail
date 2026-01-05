@@ -5,7 +5,7 @@ require "pathname"
 
 # Shared utilities for fluent.js compatibility testing
 module FluentCompatBase
-  PROJECT_ROOT = Pathname(__dir__).parent.parent
+  PROJECT_ROOT = Pathname(__dir__).parent.parent.parent
   private_constant :PROJECT_ROOT
 
   FLUENT_JS_ROOT = PROJECT_ROOT / "fluent.js"
@@ -42,5 +42,12 @@ module FluentCompatBase
     end
 
     pairs.sort_by {|pair| pair[:name] }
+  end
+
+  # Collect fixtures from multiple directories
+  # @param configs [Array<Hash>] array of find_fixture_pairs arguments
+  # @return [Array<Hash>] combined array of fixture pairs
+  module_function def collect_fixtures(*configs)
+    configs.flat_map {|config| find_fixture_pairs(**config) }
   end
 end
