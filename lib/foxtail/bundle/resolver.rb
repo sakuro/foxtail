@@ -7,9 +7,10 @@ module Foxtail
     class Resolver
       # Unicode bidi isolation characters
       FSI = "\u2068" # First Strong Isolate
-      PDI = "\u2069" # Pop Directional Isolate
+      private_constant :FSI
 
-      private_constant :FSI, :PDI
+      PDI = "\u2069" # Pop Directional Isolate
+      private_constant :PDI
 
       def initialize(bundle) = @bundle = bundle
 
