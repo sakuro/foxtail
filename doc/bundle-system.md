@@ -64,7 +64,7 @@ Uses `Bundle::Parser` internally for efficient runtime parsing with error recove
 ```ruby
 # From string
 resource = Foxtail::Resource.from_string(<<~FTL)
-  hello = Hello, {$name}!
+  hello = Hello, { $name }!
 FTL
 
 # From file
@@ -153,8 +153,8 @@ Patterns are optimized during AST conversion:
 | FTL Pattern | Runtime Representation |
 |-------------|----------------------|
 | `hello = Hello` | `"Hello"` (String) |
-| `hello = {$name}` | `VariableReference` (single element) |
-| `hello = Hi, {$name}!` | `["Hi, ", VariableReference, "!"]` (Array) |
+| `hello = { $name }` | `VariableReference` (single element) |
+| `hello = Hi, { $name }!` | `["Hi, ", VariableReference, "!"]` (Array) |
 
 ## Usage Examples
 
@@ -163,7 +163,7 @@ Patterns are optimized during AST conversion:
 ```ruby
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 resource = Foxtail::Resource.from_string(<<~FTL)
-  hello = Hello, {$name}!
+  hello = Hello, { $name }!
 FTL
 
 bundle.add_resource(resource)
@@ -175,11 +175,12 @@ bundle.format("hello", name: "World")
 
 ```ruby
 resource = Foxtail::Resource.from_string(<<~FTL)
-  emails = { $count ->
-      [0] No emails
-      [one] One email
-     *[other] {$count} emails
-  }
+  emails =
+      { $count ->
+          [0] No emails
+          [one] One email
+         *[other] { $count } emails
+      }
 FTL
 
 bundle.add_resource(resource)
@@ -193,8 +194,8 @@ bundle.format("emails", count: 5)   # => "5 emails"
 ```ruby
 resource = Foxtail::Resource.from_string(<<~FTL)
   -brand = Foxtail
-  about = About {-brand}
-  powered-by = Powered by {-brand}
+  about = About { -brand }
+  powered-by = Powered by { -brand }
 FTL
 
 bundle.add_resource(resource)
@@ -272,9 +273,9 @@ The system gracefully handles:
 | Error | Behavior |
 |-------|----------|
 | Missing message | Returns message ID |
-| Missing variable | Returns `{$name}` placeholder |
-| Missing term | Returns `{-name}` placeholder |
-| Unknown function | Returns `{FUNCTION()}` placeholder |
+| Missing variable | Returns `{ $name }` placeholder |
+| Missing term | Returns `{ -name }` placeholder |
+| Unknown function | Returns `{ FUNCTION() }` placeholder |
 | Circular reference | Returns placeholder, prevents infinite loop |
 
 ## Configuration Options
