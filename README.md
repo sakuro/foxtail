@@ -4,7 +4,7 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 
 ## Features
 
-- **fluent.js compatibility** - 97/98 official test fixtures passing
+- **fluent.js compatibility** - 159/160 official test fixtures passing
 - **Runtime message formatting** - Bundle system with `icu4x`-based formatting
 - **FTL syntax parser** - Syntax support with error recovery
 - **Multi-language support** - Number, date, and pluralization formatting
@@ -125,7 +125,9 @@ See [doc/cli.md](doc/cli.md) for full documentation.
 ## Compatibility
 
 - **Ruby**: 3.2 or higher
-- **fluent.js**: 97/98 test fixtures passing (99.0%)
+- **fluent.js**: 159/160 test fixtures passing (99.4%)
+  - Syntax parser: 97/98 (99.0%)
+  - Bundle parser: 62/62 (100%)
 
 ## Contributing
 

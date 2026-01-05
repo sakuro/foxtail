@@ -19,5 +19,7 @@
   - Examples directory with executable usage demonstrations
 
 ### Compatibility
-- fluent.js: 97/98 test fixtures passing (99.0%)
+- fluent.js: 159/160 test fixtures passing (99.4%)
+  - Syntax parser: 97/98 (99.0%)
+  - Bundle parser: 62/62 (100%)
 - Ruby: 3.2+ supported
