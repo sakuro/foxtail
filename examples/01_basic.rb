@@ -16,10 +16,8 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 resource = Foxtail::Resource.from_string(<<~FTL)
   # Simple message
   hello-world = Hello, World!
-
   # Message with variable
   greeting = Hello, { $name }!
-
   # Message with multiple variables
   welcome = Welcome to { $app }, { $user }!
 FTL

@@ -13,26 +13,27 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 
 resource = Foxtail::Resource.from_string(<<~FTL)
   # Plural selector - matches plural categories (zero, one, two, few, many, other)
-  emails = You have { $count ->
-      [0] no emails
-      [one] one email
-     *[other] { $count } emails
-  }.
-
+  emails =
+      You have { $count ->
+          [0] no emails
+          [one] one email
+         *[other] { $count } emails
+      }.
   # String selector - matches exact string values
-  greeting = { $gender ->
-      [male] Hello, Mr. { $name }!
-      [female] Hello, Ms. { $name }!
-     *[other] Hello, { $name }!
-  }
-
+  greeting =
+      { $gender ->
+          [male] Hello, Mr. { $name }!
+          [female] Hello, Ms. { $name }!
+         *[other] Hello, { $name }!
+      }
   # Numeric selector with exact matches
-  position = You are in { $place ->
-      [1] first
-      [2] second
-      [3] third
-     *[other] { $place }th
-  } place.
+  position =
+      You are in { $place ->
+          [1] first
+          [2] second
+          [3] third
+         *[other] { $place }th
+      } place.
 FTL
 
 bundle.add_resource(resource)

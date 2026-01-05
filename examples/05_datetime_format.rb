@@ -18,11 +18,9 @@ en_resource = Foxtail::Resource.from_string(<<~FTL)
   date-long = { DATETIME($date, dateStyle: "long") }
   date-medium = { DATETIME($date, dateStyle: "medium") }
   date-short = { DATETIME($date, dateStyle: "short") }
-
   # Time only
   time-full = { DATETIME($time, timeStyle: "full") }
   time-short = { DATETIME($time, timeStyle: "short") }
-
   # Combined
   datetime = { DATETIME($dt, dateStyle: "medium", timeStyle: "short") }
 FTL

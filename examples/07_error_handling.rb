@@ -14,10 +14,8 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 resource = Foxtail::Resource.from_string(<<~FTL)
   # Message with variable
   welcome = Welcome, { $name }! You have { $count } messages.
-
   # Message referencing another message
   greet-user = { greeting }, { $name }!
-
   # Valid greeting
   greeting = Hello
 FTL

@@ -15,21 +15,16 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 resource = Foxtail::Resource.from_string(<<~FTL)
   # Term - reusable value (prefixed with -)
   -brand = Foxtail
-
   # Message referencing a term
   about = About { -brand }
-
   # Another term
   -company = Acme Corp
-
   # Multiple terms in one message
   copyright = Copyright { -company }. Powered by { -brand }.
-
   # Message with attributes (for localized HTML attributes, etc.)
   login-button = Log In
       .aria-label = Click to log in
       .title = Login to your account
-
   # Referencing message attribute from another message
   login-help = { login-button.aria-label } to access your account.
 FTL

@@ -37,16 +37,12 @@ bundle = Foxtail::Bundle.new(
 resource = Foxtail::Resource.from_string(<<~FTL)
   # Using custom UPPER function
   shout = { UPPER($text) }
-
   # Using custom LOWER function
   whisper = { LOWER($text) }
-
   # Using custom REVERSE function
   backwards = { REVERSE($text) }
-
   # Combining with regular text
   greeting = Hello, { UPPER($name) }! Welcome aboard.
-
   # Still have access to default NUMBER function
   price = Total: { NUMBER($amount, style: "currency", currency: "USD") }
 FTL

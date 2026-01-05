@@ -15,16 +15,12 @@ en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 en_resource = Foxtail::Resource.from_string(<<~FTL)
   # Basic number formatting
   count = Total: { NUMBER($value) }
-
   # Currency formatting
   price = Price: { NUMBER($amount, style: "currency", currency: "USD") }
-
   # Percentage
   discount = Save { NUMBER($rate, style: "percent") }!
-
   # Controlling decimal places
   precise = Value: { NUMBER($num, minimumFractionDigits: 2, maximumFractionDigits: 2) }
-
   # Large numbers with grouping
   population = Population: { NUMBER($count) }
 FTL
@@ -35,10 +31,8 @@ ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
 ja_resource = Foxtail::Resource.from_string(<<~FTL)
   # Currency in Yen
   price = 価格：{ NUMBER($amount, style: "currency", currency: "JPY") }
-
   # Percentage
   discount = { NUMBER($rate, style: "percent") }オフ！
-
   # Large numbers
   population = 人口：{ NUMBER($count) }人
 FTL
