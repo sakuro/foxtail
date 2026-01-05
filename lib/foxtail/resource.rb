@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
 module Foxtail
-  # Parse FTL source and convert to Bundle::AST
-  # Public API for creating resources from FTL content
+  # Container for parsed FTL entries (messages and terms).
+  #
+  # Created via {.from_string} or {.from_file}, which use the runtime parser
+  # ({Bundle::Parser}) optimized for performance with error recovery.
+  # Invalid entries are silently skipped; comments are not preserved.
+  #
+  # For full AST with source positions, comments, and error details,
+  # use {Syntax::Parser} instead.
   class Resource
     include Enumerable
 
     # @return [Array<Bundle::AST::Message, Bundle::AST::Term>] Parsed FTL entries (messages and terms)
     attr_reader :entries
 
-    # @return [Array<Bundle::AST::Junk, Bundle::AST::Comment>] Parse errors encountered during processing
-    attr_reader :errors
-
     # Parse FTL source string into a Resource
     #
     # @param source [String] FTL source text to parse
-    # @param skip_junk [Boolean] Skip invalid entries (default: true)
-    # @param skip_comments [Boolean] Skip comment entries (default: true)
     # @return [Foxtail::Resource] New resource with parsed entries
-    # @raise [ArgumentError] if source is not a string
     #
     # @example Parse FTL content
     #   source = <<~FTL
@@ -26,30 +26,27 @@ module Foxtail
     #     goodbye = Goodbye!
     #   FTL
     #   resource = Foxtail::Resource.from_string(source)
-    def self.from_string(source, skip_junk: true, skip_comments: true)
-      parser = Parser.new
-      parser_resource = parser.parse(source)
+    # @raise [ArgumentError] if source is not a String
+    def self.from_string(source)
+      raise ArgumentError, "source must be a String, got #{source.class}" unless source.is_a?(String)
 
-      converter = Bundle::ASTConverter.new(skip_junk:, skip_comments:)
-      entries = converter.convert_resource(parser_resource)
+      parser = Bundle::Parser.new
+      entries = parser.parse(source)
 
-      new(entries, errors: converter.errors)
+      new(entries)
     end
 
     # Parse FTL file into a Resource
     #
     # @param path [Pathname] Path to FTL file
-    # @param skip_junk [Boolean] Skip invalid entries (default: true)
-    # @param skip_comments [Boolean] Skip comment entries (default: true)
     # @return [Foxtail::Resource] New resource with parsed entries
-    def self.from_file(path, skip_junk: true, skip_comments: true)
+    def self.from_file(path)
       source = path.read
-      from_string(source, skip_junk:, skip_comments:)
+      from_string(source)
     end
 
-    def initialize(entries, errors: [])
+    def initialize(entries)
       @entries = entries
-      @errors = errors
     end
 
     private_class_method :new

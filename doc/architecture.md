@@ -8,41 +8,68 @@ Foxtail is a Ruby implementation of [Project Fluent](https://projectfluent.org/)
 
 ```mermaid
 flowchart TD
-    FTL[FTL Source] --> Parser
-    Parser --> |Parser AST| ASTConverter
-    ASTConverter --> |Bundle AST| Resource
-    Resource --> Bundle
-    Bundle --> Resolver
-    Scope --> Resolver
-    Resolver --> Output[Formatted String]
+    FTL[FTL Source] --> SyntaxParser[Syntax::Parser]
+    FTL --> BundleParser[Bundle::Parser]
+
+    subgraph Tooling
+        SyntaxParser --> |Full AST| SyntaxAST[Syntax::Parser::AST]
+        SyntaxAST --> Serializer[Syntax::Serializer]
+        Serializer --> Output1[FTL Output]
+    end
+
+    subgraph Runtime
+        BundleParser --> |Bundle AST| Resource
+        Resource --> Bundle
+        Bundle --> Resolver
+        Scope --> Resolver
+        Resolver --> Output2[Formatted String]
+    end
 ```
+
+## Dual-Parser Architecture
+
+Foxtail follows the fluent.js architecture with two separate parsers for different use cases:
+
+### Syntax Parser (`Syntax::Parser`)
+- **Purpose**: Full-featured parser for tooling (linting, editing, serialization)
+- **Output**: Complete AST with source positions (spans), comments, and detailed structure
+- **Location**: `lib/foxtail/syntax/parser.rb`
+- **Use Cases**: CLI tools (`lint`, `tidy`, `ids`), syntax analysis
+
+### Bundle Parser (`Bundle::Parser`)
+- **Purpose**: Lightweight runtime parser optimized for message formatting
+- **Output**: Runtime AST directly usable by Bundle (no conversion needed)
+- **Location**: `lib/foxtail/bundle/parser.rb`
+- **Features**: Error recovery, minimal overhead, pattern optimization
+- **Use Cases**: Runtime message loading via `Resource`
 
 ## Core Components
 
-### Parser Layer
+### Syntax Layer
 
 | Component | File | Responsibility |
 |-----------|------|----------------|
-| `Parser` | `lib/foxtail/parser.rb` | FTL source → Parser AST |
-| `Stream` | `lib/foxtail/parser/stream.rb` | Character-by-character reading |
-| `Parser::AST::*` | `lib/foxtail/parser/ast/` | 28 AST node classes |
+| `Syntax::Parser` | `lib/foxtail/syntax/parser.rb` | FTL source → Full AST |
+| `Syntax::Parser::Stream` | `lib/foxtail/syntax/parser/stream.rb` | Character-by-character reading |
+| `Syntax::Parser::AST::*` | `lib/foxtail/syntax/parser/ast/` | 28 AST node classes |
+| `Syntax::Serializer` | `lib/foxtail/syntax/serializer.rb` | AST → FTL source |
 
-The parser reads FTL source and produces a detailed AST with source position tracking (spans).
+The syntax parser reads FTL source and produces a detailed AST with source position tracking (spans). Used by CLI tools.
 
 ### Resource Layer
 
 | Component | File | Responsibility |
 |-----------|------|----------------|
-| `Resource` | `lib/foxtail/resource.rb` | Public parsing API |
-| `ASTConverter` | `lib/foxtail/bundle/ast_converter.rb` | Parser AST → Bundle AST |
+| `Resource` | `lib/foxtail/resource.rb` | Public parsing API for runtime |
 
-`Resource` wraps the parser and converter, providing `from_string` and `from_file` methods.
+`Resource` wraps `Bundle::Parser`, providing `from_string` and `from_file` methods.
 
 ### Bundle Layer
 
 | Component | File | Responsibility |
 |-----------|------|----------------|
 | `Bundle` | `lib/foxtail/bundle.rb` | Message storage and formatting |
+| `Bundle::Parser` | `lib/foxtail/bundle/parser.rb` | Runtime FTL parsing |
 | `Bundle::AST` | `lib/foxtail/bundle/ast.rb` | Runtime Data classes |
 | `Resolver` | `lib/foxtail/bundle/resolver.rb` | Pattern evaluation |
 | `Scope` | `lib/foxtail/bundle/scope.rb` | Variable context |
@@ -55,70 +82,78 @@ The parser reads FTL source and produces a detailed AST with source position tra
 
 ## Two-AST Design
 
-Foxtail uses two separate AST representations:
+Foxtail uses two separate AST representations for different purposes:
 
 ```mermaid
 flowchart LR
-    subgraph Parsing
-        PA[Parser AST]
+    subgraph "Tooling (fluent-syntax equivalent)"
+        SP[Syntax::Parser]
+        SA[Syntax::Parser::AST]
+        SP --> SA
     end
-    subgraph Runtime
-        BA[Bundle AST]
+    subgraph "Runtime (fluent-bundle equivalent)"
+        BP[Bundle::Parser]
+        BA[Bundle::AST]
+        BP --> BA
     end
-    PA --> |ASTConverter| BA
 ```
 
-### Parser AST (`Parser::AST::*`)
+### Syntax AST (`Syntax::Parser::AST::*`)
 
 - Detailed structure preserving all FTL syntax
 - Source span tracking for error reporting
 - Hash-based nodes inheriting from `BaseNode`
-- Used during parsing phase only
+- Comments and Junk entries preserved
+- Used by tooling (linting, editing, serialization)
 
 ### Bundle AST (`Bundle::AST::*`)
 
 - Optimized for runtime evaluation
 - Immutable `Data` classes
 - Patterns simplified to String or Array
-- No span information
+- No span information, no comments
+- Error recovery (invalid entries skipped)
 
 ## Data Flow
 
-### 1. Parsing
+### Runtime Path (via Bundle::Parser)
 
 ```ruby
+# 1. Parse FTL source directly to runtime AST
 source = "hello = Hello, {$name}!"
-parser = Foxtail::Parser.new
-parser_ast = parser.parse(source)
-# => Parser::AST::Resource
-```
+resource = Foxtail::Resource.from_string(source)
+# => Resource with Bundle::AST entries
 
-### 2. Conversion
-
-```ruby
-converter = Foxtail::Bundle::ASTConverter.new
-entries = converter.convert_resource(parser_ast)
-# => [Bundle::AST::Message, ...]
-```
-
-### 3. Storage
-
-```ruby
+# 2. Add to bundle
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en"))
 bundle.add_resource(resource)
-# Messages/Terms stored in bundle.messages / bundle.terms
-```
 
-### 4. Resolution
-
-```ruby
+# 3. Format message
 result = bundle.format("hello", name: "World")
 # => "Hello, World!"
 ```
 
+### Tooling Path (via Syntax::Parser)
+
+```ruby
+# 1. Parse FTL source to full AST
+source = "hello = Hello"
+parser = Foxtail::Syntax::Parser.new
+ast = parser.parse(source)
+# => Syntax::Parser::AST::Resource
+
+# 2. Analyze or modify AST
+# ... linting, editing ...
+
+# 3. Serialize back to FTL
+serializer = Foxtail::Syntax::Serializer.new
+output = serializer.serialize(ast)
+# => "hello = Hello\n"
+```
+
 ## Pattern Representation
 
-Patterns are optimized during conversion:
+Patterns are optimized during parsing:
 
 | FTL Pattern | Bundle Representation |
 |-------------|----------------------|
@@ -139,7 +174,8 @@ Patterns are optimized during conversion:
 
 ## Error Handling
 
-- **Parse errors**: Wrapped in `Junk` entries with `Annotation`
+- **Syntax parser errors**: Wrapped in `Junk` entries with `Annotation`
+- **Bundle parser errors**: Invalid entries silently skipped (error recovery)
 - **Runtime errors**: Collected in `Scope.errors`, placeholders returned
 - **Circular references**: Detected via `Scope.dirty` set
 
@@ -159,16 +195,27 @@ DATETIME($date, dateStyle: "medium")
 
 ```
 lib/foxtail/
-├── parser.rb              # Parser
-├── resource.rb            # Resource (public API)
-├── bundle.rb              # Bundle
-├── function.rb            # NUMBER, DATETIME
-├── parser/
-│   ├── stream.rb          # Stream
-│   └── ast/               # Parser AST (28 classes)
-└── bundle/
-    ├── ast.rb             # Bundle AST (Data classes)
-    ├── ast_converter.rb   # ASTConverter
-    ├── resolver.rb        # Resolver
-    └── scope.rb           # Scope
+├── syntax/
+│   ├── parser.rb              # Syntax::Parser (full AST)
+│   ├── serializer.rb          # Syntax::Serializer
+│   └── parser/
+│       ├── stream.rb          # Syntax::Parser::Stream
+│       └── ast/               # Syntax::Parser::AST (28 classes)
+├── bundle/
+│   ├── parser.rb              # Bundle::Parser (runtime)
+│   ├── ast.rb                 # Bundle::AST (Data classes)
+│   ├── resolver.rb            # Resolver
+│   └── scope.rb               # Scope
+├── resource.rb                # Resource (public API)
+├── bundle.rb                  # Bundle
+└── function.rb                # NUMBER, DATETIME
 ```
+
+## fluent.js Correspondence
+
+| Foxtail | fluent.js | Purpose |
+|---------|-----------|---------|
+| `Foxtail::Syntax::Parser` | `@fluent/syntax` Parser | Full AST parsing |
+| `Foxtail::Syntax::Serializer` | `@fluent/syntax` serialize | AST to FTL |
+| `Foxtail::Bundle::Parser` | `@fluent/bundle` FluentResource | Runtime parsing |
+| `Foxtail::Bundle` | `@fluent/bundle` FluentBundle | Message formatting |

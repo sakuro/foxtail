@@ -78,9 +78,9 @@ RSpec.describe Foxtail::Bundle do
       expect(bundle.term?("-brand")).to be true
     end
 
-    it "returns resource errors" do
-      errors = bundle.add_resource(resource)
-      expect(errors).to be_an(Array)
+    it "returns self for method chaining" do
+      result = bundle.add_resource(resource)
+      expect(result).to be(bundle)
     end
 
     it "prevents overrides by default" do

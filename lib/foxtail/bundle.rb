@@ -70,7 +70,7 @@ module Foxtail
     #
     # @param resource [Resource] The resource to add
     # @param allow_overrides [Boolean] Whether to allow overriding existing messages/terms
-    # @return [Array<Bundle::AST::Junk, Bundle::AST::Comment>] Errors from the resource
+    # @return [self] Returns self for method chaining
     def add_resource(resource, allow_overrides: false)
       resource.entries.each do |entry|
         # In fluent-bundle format, terms have '-' prefix in id
@@ -81,7 +81,7 @@ module Foxtail
         end
       end
 
-      resource.errors
+      self
     end
 
     # Check if a message exists

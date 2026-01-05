@@ -47,17 +47,18 @@ Layout/LineLength:
 Lint/DuplicateBranch:
   Exclude:
     - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
+    - 'lib/foxtail/bundle/parser.rb'              # parse_indent: blank line and continuation return same hash
 
 # Parser logic requires deep nesting for comment attachment handling
 Metrics/BlockNesting:
   Exclude:
-    - 'lib/foxtail/parser.rb'
+    - 'lib/foxtail/syntax/parser.rb'
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
   AllowedNames:
-    - ps  # parser state - used throughout lib/foxtail/parser.rb
-    - ch  # character - used in lib/foxtail/parser/stream.rb for character operations
+    - ps  # parser state - used throughout lib/foxtail/syntax/parser.rb
+    - ch  # character - used in lib/foxtail/syntax/parser/stream.rb for character operations
     - id  # identifier - used in lib/foxtail/bundle.rb, lib/foxtail/bundle/scope.rb, and AST classes
 
 # These methods are intentionally named without ? suffix as they represent actions/operations
@@ -65,22 +66,24 @@ Naming/MethodParameterName:
 Naming/PredicateMethod:
   Exclude:
     - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
+    - 'lib/foxtail/bundle/parser.rb'          # consume_char/consume_token - consume and return success
 
 # These specs test cross-cutting concerns rather than specific classes
 RSpec/DescribeClass:
   Exclude:
-    - 'spec/foxtail/parser/ast_spec.rb'           # Tests AST node equality behavior across multiple classes
-    - 'spec/fluent_js_compatibility_spec.rb'      # Tests compatibility against fluent.js fixtures
+    - 'spec/foxtail/syntax/parser/ast_spec.rb'    # Tests AST node equality behavior across multiple classes
+    - 'spec/compat/syntax_parser_spec.rb'         # Tests compatibility against fluent-syntax fixtures
+    - 'spec/compat/bundle_parser_spec.rb'         # Tests compatibility against fluent-bundle fixtures
 
 # Allow multiple describe blocks for comprehensive AST testing
 RSpec/MultipleDescribes:
   Exclude:
-    - 'spec/foxtail/parser/ast_spec.rb'     # Tests multiple AST node classes in logical groupings
+    - 'spec/foxtail/syntax/parser/ast_spec.rb'    # Tests multiple AST node classes in logical groupings
 
 # Internal utility methods in stream processing don't require documentation
 Style/DocumentationMethod:
   Exclude:
-    - 'lib/foxtail/parser/stream.rb'          # Internal stream processing utilities
+    - 'lib/foxtail/syntax/parser/stream.rb'       # Internal stream processing utilities
 
 # Double negation is idiomatic for boolean coercion
 Style/DoubleNegation:

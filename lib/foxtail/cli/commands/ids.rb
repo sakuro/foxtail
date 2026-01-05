@@ -43,17 +43,17 @@ module Foxtail
         private def extract_ids(path, only_messages:, only_terms:, with_attributes:)
           ids = []
           content = File.read(path)
-          parser = Foxtail::Parser.new
+          parser = Foxtail::Syntax::Parser.new
           resource = parser.parse(content)
 
           resource.body.each do |entry|
             case entry
-            when Foxtail::Parser::AST::Message
+            when Foxtail::Syntax::Parser::AST::Message
               next if only_terms
 
               ids << entry.id.name
               ids.concat(attribute_ids(entry)) if with_attributes
-            when Foxtail::Parser::AST::Term
+            when Foxtail::Syntax::Parser::AST::Term
               next if only_messages
 
               ids << "-#{entry.id.name}"

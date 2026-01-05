@@ -18,7 +18,6 @@ RSpec.describe Foxtail::Resource do
       expect(resource).to be_a(Foxtail::Resource)
       expect(resource.entries).to be_an(Array)
       expect(resource.entries.size).to eq(3)
-      expect(resource.errors).to be_an(Array)
     end
 
     it "creates proper message entries" do
@@ -42,11 +41,6 @@ RSpec.describe Foxtail::Resource do
       expect(brand_term).to be_a(Foxtail::Bundle::AST::Term)
       expect(brand_term.id).to eq("-brand")
       expect(brand_term.value).to eq("Firefox")
-    end
-
-    it "accepts converter options" do
-      resource = Foxtail::Resource.from_string(ftl_source, skip_junk: false)
-      expect(resource.entries.size).to eq(3)
     end
   end
 
@@ -161,11 +155,17 @@ RSpec.describe Foxtail::Resource do
     end
   end
 
-  describe "error handling" do
-    it "collects errors from converter" do
-      # This would test error handling when we have actual error scenarios
-      resource = Foxtail::Resource.from_string("valid = Valid message")
-      expect(resource.errors).to be_an(Array)
+  describe "error recovery" do
+    it "skips invalid entries silently" do
+      # The runtime parser uses error recovery - invalid entries are silently skipped
+      ftl = <<~FTL
+        valid = Valid message
+        invalid entry without equals sign
+        another = Another valid message
+      FTL
+      resource = Foxtail::Resource.from_string(ftl)
+      expect(resource.entries.size).to eq(2)
+      expect(resource.entries.map(&:id)).to eq(%w[valid another])
     end
   end
 end

@@ -43,12 +43,12 @@ module Foxtail
         private def lint_file(path)
           errors = []
           content = File.read(path)
-          parser = Foxtail::Parser.new
+          parser = Foxtail::Syntax::Parser.new
           resource = parser.parse(content)
 
           resource.body.each do |entry|
             case entry
-            when Foxtail::Parser::AST::Junk
+            when Foxtail::Syntax::Parser::AST::Junk
               errors << format_junk_error(path, entry)
             end
           end

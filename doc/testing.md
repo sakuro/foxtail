@@ -13,27 +13,26 @@ Foxtail uses RSpec for testing with a focus on:
 ```
 spec/
 ├── spec_helper.rb                    # RSpec configuration
-├── fluent_js_compatibility_spec.rb   # Compatibility tests
+├── compat/
+│   ├── syntax_parser_spec.rb         # fluent-syntax compatibility tests
+│   └── bundle_parser_spec.rb         # fluent-bundle compatibility tests
 ├── foxtail/
-│   ├── parser_spec.rb                # Parser tests
-│   ├── resource_spec.rb              # Resource tests
-│   ├── bundle_spec.rb                # Bundle tests
-│   ├── function_spec.rb              # Function tests
-│   ├── parser/
-│   │   ├── stream_spec.rb            # Stream tests
-│   │   └── ast_spec.rb               # Parser AST tests
+│   ├── syntax/
+│   │   └── parser_spec.rb            # Syntax::Parser tests
 │   └── bundle/
-│       ├── ast_spec.rb               # Bundle AST tests
-│       ├── ast_converter_spec.rb     # AST converter tests
+│       ├── parser_spec.rb            # Bundle::Parser tests
 │       ├── resolver_spec.rb          # Resolver tests
 │       └── scope_spec.rb             # Scope tests
 └── support/
-    ├── fluent_js.rb                  # Compatibility support
-    └── fluent_js/
-        ├── ast_comparator.rb         # AST comparison logic
-        ├── fixture_loader.rb         # Fixture loading
-        ├── matchers.rb               # Custom RSpec matchers
-        └── test_helper.rb            # Test utilities
+    └── compat/
+        ├── base.rb                   # Shared utilities
+        ├── syntax.rb                 # fluent-syntax support
+        ├── syntax/
+        │   ├── ast_comparator.rb     # AST comparison logic
+        │   └── matchers.rb           # Custom RSpec matchers
+        ├── bundle.rb                 # fluent-bundle support
+        └── bundle/
+            └── ast_converter.rb      # AST conversion logic
 ```
 
 ## Running Tests
@@ -78,12 +77,12 @@ Foxtail uses test fixtures from the fluent.js project (in `fluent.js/` submodule
 | `structure` | Syntax structure tests | With spans |
 | `reference` | Reference parsing tests | Without spans |
 
-**Current Status**: 97/98 fixtures passing (99.0%)
+**Current Status**: 159/160 fixtures passing (99.4%)
 
 ### Running Compatibility Tests
 
 ```bash
-bundle exec rspec spec/fluent_js_compatibility_spec.rb
+bundle exec rspec spec/compat/
 ```
 
 ### Compatibility Test Architecture
@@ -103,7 +102,7 @@ flowchart LR
 One fixture (`leading_dots`) is marked as pending. This test also fails in fluent.js itself.
 
 ```ruby
-# spec/support/fluent_js/test_helper.rb
+# spec/support/compat/syntax.rb
 KNOWN_MISMATCHES = [
   {category: :reference, name: "leading_dots"}
 ].freeze
@@ -166,10 +165,13 @@ end
 
 ## Test Helpers
 
-### FluentJsCompatibility::TestHelper
+### FluentCompatSyntax
 
 ```ruby
-include FluentJsCompatibility::TestHelper
+include FluentCompatSyntax
+
+# Get all fixtures
+FluentCompatSyntax.all_fixtures
 
 # Parse FTL source
 ast = parse_ftl(source, with_spans: true)
@@ -179,23 +181,31 @@ process_junk_annotations!(ast)
 
 # Check for known mismatches
 known_mismatch?(fixture)
+
+# Load fixture files
+expected_ast = load_json(json_path)
+ftl_source = load_ftl(ftl_path)
 ```
 
-### FluentJsCompatibility::FixtureLoader
+### FluentCompatBundle
 
 ```ruby
-# Load all fixtures
-FluentJsCompatibility::FixtureLoader.all_fixtures
+include FluentCompatBundle
 
-# Load specific fixture content
-expected_ast = FluentJsCompatibility::FixtureLoader.load_expected_ast(json_path)
-ftl_source = FluentJsCompatibility::FixtureLoader.load_ftl_source(ftl_path)
+# Get all fixtures
+FluentCompatBundle.all_fixtures
+
+# Parse FTL source
+entries = parse_ftl(source)
+
+# Convert to JSON format
+json = convert_to_json(entries)
 ```
 
 ### Custom Matchers
 
 ```ruby
-# AST matching
+# AST matching (fluent-syntax only)
 expect(actual_ast).to match_ast(expected_ast)
 ```
 
