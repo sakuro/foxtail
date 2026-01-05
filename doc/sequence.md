@@ -23,7 +23,7 @@ ja.add_resource(Foxtail::Resource.from_string("hello = こんにちは！"))
 sequence = Foxtail::Sequence.new(en_us, en, ja)
 
 # Format uses first matching bundle
-sequence.format("hello")  # => "Hello!"
+sequence.format("hello") # => "Hello!"
 ```
 
 ## Language Fallback

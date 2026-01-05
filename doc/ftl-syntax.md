@@ -17,7 +17,7 @@ Messages are the basic units of translation. A message has an identifier and a p
 hello = Hello, World!
 
 # Message with placeable
-greeting = Hello, {$name}!
+greeting = Hello, { $name }!
 
 # Message with attributes
 login-button = Log In
@@ -34,14 +34,15 @@ Terms are reusable values that start with `-`. They cannot be used as selectors 
 -brand-name = Foxtail
 
 # Term with variants
--adjective = { $case ->
-    [uppercase] Beautiful
-   *[lowercase] beautiful
-}
+-adjective =
+    { $case ->
+        [uppercase] Beautiful
+       *[lowercase] beautiful
+    }
 
 # Using terms
-about = About {-brand-name}
-tagline = A {-adjective(case: "lowercase")} localization system
+about = About { -brand-name }
+tagline = A { -adjective(case: "lowercase") } localization system
 ```
 
 ### Attributes
@@ -54,7 +55,7 @@ login = Log In
     .aria-label = Login field
 
 # Referencing attribute
-help = {login.aria-label}
+help = { login.aria-label }
 ```
 
 ## Patterns
@@ -84,19 +85,19 @@ Placeables are expressions wrapped in `{ }`:
 
 ```ftl
 # Variable reference
-welcome = Welcome, {$user}!
+welcome = Welcome, { $user }!
 
 # Message reference
-see-also = See also: {other-message}
+see-also = See also: { other-message }
 
 # Term reference
-powered-by = Powered by {-brand-name}
+powered-by = Powered by { -brand-name }
 
 # Function call
-count = {NUMBER($num, style: "decimal")}
+count = { NUMBER($num, style: "decimal") }
 
 # Literal
-quoted = This is {"literal text"}
+quoted = This is { "literal text" }
 ```
 
 ## Expressions
@@ -106,7 +107,7 @@ quoted = This is {"literal text"}
 Variables are external values passed at runtime, prefixed with `$`:
 
 ```ftl
-hello = Hello, {$name}!
+hello = Hello, { $name }!
 ```
 
 ### Message References
@@ -115,7 +116,7 @@ Reference other messages by identifier:
 
 ```ftl
 brand = Foxtail
-tagline = {brand} is great!
+tagline = { brand } is great!
 ```
 
 ### Term References
@@ -124,14 +125,15 @@ Reference terms with `-` prefix:
 
 ```ftl
 -brand = Foxtail
-about = About {-brand}
+about = About { -brand }
 
 # With arguments
--term = { $case ->
-   *[nom] Term
-    [acc] the Term
-}
-using = Using {-term(case: "acc")}
+-term =
+    { $case ->
+       *[nom] Term
+        [acc] the Term
+    }
+using = Using { -term(case: "acc") }
 ```
 
 ### Function Calls
@@ -140,11 +142,11 @@ Built-in functions for formatting:
 
 ```ftl
 # NUMBER function
-price = {NUMBER($amount, style: "currency", currency: "USD")}
-percent = {NUMBER($ratio, style: "percent")}
+price = { NUMBER($amount, style: "currency", currency: "USD") }
+percent = { NUMBER($ratio, style: "percent") }
 
 # DATETIME function
-date = {DATETIME($timestamp, dateStyle: "long")}
+date = { DATETIME($timestamp, dateStyle: "long") }
 ```
 
 ### Literals
@@ -152,8 +154,8 @@ date = {DATETIME($timestamp, dateStyle: "long")}
 #### String Literals
 
 ```ftl
-quoted = {"Quoted text"}
-empty = {""}
+quoted = { "Quoted text" }
+empty = { "" }
 ```
 
 #### Number Literals
@@ -170,11 +172,12 @@ Pattern selection based on runtime values:
 ### Basic Selection
 
 ```ftl
-emails = { $count ->
-    [0] No emails
-    [one] One email
-   *[other] {$count} emails
-}
+emails =
+    { $count ->
+        [0] No emails
+        [one] One email
+       *[other] { $count } emails
+    }
 ```
 
 - `*` marks the default variant (required)
@@ -183,13 +186,13 @@ emails = { $count ->
 ### Selector Types
 
 Valid selectors:
-- Variables: `{$var -> ...}`
-- Function calls: `{FUNCTION($arg) -> ...}`
-- Term attributes: `{-term.attr -> ...}`
+- Variables: `{ $var -> ... }`
+- Function calls: `{ FUNCTION($arg) -> ... }`
+- Term attributes: `{ -term.attr -> ... }`
 
 Invalid selectors (will produce errors):
-- Term values: `{-term -> ...}`
-- Message references: `{message -> ...}`
+- Term values: `{ -term -> ... }`
+- Message references: `{ message -> ... }`
 - Nested expressions
 
 ### Plural Categories
@@ -197,14 +200,15 @@ Invalid selectors (will produce errors):
 Used with the NUMBER function for pluralization:
 
 ```ftl
-items = { NUMBER($count) ->
-    [zero] No items
-    [one] One item
-    [two] Two items
-    [few] A few items
-    [many] Many items
-   *[other] {$count} items
-}
+items =
+    { NUMBER($count) ->
+        [zero] No items
+        [one] One item
+        [two] Two items
+        [few] A few items
+        [many] Many items
+       *[other] { $count } items
+    }
 ```
 
 Categories depend on locale (handled by `icu4x`).
@@ -242,7 +246,7 @@ path = C:\Users\name
 To include literal `{` or `}`:
 
 ```ftl
-braces = Use {"{"} and {"}"} for placeables
+braces = Use { "{" } and { "}" } for placeables
 ```
 
 ### In String Literals
@@ -257,9 +261,9 @@ String literals support escape sequences:
 | `\U01F602` | Unicode (6 hex digits) → 😂 |
 
 ```ftl
-escaped = {"Quote: \" Backslash: \\"}
-unicode = {"\u0048\u0065\u006C\u006C\u006F"}  # Hello
-emoji = {"\U01F600"}  # 😀
+escaped = { "Quote: \" Backslash: \\" }
+unicode = { "\u0048\u0065\u006C\u006C\u006F" }  # Hello
+emoji = { "\U01F600" }  # 😀
 ```
 
 ## Error Handling

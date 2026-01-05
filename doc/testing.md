@@ -301,7 +301,7 @@ bundle exec rspec --tag focus
 ```ruby
 it "test with debugging" do
   result = some_method
-  pp result  # Pretty print
+  pp result # Pretty print
   expect(result).to eq(expected)
 end
 ```

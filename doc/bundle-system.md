@@ -44,13 +44,13 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 bundle.add_resource(resource)
 
 # Check for message existence
-bundle.message?("hello")  # => true
+bundle.message?("hello") # => true
 
 # Get message object
-bundle.message("hello")   # => Bundle::Parser::AST::Message
+bundle.message("hello") # => Bundle::Parser::AST::Message
 
 # Format a message
-bundle.format("hello", name: "World")  # => "Hello, World!"
+bundle.format("hello", name: "World") # => "Hello, World!"
 
 # Format a pattern directly
 bundle.format_pattern(pattern, name: "World")
@@ -71,7 +71,7 @@ FTL
 resource = Foxtail::Resource.from_file(Pathname("messages.ftl"))
 
 # Access entries
-resource.entries  # => [Bundle::Parser::AST::Message, ...]
+resource.entries # => [Bundle::Parser::AST::Message, ...]
 
 # Invalid entries are silently skipped (error recovery)
 ```
@@ -242,7 +242,7 @@ resource = Foxtail::Resource.from_string(<<~FTL)
   also_valid = This also works
 FTL
 
-resource.entries.map(&:id)  # => ["valid", "also_valid"]
+resource.entries.map(&:id) # => ["valid", "also_valid"]
 ```
 
 For detailed error reporting during development, use `Syntax::Parser` instead.
@@ -260,7 +260,7 @@ result = bundle.format("hello", name: "World")
 errors = []
 result = bundle.format("hello", errors, name: "World")
 # errors now contains any resolution errors
-errors.each { |e| puts e }  # => "Unknown variable: $missing"
+errors.each {|e| puts e } # => "Unknown variable: $missing"
 ```
 
 This follows the fluent.js pattern where passing an errors array collects errors instead of ignoring them.
@@ -284,7 +284,7 @@ The system gracefully handles:
 Controls bidirectional text isolation:
 
 ```ruby
-bundle = Foxtail::Bundle.new(locale, use_isolating: true)  # default
+bundle = Foxtail::Bundle.new(locale, use_isolating: true) # default
 # Wraps placeables with Unicode isolation marks (FSI U+2068, PDI U+2069)
 ```
 
@@ -312,11 +312,11 @@ Register custom formatting functions:
 
 ```ruby
 bundle = Foxtail::Bundle.new(locale, functions: {
-  "SHOUT" => ->(args, opts, scope) { args.first.to_s.upcase }
+  "SHOUT" => ->(args, _opts, _scope) { args.first.to_s.upcase }
 })
 
 # FTL: greeting = {SHOUT($name)}
-bundle.format("greeting", name: "hello")  # => "HELLO"
+bundle.format("greeting", name: "hello") # => "HELLO"
 ```
 
 ## Integration with ICU4X

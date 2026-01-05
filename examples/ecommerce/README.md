@@ -49,18 +49,20 @@ Stock and cart counts use locale-appropriate plural forms:
 
 ```ftl
 # en.ftl - English has singular/plural distinction
-stock-status = { $count ->
-    [0] Out of stock
-    [one] Only { $count } left in stock!
-   *[other] { $count } items in stock
-}
+stock-status =
+    { $count ->
+        [0] Out of stock
+        [one] Only { $count } left in stock!
+       *[other] { $count } items in stock
+    }
 
 # ja.ftl - Japanese doesn't distinguish singular/plural
-stock-status = { $count ->
-    [0] 在庫切れ
-    [one] 残り{ $count }点のみ！
-   *[other] 在庫{ $count }点
-}
+stock-status =
+    { $count ->
+        [0] 在庫切れ
+        [one] 残り{ $count }点のみ！
+       *[other] 在庫{ $count }点
+    }
 ```
 
 ### Discount Percentages

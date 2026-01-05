@@ -35,10 +35,10 @@ When a message is missing in the primary locale, `Sequence` automatically falls 
 sequence = Foxtail::Sequence.new(ja_bundle, en_bundle)
 
 # Found in Japanese bundle
-sequence.format("hello", name: "太郎")  # => こんにちは、太郎さん！
+sequence.format("hello", name: "太郎") # => こんにちは、太郎さん！
 
 # Not in Japanese, falls back to English
-sequence.format("english-only")  # => This message is only available in English.
+sequence.format("english-only") # => This message is only available in English.
 ```
 
 ### Finding Bundles
@@ -47,5 +47,5 @@ Use `find` to determine which bundle contains a message:
 
 ```ruby
 bundle = sequence.find("hello")
-puts bundle.locale  # => "ja"
+puts bundle.locale # => "ja"
 ```

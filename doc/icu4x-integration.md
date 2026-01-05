@@ -13,7 +13,7 @@ The `icu4x` gem requires data files for locale-specific rules.
 ```ruby
 # Gemfile
 gem "icu4x"
-gem "icu4x-data-recommended"  # Provides data files
+gem "icu4x-data-recommended" # Provides data files
 ```
 
 ### Configuration
@@ -92,9 +92,9 @@ Formats numbers with locale-aware formatting.
 **FTL Syntax**:
 
 ```ftl
-count = {NUMBER($value)}
-price = {NUMBER($amount, style: "currency", currency: "USD")}
-ratio = {NUMBER($percent, style: "percent")}
+count = { NUMBER($value) }
+price = { NUMBER($amount, style: "currency", currency: "USD") }
+ratio = { NUMBER($percent, style: "percent") }
 ```
 
 **Options** (FTL → ICU4X mapping):
@@ -113,9 +113,9 @@ ratio = {NUMBER($percent, style: "percent")}
 ```ruby
 # FTL
 resource = Foxtail::Resource.from_string(<<~FTL)
-  price = The price is {NUMBER($amount, style: "currency", currency: "USD")}.
-  percent = {NUMBER($ratio, style: "percent")} complete
-  padded = {NUMBER($num, minimumIntegerDigits: 3)}
+  price = The price is { NUMBER($amount, style: "currency", currency: "USD") }.
+  percent = { NUMBER($ratio, style: "percent") } complete
+  padded = { NUMBER($num, minimumIntegerDigits: 3) }
 FTL
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
@@ -133,9 +133,9 @@ Formats dates and times with locale awareness.
 **FTL Syntax**:
 
 ```ftl
-date = {DATETIME($timestamp, dateStyle: "long")}
-time = {DATETIME($timestamp, timeStyle: "short")}
-both = {DATETIME($timestamp, dateStyle: "medium", timeStyle: "short")}
+date = { DATETIME($timestamp, dateStyle: "long") }
+time = { DATETIME($timestamp, timeStyle: "short") }
+both = { DATETIME($timestamp, dateStyle: "medium", timeStyle: "short") }
 ```
 
 **Options** (FTL → ICU4X mapping):
@@ -151,8 +151,8 @@ both = {DATETIME($timestamp, dateStyle: "medium", timeStyle: "short")}
 ```ruby
 # FTL
 resource = Foxtail::Resource.from_string(<<~FTL)
-  created = Created on {DATETIME($date, dateStyle: "long")}
-  meeting = Meeting at {DATETIME($time, timeStyle: "short")}
+created = Created on { DATETIME($date, dateStyle: "long") }
+meeting = Meeting at { DATETIME($time, timeStyle: "short") }
 FTL
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
@@ -183,11 +183,12 @@ Foxtail uses ICU4X plural rules for select expressions with numeric selectors.
 ### How Matching Works
 
 ```ftl
-items = { $count ->
-    [0] No items
-    [one] One item
-   *[other] {$count} items
-}
+items =
+    { $count ->
+        [0] No items
+        [one] One item
+       *[other] { $count } items
+    }
 ```
 
 Resolution process:
@@ -221,7 +222,7 @@ You can register custom functions that use ICU4X:
 
 ```ruby
 # Custom ordinal formatter
-ordinal_function = lambda do |args, options, scope|
+ordinal_function = ->(args, _options, scope) do
   value = args.first
   locale = scope.bundle.locale
   # Use ICU4X or custom logic
@@ -252,7 +253,7 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("invalid"))
 # May raise ICU4X::Error
 
 # Invalid currency
-bundle.format("price", amount: 100)  # With currency: "INVALID"
+bundle.format("price", amount: 100) # With currency: "INVALID"
 # Returns placeholder, error collected in scope
 ```
 

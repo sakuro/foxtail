@@ -16,7 +16,7 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'foxtail'
+gem "foxtail"
 ```
 
 And then execute:
@@ -50,10 +50,11 @@ require "icu4x"
 
 resource = Foxtail::Resource.from_string(<<~FTL)
   hello = Hello, { $name }!
-  emails = You have { $count ->
-      [one] one email
-     *[other] { $count } emails
-  }.
+  emails =
+      You have { $count ->
+          [one] one email
+         *[other] { $count } emails
+      }.
 FTL
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
