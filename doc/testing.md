@@ -113,14 +113,14 @@ KNOWN_MISMATCHES = [
 ### Parser Tests
 
 ```ruby
-RSpec.describe Foxtail::Parser do
-  let(:parser) { Foxtail::Parser.new }
+RSpec.describe Foxtail::Syntax::Parser do
+  let(:parser) { Foxtail::Syntax::Parser.new }
 
   describe "#parse" do
     it "parses simple message" do
       result = parser.parse("hello = Hello")
       expect(result.body.size).to eq(1)
-      expect(result.body.first).to be_a(Foxtail::Parser::AST::Message)
+      expect(result.body.first).to be_a(Foxtail::Syntax::Parser::AST::Message)
     end
   end
 end

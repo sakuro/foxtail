@@ -306,7 +306,7 @@ The syntax parser produces an AST with 28 node types:
 The syntax parser optionally tracks source positions:
 
 ```ruby
-parser = Foxtail::Parser.new(with_spans: true)
+parser = Foxtail::Syntax::Parser.new(with_spans: true)
 ast = parser.parse(source)
 # Each node has a span with start/end positions
 ```
