@@ -264,7 +264,7 @@ emoji = {"\U01F600"}  # 😀
 
 ## Error Handling
 
-The parser uses error recovery. Invalid syntax is wrapped in `Junk` entries:
+The syntax parser uses error recovery. Invalid syntax is wrapped in `Junk` entries:
 
 ```ftl
 valid = This is valid
@@ -275,7 +275,7 @@ valid = This is valid
 another = This is also valid
 ```
 
-The parser continues after errors, collecting valid entries.
+The syntax parser continues after errors, collecting valid entries.
 
 ### Common Errors
 
@@ -289,7 +289,7 @@ The parser continues after errors, collecting valid entries.
 
 ## Parser AST
 
-The parser produces an AST with 28 node types:
+The syntax parser produces an AST with 28 node types:
 
 | Category | Node Types |
 |----------|------------|
@@ -303,7 +303,7 @@ The parser produces an AST with 28 node types:
 
 ### Span Tracking
 
-The parser optionally tracks source positions:
+The syntax parser optionally tracks source positions:
 
 ```ruby
 parser = Foxtail::Parser.new(with_spans: true)
