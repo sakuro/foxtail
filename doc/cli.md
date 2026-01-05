@@ -6,9 +6,10 @@ Foxtail provides command-line tools for working with FTL files.
 
 | Command | Description |
 |---------|-------------|
-| `foxtail lint` | Check FTL files for syntax errors |
-| `foxtail tidy` | Format FTL files with consistent style |
 | `foxtail ids` | Extract message and term IDs from FTL files |
+| `foxtail lint` | Check FTL files for syntax errors |
+| `foxtail parse` | Parse FTL files and output AST as JSON |
+| `foxtail tidy` | Format FTL files with consistent style |
 
 ## lint
 
@@ -35,6 +36,61 @@ foxtail lint en.ftl ja.ftl
 
 # Quiet mode (only errors)
 foxtail lint -q messages.ftl
+```
+
+## parse
+
+Parse FTL files and output the AST as JSON.
+
+```bash
+foxtail parse FILES
+```
+
+### Options
+
+| Option | Description |
+|--------|-------------|
+| `--with-spans` | Include source position information in output |
+
+### Examples
+
+```bash
+# Parse a single file
+foxtail parse messages.ftl
+
+# Parse with span information
+foxtail parse messages.ftl --with-spans
+
+# Parse multiple files (outputs JSON array)
+foxtail parse en.ftl ja.ftl
+
+# Compare AST before and after tidy
+foxtail parse original.ftl > before.json
+foxtail tidy original.ftl > tidied.ftl
+foxtail parse tidied.ftl > after.json
+diff before.json after.json
+```
+
+### Output Format
+
+JSON output follows the fluent.js AST structure:
+
+```json
+{
+  "file": "messages.ftl",
+  "ast": {
+    "type": "Resource",
+    "body": [
+      {
+        "type": "Message",
+        "id": { "type": "Identifier", "name": "hello" },
+        "value": { "type": "Pattern", "elements": [...] },
+        "attributes": [],
+        "comment": null
+      }
+    ]
+  }
+}
 ```
 
 ## tidy

@@ -53,6 +53,7 @@ module Foxtail
 
     register "ids", Commands::Ids
     register "lint", Commands::Lint
+    register "parse", Commands::Parse
     register "tidy", Commands::Tidy
   end
 end
