@@ -28,19 +28,34 @@ flowchart TD
 
 ## Dual-Parser Architecture
 
-Foxtail follows the fluent.js architecture with two separate parsers for different use cases:
+Foxtail follows the fluent.js architecture with two separate parsers, each producing its own AST:
 
-### Syntax Parser (`Syntax::Parser`)
+```mermaid
+flowchart LR
+    subgraph "Tooling (fluent-syntax equivalent)"
+        SP[Syntax::Parser]
+        SA[Syntax::Parser::AST]
+        SP --> SA
+    end
+    subgraph "Runtime (fluent-bundle equivalent)"
+        BP[Bundle::Parser]
+        BA[Bundle::AST]
+        BP --> BA
+    end
+```
+
+### Syntax Parser (`Syntax::Parser`) → `Syntax::Parser::AST`
 - **Purpose**: Full-featured parser for tooling (linting, editing, serialization)
 - **Output**: Complete AST with source positions (spans), comments, and detailed structure
 - **Location**: `lib/foxtail/syntax/parser.rb`
+- **AST**: Hash-based nodes inheriting from `BaseNode`, comments and Junk preserved
 - **Use Cases**: CLI tools (`lint`, `tidy`, `ids`), syntax analysis
 
-### Bundle Parser (`Bundle::Parser`)
+### Bundle Parser (`Bundle::Parser`) → `Bundle::AST`
 - **Purpose**: Lightweight runtime parser optimized for message formatting
 - **Output**: Runtime AST directly usable by Bundle (no conversion needed)
 - **Location**: `lib/foxtail/bundle/parser.rb`
-- **Features**: Error recovery, minimal overhead, pattern optimization
+- **AST**: Immutable `Data` classes, patterns simplified to String or Array, no spans
 - **Use Cases**: Runtime message loading via `Resource`
 
 ## Core Components
@@ -79,40 +94,6 @@ The syntax parser reads FTL source and produces a detailed AST with source posit
 | Component | File | Responsibility |
 |-----------|------|----------------|
 | `Function` | `lib/foxtail/function.rb` | NUMBER, DATETIME via `icu4x` |
-
-## Two-AST Design
-
-Foxtail uses two separate AST representations for different purposes:
-
-```mermaid
-flowchart LR
-    subgraph "Tooling (fluent-syntax equivalent)"
-        SP[Syntax::Parser]
-        SA[Syntax::Parser::AST]
-        SP --> SA
-    end
-    subgraph "Runtime (fluent-bundle equivalent)"
-        BP[Bundle::Parser]
-        BA[Bundle::AST]
-        BP --> BA
-    end
-```
-
-### Syntax AST (`Syntax::Parser::AST::*`)
-
-- Detailed structure preserving all FTL syntax
-- Source span tracking for error reporting
-- Hash-based nodes inheriting from `BaseNode`
-- Comments and Junk entries preserved
-- Used by tooling (linting, editing, serialization)
-
-### Bundle AST (`Bundle::AST::*`)
-
-- Optimized for runtime evaluation
-- Immutable `Data` classes
-- Patterns simplified to String or Array
-- No span information, no comments
-- Error recovery (invalid entries skipped)
 
 ## Data Flow
 
