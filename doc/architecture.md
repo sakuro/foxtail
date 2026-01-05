@@ -48,7 +48,7 @@ flowchart LR
 - **Purpose**: Full-featured parser for tooling (linting, editing, serialization)
 - **Output**: Complete AST with source positions (spans), comments, and detailed structure
 - **Location**: `lib/foxtail/syntax/parser.rb`
-- **AST**: Hash-based nodes inheriting from `BaseNode`, comments and Junk preserved
+- **AST**: Class-based nodes inheriting from `BaseNode`, comments and Junk preserved
 - **Use Cases**: CLI tools (`lint`, `tidy`, `ids`), syntax analysis
 
 ### Bundle Parser (`Bundle::Parser`) → `Bundle::Parser::AST`
