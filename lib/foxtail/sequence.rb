@@ -37,6 +37,7 @@ module Foxtail
     # Keyword arguments are passed through to the bundle's format method.
     #
     # @param id [String] The message ID
+    # @param errors [Array, nil] If provided, errors are collected into this array instead of being ignored.
     # @return [String] The formatted message, or the ID if not found
     def format(id, errors=nil, **)
       bundle = find_bundle(id)
