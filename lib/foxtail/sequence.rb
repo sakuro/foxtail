@@ -38,9 +38,9 @@ module Foxtail
     #
     # @param id [String] The message ID
     # @return [String] The formatted message, or the ID if not found
-    def format(id, **)
+    def format(id, errors=nil, **)
       bundle = find_bundle(id)
-      bundle ? bundle.format(id, **) : id.to_s
+      bundle ? bundle.format(id, errors, **) : id.to_s
     end
 
     private def find_bundle(id) = @bundles.find {|bundle| bundle.message?(id) }

@@ -77,6 +77,13 @@ RSpec.describe Foxtail::Sequence do
     it "uses fallback bundle when primary does not have the message" do
       expect(sequence.format("ja-only")).to eq("日本語のみ")
     end
+
+    it "collects errors when errors array is provided" do
+      errors = []
+      result = sequence.format("hello", errors)
+      expect(result).to eq("Hello, {$name}!")
+      expect(errors).to include("Unknown variable: $name")
+    end
   end
 
   describe "with empty sequence" do
