@@ -8,7 +8,7 @@ RSpec::Matchers.define :match_ast do |expected|
   end
 
   failure_message do |actual|
-    comparator = FluentSyntaxCompatibility::AstComparator.new
+    comparator = FluentCompatSyntax::AstComparator.new
     differences = comparator.find_differences(expected, actual)
 
     message = "expected AST to match, but found #{differences.size} difference(s):\n"

@@ -3,16 +3,16 @@
 require_relative "../support/compat/syntax"
 
 RSpec.describe "fluent-syntax Compatibility" do
-  include FluentSyntaxCompatibility
+  include FluentCompatSyntax
 
-  FluentSyntaxCompatibility.all_fixtures.each do |fixture|
+  FluentCompatSyntax.all_fixtures.each do |fixture|
     describe "#{fixture[:category]} fixtures" do
       context fixture[:name] do
         it "matches fluent-syntax AST output" do
           pending "Known mismatch in fluent-syntax" if known_mismatch?(fixture)
 
-          expected_ast = FluentCompatBase.load_json(fixture[:json_path])
-          ftl_source = FluentCompatBase.load_ftl(fixture[:ftl_path])
+          expected_ast = load_json(fixture[:json_path])
+          ftl_source = load_ftl(fixture[:ftl_path])
           actual_ast = parse_ftl(ftl_source, with_spans: fixture[:with_spans])
 
           process_junk_annotations!(actual_ast) unless fixture[:with_spans]

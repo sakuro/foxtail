@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "../base"
-
 # Helper methods for fluent-syntax compatibility tests
-module FluentSyntaxCompatibility
+module FluentCompatSyntax
   FIXTURES_ROOT = FluentCompatBase::FLUENT_JS_ROOT / "fluent-syntax" / "test"
   private_constant :FIXTURES_ROOT
 
@@ -20,7 +18,7 @@ module FluentSyntaxCompatibility
   private_constant :KNOWN_MISMATCHES
 
   module_function def all_fixtures
-    FluentCompatBase.collect_fixtures(
+    collect_fixtures(
       {json_dir: STRUCTURE_FIXTURES, ftl_dir: STRUCTURE_FIXTURES, category: :structure, with_spans: true},
       {json_dir: REFERENCE_FIXTURES, ftl_dir: REFERENCE_FIXTURES, category: :reference, with_spans: false}
     )
@@ -40,5 +38,5 @@ module FluentSyntaxCompatibility
     end
   end
 
-  module_function def known_mismatch?(fixture) = KNOWN_MISMATCHES.include?(fixture.slice(:category, :name))
+  def known_mismatch?(fixture) = KNOWN_MISMATCHES.include?(fixture.slice(:category, :name))
 end

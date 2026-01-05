@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module FluentBundleCompatibility
+module FluentCompatBundle
   # Converts Bundle::AST entries to fluent-bundle JSON format
   module ASTConverter
     module_function def to_json_format(entries)

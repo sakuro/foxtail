@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "../base"
-
 # Helper methods for fluent-bundle compatibility tests
-module FluentBundleCompatibility
+module FluentCompatBundle
   SYNTAX_FIXTURES = FluentCompatBase::FLUENT_JS_ROOT / "fluent-syntax" / "test" / "fixtures_structure"
   private_constant :SYNTAX_FIXTURES
 
@@ -11,7 +9,7 @@ module FluentBundleCompatibility
   private_constant :BUNDLE_FIXTURES
 
   module_function def all_fixtures
-    FluentCompatBase.collect_fixtures({json_dir: BUNDLE_FIXTURES, ftl_dir: SYNTAX_FIXTURES})
+    collect_fixtures({json_dir: BUNDLE_FIXTURES, ftl_dir: SYNTAX_FIXTURES})
   end
 
   def parse_ftl(source)
