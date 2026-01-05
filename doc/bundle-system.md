@@ -2,12 +2,14 @@
 
 ## Overview
 
-The Bundle system is the runtime component of Foxtail that stores messages and formats them with locale-aware processing. It converts parsed FTL into an optimized runtime representation.
+The Bundle system is the runtime component of Foxtail that stores messages and formats them with locale-aware processing. Bundle::Parser parses FTL source directly into a minimal runtime AST.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
+    FTL[FTL Source] --> |parse| Parser[Bundle::Parser]
+    Parser --> |entries| Resource
     Resource --> |add_resource| Bundle
     Bundle --> |format| Resolver
     Resolver --> |uses| Scope
