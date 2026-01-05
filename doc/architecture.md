@@ -49,7 +49,7 @@ flowchart LR
 - **Output**: Complete AST with source positions (spans), comments, and detailed structure
 - **Location**: `lib/foxtail/syntax/parser.rb`
 - **AST**: Class-based nodes inheriting from `BaseNode`, comments and Junk preserved
-- **Use Cases**: CLI tools (`lint`, `tidy`, `ids`), syntax analysis
+- **Use Cases**: CLI tools (`ids`, `lint`, `parse`, `tidy`), syntax analysis
 
 ### Bundle Parser (`Bundle::Parser`) → `Bundle::Parser::AST`
 - **Purpose**: Lightweight runtime parser optimized for message formatting

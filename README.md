@@ -116,9 +116,10 @@ See [doc/architecture.md](doc/architecture.md) for detailed design documentation
 
 Foxtail provides command-line tools for working with FTL files:
 
-- `foxtail lint` - Check FTL files for syntax errors
-- `foxtail tidy` - Format FTL files with consistent style
 - `foxtail ids` - Extract message and term IDs
+- `foxtail lint` - Check FTL files for syntax errors
+- `foxtail parse` - Parse FTL files and output AST as JSON
+- `foxtail tidy` - Format FTL files with consistent style
 
 See [doc/cli.md](doc/cli.md) for full documentation.
 
