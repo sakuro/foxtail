@@ -157,7 +157,7 @@ Patterns are optimized during parsing:
 
 - **Syntax parser errors**: Wrapped in `Junk` entries with `Annotation`
 - **Bundle parser errors**: Invalid entries silently skipped (error recovery)
-- **Runtime errors**: Collected in `Scope.errors`, placeholders returned
+- **Runtime errors**: Optionally collected via `errors` array parameter, placeholders returned
 - **Circular references**: Detected via `Scope.dirty` set
 
 ## `icu4x` Integration
