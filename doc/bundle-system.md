@@ -249,14 +249,21 @@ For detailed error reporting during development, use `Syntax::Parser` instead.
 
 ### Runtime Errors
 
-Runtime errors are collected in the scope:
+Runtime errors can be collected by passing an array as the second argument:
 
 ```ruby
-# format returns the formatted string
-# Errors during resolution result in placeholder text
-result = bundle.format("message", **args)
+# Without error collection - errors result in placeholder text
+result = bundle.format("hello", name: "World")
 # Missing variables show as: {$variable_name}
+
+# With error collection
+errors = []
+result = bundle.format("hello", errors, name: "World")
+# errors now contains any resolution errors
+errors.each { |e| puts e }  # => "Unknown variable: $missing"
 ```
+
+This follows the fluent.js pattern where passing an errors array collects errors instead of ignoring them.
 
 ### Error Recovery
 
