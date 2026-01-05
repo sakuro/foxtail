@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module FluentJsCompatibility
+module FluentSyntaxCompatibility
   # Compares AST structures for fluent.js compatibility testing
   class AstComparator
     # Find detailed differences between AST structures (for debugging)

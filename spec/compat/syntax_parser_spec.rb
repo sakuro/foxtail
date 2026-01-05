@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-require_relative "../support/fluent_js"
+require_relative "../support/fluent_syntax"
 
-RSpec.describe "Fluent.js Compatibility" do
-  include FluentJsCompatibility::TestHelper
+RSpec.describe "fluent-syntax Compatibility" do
+  include FluentSyntaxCompatibility::TestHelper
 
-  FluentJsCompatibility::FixtureLoader.all_fixtures.each do |fixture|
+  FluentSyntaxCompatibility.all_fixtures.each do |fixture|
     describe "#{fixture[:category]} fixtures" do
       context fixture[:name] do
-        it "matches fluent.js AST output" do
-          pending "Known mismatch in fluent.js" if known_mismatch?(fixture)
+        it "matches fluent-syntax AST output" do
+          pending "Known mismatch in fluent-syntax" if known_mismatch?(fixture)
 
-          expected_ast = FluentJsCompatibility::FixtureLoader.load_expected_ast(fixture[:json_path])
-          ftl_source = FluentJsCompatibility::FixtureLoader.load_ftl_source(fixture[:ftl_path])
+          expected_ast = FluentCompatBase.load_json(fixture[:json_path])
+          ftl_source = FluentCompatBase.load_ftl(fixture[:ftl_path])
           actual_ast = parse_ftl(ftl_source, with_spans: fixture[:with_spans])
 
           process_junk_annotations!(actual_ast) unless fixture[:with_spans]

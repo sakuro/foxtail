@@ -72,7 +72,8 @@ Naming/PredicateMethod:
 RSpec/DescribeClass:
   Exclude:
     - 'spec/foxtail/syntax/parser/ast_spec.rb'    # Tests AST node equality behavior across multiple classes
-    - 'spec/fluent_js_compatibility_spec.rb'      # Tests compatibility against fluent.js fixtures
+    - 'spec/compat/syntax_parser_spec.rb'         # Tests compatibility against fluent-syntax fixtures
+    - 'spec/compat/bundle_parser_spec.rb'         # Tests compatibility against fluent-bundle fixtures
 
 # Allow multiple describe blocks for comprehensive AST testing
 RSpec/MultipleDescribes:

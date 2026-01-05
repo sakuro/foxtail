@@ -5,11 +5,11 @@ require_relative "../support/fluent_bundle"
 RSpec.describe "fluent-bundle Compatibility" do
   include FluentBundleCompatibility::TestHelper
 
-  FluentBundleCompatibility::FixtureLoader.all_fixtures.each do |fixture|
+  FluentBundleCompatibility.all_fixtures.each do |fixture|
     context fixture[:name] do
       it "matches fluent-bundle JSON output" do
-        expected_json = FluentBundleCompatibility::FixtureLoader.load_expected_json(fixture[:json_path])
-        ftl_source = FluentBundleCompatibility::FixtureLoader.load_ftl_source(fixture[:ftl_path])
+        expected_json = FluentCompatBase.load_json(fixture[:json_path])
+        ftl_source = FluentCompatBase.load_ftl(fixture[:ftl_path])
         entries = parse_ftl(ftl_source)
         actual_json = convert_to_json(entries)
 

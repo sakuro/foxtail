@@ -3,27 +3,34 @@
 module FluentBundleCompatibility
   # Converts Bundle::AST entries to fluent-bundle JSON format
   module ASTConverter
-    module_function
-
-    def to_json_format(entries)
+    module_function def to_json_format(entries)
       {
-        "body" => entries.map {|entry| entry_to_json(entry) }
+        "body" => entries.filter_map {|entry|
+          json = entry_to_json(entry)
+          # Skip entries with no value and no attributes (like fluent-bundle does)
+          next if json["value"].nil? && json["attributes"].empty?
+
+          json
+        }
       }
     end
 
-    def entry_to_json(entry)
+    module_function def entry_to_json(entry)
       {
-        "id" => entry.id.sub(/^-/, ""), # fluent-bundle strips the leading dash for terms
+        "id" => entry.id,
         "value" => value_to_json(entry.value),
         "attributes" => attributes_to_json(entry.attributes)
       }
     end
 
-    def value_to_json(value)
+    module_function def value_to_json(value)
       case value
       when String
         value
       when Array
+        # Empty pattern -> nil (fluent-bundle represents empty patterns as null)
+        return nil if value.empty?
+
         value.map {|element| element_to_json(element) }
       when nil
         nil
@@ -32,7 +39,7 @@ module FluentBundleCompatibility
       end
     end
 
-    def element_to_json(element)
+    module_function def element_to_json(element)
       case element
       when String
         element
@@ -60,7 +67,7 @@ module FluentBundleCompatibility
       end
     end
 
-    def args_to_json(args)
+    module_function def args_to_json(args)
       args.map do |arg|
         case arg
         when Foxtail::Bundle::AST::NamedArgument
@@ -71,11 +78,11 @@ module FluentBundleCompatibility
       end
     end
 
-    def variant_to_json(variant)
+    module_function def variant_to_json(variant)
       {"key" => element_to_json(variant.key), "value" => value_to_json(variant.value)}
     end
 
-    def attributes_to_json(attributes)
+    module_function def attributes_to_json(attributes)
       return {} if attributes.nil?
 
       attributes.transform_values {|v| value_to_json(v) }
