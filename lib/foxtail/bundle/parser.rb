@@ -19,39 +19,55 @@ module Foxtail
 
       # Regex patterns (equivalent to fluent-bundle/src/resource.ts)
       RE_MESSAGE_START = /^(-?[a-zA-Z][\w-]*) *= */m
+      private_constant :RE_MESSAGE_START
       RE_ATTRIBUTE_START = /\.([a-zA-Z][\w-]*) *= */
+      private_constant :RE_ATTRIBUTE_START
       RE_VARIANT_START = /\*?\[/
+      private_constant :RE_VARIANT_START
       RE_NUMBER_LITERAL = /(-?[0-9]+(?:\.([0-9]+))?)/
+      private_constant :RE_NUMBER_LITERAL
       RE_IDENTIFIER = /([a-zA-Z][\w-]*)/
+      private_constant :RE_IDENTIFIER
       RE_REFERENCE = /([$-])?([a-zA-Z][\w-]*)(?:\.([a-zA-Z][\w-]*))?/
+      private_constant :RE_REFERENCE
       RE_FUNCTION_NAME = /^[A-Z][A-Z0-9_-]*$/
+      private_constant :RE_FUNCTION_NAME
       RE_TEXT_RUN = /([^{}\n\r]+)/
+      private_constant :RE_TEXT_RUN
       RE_STRING_RUN = /([^\\"\n\r]*)/
+      private_constant :RE_STRING_RUN
       RE_STRING_ESCAPE = /\\([\\"])/
+      private_constant :RE_STRING_ESCAPE
       RE_UNICODE_ESCAPE = /\\u([a-fA-F0-9]{4})|\\U([a-fA-F0-9]{6})/
+      private_constant :RE_UNICODE_ESCAPE
       RE_LEADING_NEWLINES = /^\n+/
+      private_constant :RE_LEADING_NEWLINES
       RE_TRAILING_SPACES = / +$/
+      private_constant :RE_TRAILING_SPACES
       RE_BLANK_LINES = / *\r?\n/
+      private_constant :RE_BLANK_LINES
       RE_INDENT = /( *)$/
+      private_constant :RE_INDENT
 
       # Token patterns
       TOKEN_BRACE_OPEN = /\{\s*/
+      private_constant :TOKEN_BRACE_OPEN
       TOKEN_BRACE_CLOSE = /\s*\}/
+      private_constant :TOKEN_BRACE_CLOSE
       TOKEN_BRACKET_OPEN = /\[\s*/
+      private_constant :TOKEN_BRACKET_OPEN
       TOKEN_BRACKET_CLOSE = /\s*\] */
+      private_constant :TOKEN_BRACKET_CLOSE
       TOKEN_PAREN_OPEN = /\s*\(\s*/
+      private_constant :TOKEN_PAREN_OPEN
       TOKEN_ARROW = /\s*->\s*/
+      private_constant :TOKEN_ARROW
       TOKEN_COLON = /\s*:\s*/
+      private_constant :TOKEN_COLON
       TOKEN_COMMA = /\s*,?\s*/
+      private_constant :TOKEN_COMMA
       TOKEN_BLANK = /\s+/
-
-      private_constant :RE_MESSAGE_START, :RE_ATTRIBUTE_START, :RE_VARIANT_START
-      private_constant :RE_NUMBER_LITERAL, :RE_IDENTIFIER, :RE_REFERENCE, :RE_FUNCTION_NAME
-      private_constant :RE_TEXT_RUN, :RE_STRING_RUN, :RE_STRING_ESCAPE, :RE_UNICODE_ESCAPE
-      private_constant :RE_LEADING_NEWLINES, :RE_TRAILING_SPACES, :RE_BLANK_LINES, :RE_INDENT
-      private_constant :TOKEN_BRACE_OPEN, :TOKEN_BRACE_CLOSE, :TOKEN_BRACKET_OPEN
-      private_constant :TOKEN_BRACKET_CLOSE, :TOKEN_PAREN_OPEN, :TOKEN_ARROW
-      private_constant :TOKEN_COLON, :TOKEN_COMMA, :TOKEN_BLANK
+      private_constant :TOKEN_BLANK
 
       # Parse FTL source into an array of messages and terms
       # @param source [String] FTL source text
