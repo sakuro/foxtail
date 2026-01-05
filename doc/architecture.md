@@ -188,7 +188,7 @@ lib/foxtail/
 │   │   └── ast.rb             # Bundle::Parser::AST (Data classes)
 │   ├── resolver.rb            # Resolver
 │   └── scope.rb               # Scope
-├── resource.rb                # Resource (public API)
+├── resource.rb                # Resource
 ├── bundle.rb                  # Bundle
 └── function.rb                # NUMBER, DATETIME
 ```
