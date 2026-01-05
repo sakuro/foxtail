@@ -104,6 +104,7 @@ module Foxtail
     # Keyword arguments are substituted into the message as variables.
     #
     # @param id [String, Symbol] Message identifier to format
+    # @param errors [Array, nil] If provided, errors are collected into this array instead of being ignored.
     # @return [String] Formatted message string, or the id itself if message not found
     #
     # @example Basic message formatting
@@ -113,20 +114,24 @@ module Foxtail
     # @example Pluralization
     #   bundle.format("emails", count: 1)
     #   # => "You have one email." (assuming plural message)
-    def format(id, **)
+    #
+    # @example With error collection
+    #   errors = []
+    #   bundle.format("hello", errors, name: "Alice")
+    #   # errors will contain any resolution errors
+    def format(id, errors=nil, **)
       message = message(id)
       return id.to_s unless message
 
-      scope = Scope.new(self, **)
-      resolver = Resolver.new(self)
-      resolver.resolve_pattern(message.value, scope)
-      # For now, return just the result
-      # In full implementation, would return [result, scope.errors]
+      format_pattern(message.value, errors, **)
     end
 
     # Format a pattern with the given arguments (using Resolver)
-    # @return [String]
-    def format_pattern(pattern, errors: nil, **)
+    #
+    # @param pattern [String, Array] The pattern to format
+    # @param errors [Array, nil] If provided, errors are collected into this array
+    # @return [String] Formatted result
+    def format_pattern(pattern, errors=nil, **)
       scope = Scope.new(self, **)
       resolver = Resolver.new(self)
       result = resolver.resolve_pattern(pattern, scope)

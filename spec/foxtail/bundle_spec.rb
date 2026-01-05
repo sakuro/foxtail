@@ -261,7 +261,7 @@ RSpec.describe Foxtail::Bundle do
     it "collects errors when provided" do
       pattern = [Foxtail::Bundle::AST::VariableReference[name: "missing"]]
       errors = []
-      result = bundle.format_pattern(pattern, errors:)
+      result = bundle.format_pattern(pattern, errors)
 
       expect(result).to eq("{$missing}")
       expect(errors).not_to be_empty
