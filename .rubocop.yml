@@ -46,7 +46,6 @@ Layout/LineLength:
 # Duplicate branches provide intentional fallback behavior for robustness
 Lint/DuplicateBranch:
   Exclude:
-    - 'lib/foxtail/bundle/ast_converter.rb'       # Complex pattern conversion logic with intentional fallbacks
     - 'lib/foxtail/bundle/parser.rb'              # parse_indent: blank line and continuation return same hash
 
 # Parser logic requires deep nesting for comment attachment handling
