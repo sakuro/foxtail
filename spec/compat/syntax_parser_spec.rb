@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "support/fluent_js"
+require_relative "../support/fluent_js"
 
 RSpec.describe "Fluent.js Compatibility" do
   include FluentJsCompatibility::TestHelper
