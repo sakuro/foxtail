@@ -48,7 +48,7 @@ module Foxtail
       RE_STRING_ESCAPE = /\\([\\"])/
       private_constant :RE_STRING_ESCAPE
 
-      RE_UNICODE_ESCAPE = /\\u([a-fA-F0-9]{4})|\\U([a-fA-F0-9]{6})/
+      RE_UNICODE_ESCAPE = /\\u(\h{4})|\\U(\h{6})/
       private_constant :RE_UNICODE_ESCAPE
 
       RE_LEADING_NEWLINES = /^\n+/

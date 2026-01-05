@@ -11,7 +11,7 @@ module Foxtail
           # @return [Hash] Hash containing the parsed string value
           def parse
             # Backslash backslash, backslash double quote, uHHHH, UHHHHHH.
-            known_escapes = /(?:\\\\|\\"|\\u([0-9a-fA-F]{4})|\\U([0-9a-fA-F]{6}))/
+            known_escapes = /(?:\\\\|\\"|\\u(\h{4})|\\U(\h{6}))/
 
             escaped_value = @value.gsub(known_escapes) {|match|
               codepoint4 = $1
