@@ -31,6 +31,19 @@ bundle exec ruby examples/multilingual_app/main.rb
 | [multilingual_app/](multilingual_app/) | Multi-language app | Sequence, file loading, fallback |
 | [ecommerce/](ecommerce/) | E-commerce pricing | NUMBER, plurals, attributes |
 
+## Expected Output Files
+
+Each example has an accompanying expected output file for verification:
+
+- Simple examples: `NN_name.expected.txt` (e.g., `01_basic.expected.txt`)
+- Practical scenarios: `expected.txt` inside the directory
+
+Compare actual output with expected:
+
+```bash
+bundle exec ruby examples/01_basic.rb | diff - examples/01_basic.expected.txt
+```
+
 ## Prerequisites
 
 Ensure `icu4x` is configured. Run `bin/setup` if needed.

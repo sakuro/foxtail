@@ -1,0 +1,16 @@
+--- Missing Variables ---
+Welcome, ⁨{$name}⁩! You have ⁨{$count}⁩ messages.
+Welcome, ⁨Alice⁩! You have ⁨{$count}⁩ messages.
+Welcome, ⁨Alice⁩! You have ⁨5⁩ messages.
+
+--- Message References ---
+⁨Hello⁩, ⁨Bob⁩!
+
+--- Missing Messages ---
+nonexistent
+also-missing
+
+--- Checking Message Existence ---
+welcome: exists
+greeting: exists
+nonexistent: not found

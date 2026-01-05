@@ -1,0 +1,30 @@
+=== Using Sequence for Fallback ===
+
+--- Japanese primary (with English fallback) ---
+こんにちは、⁨太郎⁩さん！
+⁨3⁩件の通知があります。
+This message is only available in English.
+
+--- English primary (with Japanese fallback) ---
+Hello, ⁨Alice⁩!
+You have ⁨one notification⁩.
+このメッセージは日本語のみです。
+
+=== Finding Which Bundle Has a Message ===
+
+Found 'english-only' in locale: en
+Found 'japanese-only' in locale: ja
+
+=== Menu Localization ===
+
+English:
+  File
+  Edit
+  View
+  Help
+
+Japanese:
+  ファイル
+  編集
+  表示
+  ヘルプ
