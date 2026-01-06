@@ -202,7 +202,7 @@ Items specify a counter word (助数詞) via the `.counter` attribute:
     .counter = 瓶
 ```
 
-The `COUNT` function combines count + counter + item: `3振`, `1束`, `1組`, `3瓶`
+The `COUNT` function combines count + counter: `3振`, `1束`, `1組`, `3瓶`
 
 ## Output Examples
 
