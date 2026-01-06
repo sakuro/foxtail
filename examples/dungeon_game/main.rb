@@ -44,7 +44,7 @@ module ItemFunctions
 end
 
 # Create a messages bundle for the specified locale
-# @param locale_tag [String] Locale identifier (e.g., "en", "de", "fr", "ja")
+# @param locale [ICU4X::Locale] The locale
 # @param locales_dir [Pathname] Directory containing locale subdirectories
 # @return [Foxtail::Bundle] Configured messages bundle with custom functions
 def create_bundle(locale, locales_dir)
