@@ -12,9 +12,9 @@
   - `icu4x`-based number and date formatting
   - Built-in functions: NUMBER() and DATETIME()
 - **CLI Commands**
+  - `foxtail check` - Check FTL files for syntax errors
+  - `foxtail dump` - Dump FTL files as AST in JSON format
   - `foxtail ids` - Extract message and term IDs from FTL files
-  - `foxtail lint` - Check FTL files for syntax errors
-  - `foxtail parse` - Parse FTL files and output AST as JSON
   - `foxtail tidy` - Format FTL files with consistent style
 - **Documentation**
   - Examples directory with executable usage demonstrations

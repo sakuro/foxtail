@@ -15,15 +15,15 @@ module Foxtail
       def initialize = super("No files specified")
     end
 
-    # Raised when lint command finds errors in FTL files
-    class LintError < Error
+    # Raised when check command finds errors in FTL files
+    class CheckError < Error
       # @return [Integer] Number of errors found
       attr_reader :error_count
 
       # @param error_count [Integer] Number of errors found
       def initialize(error_count)
         @error_count = error_count
-        super("Lint found #{error_count} error(s)")
+        super("Check found #{error_count} error(s)")
       end
     end
 
@@ -51,9 +51,9 @@ module Foxtail
       end
     end
 
+    register "check", Commands::Check
+    register "dump", Commands::Dump
     register "ids", Commands::Ids
-    register "lint", Commands::Lint
-    register "parse", Commands::Parse
     register "tidy", Commands::Tidy
   end
 end

@@ -3,8 +3,8 @@
 require "json"
 require "tempfile"
 
-RSpec.describe Foxtail::CLI::Commands::Parse do
-  subject(:command) { Foxtail::CLI::Commands::Parse.new }
+RSpec.describe Foxtail::CLI::Commands::Dump do
+  subject(:command) { Foxtail::CLI::Commands::Dump.new }
 
   describe "#call" do
     context "with no files" do

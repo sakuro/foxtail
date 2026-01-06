@@ -4,16 +4,16 @@ module Foxtail
   # Command-line interface for Foxtail
   module CLI
     module Commands
-      # Lint FTL files for syntax errors and junk entries
-      class Lint < Dry::CLI::Command
+      # Check FTL files for syntax errors
+      class Check < Dry::CLI::Command
         desc "Check FTL files for syntax errors"
 
-        argument :files, type: :array, required: true, desc: "FTL files to lint"
+        argument :files, type: :array, required: true, desc: "FTL files to check"
 
         option :quiet, type: :flag, default: false, aliases: ["-q"], desc: "Only show errors, no summary"
 
-        # Execute the lint command
-        # @param files [Array<String>] FTL files to lint
+        # Execute the check command
+        # @param files [Array<String>] FTL files to check
         # @param quiet [Boolean] Only show errors, no summary
         # @return [void]
         def call(files:, quiet:, **)
@@ -23,7 +23,7 @@ module Foxtail
           total_files = 0
 
           files.each do |file|
-            errors = lint_file(file)
+            errors = check_file(file)
             total_files += 1
             total_errors += errors.size
 
@@ -37,10 +37,10 @@ module Foxtail
             puts "#{total_files} file(s) checked, #{total_errors} error(s) found"
           end
 
-          raise Foxtail::CLI::LintError, total_errors if total_errors > 0
+          raise Foxtail::CLI::CheckError, total_errors if total_errors > 0
         end
 
-        private def lint_file(path)
+        private def check_file(path)
           errors = []
           content = File.read(path)
           parser = Foxtail::Syntax::Parser.new

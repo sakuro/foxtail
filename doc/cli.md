@@ -6,17 +6,17 @@ Foxtail provides command-line tools for working with FTL files.
 
 | Command | Description |
 |---------|-------------|
+| `foxtail check` | Check FTL files for syntax errors |
+| `foxtail dump` | Dump FTL files as AST in JSON format |
 | `foxtail ids` | Extract message and term IDs from FTL files |
-| `foxtail lint` | Check FTL files for syntax errors |
-| `foxtail parse` | Parse FTL files and output AST as JSON |
 | `foxtail tidy` | Format FTL files with consistent style |
 
-## lint
+## check
 
 Check FTL files for syntax errors.
 
 ```bash
-foxtail lint FILES
+foxtail check FILES
 ```
 
 ### Options
@@ -29,21 +29,21 @@ foxtail lint FILES
 
 ```bash
 # Check a single file
-foxtail lint messages.ftl
+foxtail check messages.ftl
 
 # Check multiple files
-foxtail lint en.ftl ja.ftl
+foxtail check en.ftl ja.ftl
 
 # Quiet mode (only errors)
-foxtail lint -q messages.ftl
+foxtail check -q messages.ftl
 ```
 
-## parse
+## dump
 
-Parse FTL files and output the AST as JSON.
+Dump FTL files as AST in JSON format.
 
 ```bash
-foxtail parse FILES
+foxtail dump FILES
 ```
 
 ### Options
@@ -55,19 +55,19 @@ foxtail parse FILES
 ### Examples
 
 ```bash
-# Parse a single file
-foxtail parse messages.ftl
+# Dump a single file
+foxtail dump messages.ftl
 
-# Parse with span information
-foxtail parse messages.ftl --with-spans
+# Dump with span information
+foxtail dump messages.ftl --with-spans
 
-# Parse multiple files (outputs JSON array)
-foxtail parse en.ftl ja.ftl
+# Dump multiple files (outputs JSON array)
+foxtail dump en.ftl ja.ftl
 
 # Compare AST before and after tidy
-foxtail parse original.ftl > before.json
+foxtail dump original.ftl > before.json
 foxtail tidy original.ftl > tidied.ftl
-foxtail parse tidied.ftl > after.json
+foxtail dump tidied.ftl > after.json
 diff before.json after.json
 ```
 

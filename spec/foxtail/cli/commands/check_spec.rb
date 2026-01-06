@@ -2,8 +2,8 @@
 
 require "tempfile"
 
-RSpec.describe Foxtail::CLI::Commands::Lint do
-  subject(:command) { Foxtail::CLI::Commands::Lint.new }
+RSpec.describe Foxtail::CLI::Commands::Check do
+  subject(:command) { Foxtail::CLI::Commands::Check.new }
 
   describe "#call" do
     context "with no files" do
@@ -28,7 +28,7 @@ RSpec.describe Foxtail::CLI::Commands::Lint do
     end
 
     context "with invalid FTL files" do
-      it "raises LintError with error count" do
+      it "raises CheckError with error count" do
         Tempfile.create(%w[invalid .ftl]) do |f|
           f.write("hello = Hi\nbad entry\n")
           f.flush
@@ -36,7 +36,7 @@ RSpec.describe Foxtail::CLI::Commands::Lint do
           expect {
             command.call(files: [f.path], quiet: true)
           }.to output(String).to_stdout
-            .and raise_error(Foxtail::CLI::LintError) {|e| expect(e.error_count).to eq(1) }
+            .and raise_error(Foxtail::CLI::CheckError) {|e| expect(e.error_count).to eq(1) }
         end
       end
 
@@ -48,7 +48,7 @@ RSpec.describe Foxtail::CLI::Commands::Lint do
           expect {
             command.call(files: [f.path], quiet: true)
           }.to output(/#{Regexp.escape(f.path)}: syntax error: bad entry/).to_stdout
-            .and raise_error(Foxtail::CLI::LintError)
+            .and raise_error(Foxtail::CLI::CheckError)
         end
       end
     end
