@@ -92,3 +92,7 @@ Style/DoubleNegation:
 # or when unhandled cases should be ignored intentionally
 Style/MissingElse:
   Enabled: false
+
+Style/TopLevelMethodDefinition:
+  Exclude:
+    - 'examples/**/*.rb'
