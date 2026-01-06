@@ -10,7 +10,7 @@ module ItemFunctions
   # Note on the `cap` parameter:
   # Capitalization at sentence start is technically a message-layer concern,
   # not an item-layer concern. However, Fluent does not support function nesting
-  # (e.g., CAPITALIZE(COUNT_ITEM(...))), so we use the `cap` parameter as a
+  # (e.g., CAPITALIZE(ITEM_WITH_COUNT(...))), so we use the `cap` parameter as a
   # pragmatic workaround. The message layer passes `cap: "true"` as a hint
   # when the result will appear at sentence start.
   class Base

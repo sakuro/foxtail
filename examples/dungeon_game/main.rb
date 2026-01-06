@@ -4,7 +4,7 @@
 #
 # This example demonstrates:
 # - Two-layer bundle architecture (Items Bundle + Messages Bundle)
-# - Custom functions (ITEM, ARTICLE, ARTICLE_ITEM) for dynamic item localization
+# - Custom functions (ITEM, ITEM_WITH_COUNT) for dynamic item localization
 # - German grammatical cases (nominative, accusative, dative, genitive)
 # - German grammatical gender (masculine, feminine, neuter)
 # - French elision (l'épée vs la hache)
