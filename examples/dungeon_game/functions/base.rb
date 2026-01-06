@@ -4,13 +4,13 @@
 module ItemFunctions
   # Base class for language-specific item localization functions.
   #
-  # Provides common fluent functions (ARTICLE_ITEM, COUNT_ITEM) and template methods
+  # Provides common fluent functions (ITEM, ITEM_WITH_COUNT) and template methods
   # for subclasses to override language-specific behavior.
   #
   # Note on the `cap` parameter:
   # Capitalization at sentence start is technically a message-layer concern,
   # not an item-layer concern. However, Fluent does not support function nesting
-  # (e.g., CAPITALIZE(COUNT_ITEM(...))), so we use the `cap` parameter as a
+  # (e.g., CAPITALIZE(ITEM_WITH_COUNT(...))), so we use the `cap` parameter as a
   # pragmatic workaround. The message layer passes `cap: "true"` as a hint
   # when the result will appear at sentence start.
   class Base
@@ -19,14 +19,17 @@ module ItemFunctions
     end
 
     # Returns the custom Fluent functions provided by this handler.
-    # Subclasses must override this method.
+    # Subclasses may override this method to provide different functions.
     # @return [Hash{String => #call}] function name to callable mapping
     def functions
-      raise NotImplementedError, "Subclasses must implement #functions"
+      {
+        "ITEM" => method(:fluent_item),
+        "ITEM_WITH_COUNT" => method(:fluent_item_with_count)
+      }
     end
 
-    # Fluent function: ARTICLE_ITEM(item_id, count = 1, type: "indefinite", case: "nominative", cap: "false")
-    def fluent_article_item(item_id, count=1, **options)
+    # Fluent function: ITEM(item_id, count = 1, type: "indefinite", case: "nominative", cap: "false")
+    def fluent_item(item_id, count=1, **options)
       type = options.fetch(:type, "indefinite")
       grammatical_case = options.fetch(:case, "nominative")
       cap = options.fetch(:cap, "false")
@@ -37,8 +40,8 @@ module ItemFunctions
       cap == "true" ? capitalize_first(result) : result
     end
 
-    # Fluent function: COUNT_ITEM(item_id, count, type: "none", case: "nominative", cap: "false")
-    def fluent_count_item(item_id, count, **options)
+    # Fluent function: ITEM_WITH_COUNT(item_id, count, type: "none", case: "nominative", cap: "false")
+    def fluent_item_with_count(item_id, count, **options)
       type = options.fetch(:type, "none")
       grammatical_case = options.fetch(:case, "nominative")
       cap = options.fetch(:cap, "false")

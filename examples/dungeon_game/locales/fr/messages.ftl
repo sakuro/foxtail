@@ -2,20 +2,20 @@
 
 ## Custom Functions
 #
-# ARTICLE_ITEM($item, $count, type, cap)
+# ITEM($item, $count, type, cap)
 #   Returns article + item name with gender agreement and elision.
 #   - type: "indefinite" (un/une), "definite" (le/la/l'), "none" (default: "indefinite")
-#   Example: { ARTICLE_ITEM("sword", type: "definite") } → "l'épée" (elision)
-#   Example: { ARTICLE_ITEM("axe", type: "definite") } → "la hache" (h aspiré, no elision)
-#   Example: { ARTICLE_ITEM("dagger", type: "indefinite") } → "un poignard"
+#   Example: { ITEM("sword", type: "definite") } → "l'épée" (elision)
+#   Example: { ITEM("axe", type: "definite") } → "la hache" (h aspiré, no elision)
+#   Example: { ITEM("dagger", type: "indefinite") } → "un poignard"
 #
-# COUNT_ITEM($item, $count, type, cap)
+# ITEM_WITH_COUNT($item, $count, type, cap)
 #   Returns count + item, using counters when available.
 #   Counter elision is handled automatically (fiole de potion vs fiole d'élixir).
 #   - type: "indefinite", "definite", or "none" (default: "none")
-#   Example: { COUNT_ITEM("sword", 3) } → "3 épées"
-#   Example: { COUNT_ITEM("healing-potion", 1, type: "indefinite") } → "une fiole de potion de soin"
-#   Example: { COUNT_ITEM("elixir", 1, type: "indefinite") } → "une fiole d'élixir"
+#   Example: { ITEM_WITH_COUNT("sword", 3) } → "3 épées"
+#   Example: { ITEM_WITH_COUNT("healing-potion", 1, type: "indefinite") } → "une fiole de potion de soin"
+#   Example: { ITEM_WITH_COUNT("elixir", 1, type: "indefinite") } → "une fiole d'élixir"
 #
 # French elision notes:
 #   - Definite articles le/la become l' before vowels (l'épée)
@@ -27,30 +27,30 @@
 # Finding items (counter-aware)
 found-item =
     { $count ->
-        [one] Tu as trouvé { COUNT_ITEM($item, $count, type: "indefinite") }.
-       *[other] Tu as trouvé { COUNT_ITEM($item, $count) }.
+        [one] Tu as trouvé { ITEM_WITH_COUNT($item, $count, type: "indefinite") }.
+       *[other] Tu as trouvé { ITEM_WITH_COUNT($item, $count) }.
     }
 
 # Item is here (sentence start - capitalize, counter-aware)
 item-is-here =
     { $count ->
-        [one] { COUNT_ITEM($item, $count, type: "definite", cap: "true") } est ici.
-       *[other] { COUNT_ITEM($item, $count, cap: "true") } sont ici.
+        [one] { ITEM_WITH_COUNT($item, $count, type: "definite", cap: "true") } est ici.
+       *[other] { ITEM_WITH_COUNT($item, $count, cap: "true") } sont ici.
     }
 
 # Attack with item (count defaults to 1)
-attack-with-item = Tu attaques avec { ARTICLE_ITEM($item, type: "definite") }.
+attack-with-item = Tu attaques avec { ITEM($item, type: "definite") }.
 
 # Drop item (counter-aware)
 drop-item =
     { $count ->
-        [one] Tu as laissé tomber { COUNT_ITEM($item, $count, type: "indefinite") }.
-       *[other] Tu as laissé tomber { COUNT_ITEM($item, $count) }.
+        [one] Tu as laissé tomber { ITEM_WITH_COUNT($item, $count, type: "indefinite") }.
+       *[other] Tu as laissé tomber { ITEM_WITH_COUNT($item, $count) }.
     }
 
 # Inventory (counter-aware)
 inventory-item =
     { $count ->
-        [one] { COUNT_ITEM($item, $count, type: "indefinite") }
-       *[other] { COUNT_ITEM($item, $count) }
+        [one] { ITEM_WITH_COUNT($item, $count, type: "indefinite") }
+       *[other] { ITEM_WITH_COUNT($item, $count) }
     }

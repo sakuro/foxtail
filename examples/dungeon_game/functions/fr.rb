@@ -7,14 +7,6 @@ module ItemFunctions
   # Provides article selection with elision handling (le/la → l' before vowels),
   # with support for h aspiré exceptions via .elision attribute.
   class Fr < Base
-    # @return [Hash{String => #call}] ARTICLE_ITEM and COUNT_ITEM functions
-    def functions
-      {
-        "ARTICLE_ITEM" => method(:fluent_article_item),
-        "COUNT_ITEM" => method(:fluent_count_item)
-      }
-    end
-
     # L1: entry points from Base (alphabetical)
     private def format_article_counter_item(article, counter, item, counter_elision: false)
       unless article

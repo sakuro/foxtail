@@ -7,14 +7,6 @@ module ItemFunctions
   # Provides indefinite article selection (a/an) based on first letter,
   # with support for explicit overrides via .indef attribute.
   class En < Base
-    # @return [Hash{String => #call}] ARTICLE_ITEM and COUNT_ITEM functions
-    def functions
-      {
-        "ARTICLE_ITEM" => method(:fluent_article_item),
-        "COUNT_ITEM" => method(:fluent_count_item)
-      }
-    end
-
     # L1: entry points from Base (alphabetical)
     private def resolve_article(item_id, count, type, _grammatical_case=nil)
       return nil if type == "none"
