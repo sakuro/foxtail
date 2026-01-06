@@ -1,0 +1,233 @@
+# frozen_string_literal: true
+
+# Dungeon Game Example
+#
+# This example demonstrates:
+# - Two-layer bundle architecture (Items Bundle + Messages Bundle)
+# - Custom functions (ITEM, ARTICLE, ARTICLE_ITEM) for dynamic item localization
+# - German grammatical cases (nominative, accusative, dative, genitive)
+# - German grammatical gender (masculine, feminine, neuter)
+# - French elision (l'épée vs la hache)
+# - Proper article declension based on gender, number, and case
+
+require "foxtail"
+require "icu4x"
+require "pathname"
+
+require_relative "functions/base"
+require_relative "functions/de"
+require_relative "functions/en"
+require_relative "functions/fr"
+require_relative "functions/ja"
+
+# Language class registry for item localization
+module ItemFunctions
+  LANGUAGE_CLASSES = {
+    "de" => De,
+    "en" => En,
+    "fr" => Fr,
+    "ja" => Ja
+  }.freeze
+
+  private_constant :LANGUAGE_CLASSES
+
+  # Create language-specific function handler
+  # @param locale [ICU4X::Locale] The locale
+  # @param items_bundle [Foxtail::Bundle] The bundle containing item terms
+  # @return [Base] Language-specific handler instance
+  def self.for_locale(locale, items_bundle)
+    klass = LANGUAGE_CLASSES.fetch(locale.language, Base)
+    klass.new(items_bundle)
+  end
+end
+
+# Create a messages bundle for the specified locale
+# @param locale_tag [String] Locale identifier (e.g., "en", "de", "fr", "ja")
+# @param locales_dir [Pathname] Directory containing locale subdirectories
+# @return [Foxtail::Bundle] Configured messages bundle with custom functions
+def create_bundle(locale_tag, locales_dir)
+  locale = ICU4X::Locale.parse(locale_tag)
+  locale_dir = locales_dir.join(locale_tag)
+
+  # Items bundle loads: articles, counters, items
+  items_bundle = Foxtail::Bundle.new(locale, use_isolating: false)
+  %w[articles counters items].each do |name|
+    path = locale_dir.join("#{name}.ftl")
+    items_bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
+  end
+
+  handler = ItemFunctions.for_locale(locale, items_bundle)
+  custom_functions = Foxtail::Function.defaults.merge(handler.functions)
+
+  # Messages bundle loads: messages
+  messages_bundle = Foxtail::Bundle.new(locale, functions: custom_functions, use_isolating: false)
+  messages_bundle.add_resource(
+    Foxtail::Resource.from_file(locale_dir.join("messages.ftl"))
+  )
+
+  messages_bundle
+end
+
+# Directory containing locale files
+locales_dir = Pathname.new(__dir__).join("locales")
+
+# Create bundles
+en_bundle = create_bundle("en", locales_dir)
+de_bundle = create_bundle("de", locales_dir)
+fr_bundle = create_bundle("fr", locales_dir)
+ja_bundle = create_bundle("ja", locales_dir)
+
+puts "=== Dungeon Game Localization Demo ==="
+puts
+
+# Test items (including counter items)
+items = %w[dagger axe sword hammer gauntlet healing-potion elixir]
+counts = [1, 3]
+
+# English
+puts "--- English ---"
+puts "found-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{en_bundle.format("found-item", item:, count:)}"
+  end
+end
+puts "attack-with-item:"
+puts "  #{en_bundle.format("attack-with-item", item: "sword")}"
+puts "item-is-here:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{en_bundle.format("item-is-here", item:, count:)}"
+  end
+end
+puts "drop-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{en_bundle.format("drop-item", item:, count:)}"
+  end
+end
+puts "inventory-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{en_bundle.format("inventory-item", item:, count:)}"
+  end
+end
+puts
+
+# German
+puts "--- German ---"
+puts "found-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{de_bundle.format("found-item", item:, count:)}"
+  end
+end
+puts "attack-with-item:"
+puts "  #{de_bundle.format("attack-with-item", item: "sword")}"
+puts "item-is-here:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{de_bundle.format("item-is-here", item:, count:)}"
+  end
+end
+puts "drop-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{de_bundle.format("drop-item", item:, count:)}"
+  end
+end
+puts "inventory-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{de_bundle.format("inventory-item", item:, count:)}"
+  end
+end
+puts
+
+# French
+puts "--- French ---"
+puts "found-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{fr_bundle.format("found-item", item:, count:)}"
+  end
+end
+puts "attack-with-item:"
+puts "  #{fr_bundle.format("attack-with-item", item: "sword")}"
+puts "item-is-here:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{fr_bundle.format("item-is-here", item:, count:)}"
+  end
+end
+puts "drop-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{fr_bundle.format("drop-item", item:, count:)}"
+  end
+end
+puts "inventory-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{fr_bundle.format("inventory-item", item:, count:)}"
+  end
+end
+puts
+
+# Japanese
+puts "--- Japanese ---"
+puts "found-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{ja_bundle.format("found-item", item:, count:)}"
+  end
+end
+puts "attack-with-item:"
+puts "  #{ja_bundle.format("attack-with-item", item: "sword")}"
+puts "item-is-here:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{ja_bundle.format("item-is-here", item:, count:)}"
+  end
+end
+puts "drop-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{ja_bundle.format("drop-item", item:, count:)}"
+  end
+end
+puts "inventory-item:"
+items.each do |item|
+  counts.each do |count|
+    puts "  #{ja_bundle.format("inventory-item", item:, count:)}"
+  end
+end
+puts
+
+# Demonstrate case differences in German
+puts "=== German Grammatical Cases ==="
+puts
+puts "Nominative (subject): #{de_bundle.format("item-is-here", item: "sword", count: 1)}"
+puts "Accusative (direct object): #{de_bundle.format("found-item", item: "sword", count: 1)}"
+puts "Dative (with preposition): #{de_bundle.format("attack-with-item", item: "sword")}"
+puts
+
+# Demonstrate gender differences in German
+puts "=== German Grammatical Gender ==="
+puts
+puts "Masculine (der Dolch): #{de_bundle.format("found-item", item: "dagger", count: 1)}"
+puts "Feminine (die Axt): #{de_bundle.format("found-item", item: "axe", count: 1)}"
+puts "Neuter (das Schwert): #{de_bundle.format("found-item", item: "sword", count: 1)}"
+puts
+
+# Demonstrate French elision
+puts "=== French Elision ==="
+puts
+puts "With elision (l'épée): #{fr_bundle.format("item-is-here", item: "sword", count: 1)}"
+puts "Without elision - h aspiré (la hache): #{fr_bundle.format("item-is-here", item: "axe", count: 1)}"
+puts "Masculine (le poignard): #{fr_bundle.format("item-is-here", item: "dagger", count: 1)}"
+puts
+puts "=== French Counter Elision ==="
+puts
+puts "Counter + consonant (fiole de potion): #{fr_bundle.format("found-item", item: "healing-potion", count: 1)}"
+puts "Counter + vowel (fiole d'élixir): #{fr_bundle.format("found-item", item: "elixir", count: 1)}"
