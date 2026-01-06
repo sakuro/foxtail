@@ -71,12 +71,6 @@ end
 # Directory containing locale files
 locales_dir = Pathname.new(__dir__).join("locales")
 
-# Create bundles
-en_bundle = create_bundle("en", locales_dir)
-de_bundle = create_bundle("de", locales_dir)
-fr_bundle = create_bundle("fr", locales_dir)
-ja_bundle = create_bundle("ja", locales_dir)
-
 puts "=== Dungeon Game Localization Demo ==="
 puts
 
@@ -84,127 +78,36 @@ puts
 items = %w[dagger axe sword hammer gauntlet healing-potion elixir]
 counts = [1, 3]
 
-# English
-puts "--- English ---"
-puts "found-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{en_bundle.format("found-item", item:, count:)}"
-  end
-end
-puts "attack-with-item:"
-puts "  #{en_bundle.format("attack-with-item", item: "sword")}"
-puts "item-is-here:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{en_bundle.format("item-is-here", item:, count:)}"
-  end
-end
-puts "drop-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{en_bundle.format("drop-item", item:, count:)}"
-  end
-end
-puts "inventory-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{en_bundle.format("inventory-item", item:, count:)}"
-  end
-end
-puts
+# Language bundles
+bundles = {
+  "English" => create_bundle("en", locales_dir),
+  "German" => create_bundle("de", locales_dir),
+  "French" => create_bundle("fr", locales_dir),
+  "Japanese" => create_bundle("ja", locales_dir)
+}
 
-# German
-puts "--- German ---"
-puts "found-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{de_bundle.format("found-item", item:, count:)}"
-  end
-end
-puts "attack-with-item:"
-puts "  #{de_bundle.format("attack-with-item", item: "sword")}"
-puts "item-is-here:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{de_bundle.format("item-is-here", item:, count:)}"
-  end
-end
-puts "drop-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{de_bundle.format("drop-item", item:, count:)}"
-  end
-end
-puts "inventory-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{de_bundle.format("inventory-item", item:, count:)}"
-  end
-end
-puts
+# Message IDs to test
+message_ids = %w[found-item attack-with-item item-is-here drop-item inventory-item]
 
-# French
-puts "--- French ---"
-puts "found-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{fr_bundle.format("found-item", item:, count:)}"
+bundles.each do |language, bundle|
+  puts "--- #{language} ---"
+  message_ids.each do |message_id|
+    puts "#{message_id}:"
+    if message_id == "attack-with-item"
+      puts "  #{bundle.format(message_id, item: "sword")}"
+    else
+      items.each do |item|
+        counts.each do |count|
+          puts "  #{bundle.format(message_id, item:, count:)}"
+        end
+      end
+    end
   end
+  puts
 end
-puts "attack-with-item:"
-puts "  #{fr_bundle.format("attack-with-item", item: "sword")}"
-puts "item-is-here:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{fr_bundle.format("item-is-here", item:, count:)}"
-  end
-end
-puts "drop-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{fr_bundle.format("drop-item", item:, count:)}"
-  end
-end
-puts "inventory-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{fr_bundle.format("inventory-item", item:, count:)}"
-  end
-end
-puts
-
-# Japanese
-puts "--- Japanese ---"
-puts "found-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{ja_bundle.format("found-item", item:, count:)}"
-  end
-end
-puts "attack-with-item:"
-puts "  #{ja_bundle.format("attack-with-item", item: "sword")}"
-puts "item-is-here:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{ja_bundle.format("item-is-here", item:, count:)}"
-  end
-end
-puts "drop-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{ja_bundle.format("drop-item", item:, count:)}"
-  end
-end
-puts "inventory-item:"
-items.each do |item|
-  counts.each do |count|
-    puts "  #{ja_bundle.format("inventory-item", item:, count:)}"
-  end
-end
-puts
 
 # Demonstrate case differences in German
+de_bundle = bundles["German"]
 puts "=== German Grammatical Cases ==="
 puts
 puts "Nominative (subject): #{de_bundle.format("item-is-here", item: "sword", count: 1)}"
@@ -221,6 +124,7 @@ puts "Neuter (das Schwert): #{de_bundle.format("found-item", item: "sword", coun
 puts
 
 # Demonstrate French elision
+fr_bundle = bundles["French"]
 puts "=== French Elision ==="
 puts
 puts "With elision (l'épée): #{fr_bundle.format("item-is-here", item: "sword", count: 1)}"
