@@ -10,14 +10,13 @@
     }
     .gender = masculine
 
-# Hache (feminine, h aspiré - no elision)
+# Hache (feminine, h aspiré - no elision by default since h is not a vowel)
 -axe =
     { $count ->
         [one] hache
        *[other] haches
     }
     .gender = feminine
-    .elision = false
 
 # Épée (feminine, starts with vowel - elision)
 -sword =
@@ -34,6 +33,15 @@
        *[other] marteaux
     }
     .gender = masculine
+
+# Herbe (feminine, h muet - elision required)
+-herb =
+    { $count ->
+        [one] herbe
+       *[other] herbes
+    }
+    .gender = feminine
+    .elision = true
 
 ## Items with counters
 

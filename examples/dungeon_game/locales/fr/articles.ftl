@@ -3,19 +3,25 @@
 ## Elision control
 #
 # By default, elision occurs before vowels (l'épée, l'arme).
-# For h aspiré words (no elision), add .elision = false to the item term:
+# Words starting with consonants (including h) do not elide by default.
 #
-#   # "la hache" - h aspiré, no elision
+# For h muet words (silent h, elision required), add .elision = true:
+#
+#   # "l'herbe" - h muet, elision required
+#   -herb = herbe
+#       .gender = feminine
+#       .elision = true
+#
+#   # "l'homme" - h muet, elision required
+#   -man = homme
+#       .gender = masculine
+#       .elision = true
+#
+# For h aspiré words, no attribute is needed (h is not a vowel):
+#
+#   # "la hache" - h aspiré, no elision (default behavior)
 #   -axe = hache
 #       .gender = feminine
-#       .elision = false
-#
-#   # "le hibou" - h aspiré, no elision
-#   -owl = hibou
-#       .gender = masculine
-#       .elision = false
-#
-# For words that should always elide (rare), use .elision = true
 
 ## Format patterns
 #

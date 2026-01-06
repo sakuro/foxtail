@@ -82,6 +82,26 @@
     }
     .gender = masculine
 
+# Kraut (neuter)
+-herb =
+    { $count ->
+        [one]
+            { $case ->
+               *[nominative] Kraut
+                [accusative] Kraut
+                [dative] Kraut
+                [genitive] Krautes
+            }
+       *[other]
+            { $case ->
+               *[nominative] Kräuter
+                [accusative] Kräuter
+                [dative] Kräutern
+                [genitive] Kräuter
+            }
+    }
+    .gender = neuter
+
 ## Items with counters
 
 # Panzerhandschuhe (plurale tantum) - counted with Paar

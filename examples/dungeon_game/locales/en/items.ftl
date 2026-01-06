@@ -26,6 +26,12 @@
        *[other] hammers
     }
 
+-herb =
+    { $count ->
+        [one] herb
+       *[other] herbs
+    }
+
 ## Items with counters
 
 # Gauntlets are counted in pairs

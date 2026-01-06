@@ -17,6 +17,9 @@
 -hammer = 槌
     .counter = 振
 
+-herb = 薬草
+    .counter = 束
+
 ## Items with counters
 
 -gauntlet = 籠手

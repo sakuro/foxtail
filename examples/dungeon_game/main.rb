@@ -76,7 +76,7 @@ puts "=== Dungeon Game Localization Demo ==="
 puts
 
 # Test items (including counter items)
-items = %w[dagger axe sword hammer gauntlet healing-potion elixir]
+items = %w[dagger axe sword hammer herb gauntlet healing-potion elixir]
 counts = [1, 3]
 
 # Language bundles
@@ -125,9 +125,10 @@ puts
 fr_bundle = bundles["fr"]
 puts "=== French Elision ==="
 puts
-puts "With elision (l'épée): #{fr_bundle.format("item-is-here", item: "sword", count: 1)}"
+puts "With elision - vowel (l'épée): #{fr_bundle.format("item-is-here", item: "sword", count: 1)}"
+puts "With elision - h muet (l'herbe): #{fr_bundle.format("item-is-here", item: "herb", count: 1)}"
 puts "Without elision - h aspiré (la hache): #{fr_bundle.format("item-is-here", item: "axe", count: 1)}"
-puts "Masculine (le poignard): #{fr_bundle.format("item-is-here", item: "dagger", count: 1)}"
+puts "Without elision - consonant (le poignard): #{fr_bundle.format("item-is-here", item: "dagger", count: 1)}"
 puts
 puts "=== French Counter Elision ==="
 puts
