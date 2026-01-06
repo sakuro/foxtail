@@ -20,6 +20,9 @@ require_relative "functions/en"
 require_relative "functions/fr"
 require_relative "functions/ja"
 
+TARGET_LANGUAGES = %w[en de fr ja].freeze
+TARGET_LOCALES = TARGET_LANGUAGES.to_h {|lang| [lang, ICU4X::Locale.parse(lang)] }.freeze
+
 # Language class registry for item localization
 module ItemFunctions
   LANGUAGE_CLASSES = {
@@ -28,7 +31,6 @@ module ItemFunctions
     "fr" => Fr,
     "ja" => Ja
   }.freeze
-
   private_constant :LANGUAGE_CLASSES
 
   # Create language-specific function handler
@@ -36,7 +38,7 @@ module ItemFunctions
   # @param items_bundle [Foxtail::Bundle] The bundle containing item terms
   # @return [Base] Language-specific handler instance
   def self.for_locale(locale, items_bundle)
-    klass = LANGUAGE_CLASSES.fetch(locale.language, Base)
+    klass = LANGUAGE_CLASSES.fetch(locale.to_s, Base)
     klass.new(items_bundle)
   end
 end
@@ -45,9 +47,8 @@ end
 # @param locale_tag [String] Locale identifier (e.g., "en", "de", "fr", "ja")
 # @param locales_dir [Pathname] Directory containing locale subdirectories
 # @return [Foxtail::Bundle] Configured messages bundle with custom functions
-def create_bundle(locale_tag, locales_dir)
-  locale = ICU4X::Locale.parse(locale_tag)
-  locale_dir = locales_dir.join(locale_tag)
+def create_bundle(locale, locales_dir)
+  locale_dir = locales_dir.join(locale.to_s)
 
   # Items bundle loads: articles, counters, items
   items_bundle = Foxtail::Bundle.new(locale, use_isolating: false)
@@ -79,18 +80,15 @@ items = %w[dagger axe sword hammer gauntlet healing-potion elixir]
 counts = [1, 3]
 
 # Language bundles
-bundles = {
-  "English" => create_bundle("en", locales_dir),
-  "German" => create_bundle("de", locales_dir),
-  "French" => create_bundle("fr", locales_dir),
-  "Japanese" => create_bundle("ja", locales_dir)
-}
+en = TARGET_LOCALES["en"]
+dn = ICU4X::DisplayNames.new(en, type: :language)
+bundles = TARGET_LOCALES.transform_values {|locale| create_bundle(locale, locales_dir) }
 
 # Message IDs to test
 message_ids = %w[found-item attack-with-item item-is-here drop-item inventory-item]
 
-bundles.each do |language, bundle|
-  puts "--- #{language} ---"
+bundles.each do |lang, bundle|
+  puts "--- #{dn.of(lang)} ---"
   message_ids.each do |message_id|
     puts "#{message_id}:"
     if message_id == "attack-with-item"
@@ -107,7 +105,7 @@ bundles.each do |language, bundle|
 end
 
 # Demonstrate case differences in German
-de_bundle = bundles["German"]
+de_bundle = bundles["de"]
 puts "=== German Grammatical Cases ==="
 puts
 puts "Nominative (subject): #{de_bundle.format("item-is-here", item: "sword", count: 1)}"
@@ -124,7 +122,7 @@ puts "Neuter (das Schwert): #{de_bundle.format("found-item", item: "sword", coun
 puts
 
 # Demonstrate French elision
-fr_bundle = bundles["French"]
+fr_bundle = bundles["fr"]
 puts "=== French Elision ==="
 puts
 puts "With elision (l'épée): #{fr_bundle.format("item-is-here", item: "sword", count: 1)}"
