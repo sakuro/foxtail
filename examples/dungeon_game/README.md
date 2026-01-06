@@ -188,10 +188,10 @@ Items can specify a counter term:
 
 -counter-furi =
     { $count ->
-        [1] 1振り
-        [2] 2振り
-        [3] 3振り
-       *[other] { $count }振り
+        [1] 1振
+        [2] 2振
+        [3] 3振
+       *[other] { $count }振
     }
 ```
 
@@ -230,8 +230,8 @@ Tu as trouvé une fiole d'élixir.   # counter elision: d' before vowel
 ### Japanese
 
 ```
-短剣を1本見つけた。                 # counter: 本
-剣を3振り見つけた。                 # counter: 振り
+短剣を1振見つけた。                 # counter: 振
+剣を3振見つけた。                   # counter: 振
 籠手を1組見つけた。                 # counter: 組
 ```
 
