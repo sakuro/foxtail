@@ -7,14 +7,6 @@ module ItemFunctions
   # Provides article declension based on grammatical gender (masculine, feminine, neuter),
   # number (singular, plural), and case (nominative, accusative, dative, genitive).
   class De < Base
-    # @return [Hash{String => #call}] ITEM and ITEM_WITH_COUNT functions
-    def functions
-      {
-        "ITEM" => method(:fluent_item),
-        "ITEM_WITH_COUNT" => method(:fluent_item_with_count)
-      }
-    end
-
     # L1: entry points from Base (alphabetical)
     private def resolve_article(item_id, count, type, grammatical_case)
       return nil if type == "none"

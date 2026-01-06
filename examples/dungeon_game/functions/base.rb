@@ -19,10 +19,13 @@ module ItemFunctions
     end
 
     # Returns the custom Fluent functions provided by this handler.
-    # Subclasses must override this method.
+    # Subclasses may override this method to provide different functions.
     # @return [Hash{String => #call}] function name to callable mapping
     def functions
-      raise NotImplementedError, "Subclasses must implement #functions"
+      {
+        "ITEM" => method(:fluent_item),
+        "ITEM_WITH_COUNT" => method(:fluent_item_with_count)
+      }
     end
 
     # Fluent function: ITEM(item_id, count = 1, type: "indefinite", case: "nominative", cap: "false")
