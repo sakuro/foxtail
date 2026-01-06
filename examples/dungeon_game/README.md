@@ -186,20 +186,23 @@ Note: H aspiré words like "hache" don't need any override since "h" is not a vo
 
 ### Japanese Counter Words
 
-Items can specify a counter term:
+Items specify a counter word (助数詞) via the `.counter` attribute:
 
 ```ftl
 -sword = 剣
-    .counter = -counter-furi
+    .counter = 振
 
--counter-furi =
-    { $count ->
-        [1] 1振
-        [2] 2振
-        [3] 3振
-       *[other] { $count }振
-    }
+-herb = 薬草
+    .counter = 束
+
+-gauntlet = 籠手
+    .counter = 組
+
+-elixir = 霊薬
+    .counter = 瓶
 ```
+
+The `COUNT` function combines count + counter + item: `3振`, `1束`, `1組`, `3瓶`
 
 ## Output Examples
 
