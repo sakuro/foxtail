@@ -6,7 +6,7 @@ Demonstrates advanced localization for game items with grammatical gender, numbe
 
 - **Two-layer Bundle architecture**: Separate bundles for items (Terms) and messages
 - **Custom functions**: Language-specific functions for dynamic item embedding
-  - English/German/French: `ARTICLE_ITEM`, `COUNT_ITEM`
+  - English/German/French: `ITEM`, `ITEM_WITH_COUNT`
   - Japanese: `ITEM`, `COUNT`
 - **German grammatical cases**: nominative, accusative, dative, genitive
 - **German grammatical gender**: masculine, feminine, neuter
@@ -91,11 +91,11 @@ Each language provides different functions based on its needs:
 
 **English/German/French:**
 ```ftl
-# ARTICLE_ITEM: Item with article
-{ ARTICLE_ITEM($item, $count, type: "indefinite", case: "nominative", cap: "false") }
+# ITEM: Item with article
+{ ITEM($item, $count, type: "indefinite", case: "nominative", cap: "false") }
 
-# COUNT_ITEM: Count with item (uses counter if defined)
-{ COUNT_ITEM($item, $count, type: "none", case: "nominative", cap: "false") }
+# ITEM_WITH_COUNT: Count with item (uses counter if defined)
+{ ITEM_WITH_COUNT($item, $count, type: "none", case: "nominative", cap: "false") }
 ```
 
 **Japanese:**
