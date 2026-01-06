@@ -161,8 +161,10 @@ Articles are defined as FTL terms with gender, count, and case selectors:
 French handles elision (l'épée instead of la épée) via:
 
 1. **Automatic detection**: NFD normalization to detect vowels (é → e)
-2. **Explicit override**: `.elision = false` for h aspiré words (la hache)
+2. **H muet override**: `.elision = true` for silent-h words (l'herbe)
 3. **FTL format patterns**: Conditional spacing based on elision
+
+Note: H aspiré words like "hache" don't need any override since "h" is not a vowel.
 
 ```ftl
 # Format pattern for article + item
@@ -172,10 +174,14 @@ French handles elision (l'épée instead of la épée) via:
        *[false] {$article} {$item}
     }
 
-# Item with h aspiré (no elision)
+# Item with h muet (elision required)
+-herb = herbe
+    .gender = feminine
+    .elision = true
+
+# Item with h aspiré (no elision by default - h is not a vowel)
 -axe = hache
     .gender = feminine
-    .elision = false
 ```
 
 ### Japanese Counter Words
