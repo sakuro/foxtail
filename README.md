@@ -79,7 +79,7 @@ See the [examples/](examples/) directory for executable demonstrations:
 - **Custom functions**: Adding your own formatters
 - **Multi-language apps**: Language fallback with `Sequence`
 - **E-commerce**: Real-world pricing and cart localization
-- **[Dungeon Game](examples/dungeon_game/)**: Advanced item localization with grammatical gender/case (German), elision (French), and counter words (Japanese)
+- **Dungeon Game**: Advanced item localization with grammatical gender/case (German), elision (French), and counter words (Japanese)
 
 
 ## Development
