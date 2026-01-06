@@ -30,6 +30,7 @@ bundle exec ruby examples/multilingual_app/main.rb
 |-----------|----------|----------|
 | [multilingual_app/](multilingual_app/) | Multi-language app | Sequence, file loading, fallback |
 | [ecommerce/](ecommerce/) | E-commerce pricing | NUMBER, plurals, attributes |
+| [dungeon_game/](dungeon_game/) | Item localization | Gender, case, elision, counters |
 
 ## Expected Output Files
 
