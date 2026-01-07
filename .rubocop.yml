@@ -93,6 +93,10 @@ Style/DoubleNegation:
 Style/MissingElse:
   Enabled: false
 
+Style/NumberedParameters:
+  Enabled: true
+  EnforcedStyle: disallow
+
 Style/TopLevelMethodDefinition:
   Exclude:
     - 'examples/**/*.rb'

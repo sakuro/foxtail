@@ -36,7 +36,7 @@ module Foxtail
           if json
             puts JSON.pretty_generate(ids)
           else
-            ids.each { puts _1 }
+            ids.each {|id| puts id }
           end
         end
 
@@ -65,7 +65,7 @@ module Foxtail
         end
 
         private def attribute_ids(entry, prefix: "")
-          entry.attributes.map { "#{prefix}#{entry.id.name}.#{_1.id.name}" }
+          entry.attributes.map {|attr| "#{prefix}#{entry.id.name}.#{attr.id.name}" }
         end
       end
     end
