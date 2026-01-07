@@ -19,7 +19,8 @@
 #
 # French elision notes:
 #   - Definite articles le/la become l' before vowels (l'épée)
-#   - Exception: h aspiré words keep la/le (la hache)
+#   - h muet (silent h): elision occurs, requires .elision = true (l'herbe)
+#   - h aspiré (aspirated h): no elision, no override needed (la hache)
 #   - Counter "de" becomes "d'" before vowels (fiole d'élixir)
 
 ## Messages
