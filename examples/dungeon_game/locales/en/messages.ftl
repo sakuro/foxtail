@@ -1,6 +1,9 @@
 ### Game messages for English
 
+
 ## Custom Functions
+
+
 #
 # ITEM($item, $count, type, cap)
 #   Returns article + item name.
@@ -20,6 +23,7 @@
 # at sentence start. This is a pragmatic workaround since Fluent does not
 # support function nesting like CAPITALIZE(ITEM_WITH_COUNT(...)).
 
+
 ## Messages
 
 # Finding items (counter-aware)
@@ -28,28 +32,23 @@ found-item =
         [one] You found { ITEM_WITH_COUNT($item, $count, type: "indefinite") }.
        *[other] You found { ITEM_WITH_COUNT($item, $count) }.
     }
-
 # Item is here (sentence start - capitalize, counter-aware)
 item-is-here =
     { $count ->
         [one] { ITEM_WITH_COUNT($item, $count, type: "definite", cap: "true") } is here.
        *[other] { ITEM_WITH_COUNT($item, $count, cap: "true") } are here.
     }
-
 # Attack with item (count defaults to 1)
 attack-with-item = You attack with { ITEM($item, type: "definite") }.
-
 # Drop item (counter-aware)
 drop-item =
     { $count ->
         [one] You dropped { ITEM_WITH_COUNT($item, $count, type: "indefinite") }.
        *[other] You dropped { ITEM_WITH_COUNT($item, $count) }.
     }
-
 # Inventory (counter-aware)
 inventory-item =
     { $count ->
         [one] { ITEM_WITH_COUNT($item, $count, type: "indefinite") }
        *[other] { ITEM_WITH_COUNT($item, $count) }
     }
-

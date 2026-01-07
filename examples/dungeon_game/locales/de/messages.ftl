@@ -1,6 +1,9 @@
 ### Game messages for German
 
+
 ## Custom Functions
+
+
 #
 # ITEM($item, $count, type, case, cap)
 #   Returns article + item name with gender/case agreement.
@@ -20,6 +23,7 @@
 #   - dative: Indirect object / with prepositions (Du greifst mit dem Schwert an.)
 #   - genitive: Possession (rarely used in this example)
 
+
 ## Messages
 
 # Finding items (accusative case - direct object, counter-aware)
@@ -28,28 +32,23 @@ found-item =
         [one] Du hast { ITEM_WITH_COUNT($item, $count, type: "indefinite", case: "accusative") } gefunden.
        *[other] Du hast { ITEM_WITH_COUNT($item, $count, case: "accusative") } gefunden.
     }
-
 # Item is here (nominative case - subject, sentence start - capitalize, counter-aware)
 item-is-here =
     { $count ->
         [one] { ITEM_WITH_COUNT($item, $count, type: "definite", case: "nominative", cap: "true") } ist hier.
        *[other] { ITEM_WITH_COUNT($item, $count, case: "nominative", cap: "true") } sind hier.
     }
-
 # Attack with item (dative case - with preposition "mit", count defaults to 1)
 attack-with-item = Du greifst mit { ITEM($item, type: "definite", case: "dative") } an.
-
 # Drop item (accusative case - direct object, counter-aware)
 drop-item =
     { $count ->
         [one] Du hast { ITEM_WITH_COUNT($item, $count, type: "indefinite", case: "accusative") } fallen gelassen.
        *[other] Du hast { ITEM_WITH_COUNT($item, $count, case: "accusative") } fallen gelassen.
     }
-
 # Inventory (nominative case, counter-aware)
 inventory-item =
     { $count ->
         [one] { ITEM_WITH_COUNT($item, $count, type: "indefinite", case: "nominative") }
        *[other] { ITEM_WITH_COUNT($item, $count, case: "nominative") }
     }
-

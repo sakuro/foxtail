@@ -1,5 +1,6 @@
 ### French item definitions
 
+
 ## Items
 
 # Poignard (masculine)
@@ -9,7 +10,6 @@
        *[other] poignards
     }
     .gender = masculine
-
 # Hache (feminine, h aspiré - no elision by default since h is not a vowel)
 -axe =
     { $count ->
@@ -17,7 +17,6 @@
        *[other] haches
     }
     .gender = feminine
-
 # Épée (feminine, starts with vowel - elision)
 -sword =
     { $count ->
@@ -25,7 +24,6 @@
        *[other] épées
     }
     .gender = feminine
-
 # Marteau (masculine)
 -hammer =
     { $count ->
@@ -33,7 +31,6 @@
        *[other] marteaux
     }
     .gender = masculine
-
 # Herbe (feminine, h muet - elision required)
 -herb =
     { $count ->
@@ -49,7 +46,6 @@
 -gauntlet = gantelets
     .gender = masculine
     .counter = -paire
-
 # Potion de soin (feminine) - counted with fiole
 -healing-potion =
     { $count ->
@@ -58,7 +54,6 @@
     }
     .gender = feminine
     .counter = -fiole
-
 # Élixir (masculine) - counted with fiole, starts with vowel (tests elision)
 -elixir =
     { $count ->

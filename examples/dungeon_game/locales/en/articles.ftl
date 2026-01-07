@@ -1,6 +1,9 @@
 ### English article definitions
 
+
 ## Exception handling
+
+
 #
 # By default, indefinite article is "a" before consonants and "an" before vowels.
 # For exceptions, add .indef attribute to the item term:
@@ -13,11 +16,11 @@
 #   -unicorn = unicorn
 #       .indef = a
 
+
 ## Article terms
 
 # Definite article (always "the")
 -def-article = the
-
 # Indefinite article (a/an based on first letter)
 # Pass $first_letter as lowercase first character of the following word
 -indef-article =

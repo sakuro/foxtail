@@ -1,5 +1,6 @@
 ### German item definitions
 
+
 ## Items
 
 # Dolch (masculine)
@@ -21,7 +22,6 @@
             }
     }
     .gender = masculine
-
 # Axt (feminine)
 -axe =
     { $count ->
@@ -41,7 +41,6 @@
             }
     }
     .gender = feminine
-
 # Schwert (neuter)
 -sword =
     { $count ->
@@ -61,7 +60,6 @@
             }
     }
     .gender = neuter
-
 # Hammer (masculine)
 -hammer =
     { $count ->
@@ -81,7 +79,6 @@
             }
     }
     .gender = masculine
-
 # Kraut (neuter)
 -herb =
     { $count ->
@@ -112,7 +109,6 @@
     }
     .gender = masculine
     .counter = -paar
-
 # Heiltrank (masculine) - counted with Flasche
 -healing-potion =
     { $count ->
@@ -133,7 +129,6 @@
     }
     .gender = masculine
     .counter = -flasche
-
 # Elixier (neuter) - counted with Flasche
 -elixir =
     { $count ->

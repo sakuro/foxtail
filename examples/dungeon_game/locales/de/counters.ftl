@@ -1,11 +1,11 @@
 ### German counter definitions
 
+
 ## Counter terms
 
 # Paar (neuter) - invariant in plural after numbers
 -paar = Paar
     .gender = neuter
-
 # Flasche (feminine)
 -flasche =
     { $count ->

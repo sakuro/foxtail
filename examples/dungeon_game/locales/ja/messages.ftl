@@ -1,6 +1,9 @@
 ### Game messages for Japanese
 
+
 ## Custom Functions
+
+
 #
 # ITEM($item, $count, cap)
 #   Returns the item name.
@@ -23,20 +26,16 @@
 #   - 瓶 (びん): For bottled items (potions, elixir)
 #   - 個 (こ): Default counter when none specified
 
+
 ## Messages
 
 # Finding items (counter-aware)
 found-item = { ITEM($item) }を{ COUNT($item, $count) }見つけた。
-
 # Item is here
 item-is-here = { ITEM($item) }が{ COUNT($item, $count) }ある。
-
 # Attack with item (count defaults to 1)
 attack-with-item = { ITEM($item) }で攻撃した。
-
 # Drop item
 drop-item = { ITEM($item) }を{ COUNT($item, $count) }捨てた。
-
 # Inventory
 inventory-item = { ITEM($item) } x { COUNT($item, $count) }
-

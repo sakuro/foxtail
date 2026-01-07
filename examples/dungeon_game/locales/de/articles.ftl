@@ -1,6 +1,9 @@
 ### German article definitions
 
+
 ## Gender specification
+
+
 #
 # Each item must have a .gender attribute (masculine/feminine/neuter):
 #
@@ -11,6 +14,7 @@
 #       .gender = feminine
 #
 # The article is selected based on gender, count, and grammatical case.
+
 
 ## Article terms
 
@@ -70,7 +74,6 @@
                     }
             }
     }
-
 # Indefinite article (ein/eine) - singular only
 -indef-article =
     { $gender ->
