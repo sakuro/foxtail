@@ -28,11 +28,18 @@ module ItemFunctions
       }
     end
 
-    # Fluent function: ITEM(item_id, count = 1, type: "indefinite", case: "nominative", cap: "false")
-    def fluent_item(item_id, count=1, **options)
-      type = options.fetch(:type, "indefinite")
-      grammatical_case = options.fetch(:case, "nominative")
-      cap = options.fetch(:cap, "false")
+    # Fluent function: ITEM - Returns a localized item name with optional article.
+    #
+    # @param item_id [String] the item identifier (e.g., "sword", "potion")
+    # @param count [Integer] the quantity of items (affects pluralization and article)
+    # @param type [String] article type (language-dependent)
+    # @param case [String] grammatical case (language-dependent)
+    # @param cap [String] capitalize first letter: "true" or "false"
+    # @return [String] the formatted item name with article
+    # @note The trailing ** is required because Foxtail::Bundle passes additional
+    #   keyword arguments (e.g., locale:) that this function does not use.
+    def fluent_item(item_id, count=1, type: "indefinite", case: "nominative", cap: "false", **)
+      grammatical_case = {case:}[:case]
 
       item = resolve_item(item_id, count, grammatical_case)
       article = resolve_article(item_id, count, type, grammatical_case)
@@ -40,11 +47,18 @@ module ItemFunctions
       cap == "true" ? capitalize_first(result) : result
     end
 
-    # Fluent function: ITEM_WITH_COUNT(item_id, count, type: "none", case: "nominative", cap: "false")
-    def fluent_item_with_count(item_id, count, **options)
-      type = options.fetch(:type, "none")
-      grammatical_case = options.fetch(:case, "nominative")
-      cap = options.fetch(:cap, "false")
+    # Fluent function: ITEM_WITH_COUNT - Returns a localized item name with count.
+    #
+    # @param item_id [String] the item identifier (e.g., "sword", "potion")
+    # @param count [Integer] the quantity of items
+    # @param type [String] article type (language-dependent)
+    # @param case [String] grammatical case (language-dependent)
+    # @param cap [String] capitalize first letter: "true" or "false"
+    # @return [String] the formatted item name with count (e.g., "3 swords", "a flask of potion")
+    # @note The trailing ** is required because Foxtail::Bundle passes additional
+    #   keyword arguments (e.g., locale:) that this function does not use.
+    def fluent_item_with_count(item_id, count, type: "none", case: "nominative", cap: "false", **)
+      grammatical_case = {case:}[:case]
 
       counter_term = resolve_counter_term(item_id)
 

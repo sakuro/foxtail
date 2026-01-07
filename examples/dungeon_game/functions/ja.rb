@@ -15,12 +15,34 @@ module ItemFunctions
       }
     end
 
-    # Fluent function: ITEM(item_id)
+    # Fluent function: ITEM - Returns a localized item name.
+    #
+    # Japanese items do not require articles or grammatical case handling,
+    # so this is a simplified version of the base class method.
+    #
+    # @param item_id [String] the item identifier (e.g., "sword", "potion")
+    # @return [String] the localized item name
+    # @note The trailing ** is required because Foxtail::Bundle passes additional
+    #   keyword arguments (e.g., locale:) that this function does not use.
     def fluent_item(item_id, **)
       resolve_item(item_id, 1, "nominative")
     end
 
-    # Fluent function: COUNT(item_id, count)
+    # Fluent function: COUNT - Returns a count with the appropriate counter word (助数詞).
+    #
+    # Japanese uses counter words that vary by item type (e.g., 振 for swords,
+    # 瓶 for bottles, 個 as default).
+    #
+    # This is a separate function from ITEM because in Japanese, counts and item
+    # names are often separated by context-dependent particles (e.g., "剣を3振",
+    # "3振の剣"). Unlike Western languages where "3 swords" is a fixed phrase,
+    # Japanese sentence structure requires flexible positioning of counts.
+    #
+    # @param item_id [String] the item identifier used to determine the counter word
+    # @param count [Integer] the quantity of items
+    # @return [String] the formatted count with counter word (e.g., "3振", "1瓶")
+    # @note The trailing ** is required because Foxtail::Bundle passes additional
+    #   keyword arguments (e.g., locale:) that this function does not use.
     def fluent_count(item_id, count, **)
       format_count(item_id, count)
     end
