@@ -43,11 +43,6 @@ inherit_from: .rubocop_todo.yml
 Layout/LineLength:
   Enabled: false
 
-# Duplicate branches provide intentional fallback behavior for robustness
-Lint/DuplicateBranch:
-  Exclude:
-    - 'lib/foxtail/bundle/parser.rb'              # parse_indent: blank line and continuation return same hash
-
 # Parser logic requires deep nesting for comment attachment handling
 Metrics/BlockNesting:
   Exclude:

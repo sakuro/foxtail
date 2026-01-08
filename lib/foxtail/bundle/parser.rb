@@ -267,15 +267,12 @@ module Foxtail
 
         # Check if this continues the pattern
         char = @source[@cursor]
-        if char.nil? || char == "\n" || char == "\r"
-          # Blank line or continuation
-          {value: blank + spaces, length: spaces.length}
-        elsif char == "}" || char == "." || char == "[" || char == "*"
+        if char == "}" || char == "." || char == "[" || char == "*"
           # Special characters that end patterns
           @cursor = start
           nil
         else
-          # Continuation
+          # Blank line or continuation
           {value: blank + spaces, length: spaces.length}
         end
       end
