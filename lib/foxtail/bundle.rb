@@ -52,13 +52,13 @@ module Foxtail
     # @example Basic bundle creation
     #   locale = ICU4X::Locale.parse("en-US")
     #   bundle = Foxtail::Bundle.new(locale)
-    def initialize(locale, functions: Function.defaults, use_isolating: true, transform: nil)
+    def initialize(locale, functions: {}, use_isolating: true, transform: nil)
       raise ArgumentError, "locale must be an ICU4X::Locale instance, got: #{locale.class}" unless locale.is_a?(ICU4X::Locale)
 
       @locale = locale
       @messages = {}  # id → Bundle::Parser::AST Message
       @terms = {}     # id → Bundle::Parser::AST Term
-      @functions = functions
+      @functions = Function.defaults.merge(functions)
       @use_isolating = use_isolating
       @transform = transform
     end

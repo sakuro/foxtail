@@ -32,30 +32,35 @@ RSpec.describe Foxtail::Bundle do
     end
 
     it "accepts custom options" do
-      functions = {"NUMBER" => ->(val, _opts) { val.to_s }}
       locale = ICU4X::Locale.parse("en")
       bundle = Foxtail::Bundle.new(
         locale,
-        functions:,
         use_isolating: false,
         transform: :some_transform
       )
 
-      expect(bundle.functions).to eq(functions)
       expect(bundle.use_isolating?).to be false
       expect(bundle.transform).to eq(:some_transform)
     end
 
-    it "accepts merged functions with defaults" do
+    it "merges custom functions with defaults" do
       custom_function = ->(_val, _opts) { "custom" }
-      merged_functions = Foxtail::Function.defaults.merge("CUSTOM" => custom_function)
       locale = ICU4X::Locale.parse("en")
-      bundle = Foxtail::Bundle.new(locale, functions: merged_functions)
+      bundle = Foxtail::Bundle.new(locale, functions: {"CUSTOM" => custom_function})
 
       expect(bundle.functions).to have_key("NUMBER")
       expect(bundle.functions).to have_key("DATETIME")
       expect(bundle.functions).to have_key("CUSTOM")
       expect(bundle.functions["CUSTOM"]).to eq(custom_function)
+    end
+
+    it "allows overriding default functions" do
+      custom_number = ->(val, _opts) { "custom:#{val}" }
+      locale = ICU4X::Locale.parse("en")
+      bundle = Foxtail::Bundle.new(locale, functions: {"NUMBER" => custom_number})
+
+      expect(bundle.functions["NUMBER"]).to eq(custom_number)
+      expect(bundle.functions).to have_key("DATETIME")
     end
   end
 

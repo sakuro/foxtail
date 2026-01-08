@@ -57,10 +57,8 @@ def create_bundle(locale, locales_dir)
     items_bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
   end
 
-  custom_functions = Foxtail::Function.defaults.merge(ItemFunctions.functions_for_locale(locale, items_bundle))
-
   # Messages bundle loads: messages
-  messages_bundle = Foxtail::Bundle.new(locale, functions: custom_functions, use_isolating: false)
+  messages_bundle = Foxtail::Bundle.new(locale, functions: ItemFunctions.functions_for_locale(locale, items_bundle), use_isolating: false)
   messages_bundle.add_resource(
     Foxtail::Resource.from_file(locale_dir.join("messages.ftl"))
   )
