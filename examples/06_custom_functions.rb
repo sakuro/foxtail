@@ -25,13 +25,10 @@ custom_functions = {
   "REVERSE" => ->(value, **_opts) { value.to_s.reverse }
 }
 
-# Merge with default functions (NUMBER, DATETIME) to keep them available
-all_functions = Foxtail::Function.defaults.merge(custom_functions)
-
 # Create bundle with merged functions
 bundle = Foxtail::Bundle.new(
   ICU4X::Locale.parse("en-US"),
-  functions: all_functions,
+  functions: custom_functions,
   use_isolating: false
 )
 
