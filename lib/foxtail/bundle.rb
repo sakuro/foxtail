@@ -22,11 +22,10 @@ module Foxtail
   #   result = bundle.format("hello", name: "World")
   #   # => "Hello, World!"
   #
-  # @example With custom functions
-  #   functions = Foxtail::Function.defaults.merge(
+  # @example With custom functions (auto-merged with defaults)
+  #   bundle = Foxtail::Bundle.new(locale, functions: {
   #     "UPPER" => ->(str, **_opts) { str.upcase }
-  #   )
-  #   bundle = Foxtail::Bundle.new(locale, functions: functions)
+  #   })
   #
   # Corresponds to fluent-bundle/src/bundle.ts in the original JavaScript implementation.
   class Bundle
