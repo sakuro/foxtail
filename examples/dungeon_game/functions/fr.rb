@@ -7,7 +7,6 @@ module ItemFunctions
   # Provides article selection with elision handling (le/la → l' before vowels),
   # with support for h aspiré exceptions via .elision attribute.
   class Fr < Base
-    # L1: entry points from Base (alphabetical)
     private def format_article_counter_item(article, counter, item, counter_elision: false)
       unless article
         term = @items_bundle.term("-fmt-counter-item")
@@ -67,7 +66,6 @@ module ItemFunctions
       end
     end
 
-    # L2: called by L1 (alphabetical)
     private def resolve_article_for_counter(counter_term, gender, count, type, _grammatical_case)
       elision = should_elide_counter?(counter_term, count)
 
@@ -125,7 +123,6 @@ module ItemFunctions
       starts_with_vowel?(item)
     end
 
-    # L3: called by L2 (alphabetical)
     private def should_elide_counter?(counter_term, count)
       if counter_term.attributes&.key?("elision")
         return counter_term.attributes["elision"] != "false"

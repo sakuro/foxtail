@@ -44,11 +44,6 @@ module ItemFunctions
     # @note The trailing ** is required because Foxtail::Bundle passes additional
     #   keyword arguments (e.g., locale:) that this function does not use.
     def fluent_count(item_id, count, **)
-      format_count(item_id, count)
-    end
-
-    # "3組", "1瓶"
-    def format_count(item_id, count)
       counter = resolve_counter(item_id, count)
       "#{count}#{counter || "個"}"
     end

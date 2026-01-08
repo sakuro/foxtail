@@ -7,7 +7,6 @@ module ItemFunctions
   # Provides article declension based on grammatical gender (masculine, feminine, neuter),
   # number (singular, plural), and case (nominative, accusative, dative, genitive).
   class De < Base
-    # L1: entry points from Base (alphabetical)
     private def resolve_article(item_id, count, type, grammatical_case)
       return nil if type == "none"
       # Indefinite only for singular
@@ -44,7 +43,6 @@ module ItemFunctions
       )
     end
 
-    # L2: called by L1
     private def resolve_gender(item_id)
       term = @items_bundle.term("-#{item_id}")
       term&.attributes&.dig("gender")

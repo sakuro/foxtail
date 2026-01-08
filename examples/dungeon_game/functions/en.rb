@@ -7,7 +7,6 @@ module ItemFunctions
   # Provides indefinite article selection (a/an) based on first letter,
   # with support for explicit overrides via .indef attribute.
   class En < Base
-    # L1: entry points from Base (alphabetical)
     private def resolve_article(item_id, count, type, _grammatical_case=nil)
       return nil if type == "none"
       # Indefinite only for singular
@@ -28,7 +27,6 @@ module ItemFunctions
       end
     end
 
-    # L2: called by L1 (alphabetical)
     private def resolve_definite_article
       term = @items_bundle.term("-def-article")
       return "the" unless term
@@ -63,7 +61,6 @@ module ItemFunctions
       @items_bundle.format_pattern(term.value, first_letter:)
     end
 
-    # L3: utility
     # Extract first letter, handling accented characters via NFD normalization
     # e.g., "élixir" → NFD → "e" + combining accent → first char "e"
     private def extract_first_letter(str)
