@@ -33,13 +33,13 @@ module ItemFunctions
   }.freeze
   private_constant :LANGUAGE_CLASSES
 
-  # Create language-specific function handler
+  # Create language-specific custom functions
   # @param locale [ICU4X::Locale] The locale
   # @param items_bundle [Foxtail::Bundle] The bundle containing item terms
-  # @return [Base] Language-specific handler instance
-  def self.for_locale(locale, items_bundle)
+  # @return [Hash{String => #call}] Custom functions for the locale
+  def self.functions_for_locale(locale, items_bundle)
     klass = LANGUAGE_CLASSES.fetch(locale.to_s, Base)
-    klass.new(items_bundle)
+    klass.new(items_bundle).functions
   end
 end
 
@@ -57,8 +57,7 @@ def create_bundle(locale, locales_dir)
     items_bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
   end
 
-  handler = ItemFunctions.for_locale(locale, items_bundle)
-  custom_functions = Foxtail::Function.defaults.merge(handler.functions)
+  custom_functions = Foxtail::Function.defaults.merge(ItemFunctions.functions_for_locale(locale, items_bundle))
 
   # Messages bundle loads: messages
   messages_bundle = Foxtail::Bundle.new(locale, functions: custom_functions, use_isolating: false)
