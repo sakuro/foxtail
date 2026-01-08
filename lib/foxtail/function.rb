@@ -57,7 +57,7 @@ module Foxtail
         when :maximumFractionDigits
           result[:maximum_fraction_digits] = Integer(value)
         when :useGrouping
-          result[:use_grouping] = !!value
+          result[:use_grouping] = value
         end
       end
 

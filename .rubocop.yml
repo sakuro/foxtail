@@ -84,10 +84,6 @@ Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/syntax/parser/stream.rb'       # Internal stream processing utilities
 
-# Double negation is idiomatic for boolean coercion
-Style/DoubleNegation:
-  Enabled: false
-
 # Case statements don't always need else clauses when all cases are handled
 # or when unhandled cases should be ignored intentionally
 Style/MissingElse:
