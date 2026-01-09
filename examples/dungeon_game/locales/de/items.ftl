@@ -98,6 +98,25 @@
             }
     }
     .gender = neuter
+# Goldmünze (feminine)
+-gold-coin =
+    { $count ->
+        [one]
+            { $case ->
+               *[nominative] Goldmünze
+                [accusative] Goldmünze
+                [dative] Goldmünze
+                [genitive] Goldmünze
+            }
+       *[other]
+            { $case ->
+               *[nominative] Goldmünzen
+                [accusative] Goldmünzen
+                [dative] Goldmünzen
+                [genitive] Goldmünzen
+            }
+    }
+    .gender = feminine
 
 ## Items with counters
 

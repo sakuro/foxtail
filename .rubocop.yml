@@ -48,6 +48,11 @@ Metrics/BlockNesting:
   Exclude:
     - 'lib/foxtail/syntax/parser.rb'
 
+# Example code may have complex function signatures for demonstration purposes
+Metrics/ParameterLists:
+  Exclude:
+    - 'examples/dungeon_game/functions/*.rb'
+
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
   AllowedNames:

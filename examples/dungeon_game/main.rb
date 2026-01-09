@@ -5,6 +5,7 @@
 # This example demonstrates:
 # - Two-layer bundle architecture (Items Bundle + Messages Bundle)
 # - Custom functions (ITEM, ITEM_WITH_COUNT) for dynamic item localization
+# - Locale-aware number formatting using ICU4X (1,000 vs 1.000 vs 1 000)
 # - German grammatical cases (nominative, accusative, dative, genitive)
 # - German grammatical gender (masculine, feminine, neuter)
 # - French elision (l'épée vs la hache)
@@ -73,8 +74,8 @@ puts "=== Dungeon Game Localization Demo ==="
 puts
 
 # Test items (including counter items)
-items = %w[dagger axe sword hammer herb gauntlet healing-potion elixir]
-counts = [1, 3]
+items = %w[dagger axe sword hammer herb gold-coin gauntlet healing-potion elixir]
+counts = [1, 3, 1000]
 
 # Language bundles
 en = TARGET_LOCALES["en"]

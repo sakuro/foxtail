@@ -40,12 +40,11 @@ module ItemFunctions
     #
     # @param item_id [String] the item identifier used to determine the counter word
     # @param count [Integer] the quantity of items
+    # @param locale [ICU4X::Locale] the locale for number formatting
     # @return [String] the formatted count with counter word (e.g., "3振", "1瓶")
-    # @note The trailing ** is required because Foxtail::Bundle passes additional
-    #   keyword arguments (e.g., locale:) that this function does not use.
-    def fluent_count(item_id, count, **)
+    def fluent_count(item_id, count, locale:, **)
       counter = resolve_counter(item_id, count)
-      "#{count}#{counter || "個"}"
+      "#{format_count(count, locale)}#{counter || "個"}"
     end
 
     private def resolve_counter(item_id, count)

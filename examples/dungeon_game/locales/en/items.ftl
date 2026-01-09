@@ -28,6 +28,11 @@
         [one] herb
        *[other] herbs
     }
+-gold-coin =
+    { $count ->
+        [one] gold coin
+       *[other] gold coins
+    }
 
 ## Items with counters
 
