@@ -380,4 +380,72 @@ RSpec.describe Foxtail::Bundle::Resolver do
       expect(result).to eq("Hello, World!")
     end
   end
+
+  describe "implicit function calling" do
+    describe "NUMBER for numeric types" do
+      it "applies NUMBER implicitly for Integer variables" do
+        scope_with_int = Foxtail::Bundle::Scope.new(bundle, count: 1000)
+        pattern = ["Count: ", ast::VariableReference[name: "count"]]
+        result = resolver.resolve_pattern(pattern, scope_with_int)
+        expect(result).to eq("Count: 1,000")
+      end
+
+      it "applies NUMBER implicitly for Float variables" do
+        scope_with_float = Foxtail::Bundle::Scope.new(bundle, price: 1234.56)
+        pattern = ["Price: ", ast::VariableReference[name: "price"]]
+        result = resolver.resolve_pattern(pattern, scope_with_float)
+        expect(result).to eq("Price: 1,234.56")
+      end
+
+      it "applies NUMBER implicitly for BigDecimal variables" do
+        require "bigdecimal"
+        scope_with_decimal = Foxtail::Bundle::Scope.new(bundle, amount: BigDecimal("9999.99"))
+        pattern = ["Amount: ", ast::VariableReference[name: "amount"]]
+        result = resolver.resolve_pattern(pattern, scope_with_decimal)
+        expect(result).to eq("Amount: 9,999.99")
+      end
+
+      it "does not apply NUMBER for non-numeric variables" do
+        scope_with_string = Foxtail::Bundle::Scope.new(bundle, name: "Alice")
+        pattern = ["Name: ", ast::VariableReference[name: "name"]]
+        result = resolver.resolve_pattern(pattern, scope_with_string)
+        expect(result).to eq("Name: Alice")
+      end
+    end
+
+    describe "DATETIME for time types" do
+      it "applies DATETIME implicitly for Time variables" do
+        time = Time.utc(2024, 6, 15, 10, 30, 0)
+        scope_with_time = Foxtail::Bundle::Scope.new(bundle, date: time)
+        pattern = ["Date: ", ast::VariableReference[name: "date"]]
+        result = resolver.resolve_pattern(pattern, scope_with_time)
+        expect(result).to include("Jun")
+        expect(result).to include("2024")
+      end
+
+      it "applies DATETIME implicitly for Date variables (responds to #to_time)" do
+        require "date"
+        date = Date.new(2024, 6, 15)
+        scope_with_date = Foxtail::Bundle::Scope.new(bundle, date:)
+        pattern = ["Date: ", ast::VariableReference[name: "date"]]
+        result = resolver.resolve_pattern(pattern, scope_with_date)
+        expect(result).to include("Jun")
+        expect(result).to include("2024")
+      end
+    end
+
+    describe "preserves raw values for selectors" do
+      it "uses raw numeric value for select expression matching" do
+        bundle.add_resource(Foxtail::Resource.from_string(<<~FTL))
+          emails = { $count ->
+              [0] No emails
+              [one] One email
+             *[other] { $count } emails
+          }
+        FTL
+        result = bundle.format("emails", count: 1)
+        expect(result).to eq("One email")
+      end
+    end
+  end
 end

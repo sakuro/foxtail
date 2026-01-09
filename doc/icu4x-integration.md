@@ -165,6 +165,31 @@ bundle.format("meeting", time: Time.new(2026, 1, 4, 14, 30))
 # => "Meeting at 2:30 PM"
 ```
 
+### Implicit Function Calling
+
+Per the [Fluent specification](https://github.com/projectfluent/fluent/blob/main/guide/functions.md), numeric and time variables automatically receive locale-aware formatting when used in placeables:
+
+```ftl
+# Implicit NUMBER formatting - equivalent to { NUMBER($count) }
+emails = You have { $count } emails.
+
+# Implicit DATETIME formatting - equivalent to { DATETIME($date) }
+created = Created on { $date }.
+```
+
+```ruby
+bundle.format("emails", count: 1000)  # "You have 1,000 emails."
+
+time = Time.new(2025, 1, 4)
+bundle.format("created", date: time)  # "Created on Jan 4, 2025."
+```
+
+**Supported types for implicit formatting:**
+- NUMBER: `Integer`, `Float`, `BigDecimal`
+- DATETIME: `Time`, or any object responding to `#to_time` (e.g., `Date`)
+
+Use explicit function calls when you need specific formatting options (currency, percent, date/time styles, etc.).
+
 ## Plural Rules
 
 Foxtail uses ICU4X plural rules for select expressions with numeric selectors.

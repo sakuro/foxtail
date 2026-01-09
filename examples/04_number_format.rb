@@ -3,45 +3,44 @@
 # Example 04: Number Formatting
 #
 # This example demonstrates:
-# - NUMBER function for locale-aware formatting
-# - Currency formatting
-# - Percentage formatting
-# - Decimal digit control
+# - Implicit NUMBER formatting for numeric variables
+# - Explicit NUMBER function for currency, percent, and precision options
+# - Locale-aware formatting
 
 require "foxtail"
 
 # English (US)
 en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 en_resource = Foxtail::Resource.from_string(<<~FTL)
-  # Basic number formatting
-  count = Total: { NUMBER($value) }
-  # Currency formatting
+  # Implicit NUMBER formatting (automatically applied to numeric variables)
+  count = Total: { $value }
+  # Currency formatting (requires explicit NUMBER with options)
   price = Price: { NUMBER($amount, style: "currency", currency: "USD") }
-  # Percentage
+  # Percentage (requires explicit NUMBER with options)
   discount = Save { NUMBER($rate, style: "percent") }!
-  # Controlling decimal places
+  # Controlling decimal places (requires explicit NUMBER with options)
   precise = Value: { NUMBER($num, minimumFractionDigits: 2, maximumFractionDigits: 2) }
-  # Large numbers with grouping
-  population = Population: { NUMBER($count) }
+  # Large numbers with implicit grouping
+  population = Population: { $count }
 FTL
 en_bundle.add_resource(en_resource)
 
 # Japanese
 ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
 ja_resource = Foxtail::Resource.from_string(<<~FTL)
-  # Currency in Yen
+  # Currency in Yen (requires explicit NUMBER with options)
   price = 価格：{ NUMBER($amount, style: "currency", currency: "JPY") }
-  # Percentage
+  # Percentage (requires explicit NUMBER with options)
   discount = { NUMBER($rate, style: "percent") }オフ！
-  # Large numbers
-  population = 人口：{ NUMBER($count) }人
+  # Large numbers with implicit grouping
+  population = 人口：{ $count }人
 FTL
 ja_bundle.add_resource(ja_resource)
 
 puts "=== English (US) ==="
 
-puts en_bundle.format("count", value: 42)
-# => Total: 42
+puts en_bundle.format("count", value: 1234)
+# => Total: 1,234
 
 puts en_bundle.format("price", amount: 1234.50)
 # => Price: $1,234.50
