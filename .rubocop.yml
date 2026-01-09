@@ -43,15 +43,13 @@ inherit_from: .rubocop_todo.yml
 Layout/LineLength:
   Enabled: false
 
-# Parser logic requires deep nesting for comment attachment handling
+# Parser requires deeper nesting for comment attachment handling
 Metrics/BlockNesting:
-  Exclude:
-    - 'lib/foxtail/syntax/parser.rb'
+  Max: 4
 
-# Example code may have complex function signatures for demonstration purposes
+# Custom functions in examples have complex signatures for localization features
 Metrics/ParameterLists:
-  Exclude:
-    - 'examples/dungeon_game/functions/*.rb'
+  Max: 7
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
