@@ -16,7 +16,7 @@ module Foxtail
     end
 
     # Format number using ICU4X
-    # @param value [Numeric] Number to format
+    # @param value [Integer, Float, BigDecimal] Number to format
     # @param locale [ICU4X::Locale] Locale for formatting
     # @param options [Hash] Formatting options (camelCase keys)
     # @return [String] Formatted number
@@ -26,7 +26,7 @@ module Foxtail
     end
 
     # Format datetime using ICU4X
-    # @param value [Time] Time to format
+    # @param value [Time, #to_time] Time or object responding to #to_time
     # @param locale [ICU4X::Locale] Locale for formatting
     # @param options [Hash] Formatting options (camelCase keys)
     # @return [String] Formatted datetime

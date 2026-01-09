@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "bigdecimal"
+
 module Foxtail
   class Bundle
     # Pattern resolution engine
@@ -51,7 +53,12 @@ module Foxtail
           # For numeric values in patterns, format for display
           formatted = element.precision > 0 ? format_number(result, element.precision) : result.to_s
           wrap_with_isolation(formatted, use_isolating)
-        when Parser::AST::StringLiteral, Parser::AST::VariableReference, Parser::AST::TermReference,
+        when Parser::AST::VariableReference
+          # Apply implicit NUMBER/DATETIME formatting for variables at display time
+          result = resolve_expression(element, scope)
+          formatted = apply_implicit_function(result)
+          wrap_with_isolation(formatted.to_s, use_isolating)
+        when Parser::AST::StringLiteral, Parser::AST::TermReference,
              Parser::AST::MessageReference, Parser::AST::FunctionReference, Parser::AST::SelectExpression
 
           result = resolve_expression(element, scope)
@@ -103,6 +110,7 @@ module Foxtail
       end
 
       # Resolve variable references
+      # Returns raw value; implicit formatting is applied at display time
       private def resolve_variable_reference(expr, scope)
         name = expr.name
 
@@ -112,10 +120,46 @@ module Foxtail
           scope.add_error("Unknown variable: $#{name}")
           "{$#{name}}"
         else
-          # Return the raw value, not string representation
-          # String conversion should happen at display time
           value
         end
+      end
+
+      # Apply implicit function based on value type
+      # Returns formatted string for numeric/time types, raw value otherwise
+      private def apply_implicit_function(value)
+        if implicit_number_type?(value)
+          apply_implicit_number(value)
+        elsif implicit_datetime_type?(value)
+          apply_implicit_datetime(value)
+        else
+          value
+        end
+      end
+
+      # Check if value should have NUMBER implicitly applied
+      private def implicit_number_type?(value) = value.is_a?(Integer) || value.is_a?(Float) || value.is_a?(BigDecimal)
+
+      # Check if value should have DATETIME implicitly applied
+      private def implicit_datetime_type?(value) = value.is_a?(Time) || value.respond_to?(:to_time)
+
+      # Apply NUMBER function implicitly
+      private def apply_implicit_number(value)
+        func = @bundle.functions["NUMBER"]
+        return value unless func
+
+        func.call(value, locale: @bundle.locale)
+      rescue
+        value
+      end
+
+      # Apply DATETIME function implicitly
+      private def apply_implicit_datetime(value)
+        func = @bundle.functions["DATETIME"]
+        return value unless func
+
+        func.call(value, locale: @bundle.locale)
+      rescue
+        value
       end
 
       # Resolve term references
