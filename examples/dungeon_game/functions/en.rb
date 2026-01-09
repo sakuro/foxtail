@@ -36,7 +36,7 @@ module ItemFunctions
 
     private def resolve_indefinite_article(item_id, count)
       # Check explicit .indef attribute first
-      item_term = @items_bundle.term("-#{item_id}")
+      item_term = @items_bundle.term(item_id)
       return item_term.attributes["indef"] if item_term&.attributes&.key?("indef")
 
       # Use FTL term with first_letter selector

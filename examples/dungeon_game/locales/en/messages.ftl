@@ -7,17 +7,19 @@
 #
 # ITEM($item, $count, type, cap)
 #   Returns article + item name.
+#   - $item: Item term reference (e.g., "-sword", "-axe")
 #   - type: "indefinite" (a/an), "definite" (the), or "none" (default: "indefinite")
-#   Example: { ITEM("axe", type: "indefinite") } → "an axe"
-#   Example: { ITEM("sword", type: "definite") } → "the sword"
+#   Example: { ITEM("-axe", type: "indefinite") } → "an axe"
+#   Example: { ITEM("-sword", type: "definite") } → "the sword"
 #
 # ITEM_WITH_COUNT($item, $count, type, cap)
 #   Returns count + item, using counters when available.
 #   For items with counters (e.g., gauntlet → pair), uses counter-based format.
+#   - $item: Item term reference (e.g., "-sword", "-gauntlet")
 #   - type: "indefinite", "definite", or "none" (default: "none")
-#   Example: { ITEM_WITH_COUNT("sword", 3) } → "3 swords"
-#   Example: { ITEM_WITH_COUNT("gauntlet", 1, type: "indefinite") } → "a pair of gauntlets"
-#   Example: { ITEM_WITH_COUNT("healing-potion", 3) } → "3 flasks of healing potion"
+#   Example: { ITEM_WITH_COUNT("-sword", 3) } → "3 swords"
+#   Example: { ITEM_WITH_COUNT("-gauntlet", 1, type: "indefinite") } → "a pair of gauntlets"
+#   Example: { ITEM_WITH_COUNT("-healing-potion", 3) } → "3 flasks of healing potion"
 #
 # Note: The `cap: "true"` parameter is used when the function result appears
 # at sentence start. This is a pragmatic workaround since Fluent does not

@@ -73,8 +73,8 @@ locales_dir = Pathname.new(__dir__).join("locales")
 puts "=== Dungeon Game Localization Demo ==="
 puts
 
-# Test items (including counter items)
-items = %w[dagger axe sword hammer herb gold-coin gauntlet healing-potion elixir]
+# Test items (including counter items) - passed as term references with - prefix
+items = %w[-dagger -axe -sword -hammer -herb -gold-coin -gauntlet -healing-potion -elixir]
 counts = [1, 3, 1000]
 
 # Language bundles
@@ -90,7 +90,7 @@ bundles.each do |lang, bundle|
   message_ids.each do |message_id|
     puts "#{message_id}:"
     if message_id == "attack-with-item"
-      puts "  #{bundle.format(message_id, item: "sword")}"
+      puts "  #{bundle.format(message_id, item: "-sword")}"
     else
       items.each do |item|
         counts.each do |count|
@@ -106,29 +106,29 @@ end
 de_bundle = bundles["de"]
 puts "=== German Grammatical Cases ==="
 puts
-puts "Nominative (subject): #{de_bundle.format("item-is-here", item: "sword", count: 1)}"
-puts "Accusative (direct object): #{de_bundle.format("found-item", item: "sword", count: 1)}"
-puts "Dative (with preposition): #{de_bundle.format("attack-with-item", item: "sword")}"
+puts "Nominative (subject): #{de_bundle.format("item-is-here", item: "-sword", count: 1)}"
+puts "Accusative (direct object): #{de_bundle.format("found-item", item: "-sword", count: 1)}"
+puts "Dative (with preposition): #{de_bundle.format("attack-with-item", item: "-sword")}"
 puts
 
 # Demonstrate gender differences in German
 puts "=== German Grammatical Gender ==="
 puts
-puts "Masculine (der Dolch): #{de_bundle.format("found-item", item: "dagger", count: 1)}"
-puts "Feminine (die Axt): #{de_bundle.format("found-item", item: "axe", count: 1)}"
-puts "Neuter (das Schwert): #{de_bundle.format("found-item", item: "sword", count: 1)}"
+puts "Masculine (der Dolch): #{de_bundle.format("found-item", item: "-dagger", count: 1)}"
+puts "Feminine (die Axt): #{de_bundle.format("found-item", item: "-axe", count: 1)}"
+puts "Neuter (das Schwert): #{de_bundle.format("found-item", item: "-sword", count: 1)}"
 puts
 
 # Demonstrate French elision
 fr_bundle = bundles["fr"]
 puts "=== French Elision ==="
 puts
-puts "With elision - vowel (l'épée): #{fr_bundle.format("item-is-here", item: "sword", count: 1)}"
-puts "With elision - h muet (l'herbe): #{fr_bundle.format("item-is-here", item: "herb", count: 1)}"
-puts "Without elision - h aspiré (la hache): #{fr_bundle.format("item-is-here", item: "axe", count: 1)}"
-puts "Without elision - consonant (le poignard): #{fr_bundle.format("item-is-here", item: "dagger", count: 1)}"
+puts "With elision - vowel (l'épée): #{fr_bundle.format("item-is-here", item: "-sword", count: 1)}"
+puts "With elision - h muet (l'herbe): #{fr_bundle.format("item-is-here", item: "-herb", count: 1)}"
+puts "Without elision - h aspiré (la hache): #{fr_bundle.format("item-is-here", item: "-axe", count: 1)}"
+puts "Without elision - consonant (le poignard): #{fr_bundle.format("item-is-here", item: "-dagger", count: 1)}"
 puts
 puts "=== French Counter Elision ==="
 puts
-puts "Counter + consonant (fiole de potion): #{fr_bundle.format("found-item", item: "healing-potion", count: 1)}"
-puts "Counter + vowel (fiole d'élixir): #{fr_bundle.format("found-item", item: "elixir", count: 1)}"
+puts "Counter + consonant (fiole de potion): #{fr_bundle.format("found-item", item: "-healing-potion", count: 1)}"
+puts "Counter + vowel (fiole d'élixir): #{fr_bundle.format("found-item", item: "-elixir", count: 1)}"

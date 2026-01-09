@@ -44,7 +44,7 @@ module ItemFunctions
     end
 
     private def resolve_gender(item_id)
-      term = @items_bundle.term("-#{item_id}")
+      term = @items_bundle.term(item_id)
       term&.attributes&.dig("gender")
     end
   end

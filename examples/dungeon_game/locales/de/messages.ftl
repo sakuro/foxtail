@@ -7,15 +7,17 @@
 #
 # ITEM($item, $count, type, case, cap)
 #   Returns article + item name with gender/case agreement.
+#   - $item: Item term reference (e.g., "-sword", "-axe")
 #   - type: "indefinite" (ein/eine), "definite" (der/die/das), "none" (default: "indefinite")
-#   Example: { ITEM("sword", type: "definite", case: "dative") } → "dem Schwert"
-#   Example: { ITEM("axe", type: "indefinite", case: "accusative") } → "eine Axt"
+#   Example: { ITEM("-sword", type: "definite", case: "dative") } → "dem Schwert"
+#   Example: { ITEM("-axe", type: "indefinite", case: "accusative") } → "eine Axt"
 #
 # ITEM_WITH_COUNT($item, $count, type, case, cap)
 #   Returns count + item, using counters when available.
+#   - $item: Item term reference (e.g., "-sword", "-gauntlet")
 #   - type: "indefinite", "definite", or "none" (default: "none")
-#   Example: { ITEM_WITH_COUNT("sword", 3, case: "accusative") } → "3 Schwerter"
-#   Example: { ITEM_WITH_COUNT("gauntlet", 1, type: "indefinite") } → "ein Paar Panzerhandschuhe"
+#   Example: { ITEM_WITH_COUNT("-sword", 3, case: "accusative") } → "3 Schwerter"
+#   Example: { ITEM_WITH_COUNT("-gauntlet", 1, type: "indefinite") } → "ein Paar Panzerhandschuhe"
 #
 # German grammatical cases:
 #   - nominative: Subject of the sentence (Der Dolch ist hier.)

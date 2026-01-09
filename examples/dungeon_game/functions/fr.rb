@@ -56,7 +56,7 @@ module ItemFunctions
     private def resolve_article(item_id, count, type, _grammatical_case=nil)
       return nil if type == "none"
 
-      term = @items_bundle.term("-#{item_id}")
+      term = @items_bundle.term(item_id)
       gender = term&.attributes&.dig("gender") || "masculine"
       elision = should_elide?(term, item_id, count)
 
@@ -112,7 +112,7 @@ module ItemFunctions
     end
 
     private def should_elide_for_item?(item_id)
-      term = @items_bundle.term("-#{item_id}")
+      term = @items_bundle.term(item_id)
 
       # Check explicit .elision attribute first
       if term&.attributes&.key?("elision")

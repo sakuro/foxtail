@@ -20,7 +20,7 @@ module ItemFunctions
     # Japanese items do not require articles or grammatical case handling,
     # so this is a simplified version of the base class method.
     #
-    # @param item_id [String] the item identifier (e.g., "sword", "potion")
+    # @param item_id [String] the item term reference (e.g., "-sword", "-potion")
     # @return [String] the localized item name
     # @note The trailing ** is required because Foxtail::Bundle passes additional
     #   keyword arguments (e.g., locale:) that this function does not use.
@@ -38,7 +38,7 @@ module ItemFunctions
     # "3振の剣"). Unlike Western languages where "3 swords" is a fixed phrase,
     # Japanese sentence structure requires flexible positioning of counts.
     #
-    # @param item_id [String] the item identifier used to determine the counter word
+    # @param item_id [String] the item term reference used to determine the counter word
     # @param count [Integer] the quantity of items
     # @param locale [ICU4X::Locale] the locale for number formatting
     # @return [String] the formatted count with counter word (e.g., "3振", "1瓶")
@@ -63,7 +63,7 @@ module ItemFunctions
     end
 
     private def resolve_counter_attr(item_id)
-      term = @items_bundle.term("-#{item_id}")
+      term = @items_bundle.term(item_id)
       return nil unless term&.attributes&.dig("counter")
 
       counter_attr = term.attributes["counter"]

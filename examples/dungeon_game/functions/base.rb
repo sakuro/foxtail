@@ -37,7 +37,7 @@ module ItemFunctions
 
     # Fluent function: ITEM - Returns a localized item name with optional article.
     #
-    # @param item_id [String] the item identifier (e.g., "sword", "potion")
+    # @param item_id [String] the item term reference (e.g., "-sword", "-potion")
     # @param count [Integer] the quantity of items (affects pluralization and article)
     # @param type [String] article type (language-dependent)
     # @param case [String] grammatical case (language-dependent)
@@ -56,7 +56,7 @@ module ItemFunctions
 
     # Fluent function: ITEM_WITH_COUNT - Returns a localized item name with count.
     #
-    # @param item_id [String] the item identifier (e.g., "sword", "potion")
+    # @param item_id [String] the item term reference (e.g., "-sword", "-potion")
     # @param count [Integer] the quantity of items
     # @param type [String] article type (language-dependent)
     # @param case [String] grammatical case (language-dependent)
@@ -141,7 +141,7 @@ module ItemFunctions
     private def resolve_article_for_gender(_gender, _count, _type, _grammatical_case) = nil
 
     private def resolve_counter_term(item_id)
-      term = @items_bundle.term("-#{item_id}")
+      term = @items_bundle.term(item_id)
       return nil unless term&.attributes&.dig("counter")
 
       counter_attr = term.attributes["counter"]
@@ -152,7 +152,7 @@ module ItemFunctions
     end
 
     private def resolve_item(item_id, count, grammatical_case)
-      term = @items_bundle.term("-#{item_id}")
+      term = @items_bundle.term(item_id)
       return "{#{item_id}}" unless term
 
       @items_bundle.format_pattern(term.value, count:, case: grammatical_case)

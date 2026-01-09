@@ -7,18 +7,20 @@
 #
 # ITEM($item, $count, type, cap)
 #   Returns article + item name with gender agreement and elision.
+#   - $item: Item term reference (e.g., "-sword", "-axe")
 #   - type: "indefinite" (un/une), "definite" (le/la/l'), "none" (default: "indefinite")
-#   Example: { ITEM("sword", type: "definite") } → "l'épée" (elision)
-#   Example: { ITEM("axe", type: "definite") } → "la hache" (h aspiré, no elision)
-#   Example: { ITEM("dagger", type: "indefinite") } → "un poignard"
+#   Example: { ITEM("-sword", type: "definite") } → "l'épée" (elision)
+#   Example: { ITEM("-axe", type: "definite") } → "la hache" (h aspiré, no elision)
+#   Example: { ITEM("-dagger", type: "indefinite") } → "un poignard"
 #
 # ITEM_WITH_COUNT($item, $count, type, cap)
 #   Returns count + item, using counters when available.
 #   Counter elision is handled automatically (fiole de potion vs fiole d'élixir).
+#   - $item: Item term reference (e.g., "-sword", "-healing-potion")
 #   - type: "indefinite", "definite", or "none" (default: "none")
-#   Example: { ITEM_WITH_COUNT("sword", 3) } → "3 épées"
-#   Example: { ITEM_WITH_COUNT("healing-potion", 1, type: "indefinite") } → "une fiole de potion de soin"
-#   Example: { ITEM_WITH_COUNT("elixir", 1, type: "indefinite") } → "une fiole d'élixir"
+#   Example: { ITEM_WITH_COUNT("-sword", 3) } → "3 épées"
+#   Example: { ITEM_WITH_COUNT("-healing-potion", 1, type: "indefinite") } → "une fiole de potion de soin"
+#   Example: { ITEM_WITH_COUNT("-elixir", 1, type: "indefinite") } → "une fiole d'élixir"
 #
 # French elision notes:
 #   - Definite articles le/la become l' before vowels (l'épée)
