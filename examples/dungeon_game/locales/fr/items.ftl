@@ -39,6 +39,13 @@
     }
     .gender = feminine
     .elision = true
+# Pièce d'or (feminine)
+-gold-coin =
+    { $count ->
+        [one] pièce d'or
+       *[other] pièces d'or
+    }
+    .gender = feminine
 
 ## Items with counters
 

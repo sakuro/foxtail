@@ -33,7 +33,7 @@ module ItemFunctions
       @items_bundle.format_pattern(term.value, article:, item:, elision: elision.to_s)
     end
 
-    private def format_count_item_with_counter(counter_term, item_id, count, type, grammatical_case)
+    private def format_count_item_with_counter(counter_term, item_id, count, type, grammatical_case, locale)
       item = resolve_item(item_id, 1, grammatical_case)
       item_elision = should_elide_for_item?(item_id)
       counter = @items_bundle.format_pattern(counter_term.value, count:, elision: item_elision.to_s)
@@ -43,13 +43,14 @@ module ItemFunctions
         article = resolve_article_for_counter(counter_term, counter_gender, count, type, grammatical_case)
         format_article_counter_item(article, counter, item, counter_elision: item_elision)
       else
-        format_count_counter_item(count, counter, item, item_elision)
+        format_count_counter_item(count, counter, item, item_elision, locale)
       end
     end
 
-    private def format_count_counter_item(count, counter, item, elision)
+    private def format_count_counter_item(count, counter, item, elision, locale)
       term = @items_bundle.term("-fmt-count-counter-item")
-      @items_bundle.format_pattern(term.value, count:, counter:, item:, elision: elision.to_s)
+      formatted_count = format_count(count, locale)
+      @items_bundle.format_pattern(term.value, count: formatted_count, counter:, item:, elision: elision.to_s)
     end
 
     private def resolve_article(item_id, count, type, _grammatical_case=nil)

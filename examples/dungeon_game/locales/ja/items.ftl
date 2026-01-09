@@ -18,6 +18,8 @@
     .counter = 振
 -herb = 薬草
     .counter = 束
+-gold-coin = 金貨
+    .counter = 枚
 
 ## Items with counters
 
