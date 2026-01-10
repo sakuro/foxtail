@@ -313,12 +313,14 @@ Register custom formatting functions:
 
 ```ruby
 bundle = Foxtail::Bundle.new(locale, functions: {
-  "SHOUT" => ->(args, _opts, _scope) { args.first.to_s.upcase }
+  "SHOUT" => ->(text, **) { text.to_s.upcase }
 })
 
 # FTL: greeting = {SHOUT($name)}
 bundle.format("greeting", name: "hello") # => "HELLO"
 ```
+
+See [custom-functions.md](custom-functions.md) for a comprehensive guide on creating custom functions, including ICU4X integration and real-world examples.
 
 ## Integration with ICU4X
 
