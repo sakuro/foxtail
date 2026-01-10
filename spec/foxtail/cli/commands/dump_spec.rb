@@ -4,13 +4,15 @@ require "json"
 require "tempfile"
 
 RSpec.describe Foxtail::CLI::Commands::Dump do
-  subject(:command) { Foxtail::CLI::Commands::Dump.new }
+  let(:cli) { Dry.CLI(Foxtail::CLI::Commands::Dump.new) }
+  let(:out) { StringIO.new }
+  let(:err) { StringIO.new }
 
   describe "#call" do
     context "with no files" do
       it "raises NoFilesError" do
         expect {
-          command.call(files: [], with_spans: false)
+          cli.call(arguments: [], out:, err:)
         }.to raise_error(Foxtail::CLI::NoFilesError, "No files specified")
       end
     end
@@ -21,8 +23,8 @@ RSpec.describe Foxtail::CLI::Commands::Dump do
           f.write("hello = Hello, world!\n")
           f.flush
 
-          output = capture_stdout { command.call(files: [f.path], with_spans: false) }
-          result = JSON.parse(output)
+          cli.call(arguments: [f.path], out:, err:)
+          result = JSON.parse(out.string)
 
           expect(result["file"]).to eq(f.path)
           expect(result["ast"]["type"]).to eq("Resource")
@@ -36,8 +38,8 @@ RSpec.describe Foxtail::CLI::Commands::Dump do
           f.write("hello = Hi\n")
           f.flush
 
-          output = capture_stdout { command.call(files: [f.path], with_spans: false) }
-          result = JSON.parse(output)
+          cli.call(arguments: [f.path], out:, err:)
+          result = JSON.parse(out.string)
 
           expect(result["ast"]["body"].first).not_to have_key("span")
         end
@@ -48,8 +50,8 @@ RSpec.describe Foxtail::CLI::Commands::Dump do
           f.write("hello = Hi\n")
           f.flush
 
-          output = capture_stdout { command.call(files: [f.path], with_spans: true) }
-          result = JSON.parse(output)
+          cli.call(arguments: [f.path, "--with-spans"], out:, err:)
+          result = JSON.parse(out.string)
 
           expect(result["ast"]["body"].first["span"]).to include("start", "end")
         end
@@ -64,8 +66,8 @@ RSpec.describe Foxtail::CLI::Commands::Dump do
           File.write(en_path, "hello = Hello!\n")
           File.write(ja_path, "hello = こんにちは！\n")
 
-          output = capture_stdout { command.call(files: [en_path, ja_path], with_spans: false) }
-          result = JSON.parse(output)
+          cli.call(arguments: [en_path, ja_path], out:, err:)
+          result = JSON.parse(out.string)
 
           expect(result).to be_an(Array)
           expect(result.size).to eq(2)
@@ -81,22 +83,13 @@ RSpec.describe Foxtail::CLI::Commands::Dump do
           f.write("hello = Hi\nbad entry\n")
           f.flush
 
-          output = capture_stdout { command.call(files: [f.path], with_spans: false) }
-          result = JSON.parse(output)
+          cli.call(arguments: [f.path], out:, err:)
+          result = JSON.parse(out.string)
 
           types = result["ast"]["body"].map {|e| e["type"] }
           expect(types).to include("Junk")
         end
       end
     end
-  end
-
-  private def capture_stdout
-    original_stdout = $stdout
-    $stdout = StringIO.new
-    yield
-    $stdout.string
-  ensure
-    $stdout = original_stdout
   end
 end
