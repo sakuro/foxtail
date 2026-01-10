@@ -14,7 +14,8 @@ module Foxtail
   # Configure inflections for acronyms
   loader.inflector.inflect(
     "ast" => "AST",
-    "cli" => "CLI"
+    "cli" => "CLI",
+    "icu4x_cache" => "ICU4XCache"
   )
 
   loader.setup

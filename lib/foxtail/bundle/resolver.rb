@@ -358,7 +358,7 @@ module Foxtail
           end
 
         # Use bundle's locale for plural rules
-        plural_rules = ICU4X::PluralRules.new(@bundle.locale)
+        plural_rules = ICU4XCache.instance.plural_rules(@bundle.locale)
         plural_category = plural_rules.select(numeric_value).to_s
         key_str.to_s == plural_category
       rescue => e

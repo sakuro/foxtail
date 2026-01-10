@@ -22,7 +22,7 @@ module Foxtail
     # @return [String] Formatted number
     private_class_method def self.format_number(value, locale:, **options)
       icu_options = convert_number_options(options)
-      ICU4X::NumberFormat.new(locale, **icu_options).format(value)
+      ICU4XCache.instance.number_formatter(locale, **icu_options).format(value)
     end
 
     # Format datetime using ICU4X
@@ -35,7 +35,7 @@ module Foxtail
       # ICU4X requires at least one of date_style or time_style
       # Default to :medium for date if neither specified
       icu_options[:date_style] ||= :medium unless icu_options[:time_style]
-      ICU4X::DateTimeFormat.new(locale, **icu_options).format(value)
+      ICU4XCache.instance.datetime_formatter(locale, **icu_options).format(value)
     end
 
     # Convert FTL/JS style number options to ICU4X options
