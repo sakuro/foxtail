@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "icu4x"
+
 RSpec.describe Foxtail::Function do
   describe ".defaults" do
     it "returns callable ICU4X-based functions" do

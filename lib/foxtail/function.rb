@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "icu4x"
-
 module Foxtail
   # Built-in formatting functions for FTL
   # Uses ICU4X for number and datetime formatting
