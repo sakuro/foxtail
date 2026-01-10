@@ -34,9 +34,9 @@ module Foxtail
           end
 
           if json
-            puts JSON.pretty_generate(ids)
+            out.puts JSON.pretty_generate(ids)
           else
-            ids.each {|id| puts id }
+            ids.each {|id| out.puts id }
           end
         end
 

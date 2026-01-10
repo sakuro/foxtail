@@ -3,13 +3,15 @@
 require "tempfile"
 
 RSpec.describe Foxtail::CLI::Commands::Tidy do
-  subject(:command) { Foxtail::CLI::Commands::Tidy.new }
+  let(:cli) { Dry.CLI(Foxtail::CLI::Commands::Tidy.new) }
+  let(:out) { StringIO.new }
+  let(:err) { StringIO.new }
 
   describe "#call" do
     context "with no files" do
       it "raises NoFilesError" do
         expect {
-          command.call(files: [], write: false, check: false, diff: false, with_junk: false)
+          cli.call(arguments: [], out:, err:)
         }.to raise_error(Foxtail::CLI::NoFilesError, "No files specified")
       end
     end
@@ -20,9 +22,8 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.write("hello=Hello\n")
           f.flush
 
-          expect {
-            command.call(files: [f.path], write: false, check: false, diff: false, with_junk: false)
-          }.to output("hello = Hello\n").to_stdout
+          cli.call(arguments: [f.path], out:, err:)
+          expect(out.string).to eq("hello = Hello\n")
         end
       end
 
@@ -32,8 +33,9 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.flush
 
           expect {
-            command.call(files: [f.path], write: false, check: false, diff: false, with_junk: false)
-          }.to output("hello = Hello\n").to_stdout
+            cli.call(arguments: [f.path], out:, err:)
+          }.not_to raise_error
+          expect(out.string).to eq("hello = Hello\n")
         end
       end
     end
@@ -46,9 +48,8 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           File.write(a_path, "a = A\n")
           File.write(b_path, "b = B\n")
 
-          expect {
-            command.call(files: [a_path, b_path], write: false, check: false, diff: false, with_junk: false)
-          }.to output(/==> .*a\.ftl <==.*==> .*b\.ftl <==/m).to_stdout
+          cli.call(arguments: [a_path, b_path], out:, err:)
+          expect(out.string).to match(/==> .*a\.ftl <==.*==> .*b\.ftl <==/m)
         end
       end
     end
@@ -59,10 +60,8 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.write("hello=Hello\n")
           f.flush
 
-          expect {
-            command.call(files: [f.path], write: true, check: false, diff: false, with_junk: false)
-          }.not_to output.to_stdout
-
+          cli.call(arguments: [f.path, "--write"], out:, err:)
+          expect(out.string).to be_empty
           expect(File.read(f.path)).to eq("hello = Hello\n")
         end
       end
@@ -75,7 +74,7 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.flush
 
           expect {
-            command.call(files: [f.path], write: false, check: true, diff: false, with_junk: false)
+            cli.call(arguments: [f.path, "--check"], out:, err:)
           }.not_to raise_error
         end
       end
@@ -86,7 +85,7 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.flush
 
           expect {
-            command.call(files: [f.path], write: false, check: true, diff: false, with_junk: false)
+            cli.call(arguments: [f.path, "--check"], out:, err:)
           }.to raise_error(Foxtail::CLI::TidyCheckError)
         end
       end
@@ -98,12 +97,9 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.write("hello=Hello\n")
           f.flush
 
-          output = capture_system_stdout {
-            command.call(files: [f.path], write: false, check: false, diff: true, with_junk: false)
-          }
-
-          expect(output).to include("-hello=Hello")
-          expect(output).to include("+hello = Hello")
+          cli.call(arguments: [f.path, "--diff"], out:, err:)
+          expect(out.string).to include("-hello=Hello")
+          expect(out.string).to include("+hello = Hello")
         end
       end
     end
@@ -115,7 +111,7 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.flush
 
           expect {
-            command.call(files: [f.path], write: false, check: false, diff: false, with_junk: false)
+            cli.call(arguments: [f.path], out:, err:)
           }.to raise_error(Foxtail::CLI::TidyError)
         end
       end
@@ -125,9 +121,8 @@ RSpec.describe Foxtail::CLI::Commands::Tidy do
           f.write("hello = Hi\nbad entry\n")
           f.flush
 
-          expect {
-            command.call(files: [f.path], write: false, check: false, diff: false, with_junk: true)
-          }.to output(/hello = Hi.*bad entry/m).to_stdout
+          cli.call(arguments: [f.path, "--with-junk"], out:, err:)
+          expect(out.string).to match(/hello = Hi.*bad entry/m)
         end
       end
     end

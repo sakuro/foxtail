@@ -4,7 +4,9 @@ require "json"
 require "tempfile"
 
 RSpec.describe Foxtail::CLI::Commands::Ids do
-  subject(:command) { Foxtail::CLI::Commands::Ids.new }
+  let(:cli) { Dry.CLI(Foxtail::CLI::Commands::Ids.new) }
+  let(:out) { StringIO.new }
+  let(:err) { StringIO.new }
 
   let(:ftl_content) do
     <<~FTL
@@ -21,7 +23,7 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
     context "with no files" do
       it "raises NoFilesError" do
         expect {
-          command.call(files: [], only_messages: false, only_terms: false, with_attributes: false, json: false)
+          cli.call(arguments: [], out:, err:)
         }.to raise_error(Foxtail::CLI::NoFilesError, "No files specified")
       end
     end
@@ -32,9 +34,8 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
           f.write(ftl_content)
           f.flush
 
-          expect {
-            command.call(files: [f.path], only_messages: false, only_terms: false, with_attributes: false, json: false)
-          }.to output("hello\ngreeting\n-brand\n").to_stdout
+          cli.call(arguments: [f.path], out:, err:)
+          expect(out.string).to eq("hello\ngreeting\n-brand\n")
         end
       end
     end
@@ -45,9 +46,8 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
           f.write(ftl_content)
           f.flush
 
-          expect {
-            command.call(files: [f.path], only_messages: true, only_terms: false, with_attributes: false, json: false)
-          }.to output("hello\ngreeting\n").to_stdout
+          cli.call(arguments: [f.path, "--only-messages"], out:, err:)
+          expect(out.string).to eq("hello\ngreeting\n")
         end
       end
     end
@@ -58,9 +58,8 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
           f.write(ftl_content)
           f.flush
 
-          expect {
-            command.call(files: [f.path], only_messages: false, only_terms: true, with_attributes: false, json: false)
-          }.to output("-brand\n").to_stdout
+          cli.call(arguments: [f.path, "--only-terms"], out:, err:)
+          expect(out.string).to eq("-brand\n")
         end
       end
     end
@@ -71,9 +70,8 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
           f.write(ftl_content)
           f.flush
 
-          expect {
-            command.call(files: [f.path], only_messages: false, only_terms: false, with_attributes: true, json: false)
-          }.to output("hello\ngreeting\ngreeting.placeholder\n-brand\n-brand.short\n").to_stdout
+          cli.call(arguments: [f.path, "--with-attributes"], out:, err:)
+          expect(out.string).to eq("hello\ngreeting\ngreeting.placeholder\n-brand\n-brand.short\n")
         end
       end
     end
@@ -84,11 +82,8 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
           f.write(ftl_content)
           f.flush
 
-          output = capture_stdout {
-            command.call(files: [f.path], only_messages: false, only_terms: false, with_attributes: false, json: true)
-          }
-
-          expect(JSON.parse(output)).to eq(%w[hello greeting -brand])
+          cli.call(arguments: [f.path, "--json"], out:, err:)
+          expect(JSON.parse(out.string)).to eq(%w[hello greeting -brand])
         end
       end
     end
@@ -101,9 +96,8 @@ RSpec.describe Foxtail::CLI::Commands::Ids do
           File.write(a_path, "msg-a = A\n")
           File.write(b_path, "msg-b = B\n")
 
-          expect {
-            command.call(files: [a_path, b_path], only_messages: false, only_terms: false, with_attributes: false, json: false)
-          }.to output("msg-a\nmsg-b\n").to_stdout
+          cli.call(arguments: [a_path, b_path], out:, err:)
+          expect(out.string).to eq("msg-a\nmsg-b\n")
         end
       end
     end

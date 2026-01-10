@@ -78,10 +78,10 @@ module Foxtail
 
         private def output_formatted(path, formatted, multiple_files)
           if multiple_files
-            puts "==> #{path} <=="
-            puts formatted
+            out.puts "==> #{path} <=="
+            out.puts formatted
           else
-            print formatted
+            out.print formatted
           end
         end
 
@@ -97,8 +97,7 @@ module Foxtail
               fmt_file.write(formatted)
               fmt_file.flush
 
-              # Use diff command with file path labels
-              system("diff", "-u", "--label", path, orig_file.path, "--label", "#{path} (formatted)", fmt_file.path)
+              out.print IO.popen(["diff", "-u", "--label", path, orig_file.path, "--label", "#{path} (formatted)", fmt_file.path], &:read)
             end
           end
         end

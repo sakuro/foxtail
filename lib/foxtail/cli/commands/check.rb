@@ -28,13 +28,13 @@ module Foxtail
             total_errors += errors.size
 
             errors.each do |error|
-              puts error
+              err.puts error
             end
           end
 
           unless quiet
-            puts
-            puts "#{total_files} file(s) checked, #{total_errors} error(s) found"
+            out.puts
+            out.puts "#{total_files} file(s) checked, #{total_errors} error(s) found"
           end
 
           raise Foxtail::CLI::CheckError, total_errors if total_errors > 0

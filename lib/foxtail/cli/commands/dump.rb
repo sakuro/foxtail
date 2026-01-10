@@ -24,7 +24,7 @@ module Foxtail
           results = files.map {|file| dump_file(Pathname(file), with_spans:) }
 
           output = files.size == 1 ? results.first : results
-          puts JSON.pretty_generate(output)
+          out.puts JSON.pretty_generate(output)
         end
 
         private def dump_file(path, with_spans:)
