@@ -18,9 +18,11 @@ module Foxtail
       class ParseError < Error; end
 
       # Regex patterns (equivalent to fluent-bundle/src/resource.ts)
-      RE_MESSAGE_START = /^(-?[a-zA-Z][\w-]*) *= */m
+      RE_MESSAGE_START = /^(?<!\r)(-?[a-zA-Z][\w-]*) *= */m
       private_constant :RE_MESSAGE_START
 
+      # fluent.js uses /(?<=\n *)\./ but Ruby does not support variable-length lookbehind.
+      # The skip_blank_and_check_attribute method handles newline/space skipping instead.
       RE_ATTRIBUTE_START = /\.([a-zA-Z][\w-]*) *= */
       private_constant :RE_ATTRIBUTE_START
 
@@ -39,10 +41,10 @@ module Foxtail
       RE_FUNCTION_NAME = /^[A-Z][A-Z\d_-]*$/
       private_constant :RE_FUNCTION_NAME
 
-      RE_TEXT_RUN = /([^{}\n\r]+)/
+      RE_TEXT_RUN = /((?:[^{}\n\r]|\r(?!\n))+)/
       private_constant :RE_TEXT_RUN
 
-      RE_STRING_RUN = /([^\\"\n\r]*)/
+      RE_STRING_RUN = /((?:[^\\"\n\r]|\r(?!\n))*)/
       private_constant :RE_STRING_RUN
 
       RE_STRING_ESCAPE = /\\([\\"])/
@@ -64,31 +66,32 @@ module Foxtail
       private_constant :RE_INDENT
 
       # Token patterns
-      TOKEN_BRACE_OPEN = /\{\s*/
+      # Only accept space, CRLF, and LF as syntactical whitespace (not CR alone or tabs)
+      TOKEN_BRACE_OPEN = /\{(?: |\r?\n)*/
       private_constant :TOKEN_BRACE_OPEN
 
-      TOKEN_BRACE_CLOSE = /\s*\}/
+      TOKEN_BRACE_CLOSE = /(?: |\r?\n)*\}/
       private_constant :TOKEN_BRACE_CLOSE
 
-      TOKEN_BRACKET_OPEN = /\[\s*/
+      TOKEN_BRACKET_OPEN = /\[(?: |\r?\n)*/
       private_constant :TOKEN_BRACKET_OPEN
 
-      TOKEN_BRACKET_CLOSE = /\s*\] */
+      TOKEN_BRACKET_CLOSE = /(?: |\r?\n)*\] */
       private_constant :TOKEN_BRACKET_CLOSE
 
-      TOKEN_PAREN_OPEN = /\s*\(\s*/
+      TOKEN_PAREN_OPEN = /(?: |\r?\n)*\((?: |\r?\n)*/
       private_constant :TOKEN_PAREN_OPEN
 
-      TOKEN_ARROW = /\s*->\s*/
+      TOKEN_ARROW = /(?: |\r?\n)*->(?: |\r?\n)*/
       private_constant :TOKEN_ARROW
 
-      TOKEN_COLON = /\s*:\s*/
+      TOKEN_COLON = /(?: |\r?\n)*:(?: |\r?\n)*/
       private_constant :TOKEN_COLON
 
-      TOKEN_COMMA = /\s*,?\s*/
+      TOKEN_COMMA = /(?: |\r?\n)*,?(?: |\r?\n)*/
       private_constant :TOKEN_COMMA
 
-      TOKEN_BLANK = /\s+/
+      TOKEN_BLANK = /(?: |\r?\n)+/
       private_constant :TOKEN_BLANK
 
       # Parse FTL source into an array of messages and terms
