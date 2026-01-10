@@ -32,7 +32,7 @@ module Foxtail
     # @param options [Hash] Formatting options passed to ICU4X::NumberFormat.new
     # @return [ICU4X::NumberFormat] Cached formatter instance
     def number_formatter(locale, **options)
-      key = [locale.to_s, options]
+      key = [locale, options]
       @number_formatters_mutex.synchronize do
         @number_formatters[key] ||= ICU4X::NumberFormat.new(locale, **options)
       end
@@ -44,7 +44,7 @@ module Foxtail
     # @param options [Hash] Formatting options passed to ICU4X::DateTimeFormat.new
     # @return [ICU4X::DateTimeFormat] Cached formatter instance
     def datetime_formatter(locale, **options)
-      key = [locale.to_s, options]
+      key = [locale, options]
       @datetime_formatters_mutex.synchronize do
         @datetime_formatters[key] ||= ICU4X::DateTimeFormat.new(locale, **options)
       end
@@ -56,7 +56,7 @@ module Foxtail
     # @param type [Symbol] Plural rule type (:cardinal or :ordinal)
     # @return [ICU4X::PluralRules] Cached rules instance
     def plural_rules(locale, type: :cardinal)
-      key = [locale.to_s, type]
+      key = [locale, type]
       @plural_rules_mutex.synchronize do
         @plural_rules[key] ||= ICU4X::PluralRules.new(locale, type:)
       end
