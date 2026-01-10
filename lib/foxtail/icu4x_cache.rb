@@ -21,6 +21,9 @@ module Foxtail
       @number_formatters = {}
       @datetime_formatters = {}
       @plural_rules = {}
+      @number_formatters_mutex = Mutex.new
+      @datetime_formatters_mutex = Mutex.new
+      @plural_rules_mutex = Mutex.new
     end
 
     # Returns a cached ICU4X::NumberFormat instance.
@@ -30,7 +33,9 @@ module Foxtail
     # @return [ICU4X::NumberFormat] Cached formatter instance
     def number_formatter(locale, **options)
       key = [locale.to_s, options]
-      @number_formatters[key] ||= ICU4X::NumberFormat.new(locale, **options)
+      @number_formatters_mutex.synchronize do
+        @number_formatters[key] ||= ICU4X::NumberFormat.new(locale, **options)
+      end
     end
 
     # Returns a cached ICU4X::DateTimeFormat instance.
@@ -40,7 +45,9 @@ module Foxtail
     # @return [ICU4X::DateTimeFormat] Cached formatter instance
     def datetime_formatter(locale, **options)
       key = [locale.to_s, options]
-      @datetime_formatters[key] ||= ICU4X::DateTimeFormat.new(locale, **options)
+      @datetime_formatters_mutex.synchronize do
+        @datetime_formatters[key] ||= ICU4X::DateTimeFormat.new(locale, **options)
+      end
     end
 
     # Returns a cached ICU4X::PluralRules instance.
@@ -50,7 +57,9 @@ module Foxtail
     # @return [ICU4X::PluralRules] Cached rules instance
     def plural_rules(locale, type: :cardinal)
       key = [locale.to_s, type]
-      @plural_rules[key] ||= ICU4X::PluralRules.new(locale, type:)
+      @plural_rules_mutex.synchronize do
+        @plural_rules[key] ||= ICU4X::PluralRules.new(locale, type:)
+      end
     end
   end
 end
