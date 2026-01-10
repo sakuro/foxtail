@@ -83,7 +83,7 @@ module ItemFunctions
 
     private def capitalize_first(str) = str.sub(/\A\p{Ll}/, &:upcase)
 
-    private def format_count(count, locale) = ICU4X::NumberFormat.new(locale).format(count)
+    private def format_count(count, locale) = Foxtail::ICU4XCache.instance.number_formatter(locale).format(count)
 
     private def format_article_counter_item(article, counter, item)
       return [counter, item].compact.join(" ") unless article
