@@ -111,6 +111,7 @@ $ bundle exec rake
 - **[Parser System](doc/ftl-syntax.md)** - FTL syntax parsing and AST implementation
 - **[Bundle System](doc/bundle-system.md)** - Runtime message formatting with [icu4x integration](doc/icu4x-integration.md)
 - **[Sequence](doc/sequence.md)** - Language fallback chains
+- **[Language Negotiation](doc/language-negotiation.md)** - Accept-Language handling and safe fallback guidelines
 
 See [doc/architecture.md](doc/architecture.md) for detailed design documentation.
 
