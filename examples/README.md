@@ -1,6 +1,6 @@
-# Foxtail Examples
+# Fantail Examples
 
-Executable examples demonstrating Foxtail features.
+Executable examples demonstrating Fantail features.
 
 ## Running Examples
 

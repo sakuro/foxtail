@@ -7,13 +7,13 @@
 # - Parsing FTL resources from strings
 # - Formatting messages with variables
 
-require "foxtail"
+require "fantail"
 
 # Create a bundle for English (US) locale
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 
 # Parse FTL content and add to bundle
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   # Simple message
   hello-world = Hello, World!
   # Message with variable
@@ -33,8 +33,8 @@ puts bundle.format("greeting", name: "Alice")
 # => Hello, Alice!
 
 # Format message with multiple variables
-puts bundle.format("welcome", app: "Foxtail", user: "Bob")
-# => Welcome to Foxtail, Bob!
+puts bundle.format("welcome", app: "Fantail", user: "Bob")
+# => Welcome to Fantail, Bob!
 
 # Missing variable renders as placeholder
 puts bundle.format("greeting")

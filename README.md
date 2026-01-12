@@ -1,4 +1,4 @@
-# :fox_face: Foxtail :globe_with_meridians:
+# Fantail
 
 A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern localization system designed to improve how software is translated.
 
@@ -16,7 +16,7 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "foxtail"
+gem "fantail"
 ```
 
 And then execute:
@@ -28,14 +28,14 @@ $ bundle install
 Or install it yourself as:
 
 ```bash
-$ gem install foxtail
+$ gem install fantail
 ```
 
 ## Quick Start
 
 ### `icu4x` Gem Setup
 
-Foxtail uses the `icu4x` gem (Ruby bindings for [ICU4X](https://github.com/unicode-org/icu4x)), which requires data configuration:
+Fantail uses the `icu4x` gem (Ruby bindings for [ICU4X](https://github.com/unicode-org/icu4x)), which requires data configuration:
 
 1. The `icu4x-data-recommended` gem is included as a development dependency
 2. Run `bin/setup` to configure the `ICU4X_DATA_PATH` environment variable in `.env`
@@ -45,10 +45,10 @@ For details, see the [icu4x gem documentation](https://github.com/sakuro/icu4x).
 ### Basic Usage
 
 ```ruby
-require "foxtail"
+require "fantail"
 require "icu4x"
 
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   hello = Hello, { $name }!
   emails =
       You have { $count ->
@@ -57,7 +57,7 @@ resource = Foxtail::Resource.from_string(<<~FTL)
       }.
 FTL
 
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"))
 bundle.add_resource(resource)
 
 bundle.format("hello", name: "Alice")
@@ -117,12 +117,12 @@ See [doc/architecture.md](doc/architecture.md) for detailed design documentation
 
 ## CLI
 
-Foxtail provides command-line tools for working with FTL files:
+Fantail provides command-line tools for working with FTL files:
 
-- `foxtail check` - Check FTL files for syntax errors
-- `foxtail dump` - Dump FTL files as AST in JSON format
-- `foxtail ids` - Extract message and term IDs
-- `foxtail tidy` - Format FTL files with consistent style
+- `fantail check` - Check FTL files for syntax errors
+- `fantail dump` - Dump FTL files as AST in JSON format
+- `fantail ids` - Extract message and term IDs
+- `fantail tidy` - Format FTL files with consistent style
 
 See [doc/cli.md](doc/cli.md) for full documentation.
 
@@ -135,7 +135,7 @@ See [doc/cli.md](doc/cli.md) for full documentation.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/sakuro/foxtail.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sakuro/fantail.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b feature/add-some-feature`)
@@ -149,7 +149,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sakuro
 This project stands on the shoulders of giants:
 
 - **[ICU4X](https://github.com/unicode-org/icu4x)**: Number, date/time, plural rules, and locale handling
-- **Fluent Project**: Foxtail aims for compatibility with Mozilla's [Fluent localization system](https://projectfluent.org/), particularly [fluent.js](https://github.com/projectfluent/fluent.js) ([Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt))
+- **Fluent Project**: Fantail aims for compatibility with Mozilla's [Fluent localization system](https://projectfluent.org/), particularly [fluent.js](https://github.com/projectfluent/fluent.js) ([Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt))
 
 ## License
 

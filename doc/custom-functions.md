@@ -1,10 +1,10 @@
 # Custom Functions Guide
 
-This guide explains how to create and register custom functions in Foxtail.
+This guide explains how to create and register custom functions in Fantail.
 
 ## Overview
 
-Custom functions extend Foxtail's formatting capabilities beyond the built-in `NUMBER` and `DATETIME` functions. They allow you to implement domain-specific formatting logic for your application.
+Custom functions extend Fantail's formatting capabilities beyond the built-in `NUMBER` and `DATETIME` functions. They allow you to implement domain-specific formatting logic for your application.
 
 ## Function Signature
 
@@ -25,7 +25,7 @@ Custom functions are callable objects (lambdas, procs, or methods) with the foll
 
 ### Important
 
-Always include `**` in your function signature to accept additional keyword arguments that Foxtail may pass.
+Always include `**` in your function signature to accept additional keyword arguments that Fantail may pass.
 
 ## Registering Functions
 
@@ -34,7 +34,7 @@ Pass functions to `Bundle.new` via the `functions:` option:
 ```ruby
 locale = ICU4X::Locale.parse("en-US")
 
-bundle = Foxtail::Bundle.new(locale, functions: {
+bundle = Fantail::Bundle.new(locale, functions: {
   "SHOUT" => ->(text, **) { text.to_s.upcase },
   "CURRENCY" => method(:format_currency)
 })
@@ -48,7 +48,7 @@ bundle = Foxtail::Bundle.new(locale, functions: {
 # FTL: greeting = Hello, { SHOUT($name) }!
 shout = ->(text, **) { text.to_s.upcase }
 
-bundle = Foxtail::Bundle.new(locale, functions: { "SHOUT" => shout })
+bundle = Fantail::Bundle.new(locale, functions: { "SHOUT" => shout })
 bundle.add_resource("greeting = Hello, { SHOUT($name) }!")
 bundle.format("greeting", name: "world")  # => "Hello, WORLD!"
 ```
@@ -58,7 +58,7 @@ bundle.format("greeting", name: "world")  # => "Hello, WORLD!"
 ```ruby
 # FTL: price = { PRICE($amount, currency: "USD") }
 format_price = ->(amount, locale:, currency: "USD", **) do
-  formatter = Foxtail::ICU4XCache.instance.number_formatter(
+  formatter = Fantail::ICU4XCache.instance.number_formatter(
     locale,
     style: :currency,
     currency: currency
@@ -66,7 +66,7 @@ format_price = ->(amount, locale:, currency: "USD", **) do
   formatter.format(amount)
 end
 
-bundle = Foxtail::Bundle.new(locale, functions: { "PRICE" => format_price })
+bundle = Fantail::Bundle.new(locale, functions: { "PRICE" => format_price })
 ```
 
 ### Class-based Functions
@@ -91,22 +91,22 @@ class ItemFormatter
   end
 
   private def format_item_with_count(item_id, count, locale:, **)
-    formatted_count = Foxtail::ICU4XCache.instance.number_formatter(locale).format(count)
+    formatted_count = Fantail::ICU4XCache.instance.number_formatter(locale).format(count)
     "#{formatted_count} #{resolve_item(item_id, count)}"
   end
 end
 
 # Usage
 formatter = ItemFormatter.new(items_bundle)
-bundle = Foxtail::Bundle.new(locale, functions: formatter.functions)
+bundle = Fantail::Bundle.new(locale, functions: formatter.functions)
 ```
 
 ## Using ICU4XCache
 
-When your custom function needs ICU4X formatters or plural rules, use `Foxtail::ICU4XCache` for efficient instance reuse:
+When your custom function needs ICU4X formatters or plural rules, use `Fantail::ICU4XCache` for efficient instance reuse:
 
 ```ruby
-cache = Foxtail::ICU4XCache.instance
+cache = Fantail::ICU4XCache.instance
 
 # Number formatting
 formatter = cache.number_formatter(locale)
@@ -150,7 +150,7 @@ Key files:
 
 ## Best Practices
 
-1. **Always accept `**`** - Future Foxtail versions may pass additional arguments
+1. **Always accept `**`** - Future Fantail versions may pass additional arguments
 2. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
 3. **Handle errors gracefully** - Return a sensible fallback on errors
 4. **Keep functions pure** - Avoid side effects for predictable behavior

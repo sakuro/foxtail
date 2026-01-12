@@ -7,11 +7,11 @@
 # - Explicit DATETIME function for date/time style options
 # - Locale-aware formatting
 
-require "foxtail"
+require "fantail"
 
 # English (US)
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
-en_resource = Foxtail::Resource.from_string(<<~FTL)
+en_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
+en_resource = Fantail::Resource.from_string(<<~FTL)
   # Implicit DATETIME formatting (automatically applied to Time variables)
   date-implicit = { $date }
   # Date only - various styles (requires explicit DATETIME with options)
@@ -28,8 +28,8 @@ FTL
 en_bundle.add_resource(en_resource)
 
 # Japanese
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
-ja_resource = Foxtail::Resource.from_string(<<~FTL)
+ja_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
+ja_resource = Fantail::Resource.from_string(<<~FTL)
   # Implicit DATETIME formatting
   date-implicit = { $date }
   date-full = { DATETIME($date, dateStyle: "full") }

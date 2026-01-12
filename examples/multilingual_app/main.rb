@@ -7,7 +7,7 @@
 # - Using Sequence for language fallback
 # - Handling locale-specific messages
 
-require "foxtail"
+require "fantail"
 require "icu4x"
 require "pathname"
 
@@ -15,18 +15,18 @@ require "pathname"
 locales_dir = Pathname.new(__dir__).join("locales")
 
 # Load bundles for available locales
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false)
-en_bundle.add_resource(Foxtail::Resource.from_file(locales_dir.join("en.ftl")))
+en_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false)
+en_bundle.add_resource(Fantail::Resource.from_file(locales_dir.join("en.ftl")))
 
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
-ja_bundle.add_resource(Foxtail::Resource.from_file(locales_dir.join("ja.ftl")))
+ja_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
+ja_bundle.add_resource(Fantail::Resource.from_file(locales_dir.join("ja.ftl")))
 
 puts "=== Using Sequence for Fallback ==="
 puts
 
 # Create sequence with Japanese as primary, English as fallback
 puts "--- Japanese primary (with English fallback) ---"
-ja_sequence = Foxtail::Sequence.new(ja_bundle, en_bundle)
+ja_sequence = Fantail::Sequence.new(ja_bundle, en_bundle)
 
 puts ja_sequence.format("hello", name: "太郎")
 # => こんにちは、太郎さん！
@@ -42,7 +42,7 @@ puts
 
 # Create sequence with English as primary, Japanese as fallback
 puts "--- English primary (with Japanese fallback) ---"
-en_sequence = Foxtail::Sequence.new(en_bundle, ja_bundle)
+en_sequence = Fantail::Sequence.new(en_bundle, ja_bundle)
 
 puts en_sequence.format("hello", name: "Alice")
 # => Hello, Alice!

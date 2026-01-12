@@ -19,7 +19,7 @@ module FluentCompatBundle
   end
 
   def parse_ftl(source)
-    parser = Foxtail::Bundle::Parser.new
+    parser = Fantail::Bundle::Parser.new
     parser.parse(source)
   end
 

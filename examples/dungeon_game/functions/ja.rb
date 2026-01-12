@@ -22,7 +22,7 @@ module ItemFunctions
     #
     # @param item_id [String] the item term reference (e.g., "-sword", "-potion")
     # @return [String] the localized item name
-    # @note The trailing ** is required because Foxtail::Bundle passes additional
+    # @note The trailing ** is required because Fantail::Bundle passes additional
     #   keyword arguments (e.g., locale:) that this function does not use.
     def fluent_item(item_id, **)
       resolve_item(item_id, 1, "nominative")

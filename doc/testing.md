@@ -2,7 +2,7 @@
 
 ## Overview
 
-Foxtail uses RSpec for testing with a focus on:
+Fantail uses RSpec for testing with a focus on:
 
 1. Unit tests for individual components
 2. Compatibility tests against fluent.js reference implementation
@@ -16,7 +16,7 @@ spec/
 ├── compat/
 │   ├── syntax_parser_spec.rb         # fluent-syntax compatibility tests
 │   └── bundle_parser_spec.rb         # fluent-bundle compatibility tests
-├── foxtail/
+├── fantail/
 │   ├── syntax/
 │   │   └── parser_spec.rb            # Syntax::Parser tests
 │   └── bundle/
@@ -48,14 +48,14 @@ bundle exec rspec
 ### Specific Files
 
 ```bash
-bundle exec rspec spec/foxtail/parser_spec.rb
-bundle exec rspec spec/foxtail/bundle/resolver_spec.rb
+bundle exec rspec spec/fantail/parser_spec.rb
+bundle exec rspec spec/fantail/bundle/resolver_spec.rb
 ```
 
 ### Specific Examples
 
 ```bash
-bundle exec rspec spec/foxtail/parser_spec.rb:42
+bundle exec rspec spec/fantail/parser_spec.rb:42
 ```
 
 ### With Documentation Output
@@ -68,7 +68,7 @@ bundle exec rspec --format documentation
 
 ### fluent.js Test Fixtures
 
-Foxtail uses test fixtures from the fluent.js project (in `fluent.js/` submodule) to ensure parsing compatibility.
+Fantail uses test fixtures from the fluent.js project (in `fluent.js/` submodule) to ensure parsing compatibility.
 
 **Fixture Types**:
 
@@ -89,7 +89,7 @@ bundle exec rspec spec/compat/
 
 ```mermaid
 flowchart LR
-    FTL[.ftl file] --> Parser[Foxtail Parser]
+    FTL[.ftl file] --> Parser[Fantail Parser]
     Parser --> ActualAST[Actual AST]
     JSON[.json file] --> ExpectedAST[Expected AST]
     ActualAST --> Comparator[AST Comparator]
@@ -113,14 +113,14 @@ KNOWN_MISMATCHES = [
 ### Parser Tests
 
 ```ruby
-RSpec.describe Foxtail::Syntax::Parser do
-  let(:parser) { Foxtail::Syntax::Parser.new }
+RSpec.describe Fantail::Syntax::Parser do
+  let(:parser) { Fantail::Syntax::Parser.new }
 
   describe "#parse" do
     it "parses simple message" do
       result = parser.parse("hello = Hello")
       expect(result.body.size).to eq(1)
-      expect(result.body.first).to be_a(Foxtail::Syntax::Parser::AST::Message)
+      expect(result.body.first).to be_a(Fantail::Syntax::Parser::AST::Message)
     end
   end
 end
@@ -129,13 +129,13 @@ end
 ### Bundle Tests
 
 ```ruby
-RSpec.describe Foxtail::Bundle do
+RSpec.describe Fantail::Bundle do
   let(:locale) { ICU4X::Locale.parse("en-US") }
-  let(:bundle) { Foxtail::Bundle.new(locale) }
+  let(:bundle) { Fantail::Bundle.new(locale) }
 
   describe "#format" do
     before do
-      resource = Foxtail::Resource.from_string("hello = Hello, {$name}!")
+      resource = Fantail::Resource.from_string("hello = Hello, {$name}!")
       bundle.add_resource(resource)
     end
 
@@ -149,14 +149,14 @@ end
 ### Resolver Tests
 
 ```ruby
-RSpec.describe Foxtail::Bundle::Resolver do
+RSpec.describe Fantail::Bundle::Resolver do
   let(:locale) { ICU4X::Locale.parse("en-US") }
-  let(:bundle) { Foxtail::Bundle.new(locale) }
-  let(:resolver) { Foxtail::Bundle::Resolver.new(bundle) }
+  let(:bundle) { Fantail::Bundle.new(locale) }
+  let(:resolver) { Fantail::Bundle::Resolver.new(bundle) }
 
   describe "#resolve_pattern" do
     it "resolves simple string pattern" do
-      scope = Foxtail::Bundle::Scope.new(bundle)
+      scope = Fantail::Bundle::Scope.new(bundle)
       expect(resolver.resolve_pattern("Hello", scope)).to eq("Hello")
     end
   end
@@ -256,8 +256,8 @@ Tests run automatically on GitHub Actions:
 ```ruby
 # frozen_string_literal: true
 
-RSpec.describe Foxtail::SomeClass do
-  let(:instance) { Foxtail::SomeClass.new }
+RSpec.describe Fantail::SomeClass do
+  let(:instance) { Fantail::SomeClass.new }
 
   describe "#method_name" do
     context "when condition" do

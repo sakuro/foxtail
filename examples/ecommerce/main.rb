@@ -8,7 +8,7 @@
 # - Plurals for stock counts and cart items
 # - Loading FTL files from disk
 
-require "foxtail"
+require "fantail"
 require "icu4x"
 require "pathname"
 
@@ -16,11 +16,11 @@ require "pathname"
 locales_dir = Pathname.new(__dir__).join("locales")
 
 # Load bundles for available locales
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
-en_bundle.add_resource(Foxtail::Resource.from_file(locales_dir.join("en.ftl")))
+en_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
+en_bundle.add_resource(Fantail::Resource.from_file(locales_dir.join("en.ftl")))
 
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
-ja_bundle.add_resource(Foxtail::Resource.from_file(locales_dir.join("ja.ftl")))
+ja_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
+ja_bundle.add_resource(Fantail::Resource.from_file(locales_dir.join("ja.ftl")))
 
 # Sample product data
 product = {

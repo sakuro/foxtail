@@ -13,10 +13,10 @@
   - Built-in functions: NUMBER() and DATETIME()
   - Implicit NUMBER/DATETIME function calling for numeric and time variables
 - **CLI Commands**
-  - `foxtail check` - Check FTL files for syntax errors
-  - `foxtail dump` - Dump FTL files as AST in JSON format
-  - `foxtail ids` - Extract message and term IDs from FTL files
-  - `foxtail tidy` - Format FTL files with consistent style
+  - `fantail check` - Check FTL files for syntax errors
+  - `fantail dump` - Dump FTL files as AST in JSON format
+  - `fantail ids` - Extract message and term IDs from FTL files
+  - `fantail tidy` - Format FTL files with consistent style
 - **Documentation**
   - Examples directory with executable usage demonstrations
 

@@ -1,6 +1,6 @@
 # Language Negotiation and Locale Fallback
 
-This document describes how language negotiation and locale fallback should work when using Foxtail with web applications.
+This document describes how language negotiation and locale fallback should work when using Fantail with web applications.
 
 ## Overview
 
@@ -9,7 +9,7 @@ There are three layers of locale handling:
 | Layer | Responsibility | Component |
 |-------|---------------|-----------|
 | **Request** | Determine user's preferred locale from Accept-Language | `rack-icu4x-locale` |
-| **Message** | Find translation messages with fallback | `Foxtail::Sequence` |
+| **Message** | Find translation messages with fallback | `Fantail::Sequence` |
 | **Formatting** | Format numbers/dates with CLDR data | `ICU4X::DataProvider` |
 
 ## Critical Rule: Script Boundaries
@@ -50,12 +50,12 @@ Key behaviors:
 
 ### 2. Bundle Selection
 
-Build a `Foxtail::Sequence` from the negotiated locales:
+Build a `Fantail::Sequence` from the negotiated locales:
 
 ```ruby
 class LocaleHelper
   def initialize(bundles)
-    @bundles = bundles  # Hash: locale_string => Foxtail::Bundle
+    @bundles = bundles  # Hash: locale_string => Fantail::Bundle
   end
 
   def sequence_for(env)
@@ -67,7 +67,7 @@ class LocaleHelper
     # Always include default fallback
     bundles << @bundles["en"] unless bundles.any?
 
-    Foxtail::Sequence.new(bundles)
+    Fantail::Sequence.new(bundles)
   end
 end
 ```
@@ -141,7 +141,7 @@ end
 
 ## Sequence Behavior
 
-`Foxtail::Sequence` is intentionally simple:
+`Fantail::Sequence` is intentionally simple:
 
 1. Takes an ordered list of bundles
 2. For each message request, returns the first bundle that has it
@@ -163,7 +163,7 @@ LC_ALL > LC_MESSAGES > LANG
 ### Locale Detection
 
 ```ruby
-module Foxtail
+module Fantail
   module CLI
     class LocaleDetector
       LOCALE_VARS = %w[LC_ALL LC_MESSAGES LANG].freeze
@@ -180,12 +180,12 @@ end
 ### Usage
 
 ```ruby
-detector = Foxtail::CLI::LocaleDetector.new
+detector = Fantail::CLI::LocaleDetector.new
 locale = detector.detect  # => ICU4X::Locale (maximized)
 
 # Build sequence based on detected locale
 bundle = load_bundle_for(locale)
-sequence = Foxtail::Sequence.new([bundle, fallback_bundle])
+sequence = Fantail::Sequence.new([bundle, fallback_bundle])
 ```
 
 ### POSIX to BCP 47 Conversion
@@ -217,7 +217,7 @@ flowchart LR
 
     L1 --> MAX1[maximize]
     L2 --> MAX2[maximize]
-    MAX1 --> SEQ[Foxtail::Sequence]
+    MAX1 --> SEQ[Fantail::Sequence]
     MAX2 --> SEQ
 ```
 
@@ -227,7 +227,7 @@ Both paths apply the same script-safety rules via `maximize`.
 
 - **rack-icu4x-locale**: Language negotiation middleware ([GitHub](https://github.com/sakuro/rack-icu4x-locale))
 - **icu4x gem**: `Locale#maximize`/`#minimize` for locale expansion
-- **Foxtail::Sequence**: Message fallback across bundles
+- **Fantail::Sequence**: Message fallback across bundles
 
 ## References
 

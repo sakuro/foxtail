@@ -32,7 +32,7 @@ module FluentCompatSyntax
   end
 
   def parse_ftl(source, with_spans:)
-    parser = Foxtail::Syntax::Parser.new(with_spans:)
+    parser = Fantail::Syntax::Parser.new(with_spans:)
     resource = parser.parse(source)
     resource.to_h
   end

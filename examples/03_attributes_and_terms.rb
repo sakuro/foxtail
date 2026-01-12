@@ -8,13 +8,13 @@
 # - Message attributes (.attribute syntax)
 # - Referencing attributes within FTL
 
-require "foxtail"
+require "fantail"
 
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   # Term - reusable value (prefixed with -)
-  -brand = Foxtail
+  -brand = Fantail
   # Message referencing a term
   about = About { -brand }
   # Another term
@@ -34,12 +34,12 @@ bundle.add_resource(resource)
 # Term reference
 puts "--- Term Reference ---"
 puts bundle.format("about")
-# => About Foxtail
+# => About Fantail
 
 # Multiple terms
 puts "\n--- Multiple Terms ---"
 puts bundle.format("copyright")
-# => Copyright Acme Corp. Powered by Foxtail.
+# => Copyright Acme Corp. Powered by Fantail.
 
 # Message value
 puts "\n--- Message with Attributes ---"

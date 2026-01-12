@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Bundle system is the runtime component of Foxtail that stores messages and formats them with locale-aware processing. Bundle::Parser parses FTL source directly into a minimal runtime AST.
+The Bundle system is the runtime component of Fantail that stores messages and formats them with locale-aware processing. Bundle::Parser parses FTL source directly into a minimal runtime AST.
 
 ## Architecture
 
@@ -23,7 +23,7 @@ flowchart LR
 The main container for messages and terms.
 
 ```ruby
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"))
 ```
 
 **Attributes**:
@@ -35,7 +35,7 @@ bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
 | `terms` | `Hash` | Term storage (id → Term) |
 | `functions` | `Hash` | Custom functions |
 | `use_isolating` | `Boolean` | Enable bidi isolation (default: true) |
-| `transform` | `Proc` | Text transformation function - [not yet implemented](https://github.com/sakuro/foxtail/issues/118) |
+| `transform` | `Proc` | Text transformation function - [not yet implemented](https://github.com/sakuro/fantail/issues/118) |
 
 **Key Methods**:
 
@@ -63,12 +63,12 @@ Uses `Bundle::Parser` internally for efficient runtime parsing with error recove
 
 ```ruby
 # From string
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   hello = Hello, { $name }!
 FTL
 
 # From file
-resource = Foxtail::Resource.from_file(Pathname("messages.ftl"))
+resource = Fantail::Resource.from_file(Pathname("messages.ftl"))
 
 # Access entries
 resource.entries # => [Bundle::Parser::AST::Message, ...]
@@ -161,8 +161,8 @@ Patterns are optimized during AST conversion:
 ### Basic Formatting
 
 ```ruby
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
-resource = Foxtail::Resource.from_string(<<~FTL)
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"))
+resource = Fantail::Resource.from_string(<<~FTL)
   hello = Hello, { $name }!
 FTL
 
@@ -174,7 +174,7 @@ bundle.format("hello", name: "World")
 ### Pluralization
 
 ```ruby
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   emails =
       { $count ->
           [0] No emails
@@ -192,21 +192,21 @@ bundle.format("emails", count: 5)   # => "5 emails"
 ### Terms for Reusable Content
 
 ```ruby
-resource = Foxtail::Resource.from_string(<<~FTL)
-  -brand = Foxtail
+resource = Fantail::Resource.from_string(<<~FTL)
+  -brand = Fantail
   about = About { -brand }
   powered-by = Powered by { -brand }
 FTL
 
 bundle.add_resource(resource)
-bundle.format("about")       # => "About Foxtail"
-bundle.format("powered-by")  # => "Powered by Foxtail"
+bundle.format("about")       # => "About Fantail"
+bundle.format("powered-by")  # => "Powered by Fantail"
 ```
 
 ### Attributes
 
 ```ruby
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   login = Log In
       .placeholder = Username
       .aria-label = Login button
@@ -237,7 +237,7 @@ This provides robust runtime behavior where malformed FTL doesn't break the appl
 
 ```ruby
 # Invalid entries are silently skipped
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   valid = This works
   invalid entry without equals
   also_valid = This also works
@@ -285,7 +285,7 @@ The system gracefully handles:
 Controls bidirectional text isolation:
 
 ```ruby
-bundle = Foxtail::Bundle.new(locale, use_isolating: true) # default
+bundle = Fantail::Bundle.new(locale, use_isolating: true) # default
 # Wraps placeables with Unicode isolation marks (FSI U+2068, PDI U+2069)
 ```
 
@@ -294,15 +294,15 @@ When enabled (default), placeables are wrapped with Unicode bidi isolation marks
 **Tip**: When writing tests that compare formatted output strings, you may want to use `use_isolating: false` to avoid invisible Unicode characters in assertions:
 
 ```ruby
-let(:bundle) { Foxtail::Bundle.new(locale, use_isolating: false) }
+let(:bundle) { Fantail::Bundle.new(locale, use_isolating: false) }
 ```
 
 ### Transform
 
-Apply text transformations ([not yet implemented](https://github.com/sakuro/foxtail/issues/118)):
+Apply text transformations ([not yet implemented](https://github.com/sakuro/fantail/issues/118)):
 
 ```ruby
-bundle = Foxtail::Bundle.new(locale, transform: ->(s) { s.upcase })
+bundle = Fantail::Bundle.new(locale, transform: ->(s) { s.upcase })
 bundle.format("hello", name: "world")
 # => "HELLO, WORLD!"
 ```
@@ -312,7 +312,7 @@ bundle.format("hello", name: "world")
 Register custom formatting functions:
 
 ```ruby
-bundle = Foxtail::Bundle.new(locale, functions: {
+bundle = Fantail::Bundle.new(locale, functions: {
   "SHOUT" => ->(text, **) { text.to_s.upcase }
 })
 
