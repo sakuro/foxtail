@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../support/compat/bundle"
+require_relative "../../../spec/support/compat/bundle"
 
 RSpec.describe "fluent-bundle Compatibility" do
   include FluentCompatBundle

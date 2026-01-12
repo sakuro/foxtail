@@ -4,7 +4,8 @@ name: Release Validation
 # It performs comprehensive checks on version, dependencies, and release readiness.
 
 env:
-  GEM_NAME: ${{ github.event.repository.name }}
+  RUNTIME_GEM_NAME: foxtail-runtime
+  TOOLS_GEM_NAME: foxtail-tools
 
 on:
   pull_request:
@@ -48,14 +49,19 @@ jobs:
 
     - name: Verify version consistency
       run: |
-        # Check if version in file matches branch
-        GEM_PATH="${{ env.GEM_NAME }}"
-        GEM_PATH="${GEM_PATH//-//}"  # Convert hyphens to slashes for path
-        FILE_VERSION=$(grep 'VERSION = ' "lib/$GEM_PATH/version.rb" | sed 's/.*VERSION = "\(.*\)".*/\1/')
-        if [ "$FILE_VERSION" != "${{ steps.version.outputs.version }}" ]; then
-          echo "❌ Error: Version mismatch. File: $FILE_VERSION, Expected: ${{ steps.version.outputs.version }}"
-          exit 1
-        fi
+        check_version() {
+          local file="$1"
+          local name="$2"
+          local file_version
+          file_version=$(grep 'VERSION = ' "$file" | sed 's/.*VERSION = "\(.*\)".*/\1/')
+          if [ "$file_version" != "${{ steps.version.outputs.version }}" ]; then
+            echo "❌ Error: Version mismatch for $name. File: $file_version, Expected: ${{ steps.version.outputs.version }}"
+            exit 1
+          fi
+        }
+
+        check_version foxtail-runtime/lib/foxtail/runtime/version.rb foxtail-runtime
+        check_version foxtail-tools/lib/foxtail/tools/version.rb foxtail-tools
 
     - name: Verify git tag exists
       run: |
@@ -70,18 +76,30 @@ jobs:
 
     - name: Check if version already released on RubyGems
       run: |
-        if gem list ${{ env.GEM_NAME }} --remote | grep -q "${{ steps.version.outputs.version }}"; then
-          echo "❌ Error: Version ${{ steps.version.outputs.version }} already exists on RubyGems"
-          exit 1
-        fi
+        check_rubygems() {
+          local name="$1"
+          if gem list "$name" --remote | grep -q "${{ steps.version.outputs.version }}"; then
+            echo "❌ Error: Version ${{ steps.version.outputs.version }} already exists on RubyGems for $name"
+            exit 1
+          fi
+        }
 
-    - name: Validate CHANGELOG.md format
+        check_rubygems ${{ env.RUNTIME_GEM_NAME }}
+        check_rubygems ${{ env.TOOLS_GEM_NAME }}
+
+    - name: Validate CHANGELOG format
       run: |
-        # Check if CHANGELOG has the expected section for this version
-        if ! grep -q "^## \[${{ steps.version.outputs.version }}\]" CHANGELOG.md; then
-          echo "❌ Error: CHANGELOG.md missing section for version ${{ steps.version.outputs.version }}"
-          exit 1
-        fi
+        check_changelog() {
+          local file="$1"
+          if ! grep -q "^## \[${{ steps.version.outputs.version }}\]" "$file"; then
+            echo "❌ Error: $file missing section for version ${{ steps.version.outputs.version }}"
+            exit 1
+          fi
+        }
+
+        check_changelog CHANGELOG.md
+        check_changelog foxtail-runtime/CHANGELOG.md
+        check_changelog foxtail-tools/CHANGELOG.md
 
     - name: Set git user for tag update
       if: github.event.action == 'synchronize'  # When new commits are pushed to PR
@@ -111,5 +129,5 @@ jobs:
           echo "- Git tag updated to latest commit"
         fi
         echo "- Version not yet on RubyGems"
-        echo "- CHANGELOG.md is properly formatted"
+        echo "- CHANGELOGs are properly formatted"
         echo "- Quality checks handled by CI workflow"

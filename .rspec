@@ -1,3 +1,7 @@
 --format progress
 --color
---require spec_helper
+--require ./foxtail-runtime/spec/spec_helper
+--require ./foxtail-tools/spec/spec_helper
+--pattern {foxtail-runtime,foxtail-tools}/spec/**/*_spec.rb
+-I foxtail-runtime
+-I foxtail-tools

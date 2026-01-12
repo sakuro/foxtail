@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "../support/compat/syntax"
+require_relative "../../../spec/support/compat/syntax"
 
 RSpec.describe "fluent-syntax Compatibility" do
   include FluentCompatSyntax

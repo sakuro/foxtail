@@ -4,7 +4,8 @@ name: Release Preparation
 # All validations are performed by the Release Validation workflow on PR creation.
 
 env:
-  GEM_NAME: ${{ github.event.repository.name }}
+  RUNTIME_GEM_NAME: foxtail-runtime
+  TOOLS_GEM_NAME: foxtail-tools
 
 on:
   workflow_dispatch:
@@ -35,33 +36,41 @@ jobs:
       run: |
         git checkout -b release-v${{ github.event.inputs.version }}
 
-    - name: Update version file
+    - name: Update version files
       run: |
-        GEM_PATH="${{ env.GEM_NAME }}"
-        GEM_PATH="${GEM_PATH//-//}"  # Convert hyphens to slashes for path
-        sed -i 's/VERSION = ".*"/VERSION = "${{ github.event.inputs.version }}"/' "lib/$GEM_PATH/version.rb"
+        sed -i 's/VERSION = ".*"/VERSION = "${{ github.event.inputs.version }}"/' \
+          foxtail-runtime/lib/foxtail/runtime/version.rb
+        sed -i 's/VERSION = ".*"/VERSION = "${{ github.event.inputs.version }}"/' \
+          foxtail-tools/lib/foxtail/tools/version.rb
 
-    - name: Update CHANGELOG.md
+    - name: Update CHANGELOG files
       run: |
         # Get current date in UTC (GitHub Actions runs in UTC timezone)
         RELEASE_DATE=$(date -u +%Y-%m-%d)
 
-        # Update changelog
-        sed -i "s/## \[Unreleased\]/## [${{ github.event.inputs.version }}] - $RELEASE_DATE/" CHANGELOG.md
+        update_changelog() {
+          local file="$1"
+          sed -i "s/## \\[Unreleased\\]/## [${{ github.event.inputs.version }}] - $RELEASE_DATE/" "$file"
+          sed -i "/## \\[${{ github.event.inputs.version }}\\]/i## [Unreleased]\\n" "$file"
+        }
 
-        # Add new unreleased section
-        sed -i "/## \[${{ github.event.inputs.version }}\]/i## [Unreleased]\n" CHANGELOG.md
+        update_changelog CHANGELOG.md
+        update_changelog foxtail-runtime/CHANGELOG.md
+        update_changelog foxtail-tools/CHANGELOG.md
 
     - name: Commit changes
       run: |
-        GEM_PATH="${{ env.GEM_NAME }}"
-        GEM_PATH="${GEM_PATH//-//}"  # Convert hyphens to slashes for path
-        git add "lib/$GEM_PATH/version.rb" CHANGELOG.md
+        git add \
+          foxtail-runtime/lib/foxtail/runtime/version.rb \
+          foxtail-tools/lib/foxtail/tools/version.rb \
+          CHANGELOG.md \
+          foxtail-runtime/CHANGELOG.md \
+          foxtail-tools/CHANGELOG.md
         git commit -m "$(cat <<'EOF'
         :bookmark: Prepare release v${{ github.event.inputs.version }}
 
         - Update VERSION constant to ${{ github.event.inputs.version }}
-        - Update CHANGELOG.md for release
+        - Update CHANGELOG files for release
         - Add new unreleased section for future changes
         EOF
         )"
@@ -101,12 +110,12 @@ jobs:
 
         Prepare for release v${{ github.event.inputs.version }}
 
-        **Note**: This is the first release for this gem.
+        **Note**: This is the first release for these gems.
 
         ## Changes
 
         - Update VERSION constant to ${{ github.event.inputs.version }}
-        - Update CHANGELOG.md with release date
+        - Update CHANGELOG files with release date
         - Add new unreleased section for future development
 
         ## Quality Checks
@@ -116,7 +125,7 @@ jobs:
         - RuboCop checks
         - All tests pass
         - Version format validation
-        - CHANGELOG.md format validation
+        - CHANGELOG format validation
 
         ## Release Requirements Checklist
 
@@ -126,7 +135,8 @@ jobs:
         - [ ] **Pending Trusted Publisher**: Create on RubyGems.org for OIDC authentication
         - [ ] Configure at: https://rubygems.org/oidc/pending_trusted_publishers
         - [ ] Required settings:
-          - Gem name: `${{ env.GEM_NAME }}`
+          - Gem name: `${{ env.RUNTIME_GEM_NAME }}`
+          - Gem name: `${{ env.TOOLS_GEM_NAME }}`
           - Repository owner: `${{ github.repository_owner }}`
           - Repository name: `${{ github.event.repository.name }}`
           - Workflow filename: `release-publish.yml`
@@ -137,7 +147,8 @@ jobs:
         - [ ] Guide: https://guides.rubygems.org/trusted-publishing/releasing-gems/
 
         ### RubyGems.org Setup
-        - [ ] **Gem name availability**: Verify `${{ env.GEM_NAME }}` is available or owned by you
+        - [ ] **Gem name availability**: Verify `${{ env.RUNTIME_GEM_NAME }}` is available or owned by you
+        - [ ] **Gem name availability**: Verify `${{ env.TOOLS_GEM_NAME }}` is available or owned by you
         - [ ] **Account verified**: RubyGems.org account email verified and MFA enabled (recommended)
         - [ ] **MFA Compatibility**: Trusted Publishing works seamlessly with MFA enabled
         - [ ] Configure MFA at: https://rubygems.org/profile/edit
@@ -163,7 +174,7 @@ jobs:
         ## Changes
 
         - Update VERSION constant to ${{ github.event.inputs.version }}
-        - Update CHANGELOG.md with release date
+        - Update CHANGELOG files with release date
         - Add new unreleased section for future development
 
         ## Quality Checks
@@ -173,14 +184,14 @@ jobs:
         - RuboCop checks
         - All tests pass
         - Version format validation
-        - CHANGELOG.md format validation
+        - CHANGELOG format validation
 
         ## Release Requirements Checklist
 
         Before merging this PR, ensure the following requirements are met:
 
-        - [ ] **CHANGELOG.md**: Verify all notable changes are documented
-        - [ ] **Breaking changes**: If any, ensure they are clearly documented in CHANGELOG
+        - [ ] **CHANGELOGs**: Verify all notable changes are documented
+        - [ ] **Breaking changes**: If any, ensure they are clearly documented in CHANGELOGs
         - [ ] **Dependencies**: Check if any dependency updates are needed
         - [ ] **Documentation**: Ensure README and docs reflect any new features or changes
 

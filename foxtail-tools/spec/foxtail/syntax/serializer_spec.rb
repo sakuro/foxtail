@@ -6,6 +6,7 @@ RSpec.describe Foxtail::Syntax::Serializer do
   let(:options) { {} }
   let(:parser) { Foxtail::Syntax::Parser.new }
 
+  # Helper for concise spec expectations.
   def parse_and_serialize(ftl)
     resource = parser.parse(ftl)
     serializer.serialize(resource)

@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative "../lib/foxtail"
 require "dry/cli"
+require "foxtail-tools"
 
 begin
   Dry::CLI.new(Foxtail::CLI).call

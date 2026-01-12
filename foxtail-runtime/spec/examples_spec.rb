@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe "Examples" do
-  examples_dir = Pathname.new(__dir__).join("..", "examples")
+  examples_dir = Pathname.new(__dir__).join("..", "..", "examples")
 
   context "with standalone scripts" do
     examples_dir.glob("*.rb").sort.each do |example|
