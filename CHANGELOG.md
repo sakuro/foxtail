@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.5.0] - 2026-01-12
+
 ### Added
 - **Core System**
   - Ruby implementation of Project Fluent localization system
