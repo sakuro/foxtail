@@ -2,7 +2,7 @@
 
 ## Overview
 
-`Foxtail::Sequence` manages ordered sequences of Bundles for language fallback. It finds the first bundle that contains a requested message, enabling fallback chains like `en-US` → `en` → default.
+`Fantail::Sequence` manages ordered sequences of Bundles for language fallback. It finds the first bundle that contains a requested message, enabling fallback chains like `en-US` → `en` → default.
 
 Equivalent to [@fluent/sequence](https://projectfluent.org/fluent.js/sequence/) in fluent.js.
 
@@ -10,17 +10,17 @@ Equivalent to [@fluent/sequence](https://projectfluent.org/fluent.js/sequence/) 
 
 ```ruby
 # Create bundles for different locales
-en_us = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
-en_us.add_resource(Foxtail::Resource.from_string("hello = Hello!"))
+en_us = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"))
+en_us.add_resource(Fantail::Resource.from_string("hello = Hello!"))
 
-en = Foxtail::Bundle.new(ICU4X::Locale.parse("en"))
-en.add_resource(Foxtail::Resource.from_string("hello = Hello!"))
+en = Fantail::Bundle.new(ICU4X::Locale.parse("en"))
+en.add_resource(Fantail::Resource.from_string("hello = Hello!"))
 
-ja = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
-ja.add_resource(Foxtail::Resource.from_string("hello = こんにちは！"))
+ja = Fantail::Bundle.new(ICU4X::Locale.parse("ja"))
+ja.add_resource(Fantail::Resource.from_string("hello = こんにちは！"))
 
 # Create sequence in priority order
-sequence = Foxtail::Sequence.new(en_us, en, ja)
+sequence = Fantail::Sequence.new(en_us, en, ja)
 
 # Format uses first matching bundle
 sequence.format("hello") # => "Hello!"
@@ -31,11 +31,11 @@ sequence.format("hello") # => "Hello!"
 When a message is not found in the primary bundle, Sequence automatically falls back to the next bundle:
 
 ```ruby
-en_us.add_resource(Foxtail::Resource.from_string("us-only = US English"))
-en.add_resource(Foxtail::Resource.from_string("en-only = English"))
-ja.add_resource(Foxtail::Resource.from_string("ja-only = 日本語"))
+en_us.add_resource(Fantail::Resource.from_string("us-only = US English"))
+en.add_resource(Fantail::Resource.from_string("en-only = English"))
+ja.add_resource(Fantail::Resource.from_string("ja-only = 日本語"))
 
-sequence = Foxtail::Sequence.new(en_us, en, ja)
+sequence = Fantail::Sequence.new(en_us, en, ja)
 
 sequence.format("us-only")  # => "US English" (from en_us)
 sequence.format("en-only")  # => "English" (from en, en_us doesn't have it)
@@ -71,10 +71,10 @@ bundles = sequence.find("hello", "goodbye", "thanks")
 Creates a new Sequence with bundles in priority order.
 
 ```ruby
-sequence = Foxtail::Sequence.new(primary, fallback1, fallback2)
+sequence = Fantail::Sequence.new(primary, fallback1, fallback2)
 
 # Also accepts an array
-sequence = Foxtail::Sequence.new(bundle_array)
+sequence = Fantail::Sequence.new(bundle_array)
 ```
 
 ### `#find(*ids)`
@@ -112,14 +112,14 @@ Same signature as `Bundle#format` for duck-typing compatibility.
 ```ruby
 # User prefers Japanese, falls back to English
 user_bundles = [bundle_ja, bundle_en]
-sequence = Foxtail::Sequence.new(user_bundles)
+sequence = Fantail::Sequence.new(user_bundles)
 ```
 
 ### Regional Variants
 
 ```ruby
 # British English → Generic English → Default
-sequence = Foxtail::Sequence.new(bundle_en_gb, bundle_en, bundle_default)
+sequence = Fantail::Sequence.new(bundle_en_gb, bundle_en, bundle_default)
 ```
 
 ### Partial Translations
@@ -127,7 +127,7 @@ sequence = Foxtail::Sequence.new(bundle_en_gb, bundle_en, bundle_default)
 ```ruby
 # New locale with incomplete translations
 # Falls back to complete locale
-sequence = Foxtail::Sequence.new(bundle_new_locale, bundle_complete_locale)
+sequence = Fantail::Sequence.new(bundle_new_locale, bundle_complete_locale)
 ```
 
 ## Example

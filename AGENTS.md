@@ -1,6 +1,6 @@
-# Foxtail - Code Instructions for AI Coding Agents
+# Fantail - Code Instructions for AI Coding Agents
 
-## What is Foxtail?
+## What is Fantail?
 
 A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern localization system designed to improve how software is translated.
 

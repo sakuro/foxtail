@@ -7,7 +7,7 @@
 # - Merging with default functions
 # - Using custom functions in FTL messages
 
-require "foxtail"
+require "fantail"
 
 # Define custom functions
 # Signature: (value, locale:, **options)
@@ -26,13 +26,13 @@ custom_functions = {
 }
 
 # Create bundle with merged functions
-bundle = Foxtail::Bundle.new(
+bundle = Fantail::Bundle.new(
   ICU4X::Locale.parse("en-US"),
   functions: custom_functions,
   use_isolating: false
 )
 
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   # Using custom UPPER function
   shout = { UPPER($text) }
   # Using custom LOWER function
@@ -55,7 +55,7 @@ puts bundle.format("shout", text: "Hello World")
 puts bundle.format("whisper", text: "QUIET PLEASE")
 # => quiet please
 
-puts bundle.format("backwards", text: "Foxtail")
+puts bundle.format("backwards", text: "Fantail")
 # => liatxoF
 
 puts bundle.format("greeting", name: "alice")

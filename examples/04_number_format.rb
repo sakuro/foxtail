@@ -7,11 +7,11 @@
 # - Explicit NUMBER function for currency, percent, and precision options
 # - Locale-aware formatting
 
-require "foxtail"
+require "fantail"
 
 # English (US)
-en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
-en_resource = Foxtail::Resource.from_string(<<~FTL)
+en_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
+en_resource = Fantail::Resource.from_string(<<~FTL)
   # Implicit NUMBER formatting (automatically applied to numeric variables)
   count = Total: { $value }
   # Currency formatting (requires explicit NUMBER with options)
@@ -26,8 +26,8 @@ FTL
 en_bundle.add_resource(en_resource)
 
 # Japanese
-ja_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
-ja_resource = Foxtail::Resource.from_string(<<~FTL)
+ja_bundle = Fantail::Bundle.new(ICU4X::Locale.parse("ja"), use_isolating: false)
+ja_resource = Fantail::Resource.from_string(<<~FTL)
   # Currency in Yen (requires explicit NUMBER with options)
   price = 価格：{ NUMBER($amount, style: "currency", currency: "JPY") }
   # Percentage (requires explicit NUMBER with options)

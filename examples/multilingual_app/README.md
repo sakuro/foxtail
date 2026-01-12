@@ -1,6 +1,6 @@
 # Multilingual App Example
 
-Demonstrates language fallback using `Foxtail::Sequence`.
+Demonstrates language fallback using `Fantail::Sequence`.
 
 ## Features
 
@@ -32,7 +32,7 @@ When a message is missing in the primary locale, `Sequence` automatically falls 
 
 ```ruby
 # Japanese primary, English fallback
-sequence = Foxtail::Sequence.new(ja_bundle, en_bundle)
+sequence = Fantail::Sequence.new(ja_bundle, en_bundle)
 
 # Found in Japanese bundle
 sequence.format("hello", name: "太郎") # => こんにちは、太郎さん！

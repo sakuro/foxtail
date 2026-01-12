@@ -1,8 +1,8 @@
-# Foxtail Architecture
+# Fantail Architecture
 
 ## Overview
 
-Foxtail is a Ruby implementation of [Project Fluent](https://projectfluent.org/), providing FTL parsing and runtime message formatting with `icu4x` integration.
+Fantail is a Ruby implementation of [Project Fluent](https://projectfluent.org/), providing FTL parsing and runtime message formatting with `icu4x` integration.
 
 ## System Diagram
 
@@ -28,7 +28,7 @@ flowchart TD
 
 ## Dual-Parser Architecture
 
-Foxtail follows the fluent.js architecture with two separate parsers, each producing its own AST:
+Fantail follows the fluent.js architecture with two separate parsers, each producing its own AST:
 
 ```mermaid
 flowchart LR
@@ -47,14 +47,14 @@ flowchart LR
 ### Syntax Parser (`Syntax::Parser`) → `Syntax::Parser::AST`
 - **Purpose**: Full-featured parser for tooling (linting, editing, serialization)
 - **Output**: Complete AST with source positions (spans), comments, and detailed structure
-- **Location**: `lib/foxtail/syntax/parser.rb`
+- **Location**: `lib/fantail/syntax/parser.rb`
 - **AST**: Class-based nodes inheriting from `BaseNode`, comments and Junk preserved
 - **Use Cases**: CLI tools (`check`, `dump`, `ids`, `tidy`), syntax analysis
 
 ### Bundle Parser (`Bundle::Parser`) → `Bundle::Parser::AST`
 - **Purpose**: Lightweight runtime parser optimized for message formatting
 - **Output**: Runtime AST directly usable by Bundle (no conversion needed)
-- **Location**: `lib/foxtail/bundle/parser.rb`
+- **Location**: `lib/fantail/bundle/parser.rb`
 - **AST**: Immutable `Data` classes, patterns simplified to String or Array, no spans
 - **Use Cases**: Runtime message loading via `Resource`
 
@@ -64,10 +64,10 @@ flowchart LR
 
 | Component | File | Responsibility |
 |-----------|------|----------------|
-| `Syntax::Parser` | `lib/foxtail/syntax/parser.rb` | FTL source → Full AST |
-| `Syntax::Parser::Stream` | `lib/foxtail/syntax/parser/stream.rb` | Character-by-character reading |
-| `Syntax::Parser::AST::*` | `lib/foxtail/syntax/parser/ast/` | 28 AST node classes |
-| `Syntax::Serializer` | `lib/foxtail/syntax/serializer.rb` | AST → FTL source |
+| `Syntax::Parser` | `lib/fantail/syntax/parser.rb` | FTL source → Full AST |
+| `Syntax::Parser::Stream` | `lib/fantail/syntax/parser/stream.rb` | Character-by-character reading |
+| `Syntax::Parser::AST::*` | `lib/fantail/syntax/parser/ast/` | 28 AST node classes |
+| `Syntax::Serializer` | `lib/fantail/syntax/serializer.rb` | AST → FTL source |
 
 The syntax parser reads FTL source and produces a detailed AST with source position tracking (spans). Used by CLI tools.
 
@@ -75,7 +75,7 @@ The syntax parser reads FTL source and produces a detailed AST with source posit
 
 | Component | File | Responsibility |
 |-----------|------|----------------|
-| `Resource` | `lib/foxtail/resource.rb` | Public parsing API for runtime |
+| `Resource` | `lib/fantail/resource.rb` | Public parsing API for runtime |
 
 `Resource` wraps `Bundle::Parser`, providing `from_string` and `from_file` methods.
 
@@ -83,17 +83,17 @@ The syntax parser reads FTL source and produces a detailed AST with source posit
 
 | Component | File | Responsibility |
 |-----------|------|----------------|
-| `Bundle` | `lib/foxtail/bundle.rb` | Message storage and formatting |
-| `Bundle::Parser` | `lib/foxtail/bundle/parser.rb` | Runtime FTL parsing |
-| `Bundle::Parser::AST` | `lib/foxtail/bundle/parser/ast.rb` | Runtime Data classes |
-| `Resolver` | `lib/foxtail/bundle/resolver.rb` | Pattern evaluation |
-| `Scope` | `lib/foxtail/bundle/scope.rb` | Variable context |
+| `Bundle` | `lib/fantail/bundle.rb` | Message storage and formatting |
+| `Bundle::Parser` | `lib/fantail/bundle/parser.rb` | Runtime FTL parsing |
+| `Bundle::Parser::AST` | `lib/fantail/bundle/parser/ast.rb` | Runtime Data classes |
+| `Resolver` | `lib/fantail/bundle/resolver.rb` | Pattern evaluation |
+| `Scope` | `lib/fantail/bundle/scope.rb` | Variable context |
 
 ### Function Layer
 
 | Component | File | Responsibility |
 |-----------|------|----------------|
-| `Function` | `lib/foxtail/function.rb` | NUMBER, DATETIME via `icu4x` |
+| `Function` | `lib/fantail/function.rb` | NUMBER, DATETIME via `icu4x` |
 
 ## Data Flow
 
@@ -102,11 +102,11 @@ The syntax parser reads FTL source and produces a detailed AST with source posit
 ```ruby
 # 1. Parse FTL source directly to runtime AST
 source = "hello = Hello, {$name}!"
-resource = Foxtail::Resource.from_string(source)
+resource = Fantail::Resource.from_string(source)
 # => Resource with Bundle::Parser::AST entries
 
 # 2. Add to bundle
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en"))
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en"))
 bundle.add_resource(resource)
 
 # 3. Format message
@@ -119,7 +119,7 @@ result = bundle.format("hello", name: "World")
 ```ruby
 # 1. Parse FTL source to full AST
 source = "hello = Hello"
-parser = Foxtail::Syntax::Parser.new
+parser = Fantail::Syntax::Parser.new
 ast = parser.parse(source)
 # => Syntax::Parser::AST::Resource
 
@@ -127,7 +127,7 @@ ast = parser.parse(source)
 # ... linting, editing ...
 
 # 3. Serialize back to FTL
-serializer = Foxtail::Syntax::Serializer.new
+serializer = Fantail::Syntax::Serializer.new
 output = serializer.serialize(ast)
 # => "hello = Hello\n"
 ```
@@ -175,7 +175,7 @@ DATETIME($date, dateStyle: "medium")
 ## File Structure
 
 ```
-lib/foxtail/
+lib/fantail/
 ├── syntax/
 │   ├── parser.rb              # Syntax::Parser (full AST)
 │   ├── serializer.rb          # Syntax::Serializer
@@ -195,9 +195,9 @@ lib/foxtail/
 
 ## fluent.js Correspondence
 
-| Foxtail | fluent.js | Purpose |
+| Fantail | fluent.js | Purpose |
 |---------|-----------|---------|
-| `Foxtail::Syntax::Parser` | `@fluent/syntax` Parser | Full AST parsing |
-| `Foxtail::Syntax::Serializer` | `@fluent/syntax` serialize | AST to FTL |
-| `Foxtail::Bundle::Parser` | `@fluent/bundle` FluentResource | Runtime parsing |
-| `Foxtail::Bundle` | `@fluent/bundle` FluentBundle | Message formatting |
+| `Fantail::Syntax::Parser` | `@fluent/syntax` Parser | Full AST parsing |
+| `Fantail::Syntax::Serializer` | `@fluent/syntax` serialize | AST to FTL |
+| `Fantail::Bundle::Parser` | `@fluent/bundle` FluentResource | Runtime parsing |
+| `Fantail::Bundle` | `@fluent/bundle` FluentBundle | Message formatting |

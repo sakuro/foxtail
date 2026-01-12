@@ -10,7 +10,7 @@ module ItemFunctions
   # for subclasses to override language-specific behavior.
   #
   # Note on the `locale` parameter:
-  # Foxtail::Bundle passes `locale:` to all custom functions. This class uses it
+  # Fantail::Bundle passes `locale:` to all custom functions. This class uses it
   # with ICU4X::NumberFormat to provide locale-aware number formatting
   # (e.g., 1,000 for en, 1.000 for de, 1 000 for fr).
   #
@@ -43,7 +43,7 @@ module ItemFunctions
     # @param case [String] grammatical case (language-dependent)
     # @param cap [String] capitalize first letter: "true" or "false"
     # @return [String] the formatted item name with article
-    # @note The trailing ** is required because Foxtail::Bundle passes additional
+    # @note The trailing ** is required because Fantail::Bundle passes additional
     #   keyword arguments (e.g., locale:) that this function does not use.
     def fluent_item(item_id, count=1, type: "indefinite", case: "nominative", cap: "false", **)
       grammatical_case = {case:}[:case]
@@ -83,7 +83,7 @@ module ItemFunctions
 
     private def capitalize_first(str) = str.sub(/\A\p{Ll}/, &:upcase)
 
-    private def format_count(count, locale) = Foxtail::ICU4XCache.instance.number_formatter(locale).format(count)
+    private def format_count(count, locale) = Fantail::ICU4XCache.instance.number_formatter(locale).format(count)
 
     private def format_article_counter_item(article, counter, item)
       return [counter, item].compact.join(" ") unless article

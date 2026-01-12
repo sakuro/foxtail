@@ -7,11 +7,11 @@
 # - String-based selectors (gender, etc.)
 # - Exact numeric matching with fallback
 
-require "foxtail"
+require "fantail"
 
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   # Plural selector - matches plural categories (zero, one, two, few, many, other)
   emails =
       You have { $count ->

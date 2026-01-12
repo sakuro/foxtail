@@ -2,7 +2,7 @@
 
 ## Overview
 
-FTL (Fluent Translation List) is the file format used by [Project Fluent](https://projectfluent.org/). Foxtail implements a parser that is compatible with the [FTL Syntax Specification](https://github.com/projectfluent/fluent/blob/master/spec/fluent.ebnf). A local copy is available at `doc/fluent.ebnf`.
+FTL (Fluent Translation List) is the file format used by [Project Fluent](https://projectfluent.org/). Fantail implements a parser that is compatible with the [FTL Syntax Specification](https://github.com/projectfluent/fluent/blob/master/spec/fluent.ebnf). A local copy is available at `doc/fluent.ebnf`.
 
 **Compatibility**: 97/98 fluent-syntax test fixtures passing (99.0%)
 
@@ -31,7 +31,7 @@ Terms are reusable values that start with `-`. They cannot be used as selectors 
 
 ```ftl
 # Term definition
--brand-name = Foxtail
+-brand-name = Fantail
 
 # Term with variants
 -adjective =
@@ -115,7 +115,7 @@ hello = Hello, { $name }!
 Reference other messages by identifier:
 
 ```ftl
-brand = Foxtail
+brand = Fantail
 tagline = { brand } is great!
 ```
 
@@ -124,7 +124,7 @@ tagline = { brand } is great!
 Reference terms with `-` prefix:
 
 ```ftl
--brand = Foxtail
+-brand = Fantail
 about = About { -brand }
 
 # With arguments
@@ -310,7 +310,7 @@ The syntax parser produces an AST with 28 node types:
 The syntax parser optionally tracks source positions:
 
 ```ruby
-parser = Foxtail::Syntax::Parser.new(with_spans: true)
+parser = Fantail::Syntax::Parser.new(with_spans: true)
 ast = parser.parse(source)
 # Each node has a span with start/end positions
 ```

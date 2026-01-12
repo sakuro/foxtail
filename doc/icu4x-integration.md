@@ -2,7 +2,7 @@
 
 ## Overview
 
-Foxtail uses the `icu4x` gem (Ruby bindings for [ICU4X](https://github.com/unicode-org/icu4x)) for locale-aware formatting. ICU4X is a Unicode Consortium project providing modern internationalization support.
+Fantail uses the `icu4x` gem (Ruby bindings for [ICU4X](https://github.com/unicode-org/icu4x)) for locale-aware formatting. ICU4X is a Unicode Consortium project providing modern internationalization support.
 
 ## Setup
 
@@ -112,13 +112,13 @@ ratio = { NUMBER($percent, style: "percent") }
 
 ```ruby
 # FTL
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   price = The price is { NUMBER($amount, style: "currency", currency: "USD") }.
   percent = { NUMBER($ratio, style: "percent") } complete
   padded = { NUMBER($num, minimumIntegerDigits: 3) }
 FTL
 
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"))
 bundle.add_resource(resource)
 
 bundle.format("price", amount: 1234.50)    # "The price is $1,234.50."
@@ -150,12 +150,12 @@ both = { DATETIME($timestamp, dateStyle: "medium", timeStyle: "short") }
 
 ```ruby
 # FTL
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
 created = Created on { DATETIME($date, dateStyle: "long") }
 meeting = Meeting at { DATETIME($time, timeStyle: "short") }
 FTL
 
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"))
 bundle.add_resource(resource)
 
 bundle.format("created", date: Time.new(2026, 1, 4))
@@ -192,7 +192,7 @@ Use explicit function calls when you need specific formatting options (currency,
 
 ## Plural Rules
 
-Foxtail uses ICU4X plural rules for select expressions with numeric selectors.
+Fantail uses ICU4X plural rules for select expressions with numeric selectors.
 
 ### CLDR Plural Categories
 
@@ -259,7 +259,7 @@ ordinal_function = ->(args, _options, scope) do
   end
 end
 
-bundle = Foxtail::Bundle.new(locale, functions: {
+bundle = Fantail::Bundle.new(locale, functions: {
   "ORDINAL" => ordinal_function
 })
 ```
@@ -270,11 +270,11 @@ bundle = Foxtail::Bundle.new(locale, functions: {
 
 ## Error Handling
 
-ICU4X errors are caught and reported through Foxtail's error system:
+ICU4X errors are caught and reported through Fantail's error system:
 
 ```ruby
 # Invalid locale
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("invalid"))
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("invalid"))
 # May raise ICU4X::Error
 
 # Invalid currency

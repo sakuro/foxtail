@@ -1,22 +1,22 @@
 # CLI Reference
 
-Foxtail provides command-line tools for working with FTL files.
+Fantail provides command-line tools for working with FTL files.
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| `foxtail check` | Check FTL files for syntax errors |
-| `foxtail dump` | Dump FTL files as AST in JSON format |
-| `foxtail ids` | Extract message and term IDs from FTL files |
-| `foxtail tidy` | Format FTL files with consistent style |
+| `fantail check` | Check FTL files for syntax errors |
+| `fantail dump` | Dump FTL files as AST in JSON format |
+| `fantail ids` | Extract message and term IDs from FTL files |
+| `fantail tidy` | Format FTL files with consistent style |
 
 ## check
 
 Check FTL files for syntax errors.
 
 ```bash
-foxtail check FILES
+fantail check FILES
 ```
 
 ### Options
@@ -29,13 +29,13 @@ foxtail check FILES
 
 ```bash
 # Check a single file
-foxtail check messages.ftl
+fantail check messages.ftl
 
 # Check multiple files
-foxtail check en.ftl ja.ftl
+fantail check en.ftl ja.ftl
 
 # Quiet mode (only errors)
-foxtail check -q messages.ftl
+fantail check -q messages.ftl
 ```
 
 ## dump
@@ -43,7 +43,7 @@ foxtail check -q messages.ftl
 Dump FTL files as AST in JSON format.
 
 ```bash
-foxtail dump FILES
+fantail dump FILES
 ```
 
 ### Options
@@ -56,18 +56,18 @@ foxtail dump FILES
 
 ```bash
 # Dump a single file
-foxtail dump messages.ftl
+fantail dump messages.ftl
 
 # Dump with span information
-foxtail dump messages.ftl --with-spans
+fantail dump messages.ftl --with-spans
 
 # Dump multiple files (outputs JSON array)
-foxtail dump en.ftl ja.ftl
+fantail dump en.ftl ja.ftl
 
 # Compare AST before and after tidy
-foxtail dump original.ftl > before.json
-foxtail tidy original.ftl > tidied.ftl
-foxtail dump tidied.ftl > after.json
+fantail dump original.ftl > before.json
+fantail tidy original.ftl > tidied.ftl
+fantail dump tidied.ftl > after.json
 diff before.json after.json
 ```
 
@@ -98,7 +98,7 @@ JSON output follows the fluent.js AST structure:
 Format FTL files with consistent style.
 
 ```bash
-foxtail tidy FILES
+fantail tidy FILES
 ```
 
 ### Options
@@ -114,16 +114,16 @@ foxtail tidy FILES
 
 ```bash
 # Preview formatted output
-foxtail tidy messages.ftl
+fantail tidy messages.ftl
 
 # Format in place
-foxtail tidy -w messages.ftl
+fantail tidy -w messages.ftl
 
 # Check formatting (for CI)
-foxtail tidy -c messages.ftl
+fantail tidy -c messages.ftl
 
 # Show diff
-foxtail tidy -d messages.ftl
+fantail tidy -d messages.ftl
 ```
 
 ## ids
@@ -131,7 +131,7 @@ foxtail tidy -d messages.ftl
 Extract message and term IDs from FTL files.
 
 ```bash
-foxtail ids FILES
+fantail ids FILES
 ```
 
 ### Options
@@ -147,20 +147,20 @@ foxtail ids FILES
 
 ```bash
 # List all IDs
-foxtail ids messages.ftl
+fantail ids messages.ftl
 
 # Only message IDs
-foxtail ids -m messages.ftl
+fantail ids -m messages.ftl
 
 # Only term IDs
-foxtail ids -t messages.ftl
+fantail ids -t messages.ftl
 
 # Include attributes
-foxtail ids -a messages.ftl
+fantail ids -a messages.ftl
 # Output: greeting, greeting.placeholder, -brand, -brand.short
 
 # JSON output
-foxtail ids -j messages.ftl
+fantail ids -j messages.ftl
 # Output: ["greeting", "-brand"]
 ```
 

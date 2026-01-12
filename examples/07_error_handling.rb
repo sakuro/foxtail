@@ -7,11 +7,11 @@
 # - Missing message handling
 # - Missing reference handling
 
-require "foxtail"
+require "fantail"
 
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
+bundle = Fantail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 
-resource = Foxtail::Resource.from_string(<<~FTL)
+resource = Fantail::Resource.from_string(<<~FTL)
   # Message with variable
   welcome = Welcome, { $name }! You have { $count } messages.
   # Message referencing another message

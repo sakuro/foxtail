@@ -11,7 +11,7 @@
 # - French elision (l'épée vs la hache)
 # - Proper article declension based on gender, number, and case
 
-require "foxtail"
+require "fantail"
 require "icu4x"
 require "pathname"
 
@@ -36,7 +36,7 @@ module ItemFunctions
 
   # Create language-specific custom functions
   # @param locale [ICU4X::Locale] The locale
-  # @param items_bundle [Foxtail::Bundle] The bundle containing item terms
+  # @param items_bundle [Fantail::Bundle] The bundle containing item terms
   # @return [Hash{String => #call}] Custom functions for the locale
   def self.functions_for_locale(locale, items_bundle)
     klass = LANGUAGE_CLASSES.fetch(locale.to_s, Base)
@@ -47,21 +47,21 @@ end
 # Create a messages bundle for the specified locale
 # @param locale [ICU4X::Locale] The locale
 # @param locales_dir [Pathname] Directory containing locale subdirectories
-# @return [Foxtail::Bundle] Configured messages bundle with custom functions
+# @return [Fantail::Bundle] Configured messages bundle with custom functions
 def create_bundle(locale, locales_dir)
   locale_dir = locales_dir.join(locale.to_s)
 
   # Items bundle loads: articles, counters, items
-  items_bundle = Foxtail::Bundle.new(locale, use_isolating: false)
+  items_bundle = Fantail::Bundle.new(locale, use_isolating: false)
   %w[articles counters items].each do |name|
     path = locale_dir.join("#{name}.ftl")
-    items_bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
+    items_bundle.add_resource(Fantail::Resource.from_file(path)) if path.exist?
   end
 
   # Messages bundle loads: messages
-  messages_bundle = Foxtail::Bundle.new(locale, functions: ItemFunctions.functions_for_locale(locale, items_bundle), use_isolating: false)
+  messages_bundle = Fantail::Bundle.new(locale, functions: ItemFunctions.functions_for_locale(locale, items_bundle), use_isolating: false)
   messages_bundle.add_resource(
-    Foxtail::Resource.from_file(locale_dir.join("messages.ftl"))
+    Fantail::Resource.from_file(locale_dir.join("messages.ftl"))
   )
 
   messages_bundle
