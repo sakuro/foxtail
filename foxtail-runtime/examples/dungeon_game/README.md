@@ -49,7 +49,7 @@ dungeon_game/
 ## Run
 
 ```bash
-bundle exec ruby foxtail-runtime/examples/dungeon_game/main.rb
+bundle exec ruby examples/dungeon_game/main.rb
 ```
 
 ## Architecture

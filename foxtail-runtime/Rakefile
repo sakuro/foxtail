@@ -1,0 +1,30 @@
+# frozen_string_literal: true
+
+require "rake/clean"
+
+CLEAN.include("coverage", ".rspec_status", ".yardoc")
+CLOBBER.include("doc/api", "pkg")
+
+require "rspec/core/rake_task"
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = "spec/**/*_spec.rb"
+  t.rspec_opts = ["--require", "spec/spec_helper"]
+  t.ruby_opts = ["-I."]
+end
+
+require "rubocop/rake_task"
+RuboCop::RakeTask.new(:rubocop) do |t|
+  t.patterns = [
+    "lib/**/*.rb",
+    "spec/**/*.rb",
+    "*.gemspec"
+  ]
+end
+
+require "yard"
+YARD::Rake::YardocTask.new(:doc) do |t|
+  t.files = ["lib/**/*.rb"]
+  t.options = ["--output-dir", "doc/api"]
+end
+
+task default: %i[spec rubocop]

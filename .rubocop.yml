@@ -4,9 +4,12 @@ AllCops:
   EnabledByDefault: true
   Exclude:
     - bin/**/*
+    - foxtail-runtime/**/*
+    - foxtail-tools/**/*
     - vendor/**/*
   ExtraDetails: true
   NewCops: enable
+  SuggestExtensions: false
   TargetRubyVersion: 3.2
   UseCache: true
 
@@ -17,96 +20,23 @@ inherit_mode:
 plugins:
   - rubocop-performance
   - rubocop-rake
-  - rubocop-rspec
-  - rubocop-thread_safety
 
 inherit_gem:
   docquet:
     - config/cops/bundler.yml
-    - config/cops/gemspec.yml
     - config/cops/layout.yml
     - config/cops/lint.yml
     - config/cops/metrics.yml
     - config/cops/naming.yml
     - config/cops/performance.yml
     - config/cops/rake.yml
-    - config/cops/rspec.yml
     - config/cops/security.yml
     - config/cops/style.yml
-    - config/cops/thread_safety.yml
 
-inherit_from: .rubocop_todo.yml
-
-# Project-specific settings can be added here
-
-# Long lines that improve readability when not split
-Layout/LineLength:
-  Enabled: false
-
-# Parser requires deeper nesting for comment attachment handling
-Metrics/BlockNesting:
-  Max: 4
-
-# Custom functions in examples have complex signatures for localization features
-Metrics/ParameterLists:
-  Max: 7
-
-# Allow common short parameter names in parser contexts
-Naming/MethodParameterName:
-  AllowedNames:
-    - ps  # parser state - used throughout foxtail-tools/lib/foxtail/syntax/parser.rb
-    - ch  # character - used in foxtail-tools/lib/foxtail/syntax/parser/stream.rb for character operations
-    - id  # identifier - used in foxtail-runtime/lib/foxtail/bundle.rb, foxtail-runtime/lib/foxtail/bundle/scope.rb, and AST classes
-
-# These methods are intentionally named without ? suffix as they represent actions/operations
-# rather than simple boolean queries
-Naming/PredicateMethod:
-  Exclude:
-    - 'foxtail-runtime/lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
-    - 'foxtail-runtime/lib/foxtail/bundle/parser.rb'          # consume_char/consume_token - consume and return success
-
-# Match Zeitwerk inflection: icu4x_cache => ICU4XCache
-RSpec/SpecFilePathFormat:
-  CustomTransform:
-    ICU4XCache: icu4x_cache
-
-# These specs test cross-cutting concerns rather than specific classes
-RSpec/DescribeClass:
-  Exclude:
-    - 'foxtail-tools/spec/foxtail/syntax/parser/ast_spec.rb'  # Tests AST node equality behavior across multiple classes
-    - 'foxtail-tools/spec/compat/syntax_parser_spec.rb'       # Tests compatibility against fluent-syntax fixtures
-    - 'foxtail-runtime/spec/compat/bundle_parser_spec.rb'     # Tests compatibility against fluent-bundle fixtures
-
-# Allow multiple describe blocks for comprehensive AST testing
-RSpec/MultipleDescribes:
-  Exclude:
-    - 'foxtail-tools/spec/foxtail/syntax/parser/ast_spec.rb'  # Tests multiple AST node classes in logical groupings
-
-# Internal utility methods in stream processing don't require documentation
 Style/DocumentationMethod:
   Exclude:
-    - 'foxtail-tools/lib/foxtail/syntax/parser/stream.rb'     # Internal stream processing utilities
-
-# Case statements don't always need else clauses when all cases are handled
-# or when unhandled cases should be ignored intentionally
-Style/MissingElse:
-  Enabled: false
-
-Style/NumberedParameters:
-  Enabled: true
-  EnforcedStyle: disallow
+    - 'Rakefile'
 
 Style/TopLevelMethodDefinition:
   Exclude:
-    - 'foxtail-runtime/examples/**/*.rb'
-    - 'foxtail-tools/examples/**/*.rb'
-
-# Gem entrypoints follow gem name with hyphen
-Naming/FileName:
-  Exclude:
-    - 'foxtail-runtime/lib/foxtail-runtime.rb'
-    - 'foxtail-tools/lib/foxtail-tools.rb'
-
-Gemspec/DependencyVersion:
-  Exclude:
-    - 'foxtail-tools/foxtail-tools.gemspec'
+    - 'Rakefile'

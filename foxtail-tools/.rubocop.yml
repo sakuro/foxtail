@@ -1,0 +1,98 @@
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  EnabledByDefault: true
+  ExtraDetails: true
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  UseCache: true
+
+inherit_mode:
+  merge:
+    - Exclude
+
+plugins:
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
+  - rubocop-thread_safety
+
+inherit_gem:
+  docquet:
+    - config/cops/gemspec.yml
+    - config/cops/layout.yml
+    - config/cops/lint.yml
+    - config/cops/metrics.yml
+    - config/cops/naming.yml
+    - config/cops/performance.yml
+    - config/cops/rake.yml
+    - config/cops/rspec.yml
+    - config/cops/security.yml
+    - config/cops/style.yml
+    - config/cops/thread_safety.yml
+
+inherit_from: .rubocop_todo.yml
+
+# Project-specific settings can be added here
+
+# Long lines that improve readability when not split
+Layout/LineLength:
+  Enabled: false
+
+# Parser requires deeper nesting for comment attachment handling
+Metrics/BlockNesting:
+  Max: 4
+
+# Custom functions in examples have complex signatures for localization features
+Metrics/ParameterLists:
+  Max: 7
+
+# Allow common short parameter names in parser contexts
+Naming/MethodParameterName:
+  AllowedNames:
+    - ps  # parser state - used throughout lib/foxtail/syntax/parser.rb
+    - ch  # character - used in lib/foxtail/syntax/parser/stream.rb for character operations
+    - id  # identifier
+
+# Match Zeitwerk inflection: icu4x_cache => ICU4XCache
+RSpec/SpecFilePathFormat:
+  CustomTransform:
+    ICU4XCache: icu4x_cache
+
+# These specs test cross-cutting concerns rather than specific classes
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/foxtail/syntax/parser/ast_spec.rb'  # Tests AST node equality behavior across multiple classes
+    - 'spec/compat/syntax_parser_spec.rb'       # Tests compatibility against fluent-syntax fixtures
+
+# Allow multiple describe blocks for comprehensive AST testing
+RSpec/MultipleDescribes:
+  Exclude:
+    - 'spec/foxtail/syntax/parser/ast_spec.rb'  # Tests multiple AST node classes in logical groupings
+
+# Internal utility methods in stream processing don't require documentation
+Style/DocumentationMethod:
+  Exclude:
+    - 'lib/foxtail/syntax/parser/stream.rb'     # Internal stream processing utilities
+
+# Case statements don't always need else clauses when all cases are handled
+# or when unhandled cases should be ignored intentionally
+Style/MissingElse:
+  Enabled: false
+
+Style/NumberedParameters:
+  Enabled: true
+  EnforcedStyle: disallow
+
+Style/TopLevelMethodDefinition:
+  Exclude:
+    - 'examples/**/*.rb'
+
+# Gem entrypoints follow gem name with hyphen
+Naming/FileName:
+  Exclude:
+    - 'lib/foxtail-tools.rb'
+
+Gemspec/DependencyVersion:
+  Exclude:
+    - 'foxtail-tools.gemspec'
