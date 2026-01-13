@@ -26,7 +26,11 @@ module FluentCompatBase
   # @param extra_fields [Hash] additional fields to include in each pair
   # @return [Array<Hash>] sorted array of fixture pairs
   module_function def find_fixture_pairs(json_dir:, ftl_dir:, **extra_fields)
-    return [] unless json_dir.exist?
+    unless json_dir.exist?
+      warn "[WARNING] Fixtures directory not found: #{json_dir}"
+      warn "          Tests will be skipped. Run 'git submodule update --init' to fetch fixtures."
+      return []
+    end
 
     pairs = []
     json_dir.glob("*.json").each do |json_path|
