@@ -1,48 +1,44 @@
 # :fox_face: Foxtail :globe_with_meridians:
 
-A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern localization system designed to improve how software is translated.
+A Ruby implementation of [Project Fluent](https://projectfluent.org/) with two gems:
 
-## Features
+- **foxtail-runtime**: runtime bundle parsing + message formatting
+- **foxtail-tools**: CLI + full syntax parser/serializer
 
-- **fluent.js compatibility** - 159/160 official test fixtures passing
-- **Runtime message formatting** - Bundle system with `icu4x`-based formatting
-- **FTL syntax parser** - Syntax support with error recovery
-- **Multi-language support** - Number, date, and pluralization formatting
-- **CLI tools** - Lint and validate FTL files
-- **Ruby implementation** - API following Ruby conventions
+## Gems
+
+### foxtail-runtime
+
+Runtime formatting with ICU4X integration and fluent.js-compatible bundle parsing.
+
+### foxtail-tools
+
+Tooling for authoring and validating FTL files (CLI + full syntax parser/serializer).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add the gems you need to your application's Gemfile:
 
 ```ruby
-gem "foxtail"
+gem "foxtail-runtime"
+# Optional tooling (CLI + syntax parser)
+gem "foxtail-tools"
 ```
 
-And then execute:
+Then install:
 
 ```bash
 $ bundle install
 ```
 
-Or install it yourself as:
+Require entry points based on what you use:
 
-```bash
-$ gem install foxtail
+```ruby
+require "foxtail-runtime" # Runtime APIs
+require "foxtail-tools"   # CLI + tooling APIs
 ```
 
-## Quick Start
-
-### `icu4x` Gem Setup
-
-Foxtail uses the `icu4x` gem (Ruby bindings for [ICU4X](https://github.com/unicode-org/icu4x)), which requires data configuration:
-
-1. The `icu4x-data-recommended` gem is included as a development dependency
-2. Run `bin/setup` to configure the `ICU4X_DATA_PATH` environment variable in `.env`
-
-For details, see the [icu4x gem documentation](https://github.com/sakuro/icu4x).
-
-### Basic Usage
+## Quick Start (runtime)
 
 ```ruby
 require "foxtail"
@@ -70,17 +66,16 @@ bundle.format("emails", count: 5)
 # => "You have 5 emails."
 ```
 
-### More Examples
+## CLI (tools)
 
-See the [examples/](examples/) directory for executable demonstrations:
+```bash
+foxtail check messages.ftl
+foxtail dump messages.ftl
+foxtail ids messages.ftl
+foxtail tidy messages.ftl
+```
 
-- **Basic features**: Variables, selectors, terms, attributes
-- **Number/Date formatting**: Currency, percent, date styles
-- **Custom functions**: Adding your own formatters
-- **Multi-language apps**: Language fallback with `Sequence`
-- **E-commerce**: Real-world pricing and cart localization
-- **Dungeon Game**: Advanced item localization with grammatical gender/case (German), elision (French), and counter words (Japanese)
-
+See [foxtail-tools/doc/cli.md](foxtail-tools/doc/cli.md) for full CLI reference.
 
 ## Development
 
@@ -90,41 +85,43 @@ After checking out the repo, run:
 $ bin/setup
 ```
 
-This will install dependencies and set up the fluent.js submodule for compatibility testing.
+This installs dependencies, configures ICU4X data, and initializes the fluent.js submodule.
 
 ### Running Tests
 
 ```bash
-# Run all tests
+# All tests
 $ bundle exec rake spec
+
+# Per gem
+$ bundle exec rake spec:runtime
+$ bundle exec rake spec:tools
 ```
 
 ### Code Quality
 
 ```bash
-# Run all checks (tests + linting)
-$ bundle exec rake
+$ bundle exec rake rubocop
 ```
 
 ## Architecture
 
-- **[Parser System](doc/ftl-syntax.md)** - FTL syntax parsing and AST implementation
-- **[Bundle System](doc/bundle-system.md)** - Runtime message formatting with [icu4x integration](doc/icu4x-integration.md)
-- **[Sequence](doc/sequence.md)** - Language fallback chains
-- **[Language Negotiation](doc/language-negotiation.md)** - Accept-Language handling and safe fallback guidelines
+Foxtail is split into two gems with distinct responsibilities:
 
-See [doc/architecture.md](doc/architecture.md) for detailed design documentation.
+- **`foxtail-runtime`**: Runtime components (bundle parsing, message formatting, ICU4X integration)
+- **`foxtail-tools`**: Tooling components (syntax parser/serializer and CLI)
 
-## CLI
+Architecture notes per gem:
 
-Foxtail provides command-line tools for working with FTL files:
+- [Runtime Architecture](foxtail-runtime/doc/architecture.md)
+- [Tools Architecture](foxtail-tools/doc/architecture.md)
 
-- `foxtail check` - Check FTL files for syntax errors
-- `foxtail dump` - Dump FTL files as AST in JSON format
-- `foxtail ids` - Extract message and term IDs
-- `foxtail tidy` - Format FTL files with consistent style
+Related docs:
 
-See [doc/cli.md](doc/cli.md) for full documentation.
+- **[Parser System](foxtail-tools/doc/ftl-syntax.md)** - FTL syntax parsing and AST implementation
+- **[Bundle System](foxtail-runtime/doc/bundle-system.md)** - Runtime message formatting with [icu4x integration](foxtail-runtime/doc/icu4x-integration.md)
+- **[Sequence](foxtail-runtime/doc/sequence.md)** - Language fallback chains
+- **[Language Negotiation](foxtail-runtime/doc/language-negotiation.md)** - Accept-Language handling and safe fallback guidelines
 
 ## Compatibility
 

@@ -9,15 +9,14 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 | Purpose | Document |
 |---------|----------|
 | Project overview & usage | [README.md](README.md) |
-| Architecture & design | [doc/architecture.md](doc/architecture.md) |
-| FTL syntax support | [doc/ftl-syntax.md](doc/ftl-syntax.md) |
-| Bundle system details | [doc/bundle-system.md](doc/bundle-system.md) |
-| Custom functions | [doc/custom-functions.md](doc/custom-functions.md) |
-| Language fallback | [doc/sequence.md](doc/sequence.md) |
-| Language negotiation | [doc/language-negotiation.md](doc/language-negotiation.md) |
-| `icu4x` integration | [doc/icu4x-integration.md](doc/icu4x-integration.md) |
-| CLI reference | [doc/cli.md](doc/cli.md) |
-| Testing strategy | [doc/testing.md](doc/testing.md) |
+| Architecture & design | [foxtail-runtime/doc/architecture.md](foxtail-runtime/doc/architecture.md) / [foxtail-tools/doc/architecture.md](foxtail-tools/doc/architecture.md) |
+| FTL syntax support | [foxtail-tools/doc/ftl-syntax.md](foxtail-tools/doc/ftl-syntax.md) |
+| Bundle system details | [foxtail-runtime/doc/bundle-system.md](foxtail-runtime/doc/bundle-system.md) |
+| Custom functions | [foxtail-runtime/doc/custom-functions.md](foxtail-runtime/doc/custom-functions.md) |
+| Language fallback | [foxtail-runtime/doc/sequence.md](foxtail-runtime/doc/sequence.md) |
+| Language negotiation | [foxtail-runtime/doc/language-negotiation.md](foxtail-runtime/doc/language-negotiation.md) |
+| `icu4x` integration | [foxtail-runtime/doc/icu4x-integration.md](foxtail-runtime/doc/icu4x-integration.md) |
+| CLI reference | [foxtail-tools/doc/cli.md](foxtail-tools/doc/cli.md) |
 
 ## Core Principles
 
@@ -61,4 +60,4 @@ bundle exec rake doc        # Generate YARD documentation
 - **RuboCop style**: Double quotes for strings
 - **Release**: Automated via CI workflow
 
-See [doc/architecture.md](doc/architecture.md) for detailed architecture information.
+See [foxtail-runtime/doc/architecture.md](foxtail-runtime/doc/architecture.md) and [foxtail-tools/doc/architecture.md](foxtail-tools/doc/architecture.md) for detailed architecture information.

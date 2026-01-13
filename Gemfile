@@ -2,7 +2,8 @@
 
 source "https://rubygems.org"
 
-gemspec
+gemspec path: "foxtail-runtime"
+gemspec path: "foxtail-tools"
 
 group :development, :test do
   gem "rake", require: false

@@ -4,7 +4,8 @@ name: Release Publish
 # Most validations are already performed by the Release Validation workflow.
 
 env:
-  GEM_NAME: ${{ github.event.repository.name }}
+  RUNTIME_GEM_NAME: foxtail-runtime
+  TOOLS_GEM_NAME: foxtail-tools
 
 on:
   pull_request:
@@ -42,21 +43,35 @@ jobs:
         ruby-version: "3.2"
         bundler-cache: true
 
-    - name: Build gem
+    - name: Build gems
       run: |
-        bundle exec rake build
+        mkdir -p pkg
+        (cd foxtail-runtime && gem build foxtail-runtime.gemspec \
+          --output ../pkg/${{ env.RUNTIME_GEM_NAME }}-${{ steps.version.outputs.version }}.gem)
+        (cd foxtail-tools && gem build foxtail-tools.gemspec \
+          --output ../pkg/${{ env.TOOLS_GEM_NAME }}-${{ steps.version.outputs.version }}.gem)
 
     - name: Configure RubyGems credentials for Trusted Publishing
       uses: rubygems/configure-rubygems-credentials@v1.0.0
 
-    - name: Push gem to RubyGems
+    - name: Push gems to RubyGems
       run: |
-        gem push pkg/${{ env.GEM_NAME }}-${{ steps.version.outputs.version }}.gem
+        gem push pkg/${{ env.RUNTIME_GEM_NAME }}-${{ steps.version.outputs.version }}.gem
+        gem push pkg/${{ env.TOOLS_GEM_NAME }}-${{ steps.version.outputs.version }}.gem
 
     - name: Extract changelog for this version
       run: |
-        # Extract changelog content for this version
-        sed -e '1,/^## \[${{ steps.version.outputs.version }}\] /d' CHANGELOG.md | sed -e '/^## \[/,$d' > release_notes.md
+        extract_section() {
+          local file="$1"
+          local title="$2"
+          echo "## $title" >> release_notes.md
+          sed -e '1,/^## \[${{ steps.version.outputs.version }}\] /d' "$file" | sed -e '/^## \[/,$d' >> release_notes.md
+          echo "" >> release_notes.md
+        }
+
+        : > release_notes.md
+        extract_section foxtail-runtime/CHANGELOG.md "foxtail-runtime"
+        extract_section foxtail-tools/CHANGELOG.md "foxtail-tools"
 
     - name: Create GitHub Release
       env:
@@ -64,9 +79,10 @@ jobs:
       run: |
         # Create release with changelog and gem file
         gh release create ${{ steps.version.outputs.tag }} \
-          --title "${{ env.GEM_NAME }} ${{ steps.version.outputs.tag }}" \
+          --title "foxtail ${{ steps.version.outputs.tag }}" \
           --notes-file release_notes.md \
-          pkg/${{ env.GEM_NAME }}-${{ steps.version.outputs.version }}.gem
+          pkg/${{ env.RUNTIME_GEM_NAME }}-${{ steps.version.outputs.version }}.gem \
+          pkg/${{ env.TOOLS_GEM_NAME }}-${{ steps.version.outputs.version }}.gem
 
     - name: Post-release summary
       run: |

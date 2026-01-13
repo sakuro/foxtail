@@ -1,23 +1,12 @@
 /.bundle/
-/.yardoc
-/_yardoc/
-/coverage/
-/doc/api/
-/pkg/
-/spec/reports/
-/tmp/
 /.env
-
-# rspec failure tracking
-.rspec_status
-Gemfile.lock
+/Gemfile.lock
 
 # MCP configuration (contains local paths)
-.mcp.json
+/.mcp.json
 
 # Serena MCP - ignore everything except project.yml
-.serena/*
+/.serena/*
 !.serena/project.yml
 
-# Generated compatibility reports
-compat/fluentjs_compatibility_report.md
+/tmp/*

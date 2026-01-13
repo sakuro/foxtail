@@ -32,6 +32,10 @@ jobs:
 
           sed -i.bak "s/TargetRubyVersion: [0-9.]\+/TargetRubyVersion: $min_version/" .rubocop.yml
           rm -f .rubocop.yml.bak
+          sed -i.bak "s/TargetRubyVersion: [0-9.]\+/TargetRubyVersion: $min_version/" foxtail-runtime/.rubocop.yml
+          rm -f foxtail-runtime/.rubocop.yml.bak
+          sed -i.bak "s/TargetRubyVersion: [0-9.]\+/TargetRubyVersion: $min_version/" foxtail-tools/.rubocop.yml
+          rm -f foxtail-tools/.rubocop.yml.bak
           sed -i.bak "s/ruby = \"[0-9.]\+\"/ruby = \"$min_version\"/" mise.toml
           rm -f mise.toml.bak
           sed -i.bak "s/ruby-version: \"[0-9.]\+\"/ruby-version: \"$min_version\"/" .github/workflows/release-validation.yml
@@ -41,12 +45,12 @@ jobs:
           sed -i.bak "s/ruby: \[.*\]/ruby: [$ruby_array]/" .github/workflows/ci.yml
           rm -f .github/workflows/ci.yml.bak
 
-          # Find gemspec file (name varies per gem)
-          gemspec_file=$(ls *.gemspec | head -n 1)
-          if [ -n "$gemspec_file" ]; then
-            sed -i.bak "s/required_ruby_version = \">= [0-9.]\+\"/required_ruby_version = \">= $min_version\"/" "$gemspec_file"
-            rm -f "$gemspec_file.bak"
-          fi
+          for gemspec_file in foxtail-runtime/*.gemspec foxtail-tools/*.gemspec; do
+            if [ -f "$gemspec_file" ]; then
+              sed -i.bak "s/required_ruby_version = \">= [0-9.]\+\"/required_ruby_version = \">= $min_version\"/" "$gemspec_file"
+              rm -f "$gemspec_file.bak"
+            fi
+          done
 
       - name: Setup Git User
         uses: git-actions/set-user@v1
@@ -56,7 +60,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         run: |
           # Check if there are changes
-          if git diff --quiet .rubocop.yml mise.toml .github/workflows/ci.yml .github/workflows/release-*.yml *.gemspec; then
+          if git diff --quiet .rubocop.yml foxtail-runtime/.rubocop.yml foxtail-tools/.rubocop.yml mise.toml .github/workflows/ci.yml .github/workflows/release-*.yml foxtail-runtime/*.gemspec foxtail-tools/*.gemspec; then
             echo "No changes detected"
             exit 0
           fi
@@ -64,7 +68,7 @@ jobs:
           # Create branch and commit
           branch="update-ruby-versions"
           git checkout -b "$branch"
-          git add .rubocop.yml mise.toml .github/workflows/ci.yml .github/workflows/release-*.yml *.gemspec
+          git add .rubocop.yml foxtail-runtime/.rubocop.yml foxtail-tools/.rubocop.yml mise.toml .github/workflows/ci.yml .github/workflows/release-*.yml foxtail-runtime/*.gemspec foxtail-tools/*.gemspec
           git commit -m ":arrow_up: Update Ruby versions and version requirements"
           git push -f origin "$branch"
 
@@ -81,7 +85,7 @@ jobs:
           This PR updates:
           - `.github/workflows/ci.yml` test matrix to include all maintained Ruby versions
           - `.github/workflows/release-*.yml` ruby-version to match the minimum Ruby version
-          - `.rubocop.yml` TargetRubyVersion to match the minimum Ruby version
+          - `.rubocop.yml` files TargetRubyVersion to match the minimum Ruby version
           - `*.gemspec` required_ruby_version to match the minimum Ruby version
           - `mise.toml` ruby version to match the minimum Ruby version
           EOF
