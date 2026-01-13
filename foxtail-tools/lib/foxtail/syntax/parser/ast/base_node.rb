@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "dry/inflector"
+
 module Foxtail
   module Syntax
     class Parser
@@ -7,6 +9,9 @@ module Foxtail
         # Base class for all AST nodes in the Fluent parser
         # Provides common functionality for type management and node equality
         class BaseNode
+          INFLECTOR = Dry::Inflector.new.freeze
+          private_constant :INFLECTOR
+
           attr_accessor :type
 
           def initialize = @type = self.class.name.split("::").last
@@ -48,7 +53,7 @@ module Foxtail
 
           # Accept a visitor and dispatch to the appropriate visit method
           def accept(visitor)
-            method_name = "visit_#{self.class.name.split("::").last.gsub(/([a-z])([A-Z])/, '\1_\2').downcase}"
+            method_name = "visit_#{INFLECTOR.underscore(self.class.name.split("::").last)}"
             visitor.public_send(method_name, self)
           end
 
