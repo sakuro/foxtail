@@ -2,6 +2,15 @@
 
 Foxtail provides command-line tools for working with FTL files.
 
+## Gem and Entry Point
+
+The CLI is provided by the `foxtail-tools` gem, which depends on `foxtail-runtime` for shared runtime types.
+
+```ruby
+require "foxtail-tools"   # CLI and tooling APIs
+require "foxtail-runtime" # Runtime APIs (bundles, resources)
+```
+
 ## Commands
 
 | Command | Description |

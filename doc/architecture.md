@@ -4,6 +4,21 @@
 
 Foxtail is a Ruby implementation of [Project Fluent](https://projectfluent.org/), providing FTL parsing and runtime message formatting with `icu4x` integration.
 
+## Gem Split
+
+Foxtail is split into two gems with clear responsibilities:
+
+- **`foxtail-runtime`**: Runtime components (bundle parsing, message formatting, ICU4X integration). It exposes the `Foxtail` module and all runtime APIs.
+- **`foxtail-tools`**: Tooling components (syntax parser/serializer and CLI). It depends on `foxtail-runtime` for shared runtime types.
+
+Entrypoints are kept symmetrical:
+
+| Gem | Entrypoint | Notes |
+|-----|------------|-------|
+| `foxtail-runtime` | `foxtail-runtime/lib/foxtail-runtime.rb` | Loads runtime code via Zeitwerk |
+| `foxtail-runtime` | `foxtail-runtime/lib/foxtail.rb` | Thin alias that requires `foxtail-runtime` |
+| `foxtail-tools` | `foxtail-tools/lib/foxtail-tools.rb` | Loads tooling code via Zeitwerk |
+
 ## System Diagram
 
 ```mermaid

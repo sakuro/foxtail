@@ -31,6 +31,13 @@ Then install:
 $ bundle install
 ```
 
+Require entry points based on what you use:
+
+```ruby
+require "foxtail-runtime" # Runtime APIs
+require "foxtail-tools"   # CLI + tooling APIs
+```
+
 ## Quick Start (runtime)
 
 ```ruby
