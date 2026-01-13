@@ -19,9 +19,6 @@ RuboCop::RakeTask.new(:rubocop) do |t|
 end
 
 require "yard"
-YARD::Rake::YardocTask.new(:doc) do |t|
-  t.files = ["lib/**/*.rb"]
-  t.options = ["--output-dir", "doc/api"]
-end
+YARD::Rake::YardocTask.new(:doc)
 
 task default: %i[spec rubocop]
