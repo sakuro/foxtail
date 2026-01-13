@@ -4,7 +4,7 @@ module Foxtail
   module Syntax
     class Parser
       # Parse error with detailed error codes and messages
-      class ParseError < Error
+      class ParseError < Foxtail::Syntax::Error
         # @return [String] Error code (e.g., "E0001", "E0002")
         attr_reader :code
         # @return [Array] Additional arguments for error message formatting

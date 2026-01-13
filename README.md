@@ -109,7 +109,7 @@ $ bundle exec rake rubocop
 Foxtail is split into two gems with distinct responsibilities:
 
 - **`foxtail-runtime`**: Runtime components (bundle parsing, message formatting, ICU4X integration)
-- **`foxtail-tools`**: Tooling components (syntax parser/serializer and CLI), depending on `foxtail-runtime`
+- **`foxtail-tools`**: Tooling components (syntax parser/serializer and CLI)
 
 Architecture notes per gem:
 

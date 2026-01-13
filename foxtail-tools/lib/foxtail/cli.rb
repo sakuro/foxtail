@@ -8,7 +8,7 @@ module Foxtail
     extend Dry::CLI::Registry
 
     # Base error class for CLI-specific exceptions
-    class Error < Foxtail::Error; end
+    class Error < Foxtail::Tools::Error; end
 
     # Raised when no files are specified for a CLI command
     class NoFilesError < Error

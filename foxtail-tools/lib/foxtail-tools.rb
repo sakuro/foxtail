@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "foxtail"
 require "zeitwerk"
 require_relative "foxtail/tools/version"
 

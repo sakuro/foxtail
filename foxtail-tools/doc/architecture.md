@@ -2,7 +2,7 @@
 
 ## Overview
 
-`foxtail-tools` provides authoring and validation tooling on top of the full syntax AST. It depends on `foxtail-runtime` for shared runtime types and exposes the `Foxtail::Syntax` API and CLI.
+`foxtail-tools` provides authoring and validation tooling on top of the full syntax AST and exposes the `Foxtail::Syntax` API and CLI.
 
 ## Syntax Parser (`Syntax::Parser`) → `Syntax::Parser::AST`
 
