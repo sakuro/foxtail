@@ -13,15 +13,4 @@ RSpec.describe "Examples" do
       end
     end
   end
-
-  context "with subdirectory apps" do
-    examples_dir.glob("*/main.rb").sort.each do |example|
-      expected_file = example.dirname.join("expected.txt")
-      next unless expected_file.exist?
-
-      it example.dirname.basename.to_s do
-        expect(example).to produce_expected_output(example.dirname.join("expected.txt"))
-      end
-    end
-  end
 end

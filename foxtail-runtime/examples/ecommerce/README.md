@@ -22,7 +22,7 @@ ecommerce/
 ## Run
 
 ```bash
-bundle exec ruby examples/ecommerce/main.rb
+bundle exec ruby foxtail-runtime/examples/ecommerce/main.rb
 ```
 
 ## Key Concepts

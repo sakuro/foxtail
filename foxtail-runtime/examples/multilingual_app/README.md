@@ -21,7 +21,7 @@ multilingual_app/
 ## Run
 
 ```bash
-bundle exec ruby examples/multilingual_app/main.rb
+bundle exec ruby foxtail-runtime/examples/multilingual_app/main.rb
 ```
 
 ## Key Concepts

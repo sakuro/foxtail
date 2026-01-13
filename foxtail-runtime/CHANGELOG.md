@@ -11,6 +11,8 @@
   - `icu4x`-based number and date formatting
   - Built-in functions: NUMBER() and DATETIME()
   - Implicit NUMBER/DATETIME function calling for numeric and time variables
+- **Examples**
+  - Executable usage demonstrations in `examples/`
 ### Compatibility
 - fluent.js bundle parser: 62/62 (100%)
 - Ruby: 3.2+ supported

@@ -98,7 +98,8 @@ Style/NumberedParameters:
 
 Style/TopLevelMethodDefinition:
   Exclude:
-    - 'examples/**/*.rb'
+    - 'foxtail-runtime/examples/**/*.rb'
+    - 'foxtail-tools/examples/**/*.rb'
 
 # Gem entrypoints follow gem name with hyphen
 Naming/FileName:

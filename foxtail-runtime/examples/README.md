@@ -6,10 +6,10 @@ Executable examples demonstrating Foxtail features.
 
 ```bash
 # Simple examples
-bundle exec ruby examples/01_basic.rb
+bundle exec ruby foxtail-runtime/examples/01_basic.rb
 
 # Practical scenarios
-bundle exec ruby examples/multilingual_app/main.rb
+bundle exec ruby foxtail-runtime/examples/multilingual_app/main.rb
 ```
 
 ## Simple Examples
@@ -42,7 +42,7 @@ Each example has an accompanying expected output file for verification:
 Compare actual output with expected:
 
 ```bash
-bundle exec ruby examples/01_basic.rb | diff - examples/01_basic.expected.txt
+bundle exec ruby foxtail-runtime/examples/01_basic.rb | diff - foxtail-runtime/examples/01_basic.expected.txt
 ```
 
 ## Prerequisites
