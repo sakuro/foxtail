@@ -4,7 +4,8 @@
 #
 # This example demonstrates:
 # - Parsing FTL into the syntax AST
-# - Using the Visitor pattern to traverse the AST
+# - Using each_message to iterate over messages
+# - Using the Visitor pattern to traverse the AST deeply
 # - Renaming message IDs with a "msg-" prefix
 # - Updating message references throughout the AST
 #
@@ -23,30 +24,18 @@ FTL
 parser = Foxtail::Syntax::Parser.new
 resource = parser.parse(source)
 
-# Visitor to collect and rename message IDs
-# Note: For this shallow traversal, a simple `each` loop would suffice.
-# We use Visitor here to demonstrate the pattern.
-class MessageIdPrefixer
-  include Foxtail::Syntax::Visitor
+# Step 1: Collect message IDs and rename them using each_message
+renames = {}
+resource.each_message do |message|
+  next if message.id.name.start_with?(PREFIX)
 
-  def initialize(prefix)
-    @prefix = prefix
-    @renames = {}
-  end
-
-  attr_reader :renames
-
-  def visit_message(node)
-    unless node.id.name.start_with?(@prefix)
-      new_name = "#{@prefix}#{node.id.name}"
-      @renames[node.id.name] = new_name
-      node.id.name = new_name
-    end
-    # Don't call super - no need to traverse into message children
-  end
+  new_name = "#{PREFIX}#{message.id.name}"
+  renames[message.id.name] = new_name
+  message.id.name = new_name
 end
 
 # Visitor to update message references with new names
+# Visitor pattern is needed here to traverse deeply into message values
 class MessageReferenceUpdater
   include Foxtail::Syntax::Visitor
 
@@ -54,6 +43,7 @@ class MessageReferenceUpdater
     @renames = renames
   end
 
+  # Update message reference ID if it was renamed
   def visit_message_reference(node)
     new_name = @renames[node.id.name]
     node.id.name = new_name if new_name
@@ -61,12 +51,8 @@ class MessageReferenceUpdater
   end
 end
 
-# Step 1: Collect message IDs and rename them
-prefixer = MessageIdPrefixer.new(PREFIX)
-resource.accept(prefixer)
-
 # Step 2: Update all message references
-updater = MessageReferenceUpdater.new(prefixer.renames)
+updater = MessageReferenceUpdater.new(renames)
 resource.accept(updater)
 
 # Output the transformed FTL
