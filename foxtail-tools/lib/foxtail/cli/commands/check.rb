@@ -41,19 +41,13 @@ module Foxtail
         end
 
         private def check_file(path)
-          errors = []
           content = File.read(path)
           parser = Foxtail::Syntax::Parser.new
           resource = parser.parse(content)
 
-          resource.body.each do |entry|
-            case entry
-            when Foxtail::Syntax::Parser::AST::Junk
-              errors << format_junk_error(path, entry)
-            end
-          end
-
-          errors
+          resource.body.filter_map {|entry|
+            format_junk_error(path, entry) if entry.is_a?(Foxtail::Syntax::Parser::AST::Junk)
+          }
         end
 
         private def format_junk_error(path, junk)
