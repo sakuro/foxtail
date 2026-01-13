@@ -77,6 +77,78 @@ RSpec.describe Foxtail::Syntax::Parser::AST::Resource do
     expect(hash["body"][0]["id"]["type"]).to eq("Identifier")
     expect(hash["body"][0]["id"]["name"]).to eq("test")
   end
+
+  describe "entry iterators" do
+    let(:hello_message) { Foxtail::Syntax::Parser::AST::Message.new(Foxtail::Syntax::Parser::AST::Identifier.new("hello")) }
+    let(:world_message) { Foxtail::Syntax::Parser::AST::Message.new(Foxtail::Syntax::Parser::AST::Identifier.new("world")) }
+    let(:term) { Foxtail::Syntax::Parser::AST::Term.new(Foxtail::Syntax::Parser::AST::Identifier.new("brand"), Foxtail::Syntax::Parser::AST::Pattern.new([])) }
+    let(:comment) { Foxtail::Syntax::Parser::AST::Comment.new("A comment") }
+    let(:junk) { Foxtail::Syntax::Parser::AST::Junk.new("bad content") }
+    let(:resource) { Foxtail::Syntax::Parser::AST::Resource.new([hello_message, comment, term, junk, world_message]) }
+
+    describe "#each_message" do
+      it "iterates over Message entries only" do
+        messages = []
+        resource.each_message {|msg| messages << msg }
+        expect(messages).to eq([hello_message, world_message])
+      end
+
+      it "returns Enumerator when no block given" do
+        enumerator = resource.each_message
+        expect(enumerator).to be_a(Enumerator)
+        expect(enumerator.to_a).to eq([hello_message, world_message])
+      end
+
+      it "returns self when block given" do
+        result = resource.each_message {|_msg| nil }
+        expect(result).to be(resource)
+      end
+    end
+
+    describe "#each_term" do
+      it "iterates over Term entries only" do
+        terms = []
+        resource.each_term {|t| terms << t }
+        expect(terms).to eq([term])
+      end
+
+      it "returns Enumerator when no block given" do
+        enumerator = resource.each_term
+        expect(enumerator).to be_a(Enumerator)
+        expect(enumerator.to_a).to eq([term])
+      end
+
+      it "returns self when block given" do
+        result = resource.each_term {|_t| nil }
+        expect(result).to be(resource)
+      end
+    end
+
+    describe "#each_entry" do
+      it "iterates over Message and Term entries only" do
+        entries = []
+        resource.each_entry {|e| entries << e }
+        expect(entries).to eq([hello_message, term, world_message])
+      end
+
+      it "excludes comments and junk" do
+        entries = resource.each_entry.to_a
+        expect(entries).not_to include(comment)
+        expect(entries).not_to include(junk)
+      end
+
+      it "returns Enumerator when no block given" do
+        enumerator = resource.each_entry
+        expect(enumerator).to be_a(Enumerator)
+        expect(enumerator.to_a).to eq([hello_message, term, world_message])
+      end
+
+      it "returns self when block given" do
+        result = resource.each_entry {|_e| nil }
+        expect(result).to be(resource)
+      end
+    end
+  end
 end
 
 RSpec.describe Foxtail::Syntax::Parser::AST::Message do

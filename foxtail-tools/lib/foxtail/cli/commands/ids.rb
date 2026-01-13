@@ -46,7 +46,7 @@ module Foxtail
           parser = Foxtail::Syntax::Parser.new
           resource = parser.parse(content)
 
-          resource.body.each do |entry|
+          resource.each_entry do |entry|
             case entry
             when Foxtail::Syntax::Parser::AST::Message
               next if only_terms
