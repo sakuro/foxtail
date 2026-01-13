@@ -41,13 +41,59 @@ RSpec.describe Foxtail::Syntax::Visitor do
       end
     end
 
-    it "returns nil by default for all visit methods" do
-      visitor_class = Class.new { include Foxtail::Syntax::Visitor }
-      visitor = visitor_class.new
+    it "traverses children by default" do
+      visited_types = []
+      visitor_class = Class.new do
+        include Foxtail::Syntax::Visitor
+
+        define_method(:initialize) do
+          @visited_types = visited_types
+        end
+
+        define_method(:visit_message) do |node|
+          @visited_types << :message
+          super(node)
+        end
+
+        define_method(:visit_identifier) do |node|
+          @visited_types << :identifier
+          super(node)
+        end
+      end
 
       resource = parser.parse("hello = world")
-      expect(visitor.visit_resource(resource)).to be_nil
-      expect(visitor.visit_message(resource.body.first)).to be_nil
+      visitor = visitor_class.new
+      resource.accept(visitor)
+
+      # Default traversal visits message and its children (identifier)
+      expect(visited_types).to include(:message, :identifier)
+    end
+
+    it "stops traversal when super is not called" do
+      visited_types = []
+      visitor_class = Class.new do
+        include Foxtail::Syntax::Visitor
+
+        define_method(:initialize) do
+          @visited_types = visited_types
+        end
+
+        define_method(:visit_message) do |_node|
+          @visited_types << :message
+          # Don't call super - stops traversal
+        end
+
+        define_method(:visit_identifier) do |_node|
+          @visited_types << :identifier
+        end
+      end
+
+      resource = parser.parse("hello = world")
+      visitor = visitor_class.new
+      resource.accept(visitor)
+
+      # Traversal stops at message, identifier is not visited
+      expect(visited_types).to eq([:message])
     end
   end
 
@@ -63,25 +109,27 @@ RSpec.describe Foxtail::Syntax::Visitor do
 
         define_method(:visit_resource) do |node|
           @visited_types << :resource
-          visit_children(node)
+          super(node)
         end
 
         define_method(:visit_message) do |node|
           @visited_types << :message
-          visit_children(node)
+          super(node)
         end
 
-        define_method(:visit_identifier) do |_node|
+        define_method(:visit_identifier) do |node|
           @visited_types << :identifier
+          super(node)
         end
 
         define_method(:visit_pattern) do |node|
           @visited_types << :pattern
-          visit_children(node)
+          super(node)
         end
 
-        define_method(:visit_text_element) do |_node|
+        define_method(:visit_text_element) do |node|
           @visited_types << :text_element
+          super(node)
         end
       end
 
@@ -150,7 +198,7 @@ RSpec.describe Foxtail::Syntax::Visitor do
   end
 
   describe "practical usage" do
-    it "can collect all message IDs" do
+    it "can collect all message IDs with automatic traversal" do
       ids = []
       visitor_class = Class.new do
         include Foxtail::Syntax::Visitor
@@ -159,12 +207,9 @@ RSpec.describe Foxtail::Syntax::Visitor do
           @ids = ids
         end
 
-        define_method(:visit_resource) do |node|
-          visit_children(node)
-        end
-
         define_method(:visit_message) do |node|
           @ids << node.id.name
+          # Don't call super - no need to traverse message children
         end
       end
 
@@ -181,7 +226,7 @@ RSpec.describe Foxtail::Syntax::Visitor do
       expect(ids).to eq(%w[hello goodbye welcome])
     end
 
-    it "can count all variable references" do
+    it "can count all variable references with automatic traversal" do
       count = {value: 0}
       visitor_class = Class.new do
         include Foxtail::Syntax::Visitor
@@ -190,24 +235,9 @@ RSpec.describe Foxtail::Syntax::Visitor do
           @count = count
         end
 
-        define_method(:visit_resource) do |node|
-          visit_children(node)
-        end
-
-        define_method(:visit_message) do |node|
-          visit_children(node)
-        end
-
-        define_method(:visit_pattern) do |node|
-          visit_children(node)
-        end
-
-        define_method(:visit_placeable) do |node|
-          visit_children(node)
-        end
-
         define_method(:visit_variable_reference) do |_node|
           @count[:value] += 1
+          # Don't call super - leaf node
         end
       end
 

@@ -5,7 +5,8 @@ module Foxtail
     # Visitor module for traversing AST nodes
     #
     # Include this module and override the visit_* methods you need.
-    # All visit_* methods return nil by default (no-op).
+    # By default, all visit_* methods traverse children automatically.
+    # Override a method and omit `super` to stop traversal at that node.
     #
     # @example Collecting message IDs
     #   class MessageIdCollector
@@ -19,7 +20,7 @@ module Foxtail
     #
     #     def visit_message(node)
     #       @ids << node.id.name
-    #       visit_children(node)
+    #       super  # continue traversal
     #     end
     #   end
     #
@@ -28,42 +29,42 @@ module Foxtail
     #   collector.ids # => ["hello", "goodbye", ...]
     module Visitor
       # Container nodes
-      def visit_resource(_node) = nil
-      def visit_message(_node) = nil
-      def visit_term(_node) = nil
-      def visit_attribute(_node) = nil
-      def visit_pattern(_node) = nil
-      def visit_placeable(_node) = nil
+      def visit_resource(node) = visit_children(node)
+      def visit_message(node) = visit_children(node)
+      def visit_term(node) = visit_children(node)
+      def visit_attribute(node) = visit_children(node)
+      def visit_pattern(node) = visit_children(node)
+      def visit_placeable(node) = visit_children(node)
 
       # Expression nodes
-      def visit_select_expression(_node) = nil
-      def visit_variant(_node) = nil
-      def visit_call_arguments(_node) = nil
-      def visit_named_argument(_node) = nil
+      def visit_select_expression(node) = visit_children(node)
+      def visit_variant(node) = visit_children(node)
+      def visit_call_arguments(node) = visit_children(node)
+      def visit_named_argument(node) = visit_children(node)
 
       # Reference nodes
-      def visit_message_reference(_node) = nil
-      def visit_term_reference(_node) = nil
-      def visit_function_reference(_node) = nil
-      def visit_variable_reference(_node) = nil
+      def visit_message_reference(node) = visit_children(node)
+      def visit_term_reference(node) = visit_children(node)
+      def visit_function_reference(node) = visit_children(node)
+      def visit_variable_reference(node) = visit_children(node)
 
       # Literal nodes
-      def visit_string_literal(_node) = nil
-      def visit_number_literal(_node) = nil
-      def visit_text_element(_node) = nil
-      def visit_identifier(_node) = nil
+      def visit_string_literal(node) = visit_children(node)
+      def visit_number_literal(node) = visit_children(node)
+      def visit_text_element(node) = visit_children(node)
+      def visit_identifier(node) = visit_children(node)
 
       # Comment nodes
-      def visit_comment(_node) = nil
-      def visit_group_comment(_node) = nil
-      def visit_resource_comment(_node) = nil
+      def visit_comment(node) = visit_children(node)
+      def visit_group_comment(node) = visit_children(node)
+      def visit_resource_comment(node) = visit_children(node)
 
       # Error nodes
-      def visit_junk(_node) = nil
-      def visit_annotation(_node) = nil
+      def visit_junk(node) = visit_children(node)
+      def visit_annotation(node) = visit_children(node)
 
       # Metadata nodes
-      def visit_span(_node) = nil
+      def visit_span(node) = visit_children(node)
 
       # Helper method to recursively visit all children of a node
       def visit_children(node)
