@@ -40,17 +40,15 @@ Layout/LineLength:
 
 # Parser requires deeper nesting for comment attachment handling
 Metrics/BlockNesting:
-  Max: 4
+  Max: 3
 
 # Custom functions in examples have complex signatures for localization features
 Metrics/ParameterLists:
-  Max: 7
+  Max: 4
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
   AllowedNames:
-    - ps  # parser state
-    - ch  # character
     - id  # identifier - used in lib/foxtail/bundle.rb, lib/foxtail/bundle/scope.rb, and AST classes
 
 # These methods are intentionally named without ? suffix as they represent actions/operations
