@@ -4,8 +4,9 @@
 #
 # This example demonstrates:
 # - Parsing FTL into the syntax AST
+# - Using the Visitor pattern to traverse the AST
 # - Renaming message IDs with a "msg-" prefix
-# - Updating message references in place
+# - Updating message references throughout the AST
 #
 # Prints the transformed FTL to stdout.
 
@@ -22,57 +23,52 @@ FTL
 parser = Foxtail::Syntax::Parser.new
 resource = parser.parse(source)
 
-renames = {}
+# Visitor to collect and rename message IDs
+# Note: For this shallow traversal, a simple `each` loop would suffice.
+# We use Visitor here to demonstrate the pattern.
+class MessageIdPrefixer
+  include Foxtail::Syntax::Visitor
 
-resource.body.each do |entry|
-  next unless entry.is_a?(Foxtail::Syntax::Parser::AST::Message)
+  def initialize(prefix)
+    @prefix = prefix
+    @renames = {}
+  end
 
-  id = entry.id
-  next if id.nil? || id.name.start_with?(PREFIX)
+  attr_reader :renames
 
-  new_name = "#{PREFIX}#{id.name}"
-  renames[id.name] = new_name
-  id.name = new_name
-end
-
-# Walks the syntax AST depth-first and yields each node.
-def walk_ast(node, &block)
-  return if node.nil?
-
-  yield node
-
-  case node
-  when Foxtail::Syntax::Parser::AST::Resource
-    node.body.each {|child| walk_ast(child, &block) }
-  when Foxtail::Syntax::Parser::AST::Message, Foxtail::Syntax::Parser::AST::Term
-    walk_ast(node.value, &block) if node.value
-    node.attributes.each {|attr| walk_ast(attr, &block) }
-  when Foxtail::Syntax::Parser::AST::Attribute,
-       Foxtail::Syntax::Parser::AST::Variant,
-       Foxtail::Syntax::Parser::AST::NamedArgument
-
-    walk_ast(node.value, &block)
-  when Foxtail::Syntax::Parser::AST::Pattern
-    node.elements.each {|elem| walk_ast(elem, &block) }
-  when Foxtail::Syntax::Parser::AST::Placeable
-    walk_ast(node.expression, &block)
-  when Foxtail::Syntax::Parser::AST::SelectExpression
-    walk_ast(node.selector, &block)
-    node.variants.each {|variant| walk_ast(variant, &block) }
-  when Foxtail::Syntax::Parser::AST::FunctionReference, Foxtail::Syntax::Parser::AST::TermReference
-    walk_ast(node.arguments, &block) if node.arguments
-  when Foxtail::Syntax::Parser::AST::CallArguments
-    node.positional.each {|arg| walk_ast(arg, &block) }
-    node.named.each {|arg| walk_ast(arg, &block) }
+  def visit_message(node)
+    unless node.id.name.start_with?(@prefix)
+      new_name = "#{@prefix}#{node.id.name}"
+      @renames[node.id.name] = new_name
+      node.id.name = new_name
+    end
+    # Don't call super - no need to traverse into message children
   end
 end
 
-walk_ast(resource) do |node|
-  next unless node.is_a?(Foxtail::Syntax::Parser::AST::MessageReference)
+# Visitor to update message references with new names
+class MessageReferenceUpdater
+  include Foxtail::Syntax::Visitor
 
-  new_name = renames[node.id.name]
-  node.id.name = new_name if new_name
+  def initialize(renames)
+    @renames = renames
+  end
+
+  def visit_message_reference(node)
+    new_name = @renames[node.id.name]
+    node.id.name = new_name if new_name
+    # Don't call super - MessageReference has no relevant children
+  end
 end
 
+# Step 1: Collect message IDs and rename them
+prefixer = MessageIdPrefixer.new(PREFIX)
+resource.accept(prefixer)
+
+# Step 2: Update all message references
+updater = MessageReferenceUpdater.new(prefixer.renames)
+resource.accept(updater)
+
+# Output the transformed FTL
 serializer = Foxtail::Syntax::Serializer.new(with_junk: true)
 puts serializer.serialize(resource)

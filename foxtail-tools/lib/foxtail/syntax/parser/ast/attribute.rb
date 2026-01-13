@@ -14,6 +14,8 @@ module Foxtail
             @id = id
             @value = value
           end
+
+          def children = [id, value]
         end
       end
     end

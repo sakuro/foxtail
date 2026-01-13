@@ -14,6 +14,8 @@ module Foxtail
             @content = content
             @annotations = annotations
           end
+
+          def children = annotations
         end
       end
     end

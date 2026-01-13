@@ -46,6 +46,16 @@ module Foxtail
             true
           end
 
+          # Accept a visitor and dispatch to the appropriate visit method
+          def accept(visitor)
+            method_name = "visit_#{self.class.name.split("::").last.gsub(/([a-z])([A-Z])/, '\1_\2').downcase}"
+            visitor.public_send(method_name, self)
+          end
+
+          # Returns an array of child nodes for traversal
+          # Subclasses with children should override this method
+          def children = []
+
           # Convert node to hash representation for JSON serialization
           def to_h
             result = {}

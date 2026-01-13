@@ -14,6 +14,8 @@ module Foxtail
             @positional = positional
             @named = named
           end
+
+          def children = [*positional, *named]
         end
       end
     end
