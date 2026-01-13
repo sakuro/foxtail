@@ -45,12 +45,11 @@ jobs:
 
     - name: Build gems
       run: |
-        gem build foxtail-runtime/foxtail-runtime.gemspec
-        gem build foxtail-tools/foxtail-tools.gemspec
-
         mkdir -p pkg
-        mv foxtail-runtime-*.gem pkg/
-        mv foxtail-tools-*.gem pkg/
+        (cd foxtail-runtime && gem build foxtail-runtime.gemspec \
+          --output ../pkg/${{ env.RUNTIME_GEM_NAME }}-${{ steps.version.outputs.version }}.gem)
+        (cd foxtail-tools && gem build foxtail-tools.gemspec \
+          --output ../pkg/${{ env.TOOLS_GEM_NAME }}-${{ steps.version.outputs.version }}.gem)
 
     - name: Configure RubyGems credentials for Trusted Publishing
       uses: rubygems/configure-rubygems-credentials@v1.0.0
