@@ -12,6 +12,8 @@ module Foxtail
             super()
             @expression = expression
           end
+
+          def children = [expression]
         end
       end
     end

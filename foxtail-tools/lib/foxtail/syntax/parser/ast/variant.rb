@@ -16,6 +16,8 @@ module Foxtail
             @value = value
             @default = default
           end
+
+          def children = [key, value]
         end
       end
     end

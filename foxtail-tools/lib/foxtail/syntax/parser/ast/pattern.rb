@@ -13,6 +13,8 @@ module Foxtail
             super()
             @elements = elements
           end
+
+          def children = elements
         end
       end
     end

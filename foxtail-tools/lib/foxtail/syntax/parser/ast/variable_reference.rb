@@ -12,6 +12,8 @@ module Foxtail
             super()
             @id = id
           end
+
+          def children = [id]
         end
       end
     end

@@ -70,10 +70,12 @@ RSpec/MultipleDescribes:
   Exclude:
     - 'spec/foxtail/syntax/parser/ast_spec.rb'  # Tests multiple AST node classes in logical groupings
 
-# Internal utility methods in stream processing don't require documentation
+# Internal utility methods don't require documentation
 Style/DocumentationMethod:
   Exclude:
     - 'lib/foxtail/syntax/parser/stream.rb'     # Internal stream processing utilities
+    - 'lib/foxtail/syntax/parser/ast/*.rb'      # children method overrides documented in base class
+    - 'lib/foxtail/syntax/visitor.rb'           # visit_* methods documented at module level
 
 # Case statements don't always need else clauses when all cases are handled
 # or when unhandled cases should be ignored intentionally

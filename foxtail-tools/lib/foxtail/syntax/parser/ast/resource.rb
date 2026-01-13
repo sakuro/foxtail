@@ -13,6 +13,8 @@ module Foxtail
             super()
             @body = body
           end
+
+          def children = body
         end
       end
     end

@@ -14,6 +14,8 @@ module Foxtail
             @selector = selector
             @variants = variants
           end
+
+          def children = [selector, *variants]
         end
       end
     end

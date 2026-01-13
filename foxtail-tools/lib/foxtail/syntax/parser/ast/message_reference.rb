@@ -14,6 +14,8 @@ module Foxtail
             @id = id
             @attribute = attribute
           end
+
+          def children = [id, attribute].compact
         end
       end
     end
