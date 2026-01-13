@@ -136,7 +136,7 @@ The cache is thread-safe and process-global.
 
 ## Real-World Example
 
-See the [dungeon game example](../foxtail-runtime/examples/dungeon_game/) for a comprehensive implementation of custom functions handling:
+See the [dungeon game example](../examples/dungeon_game/) for a comprehensive implementation of custom functions handling:
 
 - Locale-specific item names with grammatical cases
 - Counter words (e.g., Japanese counters)
@@ -144,9 +144,9 @@ See the [dungeon game example](../foxtail-runtime/examples/dungeon_game/) for a 
 - Pluralization
 
 Key files:
-- `foxtail-runtime/examples/dungeon_game/functions/base.rb` - Base function class
-- `foxtail-runtime/examples/dungeon_game/functions/en.rb` - English-specific handling
-- `foxtail-runtime/examples/dungeon_game/functions/ja.rb` - Japanese-specific handling
+- `examples/dungeon_game/functions/base.rb` - Base function class
+- `examples/dungeon_game/functions/en.rb` - English-specific handling
+- `examples/dungeon_game/functions/ja.rb` - Japanese-specific handling
 
 ## Best Practices
 

@@ -54,7 +54,6 @@ jobs:
           sed -i "/## \\[${{ github.event.inputs.version }}\\]/i## [Unreleased]\\n" "$file"
         }
 
-        update_changelog CHANGELOG.md
         update_changelog foxtail-runtime/CHANGELOG.md
         update_changelog foxtail-tools/CHANGELOG.md
 
@@ -63,7 +62,6 @@ jobs:
         git add \
           foxtail-runtime/lib/foxtail/runtime/version.rb \
           foxtail-tools/lib/foxtail/tools/version.rb \
-          CHANGELOG.md \
           foxtail-runtime/CHANGELOG.md \
           foxtail-tools/CHANGELOG.md
         git commit -m "$(cat <<'EOF'

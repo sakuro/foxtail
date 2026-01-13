@@ -71,7 +71,6 @@ jobs:
         }
 
         : > release_notes.md
-        extract_section CHANGELOG.md "Repository"
         extract_section foxtail-runtime/CHANGELOG.md "foxtail-runtime"
         extract_section foxtail-tools/CHANGELOG.md "foxtail-tools"
 

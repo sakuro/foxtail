@@ -2,7 +2,7 @@
 
 ## Overview
 
-FTL (Fluent Translation List) is the file format used by [Project Fluent](https://projectfluent.org/). Foxtail implements a parser that is compatible with the [FTL Syntax Specification](https://github.com/projectfluent/fluent/blob/master/spec/fluent.ebnf). A local copy is available at `doc/fluent.ebnf`.
+FTL (Fluent Translation List) is the file format used by [Project Fluent](https://projectfluent.org/). Foxtail implements a parser that is compatible with the [FTL Syntax Specification](https://github.com/projectfluent/fluent/blob/master/spec/fluent.ebnf). A local copy is available at `fluent.ebnf`.
 
 **Compatibility**: 97/98 fluent-syntax test fixtures passing (99.0%)
 

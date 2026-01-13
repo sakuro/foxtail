@@ -1,4 +1,4 @@
-# Foxtail Tools
+# :fox_face: Foxtail Tools :globe_with_meridians:
 
 Tooling for authoring and validating [Project Fluent](https://projectfluent.org/) files in Ruby.
 
@@ -39,7 +39,7 @@ foxtail ids messages.ftl
 foxtail tidy messages.ftl
 ```
 
-See [../doc/cli.md](../doc/cli.md) for the full CLI reference.
+See [doc/cli.md](doc/cli.md) for the full CLI reference.
 
 ### Syntax API
 
@@ -52,9 +52,9 @@ ast = parser.parse("hello = Hello")
 
 ## Documentation
 
-- [FTL Syntax](../doc/ftl-syntax.md)
-- [CLI Reference](../doc/cli.md)
-- [Architecture](../doc/architecture.md)
+- [FTL Syntax](doc/ftl-syntax.md)
+- [CLI Reference](doc/cli.md)
+- [Architecture](doc/architecture.md)
 
 ## License
 

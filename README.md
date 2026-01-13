@@ -75,7 +75,7 @@ foxtail ids messages.ftl
 foxtail tidy messages.ftl
 ```
 
-See [doc/cli.md](doc/cli.md) for full CLI reference.
+See [foxtail-tools/doc/cli.md](foxtail-tools/doc/cli.md) for full CLI reference.
 
 ## Development
 
@@ -106,12 +106,22 @@ $ bundle exec rake rubocop
 
 ## Architecture
 
-- **[Parser System](doc/ftl-syntax.md)** - FTL syntax parsing and AST implementation
-- **[Bundle System](doc/bundle-system.md)** - Runtime message formatting with [icu4x integration](doc/icu4x-integration.md)
-- **[Sequence](doc/sequence.md)** - Language fallback chains
-- **[Language Negotiation](doc/language-negotiation.md)** - Accept-Language handling and safe fallback guidelines
+Foxtail is split into two gems with distinct responsibilities:
 
-See [doc/architecture.md](doc/architecture.md) for detailed design documentation.
+- **`foxtail-runtime`**: Runtime components (bundle parsing, message formatting, ICU4X integration)
+- **`foxtail-tools`**: Tooling components (syntax parser/serializer and CLI), depending on `foxtail-runtime`
+
+Architecture notes per gem:
+
+- [Runtime Architecture](foxtail-runtime/doc/architecture.md)
+- [Tools Architecture](foxtail-tools/doc/architecture.md)
+
+Related docs:
+
+- **[Parser System](foxtail-tools/doc/ftl-syntax.md)** - FTL syntax parsing and AST implementation
+- **[Bundle System](foxtail-runtime/doc/bundle-system.md)** - Runtime message formatting with [icu4x integration](foxtail-runtime/doc/icu4x-integration.md)
+- **[Sequence](foxtail-runtime/doc/sequence.md)** - Language fallback chains
+- **[Language Negotiation](foxtail-runtime/doc/language-negotiation.md)** - Accept-Language handling and safe fallback guidelines
 
 ## Compatibility
 

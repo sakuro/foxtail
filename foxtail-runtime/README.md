@@ -1,4 +1,4 @@
-# Foxtail Runtime
+# :fox_face: Foxtail Runtime :globe_with_meridians:
 
 Runtime components for [Project Fluent](https://projectfluent.org/) localization in Ruby.
 
@@ -63,10 +63,10 @@ bundle.format("hello", name: "Alice")
 
 ## Documentation
 
-- [Architecture](../doc/architecture.md)
-- [Bundle System](../doc/bundle-system.md)
-- [ICU4X Integration](../doc/icu4x-integration.md)
-- [Sequence](../doc/sequence.md)
+- [Architecture](doc/architecture.md)
+- [Bundle System](doc/bundle-system.md)
+- [ICU4X Integration](doc/icu4x-integration.md)
+- [Sequence](doc/sequence.md)
 
 ## License
 

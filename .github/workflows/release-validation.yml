@@ -97,7 +97,6 @@ jobs:
           fi
         }
 
-        check_changelog CHANGELOG.md
         check_changelog foxtail-runtime/CHANGELOG.md
         check_changelog foxtail-tools/CHANGELOG.md
 
