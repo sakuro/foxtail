@@ -67,9 +67,9 @@ jobs:
         git commit -m "$(cat <<'EOF'
         :bookmark: Prepare release v${{ github.event.inputs.version }}
 
-        - Update VERSION constant to ${{ github.event.inputs.version }}
+        - Update VERSION constants for foxtail-runtime and foxtail-tools
         - Update CHANGELOG files for release
-        - Add new unreleased section for future changes
+        - Add new unreleased section to both CHANGELOG files
         EOF
         )"
 
@@ -112,9 +112,9 @@ jobs:
 
         ## Changes
 
-        - Update VERSION constant to ${{ github.event.inputs.version }}
+        - Update VERSION constants for foxtail-runtime and foxtail-tools
         - Update CHANGELOG files with release date
-        - Add new unreleased section for future development
+        - Add new unreleased section to both CHANGELOG files
 
         ## Quality Checks
 
@@ -130,11 +130,11 @@ jobs:
         Before merging this PR, ensure the following requirements are met:
 
         ### Trusted Publishing Setup
-        - [ ] **Pending Trusted Publisher**: Create on RubyGems.org for OIDC authentication
+        - [ ] **Pending Trusted Publishers (2x)**: Create one per gem on RubyGems.org for OIDC authentication
         - [ ] Configure at: https://rubygems.org/oidc/pending_trusted_publishers
-        - [ ] Required settings:
-          - Gem name: `${{ env.RUNTIME_GEM_NAME }}`
-          - Gem name: `${{ env.TOOLS_GEM_NAME }}`
+        - [ ] Required settings for each pending publisher:
+          - Gem name: `${{ env.RUNTIME_GEM_NAME }}` (publisher 1)
+          - Gem name: `${{ env.TOOLS_GEM_NAME }}` (publisher 2)
           - Repository owner: `${{ github.repository_owner }}`
           - Repository name: `${{ github.event.repository.name }}`
           - Workflow filename: `release-publish.yml`
@@ -171,9 +171,9 @@ jobs:
 
         ## Changes
 
-        - Update VERSION constant to ${{ github.event.inputs.version }}
+        - Update VERSION constants for foxtail-runtime and foxtail-tools
         - Update CHANGELOG files with release date
-        - Add new unreleased section for future development
+        - Add new unreleased section to both CHANGELOG files
 
         ## Quality Checks
 
