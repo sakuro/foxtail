@@ -41,7 +41,7 @@ require "foxtail-tools"   # CLI + tooling APIs
 ## Quick Start (runtime)
 
 ```ruby
-require "foxtail"
+require "foxtail-runtime"
 require "icu4x"
 
 resource = Foxtail::Resource.from_string(<<~FTL)

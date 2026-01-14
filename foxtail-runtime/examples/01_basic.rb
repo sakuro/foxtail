@@ -7,7 +7,7 @@
 # - Parsing FTL resources from strings
 # - Formatting messages with variables
 
-require "foxtail"
+require "foxtail-runtime"
 
 # Create a bundle for English (US) locale
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)

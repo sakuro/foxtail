@@ -7,7 +7,7 @@
 # - Using Sequence for language fallback
 # - Handling locale-specific messages
 
-require "foxtail"
+require "foxtail-runtime"
 require "icu4x"
 require "pathname"
 

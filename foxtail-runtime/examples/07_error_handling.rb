@@ -7,7 +7,7 @@
 # - Missing message handling
 # - Missing reference handling
 
-require "foxtail"
+require "foxtail-runtime"
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 

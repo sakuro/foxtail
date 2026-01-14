@@ -8,7 +8,7 @@
 # - Plurals for stock counts and cart items
 # - Loading FTL files from disk
 
-require "foxtail"
+require "foxtail-runtime"
 require "icu4x"
 require "pathname"
 

@@ -7,7 +7,7 @@
 # - Explicit DATETIME function for date/time style options
 # - Locale-aware formatting
 
-require "foxtail"
+require "foxtail-runtime"
 
 # English (US)
 en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)

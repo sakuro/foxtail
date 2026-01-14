@@ -7,7 +7,7 @@
 # - String-based selectors (gender, etc.)
 # - Exact numeric matching with fallback
 
-require "foxtail"
+require "foxtail-runtime"
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 

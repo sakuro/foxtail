@@ -8,7 +8,7 @@
 # - Message attributes (.attribute syntax)
 # - Referencing attributes within FTL
 
-require "foxtail"
+require "foxtail-runtime"
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 

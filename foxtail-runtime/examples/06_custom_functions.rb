@@ -7,7 +7,7 @@
 # - Merging with default functions
 # - Using custom functions in FTL messages
 
-require "foxtail"
+require "foxtail-runtime"
 
 # Define custom functions
 # Signature: (value, locale:, **options)

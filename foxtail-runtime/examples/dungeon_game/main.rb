@@ -11,7 +11,7 @@
 # - French elision (l'épée vs la hache)
 # - Proper article declension based on gender, number, and case
 
-require "foxtail"
+require "foxtail-runtime"
 require "icu4x"
 require "pathname"
 

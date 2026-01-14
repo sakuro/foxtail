@@ -42,7 +42,7 @@ See the [icu4x gem documentation](https://github.com/sakuro/icu4x) for details.
 ## Basic Usage
 
 ```ruby
-require "foxtail"
+require "foxtail-runtime"
 require "icu4x"
 
 resource = Foxtail::Resource.from_string(<<~FTL)
