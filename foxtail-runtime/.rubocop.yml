@@ -33,18 +33,18 @@ inherit_gem:
 
 inherit_from: .rubocop_todo.yml
 
-
 # Long lines that improve readability when not split
 Layout/LineLength:
   Enabled: false
 
-# Parser requires deeper nesting for comment attachment handling
-Metrics/BlockNesting:
-  Max: 3
-
 # Custom functions in examples have complex signatures for localization features
 Metrics/ParameterLists:
-  Max: 4
+  Max: 6
+
+# Gem entrypoints follow gem name with hyphen
+Naming/FileName:
+  Exclude:
+    - 'lib/foxtail-runtime.rb'
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
@@ -58,15 +58,15 @@ Naming/PredicateMethod:
     - 'lib/foxtail/bundle/scope.rb'           # track() - tracks IDs for circular reference detection
     - 'lib/foxtail/bundle/parser.rb'          # consume_char/consume_token - consume and return success
 
-# Match Zeitwerk inflection: icu4x_cache => ICU4XCache
-RSpec/SpecFilePathFormat:
-  CustomTransform:
-    ICU4XCache: icu4x_cache
-
 # These specs test cross-cutting concerns rather than specific classes
 RSpec/DescribeClass:
   Exclude:
     - 'spec/compat/bundle_parser_spec.rb'     # Tests compatibility against fluent-bundle fixtures
+
+# Match Zeitwerk inflection: icu4x_cache => ICU4XCache
+RSpec/SpecFilePathFormat:
+  CustomTransform:
+    ICU4XCache: icu4x_cache
 
 # Case statements don't always need else clauses when all cases are handled
 # or when unhandled cases should be ignored intentionally
@@ -80,10 +80,3 @@ Style/NumberedParameters:
 Style/TopLevelMethodDefinition:
   Exclude:
     - 'examples/**/*.rb'
-
-# Gem entrypoints follow gem name with hyphen
-Naming/FileName:
-  Exclude:
-    - 'lib/foxtail-runtime.rb'
-
-# Project-specific settings can be added here

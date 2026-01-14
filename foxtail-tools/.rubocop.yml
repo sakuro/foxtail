@@ -43,9 +43,10 @@ Layout/LineLength:
 Metrics/BlockNesting:
   Max: 4
 
-# Custom functions in examples have complex signatures for localization features
-Metrics/ParameterLists:
-  Max: 4
+# Gem entrypoints follow gem name with hyphen
+Naming/FileName:
+  Exclude:
+    - 'lib/foxtail-tools.rb'
 
 # Allow common short parameter names in parser contexts
 Naming/MethodParameterName:
@@ -53,11 +54,6 @@ Naming/MethodParameterName:
     - ps  # parser state - used throughout lib/foxtail/syntax/parser.rb
     - ch  # character - used in lib/foxtail/syntax/parser/stream.rb for character operations
     - id  # identifier
-
-# Match Zeitwerk inflection: icu4x_cache => ICU4XCache
-RSpec/SpecFilePathFormat:
-  CustomTransform:
-    ICU4XCache: icu4x_cache
 
 # These specs test cross-cutting concerns rather than specific classes
 RSpec/DescribeClass:
@@ -89,8 +85,3 @@ Style/NumberedParameters:
 Style/TopLevelMethodDefinition:
   Exclude:
     - 'examples/**/*.rb'
-
-# Gem entrypoints follow gem name with hyphen
-Naming/FileName:
-  Exclude:
-    - 'lib/foxtail-tools.rb'
