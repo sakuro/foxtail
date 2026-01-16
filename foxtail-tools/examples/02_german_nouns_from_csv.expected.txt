@@ -1,0 +1,54 @@
+-dog =
+    { $count ->
+        [one]
+            { $case ->
+               *[nominative] Hund
+                [accusative] Hund
+                [dative] Hund
+                [genitive] Hundes
+            }
+       *[other]
+            { $case ->
+               *[nominative] Hunde
+                [accusative] Hunde
+                [dative] Hunden
+                [genitive] Hunde
+            }
+    }
+    .gender = masculine
+-cat =
+    { $count ->
+        [one]
+            { $case ->
+               *[nominative] Katze
+                [accusative] Katze
+                [dative] Katze
+                [genitive] Katze
+            }
+       *[other]
+            { $case ->
+               *[nominative] Katzen
+                [accusative] Katzen
+                [dative] Katzen
+                [genitive] Katzen
+            }
+    }
+    .gender = feminine
+-horse =
+    { $count ->
+        [one]
+            { $case ->
+               *[nominative] Pferd
+                [accusative] Pferd
+                [dative] Pferd
+                [genitive] Pferdes
+            }
+       *[other]
+            { $case ->
+               *[nominative] Pferde
+                [accusative] Pferde
+                [dative] Pferden
+                [genitive] Pferde
+            }
+    }
+    .gender = neuter
