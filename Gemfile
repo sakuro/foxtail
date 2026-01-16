@@ -13,6 +13,9 @@ group :development, :test do
 
   # Data for i18n
   gem "icu4x-data-recommended", require: false
+
+  # For examples (bundled gem since Ruby 3.4)
+  gem "csv", require: false
 end
 
 group :development do
