@@ -7,11 +7,11 @@ module ItemFunctions
   # Provides counter word (助数詞) support for items. Each item can have a
   # counter defined via .counter attribute (e.g., 振 for swords, 瓶 for bottles).
   class Ja < Base
-    # @return [Hash{String => #call}] ITEM and COUNT functions
+    # @return [Hash{String => #call}] ITEM and ITEM_WITH_COUNT functions
     def functions
       {
-        "COUNT" => method(:fluent_count),
-        "ITEM" => method(:fluent_item)
+        "ITEM" => method(:fluent_item),
+        "ITEM_WITH_COUNT" => method(:fluent_item_with_count)
       }
     end
 
@@ -28,47 +28,26 @@ module ItemFunctions
       resolve_item(item_id, 1, "nominative")
     end
 
-    # Fluent function: COUNT - Returns a count with the appropriate counter word (助数詞).
+    # Fluent function: ITEM_WITH_COUNT - Returns count + counter + item name.
     #
-    # Japanese uses counter words that vary by item type (e.g., 振 for swords,
-    # 瓶 for bottles, 個 as default).
+    # Formats as: "<count><counter>の<item>" (e.g., "5瓶の回復薬")
     #
-    # This is a separate function from ITEM because in Japanese, counts and item
-    # names are often separated by context-dependent particles (e.g., "剣を3振",
-    # "3振の剣"). Unlike Western languages where "3 swords" is a fixed phrase,
-    # Japanese sentence structure requires flexible positioning of counts.
-    #
-    # @param item_id [String] the item term reference used to determine the counter word
+    # @param item_id [String] the item term reference (e.g., "-sword", "-healing-potion")
     # @param count [Integer] the quantity of items
     # @param locale [ICU4X::Locale] the locale for number formatting
-    # @return [String] the formatted count with counter word (e.g., "3振", "1瓶")
-    def fluent_count(item_id, count, locale:, **)
-      counter = resolve_counter(item_id, count)
-      "#{format_count(count, locale)}#{counter || "個"}"
+    # @return [String] the formatted item with count and counter
+    def fluent_item_with_count(item_id, count, locale:, **)
+      item = resolve_item(item_id, count, "nominative")
+      counter = resolve_counter(item_id) || "個"
+      "#{format_count(count, locale)}#{counter}の#{item}"
     end
 
-    private def resolve_counter(item_id, count)
-      counter_info = resolve_counter_attr(item_id)
-      return nil unless counter_info
-
-      counter_value, is_term = counter_info
-      if is_term
-        counter_term = @items_bundle.term(counter_value)
-        return nil unless counter_term
-
-        @items_bundle.format_pattern(counter_term.value, count:)
-      else
-        counter_value
-      end
-    end
-
-    private def resolve_counter_attr(item_id)
+    private def resolve_counter(item_id)
       term = @items_bundle.term(item_id)
       return nil unless term&.attributes&.dig("counter")
 
       counter_attr = term.attributes["counter"]
-      counter_str = counter_attr.is_a?(String) ? counter_attr : @items_bundle.format_pattern(counter_attr)
-      [counter_str, counter_str.start_with?("-")]
+      counter_attr.is_a?(String) ? counter_attr : @items_bundle.format_pattern(counter_attr)
     end
   end
 end
