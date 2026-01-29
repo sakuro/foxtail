@@ -6,8 +6,7 @@ Demonstrates advanced localization for game items with grammatical gender, numbe
 
 - **Two-layer Bundle architecture**: Separate bundles for items (Terms) and messages
 - **Custom functions**: Language-specific functions for dynamic item embedding
-  - English/German/French: `ITEM`, `ITEM_WITH_COUNT`
-  - Japanese: `ITEM`, `COUNT`
+  - All languages: `ITEM`, `ITEM_WITH_COUNT`
 - **German grammatical cases**: nominative, accusative, dative, genitive
 - **German grammatical gender**: masculine, feminine, neuter
 - **French elision**: Automatic article contraction (le/la → l' before vowels)
@@ -87,7 +86,7 @@ bundle exec ruby examples/dungeon_game/main.rb
 
 ### Function Signatures
 
-Each language provides different functions based on its needs:
+All languages provide `ITEM` and `ITEM_WITH_COUNT` functions:
 
 **English/German/French:**
 ```ftl
@@ -100,11 +99,11 @@ Each language provides different functions based on its needs:
 
 **Japanese:**
 ```ftl
-# ITEM: Just the item name
+# ITEM: Item name
 { ITEM($item) }
 
-# COUNT: Count with counter word
-{ COUNT($item, $count) }
+# ITEM_WITH_COUNT: Count + counter + item (e.g., "3振の剣")
+{ ITEM_WITH_COUNT($item, $count) }
 ```
 
 ### German Article Declension (FTL-based)
@@ -202,7 +201,7 @@ Items specify a counter word (助数詞) via the `.counter` attribute:
     .counter = 瓶
 ```
 
-The `COUNT` function combines count + counter: `3振`, `1束`, `1組`, `3瓶`
+The `ITEM_WITH_COUNT` function formats as: `<count><counter>の<item>` (e.g., `3振の剣`, `1組の籠手`, `5瓶の霊薬`)
 
 ## Output Examples
 
@@ -239,9 +238,10 @@ Tu as trouvé une fiole d'élixir.   # counter elision: d' before vowel
 ### Japanese
 
 ```
-短剣を1振見つけた。                 # counter: 振
-剣を3振見つけた。                   # counter: 振
-籠手を1組見つけた。                 # counter: 組
+1振の短剣を見つけた。               # counter: 振
+3振の剣を見つけた。                 # counter: 振
+1組の籠手を見つけた。               # counter: 組
+5瓶の回復薬を見つけた。             # counter: 瓶
 ```
 
 ## Adding New Items
