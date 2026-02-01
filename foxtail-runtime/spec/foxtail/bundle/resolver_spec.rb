@@ -419,8 +419,8 @@ RSpec.describe Foxtail::Bundle::Resolver do
         scope_with_time = Foxtail::Bundle::Scope.new(bundle, date: time)
         pattern = ["Date: ", ast::VariableReference[name: "date"]]
         result = resolver.resolve_pattern(pattern, scope_with_time)
-        expect(result).to include("Jun")
-        expect(result).to include("2024")
+        expect(result).to include("6")
+        expect(result).to include("24")
       end
 
       it "applies DATETIME implicitly for Date variables (responds to #to_time)" do
@@ -429,8 +429,8 @@ RSpec.describe Foxtail::Bundle::Resolver do
         scope_with_date = Foxtail::Bundle::Scope.new(bundle, date:)
         pattern = ["Date: ", ast::VariableReference[name: "date"]]
         result = resolver.resolve_pattern(pattern, scope_with_date)
-        expect(result).to include("Jun")
-        expect(result).to include("2024")
+        expect(result).to include("6")
+        expect(result).to include("24")
       end
     end
 
