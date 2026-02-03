@@ -23,6 +23,26 @@ Custom functions are callable objects (lambdas, procs, or methods) with the foll
 | Named options | Options from FTL (e.g., `{ FUNC($var, style: "short") }`) |
 | `**` | Catch-all for any additional keyword arguments |
 
+### Return Value
+
+Custom functions **must** return a `Foxtail::Function::Value` instance (or a subclass like `Foxtail::Function::Number`). This ensures consistent handling throughout the resolution process, particularly for:
+
+- Plural category matching (only `Function::Number` is treated as numeric)
+- Deferred formatting (the `#format` method is called at the appropriate time)
+- Option preservation across the resolution pipeline
+
+```ruby
+# Good: Returns a Value instance
+format_price = ->(amount, locale:, currency: "USD", **) do
+  Foxtail::Function::Number.new(amount, style: :currency, currency: currency)
+end
+
+# Bad: Returns a raw string (loses context for plural matching, etc.)
+format_price = ->(amount, locale:, currency: "USD", **) do
+  "$#{amount}"
+end
+```
+
 ### Important
 
 Always include `**` in your function signature to accept additional keyword arguments that Foxtail may pass.
@@ -46,7 +66,7 @@ bundle = Foxtail::Bundle.new(locale, functions: {
 
 ```ruby
 # FTL: greeting = Hello, { SHOUT($name) }!
-shout = ->(text, **) { text.to_s.upcase }
+shout = ->(text, **) { Foxtail::Function::Value.new(text.to_s.upcase) }
 
 bundle = Foxtail::Bundle.new(locale, functions: { "SHOUT" => shout })
 bundle.add_resource("greeting = Hello, { SHOUT($name) }!")
@@ -57,13 +77,8 @@ bundle.format("greeting", name: "world")  # => "Hello, WORLD!"
 
 ```ruby
 # FTL: price = { PRICE($amount, currency: "USD") }
-format_price = ->(amount, locale:, currency: "USD", **) do
-  formatter = Foxtail::ICU4XCache.instance.number_formatter(
-    locale,
-    style: :currency,
-    currency: currency
-  )
-  formatter.format(amount)
+format_price = ->(amount, currency: "USD", **) do
+  Foxtail::Function::Number.new(amount, style: :currency, currency: currency)
 end
 
 bundle = Foxtail::Bundle.new(locale, functions: { "PRICE" => format_price })
@@ -86,13 +101,12 @@ class ItemFormatter
     }
   end
 
-  private def format_item(item_id, locale:, **)
-    # Implementation
+  private def format_item(item_id, **)
+    Foxtail::Function::Value.new(resolve_item(item_id, 1))
   end
 
-  private def format_item_with_count(item_id, count, locale:, **)
-    formatted_count = Foxtail::ICU4XCache.instance.number_formatter(locale).format(count)
-    "#{formatted_count} #{resolve_item(item_id, count)}"
+  private def format_item_with_count(item_id, count, **)
+    Foxtail::Function::Value.new([count, resolve_item(item_id, count)])
   end
 end
 
@@ -150,8 +164,9 @@ Key files:
 
 ## Best Practices
 
-1. **Always accept `**`** - Future Foxtail versions may pass additional arguments
-2. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
-3. **Handle errors gracefully** - Return a sensible fallback on errors
-4. **Keep functions pure** - Avoid side effects for predictable behavior
-5. **Document your functions** - Especially the expected FTL syntax
+1. **Return `Function::Value`** - Always return a `Function::Value` instance (or subclass like `Function::Number`)
+2. **Always accept `**`** - Future Foxtail versions may pass additional arguments
+3. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
+4. **Handle errors gracefully** - Return a sensible fallback on errors
+5. **Keep functions pure** - Avoid side effects for predictable behavior
+6. **Document your functions** - Especially the expected FTL syntax

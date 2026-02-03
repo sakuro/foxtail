@@ -59,7 +59,7 @@ module Foxtail
           formatted = apply_implicit_function(result)
           wrap_with_isolation(format_value(formatted), use_isolating)
         when Parser::AST::FunctionReference
-          # Function results may be Function::Value objects that need formatting
+          # Function results are Function::Value objects that need formatting
           result = resolve_expression(element, scope)
           wrap_with_isolation(format_value(result), use_isolating)
         when Parser::AST::StringLiteral, Parser::AST::TermReference,
