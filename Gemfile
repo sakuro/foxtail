@@ -8,7 +8,6 @@ gemspec path: "foxtail-tools"
 group :development, :test do
   gem "rake", require: false
 
-  gem "irb", require: false
   gem "repl_type_completor", require: false
 
   # Data for i18n
