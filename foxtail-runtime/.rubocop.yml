@@ -68,6 +68,11 @@ RSpec/SpecFilePathFormat:
   CustomTransform:
     ICU4XCache: icu4x_cache
 
+# Function::DateTime is our own class, not Ruby's DateTime
+Style/DateTime:
+  Exclude:
+    - 'lib/foxtail/function.rb'
+
 # Case statements don't always need else clauses when all cases are handled
 # or when unhandled cases should be ignored intentionally
 Style/MissingElse:

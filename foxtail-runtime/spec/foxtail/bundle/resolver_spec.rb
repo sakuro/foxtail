@@ -189,7 +189,12 @@ RSpec.describe Foxtail::Bundle::Resolver do
       ]]
 
       result = resolver.resolve_expression(expr, scope)
-      expect(result).to eq("1,234.56") # Should format with 2 decimal places (with locale formatting)
+      # NUMBER function returns a Function::Number object for deferred formatting
+      expect(result).to be_a(Foxtail::Function::Number)
+      expect(result.value).to eq(1234.56)
+      expect(result.options).to include(minimumFractionDigits: 2.0)
+      # Formatting happens at display time with bundle
+      expect(result.format(bundle:)).to eq("1,234.56")
     end
   end
 
