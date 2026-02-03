@@ -3,7 +3,6 @@
 # Dungeon Game Example
 #
 # This example demonstrates:
-# - Two-layer bundle architecture (Items Bundle + Messages Bundle)
 # - Custom functions (ITEM, ITEM_WITH_COUNT) for dynamic item localization
 # - Locale-aware number formatting using ICU4X (1,000 vs 1.000 vs 1 000)
 # - German grammatical cases (nominative, accusative, dative, genitive)
@@ -14,6 +13,9 @@
 require "foxtail-runtime"
 require "icu4x"
 require "pathname"
+
+require_relative "functions/item"
+require_relative "functions/item_with_count"
 
 require_relative "functions/base"
 require_relative "functions/de"
@@ -35,36 +37,32 @@ module ItemFunctions
   private_constant :LANGUAGE_CLASSES
 
   # Create language-specific custom functions
-  # @param locale [ICU4X::Locale] The locale
-  # @param items_bundle [Foxtail::Bundle] The bundle containing item terms
-  # @return [Hash{String => #call}] Custom functions for the locale
-  def self.functions_for_locale(locale, items_bundle)
-    klass = LANGUAGE_CLASSES.fetch(locale.to_s, Base)
-    klass.new(items_bundle).functions
+  # @param bundle [Foxtail::Bundle] The bundle containing terms and messages
+  # @return [Hash{String => #call}] Custom functions for the bundle's locale
+  def self.functions_for(bundle)
+    klass = LANGUAGE_CLASSES.fetch(bundle.locale.to_s, Base)
+    klass.new(bundle).functions
   end
 end
 
-# Create a messages bundle for the specified locale
+# Create a bundle for the specified locale
 # @param locale [ICU4X::Locale] The locale
 # @param locales_dir [Pathname] Directory containing locale subdirectories
-# @return [Foxtail::Bundle] Configured messages bundle with custom functions
+# @return [Foxtail::Bundle] Configured bundle with custom functions
 def create_bundle(locale, locales_dir)
   locale_dir = locales_dir.join(locale.to_s)
 
-  # Items bundle loads: articles, counters, items
-  items_bundle = Foxtail::Bundle.new(locale, use_isolating: false)
-  %w[articles counters items].each do |name|
+  # Create bundle and load all resources
+  bundle = Foxtail::Bundle.new(locale, use_isolating: false)
+  %w[articles counters items messages].each do |name|
     path = locale_dir.join("#{name}.ftl")
-    items_bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
+    bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
   end
 
-  # Messages bundle loads: messages
-  messages_bundle = Foxtail::Bundle.new(locale, functions: ItemFunctions.functions_for_locale(locale, items_bundle), use_isolating: false)
-  messages_bundle.add_resource(
-    Foxtail::Resource.from_file(locale_dir.join("messages.ftl"))
-  )
+  # Add custom functions that reference the bundle
+  bundle.functions.merge!(ItemFunctions.functions_for(bundle))
 
-  messages_bundle
+  bundle
 end
 
 # Directory containing locale files

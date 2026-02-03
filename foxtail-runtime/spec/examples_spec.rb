@@ -19,9 +19,7 @@ RSpec.describe "Examples" do
       expected_file = example.dirname.join("expected.txt")
       next unless expected_file.exist?
 
-      it example.dirname.basename.to_s do |ex|
-        # TODO: dungeon_game uses custom functions with locale: parameter (see issue #165)
-        pending "custom function API change" if ex.description == "dungeon_game"
+      it example.dirname.basename.to_s do
         expect(example).to produce_expected_output(example.dirname.join("expected.txt"))
       end
     end

@@ -16,10 +16,10 @@ module ItemFunctions
       return nil unless gender
 
       term_name = type == "definite" ? "-def-article" : "-indef-article"
-      term = @items_bundle.term(term_name)
+      term = @bundle.term(term_name)
       return nil unless term
 
-      @items_bundle.format_pattern(
+      @bundle.format_pattern(
         term.value,
         gender:,
         count:,
@@ -32,10 +32,10 @@ module ItemFunctions
       return nil if type == "indefinite" && count != 1
 
       term_name = type == "definite" ? "-def-article" : "-indef-article"
-      term = @items_bundle.term(term_name)
+      term = @bundle.term(term_name)
       return nil unless term
 
-      @items_bundle.format_pattern(
+      @bundle.format_pattern(
         term.value,
         gender:,
         count:,
@@ -44,7 +44,7 @@ module ItemFunctions
     end
 
     private def resolve_gender(item_id)
-      term = @items_bundle.term(item_id)
+      term = @bundle.term(item_id)
       term&.attributes&.dig("gender")
     end
   end
