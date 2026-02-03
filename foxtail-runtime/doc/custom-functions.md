@@ -11,7 +11,7 @@ Custom functions extend Foxtail's formatting capabilities beyond the built-in `N
 Custom functions are callable objects (lambdas, procs, or methods) with the following signature:
 
 ```ruby
-->(positional_arg1, positional_arg2, ..., locale:, option1:, option2:, **) { ... }
+->(positional_arg1, positional_arg2, ..., option1:, option2:, **) { ... }
 ```
 
 ### Parameters
@@ -19,7 +19,6 @@ Custom functions are callable objects (lambdas, procs, or methods) with the foll
 | Parameter | Description |
 |-----------|-------------|
 | Positional arguments | Values passed from FTL (e.g., `{ FUNC($var) }` passes the value of `$var`) |
-| `locale:` | `ICU4X::Locale` instance from the bundle (always provided) |
 | Named options | Options from FTL (e.g., `{ FUNC($var, style: "short") }`) |
 | `**` | Catch-all for any additional keyword arguments |
 
@@ -33,12 +32,12 @@ Custom functions **must** return a `Foxtail::Function::Value` instance (or a sub
 
 ```ruby
 # Good: Returns a Value instance
-format_price = ->(amount, locale:, currency: "USD", **) do
+format_price = ->(amount, currency: "USD", **) do
   Foxtail::Function::Number.new(amount, style: :currency, currency: currency)
 end
 
 # Bad: Returns a raw string (loses context for plural matching, etc.)
-format_price = ->(amount, locale:, currency: "USD", **) do
+format_price = ->(amount, currency: "USD", **) do
   "$#{amount}"
 end
 ```
