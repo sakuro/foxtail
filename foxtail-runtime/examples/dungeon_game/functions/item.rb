@@ -6,7 +6,6 @@ module ItemFunctions
   # Value type for ITEM function - wraps item_id with formatting options.
   class Item < Foxtail::Function::Value
     attr_reader :handler
-    attr_reader :item_id
 
     # @param handler [ItemFunctions::Base] the locale-specific handler
     # @param item_id [String] the item term reference (e.g., "-sword")
@@ -14,14 +13,13 @@ module ItemFunctions
     def initialize(handler, item_id, **)
       super(item_id, **)
       @handler = handler
-      @item_id = item_id
     end
 
     # Format the item for display
     # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the formatted item name with article
     def format(bundle:)
-      @handler.format_item(@item_id, bundle:, **@options)
+      @handler.format_item(value, bundle:, **@options)
     end
   end
 end
