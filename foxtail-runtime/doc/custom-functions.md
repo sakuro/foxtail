@@ -24,21 +24,20 @@ Custom functions are callable objects (lambdas, procs, or methods) with the foll
 
 ### Return Value
 
-Custom functions **must** return a `Foxtail::Function::Value` instance (or a subclass like `Foxtail::Function::Number`). This ensures consistent handling throughout the resolution process, particularly for:
+Custom functions can return either:
 
-- Plural category matching (only `Function::Number` is treated as numeric)
-- Deferred formatting (the `#format` method is called at the appropriate time)
-- Option preservation across the resolution pipeline
+- A `String` - for simple text output
+- A `Foxtail::Function::Value` instance (or subclass like `Foxtail::Function::Number`)
+
+Use `Function::Number` when the result needs to participate in plural category matching:
 
 ```ruby
-# Good: Returns a Value instance
-format_price = ->(amount, currency: "USD", **) do
-  Foxtail::Function::Number.new(amount, style: :currency, currency: currency)
-end
+# Simple text: String is fine
+shout = ->(text, **) { text.to_s.upcase }
 
-# Bad: Returns a raw string (loses context for plural matching, etc.)
-format_price = ->(amount, currency: "USD", **) do
-  "$#{amount}"
+# Numeric value for plural matching: Use Function::Number
+item_count = ->(count, **) do
+  Foxtail::Function::Number.new(count)
 end
 ```
 
@@ -65,7 +64,7 @@ bundle = Foxtail::Bundle.new(locale, functions: {
 
 ```ruby
 # FTL: greeting = Hello, { SHOUT($name) }!
-shout = ->(text, **) { Foxtail::Function::Value.new(text.to_s.upcase) }
+shout = ->(text, **) { text.to_s.upcase }
 
 bundle = Foxtail::Bundle.new(locale, functions: { "SHOUT" => shout })
 bundle.add_resource("greeting = Hello, { SHOUT($name) }!")
@@ -101,11 +100,11 @@ class ItemFormatter
   end
 
   private def format_item(item_id, **)
-    Foxtail::Function::Value.new(resolve_item(item_id, 1))
+    resolve_item(item_id, 1)
   end
 
   private def format_item_with_count(item_id, count, **)
-    Foxtail::Function::Value.new([count, resolve_item(item_id, count)])
+    "#{count} #{resolve_item(item_id, count)}"
   end
 end
 
@@ -163,7 +162,7 @@ Key files:
 
 ## Best Practices
 
-1. **Return `Function::Value`** - Always return a `Function::Value` instance (or subclass like `Function::Number`)
+1. **Use `Function::Number` for numeric results** - Required for plural category matching
 2. **Always accept `**`** - Future Foxtail versions may pass additional arguments
 3. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
 4. **Handle errors gracefully** - Return a sensible fallback on errors
