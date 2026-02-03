@@ -2,7 +2,7 @@
 
 module Foxtail
   module Function
-    # Abstract base class for deferred-formatting values
+    # Base class for deferred-formatting values
     # Wraps a value with formatting options, deferring locale-specific formatting until display time
     class Value
       # @return [Object] The wrapped raw value
@@ -19,11 +19,10 @@ module Foxtail
       end
 
       # Format the value for display
-      # @param bundle [Foxtail::Bundle] The bundle providing locale and context
+      # Subclasses may override for locale-specific formatting
+      # @param bundle [Foxtail::Bundle] The bundle providing locale and context (unused in base implementation)
       # @return [String] The formatted value
-      def format(bundle:)
-        raise NotImplementedError, "Subclasses must implement #format"
-      end
+      def format(**) = @value.to_s
     end
   end
 end
