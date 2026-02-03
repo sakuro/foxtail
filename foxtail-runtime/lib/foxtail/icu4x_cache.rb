@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "dry/core/cache"
-require "icu4x"
 require "singleton"
 
 module Foxtail

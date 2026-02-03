@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "icu4x"
-
 module Foxtail
   # Main runtime class for message formatting and localization.
   #

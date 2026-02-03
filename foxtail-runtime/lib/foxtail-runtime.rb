@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "icu4x"
 require "zeitwerk"
 require_relative "foxtail/runtime/version"
 
