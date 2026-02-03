@@ -318,7 +318,7 @@ module Foxtail
             # Numeric comparison
             # If precision is 0, compare as integers
             # Otherwise compare as floats
-            actual_selector = selector_value.is_a?(Function::Value) ? selector_value.value : selector_value
+            actual_selector = selector_value.is_a?(Function::Number) ? selector_value.value : selector_value
             if actual_selector.is_a?(Numeric) && key_value.is_a?(Numeric)
               if key.precision == 0
                 # Integer comparison when precision is 0
@@ -363,7 +363,7 @@ module Foxtail
           case selector_value
           when Numeric
             selector_value
-          when Function::Value
+          when Function::Number
             selector_value.value
           when String
             if selector_value.match?(/^\d+$/)
