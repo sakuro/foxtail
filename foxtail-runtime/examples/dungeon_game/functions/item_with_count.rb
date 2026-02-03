@@ -12,7 +12,7 @@ module ItemFunctions
     # @param count [Integer] the quantity of items
     # @param options [Hash] formatting options (type:, case:, cap:, etc.)
     def initialize(handler, item_id, count, **)
-      super({item_id:, count:}, **)
+      super([item_id, count], **)
       @handler = handler
     end
 
@@ -20,7 +20,7 @@ module ItemFunctions
     # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the formatted item name with count
     def format(bundle:)
-      @handler.format_item_with_count(value[:item_id], value[:count], bundle:, **@options)
+      @handler.format_item_with_count(*value, bundle:, **@options)
     end
   end
 end
