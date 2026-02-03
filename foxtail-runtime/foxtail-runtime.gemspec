@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "bigdecimal", ">= 3.1"
+  spec.add_dependency "dry-core", "~> 1.1"
   spec.add_dependency "icu4x", "~> 0.9"
   spec.add_dependency "zeitwerk", "~> 2.7"
 end
