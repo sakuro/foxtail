@@ -4,7 +4,6 @@ Demonstrates advanced localization for game items with grammatical gender, numbe
 
 ## Features
 
-- **Two-layer Bundle architecture**: Separate bundles for items (Terms) and messages
 - **Custom functions**: Language-specific functions for dynamic item embedding
   - All languages: `ITEM`, `ITEM_WITH_COUNT`
 - **German grammatical cases**: nominative, accusative, dative, genitive
@@ -19,6 +18,8 @@ Demonstrates advanced localization for game items with grammatical gender, numbe
 dungeon_game/
   main.rb                    # Main application
   functions/
+    item.rb                  # Item Value type
+    item_with_count.rb       # ItemWithCount Value type
     base.rb                  # Base class for item functions
     de.rb                    # German-specific (case declension)
     en.rb                    # English-specific (a/an selection)
@@ -53,34 +54,21 @@ bundle exec ruby examples/dungeon_game/main.rb
 
 ## Architecture
 
-### Two-layer Bundle Design
-
 ```
 ┌─────────────────────────────────────────────────┐
-│  Items Bundle (per language)                    │
+│  Bundle (per locale)                            │
 │  - Terms: items, articles, counters             │
+│  - Messages                                     │
 │  - All linguistic data in FTL                   │
 └─────────────────────────────────────────────────┘
-                      ↓ Captured via closure
+                      ↓ Registered as functions
 ┌─────────────────────────────────────────────────┐
 │  Custom Functions (ItemFunctions module)        │
 │  - Language-specific subclasses                 │
+│  - Returns Value objects for deferred formatting│
 │  - Resolves terms and formats output            │
 └─────────────────────────────────────────────────┘
-                      ↓ Injected into functions:
-┌─────────────────────────────────────────────────┐
-│  Messages Bundle (per language)                 │
-│  - Messages only                                │
-│  - Uses custom functions to embed item names    │
-└─────────────────────────────────────────────────┘
 ```
-
-### Why Two Bundles?
-
-1. **Separation of concerns**: Item vocabulary vs. game messages
-2. **Translator efficiency**: Edit item declensions directly in FTL
-3. **No circular references**: Items Bundle created first, then used by functions
-4. **Reusability**: Items Bundle can be shared across multiple Messages Bundles
 
 ## Key Concepts
 
