@@ -275,7 +275,11 @@ module Foxtail
           # Create child scope for function execution
           scope.child_scope
 
-          func.call(*positional_args, **options)
+          # Normalize arguments to Function::Value
+          normalized_args = positional_args.map {|arg| wrap_as_value(arg) }
+          normalized_opts = options.transform_values {|v| wrap_as_value(v) }
+
+          func.call(*normalized_args, **normalized_opts)
         rescue => e
           scope.add_error("Function error in #{func_name}: #{e.message}")
           "{#{func_name}()}"
@@ -409,6 +413,26 @@ module Foxtail
         else
           scope.add_error("Unknown message attribute: #{message.id}.#{attr}")
           "{#{message.id}.#{attr}}"
+        end
+      end
+
+      # Wrap a value as Function::Value for consistent function argument handling
+      # @param value [Object] the value to wrap
+      # @return [Function::Value] the wrapped value
+      private def wrap_as_value(value)
+        case value
+        when Function::Value
+          value
+        when Numeric
+          Function::Number.new(value)
+        when Time
+          Function::DateTime.new(value)
+        else
+          if value.respond_to?(:to_time)
+            Function::DateTime.new(value)
+          else
+            Function::Value.new(value)
+          end
         end
       end
     end

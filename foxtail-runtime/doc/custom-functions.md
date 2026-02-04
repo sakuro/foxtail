@@ -18,9 +18,18 @@ Custom functions are callable objects (lambdas, procs, or methods) with the foll
 
 | Parameter | Description |
 |-----------|-------------|
-| Positional arguments | Values passed from FTL (e.g., `{ FUNC($var) }` passes the value of `$var`) |
-| Named options | Options from FTL (e.g., `{ FUNC($var, style: "short") }`) |
+| Positional arguments | `Foxtail::Function::Value` instances wrapping values from FTL |
+| Named options | `Foxtail::Function::Value` instances wrapping option values |
 | `**` | Catch-all for any additional keyword arguments |
+
+**Important:** All arguments are wrapped as `Foxtail::Function::Value` (or subclasses like `Function::Number` for numeric values). This allows functions to access both the raw value and any formatting options. To get the raw value, use `.value`:
+
+```ruby
+->(wrapped_value, **) do
+  raw = wrapped_value.value  # Extract raw value
+  # ...
+end
+```
 
 ### Return Value
 
@@ -64,7 +73,7 @@ bundle = Foxtail::Bundle.new(locale, functions: {
 
 ```ruby
 # FTL: greeting = Hello, { SHOUT($name) }!
-shout = ->(text, **) { text.to_s.upcase }
+shout = ->(text, **) { text.value.to_s.upcase }
 
 bundle = Foxtail::Bundle.new(locale, functions: { "SHOUT" => shout })
 bundle.add_resource("greeting = Hello, { SHOUT($name) }!")
@@ -75,8 +84,11 @@ bundle.format("greeting", name: "world")  # => "Hello, WORLD!"
 
 ```ruby
 # FTL: price = { PRICE($amount, currency: "USD") }
-format_price = ->(amount, currency: "USD", **) do
-  Foxtail::Function::Number.new(amount, style: :currency, currency: currency)
+format_price = ->(amount, currency:, **) do
+  # Unwrap Function::Value arguments
+  raw_amount = amount.value
+  raw_currency = currency.value
+  Foxtail::Function::Number.new(raw_amount, style: :currency, currency: raw_currency)
 end
 
 bundle = Foxtail::Bundle.new(locale, functions: { "PRICE" => format_price })
@@ -99,11 +111,16 @@ class ItemFormatter
     }
   end
 
+  private def unwrap(value) = value.is_a?(Foxtail::Function::Value) ? value.value : value
+
   private def format_item(item_id, **)
+    item_id = unwrap(item_id)
     resolve_item(item_id, 1)
   end
 
   private def format_item_with_count(item_id, count, **)
+    item_id = unwrap(item_id)
+    count = unwrap(count)
     "#{count} #{resolve_item(item_id, count)}"
   end
 end
@@ -156,15 +173,18 @@ See the [dungeon game example](../examples/dungeon_game/) for a comprehensive im
 - Pluralization
 
 Key files:
-- `examples/dungeon_game/functions/base.rb` - Base function class
-- `examples/dungeon_game/functions/en.rb` - English-specific handling
-- `examples/dungeon_game/functions/ja.rb` - Japanese-specific handling
+- `examples/dungeon_game/functions/handler.rb` - Base handler class with unwrap helper
+- `examples/dungeon_game/functions/en_handler.rb` - English-specific handling
+- `examples/dungeon_game/functions/ja_handler.rb` - Japanese-specific handling
+- `examples/dungeon_game/functions/item.rb` - ITEM function factory
+- `examples/dungeon_game/functions/item_with_count.rb` - ITEM_WITH_COUNT function factory
 
 ## Best Practices
 
-1. **Use `Function::Number` for numeric results** - Required for plural category matching
-2. **Always accept `**`** - Future Foxtail versions may pass additional arguments
-3. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
-4. **Handle errors gracefully** - Return a sensible fallback on errors
-5. **Keep functions pure** - Avoid side effects for predictable behavior
-6. **Document your functions** - Especially the expected FTL syntax
+1. **Unwrap `Function::Value` arguments** - Use `.value` to get raw values from wrapped arguments
+2. **Use `Function::Number` for numeric results** - Required for plural category matching
+3. **Always accept `**`** - Future Foxtail versions may pass additional arguments
+4. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
+5. **Handle errors gracefully** - Return a sensible fallback on errors
+6. **Keep functions pure** - Avoid side effects for predictable behavior
+7. **Document your functions** - Especially the expected FTL syntax

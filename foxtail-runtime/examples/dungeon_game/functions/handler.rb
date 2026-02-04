@@ -31,7 +31,12 @@ module ItemFunctions
     # @param cap [String] capitalize first letter: "true" or "false"
     # @return [String] the formatted item name with article
     def format_item(item_id, count: 1, type: "indefinite", case: "nominative", cap: "false", **)
-      grammatical_case = {case:}[:case]
+      # Unwrap Function::Value arguments
+      item_id = unwrap(item_id)
+      count = unwrap(count)
+      type = unwrap(type)
+      cap = unwrap(cap)
+      grammatical_case = unwrap({case:}[:case])
 
       item = resolve_item(item_id, count, grammatical_case)
       article = resolve_article(item_id, count, type, grammatical_case)
@@ -50,7 +55,12 @@ module ItemFunctions
     # @param cap [String] capitalize first letter: "true" or "false"
     # @return [String] the formatted item name with count
     def format_item_with_count(item_id, count, bundle:, type: "none", case: "nominative", cap: "false", **)
-      grammatical_case = {case:}[:case]
+      # Unwrap Function::Value arguments
+      item_id = unwrap(item_id)
+      count = unwrap(count)
+      type = unwrap(type)
+      cap = unwrap(cap)
+      grammatical_case = unwrap({case:}[:case])
 
       counter_term = resolve_counter_term(item_id)
 
@@ -66,6 +76,8 @@ module ItemFunctions
 
       cap == "true" ? capitalize_first(result) : result
     end
+
+    private def unwrap(value) = value.is_a?(Foxtail::Function::Value) ? value.value : value
 
     private def capitalize_first(str) = str.sub(/\A\p{Ll}/, &:upcase)
 
