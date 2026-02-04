@@ -4,6 +4,7 @@ require "simplecov"
 load File.expand_path("../.simplecov", __dir__)
 
 require "foxtail-runtime"
+require "icu4x-data-recommended"
 
 Dir[File.join(__dir__, "..", "..", "spec", "support", "**", "*.rb")].each {|f| require f }
 

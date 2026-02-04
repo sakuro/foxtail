@@ -5,7 +5,7 @@ require "tempfile"
 RSpec::Matchers.define :produce_expected_output do |expected_file|
   match do |example_file|
     @example_file = example_file
-    @actual = %x(bundle exec ruby #{example_file})
+    @actual = %x(bundle exec ruby -r icu4x-data-recommended #{example_file})
     @expected = expected_file.read
     @actual == @expected
   end
