@@ -28,24 +28,24 @@ module ItemFunctions
     end
 
     private def resolve_definite_article
-      term = @items_bundle.term("-def-article")
+      term = @bundle.term("-def-article")
       return "the" unless term
 
-      @items_bundle.format_pattern(term.value)
+      @bundle.format_pattern(term.value)
     end
 
     private def resolve_indefinite_article(item_id, count)
       # Check explicit .indef attribute first
-      item_term = @items_bundle.term(item_id)
+      item_term = @bundle.term(item_id)
       return item_term.attributes["indef"] if item_term&.attributes&.key?("indef")
 
       # Use FTL term with first_letter selector
-      term = @items_bundle.term("-indef-article")
+      term = @bundle.term("-indef-article")
       return "a" unless term
 
       item = resolve_item(item_id, count, "nominative")
       first_letter = extract_first_letter(item)
-      @items_bundle.format_pattern(term.value, first_letter:)
+      @bundle.format_pattern(term.value, first_letter:)
     end
 
     private def resolve_indefinite_article_for_counter(counter_term, count)
@@ -53,12 +53,12 @@ module ItemFunctions
       return counter_term.attributes["indef"] if counter_term.attributes&.key?("indef")
 
       # Use FTL term with first_letter selector
-      term = @items_bundle.term("-indef-article")
+      term = @bundle.term("-indef-article")
       return "a" unless term
 
-      counter = @items_bundle.format_pattern(counter_term.value, count:)
+      counter = @bundle.format_pattern(counter_term.value, count:)
       first_letter = extract_first_letter(counter)
-      @items_bundle.format_pattern(term.value, first_letter:)
+      @bundle.format_pattern(term.value, first_letter:)
     end
 
     # Extract first letter, handling accented characters via NFD normalization

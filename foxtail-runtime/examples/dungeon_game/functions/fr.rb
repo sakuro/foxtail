@@ -9,13 +9,13 @@ module ItemFunctions
   class Fr < Base
     private def format_article_counter_item(article, counter, item, counter_elision: false)
       unless article
-        term = @items_bundle.term("-fmt-counter-item")
-        return @items_bundle.format_pattern(term.value, counter:, item:, elision: counter_elision.to_s)
+        term = @bundle.term("-fmt-counter-item")
+        return @bundle.format_pattern(term.value, counter:, item:, elision: counter_elision.to_s)
       end
 
       article_elision = article.end_with?("'")
-      term = @items_bundle.term("-fmt-article-counter-item")
-      @items_bundle.format_pattern(
+      term = @bundle.term("-fmt-article-counter-item")
+      @bundle.format_pattern(
         term.value,
         article:,
         counter:,
@@ -29,14 +29,14 @@ module ItemFunctions
       return item unless article
 
       elision = article.end_with?("'")
-      term = @items_bundle.term("-fmt-article-item")
-      @items_bundle.format_pattern(term.value, article:, item:, elision: elision.to_s)
+      term = @bundle.term("-fmt-article-item")
+      @bundle.format_pattern(term.value, article:, item:, elision: elision.to_s)
     end
 
     private def format_count_item_with_counter(counter_term, item_id, count, type, grammatical_case, locale)
       item = resolve_item(item_id, 1, grammatical_case)
       item_elision = should_elide_for_item?(item_id)
-      counter = @items_bundle.format_pattern(counter_term.value, count:, elision: item_elision.to_s)
+      counter = @bundle.format_pattern(counter_term.value, count:, elision: item_elision.to_s)
 
       if count == 1 && type != "none"
         counter_gender = counter_term.attributes&.dig("gender") || "feminine"
@@ -48,15 +48,15 @@ module ItemFunctions
     end
 
     private def format_count_counter_item(count, counter, item, elision, locale)
-      term = @items_bundle.term("-fmt-count-counter-item")
+      term = @bundle.term("-fmt-count-counter-item")
       formatted_count = format_count(count, locale)
-      @items_bundle.format_pattern(term.value, count: formatted_count, counter:, item:, elision: elision.to_s)
+      @bundle.format_pattern(term.value, count: formatted_count, counter:, item:, elision: elision.to_s)
     end
 
     private def resolve_article(item_id, count, type, _grammatical_case=nil)
       return nil if type == "none"
 
-      term = @items_bundle.term(item_id)
+      term = @bundle.term(item_id)
       gender = term&.attributes&.dig("gender") || "masculine"
       elision = should_elide?(term, item_id, count)
 
@@ -78,10 +78,10 @@ module ItemFunctions
     end
 
     private def resolve_definite_article(gender, count, elision)
-      term = @items_bundle.term("-def-article")
+      term = @bundle.term("-def-article")
       return nil unless term
 
-      @items_bundle.format_pattern(
+      @bundle.format_pattern(
         term.value,
         gender:,
         count:,
@@ -90,10 +90,10 @@ module ItemFunctions
     end
 
     private def resolve_indefinite_article(gender, count)
-      term = @items_bundle.term("-indef-article")
+      term = @bundle.term("-indef-article")
       return nil unless term
 
-      @items_bundle.format_pattern(
+      @bundle.format_pattern(
         term.value,
         gender:,
         count:
@@ -112,7 +112,7 @@ module ItemFunctions
     end
 
     private def should_elide_for_item?(item_id)
-      term = @items_bundle.term(item_id)
+      term = @bundle.term(item_id)
 
       # Check explicit .elision attribute first
       if term&.attributes&.key?("elision")
@@ -129,7 +129,7 @@ module ItemFunctions
         return counter_term.attributes["elision"] != "false"
       end
 
-      counter = @items_bundle.format_pattern(counter_term.value, count:)
+      counter = @bundle.format_pattern(counter_term.value, count:)
       starts_with_vowel?(counter)
     end
 
