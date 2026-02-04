@@ -11,7 +11,6 @@
 # - Proper article declension based on gender, number, and case
 
 require "foxtail-runtime"
-require "icu4x"
 require "pathname"
 
 require_relative "functions/item"

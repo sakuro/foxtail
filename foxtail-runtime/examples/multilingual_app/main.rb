@@ -8,7 +8,6 @@
 # - Handling locale-specific messages
 
 require "foxtail-runtime"
-require "icu4x"
 require "pathname"
 
 # Directory containing locale files

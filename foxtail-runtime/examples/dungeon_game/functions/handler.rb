@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "icu4x"
-
 # Namespace for item localization function handlers
 module ItemFunctions
   # Base handler class for language-specific item localization.
