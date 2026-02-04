@@ -8,24 +8,7 @@ Foxtail uses the `icu4x` gem (Ruby bindings for [ICU4X](https://github.com/unico
 
 ### Dependencies
 
-The `icu4x` gem requires data files for locale-specific rules.
-
-```ruby
-# Gemfile
-gem "icu4x"
-gem "icu4x-data-recommended" # Provides data files
-```
-
-### Configuration
-
-Set the `ICU4X_DATA_PATH` environment variable:
-
-```bash
-# In .env or shell configuration
-export ICU4X_DATA_PATH=/path/to/icu4x-data
-```
-
-The `bin/setup` script automatically configures this for development.
+The `icu4x` gem requires data files for locale-specific formatting rules. See the [icu4x gem documentation](https://github.com/sakuro/icu4x?tab=readme-ov-file#data-preparation) for data setup options.
 
 ## Components Used
 
@@ -266,7 +249,7 @@ bundle = Foxtail::Bundle.new(locale, functions: {
 
 ## Data Loading
 
-`icu4x` data is loaded once at startup. Ensure `ICU4X_DATA_PATH` is set before any formatting operations.
+ICU4X data is loaded once at startup. Ensure data is configured before any formatting operations.
 
 ## Error Handling
 
