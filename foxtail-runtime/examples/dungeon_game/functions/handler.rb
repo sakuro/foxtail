@@ -4,10 +4,10 @@ require "icu4x"
 
 # Namespace for item localization function handlers
 module ItemFunctions
-  # Base class for language-specific item localization functions.
+  # Base handler class for language-specific item localization.
   #
-  # Provides common fluent functions (ITEM, ITEM_WITH_COUNT) and template methods
-  # for subclasses to override language-specific behavior.
+  # Provides formatting methods for ITEM and ITEM_WITH_COUNT functions.
+  # Subclasses override template methods for language-specific behavior.
   #
   # Note on the `cap` parameter:
   # Capitalization at sentence start is technically a message-layer concern,
@@ -15,39 +15,9 @@ module ItemFunctions
   # (e.g., CAPITALIZE(ITEM_WITH_COUNT(...))), so we use the `cap` parameter as a
   # pragmatic workaround. The message layer passes `cap: "true"` as a hint
   # when the result will appear at sentence start.
-  class Base
+  class Handler
     def initialize(bundle)
       @bundle = bundle
-    end
-
-    # Returns the custom Fluent functions provided by this handler.
-    # Subclasses may override this method to provide different functions.
-    # @return [Hash{String => #call}] function name to callable mapping
-    def functions
-      {
-        "ITEM" => method(:fluent_item),
-        "ITEM_WITH_COUNT" => method(:fluent_item_with_count)
-      }
-    end
-
-    # Fluent function: ITEM - Returns a Value object for deferred formatting.
-    #
-    # @param item_id [String] the item term reference (e.g., "-sword", "-potion")
-    # @param count [Integer] the quantity of items (affects pluralization and article)
-    # @param options [Hash] formatting options (type:, case:, cap:, etc.)
-    # @return [Item] a Value object that will format when #format is called
-    def fluent_item(item_id, count=1, **)
-      Item.new(self, item_id, count:, **)
-    end
-
-    # Fluent function: ITEM_WITH_COUNT - Returns a Value object for deferred formatting.
-    #
-    # @param item_id [String] the item term reference (e.g., "-sword", "-potion")
-    # @param count [Integer] the quantity of items
-    # @param options [Hash] formatting options (type:, case:, cap:, etc.)
-    # @return [ItemWithCount] a Value object that will format when #format is called
-    def fluent_item_with_count(item_id, count, **)
-      ItemWithCount.new(self, item_id, count, **)
     end
 
     # Format an item with optional article.

@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+require_relative "handler"
+
 # French-specific item localization functions
 module ItemFunctions
   # French item localization handler.
   #
   # Provides article selection with elision handling (le/la → l' before vowels),
   # with support for h aspiré exceptions via .elision attribute.
-  class Fr < Base
+  class FrHandler < Handler
     private def format_article_counter_item(article, counter, item, counter_elision: false)
       unless article
         term = @bundle.term("-fmt-counter-item")

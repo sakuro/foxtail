@@ -17,32 +17,43 @@ require "pathname"
 require_relative "functions/item"
 require_relative "functions/item_with_count"
 
-require_relative "functions/base"
-require_relative "functions/de"
-require_relative "functions/en"
-require_relative "functions/fr"
-require_relative "functions/ja"
+require_relative "functions/de_handler"
+require_relative "functions/en_handler"
+require_relative "functions/fr_handler"
+require_relative "functions/ja_handler"
 
 TARGET_LANGUAGES = %w[en de fr ja].freeze
 TARGET_LOCALES = TARGET_LANGUAGES.to_h {|lang| [lang, ICU4X::Locale.parse(lang)] }.freeze
 
-# Language class registry for item localization
+# Language handler registry for item localization
 module ItemFunctions
-  LANGUAGE_CLASSES = {
-    "de" => De,
-    "en" => En,
-    "fr" => Fr,
-    "ja" => Ja
+  HANDLER_CLASSES = {
+    "de" => DeHandler,
+    "en" => EnHandler,
+    "fr" => FrHandler,
+    "ja" => JaHandler
   }.freeze
-  private_constant :LANGUAGE_CLASSES
+  private_constant :HANDLER_CLASSES
 
   # Create language-specific custom functions
   # @param bundle [Foxtail::Bundle] The bundle containing terms and messages
   # @return [Hash{String => #call}] Custom functions for the bundle's locale
   def self.functions_for(bundle)
-    klass = LANGUAGE_CLASSES.fetch(bundle.locale.to_s, Base)
-    klass.new(bundle).functions
+    handler = handler_for(bundle)
+    {
+      "ITEM" => ->(item_id, count=1, **options) { Item.new(handler, item_id, count:, **options) },
+      "ITEM_WITH_COUNT" => ->(item_id, count, **options) { ItemWithCount.new(handler, item_id, count, **options) }
+    }
   end
+
+  # Create a handler for the given bundle's locale
+  # @param bundle [Foxtail::Bundle] The bundle containing terms and messages
+  # @return [Handler] The locale-specific handler
+  def self.handler_for(bundle)
+    klass = HANDLER_CLASSES.fetch(bundle.locale.to_s, Handler)
+    klass.new(bundle)
+  end
+  private_class_method :handler_for
 end
 
 # Create a bundle for the specified locale
