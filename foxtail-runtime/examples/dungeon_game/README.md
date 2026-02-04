@@ -20,11 +20,11 @@ dungeon_game/
   functions/
     item.rb                  # Item Value type
     item_with_count.rb       # ItemWithCount Value type
-    base.rb                  # Base class for item functions
-    de.rb                    # German-specific (case declension)
-    en.rb                    # English-specific (a/an selection)
-    fr.rb                    # French-specific (elision handling)
-    ja.rb                    # Japanese-specific (counter words)
+    handler.rb               # Base handler class
+    de_handler.rb            # German-specific (case declension)
+    en_handler.rb            # English-specific (a/an selection)
+    fr_handler.rb            # French-specific (elision handling)
+    ja_handler.rb            # Japanese-specific (counter words)
   locales/
     en/
       articles.ftl           # English article terms (-def-article, -indef-article)
