@@ -7,7 +7,7 @@ module ItemFunctions
   class Item < Foxtail::Function::Value
     attr_reader :handler
 
-    # @param handler [ItemFunctions::Base] the locale-specific handler
+    # @param handler [ItemFunctions::Handler] the locale-specific handler
     # @param item_id [String] the item term reference (e.g., "-sword")
     # @param options [Hash] formatting options (type:, case:, cap:, etc.)
     def initialize(handler, item_id, **)

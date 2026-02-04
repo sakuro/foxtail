@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+require_relative "handler"
+
 # English-specific item localization functions
 module ItemFunctions
   # English item localization handler.
   #
   # Provides indefinite article selection (a/an) based on first letter,
   # with support for explicit overrides via .indef attribute.
-  class En < Base
+  class EnHandler < Handler
     private def resolve_article(item_id, count, type, _grammatical_case=nil)
       return nil if type == "none"
       # Indefinite only for singular

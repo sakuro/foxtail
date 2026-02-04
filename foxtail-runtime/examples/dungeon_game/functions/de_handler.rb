@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+require_relative "handler"
+
 # German-specific item localization functions
 module ItemFunctions
   # German item localization handler.
   #
   # Provides article declension based on grammatical gender (masculine, feminine, neuter),
   # number (singular, plural), and case (nominative, accusative, dative, genitive).
-  class De < Base
+  class DeHandler < Handler
     private def resolve_article(item_id, count, type, grammatical_case)
       return nil if type == "none"
       # Indefinite only for singular

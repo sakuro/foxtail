@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+require_relative "handler"
+
 # Japanese-specific item localization functions
 module ItemFunctions
   # Japanese item localization handler.
   #
   # Provides counter word (助数詞) support for items. Each item can have a
   # counter defined via .counter attribute (e.g., 振 for swords, 瓶 for bottles).
-  class Ja < Base
+  class JaHandler < Handler
     # Format an item name.
     #
     # Japanese items do not require articles or grammatical case handling,
