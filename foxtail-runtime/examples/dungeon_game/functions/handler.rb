@@ -16,9 +16,7 @@ module ItemFunctions
   # pragmatic workaround. The message layer passes `cap: "true"` as a hint
   # when the result will appear at sentence start.
   class Handler
-    def initialize(bundle)
-      @bundle = bundle
-    end
+    def initialize(bundle) = @bundle = bundle
 
     # Format an item with optional article.
     # Called by Item#format with the bundle context.

@@ -18,8 +18,6 @@ module ItemFunctions
     # Format the item for display
     # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the formatted item name with article
-    def format(bundle:)
-      @handler.format_item(value, bundle:, **@options)
-    end
+    def format(bundle:) = @handler.format_item(value, bundle:, **@options)
   end
 end
