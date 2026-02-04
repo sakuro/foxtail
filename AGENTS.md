@@ -54,6 +54,8 @@ bin/console                 # Interactive console
 bundle exec rake doc        # Generate YARD documentation
 ```
 
+**Note**: Run commands from within each subproject directory (`foxtail-runtime/` or `foxtail-tools/`). Running `rspec` from the repository root finds no tests because specs are located in subproject directories.
+
 ## Configuration
 
 - **Ruby version**: >= 3.2
