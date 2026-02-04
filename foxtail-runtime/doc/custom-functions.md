@@ -11,7 +11,7 @@ Custom functions extend Foxtail's formatting capabilities beyond the built-in `N
 Custom functions are callable objects (lambdas, procs, or methods) with the following signature:
 
 ```ruby
-->(positional_arg1, positional_arg2, ..., locale:, option1:, option2:, **) { ... }
+->(positional_arg1, positional_arg2, ..., option1:, option2:, **) { ... }
 ```
 
 ### Parameters
@@ -19,9 +19,27 @@ Custom functions are callable objects (lambdas, procs, or methods) with the foll
 | Parameter | Description |
 |-----------|-------------|
 | Positional arguments | Values passed from FTL (e.g., `{ FUNC($var) }` passes the value of `$var`) |
-| `locale:` | `ICU4X::Locale` instance from the bundle (always provided) |
 | Named options | Options from FTL (e.g., `{ FUNC($var, style: "short") }`) |
 | `**` | Catch-all for any additional keyword arguments |
+
+### Return Value
+
+Custom functions can return either:
+
+- A `String` - for simple text output
+- A `Foxtail::Function::Value` instance (or subclass like `Foxtail::Function::Number`)
+
+Use `Function::Number` when the result needs to participate in plural category matching:
+
+```ruby
+# Simple text: String is fine
+shout = ->(text, **) { text.to_s.upcase }
+
+# Numeric value for plural matching: Use Function::Number
+item_count = ->(count, **) do
+  Foxtail::Function::Number.new(count)
+end
+```
 
 ### Important
 
@@ -57,13 +75,8 @@ bundle.format("greeting", name: "world")  # => "Hello, WORLD!"
 
 ```ruby
 # FTL: price = { PRICE($amount, currency: "USD") }
-format_price = ->(amount, locale:, currency: "USD", **) do
-  formatter = Foxtail::ICU4XCache.instance.number_formatter(
-    locale,
-    style: :currency,
-    currency: currency
-  )
-  formatter.format(amount)
+format_price = ->(amount, currency: "USD", **) do
+  Foxtail::Function::Number.new(amount, style: :currency, currency: currency)
 end
 
 bundle = Foxtail::Bundle.new(locale, functions: { "PRICE" => format_price })
@@ -86,13 +99,12 @@ class ItemFormatter
     }
   end
 
-  private def format_item(item_id, locale:, **)
-    # Implementation
+  private def format_item(item_id, **)
+    resolve_item(item_id, 1)
   end
 
-  private def format_item_with_count(item_id, count, locale:, **)
-    formatted_count = Foxtail::ICU4XCache.instance.number_formatter(locale).format(count)
-    "#{formatted_count} #{resolve_item(item_id, count)}"
+  private def format_item_with_count(item_id, count, **)
+    "#{count} #{resolve_item(item_id, count)}"
   end
 end
 
@@ -150,8 +162,9 @@ Key files:
 
 ## Best Practices
 
-1. **Always accept `**`** - Future Foxtail versions may pass additional arguments
-2. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
-3. **Handle errors gracefully** - Return a sensible fallback on errors
-4. **Keep functions pure** - Avoid side effects for predictable behavior
-5. **Document your functions** - Especially the expected FTL syntax
+1. **Use `Function::Number` for numeric results** - Required for plural category matching
+2. **Always accept `**`** - Future Foxtail versions may pass additional arguments
+3. **Use `ICU4XCache`** - Avoid creating new ICU4X instances per call
+4. **Handle errors gracefully** - Return a sensible fallback on errors
+5. **Keep functions pure** - Avoid side effects for predictable behavior
+6. **Document your functions** - Especially the expected FTL syntax

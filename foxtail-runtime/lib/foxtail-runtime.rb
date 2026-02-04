@@ -19,6 +19,7 @@ module Foxtail
   # Configure inflections for acronyms
   loader.inflector.inflect(
     "ast" => "AST",
+    "datetime" => "DateTime",
     "icu4x_cache" => "ICU4XCache"
   )
 

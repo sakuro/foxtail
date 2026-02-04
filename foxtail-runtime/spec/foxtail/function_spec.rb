@@ -12,13 +12,20 @@ RSpec.describe Foxtail::Function do
       expect(result["DATETIME"]).to respond_to(:call)
     end
 
-    it "returns correct formatted results" do
+    it "returns Value objects for deferred formatting" do
       result = Foxtail::Function.defaults
-      en_locale = ICU4X::Locale.parse("en")
+      bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en"))
 
-      expect(result["NUMBER"].call(42, locale: en_locale)).to eq("42")
-      # ICU4X requires dateStyle or timeStyle; use mid-year date to avoid timezone edge cases
-      expect(result["DATETIME"].call(Time.new(2023, 6, 15), locale: en_locale, dateStyle: :medium)).to include("2023")
+      # NUMBER returns a Function::Number for deferred formatting
+      number_value = result["NUMBER"].call(42)
+      expect(number_value).to be_a(Foxtail::Function::Number)
+      expect(number_value.value).to eq(42)
+      expect(number_value.format(bundle:)).to eq("42")
+
+      # DATETIME returns a Function::DateTime for deferred formatting
+      datetime_value = result["DATETIME"].call(Time.new(2023, 6, 15), dateStyle: :medium)
+      expect(datetime_value).to be_a(Foxtail::Function::DateTime)
+      expect(datetime_value.format(bundle:)).to include("2023")
     end
   end
 end

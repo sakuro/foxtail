@@ -57,9 +57,13 @@ module Foxtail
           # Apply implicit NUMBER/DATETIME formatting for variables at display time
           result = resolve_expression(element, scope)
           formatted = apply_implicit_function(result)
-          wrap_with_isolation(formatted.to_s, use_isolating)
+          wrap_with_isolation(format_value(formatted), use_isolating)
+        when Parser::AST::FunctionReference
+          # Function results are Function::Value objects that need formatting
+          result = resolve_expression(element, scope)
+          wrap_with_isolation(format_value(result), use_isolating)
         when Parser::AST::StringLiteral, Parser::AST::TermReference,
-             Parser::AST::MessageReference, Parser::AST::FunctionReference, Parser::AST::SelectExpression
+             Parser::AST::MessageReference, Parser::AST::SelectExpression
 
           result = resolve_expression(element, scope)
           wrap_with_isolation(result.to_s, use_isolating)
@@ -105,6 +109,17 @@ module Foxtail
         end
       end
 
+      # Format a value for display
+      # Function::Value objects are formatted with the bundle
+      private def format_value(value)
+        case value
+        when Function::Value
+          value.format(bundle: @bundle)
+        else
+          value.to_s
+        end
+      end
+
       private def wrap_with_isolation(value, use_isolating)
         use_isolating ? "#{FSI}#{value}#{PDI}" : value
       end
@@ -147,7 +162,7 @@ module Foxtail
         func = @bundle.functions["NUMBER"]
         return value unless func
 
-        func.call(value, locale: @bundle.locale)
+        func.call(value)
       rescue
         value
       end
@@ -157,7 +172,7 @@ module Foxtail
         func = @bundle.functions["DATETIME"]
         return value unless func
 
-        func.call(value, locale: @bundle.locale)
+        func.call(value)
       rescue
         value
       end
@@ -260,7 +275,7 @@ module Foxtail
           # Create child scope for function execution
           scope.child_scope
 
-          func.call(*positional_args, locale: @bundle.locale, **options)
+          func.call(*positional_args, **options)
         rescue => e
           scope.add_error("Function error in #{func_name}: #{e.message}")
           "{#{func_name}()}"
@@ -303,17 +318,18 @@ module Foxtail
             # Numeric comparison
             # If precision is 0, compare as integers
             # Otherwise compare as floats
-            if selector_value.is_a?(Numeric) && key_value.is_a?(Numeric)
+            actual_selector = selector_value.is_a?(Function::Number) ? selector_value.value : selector_value
+            if actual_selector.is_a?(Numeric) && key_value.is_a?(Numeric)
               if key.precision == 0
                 # Integer comparison when precision is 0
-                Integer(key_value) == Integer(selector_value)
+                Integer(key_value) == Integer(actual_selector)
               else
                 # Float comparison when precision > 0
-                key_value == selector_value
+                key_value == actual_selector
               end
             else
               # Fallback to string comparison if not both numeric
-              key_value.to_s == selector_value.to_s
+              key_value.to_s == actual_selector.to_s
             end
           when Parser::AST::StringLiteral
             # String comparison - check for ICU plural category match
@@ -335,7 +351,9 @@ module Foxtail
 
       # Check if selector value is numeric for plural rules processing
       private def numeric_selector?(value)
-        value.is_a?(Numeric) || (value.is_a?(String) && value.match?(/^\d+(\.\d+)?$/))
+        value.is_a?(Numeric) ||
+          value.is_a?(Function::Number) ||
+          (value.is_a?(String) && value.match?(/^\d+(\.\d+)?$/))
       end
 
       # Check if key matches selector via ICU plural rules
@@ -345,6 +363,8 @@ module Foxtail
           case selector_value
           when Numeric
             selector_value
+          when Function::Number
+            selector_value.value
           when String
             if selector_value.match?(/^\d+$/)
               Integer(selector_value)
