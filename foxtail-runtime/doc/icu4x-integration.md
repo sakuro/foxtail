@@ -224,29 +224,6 @@ ru_rules.select(21)  # => :one
 ru_rules.select(22)  # => :few
 ```
 
-## Custom Functions
-
-You can register custom functions that use ICU4X:
-
-```ruby
-# Custom ordinal formatter
-ordinal_function = ->(args, _options, scope) do
-  value = args.first
-  locale = scope.bundle.locale
-  # Use ICU4X or custom logic
-  case value
-  when 1 then "1st"
-  when 2 then "2nd"
-  when 3 then "3rd"
-  else "#{value}th"
-  end
-end
-
-bundle = Foxtail::Bundle.new(locale, functions: {
-  "ORDINAL" => ordinal_function
-})
-```
-
 ## Data Loading
 
 ICU4X data is loaded once at startup. Ensure data is configured before any formatting operations.
