@@ -4,24 +4,6 @@ IFS=$'\n\t'
 
 bundle install
 
-if [ -z "${ICU4X_DATA_PATH+x}" ]; then
-  ICU4X_DATA_PATH="$(bundle show icu4x-data-recommended)/data/recommended.postcard"
-  if [ ! -f .env ]; then
-    echo "ICU4X_DATA_PATH=$ICU4X_DATA_PATH" > .env
-    echo "ICU4X_DATA_PATH is set to $ICU4X_DATA_PATH in .env"
-  else
-    echo "Add following setting to your .env"
-    echo 'ICU4X_DATA_PATH="'$ICU4X_DATA_PATH'"'
-  fi
-else
-  echo "ICU4X_DATA_PATH is $ICU4X_DATA_PATH"
-fi
-
-if [ ! -f "$ICU4X_DATA_PATH" ]; then
-  echo "ICU4X_DATA_PATH($ICU4X_DATA_PATH) does not exist."
-  exit 1
-fi
-
 # Set up fluent.js submodule if it doesn't exist
 if [ ! -d "fluent.js" ] || [ ! -f "fluent.js/.git" ]; then
   echo "Setting up fluent.js submodule..."

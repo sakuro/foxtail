@@ -84,7 +84,7 @@ After checking out the repo, run:
 $ bin/setup
 ```
 
-This installs dependencies, configures ICU4X data, and initializes the fluent.js submodule.
+This installs dependencies and initializes the fluent.js submodule.
 
 ### Running Tests
 

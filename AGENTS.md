@@ -38,10 +38,9 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 ## Development Setup
 
 ```bash
-bin/setup  # Installs dependencies, configures icu4x, initializes fluent.js submodule
+bin/setup  # Installs dependencies, initializes fluent.js submodule
 ```
 
-- **`icu4x` configuration**: `ICU4X_DATA_PATH` environment variable (auto-configured in `.env`)
 - **fluent.js submodule**: `fluent.js/` - Reference implementation for compatibility testing
 
 ## Development Commands
