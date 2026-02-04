@@ -18,6 +18,7 @@ module ItemFunctions
     # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the localized item name
     def format_item(item_id, **)
+      item_id = unwrap(item_id)
       resolve_item(item_id, 1, "nominative")
     end
 
@@ -30,6 +31,8 @@ module ItemFunctions
     # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the formatted item with count and counter
     def format_item_with_count(item_id, count, bundle:, **)
+      item_id = unwrap(item_id)
+      count = unwrap(count)
       item = resolve_item(item_id, count, "nominative")
       counter = resolve_counter(item_id) || "個"
       "#{format_count(count, bundle.locale)}#{counter}の#{item}"

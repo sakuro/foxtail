@@ -23,6 +23,10 @@ module Foxtail
       # @param bundle [Foxtail::Bundle] The bundle providing locale and context (unused in base implementation)
       # @return [String] The formatted value
       def format(**) = @value.to_s
+
+      # String representation for interpolation
+      # @return [String] The string representation of the wrapped value
+      def to_s = @value.to_s
     end
   end
 end

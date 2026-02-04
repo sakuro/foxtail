@@ -8,9 +8,39 @@ module Foxtail
     # @return [Hash{String => #call}] Function name to callable object mapping
     def self.defaults
       {
-        "NUMBER" => ->(value, **options) { Number.new(value, **options) },
-        "DATETIME" => ->(value, **options) { DateTime.new(value, **options) }
+        "NUMBER" => ->(value, **options) {
+          # Unwrap value and merge options from nested function calls (like fluent.js)
+          raw_value, existing_options = unwrap_value(value)
+          unwrapped_options = unwrap_options(options)
+          Number.new(raw_value, **existing_options, **unwrapped_options)
+        },
+        "DATETIME" => ->(value, **options) {
+          # Unwrap value and merge options from nested function calls (like fluent.js)
+          raw_value, existing_options = unwrap_value(value)
+          unwrapped_options = unwrap_options(options)
+          DateTime.new(raw_value, **existing_options, **unwrapped_options)
+        }
       }
+    end
+
+    # Unwrap a Function::Value to get raw value and options
+    # @param value [Object] the value to unwrap
+    # @return [Array(Object, Hash)] the raw value and options
+    def self.unwrap_value(value)
+      if value.is_a?(Value)
+        [value.value, value.options]
+      else
+        [value, {}]
+      end
+    end
+
+    # Unwrap option values that may be Function::Value instances
+    # @param options [Hash] the options hash
+    # @return [Hash] options with unwrapped values
+    def self.unwrap_options(options)
+      options.transform_values do |v|
+        v.is_a?(Value) ? v.value : v
+      end
     end
   end
 end
