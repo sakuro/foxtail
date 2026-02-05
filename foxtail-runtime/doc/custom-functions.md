@@ -127,7 +127,7 @@ ICU4X formatters and rules load and parse locale data on instantiation. `ICU4XCa
 
 The cache is thread-safe and process-global.
 
-## Real-World Example
+## Detailed Example
 
 See the [dungeon game example](../examples/dungeon_game/) for a comprehensive implementation of custom functions handling:
 
