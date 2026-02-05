@@ -94,42 +94,6 @@ end
 bundle = Foxtail::Bundle.new(locale, functions: { "PRICE" => format_price })
 ```
 
-### Class-based Functions
-
-For complex functions, use a class with instance methods:
-
-```ruby
-class ItemFormatter
-  def initialize(items_bundle)
-    @items_bundle = items_bundle
-  end
-
-  def functions
-    {
-      "ITEM" => method(:format_item),
-      "ITEM_WITH_COUNT" => method(:format_item_with_count)
-    }
-  end
-
-  private def unwrap(value) = value.is_a?(Foxtail::Function::Value) ? value.value : value
-
-  private def format_item(item_id, **)
-    item_id = unwrap(item_id)
-    resolve_item(item_id, 1)
-  end
-
-  private def format_item_with_count(item_id, count, **)
-    item_id = unwrap(item_id)
-    count = unwrap(count)
-    "#{count} #{resolve_item(item_id, count)}"
-  end
-end
-
-# Usage
-formatter = ItemFormatter.new(items_bundle)
-bundle = Foxtail::Bundle.new(locale, functions: formatter.functions)
-```
-
 ## Using ICU4XCache
 
 When your custom function needs ICU4X formatters or plural rules, use `Foxtail::ICU4XCache` for efficient instance reuse:
