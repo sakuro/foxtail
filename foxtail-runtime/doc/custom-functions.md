@@ -8,10 +8,10 @@ Custom functions extend Foxtail's formatting capabilities beyond the built-in `N
 
 ## Function Signature
 
-Custom functions are callable objects (lambdas, procs, or methods) with the following signature:
+Custom functions are objects that respond to `call`. This includes lambdas, procs, methods, and any custom object that implements the `call` method. The expected signature is:
 
-```ruby
-->(positional_arg1, positional_arg2, ..., option1:, option2:, **) { ... }
+```rbs
+def call: (*Function::Value positional_args, **Function::Value options) -> (String | Function::Value)
 ```
 
 ### Parameters
