@@ -12,13 +12,13 @@ module FluentCompatBase
   public_constant :FLUENT_JS_ROOT
 
   def load_json(json_path)
-    content = json_path.read(encoding: "utf-8")
+    content = json_path.read
     JSON.parse(content)
   rescue JSON::ParserError => e
     raise StandardError, "Failed to parse JSON fixture #{json_path}: #{e.message}"
   end
 
-  def load_ftl(ftl_path) = ftl_path.read(encoding: "utf-8")
+  def load_ftl(ftl_path) = ftl_path.read
 
   # Find fixture pairs starting from .json files (expected output)
   # @param json_dir [Pathname] directory containing .json fixtures
