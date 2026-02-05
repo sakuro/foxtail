@@ -176,8 +176,8 @@ Key files:
 - `examples/dungeon_game/functions/handler.rb` - Base handler class with unwrap helper
 - `examples/dungeon_game/functions/en_handler.rb` - English-specific handling
 - `examples/dungeon_game/functions/ja_handler.rb` - Japanese-specific handling
-- `examples/dungeon_game/functions/item.rb` - ITEM function factory
-- `examples/dungeon_game/functions/item_with_count.rb` - ITEM_WITH_COUNT function factory
+- `examples/dungeon_game/functions/item.rb` - ITEM function value type
+- `examples/dungeon_game/functions/item_with_count.rb` - ITEM_WITH_COUNT function value type
 
 ## Best Practices
 
