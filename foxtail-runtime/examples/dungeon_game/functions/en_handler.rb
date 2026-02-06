@@ -45,7 +45,7 @@ module ItemFunctions
       term = @bundle.term("-indef-article")
       return "a" unless term
 
-      item = resolve_item(item_id, count, "nominative")
+      item = resolve_item(item_id, count, nil)
       first_letter = extract_first_letter(item)
       @bundle.format_pattern(term.value, first_letter:)
     end

@@ -109,7 +109,7 @@ module ItemFunctions
       end
 
       # Default: elide before vowels
-      item = resolve_item(item_id, count, "nominative")
+      item = resolve_item(item_id, count, nil)
       starts_with_vowel?(item)
     end
 
@@ -122,7 +122,7 @@ module ItemFunctions
       end
 
       # Default: elide before vowels
-      item = resolve_item(item_id, 1, "nominative")
+      item = resolve_item(item_id, 1, nil)
       starts_with_vowel?(item)
     end
 

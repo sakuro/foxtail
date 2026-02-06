@@ -18,7 +18,7 @@ module ItemFunctions
     # @return [String] the localized item name
     def format_item(item_id, **)
       item_id = unwrap(item_id)
-      resolve_item(item_id, 1, "nominative")
+      resolve_item(item_id, 1, nil)
     end
 
     # Format an item with count using counter words.
@@ -31,7 +31,7 @@ module ItemFunctions
     def format_item_with_count(item_id, count, **)
       item_id = unwrap(item_id)
       count = unwrap(count)
-      item = resolve_item(item_id, count, "nominative")
+      item = resolve_item(item_id, count, nil)
       counter = resolve_counter(item_id) || "個"
       "#{format_count(count)}#{counter}の#{item}"
     end
