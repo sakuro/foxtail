@@ -9,6 +9,7 @@ module ItemFunctions
   # Provides indefinite article selection (a/an) based on first letter,
   # with support for explicit overrides via .indef attribute.
   class EnHandler < Handler
+    register_for_locale ICU4X::Locale.parse("en")
     private def resolve_article(item_id, count, type, _grammatical_case=nil)
       return nil if type == "none"
       # Indefinite only for singular

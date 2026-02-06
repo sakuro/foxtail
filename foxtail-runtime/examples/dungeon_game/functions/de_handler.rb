@@ -9,6 +9,7 @@ module ItemFunctions
   # Provides article declension based on grammatical gender (masculine, feminine, neuter),
   # number (singular, plural), and case (nominative, accusative, dative, genitive).
   class DeHandler < Handler
+    register_for_locale ICU4X::Locale.parse("de")
     private def resolve_article(item_id, count, type, grammatical_case)
       return nil if type == "none"
       # Indefinite only for singular

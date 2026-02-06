@@ -14,6 +14,12 @@ module ItemFunctions
   # pragmatic workaround. The message layer passes `cap: "true"` as a hint
   # when the result will appear at sentence start.
   class Handler
+    HANDLER_CLASSES = {}
+
+    def self.register_for_locale(locale) = HANDLER_CLASSES[locale] = self
+
+    def self.for_bundle(bundle) = HANDLER_CLASSES.fetch(bundle.locale, Handler).new(bundle)
+
     def initialize(bundle) = @bundle = bundle
 
     # Format an item with optional article.

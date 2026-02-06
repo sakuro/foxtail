@@ -9,6 +9,7 @@ module ItemFunctions
   # Provides counter word (助数詞) support for items. Each item can have a
   # counter defined via .counter attribute (e.g., 振 for swords, 瓶 for bottles).
   class JaHandler < Handler
+    register_for_locale ICU4X::Locale.parse("ja")
     # Format an item name.
     #
     # Japanese items do not require articles or grammatical case handling,

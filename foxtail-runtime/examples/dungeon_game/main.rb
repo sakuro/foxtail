@@ -25,16 +25,8 @@ require_relative "functions/ja_handler"
 TARGET_LANGUAGES = %w[en de fr ja].freeze
 TARGET_LOCALES = TARGET_LANGUAGES.to_h {|lang| [lang, ICU4X::Locale.parse(lang)] }.freeze
 
-# Language handler registry for item localization
+# Custom functions for item localization
 module ItemFunctions
-  HANDLER_CLASSES = {
-    "de" => DeHandler,
-    "en" => EnHandler,
-    "fr" => FrHandler,
-    "ja" => JaHandler
-  }.freeze
-  private_constant :HANDLER_CLASSES
-
   # Custom functions for item localization
   # @return [Hash{String => #call}] Custom functions hash
   FUNCTIONS = {
@@ -42,14 +34,6 @@ module ItemFunctions
     "ITEM_WITH_COUNT" => ->(item_id, count, **options) { ItemWithCount[[item_id, count], options] }
   }.freeze
   public_constant :FUNCTIONS
-
-  # Create a handler for the given bundle's locale
-  # @param bundle [Foxtail::Bundle] The bundle containing terms and messages
-  # @return [Handler] The locale-specific handler
-  def self.handler_for(bundle)
-    klass = HANDLER_CLASSES.fetch(bundle.locale.to_s, Handler)
-    klass.new(bundle)
-  end
 end
 
 # Create a bundle for the specified locale

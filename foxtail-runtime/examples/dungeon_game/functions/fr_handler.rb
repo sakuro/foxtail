@@ -9,6 +9,7 @@ module ItemFunctions
   # Provides article selection with elision handling (le/la → l' before vowels),
   # with support for h aspiré exceptions via .elision attribute.
   class FrHandler < Handler
+    register_for_locale ICU4X::Locale.parse("fr")
     private def format_article_counter_item(article, counter, item, counter_elision: false)
       unless article
         term = @bundle.term("-fmt-counter-item")

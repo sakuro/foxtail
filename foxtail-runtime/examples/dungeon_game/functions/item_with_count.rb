@@ -9,6 +9,6 @@ module ItemFunctions
     # Format the item with count for display
     # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the formatted item name with count
-    def format(bundle:) = ItemFunctions.handler_for(bundle).format_item_with_count(*value, **options)
+    def format(bundle:) = Handler.for_bundle(bundle).format_item_with_count(*value, **options)
   end
 end
