@@ -38,8 +38,8 @@ module ItemFunctions
   # Custom functions for item localization
   # @return [Hash{String => #call}] Custom functions hash
   FUNCTIONS = {
-    "ITEM" => ->(item_id, count=1, **options) { Item.new(item_id, count:, **options) },
-    "ITEM_WITH_COUNT" => ->(item_id, count, **options) { ItemWithCount.new(item_id, count, **options) }
+    "ITEM" => ->(item_id, count=1, **options) { Item[item_id, {count:, **options}] },
+    "ITEM_WITH_COUNT" => ->(item_id, count, **options) { ItemWithCount[[item_id, count], options] }
   }.freeze
   public_constant :FUNCTIONS
 
