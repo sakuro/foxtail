@@ -65,6 +65,6 @@ module ItemFunctions
 
     # Extract first letter, handling accented characters via NFD normalization
     # e.g., "élixir" → NFD → "e" + combining accent → first char "e"
-    private def extract_first_letter(str) = str.unicode_normalize(:nfd)[0]&.downcase || ""
+    private def extract_first_letter(str) = str.unicode_normalize(:nfd)[0]&.downcase
   end
 end

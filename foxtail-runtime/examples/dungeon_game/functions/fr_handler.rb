@@ -142,8 +142,8 @@ module ItemFunctions
     # Check if string starts with a vowel, using NFD normalization
     # e.g., "épée" → NFD → "e" + combining accent → first char "e" (vowel)
     private def starts_with_vowel?(str)
-      first_letter = str.unicode_normalize(:nfd)[0]&.downcase || ""
-      first_letter.match?(/[aeiou]/)
+      first_letter = str.unicode_normalize(:nfd)[0]&.downcase
+      first_letter&.match?(/[aeiou]/)
     end
   end
 end
