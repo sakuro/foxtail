@@ -41,7 +41,9 @@ module ItemFunctions
       counter = @bundle.format_pattern(counter_term.value, count:, elision: item_elision.to_s)
 
       if count == 1 && type != "none"
-        counter_gender = counter_term.attributes&.dig("gender") || "feminine"
+        counter_gender = counter_term.attributes&.dig("gender")
+        raise ArgumentError, "Counter term must have a .gender attribute" unless counter_gender
+
         article = resolve_article_for_counter(counter_term, counter_gender, count, type, grammatical_case)
         format_article_counter_item(article, counter, item, counter_elision: item_elision)
       else
@@ -59,7 +61,9 @@ module ItemFunctions
       return nil if type == "none"
 
       term = @bundle.term(item_id)
-      gender = term&.attributes&.dig("gender") || "masculine"
+      gender = term&.attributes&.dig("gender")
+      raise ArgumentError, "Item term must have a .gender attribute" unless gender
+
       elision = should_elide?(term, item_id, count)
 
       if type == "definite"
