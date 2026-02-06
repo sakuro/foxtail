@@ -11,6 +11,7 @@
 # - Proper article declension based on gender, number, and case
 
 require "foxtail-runtime"
+require "icu4x-data-recommended"
 require "pathname"
 
 require_relative "functions/item"
@@ -34,16 +35,13 @@ module ItemFunctions
   }.freeze
   private_constant :HANDLER_CLASSES
 
-  # Create language-specific custom functions
-  # @param bundle [Foxtail::Bundle] The bundle containing terms and messages
-  # @return [Hash{String => #call}] Custom functions for the bundle's locale
-  def self.functions_for(bundle)
-    handler = handler_for(bundle)
-    {
-      "ITEM" => ->(item_id, count=1, **options) { Item.new(handler, item_id, count:, **options) },
-      "ITEM_WITH_COUNT" => ->(item_id, count, **options) { ItemWithCount.new(handler, item_id, count, **options) }
-    }
-  end
+  # Custom functions for item localization
+  # @return [Hash{String => #call}] Custom functions hash
+  FUNCTIONS = {
+    "ITEM" => ->(item_id, count=1, **options) { Item.new(item_id, count:, **options) },
+    "ITEM_WITH_COUNT" => ->(item_id, count, **options) { ItemWithCount.new(item_id, count, **options) }
+  }.freeze
+  public_constant :FUNCTIONS
 
   # Create a handler for the given bundle's locale
   # @param bundle [Foxtail::Bundle] The bundle containing terms and messages
@@ -52,7 +50,6 @@ module ItemFunctions
     klass = HANDLER_CLASSES.fetch(bundle.locale.to_s, Handler)
     klass.new(bundle)
   end
-  private_class_method :handler_for
 end
 
 # Create a bundle for the specified locale
@@ -69,8 +66,8 @@ def create_bundle(locale, locales_dir)
     bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
   end
 
-  # Add custom functions that reference the bundle
-  bundle.functions.merge!(ItemFunctions.functions_for(bundle))
+  # Add custom functions for item localization
+  bundle.functions.merge!(ItemFunctions::FUNCTIONS)
 
   bundle
 end
