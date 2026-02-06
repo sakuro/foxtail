@@ -55,7 +55,7 @@ module Foxtail
       @locale = locale
       @messages = {}  # id → Bundle::Parser::AST Message
       @terms = {}     # id → Bundle::Parser::AST Term
-      @functions = Function.defaults.merge(functions)
+      @functions = Function.defaults.merge(functions).freeze
       @use_isolating = use_isolating
       @transform = transform
     end

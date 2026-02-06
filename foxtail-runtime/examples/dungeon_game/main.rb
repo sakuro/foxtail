@@ -59,15 +59,12 @@ end
 def create_bundle(locale, locales_dir)
   locale_dir = locales_dir.join(locale.to_s)
 
-  # Create bundle and load all resources
-  bundle = Foxtail::Bundle.new(locale, use_isolating: false)
+  # Create bundle with custom functions and load all resources
+  bundle = Foxtail::Bundle.new(locale, functions: ItemFunctions::FUNCTIONS, use_isolating: false)
   %w[articles counters items messages].each do |name|
     path = locale_dir.join("#{name}.ftl")
     bundle.add_resource(Foxtail::Resource.from_file(path)) if path.exist?
   end
-
-  # Add custom functions for item localization
-  bundle.functions.merge!(ItemFunctions::FUNCTIONS)
 
   bundle
 end
