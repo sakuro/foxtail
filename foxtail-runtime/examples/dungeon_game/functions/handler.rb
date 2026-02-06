@@ -20,7 +20,6 @@ module ItemFunctions
     # Called by Item#format with the bundle context.
     #
     # @param item_id [String] the item term reference
-    # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @param count [Integer] the quantity of items
     # @param type [String] article type (language-dependent)
     # @param case [String] grammatical case (language-dependent)
@@ -45,12 +44,11 @@ module ItemFunctions
     #
     # @param item_id [String] the item term reference
     # @param count [Integer] the quantity of items
-    # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @param type [String] article type (language-dependent)
     # @param case [String] grammatical case (language-dependent)
     # @param cap [String] capitalize first letter: "true" or "false"
     # @return [String] the formatted item name with count
-    def format_item_with_count(item_id, count, bundle:, type: "none", case: "nominative", cap: "false", **)
+    def format_item_with_count(item_id, count, type: "none", case: "nominative", cap: "false", **)
       # Unwrap Function::Value arguments
       item_id = unwrap(item_id)
       count = unwrap(count)
@@ -61,13 +59,13 @@ module ItemFunctions
       counter_term = resolve_counter_term(item_id)
 
       result = if counter_term
-                 format_count_item_with_counter(counter_term, item_id, count, type, grammatical_case, bundle.locale)
+                 format_count_item_with_counter(counter_term, item_id, count, type, grammatical_case)
                elsif count == 1 && type != "none"
                  item = resolve_item(item_id, count, grammatical_case)
                  article = resolve_article(item_id, count, type, grammatical_case)
                  format_article_item(article, item)
                else
-                 "#{format_count(count, bundle.locale)} #{resolve_item(item_id, count, grammatical_case)}"
+                 "#{format_count(count)} #{resolve_item(item_id, count, grammatical_case)}"
                end
 
       cap == "true" ? capitalize_first(result) : result
@@ -77,7 +75,7 @@ module ItemFunctions
 
     private def capitalize_first(str) = str.sub(/\A\p{Ll}/, &:upcase)
 
-    private def format_count(count, locale) = Foxtail::ICU4XCache.instance.number_formatter(locale).format(count)
+    private def format_count(count) = Foxtail::ICU4XCache.instance.number_formatter(@bundle.locale).format(count)
 
     private def format_article_counter_item(article, counter, item)
       return [counter, item].compact.join(" ") unless article
@@ -101,7 +99,7 @@ module ItemFunctions
       end
     end
 
-    private def format_count_item_with_counter(counter_term, item_id, count, type, grammatical_case, locale)
+    private def format_count_item_with_counter(counter_term, item_id, count, type, grammatical_case)
       item = resolve_item(item_id, 1, grammatical_case)
       counter = @bundle.format_pattern(counter_term.value, count:, case: grammatical_case)
 
@@ -110,13 +108,13 @@ module ItemFunctions
         article = resolve_article_for_counter(counter_term, counter_gender, count, type, grammatical_case)
         format_article_counter_item(article, counter, item)
       else
-        format_count_counter_item(count, counter, item, locale)
+        format_count_counter_item(count, counter, item)
       end
     end
 
-    private def format_count_counter_item(count, counter, item, locale)
+    private def format_count_counter_item(count, counter, item)
       term = @bundle.term("-fmt-count-counter-item")
-      formatted_count = format_count(count, locale)
+      formatted_count = format_count(count)
       if term
         @bundle.format_pattern(term.value, count: formatted_count, counter:, item:)
       else

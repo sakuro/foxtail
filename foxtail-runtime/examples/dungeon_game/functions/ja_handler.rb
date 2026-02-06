@@ -15,7 +15,6 @@ module ItemFunctions
     # so this is a simplified version of the base class method.
     #
     # @param item_id [String] the item term reference (e.g., "-sword", "-potion")
-    # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the localized item name
     def format_item(item_id, **)
       item_id = unwrap(item_id)
@@ -28,14 +27,13 @@ module ItemFunctions
     #
     # @param item_id [String] the item term reference (e.g., "-sword", "-healing-potion")
     # @param count [Integer] the quantity of items
-    # @param bundle [Foxtail::Bundle] the bundle providing locale context
     # @return [String] the formatted item with count and counter
-    def format_item_with_count(item_id, count, bundle:, **)
+    def format_item_with_count(item_id, count, **)
       item_id = unwrap(item_id)
       count = unwrap(count)
       item = resolve_item(item_id, count, "nominative")
       counter = resolve_counter(item_id) || "個"
-      "#{format_count(count, bundle.locale)}#{counter}の#{item}"
+      "#{format_count(count)}#{counter}の#{item}"
     end
 
     private def resolve_counter(item_id)
