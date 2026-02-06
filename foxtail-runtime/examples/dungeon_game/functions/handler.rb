@@ -14,11 +14,21 @@ module ItemFunctions
   # pragmatic workaround. The message layer passes `cap: "true"` as a hint
   # when the result will appear at sentence start.
   class Handler
-    HANDLER_CLASSES = {}
+    @handler_classes = {}
 
-    def self.register_for_locale(locale) = HANDLER_CLASSES[locale] = self
+    class << self
+      attr_reader :handler_classes
+    end
 
-    def self.for_bundle(bundle) = HANDLER_CLASSES.fetch(bundle.locale, Handler).new(bundle)
+    # Registers the current class as the handler for the specified locale.
+    # @param locale [String] locale identifier (e.g., "en", "de", "ja")
+    def self.register_for_locale(locale) = Handler.handler_classes[locale] = self
+
+    # Returns the appropriate handler instance for the given bundle's locale.
+    # Falls back to the base Handler class if no locale-specific handler is registered.
+    # @param bundle [Foxtail::Bundle] the bundle to get a handler for
+    # @return [Handler] handler instance for the bundle's locale
+    def self.for_bundle(bundle) = Handler.handler_classes.fetch(bundle.locale, Handler).new(bundle)
 
     def initialize(bundle) = @bundle = bundle
 

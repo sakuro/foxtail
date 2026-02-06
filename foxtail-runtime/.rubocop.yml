@@ -85,3 +85,12 @@ Style/NumberedParameters:
 Style/TopLevelMethodDefinition:
   Exclude:
     - 'examples/**/*.rb'
+
+# Examples use class instance variables for handler registry (not thread-safety critical)
+ThreadSafety/ClassInstanceVariable:
+  Exclude:
+    - 'examples/**/*.rb'
+
+ThreadSafety/MutableClassInstanceVariable:
+  Exclude:
+    - 'examples/**/*.rb'
