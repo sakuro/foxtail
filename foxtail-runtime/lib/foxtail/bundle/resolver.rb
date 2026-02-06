@@ -424,14 +424,14 @@ module Foxtail
         when Function::Value
           value
         when Numeric
-          Function::Number.new(value)
+          Function::Number[value, {}]
         when Time
-          Function::DateTime.new(value)
+          Function::DateTime[value, {}]
         else
           if value.respond_to?(:to_time)
-            Function::DateTime.new(value)
+            Function::DateTime[value, {}]
           else
-            Function::Value.new(value)
+            Function::Value[value, {}]
           end
         end
       end

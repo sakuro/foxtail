@@ -46,7 +46,7 @@ shout = ->(text, **) { text.to_s.upcase }
 
 # Numeric value for plural matching: Use Function::Number
 item_count = ->(count, **) do
-  Foxtail::Function::Number.new(count)
+  Foxtail::Function::Number[count, {}]
 end
 ```
 
@@ -88,7 +88,7 @@ format_price = ->(amount, currency:, **) do
   # Unwrap Function::Value arguments
   raw_amount = amount.value
   raw_currency = currency.value
-  Foxtail::Function::Number.new(raw_amount, style: :currency, currency: raw_currency)
+  Foxtail::Function::Number[raw_amount, {style: :currency, currency: raw_currency}]
 end
 
 bundle = Foxtail::Bundle.new(locale, functions: { "PRICE" => format_price })

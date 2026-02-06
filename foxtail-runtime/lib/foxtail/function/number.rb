@@ -35,8 +35,8 @@ module Foxtail
       # @param bundle [Foxtail::Bundle] The bundle providing locale and context
       # @return [String] The formatted number
       def format(bundle:)
-        icu_options = self.class.convert_options(@options)
-        ICU4XCache.instance.number_formatter(bundle.locale, **icu_options).format(@value)
+        icu_options = self.class.convert_options(options)
+        ICU4XCache.instance.number_formatter(bundle.locale, **icu_options).format(value)
       end
     end
   end

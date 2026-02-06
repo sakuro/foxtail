@@ -12,13 +12,13 @@ module Foxtail
           # Unwrap value and merge options from nested function calls (like fluent.js)
           raw_value, existing_options = unwrap_value(value)
           unwrapped_options = unwrap_options(options)
-          Number.new(raw_value, **existing_options, **unwrapped_options)
+          Number[raw_value, existing_options.merge(unwrapped_options)]
         },
         "DATETIME" => ->(value, **options) {
           # Unwrap value and merge options from nested function calls (like fluent.js)
           raw_value, existing_options = unwrap_value(value)
           unwrapped_options = unwrap_options(options)
-          DateTime.new(raw_value, **existing_options, **unwrapped_options)
+          DateTime[raw_value, existing_options.merge(unwrapped_options)]
         }
       }
     end
