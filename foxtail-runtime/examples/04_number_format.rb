@@ -8,6 +8,7 @@
 # - Locale-aware formatting
 
 require "foxtail-runtime"
+require "icu4x-data-recommended"
 
 # English (US)
 en_bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)

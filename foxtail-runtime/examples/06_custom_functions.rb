@@ -8,6 +8,7 @@
 # - Using custom functions in FTL messages
 
 require "foxtail-runtime"
+require "icu4x-data-recommended"
 
 # Define custom functions
 # Signature: (value, locale:, **options)

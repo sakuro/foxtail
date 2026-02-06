@@ -8,6 +8,7 @@
 # - Missing reference handling
 
 require "foxtail-runtime"
+require "icu4x-data-recommended"
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"), use_isolating: false)
 

@@ -9,6 +9,7 @@
 # - Loading FTL files from disk
 
 require "foxtail-runtime"
+require "icu4x-data-recommended"
 require "pathname"
 
 # Directory containing locale files
