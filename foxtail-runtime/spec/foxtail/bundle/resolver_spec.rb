@@ -26,15 +26,8 @@ RSpec.describe Foxtail::Bundle::Resolver do
       expect(result).to eq("Hello, World!")
     end
 
-    it "resolves single expression patterns" do
-      pattern = ast::VariableReference[name: "name"]
-      result = resolver.resolve_pattern(pattern, scope)
-      expect(result).to eq("World")
-    end
-
-    it "handles unknown pattern types" do
-      result = resolver.resolve_pattern(42, scope)
-      expect(result).to eq("42")
+    it "raises ArgumentError for unexpected pattern types" do
+      expect { resolver.resolve_pattern(42, scope) }.to raise_error(ArgumentError, /Unexpected pattern type/)
     end
   end
 
@@ -98,6 +91,19 @@ RSpec.describe Foxtail::Bundle::Resolver do
       expect(scope.errors).to include("Unknown term: -missing")
     end
 
+    it "handles terms without value" do
+      resource_no_value = Foxtail::Resource.from_string(<<~FTL)
+        -no-value =
+            .attr = has attribute
+      FTL
+      bundle.add_resource(resource_no_value, allow_overrides: true)
+
+      expr = ast::TermReference[name: "no-value"]
+      result = resolver.resolve_expression(expr, scope)
+      expect(result).to eq("{-no-value}")
+      expect(scope.errors).to include("No value: -no-value")
+    end
+
     it "detects circular references" do
       # Create circular reference using separate resources
       resource_a = Foxtail::Resource.from_string("-a = {-b}")
@@ -123,6 +129,19 @@ RSpec.describe Foxtail::Bundle::Resolver do
       expr = ast::MessageReference[name: "hello"]
       result = resolver.resolve_expression(expr, scope)
       expect(result).to eq("Hello world")
+    end
+
+    it "handles messages without value" do
+      resource_no_value = Foxtail::Resource.from_string(<<~FTL)
+        no-value =
+            .attr = has attribute
+      FTL
+      bundle.add_resource(resource_no_value, allow_overrides: true)
+
+      expr = ast::MessageReference[name: "no-value"]
+      result = resolver.resolve_expression(expr, scope)
+      expect(result).to eq("{no-value}")
+      expect(scope.errors).to include("No value: no-value")
     end
 
     it "handles missing messages" do

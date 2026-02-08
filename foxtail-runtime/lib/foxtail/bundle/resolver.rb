@@ -23,14 +23,8 @@ module Foxtail
           pattern
         when Array
           resolve_complex_pattern(pattern, scope)
-        when Parser::AST::StringLiteral, Parser::AST::NumberLiteral, Parser::AST::VariableReference,
-             Parser::AST::TermReference, Parser::AST::MessageReference, Parser::AST::FunctionReference,
-             Parser::AST::SelectExpression
-
-          # Single expression (shouldn't normally happen in patterns)
-          resolve_expression(pattern, scope)
         else
-          pattern.to_s
+          raise ArgumentError, "Unexpected pattern type: #{pattern.class}"
         end
       end
 
@@ -196,7 +190,14 @@ module Foxtail
         end
 
         # Resolve term value
-        result = attr ? resolve_term_attribute(term, attr, scope) : resolve_pattern(term.value, scope)
+        if attr
+          result = resolve_term_attribute(term, attr, scope)
+        elsif term.value
+          result = resolve_pattern(term.value, scope)
+        else
+          scope.add_error("No value: -#{name}")
+          result = "{-#{name}}"
+        end
 
         scope.release(name)
         result
@@ -221,7 +222,14 @@ module Foxtail
         end
 
         # Resolve message value
-        result = attr ? resolve_message_attribute(message, attr, scope) : resolve_pattern(message.value, scope)
+        if attr
+          result = resolve_message_attribute(message, attr, scope)
+        elsif message.value
+          result = resolve_pattern(message.value, scope)
+        else
+          scope.add_error("No value: #{name}")
+          result = "{#{name}}"
+        end
 
         scope.release(name)
         result
