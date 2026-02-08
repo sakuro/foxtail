@@ -25,6 +25,8 @@ module Foxtail
             result[:maximum_fraction_digits] = Integer(value)
           when :useGrouping
             result[:use_grouping] = value
+          else
+            warn "Unknown NUMBER option: #{key}"
           end
         end
 

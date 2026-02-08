@@ -26,4 +26,18 @@ RSpec.describe Foxtail::Function do
       expect(datetime_value.format(bundle:)).to include("2023")
     end
   end
+
+  describe Foxtail::Function::Number, ".convert_options" do
+    it "warns on unknown options" do
+      expect { Foxtail::Function::Number.convert_options(unknownOpt: 1) }
+        .to output("Unknown NUMBER option: unknownOpt\n").to_stderr
+    end
+  end
+
+  describe Foxtail::Function::DateTime, ".convert_options" do
+    it "warns on unknown options" do
+      expect { Foxtail::Function::DateTime.convert_options(unknownOpt: 1) }
+        .to output("Unknown DATETIME option: unknownOpt\n").to_stderr
+    end
+  end
 end

@@ -19,6 +19,8 @@ module Foxtail
             result[:time_style] = value.to_sym
           when :timeZone
             result[:time_zone] = value.to_s
+          else
+            warn "Unknown DATETIME option: #{key}"
           end
         end
 
