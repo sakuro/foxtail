@@ -37,8 +37,8 @@ jobs:
         BRANCH_NAME: ${{ github.head_ref }}
       run: |
         VERSION=${BRANCH_NAME#release-v}
-        echo "version=$VERSION" >> $GITHUB_OUTPUT
-        echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+        echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+        echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
 
     - name: Validate version format
       run: |

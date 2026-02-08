@@ -29,8 +29,8 @@ jobs:
         BRANCH_NAME: ${{ github.head_ref }}
       run: |
         VERSION=${BRANCH_NAME#release-v}
-        echo "version=$VERSION" >> $GITHUB_OUTPUT
-        echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+        echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+        echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
 
     - name: Checkout release tag
       uses: actions/checkout@v5
@@ -64,9 +64,11 @@ jobs:
         extract_section() {
           local file="$1"
           local title="$2"
-          echo "## $title" >> release_notes.md
-          sed -e '1,/^## \[${{ steps.version.outputs.version }}\] /d' "$file" | sed -e '/^## \[/,$d' >> release_notes.md
-          echo "" >> release_notes.md
+          {
+            echo "## $title"
+            sed -e '1,/^## \[${{ steps.version.outputs.version }}\] /d' "$file" | sed -e '/^## \[/,$d'
+            echo ""
+          } >> release_notes.md
         }
 
         : > release_notes.md

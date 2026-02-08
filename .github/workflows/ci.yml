@@ -30,5 +30,6 @@ jobs:
           bundler-cache: true
       - name: Run the default task
         run: |
-          export ICU4X_DATA_PATH="$(bundle show icu4x-data-recommended)/data/recommended.postcard"
+          ICU4X_DATA_PATH="$(bundle show icu4x-data-recommended)/data/recommended.postcard"
+          export ICU4X_DATA_PATH
           bundle exec rake

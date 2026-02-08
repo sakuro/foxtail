@@ -91,9 +91,9 @@ jobs:
         # Check if any releases exist
         RELEASE_COUNT=$(gh release list --limit 1 --json name --jq 'length')
         if [ "$RELEASE_COUNT" -eq 0 ]; then
-          echo "is_first_release=true" >> $GITHUB_OUTPUT
+          echo "is_first_release=true" >> "$GITHUB_OUTPUT"
         else
-          echo "is_first_release=false" >> $GITHUB_OUTPUT
+          echo "is_first_release=false" >> "$GITHUB_OUTPUT"
         fi
 
     - name: Create Pull Request
