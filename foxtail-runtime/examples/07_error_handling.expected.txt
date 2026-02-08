@@ -10,6 +10,10 @@ Hello, Bob!
 nonexistent
 also-missing
 
+--- Collecting Errors ---
+Welcome, {$name}! You have {$count} messages.
+Errors: ["Unknown variable: $name", "Unknown variable: $count"]
+
 --- Checking Message Existence ---
 welcome: exists
 greeting: exists

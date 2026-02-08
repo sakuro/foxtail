@@ -6,6 +6,7 @@
 # - Missing variable handling
 # - Missing message handling
 # - Missing reference handling
+# - Collecting errors via the errors parameter
 
 require "foxtail-runtime"
 require "icu4x-data-recommended"
@@ -47,6 +48,16 @@ puts bundle.format("nonexistent")
 
 puts bundle.format("also-missing")
 # => also-missing
+
+puts "\n--- Collecting Errors ---"
+# Pass an array to format to collect errors during resolution
+errors = []
+puts bundle.format("welcome", errors)
+# => Welcome, {$name}! You have {$count} messages.
+puts "Errors: #{errors}"
+# => Errors: ["Unknown variable: $name", "Unknown variable: $count"]
+# Note: "Unknown variable" means the variable was not provided by the caller.
+# This wording follows the fluent.js reference implementation.
 
 puts "\n--- Checking Message Existence ---"
 # Use message? to check if a message exists before formatting
