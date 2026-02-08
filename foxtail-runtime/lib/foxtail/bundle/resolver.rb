@@ -157,8 +157,6 @@ module Foxtail
         return value unless func
 
         func.call(value)
-      rescue
-        value
       end
 
       # Apply DATETIME function implicitly
@@ -167,8 +165,6 @@ module Foxtail
         return value unless func
 
         func.call(value)
-      rescue
-        value
       end
 
       # Resolve term references
