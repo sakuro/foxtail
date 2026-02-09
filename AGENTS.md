@@ -14,7 +14,6 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 | Bundle system details | [foxtail-runtime/doc/bundle-system.md](foxtail-runtime/doc/bundle-system.md) |
 | Custom functions | [foxtail-runtime/doc/custom-functions.md](foxtail-runtime/doc/custom-functions.md) |
 | Language fallback | [foxtail-runtime/doc/sequence.md](foxtail-runtime/doc/sequence.md) |
-| Language negotiation | [foxtail-runtime/doc/language-negotiation.md](foxtail-runtime/doc/language-negotiation.md) |
 | `icu4x` integration | [foxtail-runtime/doc/icu4x-integration.md](foxtail-runtime/doc/icu4x-integration.md) |
 | CLI reference | [foxtail-tools/doc/cli.md](foxtail-tools/doc/cli.md) |
 
