@@ -199,7 +199,7 @@ bundle.format("price", amount: 100) # With currency: "INVALID"
 
 ## Locale Fallback
 
-Same-language locale fallback (e.g., `en-US` → `en`) is handled by the `icu4x` provider. For multi-language fallback, see [Language Fallback with Sequence](sequence.md).
+Same-language locale fallback (e.g., `en-US` → `en`) is handled by the `icu4x` provider. This applies to formatting data resolution within a single Bundle. For message-level fallback across multiple locales, see [Language Fallback with Sequence](sequence.md).
 
 ## References
 

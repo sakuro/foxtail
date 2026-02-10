@@ -2,7 +2,7 @@
 
 ## Overview
 
-`Foxtail::Sequence` manages ordered sequences of Bundles for language fallback. It finds the first bundle that contains a requested message, enabling fallback chains like `en-US` → `en` → default.
+`Foxtail::Sequence` manages ordered sequences of Bundles for message-level language fallback. It finds the first bundle that contains a requested message, enabling fallback chains like `en-US` → `en` → default. Formatting data resolution within each Bundle is handled separately by the `icu4x` provider (see [ICU4X Integration](icu4x-integration.md#locale-fallback)).
 
 Equivalent to [@fluent/sequence](https://projectfluent.org/fluent.js/sequence/) in fluent.js.
 
