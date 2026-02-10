@@ -1,4 +1,4 @@
-# :fox_face: Foxtail :globe_with_meridians:
+# 🦊 Foxtail 🌐
 
 A Ruby implementation of [Project Fluent](https://projectfluent.org/) with two gems:
 

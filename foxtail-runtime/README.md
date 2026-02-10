@@ -1,4 +1,4 @@
-# :fox_face: Foxtail Runtime :globe_with_meridians:
+# 🦊 Foxtail Runtime 🌐
 
 Runtime components for [Project Fluent](https://projectfluent.org/) localization in Ruby.
 

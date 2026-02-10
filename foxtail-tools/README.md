@@ -1,4 +1,4 @@
-# :fox_face: Foxtail Tools :globe_with_meridians:
+# 🦊 Foxtail Tools 🌐
 
 Tooling for authoring and validating [Project Fluent](https://projectfluent.org/) files in Ruby.
 
