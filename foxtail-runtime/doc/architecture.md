@@ -37,55 +37,9 @@
 |-----------|------|----------------|
 | `Function` | `lib/foxtail/function.rb` | NUMBER, DATETIME via `icu4x` |
 
-## Runtime Data Flow
+## Runtime Behavior
 
-```ruby
-source = "hello = Hello, {$name}!"
-resource = Foxtail::Resource.from_string(source)
-
-bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en"))
-bundle.add_resource(resource)
-
-bundle.format("hello", name: "World")
-# => "Hello, World!"
-```
-
-## Pattern Representation
-
-| FTL Pattern | Bundle Representation |
-|-------------|----------------------|
-| `hello = Hello` | `"Hello"` (String) |
-| `hello = Hello, {$name}!` | `["Hello, ", VariableReference, "!"]` (Array) |
-
-## Expression Types
-
-| Type | Example | Bundle Class |
-|------|---------|--------------|
-| Variable | `{$name}` | `VariableReference` |
-| Message | `{greeting}` | `MessageReference` |
-| Term | `{-brand}` | `TermReference` |
-| Function | `{NUMBER($n)}` | `FunctionReference` |
-| Select | `{$count -> ...}` | `SelectExpression` |
-| String | `{"text"}` | `StringLiteral` |
-| Number | `{123}` | `NumberLiteral` |
-
-## Error Handling
-
-- **Bundle parser errors**: Invalid entries are skipped (error recovery)
-- **Runtime errors**: Optionally collected via `errors` array parameter, placeholders returned
-- **Circular references**: Detected via `Scope.dirty` set
-
-## ICU4X Integration
-
-Built-in functions use ICU4X for locale-aware formatting:
-
-```ruby
-# NUMBER function
-NUMBER($amount, style: "currency", currency: "USD")
-
-# DATETIME function
-DATETIME($date, dateStyle: "medium")
-```
+Usage examples, AST details, error handling, and ICU4X integration are documented in [bundle-system.md](bundle-system.md).
 
 ## File Structure
 
