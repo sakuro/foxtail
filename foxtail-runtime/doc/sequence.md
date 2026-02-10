@@ -40,6 +40,7 @@ sequence = Foxtail::Sequence.new(ja, en_us, en)
 sequence.format("ja-only")  # => "日本語" (from ja)
 sequence.format("us-only")  # => "US English" (from en_us, ja doesn't have it)
 sequence.format("en-only")  # => "English" (from en, ja and en_us don't have it)
+sequence.format("unknown")  # => "unknown" (returns ID if not found)
 ```
 
 ## Finding Bundles
@@ -63,47 +64,6 @@ bundles = sequence.find("hello", "goodbye", "thanks")
 # => [bundle_for_hello, bundle_for_goodbye, bundle_for_thanks]
 # nil for IDs not found in any bundle
 ```
-
-## API Reference
-
-### `Sequence.new(*bundles)`
-
-Creates a new Sequence with bundles in priority order.
-
-```ruby
-sequence = Foxtail::Sequence.new(primary, fallback1, fallback2)
-
-# Also accepts an array
-sequence = Foxtail::Sequence.new(bundle_array)
-```
-
-### `#find(*ids)`
-
-Finds the first bundle containing each message ID.
-
-| Arguments | Return |
-|-----------|--------|
-| Single ID | `Bundle` or `nil` |
-| Multiple IDs | `Array<Bundle, nil>` |
-
-```ruby
-sequence.find("hello")           # => Bundle or nil
-sequence.find("a", "b", "c")     # => [Bundle, nil, Bundle]
-```
-
-### `#format(id, **kwargs)`
-
-Formats a message using the first matching bundle.
-
-```ruby
-sequence.format("hello", name: "World")
-# => "Hello, World!"
-
-sequence.format("nonexistent")
-# => "nonexistent" (returns ID if not found)
-```
-
-Same signature as `Bundle#format` for duck-typing compatibility.
 
 ## Use Cases
 
