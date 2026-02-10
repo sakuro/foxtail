@@ -199,7 +199,7 @@ bundle.format("price", amount: 100) # With currency: "INVALID"
 
 ## Locale Fallback
 
-Same-language locale fallback (e.g., `en-US` → `en`) is handled by `icu4x` provider. User language preference negotiation (multiple language fallback) is not yet implemented.
+Same-language locale fallback (e.g., `en-US` → `en`) is handled by the `icu4x` provider. For multi-language fallback, see [Language Fallback with Sequence](sequence.md).
 
 ## References
 
