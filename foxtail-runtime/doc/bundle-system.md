@@ -86,9 +86,9 @@ Manages variable context and error tracking during resolution.
 
 ```ruby
 # Scope tracks active references to detect cycles
-scope.track(reference) do
-  # If reference already tracked, returns placeholder
-  # Otherwise, resolves normally
+# Returns false if circular reference detected, true otherwise
+unless scope.track(name)
+  return "{#{name}}" # placeholder
 end
 ```
 
