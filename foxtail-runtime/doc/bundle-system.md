@@ -4,18 +4,6 @@
 
 The Bundle system is the runtime component of Foxtail that stores messages and formats them with locale-aware processing. Bundle::Parser parses FTL source directly into a minimal runtime AST.
 
-## Architecture
-
-```mermaid
-flowchart LR
-    FTL[FTL Source] --> |parse| Parser[Bundle::Parser]
-    Parser --> |entries| Resource
-    Resource --> |add_resource| Bundle
-    Bundle --> |format| Resolver
-    Resolver --> |uses| Scope
-    Scope --> |tracks| Variables[Variables & Errors]
-```
-
 ## Components
 
 ### Bundle
@@ -79,22 +67,6 @@ resource.entries # => [Bundle::Parser::AST::Message, ...]
 ### Resolver
 
 Evaluates patterns and expressions at runtime.
-
-**Resolution Flow**:
-
-```mermaid
-flowchart TD
-    Pattern --> |String| Direct[Direct Return]
-    Pattern --> |Array| Complex[Complex Pattern]
-    Complex --> Elements[Pattern Elements]
-    Elements --> |String| Text[Append Text]
-    Elements --> |Expression| Resolve[Resolve Expression]
-    Resolve --> Variable[Variable Reference]
-    Resolve --> Message[Message Reference]
-    Resolve --> Term[Term Reference]
-    Resolve --> Function[Function Call]
-    Resolve --> Select[Select Expression]
-```
 
 ### Scope
 
