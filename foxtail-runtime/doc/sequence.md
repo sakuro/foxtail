@@ -2,7 +2,7 @@
 
 ## Overview
 
-`Foxtail::Sequence` manages ordered sequences of Bundles for message-level language fallback. It finds the first bundle that contains a requested message, enabling fallback chains like `en-US` → `en` → default. Formatting data resolution within each Bundle is handled separately by the `icu4x` provider (see [ICU4X Integration](icu4x-integration.md#locale-fallback)).
+`Foxtail::Sequence` manages ordered sequences of Bundles for message-level language fallback. It finds the first bundle that contains a requested message, enabling fallback chains like `ja` → `en-US` → `en`. Formatting data resolution within each Bundle is handled separately by the `icu4x` provider (see [ICU4X Integration](icu4x-integration.md#locale-fallback)).
 
 Equivalent to [@fluent/sequence](https://projectfluent.org/fluent.js/sequence/) in fluent.js.
 
@@ -20,10 +20,10 @@ ja = Foxtail::Bundle.new(ICU4X::Locale.parse("ja"))
 ja.add_resource(Foxtail::Resource.from_string("hello = こんにちは！"))
 
 # Create sequence in priority order
-sequence = Foxtail::Sequence.new(en_us, en, ja)
+sequence = Foxtail::Sequence.new(ja, en_us, en)
 
 # Format uses first matching bundle
-sequence.format("hello") # => "Hello!"
+sequence.format("hello") # => "こんにちは！"
 ```
 
 ## Language Fallback
@@ -35,11 +35,11 @@ en_us.add_resource(Foxtail::Resource.from_string("us-only = US English"))
 en.add_resource(Foxtail::Resource.from_string("en-only = English"))
 ja.add_resource(Foxtail::Resource.from_string("ja-only = 日本語"))
 
-sequence = Foxtail::Sequence.new(en_us, en, ja)
+sequence = Foxtail::Sequence.new(ja, en_us, en)
 
-sequence.format("us-only")  # => "US English" (from en_us)
-sequence.format("en-only")  # => "English" (from en, en_us doesn't have it)
 sequence.format("ja-only")  # => "日本語" (from ja)
+sequence.format("us-only")  # => "US English" (from en_us, ja doesn't have it)
+sequence.format("en-only")  # => "English" (from en, ja and en_us don't have it)
 ```
 
 ## Finding Bundles
