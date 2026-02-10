@@ -61,7 +61,7 @@ resource = Foxtail::Resource.from_file(Pathname("messages.ftl"))
 # Access entries
 resource.entries # => [Bundle::Parser::AST::Message, ...]
 
-# Invalid entries are silently skipped (error recovery)
+# Invalid entries are silently skipped
 ```
 
 ### Resolver
