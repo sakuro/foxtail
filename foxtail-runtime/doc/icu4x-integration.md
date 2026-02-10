@@ -12,59 +12,12 @@ The `icu4x` gem requires data files for locale-specific formatting rules. See th
 
 ## Components Used
 
-### ICU4X::Locale
-
-Used for locale parsing and management:
-
-```ruby
-locale = ICU4X::Locale.parse("en-US")
-locale = ICU4X::Locale.parse("ja-JP")
-locale = ICU4X::Locale.parse("de-DE")
-```
-
-### ICU4X::NumberFormat
-
-Provides number formatting with various styles:
-
-```ruby
-formatter = ICU4X::NumberFormat.new(locale, style: :decimal)
-formatter.format(1234.56)  # "1,234.56" (en-US)
-
-formatter = ICU4X::NumberFormat.new(locale, style: :currency, currency: "USD")
-formatter.format(99.99)    # "$99.99" (en-US)
-
-formatter = ICU4X::NumberFormat.new(locale, style: :percent)
-formatter.format(0.15)     # "15%" (en-US)
-```
-
-### ICU4X::DateTimeFormat
-
-Provides date/time formatting:
-
-```ruby
-formatter = ICU4X::DateTimeFormat.new(locale, date_style: :long)
-formatter.format(Time.now)  # "January 4, 2026" (en-US)
-
-formatter = ICU4X::DateTimeFormat.new(locale, time_style: :short)
-formatter.format(Time.now)  # "2:30 PM" (en-US)
-```
-
-### ICU4X::PluralRules
-
-Determines plural categories for locale-aware pluralization:
-
-```ruby
-rules = ICU4X::PluralRules.new(locale)
-rules.select(0)   # => :other (English)
-rules.select(1)   # => :one
-rules.select(2)   # => :other
-rules.select(5)   # => :other
-
-# Japanese: no plural distinction
-ja_rules = ICU4X::PluralRules.new(ICU4X::Locale.parse("ja"))
-ja_rules.select(1)   # => :other
-ja_rules.select(100) # => :other
-```
+| Component | Purpose |
+|-----------|---------|
+| `ICU4X::Locale` | Locale parsing and management |
+| `ICU4X::NumberFormat` | Number formatting (decimal, currency, percent) |
+| `ICU4X::DateTimeFormat` | Date/time formatting |
+| `ICU4X::PluralRules` | CLDR plural category selection |
 
 ## Built-in Functions
 
