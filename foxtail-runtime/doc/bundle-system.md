@@ -233,7 +233,7 @@ result = bundle.format("hello", name: "World")
 errors = []
 result = bundle.format("hello", errors, name: "World")
 # errors now contains any resolution errors
-errors.each {|e| puts e } # => "Unknown variable: $missing"
+errors.each {|e| puts e } # => "Unknown variable: $name"
 ```
 
 This follows the fluent.js pattern where passing an errors array collects errors instead of ignoring them.
