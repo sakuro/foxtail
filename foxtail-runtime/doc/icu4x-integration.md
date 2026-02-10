@@ -19,6 +19,8 @@ The `icu4x` gem requires data files for locale-specific formatting rules. See th
 | `ICU4X::DateTimeFormat` | Date/time formatting |
 | `ICU4X::PluralRules` | CLDR plural category selection |
 
+These components are used internally by the built-in functions below.
+
 ## Built-in Functions
 
 ### NUMBER
