@@ -24,7 +24,7 @@
 
 The syntax parser reads FTL source and produces a detailed AST with source position tracking (spans). It preserves comments and junk for tooling use cases.
 
-## Tooling Data Flow
+## Tooling Behavior
 
 ```ruby
 source = "hello = Hello"
@@ -36,8 +36,6 @@ serializer = Foxtail::Syntax::Serializer.new
 output = serializer.serialize(ast)
 # => "hello = Hello\n"
 ```
-
-## Error Handling
 
 - **Syntax parser errors**: Wrapped in `Junk` entries with `Annotation`
 - **Formatting with errors**: `Syntax::Serializer` can include or omit Junk entries
