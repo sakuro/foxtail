@@ -28,17 +28,6 @@ Or install it yourself as:
 $ gem install foxtail-runtime
 ```
 
-## ICU4X Data Setup
-
-Foxtail uses the `icu4x` gem (Ruby bindings for [ICU4X](https://github.com/unicode-org/icu4x)).
-Configure `ICU4X_DATA_PATH` to point at ICU4X data. For development in this repo:
-
-```bash
-$ bin/setup
-```
-
-See the [icu4x gem documentation](https://github.com/sakuro/icu4x) for details.
-
 ## Basic Usage
 
 ```ruby
