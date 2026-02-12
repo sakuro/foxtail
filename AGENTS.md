@@ -34,6 +34,10 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 
 - Explore available skills and use them proactively when applicable
 
+### Memory
+
+- Propose updating MEMORY.md at session boundaries
+
 ## Development Commands
 
 ```bash
