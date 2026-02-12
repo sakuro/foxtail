@@ -34,14 +34,6 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 
 - Explore available skills and use them proactively when applicable
 
-## Development Setup
-
-```bash
-bin/setup  # Installs dependencies, initializes fluent.js submodule
-```
-
-- **fluent.js submodule**: `fluent.js/` - Reference implementation for compatibility testing
-
 ## Development Commands
 
 ```bash
