@@ -10,7 +10,6 @@ A Ruby implementation of [Project Fluent](https://projectfluent.org/) - a modern
 |---------|----------|
 | Project overview & usage | [README.md](README.md) |
 | Architecture & design | [foxtail-runtime/doc/architecture.md](foxtail-runtime/doc/architecture.md) / [foxtail-tools/doc/architecture.md](foxtail-tools/doc/architecture.md) |
-| FTL syntax support | [foxtail-tools/doc/ftl-syntax.md](foxtail-tools/doc/ftl-syntax.md) |
 | Bundle system details | [foxtail-runtime/doc/bundle-system.md](foxtail-runtime/doc/bundle-system.md) |
 | Custom functions | [foxtail-runtime/doc/custom-functions.md](foxtail-runtime/doc/custom-functions.md) |
 | Language fallback | [foxtail-runtime/doc/sequence.md](foxtail-runtime/doc/sequence.md) |

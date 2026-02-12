@@ -50,9 +50,14 @@ parser = Foxtail::Syntax::Parser.new
 ast = parser.parse("hello = Hello")
 ```
 
+## Compatibility
+
+The syntax parser passes 97 of 98 [fluent-syntax](https://github.com/projectfluent/fluent.js/tree/main/fluent-syntax) test fixtures (99.0%).
+
+The `leading_dots` fixture is a known mismatch — this test also fails in fluent.js itself.
+
 ## Documentation
 
-- [FTL Syntax](doc/ftl-syntax.md)
 - [CLI Reference](doc/cli.md)
 - [Architecture](doc/architecture.md)
 
