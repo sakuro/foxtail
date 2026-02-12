@@ -44,7 +44,7 @@ puts en_bundle.format("count", value: 1234)
 # => Total: 1,234
 
 puts en_bundle.format("price", amount: 1234.50)
-# => Price: $1,234.50
+# => Price: $1,234.5
 
 puts en_bundle.format("discount", rate: 0.25)
 # => Save 25%!

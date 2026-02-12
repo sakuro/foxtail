@@ -32,14 +32,11 @@ $ gem install foxtail-runtime
 
 ```ruby
 require "foxtail-runtime"
+require "icu4x-data-recommended" # for locale-aware NUMBER formatting
 
 resource = Foxtail::Resource.from_string(<<~FTL)
   hello = Hello, { $name }!
-  emails =
-      You have { $count ->
-          [one] one email
-         *[other] { $count } emails
-      }.
+  price = { NUMBER($amount, style: "currency", currency: "USD") }
 FTL
 
 bundle = Foxtail::Bundle.new(ICU4X::Locale.parse("en-US"))
@@ -47,6 +44,9 @@ bundle.add_resource(resource)
 
 bundle.format("hello", name: "Alice")
 # => "Hello, Alice!"
+
+bundle.format("price", amount: 1234.5)
+# => "$1,234.5"
 ```
 
 ## Documentation
