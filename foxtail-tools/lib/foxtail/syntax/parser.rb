@@ -10,7 +10,7 @@ module Foxtail
 
       # Define Indent as a Struct for temporary indentation tokens
       # Note: Uses Struct instead of Data.define because the value field is mutated in dedent()
-      Indent = Struct.new(:value, :start, :end, :span, keyword_init: true)
+      Indent = Struct.new(:value, :start, :end, :span)
 
       # Create a new Parser instance
       # @param with_spans [Boolean] Whether to include span information in AST nodes (default: true)
