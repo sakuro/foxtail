@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.5.0] - 2026-05-08
+
 ### Added
 - **Syntax Tooling**
   - FTL syntax parser with AST support
