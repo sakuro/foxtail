@@ -51,7 +51,7 @@ bundle exec rake doc        # Generate YARD documentation
 
 ## Configuration
 
-- **Ruby version**: >= 3.2
+- **Ruby version**: >= 3.3
 - **RuboCop style**: Double quotes for strings
 - **Release**: Automated via CI workflow
 

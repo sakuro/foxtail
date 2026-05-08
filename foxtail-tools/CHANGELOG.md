@@ -14,4 +14,4 @@
 
 ### Compatibility
 - fluent.js syntax parser: 97/98 (99.0%)
-- Ruby: 3.2+ supported
+- Ruby: 3.3+ supported

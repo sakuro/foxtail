@@ -124,7 +124,7 @@ Related docs:
 
 ## Compatibility
 
-- **Ruby**: 3.2 or higher
+- **Ruby**: 3.3 or higher
 - **fluent.js**: 159/160 test fixtures passing (99.4%)
   - Syntax parser: 97/98 (99.0%)
   - Bundle parser: 62/62 (100%)

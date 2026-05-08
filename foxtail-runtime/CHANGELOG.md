@@ -15,4 +15,4 @@
   - Executable usage demonstrations in `examples/`
 ### Compatibility
 - fluent.js bundle parser: 62/62 (100%)
-- Ruby: 3.2+ supported
+- Ruby: 3.3+ supported
