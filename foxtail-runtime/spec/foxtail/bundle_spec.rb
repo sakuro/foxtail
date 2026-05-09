@@ -256,6 +256,52 @@ RSpec.describe Foxtail::Bundle do
     end
   end
 
+  describe "#format_attribute" do
+    let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false) }
+
+    before do
+      ftl = <<~FTL
+        login-button =
+            .label = Sign in
+            .tooltip = Click to sign in
+        greeting =
+            .aria-label = Hello, {$name}!
+      FTL
+      bundle.add_resource(Foxtail::Resource.from_string(ftl))
+    end
+
+    it "formats a simple attribute" do
+      expect(bundle.format_attribute("login-button", "label")).to eq("Sign in")
+    end
+
+    it "formats a second attribute" do
+      expect(bundle.format_attribute("login-button", "tooltip")).to eq("Click to sign in")
+    end
+
+    it "formats an attribute with variable substitution" do
+      expect(bundle.format_attribute("greeting", "aria-label", name: "Alice")).to eq("Hello, Alice!")
+    end
+
+    it "accepts symbol as attr" do
+      expect(bundle.format_attribute("login-button", :label)).to eq("Sign in")
+    end
+
+    it "returns 'id.attr' when message does not exist" do
+      expect(bundle.format_attribute("nonexistent", "label")).to eq("nonexistent.label")
+    end
+
+    it "returns 'id.attr' when attribute does not exist" do
+      expect(bundle.format_attribute("login-button", "nonexistent")).to eq("login-button.nonexistent")
+    end
+
+    it "collects errors when errors array is provided" do
+      errors = []
+      result = bundle.format_attribute("greeting", "aria-label", errors)
+      expect(result).to eq("Hello, {$name}!")
+      expect(errors).to include("Unknown variable: $name")
+    end
+  end
+
   describe "#format_pattern" do
     let(:bundle) { Foxtail::Bundle.new(ICU4X::Locale.parse("en"), use_isolating: false) }
 

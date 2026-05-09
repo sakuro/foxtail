@@ -44,6 +44,18 @@ module Foxtail
       bundle ? bundle.format(id, errors, **) : id.to_s
     end
 
+    # Formats a message attribute using the first bundle that contains the message.
+    # Keyword arguments are passed through to the bundle's format_attribute method.
+    #
+    # @param id [String] The message ID
+    # @param attr [String, Symbol] Attribute name
+    # @param errors [Array, nil] If provided, errors are collected into this array instead of being ignored.
+    # @return [String] The formatted attribute, or "id.attr" if not found
+    def format_attribute(id, attr, errors=nil, **)
+      bundle = find_bundle(id)
+      bundle ? bundle.format_attribute(id, attr, errors, **) : "#{id}.#{attr}"
+    end
+
     private def find_bundle(id) = @bundles.find {|bundle| bundle.message?(id) }
   end
 end
