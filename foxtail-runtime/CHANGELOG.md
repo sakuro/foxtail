@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.6.0] - 2026-05-09
+
 ### Added
 - Add `format_attribute` to `Bundle` and `Sequence` for formatting message attributes directly (#179)
 

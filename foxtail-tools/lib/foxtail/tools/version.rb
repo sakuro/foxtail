@@ -3,7 +3,7 @@
 module Foxtail
   module Tools
     # Current version of the Foxtail tools gem
-    VERSION = "0.5.0"
+    VERSION = "0.6.0"
     public_constant :VERSION
   end
 end
