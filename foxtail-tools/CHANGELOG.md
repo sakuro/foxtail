@@ -2,6 +2,9 @@
 
 ## [0.6.0] - 2026-05-09
 
+### Changed
+- Bump version to align with foxtail-runtime 0.6.0
+
 ## [0.5.0] - 2026-05-08
 
 ### Added
