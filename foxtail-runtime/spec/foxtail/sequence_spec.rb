@@ -86,6 +86,60 @@ RSpec.describe Foxtail::Sequence do
     end
   end
 
+  describe "#format_attribute" do
+    let(:en_us_bundle_with_attrs) do
+      bundle = Foxtail::Bundle.new(en_us_locale, use_isolating: false)
+      resource = Foxtail::Resource.from_string(<<~FTL)
+        login-button =
+            .label = Sign in
+            .tooltip = Click to sign in
+        greeting =
+            .aria-label = Hello, {$name}!
+      FTL
+      bundle.add_resource(resource)
+      bundle
+    end
+
+    let(:en_bundle_with_attrs) do
+      bundle = Foxtail::Bundle.new(en_locale, use_isolating: false)
+      resource = Foxtail::Resource.from_string(<<~FTL)
+        en-only-button =
+            .label = English only
+      FTL
+      bundle.add_resource(resource)
+      bundle
+    end
+
+    let(:attr_sequence) { Foxtail::Sequence.new(en_us_bundle_with_attrs, en_bundle_with_attrs) }
+
+    it "formats attribute from the first matching bundle" do
+      expect(attr_sequence.format_attribute("login-button", "label")).to eq("Sign in")
+    end
+
+    it "formats attribute with variable substitution" do
+      expect(attr_sequence.format_attribute("greeting", "aria-label", name: "World")).to eq("Hello, World!")
+    end
+
+    it "uses fallback bundle when primary does not have the message" do
+      expect(attr_sequence.format_attribute("en-only-button", "label")).to eq("English only")
+    end
+
+    it "returns 'id.attr' when message is not found in any bundle" do
+      expect(attr_sequence.format_attribute("nonexistent", "label")).to eq("nonexistent.label")
+    end
+
+    it "returns 'id.attr' when attribute is not found" do
+      expect(attr_sequence.format_attribute("login-button", "nonexistent")).to eq("login-button.nonexistent")
+    end
+
+    it "collects errors when errors array is provided" do
+      errors = []
+      result = attr_sequence.format_attribute("greeting", "aria-label", errors)
+      expect(result).to eq("Hello, {$name}!")
+      expect(errors).to include("Unknown variable: $name")
+    end
+  end
+
   describe "with empty sequence" do
     let(:empty_sequence) { Foxtail::Sequence.new }
 

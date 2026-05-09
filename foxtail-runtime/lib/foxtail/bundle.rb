@@ -123,6 +123,20 @@ module Foxtail
       format_pattern(message.value, errors, **)
     end
 
+    # Format a message attribute with the given arguments.
+    #
+    # @param id [String, Symbol] Message identifier
+    # @param attr [String, Symbol] Attribute name
+    # @param errors [Array, nil] If provided, errors are collected into this array instead of being ignored.
+    # @return [String] Formatted attribute string, or "id.attr" if message or attribute not found
+    def format_attribute(id, attr, errors=nil, **)
+      msg = message(id)
+      pattern = msg&.attributes&.[](attr.to_s)
+      return "#{id}.#{attr}" unless pattern
+
+      format_pattern(pattern, errors, **)
+    end
+
     # Format a pattern with the given arguments (using Resolver)
     #
     # @param pattern [String, Array] The pattern to format
