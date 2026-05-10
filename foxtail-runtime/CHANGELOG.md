@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.6.1] - 2026-05-10
+
 ### Fixed
 - Fix term call arguments being silently ignored during resolution (#182)
 
