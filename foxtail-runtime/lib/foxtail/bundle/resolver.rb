@@ -185,16 +185,26 @@ module Foxtail
           return "{-#{name}}"
         end
 
+        # Build an isolated scope containing only the named call arguments.
+        # Per the Fluent spec, term scope must not inherit the caller's external variables.
+        named_args = expr.args.filter_map {|arg|
+          next unless arg.is_a?(Parser::AST::NamedArgument)
+
+          [arg.name.to_sym, resolve_expression(arg.value, scope)]
+        }.to_h
+        term_scope = scope.term_scope(**named_args)
+
         # Resolve term value
         if attr
-          result = resolve_term_attribute(term, attr, scope)
+          result = resolve_term_attribute(term, attr, term_scope)
         elsif term.value
-          result = resolve_pattern(term.value, scope)
+          result = resolve_pattern(term.value, term_scope)
         else
           scope.add_error("No value: -#{name}")
           result = "{-#{name}}"
         end
 
+        scope.errors.concat(term_scope.errors)
         scope.release(name)
         result
       end
