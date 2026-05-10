@@ -117,6 +117,53 @@ RSpec.describe Foxtail::Bundle::Resolver do
       expect(result).to match(/\{-[ab]\}/)
       expect(scope.errors.any? {|e| e.include?("Circular reference detected") }).to be true
     end
+
+    context "with call arguments" do
+      before do
+        bundle.add_resource(
+          Foxtail::Resource.from_string(<<~FTL),
+            -parameterized = Value {$arg}
+            -with-selector =
+                { $case ->
+                    [instrumental] Discordem
+                   *[other] Discord
+                }
+          FTL
+          allow_overrides: true
+        )
+      end
+
+      it "injects named call arguments as variables inside the term" do
+        narg = ast::NamedArgument[name: "arg", value: ast::StringLiteral[value: "bar"]]
+        expr = ast::TermReference[name: "parameterized", args: [narg]]
+        result = resolver.resolve_expression(expr, scope)
+        expect(result).to eq("Value bar")
+      end
+
+      it "does not expose external variables inside the term scope" do
+        # scope has name: "World", but term scope must be isolated from caller's externals
+        bundle.add_resource(
+          Foxtail::Resource.from_string("-uses-name = {$name}"),
+          allow_overrides: true
+        )
+        expr = ast::TermReference[name: "uses-name"]
+        result = resolver.resolve_expression(expr, scope)
+        expect(result).to eq("{$name}")
+      end
+
+      it "resolves the matching selector branch when the call argument is provided" do
+        narg = ast::NamedArgument[name: "case", value: ast::StringLiteral[value: "instrumental"]]
+        expr = ast::TermReference[name: "with-selector", args: [narg]]
+        result = resolver.resolve_expression(expr, scope)
+        expect(result).to eq("Discordem")
+      end
+
+      it "falls back to the default selector branch when no matching call argument is provided" do
+        expr = ast::TermReference[name: "with-selector"]
+        result = resolver.resolve_expression(expr, scope)
+        expect(result).to eq("Discord")
+      end
+    end
   end
 
   describe "#resolve_message_reference" do

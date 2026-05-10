@@ -53,6 +53,15 @@ module Foxtail
         child
       end
 
+      # Create an isolated scope for term resolution.
+      # Unlike child_scope, this does NOT inherit external variables — only the
+      # explicitly passed named call arguments are visible as variables inside the term.
+      def term_scope(**named_args)
+        child = self.class.new(@bundle, **named_args)
+        child.instance_variable_set(:@dirty, @dirty.dup)
+        child
+      end
+
       # Reset locals (used in some resolution contexts)
       def clear_locals = @locals.clear
 
